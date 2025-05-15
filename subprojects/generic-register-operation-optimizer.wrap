@@ -1,0 +1,3 @@
+[wrap-git]
+url = git@github.com:djazo/generic-register-operation-optimizer.git
+revision = meson
