@@ -11,397 +11,373 @@ namespace stm32 {
 
 namespace tamp {
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using cr1_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED3", std::uint8_t, 31, 24 ,access::ro>,
-  groov::field<"ITAMP8E", bool, 23, 23 >,
-  groov::field<"RESERVED2", bool, 22, 22 ,access::ro>,
-  groov::field<"ITAMP6E", bool, 21, 21 >,
-  groov::field<"ITAMP5E", bool, 20, 20 >,
-  groov::field<"RESERVED1", bool, 19, 19 ,access::ro>,
-  groov::field<"ITAMP3E", bool, 18, 18 >,
-  groov::field<"RESERVED0", std::uint16_t, 17, 3 ,access::ro>,
-  groov::field<"TAMP3E", bool, 2, 2 >,
-  groov::field<"TAMP2E", bool, 1, 1 >,
-  groov::field<"TAMP1E", bool, 0, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using cr1_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED3", std::uint8_t, 31, 24, access::ro>,
+               groov::field<"ITAMP8E", bool, 23, 23>,
+               groov::field<"RESERVED2", bool, 22, 22, access::ro>,
+               groov::field<"ITAMP6E", bool, 21, 21>,
+               groov::field<"ITAMP5E", bool, 20, 20>,
+               groov::field<"RESERVED1", bool, 19, 19, access::ro>,
+               groov::field<"ITAMP3E", bool, 18, 18>,
+               groov::field<"RESERVED0", std::uint16_t, 17, 3, access::ro>,
+               groov::field<"TAMP3E", bool, 2, 2>,
+               groov::field<"TAMP2E", bool, 1, 1>,
+               groov::field<"TAMP1E", bool, 0, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using cr2_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED2", std::uint8_t, 31, 27 ,access::ro>,
-  groov::field<"TAMP3TRG", bool, 26, 26 >,
-  groov::field<"TAMP2TRG", bool, 25, 25 >,
-  groov::field<"TAMP1TRG", bool, 24, 24 >,
-  groov::field<"BKERASE", bool, 23, 23 >,
-  groov::field<"RESERVED1", std::uint8_t, 22, 19 ,access::ro>,
-  groov::field<"TAMP3MSK", bool, 18, 18 >,
-  groov::field<"TAMP2MSK", bool, 17, 17 >,
-  groov::field<"TAMP1MSK", bool, 16, 16 >,
-  groov::field<"RESERVED0", std::uint16_t, 15, 3 ,access::ro>,
-  groov::field<"TAMP3NOER", bool, 2, 2 >,
-  groov::field<"TAMP2NOER", bool, 1, 1 >,
-  groov::field<"TAMP1NOER", bool, 0, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using cr2_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED2", std::uint8_t, 31, 27, access::ro>,
+               groov::field<"TAMP3TRG", bool, 26, 26>,
+               groov::field<"TAMP2TRG", bool, 25, 25>,
+               groov::field<"TAMP1TRG", bool, 24, 24>,
+               groov::field<"BKERASE", bool, 23, 23>,
+               groov::field<"RESERVED1", std::uint8_t, 22, 19, access::ro>,
+               groov::field<"TAMP3MSK", bool, 18, 18>,
+               groov::field<"TAMP2MSK", bool, 17, 17>,
+               groov::field<"TAMP1MSK", bool, 16, 16>,
+               groov::field<"RESERVED0", std::uint16_t, 15, 3, access::ro>,
+               groov::field<"TAMP3NOER", bool, 2, 2>,
+               groov::field<"TAMP2NOER", bool, 1, 1>,
+               groov::field<"TAMP1NOER", bool, 0, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using cr3_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED3", std::uint32_t, 31, 8 ,access::ro>,
-  groov::field<"ITAMP8NOER", bool, 7, 7 >,
-  groov::field<"RESERVED2", bool, 6, 6 ,access::ro>,
-  groov::field<"ITAMP6NOER", bool, 5, 5 >,
-  groov::field<"ITAMP5NOER", bool, 4, 4 >,
-  groov::field<"RESERVED1", bool, 3, 3 ,access::ro>,
-  groov::field<"ITAMP3NOER", bool, 2, 2 >,
-  groov::field<"RESERVED0", std::uint8_t, 1, 0 ,access::ro>
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using cr3_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED3", std::uint32_t, 31, 8, access::ro>,
+               groov::field<"ITAMP8NOER", bool, 7, 7>,
+               groov::field<"RESERVED2", bool, 6, 6, access::ro>,
+               groov::field<"ITAMP6NOER", bool, 5, 5>,
+               groov::field<"ITAMP5NOER", bool, 4, 4>,
+               groov::field<"RESERVED1", bool, 3, 3, access::ro>,
+               groov::field<"ITAMP3NOER", bool, 2, 2>,
+               groov::field<"RESERVED0", std::uint8_t, 1, 0, access::ro>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using fltcr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint32_t, 31, 8 ,access::ro>,
-  groov::field<"TAMPPUDIS", bool, 7, 7 >,
-  groov::field<"TAMPPRCH", std::uint8_t, 6, 5 >,
-  groov::field<"TAMPFLT", std::uint8_t, 4, 3 >,
-  groov::field<"TAMPFREQ", std::uint8_t, 2, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using fltcr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint32_t, 31, 8, access::ro>,
+               groov::field<"TAMPPUDIS", bool, 7, 7>,
+               groov::field<"TAMPPRCH", std::uint8_t, 6, 5>,
+               groov::field<"TAMPFLT", std::uint8_t, 4, 3>,
+               groov::field<"TAMPFREQ", std::uint8_t, 2, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using ier_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED3", std::uint8_t, 31, 24 ,access::ro>,
-  groov::field<"ITAMP8IE", bool, 23, 23 >,
-  groov::field<"RESERVED2", bool, 22, 22 ,access::ro>,
-  groov::field<"ITAMP6IE", bool, 21, 21 >,
-  groov::field<"ITAMP5IE", bool, 20, 20 >,
-  groov::field<"RESERVED1", bool, 19, 19 ,access::ro>,
-  groov::field<"ITAMP3IE", bool, 18, 18 >,
-  groov::field<"RESERVED0", std::uint16_t, 17, 3 ,access::ro>,
-  groov::field<"TAMP3IE", bool, 2, 2 >,
-  groov::field<"TAMP2IE", bool, 1, 1 >,
-  groov::field<"TAMP1IE", bool, 0, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using ier_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED3", std::uint8_t, 31, 24, access::ro>,
+               groov::field<"ITAMP8IE", bool, 23, 23>,
+               groov::field<"RESERVED2", bool, 22, 22, access::ro>,
+               groov::field<"ITAMP6IE", bool, 21, 21>,
+               groov::field<"ITAMP5IE", bool, 20, 20>,
+               groov::field<"RESERVED1", bool, 19, 19, access::ro>,
+               groov::field<"ITAMP3IE", bool, 18, 18>,
+               groov::field<"RESERVED0", std::uint16_t, 17, 3, access::ro>,
+               groov::field<"TAMP3IE", bool, 2, 2>,
+               groov::field<"TAMP2IE", bool, 1, 1>,
+               groov::field<"TAMP1IE", bool, 0, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using sr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::ro,
-  groov::field<"RESERVED3", std::uint8_t, 31, 24 >,
-  groov::field<"ITAMP8F", bool, 23, 23 >,
-  groov::field<"RESERVED2", bool, 22, 22 >,
-  groov::field<"ITAMP6F", bool, 21, 21 >,
-  groov::field<"ITAMP5F", bool, 20, 20 >,
-  groov::field<"RESERVED1", bool, 19, 19 >,
-  groov::field<"ITAMP3F", bool, 18, 18 >,
-  groov::field<"RESERVED0", std::uint16_t, 17, 3 >,
-  groov::field<"TAMP3F", bool, 2, 2 >,
-  groov::field<"TAMP2F", bool, 1, 1 >,
-  groov::field<"TAMP1F", bool, 0, 0 >
-  >;
+                           std::uint32_t,
+                           baseaddress + offset,
+                           access::ro,
+                           groov::field<"RESERVED3", std::uint8_t, 31, 24>,
+                           groov::field<"ITAMP8F", bool, 23, 23>,
+                           groov::field<"RESERVED2", bool, 22, 22>,
+                           groov::field<"ITAMP6F", bool, 21, 21>,
+                           groov::field<"ITAMP5F", bool, 20, 20>,
+                           groov::field<"RESERVED1", bool, 19, 19>,
+                           groov::field<"ITAMP3F", bool, 18, 18>,
+                           groov::field<"RESERVED0", std::uint16_t, 17, 3>,
+                           groov::field<"TAMP3F", bool, 2, 2>,
+                           groov::field<"TAMP2F", bool, 1, 1>,
+                           groov::field<"TAMP1F", bool, 0, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using misr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::ro,
-  groov::field<"RESERVED3", std::uint8_t, 31, 24 >,
-  groov::field<"ITAMP8MF", bool, 23, 23 >,
-  groov::field<"RESERVED2", bool, 22, 22 >,
-  groov::field<"ITAMP6MF", bool, 21, 21 >,
-  groov::field<"ITAMP5MF", bool, 20, 20 >,
-  groov::field<"RESERVED1", bool, 19, 19 >,
-  groov::field<"ITAMP3MF", bool, 18, 18 >,
-  groov::field<"RESERVED0", std::uint16_t, 17, 3 >,
-  groov::field<"TAMP3MF", bool, 2, 2 >,
-  groov::field<"TAMP2MF", bool, 1, 1 >,
-  groov::field<"TAMP1MF", bool, 0, 0 >
-  >;
+                             std::uint32_t,
+                             baseaddress + offset,
+                             access::ro,
+                             groov::field<"RESERVED3", std::uint8_t, 31, 24>,
+                             groov::field<"ITAMP8MF", bool, 23, 23>,
+                             groov::field<"RESERVED2", bool, 22, 22>,
+                             groov::field<"ITAMP6MF", bool, 21, 21>,
+                             groov::field<"ITAMP5MF", bool, 20, 20>,
+                             groov::field<"RESERVED1", bool, 19, 19>,
+                             groov::field<"ITAMP3MF", bool, 18, 18>,
+                             groov::field<"RESERVED0", std::uint16_t, 17, 3>,
+                             groov::field<"TAMP3MF", bool, 2, 2>,
+                             groov::field<"TAMP2MF", bool, 1, 1>,
+                             groov::field<"TAMP1MF", bool, 0, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using scr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::wo,
-  groov::field<"RESERVED3", std::uint8_t, 31, 24 ,access::ro>,
-  groov::field<"CITAMP8F", bool, 23, 23 >,
-  groov::field<"RESERVED2", bool, 22, 22 ,access::ro>,
-  groov::field<"CITAMP6F", bool, 21, 21 >,
-  groov::field<"CITAMP5F", bool, 20, 20 >,
-  groov::field<"RESERVED1", bool, 19, 19 ,access::ro>,
-  groov::field<"CITAMP3F", bool, 18, 18 >,
-  groov::field<"RESERVED0", std::uint16_t, 17, 3 ,access::ro>,
-  groov::field<"CTAMP3F", bool, 2, 2 >,
-  groov::field<"CTAMP2F", bool, 1, 1 >,
-  groov::field<"CTAMP1F", bool, 0, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using scr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::wo,
+               groov::field<"RESERVED3", std::uint8_t, 31, 24, access::ro>,
+               groov::field<"CITAMP8F", bool, 23, 23>,
+               groov::field<"RESERVED2", bool, 22, 22, access::ro>,
+               groov::field<"CITAMP6F", bool, 21, 21>,
+               groov::field<"CITAMP5F", bool, 20, 20>,
+               groov::field<"RESERVED1", bool, 19, 19, access::ro>,
+               groov::field<"CITAMP3F", bool, 18, 18>,
+               groov::field<"RESERVED0", std::uint16_t, 17, 3, access::ro>,
+               groov::field<"CTAMP3F", bool, 2, 2>,
+               groov::field<"CTAMP2F", bool, 1, 1>,
+               groov::field<"CTAMP1F", bool, 0, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using countr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::ro,
-  groov::field<"COUNT", std::uint32_t, 31, 0 >
-  >;
+                               std::uint32_t,
+                               baseaddress + offset,
+                               access::ro,
+                               groov::field<"COUNT", std::uint32_t, 31, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using bkp0r_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"BKP", std::uint32_t, 31, 0 >
-  >;
+                              std::uint32_t,
+                              baseaddress + offset,
+                              access::rw,
+                              groov::field<"BKP", std::uint32_t, 31, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using bkp1r_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"BKP", std::uint32_t, 31, 0 >
-  >;
+                              std::uint32_t,
+                              baseaddress + offset,
+                              access::rw,
+                              groov::field<"BKP", std::uint32_t, 31, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using bkp2r_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"BKP", std::uint32_t, 31, 0 >
-  >;
+                              std::uint32_t,
+                              baseaddress + offset,
+                              access::rw,
+                              groov::field<"BKP", std::uint32_t, 31, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using bkp3r_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"BKP", std::uint32_t, 31, 0 >
-  >;
+                              std::uint32_t,
+                              baseaddress + offset,
+                              access::rw,
+                              groov::field<"BKP", std::uint32_t, 31, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using bkp4r_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"BKP", std::uint32_t, 31, 0 >
-  >;
+                              std::uint32_t,
+                              baseaddress + offset,
+                              access::rw,
+                              groov::field<"BKP", std::uint32_t, 31, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using bkp5r_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"BKP", std::uint32_t, 31, 0 >
-  >;
+                              std::uint32_t,
+                              baseaddress + offset,
+                              access::rw,
+                              groov::field<"BKP", std::uint32_t, 31, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using bkp6r_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"BKP", std::uint32_t, 31, 0 >
-  >;
+                              std::uint32_t,
+                              baseaddress + offset,
+                              access::rw,
+                              groov::field<"BKP", std::uint32_t, 31, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using bkp7r_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"BKP", std::uint32_t, 31, 0 >
-  >;
+                              std::uint32_t,
+                              baseaddress + offset,
+                              access::rw,
+                              groov::field<"BKP", std::uint32_t, 31, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using bkp8r_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"BKP", std::uint32_t, 31, 0 >
-  >;
+                              std::uint32_t,
+                              baseaddress + offset,
+                              access::rw,
+                              groov::field<"BKP", std::uint32_t, 31, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using bkp9r_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"BKP", std::uint32_t, 31, 0 >
-  >;
+                              std::uint32_t,
+                              baseaddress + offset,
+                              access::rw,
+                              groov::field<"BKP", std::uint32_t, 31, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using bkp10r_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"BKP", std::uint32_t, 31, 0 >
-  >;
+                               std::uint32_t,
+                               baseaddress + offset,
+                               access::rw,
+                               groov::field<"BKP", std::uint32_t, 31, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using bkp11r_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"BKP", std::uint32_t, 31, 0 >
-  >;
+                               std::uint32_t,
+                               baseaddress + offset,
+                               access::rw,
+                               groov::field<"BKP", std::uint32_t, 31, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using bkp12r_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"BKP", std::uint32_t, 31, 0 >
-  >;
+                               std::uint32_t,
+                               baseaddress + offset,
+                               access::rw,
+                               groov::field<"BKP", std::uint32_t, 31, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using bkp13r_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"BKP", std::uint32_t, 31, 0 >
-  >;
+                               std::uint32_t,
+                               baseaddress + offset,
+                               access::rw,
+                               groov::field<"BKP", std::uint32_t, 31, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using bkp14r_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"BKP", std::uint32_t, 31, 0 >
-  >;
+                               std::uint32_t,
+                               baseaddress + offset,
+                               access::rw,
+                               groov::field<"BKP", std::uint32_t, 31, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using bkp15r_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"BKP", std::uint32_t, 31, 0 >
-  >;
+                               std::uint32_t,
+                               baseaddress + offset,
+                               access::rw,
+                               groov::field<"BKP", std::uint32_t, 31, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using bkp16r_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"BKP", std::uint32_t, 31, 0 >
-  >;
+                               std::uint32_t,
+                               baseaddress + offset,
+                               access::rw,
+                               groov::field<"BKP", std::uint32_t, 31, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using bkp17r_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"BKP", std::uint32_t, 31, 0 >
-  >;
+                               std::uint32_t,
+                               baseaddress + offset,
+                               access::rw,
+                               groov::field<"BKP", std::uint32_t, 31, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using bkp18r_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"BKP", std::uint32_t, 31, 0 >
-  >;
+                               std::uint32_t,
+                               baseaddress + offset,
+                               access::rw,
+                               groov::field<"BKP", std::uint32_t, 31, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using bkp19r_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"BKP", std::uint32_t, 31, 0 >
-  >;
+                               std::uint32_t,
+                               baseaddress + offset,
+                               access::rw,
+                               groov::field<"BKP", std::uint32_t, 31, 0>>;
 
-template <std::uint32_t baseaddress>
-using cr1_t = cr1_tt<"CR1",baseaddress,0>;
+  template <std::uint32_t baseaddress>
+  using cr1_t = cr1_tt<"CR1", baseaddress, 0>;
 
-template <std::uint32_t baseaddress>
-using cr2_t = cr2_tt<"CR2",baseaddress,4>;
+  template <std::uint32_t baseaddress>
+  using cr2_t = cr2_tt<"CR2", baseaddress, 4>;
 
-template <std::uint32_t baseaddress>
-using cr3_t = cr3_tt<"CR3",baseaddress,8>;
+  template <std::uint32_t baseaddress>
+  using cr3_t = cr3_tt<"CR3", baseaddress, 8>;
 
-template <std::uint32_t baseaddress>
-using fltcr_t = fltcr_tt<"FLTCR",baseaddress,12>;
+  template <std::uint32_t baseaddress>
+  using fltcr_t = fltcr_tt<"FLTCR", baseaddress, 12>;
 
-template <std::uint32_t baseaddress>
-using ier_t = ier_tt<"IER",baseaddress,44>;
+  template <std::uint32_t baseaddress>
+  using ier_t = ier_tt<"IER", baseaddress, 44>;
 
-template <std::uint32_t baseaddress>
-using sr_t = sr_tt<"SR",baseaddress,48>;
+  template <std::uint32_t baseaddress>
+  using sr_t = sr_tt<"SR", baseaddress, 48>;
 
-template <std::uint32_t baseaddress>
-using misr_t = misr_tt<"MISR",baseaddress,52>;
+  template <std::uint32_t baseaddress>
+  using misr_t = misr_tt<"MISR", baseaddress, 52>;
 
-template <std::uint32_t baseaddress>
-using scr_t = scr_tt<"SCR",baseaddress,60>;
+  template <std::uint32_t baseaddress>
+  using scr_t = scr_tt<"SCR", baseaddress, 60>;
 
-template <std::uint32_t baseaddress>
-using countr_t = countr_tt<"COUNTR",baseaddress,64>;
+  template <std::uint32_t baseaddress>
+  using countr_t = countr_tt<"COUNTR", baseaddress, 64>;
 
-template <std::uint32_t baseaddress>
-using bkp0r_t = bkp0r_tt<"BKP0R",baseaddress,256>;
+  template <std::uint32_t baseaddress>
+  using bkp0r_t = bkp0r_tt<"BKP0R", baseaddress, 256>;
 
-template <std::uint32_t baseaddress>
-using bkp1r_t = bkp1r_tt<"BKP1R",baseaddress,260>;
+  template <std::uint32_t baseaddress>
+  using bkp1r_t = bkp1r_tt<"BKP1R", baseaddress, 260>;
 
-template <std::uint32_t baseaddress>
-using bkp2r_t = bkp2r_tt<"BKP2R",baseaddress,264>;
+  template <std::uint32_t baseaddress>
+  using bkp2r_t = bkp2r_tt<"BKP2R", baseaddress, 264>;
 
-template <std::uint32_t baseaddress>
-using bkp3r_t = bkp3r_tt<"BKP3R",baseaddress,268>;
+  template <std::uint32_t baseaddress>
+  using bkp3r_t = bkp3r_tt<"BKP3R", baseaddress, 268>;
 
-template <std::uint32_t baseaddress>
-using bkp4r_t = bkp4r_tt<"BKP4R",baseaddress,272>;
+  template <std::uint32_t baseaddress>
+  using bkp4r_t = bkp4r_tt<"BKP4R", baseaddress, 272>;
 
-template <std::uint32_t baseaddress>
-using bkp5r_t = bkp5r_tt<"BKP5R",baseaddress,276>;
+  template <std::uint32_t baseaddress>
+  using bkp5r_t = bkp5r_tt<"BKP5R", baseaddress, 276>;
 
-template <std::uint32_t baseaddress>
-using bkp6r_t = bkp6r_tt<"BKP6R",baseaddress,280>;
+  template <std::uint32_t baseaddress>
+  using bkp6r_t = bkp6r_tt<"BKP6R", baseaddress, 280>;
 
-template <std::uint32_t baseaddress>
-using bkp7r_t = bkp7r_tt<"BKP7R",baseaddress,284>;
+  template <std::uint32_t baseaddress>
+  using bkp7r_t = bkp7r_tt<"BKP7R", baseaddress, 284>;
 
-template <std::uint32_t baseaddress>
-using bkp8r_t = bkp8r_tt<"BKP8R",baseaddress,288>;
+  template <std::uint32_t baseaddress>
+  using bkp8r_t = bkp8r_tt<"BKP8R", baseaddress, 288>;
 
-template <std::uint32_t baseaddress>
-using bkp9r_t = bkp9r_tt<"BKP9R",baseaddress,292>;
+  template <std::uint32_t baseaddress>
+  using bkp9r_t = bkp9r_tt<"BKP9R", baseaddress, 292>;
 
-template <std::uint32_t baseaddress>
-using bkp10r_t = bkp10r_tt<"BKP10R",baseaddress,320>;
+  template <std::uint32_t baseaddress>
+  using bkp10r_t = bkp10r_tt<"BKP10R", baseaddress, 320>;
 
-template <std::uint32_t baseaddress>
-using bkp11r_t = bkp11r_tt<"BKP11R",baseaddress,324>;
+  template <std::uint32_t baseaddress>
+  using bkp11r_t = bkp11r_tt<"BKP11R", baseaddress, 324>;
 
-template <std::uint32_t baseaddress>
-using bkp12r_t = bkp12r_tt<"BKP12R",baseaddress,328>;
+  template <std::uint32_t baseaddress>
+  using bkp12r_t = bkp12r_tt<"BKP12R", baseaddress, 328>;
 
-template <std::uint32_t baseaddress>
-using bkp13r_t = bkp13r_tt<"BKP13R",baseaddress,332>;
+  template <std::uint32_t baseaddress>
+  using bkp13r_t = bkp13r_tt<"BKP13R", baseaddress, 332>;
 
-template <std::uint32_t baseaddress>
-using bkp14r_t = bkp14r_tt<"BKP14R",baseaddress,336>;
+  template <std::uint32_t baseaddress>
+  using bkp14r_t = bkp14r_tt<"BKP14R", baseaddress, 336>;
 
-template <std::uint32_t baseaddress>
-using bkp15r_t = bkp15r_tt<"BKP15R",baseaddress,340>;
+  template <std::uint32_t baseaddress>
+  using bkp15r_t = bkp15r_tt<"BKP15R", baseaddress, 340>;
 
-template <std::uint32_t baseaddress>
-using bkp16r_t = bkp16r_tt<"BKP16R",baseaddress,344>;
+  template <std::uint32_t baseaddress>
+  using bkp16r_t = bkp16r_tt<"BKP16R", baseaddress, 344>;
 
-template <std::uint32_t baseaddress>
-using bkp17r_t = bkp17r_tt<"BKP17R",baseaddress,348>;
+  template <std::uint32_t baseaddress>
+  using bkp17r_t = bkp17r_tt<"BKP17R", baseaddress, 348>;
 
-template <std::uint32_t baseaddress>
-using bkp18r_t = bkp18r_tt<"BKP18R",baseaddress,352>;
+  template <std::uint32_t baseaddress>
+  using bkp18r_t = bkp18r_tt<"BKP18R", baseaddress, 352>;
 
-template <std::uint32_t baseaddress>
-using bkp19r_t = bkp19r_tt<"BKP19R",baseaddress,356>;
+  template <std::uint32_t baseaddress>
+  using bkp19r_t = bkp19r_tt<"BKP19R", baseaddress, 356>;
 
 } // namespace tamp
-

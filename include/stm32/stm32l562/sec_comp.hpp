@@ -11,57 +11,56 @@ namespace stm32 {
 
 namespace sec_comp {
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using comp1_csr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"COMP1_LOCK", bool, 31, 31 ,access::wo>,
-  groov::field<"COMP1_VALUE", bool, 30, 30 ,access::ro>,
-  groov::field<"RESERVED3", std::uint8_t, 29, 24 ,access::ro>,
-  groov::field<"COMP1_SCALEN", bool, 23, 23 >,
-  groov::field<"COMP1_BRGEN", bool, 22, 22 >,
-  groov::field<"RESERVED2", bool, 21, 21 ,access::ro>,
-  groov::field<"COMP1_BLANKING", std::uint8_t, 20, 18 >,
-  groov::field<"COMP1_HYST", std::uint8_t, 17, 16 >,
-  groov::field<"COMP1_POLARITY", bool, 15, 15 >,
-  groov::field<"RESERVED1", std::uint8_t, 14, 8 ,access::ro>,
-  groov::field<"COMP1_INPSEL", bool, 7, 7 >,
-  groov::field<"COMP1_INMSEL", std::uint8_t, 6, 4 >,
-  groov::field<"COMP1_PWRMODE", std::uint8_t, 3, 2 >,
-  groov::field<"RESERVED0", bool, 1, 1 ,access::ro>,
-  groov::field<"COMP1_EN", bool, 0, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using comp1_csr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"COMP1_LOCK", bool, 31, 31, access::wo>,
+               groov::field<"COMP1_VALUE", bool, 30, 30, access::ro>,
+               groov::field<"RESERVED3", std::uint8_t, 29, 24, access::ro>,
+               groov::field<"COMP1_SCALEN", bool, 23, 23>,
+               groov::field<"COMP1_BRGEN", bool, 22, 22>,
+               groov::field<"RESERVED2", bool, 21, 21, access::ro>,
+               groov::field<"COMP1_BLANKING", std::uint8_t, 20, 18>,
+               groov::field<"COMP1_HYST", std::uint8_t, 17, 16>,
+               groov::field<"COMP1_POLARITY", bool, 15, 15>,
+               groov::field<"RESERVED1", std::uint8_t, 14, 8, access::ro>,
+               groov::field<"COMP1_INPSEL", bool, 7, 7>,
+               groov::field<"COMP1_INMSEL", std::uint8_t, 6, 4>,
+               groov::field<"COMP1_PWRMODE", std::uint8_t, 3, 2>,
+               groov::field<"RESERVED0", bool, 1, 1, access::ro>,
+               groov::field<"COMP1_EN", bool, 0, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using comp2_csr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"COMP2_LOCK", bool, 31, 31 ,access::wo>,
-  groov::field<"COMP2_VALUE", bool, 30, 30 ,access::ro>,
-  groov::field<"RESERVED4", std::uint8_t, 29, 24 ,access::ro>,
-  groov::field<"COMP2_SCALEN", bool, 23, 23 >,
-  groov::field<"COMP2_BRGEN", bool, 22, 22 >,
-  groov::field<"RESERVED3", bool, 21, 21 ,access::ro>,
-  groov::field<"COMP2_BLANKING", std::uint8_t, 20, 18 >,
-  groov::field<"COMP2_HYST", std::uint8_t, 17, 16 >,
-  groov::field<"COMP2_POLARITY", bool, 15, 15 >,
-  groov::field<"RESERVED2", std::uint8_t, 14, 10 ,access::ro>,
-  groov::field<"COMP2_WINMODE", bool, 9, 9 >,
-  groov::field<"RESERVED1", bool, 8, 8 ,access::ro>,
-  groov::field<"COMP2_INPSEL", bool, 7, 7 >,
-  groov::field<"COMP2_INMSEL", std::uint8_t, 6, 4 >,
-  groov::field<"COMP2_PWRMODE", std::uint8_t, 3, 2 >,
-  groov::field<"RESERVED0", bool, 1, 1 ,access::ro>,
-  groov::field<"COMP2_EN", bool, 0, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using comp2_csr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"COMP2_LOCK", bool, 31, 31, access::wo>,
+               groov::field<"COMP2_VALUE", bool, 30, 30, access::ro>,
+               groov::field<"RESERVED4", std::uint8_t, 29, 24, access::ro>,
+               groov::field<"COMP2_SCALEN", bool, 23, 23>,
+               groov::field<"COMP2_BRGEN", bool, 22, 22>,
+               groov::field<"RESERVED3", bool, 21, 21, access::ro>,
+               groov::field<"COMP2_BLANKING", std::uint8_t, 20, 18>,
+               groov::field<"COMP2_HYST", std::uint8_t, 17, 16>,
+               groov::field<"COMP2_POLARITY", bool, 15, 15>,
+               groov::field<"RESERVED2", std::uint8_t, 14, 10, access::ro>,
+               groov::field<"COMP2_WINMODE", bool, 9, 9>,
+               groov::field<"RESERVED1", bool, 8, 8, access::ro>,
+               groov::field<"COMP2_INPSEL", bool, 7, 7>,
+               groov::field<"COMP2_INMSEL", std::uint8_t, 6, 4>,
+               groov::field<"COMP2_PWRMODE", std::uint8_t, 3, 2>,
+               groov::field<"RESERVED0", bool, 1, 1, access::ro>,
+               groov::field<"COMP2_EN", bool, 0, 0>>;
 
-template <std::uint32_t baseaddress>
-using comp1_csr_t = comp1_csr_tt<"COMP1_CSR",baseaddress,0>;
+  template <std::uint32_t baseaddress>
+  using comp1_csr_t = comp1_csr_tt<"COMP1_CSR", baseaddress, 0>;
 
-template <std::uint32_t baseaddress>
-using comp2_csr_t = comp2_csr_tt<"COMP2_CSR",baseaddress,4>;
+  template <std::uint32_t baseaddress>
+  using comp2_csr_t = comp2_csr_tt<"COMP2_CSR", baseaddress, 4>;
 
 } // namespace sec_comp
-

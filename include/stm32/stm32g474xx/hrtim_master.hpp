@@ -11,184 +11,182 @@ namespace stm32 {
 
 namespace hrtim_master {
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using mcr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"BRSTDMA", std::uint8_t, 31, 30 >,
-  groov::field<"MREPU", bool, 29, 29 >,
-  groov::field<"RESERVED1", bool, 28, 28 ,access::ro>,
-  groov::field<"PREEN", bool, 27, 27 >,
-  groov::field<"DACSYNC", std::uint8_t, 26, 25 >,
-  groov::field<"RESERVED0", std::uint8_t, 24, 23 ,access::ro>,
-  groov::field<"TFCEN", bool, 22, 22 >,
-  groov::field<"TECEN", bool, 21, 21 >,
-  groov::field<"TDCEN", bool, 20, 20 >,
-  groov::field<"TCCEN", bool, 19, 19 >,
-  groov::field<"TBCEN", bool, 18, 18 >,
-  groov::field<"TACEN", bool, 17, 17 >,
-  groov::field<"MCEN", bool, 16, 16 >,
-  groov::field<"SYNC_SRC", std::uint8_t, 15, 14 >,
-  groov::field<"SYNC_OUT", std::uint8_t, 13, 12 >,
-  groov::field<"SYNCSTRTM", bool, 11, 11 >,
-  groov::field<"SYNCRSTM", bool, 10, 10 >,
-  groov::field<"SYNC_IN", std::uint8_t, 9, 8 >,
-  groov::field<"INTLVD", std::uint8_t, 7, 6 >,
-  groov::field<"HALF", bool, 5, 5 >,
-  groov::field<"RETRIG", bool, 4, 4 >,
-  groov::field<"CONT", bool, 3, 3 >,
-  groov::field<"CK_PSC", std::uint8_t, 2, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using mcr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"BRSTDMA", std::uint8_t, 31, 30>,
+               groov::field<"MREPU", bool, 29, 29>,
+               groov::field<"RESERVED1", bool, 28, 28, access::ro>,
+               groov::field<"PREEN", bool, 27, 27>,
+               groov::field<"DACSYNC", std::uint8_t, 26, 25>,
+               groov::field<"RESERVED0", std::uint8_t, 24, 23, access::ro>,
+               groov::field<"TFCEN", bool, 22, 22>,
+               groov::field<"TECEN", bool, 21, 21>,
+               groov::field<"TDCEN", bool, 20, 20>,
+               groov::field<"TCCEN", bool, 19, 19>,
+               groov::field<"TBCEN", bool, 18, 18>,
+               groov::field<"TACEN", bool, 17, 17>,
+               groov::field<"MCEN", bool, 16, 16>,
+               groov::field<"SYNC_SRC", std::uint8_t, 15, 14>,
+               groov::field<"SYNC_OUT", std::uint8_t, 13, 12>,
+               groov::field<"SYNCSTRTM", bool, 11, 11>,
+               groov::field<"SYNCRSTM", bool, 10, 10>,
+               groov::field<"SYNC_IN", std::uint8_t, 9, 8>,
+               groov::field<"INTLVD", std::uint8_t, 7, 6>,
+               groov::field<"HALF", bool, 5, 5>,
+               groov::field<"RETRIG", bool, 4, 4>,
+               groov::field<"CONT", bool, 3, 3>,
+               groov::field<"CK_PSC", std::uint8_t, 2, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using misr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::ro,
-  groov::field<"RESERVED0", std::uint32_t, 31, 7 >,
-  groov::field<"MUPD", bool, 6, 6 >,
-  groov::field<"SYNC", bool, 5, 5 >,
-  groov::field<"MREP", bool, 4, 4 >,
-  groov::field<"MCMP4", bool, 3, 3 >,
-  groov::field<"MCMP3", bool, 2, 2 >,
-  groov::field<"MCMP2", bool, 1, 1 >,
-  groov::field<"MCMP1", bool, 0, 0 >
-  >;
+                             std::uint32_t,
+                             baseaddress + offset,
+                             access::ro,
+                             groov::field<"RESERVED0", std::uint32_t, 31, 7>,
+                             groov::field<"MUPD", bool, 6, 6>,
+                             groov::field<"SYNC", bool, 5, 5>,
+                             groov::field<"MREP", bool, 4, 4>,
+                             groov::field<"MCMP4", bool, 3, 3>,
+                             groov::field<"MCMP3", bool, 2, 2>,
+                             groov::field<"MCMP2", bool, 1, 1>,
+                             groov::field<"MCMP1", bool, 0, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using micr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::wo,
-  groov::field<"RESERVED0", std::uint32_t, 31, 7 ,access::ro>,
-  groov::field<"MUPDC", bool, 6, 6 >,
-  groov::field<"SYNCC", bool, 5, 5 >,
-  groov::field<"MREPC", bool, 4, 4 >,
-  groov::field<"MCMP4C", bool, 3, 3 >,
-  groov::field<"MCMP3C", bool, 2, 2 >,
-  groov::field<"MCMP2C", bool, 1, 1 >,
-  groov::field<"MCMP1C", bool, 0, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using micr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::wo,
+               groov::field<"RESERVED0", std::uint32_t, 31, 7, access::ro>,
+               groov::field<"MUPDC", bool, 6, 6>,
+               groov::field<"SYNCC", bool, 5, 5>,
+               groov::field<"MREPC", bool, 4, 4>,
+               groov::field<"MCMP4C", bool, 3, 3>,
+               groov::field<"MCMP3C", bool, 2, 2>,
+               groov::field<"MCMP2C", bool, 1, 1>,
+               groov::field<"MCMP1C", bool, 0, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using mdier_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED1", std::uint16_t, 31, 23 ,access::ro>,
-  groov::field<"MUPDDE", bool, 22, 22 >,
-  groov::field<"SYNCDE", bool, 21, 21 >,
-  groov::field<"MREPDE", bool, 20, 20 >,
-  groov::field<"MCMP4DE", bool, 19, 19 >,
-  groov::field<"MCMP3DE", bool, 18, 18 >,
-  groov::field<"MCMP2DE", bool, 17, 17 >,
-  groov::field<"MCMP1DE", bool, 16, 16 >,
-  groov::field<"RESERVED0", std::uint16_t, 15, 7 ,access::ro>,
-  groov::field<"MUPDIE", bool, 6, 6 >,
-  groov::field<"SYNCIE", bool, 5, 5 >,
-  groov::field<"MREPIE", bool, 4, 4 >,
-  groov::field<"MCMP4IE", bool, 3, 3 >,
-  groov::field<"MCMP3IE", bool, 2, 2 >,
-  groov::field<"MCMP2IE", bool, 1, 1 >,
-  groov::field<"MCMP1IE", bool, 0, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using mdier_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED1", std::uint16_t, 31, 23, access::ro>,
+               groov::field<"MUPDDE", bool, 22, 22>,
+               groov::field<"SYNCDE", bool, 21, 21>,
+               groov::field<"MREPDE", bool, 20, 20>,
+               groov::field<"MCMP4DE", bool, 19, 19>,
+               groov::field<"MCMP3DE", bool, 18, 18>,
+               groov::field<"MCMP2DE", bool, 17, 17>,
+               groov::field<"MCMP1DE", bool, 16, 16>,
+               groov::field<"RESERVED0", std::uint16_t, 15, 7, access::ro>,
+               groov::field<"MUPDIE", bool, 6, 6>,
+               groov::field<"SYNCIE", bool, 5, 5>,
+               groov::field<"MREPIE", bool, 4, 4>,
+               groov::field<"MCMP4IE", bool, 3, 3>,
+               groov::field<"MCMP3IE", bool, 2, 2>,
+               groov::field<"MCMP2IE", bool, 1, 1>,
+               groov::field<"MCMP1IE", bool, 0, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using mcntr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint16_t, 31, 16 ,access::ro>,
-  groov::field<"MCNT", std::uint16_t, 15, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using mcntr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
+               groov::field<"MCNT", std::uint16_t, 15, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using mper_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint16_t, 31, 16 ,access::ro>,
-  groov::field<"MPER", std::uint16_t, 15, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using mper_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
+               groov::field<"MPER", std::uint16_t, 15, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using mrep_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint32_t, 31, 8 ,access::ro>,
-  groov::field<"MREP", std::uint8_t, 7, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using mrep_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint32_t, 31, 8, access::ro>,
+               groov::field<"MREP", std::uint8_t, 7, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using mcmp1r_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint16_t, 31, 16 ,access::ro>,
-  groov::field<"MCMP1", std::uint16_t, 15, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using mcmp1r_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
+               groov::field<"MCMP1", std::uint16_t, 15, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using mcmp2r_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint16_t, 31, 16 ,access::ro>,
-  groov::field<"MCMP2", std::uint16_t, 15, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using mcmp2r_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
+               groov::field<"MCMP2", std::uint16_t, 15, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using mcmp3r_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint16_t, 31, 16 ,access::ro>,
-  groov::field<"MCMP3", std::uint16_t, 15, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using mcmp3r_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
+               groov::field<"MCMP3", std::uint16_t, 15, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using mcmp4r_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint16_t, 31, 16 ,access::ro>,
-  groov::field<"MCMP4", std::uint16_t, 15, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using mcmp4r_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
+               groov::field<"MCMP4", std::uint16_t, 15, 0>>;
 
-template <std::uint32_t baseaddress>
-using mcr_t = mcr_tt<"MCR",baseaddress,0>;
+  template <std::uint32_t baseaddress>
+  using mcr_t = mcr_tt<"MCR", baseaddress, 0>;
 
-template <std::uint32_t baseaddress>
-using misr_t = misr_tt<"MISR",baseaddress,4>;
+  template <std::uint32_t baseaddress>
+  using misr_t = misr_tt<"MISR", baseaddress, 4>;
 
-template <std::uint32_t baseaddress>
-using micr_t = micr_tt<"MICR",baseaddress,8>;
+  template <std::uint32_t baseaddress>
+  using micr_t = micr_tt<"MICR", baseaddress, 8>;
 
-template <std::uint32_t baseaddress>
-using mdier_t = mdier_tt<"MDIER",baseaddress,12>;
+  template <std::uint32_t baseaddress>
+  using mdier_t = mdier_tt<"MDIER", baseaddress, 12>;
 
-template <std::uint32_t baseaddress>
-using mcntr_t = mcntr_tt<"MCNTR",baseaddress,16>;
+  template <std::uint32_t baseaddress>
+  using mcntr_t = mcntr_tt<"MCNTR", baseaddress, 16>;
 
-template <std::uint32_t baseaddress>
-using mper_t = mper_tt<"MPER",baseaddress,20>;
+  template <std::uint32_t baseaddress>
+  using mper_t = mper_tt<"MPER", baseaddress, 20>;
 
-template <std::uint32_t baseaddress>
-using mrep_t = mrep_tt<"MREP",baseaddress,24>;
+  template <std::uint32_t baseaddress>
+  using mrep_t = mrep_tt<"MREP", baseaddress, 24>;
 
-template <std::uint32_t baseaddress>
-using mcmp1r_t = mcmp1r_tt<"MCMP1R",baseaddress,28>;
+  template <std::uint32_t baseaddress>
+  using mcmp1r_t = mcmp1r_tt<"MCMP1R", baseaddress, 28>;
 
-template <std::uint32_t baseaddress>
-using mcmp2r_t = mcmp2r_tt<"MCMP2R",baseaddress,36>;
+  template <std::uint32_t baseaddress>
+  using mcmp2r_t = mcmp2r_tt<"MCMP2R", baseaddress, 36>;
 
-template <std::uint32_t baseaddress>
-using mcmp3r_t = mcmp3r_tt<"MCMP3R",baseaddress,40>;
+  template <std::uint32_t baseaddress>
+  using mcmp3r_t = mcmp3r_tt<"MCMP3R", baseaddress, 40>;
 
-template <std::uint32_t baseaddress>
-using mcmp4r_t = mcmp4r_tt<"MCMP4R",baseaddress,44>;
+  template <std::uint32_t baseaddress>
+  using mcmp4r_t = mcmp4r_tt<"MCMP4R", baseaddress, 44>;
 
 } // namespace hrtim_master
-

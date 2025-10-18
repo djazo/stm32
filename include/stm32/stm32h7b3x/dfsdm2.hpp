@@ -11,2597 +11,2706 @@ namespace stm32 {
 
 namespace dfsdm2 {
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_ch0cfgr1_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DFSDMEN", bool, 31, 31 >,
-  groov::field<"CKOUTSRC", bool, 30, 30 >,
-  groov::field<"RESERVED2", std::uint8_t, 29, 24 ,access::ro>,
-  groov::field<"CKOUTDIV", std::uint8_t, 23, 16 >,
-  groov::field<"DATPACK", std::uint8_t, 15, 14 >,
-  groov::field<"DATMPX", std::uint8_t, 13, 12 >,
-  groov::field<"RESERVED1", std::uint8_t, 11, 9 ,access::ro>,
-  groov::field<"CHINSEL", bool, 8, 8 >,
-  groov::field<"CHEN", bool, 7, 7 >,
-  groov::field<"CKABEN", bool, 6, 6 >,
-  groov::field<"SCDEN", bool, 5, 5 >,
-  groov::field<"RESERVED0", bool, 4, 4 ,access::ro>,
-  groov::field<"SPICKSEL", std::uint8_t, 3, 2 >,
-  groov::field<"SITP", std::uint8_t, 1, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_ch0cfgr2_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"OFFSET", std::uint32_t, 31, 8 >,
-  groov::field<"DTRBS", std::uint8_t, 7, 3 >,
-  groov::field<"RESERVED0", std::uint8_t, 2, 0 ,access::ro>
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_ch0awscdr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED2", std::uint8_t, 31, 24 ,access::ro>,
-  groov::field<"AWFORD", std::uint8_t, 23, 22 >,
-  groov::field<"RESERVED1", bool, 21, 21 ,access::ro>,
-  groov::field<"AWFOSR", std::uint8_t, 20, 16 >,
-  groov::field<"BKSCD", std::uint8_t, 15, 12 >,
-  groov::field<"RESERVED0", std::uint8_t, 11, 8 ,access::ro>,
-  groov::field<"SCDT", std::uint8_t, 7, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_ch0wdatr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint16_t, 31, 16 ,access::ro>,
-  groov::field<"WDATA", std::uint16_t, 15, 0 ,access::ro>
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_ch0datinr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"INDAT1", std::uint16_t, 31, 16 >,
-  groov::field<"INDAT0", std::uint16_t, 15, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_ch0dlyr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint32_t, 31, 6 ,access::ro>,
-  groov::field<"PLSSKP", std::uint8_t, 5, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_ch1cfgr1_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DFSDMEN", bool, 31, 31 >,
-  groov::field<"CKOUTSRC", bool, 30, 30 >,
-  groov::field<"RESERVED2", std::uint8_t, 29, 24 ,access::ro>,
-  groov::field<"CKOUTDIV", std::uint8_t, 23, 16 >,
-  groov::field<"DATPACK", std::uint8_t, 15, 14 >,
-  groov::field<"DATMPX", std::uint8_t, 13, 12 >,
-  groov::field<"RESERVED1", std::uint8_t, 11, 9 ,access::ro>,
-  groov::field<"CHINSEL", bool, 8, 8 >,
-  groov::field<"CHEN", bool, 7, 7 >,
-  groov::field<"CKABEN", bool, 6, 6 >,
-  groov::field<"SCDEN", bool, 5, 5 >,
-  groov::field<"RESERVED0", bool, 4, 4 ,access::ro>,
-  groov::field<"SPICKSEL", std::uint8_t, 3, 2 >,
-  groov::field<"SITP", std::uint8_t, 1, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_ch1cfgr2_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"OFFSET", std::uint32_t, 31, 8 >,
-  groov::field<"DTRBS", std::uint8_t, 7, 3 >,
-  groov::field<"RESERVED0", std::uint8_t, 2, 0 ,access::ro>
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_ch1awscdr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED2", std::uint8_t, 31, 24 ,access::ro>,
-  groov::field<"AWFORD", std::uint8_t, 23, 22 >,
-  groov::field<"RESERVED1", bool, 21, 21 ,access::ro>,
-  groov::field<"AWFOSR", std::uint8_t, 20, 16 >,
-  groov::field<"BKSCD", std::uint8_t, 15, 12 >,
-  groov::field<"RESERVED0", std::uint8_t, 11, 8 ,access::ro>,
-  groov::field<"SCDT", std::uint8_t, 7, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_ch1wdatr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint16_t, 31, 16 ,access::ro>,
-  groov::field<"WDATA", std::uint16_t, 15, 0 ,access::ro>
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_ch1datinr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"INDAT1", std::uint16_t, 31, 16 >,
-  groov::field<"INDAT0", std::uint16_t, 15, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_ch1dlyr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint32_t, 31, 6 ,access::ro>,
-  groov::field<"PLSSKP", std::uint8_t, 5, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_ch2cfgr1_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DFSDMEN", bool, 31, 31 >,
-  groov::field<"CKOUTSRC", bool, 30, 30 >,
-  groov::field<"RESERVED2", std::uint8_t, 29, 24 ,access::ro>,
-  groov::field<"CKOUTDIV", std::uint8_t, 23, 16 >,
-  groov::field<"DATPACK", std::uint8_t, 15, 14 >,
-  groov::field<"DATMPX", std::uint8_t, 13, 12 >,
-  groov::field<"RESERVED1", std::uint8_t, 11, 9 ,access::ro>,
-  groov::field<"CHINSEL", bool, 8, 8 >,
-  groov::field<"CHEN", bool, 7, 7 >,
-  groov::field<"CKABEN", bool, 6, 6 >,
-  groov::field<"SCDEN", bool, 5, 5 >,
-  groov::field<"RESERVED0", bool, 4, 4 ,access::ro>,
-  groov::field<"SPICKSEL", std::uint8_t, 3, 2 >,
-  groov::field<"SITP", std::uint8_t, 1, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_ch2cfgr2_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"OFFSET", std::uint32_t, 31, 8 >,
-  groov::field<"DTRBS", std::uint8_t, 7, 3 >,
-  groov::field<"RESERVED0", std::uint8_t, 2, 0 ,access::ro>
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_ch2awscdr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED2", std::uint8_t, 31, 24 ,access::ro>,
-  groov::field<"AWFORD", std::uint8_t, 23, 22 >,
-  groov::field<"RESERVED1", bool, 21, 21 ,access::ro>,
-  groov::field<"AWFOSR", std::uint8_t, 20, 16 >,
-  groov::field<"BKSCD", std::uint8_t, 15, 12 >,
-  groov::field<"RESERVED0", std::uint8_t, 11, 8 ,access::ro>,
-  groov::field<"SCDT", std::uint8_t, 7, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_ch2wdatr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint16_t, 31, 16 ,access::ro>,
-  groov::field<"WDATA", std::uint16_t, 15, 0 ,access::ro>
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_ch2datinr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"INDAT1", std::uint16_t, 31, 16 >,
-  groov::field<"INDAT0", std::uint16_t, 15, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_ch2dlyr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint32_t, 31, 6 ,access::ro>,
-  groov::field<"PLSSKP", std::uint8_t, 5, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_ch3cfgr1_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DFSDMEN", bool, 31, 31 >,
-  groov::field<"CKOUTSRC", bool, 30, 30 >,
-  groov::field<"RESERVED2", std::uint8_t, 29, 24 ,access::ro>,
-  groov::field<"CKOUTDIV", std::uint8_t, 23, 16 >,
-  groov::field<"DATPACK", std::uint8_t, 15, 14 >,
-  groov::field<"DATMPX", std::uint8_t, 13, 12 >,
-  groov::field<"RESERVED1", std::uint8_t, 11, 9 ,access::ro>,
-  groov::field<"CHINSEL", bool, 8, 8 >,
-  groov::field<"CHEN", bool, 7, 7 >,
-  groov::field<"CKABEN", bool, 6, 6 >,
-  groov::field<"SCDEN", bool, 5, 5 >,
-  groov::field<"RESERVED0", bool, 4, 4 ,access::ro>,
-  groov::field<"SPICKSEL", std::uint8_t, 3, 2 >,
-  groov::field<"SITP", std::uint8_t, 1, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_ch3cfgr2_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"OFFSET", std::uint32_t, 31, 8 >,
-  groov::field<"DTRBS", std::uint8_t, 7, 3 >,
-  groov::field<"RESERVED0", std::uint8_t, 2, 0 ,access::ro>
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_ch3awscdr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED2", std::uint8_t, 31, 24 ,access::ro>,
-  groov::field<"AWFORD", std::uint8_t, 23, 22 >,
-  groov::field<"RESERVED1", bool, 21, 21 ,access::ro>,
-  groov::field<"AWFOSR", std::uint8_t, 20, 16 >,
-  groov::field<"BKSCD", std::uint8_t, 15, 12 >,
-  groov::field<"RESERVED0", std::uint8_t, 11, 8 ,access::ro>,
-  groov::field<"SCDT", std::uint8_t, 7, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_ch3wdatr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint16_t, 31, 16 ,access::ro>,
-  groov::field<"WDATA", std::uint16_t, 15, 0 ,access::ro>
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_ch3datinr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"INDAT1", std::uint16_t, 31, 16 >,
-  groov::field<"INDAT0", std::uint16_t, 15, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_ch3dlyr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint32_t, 31, 6 ,access::ro>,
-  groov::field<"PLSSKP", std::uint8_t, 5, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_ch4cfgr1_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DFSDMEN", bool, 31, 31 >,
-  groov::field<"CKOUTSRC", bool, 30, 30 >,
-  groov::field<"RESERVED2", std::uint8_t, 29, 24 ,access::ro>,
-  groov::field<"CKOUTDIV", std::uint8_t, 23, 16 >,
-  groov::field<"DATPACK", std::uint8_t, 15, 14 >,
-  groov::field<"DATMPX", std::uint8_t, 13, 12 >,
-  groov::field<"RESERVED1", std::uint8_t, 11, 9 ,access::ro>,
-  groov::field<"CHINSEL", bool, 8, 8 >,
-  groov::field<"CHEN", bool, 7, 7 >,
-  groov::field<"CKABEN", bool, 6, 6 >,
-  groov::field<"SCDEN", bool, 5, 5 >,
-  groov::field<"RESERVED0", bool, 4, 4 ,access::ro>,
-  groov::field<"SPICKSEL", std::uint8_t, 3, 2 >,
-  groov::field<"SITP", std::uint8_t, 1, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_ch4cfgr2_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"OFFSET", std::uint32_t, 31, 8 >,
-  groov::field<"DTRBS", std::uint8_t, 7, 3 >,
-  groov::field<"RESERVED0", std::uint8_t, 2, 0 ,access::ro>
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_ch4awscdr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED2", std::uint8_t, 31, 24 ,access::ro>,
-  groov::field<"AWFORD", std::uint8_t, 23, 22 >,
-  groov::field<"RESERVED1", bool, 21, 21 ,access::ro>,
-  groov::field<"AWFOSR", std::uint8_t, 20, 16 >,
-  groov::field<"BKSCD", std::uint8_t, 15, 12 >,
-  groov::field<"RESERVED0", std::uint8_t, 11, 8 ,access::ro>,
-  groov::field<"SCDT", std::uint8_t, 7, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_ch4wdatr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint16_t, 31, 16 ,access::ro>,
-  groov::field<"WDATA", std::uint16_t, 15, 0 ,access::ro>
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_ch4datinr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"INDAT1", std::uint16_t, 31, 16 >,
-  groov::field<"INDAT0", std::uint16_t, 15, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_ch4dlyr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint32_t, 31, 6 ,access::ro>,
-  groov::field<"PLSSKP", std::uint8_t, 5, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_ch5cfgr1_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DFSDMEN", bool, 31, 31 >,
-  groov::field<"CKOUTSRC", bool, 30, 30 >,
-  groov::field<"RESERVED2", std::uint8_t, 29, 24 ,access::ro>,
-  groov::field<"CKOUTDIV", std::uint8_t, 23, 16 >,
-  groov::field<"DATPACK", std::uint8_t, 15, 14 >,
-  groov::field<"DATMPX", std::uint8_t, 13, 12 >,
-  groov::field<"RESERVED1", std::uint8_t, 11, 9 ,access::ro>,
-  groov::field<"CHINSEL", bool, 8, 8 >,
-  groov::field<"CHEN", bool, 7, 7 >,
-  groov::field<"CKABEN", bool, 6, 6 >,
-  groov::field<"SCDEN", bool, 5, 5 >,
-  groov::field<"RESERVED0", bool, 4, 4 ,access::ro>,
-  groov::field<"SPICKSEL", std::uint8_t, 3, 2 >,
-  groov::field<"SITP", std::uint8_t, 1, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_ch5cfgr2_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"OFFSET", std::uint32_t, 31, 8 >,
-  groov::field<"DTRBS", std::uint8_t, 7, 3 >,
-  groov::field<"RESERVED0", std::uint8_t, 2, 0 ,access::ro>
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_ch5awscdr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED2", std::uint8_t, 31, 24 ,access::ro>,
-  groov::field<"AWFORD", std::uint8_t, 23, 22 >,
-  groov::field<"RESERVED1", bool, 21, 21 ,access::ro>,
-  groov::field<"AWFOSR", std::uint8_t, 20, 16 >,
-  groov::field<"BKSCD", std::uint8_t, 15, 12 >,
-  groov::field<"RESERVED0", std::uint8_t, 11, 8 ,access::ro>,
-  groov::field<"SCDT", std::uint8_t, 7, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_ch5wdatr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint16_t, 31, 16 ,access::ro>,
-  groov::field<"WDATA", std::uint16_t, 15, 0 ,access::ro>
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_ch5datinr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"INDAT1", std::uint16_t, 31, 16 >,
-  groov::field<"INDAT0", std::uint16_t, 15, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_ch5dlyr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint32_t, 31, 6 ,access::ro>,
-  groov::field<"PLSSKP", std::uint8_t, 5, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_ch6cfgr1_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DFSDMEN", bool, 31, 31 >,
-  groov::field<"CKOUTSRC", bool, 30, 30 >,
-  groov::field<"RESERVED2", std::uint8_t, 29, 24 ,access::ro>,
-  groov::field<"CKOUTDIV", std::uint8_t, 23, 16 >,
-  groov::field<"DATPACK", std::uint8_t, 15, 14 >,
-  groov::field<"DATMPX", std::uint8_t, 13, 12 >,
-  groov::field<"RESERVED1", std::uint8_t, 11, 9 ,access::ro>,
-  groov::field<"CHINSEL", bool, 8, 8 >,
-  groov::field<"CHEN", bool, 7, 7 >,
-  groov::field<"CKABEN", bool, 6, 6 >,
-  groov::field<"SCDEN", bool, 5, 5 >,
-  groov::field<"RESERVED0", bool, 4, 4 ,access::ro>,
-  groov::field<"SPICKSEL", std::uint8_t, 3, 2 >,
-  groov::field<"SITP", std::uint8_t, 1, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_ch6cfgr2_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"OFFSET", std::uint32_t, 31, 8 >,
-  groov::field<"DTRBS", std::uint8_t, 7, 3 >,
-  groov::field<"RESERVED0", std::uint8_t, 2, 0 ,access::ro>
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_ch6awscdr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED2", std::uint8_t, 31, 24 ,access::ro>,
-  groov::field<"AWFORD", std::uint8_t, 23, 22 >,
-  groov::field<"RESERVED1", bool, 21, 21 ,access::ro>,
-  groov::field<"AWFOSR", std::uint8_t, 20, 16 >,
-  groov::field<"BKSCD", std::uint8_t, 15, 12 >,
-  groov::field<"RESERVED0", std::uint8_t, 11, 8 ,access::ro>,
-  groov::field<"SCDT", std::uint8_t, 7, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_ch6wdatr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint16_t, 31, 16 ,access::ro>,
-  groov::field<"WDATA", std::uint16_t, 15, 0 ,access::ro>
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_ch6datinr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"INDAT1", std::uint16_t, 31, 16 >,
-  groov::field<"INDAT0", std::uint16_t, 15, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_ch6dlyr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint32_t, 31, 6 ,access::ro>,
-  groov::field<"PLSSKP", std::uint8_t, 5, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_ch7cfgr1_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DFSDMEN", bool, 31, 31 >,
-  groov::field<"CKOUTSRC", bool, 30, 30 >,
-  groov::field<"RESERVED2", std::uint8_t, 29, 24 ,access::ro>,
-  groov::field<"CKOUTDIV", std::uint8_t, 23, 16 >,
-  groov::field<"DATPACK", std::uint8_t, 15, 14 >,
-  groov::field<"DATMPX", std::uint8_t, 13, 12 >,
-  groov::field<"RESERVED1", std::uint8_t, 11, 9 ,access::ro>,
-  groov::field<"CHINSEL", bool, 8, 8 >,
-  groov::field<"CHEN", bool, 7, 7 >,
-  groov::field<"CKABEN", bool, 6, 6 >,
-  groov::field<"SCDEN", bool, 5, 5 >,
-  groov::field<"RESERVED0", bool, 4, 4 ,access::ro>,
-  groov::field<"SPICKSEL", std::uint8_t, 3, 2 >,
-  groov::field<"SITP", std::uint8_t, 1, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_ch7cfgr2_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"OFFSET", std::uint32_t, 31, 8 >,
-  groov::field<"DTRBS", std::uint8_t, 7, 3 >,
-  groov::field<"RESERVED0", std::uint8_t, 2, 0 ,access::ro>
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_ch7awscdr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED2", std::uint8_t, 31, 24 ,access::ro>,
-  groov::field<"AWFORD", std::uint8_t, 23, 22 >,
-  groov::field<"RESERVED1", bool, 21, 21 ,access::ro>,
-  groov::field<"AWFOSR", std::uint8_t, 20, 16 >,
-  groov::field<"BKSCD", std::uint8_t, 15, 12 >,
-  groov::field<"RESERVED0", std::uint8_t, 11, 8 ,access::ro>,
-  groov::field<"SCDT", std::uint8_t, 7, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_ch7wdatr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint16_t, 31, 16 ,access::ro>,
-  groov::field<"WDATA", std::uint16_t, 15, 0 ,access::ro>
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_ch7datinr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"INDAT1", std::uint16_t, 31, 16 >,
-  groov::field<"INDAT0", std::uint16_t, 15, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_ch7dlyr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint32_t, 31, 6 ,access::ro>,
-  groov::field<"PLSSKP", std::uint8_t, 5, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt0cr1_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED6", bool, 31, 31 ,access::ro>,
-  groov::field<"AWFSEL", bool, 30, 30 >,
-  groov::field<"FAST", bool, 29, 29 >,
-  groov::field<"RESERVED5", std::uint8_t, 28, 27 ,access::ro>,
-  groov::field<"RCH", std::uint8_t, 26, 24 >,
-  groov::field<"RESERVED4", std::uint8_t, 23, 22 ,access::ro>,
-  groov::field<"RDMAEN", bool, 21, 21 >,
-  groov::field<"RESERVED3", bool, 20, 20 ,access::ro>,
-  groov::field<"RSYNC", bool, 19, 19 >,
-  groov::field<"RCONT", bool, 18, 18 >,
-  groov::field<"RSWSTART", bool, 17, 17 >,
-  groov::field<"RESERVED2", std::uint8_t, 16, 15 ,access::ro>,
-  groov::field<"JEXTEN", std::uint8_t, 14, 13 >,
-  groov::field<"JEXTSEL", std::uint8_t, 12, 8 >,
-  groov::field<"RESERVED1", std::uint8_t, 7, 6 ,access::ro>,
-  groov::field<"JDMAEN", bool, 5, 5 >,
-  groov::field<"JSCAN", bool, 4, 4 >,
-  groov::field<"JSYNC", bool, 3, 3 >,
-  groov::field<"RESERVED0", bool, 2, 2 ,access::ro>,
-  groov::field<"JSWSTART", bool, 1, 1 >,
-  groov::field<"DFEN", bool, 0, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt0cr2_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED1", std::uint8_t, 31, 24 ,access::ro>,
-  groov::field<"AWDCH", std::uint8_t, 23, 16 >,
-  groov::field<"EXCH", std::uint8_t, 15, 8 >,
-  groov::field<"RESERVED0", bool, 7, 7 ,access::ro>,
-  groov::field<"CKABIE", bool, 6, 6 >,
-  groov::field<"SCDIE", bool, 5, 5 >,
-  groov::field<"AWDIE", bool, 4, 4 >,
-  groov::field<"ROVRIE", bool, 3, 3 >,
-  groov::field<"JOVRIE", bool, 2, 2 >,
-  groov::field<"REOCIE", bool, 1, 1 >,
-  groov::field<"JEOCIE", bool, 0, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt0isr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"SCDF", std::uint8_t, 31, 24 ,access::ro>,
-  groov::field<"CKABF", std::uint8_t, 23, 16 ,access::ro>,
-  groov::field<"RESERVED1", bool, 15, 15 ,access::ro>,
-  groov::field<"RCIP", bool, 14, 14 ,access::ro>,
-  groov::field<"JCIP", bool, 13, 13 ,access::ro>,
-  groov::field<"RESERVED0", std::uint8_t, 12, 5 ,access::ro>,
-  groov::field<"AWDF", bool, 4, 4 ,access::ro>,
-  groov::field<"ROVRF", bool, 3, 3 ,access::ro>,
-  groov::field<"JOVRF", bool, 2, 2 ,access::ro>,
-  groov::field<"REOCF", bool, 1, 1 ,access::ro>,
-  groov::field<"JEOCF", bool, 0, 0 ,access::ro>
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt0icr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"CLRSCDF", std::uint8_t, 31, 24 >,
-  groov::field<"CLRCKABF", std::uint8_t, 23, 16 >,
-  groov::field<"RESERVED1", std::uint16_t, 15, 4 ,access::ro>,
-  groov::field<"CLRROVRF", bool, 3, 3 >,
-  groov::field<"CLRJOVRF", bool, 2, 2 >,
-  groov::field<"RESERVED0", std::uint8_t, 1, 0 ,access::ro>
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt0jchgr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint32_t, 31, 8 ,access::ro>,
-  groov::field<"JCHG", std::uint8_t, 7, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt0fcr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"FORD", std::uint8_t, 31, 29 >,
-  groov::field<"RESERVED1", std::uint8_t, 28, 26 ,access::ro>,
-  groov::field<"FOSR", std::uint16_t, 25, 16 >,
-  groov::field<"RESERVED0", std::uint8_t, 15, 8 ,access::ro>,
-  groov::field<"IOSR", std::uint8_t, 7, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt0jdatar_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"JDATA", std::uint32_t, 31, 8 ,access::ro>,
-  groov::field<"RESERVED0", std::uint8_t, 7, 3 ,access::ro>,
-  groov::field<"JDATACH", std::uint8_t, 2, 0 ,access::ro>
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt0rdatar_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RDATA", std::uint32_t, 31, 8 ,access::ro>,
-  groov::field<"RESERVED1", std::uint8_t, 7, 5 ,access::ro>,
-  groov::field<"RPEND", bool, 4, 4 ,access::ro>,
-  groov::field<"RESERVED0", bool, 3, 3 ,access::ro>,
-  groov::field<"RDATACH", std::uint8_t, 2, 0 ,access::ro>
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt0awhtr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"AWHT", std::uint32_t, 31, 8 >,
-  groov::field<"RESERVED0", std::uint8_t, 7, 4 ,access::ro>,
-  groov::field<"BKAWH", std::uint8_t, 3, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt0awltr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"AWLT", std::uint32_t, 31, 8 >,
-  groov::field<"RESERVED0", std::uint8_t, 7, 4 ,access::ro>,
-  groov::field<"BKAWL", std::uint8_t, 3, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt0awsr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint16_t, 31, 16 ,access::ro>,
-  groov::field<"AWHTF", std::uint8_t, 15, 8 ,access::ro>,
-  groov::field<"AWLTF", std::uint8_t, 7, 0 ,access::ro>
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt0awcfr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint16_t, 31, 16 ,access::ro>,
-  groov::field<"CLRAWHTF", std::uint8_t, 15, 8 >,
-  groov::field<"CLRAWLTF", std::uint8_t, 7, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt0exmax_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"EXMAX", std::uint32_t, 31, 8 ,access::ro>,
-  groov::field<"RESERVED0", std::uint8_t, 7, 3 ,access::ro>,
-  groov::field<"EXMAXCH", std::uint8_t, 2, 0 ,access::ro>
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt0exmin_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"EXMIN", std::uint32_t, 31, 8 >,
-  groov::field<"RESERVED0", std::uint8_t, 7, 3 ,access::ro>,
-  groov::field<"EXMINCH", std::uint8_t, 2, 0 ,access::ro>
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt0cnvtimr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"CNVCNT", std::uint32_t, 31, 4 ,access::ro>,
-  groov::field<"RESERVED0", std::uint8_t, 3, 0 ,access::ro>
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt1cr1_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED6", bool, 31, 31 ,access::ro>,
-  groov::field<"AWFSEL", bool, 30, 30 >,
-  groov::field<"FAST", bool, 29, 29 >,
-  groov::field<"RESERVED5", std::uint8_t, 28, 27 ,access::ro>,
-  groov::field<"RCH", std::uint8_t, 26, 24 >,
-  groov::field<"RESERVED4", std::uint8_t, 23, 22 ,access::ro>,
-  groov::field<"RDMAEN", bool, 21, 21 >,
-  groov::field<"RESERVED3", bool, 20, 20 ,access::ro>,
-  groov::field<"RSYNC", bool, 19, 19 >,
-  groov::field<"RCONT", bool, 18, 18 >,
-  groov::field<"RSWSTART", bool, 17, 17 >,
-  groov::field<"RESERVED2", std::uint8_t, 16, 15 ,access::ro>,
-  groov::field<"JEXTEN", std::uint8_t, 14, 13 >,
-  groov::field<"JEXTSEL", std::uint8_t, 12, 8 >,
-  groov::field<"RESERVED1", std::uint8_t, 7, 6 ,access::ro>,
-  groov::field<"JDMAEN", bool, 5, 5 >,
-  groov::field<"JSCAN", bool, 4, 4 >,
-  groov::field<"JSYNC", bool, 3, 3 >,
-  groov::field<"RESERVED0", bool, 2, 2 ,access::ro>,
-  groov::field<"JSWSTART", bool, 1, 1 >,
-  groov::field<"DFEN", bool, 0, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt1cr2_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED1", std::uint8_t, 31, 24 ,access::ro>,
-  groov::field<"AWDCH", std::uint8_t, 23, 16 >,
-  groov::field<"EXCH", std::uint8_t, 15, 8 >,
-  groov::field<"RESERVED0", bool, 7, 7 ,access::ro>,
-  groov::field<"CKABIE", bool, 6, 6 >,
-  groov::field<"SCDIE", bool, 5, 5 >,
-  groov::field<"AWDIE", bool, 4, 4 >,
-  groov::field<"ROVRIE", bool, 3, 3 >,
-  groov::field<"JOVRIE", bool, 2, 2 >,
-  groov::field<"REOCIE", bool, 1, 1 >,
-  groov::field<"JEOCIE", bool, 0, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt1isr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"SCDF", std::uint8_t, 31, 24 ,access::ro>,
-  groov::field<"CKABF", std::uint8_t, 23, 16 ,access::ro>,
-  groov::field<"RESERVED1", bool, 15, 15 ,access::ro>,
-  groov::field<"RCIP", bool, 14, 14 ,access::ro>,
-  groov::field<"JCIP", bool, 13, 13 ,access::ro>,
-  groov::field<"RESERVED0", std::uint8_t, 12, 5 ,access::ro>,
-  groov::field<"AWDF", bool, 4, 4 ,access::ro>,
-  groov::field<"ROVRF", bool, 3, 3 ,access::ro>,
-  groov::field<"JOVRF", bool, 2, 2 ,access::ro>,
-  groov::field<"REOCF", bool, 1, 1 ,access::ro>,
-  groov::field<"JEOCF", bool, 0, 0 ,access::ro>
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt1icr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"CLRSCDF", std::uint8_t, 31, 24 >,
-  groov::field<"CLRCKABF", std::uint8_t, 23, 16 >,
-  groov::field<"RESERVED1", std::uint16_t, 15, 4 ,access::ro>,
-  groov::field<"CLRROVRF", bool, 3, 3 >,
-  groov::field<"CLRJOVRF", bool, 2, 2 >,
-  groov::field<"RESERVED0", std::uint8_t, 1, 0 ,access::ro>
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt1jchgr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint32_t, 31, 8 ,access::ro>,
-  groov::field<"JCHG", std::uint8_t, 7, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt1fcr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"FORD", std::uint8_t, 31, 29 >,
-  groov::field<"RESERVED1", std::uint8_t, 28, 26 ,access::ro>,
-  groov::field<"FOSR", std::uint16_t, 25, 16 >,
-  groov::field<"RESERVED0", std::uint8_t, 15, 8 ,access::ro>,
-  groov::field<"IOSR", std::uint8_t, 7, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt1jdatar_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"JDATA", std::uint32_t, 31, 8 ,access::ro>,
-  groov::field<"RESERVED0", std::uint8_t, 7, 3 ,access::ro>,
-  groov::field<"JDATACH", std::uint8_t, 2, 0 ,access::ro>
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt1rdatar_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RDATA", std::uint32_t, 31, 8 ,access::ro>,
-  groov::field<"RESERVED1", std::uint8_t, 7, 5 ,access::ro>,
-  groov::field<"RPEND", bool, 4, 4 ,access::ro>,
-  groov::field<"RESERVED0", bool, 3, 3 ,access::ro>,
-  groov::field<"RDATACH", std::uint8_t, 2, 0 ,access::ro>
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt1awhtr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"AWHT", std::uint32_t, 31, 8 >,
-  groov::field<"RESERVED0", std::uint8_t, 7, 4 ,access::ro>,
-  groov::field<"BKAWH", std::uint8_t, 3, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt1awltr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"AWLT", std::uint32_t, 31, 8 >,
-  groov::field<"RESERVED0", std::uint8_t, 7, 4 ,access::ro>,
-  groov::field<"BKAWL", std::uint8_t, 3, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt1awsr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint16_t, 31, 16 ,access::ro>,
-  groov::field<"AWHTF", std::uint8_t, 15, 8 ,access::ro>,
-  groov::field<"AWLTF", std::uint8_t, 7, 0 ,access::ro>
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt1awcfr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint16_t, 31, 16 ,access::ro>,
-  groov::field<"CLRAWHTF", std::uint8_t, 15, 8 >,
-  groov::field<"CLRAWLTF", std::uint8_t, 7, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt1exmax_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"EXMAX", std::uint32_t, 31, 8 ,access::ro>,
-  groov::field<"RESERVED0", std::uint8_t, 7, 3 ,access::ro>,
-  groov::field<"EXMAXCH", std::uint8_t, 2, 0 ,access::ro>
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt1exmin_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"EXMIN", std::uint32_t, 31, 8 >,
-  groov::field<"RESERVED0", std::uint8_t, 7, 3 ,access::ro>,
-  groov::field<"EXMINCH", std::uint8_t, 2, 0 ,access::ro>
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt1cnvtimr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"CNVCNT", std::uint32_t, 31, 4 ,access::ro>,
-  groov::field<"RESERVED0", std::uint8_t, 3, 0 ,access::ro>
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt2cr1_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED6", bool, 31, 31 ,access::ro>,
-  groov::field<"AWFSEL", bool, 30, 30 >,
-  groov::field<"FAST", bool, 29, 29 >,
-  groov::field<"RESERVED5", std::uint8_t, 28, 27 ,access::ro>,
-  groov::field<"RCH", std::uint8_t, 26, 24 >,
-  groov::field<"RESERVED4", std::uint8_t, 23, 22 ,access::ro>,
-  groov::field<"RDMAEN", bool, 21, 21 >,
-  groov::field<"RESERVED3", bool, 20, 20 ,access::ro>,
-  groov::field<"RSYNC", bool, 19, 19 >,
-  groov::field<"RCONT", bool, 18, 18 >,
-  groov::field<"RSWSTART", bool, 17, 17 >,
-  groov::field<"RESERVED2", std::uint8_t, 16, 15 ,access::ro>,
-  groov::field<"JEXTEN", std::uint8_t, 14, 13 >,
-  groov::field<"JEXTSEL", std::uint8_t, 12, 8 >,
-  groov::field<"RESERVED1", std::uint8_t, 7, 6 ,access::ro>,
-  groov::field<"JDMAEN", bool, 5, 5 >,
-  groov::field<"JSCAN", bool, 4, 4 >,
-  groov::field<"JSYNC", bool, 3, 3 >,
-  groov::field<"RESERVED0", bool, 2, 2 ,access::ro>,
-  groov::field<"JSWSTART", bool, 1, 1 >,
-  groov::field<"DFEN", bool, 0, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt2cr2_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED1", std::uint8_t, 31, 24 ,access::ro>,
-  groov::field<"AWDCH", std::uint8_t, 23, 16 >,
-  groov::field<"EXCH", std::uint8_t, 15, 8 >,
-  groov::field<"RESERVED0", bool, 7, 7 ,access::ro>,
-  groov::field<"CKABIE", bool, 6, 6 >,
-  groov::field<"SCDIE", bool, 5, 5 >,
-  groov::field<"AWDIE", bool, 4, 4 >,
-  groov::field<"ROVRIE", bool, 3, 3 >,
-  groov::field<"JOVRIE", bool, 2, 2 >,
-  groov::field<"REOCIE", bool, 1, 1 >,
-  groov::field<"JEOCIE", bool, 0, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt2isr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"SCDF", std::uint8_t, 31, 24 ,access::ro>,
-  groov::field<"CKABF", std::uint8_t, 23, 16 ,access::ro>,
-  groov::field<"RESERVED1", bool, 15, 15 ,access::ro>,
-  groov::field<"RCIP", bool, 14, 14 ,access::ro>,
-  groov::field<"JCIP", bool, 13, 13 ,access::ro>,
-  groov::field<"RESERVED0", std::uint8_t, 12, 5 ,access::ro>,
-  groov::field<"AWDF", bool, 4, 4 ,access::ro>,
-  groov::field<"ROVRF", bool, 3, 3 ,access::ro>,
-  groov::field<"JOVRF", bool, 2, 2 ,access::ro>,
-  groov::field<"REOCF", bool, 1, 1 ,access::ro>,
-  groov::field<"JEOCF", bool, 0, 0 ,access::ro>
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt2icr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"CLRSCDF", std::uint8_t, 31, 24 >,
-  groov::field<"CLRCKABF", std::uint8_t, 23, 16 >,
-  groov::field<"RESERVED1", std::uint16_t, 15, 4 ,access::ro>,
-  groov::field<"CLRROVRF", bool, 3, 3 >,
-  groov::field<"CLRJOVRF", bool, 2, 2 >,
-  groov::field<"RESERVED0", std::uint8_t, 1, 0 ,access::ro>
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt2jchgr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint32_t, 31, 8 ,access::ro>,
-  groov::field<"JCHG", std::uint8_t, 7, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt2fcr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"FORD", std::uint8_t, 31, 29 >,
-  groov::field<"RESERVED1", std::uint8_t, 28, 26 ,access::ro>,
-  groov::field<"FOSR", std::uint16_t, 25, 16 >,
-  groov::field<"RESERVED0", std::uint8_t, 15, 8 ,access::ro>,
-  groov::field<"IOSR", std::uint8_t, 7, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt2jdatar_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"JDATA", std::uint32_t, 31, 8 ,access::ro>,
-  groov::field<"RESERVED0", std::uint8_t, 7, 3 ,access::ro>,
-  groov::field<"JDATACH", std::uint8_t, 2, 0 ,access::ro>
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt2rdatar_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RDATA", std::uint32_t, 31, 8 ,access::ro>,
-  groov::field<"RESERVED1", std::uint8_t, 7, 5 ,access::ro>,
-  groov::field<"RPEND", bool, 4, 4 ,access::ro>,
-  groov::field<"RESERVED0", bool, 3, 3 ,access::ro>,
-  groov::field<"RDATACH", std::uint8_t, 2, 0 ,access::ro>
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt2awhtr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"AWHT", std::uint32_t, 31, 8 >,
-  groov::field<"RESERVED0", std::uint8_t, 7, 4 ,access::ro>,
-  groov::field<"BKAWH", std::uint8_t, 3, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt2awltr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"AWLT", std::uint32_t, 31, 8 >,
-  groov::field<"RESERVED0", std::uint8_t, 7, 4 ,access::ro>,
-  groov::field<"BKAWL", std::uint8_t, 3, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt2awsr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint16_t, 31, 16 ,access::ro>,
-  groov::field<"AWHTF", std::uint8_t, 15, 8 ,access::ro>,
-  groov::field<"AWLTF", std::uint8_t, 7, 0 ,access::ro>
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt2awcfr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint16_t, 31, 16 ,access::ro>,
-  groov::field<"CLRAWHTF", std::uint8_t, 15, 8 >,
-  groov::field<"CLRAWLTF", std::uint8_t, 7, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt2exmax_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"EXMAX", std::uint32_t, 31, 8 ,access::ro>,
-  groov::field<"RESERVED0", std::uint8_t, 7, 3 ,access::ro>,
-  groov::field<"EXMAXCH", std::uint8_t, 2, 0 ,access::ro>
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt2exmin_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"EXMIN", std::uint32_t, 31, 8 >,
-  groov::field<"RESERVED0", std::uint8_t, 7, 3 ,access::ro>,
-  groov::field<"EXMINCH", std::uint8_t, 2, 0 ,access::ro>
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt2cnvtimr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"CNVCNT", std::uint32_t, 31, 4 ,access::ro>,
-  groov::field<"RESERVED0", std::uint8_t, 3, 0 ,access::ro>
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt3cr1_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED6", bool, 31, 31 ,access::ro>,
-  groov::field<"AWFSEL", bool, 30, 30 >,
-  groov::field<"FAST", bool, 29, 29 >,
-  groov::field<"RESERVED5", std::uint8_t, 28, 27 ,access::ro>,
-  groov::field<"RCH", std::uint8_t, 26, 24 >,
-  groov::field<"RESERVED4", std::uint8_t, 23, 22 ,access::ro>,
-  groov::field<"RDMAEN", bool, 21, 21 >,
-  groov::field<"RESERVED3", bool, 20, 20 ,access::ro>,
-  groov::field<"RSYNC", bool, 19, 19 >,
-  groov::field<"RCONT", bool, 18, 18 >,
-  groov::field<"RSWSTART", bool, 17, 17 >,
-  groov::field<"RESERVED2", std::uint8_t, 16, 15 ,access::ro>,
-  groov::field<"JEXTEN", std::uint8_t, 14, 13 >,
-  groov::field<"JEXTSEL", std::uint8_t, 12, 8 >,
-  groov::field<"RESERVED1", std::uint8_t, 7, 6 ,access::ro>,
-  groov::field<"JDMAEN", bool, 5, 5 >,
-  groov::field<"JSCAN", bool, 4, 4 >,
-  groov::field<"JSYNC", bool, 3, 3 >,
-  groov::field<"RESERVED0", bool, 2, 2 ,access::ro>,
-  groov::field<"JSWSTART", bool, 1, 1 >,
-  groov::field<"DFEN", bool, 0, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt3cr2_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED1", std::uint8_t, 31, 24 ,access::ro>,
-  groov::field<"AWDCH", std::uint8_t, 23, 16 >,
-  groov::field<"EXCH", std::uint8_t, 15, 8 >,
-  groov::field<"RESERVED0", bool, 7, 7 ,access::ro>,
-  groov::field<"CKABIE", bool, 6, 6 >,
-  groov::field<"SCDIE", bool, 5, 5 >,
-  groov::field<"AWDIE", bool, 4, 4 >,
-  groov::field<"ROVRIE", bool, 3, 3 >,
-  groov::field<"JOVRIE", bool, 2, 2 >,
-  groov::field<"REOCIE", bool, 1, 1 >,
-  groov::field<"JEOCIE", bool, 0, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt3isr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"SCDF", std::uint8_t, 31, 24 ,access::ro>,
-  groov::field<"CKABF", std::uint8_t, 23, 16 ,access::ro>,
-  groov::field<"RESERVED1", bool, 15, 15 ,access::ro>,
-  groov::field<"RCIP", bool, 14, 14 ,access::ro>,
-  groov::field<"JCIP", bool, 13, 13 ,access::ro>,
-  groov::field<"RESERVED0", std::uint8_t, 12, 5 ,access::ro>,
-  groov::field<"AWDF", bool, 4, 4 ,access::ro>,
-  groov::field<"ROVRF", bool, 3, 3 ,access::ro>,
-  groov::field<"JOVRF", bool, 2, 2 ,access::ro>,
-  groov::field<"REOCF", bool, 1, 1 ,access::ro>,
-  groov::field<"JEOCF", bool, 0, 0 ,access::ro>
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt3icr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"CLRSCDF", std::uint8_t, 31, 24 >,
-  groov::field<"CLRCKABF", std::uint8_t, 23, 16 >,
-  groov::field<"RESERVED1", std::uint16_t, 15, 4 ,access::ro>,
-  groov::field<"CLRROVRF", bool, 3, 3 >,
-  groov::field<"CLRJOVRF", bool, 2, 2 >,
-  groov::field<"RESERVED0", std::uint8_t, 1, 0 ,access::ro>
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt3jchgr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint32_t, 31, 8 ,access::ro>,
-  groov::field<"JCHG", std::uint8_t, 7, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt3fcr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"FORD", std::uint8_t, 31, 29 >,
-  groov::field<"RESERVED1", std::uint8_t, 28, 26 ,access::ro>,
-  groov::field<"FOSR", std::uint16_t, 25, 16 >,
-  groov::field<"RESERVED0", std::uint8_t, 15, 8 ,access::ro>,
-  groov::field<"IOSR", std::uint8_t, 7, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt3jdatar_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"JDATA", std::uint32_t, 31, 8 ,access::ro>,
-  groov::field<"RESERVED0", std::uint8_t, 7, 3 ,access::ro>,
-  groov::field<"JDATACH", std::uint8_t, 2, 0 ,access::ro>
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt3rdatar_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RDATA", std::uint32_t, 31, 8 ,access::ro>,
-  groov::field<"RESERVED1", std::uint8_t, 7, 5 ,access::ro>,
-  groov::field<"RPEND", bool, 4, 4 ,access::ro>,
-  groov::field<"RESERVED0", bool, 3, 3 ,access::ro>,
-  groov::field<"RDATACH", std::uint8_t, 2, 0 ,access::ro>
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt3awhtr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"AWHT", std::uint32_t, 31, 8 >,
-  groov::field<"RESERVED0", std::uint8_t, 7, 4 ,access::ro>,
-  groov::field<"BKAWH", std::uint8_t, 3, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt3awltr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"AWLT", std::uint32_t, 31, 8 >,
-  groov::field<"RESERVED0", std::uint8_t, 7, 4 ,access::ro>,
-  groov::field<"BKAWL", std::uint8_t, 3, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt3awsr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint16_t, 31, 16 ,access::ro>,
-  groov::field<"AWHTF", std::uint8_t, 15, 8 ,access::ro>,
-  groov::field<"AWLTF", std::uint8_t, 7, 0 ,access::ro>
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt3awcfr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint16_t, 31, 16 ,access::ro>,
-  groov::field<"CLRAWHTF", std::uint8_t, 15, 8 >,
-  groov::field<"CLRAWLTF", std::uint8_t, 7, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt3exmax_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"EXMAX", std::uint32_t, 31, 8 ,access::ro>,
-  groov::field<"RESERVED0", std::uint8_t, 7, 3 ,access::ro>,
-  groov::field<"EXMAXCH", std::uint8_t, 2, 0 ,access::ro>
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt3exmin_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"EXMIN", std::uint32_t, 31, 8 >,
-  groov::field<"RESERVED0", std::uint8_t, 7, 3 ,access::ro>,
-  groov::field<"EXMINCH", std::uint8_t, 2, 0 ,access::ro>
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt3cnvtimr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"CNVCNT", std::uint32_t, 31, 4 ,access::ro>,
-  groov::field<"RESERVED0", std::uint8_t, 3, 0 ,access::ro>
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt4cr1_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED6", bool, 31, 31 ,access::ro>,
-  groov::field<"AWFSEL", bool, 30, 30 >,
-  groov::field<"FAST", bool, 29, 29 >,
-  groov::field<"RESERVED5", std::uint8_t, 28, 27 ,access::ro>,
-  groov::field<"RCH", std::uint8_t, 26, 24 >,
-  groov::field<"RESERVED4", std::uint8_t, 23, 22 ,access::ro>,
-  groov::field<"RDMAEN", bool, 21, 21 >,
-  groov::field<"RESERVED3", bool, 20, 20 ,access::ro>,
-  groov::field<"RSYNC", bool, 19, 19 >,
-  groov::field<"RCONT", bool, 18, 18 >,
-  groov::field<"RSWSTART", bool, 17, 17 >,
-  groov::field<"RESERVED2", std::uint8_t, 16, 15 ,access::ro>,
-  groov::field<"JEXTEN", std::uint8_t, 14, 13 >,
-  groov::field<"JEXTSEL", std::uint8_t, 12, 8 >,
-  groov::field<"RESERVED1", std::uint8_t, 7, 6 ,access::ro>,
-  groov::field<"JDMAEN", bool, 5, 5 >,
-  groov::field<"JSCAN", bool, 4, 4 >,
-  groov::field<"JSYNC", bool, 3, 3 >,
-  groov::field<"RESERVED0", bool, 2, 2 ,access::ro>,
-  groov::field<"JSWSTART", bool, 1, 1 >,
-  groov::field<"DFEN", bool, 0, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt4cr2_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED1", std::uint8_t, 31, 24 ,access::ro>,
-  groov::field<"AWDCH", std::uint8_t, 23, 16 >,
-  groov::field<"EXCH", std::uint8_t, 15, 8 >,
-  groov::field<"RESERVED0", bool, 7, 7 ,access::ro>,
-  groov::field<"CKABIE", bool, 6, 6 >,
-  groov::field<"SCDIE", bool, 5, 5 >,
-  groov::field<"AWDIE", bool, 4, 4 >,
-  groov::field<"ROVRIE", bool, 3, 3 >,
-  groov::field<"JOVRIE", bool, 2, 2 >,
-  groov::field<"REOCIE", bool, 1, 1 >,
-  groov::field<"JEOCIE", bool, 0, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt4isr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"SCDF", std::uint8_t, 31, 24 ,access::ro>,
-  groov::field<"CKABF", std::uint8_t, 23, 16 ,access::ro>,
-  groov::field<"RESERVED1", bool, 15, 15 ,access::ro>,
-  groov::field<"RCIP", bool, 14, 14 ,access::ro>,
-  groov::field<"JCIP", bool, 13, 13 ,access::ro>,
-  groov::field<"RESERVED0", std::uint8_t, 12, 5 ,access::ro>,
-  groov::field<"AWDF", bool, 4, 4 ,access::ro>,
-  groov::field<"ROVRF", bool, 3, 3 ,access::ro>,
-  groov::field<"JOVRF", bool, 2, 2 ,access::ro>,
-  groov::field<"REOCF", bool, 1, 1 ,access::ro>,
-  groov::field<"JEOCF", bool, 0, 0 ,access::ro>
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt4icr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"CLRSCDF", std::uint8_t, 31, 24 >,
-  groov::field<"CLRCKABF", std::uint8_t, 23, 16 >,
-  groov::field<"RESERVED1", std::uint16_t, 15, 4 ,access::ro>,
-  groov::field<"CLRROVRF", bool, 3, 3 >,
-  groov::field<"CLRJOVRF", bool, 2, 2 >,
-  groov::field<"RESERVED0", std::uint8_t, 1, 0 ,access::ro>
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt4jchgr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint32_t, 31, 8 ,access::ro>,
-  groov::field<"JCHG", std::uint8_t, 7, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt4fcr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"FORD", std::uint8_t, 31, 29 >,
-  groov::field<"RESERVED1", std::uint8_t, 28, 26 ,access::ro>,
-  groov::field<"FOSR", std::uint16_t, 25, 16 >,
-  groov::field<"RESERVED0", std::uint8_t, 15, 8 ,access::ro>,
-  groov::field<"IOSR", std::uint8_t, 7, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt4jdatar_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"JDATA", std::uint32_t, 31, 8 ,access::ro>,
-  groov::field<"RESERVED0", std::uint8_t, 7, 3 ,access::ro>,
-  groov::field<"JDATACH", std::uint8_t, 2, 0 ,access::ro>
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt4rdatar_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RDATA", std::uint32_t, 31, 8 ,access::ro>,
-  groov::field<"RESERVED1", std::uint8_t, 7, 5 ,access::ro>,
-  groov::field<"RPEND", bool, 4, 4 ,access::ro>,
-  groov::field<"RESERVED0", bool, 3, 3 ,access::ro>,
-  groov::field<"RDATACH", std::uint8_t, 2, 0 ,access::ro>
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt4awhtr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"AWHT", std::uint32_t, 31, 8 >,
-  groov::field<"RESERVED0", std::uint8_t, 7, 4 ,access::ro>,
-  groov::field<"BKAWH", std::uint8_t, 3, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt4awltr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"AWLT", std::uint32_t, 31, 8 >,
-  groov::field<"RESERVED0", std::uint8_t, 7, 4 ,access::ro>,
-  groov::field<"BKAWL", std::uint8_t, 3, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt4awsr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint16_t, 31, 16 ,access::ro>,
-  groov::field<"AWHTF", std::uint8_t, 15, 8 ,access::ro>,
-  groov::field<"AWLTF", std::uint8_t, 7, 0 ,access::ro>
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt4awcfr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint16_t, 31, 16 ,access::ro>,
-  groov::field<"CLRAWHTF", std::uint8_t, 15, 8 >,
-  groov::field<"CLRAWLTF", std::uint8_t, 7, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt4exmax_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"EXMAX", std::uint32_t, 31, 8 ,access::ro>,
-  groov::field<"RESERVED0", std::uint8_t, 7, 3 ,access::ro>,
-  groov::field<"EXMAXCH", std::uint8_t, 2, 0 ,access::ro>
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt4exmin_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"EXMIN", std::uint32_t, 31, 8 >,
-  groov::field<"RESERVED0", std::uint8_t, 7, 3 ,access::ro>,
-  groov::field<"EXMINCH", std::uint8_t, 2, 0 ,access::ro>
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt4cnvtimr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"CNVCNT", std::uint32_t, 31, 4 ,access::ro>,
-  groov::field<"RESERVED0", std::uint8_t, 3, 0 ,access::ro>
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt5cr1_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED6", bool, 31, 31 ,access::ro>,
-  groov::field<"AWFSEL", bool, 30, 30 >,
-  groov::field<"FAST", bool, 29, 29 >,
-  groov::field<"RESERVED5", std::uint8_t, 28, 27 ,access::ro>,
-  groov::field<"RCH", std::uint8_t, 26, 24 >,
-  groov::field<"RESERVED4", std::uint8_t, 23, 22 ,access::ro>,
-  groov::field<"RDMAEN", bool, 21, 21 >,
-  groov::field<"RESERVED3", bool, 20, 20 ,access::ro>,
-  groov::field<"RSYNC", bool, 19, 19 >,
-  groov::field<"RCONT", bool, 18, 18 >,
-  groov::field<"RSWSTART", bool, 17, 17 >,
-  groov::field<"RESERVED2", std::uint8_t, 16, 15 ,access::ro>,
-  groov::field<"JEXTEN", std::uint8_t, 14, 13 >,
-  groov::field<"JEXTSEL", std::uint8_t, 12, 8 >,
-  groov::field<"RESERVED1", std::uint8_t, 7, 6 ,access::ro>,
-  groov::field<"JDMAEN", bool, 5, 5 >,
-  groov::field<"JSCAN", bool, 4, 4 >,
-  groov::field<"JSYNC", bool, 3, 3 >,
-  groov::field<"RESERVED0", bool, 2, 2 ,access::ro>,
-  groov::field<"JSWSTART", bool, 1, 1 >,
-  groov::field<"DFEN", bool, 0, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt5cr2_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED1", std::uint8_t, 31, 24 ,access::ro>,
-  groov::field<"AWDCH", std::uint8_t, 23, 16 >,
-  groov::field<"EXCH", std::uint8_t, 15, 8 >,
-  groov::field<"RESERVED0", bool, 7, 7 ,access::ro>,
-  groov::field<"CKABIE", bool, 6, 6 >,
-  groov::field<"SCDIE", bool, 5, 5 >,
-  groov::field<"AWDIE", bool, 4, 4 >,
-  groov::field<"ROVRIE", bool, 3, 3 >,
-  groov::field<"JOVRIE", bool, 2, 2 >,
-  groov::field<"REOCIE", bool, 1, 1 >,
-  groov::field<"JEOCIE", bool, 0, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt5isr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"SCDF", std::uint8_t, 31, 24 ,access::ro>,
-  groov::field<"CKABF", std::uint8_t, 23, 16 ,access::ro>,
-  groov::field<"RESERVED1", bool, 15, 15 ,access::ro>,
-  groov::field<"RCIP", bool, 14, 14 ,access::ro>,
-  groov::field<"JCIP", bool, 13, 13 ,access::ro>,
-  groov::field<"RESERVED0", std::uint8_t, 12, 5 ,access::ro>,
-  groov::field<"AWDF", bool, 4, 4 ,access::ro>,
-  groov::field<"ROVRF", bool, 3, 3 ,access::ro>,
-  groov::field<"JOVRF", bool, 2, 2 ,access::ro>,
-  groov::field<"REOCF", bool, 1, 1 ,access::ro>,
-  groov::field<"JEOCF", bool, 0, 0 ,access::ro>
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt5icr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"CLRSCDF", std::uint8_t, 31, 24 >,
-  groov::field<"CLRCKABF", std::uint8_t, 23, 16 >,
-  groov::field<"RESERVED1", std::uint16_t, 15, 4 ,access::ro>,
-  groov::field<"CLRROVRF", bool, 3, 3 >,
-  groov::field<"CLRJOVRF", bool, 2, 2 >,
-  groov::field<"RESERVED0", std::uint8_t, 1, 0 ,access::ro>
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt5jchgr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint32_t, 31, 8 ,access::ro>,
-  groov::field<"JCHG", std::uint8_t, 7, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt5fcr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"FORD", std::uint8_t, 31, 29 >,
-  groov::field<"RESERVED1", std::uint8_t, 28, 26 ,access::ro>,
-  groov::field<"FOSR", std::uint16_t, 25, 16 >,
-  groov::field<"RESERVED0", std::uint8_t, 15, 8 ,access::ro>,
-  groov::field<"IOSR", std::uint8_t, 7, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt5jdatar_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"JDATA", std::uint32_t, 31, 8 ,access::ro>,
-  groov::field<"RESERVED0", std::uint8_t, 7, 3 ,access::ro>,
-  groov::field<"JDATACH", std::uint8_t, 2, 0 ,access::ro>
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt5rdatar_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RDATA", std::uint32_t, 31, 8 ,access::ro>,
-  groov::field<"RESERVED1", std::uint8_t, 7, 5 ,access::ro>,
-  groov::field<"RPEND", bool, 4, 4 ,access::ro>,
-  groov::field<"RESERVED0", bool, 3, 3 ,access::ro>,
-  groov::field<"RDATACH", std::uint8_t, 2, 0 ,access::ro>
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt5awhtr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"AWHT", std::uint32_t, 31, 8 >,
-  groov::field<"RESERVED0", std::uint8_t, 7, 4 ,access::ro>,
-  groov::field<"BKAWH", std::uint8_t, 3, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt5awltr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"AWLT", std::uint32_t, 31, 8 >,
-  groov::field<"RESERVED0", std::uint8_t, 7, 4 ,access::ro>,
-  groov::field<"BKAWL", std::uint8_t, 3, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt5awsr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint16_t, 31, 16 ,access::ro>,
-  groov::field<"AWHTF", std::uint8_t, 15, 8 ,access::ro>,
-  groov::field<"AWLTF", std::uint8_t, 7, 0 ,access::ro>
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt5awcfr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint16_t, 31, 16 ,access::ro>,
-  groov::field<"CLRAWHTF", std::uint8_t, 15, 8 >,
-  groov::field<"CLRAWLTF", std::uint8_t, 7, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt5exmax_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"EXMAX", std::uint32_t, 31, 8 ,access::ro>,
-  groov::field<"RESERVED0", std::uint8_t, 7, 3 ,access::ro>,
-  groov::field<"EXMAXCH", std::uint8_t, 2, 0 ,access::ro>
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt5exmin_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"EXMIN", std::uint32_t, 31, 8 >,
-  groov::field<"RESERVED0", std::uint8_t, 7, 3 ,access::ro>,
-  groov::field<"EXMINCH", std::uint8_t, 2, 0 ,access::ro>
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt5cnvtimr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"CNVCNT", std::uint32_t, 31, 4 ,access::ro>,
-  groov::field<"RESERVED0", std::uint8_t, 3, 0 ,access::ro>
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt6cr1_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED6", bool, 31, 31 ,access::ro>,
-  groov::field<"AWFSEL", bool, 30, 30 >,
-  groov::field<"FAST", bool, 29, 29 >,
-  groov::field<"RESERVED5", std::uint8_t, 28, 27 ,access::ro>,
-  groov::field<"RCH", std::uint8_t, 26, 24 >,
-  groov::field<"RESERVED4", std::uint8_t, 23, 22 ,access::ro>,
-  groov::field<"RDMAEN", bool, 21, 21 >,
-  groov::field<"RESERVED3", bool, 20, 20 ,access::ro>,
-  groov::field<"RSYNC", bool, 19, 19 >,
-  groov::field<"RCONT", bool, 18, 18 >,
-  groov::field<"RSWSTART", bool, 17, 17 >,
-  groov::field<"RESERVED2", std::uint8_t, 16, 15 ,access::ro>,
-  groov::field<"JEXTEN", std::uint8_t, 14, 13 >,
-  groov::field<"JEXTSEL", std::uint8_t, 12, 8 >,
-  groov::field<"RESERVED1", std::uint8_t, 7, 6 ,access::ro>,
-  groov::field<"JDMAEN", bool, 5, 5 >,
-  groov::field<"JSCAN", bool, 4, 4 >,
-  groov::field<"JSYNC", bool, 3, 3 >,
-  groov::field<"RESERVED0", bool, 2, 2 ,access::ro>,
-  groov::field<"JSWSTART", bool, 1, 1 >,
-  groov::field<"DFEN", bool, 0, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt6cr2_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED1", std::uint8_t, 31, 24 ,access::ro>,
-  groov::field<"AWDCH", std::uint8_t, 23, 16 >,
-  groov::field<"EXCH", std::uint8_t, 15, 8 >,
-  groov::field<"RESERVED0", bool, 7, 7 ,access::ro>,
-  groov::field<"CKABIE", bool, 6, 6 >,
-  groov::field<"SCDIE", bool, 5, 5 >,
-  groov::field<"AWDIE", bool, 4, 4 >,
-  groov::field<"ROVRIE", bool, 3, 3 >,
-  groov::field<"JOVRIE", bool, 2, 2 >,
-  groov::field<"REOCIE", bool, 1, 1 >,
-  groov::field<"JEOCIE", bool, 0, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt6isr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"SCDF", std::uint8_t, 31, 24 ,access::ro>,
-  groov::field<"CKABF", std::uint8_t, 23, 16 ,access::ro>,
-  groov::field<"RESERVED1", bool, 15, 15 ,access::ro>,
-  groov::field<"RCIP", bool, 14, 14 ,access::ro>,
-  groov::field<"JCIP", bool, 13, 13 ,access::ro>,
-  groov::field<"RESERVED0", std::uint8_t, 12, 5 ,access::ro>,
-  groov::field<"AWDF", bool, 4, 4 ,access::ro>,
-  groov::field<"ROVRF", bool, 3, 3 ,access::ro>,
-  groov::field<"JOVRF", bool, 2, 2 ,access::ro>,
-  groov::field<"REOCF", bool, 1, 1 ,access::ro>,
-  groov::field<"JEOCF", bool, 0, 0 ,access::ro>
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt6icr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"CLRSCDF", std::uint8_t, 31, 24 >,
-  groov::field<"CLRCKABF", std::uint8_t, 23, 16 >,
-  groov::field<"RESERVED1", std::uint16_t, 15, 4 ,access::ro>,
-  groov::field<"CLRROVRF", bool, 3, 3 >,
-  groov::field<"CLRJOVRF", bool, 2, 2 >,
-  groov::field<"RESERVED0", std::uint8_t, 1, 0 ,access::ro>
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt6jchgr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint32_t, 31, 8 ,access::ro>,
-  groov::field<"JCHG", std::uint8_t, 7, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt6fcr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"FORD", std::uint8_t, 31, 29 >,
-  groov::field<"RESERVED1", std::uint8_t, 28, 26 ,access::ro>,
-  groov::field<"FOSR", std::uint16_t, 25, 16 >,
-  groov::field<"RESERVED0", std::uint8_t, 15, 8 ,access::ro>,
-  groov::field<"IOSR", std::uint8_t, 7, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt6jdatar_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"JDATA", std::uint32_t, 31, 8 ,access::ro>,
-  groov::field<"RESERVED0", std::uint8_t, 7, 3 ,access::ro>,
-  groov::field<"JDATACH", std::uint8_t, 2, 0 ,access::ro>
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt6rdatar_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RDATA", std::uint32_t, 31, 8 ,access::ro>,
-  groov::field<"RESERVED1", std::uint8_t, 7, 5 ,access::ro>,
-  groov::field<"RPEND", bool, 4, 4 ,access::ro>,
-  groov::field<"RESERVED0", bool, 3, 3 ,access::ro>,
-  groov::field<"RDATACH", std::uint8_t, 2, 0 ,access::ro>
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt6awhtr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"AWHT", std::uint32_t, 31, 8 >,
-  groov::field<"RESERVED0", std::uint8_t, 7, 4 ,access::ro>,
-  groov::field<"BKAWH", std::uint8_t, 3, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt6awltr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"AWLT", std::uint32_t, 31, 8 >,
-  groov::field<"RESERVED0", std::uint8_t, 7, 4 ,access::ro>,
-  groov::field<"BKAWL", std::uint8_t, 3, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt6awsr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint16_t, 31, 16 ,access::ro>,
-  groov::field<"AWHTF", std::uint8_t, 15, 8 ,access::ro>,
-  groov::field<"AWLTF", std::uint8_t, 7, 0 ,access::ro>
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt6awcfr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint16_t, 31, 16 ,access::ro>,
-  groov::field<"CLRAWHTF", std::uint8_t, 15, 8 >,
-  groov::field<"CLRAWLTF", std::uint8_t, 7, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt6exmax_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"EXMAX", std::uint32_t, 31, 8 ,access::ro>,
-  groov::field<"RESERVED0", std::uint8_t, 7, 3 ,access::ro>,
-  groov::field<"EXMAXCH", std::uint8_t, 2, 0 ,access::ro>
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt6exmin_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"EXMIN", std::uint32_t, 31, 8 >,
-  groov::field<"RESERVED0", std::uint8_t, 7, 3 ,access::ro>,
-  groov::field<"EXMINCH", std::uint8_t, 2, 0 ,access::ro>
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt6cnvtimr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"CNVCNT", std::uint32_t, 31, 4 ,access::ro>,
-  groov::field<"RESERVED0", std::uint8_t, 3, 0 ,access::ro>
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt7cr1_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED6", bool, 31, 31 ,access::ro>,
-  groov::field<"AWFSEL", bool, 30, 30 >,
-  groov::field<"FAST", bool, 29, 29 >,
-  groov::field<"RESERVED5", std::uint8_t, 28, 27 ,access::ro>,
-  groov::field<"RCH", std::uint8_t, 26, 24 >,
-  groov::field<"RESERVED4", std::uint8_t, 23, 22 ,access::ro>,
-  groov::field<"RDMAEN", bool, 21, 21 >,
-  groov::field<"RESERVED3", bool, 20, 20 ,access::ro>,
-  groov::field<"RSYNC", bool, 19, 19 >,
-  groov::field<"RCONT", bool, 18, 18 >,
-  groov::field<"RSWSTART", bool, 17, 17 >,
-  groov::field<"RESERVED2", std::uint8_t, 16, 15 ,access::ro>,
-  groov::field<"JEXTEN", std::uint8_t, 14, 13 >,
-  groov::field<"JEXTSEL", std::uint8_t, 12, 8 >,
-  groov::field<"RESERVED1", std::uint8_t, 7, 6 ,access::ro>,
-  groov::field<"JDMAEN", bool, 5, 5 >,
-  groov::field<"JSCAN", bool, 4, 4 >,
-  groov::field<"JSYNC", bool, 3, 3 >,
-  groov::field<"RESERVED0", bool, 2, 2 ,access::ro>,
-  groov::field<"JSWSTART", bool, 1, 1 >,
-  groov::field<"DFEN", bool, 0, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt7cr2_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED1", std::uint8_t, 31, 24 ,access::ro>,
-  groov::field<"AWDCH", std::uint8_t, 23, 16 >,
-  groov::field<"EXCH", std::uint8_t, 15, 8 >,
-  groov::field<"RESERVED0", bool, 7, 7 ,access::ro>,
-  groov::field<"CKABIE", bool, 6, 6 >,
-  groov::field<"SCDIE", bool, 5, 5 >,
-  groov::field<"AWDIE", bool, 4, 4 >,
-  groov::field<"ROVRIE", bool, 3, 3 >,
-  groov::field<"JOVRIE", bool, 2, 2 >,
-  groov::field<"REOCIE", bool, 1, 1 >,
-  groov::field<"JEOCIE", bool, 0, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt7isr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"SCDF", std::uint8_t, 31, 24 ,access::ro>,
-  groov::field<"CKABF", std::uint8_t, 23, 16 ,access::ro>,
-  groov::field<"RESERVED1", bool, 15, 15 ,access::ro>,
-  groov::field<"RCIP", bool, 14, 14 ,access::ro>,
-  groov::field<"JCIP", bool, 13, 13 ,access::ro>,
-  groov::field<"RESERVED0", std::uint8_t, 12, 5 ,access::ro>,
-  groov::field<"AWDF", bool, 4, 4 ,access::ro>,
-  groov::field<"ROVRF", bool, 3, 3 ,access::ro>,
-  groov::field<"JOVRF", bool, 2, 2 ,access::ro>,
-  groov::field<"REOCF", bool, 1, 1 ,access::ro>,
-  groov::field<"JEOCF", bool, 0, 0 ,access::ro>
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt7icr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"CLRSCDF", std::uint8_t, 31, 24 >,
-  groov::field<"CLRCKABF", std::uint8_t, 23, 16 >,
-  groov::field<"RESERVED1", std::uint16_t, 15, 4 ,access::ro>,
-  groov::field<"CLRROVRF", bool, 3, 3 >,
-  groov::field<"CLRJOVRF", bool, 2, 2 >,
-  groov::field<"RESERVED0", std::uint8_t, 1, 0 ,access::ro>
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt7jchgr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint32_t, 31, 8 ,access::ro>,
-  groov::field<"JCHG", std::uint8_t, 7, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt7fcr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"FORD", std::uint8_t, 31, 29 >,
-  groov::field<"RESERVED1", std::uint8_t, 28, 26 ,access::ro>,
-  groov::field<"FOSR", std::uint16_t, 25, 16 >,
-  groov::field<"RESERVED0", std::uint8_t, 15, 8 ,access::ro>,
-  groov::field<"IOSR", std::uint8_t, 7, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt7jdatar_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"JDATA", std::uint32_t, 31, 8 ,access::ro>,
-  groov::field<"RESERVED0", std::uint8_t, 7, 3 ,access::ro>,
-  groov::field<"JDATACH", std::uint8_t, 2, 0 ,access::ro>
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt7rdatar_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RDATA", std::uint32_t, 31, 8 ,access::ro>,
-  groov::field<"RESERVED1", std::uint8_t, 7, 5 ,access::ro>,
-  groov::field<"RPEND", bool, 4, 4 ,access::ro>,
-  groov::field<"RESERVED0", bool, 3, 3 ,access::ro>,
-  groov::field<"RDATACH", std::uint8_t, 2, 0 ,access::ro>
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt7awhtr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"AWHT", std::uint32_t, 31, 8 >,
-  groov::field<"RESERVED0", std::uint8_t, 7, 4 ,access::ro>,
-  groov::field<"BKAWH", std::uint8_t, 3, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt7awltr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"AWLT", std::uint32_t, 31, 8 >,
-  groov::field<"RESERVED0", std::uint8_t, 7, 4 ,access::ro>,
-  groov::field<"BKAWL", std::uint8_t, 3, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt7awsr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint16_t, 31, 16 ,access::ro>,
-  groov::field<"AWHTF", std::uint8_t, 15, 8 ,access::ro>,
-  groov::field<"AWLTF", std::uint8_t, 7, 0 ,access::ro>
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt7awcfr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint16_t, 31, 16 ,access::ro>,
-  groov::field<"CLRAWHTF", std::uint8_t, 15, 8 >,
-  groov::field<"CLRAWLTF", std::uint8_t, 7, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt7exmax_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"EXMAX", std::uint32_t, 31, 8 ,access::ro>,
-  groov::field<"RESERVED0", std::uint8_t, 7, 3 ,access::ro>,
-  groov::field<"EXMAXCH", std::uint8_t, 2, 0 ,access::ro>
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt7exmin_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"EXMIN", std::uint32_t, 31, 8 >,
-  groov::field<"RESERVED0", std::uint8_t, 7, 3 ,access::ro>,
-  groov::field<"EXMINCH", std::uint8_t, 2, 0 ,access::ro>
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dfsdm_flt7cnvtimr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"CNVCNT", std::uint32_t, 31, 4 ,access::ro>,
-  groov::field<"RESERVED0", std::uint8_t, 3, 0 ,access::ro>
-  >;
-
-template <std::uint32_t baseaddress>
-using dfsdm_ch0cfgr1_t = dfsdm_ch0cfgr1_tt<"DFSDM_CH0CFGR1",baseaddress,0>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_ch0cfgr2_t = dfsdm_ch0cfgr2_tt<"DFSDM_CH0CFGR2",baseaddress,4>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_ch0awscdr_t = dfsdm_ch0awscdr_tt<"DFSDM_CH0AWSCDR",baseaddress,8>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_ch0wdatr_t = dfsdm_ch0wdatr_tt<"DFSDM_CH0WDATR",baseaddress,12>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_ch0datinr_t = dfsdm_ch0datinr_tt<"DFSDM_CH0DATINR",baseaddress,16>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_ch0dlyr_t = dfsdm_ch0dlyr_tt<"DFSDM_CH0DLYR",baseaddress,20>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_ch1cfgr1_t = dfsdm_ch1cfgr1_tt<"DFSDM_CH1CFGR1",baseaddress,32>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_ch1cfgr2_t = dfsdm_ch1cfgr2_tt<"DFSDM_CH1CFGR2",baseaddress,36>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_ch1awscdr_t = dfsdm_ch1awscdr_tt<"DFSDM_CH1AWSCDR",baseaddress,40>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_ch1wdatr_t = dfsdm_ch1wdatr_tt<"DFSDM_CH1WDATR",baseaddress,44>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_ch1datinr_t = dfsdm_ch1datinr_tt<"DFSDM_CH1DATINR",baseaddress,48>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_ch1dlyr_t = dfsdm_ch1dlyr_tt<"DFSDM_CH1DLYR",baseaddress,52>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_ch2cfgr1_t = dfsdm_ch2cfgr1_tt<"DFSDM_CH2CFGR1",baseaddress,64>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_ch2cfgr2_t = dfsdm_ch2cfgr2_tt<"DFSDM_CH2CFGR2",baseaddress,68>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_ch2awscdr_t = dfsdm_ch2awscdr_tt<"DFSDM_CH2AWSCDR",baseaddress,72>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_ch2wdatr_t = dfsdm_ch2wdatr_tt<"DFSDM_CH2WDATR",baseaddress,76>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_ch2datinr_t = dfsdm_ch2datinr_tt<"DFSDM_CH2DATINR",baseaddress,80>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_ch2dlyr_t = dfsdm_ch2dlyr_tt<"DFSDM_CH2DLYR",baseaddress,84>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_ch3cfgr1_t = dfsdm_ch3cfgr1_tt<"DFSDM_CH3CFGR1",baseaddress,96>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_ch3cfgr2_t = dfsdm_ch3cfgr2_tt<"DFSDM_CH3CFGR2",baseaddress,100>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_ch3awscdr_t = dfsdm_ch3awscdr_tt<"DFSDM_CH3AWSCDR",baseaddress,104>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_ch3wdatr_t = dfsdm_ch3wdatr_tt<"DFSDM_CH3WDATR",baseaddress,108>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_ch3datinr_t = dfsdm_ch3datinr_tt<"DFSDM_CH3DATINR",baseaddress,112>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_ch3dlyr_t = dfsdm_ch3dlyr_tt<"DFSDM_CH3DLYR",baseaddress,116>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_ch4cfgr1_t = dfsdm_ch4cfgr1_tt<"DFSDM_CH4CFGR1",baseaddress,128>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_ch4cfgr2_t = dfsdm_ch4cfgr2_tt<"DFSDM_CH4CFGR2",baseaddress,132>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_ch4awscdr_t = dfsdm_ch4awscdr_tt<"DFSDM_CH4AWSCDR",baseaddress,136>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_ch4wdatr_t = dfsdm_ch4wdatr_tt<"DFSDM_CH4WDATR",baseaddress,140>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_ch4datinr_t = dfsdm_ch4datinr_tt<"DFSDM_CH4DATINR",baseaddress,144>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_ch4dlyr_t = dfsdm_ch4dlyr_tt<"DFSDM_CH4DLYR",baseaddress,148>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_ch5cfgr1_t = dfsdm_ch5cfgr1_tt<"DFSDM_CH5CFGR1",baseaddress,160>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_ch5cfgr2_t = dfsdm_ch5cfgr2_tt<"DFSDM_CH5CFGR2",baseaddress,164>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_ch5awscdr_t = dfsdm_ch5awscdr_tt<"DFSDM_CH5AWSCDR",baseaddress,168>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_ch5wdatr_t = dfsdm_ch5wdatr_tt<"DFSDM_CH5WDATR",baseaddress,172>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_ch5datinr_t = dfsdm_ch5datinr_tt<"DFSDM_CH5DATINR",baseaddress,176>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_ch5dlyr_t = dfsdm_ch5dlyr_tt<"DFSDM_CH5DLYR",baseaddress,180>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_ch6cfgr1_t = dfsdm_ch6cfgr1_tt<"DFSDM_CH6CFGR1",baseaddress,192>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_ch6cfgr2_t = dfsdm_ch6cfgr2_tt<"DFSDM_CH6CFGR2",baseaddress,196>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_ch6awscdr_t = dfsdm_ch6awscdr_tt<"DFSDM_CH6AWSCDR",baseaddress,200>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_ch6wdatr_t = dfsdm_ch6wdatr_tt<"DFSDM_CH6WDATR",baseaddress,204>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_ch6datinr_t = dfsdm_ch6datinr_tt<"DFSDM_CH6DATINR",baseaddress,208>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_ch6dlyr_t = dfsdm_ch6dlyr_tt<"DFSDM_CH6DLYR",baseaddress,212>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_ch7cfgr1_t = dfsdm_ch7cfgr1_tt<"DFSDM_CH7CFGR1",baseaddress,224>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_ch7cfgr2_t = dfsdm_ch7cfgr2_tt<"DFSDM_CH7CFGR2",baseaddress,228>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_ch7awscdr_t = dfsdm_ch7awscdr_tt<"DFSDM_CH7AWSCDR",baseaddress,232>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_ch7wdatr_t = dfsdm_ch7wdatr_tt<"DFSDM_CH7WDATR",baseaddress,236>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_ch7datinr_t = dfsdm_ch7datinr_tt<"DFSDM_CH7DATINR",baseaddress,240>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_ch7dlyr_t = dfsdm_ch7dlyr_tt<"DFSDM_CH7DLYR",baseaddress,244>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt0cr1_t = dfsdm_flt0cr1_tt<"DFSDM_FLT0CR1",baseaddress,256>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt0cr2_t = dfsdm_flt0cr2_tt<"DFSDM_FLT0CR2",baseaddress,260>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt0isr_t = dfsdm_flt0isr_tt<"DFSDM_FLT0ISR",baseaddress,264>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt0icr_t = dfsdm_flt0icr_tt<"DFSDM_FLT0ICR",baseaddress,268>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt0jchgr_t = dfsdm_flt0jchgr_tt<"DFSDM_FLT0JCHGR",baseaddress,272>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt0fcr_t = dfsdm_flt0fcr_tt<"DFSDM_FLT0FCR",baseaddress,276>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt0jdatar_t = dfsdm_flt0jdatar_tt<"DFSDM_FLT0JDATAR",baseaddress,280>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt0rdatar_t = dfsdm_flt0rdatar_tt<"DFSDM_FLT0RDATAR",baseaddress,284>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt0awhtr_t = dfsdm_flt0awhtr_tt<"DFSDM_FLT0AWHTR",baseaddress,288>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt0awltr_t = dfsdm_flt0awltr_tt<"DFSDM_FLT0AWLTR",baseaddress,292>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt0awsr_t = dfsdm_flt0awsr_tt<"DFSDM_FLT0AWSR",baseaddress,296>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt0awcfr_t = dfsdm_flt0awcfr_tt<"DFSDM_FLT0AWCFR",baseaddress,300>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt0exmax_t = dfsdm_flt0exmax_tt<"DFSDM_FLT0EXMAX",baseaddress,304>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt0exmin_t = dfsdm_flt0exmin_tt<"DFSDM_FLT0EXMIN",baseaddress,308>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt0cnvtimr_t = dfsdm_flt0cnvtimr_tt<"DFSDM_FLT0CNVTIMR",baseaddress,312>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt1cr1_t = dfsdm_flt1cr1_tt<"DFSDM_FLT1CR1",baseaddress,384>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt1cr2_t = dfsdm_flt1cr2_tt<"DFSDM_FLT1CR2",baseaddress,388>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt1isr_t = dfsdm_flt1isr_tt<"DFSDM_FLT1ISR",baseaddress,392>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt1icr_t = dfsdm_flt1icr_tt<"DFSDM_FLT1ICR",baseaddress,396>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt1jchgr_t = dfsdm_flt1jchgr_tt<"DFSDM_FLT1JCHGR",baseaddress,400>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt1fcr_t = dfsdm_flt1fcr_tt<"DFSDM_FLT1FCR",baseaddress,404>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt1jdatar_t = dfsdm_flt1jdatar_tt<"DFSDM_FLT1JDATAR",baseaddress,408>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt1rdatar_t = dfsdm_flt1rdatar_tt<"DFSDM_FLT1RDATAR",baseaddress,412>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt1awhtr_t = dfsdm_flt1awhtr_tt<"DFSDM_FLT1AWHTR",baseaddress,416>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt1awltr_t = dfsdm_flt1awltr_tt<"DFSDM_FLT1AWLTR",baseaddress,420>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt1awsr_t = dfsdm_flt1awsr_tt<"DFSDM_FLT1AWSR",baseaddress,424>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt1awcfr_t = dfsdm_flt1awcfr_tt<"DFSDM_FLT1AWCFR",baseaddress,428>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt1exmax_t = dfsdm_flt1exmax_tt<"DFSDM_FLT1EXMAX",baseaddress,432>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt1exmin_t = dfsdm_flt1exmin_tt<"DFSDM_FLT1EXMIN",baseaddress,436>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt1cnvtimr_t = dfsdm_flt1cnvtimr_tt<"DFSDM_FLT1CNVTIMR",baseaddress,440>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt2cr1_t = dfsdm_flt2cr1_tt<"DFSDM_FLT2CR1",baseaddress,512>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt2cr2_t = dfsdm_flt2cr2_tt<"DFSDM_FLT2CR2",baseaddress,516>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt2isr_t = dfsdm_flt2isr_tt<"DFSDM_FLT2ISR",baseaddress,520>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt2icr_t = dfsdm_flt2icr_tt<"DFSDM_FLT2ICR",baseaddress,524>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt2jchgr_t = dfsdm_flt2jchgr_tt<"DFSDM_FLT2JCHGR",baseaddress,528>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt2fcr_t = dfsdm_flt2fcr_tt<"DFSDM_FLT2FCR",baseaddress,532>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt2jdatar_t = dfsdm_flt2jdatar_tt<"DFSDM_FLT2JDATAR",baseaddress,536>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt2rdatar_t = dfsdm_flt2rdatar_tt<"DFSDM_FLT2RDATAR",baseaddress,540>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt2awhtr_t = dfsdm_flt2awhtr_tt<"DFSDM_FLT2AWHTR",baseaddress,544>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt2awltr_t = dfsdm_flt2awltr_tt<"DFSDM_FLT2AWLTR",baseaddress,548>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt2awsr_t = dfsdm_flt2awsr_tt<"DFSDM_FLT2AWSR",baseaddress,552>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt2awcfr_t = dfsdm_flt2awcfr_tt<"DFSDM_FLT2AWCFR",baseaddress,556>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt2exmax_t = dfsdm_flt2exmax_tt<"DFSDM_FLT2EXMAX",baseaddress,560>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt2exmin_t = dfsdm_flt2exmin_tt<"DFSDM_FLT2EXMIN",baseaddress,564>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt2cnvtimr_t = dfsdm_flt2cnvtimr_tt<"DFSDM_FLT2CNVTIMR",baseaddress,568>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt3cr1_t = dfsdm_flt3cr1_tt<"DFSDM_FLT3CR1",baseaddress,640>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt3cr2_t = dfsdm_flt3cr2_tt<"DFSDM_FLT3CR2",baseaddress,644>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt3isr_t = dfsdm_flt3isr_tt<"DFSDM_FLT3ISR",baseaddress,648>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt3icr_t = dfsdm_flt3icr_tt<"DFSDM_FLT3ICR",baseaddress,652>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt3jchgr_t = dfsdm_flt3jchgr_tt<"DFSDM_FLT3JCHGR",baseaddress,656>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt3fcr_t = dfsdm_flt3fcr_tt<"DFSDM_FLT3FCR",baseaddress,660>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt3jdatar_t = dfsdm_flt3jdatar_tt<"DFSDM_FLT3JDATAR",baseaddress,664>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt3rdatar_t = dfsdm_flt3rdatar_tt<"DFSDM_FLT3RDATAR",baseaddress,668>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt3awhtr_t = dfsdm_flt3awhtr_tt<"DFSDM_FLT3AWHTR",baseaddress,672>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt3awltr_t = dfsdm_flt3awltr_tt<"DFSDM_FLT3AWLTR",baseaddress,676>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt3awsr_t = dfsdm_flt3awsr_tt<"DFSDM_FLT3AWSR",baseaddress,680>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt3awcfr_t = dfsdm_flt3awcfr_tt<"DFSDM_FLT3AWCFR",baseaddress,684>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt3exmax_t = dfsdm_flt3exmax_tt<"DFSDM_FLT3EXMAX",baseaddress,688>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt3exmin_t = dfsdm_flt3exmin_tt<"DFSDM_FLT3EXMIN",baseaddress,692>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt3cnvtimr_t = dfsdm_flt3cnvtimr_tt<"DFSDM_FLT3CNVTIMR",baseaddress,696>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt4cr1_t = dfsdm_flt4cr1_tt<"DFSDM_FLT4CR1",baseaddress,768>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt4cr2_t = dfsdm_flt4cr2_tt<"DFSDM_FLT4CR2",baseaddress,772>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt4isr_t = dfsdm_flt4isr_tt<"DFSDM_FLT4ISR",baseaddress,776>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt4icr_t = dfsdm_flt4icr_tt<"DFSDM_FLT4ICR",baseaddress,780>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt4jchgr_t = dfsdm_flt4jchgr_tt<"DFSDM_FLT4JCHGR",baseaddress,784>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt4fcr_t = dfsdm_flt4fcr_tt<"DFSDM_FLT4FCR",baseaddress,788>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt4jdatar_t = dfsdm_flt4jdatar_tt<"DFSDM_FLT4JDATAR",baseaddress,792>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt4rdatar_t = dfsdm_flt4rdatar_tt<"DFSDM_FLT4RDATAR",baseaddress,796>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt4awhtr_t = dfsdm_flt4awhtr_tt<"DFSDM_FLT4AWHTR",baseaddress,800>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt4awltr_t = dfsdm_flt4awltr_tt<"DFSDM_FLT4AWLTR",baseaddress,804>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt4awsr_t = dfsdm_flt4awsr_tt<"DFSDM_FLT4AWSR",baseaddress,808>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt4awcfr_t = dfsdm_flt4awcfr_tt<"DFSDM_FLT4AWCFR",baseaddress,812>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt4exmax_t = dfsdm_flt4exmax_tt<"DFSDM_FLT4EXMAX",baseaddress,816>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt4exmin_t = dfsdm_flt4exmin_tt<"DFSDM_FLT4EXMIN",baseaddress,820>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt4cnvtimr_t = dfsdm_flt4cnvtimr_tt<"DFSDM_FLT4CNVTIMR",baseaddress,824>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt5cr1_t = dfsdm_flt5cr1_tt<"DFSDM_FLT5CR1",baseaddress,896>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt5cr2_t = dfsdm_flt5cr2_tt<"DFSDM_FLT5CR2",baseaddress,900>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt5isr_t = dfsdm_flt5isr_tt<"DFSDM_FLT5ISR",baseaddress,904>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt5icr_t = dfsdm_flt5icr_tt<"DFSDM_FLT5ICR",baseaddress,908>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt5jchgr_t = dfsdm_flt5jchgr_tt<"DFSDM_FLT5JCHGR",baseaddress,912>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt5fcr_t = dfsdm_flt5fcr_tt<"DFSDM_FLT5FCR",baseaddress,916>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt5jdatar_t = dfsdm_flt5jdatar_tt<"DFSDM_FLT5JDATAR",baseaddress,920>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt5rdatar_t = dfsdm_flt5rdatar_tt<"DFSDM_FLT5RDATAR",baseaddress,924>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt5awhtr_t = dfsdm_flt5awhtr_tt<"DFSDM_FLT5AWHTR",baseaddress,928>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt5awltr_t = dfsdm_flt5awltr_tt<"DFSDM_FLT5AWLTR",baseaddress,932>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt5awsr_t = dfsdm_flt5awsr_tt<"DFSDM_FLT5AWSR",baseaddress,936>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt5awcfr_t = dfsdm_flt5awcfr_tt<"DFSDM_FLT5AWCFR",baseaddress,940>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt5exmax_t = dfsdm_flt5exmax_tt<"DFSDM_FLT5EXMAX",baseaddress,944>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt5exmin_t = dfsdm_flt5exmin_tt<"DFSDM_FLT5EXMIN",baseaddress,948>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt5cnvtimr_t = dfsdm_flt5cnvtimr_tt<"DFSDM_FLT5CNVTIMR",baseaddress,952>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt6cr1_t = dfsdm_flt6cr1_tt<"DFSDM_FLT6CR1",baseaddress,1024>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt6cr2_t = dfsdm_flt6cr2_tt<"DFSDM_FLT6CR2",baseaddress,1028>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt6isr_t = dfsdm_flt6isr_tt<"DFSDM_FLT6ISR",baseaddress,1032>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt6icr_t = dfsdm_flt6icr_tt<"DFSDM_FLT6ICR",baseaddress,1036>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt6jchgr_t = dfsdm_flt6jchgr_tt<"DFSDM_FLT6JCHGR",baseaddress,1040>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt6fcr_t = dfsdm_flt6fcr_tt<"DFSDM_FLT6FCR",baseaddress,1044>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt6jdatar_t = dfsdm_flt6jdatar_tt<"DFSDM_FLT6JDATAR",baseaddress,1048>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt6rdatar_t = dfsdm_flt6rdatar_tt<"DFSDM_FLT6RDATAR",baseaddress,1052>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt6awhtr_t = dfsdm_flt6awhtr_tt<"DFSDM_FLT6AWHTR",baseaddress,1056>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt6awltr_t = dfsdm_flt6awltr_tt<"DFSDM_FLT6AWLTR",baseaddress,1060>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt6awsr_t = dfsdm_flt6awsr_tt<"DFSDM_FLT6AWSR",baseaddress,1064>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt6awcfr_t = dfsdm_flt6awcfr_tt<"DFSDM_FLT6AWCFR",baseaddress,1068>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt6exmax_t = dfsdm_flt6exmax_tt<"DFSDM_FLT6EXMAX",baseaddress,1072>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt6exmin_t = dfsdm_flt6exmin_tt<"DFSDM_FLT6EXMIN",baseaddress,1076>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt6cnvtimr_t = dfsdm_flt6cnvtimr_tt<"DFSDM_FLT6CNVTIMR",baseaddress,1080>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt7cr1_t = dfsdm_flt7cr1_tt<"DFSDM_FLT7CR1",baseaddress,1152>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt7cr2_t = dfsdm_flt7cr2_tt<"DFSDM_FLT7CR2",baseaddress,1156>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt7isr_t = dfsdm_flt7isr_tt<"DFSDM_FLT7ISR",baseaddress,1160>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt7icr_t = dfsdm_flt7icr_tt<"DFSDM_FLT7ICR",baseaddress,1164>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt7jchgr_t = dfsdm_flt7jchgr_tt<"DFSDM_FLT7JCHGR",baseaddress,1168>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt7fcr_t = dfsdm_flt7fcr_tt<"DFSDM_FLT7FCR",baseaddress,1172>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt7jdatar_t = dfsdm_flt7jdatar_tt<"DFSDM_FLT7JDATAR",baseaddress,1176>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt7rdatar_t = dfsdm_flt7rdatar_tt<"DFSDM_FLT7RDATAR",baseaddress,1180>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt7awhtr_t = dfsdm_flt7awhtr_tt<"DFSDM_FLT7AWHTR",baseaddress,1184>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt7awltr_t = dfsdm_flt7awltr_tt<"DFSDM_FLT7AWLTR",baseaddress,1188>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt7awsr_t = dfsdm_flt7awsr_tt<"DFSDM_FLT7AWSR",baseaddress,1192>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt7awcfr_t = dfsdm_flt7awcfr_tt<"DFSDM_FLT7AWCFR",baseaddress,1196>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt7exmax_t = dfsdm_flt7exmax_tt<"DFSDM_FLT7EXMAX",baseaddress,1200>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt7exmin_t = dfsdm_flt7exmin_tt<"DFSDM_FLT7EXMIN",baseaddress,1204>;
-
-template <std::uint32_t baseaddress>
-using dfsdm_flt7cnvtimr_t = dfsdm_flt7cnvtimr_tt<"DFSDM_FLT7CNVTIMR",baseaddress,1208>;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_ch0cfgr1_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DFSDMEN", bool, 31, 31>,
+               groov::field<"CKOUTSRC", bool, 30, 30>,
+               groov::field<"RESERVED2", std::uint8_t, 29, 24, access::ro>,
+               groov::field<"CKOUTDIV", std::uint8_t, 23, 16>,
+               groov::field<"DATPACK", std::uint8_t, 15, 14>,
+               groov::field<"DATMPX", std::uint8_t, 13, 12>,
+               groov::field<"RESERVED1", std::uint8_t, 11, 9, access::ro>,
+               groov::field<"CHINSEL", bool, 8, 8>,
+               groov::field<"CHEN", bool, 7, 7>,
+               groov::field<"CKABEN", bool, 6, 6>,
+               groov::field<"SCDEN", bool, 5, 5>,
+               groov::field<"RESERVED0", bool, 4, 4, access::ro>,
+               groov::field<"SPICKSEL", std::uint8_t, 3, 2>,
+               groov::field<"SITP", std::uint8_t, 1, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_ch0cfgr2_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"OFFSET", std::uint32_t, 31, 8>,
+               groov::field<"DTRBS", std::uint8_t, 7, 3>,
+               groov::field<"RESERVED0", std::uint8_t, 2, 0, access::ro>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_ch0awscdr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED2", std::uint8_t, 31, 24, access::ro>,
+               groov::field<"AWFORD", std::uint8_t, 23, 22>,
+               groov::field<"RESERVED1", bool, 21, 21, access::ro>,
+               groov::field<"AWFOSR", std::uint8_t, 20, 16>,
+               groov::field<"BKSCD", std::uint8_t, 15, 12>,
+               groov::field<"RESERVED0", std::uint8_t, 11, 8, access::ro>,
+               groov::field<"SCDT", std::uint8_t, 7, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_ch0wdatr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
+               groov::field<"WDATA", std::uint16_t, 15, 0, access::ro>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_ch0datinr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"INDAT1", std::uint16_t, 31, 16>,
+               groov::field<"INDAT0", std::uint16_t, 15, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_ch0dlyr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint32_t, 31, 6, access::ro>,
+               groov::field<"PLSSKP", std::uint8_t, 5, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_ch1cfgr1_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DFSDMEN", bool, 31, 31>,
+               groov::field<"CKOUTSRC", bool, 30, 30>,
+               groov::field<"RESERVED2", std::uint8_t, 29, 24, access::ro>,
+               groov::field<"CKOUTDIV", std::uint8_t, 23, 16>,
+               groov::field<"DATPACK", std::uint8_t, 15, 14>,
+               groov::field<"DATMPX", std::uint8_t, 13, 12>,
+               groov::field<"RESERVED1", std::uint8_t, 11, 9, access::ro>,
+               groov::field<"CHINSEL", bool, 8, 8>,
+               groov::field<"CHEN", bool, 7, 7>,
+               groov::field<"CKABEN", bool, 6, 6>,
+               groov::field<"SCDEN", bool, 5, 5>,
+               groov::field<"RESERVED0", bool, 4, 4, access::ro>,
+               groov::field<"SPICKSEL", std::uint8_t, 3, 2>,
+               groov::field<"SITP", std::uint8_t, 1, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_ch1cfgr2_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"OFFSET", std::uint32_t, 31, 8>,
+               groov::field<"DTRBS", std::uint8_t, 7, 3>,
+               groov::field<"RESERVED0", std::uint8_t, 2, 0, access::ro>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_ch1awscdr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED2", std::uint8_t, 31, 24, access::ro>,
+               groov::field<"AWFORD", std::uint8_t, 23, 22>,
+               groov::field<"RESERVED1", bool, 21, 21, access::ro>,
+               groov::field<"AWFOSR", std::uint8_t, 20, 16>,
+               groov::field<"BKSCD", std::uint8_t, 15, 12>,
+               groov::field<"RESERVED0", std::uint8_t, 11, 8, access::ro>,
+               groov::field<"SCDT", std::uint8_t, 7, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_ch1wdatr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
+               groov::field<"WDATA", std::uint16_t, 15, 0, access::ro>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_ch1datinr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"INDAT1", std::uint16_t, 31, 16>,
+               groov::field<"INDAT0", std::uint16_t, 15, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_ch1dlyr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint32_t, 31, 6, access::ro>,
+               groov::field<"PLSSKP", std::uint8_t, 5, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_ch2cfgr1_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DFSDMEN", bool, 31, 31>,
+               groov::field<"CKOUTSRC", bool, 30, 30>,
+               groov::field<"RESERVED2", std::uint8_t, 29, 24, access::ro>,
+               groov::field<"CKOUTDIV", std::uint8_t, 23, 16>,
+               groov::field<"DATPACK", std::uint8_t, 15, 14>,
+               groov::field<"DATMPX", std::uint8_t, 13, 12>,
+               groov::field<"RESERVED1", std::uint8_t, 11, 9, access::ro>,
+               groov::field<"CHINSEL", bool, 8, 8>,
+               groov::field<"CHEN", bool, 7, 7>,
+               groov::field<"CKABEN", bool, 6, 6>,
+               groov::field<"SCDEN", bool, 5, 5>,
+               groov::field<"RESERVED0", bool, 4, 4, access::ro>,
+               groov::field<"SPICKSEL", std::uint8_t, 3, 2>,
+               groov::field<"SITP", std::uint8_t, 1, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_ch2cfgr2_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"OFFSET", std::uint32_t, 31, 8>,
+               groov::field<"DTRBS", std::uint8_t, 7, 3>,
+               groov::field<"RESERVED0", std::uint8_t, 2, 0, access::ro>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_ch2awscdr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED2", std::uint8_t, 31, 24, access::ro>,
+               groov::field<"AWFORD", std::uint8_t, 23, 22>,
+               groov::field<"RESERVED1", bool, 21, 21, access::ro>,
+               groov::field<"AWFOSR", std::uint8_t, 20, 16>,
+               groov::field<"BKSCD", std::uint8_t, 15, 12>,
+               groov::field<"RESERVED0", std::uint8_t, 11, 8, access::ro>,
+               groov::field<"SCDT", std::uint8_t, 7, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_ch2wdatr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
+               groov::field<"WDATA", std::uint16_t, 15, 0, access::ro>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_ch2datinr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"INDAT1", std::uint16_t, 31, 16>,
+               groov::field<"INDAT0", std::uint16_t, 15, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_ch2dlyr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint32_t, 31, 6, access::ro>,
+               groov::field<"PLSSKP", std::uint8_t, 5, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_ch3cfgr1_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DFSDMEN", bool, 31, 31>,
+               groov::field<"CKOUTSRC", bool, 30, 30>,
+               groov::field<"RESERVED2", std::uint8_t, 29, 24, access::ro>,
+               groov::field<"CKOUTDIV", std::uint8_t, 23, 16>,
+               groov::field<"DATPACK", std::uint8_t, 15, 14>,
+               groov::field<"DATMPX", std::uint8_t, 13, 12>,
+               groov::field<"RESERVED1", std::uint8_t, 11, 9, access::ro>,
+               groov::field<"CHINSEL", bool, 8, 8>,
+               groov::field<"CHEN", bool, 7, 7>,
+               groov::field<"CKABEN", bool, 6, 6>,
+               groov::field<"SCDEN", bool, 5, 5>,
+               groov::field<"RESERVED0", bool, 4, 4, access::ro>,
+               groov::field<"SPICKSEL", std::uint8_t, 3, 2>,
+               groov::field<"SITP", std::uint8_t, 1, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_ch3cfgr2_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"OFFSET", std::uint32_t, 31, 8>,
+               groov::field<"DTRBS", std::uint8_t, 7, 3>,
+               groov::field<"RESERVED0", std::uint8_t, 2, 0, access::ro>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_ch3awscdr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED2", std::uint8_t, 31, 24, access::ro>,
+               groov::field<"AWFORD", std::uint8_t, 23, 22>,
+               groov::field<"RESERVED1", bool, 21, 21, access::ro>,
+               groov::field<"AWFOSR", std::uint8_t, 20, 16>,
+               groov::field<"BKSCD", std::uint8_t, 15, 12>,
+               groov::field<"RESERVED0", std::uint8_t, 11, 8, access::ro>,
+               groov::field<"SCDT", std::uint8_t, 7, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_ch3wdatr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
+               groov::field<"WDATA", std::uint16_t, 15, 0, access::ro>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_ch3datinr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"INDAT1", std::uint16_t, 31, 16>,
+               groov::field<"INDAT0", std::uint16_t, 15, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_ch3dlyr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint32_t, 31, 6, access::ro>,
+               groov::field<"PLSSKP", std::uint8_t, 5, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_ch4cfgr1_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DFSDMEN", bool, 31, 31>,
+               groov::field<"CKOUTSRC", bool, 30, 30>,
+               groov::field<"RESERVED2", std::uint8_t, 29, 24, access::ro>,
+               groov::field<"CKOUTDIV", std::uint8_t, 23, 16>,
+               groov::field<"DATPACK", std::uint8_t, 15, 14>,
+               groov::field<"DATMPX", std::uint8_t, 13, 12>,
+               groov::field<"RESERVED1", std::uint8_t, 11, 9, access::ro>,
+               groov::field<"CHINSEL", bool, 8, 8>,
+               groov::field<"CHEN", bool, 7, 7>,
+               groov::field<"CKABEN", bool, 6, 6>,
+               groov::field<"SCDEN", bool, 5, 5>,
+               groov::field<"RESERVED0", bool, 4, 4, access::ro>,
+               groov::field<"SPICKSEL", std::uint8_t, 3, 2>,
+               groov::field<"SITP", std::uint8_t, 1, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_ch4cfgr2_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"OFFSET", std::uint32_t, 31, 8>,
+               groov::field<"DTRBS", std::uint8_t, 7, 3>,
+               groov::field<"RESERVED0", std::uint8_t, 2, 0, access::ro>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_ch4awscdr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED2", std::uint8_t, 31, 24, access::ro>,
+               groov::field<"AWFORD", std::uint8_t, 23, 22>,
+               groov::field<"RESERVED1", bool, 21, 21, access::ro>,
+               groov::field<"AWFOSR", std::uint8_t, 20, 16>,
+               groov::field<"BKSCD", std::uint8_t, 15, 12>,
+               groov::field<"RESERVED0", std::uint8_t, 11, 8, access::ro>,
+               groov::field<"SCDT", std::uint8_t, 7, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_ch4wdatr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
+               groov::field<"WDATA", std::uint16_t, 15, 0, access::ro>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_ch4datinr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"INDAT1", std::uint16_t, 31, 16>,
+               groov::field<"INDAT0", std::uint16_t, 15, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_ch4dlyr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint32_t, 31, 6, access::ro>,
+               groov::field<"PLSSKP", std::uint8_t, 5, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_ch5cfgr1_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DFSDMEN", bool, 31, 31>,
+               groov::field<"CKOUTSRC", bool, 30, 30>,
+               groov::field<"RESERVED2", std::uint8_t, 29, 24, access::ro>,
+               groov::field<"CKOUTDIV", std::uint8_t, 23, 16>,
+               groov::field<"DATPACK", std::uint8_t, 15, 14>,
+               groov::field<"DATMPX", std::uint8_t, 13, 12>,
+               groov::field<"RESERVED1", std::uint8_t, 11, 9, access::ro>,
+               groov::field<"CHINSEL", bool, 8, 8>,
+               groov::field<"CHEN", bool, 7, 7>,
+               groov::field<"CKABEN", bool, 6, 6>,
+               groov::field<"SCDEN", bool, 5, 5>,
+               groov::field<"RESERVED0", bool, 4, 4, access::ro>,
+               groov::field<"SPICKSEL", std::uint8_t, 3, 2>,
+               groov::field<"SITP", std::uint8_t, 1, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_ch5cfgr2_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"OFFSET", std::uint32_t, 31, 8>,
+               groov::field<"DTRBS", std::uint8_t, 7, 3>,
+               groov::field<"RESERVED0", std::uint8_t, 2, 0, access::ro>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_ch5awscdr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED2", std::uint8_t, 31, 24, access::ro>,
+               groov::field<"AWFORD", std::uint8_t, 23, 22>,
+               groov::field<"RESERVED1", bool, 21, 21, access::ro>,
+               groov::field<"AWFOSR", std::uint8_t, 20, 16>,
+               groov::field<"BKSCD", std::uint8_t, 15, 12>,
+               groov::field<"RESERVED0", std::uint8_t, 11, 8, access::ro>,
+               groov::field<"SCDT", std::uint8_t, 7, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_ch5wdatr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
+               groov::field<"WDATA", std::uint16_t, 15, 0, access::ro>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_ch5datinr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"INDAT1", std::uint16_t, 31, 16>,
+               groov::field<"INDAT0", std::uint16_t, 15, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_ch5dlyr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint32_t, 31, 6, access::ro>,
+               groov::field<"PLSSKP", std::uint8_t, 5, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_ch6cfgr1_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DFSDMEN", bool, 31, 31>,
+               groov::field<"CKOUTSRC", bool, 30, 30>,
+               groov::field<"RESERVED2", std::uint8_t, 29, 24, access::ro>,
+               groov::field<"CKOUTDIV", std::uint8_t, 23, 16>,
+               groov::field<"DATPACK", std::uint8_t, 15, 14>,
+               groov::field<"DATMPX", std::uint8_t, 13, 12>,
+               groov::field<"RESERVED1", std::uint8_t, 11, 9, access::ro>,
+               groov::field<"CHINSEL", bool, 8, 8>,
+               groov::field<"CHEN", bool, 7, 7>,
+               groov::field<"CKABEN", bool, 6, 6>,
+               groov::field<"SCDEN", bool, 5, 5>,
+               groov::field<"RESERVED0", bool, 4, 4, access::ro>,
+               groov::field<"SPICKSEL", std::uint8_t, 3, 2>,
+               groov::field<"SITP", std::uint8_t, 1, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_ch6cfgr2_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"OFFSET", std::uint32_t, 31, 8>,
+               groov::field<"DTRBS", std::uint8_t, 7, 3>,
+               groov::field<"RESERVED0", std::uint8_t, 2, 0, access::ro>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_ch6awscdr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED2", std::uint8_t, 31, 24, access::ro>,
+               groov::field<"AWFORD", std::uint8_t, 23, 22>,
+               groov::field<"RESERVED1", bool, 21, 21, access::ro>,
+               groov::field<"AWFOSR", std::uint8_t, 20, 16>,
+               groov::field<"BKSCD", std::uint8_t, 15, 12>,
+               groov::field<"RESERVED0", std::uint8_t, 11, 8, access::ro>,
+               groov::field<"SCDT", std::uint8_t, 7, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_ch6wdatr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
+               groov::field<"WDATA", std::uint16_t, 15, 0, access::ro>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_ch6datinr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"INDAT1", std::uint16_t, 31, 16>,
+               groov::field<"INDAT0", std::uint16_t, 15, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_ch6dlyr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint32_t, 31, 6, access::ro>,
+               groov::field<"PLSSKP", std::uint8_t, 5, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_ch7cfgr1_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DFSDMEN", bool, 31, 31>,
+               groov::field<"CKOUTSRC", bool, 30, 30>,
+               groov::field<"RESERVED2", std::uint8_t, 29, 24, access::ro>,
+               groov::field<"CKOUTDIV", std::uint8_t, 23, 16>,
+               groov::field<"DATPACK", std::uint8_t, 15, 14>,
+               groov::field<"DATMPX", std::uint8_t, 13, 12>,
+               groov::field<"RESERVED1", std::uint8_t, 11, 9, access::ro>,
+               groov::field<"CHINSEL", bool, 8, 8>,
+               groov::field<"CHEN", bool, 7, 7>,
+               groov::field<"CKABEN", bool, 6, 6>,
+               groov::field<"SCDEN", bool, 5, 5>,
+               groov::field<"RESERVED0", bool, 4, 4, access::ro>,
+               groov::field<"SPICKSEL", std::uint8_t, 3, 2>,
+               groov::field<"SITP", std::uint8_t, 1, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_ch7cfgr2_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"OFFSET", std::uint32_t, 31, 8>,
+               groov::field<"DTRBS", std::uint8_t, 7, 3>,
+               groov::field<"RESERVED0", std::uint8_t, 2, 0, access::ro>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_ch7awscdr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED2", std::uint8_t, 31, 24, access::ro>,
+               groov::field<"AWFORD", std::uint8_t, 23, 22>,
+               groov::field<"RESERVED1", bool, 21, 21, access::ro>,
+               groov::field<"AWFOSR", std::uint8_t, 20, 16>,
+               groov::field<"BKSCD", std::uint8_t, 15, 12>,
+               groov::field<"RESERVED0", std::uint8_t, 11, 8, access::ro>,
+               groov::field<"SCDT", std::uint8_t, 7, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_ch7wdatr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
+               groov::field<"WDATA", std::uint16_t, 15, 0, access::ro>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_ch7datinr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"INDAT1", std::uint16_t, 31, 16>,
+               groov::field<"INDAT0", std::uint16_t, 15, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_ch7dlyr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint32_t, 31, 6, access::ro>,
+               groov::field<"PLSSKP", std::uint8_t, 5, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt0cr1_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED6", bool, 31, 31, access::ro>,
+               groov::field<"AWFSEL", bool, 30, 30>,
+               groov::field<"FAST", bool, 29, 29>,
+               groov::field<"RESERVED5", std::uint8_t, 28, 27, access::ro>,
+               groov::field<"RCH", std::uint8_t, 26, 24>,
+               groov::field<"RESERVED4", std::uint8_t, 23, 22, access::ro>,
+               groov::field<"RDMAEN", bool, 21, 21>,
+               groov::field<"RESERVED3", bool, 20, 20, access::ro>,
+               groov::field<"RSYNC", bool, 19, 19>,
+               groov::field<"RCONT", bool, 18, 18>,
+               groov::field<"RSWSTART", bool, 17, 17>,
+               groov::field<"RESERVED2", std::uint8_t, 16, 15, access::ro>,
+               groov::field<"JEXTEN", std::uint8_t, 14, 13>,
+               groov::field<"JEXTSEL", std::uint8_t, 12, 8>,
+               groov::field<"RESERVED1", std::uint8_t, 7, 6, access::ro>,
+               groov::field<"JDMAEN", bool, 5, 5>,
+               groov::field<"JSCAN", bool, 4, 4>,
+               groov::field<"JSYNC", bool, 3, 3>,
+               groov::field<"RESERVED0", bool, 2, 2, access::ro>,
+               groov::field<"JSWSTART", bool, 1, 1>,
+               groov::field<"DFEN", bool, 0, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt0cr2_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED1", std::uint8_t, 31, 24, access::ro>,
+               groov::field<"AWDCH", std::uint8_t, 23, 16>,
+               groov::field<"EXCH", std::uint8_t, 15, 8>,
+               groov::field<"RESERVED0", bool, 7, 7, access::ro>,
+               groov::field<"CKABIE", bool, 6, 6>,
+               groov::field<"SCDIE", bool, 5, 5>,
+               groov::field<"AWDIE", bool, 4, 4>,
+               groov::field<"ROVRIE", bool, 3, 3>,
+               groov::field<"JOVRIE", bool, 2, 2>,
+               groov::field<"REOCIE", bool, 1, 1>,
+               groov::field<"JEOCIE", bool, 0, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt0isr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"SCDF", std::uint8_t, 31, 24, access::ro>,
+               groov::field<"CKABF", std::uint8_t, 23, 16, access::ro>,
+               groov::field<"RESERVED1", bool, 15, 15, access::ro>,
+               groov::field<"RCIP", bool, 14, 14, access::ro>,
+               groov::field<"JCIP", bool, 13, 13, access::ro>,
+               groov::field<"RESERVED0", std::uint8_t, 12, 5, access::ro>,
+               groov::field<"AWDF", bool, 4, 4, access::ro>,
+               groov::field<"ROVRF", bool, 3, 3, access::ro>,
+               groov::field<"JOVRF", bool, 2, 2, access::ro>,
+               groov::field<"REOCF", bool, 1, 1, access::ro>,
+               groov::field<"JEOCF", bool, 0, 0, access::ro>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt0icr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"CLRSCDF", std::uint8_t, 31, 24>,
+               groov::field<"CLRCKABF", std::uint8_t, 23, 16>,
+               groov::field<"RESERVED1", std::uint16_t, 15, 4, access::ro>,
+               groov::field<"CLRROVRF", bool, 3, 3>,
+               groov::field<"CLRJOVRF", bool, 2, 2>,
+               groov::field<"RESERVED0", std::uint8_t, 1, 0, access::ro>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt0jchgr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint32_t, 31, 8, access::ro>,
+               groov::field<"JCHG", std::uint8_t, 7, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt0fcr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"FORD", std::uint8_t, 31, 29>,
+               groov::field<"RESERVED1", std::uint8_t, 28, 26, access::ro>,
+               groov::field<"FOSR", std::uint16_t, 25, 16>,
+               groov::field<"RESERVED0", std::uint8_t, 15, 8, access::ro>,
+               groov::field<"IOSR", std::uint8_t, 7, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt0jdatar_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"JDATA", std::uint32_t, 31, 8, access::ro>,
+               groov::field<"RESERVED0", std::uint8_t, 7, 3, access::ro>,
+               groov::field<"JDATACH", std::uint8_t, 2, 0, access::ro>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt0rdatar_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RDATA", std::uint32_t, 31, 8, access::ro>,
+               groov::field<"RESERVED1", std::uint8_t, 7, 5, access::ro>,
+               groov::field<"RPEND", bool, 4, 4, access::ro>,
+               groov::field<"RESERVED0", bool, 3, 3, access::ro>,
+               groov::field<"RDATACH", std::uint8_t, 2, 0, access::ro>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt0awhtr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"AWHT", std::uint32_t, 31, 8>,
+               groov::field<"RESERVED0", std::uint8_t, 7, 4, access::ro>,
+               groov::field<"BKAWH", std::uint8_t, 3, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt0awltr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"AWLT", std::uint32_t, 31, 8>,
+               groov::field<"RESERVED0", std::uint8_t, 7, 4, access::ro>,
+               groov::field<"BKAWL", std::uint8_t, 3, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt0awsr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
+               groov::field<"AWHTF", std::uint8_t, 15, 8, access::ro>,
+               groov::field<"AWLTF", std::uint8_t, 7, 0, access::ro>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt0awcfr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
+               groov::field<"CLRAWHTF", std::uint8_t, 15, 8>,
+               groov::field<"CLRAWLTF", std::uint8_t, 7, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt0exmax_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"EXMAX", std::uint32_t, 31, 8, access::ro>,
+               groov::field<"RESERVED0", std::uint8_t, 7, 3, access::ro>,
+               groov::field<"EXMAXCH", std::uint8_t, 2, 0, access::ro>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt0exmin_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"EXMIN", std::uint32_t, 31, 8>,
+               groov::field<"RESERVED0", std::uint8_t, 7, 3, access::ro>,
+               groov::field<"EXMINCH", std::uint8_t, 2, 0, access::ro>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt0cnvtimr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"CNVCNT", std::uint32_t, 31, 4, access::ro>,
+               groov::field<"RESERVED0", std::uint8_t, 3, 0, access::ro>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt1cr1_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED6", bool, 31, 31, access::ro>,
+               groov::field<"AWFSEL", bool, 30, 30>,
+               groov::field<"FAST", bool, 29, 29>,
+               groov::field<"RESERVED5", std::uint8_t, 28, 27, access::ro>,
+               groov::field<"RCH", std::uint8_t, 26, 24>,
+               groov::field<"RESERVED4", std::uint8_t, 23, 22, access::ro>,
+               groov::field<"RDMAEN", bool, 21, 21>,
+               groov::field<"RESERVED3", bool, 20, 20, access::ro>,
+               groov::field<"RSYNC", bool, 19, 19>,
+               groov::field<"RCONT", bool, 18, 18>,
+               groov::field<"RSWSTART", bool, 17, 17>,
+               groov::field<"RESERVED2", std::uint8_t, 16, 15, access::ro>,
+               groov::field<"JEXTEN", std::uint8_t, 14, 13>,
+               groov::field<"JEXTSEL", std::uint8_t, 12, 8>,
+               groov::field<"RESERVED1", std::uint8_t, 7, 6, access::ro>,
+               groov::field<"JDMAEN", bool, 5, 5>,
+               groov::field<"JSCAN", bool, 4, 4>,
+               groov::field<"JSYNC", bool, 3, 3>,
+               groov::field<"RESERVED0", bool, 2, 2, access::ro>,
+               groov::field<"JSWSTART", bool, 1, 1>,
+               groov::field<"DFEN", bool, 0, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt1cr2_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED1", std::uint8_t, 31, 24, access::ro>,
+               groov::field<"AWDCH", std::uint8_t, 23, 16>,
+               groov::field<"EXCH", std::uint8_t, 15, 8>,
+               groov::field<"RESERVED0", bool, 7, 7, access::ro>,
+               groov::field<"CKABIE", bool, 6, 6>,
+               groov::field<"SCDIE", bool, 5, 5>,
+               groov::field<"AWDIE", bool, 4, 4>,
+               groov::field<"ROVRIE", bool, 3, 3>,
+               groov::field<"JOVRIE", bool, 2, 2>,
+               groov::field<"REOCIE", bool, 1, 1>,
+               groov::field<"JEOCIE", bool, 0, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt1isr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"SCDF", std::uint8_t, 31, 24, access::ro>,
+               groov::field<"CKABF", std::uint8_t, 23, 16, access::ro>,
+               groov::field<"RESERVED1", bool, 15, 15, access::ro>,
+               groov::field<"RCIP", bool, 14, 14, access::ro>,
+               groov::field<"JCIP", bool, 13, 13, access::ro>,
+               groov::field<"RESERVED0", std::uint8_t, 12, 5, access::ro>,
+               groov::field<"AWDF", bool, 4, 4, access::ro>,
+               groov::field<"ROVRF", bool, 3, 3, access::ro>,
+               groov::field<"JOVRF", bool, 2, 2, access::ro>,
+               groov::field<"REOCF", bool, 1, 1, access::ro>,
+               groov::field<"JEOCF", bool, 0, 0, access::ro>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt1icr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"CLRSCDF", std::uint8_t, 31, 24>,
+               groov::field<"CLRCKABF", std::uint8_t, 23, 16>,
+               groov::field<"RESERVED1", std::uint16_t, 15, 4, access::ro>,
+               groov::field<"CLRROVRF", bool, 3, 3>,
+               groov::field<"CLRJOVRF", bool, 2, 2>,
+               groov::field<"RESERVED0", std::uint8_t, 1, 0, access::ro>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt1jchgr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint32_t, 31, 8, access::ro>,
+               groov::field<"JCHG", std::uint8_t, 7, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt1fcr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"FORD", std::uint8_t, 31, 29>,
+               groov::field<"RESERVED1", std::uint8_t, 28, 26, access::ro>,
+               groov::field<"FOSR", std::uint16_t, 25, 16>,
+               groov::field<"RESERVED0", std::uint8_t, 15, 8, access::ro>,
+               groov::field<"IOSR", std::uint8_t, 7, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt1jdatar_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"JDATA", std::uint32_t, 31, 8, access::ro>,
+               groov::field<"RESERVED0", std::uint8_t, 7, 3, access::ro>,
+               groov::field<"JDATACH", std::uint8_t, 2, 0, access::ro>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt1rdatar_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RDATA", std::uint32_t, 31, 8, access::ro>,
+               groov::field<"RESERVED1", std::uint8_t, 7, 5, access::ro>,
+               groov::field<"RPEND", bool, 4, 4, access::ro>,
+               groov::field<"RESERVED0", bool, 3, 3, access::ro>,
+               groov::field<"RDATACH", std::uint8_t, 2, 0, access::ro>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt1awhtr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"AWHT", std::uint32_t, 31, 8>,
+               groov::field<"RESERVED0", std::uint8_t, 7, 4, access::ro>,
+               groov::field<"BKAWH", std::uint8_t, 3, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt1awltr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"AWLT", std::uint32_t, 31, 8>,
+               groov::field<"RESERVED0", std::uint8_t, 7, 4, access::ro>,
+               groov::field<"BKAWL", std::uint8_t, 3, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt1awsr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
+               groov::field<"AWHTF", std::uint8_t, 15, 8, access::ro>,
+               groov::field<"AWLTF", std::uint8_t, 7, 0, access::ro>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt1awcfr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
+               groov::field<"CLRAWHTF", std::uint8_t, 15, 8>,
+               groov::field<"CLRAWLTF", std::uint8_t, 7, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt1exmax_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"EXMAX", std::uint32_t, 31, 8, access::ro>,
+               groov::field<"RESERVED0", std::uint8_t, 7, 3, access::ro>,
+               groov::field<"EXMAXCH", std::uint8_t, 2, 0, access::ro>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt1exmin_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"EXMIN", std::uint32_t, 31, 8>,
+               groov::field<"RESERVED0", std::uint8_t, 7, 3, access::ro>,
+               groov::field<"EXMINCH", std::uint8_t, 2, 0, access::ro>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt1cnvtimr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"CNVCNT", std::uint32_t, 31, 4, access::ro>,
+               groov::field<"RESERVED0", std::uint8_t, 3, 0, access::ro>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt2cr1_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED6", bool, 31, 31, access::ro>,
+               groov::field<"AWFSEL", bool, 30, 30>,
+               groov::field<"FAST", bool, 29, 29>,
+               groov::field<"RESERVED5", std::uint8_t, 28, 27, access::ro>,
+               groov::field<"RCH", std::uint8_t, 26, 24>,
+               groov::field<"RESERVED4", std::uint8_t, 23, 22, access::ro>,
+               groov::field<"RDMAEN", bool, 21, 21>,
+               groov::field<"RESERVED3", bool, 20, 20, access::ro>,
+               groov::field<"RSYNC", bool, 19, 19>,
+               groov::field<"RCONT", bool, 18, 18>,
+               groov::field<"RSWSTART", bool, 17, 17>,
+               groov::field<"RESERVED2", std::uint8_t, 16, 15, access::ro>,
+               groov::field<"JEXTEN", std::uint8_t, 14, 13>,
+               groov::field<"JEXTSEL", std::uint8_t, 12, 8>,
+               groov::field<"RESERVED1", std::uint8_t, 7, 6, access::ro>,
+               groov::field<"JDMAEN", bool, 5, 5>,
+               groov::field<"JSCAN", bool, 4, 4>,
+               groov::field<"JSYNC", bool, 3, 3>,
+               groov::field<"RESERVED0", bool, 2, 2, access::ro>,
+               groov::field<"JSWSTART", bool, 1, 1>,
+               groov::field<"DFEN", bool, 0, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt2cr2_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED1", std::uint8_t, 31, 24, access::ro>,
+               groov::field<"AWDCH", std::uint8_t, 23, 16>,
+               groov::field<"EXCH", std::uint8_t, 15, 8>,
+               groov::field<"RESERVED0", bool, 7, 7, access::ro>,
+               groov::field<"CKABIE", bool, 6, 6>,
+               groov::field<"SCDIE", bool, 5, 5>,
+               groov::field<"AWDIE", bool, 4, 4>,
+               groov::field<"ROVRIE", bool, 3, 3>,
+               groov::field<"JOVRIE", bool, 2, 2>,
+               groov::field<"REOCIE", bool, 1, 1>,
+               groov::field<"JEOCIE", bool, 0, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt2isr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"SCDF", std::uint8_t, 31, 24, access::ro>,
+               groov::field<"CKABF", std::uint8_t, 23, 16, access::ro>,
+               groov::field<"RESERVED1", bool, 15, 15, access::ro>,
+               groov::field<"RCIP", bool, 14, 14, access::ro>,
+               groov::field<"JCIP", bool, 13, 13, access::ro>,
+               groov::field<"RESERVED0", std::uint8_t, 12, 5, access::ro>,
+               groov::field<"AWDF", bool, 4, 4, access::ro>,
+               groov::field<"ROVRF", bool, 3, 3, access::ro>,
+               groov::field<"JOVRF", bool, 2, 2, access::ro>,
+               groov::field<"REOCF", bool, 1, 1, access::ro>,
+               groov::field<"JEOCF", bool, 0, 0, access::ro>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt2icr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"CLRSCDF", std::uint8_t, 31, 24>,
+               groov::field<"CLRCKABF", std::uint8_t, 23, 16>,
+               groov::field<"RESERVED1", std::uint16_t, 15, 4, access::ro>,
+               groov::field<"CLRROVRF", bool, 3, 3>,
+               groov::field<"CLRJOVRF", bool, 2, 2>,
+               groov::field<"RESERVED0", std::uint8_t, 1, 0, access::ro>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt2jchgr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint32_t, 31, 8, access::ro>,
+               groov::field<"JCHG", std::uint8_t, 7, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt2fcr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"FORD", std::uint8_t, 31, 29>,
+               groov::field<"RESERVED1", std::uint8_t, 28, 26, access::ro>,
+               groov::field<"FOSR", std::uint16_t, 25, 16>,
+               groov::field<"RESERVED0", std::uint8_t, 15, 8, access::ro>,
+               groov::field<"IOSR", std::uint8_t, 7, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt2jdatar_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"JDATA", std::uint32_t, 31, 8, access::ro>,
+               groov::field<"RESERVED0", std::uint8_t, 7, 3, access::ro>,
+               groov::field<"JDATACH", std::uint8_t, 2, 0, access::ro>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt2rdatar_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RDATA", std::uint32_t, 31, 8, access::ro>,
+               groov::field<"RESERVED1", std::uint8_t, 7, 5, access::ro>,
+               groov::field<"RPEND", bool, 4, 4, access::ro>,
+               groov::field<"RESERVED0", bool, 3, 3, access::ro>,
+               groov::field<"RDATACH", std::uint8_t, 2, 0, access::ro>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt2awhtr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"AWHT", std::uint32_t, 31, 8>,
+               groov::field<"RESERVED0", std::uint8_t, 7, 4, access::ro>,
+               groov::field<"BKAWH", std::uint8_t, 3, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt2awltr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"AWLT", std::uint32_t, 31, 8>,
+               groov::field<"RESERVED0", std::uint8_t, 7, 4, access::ro>,
+               groov::field<"BKAWL", std::uint8_t, 3, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt2awsr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
+               groov::field<"AWHTF", std::uint8_t, 15, 8, access::ro>,
+               groov::field<"AWLTF", std::uint8_t, 7, 0, access::ro>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt2awcfr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
+               groov::field<"CLRAWHTF", std::uint8_t, 15, 8>,
+               groov::field<"CLRAWLTF", std::uint8_t, 7, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt2exmax_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"EXMAX", std::uint32_t, 31, 8, access::ro>,
+               groov::field<"RESERVED0", std::uint8_t, 7, 3, access::ro>,
+               groov::field<"EXMAXCH", std::uint8_t, 2, 0, access::ro>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt2exmin_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"EXMIN", std::uint32_t, 31, 8>,
+               groov::field<"RESERVED0", std::uint8_t, 7, 3, access::ro>,
+               groov::field<"EXMINCH", std::uint8_t, 2, 0, access::ro>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt2cnvtimr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"CNVCNT", std::uint32_t, 31, 4, access::ro>,
+               groov::field<"RESERVED0", std::uint8_t, 3, 0, access::ro>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt3cr1_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED6", bool, 31, 31, access::ro>,
+               groov::field<"AWFSEL", bool, 30, 30>,
+               groov::field<"FAST", bool, 29, 29>,
+               groov::field<"RESERVED5", std::uint8_t, 28, 27, access::ro>,
+               groov::field<"RCH", std::uint8_t, 26, 24>,
+               groov::field<"RESERVED4", std::uint8_t, 23, 22, access::ro>,
+               groov::field<"RDMAEN", bool, 21, 21>,
+               groov::field<"RESERVED3", bool, 20, 20, access::ro>,
+               groov::field<"RSYNC", bool, 19, 19>,
+               groov::field<"RCONT", bool, 18, 18>,
+               groov::field<"RSWSTART", bool, 17, 17>,
+               groov::field<"RESERVED2", std::uint8_t, 16, 15, access::ro>,
+               groov::field<"JEXTEN", std::uint8_t, 14, 13>,
+               groov::field<"JEXTSEL", std::uint8_t, 12, 8>,
+               groov::field<"RESERVED1", std::uint8_t, 7, 6, access::ro>,
+               groov::field<"JDMAEN", bool, 5, 5>,
+               groov::field<"JSCAN", bool, 4, 4>,
+               groov::field<"JSYNC", bool, 3, 3>,
+               groov::field<"RESERVED0", bool, 2, 2, access::ro>,
+               groov::field<"JSWSTART", bool, 1, 1>,
+               groov::field<"DFEN", bool, 0, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt3cr2_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED1", std::uint8_t, 31, 24, access::ro>,
+               groov::field<"AWDCH", std::uint8_t, 23, 16>,
+               groov::field<"EXCH", std::uint8_t, 15, 8>,
+               groov::field<"RESERVED0", bool, 7, 7, access::ro>,
+               groov::field<"CKABIE", bool, 6, 6>,
+               groov::field<"SCDIE", bool, 5, 5>,
+               groov::field<"AWDIE", bool, 4, 4>,
+               groov::field<"ROVRIE", bool, 3, 3>,
+               groov::field<"JOVRIE", bool, 2, 2>,
+               groov::field<"REOCIE", bool, 1, 1>,
+               groov::field<"JEOCIE", bool, 0, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt3isr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"SCDF", std::uint8_t, 31, 24, access::ro>,
+               groov::field<"CKABF", std::uint8_t, 23, 16, access::ro>,
+               groov::field<"RESERVED1", bool, 15, 15, access::ro>,
+               groov::field<"RCIP", bool, 14, 14, access::ro>,
+               groov::field<"JCIP", bool, 13, 13, access::ro>,
+               groov::field<"RESERVED0", std::uint8_t, 12, 5, access::ro>,
+               groov::field<"AWDF", bool, 4, 4, access::ro>,
+               groov::field<"ROVRF", bool, 3, 3, access::ro>,
+               groov::field<"JOVRF", bool, 2, 2, access::ro>,
+               groov::field<"REOCF", bool, 1, 1, access::ro>,
+               groov::field<"JEOCF", bool, 0, 0, access::ro>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt3icr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"CLRSCDF", std::uint8_t, 31, 24>,
+               groov::field<"CLRCKABF", std::uint8_t, 23, 16>,
+               groov::field<"RESERVED1", std::uint16_t, 15, 4, access::ro>,
+               groov::field<"CLRROVRF", bool, 3, 3>,
+               groov::field<"CLRJOVRF", bool, 2, 2>,
+               groov::field<"RESERVED0", std::uint8_t, 1, 0, access::ro>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt3jchgr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint32_t, 31, 8, access::ro>,
+               groov::field<"JCHG", std::uint8_t, 7, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt3fcr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"FORD", std::uint8_t, 31, 29>,
+               groov::field<"RESERVED1", std::uint8_t, 28, 26, access::ro>,
+               groov::field<"FOSR", std::uint16_t, 25, 16>,
+               groov::field<"RESERVED0", std::uint8_t, 15, 8, access::ro>,
+               groov::field<"IOSR", std::uint8_t, 7, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt3jdatar_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"JDATA", std::uint32_t, 31, 8, access::ro>,
+               groov::field<"RESERVED0", std::uint8_t, 7, 3, access::ro>,
+               groov::field<"JDATACH", std::uint8_t, 2, 0, access::ro>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt3rdatar_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RDATA", std::uint32_t, 31, 8, access::ro>,
+               groov::field<"RESERVED1", std::uint8_t, 7, 5, access::ro>,
+               groov::field<"RPEND", bool, 4, 4, access::ro>,
+               groov::field<"RESERVED0", bool, 3, 3, access::ro>,
+               groov::field<"RDATACH", std::uint8_t, 2, 0, access::ro>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt3awhtr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"AWHT", std::uint32_t, 31, 8>,
+               groov::field<"RESERVED0", std::uint8_t, 7, 4, access::ro>,
+               groov::field<"BKAWH", std::uint8_t, 3, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt3awltr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"AWLT", std::uint32_t, 31, 8>,
+               groov::field<"RESERVED0", std::uint8_t, 7, 4, access::ro>,
+               groov::field<"BKAWL", std::uint8_t, 3, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt3awsr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
+               groov::field<"AWHTF", std::uint8_t, 15, 8, access::ro>,
+               groov::field<"AWLTF", std::uint8_t, 7, 0, access::ro>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt3awcfr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
+               groov::field<"CLRAWHTF", std::uint8_t, 15, 8>,
+               groov::field<"CLRAWLTF", std::uint8_t, 7, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt3exmax_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"EXMAX", std::uint32_t, 31, 8, access::ro>,
+               groov::field<"RESERVED0", std::uint8_t, 7, 3, access::ro>,
+               groov::field<"EXMAXCH", std::uint8_t, 2, 0, access::ro>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt3exmin_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"EXMIN", std::uint32_t, 31, 8>,
+               groov::field<"RESERVED0", std::uint8_t, 7, 3, access::ro>,
+               groov::field<"EXMINCH", std::uint8_t, 2, 0, access::ro>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt3cnvtimr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"CNVCNT", std::uint32_t, 31, 4, access::ro>,
+               groov::field<"RESERVED0", std::uint8_t, 3, 0, access::ro>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt4cr1_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED6", bool, 31, 31, access::ro>,
+               groov::field<"AWFSEL", bool, 30, 30>,
+               groov::field<"FAST", bool, 29, 29>,
+               groov::field<"RESERVED5", std::uint8_t, 28, 27, access::ro>,
+               groov::field<"RCH", std::uint8_t, 26, 24>,
+               groov::field<"RESERVED4", std::uint8_t, 23, 22, access::ro>,
+               groov::field<"RDMAEN", bool, 21, 21>,
+               groov::field<"RESERVED3", bool, 20, 20, access::ro>,
+               groov::field<"RSYNC", bool, 19, 19>,
+               groov::field<"RCONT", bool, 18, 18>,
+               groov::field<"RSWSTART", bool, 17, 17>,
+               groov::field<"RESERVED2", std::uint8_t, 16, 15, access::ro>,
+               groov::field<"JEXTEN", std::uint8_t, 14, 13>,
+               groov::field<"JEXTSEL", std::uint8_t, 12, 8>,
+               groov::field<"RESERVED1", std::uint8_t, 7, 6, access::ro>,
+               groov::field<"JDMAEN", bool, 5, 5>,
+               groov::field<"JSCAN", bool, 4, 4>,
+               groov::field<"JSYNC", bool, 3, 3>,
+               groov::field<"RESERVED0", bool, 2, 2, access::ro>,
+               groov::field<"JSWSTART", bool, 1, 1>,
+               groov::field<"DFEN", bool, 0, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt4cr2_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED1", std::uint8_t, 31, 24, access::ro>,
+               groov::field<"AWDCH", std::uint8_t, 23, 16>,
+               groov::field<"EXCH", std::uint8_t, 15, 8>,
+               groov::field<"RESERVED0", bool, 7, 7, access::ro>,
+               groov::field<"CKABIE", bool, 6, 6>,
+               groov::field<"SCDIE", bool, 5, 5>,
+               groov::field<"AWDIE", bool, 4, 4>,
+               groov::field<"ROVRIE", bool, 3, 3>,
+               groov::field<"JOVRIE", bool, 2, 2>,
+               groov::field<"REOCIE", bool, 1, 1>,
+               groov::field<"JEOCIE", bool, 0, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt4isr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"SCDF", std::uint8_t, 31, 24, access::ro>,
+               groov::field<"CKABF", std::uint8_t, 23, 16, access::ro>,
+               groov::field<"RESERVED1", bool, 15, 15, access::ro>,
+               groov::field<"RCIP", bool, 14, 14, access::ro>,
+               groov::field<"JCIP", bool, 13, 13, access::ro>,
+               groov::field<"RESERVED0", std::uint8_t, 12, 5, access::ro>,
+               groov::field<"AWDF", bool, 4, 4, access::ro>,
+               groov::field<"ROVRF", bool, 3, 3, access::ro>,
+               groov::field<"JOVRF", bool, 2, 2, access::ro>,
+               groov::field<"REOCF", bool, 1, 1, access::ro>,
+               groov::field<"JEOCF", bool, 0, 0, access::ro>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt4icr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"CLRSCDF", std::uint8_t, 31, 24>,
+               groov::field<"CLRCKABF", std::uint8_t, 23, 16>,
+               groov::field<"RESERVED1", std::uint16_t, 15, 4, access::ro>,
+               groov::field<"CLRROVRF", bool, 3, 3>,
+               groov::field<"CLRJOVRF", bool, 2, 2>,
+               groov::field<"RESERVED0", std::uint8_t, 1, 0, access::ro>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt4jchgr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint32_t, 31, 8, access::ro>,
+               groov::field<"JCHG", std::uint8_t, 7, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt4fcr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"FORD", std::uint8_t, 31, 29>,
+               groov::field<"RESERVED1", std::uint8_t, 28, 26, access::ro>,
+               groov::field<"FOSR", std::uint16_t, 25, 16>,
+               groov::field<"RESERVED0", std::uint8_t, 15, 8, access::ro>,
+               groov::field<"IOSR", std::uint8_t, 7, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt4jdatar_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"JDATA", std::uint32_t, 31, 8, access::ro>,
+               groov::field<"RESERVED0", std::uint8_t, 7, 3, access::ro>,
+               groov::field<"JDATACH", std::uint8_t, 2, 0, access::ro>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt4rdatar_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RDATA", std::uint32_t, 31, 8, access::ro>,
+               groov::field<"RESERVED1", std::uint8_t, 7, 5, access::ro>,
+               groov::field<"RPEND", bool, 4, 4, access::ro>,
+               groov::field<"RESERVED0", bool, 3, 3, access::ro>,
+               groov::field<"RDATACH", std::uint8_t, 2, 0, access::ro>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt4awhtr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"AWHT", std::uint32_t, 31, 8>,
+               groov::field<"RESERVED0", std::uint8_t, 7, 4, access::ro>,
+               groov::field<"BKAWH", std::uint8_t, 3, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt4awltr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"AWLT", std::uint32_t, 31, 8>,
+               groov::field<"RESERVED0", std::uint8_t, 7, 4, access::ro>,
+               groov::field<"BKAWL", std::uint8_t, 3, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt4awsr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
+               groov::field<"AWHTF", std::uint8_t, 15, 8, access::ro>,
+               groov::field<"AWLTF", std::uint8_t, 7, 0, access::ro>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt4awcfr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
+               groov::field<"CLRAWHTF", std::uint8_t, 15, 8>,
+               groov::field<"CLRAWLTF", std::uint8_t, 7, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt4exmax_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"EXMAX", std::uint32_t, 31, 8, access::ro>,
+               groov::field<"RESERVED0", std::uint8_t, 7, 3, access::ro>,
+               groov::field<"EXMAXCH", std::uint8_t, 2, 0, access::ro>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt4exmin_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"EXMIN", std::uint32_t, 31, 8>,
+               groov::field<"RESERVED0", std::uint8_t, 7, 3, access::ro>,
+               groov::field<"EXMINCH", std::uint8_t, 2, 0, access::ro>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt4cnvtimr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"CNVCNT", std::uint32_t, 31, 4, access::ro>,
+               groov::field<"RESERVED0", std::uint8_t, 3, 0, access::ro>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt5cr1_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED6", bool, 31, 31, access::ro>,
+               groov::field<"AWFSEL", bool, 30, 30>,
+               groov::field<"FAST", bool, 29, 29>,
+               groov::field<"RESERVED5", std::uint8_t, 28, 27, access::ro>,
+               groov::field<"RCH", std::uint8_t, 26, 24>,
+               groov::field<"RESERVED4", std::uint8_t, 23, 22, access::ro>,
+               groov::field<"RDMAEN", bool, 21, 21>,
+               groov::field<"RESERVED3", bool, 20, 20, access::ro>,
+               groov::field<"RSYNC", bool, 19, 19>,
+               groov::field<"RCONT", bool, 18, 18>,
+               groov::field<"RSWSTART", bool, 17, 17>,
+               groov::field<"RESERVED2", std::uint8_t, 16, 15, access::ro>,
+               groov::field<"JEXTEN", std::uint8_t, 14, 13>,
+               groov::field<"JEXTSEL", std::uint8_t, 12, 8>,
+               groov::field<"RESERVED1", std::uint8_t, 7, 6, access::ro>,
+               groov::field<"JDMAEN", bool, 5, 5>,
+               groov::field<"JSCAN", bool, 4, 4>,
+               groov::field<"JSYNC", bool, 3, 3>,
+               groov::field<"RESERVED0", bool, 2, 2, access::ro>,
+               groov::field<"JSWSTART", bool, 1, 1>,
+               groov::field<"DFEN", bool, 0, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt5cr2_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED1", std::uint8_t, 31, 24, access::ro>,
+               groov::field<"AWDCH", std::uint8_t, 23, 16>,
+               groov::field<"EXCH", std::uint8_t, 15, 8>,
+               groov::field<"RESERVED0", bool, 7, 7, access::ro>,
+               groov::field<"CKABIE", bool, 6, 6>,
+               groov::field<"SCDIE", bool, 5, 5>,
+               groov::field<"AWDIE", bool, 4, 4>,
+               groov::field<"ROVRIE", bool, 3, 3>,
+               groov::field<"JOVRIE", bool, 2, 2>,
+               groov::field<"REOCIE", bool, 1, 1>,
+               groov::field<"JEOCIE", bool, 0, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt5isr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"SCDF", std::uint8_t, 31, 24, access::ro>,
+               groov::field<"CKABF", std::uint8_t, 23, 16, access::ro>,
+               groov::field<"RESERVED1", bool, 15, 15, access::ro>,
+               groov::field<"RCIP", bool, 14, 14, access::ro>,
+               groov::field<"JCIP", bool, 13, 13, access::ro>,
+               groov::field<"RESERVED0", std::uint8_t, 12, 5, access::ro>,
+               groov::field<"AWDF", bool, 4, 4, access::ro>,
+               groov::field<"ROVRF", bool, 3, 3, access::ro>,
+               groov::field<"JOVRF", bool, 2, 2, access::ro>,
+               groov::field<"REOCF", bool, 1, 1, access::ro>,
+               groov::field<"JEOCF", bool, 0, 0, access::ro>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt5icr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"CLRSCDF", std::uint8_t, 31, 24>,
+               groov::field<"CLRCKABF", std::uint8_t, 23, 16>,
+               groov::field<"RESERVED1", std::uint16_t, 15, 4, access::ro>,
+               groov::field<"CLRROVRF", bool, 3, 3>,
+               groov::field<"CLRJOVRF", bool, 2, 2>,
+               groov::field<"RESERVED0", std::uint8_t, 1, 0, access::ro>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt5jchgr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint32_t, 31, 8, access::ro>,
+               groov::field<"JCHG", std::uint8_t, 7, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt5fcr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"FORD", std::uint8_t, 31, 29>,
+               groov::field<"RESERVED1", std::uint8_t, 28, 26, access::ro>,
+               groov::field<"FOSR", std::uint16_t, 25, 16>,
+               groov::field<"RESERVED0", std::uint8_t, 15, 8, access::ro>,
+               groov::field<"IOSR", std::uint8_t, 7, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt5jdatar_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"JDATA", std::uint32_t, 31, 8, access::ro>,
+               groov::field<"RESERVED0", std::uint8_t, 7, 3, access::ro>,
+               groov::field<"JDATACH", std::uint8_t, 2, 0, access::ro>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt5rdatar_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RDATA", std::uint32_t, 31, 8, access::ro>,
+               groov::field<"RESERVED1", std::uint8_t, 7, 5, access::ro>,
+               groov::field<"RPEND", bool, 4, 4, access::ro>,
+               groov::field<"RESERVED0", bool, 3, 3, access::ro>,
+               groov::field<"RDATACH", std::uint8_t, 2, 0, access::ro>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt5awhtr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"AWHT", std::uint32_t, 31, 8>,
+               groov::field<"RESERVED0", std::uint8_t, 7, 4, access::ro>,
+               groov::field<"BKAWH", std::uint8_t, 3, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt5awltr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"AWLT", std::uint32_t, 31, 8>,
+               groov::field<"RESERVED0", std::uint8_t, 7, 4, access::ro>,
+               groov::field<"BKAWL", std::uint8_t, 3, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt5awsr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
+               groov::field<"AWHTF", std::uint8_t, 15, 8, access::ro>,
+               groov::field<"AWLTF", std::uint8_t, 7, 0, access::ro>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt5awcfr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
+               groov::field<"CLRAWHTF", std::uint8_t, 15, 8>,
+               groov::field<"CLRAWLTF", std::uint8_t, 7, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt5exmax_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"EXMAX", std::uint32_t, 31, 8, access::ro>,
+               groov::field<"RESERVED0", std::uint8_t, 7, 3, access::ro>,
+               groov::field<"EXMAXCH", std::uint8_t, 2, 0, access::ro>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt5exmin_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"EXMIN", std::uint32_t, 31, 8>,
+               groov::field<"RESERVED0", std::uint8_t, 7, 3, access::ro>,
+               groov::field<"EXMINCH", std::uint8_t, 2, 0, access::ro>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt5cnvtimr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"CNVCNT", std::uint32_t, 31, 4, access::ro>,
+               groov::field<"RESERVED0", std::uint8_t, 3, 0, access::ro>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt6cr1_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED6", bool, 31, 31, access::ro>,
+               groov::field<"AWFSEL", bool, 30, 30>,
+               groov::field<"FAST", bool, 29, 29>,
+               groov::field<"RESERVED5", std::uint8_t, 28, 27, access::ro>,
+               groov::field<"RCH", std::uint8_t, 26, 24>,
+               groov::field<"RESERVED4", std::uint8_t, 23, 22, access::ro>,
+               groov::field<"RDMAEN", bool, 21, 21>,
+               groov::field<"RESERVED3", bool, 20, 20, access::ro>,
+               groov::field<"RSYNC", bool, 19, 19>,
+               groov::field<"RCONT", bool, 18, 18>,
+               groov::field<"RSWSTART", bool, 17, 17>,
+               groov::field<"RESERVED2", std::uint8_t, 16, 15, access::ro>,
+               groov::field<"JEXTEN", std::uint8_t, 14, 13>,
+               groov::field<"JEXTSEL", std::uint8_t, 12, 8>,
+               groov::field<"RESERVED1", std::uint8_t, 7, 6, access::ro>,
+               groov::field<"JDMAEN", bool, 5, 5>,
+               groov::field<"JSCAN", bool, 4, 4>,
+               groov::field<"JSYNC", bool, 3, 3>,
+               groov::field<"RESERVED0", bool, 2, 2, access::ro>,
+               groov::field<"JSWSTART", bool, 1, 1>,
+               groov::field<"DFEN", bool, 0, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt6cr2_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED1", std::uint8_t, 31, 24, access::ro>,
+               groov::field<"AWDCH", std::uint8_t, 23, 16>,
+               groov::field<"EXCH", std::uint8_t, 15, 8>,
+               groov::field<"RESERVED0", bool, 7, 7, access::ro>,
+               groov::field<"CKABIE", bool, 6, 6>,
+               groov::field<"SCDIE", bool, 5, 5>,
+               groov::field<"AWDIE", bool, 4, 4>,
+               groov::field<"ROVRIE", bool, 3, 3>,
+               groov::field<"JOVRIE", bool, 2, 2>,
+               groov::field<"REOCIE", bool, 1, 1>,
+               groov::field<"JEOCIE", bool, 0, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt6isr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"SCDF", std::uint8_t, 31, 24, access::ro>,
+               groov::field<"CKABF", std::uint8_t, 23, 16, access::ro>,
+               groov::field<"RESERVED1", bool, 15, 15, access::ro>,
+               groov::field<"RCIP", bool, 14, 14, access::ro>,
+               groov::field<"JCIP", bool, 13, 13, access::ro>,
+               groov::field<"RESERVED0", std::uint8_t, 12, 5, access::ro>,
+               groov::field<"AWDF", bool, 4, 4, access::ro>,
+               groov::field<"ROVRF", bool, 3, 3, access::ro>,
+               groov::field<"JOVRF", bool, 2, 2, access::ro>,
+               groov::field<"REOCF", bool, 1, 1, access::ro>,
+               groov::field<"JEOCF", bool, 0, 0, access::ro>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt6icr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"CLRSCDF", std::uint8_t, 31, 24>,
+               groov::field<"CLRCKABF", std::uint8_t, 23, 16>,
+               groov::field<"RESERVED1", std::uint16_t, 15, 4, access::ro>,
+               groov::field<"CLRROVRF", bool, 3, 3>,
+               groov::field<"CLRJOVRF", bool, 2, 2>,
+               groov::field<"RESERVED0", std::uint8_t, 1, 0, access::ro>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt6jchgr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint32_t, 31, 8, access::ro>,
+               groov::field<"JCHG", std::uint8_t, 7, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt6fcr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"FORD", std::uint8_t, 31, 29>,
+               groov::field<"RESERVED1", std::uint8_t, 28, 26, access::ro>,
+               groov::field<"FOSR", std::uint16_t, 25, 16>,
+               groov::field<"RESERVED0", std::uint8_t, 15, 8, access::ro>,
+               groov::field<"IOSR", std::uint8_t, 7, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt6jdatar_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"JDATA", std::uint32_t, 31, 8, access::ro>,
+               groov::field<"RESERVED0", std::uint8_t, 7, 3, access::ro>,
+               groov::field<"JDATACH", std::uint8_t, 2, 0, access::ro>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt6rdatar_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RDATA", std::uint32_t, 31, 8, access::ro>,
+               groov::field<"RESERVED1", std::uint8_t, 7, 5, access::ro>,
+               groov::field<"RPEND", bool, 4, 4, access::ro>,
+               groov::field<"RESERVED0", bool, 3, 3, access::ro>,
+               groov::field<"RDATACH", std::uint8_t, 2, 0, access::ro>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt6awhtr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"AWHT", std::uint32_t, 31, 8>,
+               groov::field<"RESERVED0", std::uint8_t, 7, 4, access::ro>,
+               groov::field<"BKAWH", std::uint8_t, 3, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt6awltr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"AWLT", std::uint32_t, 31, 8>,
+               groov::field<"RESERVED0", std::uint8_t, 7, 4, access::ro>,
+               groov::field<"BKAWL", std::uint8_t, 3, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt6awsr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
+               groov::field<"AWHTF", std::uint8_t, 15, 8, access::ro>,
+               groov::field<"AWLTF", std::uint8_t, 7, 0, access::ro>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt6awcfr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
+               groov::field<"CLRAWHTF", std::uint8_t, 15, 8>,
+               groov::field<"CLRAWLTF", std::uint8_t, 7, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt6exmax_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"EXMAX", std::uint32_t, 31, 8, access::ro>,
+               groov::field<"RESERVED0", std::uint8_t, 7, 3, access::ro>,
+               groov::field<"EXMAXCH", std::uint8_t, 2, 0, access::ro>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt6exmin_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"EXMIN", std::uint32_t, 31, 8>,
+               groov::field<"RESERVED0", std::uint8_t, 7, 3, access::ro>,
+               groov::field<"EXMINCH", std::uint8_t, 2, 0, access::ro>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt6cnvtimr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"CNVCNT", std::uint32_t, 31, 4, access::ro>,
+               groov::field<"RESERVED0", std::uint8_t, 3, 0, access::ro>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt7cr1_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED6", bool, 31, 31, access::ro>,
+               groov::field<"AWFSEL", bool, 30, 30>,
+               groov::field<"FAST", bool, 29, 29>,
+               groov::field<"RESERVED5", std::uint8_t, 28, 27, access::ro>,
+               groov::field<"RCH", std::uint8_t, 26, 24>,
+               groov::field<"RESERVED4", std::uint8_t, 23, 22, access::ro>,
+               groov::field<"RDMAEN", bool, 21, 21>,
+               groov::field<"RESERVED3", bool, 20, 20, access::ro>,
+               groov::field<"RSYNC", bool, 19, 19>,
+               groov::field<"RCONT", bool, 18, 18>,
+               groov::field<"RSWSTART", bool, 17, 17>,
+               groov::field<"RESERVED2", std::uint8_t, 16, 15, access::ro>,
+               groov::field<"JEXTEN", std::uint8_t, 14, 13>,
+               groov::field<"JEXTSEL", std::uint8_t, 12, 8>,
+               groov::field<"RESERVED1", std::uint8_t, 7, 6, access::ro>,
+               groov::field<"JDMAEN", bool, 5, 5>,
+               groov::field<"JSCAN", bool, 4, 4>,
+               groov::field<"JSYNC", bool, 3, 3>,
+               groov::field<"RESERVED0", bool, 2, 2, access::ro>,
+               groov::field<"JSWSTART", bool, 1, 1>,
+               groov::field<"DFEN", bool, 0, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt7cr2_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED1", std::uint8_t, 31, 24, access::ro>,
+               groov::field<"AWDCH", std::uint8_t, 23, 16>,
+               groov::field<"EXCH", std::uint8_t, 15, 8>,
+               groov::field<"RESERVED0", bool, 7, 7, access::ro>,
+               groov::field<"CKABIE", bool, 6, 6>,
+               groov::field<"SCDIE", bool, 5, 5>,
+               groov::field<"AWDIE", bool, 4, 4>,
+               groov::field<"ROVRIE", bool, 3, 3>,
+               groov::field<"JOVRIE", bool, 2, 2>,
+               groov::field<"REOCIE", bool, 1, 1>,
+               groov::field<"JEOCIE", bool, 0, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt7isr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"SCDF", std::uint8_t, 31, 24, access::ro>,
+               groov::field<"CKABF", std::uint8_t, 23, 16, access::ro>,
+               groov::field<"RESERVED1", bool, 15, 15, access::ro>,
+               groov::field<"RCIP", bool, 14, 14, access::ro>,
+               groov::field<"JCIP", bool, 13, 13, access::ro>,
+               groov::field<"RESERVED0", std::uint8_t, 12, 5, access::ro>,
+               groov::field<"AWDF", bool, 4, 4, access::ro>,
+               groov::field<"ROVRF", bool, 3, 3, access::ro>,
+               groov::field<"JOVRF", bool, 2, 2, access::ro>,
+               groov::field<"REOCF", bool, 1, 1, access::ro>,
+               groov::field<"JEOCF", bool, 0, 0, access::ro>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt7icr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"CLRSCDF", std::uint8_t, 31, 24>,
+               groov::field<"CLRCKABF", std::uint8_t, 23, 16>,
+               groov::field<"RESERVED1", std::uint16_t, 15, 4, access::ro>,
+               groov::field<"CLRROVRF", bool, 3, 3>,
+               groov::field<"CLRJOVRF", bool, 2, 2>,
+               groov::field<"RESERVED0", std::uint8_t, 1, 0, access::ro>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt7jchgr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint32_t, 31, 8, access::ro>,
+               groov::field<"JCHG", std::uint8_t, 7, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt7fcr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"FORD", std::uint8_t, 31, 29>,
+               groov::field<"RESERVED1", std::uint8_t, 28, 26, access::ro>,
+               groov::field<"FOSR", std::uint16_t, 25, 16>,
+               groov::field<"RESERVED0", std::uint8_t, 15, 8, access::ro>,
+               groov::field<"IOSR", std::uint8_t, 7, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt7jdatar_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"JDATA", std::uint32_t, 31, 8, access::ro>,
+               groov::field<"RESERVED0", std::uint8_t, 7, 3, access::ro>,
+               groov::field<"JDATACH", std::uint8_t, 2, 0, access::ro>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt7rdatar_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RDATA", std::uint32_t, 31, 8, access::ro>,
+               groov::field<"RESERVED1", std::uint8_t, 7, 5, access::ro>,
+               groov::field<"RPEND", bool, 4, 4, access::ro>,
+               groov::field<"RESERVED0", bool, 3, 3, access::ro>,
+               groov::field<"RDATACH", std::uint8_t, 2, 0, access::ro>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt7awhtr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"AWHT", std::uint32_t, 31, 8>,
+               groov::field<"RESERVED0", std::uint8_t, 7, 4, access::ro>,
+               groov::field<"BKAWH", std::uint8_t, 3, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt7awltr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"AWLT", std::uint32_t, 31, 8>,
+               groov::field<"RESERVED0", std::uint8_t, 7, 4, access::ro>,
+               groov::field<"BKAWL", std::uint8_t, 3, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt7awsr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
+               groov::field<"AWHTF", std::uint8_t, 15, 8, access::ro>,
+               groov::field<"AWLTF", std::uint8_t, 7, 0, access::ro>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt7awcfr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
+               groov::field<"CLRAWHTF", std::uint8_t, 15, 8>,
+               groov::field<"CLRAWLTF", std::uint8_t, 7, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt7exmax_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"EXMAX", std::uint32_t, 31, 8, access::ro>,
+               groov::field<"RESERVED0", std::uint8_t, 7, 3, access::ro>,
+               groov::field<"EXMAXCH", std::uint8_t, 2, 0, access::ro>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt7exmin_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"EXMIN", std::uint32_t, 31, 8>,
+               groov::field<"RESERVED0", std::uint8_t, 7, 3, access::ro>,
+               groov::field<"EXMINCH", std::uint8_t, 2, 0, access::ro>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dfsdm_flt7cnvtimr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"CNVCNT", std::uint32_t, 31, 4, access::ro>,
+               groov::field<"RESERVED0", std::uint8_t, 3, 0, access::ro>>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_ch0cfgr1_t = dfsdm_ch0cfgr1_tt<"DFSDM_CH0CFGR1", baseaddress, 0>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_ch0cfgr2_t = dfsdm_ch0cfgr2_tt<"DFSDM_CH0CFGR2", baseaddress, 4>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_ch0awscdr_t =
+    dfsdm_ch0awscdr_tt<"DFSDM_CH0AWSCDR", baseaddress, 8>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_ch0wdatr_t = dfsdm_ch0wdatr_tt<"DFSDM_CH0WDATR", baseaddress, 12>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_ch0datinr_t =
+    dfsdm_ch0datinr_tt<"DFSDM_CH0DATINR", baseaddress, 16>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_ch0dlyr_t = dfsdm_ch0dlyr_tt<"DFSDM_CH0DLYR", baseaddress, 20>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_ch1cfgr1_t = dfsdm_ch1cfgr1_tt<"DFSDM_CH1CFGR1", baseaddress, 32>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_ch1cfgr2_t = dfsdm_ch1cfgr2_tt<"DFSDM_CH1CFGR2", baseaddress, 36>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_ch1awscdr_t =
+    dfsdm_ch1awscdr_tt<"DFSDM_CH1AWSCDR", baseaddress, 40>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_ch1wdatr_t = dfsdm_ch1wdatr_tt<"DFSDM_CH1WDATR", baseaddress, 44>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_ch1datinr_t =
+    dfsdm_ch1datinr_tt<"DFSDM_CH1DATINR", baseaddress, 48>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_ch1dlyr_t = dfsdm_ch1dlyr_tt<"DFSDM_CH1DLYR", baseaddress, 52>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_ch2cfgr1_t = dfsdm_ch2cfgr1_tt<"DFSDM_CH2CFGR1", baseaddress, 64>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_ch2cfgr2_t = dfsdm_ch2cfgr2_tt<"DFSDM_CH2CFGR2", baseaddress, 68>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_ch2awscdr_t =
+    dfsdm_ch2awscdr_tt<"DFSDM_CH2AWSCDR", baseaddress, 72>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_ch2wdatr_t = dfsdm_ch2wdatr_tt<"DFSDM_CH2WDATR", baseaddress, 76>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_ch2datinr_t =
+    dfsdm_ch2datinr_tt<"DFSDM_CH2DATINR", baseaddress, 80>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_ch2dlyr_t = dfsdm_ch2dlyr_tt<"DFSDM_CH2DLYR", baseaddress, 84>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_ch3cfgr1_t = dfsdm_ch3cfgr1_tt<"DFSDM_CH3CFGR1", baseaddress, 96>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_ch3cfgr2_t =
+    dfsdm_ch3cfgr2_tt<"DFSDM_CH3CFGR2", baseaddress, 100>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_ch3awscdr_t =
+    dfsdm_ch3awscdr_tt<"DFSDM_CH3AWSCDR", baseaddress, 104>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_ch3wdatr_t =
+    dfsdm_ch3wdatr_tt<"DFSDM_CH3WDATR", baseaddress, 108>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_ch3datinr_t =
+    dfsdm_ch3datinr_tt<"DFSDM_CH3DATINR", baseaddress, 112>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_ch3dlyr_t = dfsdm_ch3dlyr_tt<"DFSDM_CH3DLYR", baseaddress, 116>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_ch4cfgr1_t =
+    dfsdm_ch4cfgr1_tt<"DFSDM_CH4CFGR1", baseaddress, 128>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_ch4cfgr2_t =
+    dfsdm_ch4cfgr2_tt<"DFSDM_CH4CFGR2", baseaddress, 132>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_ch4awscdr_t =
+    dfsdm_ch4awscdr_tt<"DFSDM_CH4AWSCDR", baseaddress, 136>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_ch4wdatr_t =
+    dfsdm_ch4wdatr_tt<"DFSDM_CH4WDATR", baseaddress, 140>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_ch4datinr_t =
+    dfsdm_ch4datinr_tt<"DFSDM_CH4DATINR", baseaddress, 144>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_ch4dlyr_t = dfsdm_ch4dlyr_tt<"DFSDM_CH4DLYR", baseaddress, 148>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_ch5cfgr1_t =
+    dfsdm_ch5cfgr1_tt<"DFSDM_CH5CFGR1", baseaddress, 160>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_ch5cfgr2_t =
+    dfsdm_ch5cfgr2_tt<"DFSDM_CH5CFGR2", baseaddress, 164>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_ch5awscdr_t =
+    dfsdm_ch5awscdr_tt<"DFSDM_CH5AWSCDR", baseaddress, 168>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_ch5wdatr_t =
+    dfsdm_ch5wdatr_tt<"DFSDM_CH5WDATR", baseaddress, 172>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_ch5datinr_t =
+    dfsdm_ch5datinr_tt<"DFSDM_CH5DATINR", baseaddress, 176>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_ch5dlyr_t = dfsdm_ch5dlyr_tt<"DFSDM_CH5DLYR", baseaddress, 180>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_ch6cfgr1_t =
+    dfsdm_ch6cfgr1_tt<"DFSDM_CH6CFGR1", baseaddress, 192>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_ch6cfgr2_t =
+    dfsdm_ch6cfgr2_tt<"DFSDM_CH6CFGR2", baseaddress, 196>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_ch6awscdr_t =
+    dfsdm_ch6awscdr_tt<"DFSDM_CH6AWSCDR", baseaddress, 200>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_ch6wdatr_t =
+    dfsdm_ch6wdatr_tt<"DFSDM_CH6WDATR", baseaddress, 204>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_ch6datinr_t =
+    dfsdm_ch6datinr_tt<"DFSDM_CH6DATINR", baseaddress, 208>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_ch6dlyr_t = dfsdm_ch6dlyr_tt<"DFSDM_CH6DLYR", baseaddress, 212>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_ch7cfgr1_t =
+    dfsdm_ch7cfgr1_tt<"DFSDM_CH7CFGR1", baseaddress, 224>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_ch7cfgr2_t =
+    dfsdm_ch7cfgr2_tt<"DFSDM_CH7CFGR2", baseaddress, 228>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_ch7awscdr_t =
+    dfsdm_ch7awscdr_tt<"DFSDM_CH7AWSCDR", baseaddress, 232>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_ch7wdatr_t =
+    dfsdm_ch7wdatr_tt<"DFSDM_CH7WDATR", baseaddress, 236>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_ch7datinr_t =
+    dfsdm_ch7datinr_tt<"DFSDM_CH7DATINR", baseaddress, 240>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_ch7dlyr_t = dfsdm_ch7dlyr_tt<"DFSDM_CH7DLYR", baseaddress, 244>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt0cr1_t = dfsdm_flt0cr1_tt<"DFSDM_FLT0CR1", baseaddress, 256>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt0cr2_t = dfsdm_flt0cr2_tt<"DFSDM_FLT0CR2", baseaddress, 260>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt0isr_t = dfsdm_flt0isr_tt<"DFSDM_FLT0ISR", baseaddress, 264>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt0icr_t = dfsdm_flt0icr_tt<"DFSDM_FLT0ICR", baseaddress, 268>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt0jchgr_t =
+    dfsdm_flt0jchgr_tt<"DFSDM_FLT0JCHGR", baseaddress, 272>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt0fcr_t = dfsdm_flt0fcr_tt<"DFSDM_FLT0FCR", baseaddress, 276>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt0jdatar_t =
+    dfsdm_flt0jdatar_tt<"DFSDM_FLT0JDATAR", baseaddress, 280>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt0rdatar_t =
+    dfsdm_flt0rdatar_tt<"DFSDM_FLT0RDATAR", baseaddress, 284>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt0awhtr_t =
+    dfsdm_flt0awhtr_tt<"DFSDM_FLT0AWHTR", baseaddress, 288>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt0awltr_t =
+    dfsdm_flt0awltr_tt<"DFSDM_FLT0AWLTR", baseaddress, 292>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt0awsr_t =
+    dfsdm_flt0awsr_tt<"DFSDM_FLT0AWSR", baseaddress, 296>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt0awcfr_t =
+    dfsdm_flt0awcfr_tt<"DFSDM_FLT0AWCFR", baseaddress, 300>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt0exmax_t =
+    dfsdm_flt0exmax_tt<"DFSDM_FLT0EXMAX", baseaddress, 304>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt0exmin_t =
+    dfsdm_flt0exmin_tt<"DFSDM_FLT0EXMIN", baseaddress, 308>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt0cnvtimr_t =
+    dfsdm_flt0cnvtimr_tt<"DFSDM_FLT0CNVTIMR", baseaddress, 312>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt1cr1_t = dfsdm_flt1cr1_tt<"DFSDM_FLT1CR1", baseaddress, 384>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt1cr2_t = dfsdm_flt1cr2_tt<"DFSDM_FLT1CR2", baseaddress, 388>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt1isr_t = dfsdm_flt1isr_tt<"DFSDM_FLT1ISR", baseaddress, 392>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt1icr_t = dfsdm_flt1icr_tt<"DFSDM_FLT1ICR", baseaddress, 396>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt1jchgr_t =
+    dfsdm_flt1jchgr_tt<"DFSDM_FLT1JCHGR", baseaddress, 400>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt1fcr_t = dfsdm_flt1fcr_tt<"DFSDM_FLT1FCR", baseaddress, 404>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt1jdatar_t =
+    dfsdm_flt1jdatar_tt<"DFSDM_FLT1JDATAR", baseaddress, 408>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt1rdatar_t =
+    dfsdm_flt1rdatar_tt<"DFSDM_FLT1RDATAR", baseaddress, 412>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt1awhtr_t =
+    dfsdm_flt1awhtr_tt<"DFSDM_FLT1AWHTR", baseaddress, 416>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt1awltr_t =
+    dfsdm_flt1awltr_tt<"DFSDM_FLT1AWLTR", baseaddress, 420>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt1awsr_t =
+    dfsdm_flt1awsr_tt<"DFSDM_FLT1AWSR", baseaddress, 424>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt1awcfr_t =
+    dfsdm_flt1awcfr_tt<"DFSDM_FLT1AWCFR", baseaddress, 428>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt1exmax_t =
+    dfsdm_flt1exmax_tt<"DFSDM_FLT1EXMAX", baseaddress, 432>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt1exmin_t =
+    dfsdm_flt1exmin_tt<"DFSDM_FLT1EXMIN", baseaddress, 436>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt1cnvtimr_t =
+    dfsdm_flt1cnvtimr_tt<"DFSDM_FLT1CNVTIMR", baseaddress, 440>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt2cr1_t = dfsdm_flt2cr1_tt<"DFSDM_FLT2CR1", baseaddress, 512>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt2cr2_t = dfsdm_flt2cr2_tt<"DFSDM_FLT2CR2", baseaddress, 516>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt2isr_t = dfsdm_flt2isr_tt<"DFSDM_FLT2ISR", baseaddress, 520>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt2icr_t = dfsdm_flt2icr_tt<"DFSDM_FLT2ICR", baseaddress, 524>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt2jchgr_t =
+    dfsdm_flt2jchgr_tt<"DFSDM_FLT2JCHGR", baseaddress, 528>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt2fcr_t = dfsdm_flt2fcr_tt<"DFSDM_FLT2FCR", baseaddress, 532>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt2jdatar_t =
+    dfsdm_flt2jdatar_tt<"DFSDM_FLT2JDATAR", baseaddress, 536>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt2rdatar_t =
+    dfsdm_flt2rdatar_tt<"DFSDM_FLT2RDATAR", baseaddress, 540>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt2awhtr_t =
+    dfsdm_flt2awhtr_tt<"DFSDM_FLT2AWHTR", baseaddress, 544>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt2awltr_t =
+    dfsdm_flt2awltr_tt<"DFSDM_FLT2AWLTR", baseaddress, 548>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt2awsr_t =
+    dfsdm_flt2awsr_tt<"DFSDM_FLT2AWSR", baseaddress, 552>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt2awcfr_t =
+    dfsdm_flt2awcfr_tt<"DFSDM_FLT2AWCFR", baseaddress, 556>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt2exmax_t =
+    dfsdm_flt2exmax_tt<"DFSDM_FLT2EXMAX", baseaddress, 560>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt2exmin_t =
+    dfsdm_flt2exmin_tt<"DFSDM_FLT2EXMIN", baseaddress, 564>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt2cnvtimr_t =
+    dfsdm_flt2cnvtimr_tt<"DFSDM_FLT2CNVTIMR", baseaddress, 568>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt3cr1_t = dfsdm_flt3cr1_tt<"DFSDM_FLT3CR1", baseaddress, 640>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt3cr2_t = dfsdm_flt3cr2_tt<"DFSDM_FLT3CR2", baseaddress, 644>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt3isr_t = dfsdm_flt3isr_tt<"DFSDM_FLT3ISR", baseaddress, 648>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt3icr_t = dfsdm_flt3icr_tt<"DFSDM_FLT3ICR", baseaddress, 652>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt3jchgr_t =
+    dfsdm_flt3jchgr_tt<"DFSDM_FLT3JCHGR", baseaddress, 656>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt3fcr_t = dfsdm_flt3fcr_tt<"DFSDM_FLT3FCR", baseaddress, 660>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt3jdatar_t =
+    dfsdm_flt3jdatar_tt<"DFSDM_FLT3JDATAR", baseaddress, 664>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt3rdatar_t =
+    dfsdm_flt3rdatar_tt<"DFSDM_FLT3RDATAR", baseaddress, 668>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt3awhtr_t =
+    dfsdm_flt3awhtr_tt<"DFSDM_FLT3AWHTR", baseaddress, 672>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt3awltr_t =
+    dfsdm_flt3awltr_tt<"DFSDM_FLT3AWLTR", baseaddress, 676>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt3awsr_t =
+    dfsdm_flt3awsr_tt<"DFSDM_FLT3AWSR", baseaddress, 680>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt3awcfr_t =
+    dfsdm_flt3awcfr_tt<"DFSDM_FLT3AWCFR", baseaddress, 684>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt3exmax_t =
+    dfsdm_flt3exmax_tt<"DFSDM_FLT3EXMAX", baseaddress, 688>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt3exmin_t =
+    dfsdm_flt3exmin_tt<"DFSDM_FLT3EXMIN", baseaddress, 692>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt3cnvtimr_t =
+    dfsdm_flt3cnvtimr_tt<"DFSDM_FLT3CNVTIMR", baseaddress, 696>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt4cr1_t = dfsdm_flt4cr1_tt<"DFSDM_FLT4CR1", baseaddress, 768>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt4cr2_t = dfsdm_flt4cr2_tt<"DFSDM_FLT4CR2", baseaddress, 772>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt4isr_t = dfsdm_flt4isr_tt<"DFSDM_FLT4ISR", baseaddress, 776>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt4icr_t = dfsdm_flt4icr_tt<"DFSDM_FLT4ICR", baseaddress, 780>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt4jchgr_t =
+    dfsdm_flt4jchgr_tt<"DFSDM_FLT4JCHGR", baseaddress, 784>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt4fcr_t = dfsdm_flt4fcr_tt<"DFSDM_FLT4FCR", baseaddress, 788>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt4jdatar_t =
+    dfsdm_flt4jdatar_tt<"DFSDM_FLT4JDATAR", baseaddress, 792>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt4rdatar_t =
+    dfsdm_flt4rdatar_tt<"DFSDM_FLT4RDATAR", baseaddress, 796>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt4awhtr_t =
+    dfsdm_flt4awhtr_tt<"DFSDM_FLT4AWHTR", baseaddress, 800>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt4awltr_t =
+    dfsdm_flt4awltr_tt<"DFSDM_FLT4AWLTR", baseaddress, 804>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt4awsr_t =
+    dfsdm_flt4awsr_tt<"DFSDM_FLT4AWSR", baseaddress, 808>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt4awcfr_t =
+    dfsdm_flt4awcfr_tt<"DFSDM_FLT4AWCFR", baseaddress, 812>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt4exmax_t =
+    dfsdm_flt4exmax_tt<"DFSDM_FLT4EXMAX", baseaddress, 816>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt4exmin_t =
+    dfsdm_flt4exmin_tt<"DFSDM_FLT4EXMIN", baseaddress, 820>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt4cnvtimr_t =
+    dfsdm_flt4cnvtimr_tt<"DFSDM_FLT4CNVTIMR", baseaddress, 824>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt5cr1_t = dfsdm_flt5cr1_tt<"DFSDM_FLT5CR1", baseaddress, 896>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt5cr2_t = dfsdm_flt5cr2_tt<"DFSDM_FLT5CR2", baseaddress, 900>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt5isr_t = dfsdm_flt5isr_tt<"DFSDM_FLT5ISR", baseaddress, 904>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt5icr_t = dfsdm_flt5icr_tt<"DFSDM_FLT5ICR", baseaddress, 908>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt5jchgr_t =
+    dfsdm_flt5jchgr_tt<"DFSDM_FLT5JCHGR", baseaddress, 912>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt5fcr_t = dfsdm_flt5fcr_tt<"DFSDM_FLT5FCR", baseaddress, 916>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt5jdatar_t =
+    dfsdm_flt5jdatar_tt<"DFSDM_FLT5JDATAR", baseaddress, 920>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt5rdatar_t =
+    dfsdm_flt5rdatar_tt<"DFSDM_FLT5RDATAR", baseaddress, 924>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt5awhtr_t =
+    dfsdm_flt5awhtr_tt<"DFSDM_FLT5AWHTR", baseaddress, 928>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt5awltr_t =
+    dfsdm_flt5awltr_tt<"DFSDM_FLT5AWLTR", baseaddress, 932>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt5awsr_t =
+    dfsdm_flt5awsr_tt<"DFSDM_FLT5AWSR", baseaddress, 936>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt5awcfr_t =
+    dfsdm_flt5awcfr_tt<"DFSDM_FLT5AWCFR", baseaddress, 940>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt5exmax_t =
+    dfsdm_flt5exmax_tt<"DFSDM_FLT5EXMAX", baseaddress, 944>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt5exmin_t =
+    dfsdm_flt5exmin_tt<"DFSDM_FLT5EXMIN", baseaddress, 948>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt5cnvtimr_t =
+    dfsdm_flt5cnvtimr_tt<"DFSDM_FLT5CNVTIMR", baseaddress, 952>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt6cr1_t = dfsdm_flt6cr1_tt<"DFSDM_FLT6CR1", baseaddress, 1024>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt6cr2_t = dfsdm_flt6cr2_tt<"DFSDM_FLT6CR2", baseaddress, 1028>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt6isr_t = dfsdm_flt6isr_tt<"DFSDM_FLT6ISR", baseaddress, 1032>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt6icr_t = dfsdm_flt6icr_tt<"DFSDM_FLT6ICR", baseaddress, 1036>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt6jchgr_t =
+    dfsdm_flt6jchgr_tt<"DFSDM_FLT6JCHGR", baseaddress, 1040>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt6fcr_t = dfsdm_flt6fcr_tt<"DFSDM_FLT6FCR", baseaddress, 1044>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt6jdatar_t =
+    dfsdm_flt6jdatar_tt<"DFSDM_FLT6JDATAR", baseaddress, 1048>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt6rdatar_t =
+    dfsdm_flt6rdatar_tt<"DFSDM_FLT6RDATAR", baseaddress, 1052>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt6awhtr_t =
+    dfsdm_flt6awhtr_tt<"DFSDM_FLT6AWHTR", baseaddress, 1056>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt6awltr_t =
+    dfsdm_flt6awltr_tt<"DFSDM_FLT6AWLTR", baseaddress, 1060>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt6awsr_t =
+    dfsdm_flt6awsr_tt<"DFSDM_FLT6AWSR", baseaddress, 1064>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt6awcfr_t =
+    dfsdm_flt6awcfr_tt<"DFSDM_FLT6AWCFR", baseaddress, 1068>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt6exmax_t =
+    dfsdm_flt6exmax_tt<"DFSDM_FLT6EXMAX", baseaddress, 1072>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt6exmin_t =
+    dfsdm_flt6exmin_tt<"DFSDM_FLT6EXMIN", baseaddress, 1076>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt6cnvtimr_t =
+    dfsdm_flt6cnvtimr_tt<"DFSDM_FLT6CNVTIMR", baseaddress, 1080>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt7cr1_t = dfsdm_flt7cr1_tt<"DFSDM_FLT7CR1", baseaddress, 1152>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt7cr2_t = dfsdm_flt7cr2_tt<"DFSDM_FLT7CR2", baseaddress, 1156>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt7isr_t = dfsdm_flt7isr_tt<"DFSDM_FLT7ISR", baseaddress, 1160>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt7icr_t = dfsdm_flt7icr_tt<"DFSDM_FLT7ICR", baseaddress, 1164>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt7jchgr_t =
+    dfsdm_flt7jchgr_tt<"DFSDM_FLT7JCHGR", baseaddress, 1168>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt7fcr_t = dfsdm_flt7fcr_tt<"DFSDM_FLT7FCR", baseaddress, 1172>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt7jdatar_t =
+    dfsdm_flt7jdatar_tt<"DFSDM_FLT7JDATAR", baseaddress, 1176>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt7rdatar_t =
+    dfsdm_flt7rdatar_tt<"DFSDM_FLT7RDATAR", baseaddress, 1180>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt7awhtr_t =
+    dfsdm_flt7awhtr_tt<"DFSDM_FLT7AWHTR", baseaddress, 1184>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt7awltr_t =
+    dfsdm_flt7awltr_tt<"DFSDM_FLT7AWLTR", baseaddress, 1188>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt7awsr_t =
+    dfsdm_flt7awsr_tt<"DFSDM_FLT7AWSR", baseaddress, 1192>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt7awcfr_t =
+    dfsdm_flt7awcfr_tt<"DFSDM_FLT7AWCFR", baseaddress, 1196>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt7exmax_t =
+    dfsdm_flt7exmax_tt<"DFSDM_FLT7EXMAX", baseaddress, 1200>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt7exmin_t =
+    dfsdm_flt7exmin_tt<"DFSDM_FLT7EXMIN", baseaddress, 1204>;
+
+  template <std::uint32_t baseaddress>
+  using dfsdm_flt7cnvtimr_t =
+    dfsdm_flt7cnvtimr_tt<"DFSDM_FLT7CNVTIMR", baseaddress, 1208>;
 
 } // namespace dfsdm2
-

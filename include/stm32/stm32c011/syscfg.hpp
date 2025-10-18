@@ -11,332 +11,352 @@ namespace stm32 {
 
 namespace syscfg {
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using syscfg_cfgr1_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED3", std::uint8_t, 31, 25 ,access::ro>,
-  groov::field<"I2C_PC14_FMP", bool, 24, 24 >,
-  groov::field<"I2C_PA10_FMP", bool, 23, 23 >,
-  groov::field<"I2C_PA9_FMP", bool, 22, 22 >,
-  groov::field<"RESERVED2", bool, 21, 21 ,access::ro>,
-  groov::field<"I2C1_FMP", bool, 20, 20 >,
-  groov::field<"I2C_PB9_FMP", bool, 19, 19 >,
-  groov::field<"I2C_PB8_FMP", bool, 18, 18 >,
-  groov::field<"I2C_PB7_FMP", bool, 17, 17 >,
-  groov::field<"I2C_PB6_FMP", bool, 16, 16 >,
-  groov::field<"RESERVED1", std::uint8_t, 15, 8 ,access::ro>,
-  groov::field<"IR_MOD", std::uint8_t, 7, 6 >,
-  groov::field<"IR_POL", bool, 5, 5 >,
-  groov::field<"PA12_RMP", bool, 4, 4 >,
-  groov::field<"PA11_RMP", bool, 3, 3 >,
-  groov::field<"RESERVED0", bool, 2, 2 ,access::ro>,
-  groov::field<"MEM_MODE", std::uint8_t, 1, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using syscfg_cfgr1_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED3", std::uint8_t, 31, 25, access::ro>,
+               groov::field<"I2C_PC14_FMP", bool, 24, 24>,
+               groov::field<"I2C_PA10_FMP", bool, 23, 23>,
+               groov::field<"I2C_PA9_FMP", bool, 22, 22>,
+               groov::field<"RESERVED2", bool, 21, 21, access::ro>,
+               groov::field<"I2C1_FMP", bool, 20, 20>,
+               groov::field<"I2C_PB9_FMP", bool, 19, 19>,
+               groov::field<"I2C_PB8_FMP", bool, 18, 18>,
+               groov::field<"I2C_PB7_FMP", bool, 17, 17>,
+               groov::field<"I2C_PB6_FMP", bool, 16, 16>,
+               groov::field<"RESERVED1", std::uint8_t, 15, 8, access::ro>,
+               groov::field<"IR_MOD", std::uint8_t, 7, 6>,
+               groov::field<"IR_POL", bool, 5, 5>,
+               groov::field<"PA12_RMP", bool, 4, 4>,
+               groov::field<"PA11_RMP", bool, 3, 3>,
+               groov::field<"RESERVED0", bool, 2, 2, access::ro>,
+               groov::field<"MEM_MODE", std::uint8_t, 1, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using syscfg_cfgr2_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint32_t, 31, 1 ,access::ro>,
-  groov::field<"LOCKUP_LOCK", bool, 0, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using syscfg_cfgr2_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint32_t, 31, 1, access::ro>,
+               groov::field<"LOCKUP_LOCK", bool, 0, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using syscfg_cfgr3_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint32_t, 31, 12 ,access::ro>,
-  groov::field<"PINMUX5", std::uint8_t, 11, 10 >,
-  groov::field<"PINMUX4", std::uint8_t, 9, 8 >,
-  groov::field<"PINMUX3", std::uint8_t, 7, 6 >,
-  groov::field<"PINMUX2", std::uint8_t, 5, 4 >,
-  groov::field<"PINMUX1", std::uint8_t, 3, 2 >,
-  groov::field<"PINMUX0", std::uint8_t, 1, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using syscfg_cfgr3_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint32_t, 31, 12, access::ro>,
+               groov::field<"PINMUX5", std::uint8_t, 11, 10>,
+               groov::field<"PINMUX4", std::uint8_t, 9, 8>,
+               groov::field<"PINMUX3", std::uint8_t, 7, 6>,
+               groov::field<"PINMUX2", std::uint8_t, 5, 4>,
+               groov::field<"PINMUX1", std::uint8_t, 3, 2>,
+               groov::field<"PINMUX0", std::uint8_t, 1, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using syscfg_itline0_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint32_t, 31, 1 ,access::ro>,
-  groov::field<"WWDG", bool, 0, 0 ,access::ro>
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using syscfg_itline0_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint32_t, 31, 1, access::ro>,
+               groov::field<"WWDG", bool, 0, 0, access::ro>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using syscfg_itline2_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED1", std::uint32_t, 31, 2 ,access::ro>,
-  groov::field<"RTC", bool, 1, 1 ,access::ro>,
-  groov::field<"RESERVED0", bool, 0, 0 ,access::ro>
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using syscfg_itline2_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED1", std::uint32_t, 31, 2, access::ro>,
+               groov::field<"RTC", bool, 1, 1, access::ro>,
+               groov::field<"RESERVED0", bool, 0, 0, access::ro>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using syscfg_itline3_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED1", std::uint32_t, 31, 2 ,access::ro>,
-  groov::field<"FLASH_ITF", bool, 1, 1 ,access::ro>,
-  groov::field<"RESERVED0", bool, 0, 0 ,access::ro>
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using syscfg_itline3_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED1", std::uint32_t, 31, 2, access::ro>,
+               groov::field<"FLASH_ITF", bool, 1, 1, access::ro>,
+               groov::field<"RESERVED0", bool, 0, 0, access::ro>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using syscfg_itline4_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint32_t, 31, 1 ,access::ro>,
-  groov::field<"RCC", bool, 0, 0 ,access::ro>
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using syscfg_itline4_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint32_t, 31, 1, access::ro>,
+               groov::field<"RCC", bool, 0, 0, access::ro>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using syscfg_itline5_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint32_t, 31, 2 ,access::ro>,
-  groov::field<"EXTI1", bool, 1, 1 ,access::ro>,
-  groov::field<"EXTI0", bool, 0, 0 ,access::ro>
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using syscfg_itline5_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint32_t, 31, 2, access::ro>,
+               groov::field<"EXTI1", bool, 1, 1, access::ro>,
+               groov::field<"EXTI0", bool, 0, 0, access::ro>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using syscfg_itline6_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint32_t, 31, 2 ,access::ro>,
-  groov::field<"EXTI3", bool, 1, 1 ,access::ro>,
-  groov::field<"EXTI2", bool, 0, 0 ,access::ro>
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using syscfg_itline6_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint32_t, 31, 2, access::ro>,
+               groov::field<"EXTI3", bool, 1, 1, access::ro>,
+               groov::field<"EXTI2", bool, 0, 0, access::ro>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using syscfg_itline7_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint32_t, 31, 12 ,access::ro>,
-  groov::field<"EXTI15", bool, 11, 11 ,access::ro>,
-  groov::field<"EXTI14", bool, 10, 10 ,access::ro>,
-  groov::field<"EXTI13", bool, 9, 9 ,access::ro>,
-  groov::field<"EXTI12", bool, 8, 8 ,access::ro>,
-  groov::field<"EXTI11", bool, 7, 7 ,access::ro>,
-  groov::field<"EXTI10", bool, 6, 6 ,access::ro>,
-  groov::field<"EXTI9", bool, 5, 5 ,access::ro>,
-  groov::field<"EXTI8", bool, 4, 4 ,access::ro>,
-  groov::field<"EXTI7", bool, 3, 3 ,access::ro>,
-  groov::field<"EXTI6", bool, 2, 2 ,access::ro>,
-  groov::field<"EXTI5", bool, 1, 1 ,access::ro>,
-  groov::field<"EXTI4", bool, 0, 0 ,access::ro>
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using syscfg_itline7_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint32_t, 31, 12, access::ro>,
+               groov::field<"EXTI15", bool, 11, 11, access::ro>,
+               groov::field<"EXTI14", bool, 10, 10, access::ro>,
+               groov::field<"EXTI13", bool, 9, 9, access::ro>,
+               groov::field<"EXTI12", bool, 8, 8, access::ro>,
+               groov::field<"EXTI11", bool, 7, 7, access::ro>,
+               groov::field<"EXTI10", bool, 6, 6, access::ro>,
+               groov::field<"EXTI9", bool, 5, 5, access::ro>,
+               groov::field<"EXTI8", bool, 4, 4, access::ro>,
+               groov::field<"EXTI7", bool, 3, 3, access::ro>,
+               groov::field<"EXTI6", bool, 2, 2, access::ro>,
+               groov::field<"EXTI5", bool, 1, 1, access::ro>,
+               groov::field<"EXTI4", bool, 0, 0, access::ro>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using syscfg_itline9_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint32_t, 31, 1 ,access::ro>,
-  groov::field<"DMA1_CH1", bool, 0, 0 ,access::ro>
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using syscfg_itline9_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint32_t, 31, 1, access::ro>,
+               groov::field<"DMA1_CH1", bool, 0, 0, access::ro>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using syscfg_itline10_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint32_t, 31, 2 ,access::ro>,
-  groov::field<"DMA1_CH3", bool, 1, 1 ,access::ro>,
-  groov::field<"DMA1_CH2", bool, 0, 0 ,access::ro>
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using syscfg_itline10_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint32_t, 31, 2, access::ro>,
+               groov::field<"DMA1_CH3", bool, 1, 1, access::ro>,
+               groov::field<"DMA1_CH2", bool, 0, 0, access::ro>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using syscfg_itline11_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint32_t, 31, 1 ,access::ro>,
-  groov::field<"DMAMUX", bool, 0, 0 ,access::ro>
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using syscfg_itline11_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint32_t, 31, 1, access::ro>,
+               groov::field<"DMAMUX", bool, 0, 0, access::ro>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using syscfg_itline12_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint32_t, 31, 1 ,access::ro>,
-  groov::field<"ADC", bool, 0, 0 ,access::ro>
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using syscfg_itline12_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint32_t, 31, 1, access::ro>,
+               groov::field<"ADC", bool, 0, 0, access::ro>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using syscfg_itline13_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint32_t, 31, 4 ,access::ro>,
-  groov::field<"TIM1_BRK", bool, 3, 3 ,access::ro>,
-  groov::field<"TIM1_UPD", bool, 2, 2 ,access::ro>,
-  groov::field<"TIM1_TRG", bool, 1, 1 ,access::ro>,
-  groov::field<"TIM1_CCU", bool, 0, 0 ,access::ro>
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using syscfg_itline13_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint32_t, 31, 4, access::ro>,
+               groov::field<"TIM1_BRK", bool, 3, 3, access::ro>,
+               groov::field<"TIM1_UPD", bool, 2, 2, access::ro>,
+               groov::field<"TIM1_TRG", bool, 1, 1, access::ro>,
+               groov::field<"TIM1_CCU", bool, 0, 0, access::ro>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using syscfg_itline14_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint32_t, 31, 1 ,access::ro>,
-  groov::field<"TIM1_CC", bool, 0, 0 ,access::ro>
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using syscfg_itline14_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint32_t, 31, 1, access::ro>,
+               groov::field<"TIM1_CC", bool, 0, 0, access::ro>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using syscfg_itline16_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint32_t, 31, 1 ,access::ro>,
-  groov::field<"TIM3", bool, 0, 0 ,access::ro>
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using syscfg_itline16_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint32_t, 31, 1, access::ro>,
+               groov::field<"TIM3", bool, 0, 0, access::ro>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using syscfg_itline19_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint32_t, 31, 1 ,access::ro>,
-  groov::field<"TIM14", bool, 0, 0 ,access::ro>
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using syscfg_itline19_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint32_t, 31, 1, access::ro>,
+               groov::field<"TIM14", bool, 0, 0, access::ro>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using syscfg_itline21_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint32_t, 31, 1 ,access::ro>,
-  groov::field<"TIM16", bool, 0, 0 ,access::ro>
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using syscfg_itline21_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint32_t, 31, 1, access::ro>,
+               groov::field<"TIM16", bool, 0, 0, access::ro>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using syscfg_itline22_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint32_t, 31, 1 ,access::ro>,
-  groov::field<"TIM17", bool, 0, 0 ,access::ro>
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using syscfg_itline22_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint32_t, 31, 1, access::ro>,
+               groov::field<"TIM17", bool, 0, 0, access::ro>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using syscfg_itline23_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint32_t, 31, 1 ,access::ro>,
-  groov::field<"I2C1", bool, 0, 0 ,access::ro>
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using syscfg_itline23_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint32_t, 31, 1, access::ro>,
+               groov::field<"I2C1", bool, 0, 0, access::ro>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using syscfg_itline25_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint32_t, 31, 1 ,access::ro>,
-  groov::field<"SPI1", bool, 0, 0 ,access::ro>
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using syscfg_itline25_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint32_t, 31, 1, access::ro>,
+               groov::field<"SPI1", bool, 0, 0, access::ro>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using syscfg_itline27_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint32_t, 31, 1 ,access::ro>,
-  groov::field<"USART1", bool, 0, 0 ,access::ro>
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using syscfg_itline27_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint32_t, 31, 1, access::ro>,
+               groov::field<"USART1", bool, 0, 0, access::ro>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using syscfg_itline28_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint32_t, 31, 1 ,access::ro>,
-  groov::field<"USART2", bool, 0, 0 ,access::ro>
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using syscfg_itline28_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint32_t, 31, 1, access::ro>,
+               groov::field<"USART2", bool, 0, 0, access::ro>>;
 
-template <std::uint32_t baseaddress>
-using syscfg_cfgr1_t = syscfg_cfgr1_tt<"SYSCFG_CFGR1",baseaddress,0>;
+  template <std::uint32_t baseaddress>
+  using syscfg_cfgr1_t = syscfg_cfgr1_tt<"SYSCFG_CFGR1", baseaddress, 0>;
 
-template <std::uint32_t baseaddress>
-using syscfg_cfgr2_t = syscfg_cfgr2_tt<"SYSCFG_CFGR2",baseaddress,24>;
+  template <std::uint32_t baseaddress>
+  using syscfg_cfgr2_t = syscfg_cfgr2_tt<"SYSCFG_CFGR2", baseaddress, 24>;
 
-template <std::uint32_t baseaddress>
-using syscfg_cfgr3_t = syscfg_cfgr3_tt<"SYSCFG_CFGR3",baseaddress,60>;
+  template <std::uint32_t baseaddress>
+  using syscfg_cfgr3_t = syscfg_cfgr3_tt<"SYSCFG_CFGR3", baseaddress, 60>;
 
-template <std::uint32_t baseaddress>
-using syscfg_itline0_t = syscfg_itline0_tt<"SYSCFG_ITLINE0",baseaddress,128>;
+  template <std::uint32_t baseaddress>
+  using syscfg_itline0_t =
+    syscfg_itline0_tt<"SYSCFG_ITLINE0", baseaddress, 128>;
 
-template <std::uint32_t baseaddress>
-using syscfg_itline2_t = syscfg_itline2_tt<"SYSCFG_ITLINE2",baseaddress,136>;
+  template <std::uint32_t baseaddress>
+  using syscfg_itline2_t =
+    syscfg_itline2_tt<"SYSCFG_ITLINE2", baseaddress, 136>;
 
-template <std::uint32_t baseaddress>
-using syscfg_itline3_t = syscfg_itline3_tt<"SYSCFG_ITLINE3",baseaddress,140>;
+  template <std::uint32_t baseaddress>
+  using syscfg_itline3_t =
+    syscfg_itline3_tt<"SYSCFG_ITLINE3", baseaddress, 140>;
 
-template <std::uint32_t baseaddress>
-using syscfg_itline4_t = syscfg_itline4_tt<"SYSCFG_ITLINE4",baseaddress,144>;
+  template <std::uint32_t baseaddress>
+  using syscfg_itline4_t =
+    syscfg_itline4_tt<"SYSCFG_ITLINE4", baseaddress, 144>;
 
-template <std::uint32_t baseaddress>
-using syscfg_itline5_t = syscfg_itline5_tt<"SYSCFG_ITLINE5",baseaddress,148>;
+  template <std::uint32_t baseaddress>
+  using syscfg_itline5_t =
+    syscfg_itline5_tt<"SYSCFG_ITLINE5", baseaddress, 148>;
 
-template <std::uint32_t baseaddress>
-using syscfg_itline6_t = syscfg_itline6_tt<"SYSCFG_ITLINE6",baseaddress,152>;
+  template <std::uint32_t baseaddress>
+  using syscfg_itline6_t =
+    syscfg_itline6_tt<"SYSCFG_ITLINE6", baseaddress, 152>;
 
-template <std::uint32_t baseaddress>
-using syscfg_itline7_t = syscfg_itline7_tt<"SYSCFG_ITLINE7",baseaddress,156>;
+  template <std::uint32_t baseaddress>
+  using syscfg_itline7_t =
+    syscfg_itline7_tt<"SYSCFG_ITLINE7", baseaddress, 156>;
 
-template <std::uint32_t baseaddress>
-using syscfg_itline9_t = syscfg_itline9_tt<"SYSCFG_ITLINE9",baseaddress,164>;
+  template <std::uint32_t baseaddress>
+  using syscfg_itline9_t =
+    syscfg_itline9_tt<"SYSCFG_ITLINE9", baseaddress, 164>;
 
-template <std::uint32_t baseaddress>
-using syscfg_itline10_t = syscfg_itline10_tt<"SYSCFG_ITLINE10",baseaddress,168>;
+  template <std::uint32_t baseaddress>
+  using syscfg_itline10_t =
+    syscfg_itline10_tt<"SYSCFG_ITLINE10", baseaddress, 168>;
 
-template <std::uint32_t baseaddress>
-using syscfg_itline11_t = syscfg_itline11_tt<"SYSCFG_ITLINE11",baseaddress,172>;
+  template <std::uint32_t baseaddress>
+  using syscfg_itline11_t =
+    syscfg_itline11_tt<"SYSCFG_ITLINE11", baseaddress, 172>;
 
-template <std::uint32_t baseaddress>
-using syscfg_itline12_t = syscfg_itline12_tt<"SYSCFG_ITLINE12",baseaddress,176>;
+  template <std::uint32_t baseaddress>
+  using syscfg_itline12_t =
+    syscfg_itline12_tt<"SYSCFG_ITLINE12", baseaddress, 176>;
 
-template <std::uint32_t baseaddress>
-using syscfg_itline13_t = syscfg_itline13_tt<"SYSCFG_ITLINE13",baseaddress,180>;
+  template <std::uint32_t baseaddress>
+  using syscfg_itline13_t =
+    syscfg_itline13_tt<"SYSCFG_ITLINE13", baseaddress, 180>;
 
-template <std::uint32_t baseaddress>
-using syscfg_itline14_t = syscfg_itline14_tt<"SYSCFG_ITLINE14",baseaddress,184>;
+  template <std::uint32_t baseaddress>
+  using syscfg_itline14_t =
+    syscfg_itline14_tt<"SYSCFG_ITLINE14", baseaddress, 184>;
 
-template <std::uint32_t baseaddress>
-using syscfg_itline16_t = syscfg_itline16_tt<"SYSCFG_ITLINE16",baseaddress,192>;
+  template <std::uint32_t baseaddress>
+  using syscfg_itline16_t =
+    syscfg_itline16_tt<"SYSCFG_ITLINE16", baseaddress, 192>;
 
-template <std::uint32_t baseaddress>
-using syscfg_itline19_t = syscfg_itline19_tt<"SYSCFG_ITLINE19",baseaddress,204>;
+  template <std::uint32_t baseaddress>
+  using syscfg_itline19_t =
+    syscfg_itline19_tt<"SYSCFG_ITLINE19", baseaddress, 204>;
 
-template <std::uint32_t baseaddress>
-using syscfg_itline21_t = syscfg_itline21_tt<"SYSCFG_ITLINE21",baseaddress,212>;
+  template <std::uint32_t baseaddress>
+  using syscfg_itline21_t =
+    syscfg_itline21_tt<"SYSCFG_ITLINE21", baseaddress, 212>;
 
-template <std::uint32_t baseaddress>
-using syscfg_itline22_t = syscfg_itline22_tt<"SYSCFG_ITLINE22",baseaddress,216>;
+  template <std::uint32_t baseaddress>
+  using syscfg_itline22_t =
+    syscfg_itline22_tt<"SYSCFG_ITLINE22", baseaddress, 216>;
 
-template <std::uint32_t baseaddress>
-using syscfg_itline23_t = syscfg_itline23_tt<"SYSCFG_ITLINE23",baseaddress,220>;
+  template <std::uint32_t baseaddress>
+  using syscfg_itline23_t =
+    syscfg_itline23_tt<"SYSCFG_ITLINE23", baseaddress, 220>;
 
-template <std::uint32_t baseaddress>
-using syscfg_itline25_t = syscfg_itline25_tt<"SYSCFG_ITLINE25",baseaddress,228>;
+  template <std::uint32_t baseaddress>
+  using syscfg_itline25_t =
+    syscfg_itline25_tt<"SYSCFG_ITLINE25", baseaddress, 228>;
 
-template <std::uint32_t baseaddress>
-using syscfg_itline27_t = syscfg_itline27_tt<"SYSCFG_ITLINE27",baseaddress,236>;
+  template <std::uint32_t baseaddress>
+  using syscfg_itline27_t =
+    syscfg_itline27_tt<"SYSCFG_ITLINE27", baseaddress, 236>;
 
-template <std::uint32_t baseaddress>
-using syscfg_itline28_t = syscfg_itline28_tt<"SYSCFG_ITLINE28",baseaddress,240>;
+  template <std::uint32_t baseaddress>
+  using syscfg_itline28_t =
+    syscfg_itline28_tt<"SYSCFG_ITLINE28", baseaddress, 240>;
 
 } // namespace syscfg
-

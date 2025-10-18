@@ -11,474 +11,468 @@ namespace stm32 {
 
 namespace sec_hspi1 {
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using hspi_cr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"MSEL", std::uint8_t, 31, 30 >,
-  groov::field<"FMODE", std::uint8_t, 29, 28 >,
-  groov::field<"RESERVED3", std::uint8_t, 27, 24 ,access::ro>,
-  groov::field<"PMM", bool, 23, 23 >,
-  groov::field<"APMS", bool, 22, 22 >,
-  groov::field<"RESERVED2", bool, 21, 21 ,access::ro>,
-  groov::field<"TOIE", bool, 20, 20 >,
-  groov::field<"SMIE", bool, 19, 19 >,
-  groov::field<"FTIE", bool, 18, 18 >,
-  groov::field<"TCIE", bool, 17, 17 >,
-  groov::field<"TEIE", bool, 16, 16 >,
-  groov::field<"RESERVED1", std::uint8_t, 15, 14 ,access::ro>,
-  groov::field<"FTHRES", std::uint8_t, 13, 8 >,
-  groov::field<"FSEL", bool, 7, 7 >,
-  groov::field<"DMM", bool, 6, 6 >,
-  groov::field<"RESERVED0", std::uint8_t, 5, 4 ,access::ro>,
-  groov::field<"TCEN", bool, 3, 3 >,
-  groov::field<"DMAEN", bool, 2, 2 >,
-  groov::field<"ABORT", bool, 1, 1 >,
-  groov::field<"EN", bool, 0, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using hspi_cr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"MSEL", std::uint8_t, 31, 30>,
+               groov::field<"FMODE", std::uint8_t, 29, 28>,
+               groov::field<"RESERVED3", std::uint8_t, 27, 24, access::ro>,
+               groov::field<"PMM", bool, 23, 23>,
+               groov::field<"APMS", bool, 22, 22>,
+               groov::field<"RESERVED2", bool, 21, 21, access::ro>,
+               groov::field<"TOIE", bool, 20, 20>,
+               groov::field<"SMIE", bool, 19, 19>,
+               groov::field<"FTIE", bool, 18, 18>,
+               groov::field<"TCIE", bool, 17, 17>,
+               groov::field<"TEIE", bool, 16, 16>,
+               groov::field<"RESERVED1", std::uint8_t, 15, 14, access::ro>,
+               groov::field<"FTHRES", std::uint8_t, 13, 8>,
+               groov::field<"FSEL", bool, 7, 7>,
+               groov::field<"DMM", bool, 6, 6>,
+               groov::field<"RESERVED0", std::uint8_t, 5, 4, access::ro>,
+               groov::field<"TCEN", bool, 3, 3>,
+               groov::field<"DMAEN", bool, 2, 2>,
+               groov::field<"ABORT", bool, 1, 1>,
+               groov::field<"EN", bool, 0, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using hspi_dcr1_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED4", std::uint8_t, 31, 27 ,access::ro>,
-  groov::field<"MTYP", std::uint8_t, 26, 24 >,
-  groov::field<"RESERVED3", std::uint8_t, 23, 21 ,access::ro>,
-  groov::field<"DEVSIZE", std::uint8_t, 20, 16 >,
-  groov::field<"RESERVED2", std::uint8_t, 15, 14 ,access::ro>,
-  groov::field<"CSHT", std::uint8_t, 13, 8 >,
-  groov::field<"RESERVED1", std::uint8_t, 7, 4 ,access::ro>,
-  groov::field<"DLYBYP", bool, 3, 3 >,
-  groov::field<"RESERVED0", bool, 2, 2 ,access::ro>,
-  groov::field<"FRCK", bool, 1, 1 >,
-  groov::field<"CKMODE", bool, 0, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using hspi_dcr1_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED4", std::uint8_t, 31, 27, access::ro>,
+               groov::field<"MTYP", std::uint8_t, 26, 24>,
+               groov::field<"RESERVED3", std::uint8_t, 23, 21, access::ro>,
+               groov::field<"DEVSIZE", std::uint8_t, 20, 16>,
+               groov::field<"RESERVED2", std::uint8_t, 15, 14, access::ro>,
+               groov::field<"CSHT", std::uint8_t, 13, 8>,
+               groov::field<"RESERVED1", std::uint8_t, 7, 4, access::ro>,
+               groov::field<"DLYBYP", bool, 3, 3>,
+               groov::field<"RESERVED0", bool, 2, 2, access::ro>,
+               groov::field<"FRCK", bool, 1, 1>,
+               groov::field<"CKMODE", bool, 0, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using hspi_dcr2_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED1", std::uint16_t, 31, 19 ,access::ro>,
-  groov::field<"WRAPSIZE", std::uint8_t, 18, 16 >,
-  groov::field<"RESERVED0", std::uint8_t, 15, 8 ,access::ro>,
-  groov::field<"PRESCALER", std::uint8_t, 7, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using hspi_dcr2_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED1", std::uint16_t, 31, 19, access::ro>,
+               groov::field<"WRAPSIZE", std::uint8_t, 18, 16>,
+               groov::field<"RESERVED0", std::uint8_t, 15, 8, access::ro>,
+               groov::field<"PRESCALER", std::uint8_t, 7, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using hspi_dcr3_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED1", std::uint16_t, 31, 21 ,access::ro>,
-  groov::field<"CSBOUND", std::uint8_t, 20, 16 >,
-  groov::field<"RESERVED0", std::uint8_t, 15, 8 ,access::ro>,
-  groov::field<"MAXTRAN", std::uint8_t, 7, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using hspi_dcr3_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED1", std::uint16_t, 31, 21, access::ro>,
+               groov::field<"CSBOUND", std::uint8_t, 20, 16>,
+               groov::field<"RESERVED0", std::uint8_t, 15, 8, access::ro>,
+               groov::field<"MAXTRAN", std::uint8_t, 7, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using hspi_dcr4_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"REFRESH", std::uint32_t, 31, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using hspi_dcr4_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"REFRESH", std::uint32_t, 31, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using hspi_sr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED1", std::uint32_t, 31, 15 ,access::ro>,
-  groov::field<"FLEVEL", std::uint8_t, 14, 8 ,access::ro>,
-  groov::field<"RESERVED0", std::uint8_t, 7, 6 ,access::ro>,
-  groov::field<"BUSY", bool, 5, 5 ,access::ro>,
-  groov::field<"TOF", bool, 4, 4 ,access::ro>,
-  groov::field<"SMF", bool, 3, 3 ,access::ro>,
-  groov::field<"FTF", bool, 2, 2 ,access::ro>,
-  groov::field<"TCF", bool, 1, 1 ,access::ro>,
-  groov::field<"TEF", bool, 0, 0 ,access::ro>
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using hspi_sr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED1", std::uint32_t, 31, 15, access::ro>,
+               groov::field<"FLEVEL", std::uint8_t, 14, 8, access::ro>,
+               groov::field<"RESERVED0", std::uint8_t, 7, 6, access::ro>,
+               groov::field<"BUSY", bool, 5, 5, access::ro>,
+               groov::field<"TOF", bool, 4, 4, access::ro>,
+               groov::field<"SMF", bool, 3, 3, access::ro>,
+               groov::field<"FTF", bool, 2, 2, access::ro>,
+               groov::field<"TCF", bool, 1, 1, access::ro>,
+               groov::field<"TEF", bool, 0, 0, access::ro>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using hspi_fcr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED1", std::uint32_t, 31, 5 ,access::ro>,
-  groov::field<"CTOF", bool, 4, 4 ,access::wo>,
-  groov::field<"CSMF", bool, 3, 3 ,access::wo>,
-  groov::field<"RESERVED0", bool, 2, 2 ,access::ro>,
-  groov::field<"CTCF", bool, 1, 1 ,access::wo>,
-  groov::field<"CTEF", bool, 0, 0 ,access::wo>
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using hspi_fcr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED1", std::uint32_t, 31, 5, access::ro>,
+               groov::field<"CTOF", bool, 4, 4, access::wo>,
+               groov::field<"CSMF", bool, 3, 3, access::wo>,
+               groov::field<"RESERVED0", bool, 2, 2, access::ro>,
+               groov::field<"CTCF", bool, 1, 1, access::wo>,
+               groov::field<"CTEF", bool, 0, 0, access::wo>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using hspi_dlr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DL", std::uint32_t, 31, 0 >
-  >;
+                                 std::uint32_t,
+                                 baseaddress + offset,
+                                 access::rw,
+                                 groov::field<"DL", std::uint32_t, 31, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using hspi_ar_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"ADDRESS", std::uint32_t, 31, 0 >
-  >;
+                                std::uint32_t,
+                                baseaddress + offset,
+                                access::rw,
+                                groov::field<"ADDRESS", std::uint32_t, 31, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using hspi_dr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DATA", std::uint32_t, 31, 0 >
-  >;
+                                std::uint32_t,
+                                baseaddress + offset,
+                                access::rw,
+                                groov::field<"DATA", std::uint32_t, 31, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using hspi_psmkr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"MASK", std::uint32_t, 31, 0 >
-  >;
+                                   std::uint32_t,
+                                   baseaddress + offset,
+                                   access::rw,
+                                   groov::field<"MASK", std::uint32_t, 31, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using hspi_psmar_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"MATCH", std::uint32_t, 31, 0 >
-  >;
+                                   std::uint32_t,
+                                   baseaddress + offset,
+                                   access::rw,
+                                   groov::field<"MATCH", std::uint32_t, 31, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using hspi_pir_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint16_t, 31, 16 ,access::ro>,
-  groov::field<"INTERVAL", std::uint16_t, 15, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using hspi_pir_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
+               groov::field<"INTERVAL", std::uint16_t, 15, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using hspi_ccr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"SIOO", bool, 31, 31 >,
-  groov::field<"RESERVED4", bool, 30, 30 ,access::ro>,
-  groov::field<"DQSE", bool, 29, 29 >,
-  groov::field<"RESERVED3", bool, 28, 28 ,access::ro>,
-  groov::field<"DDTR", bool, 27, 27 >,
-  groov::field<"DMODE", std::uint8_t, 26, 24 >,
-  groov::field<"RESERVED2", std::uint8_t, 23, 22 ,access::ro>,
-  groov::field<"ABSIZE", std::uint8_t, 21, 20 >,
-  groov::field<"ABDTR", bool, 19, 19 >,
-  groov::field<"ABMODE", std::uint8_t, 18, 16 >,
-  groov::field<"RESERVED1", std::uint8_t, 15, 14 ,access::ro>,
-  groov::field<"ADSIZE", std::uint8_t, 13, 12 >,
-  groov::field<"ADDTR", bool, 11, 11 >,
-  groov::field<"ADMODE", std::uint8_t, 10, 8 >,
-  groov::field<"RESERVED0", std::uint8_t, 7, 6 ,access::ro>,
-  groov::field<"ISIZE", std::uint8_t, 5, 4 >,
-  groov::field<"IDTR", bool, 3, 3 >,
-  groov::field<"IMODE", std::uint8_t, 2, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using hspi_ccr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"SIOO", bool, 31, 31>,
+               groov::field<"RESERVED4", bool, 30, 30, access::ro>,
+               groov::field<"DQSE", bool, 29, 29>,
+               groov::field<"RESERVED3", bool, 28, 28, access::ro>,
+               groov::field<"DDTR", bool, 27, 27>,
+               groov::field<"DMODE", std::uint8_t, 26, 24>,
+               groov::field<"RESERVED2", std::uint8_t, 23, 22, access::ro>,
+               groov::field<"ABSIZE", std::uint8_t, 21, 20>,
+               groov::field<"ABDTR", bool, 19, 19>,
+               groov::field<"ABMODE", std::uint8_t, 18, 16>,
+               groov::field<"RESERVED1", std::uint8_t, 15, 14, access::ro>,
+               groov::field<"ADSIZE", std::uint8_t, 13, 12>,
+               groov::field<"ADDTR", bool, 11, 11>,
+               groov::field<"ADMODE", std::uint8_t, 10, 8>,
+               groov::field<"RESERVED0", std::uint8_t, 7, 6, access::ro>,
+               groov::field<"ISIZE", std::uint8_t, 5, 4>,
+               groov::field<"IDTR", bool, 3, 3>,
+               groov::field<"IMODE", std::uint8_t, 2, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using hspi_tcr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED2", bool, 31, 31 ,access::ro>,
-  groov::field<"SSHIFT", bool, 30, 30 >,
-  groov::field<"RESERVED1", bool, 29, 29 ,access::ro>,
-  groov::field<"DHQC", bool, 28, 28 >,
-  groov::field<"RESERVED0", std::uint32_t, 27, 5 ,access::ro>,
-  groov::field<"DCYC", std::uint8_t, 4, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using hspi_tcr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED2", bool, 31, 31, access::ro>,
+               groov::field<"SSHIFT", bool, 30, 30>,
+               groov::field<"RESERVED1", bool, 29, 29, access::ro>,
+               groov::field<"DHQC", bool, 28, 28>,
+               groov::field<"RESERVED0", std::uint32_t, 27, 5, access::ro>,
+               groov::field<"DCYC", std::uint8_t, 4, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using hspi_ir_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"INSTRUCTION", std::uint32_t, 31, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using hspi_ir_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"INSTRUCTION", std::uint32_t, 31, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using hspi_abr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"ALTERNATE", std::uint32_t, 31, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using hspi_abr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"ALTERNATE", std::uint32_t, 31, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using hspi_lptr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint16_t, 31, 16 ,access::ro>,
-  groov::field<"TIMEOUT", std::uint16_t, 15, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using hspi_lptr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
+               groov::field<"TIMEOUT", std::uint16_t, 15, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using hspi_wpccr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED4", std::uint8_t, 31, 30 ,access::ro>,
-  groov::field<"DQSE", bool, 29, 29 >,
-  groov::field<"RESERVED3", bool, 28, 28 ,access::ro>,
-  groov::field<"DDTR", bool, 27, 27 >,
-  groov::field<"DMODE", std::uint8_t, 26, 24 >,
-  groov::field<"RESERVED2", std::uint8_t, 23, 22 ,access::ro>,
-  groov::field<"ABSIZE", std::uint8_t, 21, 20 >,
-  groov::field<"ABDTR", bool, 19, 19 >,
-  groov::field<"ABMODE", std::uint8_t, 18, 16 >,
-  groov::field<"RESERVED1", std::uint8_t, 15, 14 ,access::ro>,
-  groov::field<"ADSIZE", std::uint8_t, 13, 12 >,
-  groov::field<"ADDTR", bool, 11, 11 >,
-  groov::field<"ADMODE", std::uint8_t, 10, 8 >,
-  groov::field<"RESERVED0", std::uint8_t, 7, 6 ,access::ro>,
-  groov::field<"ISIZE", std::uint8_t, 5, 4 >,
-  groov::field<"IDTR", bool, 3, 3 >,
-  groov::field<"IMODE", std::uint8_t, 2, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using hspi_wpccr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED4", std::uint8_t, 31, 30, access::ro>,
+               groov::field<"DQSE", bool, 29, 29>,
+               groov::field<"RESERVED3", bool, 28, 28, access::ro>,
+               groov::field<"DDTR", bool, 27, 27>,
+               groov::field<"DMODE", std::uint8_t, 26, 24>,
+               groov::field<"RESERVED2", std::uint8_t, 23, 22, access::ro>,
+               groov::field<"ABSIZE", std::uint8_t, 21, 20>,
+               groov::field<"ABDTR", bool, 19, 19>,
+               groov::field<"ABMODE", std::uint8_t, 18, 16>,
+               groov::field<"RESERVED1", std::uint8_t, 15, 14, access::ro>,
+               groov::field<"ADSIZE", std::uint8_t, 13, 12>,
+               groov::field<"ADDTR", bool, 11, 11>,
+               groov::field<"ADMODE", std::uint8_t, 10, 8>,
+               groov::field<"RESERVED0", std::uint8_t, 7, 6, access::ro>,
+               groov::field<"ISIZE", std::uint8_t, 5, 4>,
+               groov::field<"IDTR", bool, 3, 3>,
+               groov::field<"IMODE", std::uint8_t, 2, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using hspi_wptcr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED2", bool, 31, 31 ,access::ro>,
-  groov::field<"SSHIFT", bool, 30, 30 >,
-  groov::field<"RESERVED1", bool, 29, 29 ,access::ro>,
-  groov::field<"DHQC", bool, 28, 28 >,
-  groov::field<"RESERVED0", std::uint32_t, 27, 5 ,access::ro>,
-  groov::field<"DCYC", std::uint8_t, 4, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using hspi_wptcr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED2", bool, 31, 31, access::ro>,
+               groov::field<"SSHIFT", bool, 30, 30>,
+               groov::field<"RESERVED1", bool, 29, 29, access::ro>,
+               groov::field<"DHQC", bool, 28, 28>,
+               groov::field<"RESERVED0", std::uint32_t, 27, 5, access::ro>,
+               groov::field<"DCYC", std::uint8_t, 4, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using hspi_wpir_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"INSTRUCTION", std::uint32_t, 31, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using hspi_wpir_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"INSTRUCTION", std::uint32_t, 31, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using hspi_wpabr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"ALTERNATE", std::uint32_t, 31, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using hspi_wpabr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"ALTERNATE", std::uint32_t, 31, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using hspi_wccr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED4", std::uint8_t, 31, 30 ,access::ro>,
-  groov::field<"DQSE", bool, 29, 29 >,
-  groov::field<"RESERVED3", bool, 28, 28 ,access::ro>,
-  groov::field<"DDTR", bool, 27, 27 >,
-  groov::field<"DMODE", std::uint8_t, 26, 24 >,
-  groov::field<"RESERVED2", std::uint8_t, 23, 22 ,access::ro>,
-  groov::field<"ABSIZE", std::uint8_t, 21, 20 >,
-  groov::field<"ABDTR", bool, 19, 19 >,
-  groov::field<"ABMODE", std::uint8_t, 18, 16 >,
-  groov::field<"RESERVED1", std::uint8_t, 15, 14 ,access::ro>,
-  groov::field<"ADSIZE", std::uint8_t, 13, 12 >,
-  groov::field<"ADDTR", bool, 11, 11 >,
-  groov::field<"ADMODE", std::uint8_t, 10, 8 >,
-  groov::field<"RESERVED0", std::uint8_t, 7, 6 ,access::ro>,
-  groov::field<"ISIZE", std::uint8_t, 5, 4 >,
-  groov::field<"IDTR", bool, 3, 3 >,
-  groov::field<"IMODE", std::uint8_t, 2, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using hspi_wccr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED4", std::uint8_t, 31, 30, access::ro>,
+               groov::field<"DQSE", bool, 29, 29>,
+               groov::field<"RESERVED3", bool, 28, 28, access::ro>,
+               groov::field<"DDTR", bool, 27, 27>,
+               groov::field<"DMODE", std::uint8_t, 26, 24>,
+               groov::field<"RESERVED2", std::uint8_t, 23, 22, access::ro>,
+               groov::field<"ABSIZE", std::uint8_t, 21, 20>,
+               groov::field<"ABDTR", bool, 19, 19>,
+               groov::field<"ABMODE", std::uint8_t, 18, 16>,
+               groov::field<"RESERVED1", std::uint8_t, 15, 14, access::ro>,
+               groov::field<"ADSIZE", std::uint8_t, 13, 12>,
+               groov::field<"ADDTR", bool, 11, 11>,
+               groov::field<"ADMODE", std::uint8_t, 10, 8>,
+               groov::field<"RESERVED0", std::uint8_t, 7, 6, access::ro>,
+               groov::field<"ISIZE", std::uint8_t, 5, 4>,
+               groov::field<"IDTR", bool, 3, 3>,
+               groov::field<"IMODE", std::uint8_t, 2, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using hspi_wtcr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint32_t, 31, 5 ,access::ro>,
-  groov::field<"DCYC", std::uint8_t, 4, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using hspi_wtcr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint32_t, 31, 5, access::ro>,
+               groov::field<"DCYC", std::uint8_t, 4, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using hspi_wir_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"INSTRUCTION", std::uint32_t, 31, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using hspi_wir_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"INSTRUCTION", std::uint32_t, 31, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using hspi_wabr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"ALTERNATE", std::uint32_t, 31, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using hspi_wabr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"ALTERNATE", std::uint32_t, 31, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using hspi_hlcr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED1", std::uint8_t, 31, 24 ,access::ro>,
-  groov::field<"TRWR", std::uint8_t, 23, 16 >,
-  groov::field<"TACC", std::uint8_t, 15, 8 >,
-  groov::field<"RESERVED0", std::uint8_t, 7, 2 ,access::ro>,
-  groov::field<"WZL", bool, 1, 1 >,
-  groov::field<"LM", bool, 0, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using hspi_hlcr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED1", std::uint8_t, 31, 24, access::ro>,
+               groov::field<"TRWR", std::uint8_t, 23, 16>,
+               groov::field<"TACC", std::uint8_t, 15, 8>,
+               groov::field<"RESERVED0", std::uint8_t, 7, 2, access::ro>,
+               groov::field<"WZL", bool, 1, 1>,
+               groov::field<"LM", bool, 0, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using hspi_calfcr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"CALMAX", bool, 31, 31 ,access::ro>,
-  groov::field<"RESERVED1", std::uint16_t, 30, 21 ,access::ro>,
-  groov::field<"COARSE", std::uint8_t, 20, 16 ,access::ro>,
-  groov::field<"RESERVED0", std::uint16_t, 15, 7 ,access::ro>,
-  groov::field<"FINE", std::uint8_t, 6, 0 ,access::ro>
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using hspi_calfcr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"CALMAX", bool, 31, 31, access::ro>,
+               groov::field<"RESERVED1", std::uint16_t, 30, 21, access::ro>,
+               groov::field<"COARSE", std::uint8_t, 20, 16, access::ro>,
+               groov::field<"RESERVED0", std::uint16_t, 15, 7, access::ro>,
+               groov::field<"FINE", std::uint8_t, 6, 0, access::ro>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using hspi_calmr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED1", std::uint16_t, 31, 21 ,access::ro>,
-  groov::field<"COARSE", std::uint8_t, 20, 16 >,
-  groov::field<"RESERVED0", std::uint16_t, 15, 7 ,access::ro>,
-  groov::field<"FINE", std::uint8_t, 6, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using hspi_calmr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED1", std::uint16_t, 31, 21, access::ro>,
+               groov::field<"COARSE", std::uint8_t, 20, 16>,
+               groov::field<"RESERVED0", std::uint16_t, 15, 7, access::ro>,
+               groov::field<"FINE", std::uint8_t, 6, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using hspi_calsor_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED1", std::uint16_t, 31, 21 ,access::ro>,
-  groov::field<"COARSE", std::uint8_t, 20, 16 >,
-  groov::field<"RESERVED0", std::uint16_t, 15, 7 ,access::ro>,
-  groov::field<"FINE", std::uint8_t, 6, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using hspi_calsor_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED1", std::uint16_t, 31, 21, access::ro>,
+               groov::field<"COARSE", std::uint8_t, 20, 16>,
+               groov::field<"RESERVED0", std::uint16_t, 15, 7, access::ro>,
+               groov::field<"FINE", std::uint8_t, 6, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using hspi_calsir_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED1", std::uint16_t, 31, 21 ,access::ro>,
-  groov::field<"COARSE", std::uint8_t, 20, 16 >,
-  groov::field<"RESERVED0", std::uint16_t, 15, 7 ,access::ro>,
-  groov::field<"FINE", std::uint8_t, 6, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using hspi_calsir_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED1", std::uint16_t, 31, 21, access::ro>,
+               groov::field<"COARSE", std::uint8_t, 20, 16>,
+               groov::field<"RESERVED0", std::uint16_t, 15, 7, access::ro>,
+               groov::field<"FINE", std::uint8_t, 6, 0>>;
 
-template <std::uint32_t baseaddress>
-using hspi_cr_t = hspi_cr_tt<"HSPI_CR",baseaddress,0>;
+  template <std::uint32_t baseaddress>
+  using hspi_cr_t = hspi_cr_tt<"HSPI_CR", baseaddress, 0>;
 
-template <std::uint32_t baseaddress>
-using hspi_dcr1_t = hspi_dcr1_tt<"HSPI_DCR1",baseaddress,8>;
+  template <std::uint32_t baseaddress>
+  using hspi_dcr1_t = hspi_dcr1_tt<"HSPI_DCR1", baseaddress, 8>;
 
-template <std::uint32_t baseaddress>
-using hspi_dcr2_t = hspi_dcr2_tt<"HSPI_DCR2",baseaddress,12>;
+  template <std::uint32_t baseaddress>
+  using hspi_dcr2_t = hspi_dcr2_tt<"HSPI_DCR2", baseaddress, 12>;
 
-template <std::uint32_t baseaddress>
-using hspi_dcr3_t = hspi_dcr3_tt<"HSPI_DCR3",baseaddress,16>;
+  template <std::uint32_t baseaddress>
+  using hspi_dcr3_t = hspi_dcr3_tt<"HSPI_DCR3", baseaddress, 16>;
 
-template <std::uint32_t baseaddress>
-using hspi_dcr4_t = hspi_dcr4_tt<"HSPI_DCR4",baseaddress,20>;
+  template <std::uint32_t baseaddress>
+  using hspi_dcr4_t = hspi_dcr4_tt<"HSPI_DCR4", baseaddress, 20>;
 
-template <std::uint32_t baseaddress>
-using hspi_sr_t = hspi_sr_tt<"HSPI_SR",baseaddress,32>;
+  template <std::uint32_t baseaddress>
+  using hspi_sr_t = hspi_sr_tt<"HSPI_SR", baseaddress, 32>;
 
-template <std::uint32_t baseaddress>
-using hspi_fcr_t = hspi_fcr_tt<"HSPI_FCR",baseaddress,36>;
+  template <std::uint32_t baseaddress>
+  using hspi_fcr_t = hspi_fcr_tt<"HSPI_FCR", baseaddress, 36>;
 
-template <std::uint32_t baseaddress>
-using hspi_dlr_t = hspi_dlr_tt<"HSPI_DLR",baseaddress,64>;
+  template <std::uint32_t baseaddress>
+  using hspi_dlr_t = hspi_dlr_tt<"HSPI_DLR", baseaddress, 64>;
 
-template <std::uint32_t baseaddress>
-using hspi_ar_t = hspi_ar_tt<"HSPI_AR",baseaddress,72>;
+  template <std::uint32_t baseaddress>
+  using hspi_ar_t = hspi_ar_tt<"HSPI_AR", baseaddress, 72>;
 
-template <std::uint32_t baseaddress>
-using hspi_dr_t = hspi_dr_tt<"HSPI_DR",baseaddress,80>;
+  template <std::uint32_t baseaddress>
+  using hspi_dr_t = hspi_dr_tt<"HSPI_DR", baseaddress, 80>;
 
-template <std::uint32_t baseaddress>
-using hspi_psmkr_t = hspi_psmkr_tt<"HSPI_PSMKR",baseaddress,128>;
+  template <std::uint32_t baseaddress>
+  using hspi_psmkr_t = hspi_psmkr_tt<"HSPI_PSMKR", baseaddress, 128>;
 
-template <std::uint32_t baseaddress>
-using hspi_psmar_t = hspi_psmar_tt<"HSPI_PSMAR",baseaddress,136>;
+  template <std::uint32_t baseaddress>
+  using hspi_psmar_t = hspi_psmar_tt<"HSPI_PSMAR", baseaddress, 136>;
 
-template <std::uint32_t baseaddress>
-using hspi_pir_t = hspi_pir_tt<"HSPI_PIR",baseaddress,144>;
+  template <std::uint32_t baseaddress>
+  using hspi_pir_t = hspi_pir_tt<"HSPI_PIR", baseaddress, 144>;
 
-template <std::uint32_t baseaddress>
-using hspi_ccr_t = hspi_ccr_tt<"HSPI_CCR",baseaddress,256>;
+  template <std::uint32_t baseaddress>
+  using hspi_ccr_t = hspi_ccr_tt<"HSPI_CCR", baseaddress, 256>;
 
-template <std::uint32_t baseaddress>
-using hspi_tcr_t = hspi_tcr_tt<"HSPI_TCR",baseaddress,264>;
+  template <std::uint32_t baseaddress>
+  using hspi_tcr_t = hspi_tcr_tt<"HSPI_TCR", baseaddress, 264>;
 
-template <std::uint32_t baseaddress>
-using hspi_ir_t = hspi_ir_tt<"HSPI_IR",baseaddress,272>;
+  template <std::uint32_t baseaddress>
+  using hspi_ir_t = hspi_ir_tt<"HSPI_IR", baseaddress, 272>;
 
-template <std::uint32_t baseaddress>
-using hspi_abr_t = hspi_abr_tt<"HSPI_ABR",baseaddress,288>;
+  template <std::uint32_t baseaddress>
+  using hspi_abr_t = hspi_abr_tt<"HSPI_ABR", baseaddress, 288>;
 
-template <std::uint32_t baseaddress>
-using hspi_lptr_t = hspi_lptr_tt<"HSPI_LPTR",baseaddress,304>;
+  template <std::uint32_t baseaddress>
+  using hspi_lptr_t = hspi_lptr_tt<"HSPI_LPTR", baseaddress, 304>;
 
-template <std::uint32_t baseaddress>
-using hspi_wpccr_t = hspi_wpccr_tt<"HSPI_WPCCR",baseaddress,320>;
+  template <std::uint32_t baseaddress>
+  using hspi_wpccr_t = hspi_wpccr_tt<"HSPI_WPCCR", baseaddress, 320>;
 
-template <std::uint32_t baseaddress>
-using hspi_wptcr_t = hspi_wptcr_tt<"HSPI_WPTCR",baseaddress,328>;
+  template <std::uint32_t baseaddress>
+  using hspi_wptcr_t = hspi_wptcr_tt<"HSPI_WPTCR", baseaddress, 328>;
 
-template <std::uint32_t baseaddress>
-using hspi_wpir_t = hspi_wpir_tt<"HSPI_WPIR",baseaddress,336>;
+  template <std::uint32_t baseaddress>
+  using hspi_wpir_t = hspi_wpir_tt<"HSPI_WPIR", baseaddress, 336>;
 
-template <std::uint32_t baseaddress>
-using hspi_wpabr_t = hspi_wpabr_tt<"HSPI_WPABR",baseaddress,352>;
+  template <std::uint32_t baseaddress>
+  using hspi_wpabr_t = hspi_wpabr_tt<"HSPI_WPABR", baseaddress, 352>;
 
-template <std::uint32_t baseaddress>
-using hspi_wccr_t = hspi_wccr_tt<"HSPI_WCCR",baseaddress,384>;
+  template <std::uint32_t baseaddress>
+  using hspi_wccr_t = hspi_wccr_tt<"HSPI_WCCR", baseaddress, 384>;
 
-template <std::uint32_t baseaddress>
-using hspi_wtcr_t = hspi_wtcr_tt<"HSPI_WTCR",baseaddress,392>;
+  template <std::uint32_t baseaddress>
+  using hspi_wtcr_t = hspi_wtcr_tt<"HSPI_WTCR", baseaddress, 392>;
 
-template <std::uint32_t baseaddress>
-using hspi_wir_t = hspi_wir_tt<"HSPI_WIR",baseaddress,400>;
+  template <std::uint32_t baseaddress>
+  using hspi_wir_t = hspi_wir_tt<"HSPI_WIR", baseaddress, 400>;
 
-template <std::uint32_t baseaddress>
-using hspi_wabr_t = hspi_wabr_tt<"HSPI_WABR",baseaddress,416>;
+  template <std::uint32_t baseaddress>
+  using hspi_wabr_t = hspi_wabr_tt<"HSPI_WABR", baseaddress, 416>;
 
-template <std::uint32_t baseaddress>
-using hspi_hlcr_t = hspi_hlcr_tt<"HSPI_HLCR",baseaddress,512>;
+  template <std::uint32_t baseaddress>
+  using hspi_hlcr_t = hspi_hlcr_tt<"HSPI_HLCR", baseaddress, 512>;
 
-template <std::uint32_t baseaddress>
-using hspi_calfcr_t = hspi_calfcr_tt<"HSPI_CALFCR",baseaddress,528>;
+  template <std::uint32_t baseaddress>
+  using hspi_calfcr_t = hspi_calfcr_tt<"HSPI_CALFCR", baseaddress, 528>;
 
-template <std::uint32_t baseaddress>
-using hspi_calmr_t = hspi_calmr_tt<"HSPI_CALMR",baseaddress,536>;
+  template <std::uint32_t baseaddress>
+  using hspi_calmr_t = hspi_calmr_tt<"HSPI_CALMR", baseaddress, 536>;
 
-template <std::uint32_t baseaddress>
-using hspi_calsor_t = hspi_calsor_tt<"HSPI_CALSOR",baseaddress,544>;
+  template <std::uint32_t baseaddress>
+  using hspi_calsor_t = hspi_calsor_tt<"HSPI_CALSOR", baseaddress, 544>;
 
-template <std::uint32_t baseaddress>
-using hspi_calsir_t = hspi_calsir_tt<"HSPI_CALSIR",baseaddress,552>;
+  template <std::uint32_t baseaddress>
+  using hspi_calsir_t = hspi_calsir_tt<"HSPI_CALSIR", baseaddress, 552>;
 
 } // namespace sec_hspi1
-

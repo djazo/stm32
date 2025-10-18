@@ -11,150 +11,141 @@ namespace stm32 {
 
 namespace ethernet_ptp {
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using ptptscr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED1", std::uint16_t, 31, 19 ,access::ro>,
-  groov::field<"TSPFFMAE", bool, 18, 18 >,
-  groov::field<"TSCNT", std::uint8_t, 17, 16 >,
-  groov::field<"TSSMRME", bool, 15, 15 >,
-  groov::field<"TSSEME", bool, 14, 14 >,
-  groov::field<"TSSIPV4FE", bool, 13, 13 >,
-  groov::field<"TSSIPV6FE", bool, 12, 12 >,
-  groov::field<"TSSPTPOEFE", bool, 11, 11 >,
-  groov::field<"TSPTPPSV2E", bool, 10, 10 >,
-  groov::field<"TSSSR", bool, 9, 9 >,
-  groov::field<"TSSARFE", bool, 8, 8 >,
-  groov::field<"RESERVED0", std::uint8_t, 7, 6 ,access::ro>,
-  groov::field<"TTSARU", bool, 5, 5 >,
-  groov::field<"TSITE", bool, 4, 4 >,
-  groov::field<"TSSTU", bool, 3, 3 >,
-  groov::field<"TSSTI", bool, 2, 2 >,
-  groov::field<"TSFCU", bool, 1, 1 >,
-  groov::field<"TSE", bool, 0, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using ptptscr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED1", std::uint16_t, 31, 19, access::ro>,
+               groov::field<"TSPFFMAE", bool, 18, 18>,
+               groov::field<"TSCNT", std::uint8_t, 17, 16>,
+               groov::field<"TSSMRME", bool, 15, 15>,
+               groov::field<"TSSEME", bool, 14, 14>,
+               groov::field<"TSSIPV4FE", bool, 13, 13>,
+               groov::field<"TSSIPV6FE", bool, 12, 12>,
+               groov::field<"TSSPTPOEFE", bool, 11, 11>,
+               groov::field<"TSPTPPSV2E", bool, 10, 10>,
+               groov::field<"TSSSR", bool, 9, 9>,
+               groov::field<"TSSARFE", bool, 8, 8>,
+               groov::field<"RESERVED0", std::uint8_t, 7, 6, access::ro>,
+               groov::field<"TTSARU", bool, 5, 5>,
+               groov::field<"TSITE", bool, 4, 4>,
+               groov::field<"TSSTU", bool, 3, 3>,
+               groov::field<"TSSTI", bool, 2, 2>,
+               groov::field<"TSFCU", bool, 1, 1>,
+               groov::field<"TSE", bool, 0, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using ptpssir_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint32_t, 31, 8 ,access::ro>,
-  groov::field<"STSSI", std::uint8_t, 7, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using ptpssir_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint32_t, 31, 8, access::ro>,
+               groov::field<"STSSI", std::uint8_t, 7, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using ptptshr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::ro,
-  groov::field<"STS", std::uint32_t, 31, 0 >
-  >;
+                                std::uint32_t,
+                                baseaddress + offset,
+                                access::ro,
+                                groov::field<"STS", std::uint32_t, 31, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using ptptslr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::ro,
-  groov::field<"STPNS", bool, 31, 31 >,
-  groov::field<"STSS", std::uint32_t, 30, 0 >
-  >;
+                                std::uint32_t,
+                                baseaddress + offset,
+                                access::ro,
+                                groov::field<"STPNS", bool, 31, 31>,
+                                groov::field<"STSS", std::uint32_t, 30, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using ptptshur_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"TSUS", std::uint32_t, 31, 0 >
-  >;
+                                 std::uint32_t,
+                                 baseaddress + offset,
+                                 access::rw,
+                                 groov::field<"TSUS", std::uint32_t, 31, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using ptptslur_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"TSUPNS", bool, 31, 31 >,
-  groov::field<"TSUSS", std::uint32_t, 30, 0 >
-  >;
+                                 std::uint32_t,
+                                 baseaddress + offset,
+                                 access::rw,
+                                 groov::field<"TSUPNS", bool, 31, 31>,
+                                 groov::field<"TSUSS", std::uint32_t, 30, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using ptptsar_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"TSA", std::uint32_t, 31, 0 >
-  >;
+                                std::uint32_t,
+                                baseaddress + offset,
+                                access::rw,
+                                groov::field<"TSA", std::uint32_t, 31, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using ptptthr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"TTSH", std::uint32_t, 31, 0 >
-  >;
+                                std::uint32_t,
+                                baseaddress + offset,
+                                access::rw,
+                                groov::field<"TTSH", std::uint32_t, 31, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using ptpttlr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"TTSL", std::uint32_t, 31, 0 >
-  >;
+                                std::uint32_t,
+                                baseaddress + offset,
+                                access::rw,
+                                groov::field<"TTSL", std::uint32_t, 31, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using ptptssr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::ro,
-  groov::field<"RESERVED0", std::uint32_t, 31, 2 >,
-  groov::field<"TSTTR", bool, 1, 1 >,
-  groov::field<"TSSO", bool, 0, 0 >
-  >;
+                                std::uint32_t,
+                                baseaddress + offset,
+                                access::ro,
+                                groov::field<"RESERVED0", std::uint32_t, 31, 2>,
+                                groov::field<"TSTTR", bool, 1, 1>,
+                                groov::field<"TSSO", bool, 0, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using ptpppscr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::ro,
-  groov::field<"RESERVED0", std::uint32_t, 31, 2 >,
-  groov::field<"TSTTR", bool, 1, 1 >,
-  groov::field<"TSSO", bool, 0, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using ptpppscr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::ro,
+               groov::field<"RESERVED0", std::uint32_t, 31, 2>,
+               groov::field<"TSTTR", bool, 1, 1>,
+               groov::field<"TSSO", bool, 0, 0>>;
 
-template <std::uint32_t baseaddress>
-using ptptscr_t = ptptscr_tt<"PTPTSCR",baseaddress,0>;
+  template <std::uint32_t baseaddress>
+  using ptptscr_t = ptptscr_tt<"PTPTSCR", baseaddress, 0>;
 
-template <std::uint32_t baseaddress>
-using ptpssir_t = ptpssir_tt<"PTPSSIR",baseaddress,4>;
+  template <std::uint32_t baseaddress>
+  using ptpssir_t = ptpssir_tt<"PTPSSIR", baseaddress, 4>;
 
-template <std::uint32_t baseaddress>
-using ptptshr_t = ptptshr_tt<"PTPTSHR",baseaddress,8>;
+  template <std::uint32_t baseaddress>
+  using ptptshr_t = ptptshr_tt<"PTPTSHR", baseaddress, 8>;
 
-template <std::uint32_t baseaddress>
-using ptptslr_t = ptptslr_tt<"PTPTSLR",baseaddress,12>;
+  template <std::uint32_t baseaddress>
+  using ptptslr_t = ptptslr_tt<"PTPTSLR", baseaddress, 12>;
 
-template <std::uint32_t baseaddress>
-using ptptshur_t = ptptshur_tt<"PTPTSHUR",baseaddress,16>;
+  template <std::uint32_t baseaddress>
+  using ptptshur_t = ptptshur_tt<"PTPTSHUR", baseaddress, 16>;
 
-template <std::uint32_t baseaddress>
-using ptptslur_t = ptptslur_tt<"PTPTSLUR",baseaddress,20>;
+  template <std::uint32_t baseaddress>
+  using ptptslur_t = ptptslur_tt<"PTPTSLUR", baseaddress, 20>;
 
-template <std::uint32_t baseaddress>
-using ptptsar_t = ptptsar_tt<"PTPTSAR",baseaddress,24>;
+  template <std::uint32_t baseaddress>
+  using ptptsar_t = ptptsar_tt<"PTPTSAR", baseaddress, 24>;
 
-template <std::uint32_t baseaddress>
-using ptptthr_t = ptptthr_tt<"PTPTTHR",baseaddress,28>;
+  template <std::uint32_t baseaddress>
+  using ptptthr_t = ptptthr_tt<"PTPTTHR", baseaddress, 28>;
 
-template <std::uint32_t baseaddress>
-using ptpttlr_t = ptpttlr_tt<"PTPTTLR",baseaddress,32>;
+  template <std::uint32_t baseaddress>
+  using ptpttlr_t = ptpttlr_tt<"PTPTTLR", baseaddress, 32>;
 
-template <std::uint32_t baseaddress>
-using ptptssr_t = ptptssr_tt<"PTPTSSR",baseaddress,40>;
+  template <std::uint32_t baseaddress>
+  using ptptssr_t = ptptssr_tt<"PTPTSSR", baseaddress, 40>;
 
-template <std::uint32_t baseaddress>
-using ptpppscr_t = ptpppscr_tt<"PTPPPSCR",baseaddress,44>;
+  template <std::uint32_t baseaddress>
+  using ptpppscr_t = ptpppscr_tt<"PTPPPSCR", baseaddress, 44>;
 
 } // namespace ethernet_ptp
-

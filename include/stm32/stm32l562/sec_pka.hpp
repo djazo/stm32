@@ -11,58 +11,56 @@ namespace stm32 {
 
 namespace sec_pka {
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using pka_cr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED3", std::uint16_t, 31, 21 ,access::ro>,
-  groov::field<"ADDRERRIE", bool, 20, 20 >,
-  groov::field<"RAMERRIE", bool, 19, 19 >,
-  groov::field<"RESERVED2", bool, 18, 18 ,access::ro>,
-  groov::field<"PROCENDIE", bool, 17, 17 >,
-  groov::field<"RESERVED1", std::uint8_t, 16, 14 ,access::ro>,
-  groov::field<"MODE", std::uint8_t, 13, 8 >,
-  groov::field<"RESERVED0", std::uint8_t, 7, 2 ,access::ro>,
-  groov::field<"START", bool, 1, 1 >,
-  groov::field<"EN", bool, 0, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using pka_cr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED3", std::uint16_t, 31, 21, access::ro>,
+               groov::field<"ADDRERRIE", bool, 20, 20>,
+               groov::field<"RAMERRIE", bool, 19, 19>,
+               groov::field<"RESERVED2", bool, 18, 18, access::ro>,
+               groov::field<"PROCENDIE", bool, 17, 17>,
+               groov::field<"RESERVED1", std::uint8_t, 16, 14, access::ro>,
+               groov::field<"MODE", std::uint8_t, 13, 8>,
+               groov::field<"RESERVED0", std::uint8_t, 7, 2, access::ro>,
+               groov::field<"START", bool, 1, 1>,
+               groov::field<"EN", bool, 0, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using pka_sr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::ro,
-  groov::field<"RESERVED2", std::uint16_t, 31, 21 >,
-  groov::field<"ADDRERRF", bool, 20, 20 >,
-  groov::field<"RAMERRF", bool, 19, 19 >,
-  groov::field<"RESERVED1", bool, 18, 18 >,
-  groov::field<"PROCENDF", bool, 17, 17 >,
-  groov::field<"BUSY", bool, 16, 16 >,
-  groov::field<"RESERVED0", std::uint16_t, 15, 0 >
-  >;
+                               std::uint32_t,
+                               baseaddress + offset,
+                               access::ro,
+                               groov::field<"RESERVED2", std::uint16_t, 31, 21>,
+                               groov::field<"ADDRERRF", bool, 20, 20>,
+                               groov::field<"RAMERRF", bool, 19, 19>,
+                               groov::field<"RESERVED1", bool, 18, 18>,
+                               groov::field<"PROCENDF", bool, 17, 17>,
+                               groov::field<"BUSY", bool, 16, 16>,
+                               groov::field<"RESERVED0", std::uint16_t, 15, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using pka_clrfr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::wo,
-  groov::field<"RESERVED2", std::uint16_t, 31, 21 ,access::ro>,
-  groov::field<"ADDRERRFC", bool, 20, 20 >,
-  groov::field<"RAMERRFC", bool, 19, 19 >,
-  groov::field<"RESERVED1", bool, 18, 18 ,access::ro>,
-  groov::field<"PROCENDFC", bool, 17, 17 >,
-  groov::field<"RESERVED0", std::uint32_t, 16, 0 ,access::ro>
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using pka_clrfr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::wo,
+               groov::field<"RESERVED2", std::uint16_t, 31, 21, access::ro>,
+               groov::field<"ADDRERRFC", bool, 20, 20>,
+               groov::field<"RAMERRFC", bool, 19, 19>,
+               groov::field<"RESERVED1", bool, 18, 18, access::ro>,
+               groov::field<"PROCENDFC", bool, 17, 17>,
+               groov::field<"RESERVED0", std::uint32_t, 16, 0, access::ro>>;
 
-template <std::uint32_t baseaddress>
-using pka_cr_t = pka_cr_tt<"PKA_CR",baseaddress,0>;
+  template <std::uint32_t baseaddress>
+  using pka_cr_t = pka_cr_tt<"PKA_CR", baseaddress, 0>;
 
-template <std::uint32_t baseaddress>
-using pka_sr_t = pka_sr_tt<"PKA_SR",baseaddress,4>;
+  template <std::uint32_t baseaddress>
+  using pka_sr_t = pka_sr_tt<"PKA_SR", baseaddress, 4>;
 
-template <std::uint32_t baseaddress>
-using pka_clrfr_t = pka_clrfr_tt<"PKA_CLRFR",baseaddress,8>;
+  template <std::uint32_t baseaddress>
+  using pka_clrfr_t = pka_clrfr_tt<"PKA_CLRFR", baseaddress, 8>;
 
 } // namespace sec_pka
-

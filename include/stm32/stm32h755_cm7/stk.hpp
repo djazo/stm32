@@ -11,59 +11,58 @@ namespace stm32 {
 
 namespace stk {
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using csr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED1", std::uint16_t, 31, 17 ,access::ro>,
-  groov::field<"COUNTFLAG", bool, 16, 16 >,
-  groov::field<"RESERVED0", std::uint16_t, 15, 3 ,access::ro>,
-  groov::field<"CLKSOURCE", bool, 2, 2 >,
-  groov::field<"TICKINT", bool, 1, 1 >,
-  groov::field<"ENABLE", bool, 0, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using csr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED1", std::uint16_t, 31, 17, access::ro>,
+               groov::field<"COUNTFLAG", bool, 16, 16>,
+               groov::field<"RESERVED0", std::uint16_t, 15, 3, access::ro>,
+               groov::field<"CLKSOURCE", bool, 2, 2>,
+               groov::field<"TICKINT", bool, 1, 1>,
+               groov::field<"ENABLE", bool, 0, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using rvr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint8_t, 31, 24 ,access::ro>,
-  groov::field<"RELOAD", std::uint32_t, 23, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using rvr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint8_t, 31, 24, access::ro>,
+               groov::field<"RELOAD", std::uint32_t, 23, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using cvr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint8_t, 31, 24 ,access::ro>,
-  groov::field<"CURRENT", std::uint32_t, 23, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using cvr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint8_t, 31, 24, access::ro>,
+               groov::field<"CURRENT", std::uint32_t, 23, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using calib_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"NOREF", bool, 31, 31 >,
-  groov::field<"SKEW", bool, 30, 30 >,
-  groov::field<"RESERVED0", std::uint8_t, 29, 24 ,access::ro>,
-  groov::field<"TENMS", std::uint32_t, 23, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using calib_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"NOREF", bool, 31, 31>,
+               groov::field<"SKEW", bool, 30, 30>,
+               groov::field<"RESERVED0", std::uint8_t, 29, 24, access::ro>,
+               groov::field<"TENMS", std::uint32_t, 23, 0>>;
 
-template <std::uint32_t baseaddress>
-using csr_t = csr_tt<"CSR",baseaddress,0>;
+  template <std::uint32_t baseaddress>
+  using csr_t = csr_tt<"CSR", baseaddress, 0>;
 
-template <std::uint32_t baseaddress>
-using rvr_t = rvr_tt<"RVR",baseaddress,4>;
+  template <std::uint32_t baseaddress>
+  using rvr_t = rvr_tt<"RVR", baseaddress, 4>;
 
-template <std::uint32_t baseaddress>
-using cvr_t = cvr_tt<"CVR",baseaddress,8>;
+  template <std::uint32_t baseaddress>
+  using cvr_t = cvr_tt<"CVR", baseaddress, 8>;
 
-template <std::uint32_t baseaddress>
-using calib_t = calib_tt<"CALIB",baseaddress,12>;
+  template <std::uint32_t baseaddress>
+  using calib_t = calib_tt<"CALIB", baseaddress, 12>;
 
 } // namespace stk
-

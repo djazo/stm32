@@ -11,44 +11,43 @@ namespace stm32 {
 
 namespace wwdg {
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using cr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint32_t, 31, 8 ,access::ro>,
-  groov::field<"WDGA", bool, 7, 7 >,
-  groov::field<"T", std::uint8_t, 6, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using cr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint32_t, 31, 8, access::ro>,
+               groov::field<"WDGA", bool, 7, 7>,
+               groov::field<"T", std::uint8_t, 6, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using cfr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint32_t, 31, 10 ,access::ro>,
-  groov::field<"EWI", bool, 9, 9 >,
-  groov::field<"WDGTB", std::uint8_t, 8, 7 >,
-  groov::field<"W", std::uint8_t, 6, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using cfr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint32_t, 31, 10, access::ro>,
+               groov::field<"EWI", bool, 9, 9>,
+               groov::field<"WDGTB", std::uint8_t, 8, 7>,
+               groov::field<"W", std::uint8_t, 6, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using sr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint32_t, 31, 1 ,access::ro>,
-  groov::field<"EWIF", bool, 0, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using sr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint32_t, 31, 1, access::ro>,
+               groov::field<"EWIF", bool, 0, 0>>;
 
-template <std::uint32_t baseaddress>
-using cr_t = cr_tt<"CR",baseaddress,0>;
+  template <std::uint32_t baseaddress>
+  using cr_t = cr_tt<"CR", baseaddress, 0>;
 
-template <std::uint32_t baseaddress>
-using cfr_t = cfr_tt<"CFR",baseaddress,4>;
+  template <std::uint32_t baseaddress>
+  using cfr_t = cfr_tt<"CFR", baseaddress, 4>;
 
-template <std::uint32_t baseaddress>
-using sr_t = sr_tt<"SR",baseaddress,8>;
+  template <std::uint32_t baseaddress>
+  using sr_t = sr_tt<"SR", baseaddress, 8>;
 
 } // namespace wwdg
-

@@ -11,140 +11,138 @@ namespace stm32 {
 
 namespace sec_lpgpio1 {
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using lpgpio_moder_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint16_t, 31, 16 ,access::ro>,
-  groov::field<"MODE15", bool, 15, 15 >,
-  groov::field<"MODE14", bool, 14, 14 >,
-  groov::field<"MODE13", bool, 13, 13 >,
-  groov::field<"MODE12", bool, 12, 12 >,
-  groov::field<"MODE11", bool, 11, 11 >,
-  groov::field<"MODE10", bool, 10, 10 >,
-  groov::field<"MODE9", bool, 9, 9 >,
-  groov::field<"MODE8", bool, 8, 8 >,
-  groov::field<"MODE7", bool, 7, 7 >,
-  groov::field<"MODE6", bool, 6, 6 >,
-  groov::field<"MODE5", bool, 5, 5 >,
-  groov::field<"MODE4", bool, 4, 4 >,
-  groov::field<"MODE3", bool, 3, 3 >,
-  groov::field<"MODE2", bool, 2, 2 >,
-  groov::field<"MODE1", bool, 1, 1 >,
-  groov::field<"MODE0", bool, 0, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using lpgpio_moder_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
+               groov::field<"MODE15", bool, 15, 15>,
+               groov::field<"MODE14", bool, 14, 14>,
+               groov::field<"MODE13", bool, 13, 13>,
+               groov::field<"MODE12", bool, 12, 12>,
+               groov::field<"MODE11", bool, 11, 11>,
+               groov::field<"MODE10", bool, 10, 10>,
+               groov::field<"MODE9", bool, 9, 9>,
+               groov::field<"MODE8", bool, 8, 8>,
+               groov::field<"MODE7", bool, 7, 7>,
+               groov::field<"MODE6", bool, 6, 6>,
+               groov::field<"MODE5", bool, 5, 5>,
+               groov::field<"MODE4", bool, 4, 4>,
+               groov::field<"MODE3", bool, 3, 3>,
+               groov::field<"MODE2", bool, 2, 2>,
+               groov::field<"MODE1", bool, 1, 1>,
+               groov::field<"MODE0", bool, 0, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using lpgpio_idr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::ro,
-  groov::field<"RESERVED0", std::uint16_t, 31, 16 >,
-  groov::field<"IDy", std::uint16_t, 15, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using lpgpio_idr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::ro,
+               groov::field<"RESERVED0", std::uint16_t, 31, 16>,
+               groov::field<"IDy", std::uint16_t, 15, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using lpgpio_odr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint16_t, 31, 16 ,access::ro>,
-  groov::field<"ODy15", bool, 15, 15 >,
-  groov::field<"ODy14", bool, 14, 14 >,
-  groov::field<"ODy13", bool, 13, 13 >,
-  groov::field<"ODy12", bool, 12, 12 >,
-  groov::field<"ODy11", bool, 11, 11 >,
-  groov::field<"ODy10", bool, 10, 10 >,
-  groov::field<"ODy9", bool, 9, 9 >,
-  groov::field<"ODy8", bool, 8, 8 >,
-  groov::field<"ODy7", bool, 7, 7 >,
-  groov::field<"ODy6", bool, 6, 6 >,
-  groov::field<"ODy5", bool, 5, 5 >,
-  groov::field<"ODy4", bool, 4, 4 >,
-  groov::field<"ODy3", bool, 3, 3 >,
-  groov::field<"ODy2", bool, 2, 2 >,
-  groov::field<"ODy1", bool, 1, 1 >,
-  groov::field<"ODy0", bool, 0, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using lpgpio_odr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
+               groov::field<"ODy15", bool, 15, 15>,
+               groov::field<"ODy14", bool, 14, 14>,
+               groov::field<"ODy13", bool, 13, 13>,
+               groov::field<"ODy12", bool, 12, 12>,
+               groov::field<"ODy11", bool, 11, 11>,
+               groov::field<"ODy10", bool, 10, 10>,
+               groov::field<"ODy9", bool, 9, 9>,
+               groov::field<"ODy8", bool, 8, 8>,
+               groov::field<"ODy7", bool, 7, 7>,
+               groov::field<"ODy6", bool, 6, 6>,
+               groov::field<"ODy5", bool, 5, 5>,
+               groov::field<"ODy4", bool, 4, 4>,
+               groov::field<"ODy3", bool, 3, 3>,
+               groov::field<"ODy2", bool, 2, 2>,
+               groov::field<"ODy1", bool, 1, 1>,
+               groov::field<"ODy0", bool, 0, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using lpgpio_bsrr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::wo,
-  groov::field<"BRy31", bool, 31, 31 >,
-  groov::field<"BRy30", bool, 30, 30 >,
-  groov::field<"BRy29", bool, 29, 29 >,
-  groov::field<"BRy28", bool, 28, 28 >,
-  groov::field<"BRy27", bool, 27, 27 >,
-  groov::field<"BRy26", bool, 26, 26 >,
-  groov::field<"BRy25", bool, 25, 25 >,
-  groov::field<"BRy24", bool, 24, 24 >,
-  groov::field<"BRy23", bool, 23, 23 >,
-  groov::field<"BRy22", bool, 22, 22 >,
-  groov::field<"BRy21", bool, 21, 21 >,
-  groov::field<"BRy20", bool, 20, 20 >,
-  groov::field<"BRy19", bool, 19, 19 >,
-  groov::field<"BRy18", bool, 18, 18 >,
-  groov::field<"BRy17", bool, 17, 17 >,
-  groov::field<"BRy16", bool, 16, 16 >,
-  groov::field<"BSy15", bool, 15, 15 >,
-  groov::field<"BSy14", bool, 14, 14 >,
-  groov::field<"BSy13", bool, 13, 13 >,
-  groov::field<"BSy12", bool, 12, 12 >,
-  groov::field<"BSy11", bool, 11, 11 >,
-  groov::field<"BSy10", bool, 10, 10 >,
-  groov::field<"BSy9", bool, 9, 9 >,
-  groov::field<"BSy8", bool, 8, 8 >,
-  groov::field<"BSy7", bool, 7, 7 >,
-  groov::field<"BSy6", bool, 6, 6 >,
-  groov::field<"BSy5", bool, 5, 5 >,
-  groov::field<"BSy4", bool, 4, 4 >,
-  groov::field<"BSy3", bool, 3, 3 >,
-  groov::field<"BSy2", bool, 2, 2 >,
-  groov::field<"BSy1", bool, 1, 1 >,
-  groov::field<"BSy0", bool, 0, 0 >
-  >;
+                                    std::uint32_t,
+                                    baseaddress + offset,
+                                    access::wo,
+                                    groov::field<"BRy31", bool, 31, 31>,
+                                    groov::field<"BRy30", bool, 30, 30>,
+                                    groov::field<"BRy29", bool, 29, 29>,
+                                    groov::field<"BRy28", bool, 28, 28>,
+                                    groov::field<"BRy27", bool, 27, 27>,
+                                    groov::field<"BRy26", bool, 26, 26>,
+                                    groov::field<"BRy25", bool, 25, 25>,
+                                    groov::field<"BRy24", bool, 24, 24>,
+                                    groov::field<"BRy23", bool, 23, 23>,
+                                    groov::field<"BRy22", bool, 22, 22>,
+                                    groov::field<"BRy21", bool, 21, 21>,
+                                    groov::field<"BRy20", bool, 20, 20>,
+                                    groov::field<"BRy19", bool, 19, 19>,
+                                    groov::field<"BRy18", bool, 18, 18>,
+                                    groov::field<"BRy17", bool, 17, 17>,
+                                    groov::field<"BRy16", bool, 16, 16>,
+                                    groov::field<"BSy15", bool, 15, 15>,
+                                    groov::field<"BSy14", bool, 14, 14>,
+                                    groov::field<"BSy13", bool, 13, 13>,
+                                    groov::field<"BSy12", bool, 12, 12>,
+                                    groov::field<"BSy11", bool, 11, 11>,
+                                    groov::field<"BSy10", bool, 10, 10>,
+                                    groov::field<"BSy9", bool, 9, 9>,
+                                    groov::field<"BSy8", bool, 8, 8>,
+                                    groov::field<"BSy7", bool, 7, 7>,
+                                    groov::field<"BSy6", bool, 6, 6>,
+                                    groov::field<"BSy5", bool, 5, 5>,
+                                    groov::field<"BSy4", bool, 4, 4>,
+                                    groov::field<"BSy3", bool, 3, 3>,
+                                    groov::field<"BSy2", bool, 2, 2>,
+                                    groov::field<"BSy1", bool, 1, 1>,
+                                    groov::field<"BSy0", bool, 0, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using lpgpio_brr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::ro,
-  groov::field<"RESERVED0", std::uint16_t, 31, 16 >,
-  groov::field<"BRy15", bool, 15, 15 >,
-  groov::field<"BRy14", bool, 14, 14 >,
-  groov::field<"BRy13", bool, 13, 13 >,
-  groov::field<"BRy12", bool, 12, 12 >,
-  groov::field<"BRy11", bool, 11, 11 >,
-  groov::field<"BRy10", bool, 10, 10 >,
-  groov::field<"BRy9", bool, 9, 9 >,
-  groov::field<"BRy8", bool, 8, 8 >,
-  groov::field<"BRy7", bool, 7, 7 >,
-  groov::field<"BRy6", bool, 6, 6 >,
-  groov::field<"BRy5", bool, 5, 5 >,
-  groov::field<"BRy4", bool, 4, 4 >,
-  groov::field<"BRy3", bool, 3, 3 >,
-  groov::field<"BRy2", bool, 2, 2 >,
-  groov::field<"BRy1", bool, 1, 1 >,
-  groov::field<"BRy0", bool, 0, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using lpgpio_brr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::ro,
+               groov::field<"RESERVED0", std::uint16_t, 31, 16>,
+               groov::field<"BRy15", bool, 15, 15>,
+               groov::field<"BRy14", bool, 14, 14>,
+               groov::field<"BRy13", bool, 13, 13>,
+               groov::field<"BRy12", bool, 12, 12>,
+               groov::field<"BRy11", bool, 11, 11>,
+               groov::field<"BRy10", bool, 10, 10>,
+               groov::field<"BRy9", bool, 9, 9>,
+               groov::field<"BRy8", bool, 8, 8>,
+               groov::field<"BRy7", bool, 7, 7>,
+               groov::field<"BRy6", bool, 6, 6>,
+               groov::field<"BRy5", bool, 5, 5>,
+               groov::field<"BRy4", bool, 4, 4>,
+               groov::field<"BRy3", bool, 3, 3>,
+               groov::field<"BRy2", bool, 2, 2>,
+               groov::field<"BRy1", bool, 1, 1>,
+               groov::field<"BRy0", bool, 0, 0>>;
 
-template <std::uint32_t baseaddress>
-using lpgpio_moder_t = lpgpio_moder_tt<"LPGPIO_MODER",baseaddress,0>;
+  template <std::uint32_t baseaddress>
+  using lpgpio_moder_t = lpgpio_moder_tt<"LPGPIO_MODER", baseaddress, 0>;
 
-template <std::uint32_t baseaddress>
-using lpgpio_idr_t = lpgpio_idr_tt<"LPGPIO_IDR",baseaddress,16>;
+  template <std::uint32_t baseaddress>
+  using lpgpio_idr_t = lpgpio_idr_tt<"LPGPIO_IDR", baseaddress, 16>;
 
-template <std::uint32_t baseaddress>
-using lpgpio_odr_t = lpgpio_odr_tt<"LPGPIO_ODR",baseaddress,20>;
+  template <std::uint32_t baseaddress>
+  using lpgpio_odr_t = lpgpio_odr_tt<"LPGPIO_ODR", baseaddress, 20>;
 
-template <std::uint32_t baseaddress>
-using lpgpio_bsrr_t = lpgpio_bsrr_tt<"LPGPIO_BSRR",baseaddress,24>;
+  template <std::uint32_t baseaddress>
+  using lpgpio_bsrr_t = lpgpio_bsrr_tt<"LPGPIO_BSRR", baseaddress, 24>;
 
-template <std::uint32_t baseaddress>
-using lpgpio_brr_t = lpgpio_brr_tt<"LPGPIO_BRR",baseaddress,40>;
+  template <std::uint32_t baseaddress>
+  using lpgpio_brr_t = lpgpio_brr_tt<"LPGPIO_BRR", baseaddress, 40>;
 
 } // namespace sec_lpgpio1
-

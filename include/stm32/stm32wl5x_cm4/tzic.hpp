@@ -11,80 +11,78 @@ namespace stm32 {
 
 namespace tzic {
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using ier1_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint32_t, 31, 14 ,access::ro>,
-  groov::field<"PKAIE", bool, 13, 13 >,
-  groov::field<"SRAM2IE", bool, 12, 12 >,
-  groov::field<"SRAM1IE", bool, 11, 11 >,
-  groov::field<"FLASHIE", bool, 10, 10 >,
-  groov::field<"DMAMUX1IE", bool, 9, 9 >,
-  groov::field<"DMA2IE", bool, 8, 8 >,
-  groov::field<"DMA1IE", bool, 7, 7 >,
-  groov::field<"FLASHIFIE", bool, 6, 6 >,
-  groov::field<"PWRIE", bool, 5, 5 >,
-  groov::field<"SUBGHZSPIIE", bool, 4, 4 >,
-  groov::field<"RNGIE", bool, 3, 3 >,
-  groov::field<"AESIE", bool, 2, 2 >,
-  groov::field<"TZSCIE", bool, 1, 1 >,
-  groov::field<"TZICIE", bool, 0, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using ier1_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint32_t, 31, 14, access::ro>,
+               groov::field<"PKAIE", bool, 13, 13>,
+               groov::field<"SRAM2IE", bool, 12, 12>,
+               groov::field<"SRAM1IE", bool, 11, 11>,
+               groov::field<"FLASHIE", bool, 10, 10>,
+               groov::field<"DMAMUX1IE", bool, 9, 9>,
+               groov::field<"DMA2IE", bool, 8, 8>,
+               groov::field<"DMA1IE", bool, 7, 7>,
+               groov::field<"FLASHIFIE", bool, 6, 6>,
+               groov::field<"PWRIE", bool, 5, 5>,
+               groov::field<"SUBGHZSPIIE", bool, 4, 4>,
+               groov::field<"RNGIE", bool, 3, 3>,
+               groov::field<"AESIE", bool, 2, 2>,
+               groov::field<"TZSCIE", bool, 1, 1>,
+               groov::field<"TZICIE", bool, 0, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using misr1_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::ro,
-  groov::field<"RESERVED0", std::uint32_t, 31, 14 >,
-  groov::field<"PKAMF", bool, 13, 13 >,
-  groov::field<"SRAM2MF", bool, 12, 12 >,
-  groov::field<"SRAM1MF", bool, 11, 11 >,
-  groov::field<"FLASHMF", bool, 10, 10 >,
-  groov::field<"DMAMUX1MF", bool, 9, 9 >,
-  groov::field<"DMA2MF", bool, 8, 8 >,
-  groov::field<"DMA1MF", bool, 7, 7 >,
-  groov::field<"FLASHIFMF", bool, 6, 6 >,
-  groov::field<"PWRMF", bool, 5, 5 >,
-  groov::field<"SUBGHZSPIMF", bool, 4, 4 >,
-  groov::field<"RNGMF", bool, 3, 3 >,
-  groov::field<"AESMF", bool, 2, 2 >,
-  groov::field<"TZSCMF", bool, 1, 1 >,
-  groov::field<"TZICMF", bool, 0, 0 >
-  >;
+                              std::uint32_t,
+                              baseaddress + offset,
+                              access::ro,
+                              groov::field<"RESERVED0", std::uint32_t, 31, 14>,
+                              groov::field<"PKAMF", bool, 13, 13>,
+                              groov::field<"SRAM2MF", bool, 12, 12>,
+                              groov::field<"SRAM1MF", bool, 11, 11>,
+                              groov::field<"FLASHMF", bool, 10, 10>,
+                              groov::field<"DMAMUX1MF", bool, 9, 9>,
+                              groov::field<"DMA2MF", bool, 8, 8>,
+                              groov::field<"DMA1MF", bool, 7, 7>,
+                              groov::field<"FLASHIFMF", bool, 6, 6>,
+                              groov::field<"PWRMF", bool, 5, 5>,
+                              groov::field<"SUBGHZSPIMF", bool, 4, 4>,
+                              groov::field<"RNGMF", bool, 3, 3>,
+                              groov::field<"AESMF", bool, 2, 2>,
+                              groov::field<"TZSCMF", bool, 1, 1>,
+                              groov::field<"TZICMF", bool, 0, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using icr1_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint32_t, 31, 14 ,access::ro>,
-  groov::field<"PKACF", bool, 13, 13 >,
-  groov::field<"SRAM2CF", bool, 12, 12 >,
-  groov::field<"SRAM1CF", bool, 11, 11 >,
-  groov::field<"FLASHCF", bool, 10, 10 >,
-  groov::field<"DMAMUX1CF", bool, 9, 9 >,
-  groov::field<"DMA2CF", bool, 8, 8 >,
-  groov::field<"DMA1CF", bool, 7, 7 >,
-  groov::field<"FLASHIFCF", bool, 6, 6 >,
-  groov::field<"PWRCF", bool, 5, 5 >,
-  groov::field<"SUBGHZSPICF", bool, 4, 4 >,
-  groov::field<"RNGCF", bool, 3, 3 >,
-  groov::field<"AESCF", bool, 2, 2 >,
-  groov::field<"TZSCCF", bool, 1, 1 >,
-  groov::field<"TZICCF", bool, 0, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using icr1_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint32_t, 31, 14, access::ro>,
+               groov::field<"PKACF", bool, 13, 13>,
+               groov::field<"SRAM2CF", bool, 12, 12>,
+               groov::field<"SRAM1CF", bool, 11, 11>,
+               groov::field<"FLASHCF", bool, 10, 10>,
+               groov::field<"DMAMUX1CF", bool, 9, 9>,
+               groov::field<"DMA2CF", bool, 8, 8>,
+               groov::field<"DMA1CF", bool, 7, 7>,
+               groov::field<"FLASHIFCF", bool, 6, 6>,
+               groov::field<"PWRCF", bool, 5, 5>,
+               groov::field<"SUBGHZSPICF", bool, 4, 4>,
+               groov::field<"RNGCF", bool, 3, 3>,
+               groov::field<"AESCF", bool, 2, 2>,
+               groov::field<"TZSCCF", bool, 1, 1>,
+               groov::field<"TZICCF", bool, 0, 0>>;
 
-template <std::uint32_t baseaddress>
-using ier1_t = ier1_tt<"IER1",baseaddress,0>;
+  template <std::uint32_t baseaddress>
+  using ier1_t = ier1_tt<"IER1", baseaddress, 0>;
 
-template <std::uint32_t baseaddress>
-using misr1_t = misr1_tt<"MISR1",baseaddress,16>;
+  template <std::uint32_t baseaddress>
+  using misr1_t = misr1_tt<"MISR1", baseaddress, 16>;
 
-template <std::uint32_t baseaddress>
-using icr1_t = icr1_tt<"ICR1",baseaddress,32>;
+  template <std::uint32_t baseaddress>
+  using icr1_t = icr1_tt<"ICR1", baseaddress, 32>;
 
 } // namespace tzic
-

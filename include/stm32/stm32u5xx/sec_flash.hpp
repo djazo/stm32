@@ -11,1149 +11,1158 @@ namespace stm32 {
 
 namespace sec_flash {
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using flash_acr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED2", std::uint32_t, 31, 15 ,access::ro>,
-  groov::field<"SLEEP_PD", bool, 14, 14 >,
-  groov::field<"PDREQ2", bool, 13, 13 >,
-  groov::field<"PDREQ1", bool, 12, 12 >,
-  groov::field<"LPM", bool, 11, 11 >,
-  groov::field<"RESERVED1", std::uint8_t, 10, 9 ,access::ro>,
-  groov::field<"PRFTEN", bool, 8, 8 >,
-  groov::field<"RESERVED0", std::uint8_t, 7, 4 ,access::ro>,
-  groov::field<"LATENCY", std::uint8_t, 3, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using flash_acr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED2", std::uint32_t, 31, 15, access::ro>,
+               groov::field<"SLEEP_PD", bool, 14, 14>,
+               groov::field<"PDREQ2", bool, 13, 13>,
+               groov::field<"PDREQ1", bool, 12, 12>,
+               groov::field<"LPM", bool, 11, 11>,
+               groov::field<"RESERVED1", std::uint8_t, 10, 9, access::ro>,
+               groov::field<"PRFTEN", bool, 8, 8>,
+               groov::field<"RESERVED0", std::uint8_t, 7, 4, access::ro>,
+               groov::field<"LATENCY", std::uint8_t, 3, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using flash_nskeyr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"NSKEY", std::uint32_t, 31, 0 ,access::wo>
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using flash_nskeyr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"NSKEY", std::uint32_t, 31, 0, access::wo>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using flash_seckeyr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"SECKEY", std::uint32_t, 31, 0 ,access::wo>
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using flash_seckeyr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"SECKEY", std::uint32_t, 31, 0, access::wo>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using flash_optkeyr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"OPTKEY", std::uint32_t, 31, 0 ,access::wo>
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using flash_optkeyr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"OPTKEY", std::uint32_t, 31, 0, access::wo>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using flash_pdkey1r_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"PDKEY1", std::uint32_t, 31, 0 ,access::wo>
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using flash_pdkey1r_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"PDKEY1", std::uint32_t, 31, 0, access::wo>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using flash_pdkey2r_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"PDKEY2", std::uint32_t, 31, 0 ,access::wo>
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using flash_pdkey2r_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"PDKEY2", std::uint32_t, 31, 0, access::wo>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using flash_nssr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED3", std::uint16_t, 31, 22 ,access::ro>,
-  groov::field<"PD2", bool, 21, 21 ,access::ro>,
-  groov::field<"PD1", bool, 20, 20 ,access::ro>,
-  groov::field<"OEM2LOCK", bool, 19, 19 ,access::ro>,
-  groov::field<"OEM1LOCK", bool, 18, 18 ,access::ro>,
-  groov::field<"WDW", bool, 17, 17 ,access::ro>,
-  groov::field<"BSY", bool, 16, 16 ,access::ro>,
-  groov::field<"RESERVED2", std::uint8_t, 15, 14 ,access::ro>,
-  groov::field<"OPTWERR", bool, 13, 13 >,
-  groov::field<"RESERVED1", std::uint8_t, 12, 8 ,access::ro>,
-  groov::field<"PGSERR", bool, 7, 7 >,
-  groov::field<"SIZERR", bool, 6, 6 >,
-  groov::field<"PGAERR", bool, 5, 5 >,
-  groov::field<"WRPERR", bool, 4, 4 >,
-  groov::field<"PROGERR", bool, 3, 3 >,
-  groov::field<"RESERVED0", bool, 2, 2 ,access::ro>,
-  groov::field<"OPERR", bool, 1, 1 >,
-  groov::field<"EOP", bool, 0, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using flash_nssr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED3", std::uint16_t, 31, 22, access::ro>,
+               groov::field<"PD2", bool, 21, 21, access::ro>,
+               groov::field<"PD1", bool, 20, 20, access::ro>,
+               groov::field<"OEM2LOCK", bool, 19, 19, access::ro>,
+               groov::field<"OEM1LOCK", bool, 18, 18, access::ro>,
+               groov::field<"WDW", bool, 17, 17, access::ro>,
+               groov::field<"BSY", bool, 16, 16, access::ro>,
+               groov::field<"RESERVED2", std::uint8_t, 15, 14, access::ro>,
+               groov::field<"OPTWERR", bool, 13, 13>,
+               groov::field<"RESERVED1", std::uint8_t, 12, 8, access::ro>,
+               groov::field<"PGSERR", bool, 7, 7>,
+               groov::field<"SIZERR", bool, 6, 6>,
+               groov::field<"PGAERR", bool, 5, 5>,
+               groov::field<"WRPERR", bool, 4, 4>,
+               groov::field<"PROGERR", bool, 3, 3>,
+               groov::field<"RESERVED0", bool, 2, 2, access::ro>,
+               groov::field<"OPERR", bool, 1, 1>,
+               groov::field<"EOP", bool, 0, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using flash_secsr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED2", std::uint16_t, 31, 18 ,access::ro>,
-  groov::field<"WDW", bool, 17, 17 ,access::ro>,
-  groov::field<"BSY", bool, 16, 16 ,access::ro>,
-  groov::field<"RESERVED1", std::uint8_t, 15, 8 ,access::ro>,
-  groov::field<"PGSERR", bool, 7, 7 >,
-  groov::field<"SIZERR", bool, 6, 6 >,
-  groov::field<"PGAERR", bool, 5, 5 >,
-  groov::field<"WRPERR", bool, 4, 4 >,
-  groov::field<"PROGERR", bool, 3, 3 >,
-  groov::field<"RESERVED0", bool, 2, 2 ,access::ro>,
-  groov::field<"OPERR", bool, 1, 1 >,
-  groov::field<"EOP", bool, 0, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using flash_secsr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED2", std::uint16_t, 31, 18, access::ro>,
+               groov::field<"WDW", bool, 17, 17, access::ro>,
+               groov::field<"BSY", bool, 16, 16, access::ro>,
+               groov::field<"RESERVED1", std::uint8_t, 15, 8, access::ro>,
+               groov::field<"PGSERR", bool, 7, 7>,
+               groov::field<"SIZERR", bool, 6, 6>,
+               groov::field<"PGAERR", bool, 5, 5>,
+               groov::field<"WRPERR", bool, 4, 4>,
+               groov::field<"PROGERR", bool, 3, 3>,
+               groov::field<"RESERVED0", bool, 2, 2, access::ro>,
+               groov::field<"OPERR", bool, 1, 1>,
+               groov::field<"EOP", bool, 0, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using flash_nscr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"LOCK", bool, 31, 31 >,
-  groov::field<"OPTLOCK", bool, 30, 30 >,
-  groov::field<"RESERVED4", std::uint8_t, 29, 28 ,access::ro>,
-  groov::field<"OBL_LAUNCH", bool, 27, 27 >,
-  groov::field<"RESERVED3", bool, 26, 26 ,access::ro>,
-  groov::field<"ERRIE", bool, 25, 25 >,
-  groov::field<"EOPIE", bool, 24, 24 >,
-  groov::field<"RESERVED2", std::uint8_t, 23, 18 ,access::ro>,
-  groov::field<"OPTSTRT", bool, 17, 17 >,
-  groov::field<"STRT", bool, 16, 16 >,
-  groov::field<"MER2", bool, 15, 15 >,
-  groov::field<"BWR", bool, 14, 14 >,
-  groov::field<"RESERVED1", std::uint8_t, 13, 12 ,access::ro>,
-  groov::field<"BKER", bool, 11, 11 >,
-  groov::field<"RESERVED0", bool, 10, 10 ,access::ro>,
-  groov::field<"PNB", std::uint8_t, 9, 3 >,
-  groov::field<"MER1", bool, 2, 2 >,
-  groov::field<"PER", bool, 1, 1 >,
-  groov::field<"PG", bool, 0, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using flash_nscr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"LOCK", bool, 31, 31>,
+               groov::field<"OPTLOCK", bool, 30, 30>,
+               groov::field<"RESERVED4", std::uint8_t, 29, 28, access::ro>,
+               groov::field<"OBL_LAUNCH", bool, 27, 27>,
+               groov::field<"RESERVED3", bool, 26, 26, access::ro>,
+               groov::field<"ERRIE", bool, 25, 25>,
+               groov::field<"EOPIE", bool, 24, 24>,
+               groov::field<"RESERVED2", std::uint8_t, 23, 18, access::ro>,
+               groov::field<"OPTSTRT", bool, 17, 17>,
+               groov::field<"STRT", bool, 16, 16>,
+               groov::field<"MER2", bool, 15, 15>,
+               groov::field<"BWR", bool, 14, 14>,
+               groov::field<"RESERVED1", std::uint8_t, 13, 12, access::ro>,
+               groov::field<"BKER", bool, 11, 11>,
+               groov::field<"RESERVED0", bool, 10, 10, access::ro>,
+               groov::field<"PNB", std::uint8_t, 9, 3>,
+               groov::field<"MER1", bool, 2, 2>,
+               groov::field<"PER", bool, 1, 1>,
+               groov::field<"PG", bool, 0, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using flash_seccr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"LOCK", bool, 31, 31 >,
-  groov::field<"RESERVED4", bool, 30, 30 ,access::ro>,
-  groov::field<"INV", bool, 29, 29 >,
-  groov::field<"RESERVED3", std::uint8_t, 28, 27 ,access::ro>,
-  groov::field<"RDERRIE", bool, 26, 26 >,
-  groov::field<"ERRIE", bool, 25, 25 >,
-  groov::field<"EOPIE", bool, 24, 24 >,
-  groov::field<"RESERVED2", std::uint8_t, 23, 17 ,access::ro>,
-  groov::field<"STRT", bool, 16, 16 >,
-  groov::field<"MER2", bool, 15, 15 >,
-  groov::field<"BWR", bool, 14, 14 >,
-  groov::field<"RESERVED1", std::uint8_t, 13, 12 ,access::ro>,
-  groov::field<"BKER", bool, 11, 11 >,
-  groov::field<"RESERVED0", bool, 10, 10 ,access::ro>,
-  groov::field<"PNB", std::uint8_t, 9, 3 >,
-  groov::field<"MER1", bool, 2, 2 >,
-  groov::field<"PER", bool, 1, 1 >,
-  groov::field<"PG", bool, 0, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using flash_seccr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"LOCK", bool, 31, 31>,
+               groov::field<"RESERVED4", bool, 30, 30, access::ro>,
+               groov::field<"INV", bool, 29, 29>,
+               groov::field<"RESERVED3", std::uint8_t, 28, 27, access::ro>,
+               groov::field<"RDERRIE", bool, 26, 26>,
+               groov::field<"ERRIE", bool, 25, 25>,
+               groov::field<"EOPIE", bool, 24, 24>,
+               groov::field<"RESERVED2", std::uint8_t, 23, 17, access::ro>,
+               groov::field<"STRT", bool, 16, 16>,
+               groov::field<"MER2", bool, 15, 15>,
+               groov::field<"BWR", bool, 14, 14>,
+               groov::field<"RESERVED1", std::uint8_t, 13, 12, access::ro>,
+               groov::field<"BKER", bool, 11, 11>,
+               groov::field<"RESERVED0", bool, 10, 10, access::ro>,
+               groov::field<"PNB", std::uint8_t, 9, 3>,
+               groov::field<"MER1", bool, 2, 2>,
+               groov::field<"PER", bool, 1, 1>,
+               groov::field<"PG", bool, 0, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using flash_eccr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"ECCD", bool, 31, 31 >,
-  groov::field<"ECCC", bool, 30, 30 >,
-  groov::field<"RESERVED2", std::uint8_t, 29, 25 ,access::ro>,
-  groov::field<"ECCIE", bool, 24, 24 >,
-  groov::field<"RESERVED1", bool, 23, 23 ,access::ro>,
-  groov::field<"SYSF_ECC", bool, 22, 22 ,access::ro>,
-  groov::field<"BK_ECC", bool, 21, 21 ,access::ro>,
-  groov::field<"RESERVED0", bool, 20, 20 ,access::ro>,
-  groov::field<"ADDR_ECC", std::uint32_t, 19, 0 ,access::ro>
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using flash_eccr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"ECCD", bool, 31, 31>,
+               groov::field<"ECCC", bool, 30, 30>,
+               groov::field<"RESERVED2", std::uint8_t, 29, 25, access::ro>,
+               groov::field<"ECCIE", bool, 24, 24>,
+               groov::field<"RESERVED1", bool, 23, 23, access::ro>,
+               groov::field<"SYSF_ECC", bool, 22, 22, access::ro>,
+               groov::field<"BK_ECC", bool, 21, 21, access::ro>,
+               groov::field<"RESERVED0", bool, 20, 20, access::ro>,
+               groov::field<"ADDR_ECC", std::uint32_t, 19, 0, access::ro>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using flash_opsr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"CODE_OP", std::uint8_t, 31, 29 ,access::ro>,
-  groov::field<"RESERVED1", std::uint8_t, 28, 23 ,access::ro>,
-  groov::field<"SYSF_OP", bool, 22, 22 ,access::ro>,
-  groov::field<"BK_OP", bool, 21, 21 ,access::ro>,
-  groov::field<"RESERVED0", bool, 20, 20 ,access::ro>,
-  groov::field<"ADDR_OP", std::uint32_t, 19, 0 ,access::ro>
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using flash_opsr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"CODE_OP", std::uint8_t, 31, 29, access::ro>,
+               groov::field<"RESERVED1", std::uint8_t, 28, 23, access::ro>,
+               groov::field<"SYSF_OP", bool, 22, 22, access::ro>,
+               groov::field<"BK_OP", bool, 21, 21, access::ro>,
+               groov::field<"RESERVED0", bool, 20, 20, access::ro>,
+               groov::field<"ADDR_OP", std::uint32_t, 19, 0, access::ro>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using flash_optr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"TZEN", bool, 31, 31 >,
-  groov::field<"IO_VDDIO2_HSLV", bool, 30, 30 >,
-  groov::field<"IO_VDD_HSLV", bool, 29, 29 >,
-  groov::field<"PA15_PUPEN", bool, 28, 28 >,
-  groov::field<"nBOOT0", bool, 27, 27 >,
-  groov::field<"nSWBOOT0", bool, 26, 26 >,
-  groov::field<"SRAM2_RST", bool, 25, 25 >,
-  groov::field<"SRAM2_ECC", bool, 24, 24 >,
-  groov::field<"SRAM3_ECC", bool, 23, 23 >,
-  groov::field<"BKPRAM_ECC", bool, 22, 22 >,
-  groov::field<"DUALBANK", bool, 21, 21 >,
-  groov::field<"SWAP_BANK", bool, 20, 20 >,
-  groov::field<"WWDG_SW", bool, 19, 19 >,
-  groov::field<"IWDG_STDBY", bool, 18, 18 >,
-  groov::field<"IWDG_STOP", bool, 17, 17 >,
-  groov::field<"IWDG_SW", bool, 16, 16 >,
-  groov::field<"SRAM1345_RST", bool, 15, 15 >,
-  groov::field<"nRST_SHDW", bool, 14, 14 >,
-  groov::field<"nRST_STDBY", bool, 13, 13 >,
-  groov::field<"nRST_STOP", bool, 12, 12 >,
-  groov::field<"RESERVED0", bool, 11, 11 ,access::ro>,
-  groov::field<"BOR_LEV", std::uint8_t, 10, 8 >,
-  groov::field<"RDP", std::uint8_t, 7, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using flash_optr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"TZEN", bool, 31, 31>,
+               groov::field<"IO_VDDIO2_HSLV", bool, 30, 30>,
+               groov::field<"IO_VDD_HSLV", bool, 29, 29>,
+               groov::field<"PA15_PUPEN", bool, 28, 28>,
+               groov::field<"nBOOT0", bool, 27, 27>,
+               groov::field<"nSWBOOT0", bool, 26, 26>,
+               groov::field<"SRAM2_RST", bool, 25, 25>,
+               groov::field<"SRAM2_ECC", bool, 24, 24>,
+               groov::field<"SRAM3_ECC", bool, 23, 23>,
+               groov::field<"BKPRAM_ECC", bool, 22, 22>,
+               groov::field<"DUALBANK", bool, 21, 21>,
+               groov::field<"SWAP_BANK", bool, 20, 20>,
+               groov::field<"WWDG_SW", bool, 19, 19>,
+               groov::field<"IWDG_STDBY", bool, 18, 18>,
+               groov::field<"IWDG_STOP", bool, 17, 17>,
+               groov::field<"IWDG_SW", bool, 16, 16>,
+               groov::field<"SRAM1345_RST", bool, 15, 15>,
+               groov::field<"nRST_SHDW", bool, 14, 14>,
+               groov::field<"nRST_STDBY", bool, 13, 13>,
+               groov::field<"nRST_STOP", bool, 12, 12>,
+               groov::field<"RESERVED0", bool, 11, 11, access::ro>,
+               groov::field<"BOR_LEV", std::uint8_t, 10, 8>,
+               groov::field<"RDP", std::uint8_t, 7, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using flash_nsbootadd0r_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"NSBOOTADD0", std::uint32_t, 31, 7 >,
-  groov::field<"RESERVED0", std::uint8_t, 6, 0 ,access::ro>
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using flash_nsbootadd0r_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"NSBOOTADD0", std::uint32_t, 31, 7>,
+               groov::field<"RESERVED0", std::uint8_t, 6, 0, access::ro>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using flash_nsbootadd1r_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"NSBOOTADD1", std::uint32_t, 31, 7 >,
-  groov::field<"RESERVED0", std::uint8_t, 6, 0 ,access::ro>
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using flash_nsbootadd1r_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"NSBOOTADD1", std::uint32_t, 31, 7>,
+               groov::field<"RESERVED0", std::uint8_t, 6, 0, access::ro>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using flash_secbootadd0r_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"SECBOOTADD0", std::uint32_t, 31, 7 >,
-  groov::field<"RESERVED0", std::uint8_t, 6, 1 ,access::ro>,
-  groov::field<"BOOT_LOCK", bool, 0, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using flash_secbootadd0r_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"SECBOOTADD0", std::uint32_t, 31, 7>,
+               groov::field<"RESERVED0", std::uint8_t, 6, 1, access::ro>,
+               groov::field<"BOOT_LOCK", bool, 0, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using flash_secwm1r1_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED1", std::uint16_t, 31, 23 ,access::ro>,
-  groov::field<"SECWM1_PEND", std::uint8_t, 22, 16 >,
-  groov::field<"RESERVED0", std::uint16_t, 15, 7 ,access::ro>,
-  groov::field<"SECWM1_PSTRT", std::uint8_t, 6, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using flash_secwm1r1_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED1", std::uint16_t, 31, 23, access::ro>,
+               groov::field<"SECWM1_PEND", std::uint8_t, 22, 16>,
+               groov::field<"RESERVED0", std::uint16_t, 15, 7, access::ro>,
+               groov::field<"SECWM1_PSTRT", std::uint8_t, 6, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using flash_secwm1r2_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"HDP1EN", bool, 31, 31 >,
-  groov::field<"RESERVED1", std::uint8_t, 30, 23 ,access::ro>,
-  groov::field<"HDP1_PEND", std::uint8_t, 22, 16 >,
-  groov::field<"RESERVED0", std::uint16_t, 15, 0 ,access::ro>
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using flash_secwm1r2_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"HDP1EN", bool, 31, 31>,
+               groov::field<"RESERVED1", std::uint8_t, 30, 23, access::ro>,
+               groov::field<"HDP1_PEND", std::uint8_t, 22, 16>,
+               groov::field<"RESERVED0", std::uint16_t, 15, 0, access::ro>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using flash_wrp1ar_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"UNLOCK", bool, 31, 31 >,
-  groov::field<"RESERVED1", std::uint8_t, 30, 23 ,access::ro>,
-  groov::field<"WRP1A_PEND", std::uint8_t, 22, 16 >,
-  groov::field<"RESERVED0", std::uint16_t, 15, 7 ,access::ro>,
-  groov::field<"WRP1A_PSTRT", std::uint8_t, 6, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using flash_wrp1ar_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"UNLOCK", bool, 31, 31>,
+               groov::field<"RESERVED1", std::uint8_t, 30, 23, access::ro>,
+               groov::field<"WRP1A_PEND", std::uint8_t, 22, 16>,
+               groov::field<"RESERVED0", std::uint16_t, 15, 7, access::ro>,
+               groov::field<"WRP1A_PSTRT", std::uint8_t, 6, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using flash_wrp1br_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"UNLOCK", bool, 31, 31 >,
-  groov::field<"RESERVED1", std::uint8_t, 30, 23 ,access::ro>,
-  groov::field<"WRP1B_PEND", std::uint8_t, 22, 16 >,
-  groov::field<"RESERVED0", std::uint16_t, 15, 7 ,access::ro>,
-  groov::field<"WRP1B_PSTRT", std::uint8_t, 6, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using flash_wrp1br_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"UNLOCK", bool, 31, 31>,
+               groov::field<"RESERVED1", std::uint8_t, 30, 23, access::ro>,
+               groov::field<"WRP1B_PEND", std::uint8_t, 22, 16>,
+               groov::field<"RESERVED0", std::uint16_t, 15, 7, access::ro>,
+               groov::field<"WRP1B_PSTRT", std::uint8_t, 6, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using flash_secwm2r1_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED1", std::uint16_t, 31, 23 ,access::ro>,
-  groov::field<"SECWM2_PEND", std::uint8_t, 22, 16 >,
-  groov::field<"RESERVED0", std::uint16_t, 15, 7 ,access::ro>,
-  groov::field<"SECWM2_PSTRT", std::uint8_t, 6, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using flash_secwm2r1_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED1", std::uint16_t, 31, 23, access::ro>,
+               groov::field<"SECWM2_PEND", std::uint8_t, 22, 16>,
+               groov::field<"RESERVED0", std::uint16_t, 15, 7, access::ro>,
+               groov::field<"SECWM2_PSTRT", std::uint8_t, 6, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using flash_secwm2r2_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"HDP2EN", bool, 31, 31 >,
-  groov::field<"RESERVED1", std::uint8_t, 30, 23 ,access::ro>,
-  groov::field<"HDP2_PEND", std::uint8_t, 22, 16 >,
-  groov::field<"RESERVED0", std::uint16_t, 15, 0 ,access::ro>
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using flash_secwm2r2_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"HDP2EN", bool, 31, 31>,
+               groov::field<"RESERVED1", std::uint8_t, 30, 23, access::ro>,
+               groov::field<"HDP2_PEND", std::uint8_t, 22, 16>,
+               groov::field<"RESERVED0", std::uint16_t, 15, 0, access::ro>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using flash_wrp2ar_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"UNLOCK", bool, 31, 31 >,
-  groov::field<"RESERVED1", std::uint8_t, 30, 23 ,access::ro>,
-  groov::field<"WRP2A_PEND", std::uint8_t, 22, 16 >,
-  groov::field<"RESERVED0", std::uint16_t, 15, 7 ,access::ro>,
-  groov::field<"WRP2A_PSTRT", std::uint8_t, 6, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using flash_wrp2ar_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"UNLOCK", bool, 31, 31>,
+               groov::field<"RESERVED1", std::uint8_t, 30, 23, access::ro>,
+               groov::field<"WRP2A_PEND", std::uint8_t, 22, 16>,
+               groov::field<"RESERVED0", std::uint16_t, 15, 7, access::ro>,
+               groov::field<"WRP2A_PSTRT", std::uint8_t, 6, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using flash_wrp2br_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"UNLOCK", bool, 31, 31 >,
-  groov::field<"RESERVED1", std::uint8_t, 30, 23 ,access::ro>,
-  groov::field<"WRP2B_PEND", std::uint8_t, 22, 16 >,
-  groov::field<"RESERVED0", std::uint16_t, 15, 7 ,access::ro>,
-  groov::field<"WRP2B_PSTRT", std::uint8_t, 6, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using flash_wrp2br_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"UNLOCK", bool, 31, 31>,
+               groov::field<"RESERVED1", std::uint8_t, 30, 23, access::ro>,
+               groov::field<"WRP2B_PEND", std::uint8_t, 22, 16>,
+               groov::field<"RESERVED0", std::uint16_t, 15, 7, access::ro>,
+               groov::field<"WRP2B_PSTRT", std::uint8_t, 6, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using flash_oem1keyr1_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"OEM1KEY", std::uint32_t, 31, 0 ,access::wo>
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using flash_oem1keyr1_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"OEM1KEY", std::uint32_t, 31, 0, access::wo>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using flash_oem1keyr2_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"OEM1KEY", std::uint32_t, 31, 0 ,access::wo>
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using flash_oem1keyr2_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"OEM1KEY", std::uint32_t, 31, 0, access::wo>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using flash_oem2keyr1_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"OEM2KEY", std::uint32_t, 31, 0 ,access::wo>
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using flash_oem2keyr1_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"OEM2KEY", std::uint32_t, 31, 0, access::wo>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using flash_oem2keyr2_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"OEM2KEY", std::uint32_t, 31, 0 ,access::wo>
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using flash_oem2keyr2_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"OEM2KEY", std::uint32_t, 31, 0, access::wo>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using flash_sec1bbr1_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"SEC1BB31", bool, 31, 31 >,
-  groov::field<"SEC1BB30", bool, 30, 30 >,
-  groov::field<"SEC1BB29", bool, 29, 29 >,
-  groov::field<"SEC1BB28", bool, 28, 28 >,
-  groov::field<"SEC1BB27", bool, 27, 27 >,
-  groov::field<"SEC1BB26", bool, 26, 26 >,
-  groov::field<"SEC1BB25", bool, 25, 25 >,
-  groov::field<"SEC1BB24", bool, 24, 24 >,
-  groov::field<"SEC1BB23", bool, 23, 23 >,
-  groov::field<"SEC1BB22", bool, 22, 22 >,
-  groov::field<"SEC1BB21", bool, 21, 21 >,
-  groov::field<"SEC1BB20", bool, 20, 20 >,
-  groov::field<"SEC1BB19", bool, 19, 19 >,
-  groov::field<"SEC1BB18", bool, 18, 18 >,
-  groov::field<"SEC1BB17", bool, 17, 17 >,
-  groov::field<"SEC1BB16", bool, 16, 16 >,
-  groov::field<"SEC1BB15", bool, 15, 15 >,
-  groov::field<"SEC1BB14", bool, 14, 14 >,
-  groov::field<"SEC1BB13", bool, 13, 13 >,
-  groov::field<"SEC1BB12", bool, 12, 12 >,
-  groov::field<"SEC1BB11", bool, 11, 11 >,
-  groov::field<"SEC1BB10", bool, 10, 10 >,
-  groov::field<"SEC1BB9", bool, 9, 9 >,
-  groov::field<"SEC1BB8", bool, 8, 8 >,
-  groov::field<"SEC1BB7", bool, 7, 7 >,
-  groov::field<"SEC1BB6", bool, 6, 6 >,
-  groov::field<"SEC1BB5", bool, 5, 5 >,
-  groov::field<"SEC1BB4", bool, 4, 4 >,
-  groov::field<"SEC1BB3", bool, 3, 3 >,
-  groov::field<"SEC1BB2", bool, 2, 2 >,
-  groov::field<"SEC1BB1", bool, 1, 1 >,
-  groov::field<"SEC1BB0", bool, 0, 0 >
-  >;
+                                       std::uint32_t,
+                                       baseaddress + offset,
+                                       access::rw,
+                                       groov::field<"SEC1BB31", bool, 31, 31>,
+                                       groov::field<"SEC1BB30", bool, 30, 30>,
+                                       groov::field<"SEC1BB29", bool, 29, 29>,
+                                       groov::field<"SEC1BB28", bool, 28, 28>,
+                                       groov::field<"SEC1BB27", bool, 27, 27>,
+                                       groov::field<"SEC1BB26", bool, 26, 26>,
+                                       groov::field<"SEC1BB25", bool, 25, 25>,
+                                       groov::field<"SEC1BB24", bool, 24, 24>,
+                                       groov::field<"SEC1BB23", bool, 23, 23>,
+                                       groov::field<"SEC1BB22", bool, 22, 22>,
+                                       groov::field<"SEC1BB21", bool, 21, 21>,
+                                       groov::field<"SEC1BB20", bool, 20, 20>,
+                                       groov::field<"SEC1BB19", bool, 19, 19>,
+                                       groov::field<"SEC1BB18", bool, 18, 18>,
+                                       groov::field<"SEC1BB17", bool, 17, 17>,
+                                       groov::field<"SEC1BB16", bool, 16, 16>,
+                                       groov::field<"SEC1BB15", bool, 15, 15>,
+                                       groov::field<"SEC1BB14", bool, 14, 14>,
+                                       groov::field<"SEC1BB13", bool, 13, 13>,
+                                       groov::field<"SEC1BB12", bool, 12, 12>,
+                                       groov::field<"SEC1BB11", bool, 11, 11>,
+                                       groov::field<"SEC1BB10", bool, 10, 10>,
+                                       groov::field<"SEC1BB9", bool, 9, 9>,
+                                       groov::field<"SEC1BB8", bool, 8, 8>,
+                                       groov::field<"SEC1BB7", bool, 7, 7>,
+                                       groov::field<"SEC1BB6", bool, 6, 6>,
+                                       groov::field<"SEC1BB5", bool, 5, 5>,
+                                       groov::field<"SEC1BB4", bool, 4, 4>,
+                                       groov::field<"SEC1BB3", bool, 3, 3>,
+                                       groov::field<"SEC1BB2", bool, 2, 2>,
+                                       groov::field<"SEC1BB1", bool, 1, 1>,
+                                       groov::field<"SEC1BB0", bool, 0, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using flash_sec1bbr2_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"SEC1BB31", bool, 31, 31 >,
-  groov::field<"SEC1BB30", bool, 30, 30 >,
-  groov::field<"SEC1BB29", bool, 29, 29 >,
-  groov::field<"SEC1BB28", bool, 28, 28 >,
-  groov::field<"SEC1BB27", bool, 27, 27 >,
-  groov::field<"SEC1BB26", bool, 26, 26 >,
-  groov::field<"SEC1BB25", bool, 25, 25 >,
-  groov::field<"SEC1BB24", bool, 24, 24 >,
-  groov::field<"SEC1BB23", bool, 23, 23 >,
-  groov::field<"SEC1BB22", bool, 22, 22 >,
-  groov::field<"SEC1BB21", bool, 21, 21 >,
-  groov::field<"SEC1BB20", bool, 20, 20 >,
-  groov::field<"SEC1BB19", bool, 19, 19 >,
-  groov::field<"SEC1BB18", bool, 18, 18 >,
-  groov::field<"SEC1BB17", bool, 17, 17 >,
-  groov::field<"SEC1BB16", bool, 16, 16 >,
-  groov::field<"SEC1BB15", bool, 15, 15 >,
-  groov::field<"SEC1BB14", bool, 14, 14 >,
-  groov::field<"SEC1BB13", bool, 13, 13 >,
-  groov::field<"SEC1BB12", bool, 12, 12 >,
-  groov::field<"SEC1BB11", bool, 11, 11 >,
-  groov::field<"SEC1BB10", bool, 10, 10 >,
-  groov::field<"SEC1BB9", bool, 9, 9 >,
-  groov::field<"SEC1BB8", bool, 8, 8 >,
-  groov::field<"SEC1BB7", bool, 7, 7 >,
-  groov::field<"SEC1BB6", bool, 6, 6 >,
-  groov::field<"SEC1BB5", bool, 5, 5 >,
-  groov::field<"SEC1BB4", bool, 4, 4 >,
-  groov::field<"SEC1BB3", bool, 3, 3 >,
-  groov::field<"SEC1BB2", bool, 2, 2 >,
-  groov::field<"SEC1BB1", bool, 1, 1 >,
-  groov::field<"SEC1BB0", bool, 0, 0 >
-  >;
+                                       std::uint32_t,
+                                       baseaddress + offset,
+                                       access::rw,
+                                       groov::field<"SEC1BB31", bool, 31, 31>,
+                                       groov::field<"SEC1BB30", bool, 30, 30>,
+                                       groov::field<"SEC1BB29", bool, 29, 29>,
+                                       groov::field<"SEC1BB28", bool, 28, 28>,
+                                       groov::field<"SEC1BB27", bool, 27, 27>,
+                                       groov::field<"SEC1BB26", bool, 26, 26>,
+                                       groov::field<"SEC1BB25", bool, 25, 25>,
+                                       groov::field<"SEC1BB24", bool, 24, 24>,
+                                       groov::field<"SEC1BB23", bool, 23, 23>,
+                                       groov::field<"SEC1BB22", bool, 22, 22>,
+                                       groov::field<"SEC1BB21", bool, 21, 21>,
+                                       groov::field<"SEC1BB20", bool, 20, 20>,
+                                       groov::field<"SEC1BB19", bool, 19, 19>,
+                                       groov::field<"SEC1BB18", bool, 18, 18>,
+                                       groov::field<"SEC1BB17", bool, 17, 17>,
+                                       groov::field<"SEC1BB16", bool, 16, 16>,
+                                       groov::field<"SEC1BB15", bool, 15, 15>,
+                                       groov::field<"SEC1BB14", bool, 14, 14>,
+                                       groov::field<"SEC1BB13", bool, 13, 13>,
+                                       groov::field<"SEC1BB12", bool, 12, 12>,
+                                       groov::field<"SEC1BB11", bool, 11, 11>,
+                                       groov::field<"SEC1BB10", bool, 10, 10>,
+                                       groov::field<"SEC1BB9", bool, 9, 9>,
+                                       groov::field<"SEC1BB8", bool, 8, 8>,
+                                       groov::field<"SEC1BB7", bool, 7, 7>,
+                                       groov::field<"SEC1BB6", bool, 6, 6>,
+                                       groov::field<"SEC1BB5", bool, 5, 5>,
+                                       groov::field<"SEC1BB4", bool, 4, 4>,
+                                       groov::field<"SEC1BB3", bool, 3, 3>,
+                                       groov::field<"SEC1BB2", bool, 2, 2>,
+                                       groov::field<"SEC1BB1", bool, 1, 1>,
+                                       groov::field<"SEC1BB0", bool, 0, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using flash_sec1bbr3_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"SEC1BB31", bool, 31, 31 >,
-  groov::field<"SEC1BB30", bool, 30, 30 >,
-  groov::field<"SEC1BB29", bool, 29, 29 >,
-  groov::field<"SEC1BB28", bool, 28, 28 >,
-  groov::field<"SEC1BB27", bool, 27, 27 >,
-  groov::field<"SEC1BB26", bool, 26, 26 >,
-  groov::field<"SEC1BB25", bool, 25, 25 >,
-  groov::field<"SEC1BB24", bool, 24, 24 >,
-  groov::field<"SEC1BB23", bool, 23, 23 >,
-  groov::field<"SEC1BB22", bool, 22, 22 >,
-  groov::field<"SEC1BB21", bool, 21, 21 >,
-  groov::field<"SEC1BB20", bool, 20, 20 >,
-  groov::field<"SEC1BB19", bool, 19, 19 >,
-  groov::field<"SEC1BB18", bool, 18, 18 >,
-  groov::field<"SEC1BB17", bool, 17, 17 >,
-  groov::field<"SEC1BB16", bool, 16, 16 >,
-  groov::field<"SEC1BB15", bool, 15, 15 >,
-  groov::field<"SEC1BB14", bool, 14, 14 >,
-  groov::field<"SEC1BB13", bool, 13, 13 >,
-  groov::field<"SEC1BB12", bool, 12, 12 >,
-  groov::field<"SEC1BB11", bool, 11, 11 >,
-  groov::field<"SEC1BB10", bool, 10, 10 >,
-  groov::field<"SEC1BB9", bool, 9, 9 >,
-  groov::field<"SEC1BB8", bool, 8, 8 >,
-  groov::field<"SEC1BB7", bool, 7, 7 >,
-  groov::field<"SEC1BB6", bool, 6, 6 >,
-  groov::field<"SEC1BB5", bool, 5, 5 >,
-  groov::field<"SEC1BB4", bool, 4, 4 >,
-  groov::field<"SEC1BB3", bool, 3, 3 >,
-  groov::field<"SEC1BB2", bool, 2, 2 >,
-  groov::field<"SEC1BB1", bool, 1, 1 >,
-  groov::field<"SEC1BB0", bool, 0, 0 >
-  >;
+                                       std::uint32_t,
+                                       baseaddress + offset,
+                                       access::rw,
+                                       groov::field<"SEC1BB31", bool, 31, 31>,
+                                       groov::field<"SEC1BB30", bool, 30, 30>,
+                                       groov::field<"SEC1BB29", bool, 29, 29>,
+                                       groov::field<"SEC1BB28", bool, 28, 28>,
+                                       groov::field<"SEC1BB27", bool, 27, 27>,
+                                       groov::field<"SEC1BB26", bool, 26, 26>,
+                                       groov::field<"SEC1BB25", bool, 25, 25>,
+                                       groov::field<"SEC1BB24", bool, 24, 24>,
+                                       groov::field<"SEC1BB23", bool, 23, 23>,
+                                       groov::field<"SEC1BB22", bool, 22, 22>,
+                                       groov::field<"SEC1BB21", bool, 21, 21>,
+                                       groov::field<"SEC1BB20", bool, 20, 20>,
+                                       groov::field<"SEC1BB19", bool, 19, 19>,
+                                       groov::field<"SEC1BB18", bool, 18, 18>,
+                                       groov::field<"SEC1BB17", bool, 17, 17>,
+                                       groov::field<"SEC1BB16", bool, 16, 16>,
+                                       groov::field<"SEC1BB15", bool, 15, 15>,
+                                       groov::field<"SEC1BB14", bool, 14, 14>,
+                                       groov::field<"SEC1BB13", bool, 13, 13>,
+                                       groov::field<"SEC1BB12", bool, 12, 12>,
+                                       groov::field<"SEC1BB11", bool, 11, 11>,
+                                       groov::field<"SEC1BB10", bool, 10, 10>,
+                                       groov::field<"SEC1BB9", bool, 9, 9>,
+                                       groov::field<"SEC1BB8", bool, 8, 8>,
+                                       groov::field<"SEC1BB7", bool, 7, 7>,
+                                       groov::field<"SEC1BB6", bool, 6, 6>,
+                                       groov::field<"SEC1BB5", bool, 5, 5>,
+                                       groov::field<"SEC1BB4", bool, 4, 4>,
+                                       groov::field<"SEC1BB3", bool, 3, 3>,
+                                       groov::field<"SEC1BB2", bool, 2, 2>,
+                                       groov::field<"SEC1BB1", bool, 1, 1>,
+                                       groov::field<"SEC1BB0", bool, 0, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using flash_sec1bbr4_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"SEC1BB31", bool, 31, 31 >,
-  groov::field<"SEC1BB30", bool, 30, 30 >,
-  groov::field<"SEC1BB29", bool, 29, 29 >,
-  groov::field<"SEC1BB28", bool, 28, 28 >,
-  groov::field<"SEC1BB27", bool, 27, 27 >,
-  groov::field<"SEC1BB26", bool, 26, 26 >,
-  groov::field<"SEC1BB25", bool, 25, 25 >,
-  groov::field<"SEC1BB24", bool, 24, 24 >,
-  groov::field<"SEC1BB23", bool, 23, 23 >,
-  groov::field<"SEC1BB22", bool, 22, 22 >,
-  groov::field<"SEC1BB21", bool, 21, 21 >,
-  groov::field<"SEC1BB20", bool, 20, 20 >,
-  groov::field<"SEC1BB19", bool, 19, 19 >,
-  groov::field<"SEC1BB18", bool, 18, 18 >,
-  groov::field<"SEC1BB17", bool, 17, 17 >,
-  groov::field<"SEC1BB16", bool, 16, 16 >,
-  groov::field<"SEC1BB15", bool, 15, 15 >,
-  groov::field<"SEC1BB14", bool, 14, 14 >,
-  groov::field<"SEC1BB13", bool, 13, 13 >,
-  groov::field<"SEC1BB12", bool, 12, 12 >,
-  groov::field<"SEC1BB11", bool, 11, 11 >,
-  groov::field<"SEC1BB10", bool, 10, 10 >,
-  groov::field<"SEC1BB9", bool, 9, 9 >,
-  groov::field<"SEC1BB8", bool, 8, 8 >,
-  groov::field<"SEC1BB7", bool, 7, 7 >,
-  groov::field<"SEC1BB6", bool, 6, 6 >,
-  groov::field<"SEC1BB5", bool, 5, 5 >,
-  groov::field<"SEC1BB4", bool, 4, 4 >,
-  groov::field<"SEC1BB3", bool, 3, 3 >,
-  groov::field<"SEC1BB2", bool, 2, 2 >,
-  groov::field<"SEC1BB1", bool, 1, 1 >,
-  groov::field<"SEC1BB0", bool, 0, 0 >
-  >;
+                                       std::uint32_t,
+                                       baseaddress + offset,
+                                       access::rw,
+                                       groov::field<"SEC1BB31", bool, 31, 31>,
+                                       groov::field<"SEC1BB30", bool, 30, 30>,
+                                       groov::field<"SEC1BB29", bool, 29, 29>,
+                                       groov::field<"SEC1BB28", bool, 28, 28>,
+                                       groov::field<"SEC1BB27", bool, 27, 27>,
+                                       groov::field<"SEC1BB26", bool, 26, 26>,
+                                       groov::field<"SEC1BB25", bool, 25, 25>,
+                                       groov::field<"SEC1BB24", bool, 24, 24>,
+                                       groov::field<"SEC1BB23", bool, 23, 23>,
+                                       groov::field<"SEC1BB22", bool, 22, 22>,
+                                       groov::field<"SEC1BB21", bool, 21, 21>,
+                                       groov::field<"SEC1BB20", bool, 20, 20>,
+                                       groov::field<"SEC1BB19", bool, 19, 19>,
+                                       groov::field<"SEC1BB18", bool, 18, 18>,
+                                       groov::field<"SEC1BB17", bool, 17, 17>,
+                                       groov::field<"SEC1BB16", bool, 16, 16>,
+                                       groov::field<"SEC1BB15", bool, 15, 15>,
+                                       groov::field<"SEC1BB14", bool, 14, 14>,
+                                       groov::field<"SEC1BB13", bool, 13, 13>,
+                                       groov::field<"SEC1BB12", bool, 12, 12>,
+                                       groov::field<"SEC1BB11", bool, 11, 11>,
+                                       groov::field<"SEC1BB10", bool, 10, 10>,
+                                       groov::field<"SEC1BB9", bool, 9, 9>,
+                                       groov::field<"SEC1BB8", bool, 8, 8>,
+                                       groov::field<"SEC1BB7", bool, 7, 7>,
+                                       groov::field<"SEC1BB6", bool, 6, 6>,
+                                       groov::field<"SEC1BB5", bool, 5, 5>,
+                                       groov::field<"SEC1BB4", bool, 4, 4>,
+                                       groov::field<"SEC1BB3", bool, 3, 3>,
+                                       groov::field<"SEC1BB2", bool, 2, 2>,
+                                       groov::field<"SEC1BB1", bool, 1, 1>,
+                                       groov::field<"SEC1BB0", bool, 0, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using flash_sec2bbr1_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"SEC2BB31", bool, 31, 31 >,
-  groov::field<"SEC2BB30", bool, 30, 30 >,
-  groov::field<"SEC2BB29", bool, 29, 29 >,
-  groov::field<"SEC2BB28", bool, 28, 28 >,
-  groov::field<"SEC2BB27", bool, 27, 27 >,
-  groov::field<"SEC2BB26", bool, 26, 26 >,
-  groov::field<"SEC2BB25", bool, 25, 25 >,
-  groov::field<"SEC2BB24", bool, 24, 24 >,
-  groov::field<"SEC2BB23", bool, 23, 23 >,
-  groov::field<"SEC2BB22", bool, 22, 22 >,
-  groov::field<"SEC2BB21", bool, 21, 21 >,
-  groov::field<"SEC2BB20", bool, 20, 20 >,
-  groov::field<"SEC2BB19", bool, 19, 19 >,
-  groov::field<"SEC2BB18", bool, 18, 18 >,
-  groov::field<"SEC2BB17", bool, 17, 17 >,
-  groov::field<"SEC2BB16", bool, 16, 16 >,
-  groov::field<"SEC2BB15", bool, 15, 15 >,
-  groov::field<"SEC2BB14", bool, 14, 14 >,
-  groov::field<"SEC2BB13", bool, 13, 13 >,
-  groov::field<"SEC2BB12", bool, 12, 12 >,
-  groov::field<"SEC2BB11", bool, 11, 11 >,
-  groov::field<"SEC2BB10", bool, 10, 10 >,
-  groov::field<"SEC2BB9", bool, 9, 9 >,
-  groov::field<"SEC2BB8", bool, 8, 8 >,
-  groov::field<"SEC2BB7", bool, 7, 7 >,
-  groov::field<"SEC2BB6", bool, 6, 6 >,
-  groov::field<"SEC2BB5", bool, 5, 5 >,
-  groov::field<"SEC2BB4", bool, 4, 4 >,
-  groov::field<"SEC2BB3", bool, 3, 3 >,
-  groov::field<"SEC2BB2", bool, 2, 2 >,
-  groov::field<"SEC2BB1", bool, 1, 1 >,
-  groov::field<"SEC2BB0", bool, 0, 0 >
-  >;
+                                       std::uint32_t,
+                                       baseaddress + offset,
+                                       access::rw,
+                                       groov::field<"SEC2BB31", bool, 31, 31>,
+                                       groov::field<"SEC2BB30", bool, 30, 30>,
+                                       groov::field<"SEC2BB29", bool, 29, 29>,
+                                       groov::field<"SEC2BB28", bool, 28, 28>,
+                                       groov::field<"SEC2BB27", bool, 27, 27>,
+                                       groov::field<"SEC2BB26", bool, 26, 26>,
+                                       groov::field<"SEC2BB25", bool, 25, 25>,
+                                       groov::field<"SEC2BB24", bool, 24, 24>,
+                                       groov::field<"SEC2BB23", bool, 23, 23>,
+                                       groov::field<"SEC2BB22", bool, 22, 22>,
+                                       groov::field<"SEC2BB21", bool, 21, 21>,
+                                       groov::field<"SEC2BB20", bool, 20, 20>,
+                                       groov::field<"SEC2BB19", bool, 19, 19>,
+                                       groov::field<"SEC2BB18", bool, 18, 18>,
+                                       groov::field<"SEC2BB17", bool, 17, 17>,
+                                       groov::field<"SEC2BB16", bool, 16, 16>,
+                                       groov::field<"SEC2BB15", bool, 15, 15>,
+                                       groov::field<"SEC2BB14", bool, 14, 14>,
+                                       groov::field<"SEC2BB13", bool, 13, 13>,
+                                       groov::field<"SEC2BB12", bool, 12, 12>,
+                                       groov::field<"SEC2BB11", bool, 11, 11>,
+                                       groov::field<"SEC2BB10", bool, 10, 10>,
+                                       groov::field<"SEC2BB9", bool, 9, 9>,
+                                       groov::field<"SEC2BB8", bool, 8, 8>,
+                                       groov::field<"SEC2BB7", bool, 7, 7>,
+                                       groov::field<"SEC2BB6", bool, 6, 6>,
+                                       groov::field<"SEC2BB5", bool, 5, 5>,
+                                       groov::field<"SEC2BB4", bool, 4, 4>,
+                                       groov::field<"SEC2BB3", bool, 3, 3>,
+                                       groov::field<"SEC2BB2", bool, 2, 2>,
+                                       groov::field<"SEC2BB1", bool, 1, 1>,
+                                       groov::field<"SEC2BB0", bool, 0, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using flash_sec2bbr2_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"SEC2BB31", bool, 31, 31 >,
-  groov::field<"SEC2BB30", bool, 30, 30 >,
-  groov::field<"SEC2BB29", bool, 29, 29 >,
-  groov::field<"SEC2BB28", bool, 28, 28 >,
-  groov::field<"SEC2BB27", bool, 27, 27 >,
-  groov::field<"SEC2BB26", bool, 26, 26 >,
-  groov::field<"SEC2BB25", bool, 25, 25 >,
-  groov::field<"SEC2BB24", bool, 24, 24 >,
-  groov::field<"SEC2BB23", bool, 23, 23 >,
-  groov::field<"SEC2BB22", bool, 22, 22 >,
-  groov::field<"SEC2BB21", bool, 21, 21 >,
-  groov::field<"SEC2BB20", bool, 20, 20 >,
-  groov::field<"SEC2BB19", bool, 19, 19 >,
-  groov::field<"SEC2BB18", bool, 18, 18 >,
-  groov::field<"SEC2BB17", bool, 17, 17 >,
-  groov::field<"SEC2BB16", bool, 16, 16 >,
-  groov::field<"SEC2BB15", bool, 15, 15 >,
-  groov::field<"SEC2BB14", bool, 14, 14 >,
-  groov::field<"SEC2BB13", bool, 13, 13 >,
-  groov::field<"SEC2BB12", bool, 12, 12 >,
-  groov::field<"SEC2BB11", bool, 11, 11 >,
-  groov::field<"SEC2BB10", bool, 10, 10 >,
-  groov::field<"SEC2BB9", bool, 9, 9 >,
-  groov::field<"SEC2BB8", bool, 8, 8 >,
-  groov::field<"SEC2BB7", bool, 7, 7 >,
-  groov::field<"SEC2BB6", bool, 6, 6 >,
-  groov::field<"SEC2BB5", bool, 5, 5 >,
-  groov::field<"SEC2BB4", bool, 4, 4 >,
-  groov::field<"SEC2BB3", bool, 3, 3 >,
-  groov::field<"SEC2BB2", bool, 2, 2 >,
-  groov::field<"SEC2BB1", bool, 1, 1 >,
-  groov::field<"SEC2BB0", bool, 0, 0 >
-  >;
+                                       std::uint32_t,
+                                       baseaddress + offset,
+                                       access::rw,
+                                       groov::field<"SEC2BB31", bool, 31, 31>,
+                                       groov::field<"SEC2BB30", bool, 30, 30>,
+                                       groov::field<"SEC2BB29", bool, 29, 29>,
+                                       groov::field<"SEC2BB28", bool, 28, 28>,
+                                       groov::field<"SEC2BB27", bool, 27, 27>,
+                                       groov::field<"SEC2BB26", bool, 26, 26>,
+                                       groov::field<"SEC2BB25", bool, 25, 25>,
+                                       groov::field<"SEC2BB24", bool, 24, 24>,
+                                       groov::field<"SEC2BB23", bool, 23, 23>,
+                                       groov::field<"SEC2BB22", bool, 22, 22>,
+                                       groov::field<"SEC2BB21", bool, 21, 21>,
+                                       groov::field<"SEC2BB20", bool, 20, 20>,
+                                       groov::field<"SEC2BB19", bool, 19, 19>,
+                                       groov::field<"SEC2BB18", bool, 18, 18>,
+                                       groov::field<"SEC2BB17", bool, 17, 17>,
+                                       groov::field<"SEC2BB16", bool, 16, 16>,
+                                       groov::field<"SEC2BB15", bool, 15, 15>,
+                                       groov::field<"SEC2BB14", bool, 14, 14>,
+                                       groov::field<"SEC2BB13", bool, 13, 13>,
+                                       groov::field<"SEC2BB12", bool, 12, 12>,
+                                       groov::field<"SEC2BB11", bool, 11, 11>,
+                                       groov::field<"SEC2BB10", bool, 10, 10>,
+                                       groov::field<"SEC2BB9", bool, 9, 9>,
+                                       groov::field<"SEC2BB8", bool, 8, 8>,
+                                       groov::field<"SEC2BB7", bool, 7, 7>,
+                                       groov::field<"SEC2BB6", bool, 6, 6>,
+                                       groov::field<"SEC2BB5", bool, 5, 5>,
+                                       groov::field<"SEC2BB4", bool, 4, 4>,
+                                       groov::field<"SEC2BB3", bool, 3, 3>,
+                                       groov::field<"SEC2BB2", bool, 2, 2>,
+                                       groov::field<"SEC2BB1", bool, 1, 1>,
+                                       groov::field<"SEC2BB0", bool, 0, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using flash_sec2bbr3_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"SEC2BB31", bool, 31, 31 >,
-  groov::field<"SEC2BB30", bool, 30, 30 >,
-  groov::field<"SEC2BB29", bool, 29, 29 >,
-  groov::field<"SEC2BB28", bool, 28, 28 >,
-  groov::field<"SEC2BB27", bool, 27, 27 >,
-  groov::field<"SEC2BB26", bool, 26, 26 >,
-  groov::field<"SEC2BB25", bool, 25, 25 >,
-  groov::field<"SEC2BB24", bool, 24, 24 >,
-  groov::field<"SEC2BB23", bool, 23, 23 >,
-  groov::field<"SEC2BB22", bool, 22, 22 >,
-  groov::field<"SEC2BB21", bool, 21, 21 >,
-  groov::field<"SEC2BB20", bool, 20, 20 >,
-  groov::field<"SEC2BB19", bool, 19, 19 >,
-  groov::field<"SEC2BB18", bool, 18, 18 >,
-  groov::field<"SEC2BB17", bool, 17, 17 >,
-  groov::field<"SEC2BB16", bool, 16, 16 >,
-  groov::field<"SEC2BB15", bool, 15, 15 >,
-  groov::field<"SEC2BB14", bool, 14, 14 >,
-  groov::field<"SEC2BB13", bool, 13, 13 >,
-  groov::field<"SEC2BB12", bool, 12, 12 >,
-  groov::field<"SEC2BB11", bool, 11, 11 >,
-  groov::field<"SEC2BB10", bool, 10, 10 >,
-  groov::field<"SEC2BB9", bool, 9, 9 >,
-  groov::field<"SEC2BB8", bool, 8, 8 >,
-  groov::field<"SEC2BB7", bool, 7, 7 >,
-  groov::field<"SEC2BB6", bool, 6, 6 >,
-  groov::field<"SEC2BB5", bool, 5, 5 >,
-  groov::field<"SEC2BB4", bool, 4, 4 >,
-  groov::field<"SEC2BB3", bool, 3, 3 >,
-  groov::field<"SEC2BB2", bool, 2, 2 >,
-  groov::field<"SEC2BB1", bool, 1, 1 >,
-  groov::field<"SEC2BB0", bool, 0, 0 >
-  >;
+                                       std::uint32_t,
+                                       baseaddress + offset,
+                                       access::rw,
+                                       groov::field<"SEC2BB31", bool, 31, 31>,
+                                       groov::field<"SEC2BB30", bool, 30, 30>,
+                                       groov::field<"SEC2BB29", bool, 29, 29>,
+                                       groov::field<"SEC2BB28", bool, 28, 28>,
+                                       groov::field<"SEC2BB27", bool, 27, 27>,
+                                       groov::field<"SEC2BB26", bool, 26, 26>,
+                                       groov::field<"SEC2BB25", bool, 25, 25>,
+                                       groov::field<"SEC2BB24", bool, 24, 24>,
+                                       groov::field<"SEC2BB23", bool, 23, 23>,
+                                       groov::field<"SEC2BB22", bool, 22, 22>,
+                                       groov::field<"SEC2BB21", bool, 21, 21>,
+                                       groov::field<"SEC2BB20", bool, 20, 20>,
+                                       groov::field<"SEC2BB19", bool, 19, 19>,
+                                       groov::field<"SEC2BB18", bool, 18, 18>,
+                                       groov::field<"SEC2BB17", bool, 17, 17>,
+                                       groov::field<"SEC2BB16", bool, 16, 16>,
+                                       groov::field<"SEC2BB15", bool, 15, 15>,
+                                       groov::field<"SEC2BB14", bool, 14, 14>,
+                                       groov::field<"SEC2BB13", bool, 13, 13>,
+                                       groov::field<"SEC2BB12", bool, 12, 12>,
+                                       groov::field<"SEC2BB11", bool, 11, 11>,
+                                       groov::field<"SEC2BB10", bool, 10, 10>,
+                                       groov::field<"SEC2BB9", bool, 9, 9>,
+                                       groov::field<"SEC2BB8", bool, 8, 8>,
+                                       groov::field<"SEC2BB7", bool, 7, 7>,
+                                       groov::field<"SEC2BB6", bool, 6, 6>,
+                                       groov::field<"SEC2BB5", bool, 5, 5>,
+                                       groov::field<"SEC2BB4", bool, 4, 4>,
+                                       groov::field<"SEC2BB3", bool, 3, 3>,
+                                       groov::field<"SEC2BB2", bool, 2, 2>,
+                                       groov::field<"SEC2BB1", bool, 1, 1>,
+                                       groov::field<"SEC2BB0", bool, 0, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using flash_sec2bbr4_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"SEC2BB31", bool, 31, 31 >,
-  groov::field<"SEC2BB30", bool, 30, 30 >,
-  groov::field<"SEC2BB29", bool, 29, 29 >,
-  groov::field<"SEC2BB28", bool, 28, 28 >,
-  groov::field<"SEC2BB27", bool, 27, 27 >,
-  groov::field<"SEC2BB26", bool, 26, 26 >,
-  groov::field<"SEC2BB25", bool, 25, 25 >,
-  groov::field<"SEC2BB24", bool, 24, 24 >,
-  groov::field<"SEC2BB23", bool, 23, 23 >,
-  groov::field<"SEC2BB22", bool, 22, 22 >,
-  groov::field<"SEC2BB21", bool, 21, 21 >,
-  groov::field<"SEC2BB20", bool, 20, 20 >,
-  groov::field<"SEC2BB19", bool, 19, 19 >,
-  groov::field<"SEC2BB18", bool, 18, 18 >,
-  groov::field<"SEC2BB17", bool, 17, 17 >,
-  groov::field<"SEC2BB16", bool, 16, 16 >,
-  groov::field<"SEC2BB15", bool, 15, 15 >,
-  groov::field<"SEC2BB14", bool, 14, 14 >,
-  groov::field<"SEC2BB13", bool, 13, 13 >,
-  groov::field<"SEC2BB12", bool, 12, 12 >,
-  groov::field<"SEC2BB11", bool, 11, 11 >,
-  groov::field<"SEC2BB10", bool, 10, 10 >,
-  groov::field<"SEC2BB9", bool, 9, 9 >,
-  groov::field<"SEC2BB8", bool, 8, 8 >,
-  groov::field<"SEC2BB7", bool, 7, 7 >,
-  groov::field<"SEC2BB6", bool, 6, 6 >,
-  groov::field<"SEC2BB5", bool, 5, 5 >,
-  groov::field<"SEC2BB4", bool, 4, 4 >,
-  groov::field<"SEC2BB3", bool, 3, 3 >,
-  groov::field<"SEC2BB2", bool, 2, 2 >,
-  groov::field<"SEC2BB1", bool, 1, 1 >,
-  groov::field<"SEC2BB0", bool, 0, 0 >
-  >;
+                                       std::uint32_t,
+                                       baseaddress + offset,
+                                       access::rw,
+                                       groov::field<"SEC2BB31", bool, 31, 31>,
+                                       groov::field<"SEC2BB30", bool, 30, 30>,
+                                       groov::field<"SEC2BB29", bool, 29, 29>,
+                                       groov::field<"SEC2BB28", bool, 28, 28>,
+                                       groov::field<"SEC2BB27", bool, 27, 27>,
+                                       groov::field<"SEC2BB26", bool, 26, 26>,
+                                       groov::field<"SEC2BB25", bool, 25, 25>,
+                                       groov::field<"SEC2BB24", bool, 24, 24>,
+                                       groov::field<"SEC2BB23", bool, 23, 23>,
+                                       groov::field<"SEC2BB22", bool, 22, 22>,
+                                       groov::field<"SEC2BB21", bool, 21, 21>,
+                                       groov::field<"SEC2BB20", bool, 20, 20>,
+                                       groov::field<"SEC2BB19", bool, 19, 19>,
+                                       groov::field<"SEC2BB18", bool, 18, 18>,
+                                       groov::field<"SEC2BB17", bool, 17, 17>,
+                                       groov::field<"SEC2BB16", bool, 16, 16>,
+                                       groov::field<"SEC2BB15", bool, 15, 15>,
+                                       groov::field<"SEC2BB14", bool, 14, 14>,
+                                       groov::field<"SEC2BB13", bool, 13, 13>,
+                                       groov::field<"SEC2BB12", bool, 12, 12>,
+                                       groov::field<"SEC2BB11", bool, 11, 11>,
+                                       groov::field<"SEC2BB10", bool, 10, 10>,
+                                       groov::field<"SEC2BB9", bool, 9, 9>,
+                                       groov::field<"SEC2BB8", bool, 8, 8>,
+                                       groov::field<"SEC2BB7", bool, 7, 7>,
+                                       groov::field<"SEC2BB6", bool, 6, 6>,
+                                       groov::field<"SEC2BB5", bool, 5, 5>,
+                                       groov::field<"SEC2BB4", bool, 4, 4>,
+                                       groov::field<"SEC2BB3", bool, 3, 3>,
+                                       groov::field<"SEC2BB2", bool, 2, 2>,
+                                       groov::field<"SEC2BB1", bool, 1, 1>,
+                                       groov::field<"SEC2BB0", bool, 0, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using flash_sechdpcr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint32_t, 31, 2 ,access::ro>,
-  groov::field<"HDP2_ACCDIS", bool, 1, 1 >,
-  groov::field<"HDP1_ACCDIS", bool, 0, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using flash_sechdpcr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint32_t, 31, 2, access::ro>,
+               groov::field<"HDP2_ACCDIS", bool, 1, 1>,
+               groov::field<"HDP1_ACCDIS", bool, 0, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using flash_privcfgr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint32_t, 31, 2 ,access::ro>,
-  groov::field<"NSPRIV", bool, 1, 1 >,
-  groov::field<"SPRIV", bool, 0, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using flash_privcfgr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint32_t, 31, 2, access::ro>,
+               groov::field<"NSPRIV", bool, 1, 1>,
+               groov::field<"SPRIV", bool, 0, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using flash_priv1bbr1_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"PRIV1BB31", bool, 31, 31 >,
-  groov::field<"PRIV1BB30", bool, 30, 30 >,
-  groov::field<"PRIV1BB29", bool, 29, 29 >,
-  groov::field<"PRIV1BB28", bool, 28, 28 >,
-  groov::field<"PRIV1BB27", bool, 27, 27 >,
-  groov::field<"PRIV1BB26", bool, 26, 26 >,
-  groov::field<"PRIV1BB25", bool, 25, 25 >,
-  groov::field<"PRIV1BB24", bool, 24, 24 >,
-  groov::field<"PRIV1BB23", bool, 23, 23 >,
-  groov::field<"PRIV1BB22", bool, 22, 22 >,
-  groov::field<"PRIV1BB21", bool, 21, 21 >,
-  groov::field<"PRIV1BB20", bool, 20, 20 >,
-  groov::field<"PRIV1BB19", bool, 19, 19 >,
-  groov::field<"PRIV1BB18", bool, 18, 18 >,
-  groov::field<"PRIV1BB17", bool, 17, 17 >,
-  groov::field<"PRIV1BB16", bool, 16, 16 >,
-  groov::field<"PRIV1BB15", bool, 15, 15 >,
-  groov::field<"PRIV1BB14", bool, 14, 14 >,
-  groov::field<"PRIV1BB13", bool, 13, 13 >,
-  groov::field<"PRIV1BB12", bool, 12, 12 >,
-  groov::field<"PRIV1BB11", bool, 11, 11 >,
-  groov::field<"PRIV1BB10", bool, 10, 10 >,
-  groov::field<"PRIV1BB9", bool, 9, 9 >,
-  groov::field<"PRIV1BB8", bool, 8, 8 >,
-  groov::field<"PRIV1BB7", bool, 7, 7 >,
-  groov::field<"PRIV1BB6", bool, 6, 6 >,
-  groov::field<"PRIV1BB5", bool, 5, 5 >,
-  groov::field<"PRIV1BB4", bool, 4, 4 >,
-  groov::field<"PRIV1BB3", bool, 3, 3 >,
-  groov::field<"PRIV1BB2", bool, 2, 2 >,
-  groov::field<"PRIV1BB1", bool, 1, 1 >,
-  groov::field<"PRIV1BB0", bool, 0, 0 >
-  >;
+                                        std::uint32_t,
+                                        baseaddress + offset,
+                                        access::rw,
+                                        groov::field<"PRIV1BB31", bool, 31, 31>,
+                                        groov::field<"PRIV1BB30", bool, 30, 30>,
+                                        groov::field<"PRIV1BB29", bool, 29, 29>,
+                                        groov::field<"PRIV1BB28", bool, 28, 28>,
+                                        groov::field<"PRIV1BB27", bool, 27, 27>,
+                                        groov::field<"PRIV1BB26", bool, 26, 26>,
+                                        groov::field<"PRIV1BB25", bool, 25, 25>,
+                                        groov::field<"PRIV1BB24", bool, 24, 24>,
+                                        groov::field<"PRIV1BB23", bool, 23, 23>,
+                                        groov::field<"PRIV1BB22", bool, 22, 22>,
+                                        groov::field<"PRIV1BB21", bool, 21, 21>,
+                                        groov::field<"PRIV1BB20", bool, 20, 20>,
+                                        groov::field<"PRIV1BB19", bool, 19, 19>,
+                                        groov::field<"PRIV1BB18", bool, 18, 18>,
+                                        groov::field<"PRIV1BB17", bool, 17, 17>,
+                                        groov::field<"PRIV1BB16", bool, 16, 16>,
+                                        groov::field<"PRIV1BB15", bool, 15, 15>,
+                                        groov::field<"PRIV1BB14", bool, 14, 14>,
+                                        groov::field<"PRIV1BB13", bool, 13, 13>,
+                                        groov::field<"PRIV1BB12", bool, 12, 12>,
+                                        groov::field<"PRIV1BB11", bool, 11, 11>,
+                                        groov::field<"PRIV1BB10", bool, 10, 10>,
+                                        groov::field<"PRIV1BB9", bool, 9, 9>,
+                                        groov::field<"PRIV1BB8", bool, 8, 8>,
+                                        groov::field<"PRIV1BB7", bool, 7, 7>,
+                                        groov::field<"PRIV1BB6", bool, 6, 6>,
+                                        groov::field<"PRIV1BB5", bool, 5, 5>,
+                                        groov::field<"PRIV1BB4", bool, 4, 4>,
+                                        groov::field<"PRIV1BB3", bool, 3, 3>,
+                                        groov::field<"PRIV1BB2", bool, 2, 2>,
+                                        groov::field<"PRIV1BB1", bool, 1, 1>,
+                                        groov::field<"PRIV1BB0", bool, 0, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using flash_priv1bbr2_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"PRIV1BB31", bool, 31, 31 >,
-  groov::field<"PRIV1BB30", bool, 30, 30 >,
-  groov::field<"PRIV1BB29", bool, 29, 29 >,
-  groov::field<"PRIV1BB28", bool, 28, 28 >,
-  groov::field<"PRIV1BB27", bool, 27, 27 >,
-  groov::field<"PRIV1BB26", bool, 26, 26 >,
-  groov::field<"PRIV1BB25", bool, 25, 25 >,
-  groov::field<"PRIV1BB24", bool, 24, 24 >,
-  groov::field<"PRIV1BB23", bool, 23, 23 >,
-  groov::field<"PRIV1BB22", bool, 22, 22 >,
-  groov::field<"PRIV1BB21", bool, 21, 21 >,
-  groov::field<"PRIV1BB20", bool, 20, 20 >,
-  groov::field<"PRIV1BB19", bool, 19, 19 >,
-  groov::field<"PRIV1BB18", bool, 18, 18 >,
-  groov::field<"PRIV1BB17", bool, 17, 17 >,
-  groov::field<"PRIV1BB16", bool, 16, 16 >,
-  groov::field<"PRIV1BB15", bool, 15, 15 >,
-  groov::field<"PRIV1BB14", bool, 14, 14 >,
-  groov::field<"PRIV1BB13", bool, 13, 13 >,
-  groov::field<"PRIV1BB12", bool, 12, 12 >,
-  groov::field<"PRIV1BB11", bool, 11, 11 >,
-  groov::field<"PRIV1BB10", bool, 10, 10 >,
-  groov::field<"PRIV1BB9", bool, 9, 9 >,
-  groov::field<"PRIV1BB8", bool, 8, 8 >,
-  groov::field<"PRIV1BB7", bool, 7, 7 >,
-  groov::field<"PRIV1BB6", bool, 6, 6 >,
-  groov::field<"PRIV1BB5", bool, 5, 5 >,
-  groov::field<"PRIV1BB4", bool, 4, 4 >,
-  groov::field<"PRIV1BB3", bool, 3, 3 >,
-  groov::field<"PRIV1BB2", bool, 2, 2 >,
-  groov::field<"PRIV1BB1", bool, 1, 1 >,
-  groov::field<"PRIV1BB0", bool, 0, 0 >
-  >;
+                                        std::uint32_t,
+                                        baseaddress + offset,
+                                        access::rw,
+                                        groov::field<"PRIV1BB31", bool, 31, 31>,
+                                        groov::field<"PRIV1BB30", bool, 30, 30>,
+                                        groov::field<"PRIV1BB29", bool, 29, 29>,
+                                        groov::field<"PRIV1BB28", bool, 28, 28>,
+                                        groov::field<"PRIV1BB27", bool, 27, 27>,
+                                        groov::field<"PRIV1BB26", bool, 26, 26>,
+                                        groov::field<"PRIV1BB25", bool, 25, 25>,
+                                        groov::field<"PRIV1BB24", bool, 24, 24>,
+                                        groov::field<"PRIV1BB23", bool, 23, 23>,
+                                        groov::field<"PRIV1BB22", bool, 22, 22>,
+                                        groov::field<"PRIV1BB21", bool, 21, 21>,
+                                        groov::field<"PRIV1BB20", bool, 20, 20>,
+                                        groov::field<"PRIV1BB19", bool, 19, 19>,
+                                        groov::field<"PRIV1BB18", bool, 18, 18>,
+                                        groov::field<"PRIV1BB17", bool, 17, 17>,
+                                        groov::field<"PRIV1BB16", bool, 16, 16>,
+                                        groov::field<"PRIV1BB15", bool, 15, 15>,
+                                        groov::field<"PRIV1BB14", bool, 14, 14>,
+                                        groov::field<"PRIV1BB13", bool, 13, 13>,
+                                        groov::field<"PRIV1BB12", bool, 12, 12>,
+                                        groov::field<"PRIV1BB11", bool, 11, 11>,
+                                        groov::field<"PRIV1BB10", bool, 10, 10>,
+                                        groov::field<"PRIV1BB9", bool, 9, 9>,
+                                        groov::field<"PRIV1BB8", bool, 8, 8>,
+                                        groov::field<"PRIV1BB7", bool, 7, 7>,
+                                        groov::field<"PRIV1BB6", bool, 6, 6>,
+                                        groov::field<"PRIV1BB5", bool, 5, 5>,
+                                        groov::field<"PRIV1BB4", bool, 4, 4>,
+                                        groov::field<"PRIV1BB3", bool, 3, 3>,
+                                        groov::field<"PRIV1BB2", bool, 2, 2>,
+                                        groov::field<"PRIV1BB1", bool, 1, 1>,
+                                        groov::field<"PRIV1BB0", bool, 0, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using flash_priv1bbr3_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"PRIV1BB31", bool, 31, 31 >,
-  groov::field<"PRIV1BB30", bool, 30, 30 >,
-  groov::field<"PRIV1BB29", bool, 29, 29 >,
-  groov::field<"PRIV1BB28", bool, 28, 28 >,
-  groov::field<"PRIV1BB27", bool, 27, 27 >,
-  groov::field<"PRIV1BB26", bool, 26, 26 >,
-  groov::field<"PRIV1BB25", bool, 25, 25 >,
-  groov::field<"PRIV1BB24", bool, 24, 24 >,
-  groov::field<"PRIV1BB23", bool, 23, 23 >,
-  groov::field<"PRIV1BB22", bool, 22, 22 >,
-  groov::field<"PRIV1BB21", bool, 21, 21 >,
-  groov::field<"PRIV1BB20", bool, 20, 20 >,
-  groov::field<"PRIV1BB19", bool, 19, 19 >,
-  groov::field<"PRIV1BB18", bool, 18, 18 >,
-  groov::field<"PRIV1BB17", bool, 17, 17 >,
-  groov::field<"PRIV1BB16", bool, 16, 16 >,
-  groov::field<"PRIV1BB15", bool, 15, 15 >,
-  groov::field<"PRIV1BB14", bool, 14, 14 >,
-  groov::field<"PRIV1BB13", bool, 13, 13 >,
-  groov::field<"PRIV1BB12", bool, 12, 12 >,
-  groov::field<"PRIV1BB11", bool, 11, 11 >,
-  groov::field<"PRIV1BB10", bool, 10, 10 >,
-  groov::field<"PRIV1BB9", bool, 9, 9 >,
-  groov::field<"PRIV1BB8", bool, 8, 8 >,
-  groov::field<"PRIV1BB7", bool, 7, 7 >,
-  groov::field<"PRIV1BB6", bool, 6, 6 >,
-  groov::field<"PRIV1BB5", bool, 5, 5 >,
-  groov::field<"PRIV1BB4", bool, 4, 4 >,
-  groov::field<"PRIV1BB3", bool, 3, 3 >,
-  groov::field<"PRIV1BB2", bool, 2, 2 >,
-  groov::field<"PRIV1BB1", bool, 1, 1 >,
-  groov::field<"PRIV1BB0", bool, 0, 0 >
-  >;
+                                        std::uint32_t,
+                                        baseaddress + offset,
+                                        access::rw,
+                                        groov::field<"PRIV1BB31", bool, 31, 31>,
+                                        groov::field<"PRIV1BB30", bool, 30, 30>,
+                                        groov::field<"PRIV1BB29", bool, 29, 29>,
+                                        groov::field<"PRIV1BB28", bool, 28, 28>,
+                                        groov::field<"PRIV1BB27", bool, 27, 27>,
+                                        groov::field<"PRIV1BB26", bool, 26, 26>,
+                                        groov::field<"PRIV1BB25", bool, 25, 25>,
+                                        groov::field<"PRIV1BB24", bool, 24, 24>,
+                                        groov::field<"PRIV1BB23", bool, 23, 23>,
+                                        groov::field<"PRIV1BB22", bool, 22, 22>,
+                                        groov::field<"PRIV1BB21", bool, 21, 21>,
+                                        groov::field<"PRIV1BB20", bool, 20, 20>,
+                                        groov::field<"PRIV1BB19", bool, 19, 19>,
+                                        groov::field<"PRIV1BB18", bool, 18, 18>,
+                                        groov::field<"PRIV1BB17", bool, 17, 17>,
+                                        groov::field<"PRIV1BB16", bool, 16, 16>,
+                                        groov::field<"PRIV1BB15", bool, 15, 15>,
+                                        groov::field<"PRIV1BB14", bool, 14, 14>,
+                                        groov::field<"PRIV1BB13", bool, 13, 13>,
+                                        groov::field<"PRIV1BB12", bool, 12, 12>,
+                                        groov::field<"PRIV1BB11", bool, 11, 11>,
+                                        groov::field<"PRIV1BB10", bool, 10, 10>,
+                                        groov::field<"PRIV1BB9", bool, 9, 9>,
+                                        groov::field<"PRIV1BB8", bool, 8, 8>,
+                                        groov::field<"PRIV1BB7", bool, 7, 7>,
+                                        groov::field<"PRIV1BB6", bool, 6, 6>,
+                                        groov::field<"PRIV1BB5", bool, 5, 5>,
+                                        groov::field<"PRIV1BB4", bool, 4, 4>,
+                                        groov::field<"PRIV1BB3", bool, 3, 3>,
+                                        groov::field<"PRIV1BB2", bool, 2, 2>,
+                                        groov::field<"PRIV1BB1", bool, 1, 1>,
+                                        groov::field<"PRIV1BB0", bool, 0, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using flash_priv1bbr4_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"PRIV1BB31", bool, 31, 31 >,
-  groov::field<"PRIV1BB30", bool, 30, 30 >,
-  groov::field<"PRIV1BB29", bool, 29, 29 >,
-  groov::field<"PRIV1BB28", bool, 28, 28 >,
-  groov::field<"PRIV1BB27", bool, 27, 27 >,
-  groov::field<"PRIV1BB26", bool, 26, 26 >,
-  groov::field<"PRIV1BB25", bool, 25, 25 >,
-  groov::field<"PRIV1BB24", bool, 24, 24 >,
-  groov::field<"PRIV1BB23", bool, 23, 23 >,
-  groov::field<"PRIV1BB22", bool, 22, 22 >,
-  groov::field<"PRIV1BB21", bool, 21, 21 >,
-  groov::field<"PRIV1BB20", bool, 20, 20 >,
-  groov::field<"PRIV1BB19", bool, 19, 19 >,
-  groov::field<"PRIV1BB18", bool, 18, 18 >,
-  groov::field<"PRIV1BB17", bool, 17, 17 >,
-  groov::field<"PRIV1BB16", bool, 16, 16 >,
-  groov::field<"PRIV1BB15", bool, 15, 15 >,
-  groov::field<"PRIV1BB14", bool, 14, 14 >,
-  groov::field<"PRIV1BB13", bool, 13, 13 >,
-  groov::field<"PRIV1BB12", bool, 12, 12 >,
-  groov::field<"PRIV1BB11", bool, 11, 11 >,
-  groov::field<"PRIV1BB10", bool, 10, 10 >,
-  groov::field<"PRIV1BB9", bool, 9, 9 >,
-  groov::field<"PRIV1BB8", bool, 8, 8 >,
-  groov::field<"PRIV1BB7", bool, 7, 7 >,
-  groov::field<"PRIV1BB6", bool, 6, 6 >,
-  groov::field<"PRIV1BB5", bool, 5, 5 >,
-  groov::field<"PRIV1BB4", bool, 4, 4 >,
-  groov::field<"PRIV1BB3", bool, 3, 3 >,
-  groov::field<"PRIV1BB2", bool, 2, 2 >,
-  groov::field<"PRIV1BB1", bool, 1, 1 >,
-  groov::field<"PRIV1BB0", bool, 0, 0 >
-  >;
+                                        std::uint32_t,
+                                        baseaddress + offset,
+                                        access::rw,
+                                        groov::field<"PRIV1BB31", bool, 31, 31>,
+                                        groov::field<"PRIV1BB30", bool, 30, 30>,
+                                        groov::field<"PRIV1BB29", bool, 29, 29>,
+                                        groov::field<"PRIV1BB28", bool, 28, 28>,
+                                        groov::field<"PRIV1BB27", bool, 27, 27>,
+                                        groov::field<"PRIV1BB26", bool, 26, 26>,
+                                        groov::field<"PRIV1BB25", bool, 25, 25>,
+                                        groov::field<"PRIV1BB24", bool, 24, 24>,
+                                        groov::field<"PRIV1BB23", bool, 23, 23>,
+                                        groov::field<"PRIV1BB22", bool, 22, 22>,
+                                        groov::field<"PRIV1BB21", bool, 21, 21>,
+                                        groov::field<"PRIV1BB20", bool, 20, 20>,
+                                        groov::field<"PRIV1BB19", bool, 19, 19>,
+                                        groov::field<"PRIV1BB18", bool, 18, 18>,
+                                        groov::field<"PRIV1BB17", bool, 17, 17>,
+                                        groov::field<"PRIV1BB16", bool, 16, 16>,
+                                        groov::field<"PRIV1BB15", bool, 15, 15>,
+                                        groov::field<"PRIV1BB14", bool, 14, 14>,
+                                        groov::field<"PRIV1BB13", bool, 13, 13>,
+                                        groov::field<"PRIV1BB12", bool, 12, 12>,
+                                        groov::field<"PRIV1BB11", bool, 11, 11>,
+                                        groov::field<"PRIV1BB10", bool, 10, 10>,
+                                        groov::field<"PRIV1BB9", bool, 9, 9>,
+                                        groov::field<"PRIV1BB8", bool, 8, 8>,
+                                        groov::field<"PRIV1BB7", bool, 7, 7>,
+                                        groov::field<"PRIV1BB6", bool, 6, 6>,
+                                        groov::field<"PRIV1BB5", bool, 5, 5>,
+                                        groov::field<"PRIV1BB4", bool, 4, 4>,
+                                        groov::field<"PRIV1BB3", bool, 3, 3>,
+                                        groov::field<"PRIV1BB2", bool, 2, 2>,
+                                        groov::field<"PRIV1BB1", bool, 1, 1>,
+                                        groov::field<"PRIV1BB0", bool, 0, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using flash_priv2bbr1_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"PRIV2BB31", bool, 31, 31 >,
-  groov::field<"PRIV2BB30", bool, 30, 30 >,
-  groov::field<"PRIV2BB29", bool, 29, 29 >,
-  groov::field<"PRIV2BB28", bool, 28, 28 >,
-  groov::field<"PRIV2BB27", bool, 27, 27 >,
-  groov::field<"PRIV2BB26", bool, 26, 26 >,
-  groov::field<"PRIV2BB25", bool, 25, 25 >,
-  groov::field<"PRIV2BB24", bool, 24, 24 >,
-  groov::field<"PRIV2BB23", bool, 23, 23 >,
-  groov::field<"PRIV2BB22", bool, 22, 22 >,
-  groov::field<"PRIV2BB21", bool, 21, 21 >,
-  groov::field<"PRIV2BB20", bool, 20, 20 >,
-  groov::field<"PRIV2BB19", bool, 19, 19 >,
-  groov::field<"PRIV2BB18", bool, 18, 18 >,
-  groov::field<"PRIV2BB17", bool, 17, 17 >,
-  groov::field<"PRIV2BB16", bool, 16, 16 >,
-  groov::field<"PRIV2BB15", bool, 15, 15 >,
-  groov::field<"PRIV2BB14", bool, 14, 14 >,
-  groov::field<"PRIV2BB13", bool, 13, 13 >,
-  groov::field<"PRIV2BB12", bool, 12, 12 >,
-  groov::field<"PRIV2BB11", bool, 11, 11 >,
-  groov::field<"PRIV2BB10", bool, 10, 10 >,
-  groov::field<"PRIV2BB9", bool, 9, 9 >,
-  groov::field<"PRIV2BB8", bool, 8, 8 >,
-  groov::field<"PRIV2BB7", bool, 7, 7 >,
-  groov::field<"PRIV2BB6", bool, 6, 6 >,
-  groov::field<"PRIV2BB5", bool, 5, 5 >,
-  groov::field<"PRIV2BB4", bool, 4, 4 >,
-  groov::field<"PRIV2BB3", bool, 3, 3 >,
-  groov::field<"PRIV2BB2", bool, 2, 2 >,
-  groov::field<"PRIV2BB1", bool, 1, 1 >,
-  groov::field<"PRIV2BB0", bool, 0, 0 >
-  >;
+                                        std::uint32_t,
+                                        baseaddress + offset,
+                                        access::rw,
+                                        groov::field<"PRIV2BB31", bool, 31, 31>,
+                                        groov::field<"PRIV2BB30", bool, 30, 30>,
+                                        groov::field<"PRIV2BB29", bool, 29, 29>,
+                                        groov::field<"PRIV2BB28", bool, 28, 28>,
+                                        groov::field<"PRIV2BB27", bool, 27, 27>,
+                                        groov::field<"PRIV2BB26", bool, 26, 26>,
+                                        groov::field<"PRIV2BB25", bool, 25, 25>,
+                                        groov::field<"PRIV2BB24", bool, 24, 24>,
+                                        groov::field<"PRIV2BB23", bool, 23, 23>,
+                                        groov::field<"PRIV2BB22", bool, 22, 22>,
+                                        groov::field<"PRIV2BB21", bool, 21, 21>,
+                                        groov::field<"PRIV2BB20", bool, 20, 20>,
+                                        groov::field<"PRIV2BB19", bool, 19, 19>,
+                                        groov::field<"PRIV2BB18", bool, 18, 18>,
+                                        groov::field<"PRIV2BB17", bool, 17, 17>,
+                                        groov::field<"PRIV2BB16", bool, 16, 16>,
+                                        groov::field<"PRIV2BB15", bool, 15, 15>,
+                                        groov::field<"PRIV2BB14", bool, 14, 14>,
+                                        groov::field<"PRIV2BB13", bool, 13, 13>,
+                                        groov::field<"PRIV2BB12", bool, 12, 12>,
+                                        groov::field<"PRIV2BB11", bool, 11, 11>,
+                                        groov::field<"PRIV2BB10", bool, 10, 10>,
+                                        groov::field<"PRIV2BB9", bool, 9, 9>,
+                                        groov::field<"PRIV2BB8", bool, 8, 8>,
+                                        groov::field<"PRIV2BB7", bool, 7, 7>,
+                                        groov::field<"PRIV2BB6", bool, 6, 6>,
+                                        groov::field<"PRIV2BB5", bool, 5, 5>,
+                                        groov::field<"PRIV2BB4", bool, 4, 4>,
+                                        groov::field<"PRIV2BB3", bool, 3, 3>,
+                                        groov::field<"PRIV2BB2", bool, 2, 2>,
+                                        groov::field<"PRIV2BB1", bool, 1, 1>,
+                                        groov::field<"PRIV2BB0", bool, 0, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using flash_priv2bbr2_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"PRIV2BB31", bool, 31, 31 >,
-  groov::field<"PRIV2BB30", bool, 30, 30 >,
-  groov::field<"PRIV2BB29", bool, 29, 29 >,
-  groov::field<"PRIV2BB28", bool, 28, 28 >,
-  groov::field<"PRIV2BB27", bool, 27, 27 >,
-  groov::field<"PRIV2BB26", bool, 26, 26 >,
-  groov::field<"PRIV2BB25", bool, 25, 25 >,
-  groov::field<"PRIV2BB24", bool, 24, 24 >,
-  groov::field<"PRIV2BB23", bool, 23, 23 >,
-  groov::field<"PRIV2BB22", bool, 22, 22 >,
-  groov::field<"PRIV2BB21", bool, 21, 21 >,
-  groov::field<"PRIV2BB20", bool, 20, 20 >,
-  groov::field<"PRIV2BB19", bool, 19, 19 >,
-  groov::field<"PRIV2BB18", bool, 18, 18 >,
-  groov::field<"PRIV2BB17", bool, 17, 17 >,
-  groov::field<"PRIV2BB16", bool, 16, 16 >,
-  groov::field<"PRIV2BB15", bool, 15, 15 >,
-  groov::field<"PRIV2BB14", bool, 14, 14 >,
-  groov::field<"PRIV2BB13", bool, 13, 13 >,
-  groov::field<"PRIV2BB12", bool, 12, 12 >,
-  groov::field<"PRIV2BB11", bool, 11, 11 >,
-  groov::field<"PRIV2BB10", bool, 10, 10 >,
-  groov::field<"PRIV2BB9", bool, 9, 9 >,
-  groov::field<"PRIV2BB8", bool, 8, 8 >,
-  groov::field<"PRIV2BB7", bool, 7, 7 >,
-  groov::field<"PRIV2BB6", bool, 6, 6 >,
-  groov::field<"PRIV2BB5", bool, 5, 5 >,
-  groov::field<"PRIV2BB4", bool, 4, 4 >,
-  groov::field<"PRIV2BB3", bool, 3, 3 >,
-  groov::field<"PRIV2BB2", bool, 2, 2 >,
-  groov::field<"PRIV2BB1", bool, 1, 1 >,
-  groov::field<"PRIV2BB0", bool, 0, 0 >
-  >;
+                                        std::uint32_t,
+                                        baseaddress + offset,
+                                        access::rw,
+                                        groov::field<"PRIV2BB31", bool, 31, 31>,
+                                        groov::field<"PRIV2BB30", bool, 30, 30>,
+                                        groov::field<"PRIV2BB29", bool, 29, 29>,
+                                        groov::field<"PRIV2BB28", bool, 28, 28>,
+                                        groov::field<"PRIV2BB27", bool, 27, 27>,
+                                        groov::field<"PRIV2BB26", bool, 26, 26>,
+                                        groov::field<"PRIV2BB25", bool, 25, 25>,
+                                        groov::field<"PRIV2BB24", bool, 24, 24>,
+                                        groov::field<"PRIV2BB23", bool, 23, 23>,
+                                        groov::field<"PRIV2BB22", bool, 22, 22>,
+                                        groov::field<"PRIV2BB21", bool, 21, 21>,
+                                        groov::field<"PRIV2BB20", bool, 20, 20>,
+                                        groov::field<"PRIV2BB19", bool, 19, 19>,
+                                        groov::field<"PRIV2BB18", bool, 18, 18>,
+                                        groov::field<"PRIV2BB17", bool, 17, 17>,
+                                        groov::field<"PRIV2BB16", bool, 16, 16>,
+                                        groov::field<"PRIV2BB15", bool, 15, 15>,
+                                        groov::field<"PRIV2BB14", bool, 14, 14>,
+                                        groov::field<"PRIV2BB13", bool, 13, 13>,
+                                        groov::field<"PRIV2BB12", bool, 12, 12>,
+                                        groov::field<"PRIV2BB11", bool, 11, 11>,
+                                        groov::field<"PRIV2BB10", bool, 10, 10>,
+                                        groov::field<"PRIV2BB9", bool, 9, 9>,
+                                        groov::field<"PRIV2BB8", bool, 8, 8>,
+                                        groov::field<"PRIV2BB7", bool, 7, 7>,
+                                        groov::field<"PRIV2BB6", bool, 6, 6>,
+                                        groov::field<"PRIV2BB5", bool, 5, 5>,
+                                        groov::field<"PRIV2BB4", bool, 4, 4>,
+                                        groov::field<"PRIV2BB3", bool, 3, 3>,
+                                        groov::field<"PRIV2BB2", bool, 2, 2>,
+                                        groov::field<"PRIV2BB1", bool, 1, 1>,
+                                        groov::field<"PRIV2BB0", bool, 0, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using flash_priv2bbr3_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"PRIV2BB31", bool, 31, 31 >,
-  groov::field<"PRIV2BB30", bool, 30, 30 >,
-  groov::field<"PRIV2BB29", bool, 29, 29 >,
-  groov::field<"PRIV2BB28", bool, 28, 28 >,
-  groov::field<"PRIV2BB27", bool, 27, 27 >,
-  groov::field<"PRIV2BB26", bool, 26, 26 >,
-  groov::field<"PRIV2BB25", bool, 25, 25 >,
-  groov::field<"PRIV2BB24", bool, 24, 24 >,
-  groov::field<"PRIV2BB23", bool, 23, 23 >,
-  groov::field<"PRIV2BB22", bool, 22, 22 >,
-  groov::field<"PRIV2BB21", bool, 21, 21 >,
-  groov::field<"PRIV2BB20", bool, 20, 20 >,
-  groov::field<"PRIV2BB19", bool, 19, 19 >,
-  groov::field<"PRIV2BB18", bool, 18, 18 >,
-  groov::field<"PRIV2BB17", bool, 17, 17 >,
-  groov::field<"PRIV2BB16", bool, 16, 16 >,
-  groov::field<"PRIV2BB15", bool, 15, 15 >,
-  groov::field<"PRIV2BB14", bool, 14, 14 >,
-  groov::field<"PRIV2BB13", bool, 13, 13 >,
-  groov::field<"PRIV2BB12", bool, 12, 12 >,
-  groov::field<"PRIV2BB11", bool, 11, 11 >,
-  groov::field<"PRIV2BB10", bool, 10, 10 >,
-  groov::field<"PRIV2BB9", bool, 9, 9 >,
-  groov::field<"PRIV2BB8", bool, 8, 8 >,
-  groov::field<"PRIV2BB7", bool, 7, 7 >,
-  groov::field<"PRIV2BB6", bool, 6, 6 >,
-  groov::field<"PRIV2BB5", bool, 5, 5 >,
-  groov::field<"PRIV2BB4", bool, 4, 4 >,
-  groov::field<"PRIV2BB3", bool, 3, 3 >,
-  groov::field<"PRIV2BB2", bool, 2, 2 >,
-  groov::field<"PRIV2BB1", bool, 1, 1 >,
-  groov::field<"PRIV2BB0", bool, 0, 0 >
-  >;
+                                        std::uint32_t,
+                                        baseaddress + offset,
+                                        access::rw,
+                                        groov::field<"PRIV2BB31", bool, 31, 31>,
+                                        groov::field<"PRIV2BB30", bool, 30, 30>,
+                                        groov::field<"PRIV2BB29", bool, 29, 29>,
+                                        groov::field<"PRIV2BB28", bool, 28, 28>,
+                                        groov::field<"PRIV2BB27", bool, 27, 27>,
+                                        groov::field<"PRIV2BB26", bool, 26, 26>,
+                                        groov::field<"PRIV2BB25", bool, 25, 25>,
+                                        groov::field<"PRIV2BB24", bool, 24, 24>,
+                                        groov::field<"PRIV2BB23", bool, 23, 23>,
+                                        groov::field<"PRIV2BB22", bool, 22, 22>,
+                                        groov::field<"PRIV2BB21", bool, 21, 21>,
+                                        groov::field<"PRIV2BB20", bool, 20, 20>,
+                                        groov::field<"PRIV2BB19", bool, 19, 19>,
+                                        groov::field<"PRIV2BB18", bool, 18, 18>,
+                                        groov::field<"PRIV2BB17", bool, 17, 17>,
+                                        groov::field<"PRIV2BB16", bool, 16, 16>,
+                                        groov::field<"PRIV2BB15", bool, 15, 15>,
+                                        groov::field<"PRIV2BB14", bool, 14, 14>,
+                                        groov::field<"PRIV2BB13", bool, 13, 13>,
+                                        groov::field<"PRIV2BB12", bool, 12, 12>,
+                                        groov::field<"PRIV2BB11", bool, 11, 11>,
+                                        groov::field<"PRIV2BB10", bool, 10, 10>,
+                                        groov::field<"PRIV2BB9", bool, 9, 9>,
+                                        groov::field<"PRIV2BB8", bool, 8, 8>,
+                                        groov::field<"PRIV2BB7", bool, 7, 7>,
+                                        groov::field<"PRIV2BB6", bool, 6, 6>,
+                                        groov::field<"PRIV2BB5", bool, 5, 5>,
+                                        groov::field<"PRIV2BB4", bool, 4, 4>,
+                                        groov::field<"PRIV2BB3", bool, 3, 3>,
+                                        groov::field<"PRIV2BB2", bool, 2, 2>,
+                                        groov::field<"PRIV2BB1", bool, 1, 1>,
+                                        groov::field<"PRIV2BB0", bool, 0, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using flash_priv2bbr4_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"PRIV2BB31", bool, 31, 31 >,
-  groov::field<"PRIV2BB30", bool, 30, 30 >,
-  groov::field<"PRIV2BB29", bool, 29, 29 >,
-  groov::field<"PRIV2BB28", bool, 28, 28 >,
-  groov::field<"PRIV2BB27", bool, 27, 27 >,
-  groov::field<"PRIV2BB26", bool, 26, 26 >,
-  groov::field<"PRIV2BB25", bool, 25, 25 >,
-  groov::field<"PRIV2BB24", bool, 24, 24 >,
-  groov::field<"PRIV2BB23", bool, 23, 23 >,
-  groov::field<"PRIV2BB22", bool, 22, 22 >,
-  groov::field<"PRIV2BB21", bool, 21, 21 >,
-  groov::field<"PRIV2BB20", bool, 20, 20 >,
-  groov::field<"PRIV2BB19", bool, 19, 19 >,
-  groov::field<"PRIV2BB18", bool, 18, 18 >,
-  groov::field<"PRIV2BB17", bool, 17, 17 >,
-  groov::field<"PRIV2BB16", bool, 16, 16 >,
-  groov::field<"PRIV2BB15", bool, 15, 15 >,
-  groov::field<"PRIV2BB14", bool, 14, 14 >,
-  groov::field<"PRIV2BB13", bool, 13, 13 >,
-  groov::field<"PRIV2BB12", bool, 12, 12 >,
-  groov::field<"PRIV2BB11", bool, 11, 11 >,
-  groov::field<"PRIV2BB10", bool, 10, 10 >,
-  groov::field<"PRIV2BB9", bool, 9, 9 >,
-  groov::field<"PRIV2BB8", bool, 8, 8 >,
-  groov::field<"PRIV2BB7", bool, 7, 7 >,
-  groov::field<"PRIV2BB6", bool, 6, 6 >,
-  groov::field<"PRIV2BB5", bool, 5, 5 >,
-  groov::field<"PRIV2BB4", bool, 4, 4 >,
-  groov::field<"PRIV2BB3", bool, 3, 3 >,
-  groov::field<"PRIV2BB2", bool, 2, 2 >,
-  groov::field<"PRIV2BB1", bool, 1, 1 >,
-  groov::field<"PRIV2BB0", bool, 0, 0 >
-  >;
+                                        std::uint32_t,
+                                        baseaddress + offset,
+                                        access::rw,
+                                        groov::field<"PRIV2BB31", bool, 31, 31>,
+                                        groov::field<"PRIV2BB30", bool, 30, 30>,
+                                        groov::field<"PRIV2BB29", bool, 29, 29>,
+                                        groov::field<"PRIV2BB28", bool, 28, 28>,
+                                        groov::field<"PRIV2BB27", bool, 27, 27>,
+                                        groov::field<"PRIV2BB26", bool, 26, 26>,
+                                        groov::field<"PRIV2BB25", bool, 25, 25>,
+                                        groov::field<"PRIV2BB24", bool, 24, 24>,
+                                        groov::field<"PRIV2BB23", bool, 23, 23>,
+                                        groov::field<"PRIV2BB22", bool, 22, 22>,
+                                        groov::field<"PRIV2BB21", bool, 21, 21>,
+                                        groov::field<"PRIV2BB20", bool, 20, 20>,
+                                        groov::field<"PRIV2BB19", bool, 19, 19>,
+                                        groov::field<"PRIV2BB18", bool, 18, 18>,
+                                        groov::field<"PRIV2BB17", bool, 17, 17>,
+                                        groov::field<"PRIV2BB16", bool, 16, 16>,
+                                        groov::field<"PRIV2BB15", bool, 15, 15>,
+                                        groov::field<"PRIV2BB14", bool, 14, 14>,
+                                        groov::field<"PRIV2BB13", bool, 13, 13>,
+                                        groov::field<"PRIV2BB12", bool, 12, 12>,
+                                        groov::field<"PRIV2BB11", bool, 11, 11>,
+                                        groov::field<"PRIV2BB10", bool, 10, 10>,
+                                        groov::field<"PRIV2BB9", bool, 9, 9>,
+                                        groov::field<"PRIV2BB8", bool, 8, 8>,
+                                        groov::field<"PRIV2BB7", bool, 7, 7>,
+                                        groov::field<"PRIV2BB6", bool, 6, 6>,
+                                        groov::field<"PRIV2BB5", bool, 5, 5>,
+                                        groov::field<"PRIV2BB4", bool, 4, 4>,
+                                        groov::field<"PRIV2BB3", bool, 3, 3>,
+                                        groov::field<"PRIV2BB2", bool, 2, 2>,
+                                        groov::field<"PRIV2BB1", bool, 1, 1>,
+                                        groov::field<"PRIV2BB0", bool, 0, 0>>;
 
-template <std::uint32_t baseaddress>
-using flash_acr_t = flash_acr_tt<"FLASH_ACR",baseaddress,0>;
+  template <std::uint32_t baseaddress>
+  using flash_acr_t = flash_acr_tt<"FLASH_ACR", baseaddress, 0>;
 
-template <std::uint32_t baseaddress>
-using flash_nskeyr_t = flash_nskeyr_tt<"FLASH_NSKEYR",baseaddress,8>;
+  template <std::uint32_t baseaddress>
+  using flash_nskeyr_t = flash_nskeyr_tt<"FLASH_NSKEYR", baseaddress, 8>;
 
-template <std::uint32_t baseaddress>
-using flash_seckeyr_t = flash_seckeyr_tt<"FLASH_SECKEYR",baseaddress,12>;
+  template <std::uint32_t baseaddress>
+  using flash_seckeyr_t = flash_seckeyr_tt<"FLASH_SECKEYR", baseaddress, 12>;
 
-template <std::uint32_t baseaddress>
-using flash_optkeyr_t = flash_optkeyr_tt<"FLASH_OPTKEYR",baseaddress,16>;
+  template <std::uint32_t baseaddress>
+  using flash_optkeyr_t = flash_optkeyr_tt<"FLASH_OPTKEYR", baseaddress, 16>;
 
-template <std::uint32_t baseaddress>
-using flash_pdkey1r_t = flash_pdkey1r_tt<"FLASH_PDKEY1R",baseaddress,24>;
+  template <std::uint32_t baseaddress>
+  using flash_pdkey1r_t = flash_pdkey1r_tt<"FLASH_PDKEY1R", baseaddress, 24>;
 
-template <std::uint32_t baseaddress>
-using flash_pdkey2r_t = flash_pdkey2r_tt<"FLASH_PDKEY2R",baseaddress,28>;
+  template <std::uint32_t baseaddress>
+  using flash_pdkey2r_t = flash_pdkey2r_tt<"FLASH_PDKEY2R", baseaddress, 28>;
 
-template <std::uint32_t baseaddress>
-using flash_nssr_t = flash_nssr_tt<"FLASH_NSSR",baseaddress,32>;
+  template <std::uint32_t baseaddress>
+  using flash_nssr_t = flash_nssr_tt<"FLASH_NSSR", baseaddress, 32>;
 
-template <std::uint32_t baseaddress>
-using flash_secsr_t = flash_secsr_tt<"FLASH_SECSR",baseaddress,36>;
+  template <std::uint32_t baseaddress>
+  using flash_secsr_t = flash_secsr_tt<"FLASH_SECSR", baseaddress, 36>;
 
-template <std::uint32_t baseaddress>
-using flash_nscr_t = flash_nscr_tt<"FLASH_NSCR",baseaddress,40>;
+  template <std::uint32_t baseaddress>
+  using flash_nscr_t = flash_nscr_tt<"FLASH_NSCR", baseaddress, 40>;
 
-template <std::uint32_t baseaddress>
-using flash_seccr_t = flash_seccr_tt<"FLASH_SECCR",baseaddress,44>;
+  template <std::uint32_t baseaddress>
+  using flash_seccr_t = flash_seccr_tt<"FLASH_SECCR", baseaddress, 44>;
 
-template <std::uint32_t baseaddress>
-using flash_eccr_t = flash_eccr_tt<"FLASH_ECCR",baseaddress,48>;
+  template <std::uint32_t baseaddress>
+  using flash_eccr_t = flash_eccr_tt<"FLASH_ECCR", baseaddress, 48>;
 
-template <std::uint32_t baseaddress>
-using flash_opsr_t = flash_opsr_tt<"FLASH_OPSR",baseaddress,52>;
+  template <std::uint32_t baseaddress>
+  using flash_opsr_t = flash_opsr_tt<"FLASH_OPSR", baseaddress, 52>;
 
-template <std::uint32_t baseaddress>
-using flash_optr_t = flash_optr_tt<"FLASH_OPTR",baseaddress,64>;
+  template <std::uint32_t baseaddress>
+  using flash_optr_t = flash_optr_tt<"FLASH_OPTR", baseaddress, 64>;
 
-template <std::uint32_t baseaddress>
-using flash_nsbootadd0r_t = flash_nsbootadd0r_tt<"FLASH_NSBOOTADD0R",baseaddress,68>;
+  template <std::uint32_t baseaddress>
+  using flash_nsbootadd0r_t =
+    flash_nsbootadd0r_tt<"FLASH_NSBOOTADD0R", baseaddress, 68>;
 
-template <std::uint32_t baseaddress>
-using flash_nsbootadd1r_t = flash_nsbootadd1r_tt<"FLASH_NSBOOTADD1R",baseaddress,72>;
+  template <std::uint32_t baseaddress>
+  using flash_nsbootadd1r_t =
+    flash_nsbootadd1r_tt<"FLASH_NSBOOTADD1R", baseaddress, 72>;
 
-template <std::uint32_t baseaddress>
-using flash_secbootadd0r_t = flash_secbootadd0r_tt<"FLASH_SECBOOTADD0R",baseaddress,76>;
+  template <std::uint32_t baseaddress>
+  using flash_secbootadd0r_t =
+    flash_secbootadd0r_tt<"FLASH_SECBOOTADD0R", baseaddress, 76>;
 
-template <std::uint32_t baseaddress>
-using flash_secwm1r1_t = flash_secwm1r1_tt<"FLASH_SECWM1R1",baseaddress,80>;
+  template <std::uint32_t baseaddress>
+  using flash_secwm1r1_t = flash_secwm1r1_tt<"FLASH_SECWM1R1", baseaddress, 80>;
 
-template <std::uint32_t baseaddress>
-using flash_secwm1r2_t = flash_secwm1r2_tt<"FLASH_SECWM1R2",baseaddress,84>;
+  template <std::uint32_t baseaddress>
+  using flash_secwm1r2_t = flash_secwm1r2_tt<"FLASH_SECWM1R2", baseaddress, 84>;
 
-template <std::uint32_t baseaddress>
-using flash_wrp1ar_t = flash_wrp1ar_tt<"FLASH_WRP1AR",baseaddress,88>;
+  template <std::uint32_t baseaddress>
+  using flash_wrp1ar_t = flash_wrp1ar_tt<"FLASH_WRP1AR", baseaddress, 88>;
 
-template <std::uint32_t baseaddress>
-using flash_wrp1br_t = flash_wrp1br_tt<"FLASH_WRP1BR",baseaddress,92>;
+  template <std::uint32_t baseaddress>
+  using flash_wrp1br_t = flash_wrp1br_tt<"FLASH_WRP1BR", baseaddress, 92>;
 
-template <std::uint32_t baseaddress>
-using flash_secwm2r1_t = flash_secwm2r1_tt<"FLASH_SECWM2R1",baseaddress,96>;
+  template <std::uint32_t baseaddress>
+  using flash_secwm2r1_t = flash_secwm2r1_tt<"FLASH_SECWM2R1", baseaddress, 96>;
 
-template <std::uint32_t baseaddress>
-using flash_secwm2r2_t = flash_secwm2r2_tt<"FLASH_SECWM2R2",baseaddress,100>;
+  template <std::uint32_t baseaddress>
+  using flash_secwm2r2_t =
+    flash_secwm2r2_tt<"FLASH_SECWM2R2", baseaddress, 100>;
 
-template <std::uint32_t baseaddress>
-using flash_wrp2ar_t = flash_wrp2ar_tt<"FLASH_WRP2AR",baseaddress,104>;
+  template <std::uint32_t baseaddress>
+  using flash_wrp2ar_t = flash_wrp2ar_tt<"FLASH_WRP2AR", baseaddress, 104>;
 
-template <std::uint32_t baseaddress>
-using flash_wrp2br_t = flash_wrp2br_tt<"FLASH_WRP2BR",baseaddress,108>;
+  template <std::uint32_t baseaddress>
+  using flash_wrp2br_t = flash_wrp2br_tt<"FLASH_WRP2BR", baseaddress, 108>;
 
-template <std::uint32_t baseaddress>
-using flash_oem1keyr1_t = flash_oem1keyr1_tt<"FLASH_OEM1KEYR1",baseaddress,112>;
+  template <std::uint32_t baseaddress>
+  using flash_oem1keyr1_t =
+    flash_oem1keyr1_tt<"FLASH_OEM1KEYR1", baseaddress, 112>;
 
-template <std::uint32_t baseaddress>
-using flash_oem1keyr2_t = flash_oem1keyr2_tt<"FLASH_OEM1KEYR2",baseaddress,116>;
+  template <std::uint32_t baseaddress>
+  using flash_oem1keyr2_t =
+    flash_oem1keyr2_tt<"FLASH_OEM1KEYR2", baseaddress, 116>;
 
-template <std::uint32_t baseaddress>
-using flash_oem2keyr1_t = flash_oem2keyr1_tt<"FLASH_OEM2KEYR1",baseaddress,120>;
+  template <std::uint32_t baseaddress>
+  using flash_oem2keyr1_t =
+    flash_oem2keyr1_tt<"FLASH_OEM2KEYR1", baseaddress, 120>;
 
-template <std::uint32_t baseaddress>
-using flash_oem2keyr2_t = flash_oem2keyr2_tt<"FLASH_OEM2KEYR2",baseaddress,124>;
+  template <std::uint32_t baseaddress>
+  using flash_oem2keyr2_t =
+    flash_oem2keyr2_tt<"FLASH_OEM2KEYR2", baseaddress, 124>;
 
-template <std::uint32_t baseaddress>
-using flash_sec1bbr1_t = flash_sec1bbr1_tt<"FLASH_SEC1BBR1",baseaddress,128>;
+  template <std::uint32_t baseaddress>
+  using flash_sec1bbr1_t =
+    flash_sec1bbr1_tt<"FLASH_SEC1BBR1", baseaddress, 128>;
 
-template <std::uint32_t baseaddress>
-using flash_sec1bbr2_t = flash_sec1bbr2_tt<"FLASH_SEC1BBR2",baseaddress,132>;
+  template <std::uint32_t baseaddress>
+  using flash_sec1bbr2_t =
+    flash_sec1bbr2_tt<"FLASH_SEC1BBR2", baseaddress, 132>;
 
-template <std::uint32_t baseaddress>
-using flash_sec1bbr3_t = flash_sec1bbr3_tt<"FLASH_SEC1BBR3",baseaddress,136>;
+  template <std::uint32_t baseaddress>
+  using flash_sec1bbr3_t =
+    flash_sec1bbr3_tt<"FLASH_SEC1BBR3", baseaddress, 136>;
 
-template <std::uint32_t baseaddress>
-using flash_sec1bbr4_t = flash_sec1bbr4_tt<"FLASH_SEC1BBR4",baseaddress,140>;
+  template <std::uint32_t baseaddress>
+  using flash_sec1bbr4_t =
+    flash_sec1bbr4_tt<"FLASH_SEC1BBR4", baseaddress, 140>;
 
-template <std::uint32_t baseaddress>
-using flash_sec2bbr1_t = flash_sec2bbr1_tt<"FLASH_SEC2BBR1",baseaddress,160>;
+  template <std::uint32_t baseaddress>
+  using flash_sec2bbr1_t =
+    flash_sec2bbr1_tt<"FLASH_SEC2BBR1", baseaddress, 160>;
 
-template <std::uint32_t baseaddress>
-using flash_sec2bbr2_t = flash_sec2bbr2_tt<"FLASH_SEC2BBR2",baseaddress,164>;
+  template <std::uint32_t baseaddress>
+  using flash_sec2bbr2_t =
+    flash_sec2bbr2_tt<"FLASH_SEC2BBR2", baseaddress, 164>;
 
-template <std::uint32_t baseaddress>
-using flash_sec2bbr3_t = flash_sec2bbr3_tt<"FLASH_SEC2BBR3",baseaddress,168>;
+  template <std::uint32_t baseaddress>
+  using flash_sec2bbr3_t =
+    flash_sec2bbr3_tt<"FLASH_SEC2BBR3", baseaddress, 168>;
 
-template <std::uint32_t baseaddress>
-using flash_sec2bbr4_t = flash_sec2bbr4_tt<"FLASH_SEC2BBR4",baseaddress,172>;
+  template <std::uint32_t baseaddress>
+  using flash_sec2bbr4_t =
+    flash_sec2bbr4_tt<"FLASH_SEC2BBR4", baseaddress, 172>;
 
-template <std::uint32_t baseaddress>
-using flash_sechdpcr_t = flash_sechdpcr_tt<"FLASH_SECHDPCR",baseaddress,192>;
+  template <std::uint32_t baseaddress>
+  using flash_sechdpcr_t =
+    flash_sechdpcr_tt<"FLASH_SECHDPCR", baseaddress, 192>;
 
-template <std::uint32_t baseaddress>
-using flash_privcfgr_t = flash_privcfgr_tt<"FLASH_PRIVCFGR",baseaddress,196>;
+  template <std::uint32_t baseaddress>
+  using flash_privcfgr_t =
+    flash_privcfgr_tt<"FLASH_PRIVCFGR", baseaddress, 196>;
 
-template <std::uint32_t baseaddress>
-using flash_priv1bbr1_t = flash_priv1bbr1_tt<"FLASH_PRIV1BBR1",baseaddress,208>;
+  template <std::uint32_t baseaddress>
+  using flash_priv1bbr1_t =
+    flash_priv1bbr1_tt<"FLASH_PRIV1BBR1", baseaddress, 208>;
 
-template <std::uint32_t baseaddress>
-using flash_priv1bbr2_t = flash_priv1bbr2_tt<"FLASH_PRIV1BBR2",baseaddress,212>;
+  template <std::uint32_t baseaddress>
+  using flash_priv1bbr2_t =
+    flash_priv1bbr2_tt<"FLASH_PRIV1BBR2", baseaddress, 212>;
 
-template <std::uint32_t baseaddress>
-using flash_priv1bbr3_t = flash_priv1bbr3_tt<"FLASH_PRIV1BBR3",baseaddress,216>;
+  template <std::uint32_t baseaddress>
+  using flash_priv1bbr3_t =
+    flash_priv1bbr3_tt<"FLASH_PRIV1BBR3", baseaddress, 216>;
 
-template <std::uint32_t baseaddress>
-using flash_priv1bbr4_t = flash_priv1bbr4_tt<"FLASH_PRIV1BBR4",baseaddress,220>;
+  template <std::uint32_t baseaddress>
+  using flash_priv1bbr4_t =
+    flash_priv1bbr4_tt<"FLASH_PRIV1BBR4", baseaddress, 220>;
 
-template <std::uint32_t baseaddress>
-using flash_priv2bbr1_t = flash_priv2bbr1_tt<"FLASH_PRIV2BBR1",baseaddress,240>;
+  template <std::uint32_t baseaddress>
+  using flash_priv2bbr1_t =
+    flash_priv2bbr1_tt<"FLASH_PRIV2BBR1", baseaddress, 240>;
 
-template <std::uint32_t baseaddress>
-using flash_priv2bbr2_t = flash_priv2bbr2_tt<"FLASH_PRIV2BBR2",baseaddress,244>;
+  template <std::uint32_t baseaddress>
+  using flash_priv2bbr2_t =
+    flash_priv2bbr2_tt<"FLASH_PRIV2BBR2", baseaddress, 244>;
 
-template <std::uint32_t baseaddress>
-using flash_priv2bbr3_t = flash_priv2bbr3_tt<"FLASH_PRIV2BBR3",baseaddress,248>;
+  template <std::uint32_t baseaddress>
+  using flash_priv2bbr3_t =
+    flash_priv2bbr3_tt<"FLASH_PRIV2BBR3", baseaddress, 248>;
 
-template <std::uint32_t baseaddress>
-using flash_priv2bbr4_t = flash_priv2bbr4_tt<"FLASH_PRIV2BBR4",baseaddress,252>;
+  template <std::uint32_t baseaddress>
+  using flash_priv2bbr4_t =
+    flash_priv2bbr4_tt<"FLASH_PRIV2BBR4", baseaddress, 252>;
 
 } // namespace sec_flash
-

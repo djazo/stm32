@@ -11,60 +11,57 @@ namespace stm32 {
 
 namespace pf {
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using clidr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::ro,
-  groov::field<"RESERVED0", std::uint8_t, 31, 30 >,
-  groov::field<"LoU", std::uint8_t, 29, 27 >,
-  groov::field<"LoC", std::uint8_t, 26, 24 >,
-  groov::field<"LoUIS", std::uint8_t, 23, 21 >,
-  groov::field<"CL7", std::uint8_t, 20, 18 >,
-  groov::field<"CL6", std::uint8_t, 17, 15 >,
-  groov::field<"CL5", std::uint8_t, 14, 12 >,
-  groov::field<"CL4", std::uint8_t, 11, 9 >,
-  groov::field<"CL3", std::uint8_t, 8, 6 >,
-  groov::field<"CL2", std::uint8_t, 5, 3 >,
-  groov::field<"CL1", std::uint8_t, 2, 0 >
-  >;
+                              std::uint32_t,
+                              baseaddress + offset,
+                              access::ro,
+                              groov::field<"RESERVED0", std::uint8_t, 31, 30>,
+                              groov::field<"LoU", std::uint8_t, 29, 27>,
+                              groov::field<"LoC", std::uint8_t, 26, 24>,
+                              groov::field<"LoUIS", std::uint8_t, 23, 21>,
+                              groov::field<"CL7", std::uint8_t, 20, 18>,
+                              groov::field<"CL6", std::uint8_t, 17, 15>,
+                              groov::field<"CL5", std::uint8_t, 14, 12>,
+                              groov::field<"CL4", std::uint8_t, 11, 9>,
+                              groov::field<"CL3", std::uint8_t, 8, 6>,
+                              groov::field<"CL2", std::uint8_t, 5, 3>,
+                              groov::field<"CL1", std::uint8_t, 2, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using ctr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::ro,
-  groov::field<"Format", std::uint8_t, 31, 29 >,
-  groov::field<"RESERVED1", bool, 28, 28 >,
-  groov::field<"CWG", std::uint8_t, 27, 24 >,
-  groov::field<"ERG", std::uint8_t, 23, 20 >,
-  groov::field<"DMinLine", std::uint8_t, 19, 16 >,
-  groov::field<"RESERVED0", std::uint16_t, 15, 4 >,
-  groov::field<"_IminLine", std::uint8_t, 3, 0 >
-  >;
+                            std::uint32_t,
+                            baseaddress + offset,
+                            access::ro,
+                            groov::field<"Format", std::uint8_t, 31, 29>,
+                            groov::field<"RESERVED1", bool, 28, 28>,
+                            groov::field<"CWG", std::uint8_t, 27, 24>,
+                            groov::field<"ERG", std::uint8_t, 23, 20>,
+                            groov::field<"DMinLine", std::uint8_t, 19, 16>,
+                            groov::field<"RESERVED0", std::uint16_t, 15, 4>,
+                            groov::field<"_IminLine", std::uint8_t, 3, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using ccsidr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::ro,
-  groov::field<"WT", bool, 31, 31 >,
-  groov::field<"WB", bool, 30, 30 >,
-  groov::field<"RA", bool, 29, 29 >,
-  groov::field<"WA", bool, 28, 28 >,
-  groov::field<"NumSets", std::uint16_t, 27, 13 >,
-  groov::field<"Associativity", std::uint16_t, 12, 3 >,
-  groov::field<"LineSize", std::uint8_t, 2, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using ccsidr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::ro,
+               groov::field<"WT", bool, 31, 31>,
+               groov::field<"WB", bool, 30, 30>,
+               groov::field<"RA", bool, 29, 29>,
+               groov::field<"WA", bool, 28, 28>,
+               groov::field<"NumSets", std::uint16_t, 27, 13>,
+               groov::field<"Associativity", std::uint16_t, 12, 3>,
+               groov::field<"LineSize", std::uint8_t, 2, 0>>;
 
-template <std::uint32_t baseaddress>
-using clidr_t = clidr_tt<"CLIDR",baseaddress,0>;
+  template <std::uint32_t baseaddress>
+  using clidr_t = clidr_tt<"CLIDR", baseaddress, 0>;
 
-template <std::uint32_t baseaddress>
-using ctr_t = ctr_tt<"CTR",baseaddress,4>;
+  template <std::uint32_t baseaddress>
+  using ctr_t = ctr_tt<"CTR", baseaddress, 4>;
 
-template <std::uint32_t baseaddress>
-using ccsidr_t = ccsidr_tt<"CCSIDR",baseaddress,8>;
+  template <std::uint32_t baseaddress>
+  using ccsidr_t = ccsidr_tt<"CCSIDR", baseaddress, 8>;
 
 } // namespace pf
-

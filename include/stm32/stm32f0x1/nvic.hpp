@@ -11,193 +11,188 @@ namespace stm32 {
 
 namespace nvic {
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using iser_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"SETENA", std::uint32_t, 31, 0 >
-  >;
+                             std::uint32_t,
+                             baseaddress + offset,
+                             access::rw,
+                             groov::field<"SETENA", std::uint32_t, 31, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using icer_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"CLRENA", std::uint32_t, 31, 0 >
-  >;
+                             std::uint32_t,
+                             baseaddress + offset,
+                             access::rw,
+                             groov::field<"CLRENA", std::uint32_t, 31, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using ispr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"SETPEND", std::uint32_t, 31, 0 >
-  >;
+                             std::uint32_t,
+                             baseaddress + offset,
+                             access::rw,
+                             groov::field<"SETPEND", std::uint32_t, 31, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using icpr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"CLRPEND", std::uint32_t, 31, 0 >
-  >;
+                             std::uint32_t,
+                             baseaddress + offset,
+                             access::rw,
+                             groov::field<"CLRPEND", std::uint32_t, 31, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using ipr0_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"PRI_03", std::uint8_t, 31, 30 >,
-  groov::field<"RESERVED3", std::uint8_t, 29, 24 ,access::ro>,
-  groov::field<"PRI_02", std::uint8_t, 23, 22 >,
-  groov::field<"RESERVED2", std::uint8_t, 21, 16 ,access::ro>,
-  groov::field<"PRI_01", std::uint8_t, 15, 14 >,
-  groov::field<"RESERVED1", std::uint8_t, 13, 8 ,access::ro>,
-  groov::field<"PRI_00", std::uint8_t, 7, 6 >,
-  groov::field<"RESERVED0", std::uint8_t, 5, 0 ,access::ro>
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using ipr0_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"PRI_03", std::uint8_t, 31, 30>,
+               groov::field<"RESERVED3", std::uint8_t, 29, 24, access::ro>,
+               groov::field<"PRI_02", std::uint8_t, 23, 22>,
+               groov::field<"RESERVED2", std::uint8_t, 21, 16, access::ro>,
+               groov::field<"PRI_01", std::uint8_t, 15, 14>,
+               groov::field<"RESERVED1", std::uint8_t, 13, 8, access::ro>,
+               groov::field<"PRI_00", std::uint8_t, 7, 6>,
+               groov::field<"RESERVED0", std::uint8_t, 5, 0, access::ro>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using ipr1_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"PRI_43", std::uint8_t, 31, 30 >,
-  groov::field<"RESERVED3", std::uint8_t, 29, 24 ,access::ro>,
-  groov::field<"PRI_42", std::uint8_t, 23, 22 >,
-  groov::field<"RESERVED2", std::uint8_t, 21, 16 ,access::ro>,
-  groov::field<"PRI_41", std::uint8_t, 15, 14 >,
-  groov::field<"RESERVED1", std::uint8_t, 13, 8 ,access::ro>,
-  groov::field<"PRI_40", std::uint8_t, 7, 6 >,
-  groov::field<"RESERVED0", std::uint8_t, 5, 0 ,access::ro>
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using ipr1_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"PRI_43", std::uint8_t, 31, 30>,
+               groov::field<"RESERVED3", std::uint8_t, 29, 24, access::ro>,
+               groov::field<"PRI_42", std::uint8_t, 23, 22>,
+               groov::field<"RESERVED2", std::uint8_t, 21, 16, access::ro>,
+               groov::field<"PRI_41", std::uint8_t, 15, 14>,
+               groov::field<"RESERVED1", std::uint8_t, 13, 8, access::ro>,
+               groov::field<"PRI_40", std::uint8_t, 7, 6>,
+               groov::field<"RESERVED0", std::uint8_t, 5, 0, access::ro>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using ipr2_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"PRI_83", std::uint8_t, 31, 30 >,
-  groov::field<"RESERVED3", std::uint8_t, 29, 24 ,access::ro>,
-  groov::field<"PRI_82", std::uint8_t, 23, 22 >,
-  groov::field<"RESERVED2", std::uint8_t, 21, 16 ,access::ro>,
-  groov::field<"PRI_81", std::uint8_t, 15, 14 >,
-  groov::field<"RESERVED1", std::uint8_t, 13, 8 ,access::ro>,
-  groov::field<"PRI_80", std::uint8_t, 7, 6 >,
-  groov::field<"RESERVED0", std::uint8_t, 5, 0 ,access::ro>
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using ipr2_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"PRI_83", std::uint8_t, 31, 30>,
+               groov::field<"RESERVED3", std::uint8_t, 29, 24, access::ro>,
+               groov::field<"PRI_82", std::uint8_t, 23, 22>,
+               groov::field<"RESERVED2", std::uint8_t, 21, 16, access::ro>,
+               groov::field<"PRI_81", std::uint8_t, 15, 14>,
+               groov::field<"RESERVED1", std::uint8_t, 13, 8, access::ro>,
+               groov::field<"PRI_80", std::uint8_t, 7, 6>,
+               groov::field<"RESERVED0", std::uint8_t, 5, 0, access::ro>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using ipr3_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"PRI_123", std::uint8_t, 31, 30 >,
-  groov::field<"RESERVED3", std::uint8_t, 29, 24 ,access::ro>,
-  groov::field<"PRI_122", std::uint8_t, 23, 22 >,
-  groov::field<"RESERVED2", std::uint8_t, 21, 16 ,access::ro>,
-  groov::field<"PRI_121", std::uint8_t, 15, 14 >,
-  groov::field<"RESERVED1", std::uint8_t, 13, 8 ,access::ro>,
-  groov::field<"PRI_120", std::uint8_t, 7, 6 >,
-  groov::field<"RESERVED0", std::uint8_t, 5, 0 ,access::ro>
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using ipr3_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"PRI_123", std::uint8_t, 31, 30>,
+               groov::field<"RESERVED3", std::uint8_t, 29, 24, access::ro>,
+               groov::field<"PRI_122", std::uint8_t, 23, 22>,
+               groov::field<"RESERVED2", std::uint8_t, 21, 16, access::ro>,
+               groov::field<"PRI_121", std::uint8_t, 15, 14>,
+               groov::field<"RESERVED1", std::uint8_t, 13, 8, access::ro>,
+               groov::field<"PRI_120", std::uint8_t, 7, 6>,
+               groov::field<"RESERVED0", std::uint8_t, 5, 0, access::ro>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using ipr4_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"PRI_163", std::uint8_t, 31, 30 >,
-  groov::field<"RESERVED3", std::uint8_t, 29, 24 ,access::ro>,
-  groov::field<"PRI_162", std::uint8_t, 23, 22 >,
-  groov::field<"RESERVED2", std::uint8_t, 21, 16 ,access::ro>,
-  groov::field<"PRI_161", std::uint8_t, 15, 14 >,
-  groov::field<"RESERVED1", std::uint8_t, 13, 8 ,access::ro>,
-  groov::field<"PRI_160", std::uint8_t, 7, 6 >,
-  groov::field<"RESERVED0", std::uint8_t, 5, 0 ,access::ro>
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using ipr4_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"PRI_163", std::uint8_t, 31, 30>,
+               groov::field<"RESERVED3", std::uint8_t, 29, 24, access::ro>,
+               groov::field<"PRI_162", std::uint8_t, 23, 22>,
+               groov::field<"RESERVED2", std::uint8_t, 21, 16, access::ro>,
+               groov::field<"PRI_161", std::uint8_t, 15, 14>,
+               groov::field<"RESERVED1", std::uint8_t, 13, 8, access::ro>,
+               groov::field<"PRI_160", std::uint8_t, 7, 6>,
+               groov::field<"RESERVED0", std::uint8_t, 5, 0, access::ro>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using ipr5_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"PRI_203", std::uint8_t, 31, 30 >,
-  groov::field<"RESERVED3", std::uint8_t, 29, 24 ,access::ro>,
-  groov::field<"PRI_202", std::uint8_t, 23, 22 >,
-  groov::field<"RESERVED2", std::uint8_t, 21, 16 ,access::ro>,
-  groov::field<"PRI_201", std::uint8_t, 15, 14 >,
-  groov::field<"RESERVED1", std::uint8_t, 13, 8 ,access::ro>,
-  groov::field<"PRI_200", std::uint8_t, 7, 6 >,
-  groov::field<"RESERVED0", std::uint8_t, 5, 0 ,access::ro>
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using ipr5_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"PRI_203", std::uint8_t, 31, 30>,
+               groov::field<"RESERVED3", std::uint8_t, 29, 24, access::ro>,
+               groov::field<"PRI_202", std::uint8_t, 23, 22>,
+               groov::field<"RESERVED2", std::uint8_t, 21, 16, access::ro>,
+               groov::field<"PRI_201", std::uint8_t, 15, 14>,
+               groov::field<"RESERVED1", std::uint8_t, 13, 8, access::ro>,
+               groov::field<"PRI_200", std::uint8_t, 7, 6>,
+               groov::field<"RESERVED0", std::uint8_t, 5, 0, access::ro>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using ipr6_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"PRI_243", std::uint8_t, 31, 30 >,
-  groov::field<"RESERVED3", std::uint8_t, 29, 24 ,access::ro>,
-  groov::field<"PRI_242", std::uint8_t, 23, 22 >,
-  groov::field<"RESERVED2", std::uint8_t, 21, 16 ,access::ro>,
-  groov::field<"PRI_241", std::uint8_t, 15, 14 >,
-  groov::field<"RESERVED1", std::uint8_t, 13, 8 ,access::ro>,
-  groov::field<"PRI_240", std::uint8_t, 7, 6 >,
-  groov::field<"RESERVED0", std::uint8_t, 5, 0 ,access::ro>
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using ipr6_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"PRI_243", std::uint8_t, 31, 30>,
+               groov::field<"RESERVED3", std::uint8_t, 29, 24, access::ro>,
+               groov::field<"PRI_242", std::uint8_t, 23, 22>,
+               groov::field<"RESERVED2", std::uint8_t, 21, 16, access::ro>,
+               groov::field<"PRI_241", std::uint8_t, 15, 14>,
+               groov::field<"RESERVED1", std::uint8_t, 13, 8, access::ro>,
+               groov::field<"PRI_240", std::uint8_t, 7, 6>,
+               groov::field<"RESERVED0", std::uint8_t, 5, 0, access::ro>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using ipr7_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"PRI_283", std::uint8_t, 31, 30 >,
-  groov::field<"RESERVED3", std::uint8_t, 29, 24 ,access::ro>,
-  groov::field<"PRI_282", std::uint8_t, 23, 22 >,
-  groov::field<"RESERVED2", std::uint8_t, 21, 16 ,access::ro>,
-  groov::field<"PRI_281", std::uint8_t, 15, 14 >,
-  groov::field<"RESERVED1", std::uint8_t, 13, 8 ,access::ro>,
-  groov::field<"PRI_280", std::uint8_t, 7, 6 >,
-  groov::field<"RESERVED0", std::uint8_t, 5, 0 ,access::ro>
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using ipr7_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"PRI_283", std::uint8_t, 31, 30>,
+               groov::field<"RESERVED3", std::uint8_t, 29, 24, access::ro>,
+               groov::field<"PRI_282", std::uint8_t, 23, 22>,
+               groov::field<"RESERVED2", std::uint8_t, 21, 16, access::ro>,
+               groov::field<"PRI_281", std::uint8_t, 15, 14>,
+               groov::field<"RESERVED1", std::uint8_t, 13, 8, access::ro>,
+               groov::field<"PRI_280", std::uint8_t, 7, 6>,
+               groov::field<"RESERVED0", std::uint8_t, 5, 0, access::ro>>;
 
-template <std::uint32_t baseaddress>
-using iser_t = iser_tt<"ISER",baseaddress,0>;
+  template <std::uint32_t baseaddress>
+  using iser_t = iser_tt<"ISER", baseaddress, 0>;
 
-template <std::uint32_t baseaddress>
-using icer_t = icer_tt<"ICER",baseaddress,128>;
+  template <std::uint32_t baseaddress>
+  using icer_t = icer_tt<"ICER", baseaddress, 128>;
 
-template <std::uint32_t baseaddress>
-using ispr_t = ispr_tt<"ISPR",baseaddress,256>;
+  template <std::uint32_t baseaddress>
+  using ispr_t = ispr_tt<"ISPR", baseaddress, 256>;
 
-template <std::uint32_t baseaddress>
-using icpr_t = icpr_tt<"ICPR",baseaddress,384>;
+  template <std::uint32_t baseaddress>
+  using icpr_t = icpr_tt<"ICPR", baseaddress, 384>;
 
-template <std::uint32_t baseaddress>
-using ipr0_t = ipr0_tt<"IPR0",baseaddress,768>;
+  template <std::uint32_t baseaddress>
+  using ipr0_t = ipr0_tt<"IPR0", baseaddress, 768>;
 
-template <std::uint32_t baseaddress>
-using ipr1_t = ipr1_tt<"IPR1",baseaddress,772>;
+  template <std::uint32_t baseaddress>
+  using ipr1_t = ipr1_tt<"IPR1", baseaddress, 772>;
 
-template <std::uint32_t baseaddress>
-using ipr2_t = ipr2_tt<"IPR2",baseaddress,776>;
+  template <std::uint32_t baseaddress>
+  using ipr2_t = ipr2_tt<"IPR2", baseaddress, 776>;
 
-template <std::uint32_t baseaddress>
-using ipr3_t = ipr3_tt<"IPR3",baseaddress,780>;
+  template <std::uint32_t baseaddress>
+  using ipr3_t = ipr3_tt<"IPR3", baseaddress, 780>;
 
-template <std::uint32_t baseaddress>
-using ipr4_t = ipr4_tt<"IPR4",baseaddress,784>;
+  template <std::uint32_t baseaddress>
+  using ipr4_t = ipr4_tt<"IPR4", baseaddress, 784>;
 
-template <std::uint32_t baseaddress>
-using ipr5_t = ipr5_tt<"IPR5",baseaddress,788>;
+  template <std::uint32_t baseaddress>
+  using ipr5_t = ipr5_tt<"IPR5", baseaddress, 788>;
 
-template <std::uint32_t baseaddress>
-using ipr6_t = ipr6_tt<"IPR6",baseaddress,792>;
+  template <std::uint32_t baseaddress>
+  using ipr6_t = ipr6_tt<"IPR6", baseaddress, 792>;
 
-template <std::uint32_t baseaddress>
-using ipr7_t = ipr7_tt<"IPR7",baseaddress,796>;
+  template <std::uint32_t baseaddress>
+  using ipr7_t = ipr7_tt<"IPR7", baseaddress, 796>;
 
 } // namespace nvic
-

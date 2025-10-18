@@ -11,85 +11,84 @@ namespace stm32 {
 
 namespace sec_adc12_common {
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using adc12_csr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::ro,
-  groov::field<"RESERVED3", std::uint8_t, 31, 29 >,
-  groov::field<"LDORDY_SLV", bool, 28, 28 >,
-  groov::field<"RESERVED2", std::uint8_t, 27, 26 >,
-  groov::field<"AWD3_SLV", bool, 25, 25 >,
-  groov::field<"AWD2_SLV", bool, 24, 24 >,
-  groov::field<"AWD1_SLV", bool, 23, 23 >,
-  groov::field<"JEOS_SLV", bool, 22, 22 >,
-  groov::field<"JEOC_SLV", bool, 21, 21 >,
-  groov::field<"OVR_SLV", bool, 20, 20 >,
-  groov::field<"EOS_SLV", bool, 19, 19 >,
-  groov::field<"EOC_SLV", bool, 18, 18 >,
-  groov::field<"EOSMP_SLV", bool, 17, 17 >,
-  groov::field<"ADRDY_SLV", bool, 16, 16 >,
-  groov::field<"RESERVED1", std::uint8_t, 15, 13 >,
-  groov::field<"LDORDY_MST", bool, 12, 12 >,
-  groov::field<"RESERVED0", std::uint8_t, 11, 10 >,
-  groov::field<"AWD3_MST", bool, 9, 9 >,
-  groov::field<"AWD2_MST", bool, 8, 8 >,
-  groov::field<"AWD1_MST", bool, 7, 7 >,
-  groov::field<"JEOS_MST", bool, 6, 6 >,
-  groov::field<"JEOC_MST", bool, 5, 5 >,
-  groov::field<"OVR_MST", bool, 4, 4 >,
-  groov::field<"EOS_MST", bool, 3, 3 >,
-  groov::field<"EOC_MST", bool, 2, 2 >,
-  groov::field<"EOSMP_MST", bool, 1, 1 >,
-  groov::field<"ADRDY_MST", bool, 0, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using adc12_csr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::ro,
+               groov::field<"RESERVED3", std::uint8_t, 31, 29>,
+               groov::field<"LDORDY_SLV", bool, 28, 28>,
+               groov::field<"RESERVED2", std::uint8_t, 27, 26>,
+               groov::field<"AWD3_SLV", bool, 25, 25>,
+               groov::field<"AWD2_SLV", bool, 24, 24>,
+               groov::field<"AWD1_SLV", bool, 23, 23>,
+               groov::field<"JEOS_SLV", bool, 22, 22>,
+               groov::field<"JEOC_SLV", bool, 21, 21>,
+               groov::field<"OVR_SLV", bool, 20, 20>,
+               groov::field<"EOS_SLV", bool, 19, 19>,
+               groov::field<"EOC_SLV", bool, 18, 18>,
+               groov::field<"EOSMP_SLV", bool, 17, 17>,
+               groov::field<"ADRDY_SLV", bool, 16, 16>,
+               groov::field<"RESERVED1", std::uint8_t, 15, 13>,
+               groov::field<"LDORDY_MST", bool, 12, 12>,
+               groov::field<"RESERVED0", std::uint8_t, 11, 10>,
+               groov::field<"AWD3_MST", bool, 9, 9>,
+               groov::field<"AWD2_MST", bool, 8, 8>,
+               groov::field<"AWD1_MST", bool, 7, 7>,
+               groov::field<"JEOS_MST", bool, 6, 6>,
+               groov::field<"JEOC_MST", bool, 5, 5>,
+               groov::field<"OVR_MST", bool, 4, 4>,
+               groov::field<"EOS_MST", bool, 3, 3>,
+               groov::field<"EOC_MST", bool, 2, 2>,
+               groov::field<"EOSMP_MST", bool, 1, 1>,
+               groov::field<"ADRDY_MST", bool, 0, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using adc12_ccr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED3", std::uint8_t, 31, 25 ,access::ro>,
-  groov::field<"VBATEN", bool, 24, 24 >,
-  groov::field<"VSENSESEL", bool, 23, 23 >,
-  groov::field<"VREFEN", bool, 22, 22 >,
-  groov::field<"PRESC", std::uint8_t, 21, 18 >,
-  groov::field<"RESERVED2", std::uint8_t, 17, 16 ,access::ro>,
-  groov::field<"DAMDF", std::uint8_t, 15, 14 >,
-  groov::field<"RESERVED1", std::uint8_t, 13, 12 ,access::ro>,
-  groov::field<"DELAY", std::uint8_t, 11, 8 >,
-  groov::field<"RESERVED0", std::uint8_t, 7, 5 ,access::ro>,
-  groov::field<"DUAL", std::uint8_t, 4, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using adc12_ccr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED3", std::uint8_t, 31, 25, access::ro>,
+               groov::field<"VBATEN", bool, 24, 24>,
+               groov::field<"VSENSESEL", bool, 23, 23>,
+               groov::field<"VREFEN", bool, 22, 22>,
+               groov::field<"PRESC", std::uint8_t, 21, 18>,
+               groov::field<"RESERVED2", std::uint8_t, 17, 16, access::ro>,
+               groov::field<"DAMDF", std::uint8_t, 15, 14>,
+               groov::field<"RESERVED1", std::uint8_t, 13, 12, access::ro>,
+               groov::field<"DELAY", std::uint8_t, 11, 8>,
+               groov::field<"RESERVED0", std::uint8_t, 7, 5, access::ro>,
+               groov::field<"DUAL", std::uint8_t, 4, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using adc12_cdr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::ro,
-  groov::field<"RDATA_SLV", std::uint16_t, 31, 16 >,
-  groov::field<"RDATA_MST", std::uint16_t, 15, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using adc12_cdr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::ro,
+               groov::field<"RDATA_SLV", std::uint16_t, 31, 16>,
+               groov::field<"RDATA_MST", std::uint16_t, 15, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using adc12_cdr2_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::ro,
-  groov::field<"RDATA_ALT", std::uint32_t, 31, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using adc12_cdr2_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::ro,
+               groov::field<"RDATA_ALT", std::uint32_t, 31, 0>>;
 
-template <std::uint32_t baseaddress>
-using adc12_csr_t = adc12_csr_tt<"ADC12_CSR",baseaddress,0>;
+  template <std::uint32_t baseaddress>
+  using adc12_csr_t = adc12_csr_tt<"ADC12_CSR", baseaddress, 0>;
 
-template <std::uint32_t baseaddress>
-using adc12_ccr_t = adc12_ccr_tt<"ADC12_CCR",baseaddress,8>;
+  template <std::uint32_t baseaddress>
+  using adc12_ccr_t = adc12_ccr_tt<"ADC12_CCR", baseaddress, 8>;
 
-template <std::uint32_t baseaddress>
-using adc12_cdr_t = adc12_cdr_tt<"ADC12_CDR",baseaddress,12>;
+  template <std::uint32_t baseaddress>
+  using adc12_cdr_t = adc12_cdr_tt<"ADC12_CDR", baseaddress, 12>;
 
-template <std::uint32_t baseaddress>
-using adc12_cdr2_t = adc12_cdr2_tt<"ADC12_CDR2",baseaddress,16>;
+  template <std::uint32_t baseaddress>
+  using adc12_cdr2_t = adc12_cdr2_tt<"ADC12_CDR2", baseaddress, 16>;
 
 } // namespace sec_adc12_common
-

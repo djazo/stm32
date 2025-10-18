@@ -11,157 +11,155 @@ namespace stm32 {
 
 namespace ethernet_mtl {
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using mtlomr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED2", std::uint32_t, 31, 10 ,access::ro>,
-  groov::field<"CNTCLR", bool, 9, 9 >,
-  groov::field<"CNTPRST", bool, 8, 8 >,
-  groov::field<"RESERVED1", std::uint8_t, 7, 2 ,access::ro>,
-  groov::field<"DTXSTS", bool, 1, 1 >,
-  groov::field<"RESERVED0", bool, 0, 0 ,access::ro>
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using mtlomr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED2", std::uint32_t, 31, 10, access::ro>,
+               groov::field<"CNTCLR", bool, 9, 9>,
+               groov::field<"CNTPRST", bool, 8, 8>,
+               groov::field<"RESERVED1", std::uint8_t, 7, 2, access::ro>,
+               groov::field<"DTXSTS", bool, 1, 1>,
+               groov::field<"RESERVED0", bool, 0, 0, access::ro>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using mtlisr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::ro,
-  groov::field<"RESERVED0", std::uint32_t, 31, 1 >,
-  groov::field<"Q0IS", bool, 0, 0 >
-  >;
+                               std::uint32_t,
+                               baseaddress + offset,
+                               access::ro,
+                               groov::field<"RESERVED0", std::uint32_t, 31, 1>,
+                               groov::field<"Q0IS", bool, 0, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using mtltxqomr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED1", std::uint16_t, 31, 19 ,access::ro>,
-  groov::field<"TQS", std::uint8_t, 18, 16 >,
-  groov::field<"RESERVED0", std::uint16_t, 15, 7 ,access::ro>,
-  groov::field<"TTC", std::uint8_t, 6, 4 >,
-  groov::field<"TXQEN", std::uint8_t, 3, 2 ,access::ro>,
-  groov::field<"TSF", bool, 1, 1 >,
-  groov::field<"FTQ", bool, 0, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using mtltxqomr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED1", std::uint16_t, 31, 19, access::ro>,
+               groov::field<"TQS", std::uint8_t, 18, 16>,
+               groov::field<"RESERVED0", std::uint16_t, 15, 7, access::ro>,
+               groov::field<"TTC", std::uint8_t, 6, 4>,
+               groov::field<"TXQEN", std::uint8_t, 3, 2, access::ro>,
+               groov::field<"TSF", bool, 1, 1>,
+               groov::field<"FTQ", bool, 0, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using mtltxqur_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::ro,
-  groov::field<"RESERVED0", std::uint32_t, 31, 12 >,
-  groov::field<"UFCNTOVF", bool, 11, 11 >,
-  groov::field<"UFFRMCNT", std::uint16_t, 10, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using mtltxqur_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::ro,
+               groov::field<"RESERVED0", std::uint32_t, 31, 12>,
+               groov::field<"UFCNTOVF", bool, 11, 11>,
+               groov::field<"UFFRMCNT", std::uint16_t, 10, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using mtltxqdr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::ro,
-  groov::field<"RESERVED2", std::uint16_t, 31, 23 >,
-  groov::field<"STXSTSF", std::uint8_t, 22, 20 >,
-  groov::field<"RESERVED1", bool, 19, 19 >,
-  groov::field<"PTXQ", std::uint8_t, 18, 16 >,
-  groov::field<"RESERVED0", std::uint16_t, 15, 6 >,
-  groov::field<"TXSTSFSTS", bool, 5, 5 >,
-  groov::field<"TXQSTS", bool, 4, 4 >,
-  groov::field<"TWCSTS", bool, 3, 3 >,
-  groov::field<"TRCSTS", std::uint8_t, 2, 1 >,
-  groov::field<"TXQPAUSED", bool, 0, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using mtltxqdr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::ro,
+               groov::field<"RESERVED2", std::uint16_t, 31, 23>,
+               groov::field<"STXSTSF", std::uint8_t, 22, 20>,
+               groov::field<"RESERVED1", bool, 19, 19>,
+               groov::field<"PTXQ", std::uint8_t, 18, 16>,
+               groov::field<"RESERVED0", std::uint16_t, 15, 6>,
+               groov::field<"TXSTSFSTS", bool, 5, 5>,
+               groov::field<"TXQSTS", bool, 4, 4>,
+               groov::field<"TWCSTS", bool, 3, 3>,
+               groov::field<"TRCSTS", std::uint8_t, 2, 1>,
+               groov::field<"TXQPAUSED", bool, 0, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using mtlqicsr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED3", std::uint8_t, 31, 25 ,access::ro>,
-  groov::field<"RXOIE", bool, 24, 24 >,
-  groov::field<"RESERVED2", std::uint8_t, 23, 17 ,access::ro>,
-  groov::field<"RXOVFIS", bool, 16, 16 >,
-  groov::field<"RESERVED1", std::uint8_t, 15, 9 ,access::ro>,
-  groov::field<"TXUIE", bool, 8, 8 >,
-  groov::field<"RESERVED0", std::uint8_t, 7, 1 ,access::ro>,
-  groov::field<"TXUNFIS", bool, 0, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using mtlqicsr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED3", std::uint8_t, 31, 25, access::ro>,
+               groov::field<"RXOIE", bool, 24, 24>,
+               groov::field<"RESERVED2", std::uint8_t, 23, 17, access::ro>,
+               groov::field<"RXOVFIS", bool, 16, 16>,
+               groov::field<"RESERVED1", std::uint8_t, 15, 9, access::ro>,
+               groov::field<"TXUIE", bool, 8, 8>,
+               groov::field<"RESERVED0", std::uint8_t, 7, 1, access::ro>,
+               groov::field<"TXUNFIS", bool, 0, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using mtlrxqomr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED3", std::uint16_t, 31, 23 ,access::ro>,
-  groov::field<"RQS", std::uint8_t, 22, 20 ,access::ro>,
-  groov::field<"RESERVED2", std::uint8_t, 19, 17 ,access::ro>,
-  groov::field<"RFD", std::uint8_t, 16, 14 >,
-  groov::field<"RESERVED1", std::uint8_t, 13, 11 ,access::ro>,
-  groov::field<"RFA", std::uint8_t, 10, 8 >,
-  groov::field<"EHFC", bool, 7, 7 >,
-  groov::field<"DIS_TCP_EF", bool, 6, 6 >,
-  groov::field<"RSF", bool, 5, 5 >,
-  groov::field<"FEP", bool, 4, 4 >,
-  groov::field<"FUP", bool, 3, 3 >,
-  groov::field<"RESERVED0", bool, 2, 2 ,access::ro>,
-  groov::field<"RTC", std::uint8_t, 1, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using mtlrxqomr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED3", std::uint16_t, 31, 23, access::ro>,
+               groov::field<"RQS", std::uint8_t, 22, 20, access::ro>,
+               groov::field<"RESERVED2", std::uint8_t, 19, 17, access::ro>,
+               groov::field<"RFD", std::uint8_t, 16, 14>,
+               groov::field<"RESERVED1", std::uint8_t, 13, 11, access::ro>,
+               groov::field<"RFA", std::uint8_t, 10, 8>,
+               groov::field<"EHFC", bool, 7, 7>,
+               groov::field<"DIS_TCP_EF", bool, 6, 6>,
+               groov::field<"RSF", bool, 5, 5>,
+               groov::field<"FEP", bool, 4, 4>,
+               groov::field<"FUP", bool, 3, 3>,
+               groov::field<"RESERVED0", bool, 2, 2, access::ro>,
+               groov::field<"RTC", std::uint8_t, 1, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using mtlrxqmpocr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::ro,
-  groov::field<"RESERVED1", std::uint8_t, 31, 28 >,
-  groov::field<"MISCNTOVF", bool, 27, 27 >,
-  groov::field<"MISPKTCNT", std::uint16_t, 26, 16 >,
-  groov::field<"RESERVED0", std::uint8_t, 15, 12 >,
-  groov::field<"OVFCNTOVF", bool, 11, 11 >,
-  groov::field<"OVFPKTCNT", std::uint16_t, 10, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using mtlrxqmpocr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::ro,
+               groov::field<"RESERVED1", std::uint8_t, 31, 28>,
+               groov::field<"MISCNTOVF", bool, 27, 27>,
+               groov::field<"MISPKTCNT", std::uint16_t, 26, 16>,
+               groov::field<"RESERVED0", std::uint8_t, 15, 12>,
+               groov::field<"OVFCNTOVF", bool, 11, 11>,
+               groov::field<"OVFPKTCNT", std::uint16_t, 10, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using mtlrxqdr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::ro,
-  groov::field<"RESERVED2", std::uint8_t, 31, 30 >,
-  groov::field<"PRXQ", std::uint16_t, 29, 16 >,
-  groov::field<"RESERVED1", std::uint16_t, 15, 6 >,
-  groov::field<"RXQSTS", std::uint8_t, 5, 4 >,
-  groov::field<"RESERVED0", bool, 3, 3 >,
-  groov::field<"RRCSTS", std::uint8_t, 2, 1 >,
-  groov::field<"RWCSTS", bool, 0, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using mtlrxqdr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::ro,
+               groov::field<"RESERVED2", std::uint8_t, 31, 30>,
+               groov::field<"PRXQ", std::uint16_t, 29, 16>,
+               groov::field<"RESERVED1", std::uint16_t, 15, 6>,
+               groov::field<"RXQSTS", std::uint8_t, 5, 4>,
+               groov::field<"RESERVED0", bool, 3, 3>,
+               groov::field<"RRCSTS", std::uint8_t, 2, 1>,
+               groov::field<"RWCSTS", bool, 0, 0>>;
 
-template <std::uint32_t baseaddress>
-using mtlomr_t = mtlomr_tt<"MTLOMR",baseaddress,0>;
+  template <std::uint32_t baseaddress>
+  using mtlomr_t = mtlomr_tt<"MTLOMR", baseaddress, 0>;
 
-template <std::uint32_t baseaddress>
-using mtlisr_t = mtlisr_tt<"MTLISR",baseaddress,32>;
+  template <std::uint32_t baseaddress>
+  using mtlisr_t = mtlisr_tt<"MTLISR", baseaddress, 32>;
 
-template <std::uint32_t baseaddress>
-using mtltxqomr_t = mtltxqomr_tt<"MTLTxQOMR",baseaddress,256>;
+  template <std::uint32_t baseaddress>
+  using mtltxqomr_t = mtltxqomr_tt<"MTLTxQOMR", baseaddress, 256>;
 
-template <std::uint32_t baseaddress>
-using mtltxqur_t = mtltxqur_tt<"MTLTxQUR",baseaddress,260>;
+  template <std::uint32_t baseaddress>
+  using mtltxqur_t = mtltxqur_tt<"MTLTxQUR", baseaddress, 260>;
 
-template <std::uint32_t baseaddress>
-using mtltxqdr_t = mtltxqdr_tt<"MTLTxQDR",baseaddress,264>;
+  template <std::uint32_t baseaddress>
+  using mtltxqdr_t = mtltxqdr_tt<"MTLTxQDR", baseaddress, 264>;
 
-template <std::uint32_t baseaddress>
-using mtlqicsr_t = mtlqicsr_tt<"MTLQICSR",baseaddress,300>;
+  template <std::uint32_t baseaddress>
+  using mtlqicsr_t = mtlqicsr_tt<"MTLQICSR", baseaddress, 300>;
 
-template <std::uint32_t baseaddress>
-using mtlrxqomr_t = mtlrxqomr_tt<"MTLRxQOMR",baseaddress,304>;
+  template <std::uint32_t baseaddress>
+  using mtlrxqomr_t = mtlrxqomr_tt<"MTLRxQOMR", baseaddress, 304>;
 
-template <std::uint32_t baseaddress>
-using mtlrxqmpocr_t = mtlrxqmpocr_tt<"MTLRxQMPOCR",baseaddress,308>;
+  template <std::uint32_t baseaddress>
+  using mtlrxqmpocr_t = mtlrxqmpocr_tt<"MTLRxQMPOCR", baseaddress, 308>;
 
-template <std::uint32_t baseaddress>
-using mtlrxqdr_t = mtlrxqdr_tt<"MTLRxQDR",baseaddress,312>;
+  template <std::uint32_t baseaddress>
+  using mtlrxqdr_t = mtlrxqdr_tt<"MTLRxQDR", baseaddress, 312>;
 
 } // namespace ethernet_mtl
-

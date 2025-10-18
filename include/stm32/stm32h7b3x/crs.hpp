@@ -11,78 +11,76 @@ namespace stm32 {
 
 namespace crs {
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using crs_cr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED1", std::uint32_t, 31, 14 ,access::ro>,
-  groov::field<"TRIM", std::uint8_t, 13, 8 >,
-  groov::field<"SWSYNC", bool, 7, 7 ,access::ro>,
-  groov::field<"AUTOTRIMEN", bool, 6, 6 >,
-  groov::field<"CEN", bool, 5, 5 >,
-  groov::field<"RESERVED0", bool, 4, 4 ,access::ro>,
-  groov::field<"ESYNCIE", bool, 3, 3 >,
-  groov::field<"ERRIE", bool, 2, 2 >,
-  groov::field<"SYNCWARNIE", bool, 1, 1 >,
-  groov::field<"SYNCOKIE", bool, 0, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using crs_cr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED1", std::uint32_t, 31, 14, access::ro>,
+               groov::field<"TRIM", std::uint8_t, 13, 8>,
+               groov::field<"SWSYNC", bool, 7, 7, access::ro>,
+               groov::field<"AUTOTRIMEN", bool, 6, 6>,
+               groov::field<"CEN", bool, 5, 5>,
+               groov::field<"RESERVED0", bool, 4, 4, access::ro>,
+               groov::field<"ESYNCIE", bool, 3, 3>,
+               groov::field<"ERRIE", bool, 2, 2>,
+               groov::field<"SYNCWARNIE", bool, 1, 1>,
+               groov::field<"SYNCOKIE", bool, 0, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using crs_cfgr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"SYNCPOL", bool, 31, 31 >,
-  groov::field<"RESERVED1", bool, 30, 30 ,access::ro>,
-  groov::field<"SYNCSRC", std::uint8_t, 29, 28 >,
-  groov::field<"RESERVED0", bool, 27, 27 ,access::ro>,
-  groov::field<"SYNCDIV", std::uint8_t, 26, 24 >,
-  groov::field<"FELIM", std::uint8_t, 23, 16 >,
-  groov::field<"RELOAD", std::uint16_t, 15, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using crs_cfgr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"SYNCPOL", bool, 31, 31>,
+               groov::field<"RESERVED1", bool, 30, 30, access::ro>,
+               groov::field<"SYNCSRC", std::uint8_t, 29, 28>,
+               groov::field<"RESERVED0", bool, 27, 27, access::ro>,
+               groov::field<"SYNCDIV", std::uint8_t, 26, 24>,
+               groov::field<"FELIM", std::uint8_t, 23, 16>,
+               groov::field<"RELOAD", std::uint16_t, 15, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using crs_isr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::ro,
-  groov::field<"FECAP", std::uint16_t, 31, 16 >,
-  groov::field<"FEDIR", bool, 15, 15 >,
-  groov::field<"RESERVED1", std::uint8_t, 14, 11 >,
-  groov::field<"TRIMOVF", bool, 10, 10 >,
-  groov::field<"SYNCMISS", bool, 9, 9 >,
-  groov::field<"SYNCERR", bool, 8, 8 >,
-  groov::field<"RESERVED0", std::uint8_t, 7, 4 >,
-  groov::field<"ESYNCF", bool, 3, 3 >,
-  groov::field<"ERRF", bool, 2, 2 >,
-  groov::field<"SYNCWARNF", bool, 1, 1 >,
-  groov::field<"SYNCOKF", bool, 0, 0 >
-  >;
+                                std::uint32_t,
+                                baseaddress + offset,
+                                access::ro,
+                                groov::field<"FECAP", std::uint16_t, 31, 16>,
+                                groov::field<"FEDIR", bool, 15, 15>,
+                                groov::field<"RESERVED1", std::uint8_t, 14, 11>,
+                                groov::field<"TRIMOVF", bool, 10, 10>,
+                                groov::field<"SYNCMISS", bool, 9, 9>,
+                                groov::field<"SYNCERR", bool, 8, 8>,
+                                groov::field<"RESERVED0", std::uint8_t, 7, 4>,
+                                groov::field<"ESYNCF", bool, 3, 3>,
+                                groov::field<"ERRF", bool, 2, 2>,
+                                groov::field<"SYNCWARNF", bool, 1, 1>,
+                                groov::field<"SYNCOKF", bool, 0, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using crs_icr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint32_t, 31, 4 ,access::ro>,
-  groov::field<"ESYNCC", bool, 3, 3 >,
-  groov::field<"ERRC", bool, 2, 2 >,
-  groov::field<"SYNCWARNC", bool, 1, 1 >,
-  groov::field<"SYNCOKC", bool, 0, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using crs_icr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint32_t, 31, 4, access::ro>,
+               groov::field<"ESYNCC", bool, 3, 3>,
+               groov::field<"ERRC", bool, 2, 2>,
+               groov::field<"SYNCWARNC", bool, 1, 1>,
+               groov::field<"SYNCOKC", bool, 0, 0>>;
 
-template <std::uint32_t baseaddress>
-using crs_cr_t = crs_cr_tt<"CRS_CR",baseaddress,0>;
+  template <std::uint32_t baseaddress>
+  using crs_cr_t = crs_cr_tt<"CRS_CR", baseaddress, 0>;
 
-template <std::uint32_t baseaddress>
-using crs_cfgr_t = crs_cfgr_tt<"CRS_CFGR",baseaddress,4>;
+  template <std::uint32_t baseaddress>
+  using crs_cfgr_t = crs_cfgr_tt<"CRS_CFGR", baseaddress, 4>;
 
-template <std::uint32_t baseaddress>
-using crs_isr_t = crs_isr_tt<"CRS_ISR",baseaddress,8>;
+  template <std::uint32_t baseaddress>
+  using crs_isr_t = crs_isr_tt<"CRS_ISR", baseaddress, 8>;
 
-template <std::uint32_t baseaddress>
-using crs_icr_t = crs_icr_tt<"CRS_ICR",baseaddress,12>;
+  template <std::uint32_t baseaddress>
+  using crs_icr_t = crs_icr_tt<"CRS_ICR", baseaddress, 12>;
 
 } // namespace crs
-

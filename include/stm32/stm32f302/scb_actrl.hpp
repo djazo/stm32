@@ -11,22 +11,21 @@ namespace stm32 {
 
 namespace scb_actrl {
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using actrl_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED1", std::uint32_t, 31, 10 ,access::ro>,
-  groov::field<"DISOOFP", bool, 9, 9 >,
-  groov::field<"DISFPCA", bool, 8, 8 >,
-  groov::field<"RESERVED0", std::uint8_t, 7, 3 ,access::ro>,
-  groov::field<"DISFOLD", bool, 2, 2 >,
-  groov::field<"DISDEFWBUF", bool, 1, 1 >,
-  groov::field<"DISMCYCINT", bool, 0, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using actrl_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED1", std::uint32_t, 31, 10, access::ro>,
+               groov::field<"DISOOFP", bool, 9, 9>,
+               groov::field<"DISFPCA", bool, 8, 8>,
+               groov::field<"RESERVED0", std::uint8_t, 7, 3, access::ro>,
+               groov::field<"DISFOLD", bool, 2, 2>,
+               groov::field<"DISDEFWBUF", bool, 1, 1>,
+               groov::field<"DISMCYCINT", bool, 0, 0>>;
 
-template <std::uint32_t baseaddress>
-using actrl_t = actrl_tt<"ACTRL",baseaddress,0>;
+  template <std::uint32_t baseaddress>
+  using actrl_t = actrl_tt<"ACTRL", baseaddress, 0>;
 
 } // namespace scb_actrl
-

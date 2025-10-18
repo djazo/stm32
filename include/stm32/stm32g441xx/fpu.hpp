@@ -11,66 +11,65 @@ namespace stm32 {
 
 namespace fpu {
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using fpccr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"ASPEN", bool, 31, 31 >,
-  groov::field<"LSPEN", bool, 30, 30 >,
-  groov::field<"RESERVED2", std::uint32_t, 29, 9 ,access::ro>,
-  groov::field<"MONRDY", bool, 8, 8 >,
-  groov::field<"RESERVED1", bool, 7, 7 ,access::ro>,
-  groov::field<"BFRDY", bool, 6, 6 >,
-  groov::field<"MMRDY", bool, 5, 5 >,
-  groov::field<"HFRDY", bool, 4, 4 >,
-  groov::field<"THREAD", bool, 3, 3 >,
-  groov::field<"RESERVED0", bool, 2, 2 ,access::ro>,
-  groov::field<"USER", bool, 1, 1 >,
-  groov::field<"LSPACT", bool, 0, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using fpccr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"ASPEN", bool, 31, 31>,
+               groov::field<"LSPEN", bool, 30, 30>,
+               groov::field<"RESERVED2", std::uint32_t, 29, 9, access::ro>,
+               groov::field<"MONRDY", bool, 8, 8>,
+               groov::field<"RESERVED1", bool, 7, 7, access::ro>,
+               groov::field<"BFRDY", bool, 6, 6>,
+               groov::field<"MMRDY", bool, 5, 5>,
+               groov::field<"HFRDY", bool, 4, 4>,
+               groov::field<"THREAD", bool, 3, 3>,
+               groov::field<"RESERVED0", bool, 2, 2, access::ro>,
+               groov::field<"USER", bool, 1, 1>,
+               groov::field<"LSPACT", bool, 0, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using fpcar_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"ADDRESS", std::uint32_t, 31, 3 >,
-  groov::field<"RESERVED0", std::uint8_t, 2, 0 ,access::ro>
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using fpcar_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"ADDRESS", std::uint32_t, 31, 3>,
+               groov::field<"RESERVED0", std::uint8_t, 2, 0, access::ro>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using fpscr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"N", bool, 31, 31 >,
-  groov::field<"Z", bool, 30, 30 >,
-  groov::field<"C", bool, 29, 29 >,
-  groov::field<"V", bool, 28, 28 >,
-  groov::field<"RESERVED2", bool, 27, 27 ,access::ro>,
-  groov::field<"AHP", bool, 26, 26 >,
-  groov::field<"DN", bool, 25, 25 >,
-  groov::field<"FZ", bool, 24, 24 >,
-  groov::field<"RMode", std::uint8_t, 23, 22 >,
-  groov::field<"RESERVED1", std::uint16_t, 21, 8 ,access::ro>,
-  groov::field<"IDC", bool, 7, 7 >,
-  groov::field<"RESERVED0", std::uint8_t, 6, 5 ,access::ro>,
-  groov::field<"IXC", bool, 4, 4 >,
-  groov::field<"UFC", bool, 3, 3 >,
-  groov::field<"OFC", bool, 2, 2 >,
-  groov::field<"DZC", bool, 1, 1 >,
-  groov::field<"IOC", bool, 0, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using fpscr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"N", bool, 31, 31>,
+               groov::field<"Z", bool, 30, 30>,
+               groov::field<"C", bool, 29, 29>,
+               groov::field<"V", bool, 28, 28>,
+               groov::field<"RESERVED2", bool, 27, 27, access::ro>,
+               groov::field<"AHP", bool, 26, 26>,
+               groov::field<"DN", bool, 25, 25>,
+               groov::field<"FZ", bool, 24, 24>,
+               groov::field<"RMode", std::uint8_t, 23, 22>,
+               groov::field<"RESERVED1", std::uint16_t, 21, 8, access::ro>,
+               groov::field<"IDC", bool, 7, 7>,
+               groov::field<"RESERVED0", std::uint8_t, 6, 5, access::ro>,
+               groov::field<"IXC", bool, 4, 4>,
+               groov::field<"UFC", bool, 3, 3>,
+               groov::field<"OFC", bool, 2, 2>,
+               groov::field<"DZC", bool, 1, 1>,
+               groov::field<"IOC", bool, 0, 0>>;
 
-template <std::uint32_t baseaddress>
-using fpccr_t = fpccr_tt<"FPCCR",baseaddress,0>;
+  template <std::uint32_t baseaddress>
+  using fpccr_t = fpccr_tt<"FPCCR", baseaddress, 0>;
 
-template <std::uint32_t baseaddress>
-using fpcar_t = fpcar_tt<"FPCAR",baseaddress,4>;
+  template <std::uint32_t baseaddress>
+  using fpcar_t = fpcar_tt<"FPCAR", baseaddress, 4>;
 
-template <std::uint32_t baseaddress>
-using fpscr_t = fpscr_tt<"FPSCR",baseaddress,8>;
+  template <std::uint32_t baseaddress>
+  using fpscr_t = fpscr_tt<"FPSCR", baseaddress, 8>;
 
 } // namespace fpu
-

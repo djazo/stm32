@@ -11,20 +11,19 @@ namespace stm32 {
 
 namespace otg_fs_pwrclk {
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using fs_pcgcctl_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED1", std::uint32_t, 31, 5 ,access::ro>,
-  groov::field<"PHYSUSP", bool, 4, 4 >,
-  groov::field<"RESERVED0", std::uint8_t, 3, 2 ,access::ro>,
-  groov::field<"GATEHCLK", bool, 1, 1 >,
-  groov::field<"STPPCLK", bool, 0, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using fs_pcgcctl_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED1", std::uint32_t, 31, 5, access::ro>,
+               groov::field<"PHYSUSP", bool, 4, 4>,
+               groov::field<"RESERVED0", std::uint8_t, 3, 2, access::ro>,
+               groov::field<"GATEHCLK", bool, 1, 1>,
+               groov::field<"STPPCLK", bool, 0, 0>>;
 
-template <std::uint32_t baseaddress>
-using fs_pcgcctl_t = fs_pcgcctl_tt<"FS_PCGCCTL",baseaddress,0>;
+  template <std::uint32_t baseaddress>
+  using fs_pcgcctl_t = fs_pcgcctl_tt<"FS_PCGCCTL", baseaddress, 0>;
 
 } // namespace otg_fs_pwrclk
-

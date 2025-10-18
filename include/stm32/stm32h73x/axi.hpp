@@ -11,581 +11,622 @@ namespace stm32 {
 
 namespace axi {
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using axi_periph_id_4_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::ro,
-  groov::field<"RESERVED0", std::uint32_t, 31, 8 >,
-  groov::field<"KCOUNT4", std::uint8_t, 7, 4 >,
-  groov::field<"JEP106CON", std::uint8_t, 3, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using axi_periph_id_0_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::ro,
-  groov::field<"RESERVED0", std::uint32_t, 31, 8 >,
-  groov::field<"PARTNUM", std::uint8_t, 7, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using axi_periph_id_1_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::ro,
-  groov::field<"RESERVED0", std::uint32_t, 31, 8 >,
-  groov::field<"JEP106I", std::uint8_t, 7, 4 >,
-  groov::field<"PARTNUM", std::uint8_t, 3, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using axi_periph_id_2_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::ro,
-  groov::field<"RESERVED0", std::uint32_t, 31, 8 >,
-  groov::field<"REVISION", std::uint8_t, 7, 4 >,
-  groov::field<"JEDEC", bool, 3, 3 >,
-  groov::field<"JEP106ID", std::uint8_t, 2, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using axi_periph_id_3_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::ro,
-  groov::field<"RESERVED0", std::uint32_t, 31, 8 >,
-  groov::field<"REV_AND", std::uint8_t, 7, 4 >,
-  groov::field<"CUST_MOD_NUM", std::uint8_t, 3, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using axi_comp_id_0_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::ro,
-  groov::field<"RESERVED0", std::uint32_t, 31, 8 >,
-  groov::field<"PREAMBLE", std::uint8_t, 7, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using axi_comp_id_1_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::ro,
-  groov::field<"RESERVED0", std::uint32_t, 31, 8 >,
-  groov::field<"CLASS", std::uint8_t, 7, 4 >,
-  groov::field<"PREAMBLE", std::uint8_t, 3, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using axi_comp_id_2_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::ro,
-  groov::field<"RESERVED0", std::uint32_t, 31, 8 >,
-  groov::field<"PREAMBLE", std::uint8_t, 7, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using axi_comp_id_3_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::ro,
-  groov::field<"RESERVED0", std::uint32_t, 31, 8 >,
-  groov::field<"PREAMBLE", std::uint8_t, 7, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using axi_targ1_fn_mod_iss_bm_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint32_t, 31, 2 ,access::ro>,
-  groov::field<"WRITE_ISS_OVERRIDE", bool, 1, 1 >,
-  groov::field<"READ_ISS_OVERRIDE", bool, 0, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using axi_targ2_fn_mod_iss_bm_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint32_t, 31, 2 ,access::ro>,
-  groov::field<"WRITE_ISS_OVERRIDE", bool, 1, 1 >,
-  groov::field<"READ_ISS_OVERRIDE", bool, 0, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using axi_targ3_fn_mod_iss_bm_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint32_t, 31, 2 ,access::ro>,
-  groov::field<"WRITE_ISS_OVERRIDE", bool, 1, 1 >,
-  groov::field<"READ_ISS_OVERRIDE", bool, 0, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using axi_targ4_fn_mod_iss_bm_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint32_t, 31, 2 ,access::ro>,
-  groov::field<"WRITE_ISS_OVERRIDE", bool, 1, 1 >,
-  groov::field<"READ_ISS_OVERRIDE", bool, 0, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using axi_targ5_fn_mod_iss_bm_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint32_t, 31, 2 ,access::ro>,
-  groov::field<"WRITE_ISS_OVERRIDE", bool, 1, 1 >,
-  groov::field<"READ_ISS_OVERRIDE", bool, 0, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using axi_targ6_fn_mod_iss_bm_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint32_t, 31, 2 ,access::ro>,
-  groov::field<"WRITE_ISS_OVERRIDE", bool, 1, 1 >,
-  groov::field<"READ_ISS_OVERRIDE", bool, 0, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using axi_targ7_fn_mod_iss_bm_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint32_t, 31, 2 ,access::ro>,
-  groov::field<"WRITE_ISS_OVERRIDE", bool, 1, 1 >,
-  groov::field<"READ_ISS_OVERRIDE", bool, 0, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using axi_targ1_fn_mod2_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint32_t, 31, 1 ,access::ro>,
-  groov::field<"BYPASS_MERGE", bool, 0, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using axi_targ2_fn_mod2_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint32_t, 31, 1 ,access::ro>,
-  groov::field<"BYPASS_MERGE", bool, 0, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using axi_targ7_fn_mod2_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint32_t, 31, 1 ,access::ro>,
-  groov::field<"BYPASS_MERGE", bool, 0, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using axi_targ1_fn_mod_lb_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint32_t, 31, 1 ,access::ro>,
-  groov::field<"FN_MOD_LB", bool, 0, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using axi_targ2_fn_mod_lb_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint32_t, 31, 1 ,access::ro>,
-  groov::field<"FN_MOD_LB", bool, 0, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using axi_targ1_fn_mod_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint32_t, 31, 2 ,access::ro>,
-  groov::field<"WRITE_ISS_OVERRIDE", bool, 1, 1 >,
-  groov::field<"READ_ISS_OVERRIDE", bool, 0, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using axi_targ2_fn_mod_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint32_t, 31, 2 ,access::ro>,
-  groov::field<"WRITE_ISS_OVERRIDE", bool, 1, 1 >,
-  groov::field<"READ_ISS_OVERRIDE", bool, 0, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using axi_targ7_fn_mod_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint32_t, 31, 2 ,access::ro>,
-  groov::field<"WRITE_ISS_OVERRIDE", bool, 1, 1 >,
-  groov::field<"READ_ISS_OVERRIDE", bool, 0, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using axi_ini1_fn_mod2_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint32_t, 31, 1 ,access::ro>,
-  groov::field<"BYPASS_MERGE", bool, 0, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using axi_ini3_fn_mod2_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint32_t, 31, 1 ,access::ro>,
-  groov::field<"BYPASS_MERGE", bool, 0, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using axi_ini1_fn_mod_ahb_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint32_t, 31, 2 ,access::ro>,
-  groov::field<"WR_INC_OVERRIDE", bool, 1, 1 >,
-  groov::field<"RD_INC_OVERRIDE", bool, 0, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using axi_ini3_fn_mod_ahb_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint32_t, 31, 2 ,access::ro>,
-  groov::field<"WR_INC_OVERRIDE", bool, 1, 1 >,
-  groov::field<"RD_INC_OVERRIDE", bool, 0, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using axi_ini1_read_qos_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint32_t, 31, 4 ,access::ro>,
-  groov::field<"AR_QOS", std::uint8_t, 3, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using axi_ini2_read_qos_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint32_t, 31, 4 ,access::ro>,
-  groov::field<"AR_QOS", std::uint8_t, 3, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using axi_ini3_read_qos_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint32_t, 31, 4 ,access::ro>,
-  groov::field<"AR_QOS", std::uint8_t, 3, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using axi_ini4_read_qos_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint32_t, 31, 4 ,access::ro>,
-  groov::field<"AR_QOS", std::uint8_t, 3, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using axi_ini5_read_qos_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint32_t, 31, 4 ,access::ro>,
-  groov::field<"AR_QOS", std::uint8_t, 3, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using axi_ini6_read_qos_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint32_t, 31, 4 ,access::ro>,
-  groov::field<"AR_QOS", std::uint8_t, 3, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using axi_ini1_write_qos_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint32_t, 31, 4 ,access::ro>,
-  groov::field<"AW_QOS", std::uint8_t, 3, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using axi_ini2_write_qos_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint32_t, 31, 4 ,access::ro>,
-  groov::field<"AW_QOS", std::uint8_t, 3, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using axi_ini3_write_qos_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint32_t, 31, 4 ,access::ro>,
-  groov::field<"AW_QOS", std::uint8_t, 3, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using axi_ini4_write_qos_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint32_t, 31, 4 ,access::ro>,
-  groov::field<"AW_QOS", std::uint8_t, 3, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using axi_ini5_write_qos_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint32_t, 31, 4 ,access::ro>,
-  groov::field<"AW_QOS", std::uint8_t, 3, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using axi_ini6_write_qos_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint32_t, 31, 4 ,access::ro>,
-  groov::field<"AW_QOS", std::uint8_t, 3, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using axi_ini1_fn_mod_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint32_t, 31, 2 ,access::ro>,
-  groov::field<"WRITE_ISS_OVERRIDE", bool, 1, 1 >,
-  groov::field<"READ_ISS_OVERRIDE", bool, 0, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using axi_ini2_fn_mod_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint32_t, 31, 2 ,access::ro>,
-  groov::field<"WRITE_ISS_OVERRIDE", bool, 1, 1 >,
-  groov::field<"READ_ISS_OVERRIDE", bool, 0, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using axi_ini3_fn_mod_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint32_t, 31, 2 ,access::ro>,
-  groov::field<"WRITE_ISS_OVERRIDE", bool, 1, 1 >,
-  groov::field<"READ_ISS_OVERRIDE", bool, 0, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using axi_ini4_fn_mod_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint32_t, 31, 2 ,access::ro>,
-  groov::field<"WRITE_ISS_OVERRIDE", bool, 1, 1 >,
-  groov::field<"READ_ISS_OVERRIDE", bool, 0, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using axi_ini5_fn_mod_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint32_t, 31, 2 ,access::ro>,
-  groov::field<"WRITE_ISS_OVERRIDE", bool, 1, 1 >,
-  groov::field<"READ_ISS_OVERRIDE", bool, 0, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using axi_ini6_fn_mod_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint32_t, 31, 2 ,access::ro>,
-  groov::field<"WRITE_ISS_OVERRIDE", bool, 1, 1 >,
-  groov::field<"READ_ISS_OVERRIDE", bool, 0, 0 >
-  >;
-
-template <std::uint32_t baseaddress>
-using axi_periph_id_4_t = axi_periph_id_4_tt<"AXI_PERIPH_ID_4",baseaddress,8144>;
-
-template <std::uint32_t baseaddress>
-using axi_periph_id_0_t = axi_periph_id_0_tt<"AXI_PERIPH_ID_0",baseaddress,8160>;
-
-template <std::uint32_t baseaddress>
-using axi_periph_id_1_t = axi_periph_id_1_tt<"AXI_PERIPH_ID_1",baseaddress,8164>;
-
-template <std::uint32_t baseaddress>
-using axi_periph_id_2_t = axi_periph_id_2_tt<"AXI_PERIPH_ID_2",baseaddress,8168>;
-
-template <std::uint32_t baseaddress>
-using axi_periph_id_3_t = axi_periph_id_3_tt<"AXI_PERIPH_ID_3",baseaddress,8172>;
-
-template <std::uint32_t baseaddress>
-using axi_comp_id_0_t = axi_comp_id_0_tt<"AXI_COMP_ID_0",baseaddress,8176>;
-
-template <std::uint32_t baseaddress>
-using axi_comp_id_1_t = axi_comp_id_1_tt<"AXI_COMP_ID_1",baseaddress,8180>;
-
-template <std::uint32_t baseaddress>
-using axi_comp_id_2_t = axi_comp_id_2_tt<"AXI_COMP_ID_2",baseaddress,8184>;
-
-template <std::uint32_t baseaddress>
-using axi_comp_id_3_t = axi_comp_id_3_tt<"AXI_COMP_ID_3",baseaddress,8188>;
-
-template <std::uint32_t baseaddress>
-using axi_targ1_fn_mod_iss_bm_t = axi_targ1_fn_mod_iss_bm_tt<"AXI_TARG1_FN_MOD_ISS_BM",baseaddress,8200>;
-
-template <std::uint32_t baseaddress>
-using axi_targ2_fn_mod_iss_bm_t = axi_targ2_fn_mod_iss_bm_tt<"AXI_TARG2_FN_MOD_ISS_BM",baseaddress,12296>;
-
-template <std::uint32_t baseaddress>
-using axi_targ3_fn_mod_iss_bm_t = axi_targ3_fn_mod_iss_bm_tt<"AXI_TARG3_FN_MOD_ISS_BM",baseaddress,16392>;
-
-template <std::uint32_t baseaddress>
-using axi_targ4_fn_mod_iss_bm_t = axi_targ4_fn_mod_iss_bm_tt<"AXI_TARG4_FN_MOD_ISS_BM",baseaddress,20488>;
-
-template <std::uint32_t baseaddress>
-using axi_targ5_fn_mod_iss_bm_t = axi_targ5_fn_mod_iss_bm_tt<"AXI_TARG5_FN_MOD_ISS_BM",baseaddress,24584>;
-
-template <std::uint32_t baseaddress>
-using axi_targ6_fn_mod_iss_bm_t = axi_targ6_fn_mod_iss_bm_tt<"AXI_TARG6_FN_MOD_ISS_BM",baseaddress,28680>;
-
-template <std::uint32_t baseaddress>
-using axi_targ7_fn_mod_iss_bm_t = axi_targ7_fn_mod_iss_bm_tt<"AXI_TARG7_FN_MOD_ISS_BM",baseaddress,32780>;
-
-template <std::uint32_t baseaddress>
-using axi_targ1_fn_mod2_t = axi_targ1_fn_mod2_tt<"AXI_TARG1_FN_MOD2",baseaddress,8228>;
-
-template <std::uint32_t baseaddress>
-using axi_targ2_fn_mod2_t = axi_targ2_fn_mod2_tt<"AXI_TARG2_FN_MOD2",baseaddress,12324>;
-
-template <std::uint32_t baseaddress>
-using axi_targ7_fn_mod2_t = axi_targ7_fn_mod2_tt<"AXI_TARG7_FN_MOD2",baseaddress,32804>;
-
-template <std::uint32_t baseaddress>
-using axi_targ1_fn_mod_lb_t = axi_targ1_fn_mod_lb_tt<"AXI_TARG1_FN_MOD_LB",baseaddress,8236>;
-
-template <std::uint32_t baseaddress>
-using axi_targ2_fn_mod_lb_t = axi_targ2_fn_mod_lb_tt<"AXI_TARG2_FN_MOD_LB",baseaddress,12332>;
-
-template <std::uint32_t baseaddress>
-using axi_targ1_fn_mod_t = axi_targ1_fn_mod_tt<"AXI_TARG1_FN_MOD",baseaddress,8456>;
-
-template <std::uint32_t baseaddress>
-using axi_targ2_fn_mod_t = axi_targ2_fn_mod_tt<"AXI_TARG2_FN_MOD",baseaddress,12552>;
-
-template <std::uint32_t baseaddress>
-using axi_targ7_fn_mod_t = axi_targ7_fn_mod_tt<"AXI_TARG7_FN_MOD",baseaddress,33032>;
-
-template <std::uint32_t baseaddress>
-using axi_ini1_fn_mod2_t = axi_ini1_fn_mod2_tt<"AXI_INI1_FN_MOD2",baseaddress,270372>;
-
-template <std::uint32_t baseaddress>
-using axi_ini3_fn_mod2_t = axi_ini3_fn_mod2_tt<"AXI_INI3_FN_MOD2",baseaddress,278564>;
-
-template <std::uint32_t baseaddress>
-using axi_ini1_fn_mod_ahb_t = axi_ini1_fn_mod_ahb_tt<"AXI_INI1_FN_MOD_AHB",baseaddress,270376>;
-
-template <std::uint32_t baseaddress>
-using axi_ini3_fn_mod_ahb_t = axi_ini3_fn_mod_ahb_tt<"AXI_INI3_FN_MOD_AHB",baseaddress,278568>;
-
-template <std::uint32_t baseaddress>
-using axi_ini1_read_qos_t = axi_ini1_read_qos_tt<"AXI_INI1_READ_QOS",baseaddress,270592>;
-
-template <std::uint32_t baseaddress>
-using axi_ini2_read_qos_t = axi_ini2_read_qos_tt<"AXI_INI2_READ_QOS",baseaddress,274688>;
-
-template <std::uint32_t baseaddress>
-using axi_ini3_read_qos_t = axi_ini3_read_qos_tt<"AXI_INI3_READ_QOS",baseaddress,278784>;
-
-template <std::uint32_t baseaddress>
-using axi_ini4_read_qos_t = axi_ini4_read_qos_tt<"AXI_INI4_READ_QOS",baseaddress,282880>;
-
-template <std::uint32_t baseaddress>
-using axi_ini5_read_qos_t = axi_ini5_read_qos_tt<"AXI_INI5_READ_QOS",baseaddress,286976>;
-
-template <std::uint32_t baseaddress>
-using axi_ini6_read_qos_t = axi_ini6_read_qos_tt<"AXI_INI6_READ_QOS",baseaddress,291072>;
-
-template <std::uint32_t baseaddress>
-using axi_ini1_write_qos_t = axi_ini1_write_qos_tt<"AXI_INI1_WRITE_QOS",baseaddress,270596>;
-
-template <std::uint32_t baseaddress>
-using axi_ini2_write_qos_t = axi_ini2_write_qos_tt<"AXI_INI2_WRITE_QOS",baseaddress,274692>;
-
-template <std::uint32_t baseaddress>
-using axi_ini3_write_qos_t = axi_ini3_write_qos_tt<"AXI_INI3_WRITE_QOS",baseaddress,278788>;
-
-template <std::uint32_t baseaddress>
-using axi_ini4_write_qos_t = axi_ini4_write_qos_tt<"AXI_INI4_WRITE_QOS",baseaddress,282884>;
-
-template <std::uint32_t baseaddress>
-using axi_ini5_write_qos_t = axi_ini5_write_qos_tt<"AXI_INI5_WRITE_QOS",baseaddress,286980>;
-
-template <std::uint32_t baseaddress>
-using axi_ini6_write_qos_t = axi_ini6_write_qos_tt<"AXI_INI6_WRITE_QOS",baseaddress,291076>;
-
-template <std::uint32_t baseaddress>
-using axi_ini1_fn_mod_t = axi_ini1_fn_mod_tt<"AXI_INI1_FN_MOD",baseaddress,270600>;
-
-template <std::uint32_t baseaddress>
-using axi_ini2_fn_mod_t = axi_ini2_fn_mod_tt<"AXI_INI2_FN_MOD",baseaddress,274696>;
-
-template <std::uint32_t baseaddress>
-using axi_ini3_fn_mod_t = axi_ini3_fn_mod_tt<"AXI_INI3_FN_MOD",baseaddress,278792>;
-
-template <std::uint32_t baseaddress>
-using axi_ini4_fn_mod_t = axi_ini4_fn_mod_tt<"AXI_INI4_FN_MOD",baseaddress,282888>;
-
-template <std::uint32_t baseaddress>
-using axi_ini5_fn_mod_t = axi_ini5_fn_mod_tt<"AXI_INI5_FN_MOD",baseaddress,286984>;
-
-template <std::uint32_t baseaddress>
-using axi_ini6_fn_mod_t = axi_ini6_fn_mod_tt<"AXI_INI6_FN_MOD",baseaddress,291080>;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using axi_periph_id_4_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::ro,
+               groov::field<"RESERVED0", std::uint32_t, 31, 8>,
+               groov::field<"KCOUNT4", std::uint8_t, 7, 4>,
+               groov::field<"JEP106CON", std::uint8_t, 3, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using axi_periph_id_0_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::ro,
+               groov::field<"RESERVED0", std::uint32_t, 31, 8>,
+               groov::field<"PARTNUM", std::uint8_t, 7, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using axi_periph_id_1_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::ro,
+               groov::field<"RESERVED0", std::uint32_t, 31, 8>,
+               groov::field<"JEP106I", std::uint8_t, 7, 4>,
+               groov::field<"PARTNUM", std::uint8_t, 3, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using axi_periph_id_2_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::ro,
+               groov::field<"RESERVED0", std::uint32_t, 31, 8>,
+               groov::field<"REVISION", std::uint8_t, 7, 4>,
+               groov::field<"JEDEC", bool, 3, 3>,
+               groov::field<"JEP106ID", std::uint8_t, 2, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using axi_periph_id_3_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::ro,
+               groov::field<"RESERVED0", std::uint32_t, 31, 8>,
+               groov::field<"REV_AND", std::uint8_t, 7, 4>,
+               groov::field<"CUST_MOD_NUM", std::uint8_t, 3, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using axi_comp_id_0_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::ro,
+               groov::field<"RESERVED0", std::uint32_t, 31, 8>,
+               groov::field<"PREAMBLE", std::uint8_t, 7, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using axi_comp_id_1_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::ro,
+               groov::field<"RESERVED0", std::uint32_t, 31, 8>,
+               groov::field<"CLASS", std::uint8_t, 7, 4>,
+               groov::field<"PREAMBLE", std::uint8_t, 3, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using axi_comp_id_2_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::ro,
+               groov::field<"RESERVED0", std::uint32_t, 31, 8>,
+               groov::field<"PREAMBLE", std::uint8_t, 7, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using axi_comp_id_3_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::ro,
+               groov::field<"RESERVED0", std::uint32_t, 31, 8>,
+               groov::field<"PREAMBLE", std::uint8_t, 7, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using axi_targ1_fn_mod_iss_bm_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint32_t, 31, 2, access::ro>,
+               groov::field<"WRITE_ISS_OVERRIDE", bool, 1, 1>,
+               groov::field<"READ_ISS_OVERRIDE", bool, 0, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using axi_targ2_fn_mod_iss_bm_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint32_t, 31, 2, access::ro>,
+               groov::field<"WRITE_ISS_OVERRIDE", bool, 1, 1>,
+               groov::field<"READ_ISS_OVERRIDE", bool, 0, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using axi_targ3_fn_mod_iss_bm_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint32_t, 31, 2, access::ro>,
+               groov::field<"WRITE_ISS_OVERRIDE", bool, 1, 1>,
+               groov::field<"READ_ISS_OVERRIDE", bool, 0, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using axi_targ4_fn_mod_iss_bm_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint32_t, 31, 2, access::ro>,
+               groov::field<"WRITE_ISS_OVERRIDE", bool, 1, 1>,
+               groov::field<"READ_ISS_OVERRIDE", bool, 0, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using axi_targ5_fn_mod_iss_bm_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint32_t, 31, 2, access::ro>,
+               groov::field<"WRITE_ISS_OVERRIDE", bool, 1, 1>,
+               groov::field<"READ_ISS_OVERRIDE", bool, 0, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using axi_targ6_fn_mod_iss_bm_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint32_t, 31, 2, access::ro>,
+               groov::field<"WRITE_ISS_OVERRIDE", bool, 1, 1>,
+               groov::field<"READ_ISS_OVERRIDE", bool, 0, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using axi_targ7_fn_mod_iss_bm_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint32_t, 31, 2, access::ro>,
+               groov::field<"WRITE_ISS_OVERRIDE", bool, 1, 1>,
+               groov::field<"READ_ISS_OVERRIDE", bool, 0, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using axi_targ1_fn_mod2_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint32_t, 31, 1, access::ro>,
+               groov::field<"BYPASS_MERGE", bool, 0, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using axi_targ2_fn_mod2_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint32_t, 31, 1, access::ro>,
+               groov::field<"BYPASS_MERGE", bool, 0, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using axi_targ7_fn_mod2_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint32_t, 31, 1, access::ro>,
+               groov::field<"BYPASS_MERGE", bool, 0, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using axi_targ1_fn_mod_lb_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint32_t, 31, 1, access::ro>,
+               groov::field<"FN_MOD_LB", bool, 0, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using axi_targ2_fn_mod_lb_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint32_t, 31, 1, access::ro>,
+               groov::field<"FN_MOD_LB", bool, 0, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using axi_targ1_fn_mod_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint32_t, 31, 2, access::ro>,
+               groov::field<"WRITE_ISS_OVERRIDE", bool, 1, 1>,
+               groov::field<"READ_ISS_OVERRIDE", bool, 0, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using axi_targ2_fn_mod_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint32_t, 31, 2, access::ro>,
+               groov::field<"WRITE_ISS_OVERRIDE", bool, 1, 1>,
+               groov::field<"READ_ISS_OVERRIDE", bool, 0, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using axi_targ7_fn_mod_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint32_t, 31, 2, access::ro>,
+               groov::field<"WRITE_ISS_OVERRIDE", bool, 1, 1>,
+               groov::field<"READ_ISS_OVERRIDE", bool, 0, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using axi_ini1_fn_mod2_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint32_t, 31, 1, access::ro>,
+               groov::field<"BYPASS_MERGE", bool, 0, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using axi_ini3_fn_mod2_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint32_t, 31, 1, access::ro>,
+               groov::field<"BYPASS_MERGE", bool, 0, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using axi_ini1_fn_mod_ahb_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint32_t, 31, 2, access::ro>,
+               groov::field<"WR_INC_OVERRIDE", bool, 1, 1>,
+               groov::field<"RD_INC_OVERRIDE", bool, 0, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using axi_ini3_fn_mod_ahb_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint32_t, 31, 2, access::ro>,
+               groov::field<"WR_INC_OVERRIDE", bool, 1, 1>,
+               groov::field<"RD_INC_OVERRIDE", bool, 0, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using axi_ini1_read_qos_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint32_t, 31, 4, access::ro>,
+               groov::field<"AR_QOS", std::uint8_t, 3, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using axi_ini2_read_qos_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint32_t, 31, 4, access::ro>,
+               groov::field<"AR_QOS", std::uint8_t, 3, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using axi_ini3_read_qos_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint32_t, 31, 4, access::ro>,
+               groov::field<"AR_QOS", std::uint8_t, 3, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using axi_ini4_read_qos_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint32_t, 31, 4, access::ro>,
+               groov::field<"AR_QOS", std::uint8_t, 3, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using axi_ini5_read_qos_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint32_t, 31, 4, access::ro>,
+               groov::field<"AR_QOS", std::uint8_t, 3, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using axi_ini6_read_qos_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint32_t, 31, 4, access::ro>,
+               groov::field<"AR_QOS", std::uint8_t, 3, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using axi_ini1_write_qos_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint32_t, 31, 4, access::ro>,
+               groov::field<"AW_QOS", std::uint8_t, 3, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using axi_ini2_write_qos_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint32_t, 31, 4, access::ro>,
+               groov::field<"AW_QOS", std::uint8_t, 3, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using axi_ini3_write_qos_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint32_t, 31, 4, access::ro>,
+               groov::field<"AW_QOS", std::uint8_t, 3, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using axi_ini4_write_qos_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint32_t, 31, 4, access::ro>,
+               groov::field<"AW_QOS", std::uint8_t, 3, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using axi_ini5_write_qos_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint32_t, 31, 4, access::ro>,
+               groov::field<"AW_QOS", std::uint8_t, 3, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using axi_ini6_write_qos_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint32_t, 31, 4, access::ro>,
+               groov::field<"AW_QOS", std::uint8_t, 3, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using axi_ini1_fn_mod_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint32_t, 31, 2, access::ro>,
+               groov::field<"WRITE_ISS_OVERRIDE", bool, 1, 1>,
+               groov::field<"READ_ISS_OVERRIDE", bool, 0, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using axi_ini2_fn_mod_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint32_t, 31, 2, access::ro>,
+               groov::field<"WRITE_ISS_OVERRIDE", bool, 1, 1>,
+               groov::field<"READ_ISS_OVERRIDE", bool, 0, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using axi_ini3_fn_mod_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint32_t, 31, 2, access::ro>,
+               groov::field<"WRITE_ISS_OVERRIDE", bool, 1, 1>,
+               groov::field<"READ_ISS_OVERRIDE", bool, 0, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using axi_ini4_fn_mod_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint32_t, 31, 2, access::ro>,
+               groov::field<"WRITE_ISS_OVERRIDE", bool, 1, 1>,
+               groov::field<"READ_ISS_OVERRIDE", bool, 0, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using axi_ini5_fn_mod_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint32_t, 31, 2, access::ro>,
+               groov::field<"WRITE_ISS_OVERRIDE", bool, 1, 1>,
+               groov::field<"READ_ISS_OVERRIDE", bool, 0, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using axi_ini6_fn_mod_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint32_t, 31, 2, access::ro>,
+               groov::field<"WRITE_ISS_OVERRIDE", bool, 1, 1>,
+               groov::field<"READ_ISS_OVERRIDE", bool, 0, 0>>;
+
+  template <std::uint32_t baseaddress>
+  using axi_periph_id_4_t =
+    axi_periph_id_4_tt<"AXI_PERIPH_ID_4", baseaddress, 8144>;
+
+  template <std::uint32_t baseaddress>
+  using axi_periph_id_0_t =
+    axi_periph_id_0_tt<"AXI_PERIPH_ID_0", baseaddress, 8160>;
+
+  template <std::uint32_t baseaddress>
+  using axi_periph_id_1_t =
+    axi_periph_id_1_tt<"AXI_PERIPH_ID_1", baseaddress, 8164>;
+
+  template <std::uint32_t baseaddress>
+  using axi_periph_id_2_t =
+    axi_periph_id_2_tt<"AXI_PERIPH_ID_2", baseaddress, 8168>;
+
+  template <std::uint32_t baseaddress>
+  using axi_periph_id_3_t =
+    axi_periph_id_3_tt<"AXI_PERIPH_ID_3", baseaddress, 8172>;
+
+  template <std::uint32_t baseaddress>
+  using axi_comp_id_0_t = axi_comp_id_0_tt<"AXI_COMP_ID_0", baseaddress, 8176>;
+
+  template <std::uint32_t baseaddress>
+  using axi_comp_id_1_t = axi_comp_id_1_tt<"AXI_COMP_ID_1", baseaddress, 8180>;
+
+  template <std::uint32_t baseaddress>
+  using axi_comp_id_2_t = axi_comp_id_2_tt<"AXI_COMP_ID_2", baseaddress, 8184>;
+
+  template <std::uint32_t baseaddress>
+  using axi_comp_id_3_t = axi_comp_id_3_tt<"AXI_COMP_ID_3", baseaddress, 8188>;
+
+  template <std::uint32_t baseaddress>
+  using axi_targ1_fn_mod_iss_bm_t =
+    axi_targ1_fn_mod_iss_bm_tt<"AXI_TARG1_FN_MOD_ISS_BM", baseaddress, 8200>;
+
+  template <std::uint32_t baseaddress>
+  using axi_targ2_fn_mod_iss_bm_t =
+    axi_targ2_fn_mod_iss_bm_tt<"AXI_TARG2_FN_MOD_ISS_BM", baseaddress, 12296>;
+
+  template <std::uint32_t baseaddress>
+  using axi_targ3_fn_mod_iss_bm_t =
+    axi_targ3_fn_mod_iss_bm_tt<"AXI_TARG3_FN_MOD_ISS_BM", baseaddress, 16392>;
+
+  template <std::uint32_t baseaddress>
+  using axi_targ4_fn_mod_iss_bm_t =
+    axi_targ4_fn_mod_iss_bm_tt<"AXI_TARG4_FN_MOD_ISS_BM", baseaddress, 20488>;
+
+  template <std::uint32_t baseaddress>
+  using axi_targ5_fn_mod_iss_bm_t =
+    axi_targ5_fn_mod_iss_bm_tt<"AXI_TARG5_FN_MOD_ISS_BM", baseaddress, 24584>;
+
+  template <std::uint32_t baseaddress>
+  using axi_targ6_fn_mod_iss_bm_t =
+    axi_targ6_fn_mod_iss_bm_tt<"AXI_TARG6_FN_MOD_ISS_BM", baseaddress, 28680>;
+
+  template <std::uint32_t baseaddress>
+  using axi_targ7_fn_mod_iss_bm_t =
+    axi_targ7_fn_mod_iss_bm_tt<"AXI_TARG7_FN_MOD_ISS_BM", baseaddress, 32780>;
+
+  template <std::uint32_t baseaddress>
+  using axi_targ1_fn_mod2_t =
+    axi_targ1_fn_mod2_tt<"AXI_TARG1_FN_MOD2", baseaddress, 8228>;
+
+  template <std::uint32_t baseaddress>
+  using axi_targ2_fn_mod2_t =
+    axi_targ2_fn_mod2_tt<"AXI_TARG2_FN_MOD2", baseaddress, 12324>;
+
+  template <std::uint32_t baseaddress>
+  using axi_targ7_fn_mod2_t =
+    axi_targ7_fn_mod2_tt<"AXI_TARG7_FN_MOD2", baseaddress, 32804>;
+
+  template <std::uint32_t baseaddress>
+  using axi_targ1_fn_mod_lb_t =
+    axi_targ1_fn_mod_lb_tt<"AXI_TARG1_FN_MOD_LB", baseaddress, 8236>;
+
+  template <std::uint32_t baseaddress>
+  using axi_targ2_fn_mod_lb_t =
+    axi_targ2_fn_mod_lb_tt<"AXI_TARG2_FN_MOD_LB", baseaddress, 12332>;
+
+  template <std::uint32_t baseaddress>
+  using axi_targ1_fn_mod_t =
+    axi_targ1_fn_mod_tt<"AXI_TARG1_FN_MOD", baseaddress, 8456>;
+
+  template <std::uint32_t baseaddress>
+  using axi_targ2_fn_mod_t =
+    axi_targ2_fn_mod_tt<"AXI_TARG2_FN_MOD", baseaddress, 12552>;
+
+  template <std::uint32_t baseaddress>
+  using axi_targ7_fn_mod_t =
+    axi_targ7_fn_mod_tt<"AXI_TARG7_FN_MOD", baseaddress, 33032>;
+
+  template <std::uint32_t baseaddress>
+  using axi_ini1_fn_mod2_t =
+    axi_ini1_fn_mod2_tt<"AXI_INI1_FN_MOD2", baseaddress, 27'0372>;
+
+  template <std::uint32_t baseaddress>
+  using axi_ini3_fn_mod2_t =
+    axi_ini3_fn_mod2_tt<"AXI_INI3_FN_MOD2", baseaddress, 27'8564>;
+
+  template <std::uint32_t baseaddress>
+  using axi_ini1_fn_mod_ahb_t =
+    axi_ini1_fn_mod_ahb_tt<"AXI_INI1_FN_MOD_AHB", baseaddress, 27'0376>;
+
+  template <std::uint32_t baseaddress>
+  using axi_ini3_fn_mod_ahb_t =
+    axi_ini3_fn_mod_ahb_tt<"AXI_INI3_FN_MOD_AHB", baseaddress, 27'8568>;
+
+  template <std::uint32_t baseaddress>
+  using axi_ini1_read_qos_t =
+    axi_ini1_read_qos_tt<"AXI_INI1_READ_QOS", baseaddress, 27'0592>;
+
+  template <std::uint32_t baseaddress>
+  using axi_ini2_read_qos_t =
+    axi_ini2_read_qos_tt<"AXI_INI2_READ_QOS", baseaddress, 27'4688>;
+
+  template <std::uint32_t baseaddress>
+  using axi_ini3_read_qos_t =
+    axi_ini3_read_qos_tt<"AXI_INI3_READ_QOS", baseaddress, 27'8784>;
+
+  template <std::uint32_t baseaddress>
+  using axi_ini4_read_qos_t =
+    axi_ini4_read_qos_tt<"AXI_INI4_READ_QOS", baseaddress, 28'2880>;
+
+  template <std::uint32_t baseaddress>
+  using axi_ini5_read_qos_t =
+    axi_ini5_read_qos_tt<"AXI_INI5_READ_QOS", baseaddress, 28'6976>;
+
+  template <std::uint32_t baseaddress>
+  using axi_ini6_read_qos_t =
+    axi_ini6_read_qos_tt<"AXI_INI6_READ_QOS", baseaddress, 29'1072>;
+
+  template <std::uint32_t baseaddress>
+  using axi_ini1_write_qos_t =
+    axi_ini1_write_qos_tt<"AXI_INI1_WRITE_QOS", baseaddress, 27'0596>;
+
+  template <std::uint32_t baseaddress>
+  using axi_ini2_write_qos_t =
+    axi_ini2_write_qos_tt<"AXI_INI2_WRITE_QOS", baseaddress, 27'4692>;
+
+  template <std::uint32_t baseaddress>
+  using axi_ini3_write_qos_t =
+    axi_ini3_write_qos_tt<"AXI_INI3_WRITE_QOS", baseaddress, 27'8788>;
+
+  template <std::uint32_t baseaddress>
+  using axi_ini4_write_qos_t =
+    axi_ini4_write_qos_tt<"AXI_INI4_WRITE_QOS", baseaddress, 28'2884>;
+
+  template <std::uint32_t baseaddress>
+  using axi_ini5_write_qos_t =
+    axi_ini5_write_qos_tt<"AXI_INI5_WRITE_QOS", baseaddress, 28'6980>;
+
+  template <std::uint32_t baseaddress>
+  using axi_ini6_write_qos_t =
+    axi_ini6_write_qos_tt<"AXI_INI6_WRITE_QOS", baseaddress, 29'1076>;
+
+  template <std::uint32_t baseaddress>
+  using axi_ini1_fn_mod_t =
+    axi_ini1_fn_mod_tt<"AXI_INI1_FN_MOD", baseaddress, 27'0600>;
+
+  template <std::uint32_t baseaddress>
+  using axi_ini2_fn_mod_t =
+    axi_ini2_fn_mod_tt<"AXI_INI2_FN_MOD", baseaddress, 27'4696>;
+
+  template <std::uint32_t baseaddress>
+  using axi_ini3_fn_mod_t =
+    axi_ini3_fn_mod_tt<"AXI_INI3_FN_MOD", baseaddress, 27'8792>;
+
+  template <std::uint32_t baseaddress>
+  using axi_ini4_fn_mod_t =
+    axi_ini4_fn_mod_tt<"AXI_INI4_FN_MOD", baseaddress, 28'2888>;
+
+  template <std::uint32_t baseaddress>
+  using axi_ini5_fn_mod_t =
+    axi_ini5_fn_mod_tt<"AXI_INI5_FN_MOD", baseaddress, 28'6984>;
+
+  template <std::uint32_t baseaddress>
+  using axi_ini6_fn_mod_t =
+    axi_ini6_fn_mod_tt<"AXI_INI6_FN_MOD", baseaddress, 29'1080>;
 
 } // namespace axi
-

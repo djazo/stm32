@@ -11,18 +11,16 @@ namespace stm32 {
 
 namespace dbgmcu {
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using idcode_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::ro,
-  groov::field<"REV_ID", std::uint16_t, 31, 16 >,
-  groov::field<"RESERVED0", std::uint8_t, 15, 12 >,
-  groov::field<"DEV_ID", std::uint16_t, 11, 0 >
-  >;
+                               std::uint32_t,
+                               baseaddress + offset,
+                               access::ro,
+                               groov::field<"REV_ID", std::uint16_t, 31, 16>,
+                               groov::field<"RESERVED0", std::uint8_t, 15, 12>,
+                               groov::field<"DEV_ID", std::uint16_t, 11, 0>>;
 
-template <std::uint32_t baseaddress>
-using idcode_t = idcode_tt<"IDCODE",baseaddress,0>;
+  template <std::uint32_t baseaddress>
+  using idcode_t = idcode_tt<"IDCODE", baseaddress, 0>;
 
 } // namespace dbgmcu
-

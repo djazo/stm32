@@ -11,76 +11,74 @@ namespace stm32 {
 
 namespace opamp {
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using csr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"OPA3CALOUT", bool, 31, 31 >,
-  groov::field<"OPA2CALOUT", bool, 30, 30 >,
-  groov::field<"OPA1CALOUT", bool, 29, 29 >,
-  groov::field<"AOP_RANGE", bool, 28, 28 >,
-  groov::field<"S7SEL2", bool, 27, 27 >,
-  groov::field<"ANAWSEL3", bool, 26, 26 >,
-  groov::field<"ANAWSEL2", bool, 25, 25 >,
-  groov::field<"ANAWSEL1", bool, 24, 24 >,
-  groov::field<"OPA3LPM", bool, 23, 23 >,
-  groov::field<"OPA3CAL_H", bool, 22, 22 >,
-  groov::field<"OPA3CAL_L", bool, 21, 21 >,
-  groov::field<"S6SEL3", bool, 20, 20 >,
-  groov::field<"S5SEL3", bool, 19, 19 >,
-  groov::field<"S4SEL3", bool, 18, 18 >,
-  groov::field<"S3SEL3", bool, 17, 17 >,
-  groov::field<"OPA3PD", bool, 16, 16 >,
-  groov::field<"OPA2LPM", bool, 15, 15 >,
-  groov::field<"OPA2CAL_H", bool, 14, 14 >,
-  groov::field<"OPA2CAL_L", bool, 13, 13 >,
-  groov::field<"S6SEL2", bool, 12, 12 >,
-  groov::field<"S5SEL2", bool, 11, 11 >,
-  groov::field<"S4SEL2", bool, 10, 10 >,
-  groov::field<"S3SEL2", bool, 9, 9 >,
-  groov::field<"OPA2PD", bool, 8, 8 >,
-  groov::field<"OPA1LPM", bool, 7, 7 >,
-  groov::field<"OPA1CAL_H", bool, 6, 6 >,
-  groov::field<"OPA1CAL_L", bool, 5, 5 >,
-  groov::field<"S6SEL1", bool, 4, 4 >,
-  groov::field<"S5SEL1", bool, 3, 3 >,
-  groov::field<"S4SEL1", bool, 2, 2 >,
-  groov::field<"S3SEL1", bool, 1, 1 >,
-  groov::field<"OPA1PD", bool, 0, 0 >
-  >;
+                            std::uint32_t,
+                            baseaddress + offset,
+                            access::rw,
+                            groov::field<"OPA3CALOUT", bool, 31, 31>,
+                            groov::field<"OPA2CALOUT", bool, 30, 30>,
+                            groov::field<"OPA1CALOUT", bool, 29, 29>,
+                            groov::field<"AOP_RANGE", bool, 28, 28>,
+                            groov::field<"S7SEL2", bool, 27, 27>,
+                            groov::field<"ANAWSEL3", bool, 26, 26>,
+                            groov::field<"ANAWSEL2", bool, 25, 25>,
+                            groov::field<"ANAWSEL1", bool, 24, 24>,
+                            groov::field<"OPA3LPM", bool, 23, 23>,
+                            groov::field<"OPA3CAL_H", bool, 22, 22>,
+                            groov::field<"OPA3CAL_L", bool, 21, 21>,
+                            groov::field<"S6SEL3", bool, 20, 20>,
+                            groov::field<"S5SEL3", bool, 19, 19>,
+                            groov::field<"S4SEL3", bool, 18, 18>,
+                            groov::field<"S3SEL3", bool, 17, 17>,
+                            groov::field<"OPA3PD", bool, 16, 16>,
+                            groov::field<"OPA2LPM", bool, 15, 15>,
+                            groov::field<"OPA2CAL_H", bool, 14, 14>,
+                            groov::field<"OPA2CAL_L", bool, 13, 13>,
+                            groov::field<"S6SEL2", bool, 12, 12>,
+                            groov::field<"S5SEL2", bool, 11, 11>,
+                            groov::field<"S4SEL2", bool, 10, 10>,
+                            groov::field<"S3SEL2", bool, 9, 9>,
+                            groov::field<"OPA2PD", bool, 8, 8>,
+                            groov::field<"OPA1LPM", bool, 7, 7>,
+                            groov::field<"OPA1CAL_H", bool, 6, 6>,
+                            groov::field<"OPA1CAL_L", bool, 5, 5>,
+                            groov::field<"S6SEL1", bool, 4, 4>,
+                            groov::field<"S5SEL1", bool, 3, 3>,
+                            groov::field<"S4SEL1", bool, 2, 2>,
+                            groov::field<"S3SEL1", bool, 1, 1>,
+                            groov::field<"OPA1PD", bool, 0, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using otr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"OT_USER", bool, 31, 31 >,
-  groov::field<"RESERVED0", bool, 30, 30 ,access::ro>,
-  groov::field<"AO3_OPT_OFFSET_TRIM", std::uint16_t, 29, 20 >,
-  groov::field<"AO2_OPT_OFFSET_TRIM", std::uint16_t, 19, 10 >,
-  groov::field<"AO1_OPT_OFFSET_TRIM", std::uint16_t, 9, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using otr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"OT_USER", bool, 31, 31>,
+               groov::field<"RESERVED0", bool, 30, 30, access::ro>,
+               groov::field<"AO3_OPT_OFFSET_TRIM", std::uint16_t, 29, 20>,
+               groov::field<"AO2_OPT_OFFSET_TRIM", std::uint16_t, 19, 10>,
+               groov::field<"AO1_OPT_OFFSET_TRIM", std::uint16_t, 9, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using lpotr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint8_t, 31, 30 ,access::ro>,
-  groov::field<"AO3_OPT_OFFSET_TRIM_LP", std::uint16_t, 29, 20 >,
-  groov::field<"AO2_OPT_OFFSET_TRIM_LP", std::uint16_t, 19, 10 >,
-  groov::field<"AO1_OPT_OFFSET_TRIM_LP", std::uint16_t, 9, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using lpotr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint8_t, 31, 30, access::ro>,
+               groov::field<"AO3_OPT_OFFSET_TRIM_LP", std::uint16_t, 29, 20>,
+               groov::field<"AO2_OPT_OFFSET_TRIM_LP", std::uint16_t, 19, 10>,
+               groov::field<"AO1_OPT_OFFSET_TRIM_LP", std::uint16_t, 9, 0>>;
 
-template <std::uint32_t baseaddress>
-using csr_t = csr_tt<"CSR",baseaddress,0>;
+  template <std::uint32_t baseaddress>
+  using csr_t = csr_tt<"CSR", baseaddress, 0>;
 
-template <std::uint32_t baseaddress>
-using otr_t = otr_tt<"OTR",baseaddress,4>;
+  template <std::uint32_t baseaddress>
+  using otr_t = otr_tt<"OTR", baseaddress, 4>;
 
-template <std::uint32_t baseaddress>
-using lpotr_t = lpotr_tt<"LPOTR",baseaddress,8>;
+  template <std::uint32_t baseaddress>
+  using lpotr_t = lpotr_tt<"LPOTR", baseaddress, 8>;
 
 } // namespace opamp
-

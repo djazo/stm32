@@ -11,65 +11,64 @@ namespace stm32 {
 
 namespace sec_gtzc2_tzsc {
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using tzsc_cr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint32_t, 31, 1 ,access::ro>,
-  groov::field<"LCK", bool, 0, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using tzsc_cr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint32_t, 31, 1, access::ro>,
+               groov::field<"LCK", bool, 0, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using tzsc_seccfgr1_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED1", std::uint32_t, 31, 13 ,access::ro>,
-  groov::field<"ADF1SEC", bool, 12, 12 >,
-  groov::field<"DAC1SEC", bool, 11, 11 >,
-  groov::field<"RESERVED0", bool, 10, 10 ,access::ro>,
-  groov::field<"VREFBUFSEC", bool, 9, 9 >,
-  groov::field<"ADC2SEC", bool, 8, 8 >,
-  groov::field<"COMPSEC", bool, 7, 7 >,
-  groov::field<"OPAMPSEC", bool, 6, 6 >,
-  groov::field<"LPTIM4SEC", bool, 5, 5 >,
-  groov::field<"LPTIM3SEC", bool, 4, 4 >,
-  groov::field<"LPTIM1SEC", bool, 3, 3 >,
-  groov::field<"I2C3SEC", bool, 2, 2 >,
-  groov::field<"LPUART1SEC", bool, 1, 1 >,
-  groov::field<"SPI3SEC", bool, 0, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using tzsc_seccfgr1_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED1", std::uint32_t, 31, 13, access::ro>,
+               groov::field<"ADF1SEC", bool, 12, 12>,
+               groov::field<"DAC1SEC", bool, 11, 11>,
+               groov::field<"RESERVED0", bool, 10, 10, access::ro>,
+               groov::field<"VREFBUFSEC", bool, 9, 9>,
+               groov::field<"ADC2SEC", bool, 8, 8>,
+               groov::field<"COMPSEC", bool, 7, 7>,
+               groov::field<"OPAMPSEC", bool, 6, 6>,
+               groov::field<"LPTIM4SEC", bool, 5, 5>,
+               groov::field<"LPTIM3SEC", bool, 4, 4>,
+               groov::field<"LPTIM1SEC", bool, 3, 3>,
+               groov::field<"I2C3SEC", bool, 2, 2>,
+               groov::field<"LPUART1SEC", bool, 1, 1>,
+               groov::field<"SPI3SEC", bool, 0, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using tzsc_privcfgr1_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED1", std::uint32_t, 31, 13 ,access::ro>,
-  groov::field<"ADF1PRIV", bool, 12, 12 >,
-  groov::field<"DAC1PRIV", bool, 11, 11 >,
-  groov::field<"RESERVED0", bool, 10, 10 ,access::ro>,
-  groov::field<"VREFBUFPRIV", bool, 9, 9 >,
-  groov::field<"ADC2PRIV", bool, 8, 8 >,
-  groov::field<"COMPPRIV", bool, 7, 7 >,
-  groov::field<"OPAMPPRIV", bool, 6, 6 >,
-  groov::field<"LPTIM4PRIV", bool, 5, 5 >,
-  groov::field<"LPTIM3PRIV", bool, 4, 4 >,
-  groov::field<"LPTIM1PRIV", bool, 3, 3 >,
-  groov::field<"I2C3PRIV", bool, 2, 2 >,
-  groov::field<"LPUART1PRIV", bool, 1, 1 >,
-  groov::field<"SPI3PRIV", bool, 0, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using tzsc_privcfgr1_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED1", std::uint32_t, 31, 13, access::ro>,
+               groov::field<"ADF1PRIV", bool, 12, 12>,
+               groov::field<"DAC1PRIV", bool, 11, 11>,
+               groov::field<"RESERVED0", bool, 10, 10, access::ro>,
+               groov::field<"VREFBUFPRIV", bool, 9, 9>,
+               groov::field<"ADC2PRIV", bool, 8, 8>,
+               groov::field<"COMPPRIV", bool, 7, 7>,
+               groov::field<"OPAMPPRIV", bool, 6, 6>,
+               groov::field<"LPTIM4PRIV", bool, 5, 5>,
+               groov::field<"LPTIM3PRIV", bool, 4, 4>,
+               groov::field<"LPTIM1PRIV", bool, 3, 3>,
+               groov::field<"I2C3PRIV", bool, 2, 2>,
+               groov::field<"LPUART1PRIV", bool, 1, 1>,
+               groov::field<"SPI3PRIV", bool, 0, 0>>;
 
-template <std::uint32_t baseaddress>
-using tzsc_cr_t = tzsc_cr_tt<"TZSC_CR",baseaddress,0>;
+  template <std::uint32_t baseaddress>
+  using tzsc_cr_t = tzsc_cr_tt<"TZSC_CR", baseaddress, 0>;
 
-template <std::uint32_t baseaddress>
-using tzsc_seccfgr1_t = tzsc_seccfgr1_tt<"TZSC_SECCFGR1",baseaddress,16>;
+  template <std::uint32_t baseaddress>
+  using tzsc_seccfgr1_t = tzsc_seccfgr1_tt<"TZSC_SECCFGR1", baseaddress, 16>;
 
-template <std::uint32_t baseaddress>
-using tzsc_privcfgr1_t = tzsc_privcfgr1_tt<"TZSC_PRIVCFGR1",baseaddress,32>;
+  template <std::uint32_t baseaddress>
+  using tzsc_privcfgr1_t = tzsc_privcfgr1_tt<"TZSC_PRIVCFGR1", baseaddress, 32>;
 
 } // namespace sec_gtzc2_tzsc
-

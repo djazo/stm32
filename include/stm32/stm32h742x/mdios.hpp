@@ -11,863 +11,825 @@ namespace stm32 {
 
 namespace mdios {
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using cr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED1", std::uint32_t, 31, 13 ,access::ro>,
-  groov::field<"PORT_ADDRESS", std::uint8_t, 12, 8 >,
-  groov::field<"DPC", bool, 7, 7 >,
-  groov::field<"RESERVED0", std::uint8_t, 6, 4 ,access::ro>,
-  groov::field<"EIE", bool, 3, 3 >,
-  groov::field<"RDIE", bool, 2, 2 >,
-  groov::field<"WRIE", bool, 1, 1 >,
-  groov::field<"EN", bool, 0, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using cr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED1", std::uint32_t, 31, 13, access::ro>,
+               groov::field<"PORT_ADDRESS", std::uint8_t, 12, 8>,
+               groov::field<"DPC", bool, 7, 7>,
+               groov::field<"RESERVED0", std::uint8_t, 6, 4, access::ro>,
+               groov::field<"EIE", bool, 3, 3>,
+               groov::field<"RDIE", bool, 2, 2>,
+               groov::field<"WRIE", bool, 1, 1>,
+               groov::field<"EN", bool, 0, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using wrfr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::ro,
-  groov::field<"WRF", std::uint32_t, 31, 0 >
-  >;
+                             std::uint32_t,
+                             baseaddress + offset,
+                             access::ro,
+                             groov::field<"WRF", std::uint32_t, 31, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using cwrfr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"CWRF", std::uint32_t, 31, 0 >
-  >;
+                              std::uint32_t,
+                              baseaddress + offset,
+                              access::rw,
+                              groov::field<"CWRF", std::uint32_t, 31, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using rdfr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::ro,
-  groov::field<"RDF", std::uint32_t, 31, 0 >
-  >;
+                             std::uint32_t,
+                             baseaddress + offset,
+                             access::ro,
+                             groov::field<"RDF", std::uint32_t, 31, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using crdfr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"CRDF", std::uint32_t, 31, 0 >
-  >;
+                              std::uint32_t,
+                              baseaddress + offset,
+                              access::rw,
+                              groov::field<"CRDF", std::uint32_t, 31, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using sr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::ro,
-  groov::field<"RESERVED0", std::uint32_t, 31, 3 >,
-  groov::field<"TERF", bool, 2, 2 >,
-  groov::field<"SERF", bool, 1, 1 >,
-  groov::field<"PERF", bool, 0, 0 >
-  >;
+                           std::uint32_t,
+                           baseaddress + offset,
+                           access::ro,
+                           groov::field<"RESERVED0", std::uint32_t, 31, 3>,
+                           groov::field<"TERF", bool, 2, 2>,
+                           groov::field<"SERF", bool, 1, 1>,
+                           groov::field<"PERF", bool, 0, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using clrfr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint32_t, 31, 3 ,access::ro>,
-  groov::field<"CTERF", bool, 2, 2 >,
-  groov::field<"CSERF", bool, 1, 1 >,
-  groov::field<"CPERF", bool, 0, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using clrfr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint32_t, 31, 3, access::ro>,
+               groov::field<"CTERF", bool, 2, 2>,
+               groov::field<"CSERF", bool, 1, 1>,
+               groov::field<"CPERF", bool, 0, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using dinr0_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::ro,
-  groov::field<"RESERVED0", std::uint16_t, 31, 16 >,
-  groov::field<"DIN0", std::uint16_t, 15, 0 >
-  >;
+                              std::uint32_t,
+                              baseaddress + offset,
+                              access::ro,
+                              groov::field<"RESERVED0", std::uint16_t, 31, 16>,
+                              groov::field<"DIN0", std::uint16_t, 15, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using dinr1_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::ro,
-  groov::field<"RESERVED0", std::uint16_t, 31, 16 >,
-  groov::field<"DIN1", std::uint16_t, 15, 0 >
-  >;
+                              std::uint32_t,
+                              baseaddress + offset,
+                              access::ro,
+                              groov::field<"RESERVED0", std::uint16_t, 31, 16>,
+                              groov::field<"DIN1", std::uint16_t, 15, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using dinr2_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::ro,
-  groov::field<"RESERVED0", std::uint16_t, 31, 16 >,
-  groov::field<"DIN2", std::uint16_t, 15, 0 >
-  >;
+                              std::uint32_t,
+                              baseaddress + offset,
+                              access::ro,
+                              groov::field<"RESERVED0", std::uint16_t, 31, 16>,
+                              groov::field<"DIN2", std::uint16_t, 15, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using dinr3_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::ro,
-  groov::field<"RESERVED0", std::uint16_t, 31, 16 >,
-  groov::field<"DIN3", std::uint16_t, 15, 0 >
-  >;
+                              std::uint32_t,
+                              baseaddress + offset,
+                              access::ro,
+                              groov::field<"RESERVED0", std::uint16_t, 31, 16>,
+                              groov::field<"DIN3", std::uint16_t, 15, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using dinr4_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::ro,
-  groov::field<"RESERVED0", std::uint16_t, 31, 16 >,
-  groov::field<"DIN4", std::uint16_t, 15, 0 >
-  >;
+                              std::uint32_t,
+                              baseaddress + offset,
+                              access::ro,
+                              groov::field<"RESERVED0", std::uint16_t, 31, 16>,
+                              groov::field<"DIN4", std::uint16_t, 15, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using dinr5_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::ro,
-  groov::field<"RESERVED0", std::uint16_t, 31, 16 >,
-  groov::field<"DIN5", std::uint16_t, 15, 0 >
-  >;
+                              std::uint32_t,
+                              baseaddress + offset,
+                              access::ro,
+                              groov::field<"RESERVED0", std::uint16_t, 31, 16>,
+                              groov::field<"DIN5", std::uint16_t, 15, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using dinr6_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::ro,
-  groov::field<"RESERVED0", std::uint16_t, 31, 16 >,
-  groov::field<"DIN6", std::uint16_t, 15, 0 >
-  >;
+                              std::uint32_t,
+                              baseaddress + offset,
+                              access::ro,
+                              groov::field<"RESERVED0", std::uint16_t, 31, 16>,
+                              groov::field<"DIN6", std::uint16_t, 15, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using dinr7_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::ro,
-  groov::field<"RESERVED0", std::uint16_t, 31, 16 >,
-  groov::field<"DIN7", std::uint16_t, 15, 0 >
-  >;
+                              std::uint32_t,
+                              baseaddress + offset,
+                              access::ro,
+                              groov::field<"RESERVED0", std::uint16_t, 31, 16>,
+                              groov::field<"DIN7", std::uint16_t, 15, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using dinr8_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::ro,
-  groov::field<"RESERVED0", std::uint16_t, 31, 16 >,
-  groov::field<"DIN8", std::uint16_t, 15, 0 >
-  >;
+                              std::uint32_t,
+                              baseaddress + offset,
+                              access::ro,
+                              groov::field<"RESERVED0", std::uint16_t, 31, 16>,
+                              groov::field<"DIN8", std::uint16_t, 15, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using dinr9_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::ro,
-  groov::field<"RESERVED0", std::uint16_t, 31, 16 >,
-  groov::field<"DIN9", std::uint16_t, 15, 0 >
-  >;
+                              std::uint32_t,
+                              baseaddress + offset,
+                              access::ro,
+                              groov::field<"RESERVED0", std::uint16_t, 31, 16>,
+                              groov::field<"DIN9", std::uint16_t, 15, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using dinr10_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::ro,
-  groov::field<"RESERVED0", std::uint16_t, 31, 16 >,
-  groov::field<"DIN10", std::uint16_t, 15, 0 >
-  >;
+                               std::uint32_t,
+                               baseaddress + offset,
+                               access::ro,
+                               groov::field<"RESERVED0", std::uint16_t, 31, 16>,
+                               groov::field<"DIN10", std::uint16_t, 15, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using dinr11_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::ro,
-  groov::field<"RESERVED0", std::uint16_t, 31, 16 >,
-  groov::field<"DIN11", std::uint16_t, 15, 0 >
-  >;
+                               std::uint32_t,
+                               baseaddress + offset,
+                               access::ro,
+                               groov::field<"RESERVED0", std::uint16_t, 31, 16>,
+                               groov::field<"DIN11", std::uint16_t, 15, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using dinr12_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::ro,
-  groov::field<"RESERVED0", std::uint16_t, 31, 16 >,
-  groov::field<"DIN12", std::uint16_t, 15, 0 >
-  >;
+                               std::uint32_t,
+                               baseaddress + offset,
+                               access::ro,
+                               groov::field<"RESERVED0", std::uint16_t, 31, 16>,
+                               groov::field<"DIN12", std::uint16_t, 15, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using dinr13_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::ro,
-  groov::field<"RESERVED0", std::uint16_t, 31, 16 >,
-  groov::field<"DIN13", std::uint16_t, 15, 0 >
-  >;
+                               std::uint32_t,
+                               baseaddress + offset,
+                               access::ro,
+                               groov::field<"RESERVED0", std::uint16_t, 31, 16>,
+                               groov::field<"DIN13", std::uint16_t, 15, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using dinr14_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::ro,
-  groov::field<"RESERVED0", std::uint16_t, 31, 16 >,
-  groov::field<"DIN14", std::uint16_t, 15, 0 >
-  >;
+                               std::uint32_t,
+                               baseaddress + offset,
+                               access::ro,
+                               groov::field<"RESERVED0", std::uint16_t, 31, 16>,
+                               groov::field<"DIN14", std::uint16_t, 15, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using dinr15_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::ro,
-  groov::field<"RESERVED0", std::uint16_t, 31, 16 >,
-  groov::field<"DIN15", std::uint16_t, 15, 0 >
-  >;
+                               std::uint32_t,
+                               baseaddress + offset,
+                               access::ro,
+                               groov::field<"RESERVED0", std::uint16_t, 31, 16>,
+                               groov::field<"DIN15", std::uint16_t, 15, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using dinr16_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::ro,
-  groov::field<"RESERVED0", std::uint16_t, 31, 16 >,
-  groov::field<"DIN16", std::uint16_t, 15, 0 >
-  >;
+                               std::uint32_t,
+                               baseaddress + offset,
+                               access::ro,
+                               groov::field<"RESERVED0", std::uint16_t, 31, 16>,
+                               groov::field<"DIN16", std::uint16_t, 15, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using dinr17_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::ro,
-  groov::field<"RESERVED0", std::uint16_t, 31, 16 >,
-  groov::field<"DIN17", std::uint16_t, 15, 0 >
-  >;
+                               std::uint32_t,
+                               baseaddress + offset,
+                               access::ro,
+                               groov::field<"RESERVED0", std::uint16_t, 31, 16>,
+                               groov::field<"DIN17", std::uint16_t, 15, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using dinr18_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::ro,
-  groov::field<"RESERVED0", std::uint16_t, 31, 16 >,
-  groov::field<"DIN18", std::uint16_t, 15, 0 >
-  >;
+                               std::uint32_t,
+                               baseaddress + offset,
+                               access::ro,
+                               groov::field<"RESERVED0", std::uint16_t, 31, 16>,
+                               groov::field<"DIN18", std::uint16_t, 15, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using dinr19_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::ro,
-  groov::field<"RESERVED0", std::uint16_t, 31, 16 >,
-  groov::field<"DIN19", std::uint16_t, 15, 0 >
-  >;
+                               std::uint32_t,
+                               baseaddress + offset,
+                               access::ro,
+                               groov::field<"RESERVED0", std::uint16_t, 31, 16>,
+                               groov::field<"DIN19", std::uint16_t, 15, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using dinr20_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::ro,
-  groov::field<"RESERVED0", std::uint16_t, 31, 16 >,
-  groov::field<"DIN20", std::uint16_t, 15, 0 >
-  >;
+                               std::uint32_t,
+                               baseaddress + offset,
+                               access::ro,
+                               groov::field<"RESERVED0", std::uint16_t, 31, 16>,
+                               groov::field<"DIN20", std::uint16_t, 15, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using dinr21_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::ro,
-  groov::field<"RESERVED0", std::uint16_t, 31, 16 >,
-  groov::field<"DIN21", std::uint16_t, 15, 0 >
-  >;
+                               std::uint32_t,
+                               baseaddress + offset,
+                               access::ro,
+                               groov::field<"RESERVED0", std::uint16_t, 31, 16>,
+                               groov::field<"DIN21", std::uint16_t, 15, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using dinr22_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::ro,
-  groov::field<"RESERVED0", std::uint16_t, 31, 16 >,
-  groov::field<"DIN22", std::uint16_t, 15, 0 >
-  >;
+                               std::uint32_t,
+                               baseaddress + offset,
+                               access::ro,
+                               groov::field<"RESERVED0", std::uint16_t, 31, 16>,
+                               groov::field<"DIN22", std::uint16_t, 15, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using dinr23_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::ro,
-  groov::field<"RESERVED0", std::uint16_t, 31, 16 >,
-  groov::field<"DIN23", std::uint16_t, 15, 0 >
-  >;
+                               std::uint32_t,
+                               baseaddress + offset,
+                               access::ro,
+                               groov::field<"RESERVED0", std::uint16_t, 31, 16>,
+                               groov::field<"DIN23", std::uint16_t, 15, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using dinr24_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::ro,
-  groov::field<"RESERVED0", std::uint16_t, 31, 16 >,
-  groov::field<"DIN24", std::uint16_t, 15, 0 >
-  >;
+                               std::uint32_t,
+                               baseaddress + offset,
+                               access::ro,
+                               groov::field<"RESERVED0", std::uint16_t, 31, 16>,
+                               groov::field<"DIN24", std::uint16_t, 15, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using dinr25_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::ro,
-  groov::field<"RESERVED0", std::uint16_t, 31, 16 >,
-  groov::field<"DIN25", std::uint16_t, 15, 0 >
-  >;
+                               std::uint32_t,
+                               baseaddress + offset,
+                               access::ro,
+                               groov::field<"RESERVED0", std::uint16_t, 31, 16>,
+                               groov::field<"DIN25", std::uint16_t, 15, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using dinr26_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::ro,
-  groov::field<"RESERVED0", std::uint16_t, 31, 16 >,
-  groov::field<"DIN26", std::uint16_t, 15, 0 >
-  >;
+                               std::uint32_t,
+                               baseaddress + offset,
+                               access::ro,
+                               groov::field<"RESERVED0", std::uint16_t, 31, 16>,
+                               groov::field<"DIN26", std::uint16_t, 15, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using dinr27_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::ro,
-  groov::field<"RESERVED0", std::uint16_t, 31, 16 >,
-  groov::field<"DIN27", std::uint16_t, 15, 0 >
-  >;
+                               std::uint32_t,
+                               baseaddress + offset,
+                               access::ro,
+                               groov::field<"RESERVED0", std::uint16_t, 31, 16>,
+                               groov::field<"DIN27", std::uint16_t, 15, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using dinr28_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::ro,
-  groov::field<"RESERVED0", std::uint16_t, 31, 16 >,
-  groov::field<"DIN28", std::uint16_t, 15, 0 >
-  >;
+                               std::uint32_t,
+                               baseaddress + offset,
+                               access::ro,
+                               groov::field<"RESERVED0", std::uint16_t, 31, 16>,
+                               groov::field<"DIN28", std::uint16_t, 15, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using dinr29_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::ro,
-  groov::field<"RESERVED0", std::uint16_t, 31, 16 >,
-  groov::field<"DIN29", std::uint16_t, 15, 0 >
-  >;
+                               std::uint32_t,
+                               baseaddress + offset,
+                               access::ro,
+                               groov::field<"RESERVED0", std::uint16_t, 31, 16>,
+                               groov::field<"DIN29", std::uint16_t, 15, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using dinr30_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::ro,
-  groov::field<"RESERVED0", std::uint16_t, 31, 16 >,
-  groov::field<"DIN30", std::uint16_t, 15, 0 >
-  >;
+                               std::uint32_t,
+                               baseaddress + offset,
+                               access::ro,
+                               groov::field<"RESERVED0", std::uint16_t, 31, 16>,
+                               groov::field<"DIN30", std::uint16_t, 15, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using dinr31_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::ro,
-  groov::field<"RESERVED0", std::uint16_t, 31, 16 >,
-  groov::field<"DIN31", std::uint16_t, 15, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using doutr0_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint16_t, 31, 16 ,access::ro>,
-  groov::field<"DOUT0", std::uint16_t, 15, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using doutr1_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint16_t, 31, 16 ,access::ro>,
-  groov::field<"DOUT1", std::uint16_t, 15, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using doutr2_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint16_t, 31, 16 ,access::ro>,
-  groov::field<"DOUT2", std::uint16_t, 15, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using doutr3_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint16_t, 31, 16 ,access::ro>,
-  groov::field<"DOUT3", std::uint16_t, 15, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using doutr4_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint16_t, 31, 16 ,access::ro>,
-  groov::field<"DOUT4", std::uint16_t, 15, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using doutr5_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint16_t, 31, 16 ,access::ro>,
-  groov::field<"DOUT5", std::uint16_t, 15, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using doutr6_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint16_t, 31, 16 ,access::ro>,
-  groov::field<"DOUT6", std::uint16_t, 15, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using doutr7_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint16_t, 31, 16 ,access::ro>,
-  groov::field<"DOUT7", std::uint16_t, 15, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using doutr8_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint16_t, 31, 16 ,access::ro>,
-  groov::field<"DOUT8", std::uint16_t, 15, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using doutr9_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint16_t, 31, 16 ,access::ro>,
-  groov::field<"DOUT9", std::uint16_t, 15, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using doutr10_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint16_t, 31, 16 ,access::ro>,
-  groov::field<"DOUT10", std::uint16_t, 15, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using doutr11_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint16_t, 31, 16 ,access::ro>,
-  groov::field<"DOUT11", std::uint16_t, 15, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using doutr12_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint16_t, 31, 16 ,access::ro>,
-  groov::field<"DOUT12", std::uint16_t, 15, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using doutr13_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint16_t, 31, 16 ,access::ro>,
-  groov::field<"DOUT13", std::uint16_t, 15, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using doutr14_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint16_t, 31, 16 ,access::ro>,
-  groov::field<"DOUT14", std::uint16_t, 15, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using doutr15_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint16_t, 31, 16 ,access::ro>,
-  groov::field<"DOUT15", std::uint16_t, 15, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using doutr16_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint16_t, 31, 16 ,access::ro>,
-  groov::field<"DOUT16", std::uint16_t, 15, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using doutr17_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint16_t, 31, 16 ,access::ro>,
-  groov::field<"DOUT17", std::uint16_t, 15, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using doutr18_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint16_t, 31, 16 ,access::ro>,
-  groov::field<"DOUT18", std::uint16_t, 15, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using doutr19_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint16_t, 31, 16 ,access::ro>,
-  groov::field<"DOUT19", std::uint16_t, 15, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using doutr20_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint16_t, 31, 16 ,access::ro>,
-  groov::field<"DOUT20", std::uint16_t, 15, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using doutr21_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint16_t, 31, 16 ,access::ro>,
-  groov::field<"DOUT21", std::uint16_t, 15, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using doutr22_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint16_t, 31, 16 ,access::ro>,
-  groov::field<"DOUT22", std::uint16_t, 15, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using doutr23_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint16_t, 31, 16 ,access::ro>,
-  groov::field<"DOUT23", std::uint16_t, 15, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using doutr24_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint16_t, 31, 16 ,access::ro>,
-  groov::field<"DOUT24", std::uint16_t, 15, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using doutr25_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint16_t, 31, 16 ,access::ro>,
-  groov::field<"DOUT25", std::uint16_t, 15, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using doutr26_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint16_t, 31, 16 ,access::ro>,
-  groov::field<"DOUT26", std::uint16_t, 15, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using doutr27_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint16_t, 31, 16 ,access::ro>,
-  groov::field<"DOUT27", std::uint16_t, 15, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using doutr28_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint16_t, 31, 16 ,access::ro>,
-  groov::field<"DOUT28", std::uint16_t, 15, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using doutr29_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint16_t, 31, 16 ,access::ro>,
-  groov::field<"DOUT29", std::uint16_t, 15, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using doutr30_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint16_t, 31, 16 ,access::ro>,
-  groov::field<"DOUT30", std::uint16_t, 15, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using doutr31_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint16_t, 31, 16 ,access::ro>,
-  groov::field<"DOUT31", std::uint16_t, 15, 0 >
-  >;
-
-template <std::uint32_t baseaddress>
-using cr_t = cr_tt<"CR",baseaddress,0>;
-
-template <std::uint32_t baseaddress>
-using wrfr_t = wrfr_tt<"WRFR",baseaddress,4>;
-
-template <std::uint32_t baseaddress>
-using cwrfr_t = cwrfr_tt<"CWRFR",baseaddress,8>;
-
-template <std::uint32_t baseaddress>
-using rdfr_t = rdfr_tt<"RDFR",baseaddress,12>;
-
-template <std::uint32_t baseaddress>
-using crdfr_t = crdfr_tt<"CRDFR",baseaddress,16>;
-
-template <std::uint32_t baseaddress>
-using sr_t = sr_tt<"SR",baseaddress,20>;
-
-template <std::uint32_t baseaddress>
-using clrfr_t = clrfr_tt<"CLRFR",baseaddress,24>;
-
-template <std::uint32_t baseaddress>
-using dinr0_t = dinr0_tt<"DINR0",baseaddress,28>;
-
-template <std::uint32_t baseaddress>
-using dinr1_t = dinr1_tt<"DINR1",baseaddress,32>;
-
-template <std::uint32_t baseaddress>
-using dinr2_t = dinr2_tt<"DINR2",baseaddress,36>;
-
-template <std::uint32_t baseaddress>
-using dinr3_t = dinr3_tt<"DINR3",baseaddress,40>;
-
-template <std::uint32_t baseaddress>
-using dinr4_t = dinr4_tt<"DINR4",baseaddress,44>;
-
-template <std::uint32_t baseaddress>
-using dinr5_t = dinr5_tt<"DINR5",baseaddress,48>;
-
-template <std::uint32_t baseaddress>
-using dinr6_t = dinr6_tt<"DINR6",baseaddress,52>;
-
-template <std::uint32_t baseaddress>
-using dinr7_t = dinr7_tt<"DINR7",baseaddress,56>;
-
-template <std::uint32_t baseaddress>
-using dinr8_t = dinr8_tt<"DINR8",baseaddress,60>;
-
-template <std::uint32_t baseaddress>
-using dinr9_t = dinr9_tt<"DINR9",baseaddress,64>;
-
-template <std::uint32_t baseaddress>
-using dinr10_t = dinr10_tt<"DINR10",baseaddress,68>;
-
-template <std::uint32_t baseaddress>
-using dinr11_t = dinr11_tt<"DINR11",baseaddress,72>;
-
-template <std::uint32_t baseaddress>
-using dinr12_t = dinr12_tt<"DINR12",baseaddress,76>;
-
-template <std::uint32_t baseaddress>
-using dinr13_t = dinr13_tt<"DINR13",baseaddress,80>;
-
-template <std::uint32_t baseaddress>
-using dinr14_t = dinr14_tt<"DINR14",baseaddress,84>;
-
-template <std::uint32_t baseaddress>
-using dinr15_t = dinr15_tt<"DINR15",baseaddress,88>;
-
-template <std::uint32_t baseaddress>
-using dinr16_t = dinr16_tt<"DINR16",baseaddress,92>;
-
-template <std::uint32_t baseaddress>
-using dinr17_t = dinr17_tt<"DINR17",baseaddress,96>;
-
-template <std::uint32_t baseaddress>
-using dinr18_t = dinr18_tt<"DINR18",baseaddress,100>;
-
-template <std::uint32_t baseaddress>
-using dinr19_t = dinr19_tt<"DINR19",baseaddress,104>;
-
-template <std::uint32_t baseaddress>
-using dinr20_t = dinr20_tt<"DINR20",baseaddress,108>;
-
-template <std::uint32_t baseaddress>
-using dinr21_t = dinr21_tt<"DINR21",baseaddress,112>;
-
-template <std::uint32_t baseaddress>
-using dinr22_t = dinr22_tt<"DINR22",baseaddress,116>;
-
-template <std::uint32_t baseaddress>
-using dinr23_t = dinr23_tt<"DINR23",baseaddress,120>;
-
-template <std::uint32_t baseaddress>
-using dinr24_t = dinr24_tt<"DINR24",baseaddress,124>;
-
-template <std::uint32_t baseaddress>
-using dinr25_t = dinr25_tt<"DINR25",baseaddress,128>;
-
-template <std::uint32_t baseaddress>
-using dinr26_t = dinr26_tt<"DINR26",baseaddress,132>;
-
-template <std::uint32_t baseaddress>
-using dinr27_t = dinr27_tt<"DINR27",baseaddress,136>;
-
-template <std::uint32_t baseaddress>
-using dinr28_t = dinr28_tt<"DINR28",baseaddress,140>;
-
-template <std::uint32_t baseaddress>
-using dinr29_t = dinr29_tt<"DINR29",baseaddress,144>;
-
-template <std::uint32_t baseaddress>
-using dinr30_t = dinr30_tt<"DINR30",baseaddress,148>;
-
-template <std::uint32_t baseaddress>
-using dinr31_t = dinr31_tt<"DINR31",baseaddress,152>;
-
-template <std::uint32_t baseaddress>
-using doutr0_t = doutr0_tt<"DOUTR0",baseaddress,156>;
-
-template <std::uint32_t baseaddress>
-using doutr1_t = doutr1_tt<"DOUTR1",baseaddress,160>;
-
-template <std::uint32_t baseaddress>
-using doutr2_t = doutr2_tt<"DOUTR2",baseaddress,164>;
-
-template <std::uint32_t baseaddress>
-using doutr3_t = doutr3_tt<"DOUTR3",baseaddress,168>;
-
-template <std::uint32_t baseaddress>
-using doutr4_t = doutr4_tt<"DOUTR4",baseaddress,172>;
-
-template <std::uint32_t baseaddress>
-using doutr5_t = doutr5_tt<"DOUTR5",baseaddress,176>;
-
-template <std::uint32_t baseaddress>
-using doutr6_t = doutr6_tt<"DOUTR6",baseaddress,180>;
-
-template <std::uint32_t baseaddress>
-using doutr7_t = doutr7_tt<"DOUTR7",baseaddress,184>;
-
-template <std::uint32_t baseaddress>
-using doutr8_t = doutr8_tt<"DOUTR8",baseaddress,188>;
-
-template <std::uint32_t baseaddress>
-using doutr9_t = doutr9_tt<"DOUTR9",baseaddress,192>;
-
-template <std::uint32_t baseaddress>
-using doutr10_t = doutr10_tt<"DOUTR10",baseaddress,196>;
-
-template <std::uint32_t baseaddress>
-using doutr11_t = doutr11_tt<"DOUTR11",baseaddress,200>;
-
-template <std::uint32_t baseaddress>
-using doutr12_t = doutr12_tt<"DOUTR12",baseaddress,204>;
-
-template <std::uint32_t baseaddress>
-using doutr13_t = doutr13_tt<"DOUTR13",baseaddress,208>;
-
-template <std::uint32_t baseaddress>
-using doutr14_t = doutr14_tt<"DOUTR14",baseaddress,212>;
-
-template <std::uint32_t baseaddress>
-using doutr15_t = doutr15_tt<"DOUTR15",baseaddress,216>;
-
-template <std::uint32_t baseaddress>
-using doutr16_t = doutr16_tt<"DOUTR16",baseaddress,220>;
-
-template <std::uint32_t baseaddress>
-using doutr17_t = doutr17_tt<"DOUTR17",baseaddress,224>;
-
-template <std::uint32_t baseaddress>
-using doutr18_t = doutr18_tt<"DOUTR18",baseaddress,228>;
-
-template <std::uint32_t baseaddress>
-using doutr19_t = doutr19_tt<"DOUTR19",baseaddress,232>;
-
-template <std::uint32_t baseaddress>
-using doutr20_t = doutr20_tt<"DOUTR20",baseaddress,236>;
-
-template <std::uint32_t baseaddress>
-using doutr21_t = doutr21_tt<"DOUTR21",baseaddress,240>;
-
-template <std::uint32_t baseaddress>
-using doutr22_t = doutr22_tt<"DOUTR22",baseaddress,244>;
-
-template <std::uint32_t baseaddress>
-using doutr23_t = doutr23_tt<"DOUTR23",baseaddress,248>;
-
-template <std::uint32_t baseaddress>
-using doutr24_t = doutr24_tt<"DOUTR24",baseaddress,252>;
-
-template <std::uint32_t baseaddress>
-using doutr25_t = doutr25_tt<"DOUTR25",baseaddress,256>;
-
-template <std::uint32_t baseaddress>
-using doutr26_t = doutr26_tt<"DOUTR26",baseaddress,260>;
-
-template <std::uint32_t baseaddress>
-using doutr27_t = doutr27_tt<"DOUTR27",baseaddress,264>;
-
-template <std::uint32_t baseaddress>
-using doutr28_t = doutr28_tt<"DOUTR28",baseaddress,268>;
-
-template <std::uint32_t baseaddress>
-using doutr29_t = doutr29_tt<"DOUTR29",baseaddress,272>;
-
-template <std::uint32_t baseaddress>
-using doutr30_t = doutr30_tt<"DOUTR30",baseaddress,276>;
-
-template <std::uint32_t baseaddress>
-using doutr31_t = doutr31_tt<"DOUTR31",baseaddress,280>;
+                               std::uint32_t,
+                               baseaddress + offset,
+                               access::ro,
+                               groov::field<"RESERVED0", std::uint16_t, 31, 16>,
+                               groov::field<"DIN31", std::uint16_t, 15, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using doutr0_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
+               groov::field<"DOUT0", std::uint16_t, 15, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using doutr1_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
+               groov::field<"DOUT1", std::uint16_t, 15, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using doutr2_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
+               groov::field<"DOUT2", std::uint16_t, 15, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using doutr3_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
+               groov::field<"DOUT3", std::uint16_t, 15, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using doutr4_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
+               groov::field<"DOUT4", std::uint16_t, 15, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using doutr5_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
+               groov::field<"DOUT5", std::uint16_t, 15, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using doutr6_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
+               groov::field<"DOUT6", std::uint16_t, 15, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using doutr7_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
+               groov::field<"DOUT7", std::uint16_t, 15, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using doutr8_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
+               groov::field<"DOUT8", std::uint16_t, 15, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using doutr9_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
+               groov::field<"DOUT9", std::uint16_t, 15, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using doutr10_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
+               groov::field<"DOUT10", std::uint16_t, 15, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using doutr11_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
+               groov::field<"DOUT11", std::uint16_t, 15, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using doutr12_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
+               groov::field<"DOUT12", std::uint16_t, 15, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using doutr13_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
+               groov::field<"DOUT13", std::uint16_t, 15, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using doutr14_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
+               groov::field<"DOUT14", std::uint16_t, 15, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using doutr15_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
+               groov::field<"DOUT15", std::uint16_t, 15, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using doutr16_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
+               groov::field<"DOUT16", std::uint16_t, 15, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using doutr17_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
+               groov::field<"DOUT17", std::uint16_t, 15, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using doutr18_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
+               groov::field<"DOUT18", std::uint16_t, 15, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using doutr19_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
+               groov::field<"DOUT19", std::uint16_t, 15, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using doutr20_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
+               groov::field<"DOUT20", std::uint16_t, 15, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using doutr21_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
+               groov::field<"DOUT21", std::uint16_t, 15, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using doutr22_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
+               groov::field<"DOUT22", std::uint16_t, 15, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using doutr23_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
+               groov::field<"DOUT23", std::uint16_t, 15, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using doutr24_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
+               groov::field<"DOUT24", std::uint16_t, 15, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using doutr25_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
+               groov::field<"DOUT25", std::uint16_t, 15, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using doutr26_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
+               groov::field<"DOUT26", std::uint16_t, 15, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using doutr27_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
+               groov::field<"DOUT27", std::uint16_t, 15, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using doutr28_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
+               groov::field<"DOUT28", std::uint16_t, 15, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using doutr29_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
+               groov::field<"DOUT29", std::uint16_t, 15, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using doutr30_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
+               groov::field<"DOUT30", std::uint16_t, 15, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using doutr31_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
+               groov::field<"DOUT31", std::uint16_t, 15, 0>>;
+
+  template <std::uint32_t baseaddress>
+  using cr_t = cr_tt<"CR", baseaddress, 0>;
+
+  template <std::uint32_t baseaddress>
+  using wrfr_t = wrfr_tt<"WRFR", baseaddress, 4>;
+
+  template <std::uint32_t baseaddress>
+  using cwrfr_t = cwrfr_tt<"CWRFR", baseaddress, 8>;
+
+  template <std::uint32_t baseaddress>
+  using rdfr_t = rdfr_tt<"RDFR", baseaddress, 12>;
+
+  template <std::uint32_t baseaddress>
+  using crdfr_t = crdfr_tt<"CRDFR", baseaddress, 16>;
+
+  template <std::uint32_t baseaddress>
+  using sr_t = sr_tt<"SR", baseaddress, 20>;
+
+  template <std::uint32_t baseaddress>
+  using clrfr_t = clrfr_tt<"CLRFR", baseaddress, 24>;
+
+  template <std::uint32_t baseaddress>
+  using dinr0_t = dinr0_tt<"DINR0", baseaddress, 28>;
+
+  template <std::uint32_t baseaddress>
+  using dinr1_t = dinr1_tt<"DINR1", baseaddress, 32>;
+
+  template <std::uint32_t baseaddress>
+  using dinr2_t = dinr2_tt<"DINR2", baseaddress, 36>;
+
+  template <std::uint32_t baseaddress>
+  using dinr3_t = dinr3_tt<"DINR3", baseaddress, 40>;
+
+  template <std::uint32_t baseaddress>
+  using dinr4_t = dinr4_tt<"DINR4", baseaddress, 44>;
+
+  template <std::uint32_t baseaddress>
+  using dinr5_t = dinr5_tt<"DINR5", baseaddress, 48>;
+
+  template <std::uint32_t baseaddress>
+  using dinr6_t = dinr6_tt<"DINR6", baseaddress, 52>;
+
+  template <std::uint32_t baseaddress>
+  using dinr7_t = dinr7_tt<"DINR7", baseaddress, 56>;
+
+  template <std::uint32_t baseaddress>
+  using dinr8_t = dinr8_tt<"DINR8", baseaddress, 60>;
+
+  template <std::uint32_t baseaddress>
+  using dinr9_t = dinr9_tt<"DINR9", baseaddress, 64>;
+
+  template <std::uint32_t baseaddress>
+  using dinr10_t = dinr10_tt<"DINR10", baseaddress, 68>;
+
+  template <std::uint32_t baseaddress>
+  using dinr11_t = dinr11_tt<"DINR11", baseaddress, 72>;
+
+  template <std::uint32_t baseaddress>
+  using dinr12_t = dinr12_tt<"DINR12", baseaddress, 76>;
+
+  template <std::uint32_t baseaddress>
+  using dinr13_t = dinr13_tt<"DINR13", baseaddress, 80>;
+
+  template <std::uint32_t baseaddress>
+  using dinr14_t = dinr14_tt<"DINR14", baseaddress, 84>;
+
+  template <std::uint32_t baseaddress>
+  using dinr15_t = dinr15_tt<"DINR15", baseaddress, 88>;
+
+  template <std::uint32_t baseaddress>
+  using dinr16_t = dinr16_tt<"DINR16", baseaddress, 92>;
+
+  template <std::uint32_t baseaddress>
+  using dinr17_t = dinr17_tt<"DINR17", baseaddress, 96>;
+
+  template <std::uint32_t baseaddress>
+  using dinr18_t = dinr18_tt<"DINR18", baseaddress, 100>;
+
+  template <std::uint32_t baseaddress>
+  using dinr19_t = dinr19_tt<"DINR19", baseaddress, 104>;
+
+  template <std::uint32_t baseaddress>
+  using dinr20_t = dinr20_tt<"DINR20", baseaddress, 108>;
+
+  template <std::uint32_t baseaddress>
+  using dinr21_t = dinr21_tt<"DINR21", baseaddress, 112>;
+
+  template <std::uint32_t baseaddress>
+  using dinr22_t = dinr22_tt<"DINR22", baseaddress, 116>;
+
+  template <std::uint32_t baseaddress>
+  using dinr23_t = dinr23_tt<"DINR23", baseaddress, 120>;
+
+  template <std::uint32_t baseaddress>
+  using dinr24_t = dinr24_tt<"DINR24", baseaddress, 124>;
+
+  template <std::uint32_t baseaddress>
+  using dinr25_t = dinr25_tt<"DINR25", baseaddress, 128>;
+
+  template <std::uint32_t baseaddress>
+  using dinr26_t = dinr26_tt<"DINR26", baseaddress, 132>;
+
+  template <std::uint32_t baseaddress>
+  using dinr27_t = dinr27_tt<"DINR27", baseaddress, 136>;
+
+  template <std::uint32_t baseaddress>
+  using dinr28_t = dinr28_tt<"DINR28", baseaddress, 140>;
+
+  template <std::uint32_t baseaddress>
+  using dinr29_t = dinr29_tt<"DINR29", baseaddress, 144>;
+
+  template <std::uint32_t baseaddress>
+  using dinr30_t = dinr30_tt<"DINR30", baseaddress, 148>;
+
+  template <std::uint32_t baseaddress>
+  using dinr31_t = dinr31_tt<"DINR31", baseaddress, 152>;
+
+  template <std::uint32_t baseaddress>
+  using doutr0_t = doutr0_tt<"DOUTR0", baseaddress, 156>;
+
+  template <std::uint32_t baseaddress>
+  using doutr1_t = doutr1_tt<"DOUTR1", baseaddress, 160>;
+
+  template <std::uint32_t baseaddress>
+  using doutr2_t = doutr2_tt<"DOUTR2", baseaddress, 164>;
+
+  template <std::uint32_t baseaddress>
+  using doutr3_t = doutr3_tt<"DOUTR3", baseaddress, 168>;
+
+  template <std::uint32_t baseaddress>
+  using doutr4_t = doutr4_tt<"DOUTR4", baseaddress, 172>;
+
+  template <std::uint32_t baseaddress>
+  using doutr5_t = doutr5_tt<"DOUTR5", baseaddress, 176>;
+
+  template <std::uint32_t baseaddress>
+  using doutr6_t = doutr6_tt<"DOUTR6", baseaddress, 180>;
+
+  template <std::uint32_t baseaddress>
+  using doutr7_t = doutr7_tt<"DOUTR7", baseaddress, 184>;
+
+  template <std::uint32_t baseaddress>
+  using doutr8_t = doutr8_tt<"DOUTR8", baseaddress, 188>;
+
+  template <std::uint32_t baseaddress>
+  using doutr9_t = doutr9_tt<"DOUTR9", baseaddress, 192>;
+
+  template <std::uint32_t baseaddress>
+  using doutr10_t = doutr10_tt<"DOUTR10", baseaddress, 196>;
+
+  template <std::uint32_t baseaddress>
+  using doutr11_t = doutr11_tt<"DOUTR11", baseaddress, 200>;
+
+  template <std::uint32_t baseaddress>
+  using doutr12_t = doutr12_tt<"DOUTR12", baseaddress, 204>;
+
+  template <std::uint32_t baseaddress>
+  using doutr13_t = doutr13_tt<"DOUTR13", baseaddress, 208>;
+
+  template <std::uint32_t baseaddress>
+  using doutr14_t = doutr14_tt<"DOUTR14", baseaddress, 212>;
+
+  template <std::uint32_t baseaddress>
+  using doutr15_t = doutr15_tt<"DOUTR15", baseaddress, 216>;
+
+  template <std::uint32_t baseaddress>
+  using doutr16_t = doutr16_tt<"DOUTR16", baseaddress, 220>;
+
+  template <std::uint32_t baseaddress>
+  using doutr17_t = doutr17_tt<"DOUTR17", baseaddress, 224>;
+
+  template <std::uint32_t baseaddress>
+  using doutr18_t = doutr18_tt<"DOUTR18", baseaddress, 228>;
+
+  template <std::uint32_t baseaddress>
+  using doutr19_t = doutr19_tt<"DOUTR19", baseaddress, 232>;
+
+  template <std::uint32_t baseaddress>
+  using doutr20_t = doutr20_tt<"DOUTR20", baseaddress, 236>;
+
+  template <std::uint32_t baseaddress>
+  using doutr21_t = doutr21_tt<"DOUTR21", baseaddress, 240>;
+
+  template <std::uint32_t baseaddress>
+  using doutr22_t = doutr22_tt<"DOUTR22", baseaddress, 244>;
+
+  template <std::uint32_t baseaddress>
+  using doutr23_t = doutr23_tt<"DOUTR23", baseaddress, 248>;
+
+  template <std::uint32_t baseaddress>
+  using doutr24_t = doutr24_tt<"DOUTR24", baseaddress, 252>;
+
+  template <std::uint32_t baseaddress>
+  using doutr25_t = doutr25_tt<"DOUTR25", baseaddress, 256>;
+
+  template <std::uint32_t baseaddress>
+  using doutr26_t = doutr26_tt<"DOUTR26", baseaddress, 260>;
+
+  template <std::uint32_t baseaddress>
+  using doutr27_t = doutr27_tt<"DOUTR27", baseaddress, 264>;
+
+  template <std::uint32_t baseaddress>
+  using doutr28_t = doutr28_tt<"DOUTR28", baseaddress, 268>;
+
+  template <std::uint32_t baseaddress>
+  using doutr29_t = doutr29_tt<"DOUTR29", baseaddress, 272>;
+
+  template <std::uint32_t baseaddress>
+  using doutr30_t = doutr30_tt<"DOUTR30", baseaddress, 276>;
+
+  template <std::uint32_t baseaddress>
+  using doutr31_t = doutr31_tt<"DOUTR31", baseaddress, 280>;
 
 } // namespace mdios
-

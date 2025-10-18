@@ -11,325 +11,315 @@ namespace stm32 {
 
 namespace ethernet_mac {
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using maccr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED5", std::uint8_t, 31, 26 ,access::ro>,
-  groov::field<"CSTF", bool, 25, 25 >,
-  groov::field<"RESERVED4", bool, 24, 24 ,access::ro>,
-  groov::field<"WD", bool, 23, 23 >,
-  groov::field<"JD", bool, 22, 22 >,
-  groov::field<"RESERVED3", std::uint8_t, 21, 20 ,access::ro>,
-  groov::field<"IFG", std::uint8_t, 19, 17 >,
-  groov::field<"CSD", bool, 16, 16 >,
-  groov::field<"RESERVED2", bool, 15, 15 ,access::ro>,
-  groov::field<"FES", bool, 14, 14 >,
-  groov::field<"ROD", bool, 13, 13 >,
-  groov::field<"LM", bool, 12, 12 >,
-  groov::field<"DM", bool, 11, 11 >,
-  groov::field<"IPCO", bool, 10, 10 >,
-  groov::field<"RD", bool, 9, 9 >,
-  groov::field<"RESERVED1", bool, 8, 8 ,access::ro>,
-  groov::field<"APCS", bool, 7, 7 >,
-  groov::field<"BL", std::uint8_t, 6, 5 >,
-  groov::field<"DC", bool, 4, 4 >,
-  groov::field<"TE", bool, 3, 3 >,
-  groov::field<"RE", bool, 2, 2 >,
-  groov::field<"RESERVED0", std::uint8_t, 1, 0 ,access::ro>
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using maccr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED5", std::uint8_t, 31, 26, access::ro>,
+               groov::field<"CSTF", bool, 25, 25>,
+               groov::field<"RESERVED4", bool, 24, 24, access::ro>,
+               groov::field<"WD", bool, 23, 23>,
+               groov::field<"JD", bool, 22, 22>,
+               groov::field<"RESERVED3", std::uint8_t, 21, 20, access::ro>,
+               groov::field<"IFG", std::uint8_t, 19, 17>,
+               groov::field<"CSD", bool, 16, 16>,
+               groov::field<"RESERVED2", bool, 15, 15, access::ro>,
+               groov::field<"FES", bool, 14, 14>,
+               groov::field<"ROD", bool, 13, 13>,
+               groov::field<"LM", bool, 12, 12>,
+               groov::field<"DM", bool, 11, 11>,
+               groov::field<"IPCO", bool, 10, 10>,
+               groov::field<"RD", bool, 9, 9>,
+               groov::field<"RESERVED1", bool, 8, 8, access::ro>,
+               groov::field<"APCS", bool, 7, 7>,
+               groov::field<"BL", std::uint8_t, 6, 5>,
+               groov::field<"DC", bool, 4, 4>,
+               groov::field<"TE", bool, 3, 3>,
+               groov::field<"RE", bool, 2, 2>,
+               groov::field<"RESERVED0", std::uint8_t, 1, 0, access::ro>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using macffr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RA", bool, 31, 31 >,
-  groov::field<"RESERVED0", std::uint32_t, 30, 10 ,access::ro>,
-  groov::field<"HPF", bool, 9, 9 >,
-  groov::field<"SAF", bool, 8, 8 >,
-  groov::field<"SAIF", bool, 7, 7 >,
-  groov::field<"PCF", bool, 6, 6 >,
-  groov::field<"BFD", bool, 5, 5 >,
-  groov::field<"RAM", bool, 4, 4 >,
-  groov::field<"DAIF", bool, 3, 3 >,
-  groov::field<"HM", bool, 2, 2 >,
-  groov::field<"HU", bool, 1, 1 >,
-  groov::field<"PM", bool, 0, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using macffr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RA", bool, 31, 31>,
+               groov::field<"RESERVED0", std::uint32_t, 30, 10, access::ro>,
+               groov::field<"HPF", bool, 9, 9>,
+               groov::field<"SAF", bool, 8, 8>,
+               groov::field<"SAIF", bool, 7, 7>,
+               groov::field<"PCF", bool, 6, 6>,
+               groov::field<"BFD", bool, 5, 5>,
+               groov::field<"RAM", bool, 4, 4>,
+               groov::field<"DAIF", bool, 3, 3>,
+               groov::field<"HM", bool, 2, 2>,
+               groov::field<"HU", bool, 1, 1>,
+               groov::field<"PM", bool, 0, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using machthr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"HTH", std::uint32_t, 31, 0 >
-  >;
+                                std::uint32_t,
+                                baseaddress + offset,
+                                access::rw,
+                                groov::field<"HTH", std::uint32_t, 31, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using machtlr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"HTL", std::uint32_t, 31, 0 >
-  >;
+                                std::uint32_t,
+                                baseaddress + offset,
+                                access::rw,
+                                groov::field<"HTL", std::uint32_t, 31, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using macmiiar_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED1", std::uint16_t, 31, 16 ,access::ro>,
-  groov::field<"PA", std::uint8_t, 15, 11 >,
-  groov::field<"MR", std::uint8_t, 10, 6 >,
-  groov::field<"RESERVED0", bool, 5, 5 ,access::ro>,
-  groov::field<"CR", std::uint8_t, 4, 2 >,
-  groov::field<"MW", bool, 1, 1 >,
-  groov::field<"MB", bool, 0, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using macmiiar_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED1", std::uint16_t, 31, 16, access::ro>,
+               groov::field<"PA", std::uint8_t, 15, 11>,
+               groov::field<"MR", std::uint8_t, 10, 6>,
+               groov::field<"RESERVED0", bool, 5, 5, access::ro>,
+               groov::field<"CR", std::uint8_t, 4, 2>,
+               groov::field<"MW", bool, 1, 1>,
+               groov::field<"MB", bool, 0, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using macmiidr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint16_t, 31, 16 ,access::ro>,
-  groov::field<"TD", std::uint16_t, 15, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using macmiidr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
+               groov::field<"TD", std::uint16_t, 15, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using macfcr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"PT", std::uint16_t, 31, 16 >,
-  groov::field<"RESERVED1", std::uint8_t, 15, 8 ,access::ro>,
-  groov::field<"ZQPD", bool, 7, 7 >,
-  groov::field<"RESERVED0", bool, 6, 6 ,access::ro>,
-  groov::field<"PLT", std::uint8_t, 5, 4 >,
-  groov::field<"UPFD", bool, 3, 3 >,
-  groov::field<"RFCE", bool, 2, 2 >,
-  groov::field<"TFCE", bool, 1, 1 >,
-  groov::field<"FCB", bool, 0, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using macfcr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"PT", std::uint16_t, 31, 16>,
+               groov::field<"RESERVED1", std::uint8_t, 15, 8, access::ro>,
+               groov::field<"ZQPD", bool, 7, 7>,
+               groov::field<"RESERVED0", bool, 6, 6, access::ro>,
+               groov::field<"PLT", std::uint8_t, 5, 4>,
+               groov::field<"UPFD", bool, 3, 3>,
+               groov::field<"RFCE", bool, 2, 2>,
+               groov::field<"TFCE", bool, 1, 1>,
+               groov::field<"FCB", bool, 0, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using macvlantr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint16_t, 31, 17 ,access::ro>,
-  groov::field<"VLANTC", bool, 16, 16 >,
-  groov::field<"VLANTI", std::uint16_t, 15, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using macvlantr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint16_t, 31, 17, access::ro>,
+               groov::field<"VLANTC", bool, 16, 16>,
+               groov::field<"VLANTI", std::uint16_t, 15, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using macpmtcsr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"WFFRPR", bool, 31, 31 >,
-  groov::field<"RESERVED2", std::uint32_t, 30, 10 ,access::ro>,
-  groov::field<"GU", bool, 9, 9 >,
-  groov::field<"RESERVED1", std::uint8_t, 8, 7 ,access::ro>,
-  groov::field<"WFR", bool, 6, 6 >,
-  groov::field<"MPR", bool, 5, 5 >,
-  groov::field<"RESERVED0", std::uint8_t, 4, 3 ,access::ro>,
-  groov::field<"WFE", bool, 2, 2 >,
-  groov::field<"MPE", bool, 1, 1 >,
-  groov::field<"PD", bool, 0, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using macpmtcsr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"WFFRPR", bool, 31, 31>,
+               groov::field<"RESERVED2", std::uint32_t, 30, 10, access::ro>,
+               groov::field<"GU", bool, 9, 9>,
+               groov::field<"RESERVED1", std::uint8_t, 8, 7, access::ro>,
+               groov::field<"WFR", bool, 6, 6>,
+               groov::field<"MPR", bool, 5, 5>,
+               groov::field<"RESERVED0", std::uint8_t, 4, 3, access::ro>,
+               groov::field<"WFE", bool, 2, 2>,
+               groov::field<"MPE", bool, 1, 1>,
+               groov::field<"PD", bool, 0, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using macdbgr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::ro,
-  groov::field<"RESERVED0", std::uint32_t, 31, 6 >,
-  groov::field<"MCFHP", bool, 5, 5 >,
-  groov::field<"MCP", bool, 4, 4 >,
-  groov::field<"MCF", bool, 3, 3 >,
-  groov::field<"ROR", bool, 2, 2 >,
-  groov::field<"CSR", bool, 1, 1 >,
-  groov::field<"CR", bool, 0, 0 >
-  >;
+                                std::uint32_t,
+                                baseaddress + offset,
+                                access::ro,
+                                groov::field<"RESERVED0", std::uint32_t, 31, 6>,
+                                groov::field<"MCFHP", bool, 5, 5>,
+                                groov::field<"MCP", bool, 4, 4>,
+                                groov::field<"MCF", bool, 3, 3>,
+                                groov::field<"ROR", bool, 2, 2>,
+                                groov::field<"CSR", bool, 1, 1>,
+                                groov::field<"CR", bool, 0, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using macsr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED2", std::uint32_t, 31, 10 ,access::ro>,
-  groov::field<"TSTS", bool, 9, 9 >,
-  groov::field<"RESERVED1", std::uint8_t, 8, 7 ,access::ro>,
-  groov::field<"MMCTS", bool, 6, 6 ,access::ro>,
-  groov::field<"MMCRS", bool, 5, 5 ,access::ro>,
-  groov::field<"MMCS", bool, 4, 4 ,access::ro>,
-  groov::field<"PMTS", bool, 3, 3 ,access::ro>,
-  groov::field<"RESERVED0", std::uint8_t, 2, 0 ,access::ro>
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using macsr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED2", std::uint32_t, 31, 10, access::ro>,
+               groov::field<"TSTS", bool, 9, 9>,
+               groov::field<"RESERVED1", std::uint8_t, 8, 7, access::ro>,
+               groov::field<"MMCTS", bool, 6, 6, access::ro>,
+               groov::field<"MMCRS", bool, 5, 5, access::ro>,
+               groov::field<"MMCS", bool, 4, 4, access::ro>,
+               groov::field<"PMTS", bool, 3, 3, access::ro>,
+               groov::field<"RESERVED0", std::uint8_t, 2, 0, access::ro>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using macimr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED2", std::uint32_t, 31, 10 ,access::ro>,
-  groov::field<"TSTIM", bool, 9, 9 >,
-  groov::field<"RESERVED1", std::uint8_t, 8, 4 ,access::ro>,
-  groov::field<"PMTIM", bool, 3, 3 >,
-  groov::field<"RESERVED0", std::uint8_t, 2, 0 ,access::ro>
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using macimr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED2", std::uint32_t, 31, 10, access::ro>,
+               groov::field<"TSTIM", bool, 9, 9>,
+               groov::field<"RESERVED1", std::uint8_t, 8, 4, access::ro>,
+               groov::field<"PMTIM", bool, 3, 3>,
+               groov::field<"RESERVED0", std::uint8_t, 2, 0, access::ro>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using maca0hr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"MO", bool, 31, 31 ,access::ro>,
-  groov::field<"RESERVED0", std::uint16_t, 30, 16 ,access::ro>,
-  groov::field<"MACA0H", std::uint16_t, 15, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using maca0hr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"MO", bool, 31, 31, access::ro>,
+               groov::field<"RESERVED0", std::uint16_t, 30, 16, access::ro>,
+               groov::field<"MACA0H", std::uint16_t, 15, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using maca0lr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"MACA0L", std::uint32_t, 31, 0 >
-  >;
+                                std::uint32_t,
+                                baseaddress + offset,
+                                access::rw,
+                                groov::field<"MACA0L", std::uint32_t, 31, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using maca1hr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"AE", bool, 31, 31 >,
-  groov::field<"SA", bool, 30, 30 >,
-  groov::field<"MBC", std::uint8_t, 29, 24 >,
-  groov::field<"RESERVED0", std::uint8_t, 23, 16 ,access::ro>,
-  groov::field<"MACA1H", std::uint16_t, 15, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using maca1hr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"AE", bool, 31, 31>,
+               groov::field<"SA", bool, 30, 30>,
+               groov::field<"MBC", std::uint8_t, 29, 24>,
+               groov::field<"RESERVED0", std::uint8_t, 23, 16, access::ro>,
+               groov::field<"MACA1H", std::uint16_t, 15, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using maca1lr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"MACA1LR", std::uint32_t, 31, 0 >
-  >;
+                                std::uint32_t,
+                                baseaddress + offset,
+                                access::rw,
+                                groov::field<"MACA1LR", std::uint32_t, 31, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using maca2hr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"AE", bool, 31, 31 >,
-  groov::field<"SA", bool, 30, 30 >,
-  groov::field<"MBC", std::uint8_t, 29, 24 >,
-  groov::field<"RESERVED0", std::uint8_t, 23, 16 ,access::ro>,
-  groov::field<"MAC2AH", std::uint16_t, 15, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using maca2hr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"AE", bool, 31, 31>,
+               groov::field<"SA", bool, 30, 30>,
+               groov::field<"MBC", std::uint8_t, 29, 24>,
+               groov::field<"RESERVED0", std::uint8_t, 23, 16, access::ro>,
+               groov::field<"MAC2AH", std::uint16_t, 15, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using maca2lr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", bool, 31, 31 ,access::ro>,
-  groov::field<"MACA2L", std::uint32_t, 30, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using maca2lr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", bool, 31, 31, access::ro>,
+               groov::field<"MACA2L", std::uint32_t, 30, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using maca3hr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"AE", bool, 31, 31 >,
-  groov::field<"SA", bool, 30, 30 >,
-  groov::field<"MBC", std::uint8_t, 29, 24 >,
-  groov::field<"RESERVED0", std::uint8_t, 23, 16 ,access::ro>,
-  groov::field<"MACA3H", std::uint16_t, 15, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using maca3hr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"AE", bool, 31, 31>,
+               groov::field<"SA", bool, 30, 30>,
+               groov::field<"MBC", std::uint8_t, 29, 24>,
+               groov::field<"RESERVED0", std::uint8_t, 23, 16, access::ro>,
+               groov::field<"MACA3H", std::uint16_t, 15, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using maca3lr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"MBCA3L", std::uint32_t, 31, 0 >
-  >;
+                                std::uint32_t,
+                                baseaddress + offset,
+                                access::rw,
+                                groov::field<"MBCA3L", std::uint32_t, 31, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using macrwuffer_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using macrwuffer_tt =
+    groov::reg<name, std::uint32_t, baseaddress + offset, access::rw, >;
 
-template <std::uint32_t baseaddress>
-using maccr_t = maccr_tt<"MACCR",baseaddress,0>;
+  template <std::uint32_t baseaddress>
+  using maccr_t = maccr_tt<"MACCR", baseaddress, 0>;
 
-template <std::uint32_t baseaddress>
-using macffr_t = macffr_tt<"MACFFR",baseaddress,4>;
+  template <std::uint32_t baseaddress>
+  using macffr_t = macffr_tt<"MACFFR", baseaddress, 4>;
 
-template <std::uint32_t baseaddress>
-using machthr_t = machthr_tt<"MACHTHR",baseaddress,8>;
+  template <std::uint32_t baseaddress>
+  using machthr_t = machthr_tt<"MACHTHR", baseaddress, 8>;
 
-template <std::uint32_t baseaddress>
-using machtlr_t = machtlr_tt<"MACHTLR",baseaddress,12>;
+  template <std::uint32_t baseaddress>
+  using machtlr_t = machtlr_tt<"MACHTLR", baseaddress, 12>;
 
-template <std::uint32_t baseaddress>
-using macmiiar_t = macmiiar_tt<"MACMIIAR",baseaddress,16>;
+  template <std::uint32_t baseaddress>
+  using macmiiar_t = macmiiar_tt<"MACMIIAR", baseaddress, 16>;
 
-template <std::uint32_t baseaddress>
-using macmiidr_t = macmiidr_tt<"MACMIIDR",baseaddress,20>;
+  template <std::uint32_t baseaddress>
+  using macmiidr_t = macmiidr_tt<"MACMIIDR", baseaddress, 20>;
 
-template <std::uint32_t baseaddress>
-using macfcr_t = macfcr_tt<"MACFCR",baseaddress,24>;
+  template <std::uint32_t baseaddress>
+  using macfcr_t = macfcr_tt<"MACFCR", baseaddress, 24>;
 
-template <std::uint32_t baseaddress>
-using macvlantr_t = macvlantr_tt<"MACVLANTR",baseaddress,28>;
+  template <std::uint32_t baseaddress>
+  using macvlantr_t = macvlantr_tt<"MACVLANTR", baseaddress, 28>;
 
-template <std::uint32_t baseaddress>
-using macpmtcsr_t = macpmtcsr_tt<"MACPMTCSR",baseaddress,44>;
+  template <std::uint32_t baseaddress>
+  using macpmtcsr_t = macpmtcsr_tt<"MACPMTCSR", baseaddress, 44>;
 
-template <std::uint32_t baseaddress>
-using macdbgr_t = macdbgr_tt<"MACDBGR",baseaddress,52>;
+  template <std::uint32_t baseaddress>
+  using macdbgr_t = macdbgr_tt<"MACDBGR", baseaddress, 52>;
 
-template <std::uint32_t baseaddress>
-using macsr_t = macsr_tt<"MACSR",baseaddress,56>;
+  template <std::uint32_t baseaddress>
+  using macsr_t = macsr_tt<"MACSR", baseaddress, 56>;
 
-template <std::uint32_t baseaddress>
-using macimr_t = macimr_tt<"MACIMR",baseaddress,60>;
+  template <std::uint32_t baseaddress>
+  using macimr_t = macimr_tt<"MACIMR", baseaddress, 60>;
 
-template <std::uint32_t baseaddress>
-using maca0hr_t = maca0hr_tt<"MACA0HR",baseaddress,64>;
+  template <std::uint32_t baseaddress>
+  using maca0hr_t = maca0hr_tt<"MACA0HR", baseaddress, 64>;
 
-template <std::uint32_t baseaddress>
-using maca0lr_t = maca0lr_tt<"MACA0LR",baseaddress,68>;
+  template <std::uint32_t baseaddress>
+  using maca0lr_t = maca0lr_tt<"MACA0LR", baseaddress, 68>;
 
-template <std::uint32_t baseaddress>
-using maca1hr_t = maca1hr_tt<"MACA1HR",baseaddress,72>;
+  template <std::uint32_t baseaddress>
+  using maca1hr_t = maca1hr_tt<"MACA1HR", baseaddress, 72>;
 
-template <std::uint32_t baseaddress>
-using maca1lr_t = maca1lr_tt<"MACA1LR",baseaddress,76>;
+  template <std::uint32_t baseaddress>
+  using maca1lr_t = maca1lr_tt<"MACA1LR", baseaddress, 76>;
 
-template <std::uint32_t baseaddress>
-using maca2hr_t = maca2hr_tt<"MACA2HR",baseaddress,80>;
+  template <std::uint32_t baseaddress>
+  using maca2hr_t = maca2hr_tt<"MACA2HR", baseaddress, 80>;
 
-template <std::uint32_t baseaddress>
-using maca2lr_t = maca2lr_tt<"MACA2LR",baseaddress,84>;
+  template <std::uint32_t baseaddress>
+  using maca2lr_t = maca2lr_tt<"MACA2LR", baseaddress, 84>;
 
-template <std::uint32_t baseaddress>
-using maca3hr_t = maca3hr_tt<"MACA3HR",baseaddress,88>;
+  template <std::uint32_t baseaddress>
+  using maca3hr_t = maca3hr_tt<"MACA3HR", baseaddress, 88>;
 
-template <std::uint32_t baseaddress>
-using maca3lr_t = maca3lr_tt<"MACA3LR",baseaddress,92>;
+  template <std::uint32_t baseaddress>
+  using maca3lr_t = maca3lr_tt<"MACA3LR", baseaddress, 92>;
 
-template <std::uint32_t baseaddress>
-using macrwuffer_t = macrwuffer_tt<"MACRWUFFER",baseaddress,96>;
+  template <std::uint32_t baseaddress>
+  using macrwuffer_t = macrwuffer_tt<"MACRWUFFER", baseaddress, 96>;
 
 } // namespace ethernet_mac
-

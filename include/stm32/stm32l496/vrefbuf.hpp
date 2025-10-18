@@ -11,32 +11,31 @@ namespace stm32 {
 
 namespace vrefbuf {
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using csr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint32_t, 31, 4 ,access::ro>,
-  groov::field<"VRR", bool, 3, 3 ,access::ro>,
-  groov::field<"VRS", bool, 2, 2 >,
-  groov::field<"HIZ", bool, 1, 1 >,
-  groov::field<"ENVR", bool, 0, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using csr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint32_t, 31, 4, access::ro>,
+               groov::field<"VRR", bool, 3, 3, access::ro>,
+               groov::field<"VRS", bool, 2, 2>,
+               groov::field<"HIZ", bool, 1, 1>,
+               groov::field<"ENVR", bool, 0, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using ccr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint32_t, 31, 6 ,access::ro>,
-  groov::field<"TRIM", std::uint8_t, 5, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using ccr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint32_t, 31, 6, access::ro>,
+               groov::field<"TRIM", std::uint8_t, 5, 0>>;
 
-template <std::uint32_t baseaddress>
-using csr_t = csr_tt<"CSR",baseaddress,0>;
+  template <std::uint32_t baseaddress>
+  using csr_t = csr_tt<"CSR", baseaddress, 0>;
 
-template <std::uint32_t baseaddress>
-using ccr_t = ccr_tt<"CCR",baseaddress,4>;
+  template <std::uint32_t baseaddress>
+  using ccr_t = ccr_tt<"CCR", baseaddress, 4>;
 
 } // namespace vrefbuf
-

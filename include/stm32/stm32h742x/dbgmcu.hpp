@@ -11,123 +11,121 @@ namespace stm32 {
 
 namespace dbgmcu {
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using idc_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::ro,
-  groov::field<"REV_ID", std::uint16_t, 31, 16 >,
-  groov::field<"RESERVED0", std::uint8_t, 15, 12 >,
-  groov::field<"DEV_ID", std::uint16_t, 11, 0 >
-  >;
+                            std::uint32_t,
+                            baseaddress + offset,
+                            access::ro,
+                            groov::field<"REV_ID", std::uint16_t, 31, 16>,
+                            groov::field<"RESERVED0", std::uint8_t, 15, 12>,
+                            groov::field<"DEV_ID", std::uint16_t, 11, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using cr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED3", std::uint8_t, 31, 29 ,access::ro>,
-  groov::field<"TRGOEN", bool, 28, 28 >,
-  groov::field<"RESERVED2", std::uint8_t, 27, 23 ,access::ro>,
-  groov::field<"D3DBGCKEN", bool, 22, 22 >,
-  groov::field<"D1DBGCKEN", bool, 21, 21 >,
-  groov::field<"TRACECLKEN", bool, 20, 20 >,
-  groov::field<"RESERVED1", std::uint16_t, 19, 9 ,access::ro>,
-  groov::field<"DBGSTBY_D3", bool, 8, 8 >,
-  groov::field<"DBGSTOP_D3", bool, 7, 7 >,
-  groov::field<"RESERVED0", bool, 6, 6 ,access::ro>,
-  groov::field<"DBGSTBY_D2", bool, 5, 5 >,
-  groov::field<"DBGSTOP_D2", bool, 4, 4 >,
-  groov::field<"DBGSLEEP_D2", bool, 3, 3 >,
-  groov::field<"DBGSTBY_D1", bool, 2, 2 >,
-  groov::field<"DBGSTOP_D1", bool, 1, 1 >,
-  groov::field<"DBGSLEEP_D1", bool, 0, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using cr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED3", std::uint8_t, 31, 29, access::ro>,
+               groov::field<"TRGOEN", bool, 28, 28>,
+               groov::field<"RESERVED2", std::uint8_t, 27, 23, access::ro>,
+               groov::field<"D3DBGCKEN", bool, 22, 22>,
+               groov::field<"D1DBGCKEN", bool, 21, 21>,
+               groov::field<"TRACECLKEN", bool, 20, 20>,
+               groov::field<"RESERVED1", std::uint16_t, 19, 9, access::ro>,
+               groov::field<"DBGSTBY_D3", bool, 8, 8>,
+               groov::field<"DBGSTOP_D3", bool, 7, 7>,
+               groov::field<"RESERVED0", bool, 6, 6, access::ro>,
+               groov::field<"DBGSTBY_D2", bool, 5, 5>,
+               groov::field<"DBGSTOP_D2", bool, 4, 4>,
+               groov::field<"DBGSLEEP_D2", bool, 3, 3>,
+               groov::field<"DBGSTBY_D1", bool, 2, 2>,
+               groov::field<"DBGSTOP_D1", bool, 1, 1>,
+               groov::field<"DBGSLEEP_D1", bool, 0, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using apb3fz1_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED1", std::uint32_t, 31, 7 ,access::ro>,
-  groov::field<"WWDG1", bool, 6, 6 >,
-  groov::field<"RESERVED0", std::uint8_t, 5, 0 ,access::ro>
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using apb3fz1_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED1", std::uint32_t, 31, 7, access::ro>,
+               groov::field<"WWDG1", bool, 6, 6>,
+               groov::field<"RESERVED0", std::uint8_t, 5, 0, access::ro>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using apb1lfz1_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED1", std::uint8_t, 31, 24 ,access::ro>,
-  groov::field<"DBG_I2C3", bool, 23, 23 >,
-  groov::field<"DBG_I2C2", bool, 22, 22 >,
-  groov::field<"DBG_I2C1", bool, 21, 21 >,
-  groov::field<"RESERVED0", std::uint16_t, 20, 10 ,access::ro>,
-  groov::field<"DBG_LPTIM1", bool, 9, 9 >,
-  groov::field<"DBG_TIM14", bool, 8, 8 >,
-  groov::field<"DBG_TIM13", bool, 7, 7 >,
-  groov::field<"DBG_TIM12", bool, 6, 6 >,
-  groov::field<"DBG_TIM7", bool, 5, 5 >,
-  groov::field<"DBG_TIM6", bool, 4, 4 >,
-  groov::field<"DBG_TIM5", bool, 3, 3 >,
-  groov::field<"DBG_TIM4", bool, 2, 2 >,
-  groov::field<"DBG_TIM3", bool, 1, 1 >,
-  groov::field<"DBG_TIM2", bool, 0, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using apb1lfz1_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED1", std::uint8_t, 31, 24, access::ro>,
+               groov::field<"DBG_I2C3", bool, 23, 23>,
+               groov::field<"DBG_I2C2", bool, 22, 22>,
+               groov::field<"DBG_I2C1", bool, 21, 21>,
+               groov::field<"RESERVED0", std::uint16_t, 20, 10, access::ro>,
+               groov::field<"DBG_LPTIM1", bool, 9, 9>,
+               groov::field<"DBG_TIM14", bool, 8, 8>,
+               groov::field<"DBG_TIM13", bool, 7, 7>,
+               groov::field<"DBG_TIM12", bool, 6, 6>,
+               groov::field<"DBG_TIM7", bool, 5, 5>,
+               groov::field<"DBG_TIM6", bool, 4, 4>,
+               groov::field<"DBG_TIM5", bool, 3, 3>,
+               groov::field<"DBG_TIM4", bool, 2, 2>,
+               groov::field<"DBG_TIM3", bool, 1, 1>,
+               groov::field<"DBG_TIM2", bool, 0, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using apb2fz1_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED2", std::uint8_t, 31, 30 ,access::ro>,
-  groov::field<"DBG_HRTIM", bool, 29, 29 >,
-  groov::field<"RESERVED1", std::uint16_t, 28, 19 ,access::ro>,
-  groov::field<"DBG_TIM17", bool, 18, 18 >,
-  groov::field<"DBG_TIM16", bool, 17, 17 >,
-  groov::field<"DBG_TIM15", bool, 16, 16 >,
-  groov::field<"RESERVED0", std::uint16_t, 15, 2 ,access::ro>,
-  groov::field<"DBG_TIM8", bool, 1, 1 >,
-  groov::field<"DBG_TIM1", bool, 0, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using apb2fz1_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED2", std::uint8_t, 31, 30, access::ro>,
+               groov::field<"DBG_HRTIM", bool, 29, 29>,
+               groov::field<"RESERVED1", std::uint16_t, 28, 19, access::ro>,
+               groov::field<"DBG_TIM17", bool, 18, 18>,
+               groov::field<"DBG_TIM16", bool, 17, 17>,
+               groov::field<"DBG_TIM15", bool, 16, 16>,
+               groov::field<"RESERVED0", std::uint16_t, 15, 2, access::ro>,
+               groov::field<"DBG_TIM8", bool, 1, 1>,
+               groov::field<"DBG_TIM1", bool, 0, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using apb4fz1_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED4", std::uint16_t, 31, 19 ,access::ro>,
-  groov::field<"DBG_WDGLSD1", bool, 18, 18 >,
-  groov::field<"RESERVED3", bool, 17, 17 ,access::ro>,
-  groov::field<"DBG_RTC", bool, 16, 16 >,
-  groov::field<"RESERVED2", std::uint8_t, 15, 13 ,access::ro>,
-  groov::field<"DBG_LPTIM5", bool, 12, 12 >,
-  groov::field<"DBG_LPTIM4", bool, 11, 11 >,
-  groov::field<"DBG_LPTIM3", bool, 10, 10 >,
-  groov::field<"DBG_LPTIM2", bool, 9, 9 >,
-  groov::field<"RESERVED1", bool, 8, 8 ,access::ro>,
-  groov::field<"DBG_I2C4", bool, 7, 7 >,
-  groov::field<"RESERVED0", std::uint8_t, 6, 0 ,access::ro>
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using apb4fz1_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED4", std::uint16_t, 31, 19, access::ro>,
+               groov::field<"DBG_WDGLSD1", bool, 18, 18>,
+               groov::field<"RESERVED3", bool, 17, 17, access::ro>,
+               groov::field<"DBG_RTC", bool, 16, 16>,
+               groov::field<"RESERVED2", std::uint8_t, 15, 13, access::ro>,
+               groov::field<"DBG_LPTIM5", bool, 12, 12>,
+               groov::field<"DBG_LPTIM4", bool, 11, 11>,
+               groov::field<"DBG_LPTIM3", bool, 10, 10>,
+               groov::field<"DBG_LPTIM2", bool, 9, 9>,
+               groov::field<"RESERVED1", bool, 8, 8, access::ro>,
+               groov::field<"DBG_I2C4", bool, 7, 7>,
+               groov::field<"RESERVED0", std::uint8_t, 6, 0, access::ro>>;
 
-template <std::uint32_t baseaddress>
-using idc_t = idc_tt<"IDC",baseaddress,0>;
+  template <std::uint32_t baseaddress>
+  using idc_t = idc_tt<"IDC", baseaddress, 0>;
 
-template <std::uint32_t baseaddress>
-using cr_t = cr_tt<"CR",baseaddress,4>;
+  template <std::uint32_t baseaddress>
+  using cr_t = cr_tt<"CR", baseaddress, 4>;
 
-template <std::uint32_t baseaddress>
-using apb3fz1_t = apb3fz1_tt<"APB3FZ1",baseaddress,52>;
+  template <std::uint32_t baseaddress>
+  using apb3fz1_t = apb3fz1_tt<"APB3FZ1", baseaddress, 52>;
 
-template <std::uint32_t baseaddress>
-using apb1lfz1_t = apb1lfz1_tt<"APB1LFZ1",baseaddress,60>;
+  template <std::uint32_t baseaddress>
+  using apb1lfz1_t = apb1lfz1_tt<"APB1LFZ1", baseaddress, 60>;
 
-template <std::uint32_t baseaddress>
-using apb2fz1_t = apb2fz1_tt<"APB2FZ1",baseaddress,76>;
+  template <std::uint32_t baseaddress>
+  using apb2fz1_t = apb2fz1_tt<"APB2FZ1", baseaddress, 76>;
 
-template <std::uint32_t baseaddress>
-using apb4fz1_t = apb4fz1_tt<"APB4FZ1",baseaddress,84>;
+  template <std::uint32_t baseaddress>
+  using apb4fz1_t = apb4fz1_tt<"APB4FZ1", baseaddress, 84>;
 
 } // namespace dbgmcu
-

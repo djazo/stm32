@@ -11,67 +11,66 @@ namespace stm32 {
 
 namespace iwdg {
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using iwdg_kr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint16_t, 31, 16 ,access::ro>,
-  groov::field<"KEY", std::uint16_t, 15, 0 ,access::wo>
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using iwdg_kr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
+               groov::field<"KEY", std::uint16_t, 15, 0, access::wo>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using iwdg_pr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint32_t, 31, 3 ,access::ro>,
-  groov::field<"PR", std::uint8_t, 2, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using iwdg_pr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint32_t, 31, 3, access::ro>,
+               groov::field<"PR", std::uint8_t, 2, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using iwdg_rlr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint32_t, 31, 12 ,access::ro>,
-  groov::field<"RL", std::uint16_t, 11, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using iwdg_rlr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint32_t, 31, 12, access::ro>,
+               groov::field<"RL", std::uint16_t, 11, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using iwdg_sr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint32_t, 31, 3 ,access::ro>,
-  groov::field<"WVU", bool, 2, 2 ,access::ro>,
-  groov::field<"RVU", bool, 1, 1 ,access::ro>,
-  groov::field<"PVU", bool, 0, 0 ,access::ro>
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using iwdg_sr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint32_t, 31, 3, access::ro>,
+               groov::field<"WVU", bool, 2, 2, access::ro>,
+               groov::field<"RVU", bool, 1, 1, access::ro>,
+               groov::field<"PVU", bool, 0, 0, access::ro>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using iwdg_winr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint32_t, 31, 12 ,access::ro>,
-  groov::field<"WIN", std::uint16_t, 11, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using iwdg_winr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint32_t, 31, 12, access::ro>,
+               groov::field<"WIN", std::uint16_t, 11, 0>>;
 
-template <std::uint32_t baseaddress>
-using iwdg_kr_t = iwdg_kr_tt<"IWDG_KR",baseaddress,0>;
+  template <std::uint32_t baseaddress>
+  using iwdg_kr_t = iwdg_kr_tt<"IWDG_KR", baseaddress, 0>;
 
-template <std::uint32_t baseaddress>
-using iwdg_pr_t = iwdg_pr_tt<"IWDG_PR",baseaddress,4>;
+  template <std::uint32_t baseaddress>
+  using iwdg_pr_t = iwdg_pr_tt<"IWDG_PR", baseaddress, 4>;
 
-template <std::uint32_t baseaddress>
-using iwdg_rlr_t = iwdg_rlr_tt<"IWDG_RLR",baseaddress,8>;
+  template <std::uint32_t baseaddress>
+  using iwdg_rlr_t = iwdg_rlr_tt<"IWDG_RLR", baseaddress, 8>;
 
-template <std::uint32_t baseaddress>
-using iwdg_sr_t = iwdg_sr_tt<"IWDG_SR",baseaddress,12>;
+  template <std::uint32_t baseaddress>
+  using iwdg_sr_t = iwdg_sr_tt<"IWDG_SR", baseaddress, 12>;
 
-template <std::uint32_t baseaddress>
-using iwdg_winr_t = iwdg_winr_tt<"IWDG_WINR",baseaddress,16>;
+  template <std::uint32_t baseaddress>
+  using iwdg_winr_t = iwdg_winr_tt<"IWDG_WINR", baseaddress, 16>;
 
 } // namespace iwdg
-

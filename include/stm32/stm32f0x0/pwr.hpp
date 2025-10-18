@@ -11,43 +11,42 @@ namespace stm32 {
 
 namespace pwr {
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using cr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED1", std::uint32_t, 31, 9 ,access::ro>,
-  groov::field<"DBP", bool, 8, 8 >,
-  groov::field<"RESERVED0", std::uint8_t, 7, 4 ,access::ro>,
-  groov::field<"CSBF", bool, 3, 3 >,
-  groov::field<"CWUF", bool, 2, 2 >,
-  groov::field<"PDDS", bool, 1, 1 >,
-  groov::field<"LPDS", bool, 0, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using cr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED1", std::uint32_t, 31, 9, access::ro>,
+               groov::field<"DBP", bool, 8, 8>,
+               groov::field<"RESERVED0", std::uint8_t, 7, 4, access::ro>,
+               groov::field<"CSBF", bool, 3, 3>,
+               groov::field<"CWUF", bool, 2, 2>,
+               groov::field<"PDDS", bool, 1, 1>,
+               groov::field<"LPDS", bool, 0, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using csr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED2", std::uint32_t, 31, 15 ,access::ro>,
-  groov::field<"EWUP7", bool, 14, 14 >,
-  groov::field<"EWUP6", bool, 13, 13 >,
-  groov::field<"EWUP5", bool, 12, 12 >,
-  groov::field<"EWUP4", bool, 11, 11 >,
-  groov::field<"RESERVED1", bool, 10, 10 ,access::ro>,
-  groov::field<"EWUP2", bool, 9, 9 >,
-  groov::field<"EWUP1", bool, 8, 8 >,
-  groov::field<"RESERVED0", std::uint8_t, 7, 2 ,access::ro>,
-  groov::field<"SBF", bool, 1, 1 ,access::ro>,
-  groov::field<"WUF", bool, 0, 0 ,access::ro>
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using csr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED2", std::uint32_t, 31, 15, access::ro>,
+               groov::field<"EWUP7", bool, 14, 14>,
+               groov::field<"EWUP6", bool, 13, 13>,
+               groov::field<"EWUP5", bool, 12, 12>,
+               groov::field<"EWUP4", bool, 11, 11>,
+               groov::field<"RESERVED1", bool, 10, 10, access::ro>,
+               groov::field<"EWUP2", bool, 9, 9>,
+               groov::field<"EWUP1", bool, 8, 8>,
+               groov::field<"RESERVED0", std::uint8_t, 7, 2, access::ro>,
+               groov::field<"SBF", bool, 1, 1, access::ro>,
+               groov::field<"WUF", bool, 0, 0, access::ro>>;
 
-template <std::uint32_t baseaddress>
-using cr_t = cr_tt<"CR",baseaddress,0>;
+  template <std::uint32_t baseaddress>
+  using cr_t = cr_tt<"CR", baseaddress, 0>;
 
-template <std::uint32_t baseaddress>
-using csr_t = csr_tt<"CSR",baseaddress,4>;
+  template <std::uint32_t baseaddress>
+  using csr_t = csr_tt<"CSR", baseaddress, 4>;
 
 } // namespace pwr
-

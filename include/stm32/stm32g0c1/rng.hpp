@@ -11,49 +11,47 @@ namespace stm32 {
 
 namespace rng {
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using rng_cr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED2", std::uint32_t, 31, 6 ,access::ro>,
-  groov::field<"CED", bool, 5, 5 >,
-  groov::field<"RESERVED1", bool, 4, 4 ,access::ro>,
-  groov::field<"IE", bool, 3, 3 >,
-  groov::field<"RNGEN", bool, 2, 2 >,
-  groov::field<"RESERVED0", std::uint8_t, 1, 0 ,access::ro>
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using rng_cr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED2", std::uint32_t, 31, 6, access::ro>,
+               groov::field<"CED", bool, 5, 5>,
+               groov::field<"RESERVED1", bool, 4, 4, access::ro>,
+               groov::field<"IE", bool, 3, 3>,
+               groov::field<"RNGEN", bool, 2, 2>,
+               groov::field<"RESERVED0", std::uint8_t, 1, 0, access::ro>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using rng_sr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED1", std::uint32_t, 31, 7 ,access::ro>,
-  groov::field<"SEIS", bool, 6, 6 >,
-  groov::field<"CEIS", bool, 5, 5 >,
-  groov::field<"RESERVED0", std::uint8_t, 4, 3 ,access::ro>,
-  groov::field<"SECS", bool, 2, 2 ,access::ro>,
-  groov::field<"CECS", bool, 1, 1 ,access::ro>,
-  groov::field<"DRDY", bool, 0, 0 ,access::ro>
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using rng_sr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED1", std::uint32_t, 31, 7, access::ro>,
+               groov::field<"SEIS", bool, 6, 6>,
+               groov::field<"CEIS", bool, 5, 5>,
+               groov::field<"RESERVED0", std::uint8_t, 4, 3, access::ro>,
+               groov::field<"SECS", bool, 2, 2, access::ro>,
+               groov::field<"CECS", bool, 1, 1, access::ro>,
+               groov::field<"DRDY", bool, 0, 0, access::ro>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using rng_dr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::ro,
-  groov::field<"RNDATA", std::uint32_t, 31, 0 >
-  >;
+                               std::uint32_t,
+                               baseaddress + offset,
+                               access::ro,
+                               groov::field<"RNDATA", std::uint32_t, 31, 0>>;
 
-template <std::uint32_t baseaddress>
-using rng_cr_t = rng_cr_tt<"RNG_CR",baseaddress,0>;
+  template <std::uint32_t baseaddress>
+  using rng_cr_t = rng_cr_tt<"RNG_CR", baseaddress, 0>;
 
-template <std::uint32_t baseaddress>
-using rng_sr_t = rng_sr_tt<"RNG_SR",baseaddress,4>;
+  template <std::uint32_t baseaddress>
+  using rng_sr_t = rng_sr_tt<"RNG_SR", baseaddress, 4>;
 
-template <std::uint32_t baseaddress>
-using rng_dr_t = rng_dr_tt<"RNG_DR",baseaddress,8>;
+  template <std::uint32_t baseaddress>
+  using rng_dr_t = rng_dr_tt<"RNG_DR", baseaddress, 8>;
 
 } // namespace rng
-

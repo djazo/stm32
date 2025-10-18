@@ -11,55 +11,54 @@ namespace stm32 {
 
 namespace octospim {
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using p1cr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED4", std::uint8_t, 31, 27 ,access::ro>,
-  groov::field<"IOHSRC", std::uint8_t, 26, 25 >,
-  groov::field<"IOHEN", bool, 24, 24 >,
-  groov::field<"RESERVED3", std::uint8_t, 23, 19 ,access::ro>,
-  groov::field<"IOLSRC", std::uint8_t, 18, 17 >,
-  groov::field<"IOLEN", bool, 16, 16 >,
-  groov::field<"RESERVED2", std::uint8_t, 15, 10 ,access::ro>,
-  groov::field<"NCSSRC", bool, 9, 9 >,
-  groov::field<"NCSEN", bool, 8, 8 >,
-  groov::field<"RESERVED1", std::uint8_t, 7, 6 ,access::ro>,
-  groov::field<"DQSSRC", bool, 5, 5 >,
-  groov::field<"DQSEN", bool, 4, 4 >,
-  groov::field<"RESERVED0", std::uint8_t, 3, 2 ,access::ro>,
-  groov::field<"CLKSRC", bool, 1, 1 >,
-  groov::field<"CLKEN", bool, 0, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using p1cr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED4", std::uint8_t, 31, 27, access::ro>,
+               groov::field<"IOHSRC", std::uint8_t, 26, 25>,
+               groov::field<"IOHEN", bool, 24, 24>,
+               groov::field<"RESERVED3", std::uint8_t, 23, 19, access::ro>,
+               groov::field<"IOLSRC", std::uint8_t, 18, 17>,
+               groov::field<"IOLEN", bool, 16, 16>,
+               groov::field<"RESERVED2", std::uint8_t, 15, 10, access::ro>,
+               groov::field<"NCSSRC", bool, 9, 9>,
+               groov::field<"NCSEN", bool, 8, 8>,
+               groov::field<"RESERVED1", std::uint8_t, 7, 6, access::ro>,
+               groov::field<"DQSSRC", bool, 5, 5>,
+               groov::field<"DQSEN", bool, 4, 4>,
+               groov::field<"RESERVED0", std::uint8_t, 3, 2, access::ro>,
+               groov::field<"CLKSRC", bool, 1, 1>,
+               groov::field<"CLKEN", bool, 0, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using p2cr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED4", std::uint8_t, 31, 27 ,access::ro>,
-  groov::field<"IOHSRC", std::uint8_t, 26, 25 >,
-  groov::field<"IOHEN", bool, 24, 24 >,
-  groov::field<"RESERVED3", std::uint8_t, 23, 19 ,access::ro>,
-  groov::field<"IOLSRC", std::uint8_t, 18, 17 >,
-  groov::field<"IOLEN", bool, 16, 16 >,
-  groov::field<"RESERVED2", std::uint8_t, 15, 10 ,access::ro>,
-  groov::field<"NCSSRC", bool, 9, 9 >,
-  groov::field<"NCSEN", bool, 8, 8 >,
-  groov::field<"RESERVED1", std::uint8_t, 7, 6 ,access::ro>,
-  groov::field<"DQSSRC", bool, 5, 5 >,
-  groov::field<"DQSEN", bool, 4, 4 >,
-  groov::field<"RESERVED0", std::uint8_t, 3, 2 ,access::ro>,
-  groov::field<"CLKSRC", bool, 1, 1 >,
-  groov::field<"CLKEN", bool, 0, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using p2cr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED4", std::uint8_t, 31, 27, access::ro>,
+               groov::field<"IOHSRC", std::uint8_t, 26, 25>,
+               groov::field<"IOHEN", bool, 24, 24>,
+               groov::field<"RESERVED3", std::uint8_t, 23, 19, access::ro>,
+               groov::field<"IOLSRC", std::uint8_t, 18, 17>,
+               groov::field<"IOLEN", bool, 16, 16>,
+               groov::field<"RESERVED2", std::uint8_t, 15, 10, access::ro>,
+               groov::field<"NCSSRC", bool, 9, 9>,
+               groov::field<"NCSEN", bool, 8, 8>,
+               groov::field<"RESERVED1", std::uint8_t, 7, 6, access::ro>,
+               groov::field<"DQSSRC", bool, 5, 5>,
+               groov::field<"DQSEN", bool, 4, 4>,
+               groov::field<"RESERVED0", std::uint8_t, 3, 2, access::ro>,
+               groov::field<"CLKSRC", bool, 1, 1>,
+               groov::field<"CLKEN", bool, 0, 0>>;
 
-template <std::uint32_t baseaddress>
-using p1cr_t = p1cr_tt<"P1CR",baseaddress,4>;
+  template <std::uint32_t baseaddress>
+  using p1cr_t = p1cr_tt<"P1CR", baseaddress, 4>;
 
-template <std::uint32_t baseaddress>
-using p2cr_t = p2cr_tt<"P2CR",baseaddress,8>;
+  template <std::uint32_t baseaddress>
+  using p2cr_t = p2cr_tt<"P2CR", baseaddress, 8>;
 
 } // namespace octospim
-

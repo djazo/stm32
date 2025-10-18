@@ -11,53 +11,52 @@ namespace stm32 {
 
 namespace syscfg {
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using cfgr1_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED2", std::uint8_t, 31, 24 ,access::ro>,
-  groov::field<"I2C_PAx_FMP", std::uint8_t, 23, 22 >,
-  groov::field<"I2C2_FMP", bool, 21, 21 >,
-  groov::field<"I2C1_FMP", bool, 20, 20 >,
-  groov::field<"I2C_PBx_FMP", std::uint8_t, 19, 16 >,
-  groov::field<"RESERVED1", std::uint8_t, 15, 9 ,access::ro>,
-  groov::field<"BOOSTEN", bool, 8, 8 >,
-  groov::field<"IR_MOD", std::uint8_t, 7, 6 >,
-  groov::field<"IR_POL", bool, 5, 5 >,
-  groov::field<"PA11_PA12_RMP", bool, 4, 4 >,
-  groov::field<"RESERVED0", std::uint8_t, 3, 2 ,access::ro>,
-  groov::field<"MEM_MODE", std::uint8_t, 1, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using cfgr1_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED2", std::uint8_t, 31, 24, access::ro>,
+               groov::field<"I2C_PAx_FMP", std::uint8_t, 23, 22>,
+               groov::field<"I2C2_FMP", bool, 21, 21>,
+               groov::field<"I2C1_FMP", bool, 20, 20>,
+               groov::field<"I2C_PBx_FMP", std::uint8_t, 19, 16>,
+               groov::field<"RESERVED1", std::uint8_t, 15, 9, access::ro>,
+               groov::field<"BOOSTEN", bool, 8, 8>,
+               groov::field<"IR_MOD", std::uint8_t, 7, 6>,
+               groov::field<"IR_POL", bool, 5, 5>,
+               groov::field<"PA11_PA12_RMP", bool, 4, 4>,
+               groov::field<"RESERVED0", std::uint8_t, 3, 2, access::ro>,
+               groov::field<"MEM_MODE", std::uint8_t, 1, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using cfgr2_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED2", std::uint8_t, 31, 24 ,access::ro>,
-  groov::field<"PB2_CDEN", bool, 23, 23 >,
-  groov::field<"PB1_CDEN", bool, 22, 22 >,
-  groov::field<"PB0_CDEN", bool, 21, 21 >,
-  groov::field<"PA13_CDEN", bool, 20, 20 >,
-  groov::field<"PA6_CDEN", bool, 19, 19 >,
-  groov::field<"PA5_CDEN", bool, 18, 18 >,
-  groov::field<"PA3_CDEN", bool, 17, 17 >,
-  groov::field<"PA1_CDEN", bool, 16, 16 >,
-  groov::field<"RESERVED1", std::uint8_t, 15, 9 ,access::ro>,
-  groov::field<"SRAM_PEF", bool, 8, 8 >,
-  groov::field<"RESERVED0", std::uint8_t, 7, 4 ,access::ro>,
-  groov::field<"ECC_LOCK", bool, 3, 3 >,
-  groov::field<"PVD_LOCK", bool, 2, 2 >,
-  groov::field<"SRAM_PARITY_LOCK", bool, 1, 1 >,
-  groov::field<"LOCKUP_LOCK", bool, 0, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using cfgr2_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED2", std::uint8_t, 31, 24, access::ro>,
+               groov::field<"PB2_CDEN", bool, 23, 23>,
+               groov::field<"PB1_CDEN", bool, 22, 22>,
+               groov::field<"PB0_CDEN", bool, 21, 21>,
+               groov::field<"PA13_CDEN", bool, 20, 20>,
+               groov::field<"PA6_CDEN", bool, 19, 19>,
+               groov::field<"PA5_CDEN", bool, 18, 18>,
+               groov::field<"PA3_CDEN", bool, 17, 17>,
+               groov::field<"PA1_CDEN", bool, 16, 16>,
+               groov::field<"RESERVED1", std::uint8_t, 15, 9, access::ro>,
+               groov::field<"SRAM_PEF", bool, 8, 8>,
+               groov::field<"RESERVED0", std::uint8_t, 7, 4, access::ro>,
+               groov::field<"ECC_LOCK", bool, 3, 3>,
+               groov::field<"PVD_LOCK", bool, 2, 2>,
+               groov::field<"SRAM_PARITY_LOCK", bool, 1, 1>,
+               groov::field<"LOCKUP_LOCK", bool, 0, 0>>;
 
-template <std::uint32_t baseaddress>
-using cfgr1_t = cfgr1_tt<"CFGR1",baseaddress,0>;
+  template <std::uint32_t baseaddress>
+  using cfgr1_t = cfgr1_tt<"CFGR1", baseaddress, 0>;
 
-template <std::uint32_t baseaddress>
-using cfgr2_t = cfgr2_tt<"CFGR2",baseaddress,24>;
+  template <std::uint32_t baseaddress>
+  using cfgr2_t = cfgr2_tt<"CFGR2", baseaddress, 24>;
 
 } // namespace syscfg
-

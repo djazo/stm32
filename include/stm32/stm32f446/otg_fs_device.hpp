@@ -11,662 +11,660 @@ namespace stm32 {
 
 namespace otg_fs_device {
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using fs_dcfg_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED2", std::uint16_t, 31, 16 ,access::ro>,
-  groov::field<"ERRATIM", bool, 15, 15 >,
-  groov::field<"RESERVED1", std::uint8_t, 14, 13 ,access::ro>,
-  groov::field<"PFIVL", std::uint8_t, 12, 11 >,
-  groov::field<"DAD", std::uint8_t, 10, 4 >,
-  groov::field<"RESERVED0", bool, 3, 3 ,access::ro>,
-  groov::field<"NZLSOHSK", bool, 2, 2 >,
-  groov::field<"DSPD", std::uint8_t, 1, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using fs_dcfg_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED2", std::uint16_t, 31, 16, access::ro>,
+               groov::field<"ERRATIM", bool, 15, 15>,
+               groov::field<"RESERVED1", std::uint8_t, 14, 13, access::ro>,
+               groov::field<"PFIVL", std::uint8_t, 12, 11>,
+               groov::field<"DAD", std::uint8_t, 10, 4>,
+               groov::field<"RESERVED0", bool, 3, 3, access::ro>,
+               groov::field<"NZLSOHSK", bool, 2, 2>,
+               groov::field<"DSPD", std::uint8_t, 1, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using fs_dctl_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint32_t, 31, 12 ,access::ro>,
-  groov::field<"POPRGDNE", bool, 11, 11 >,
-  groov::field<"CGONAK", bool, 10, 10 >,
-  groov::field<"SGONAK", bool, 9, 9 >,
-  groov::field<"CGINAK", bool, 8, 8 >,
-  groov::field<"SGINAK", bool, 7, 7 >,
-  groov::field<"TCTL", std::uint8_t, 6, 4 >,
-  groov::field<"GONSTS", bool, 3, 3 ,access::ro>,
-  groov::field<"GINSTS", bool, 2, 2 ,access::ro>,
-  groov::field<"SDIS", bool, 1, 1 >,
-  groov::field<"RWUSIG", bool, 0, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using fs_dctl_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint32_t, 31, 12, access::ro>,
+               groov::field<"POPRGDNE", bool, 11, 11>,
+               groov::field<"CGONAK", bool, 10, 10>,
+               groov::field<"SGONAK", bool, 9, 9>,
+               groov::field<"CGINAK", bool, 8, 8>,
+               groov::field<"SGINAK", bool, 7, 7>,
+               groov::field<"TCTL", std::uint8_t, 6, 4>,
+               groov::field<"GONSTS", bool, 3, 3, access::ro>,
+               groov::field<"GINSTS", bool, 2, 2, access::ro>,
+               groov::field<"SDIS", bool, 1, 1>,
+               groov::field<"RWUSIG", bool, 0, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using fs_dsts_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::ro,
-  groov::field<"RESERVED1", std::uint16_t, 31, 22 >,
-  groov::field<"FNSOF", std::uint16_t, 21, 8 >,
-  groov::field<"RESERVED0", std::uint8_t, 7, 4 >,
-  groov::field<"EERR", bool, 3, 3 >,
-  groov::field<"ENUMSPD", std::uint8_t, 2, 1 >,
-  groov::field<"SUSPSTS", bool, 0, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using fs_dsts_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::ro,
+               groov::field<"RESERVED1", std::uint16_t, 31, 22>,
+               groov::field<"FNSOF", std::uint16_t, 21, 8>,
+               groov::field<"RESERVED0", std::uint8_t, 7, 4>,
+               groov::field<"EERR", bool, 3, 3>,
+               groov::field<"ENUMSPD", std::uint8_t, 2, 1>,
+               groov::field<"SUSPSTS", bool, 0, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using fs_diepmsk_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED1", std::uint32_t, 31, 7 ,access::ro>,
-  groov::field<"INEPNEM", bool, 6, 6 >,
-  groov::field<"INEPNMM", bool, 5, 5 >,
-  groov::field<"ITTXFEMSK", bool, 4, 4 >,
-  groov::field<"TOM", bool, 3, 3 >,
-  groov::field<"RESERVED0", bool, 2, 2 ,access::ro>,
-  groov::field<"EPDM", bool, 1, 1 >,
-  groov::field<"XFRCM", bool, 0, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using fs_diepmsk_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED1", std::uint32_t, 31, 7, access::ro>,
+               groov::field<"INEPNEM", bool, 6, 6>,
+               groov::field<"INEPNMM", bool, 5, 5>,
+               groov::field<"ITTXFEMSK", bool, 4, 4>,
+               groov::field<"TOM", bool, 3, 3>,
+               groov::field<"RESERVED0", bool, 2, 2, access::ro>,
+               groov::field<"EPDM", bool, 1, 1>,
+               groov::field<"XFRCM", bool, 0, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using fs_doepmsk_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED1", std::uint32_t, 31, 5 ,access::ro>,
-  groov::field<"OTEPDM", bool, 4, 4 >,
-  groov::field<"STUPM", bool, 3, 3 >,
-  groov::field<"RESERVED0", bool, 2, 2 ,access::ro>,
-  groov::field<"EPDM", bool, 1, 1 >,
-  groov::field<"XFRCM", bool, 0, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using fs_doepmsk_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED1", std::uint32_t, 31, 5, access::ro>,
+               groov::field<"OTEPDM", bool, 4, 4>,
+               groov::field<"STUPM", bool, 3, 3>,
+               groov::field<"RESERVED0", bool, 2, 2, access::ro>,
+               groov::field<"EPDM", bool, 1, 1>,
+               groov::field<"XFRCM", bool, 0, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using fs_daint_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::ro,
-  groov::field<"OEPINT", std::uint16_t, 31, 16 >,
-  groov::field<"IEPINT", std::uint16_t, 15, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using fs_daintmsk_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"OEPINT", std::uint16_t, 31, 16 >,
-  groov::field<"IEPM", std::uint16_t, 15, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dvbusdis_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint16_t, 31, 16 ,access::ro>,
-  groov::field<"VBUSDT", std::uint16_t, 15, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dvbuspulse_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint32_t, 31, 12 ,access::ro>,
-  groov::field<"DVBUSP", std::uint16_t, 11, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using diepempmsk_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint16_t, 31, 16 ,access::ro>,
-  groov::field<"INEPTXFEM", std::uint16_t, 15, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using fs_diepctl0_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"EPENA", bool, 31, 31 ,access::ro>,
-  groov::field<"EPDIS", bool, 30, 30 ,access::ro>,
-  groov::field<"RESERVED3", std::uint8_t, 29, 28 ,access::ro>,
-  groov::field<"SNAK", bool, 27, 27 ,access::wo>,
-  groov::field<"CNAK", bool, 26, 26 ,access::wo>,
-  groov::field<"TXFNUM", std::uint8_t, 25, 22 >,
-  groov::field<"STALL", bool, 21, 21 >,
-  groov::field<"RESERVED2", bool, 20, 20 ,access::ro>,
-  groov::field<"EPTYP", std::uint8_t, 19, 18 ,access::ro>,
-  groov::field<"NAKSTS", bool, 17, 17 ,access::ro>,
-  groov::field<"RESERVED1", bool, 16, 16 ,access::ro>,
-  groov::field<"USBAEP", bool, 15, 15 ,access::ro>,
-  groov::field<"RESERVED0", std::uint16_t, 14, 2 ,access::ro>,
-  groov::field<"MPSIZ", std::uint8_t, 1, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using diepctl1_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"EPENA", bool, 31, 31 >,
-  groov::field<"EPDIS", bool, 30, 30 >,
-  groov::field<"SODDFRM_SD1PID", bool, 29, 29 ,access::wo>,
-  groov::field<"SD0PID_SEVNFRM", bool, 28, 28 ,access::wo>,
-  groov::field<"SNAK", bool, 27, 27 ,access::wo>,
-  groov::field<"CNAK", bool, 26, 26 ,access::wo>,
-  groov::field<"TXFNUM", std::uint8_t, 25, 22 >,
-  groov::field<"Stall", bool, 21, 21 >,
-  groov::field<"RESERVED1", bool, 20, 20 ,access::ro>,
-  groov::field<"EPTYP", std::uint8_t, 19, 18 >,
-  groov::field<"NAKSTS", bool, 17, 17 ,access::ro>,
-  groov::field<"EONUM_DPID", bool, 16, 16 ,access::ro>,
-  groov::field<"USBAEP", bool, 15, 15 >,
-  groov::field<"RESERVED0", std::uint8_t, 14, 11 ,access::ro>,
-  groov::field<"MPSIZ", std::uint16_t, 10, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using diepctl2_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"EPENA", bool, 31, 31 >,
-  groov::field<"EPDIS", bool, 30, 30 >,
-  groov::field<"SODDFRM", bool, 29, 29 ,access::wo>,
-  groov::field<"SD0PID_SEVNFRM", bool, 28, 28 ,access::wo>,
-  groov::field<"SNAK", bool, 27, 27 ,access::wo>,
-  groov::field<"CNAK", bool, 26, 26 ,access::wo>,
-  groov::field<"TXFNUM", std::uint8_t, 25, 22 >,
-  groov::field<"Stall", bool, 21, 21 >,
-  groov::field<"RESERVED1", bool, 20, 20 ,access::ro>,
-  groov::field<"EPTYP", std::uint8_t, 19, 18 >,
-  groov::field<"NAKSTS", bool, 17, 17 ,access::ro>,
-  groov::field<"EONUM_DPID", bool, 16, 16 ,access::ro>,
-  groov::field<"USBAEP", bool, 15, 15 >,
-  groov::field<"RESERVED0", std::uint8_t, 14, 11 ,access::ro>,
-  groov::field<"MPSIZ", std::uint16_t, 10, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using diepctl3_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"EPENA", bool, 31, 31 >,
-  groov::field<"EPDIS", bool, 30, 30 >,
-  groov::field<"SODDFRM", bool, 29, 29 ,access::wo>,
-  groov::field<"SD0PID_SEVNFRM", bool, 28, 28 ,access::wo>,
-  groov::field<"SNAK", bool, 27, 27 ,access::wo>,
-  groov::field<"CNAK", bool, 26, 26 ,access::wo>,
-  groov::field<"TXFNUM", std::uint8_t, 25, 22 >,
-  groov::field<"Stall", bool, 21, 21 >,
-  groov::field<"RESERVED1", bool, 20, 20 ,access::ro>,
-  groov::field<"EPTYP", std::uint8_t, 19, 18 >,
-  groov::field<"NAKSTS", bool, 17, 17 ,access::ro>,
-  groov::field<"EONUM_DPID", bool, 16, 16 ,access::ro>,
-  groov::field<"USBAEP", bool, 15, 15 >,
-  groov::field<"RESERVED0", std::uint8_t, 14, 11 ,access::ro>,
-  groov::field<"MPSIZ", std::uint16_t, 10, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using doepctl0_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"EPENA", bool, 31, 31 ,access::wo>,
-  groov::field<"EPDIS", bool, 30, 30 ,access::ro>,
-  groov::field<"RESERVED3", std::uint8_t, 29, 28 ,access::ro>,
-  groov::field<"SNAK", bool, 27, 27 ,access::wo>,
-  groov::field<"CNAK", bool, 26, 26 ,access::wo>,
-  groov::field<"RESERVED2", std::uint8_t, 25, 22 ,access::ro>,
-  groov::field<"Stall", bool, 21, 21 >,
-  groov::field<"SNPM", bool, 20, 20 >,
-  groov::field<"EPTYP", std::uint8_t, 19, 18 ,access::ro>,
-  groov::field<"NAKSTS", bool, 17, 17 ,access::ro>,
-  groov::field<"RESERVED1", bool, 16, 16 ,access::ro>,
-  groov::field<"USBAEP", bool, 15, 15 ,access::ro>,
-  groov::field<"RESERVED0", std::uint16_t, 14, 2 ,access::ro>,
-  groov::field<"MPSIZ", std::uint8_t, 1, 0 ,access::ro>
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using doepctl1_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"EPENA", bool, 31, 31 >,
-  groov::field<"EPDIS", bool, 30, 30 >,
-  groov::field<"SODDFRM", bool, 29, 29 ,access::wo>,
-  groov::field<"SD0PID_SEVNFRM", bool, 28, 28 ,access::wo>,
-  groov::field<"SNAK", bool, 27, 27 ,access::wo>,
-  groov::field<"CNAK", bool, 26, 26 ,access::wo>,
-  groov::field<"RESERVED1", std::uint8_t, 25, 22 ,access::ro>,
-  groov::field<"Stall", bool, 21, 21 >,
-  groov::field<"SNPM", bool, 20, 20 >,
-  groov::field<"EPTYP", std::uint8_t, 19, 18 >,
-  groov::field<"NAKSTS", bool, 17, 17 ,access::ro>,
-  groov::field<"EONUM_DPID", bool, 16, 16 ,access::ro>,
-  groov::field<"USBAEP", bool, 15, 15 >,
-  groov::field<"RESERVED0", std::uint8_t, 14, 11 ,access::ro>,
-  groov::field<"MPSIZ", std::uint16_t, 10, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using doepctl2_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"EPENA", bool, 31, 31 >,
-  groov::field<"EPDIS", bool, 30, 30 >,
-  groov::field<"SODDFRM", bool, 29, 29 ,access::wo>,
-  groov::field<"SD0PID_SEVNFRM", bool, 28, 28 ,access::wo>,
-  groov::field<"SNAK", bool, 27, 27 ,access::wo>,
-  groov::field<"CNAK", bool, 26, 26 ,access::wo>,
-  groov::field<"RESERVED1", std::uint8_t, 25, 22 ,access::ro>,
-  groov::field<"Stall", bool, 21, 21 >,
-  groov::field<"SNPM", bool, 20, 20 >,
-  groov::field<"EPTYP", std::uint8_t, 19, 18 >,
-  groov::field<"NAKSTS", bool, 17, 17 ,access::ro>,
-  groov::field<"EONUM_DPID", bool, 16, 16 ,access::ro>,
-  groov::field<"USBAEP", bool, 15, 15 >,
-  groov::field<"RESERVED0", std::uint8_t, 14, 11 ,access::ro>,
-  groov::field<"MPSIZ", std::uint16_t, 10, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using doepctl3_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"EPENA", bool, 31, 31 >,
-  groov::field<"EPDIS", bool, 30, 30 >,
-  groov::field<"SODDFRM", bool, 29, 29 ,access::wo>,
-  groov::field<"SD0PID_SEVNFRM", bool, 28, 28 ,access::wo>,
-  groov::field<"SNAK", bool, 27, 27 ,access::wo>,
-  groov::field<"CNAK", bool, 26, 26 ,access::wo>,
-  groov::field<"RESERVED1", std::uint8_t, 25, 22 ,access::ro>,
-  groov::field<"Stall", bool, 21, 21 >,
-  groov::field<"SNPM", bool, 20, 20 >,
-  groov::field<"EPTYP", std::uint8_t, 19, 18 >,
-  groov::field<"NAKSTS", bool, 17, 17 ,access::ro>,
-  groov::field<"EONUM_DPID", bool, 16, 16 ,access::ro>,
-  groov::field<"USBAEP", bool, 15, 15 >,
-  groov::field<"RESERVED0", std::uint8_t, 14, 11 ,access::ro>,
-  groov::field<"MPSIZ", std::uint16_t, 10, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using diepint0_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED2", std::uint32_t, 31, 8 ,access::ro>,
-  groov::field<"TXFE", bool, 7, 7 ,access::ro>,
-  groov::field<"INEPNE", bool, 6, 6 >,
-  groov::field<"RESERVED1", bool, 5, 5 ,access::ro>,
-  groov::field<"ITTXFE", bool, 4, 4 >,
-  groov::field<"TOC", bool, 3, 3 >,
-  groov::field<"RESERVED0", bool, 2, 2 ,access::ro>,
-  groov::field<"EPDISD", bool, 1, 1 >,
-  groov::field<"XFRC", bool, 0, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using diepint1_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED2", std::uint32_t, 31, 8 ,access::ro>,
-  groov::field<"TXFE", bool, 7, 7 ,access::ro>,
-  groov::field<"INEPNE", bool, 6, 6 >,
-  groov::field<"RESERVED1", bool, 5, 5 ,access::ro>,
-  groov::field<"ITTXFE", bool, 4, 4 >,
-  groov::field<"TOC", bool, 3, 3 >,
-  groov::field<"RESERVED0", bool, 2, 2 ,access::ro>,
-  groov::field<"EPDISD", bool, 1, 1 >,
-  groov::field<"XFRC", bool, 0, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using diepint2_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED2", std::uint32_t, 31, 8 ,access::ro>,
-  groov::field<"TXFE", bool, 7, 7 ,access::ro>,
-  groov::field<"INEPNE", bool, 6, 6 >,
-  groov::field<"RESERVED1", bool, 5, 5 ,access::ro>,
-  groov::field<"ITTXFE", bool, 4, 4 >,
-  groov::field<"TOC", bool, 3, 3 >,
-  groov::field<"RESERVED0", bool, 2, 2 ,access::ro>,
-  groov::field<"EPDISD", bool, 1, 1 >,
-  groov::field<"XFRC", bool, 0, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using diepint3_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED2", std::uint32_t, 31, 8 ,access::ro>,
-  groov::field<"TXFE", bool, 7, 7 ,access::ro>,
-  groov::field<"INEPNE", bool, 6, 6 >,
-  groov::field<"RESERVED1", bool, 5, 5 ,access::ro>,
-  groov::field<"ITTXFE", bool, 4, 4 >,
-  groov::field<"TOC", bool, 3, 3 >,
-  groov::field<"RESERVED0", bool, 2, 2 ,access::ro>,
-  groov::field<"EPDISD", bool, 1, 1 >,
-  groov::field<"XFRC", bool, 0, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using doepint0_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED2", std::uint32_t, 31, 7 ,access::ro>,
-  groov::field<"B2BSTUP", bool, 6, 6 >,
-  groov::field<"RESERVED1", bool, 5, 5 ,access::ro>,
-  groov::field<"OTEPDIS", bool, 4, 4 >,
-  groov::field<"STUP", bool, 3, 3 >,
-  groov::field<"RESERVED0", bool, 2, 2 ,access::ro>,
-  groov::field<"EPDISD", bool, 1, 1 >,
-  groov::field<"XFRC", bool, 0, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using doepint1_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED2", std::uint32_t, 31, 7 ,access::ro>,
-  groov::field<"B2BSTUP", bool, 6, 6 >,
-  groov::field<"RESERVED1", bool, 5, 5 ,access::ro>,
-  groov::field<"OTEPDIS", bool, 4, 4 >,
-  groov::field<"STUP", bool, 3, 3 >,
-  groov::field<"RESERVED0", bool, 2, 2 ,access::ro>,
-  groov::field<"EPDISD", bool, 1, 1 >,
-  groov::field<"XFRC", bool, 0, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using doepint2_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED2", std::uint32_t, 31, 7 ,access::ro>,
-  groov::field<"B2BSTUP", bool, 6, 6 >,
-  groov::field<"RESERVED1", bool, 5, 5 ,access::ro>,
-  groov::field<"OTEPDIS", bool, 4, 4 >,
-  groov::field<"STUP", bool, 3, 3 >,
-  groov::field<"RESERVED0", bool, 2, 2 ,access::ro>,
-  groov::field<"EPDISD", bool, 1, 1 >,
-  groov::field<"XFRC", bool, 0, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using doepint3_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED2", std::uint32_t, 31, 7 ,access::ro>,
-  groov::field<"B2BSTUP", bool, 6, 6 >,
-  groov::field<"RESERVED1", bool, 5, 5 ,access::ro>,
-  groov::field<"OTEPDIS", bool, 4, 4 >,
-  groov::field<"STUP", bool, 3, 3 >,
-  groov::field<"RESERVED0", bool, 2, 2 ,access::ro>,
-  groov::field<"EPDISD", bool, 1, 1 >,
-  groov::field<"XFRC", bool, 0, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dieptsiz0_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED1", std::uint16_t, 31, 21 ,access::ro>,
-  groov::field<"PKTCNT", std::uint8_t, 20, 19 >,
-  groov::field<"RESERVED0", std::uint16_t, 18, 7 ,access::ro>,
-  groov::field<"XFRSIZ", std::uint8_t, 6, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using doeptsiz0_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED2", bool, 31, 31 ,access::ro>,
-  groov::field<"STUPCNT", std::uint8_t, 30, 29 >,
-  groov::field<"RESERVED1", std::uint16_t, 28, 20 ,access::ro>,
-  groov::field<"PKTCNT", bool, 19, 19 >,
-  groov::field<"RESERVED0", std::uint16_t, 18, 7 ,access::ro>,
-  groov::field<"XFRSIZ", std::uint8_t, 6, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dieptsiz1_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", bool, 31, 31 ,access::ro>,
-  groov::field<"MCNT", std::uint8_t, 30, 29 >,
-  groov::field<"PKTCNT", std::uint16_t, 28, 19 >,
-  groov::field<"XFRSIZ", std::uint32_t, 18, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dieptsiz2_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", bool, 31, 31 ,access::ro>,
-  groov::field<"MCNT", std::uint8_t, 30, 29 >,
-  groov::field<"PKTCNT", std::uint16_t, 28, 19 >,
-  groov::field<"XFRSIZ", std::uint32_t, 18, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dieptsiz3_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", bool, 31, 31 ,access::ro>,
-  groov::field<"MCNT", std::uint8_t, 30, 29 >,
-  groov::field<"PKTCNT", std::uint16_t, 28, 19 >,
-  groov::field<"XFRSIZ", std::uint32_t, 18, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dtxfsts0_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::ro,
-  groov::field<"RESERVED0", std::uint16_t, 31, 16 >,
-  groov::field<"INEPTFSAV", std::uint16_t, 15, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dtxfsts1_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::ro,
-  groov::field<"RESERVED0", std::uint16_t, 31, 16 >,
-  groov::field<"INEPTFSAV", std::uint16_t, 15, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dtxfsts2_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::ro,
-  groov::field<"RESERVED0", std::uint16_t, 31, 16 >,
-  groov::field<"INEPTFSAV", std::uint16_t, 15, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dtxfsts3_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::ro,
-  groov::field<"RESERVED0", std::uint16_t, 31, 16 >,
-  groov::field<"INEPTFSAV", std::uint16_t, 15, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using doeptsiz1_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", bool, 31, 31 ,access::ro>,
-  groov::field<"RXDPID_STUPCNT", std::uint8_t, 30, 29 >,
-  groov::field<"PKTCNT", std::uint16_t, 28, 19 >,
-  groov::field<"XFRSIZ", std::uint32_t, 18, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using doeptsiz2_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", bool, 31, 31 ,access::ro>,
-  groov::field<"RXDPID_STUPCNT", std::uint8_t, 30, 29 >,
-  groov::field<"PKTCNT", std::uint16_t, 28, 19 >,
-  groov::field<"XFRSIZ", std::uint32_t, 18, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using doeptsiz3_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", bool, 31, 31 ,access::ro>,
-  groov::field<"RXDPID_STUPCNT", std::uint8_t, 30, 29 >,
-  groov::field<"PKTCNT", std::uint16_t, 28, 19 >,
-  groov::field<"XFRSIZ", std::uint32_t, 18, 0 >
-  >;
-
-template <std::uint32_t baseaddress>
-using fs_dcfg_t = fs_dcfg_tt<"FS_DCFG",baseaddress,0>;
-
-template <std::uint32_t baseaddress>
-using fs_dctl_t = fs_dctl_tt<"FS_DCTL",baseaddress,4>;
-
-template <std::uint32_t baseaddress>
-using fs_dsts_t = fs_dsts_tt<"FS_DSTS",baseaddress,8>;
-
-template <std::uint32_t baseaddress>
-using fs_diepmsk_t = fs_diepmsk_tt<"FS_DIEPMSK",baseaddress,16>;
-
-template <std::uint32_t baseaddress>
-using fs_doepmsk_t = fs_doepmsk_tt<"FS_DOEPMSK",baseaddress,20>;
-
-template <std::uint32_t baseaddress>
-using fs_daint_t = fs_daint_tt<"FS_DAINT",baseaddress,24>;
-
-template <std::uint32_t baseaddress>
-using fs_daintmsk_t = fs_daintmsk_tt<"FS_DAINTMSK",baseaddress,28>;
-
-template <std::uint32_t baseaddress>
-using dvbusdis_t = dvbusdis_tt<"DVBUSDIS",baseaddress,40>;
-
-template <std::uint32_t baseaddress>
-using dvbuspulse_t = dvbuspulse_tt<"DVBUSPULSE",baseaddress,44>;
-
-template <std::uint32_t baseaddress>
-using diepempmsk_t = diepempmsk_tt<"DIEPEMPMSK",baseaddress,52>;
-
-template <std::uint32_t baseaddress>
-using fs_diepctl0_t = fs_diepctl0_tt<"FS_DIEPCTL0",baseaddress,256>;
-
-template <std::uint32_t baseaddress>
-using diepctl1_t = diepctl1_tt<"DIEPCTL1",baseaddress,288>;
-
-template <std::uint32_t baseaddress>
-using diepctl2_t = diepctl2_tt<"DIEPCTL2",baseaddress,320>;
-
-template <std::uint32_t baseaddress>
-using diepctl3_t = diepctl3_tt<"DIEPCTL3",baseaddress,352>;
-
-template <std::uint32_t baseaddress>
-using doepctl0_t = doepctl0_tt<"DOEPCTL0",baseaddress,768>;
-
-template <std::uint32_t baseaddress>
-using doepctl1_t = doepctl1_tt<"DOEPCTL1",baseaddress,800>;
-
-template <std::uint32_t baseaddress>
-using doepctl2_t = doepctl2_tt<"DOEPCTL2",baseaddress,832>;
-
-template <std::uint32_t baseaddress>
-using doepctl3_t = doepctl3_tt<"DOEPCTL3",baseaddress,864>;
-
-template <std::uint32_t baseaddress>
-using diepint0_t = diepint0_tt<"DIEPINT0",baseaddress,264>;
-
-template <std::uint32_t baseaddress>
-using diepint1_t = diepint1_tt<"DIEPINT1",baseaddress,296>;
-
-template <std::uint32_t baseaddress>
-using diepint2_t = diepint2_tt<"DIEPINT2",baseaddress,328>;
-
-template <std::uint32_t baseaddress>
-using diepint3_t = diepint3_tt<"DIEPINT3",baseaddress,360>;
-
-template <std::uint32_t baseaddress>
-using doepint0_t = doepint0_tt<"DOEPINT0",baseaddress,776>;
-
-template <std::uint32_t baseaddress>
-using doepint1_t = doepint1_tt<"DOEPINT1",baseaddress,808>;
-
-template <std::uint32_t baseaddress>
-using doepint2_t = doepint2_tt<"DOEPINT2",baseaddress,840>;
-
-template <std::uint32_t baseaddress>
-using doepint3_t = doepint3_tt<"DOEPINT3",baseaddress,872>;
-
-template <std::uint32_t baseaddress>
-using dieptsiz0_t = dieptsiz0_tt<"DIEPTSIZ0",baseaddress,272>;
-
-template <std::uint32_t baseaddress>
-using doeptsiz0_t = doeptsiz0_tt<"DOEPTSIZ0",baseaddress,784>;
-
-template <std::uint32_t baseaddress>
-using dieptsiz1_t = dieptsiz1_tt<"DIEPTSIZ1",baseaddress,304>;
-
-template <std::uint32_t baseaddress>
-using dieptsiz2_t = dieptsiz2_tt<"DIEPTSIZ2",baseaddress,336>;
-
-template <std::uint32_t baseaddress>
-using dieptsiz3_t = dieptsiz3_tt<"DIEPTSIZ3",baseaddress,368>;
-
-template <std::uint32_t baseaddress>
-using dtxfsts0_t = dtxfsts0_tt<"DTXFSTS0",baseaddress,280>;
-
-template <std::uint32_t baseaddress>
-using dtxfsts1_t = dtxfsts1_tt<"DTXFSTS1",baseaddress,312>;
-
-template <std::uint32_t baseaddress>
-using dtxfsts2_t = dtxfsts2_tt<"DTXFSTS2",baseaddress,344>;
-
-template <std::uint32_t baseaddress>
-using dtxfsts3_t = dtxfsts3_tt<"DTXFSTS3",baseaddress,376>;
-
-template <std::uint32_t baseaddress>
-using doeptsiz1_t = doeptsiz1_tt<"DOEPTSIZ1",baseaddress,816>;
-
-template <std::uint32_t baseaddress>
-using doeptsiz2_t = doeptsiz2_tt<"DOEPTSIZ2",baseaddress,848>;
-
-template <std::uint32_t baseaddress>
-using doeptsiz3_t = doeptsiz3_tt<"DOEPTSIZ3",baseaddress,880>;
+                                 std::uint32_t,
+                                 baseaddress + offset,
+                                 access::ro,
+                                 groov::field<"OEPINT", std::uint16_t, 31, 16>,
+                                 groov::field<"IEPINT", std::uint16_t, 15, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using fs_daintmsk_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"OEPINT", std::uint16_t, 31, 16>,
+               groov::field<"IEPM", std::uint16_t, 15, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dvbusdis_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
+               groov::field<"VBUSDT", std::uint16_t, 15, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dvbuspulse_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint32_t, 31, 12, access::ro>,
+               groov::field<"DVBUSP", std::uint16_t, 11, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using diepempmsk_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
+               groov::field<"INEPTXFEM", std::uint16_t, 15, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using fs_diepctl0_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"EPENA", bool, 31, 31, access::ro>,
+               groov::field<"EPDIS", bool, 30, 30, access::ro>,
+               groov::field<"RESERVED3", std::uint8_t, 29, 28, access::ro>,
+               groov::field<"SNAK", bool, 27, 27, access::wo>,
+               groov::field<"CNAK", bool, 26, 26, access::wo>,
+               groov::field<"TXFNUM", std::uint8_t, 25, 22>,
+               groov::field<"STALL", bool, 21, 21>,
+               groov::field<"RESERVED2", bool, 20, 20, access::ro>,
+               groov::field<"EPTYP", std::uint8_t, 19, 18, access::ro>,
+               groov::field<"NAKSTS", bool, 17, 17, access::ro>,
+               groov::field<"RESERVED1", bool, 16, 16, access::ro>,
+               groov::field<"USBAEP", bool, 15, 15, access::ro>,
+               groov::field<"RESERVED0", std::uint16_t, 14, 2, access::ro>,
+               groov::field<"MPSIZ", std::uint8_t, 1, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using diepctl1_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"EPENA", bool, 31, 31>,
+               groov::field<"EPDIS", bool, 30, 30>,
+               groov::field<"SODDFRM_SD1PID", bool, 29, 29, access::wo>,
+               groov::field<"SD0PID_SEVNFRM", bool, 28, 28, access::wo>,
+               groov::field<"SNAK", bool, 27, 27, access::wo>,
+               groov::field<"CNAK", bool, 26, 26, access::wo>,
+               groov::field<"TXFNUM", std::uint8_t, 25, 22>,
+               groov::field<"Stall", bool, 21, 21>,
+               groov::field<"RESERVED1", bool, 20, 20, access::ro>,
+               groov::field<"EPTYP", std::uint8_t, 19, 18>,
+               groov::field<"NAKSTS", bool, 17, 17, access::ro>,
+               groov::field<"EONUM_DPID", bool, 16, 16, access::ro>,
+               groov::field<"USBAEP", bool, 15, 15>,
+               groov::field<"RESERVED0", std::uint8_t, 14, 11, access::ro>,
+               groov::field<"MPSIZ", std::uint16_t, 10, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using diepctl2_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"EPENA", bool, 31, 31>,
+               groov::field<"EPDIS", bool, 30, 30>,
+               groov::field<"SODDFRM", bool, 29, 29, access::wo>,
+               groov::field<"SD0PID_SEVNFRM", bool, 28, 28, access::wo>,
+               groov::field<"SNAK", bool, 27, 27, access::wo>,
+               groov::field<"CNAK", bool, 26, 26, access::wo>,
+               groov::field<"TXFNUM", std::uint8_t, 25, 22>,
+               groov::field<"Stall", bool, 21, 21>,
+               groov::field<"RESERVED1", bool, 20, 20, access::ro>,
+               groov::field<"EPTYP", std::uint8_t, 19, 18>,
+               groov::field<"NAKSTS", bool, 17, 17, access::ro>,
+               groov::field<"EONUM_DPID", bool, 16, 16, access::ro>,
+               groov::field<"USBAEP", bool, 15, 15>,
+               groov::field<"RESERVED0", std::uint8_t, 14, 11, access::ro>,
+               groov::field<"MPSIZ", std::uint16_t, 10, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using diepctl3_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"EPENA", bool, 31, 31>,
+               groov::field<"EPDIS", bool, 30, 30>,
+               groov::field<"SODDFRM", bool, 29, 29, access::wo>,
+               groov::field<"SD0PID_SEVNFRM", bool, 28, 28, access::wo>,
+               groov::field<"SNAK", bool, 27, 27, access::wo>,
+               groov::field<"CNAK", bool, 26, 26, access::wo>,
+               groov::field<"TXFNUM", std::uint8_t, 25, 22>,
+               groov::field<"Stall", bool, 21, 21>,
+               groov::field<"RESERVED1", bool, 20, 20, access::ro>,
+               groov::field<"EPTYP", std::uint8_t, 19, 18>,
+               groov::field<"NAKSTS", bool, 17, 17, access::ro>,
+               groov::field<"EONUM_DPID", bool, 16, 16, access::ro>,
+               groov::field<"USBAEP", bool, 15, 15>,
+               groov::field<"RESERVED0", std::uint8_t, 14, 11, access::ro>,
+               groov::field<"MPSIZ", std::uint16_t, 10, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using doepctl0_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"EPENA", bool, 31, 31, access::wo>,
+               groov::field<"EPDIS", bool, 30, 30, access::ro>,
+               groov::field<"RESERVED3", std::uint8_t, 29, 28, access::ro>,
+               groov::field<"SNAK", bool, 27, 27, access::wo>,
+               groov::field<"CNAK", bool, 26, 26, access::wo>,
+               groov::field<"RESERVED2", std::uint8_t, 25, 22, access::ro>,
+               groov::field<"Stall", bool, 21, 21>,
+               groov::field<"SNPM", bool, 20, 20>,
+               groov::field<"EPTYP", std::uint8_t, 19, 18, access::ro>,
+               groov::field<"NAKSTS", bool, 17, 17, access::ro>,
+               groov::field<"RESERVED1", bool, 16, 16, access::ro>,
+               groov::field<"USBAEP", bool, 15, 15, access::ro>,
+               groov::field<"RESERVED0", std::uint16_t, 14, 2, access::ro>,
+               groov::field<"MPSIZ", std::uint8_t, 1, 0, access::ro>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using doepctl1_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"EPENA", bool, 31, 31>,
+               groov::field<"EPDIS", bool, 30, 30>,
+               groov::field<"SODDFRM", bool, 29, 29, access::wo>,
+               groov::field<"SD0PID_SEVNFRM", bool, 28, 28, access::wo>,
+               groov::field<"SNAK", bool, 27, 27, access::wo>,
+               groov::field<"CNAK", bool, 26, 26, access::wo>,
+               groov::field<"RESERVED1", std::uint8_t, 25, 22, access::ro>,
+               groov::field<"Stall", bool, 21, 21>,
+               groov::field<"SNPM", bool, 20, 20>,
+               groov::field<"EPTYP", std::uint8_t, 19, 18>,
+               groov::field<"NAKSTS", bool, 17, 17, access::ro>,
+               groov::field<"EONUM_DPID", bool, 16, 16, access::ro>,
+               groov::field<"USBAEP", bool, 15, 15>,
+               groov::field<"RESERVED0", std::uint8_t, 14, 11, access::ro>,
+               groov::field<"MPSIZ", std::uint16_t, 10, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using doepctl2_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"EPENA", bool, 31, 31>,
+               groov::field<"EPDIS", bool, 30, 30>,
+               groov::field<"SODDFRM", bool, 29, 29, access::wo>,
+               groov::field<"SD0PID_SEVNFRM", bool, 28, 28, access::wo>,
+               groov::field<"SNAK", bool, 27, 27, access::wo>,
+               groov::field<"CNAK", bool, 26, 26, access::wo>,
+               groov::field<"RESERVED1", std::uint8_t, 25, 22, access::ro>,
+               groov::field<"Stall", bool, 21, 21>,
+               groov::field<"SNPM", bool, 20, 20>,
+               groov::field<"EPTYP", std::uint8_t, 19, 18>,
+               groov::field<"NAKSTS", bool, 17, 17, access::ro>,
+               groov::field<"EONUM_DPID", bool, 16, 16, access::ro>,
+               groov::field<"USBAEP", bool, 15, 15>,
+               groov::field<"RESERVED0", std::uint8_t, 14, 11, access::ro>,
+               groov::field<"MPSIZ", std::uint16_t, 10, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using doepctl3_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"EPENA", bool, 31, 31>,
+               groov::field<"EPDIS", bool, 30, 30>,
+               groov::field<"SODDFRM", bool, 29, 29, access::wo>,
+               groov::field<"SD0PID_SEVNFRM", bool, 28, 28, access::wo>,
+               groov::field<"SNAK", bool, 27, 27, access::wo>,
+               groov::field<"CNAK", bool, 26, 26, access::wo>,
+               groov::field<"RESERVED1", std::uint8_t, 25, 22, access::ro>,
+               groov::field<"Stall", bool, 21, 21>,
+               groov::field<"SNPM", bool, 20, 20>,
+               groov::field<"EPTYP", std::uint8_t, 19, 18>,
+               groov::field<"NAKSTS", bool, 17, 17, access::ro>,
+               groov::field<"EONUM_DPID", bool, 16, 16, access::ro>,
+               groov::field<"USBAEP", bool, 15, 15>,
+               groov::field<"RESERVED0", std::uint8_t, 14, 11, access::ro>,
+               groov::field<"MPSIZ", std::uint16_t, 10, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using diepint0_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED2", std::uint32_t, 31, 8, access::ro>,
+               groov::field<"TXFE", bool, 7, 7, access::ro>,
+               groov::field<"INEPNE", bool, 6, 6>,
+               groov::field<"RESERVED1", bool, 5, 5, access::ro>,
+               groov::field<"ITTXFE", bool, 4, 4>,
+               groov::field<"TOC", bool, 3, 3>,
+               groov::field<"RESERVED0", bool, 2, 2, access::ro>,
+               groov::field<"EPDISD", bool, 1, 1>,
+               groov::field<"XFRC", bool, 0, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using diepint1_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED2", std::uint32_t, 31, 8, access::ro>,
+               groov::field<"TXFE", bool, 7, 7, access::ro>,
+               groov::field<"INEPNE", bool, 6, 6>,
+               groov::field<"RESERVED1", bool, 5, 5, access::ro>,
+               groov::field<"ITTXFE", bool, 4, 4>,
+               groov::field<"TOC", bool, 3, 3>,
+               groov::field<"RESERVED0", bool, 2, 2, access::ro>,
+               groov::field<"EPDISD", bool, 1, 1>,
+               groov::field<"XFRC", bool, 0, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using diepint2_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED2", std::uint32_t, 31, 8, access::ro>,
+               groov::field<"TXFE", bool, 7, 7, access::ro>,
+               groov::field<"INEPNE", bool, 6, 6>,
+               groov::field<"RESERVED1", bool, 5, 5, access::ro>,
+               groov::field<"ITTXFE", bool, 4, 4>,
+               groov::field<"TOC", bool, 3, 3>,
+               groov::field<"RESERVED0", bool, 2, 2, access::ro>,
+               groov::field<"EPDISD", bool, 1, 1>,
+               groov::field<"XFRC", bool, 0, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using diepint3_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED2", std::uint32_t, 31, 8, access::ro>,
+               groov::field<"TXFE", bool, 7, 7, access::ro>,
+               groov::field<"INEPNE", bool, 6, 6>,
+               groov::field<"RESERVED1", bool, 5, 5, access::ro>,
+               groov::field<"ITTXFE", bool, 4, 4>,
+               groov::field<"TOC", bool, 3, 3>,
+               groov::field<"RESERVED0", bool, 2, 2, access::ro>,
+               groov::field<"EPDISD", bool, 1, 1>,
+               groov::field<"XFRC", bool, 0, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using doepint0_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED2", std::uint32_t, 31, 7, access::ro>,
+               groov::field<"B2BSTUP", bool, 6, 6>,
+               groov::field<"RESERVED1", bool, 5, 5, access::ro>,
+               groov::field<"OTEPDIS", bool, 4, 4>,
+               groov::field<"STUP", bool, 3, 3>,
+               groov::field<"RESERVED0", bool, 2, 2, access::ro>,
+               groov::field<"EPDISD", bool, 1, 1>,
+               groov::field<"XFRC", bool, 0, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using doepint1_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED2", std::uint32_t, 31, 7, access::ro>,
+               groov::field<"B2BSTUP", bool, 6, 6>,
+               groov::field<"RESERVED1", bool, 5, 5, access::ro>,
+               groov::field<"OTEPDIS", bool, 4, 4>,
+               groov::field<"STUP", bool, 3, 3>,
+               groov::field<"RESERVED0", bool, 2, 2, access::ro>,
+               groov::field<"EPDISD", bool, 1, 1>,
+               groov::field<"XFRC", bool, 0, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using doepint2_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED2", std::uint32_t, 31, 7, access::ro>,
+               groov::field<"B2BSTUP", bool, 6, 6>,
+               groov::field<"RESERVED1", bool, 5, 5, access::ro>,
+               groov::field<"OTEPDIS", bool, 4, 4>,
+               groov::field<"STUP", bool, 3, 3>,
+               groov::field<"RESERVED0", bool, 2, 2, access::ro>,
+               groov::field<"EPDISD", bool, 1, 1>,
+               groov::field<"XFRC", bool, 0, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using doepint3_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED2", std::uint32_t, 31, 7, access::ro>,
+               groov::field<"B2BSTUP", bool, 6, 6>,
+               groov::field<"RESERVED1", bool, 5, 5, access::ro>,
+               groov::field<"OTEPDIS", bool, 4, 4>,
+               groov::field<"STUP", bool, 3, 3>,
+               groov::field<"RESERVED0", bool, 2, 2, access::ro>,
+               groov::field<"EPDISD", bool, 1, 1>,
+               groov::field<"XFRC", bool, 0, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dieptsiz0_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED1", std::uint16_t, 31, 21, access::ro>,
+               groov::field<"PKTCNT", std::uint8_t, 20, 19>,
+               groov::field<"RESERVED0", std::uint16_t, 18, 7, access::ro>,
+               groov::field<"XFRSIZ", std::uint8_t, 6, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using doeptsiz0_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED2", bool, 31, 31, access::ro>,
+               groov::field<"STUPCNT", std::uint8_t, 30, 29>,
+               groov::field<"RESERVED1", std::uint16_t, 28, 20, access::ro>,
+               groov::field<"PKTCNT", bool, 19, 19>,
+               groov::field<"RESERVED0", std::uint16_t, 18, 7, access::ro>,
+               groov::field<"XFRSIZ", std::uint8_t, 6, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dieptsiz1_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", bool, 31, 31, access::ro>,
+               groov::field<"MCNT", std::uint8_t, 30, 29>,
+               groov::field<"PKTCNT", std::uint16_t, 28, 19>,
+               groov::field<"XFRSIZ", std::uint32_t, 18, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dieptsiz2_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", bool, 31, 31, access::ro>,
+               groov::field<"MCNT", std::uint8_t, 30, 29>,
+               groov::field<"PKTCNT", std::uint16_t, 28, 19>,
+               groov::field<"XFRSIZ", std::uint32_t, 18, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dieptsiz3_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", bool, 31, 31, access::ro>,
+               groov::field<"MCNT", std::uint8_t, 30, 29>,
+               groov::field<"PKTCNT", std::uint16_t, 28, 19>,
+               groov::field<"XFRSIZ", std::uint32_t, 18, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dtxfsts0_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::ro,
+               groov::field<"RESERVED0", std::uint16_t, 31, 16>,
+               groov::field<"INEPTFSAV", std::uint16_t, 15, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dtxfsts1_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::ro,
+               groov::field<"RESERVED0", std::uint16_t, 31, 16>,
+               groov::field<"INEPTFSAV", std::uint16_t, 15, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dtxfsts2_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::ro,
+               groov::field<"RESERVED0", std::uint16_t, 31, 16>,
+               groov::field<"INEPTFSAV", std::uint16_t, 15, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dtxfsts3_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::ro,
+               groov::field<"RESERVED0", std::uint16_t, 31, 16>,
+               groov::field<"INEPTFSAV", std::uint16_t, 15, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using doeptsiz1_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", bool, 31, 31, access::ro>,
+               groov::field<"RXDPID_STUPCNT", std::uint8_t, 30, 29>,
+               groov::field<"PKTCNT", std::uint16_t, 28, 19>,
+               groov::field<"XFRSIZ", std::uint32_t, 18, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using doeptsiz2_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", bool, 31, 31, access::ro>,
+               groov::field<"RXDPID_STUPCNT", std::uint8_t, 30, 29>,
+               groov::field<"PKTCNT", std::uint16_t, 28, 19>,
+               groov::field<"XFRSIZ", std::uint32_t, 18, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using doeptsiz3_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", bool, 31, 31, access::ro>,
+               groov::field<"RXDPID_STUPCNT", std::uint8_t, 30, 29>,
+               groov::field<"PKTCNT", std::uint16_t, 28, 19>,
+               groov::field<"XFRSIZ", std::uint32_t, 18, 0>>;
+
+  template <std::uint32_t baseaddress>
+  using fs_dcfg_t = fs_dcfg_tt<"FS_DCFG", baseaddress, 0>;
+
+  template <std::uint32_t baseaddress>
+  using fs_dctl_t = fs_dctl_tt<"FS_DCTL", baseaddress, 4>;
+
+  template <std::uint32_t baseaddress>
+  using fs_dsts_t = fs_dsts_tt<"FS_DSTS", baseaddress, 8>;
+
+  template <std::uint32_t baseaddress>
+  using fs_diepmsk_t = fs_diepmsk_tt<"FS_DIEPMSK", baseaddress, 16>;
+
+  template <std::uint32_t baseaddress>
+  using fs_doepmsk_t = fs_doepmsk_tt<"FS_DOEPMSK", baseaddress, 20>;
+
+  template <std::uint32_t baseaddress>
+  using fs_daint_t = fs_daint_tt<"FS_DAINT", baseaddress, 24>;
+
+  template <std::uint32_t baseaddress>
+  using fs_daintmsk_t = fs_daintmsk_tt<"FS_DAINTMSK", baseaddress, 28>;
+
+  template <std::uint32_t baseaddress>
+  using dvbusdis_t = dvbusdis_tt<"DVBUSDIS", baseaddress, 40>;
+
+  template <std::uint32_t baseaddress>
+  using dvbuspulse_t = dvbuspulse_tt<"DVBUSPULSE", baseaddress, 44>;
+
+  template <std::uint32_t baseaddress>
+  using diepempmsk_t = diepempmsk_tt<"DIEPEMPMSK", baseaddress, 52>;
+
+  template <std::uint32_t baseaddress>
+  using fs_diepctl0_t = fs_diepctl0_tt<"FS_DIEPCTL0", baseaddress, 256>;
+
+  template <std::uint32_t baseaddress>
+  using diepctl1_t = diepctl1_tt<"DIEPCTL1", baseaddress, 288>;
+
+  template <std::uint32_t baseaddress>
+  using diepctl2_t = diepctl2_tt<"DIEPCTL2", baseaddress, 320>;
+
+  template <std::uint32_t baseaddress>
+  using diepctl3_t = diepctl3_tt<"DIEPCTL3", baseaddress, 352>;
+
+  template <std::uint32_t baseaddress>
+  using doepctl0_t = doepctl0_tt<"DOEPCTL0", baseaddress, 768>;
+
+  template <std::uint32_t baseaddress>
+  using doepctl1_t = doepctl1_tt<"DOEPCTL1", baseaddress, 800>;
+
+  template <std::uint32_t baseaddress>
+  using doepctl2_t = doepctl2_tt<"DOEPCTL2", baseaddress, 832>;
+
+  template <std::uint32_t baseaddress>
+  using doepctl3_t = doepctl3_tt<"DOEPCTL3", baseaddress, 864>;
+
+  template <std::uint32_t baseaddress>
+  using diepint0_t = diepint0_tt<"DIEPINT0", baseaddress, 264>;
+
+  template <std::uint32_t baseaddress>
+  using diepint1_t = diepint1_tt<"DIEPINT1", baseaddress, 296>;
+
+  template <std::uint32_t baseaddress>
+  using diepint2_t = diepint2_tt<"DIEPINT2", baseaddress, 328>;
+
+  template <std::uint32_t baseaddress>
+  using diepint3_t = diepint3_tt<"DIEPINT3", baseaddress, 360>;
+
+  template <std::uint32_t baseaddress>
+  using doepint0_t = doepint0_tt<"DOEPINT0", baseaddress, 776>;
+
+  template <std::uint32_t baseaddress>
+  using doepint1_t = doepint1_tt<"DOEPINT1", baseaddress, 808>;
+
+  template <std::uint32_t baseaddress>
+  using doepint2_t = doepint2_tt<"DOEPINT2", baseaddress, 840>;
+
+  template <std::uint32_t baseaddress>
+  using doepint3_t = doepint3_tt<"DOEPINT3", baseaddress, 872>;
+
+  template <std::uint32_t baseaddress>
+  using dieptsiz0_t = dieptsiz0_tt<"DIEPTSIZ0", baseaddress, 272>;
+
+  template <std::uint32_t baseaddress>
+  using doeptsiz0_t = doeptsiz0_tt<"DOEPTSIZ0", baseaddress, 784>;
+
+  template <std::uint32_t baseaddress>
+  using dieptsiz1_t = dieptsiz1_tt<"DIEPTSIZ1", baseaddress, 304>;
+
+  template <std::uint32_t baseaddress>
+  using dieptsiz2_t = dieptsiz2_tt<"DIEPTSIZ2", baseaddress, 336>;
+
+  template <std::uint32_t baseaddress>
+  using dieptsiz3_t = dieptsiz3_tt<"DIEPTSIZ3", baseaddress, 368>;
+
+  template <std::uint32_t baseaddress>
+  using dtxfsts0_t = dtxfsts0_tt<"DTXFSTS0", baseaddress, 280>;
+
+  template <std::uint32_t baseaddress>
+  using dtxfsts1_t = dtxfsts1_tt<"DTXFSTS1", baseaddress, 312>;
+
+  template <std::uint32_t baseaddress>
+  using dtxfsts2_t = dtxfsts2_tt<"DTXFSTS2", baseaddress, 344>;
+
+  template <std::uint32_t baseaddress>
+  using dtxfsts3_t = dtxfsts3_tt<"DTXFSTS3", baseaddress, 376>;
+
+  template <std::uint32_t baseaddress>
+  using doeptsiz1_t = doeptsiz1_tt<"DOEPTSIZ1", baseaddress, 816>;
+
+  template <std::uint32_t baseaddress>
+  using doeptsiz2_t = doeptsiz2_tt<"DOEPTSIZ2", baseaddress, 848>;
+
+  template <std::uint32_t baseaddress>
+  using doeptsiz3_t = doeptsiz3_tt<"DOEPTSIZ3", baseaddress, 880>;
 
 } // namespace otg_fs_device
-

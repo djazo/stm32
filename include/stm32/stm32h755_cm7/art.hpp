@@ -11,19 +11,18 @@ namespace stm32 {
 
 namespace art {
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using ctr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED1", std::uint16_t, 31, 20 ,access::ro>,
-  groov::field<"PCACHEADDR", std::uint16_t, 19, 8 >,
-  groov::field<"RESERVED0", std::uint8_t, 7, 1 ,access::ro>,
-  groov::field<"EN", bool, 0, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using ctr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED1", std::uint16_t, 31, 20, access::ro>,
+               groov::field<"PCACHEADDR", std::uint16_t, 19, 8>,
+               groov::field<"RESERVED0", std::uint8_t, 7, 1, access::ro>,
+               groov::field<"EN", bool, 0, 0>>;
 
-template <std::uint32_t baseaddress>
-using ctr_t = ctr_tt<"CTR",baseaddress,0>;
+  template <std::uint32_t baseaddress>
+  using ctr_t = ctr_tt<"CTR", baseaddress, 0>;
 
 } // namespace art
-

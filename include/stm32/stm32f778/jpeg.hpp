@@ -11,5702 +11,5814 @@ namespace stm32 {
 
 namespace jpeg {
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using jpeg_confr0_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::wo,
-  groov::field<"RESERVED0", std::uint32_t, 31, 1 ,access::ro>,
-  groov::field<"START", bool, 0, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using jpeg_confr0_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::wo,
+               groov::field<"RESERVED0", std::uint32_t, 31, 1, access::ro>,
+               groov::field<"START", bool, 0, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using jpeg_confr1_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"YSIZE", std::uint16_t, 31, 16 >,
-  groov::field<"RESERVED1", std::uint8_t, 15, 9 ,access::ro>,
-  groov::field<"HDR", bool, 8, 8 >,
-  groov::field<"NS", std::uint8_t, 7, 6 >,
-  groov::field<"COLORSPACE", std::uint8_t, 5, 4 >,
-  groov::field<"DE", bool, 3, 3 >,
-  groov::field<"RESERVED0", bool, 2, 2 ,access::ro>,
-  groov::field<"NF", std::uint8_t, 1, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using jpeg_confr1_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"YSIZE", std::uint16_t, 31, 16>,
+               groov::field<"RESERVED1", std::uint8_t, 15, 9, access::ro>,
+               groov::field<"HDR", bool, 8, 8>,
+               groov::field<"NS", std::uint8_t, 7, 6>,
+               groov::field<"COLORSPACE", std::uint8_t, 5, 4>,
+               groov::field<"DE", bool, 3, 3>,
+               groov::field<"RESERVED0", bool, 2, 2, access::ro>,
+               groov::field<"NF", std::uint8_t, 1, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using jpeg_confr2_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint8_t, 31, 26 ,access::ro>,
-  groov::field<"NMCU", std::uint32_t, 25, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using jpeg_confr2_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint8_t, 31, 26, access::ro>,
+               groov::field<"NMCU", std::uint32_t, 25, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using jpeg_confr3_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"XSIZE", std::uint16_t, 31, 16 >,
-  groov::field<"RESERVED0", std::uint16_t, 15, 0 ,access::ro>
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using jpeg_confr3_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"XSIZE", std::uint16_t, 31, 16>,
+               groov::field<"RESERVED0", std::uint16_t, 15, 0, access::ro>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using jpeg_confr4_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint16_t, 31, 16 ,access::ro>,
-  groov::field<"HSF", std::uint8_t, 15, 12 >,
-  groov::field<"VSF", std::uint8_t, 11, 8 >,
-  groov::field<"NB", std::uint8_t, 7, 4 >,
-  groov::field<"QT", std::uint8_t, 3, 2 >,
-  groov::field<"HA", bool, 1, 1 >,
-  groov::field<"HD", bool, 0, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using jpeg_confr4_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
+               groov::field<"HSF", std::uint8_t, 15, 12>,
+               groov::field<"VSF", std::uint8_t, 11, 8>,
+               groov::field<"NB", std::uint8_t, 7, 4>,
+               groov::field<"QT", std::uint8_t, 3, 2>,
+               groov::field<"HA", bool, 1, 1>,
+               groov::field<"HD", bool, 0, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using jpeg_confr5_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint16_t, 31, 16 ,access::ro>,
-  groov::field<"HSF", std::uint8_t, 15, 12 >,
-  groov::field<"VSF", std::uint8_t, 11, 8 >,
-  groov::field<"NB", std::uint8_t, 7, 4 >,
-  groov::field<"QT", std::uint8_t, 3, 2 >,
-  groov::field<"HA", bool, 1, 1 >,
-  groov::field<"HD", bool, 0, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using jpeg_confr5_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
+               groov::field<"HSF", std::uint8_t, 15, 12>,
+               groov::field<"VSF", std::uint8_t, 11, 8>,
+               groov::field<"NB", std::uint8_t, 7, 4>,
+               groov::field<"QT", std::uint8_t, 3, 2>,
+               groov::field<"HA", bool, 1, 1>,
+               groov::field<"HD", bool, 0, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using jpeg_confr6_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint16_t, 31, 16 ,access::ro>,
-  groov::field<"HSF", std::uint8_t, 15, 12 >,
-  groov::field<"VSF", std::uint8_t, 11, 8 >,
-  groov::field<"NB", std::uint8_t, 7, 4 >,
-  groov::field<"QT", std::uint8_t, 3, 2 >,
-  groov::field<"HA", bool, 1, 1 >,
-  groov::field<"HD", bool, 0, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using jpeg_confr6_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
+               groov::field<"HSF", std::uint8_t, 15, 12>,
+               groov::field<"VSF", std::uint8_t, 11, 8>,
+               groov::field<"NB", std::uint8_t, 7, 4>,
+               groov::field<"QT", std::uint8_t, 3, 2>,
+               groov::field<"HA", bool, 1, 1>,
+               groov::field<"HD", bool, 0, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using jpeg_confr7_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint16_t, 31, 16 ,access::ro>,
-  groov::field<"HSF", std::uint8_t, 15, 12 >,
-  groov::field<"VSF", std::uint8_t, 11, 8 >,
-  groov::field<"NB", std::uint8_t, 7, 4 >,
-  groov::field<"QT", std::uint8_t, 3, 2 >,
-  groov::field<"HA", bool, 1, 1 >,
-  groov::field<"HD", bool, 0, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using jpeg_confr7_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
+               groov::field<"HSF", std::uint8_t, 15, 12>,
+               groov::field<"VSF", std::uint8_t, 11, 8>,
+               groov::field<"NB", std::uint8_t, 7, 4>,
+               groov::field<"QT", std::uint8_t, 3, 2>,
+               groov::field<"HA", bool, 1, 1>,
+               groov::field<"HD", bool, 0, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using jpeg_cr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED1", std::uint32_t, 31, 15 ,access::ro>,
-  groov::field<"OFF", bool, 14, 14 ,access::ro>,
-  groov::field<"IFF", bool, 13, 13 ,access::ro>,
-  groov::field<"ODMAEN", bool, 12, 12 >,
-  groov::field<"IDMAEN", bool, 11, 11 >,
-  groov::field<"RESERVED0", std::uint8_t, 10, 7 ,access::ro>,
-  groov::field<"HPDIE", bool, 6, 6 >,
-  groov::field<"EOCIE", bool, 5, 5 >,
-  groov::field<"OFNEIE", bool, 4, 4 >,
-  groov::field<"OFTIE", bool, 3, 3 >,
-  groov::field<"IFNFIE", bool, 2, 2 >,
-  groov::field<"IFTIE", bool, 1, 1 >,
-  groov::field<"JCEN", bool, 0, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using jpeg_cr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED1", std::uint32_t, 31, 15, access::ro>,
+               groov::field<"OFF", bool, 14, 14, access::ro>,
+               groov::field<"IFF", bool, 13, 13, access::ro>,
+               groov::field<"ODMAEN", bool, 12, 12>,
+               groov::field<"IDMAEN", bool, 11, 11>,
+               groov::field<"RESERVED0", std::uint8_t, 10, 7, access::ro>,
+               groov::field<"HPDIE", bool, 6, 6>,
+               groov::field<"EOCIE", bool, 5, 5>,
+               groov::field<"OFNEIE", bool, 4, 4>,
+               groov::field<"OFTIE", bool, 3, 3>,
+               groov::field<"IFNFIE", bool, 2, 2>,
+               groov::field<"IFTIE", bool, 1, 1>,
+               groov::field<"JCEN", bool, 0, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using jpeg_sr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::ro,
-  groov::field<"RESERVED1", std::uint32_t, 31, 8 >,
-  groov::field<"COF", bool, 7, 7 >,
-  groov::field<"HPDF", bool, 6, 6 >,
-  groov::field<"EOCF", bool, 5, 5 >,
-  groov::field<"OFNEF", bool, 4, 4 >,
-  groov::field<"OFTF", bool, 3, 3 >,
-  groov::field<"IFNFF", bool, 2, 2 >,
-  groov::field<"IFTF", bool, 1, 1 >,
-  groov::field<"RESERVED0", bool, 0, 0 >
-  >;
+                                std::uint32_t,
+                                baseaddress + offset,
+                                access::ro,
+                                groov::field<"RESERVED1", std::uint32_t, 31, 8>,
+                                groov::field<"COF", bool, 7, 7>,
+                                groov::field<"HPDF", bool, 6, 6>,
+                                groov::field<"EOCF", bool, 5, 5>,
+                                groov::field<"OFNEF", bool, 4, 4>,
+                                groov::field<"OFTF", bool, 3, 3>,
+                                groov::field<"IFNFF", bool, 2, 2>,
+                                groov::field<"IFTF", bool, 1, 1>,
+                                groov::field<"RESERVED0", bool, 0, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using jpeg_cfr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::wo,
-  groov::field<"RESERVED1", std::uint32_t, 31, 7 ,access::ro>,
-  groov::field<"CHPDF", bool, 6, 6 >,
-  groov::field<"CEOCF", bool, 5, 5 >,
-  groov::field<"RESERVED0", std::uint8_t, 4, 0 ,access::ro>
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using jpeg_cfr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::wo,
+               groov::field<"RESERVED1", std::uint32_t, 31, 7, access::ro>,
+               groov::field<"CHPDF", bool, 6, 6>,
+               groov::field<"CEOCF", bool, 5, 5>,
+               groov::field<"RESERVED0", std::uint8_t, 4, 0, access::ro>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using jpeg_dir_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::wo,
-  groov::field<"DATAIN", std::uint32_t, 31, 0 >
-  >;
+                                 std::uint32_t,
+                                 baseaddress + offset,
+                                 access::wo,
+                                 groov::field<"DATAIN", std::uint32_t, 31, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using jpeg_dor_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::ro,
-  groov::field<"DATAOUT", std::uint32_t, 31, 0 >
-  >;
+                                 std::uint32_t,
+                                 baseaddress + offset,
+                                 access::ro,
+                                 groov::field<"DATAOUT", std::uint32_t, 31, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using qmem0_0_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"QMem_RAM", std::uint32_t, 31, 0 >
-  >;
+                                std::uint32_t,
+                                baseaddress + offset,
+                                access::rw,
+                                groov::field<"QMem_RAM", std::uint32_t, 31, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using qmem0_1_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"QMem_RAM", std::uint32_t, 31, 0 >
-  >;
+                                std::uint32_t,
+                                baseaddress + offset,
+                                access::rw,
+                                groov::field<"QMem_RAM", std::uint32_t, 31, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using qmem0_2_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"QMem_RAM", std::uint32_t, 31, 0 >
-  >;
+                                std::uint32_t,
+                                baseaddress + offset,
+                                access::rw,
+                                groov::field<"QMem_RAM", std::uint32_t, 31, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using qmem0_3_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"QMem_RAM", std::uint32_t, 31, 0 >
-  >;
+                                std::uint32_t,
+                                baseaddress + offset,
+                                access::rw,
+                                groov::field<"QMem_RAM", std::uint32_t, 31, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using qmem0_4_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"QMem_RAM", std::uint32_t, 31, 0 >
-  >;
+                                std::uint32_t,
+                                baseaddress + offset,
+                                access::rw,
+                                groov::field<"QMem_RAM", std::uint32_t, 31, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using qmem0_5_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"QMem_RAM", std::uint32_t, 31, 0 >
-  >;
+                                std::uint32_t,
+                                baseaddress + offset,
+                                access::rw,
+                                groov::field<"QMem_RAM", std::uint32_t, 31, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using qmem0_6_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"QMem_RAM", std::uint32_t, 31, 0 >
-  >;
+                                std::uint32_t,
+                                baseaddress + offset,
+                                access::rw,
+                                groov::field<"QMem_RAM", std::uint32_t, 31, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using qmem0_7_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"QMem_RAM", std::uint32_t, 31, 0 >
-  >;
+                                std::uint32_t,
+                                baseaddress + offset,
+                                access::rw,
+                                groov::field<"QMem_RAM", std::uint32_t, 31, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using qmem0_8_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"QMem_RAM", std::uint32_t, 31, 0 >
-  >;
+                                std::uint32_t,
+                                baseaddress + offset,
+                                access::rw,
+                                groov::field<"QMem_RAM", std::uint32_t, 31, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using qmem0_9_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"QMem_RAM", std::uint32_t, 31, 0 >
-  >;
+                                std::uint32_t,
+                                baseaddress + offset,
+                                access::rw,
+                                groov::field<"QMem_RAM", std::uint32_t, 31, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using qmem0_10_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"QMem_RAM", std::uint32_t, 31, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using qmem0_10_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"QMem_RAM", std::uint32_t, 31, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using qmem0_11_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"QMem_RAM", std::uint32_t, 31, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using qmem0_11_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"QMem_RAM", std::uint32_t, 31, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using qmem0_12_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"QMem_RAM", std::uint32_t, 31, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using qmem0_12_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"QMem_RAM", std::uint32_t, 31, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using qmem0_13_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"QMem_RAM", std::uint32_t, 31, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using qmem0_13_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"QMem_RAM", std::uint32_t, 31, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using qmem0_14_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"QMem_RAM", std::uint32_t, 31, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using qmem0_14_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"QMem_RAM", std::uint32_t, 31, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using qmem0_15_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"QMem_RAM", std::uint32_t, 31, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using qmem0_15_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"QMem_RAM", std::uint32_t, 31, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using qmem1_0_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"QMem_RAM", std::uint32_t, 31, 0 >
-  >;
+                                std::uint32_t,
+                                baseaddress + offset,
+                                access::rw,
+                                groov::field<"QMem_RAM", std::uint32_t, 31, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using qmem1_1_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"QMem_RAM", std::uint32_t, 31, 0 >
-  >;
+                                std::uint32_t,
+                                baseaddress + offset,
+                                access::rw,
+                                groov::field<"QMem_RAM", std::uint32_t, 31, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using qmem1_2_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"QMem_RAM", std::uint32_t, 31, 0 >
-  >;
+                                std::uint32_t,
+                                baseaddress + offset,
+                                access::rw,
+                                groov::field<"QMem_RAM", std::uint32_t, 31, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using qmem1_3_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"QMem_RAM", std::uint32_t, 31, 0 >
-  >;
+                                std::uint32_t,
+                                baseaddress + offset,
+                                access::rw,
+                                groov::field<"QMem_RAM", std::uint32_t, 31, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using qmem1_4_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"QMem_RAM", std::uint32_t, 31, 0 >
-  >;
+                                std::uint32_t,
+                                baseaddress + offset,
+                                access::rw,
+                                groov::field<"QMem_RAM", std::uint32_t, 31, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using qmem1_5_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"QMem_RAM", std::uint32_t, 31, 0 >
-  >;
+                                std::uint32_t,
+                                baseaddress + offset,
+                                access::rw,
+                                groov::field<"QMem_RAM", std::uint32_t, 31, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using qmem1_6_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"QMem_RAM", std::uint32_t, 31, 0 >
-  >;
+                                std::uint32_t,
+                                baseaddress + offset,
+                                access::rw,
+                                groov::field<"QMem_RAM", std::uint32_t, 31, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using qmem1_7_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"QMem_RAM", std::uint32_t, 31, 0 >
-  >;
+                                std::uint32_t,
+                                baseaddress + offset,
+                                access::rw,
+                                groov::field<"QMem_RAM", std::uint32_t, 31, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using qmem1_8_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"QMem_RAM", std::uint32_t, 31, 0 >
-  >;
+                                std::uint32_t,
+                                baseaddress + offset,
+                                access::rw,
+                                groov::field<"QMem_RAM", std::uint32_t, 31, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using qmem1_9_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"QMem_RAM", std::uint32_t, 31, 0 >
-  >;
+                                std::uint32_t,
+                                baseaddress + offset,
+                                access::rw,
+                                groov::field<"QMem_RAM", std::uint32_t, 31, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using qmem1_10_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"QMem_RAM", std::uint32_t, 31, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using qmem1_10_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"QMem_RAM", std::uint32_t, 31, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using qmem1_11_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"QMem_RAM", std::uint32_t, 31, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using qmem1_11_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"QMem_RAM", std::uint32_t, 31, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using qmem1_12_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"QMem_RAM", std::uint32_t, 31, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using qmem1_12_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"QMem_RAM", std::uint32_t, 31, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using qmem1_13_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"QMem_RAM", std::uint32_t, 31, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using qmem1_13_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"QMem_RAM", std::uint32_t, 31, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using qmem1_14_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"QMem_RAM", std::uint32_t, 31, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using qmem1_14_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"QMem_RAM", std::uint32_t, 31, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using qmem1_15_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"QMem_RAM", std::uint32_t, 31, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using qmem1_15_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"QMem_RAM", std::uint32_t, 31, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using qmem2_0_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"QMem_RAM", std::uint32_t, 31, 0 >
-  >;
+                                std::uint32_t,
+                                baseaddress + offset,
+                                access::rw,
+                                groov::field<"QMem_RAM", std::uint32_t, 31, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using qmem2_1_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"QMem_RAM", std::uint32_t, 31, 0 >
-  >;
+                                std::uint32_t,
+                                baseaddress + offset,
+                                access::rw,
+                                groov::field<"QMem_RAM", std::uint32_t, 31, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using qmem2_2_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"QMem_RAM", std::uint32_t, 31, 0 >
-  >;
+                                std::uint32_t,
+                                baseaddress + offset,
+                                access::rw,
+                                groov::field<"QMem_RAM", std::uint32_t, 31, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using qmem2_3_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"QMem_RAM", std::uint32_t, 31, 0 >
-  >;
+                                std::uint32_t,
+                                baseaddress + offset,
+                                access::rw,
+                                groov::field<"QMem_RAM", std::uint32_t, 31, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using qmem2_4_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"QMem_RAM", std::uint32_t, 31, 0 >
-  >;
+                                std::uint32_t,
+                                baseaddress + offset,
+                                access::rw,
+                                groov::field<"QMem_RAM", std::uint32_t, 31, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using qmem2_5_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"QMem_RAM", std::uint32_t, 31, 0 >
-  >;
+                                std::uint32_t,
+                                baseaddress + offset,
+                                access::rw,
+                                groov::field<"QMem_RAM", std::uint32_t, 31, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using qmem2_6_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"QMem_RAM", std::uint32_t, 31, 0 >
-  >;
+                                std::uint32_t,
+                                baseaddress + offset,
+                                access::rw,
+                                groov::field<"QMem_RAM", std::uint32_t, 31, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using qmem2_7_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"QMem_RAM", std::uint32_t, 31, 0 >
-  >;
+                                std::uint32_t,
+                                baseaddress + offset,
+                                access::rw,
+                                groov::field<"QMem_RAM", std::uint32_t, 31, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using qmem2_8_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"QMem_RAM", std::uint32_t, 31, 0 >
-  >;
+                                std::uint32_t,
+                                baseaddress + offset,
+                                access::rw,
+                                groov::field<"QMem_RAM", std::uint32_t, 31, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using qmem2_9_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"QMem_RAM", std::uint32_t, 31, 0 >
-  >;
+                                std::uint32_t,
+                                baseaddress + offset,
+                                access::rw,
+                                groov::field<"QMem_RAM", std::uint32_t, 31, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using qmem2_10_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"QMem_RAM", std::uint32_t, 31, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using qmem2_10_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"QMem_RAM", std::uint32_t, 31, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using qmem2_11_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"QMem_RAM", std::uint32_t, 31, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using qmem2_11_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"QMem_RAM", std::uint32_t, 31, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using qmem2_12_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"QMem_RAM", std::uint32_t, 31, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using qmem2_12_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"QMem_RAM", std::uint32_t, 31, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using qmem2_13_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"QMem_RAM", std::uint32_t, 31, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using qmem2_13_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"QMem_RAM", std::uint32_t, 31, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using qmem2_14_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"QMem_RAM", std::uint32_t, 31, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using qmem2_14_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"QMem_RAM", std::uint32_t, 31, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using qmem2_15_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"QMem_RAM", std::uint32_t, 31, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using qmem2_15_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"QMem_RAM", std::uint32_t, 31, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using qmem3_0_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"QMem_RAM", std::uint32_t, 31, 0 >
-  >;
+                                std::uint32_t,
+                                baseaddress + offset,
+                                access::rw,
+                                groov::field<"QMem_RAM", std::uint32_t, 31, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using qmem3_1_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"QMem_RAM", std::uint32_t, 31, 0 >
-  >;
+                                std::uint32_t,
+                                baseaddress + offset,
+                                access::rw,
+                                groov::field<"QMem_RAM", std::uint32_t, 31, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using qmem3_2_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"QMem_RAM", std::uint32_t, 31, 0 >
-  >;
+                                std::uint32_t,
+                                baseaddress + offset,
+                                access::rw,
+                                groov::field<"QMem_RAM", std::uint32_t, 31, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using qmem3_3_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"QMem_RAM", std::uint32_t, 31, 0 >
-  >;
+                                std::uint32_t,
+                                baseaddress + offset,
+                                access::rw,
+                                groov::field<"QMem_RAM", std::uint32_t, 31, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using qmem3_4_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"QMem_RAM", std::uint32_t, 31, 0 >
-  >;
+                                std::uint32_t,
+                                baseaddress + offset,
+                                access::rw,
+                                groov::field<"QMem_RAM", std::uint32_t, 31, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using qmem3_5_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"QMem_RAM", std::uint32_t, 31, 0 >
-  >;
+                                std::uint32_t,
+                                baseaddress + offset,
+                                access::rw,
+                                groov::field<"QMem_RAM", std::uint32_t, 31, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using qmem3_6_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"QMem_RAM", std::uint32_t, 31, 0 >
-  >;
+                                std::uint32_t,
+                                baseaddress + offset,
+                                access::rw,
+                                groov::field<"QMem_RAM", std::uint32_t, 31, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using qmem3_7_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"QMem_RAM", std::uint32_t, 31, 0 >
-  >;
+                                std::uint32_t,
+                                baseaddress + offset,
+                                access::rw,
+                                groov::field<"QMem_RAM", std::uint32_t, 31, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using qmem3_8_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"QMem_RAM", std::uint32_t, 31, 0 >
-  >;
+                                std::uint32_t,
+                                baseaddress + offset,
+                                access::rw,
+                                groov::field<"QMem_RAM", std::uint32_t, 31, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using qmem3_9_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"QMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using qmem3_10_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"QMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using qmem3_11_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"QMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using qmem3_12_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"QMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using qmem3_13_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"QMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using qmem3_14_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"QMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using qmem3_15_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"QMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffmin_0_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"HuffMin_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffmin_1_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"HuffMin_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffmin_2_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"HuffMin_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffmin_3_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"HuffMin_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffmin_4_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"HuffMin_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffmin_5_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"HuffMin_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffmin_6_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"HuffMin_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffmin_7_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"HuffMin_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffmin_8_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"HuffMin_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffmin_9_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"HuffMin_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffmin_10_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"HuffMin_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffmin_11_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"HuffMin_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffmin_12_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"HuffMin_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffmin_13_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"HuffMin_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffmin_14_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"HuffMin_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffmin_15_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"HuffMin_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffbase0_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED1", std::uint8_t, 31, 25 ,access::ro>,
-  groov::field<"HuffBase_RAM_1", std::uint16_t, 24, 16 >,
-  groov::field<"RESERVED0", std::uint8_t, 15, 9 ,access::ro>,
-  groov::field<"HuffBase_RAM_0", std::uint16_t, 8, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffbase1_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED1", std::uint8_t, 31, 25 ,access::ro>,
-  groov::field<"HuffBase_RAM_1", std::uint16_t, 24, 16 >,
-  groov::field<"RESERVED0", std::uint8_t, 15, 9 ,access::ro>,
-  groov::field<"HuffBase_RAM_0", std::uint16_t, 8, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffbase2_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED1", std::uint8_t, 31, 25 ,access::ro>,
-  groov::field<"HuffBase_RAM_1", std::uint16_t, 24, 16 >,
-  groov::field<"RESERVED0", std::uint8_t, 15, 9 ,access::ro>,
-  groov::field<"HuffBase_RAM_0", std::uint16_t, 8, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffbase3_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED1", std::uint8_t, 31, 25 ,access::ro>,
-  groov::field<"HuffBase_RAM_1", std::uint16_t, 24, 16 >,
-  groov::field<"RESERVED0", std::uint8_t, 15, 9 ,access::ro>,
-  groov::field<"HuffBase_RAM_0", std::uint16_t, 8, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffbase4_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED1", std::uint8_t, 31, 25 ,access::ro>,
-  groov::field<"HuffBase_RAM_1", std::uint16_t, 24, 16 >,
-  groov::field<"RESERVED0", std::uint8_t, 15, 9 ,access::ro>,
-  groov::field<"HuffBase_RAM_0", std::uint16_t, 8, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffbase5_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED1", std::uint8_t, 31, 25 ,access::ro>,
-  groov::field<"HuffBase_RAM_1", std::uint16_t, 24, 16 >,
-  groov::field<"RESERVED0", std::uint8_t, 15, 9 ,access::ro>,
-  groov::field<"HuffBase_RAM_0", std::uint16_t, 8, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffbase6_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED1", std::uint8_t, 31, 25 ,access::ro>,
-  groov::field<"HuffBase_RAM_1", std::uint16_t, 24, 16 >,
-  groov::field<"RESERVED0", std::uint8_t, 15, 9 ,access::ro>,
-  groov::field<"HuffBase_RAM_0", std::uint16_t, 8, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffbase7_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED1", std::uint8_t, 31, 25 ,access::ro>,
-  groov::field<"HuffBase_RAM_1", std::uint16_t, 24, 16 >,
-  groov::field<"RESERVED0", std::uint8_t, 15, 9 ,access::ro>,
-  groov::field<"HuffBase_RAM_0", std::uint16_t, 8, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffbase8_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED1", std::uint8_t, 31, 25 ,access::ro>,
-  groov::field<"HuffBase_RAM_1", std::uint16_t, 24, 16 >,
-  groov::field<"RESERVED0", std::uint8_t, 15, 9 ,access::ro>,
-  groov::field<"HuffBase_RAM_0", std::uint16_t, 8, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffbase9_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED1", std::uint8_t, 31, 25 ,access::ro>,
-  groov::field<"HuffBase_RAM_1", std::uint16_t, 24, 16 >,
-  groov::field<"RESERVED0", std::uint8_t, 15, 9 ,access::ro>,
-  groov::field<"HuffBase_RAM_0", std::uint16_t, 8, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffbase10_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED1", std::uint8_t, 31, 25 ,access::ro>,
-  groov::field<"HuffBase_RAM_1", std::uint16_t, 24, 16 >,
-  groov::field<"RESERVED0", std::uint8_t, 15, 9 ,access::ro>,
-  groov::field<"HuffBase_RAM_0", std::uint16_t, 8, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffbase11_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED1", std::uint8_t, 31, 25 ,access::ro>,
-  groov::field<"HuffBase_RAM_1", std::uint16_t, 24, 16 >,
-  groov::field<"RESERVED0", std::uint8_t, 15, 9 ,access::ro>,
-  groov::field<"HuffBase_RAM_0", std::uint16_t, 8, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffbase12_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED1", std::uint8_t, 31, 25 ,access::ro>,
-  groov::field<"HuffBase_RAM_1", std::uint16_t, 24, 16 >,
-  groov::field<"RESERVED0", std::uint8_t, 15, 9 ,access::ro>,
-  groov::field<"HuffBase_RAM_0", std::uint16_t, 8, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffbase13_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED1", std::uint8_t, 31, 25 ,access::ro>,
-  groov::field<"HuffBase_RAM_1", std::uint16_t, 24, 16 >,
-  groov::field<"RESERVED0", std::uint8_t, 15, 9 ,access::ro>,
-  groov::field<"HuffBase_RAM_0", std::uint16_t, 8, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffbase14_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED1", std::uint8_t, 31, 25 ,access::ro>,
-  groov::field<"HuffBase_RAM_1", std::uint16_t, 24, 16 >,
-  groov::field<"RESERVED0", std::uint8_t, 15, 9 ,access::ro>,
-  groov::field<"HuffBase_RAM_0", std::uint16_t, 8, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffbase15_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED1", std::uint8_t, 31, 25 ,access::ro>,
-  groov::field<"HuffBase_RAM_1", std::uint16_t, 24, 16 >,
-  groov::field<"RESERVED0", std::uint8_t, 15, 9 ,access::ro>,
-  groov::field<"HuffBase_RAM_0", std::uint16_t, 8, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffbase16_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED1", std::uint8_t, 31, 25 ,access::ro>,
-  groov::field<"HuffBase_RAM_1", std::uint16_t, 24, 16 >,
-  groov::field<"RESERVED0", std::uint8_t, 15, 9 ,access::ro>,
-  groov::field<"HuffBase_RAM_0", std::uint16_t, 8, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffbase17_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED1", std::uint8_t, 31, 25 ,access::ro>,
-  groov::field<"HuffBase_RAM_1", std::uint16_t, 24, 16 >,
-  groov::field<"RESERVED0", std::uint8_t, 15, 9 ,access::ro>,
-  groov::field<"HuffBase_RAM_0", std::uint16_t, 8, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffbase18_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED1", std::uint8_t, 31, 25 ,access::ro>,
-  groov::field<"HuffBase_RAM_1", std::uint16_t, 24, 16 >,
-  groov::field<"RESERVED0", std::uint8_t, 15, 9 ,access::ro>,
-  groov::field<"HuffBase_RAM_0", std::uint16_t, 8, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffbase19_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED1", std::uint8_t, 31, 25 ,access::ro>,
-  groov::field<"HuffBase_RAM_1", std::uint16_t, 24, 16 >,
-  groov::field<"RESERVED0", std::uint8_t, 15, 9 ,access::ro>,
-  groov::field<"HuffBase_RAM_0", std::uint16_t, 8, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffbase20_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED1", std::uint8_t, 31, 25 ,access::ro>,
-  groov::field<"HuffBase_RAM_1", std::uint16_t, 24, 16 >,
-  groov::field<"RESERVED0", std::uint8_t, 15, 9 ,access::ro>,
-  groov::field<"HuffBase_RAM_0", std::uint16_t, 8, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffbase21_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED1", std::uint8_t, 31, 25 ,access::ro>,
-  groov::field<"HuffBase_RAM_1", std::uint16_t, 24, 16 >,
-  groov::field<"RESERVED0", std::uint8_t, 15, 9 ,access::ro>,
-  groov::field<"HuffBase_RAM_0", std::uint16_t, 8, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffbase22_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED1", std::uint8_t, 31, 25 ,access::ro>,
-  groov::field<"HuffBase_RAM_1", std::uint16_t, 24, 16 >,
-  groov::field<"RESERVED0", std::uint8_t, 15, 9 ,access::ro>,
-  groov::field<"HuffBase_RAM_0", std::uint16_t, 8, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffbase23_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED1", std::uint8_t, 31, 25 ,access::ro>,
-  groov::field<"HuffBase_RAM_1", std::uint16_t, 24, 16 >,
-  groov::field<"RESERVED0", std::uint8_t, 15, 9 ,access::ro>,
-  groov::field<"HuffBase_RAM_0", std::uint16_t, 8, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffbase24_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED1", std::uint8_t, 31, 25 ,access::ro>,
-  groov::field<"HuffBase_RAM_1", std::uint16_t, 24, 16 >,
-  groov::field<"RESERVED0", std::uint8_t, 15, 9 ,access::ro>,
-  groov::field<"HuffBase_RAM_0", std::uint16_t, 8, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffbase25_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED1", std::uint8_t, 31, 25 ,access::ro>,
-  groov::field<"HuffBase_RAM_1", std::uint16_t, 24, 16 >,
-  groov::field<"RESERVED0", std::uint8_t, 15, 9 ,access::ro>,
-  groov::field<"HuffBase_RAM_0", std::uint16_t, 8, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffbase26_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED1", std::uint8_t, 31, 25 ,access::ro>,
-  groov::field<"HuffBase_RAM_1", std::uint16_t, 24, 16 >,
-  groov::field<"RESERVED0", std::uint8_t, 15, 9 ,access::ro>,
-  groov::field<"HuffBase_RAM_0", std::uint16_t, 8, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffbase27_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED1", std::uint8_t, 31, 25 ,access::ro>,
-  groov::field<"HuffBase_RAM_1", std::uint16_t, 24, 16 >,
-  groov::field<"RESERVED0", std::uint8_t, 15, 9 ,access::ro>,
-  groov::field<"HuffBase_RAM_0", std::uint16_t, 8, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffbase28_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED1", std::uint8_t, 31, 25 ,access::ro>,
-  groov::field<"HuffBase_RAM_1", std::uint16_t, 24, 16 >,
-  groov::field<"RESERVED0", std::uint8_t, 15, 9 ,access::ro>,
-  groov::field<"HuffBase_RAM_0", std::uint16_t, 8, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffbase29_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED1", std::uint8_t, 31, 25 ,access::ro>,
-  groov::field<"HuffBase_RAM_1", std::uint16_t, 24, 16 >,
-  groov::field<"RESERVED0", std::uint8_t, 15, 9 ,access::ro>,
-  groov::field<"HuffBase_RAM_0", std::uint16_t, 8, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffbase30_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED1", std::uint8_t, 31, 25 ,access::ro>,
-  groov::field<"HuffBase_RAM_1", std::uint16_t, 24, 16 >,
-  groov::field<"RESERVED0", std::uint8_t, 15, 9 ,access::ro>,
-  groov::field<"HuffBase_RAM_0", std::uint16_t, 8, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffbase31_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED1", std::uint8_t, 31, 25 ,access::ro>,
-  groov::field<"HuffBase_RAM_1", std::uint16_t, 24, 16 >,
-  groov::field<"RESERVED0", std::uint8_t, 15, 9 ,access::ro>,
-  groov::field<"HuffBase_RAM_0", std::uint16_t, 8, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffsymb0_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffsymb1_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffsymb2_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffsymb3_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffsymb4_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffsymb5_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffsymb6_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffsymb7_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffsymb8_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffsymb9_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffsymb10_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffsymb11_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffsymb12_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffsymb13_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffsymb14_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffsymb15_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffsymb16_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffsymb17_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffsymb18_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffsymb19_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffsymb20_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffsymb21_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffsymb22_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffsymb23_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffsymb24_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffsymb25_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffsymb26_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffsymb27_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffsymb28_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffsymb29_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffsymb30_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffsymb31_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffsymb32_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffsymb33_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffsymb34_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffsymb35_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffsymb36_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffsymb37_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffsymb38_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffsymb39_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffsymb40_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffsymb41_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffsymb42_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffsymb43_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffsymb44_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffsymb45_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffsymb46_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffsymb47_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffsymb48_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffsymb49_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffsymb50_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffsymb51_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffsymb52_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffsymb53_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffsymb54_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffsymb55_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffsymb56_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffsymb57_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffsymb58_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffsymb59_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffsymb60_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffsymb61_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffsymb62_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffsymb63_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffsymb64_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffsymb65_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffsymb66_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffsymb67_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffsymb68_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffsymb69_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffsymb70_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffsymb71_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffsymb72_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffsymb73_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffsymb74_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffsymb75_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffsymb76_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffsymb77_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffsymb78_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffsymb79_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffsymb80_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffsymb81_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffsymb82_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffsymb83_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dhtmem0_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dhtmem2_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dhtmem3_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dhtmem4_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dhtmem5_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dhtmem6_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dhtmem7_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dhtmem8_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dhtmem9_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dhtmem10_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dhtmem11_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dhtmem12_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dhtmem13_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dhtmem14_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dhtmem15_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dhtmem16_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dhtmem17_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dhtmem18_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dhtmem19_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dhtmem20_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dhtmem21_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dhtmem22_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dhtmem23_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dhtmem24_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dhtmem25_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dhtmem26_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dhtmem27_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dhtmem28_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dhtmem29_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dhtmem30_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dhtmem31_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dhtmem32_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dhtmem33_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dhtmem34_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dhtmem35_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dhtmem36_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dhtmem37_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dhtmem38_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dhtmem39_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dhtmem40_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dhtmem41_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dhtmem42_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dhtmem43_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dhtmem44_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dhtmem45_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dhtmem46_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dhtmem47_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dhtmem48_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dhtmem49_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dhtmem50_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dhtmem51_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dhtmem52_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dhtmem53_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dhtmem54_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dhtmem55_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dhtmem56_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dhtmem57_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dhtmem58_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dhtmem59_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dhtmem60_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dhtmem61_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dhtmem62_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dhtmem63_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dhtmem64_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dhtmem65_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dhtmem66_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dhtmem67_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dhtmem68_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dhtmem69_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dhtmem70_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dhtmem71_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dhtmem72_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dhtmem73_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dhtmem74_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dhtmem75_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dhtmem76_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dhtmem77_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dhtmem78_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dhtmem79_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dhtmem80_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dhtmem81_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dhtmem82_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dhtmem83_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dhtmem84_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dhtmem85_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dhtmem86_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dhtmem87_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dhtmem88_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dhtmem89_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dhtmem90_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dhtmem91_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dhtmem92_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dhtmem93_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dhtmem94_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dhtmem95_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dhtmem96_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dhtmem97_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dhtmem98_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dhtmem99_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dhtmem100_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dhtmem101_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dhtmem102_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dhtmem103_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac0_0_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac0_1_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac0_2_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac0_3_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac0_4_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac0_5_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac0_6_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac0_7_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac0_8_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac0_9_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac0_10_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac0_11_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac0_12_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac0_13_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac0_14_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac0_15_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac0_16_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac0_17_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac0_18_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac0_19_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac0_20_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac0_21_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac0_22_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac0_23_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac0_24_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac0_25_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac0_26_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac0_27_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac0_28_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac0_29_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac0_30_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac0_31_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac0_32_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac0_33_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac0_34_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac0_35_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac0_36_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac0_37_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac0_38_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac0_39_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac0_40_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac0_41_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac0_42_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac0_43_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac0_44_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac0_45_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac0_46_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac0_47_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac0_48_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac0_49_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac0_50_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac0_51_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac0_52_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac0_53_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac0_54_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac0_55_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac0_56_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac0_57_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac0_58_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac0_59_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac0_60_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac0_61_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac0_62_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac0_63_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac0_64_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac0_65_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac0_66_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac0_67_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac0_68_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac0_69_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac0_70_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac0_71_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac0_72_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac0_73_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac0_74_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac0_75_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac0_76_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac0_77_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac0_78_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac0_79_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac0_80_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac0_81_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac0_82_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac0_83_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac0_84_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac0_85_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac0_86_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac0_87_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac1_0_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac1_1_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac1_2_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac1_3_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac1_4_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac1_5_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac1_6_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac1_7_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac1_8_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac1_9_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac1_10_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac1_11_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac1_12_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac1_13_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac1_14_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac1_15_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac1_16_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac1_17_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac1_18_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac1_19_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac1_20_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac1_21_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac1_22_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac1_23_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac1_24_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac1_25_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac1_26_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac1_27_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac1_28_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac1_29_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac1_30_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac1_31_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac1_32_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac1_33_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac1_34_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac1_35_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac1_36_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac1_37_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac1_38_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac1_39_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac1_40_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac1_41_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac1_42_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac1_43_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac1_44_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac1_45_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac1_46_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac1_47_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac1_48_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac1_49_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac1_50_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac1_51_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac1_52_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac1_53_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac1_54_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac1_55_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac1_56_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac1_57_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac1_58_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac1_59_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac1_60_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac1_61_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac1_62_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac1_63_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac1_64_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac1_65_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac1_66_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac1_67_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac1_68_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac1_69_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac1_70_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac1_71_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac1_72_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac1_73_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac1_74_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac1_75_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac1_76_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac1_77_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac1_78_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac1_79_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac1_80_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac1_81_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac1_82_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac1_83_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac1_84_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac1_85_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac1_86_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_ac1_87_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_dc0_0_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_dc0_1_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_dc0_2_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_dc0_3_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_dc0_4_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_dc0_5_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_dc0_6_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_dc0_7_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_dc1_0_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_dc1_1_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_dc1_2_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_dc1_3_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_dc1_4_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_dc1_5_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_dc1_6_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using huffenc_dc1_7_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DHTMem_RAM", std::uint32_t, 31, 0 >
-  >;
-
-template <std::uint32_t baseaddress>
-using jpeg_confr0_t = jpeg_confr0_tt<"JPEG_CONFR0",baseaddress,0>;
-
-template <std::uint32_t baseaddress>
-using jpeg_confr1_t = jpeg_confr1_tt<"JPEG_CONFR1",baseaddress,4>;
-
-template <std::uint32_t baseaddress>
-using jpeg_confr2_t = jpeg_confr2_tt<"JPEG_CONFR2",baseaddress,8>;
-
-template <std::uint32_t baseaddress>
-using jpeg_confr3_t = jpeg_confr3_tt<"JPEG_CONFR3",baseaddress,12>;
-
-template <std::uint32_t baseaddress>
-using jpeg_confr4_t = jpeg_confr4_tt<"JPEG_CONFR4",baseaddress,16>;
-
-template <std::uint32_t baseaddress>
-using jpeg_confr5_t = jpeg_confr5_tt<"JPEG_CONFR5",baseaddress,20>;
-
-template <std::uint32_t baseaddress>
-using jpeg_confr6_t = jpeg_confr6_tt<"JPEG_CONFR6",baseaddress,24>;
-
-template <std::uint32_t baseaddress>
-using jpeg_confr7_t = jpeg_confr7_tt<"JPEG_CONFR7",baseaddress,28>;
-
-template <std::uint32_t baseaddress>
-using jpeg_cr_t = jpeg_cr_tt<"JPEG_CR",baseaddress,48>;
-
-template <std::uint32_t baseaddress>
-using jpeg_sr_t = jpeg_sr_tt<"JPEG_SR",baseaddress,52>;
-
-template <std::uint32_t baseaddress>
-using jpeg_cfr_t = jpeg_cfr_tt<"JPEG_CFR",baseaddress,56>;
-
-template <std::uint32_t baseaddress>
-using jpeg_dir_t = jpeg_dir_tt<"JPEG_DIR",baseaddress,64>;
-
-template <std::uint32_t baseaddress>
-using jpeg_dor_t = jpeg_dor_tt<"JPEG_DOR",baseaddress,68>;
-
-template <std::uint32_t baseaddress>
-using qmem0_0_t = qmem0_0_tt<"QMEM0_0",baseaddress,80>;
-
-template <std::uint32_t baseaddress>
-using qmem0_1_t = qmem0_1_tt<"QMEM0_1",baseaddress,84>;
-
-template <std::uint32_t baseaddress>
-using qmem0_2_t = qmem0_2_tt<"QMEM0_2",baseaddress,88>;
-
-template <std::uint32_t baseaddress>
-using qmem0_3_t = qmem0_3_tt<"QMEM0_3",baseaddress,92>;
-
-template <std::uint32_t baseaddress>
-using qmem0_4_t = qmem0_4_tt<"QMEM0_4",baseaddress,96>;
-
-template <std::uint32_t baseaddress>
-using qmem0_5_t = qmem0_5_tt<"QMEM0_5",baseaddress,100>;
-
-template <std::uint32_t baseaddress>
-using qmem0_6_t = qmem0_6_tt<"QMEM0_6",baseaddress,104>;
-
-template <std::uint32_t baseaddress>
-using qmem0_7_t = qmem0_7_tt<"QMEM0_7",baseaddress,108>;
-
-template <std::uint32_t baseaddress>
-using qmem0_8_t = qmem0_8_tt<"QMEM0_8",baseaddress,112>;
-
-template <std::uint32_t baseaddress>
-using qmem0_9_t = qmem0_9_tt<"QMEM0_9",baseaddress,116>;
-
-template <std::uint32_t baseaddress>
-using qmem0_10_t = qmem0_10_tt<"QMEM0_10",baseaddress,120>;
-
-template <std::uint32_t baseaddress>
-using qmem0_11_t = qmem0_11_tt<"QMEM0_11",baseaddress,124>;
-
-template <std::uint32_t baseaddress>
-using qmem0_12_t = qmem0_12_tt<"QMEM0_12",baseaddress,128>;
-
-template <std::uint32_t baseaddress>
-using qmem0_13_t = qmem0_13_tt<"QMEM0_13",baseaddress,132>;
-
-template <std::uint32_t baseaddress>
-using qmem0_14_t = qmem0_14_tt<"QMEM0_14",baseaddress,136>;
-
-template <std::uint32_t baseaddress>
-using qmem0_15_t = qmem0_15_tt<"QMEM0_15",baseaddress,140>;
-
-template <std::uint32_t baseaddress>
-using qmem1_0_t = qmem1_0_tt<"QMEM1_0",baseaddress,144>;
-
-template <std::uint32_t baseaddress>
-using qmem1_1_t = qmem1_1_tt<"QMEM1_1",baseaddress,148>;
-
-template <std::uint32_t baseaddress>
-using qmem1_2_t = qmem1_2_tt<"QMEM1_2",baseaddress,152>;
-
-template <std::uint32_t baseaddress>
-using qmem1_3_t = qmem1_3_tt<"QMEM1_3",baseaddress,156>;
-
-template <std::uint32_t baseaddress>
-using qmem1_4_t = qmem1_4_tt<"QMEM1_4",baseaddress,160>;
-
-template <std::uint32_t baseaddress>
-using qmem1_5_t = qmem1_5_tt<"QMEM1_5",baseaddress,164>;
-
-template <std::uint32_t baseaddress>
-using qmem1_6_t = qmem1_6_tt<"QMEM1_6",baseaddress,168>;
-
-template <std::uint32_t baseaddress>
-using qmem1_7_t = qmem1_7_tt<"QMEM1_7",baseaddress,172>;
-
-template <std::uint32_t baseaddress>
-using qmem1_8_t = qmem1_8_tt<"QMEM1_8",baseaddress,176>;
-
-template <std::uint32_t baseaddress>
-using qmem1_9_t = qmem1_9_tt<"QMEM1_9",baseaddress,180>;
-
-template <std::uint32_t baseaddress>
-using qmem1_10_t = qmem1_10_tt<"QMEM1_10",baseaddress,184>;
-
-template <std::uint32_t baseaddress>
-using qmem1_11_t = qmem1_11_tt<"QMEM1_11",baseaddress,188>;
-
-template <std::uint32_t baseaddress>
-using qmem1_12_t = qmem1_12_tt<"QMEM1_12",baseaddress,192>;
-
-template <std::uint32_t baseaddress>
-using qmem1_13_t = qmem1_13_tt<"QMEM1_13",baseaddress,196>;
-
-template <std::uint32_t baseaddress>
-using qmem1_14_t = qmem1_14_tt<"QMEM1_14",baseaddress,200>;
-
-template <std::uint32_t baseaddress>
-using qmem1_15_t = qmem1_15_tt<"QMEM1_15",baseaddress,204>;
-
-template <std::uint32_t baseaddress>
-using qmem2_0_t = qmem2_0_tt<"QMEM2_0",baseaddress,208>;
-
-template <std::uint32_t baseaddress>
-using qmem2_1_t = qmem2_1_tt<"QMEM2_1",baseaddress,212>;
-
-template <std::uint32_t baseaddress>
-using qmem2_2_t = qmem2_2_tt<"QMEM2_2",baseaddress,216>;
-
-template <std::uint32_t baseaddress>
-using qmem2_3_t = qmem2_3_tt<"QMEM2_3",baseaddress,220>;
-
-template <std::uint32_t baseaddress>
-using qmem2_4_t = qmem2_4_tt<"QMEM2_4",baseaddress,224>;
-
-template <std::uint32_t baseaddress>
-using qmem2_5_t = qmem2_5_tt<"QMEM2_5",baseaddress,228>;
-
-template <std::uint32_t baseaddress>
-using qmem2_6_t = qmem2_6_tt<"QMEM2_6",baseaddress,232>;
-
-template <std::uint32_t baseaddress>
-using qmem2_7_t = qmem2_7_tt<"QMEM2_7",baseaddress,236>;
-
-template <std::uint32_t baseaddress>
-using qmem2_8_t = qmem2_8_tt<"QMEM2_8",baseaddress,240>;
-
-template <std::uint32_t baseaddress>
-using qmem2_9_t = qmem2_9_tt<"QMEM2_9",baseaddress,244>;
-
-template <std::uint32_t baseaddress>
-using qmem2_10_t = qmem2_10_tt<"QMEM2_10",baseaddress,248>;
-
-template <std::uint32_t baseaddress>
-using qmem2_11_t = qmem2_11_tt<"QMEM2_11",baseaddress,252>;
-
-template <std::uint32_t baseaddress>
-using qmem2_12_t = qmem2_12_tt<"QMEM2_12",baseaddress,256>;
-
-template <std::uint32_t baseaddress>
-using qmem2_13_t = qmem2_13_tt<"QMEM2_13",baseaddress,260>;
-
-template <std::uint32_t baseaddress>
-using qmem2_14_t = qmem2_14_tt<"QMEM2_14",baseaddress,264>;
-
-template <std::uint32_t baseaddress>
-using qmem2_15_t = qmem2_15_tt<"QMEM2_15",baseaddress,268>;
-
-template <std::uint32_t baseaddress>
-using qmem3_0_t = qmem3_0_tt<"QMEM3_0",baseaddress,272>;
-
-template <std::uint32_t baseaddress>
-using qmem3_1_t = qmem3_1_tt<"QMEM3_1",baseaddress,276>;
-
-template <std::uint32_t baseaddress>
-using qmem3_2_t = qmem3_2_tt<"QMEM3_2",baseaddress,280>;
-
-template <std::uint32_t baseaddress>
-using qmem3_3_t = qmem3_3_tt<"QMEM3_3",baseaddress,284>;
-
-template <std::uint32_t baseaddress>
-using qmem3_4_t = qmem3_4_tt<"QMEM3_4",baseaddress,288>;
-
-template <std::uint32_t baseaddress>
-using qmem3_5_t = qmem3_5_tt<"QMEM3_5",baseaddress,292>;
-
-template <std::uint32_t baseaddress>
-using qmem3_6_t = qmem3_6_tt<"QMEM3_6",baseaddress,296>;
-
-template <std::uint32_t baseaddress>
-using qmem3_7_t = qmem3_7_tt<"QMEM3_7",baseaddress,300>;
-
-template <std::uint32_t baseaddress>
-using qmem3_8_t = qmem3_8_tt<"QMEM3_8",baseaddress,304>;
-
-template <std::uint32_t baseaddress>
-using qmem3_9_t = qmem3_9_tt<"QMEM3_9",baseaddress,308>;
-
-template <std::uint32_t baseaddress>
-using qmem3_10_t = qmem3_10_tt<"QMEM3_10",baseaddress,312>;
-
-template <std::uint32_t baseaddress>
-using qmem3_11_t = qmem3_11_tt<"QMEM3_11",baseaddress,316>;
-
-template <std::uint32_t baseaddress>
-using qmem3_12_t = qmem3_12_tt<"QMEM3_12",baseaddress,320>;
-
-template <std::uint32_t baseaddress>
-using qmem3_13_t = qmem3_13_tt<"QMEM3_13",baseaddress,324>;
-
-template <std::uint32_t baseaddress>
-using qmem3_14_t = qmem3_14_tt<"QMEM3_14",baseaddress,328>;
-
-template <std::uint32_t baseaddress>
-using qmem3_15_t = qmem3_15_tt<"QMEM3_15",baseaddress,332>;
-
-template <std::uint32_t baseaddress>
-using huffmin_0_t = huffmin_0_tt<"HUFFMIN_0",baseaddress,336>;
-
-template <std::uint32_t baseaddress>
-using huffmin_1_t = huffmin_1_tt<"HUFFMIN_1",baseaddress,340>;
-
-template <std::uint32_t baseaddress>
-using huffmin_2_t = huffmin_2_tt<"HUFFMIN_2",baseaddress,344>;
-
-template <std::uint32_t baseaddress>
-using huffmin_3_t = huffmin_3_tt<"HUFFMIN_3",baseaddress,348>;
-
-template <std::uint32_t baseaddress>
-using huffmin_4_t = huffmin_4_tt<"HUFFMIN_4",baseaddress,352>;
-
-template <std::uint32_t baseaddress>
-using huffmin_5_t = huffmin_5_tt<"HUFFMIN_5",baseaddress,356>;
-
-template <std::uint32_t baseaddress>
-using huffmin_6_t = huffmin_6_tt<"HUFFMIN_6",baseaddress,360>;
-
-template <std::uint32_t baseaddress>
-using huffmin_7_t = huffmin_7_tt<"HUFFMIN_7",baseaddress,364>;
-
-template <std::uint32_t baseaddress>
-using huffmin_8_t = huffmin_8_tt<"HUFFMIN_8",baseaddress,368>;
-
-template <std::uint32_t baseaddress>
-using huffmin_9_t = huffmin_9_tt<"HUFFMIN_9",baseaddress,372>;
-
-template <std::uint32_t baseaddress>
-using huffmin_10_t = huffmin_10_tt<"HUFFMIN_10",baseaddress,376>;
-
-template <std::uint32_t baseaddress>
-using huffmin_11_t = huffmin_11_tt<"HUFFMIN_11",baseaddress,380>;
-
-template <std::uint32_t baseaddress>
-using huffmin_12_t = huffmin_12_tt<"HUFFMIN_12",baseaddress,384>;
-
-template <std::uint32_t baseaddress>
-using huffmin_13_t = huffmin_13_tt<"HUFFMIN_13",baseaddress,388>;
-
-template <std::uint32_t baseaddress>
-using huffmin_14_t = huffmin_14_tt<"HUFFMIN_14",baseaddress,392>;
-
-template <std::uint32_t baseaddress>
-using huffmin_15_t = huffmin_15_tt<"HUFFMIN_15",baseaddress,396>;
-
-template <std::uint32_t baseaddress>
-using huffbase0_t = huffbase0_tt<"HUFFBASE0",baseaddress,400>;
-
-template <std::uint32_t baseaddress>
-using huffbase1_t = huffbase1_tt<"HUFFBASE1",baseaddress,404>;
-
-template <std::uint32_t baseaddress>
-using huffbase2_t = huffbase2_tt<"HUFFBASE2",baseaddress,408>;
-
-template <std::uint32_t baseaddress>
-using huffbase3_t = huffbase3_tt<"HUFFBASE3",baseaddress,412>;
-
-template <std::uint32_t baseaddress>
-using huffbase4_t = huffbase4_tt<"HUFFBASE4",baseaddress,416>;
-
-template <std::uint32_t baseaddress>
-using huffbase5_t = huffbase5_tt<"HUFFBASE5",baseaddress,420>;
-
-template <std::uint32_t baseaddress>
-using huffbase6_t = huffbase6_tt<"HUFFBASE6",baseaddress,424>;
-
-template <std::uint32_t baseaddress>
-using huffbase7_t = huffbase7_tt<"HUFFBASE7",baseaddress,428>;
-
-template <std::uint32_t baseaddress>
-using huffbase8_t = huffbase8_tt<"HUFFBASE8",baseaddress,432>;
-
-template <std::uint32_t baseaddress>
-using huffbase9_t = huffbase9_tt<"HUFFBASE9",baseaddress,436>;
-
-template <std::uint32_t baseaddress>
-using huffbase10_t = huffbase10_tt<"HUFFBASE10",baseaddress,440>;
-
-template <std::uint32_t baseaddress>
-using huffbase11_t = huffbase11_tt<"HUFFBASE11",baseaddress,444>;
-
-template <std::uint32_t baseaddress>
-using huffbase12_t = huffbase12_tt<"HUFFBASE12",baseaddress,448>;
-
-template <std::uint32_t baseaddress>
-using huffbase13_t = huffbase13_tt<"HUFFBASE13",baseaddress,452>;
-
-template <std::uint32_t baseaddress>
-using huffbase14_t = huffbase14_tt<"HUFFBASE14",baseaddress,456>;
-
-template <std::uint32_t baseaddress>
-using huffbase15_t = huffbase15_tt<"HUFFBASE15",baseaddress,460>;
-
-template <std::uint32_t baseaddress>
-using huffbase16_t = huffbase16_tt<"HUFFBASE16",baseaddress,464>;
-
-template <std::uint32_t baseaddress>
-using huffbase17_t = huffbase17_tt<"HUFFBASE17",baseaddress,468>;
-
-template <std::uint32_t baseaddress>
-using huffbase18_t = huffbase18_tt<"HUFFBASE18",baseaddress,472>;
-
-template <std::uint32_t baseaddress>
-using huffbase19_t = huffbase19_tt<"HUFFBASE19",baseaddress,476>;
-
-template <std::uint32_t baseaddress>
-using huffbase20_t = huffbase20_tt<"HUFFBASE20",baseaddress,480>;
-
-template <std::uint32_t baseaddress>
-using huffbase21_t = huffbase21_tt<"HUFFBASE21",baseaddress,484>;
-
-template <std::uint32_t baseaddress>
-using huffbase22_t = huffbase22_tt<"HUFFBASE22",baseaddress,488>;
-
-template <std::uint32_t baseaddress>
-using huffbase23_t = huffbase23_tt<"HUFFBASE23",baseaddress,492>;
-
-template <std::uint32_t baseaddress>
-using huffbase24_t = huffbase24_tt<"HUFFBASE24",baseaddress,496>;
-
-template <std::uint32_t baseaddress>
-using huffbase25_t = huffbase25_tt<"HUFFBASE25",baseaddress,500>;
-
-template <std::uint32_t baseaddress>
-using huffbase26_t = huffbase26_tt<"HUFFBASE26",baseaddress,504>;
-
-template <std::uint32_t baseaddress>
-using huffbase27_t = huffbase27_tt<"HUFFBASE27",baseaddress,508>;
-
-template <std::uint32_t baseaddress>
-using huffbase28_t = huffbase28_tt<"HUFFBASE28",baseaddress,512>;
-
-template <std::uint32_t baseaddress>
-using huffbase29_t = huffbase29_tt<"HUFFBASE29",baseaddress,516>;
-
-template <std::uint32_t baseaddress>
-using huffbase30_t = huffbase30_tt<"HUFFBASE30",baseaddress,520>;
-
-template <std::uint32_t baseaddress>
-using huffbase31_t = huffbase31_tt<"HUFFBASE31",baseaddress,524>;
-
-template <std::uint32_t baseaddress>
-using huffsymb0_t = huffsymb0_tt<"HUFFSYMB0",baseaddress,528>;
-
-template <std::uint32_t baseaddress>
-using huffsymb1_t = huffsymb1_tt<"HUFFSYMB1",baseaddress,532>;
-
-template <std::uint32_t baseaddress>
-using huffsymb2_t = huffsymb2_tt<"HUFFSYMB2",baseaddress,536>;
-
-template <std::uint32_t baseaddress>
-using huffsymb3_t = huffsymb3_tt<"HUFFSYMB3",baseaddress,540>;
-
-template <std::uint32_t baseaddress>
-using huffsymb4_t = huffsymb4_tt<"HUFFSYMB4",baseaddress,544>;
-
-template <std::uint32_t baseaddress>
-using huffsymb5_t = huffsymb5_tt<"HUFFSYMB5",baseaddress,548>;
-
-template <std::uint32_t baseaddress>
-using huffsymb6_t = huffsymb6_tt<"HUFFSYMB6",baseaddress,552>;
-
-template <std::uint32_t baseaddress>
-using huffsymb7_t = huffsymb7_tt<"HUFFSYMB7",baseaddress,556>;
-
-template <std::uint32_t baseaddress>
-using huffsymb8_t = huffsymb8_tt<"HUFFSYMB8",baseaddress,560>;
-
-template <std::uint32_t baseaddress>
-using huffsymb9_t = huffsymb9_tt<"HUFFSYMB9",baseaddress,564>;
-
-template <std::uint32_t baseaddress>
-using huffsymb10_t = huffsymb10_tt<"HUFFSYMB10",baseaddress,568>;
-
-template <std::uint32_t baseaddress>
-using huffsymb11_t = huffsymb11_tt<"HUFFSYMB11",baseaddress,572>;
-
-template <std::uint32_t baseaddress>
-using huffsymb12_t = huffsymb12_tt<"HUFFSYMB12",baseaddress,576>;
-
-template <std::uint32_t baseaddress>
-using huffsymb13_t = huffsymb13_tt<"HUFFSYMB13",baseaddress,580>;
-
-template <std::uint32_t baseaddress>
-using huffsymb14_t = huffsymb14_tt<"HUFFSYMB14",baseaddress,584>;
-
-template <std::uint32_t baseaddress>
-using huffsymb15_t = huffsymb15_tt<"HUFFSYMB15",baseaddress,588>;
-
-template <std::uint32_t baseaddress>
-using huffsymb16_t = huffsymb16_tt<"HUFFSYMB16",baseaddress,592>;
-
-template <std::uint32_t baseaddress>
-using huffsymb17_t = huffsymb17_tt<"HUFFSYMB17",baseaddress,596>;
-
-template <std::uint32_t baseaddress>
-using huffsymb18_t = huffsymb18_tt<"HUFFSYMB18",baseaddress,600>;
-
-template <std::uint32_t baseaddress>
-using huffsymb19_t = huffsymb19_tt<"HUFFSYMB19",baseaddress,604>;
-
-template <std::uint32_t baseaddress>
-using huffsymb20_t = huffsymb20_tt<"HUFFSYMB20",baseaddress,608>;
-
-template <std::uint32_t baseaddress>
-using huffsymb21_t = huffsymb21_tt<"HUFFSYMB21",baseaddress,612>;
-
-template <std::uint32_t baseaddress>
-using huffsymb22_t = huffsymb22_tt<"HUFFSYMB22",baseaddress,616>;
-
-template <std::uint32_t baseaddress>
-using huffsymb23_t = huffsymb23_tt<"HUFFSYMB23",baseaddress,620>;
-
-template <std::uint32_t baseaddress>
-using huffsymb24_t = huffsymb24_tt<"HUFFSYMB24",baseaddress,624>;
-
-template <std::uint32_t baseaddress>
-using huffsymb25_t = huffsymb25_tt<"HUFFSYMB25",baseaddress,628>;
-
-template <std::uint32_t baseaddress>
-using huffsymb26_t = huffsymb26_tt<"HUFFSYMB26",baseaddress,632>;
-
-template <std::uint32_t baseaddress>
-using huffsymb27_t = huffsymb27_tt<"HUFFSYMB27",baseaddress,636>;
-
-template <std::uint32_t baseaddress>
-using huffsymb28_t = huffsymb28_tt<"HUFFSYMB28",baseaddress,640>;
-
-template <std::uint32_t baseaddress>
-using huffsymb29_t = huffsymb29_tt<"HUFFSYMB29",baseaddress,644>;
-
-template <std::uint32_t baseaddress>
-using huffsymb30_t = huffsymb30_tt<"HUFFSYMB30",baseaddress,648>;
-
-template <std::uint32_t baseaddress>
-using huffsymb31_t = huffsymb31_tt<"HUFFSYMB31",baseaddress,652>;
-
-template <std::uint32_t baseaddress>
-using huffsymb32_t = huffsymb32_tt<"HUFFSYMB32",baseaddress,656>;
-
-template <std::uint32_t baseaddress>
-using huffsymb33_t = huffsymb33_tt<"HUFFSYMB33",baseaddress,660>;
-
-template <std::uint32_t baseaddress>
-using huffsymb34_t = huffsymb34_tt<"HUFFSYMB34",baseaddress,664>;
-
-template <std::uint32_t baseaddress>
-using huffsymb35_t = huffsymb35_tt<"HUFFSYMB35",baseaddress,668>;
-
-template <std::uint32_t baseaddress>
-using huffsymb36_t = huffsymb36_tt<"HUFFSYMB36",baseaddress,672>;
-
-template <std::uint32_t baseaddress>
-using huffsymb37_t = huffsymb37_tt<"HUFFSYMB37",baseaddress,676>;
-
-template <std::uint32_t baseaddress>
-using huffsymb38_t = huffsymb38_tt<"HUFFSYMB38",baseaddress,680>;
-
-template <std::uint32_t baseaddress>
-using huffsymb39_t = huffsymb39_tt<"HUFFSYMB39",baseaddress,684>;
-
-template <std::uint32_t baseaddress>
-using huffsymb40_t = huffsymb40_tt<"HUFFSYMB40",baseaddress,688>;
-
-template <std::uint32_t baseaddress>
-using huffsymb41_t = huffsymb41_tt<"HUFFSYMB41",baseaddress,692>;
-
-template <std::uint32_t baseaddress>
-using huffsymb42_t = huffsymb42_tt<"HUFFSYMB42",baseaddress,696>;
-
-template <std::uint32_t baseaddress>
-using huffsymb43_t = huffsymb43_tt<"HUFFSYMB43",baseaddress,700>;
-
-template <std::uint32_t baseaddress>
-using huffsymb44_t = huffsymb44_tt<"HUFFSYMB44",baseaddress,704>;
-
-template <std::uint32_t baseaddress>
-using huffsymb45_t = huffsymb45_tt<"HUFFSYMB45",baseaddress,708>;
-
-template <std::uint32_t baseaddress>
-using huffsymb46_t = huffsymb46_tt<"HUFFSYMB46",baseaddress,712>;
-
-template <std::uint32_t baseaddress>
-using huffsymb47_t = huffsymb47_tt<"HUFFSYMB47",baseaddress,716>;
-
-template <std::uint32_t baseaddress>
-using huffsymb48_t = huffsymb48_tt<"HUFFSYMB48",baseaddress,720>;
-
-template <std::uint32_t baseaddress>
-using huffsymb49_t = huffsymb49_tt<"HUFFSYMB49",baseaddress,724>;
-
-template <std::uint32_t baseaddress>
-using huffsymb50_t = huffsymb50_tt<"HUFFSYMB50",baseaddress,728>;
-
-template <std::uint32_t baseaddress>
-using huffsymb51_t = huffsymb51_tt<"HUFFSYMB51",baseaddress,732>;
-
-template <std::uint32_t baseaddress>
-using huffsymb52_t = huffsymb52_tt<"HUFFSYMB52",baseaddress,736>;
-
-template <std::uint32_t baseaddress>
-using huffsymb53_t = huffsymb53_tt<"HUFFSYMB53",baseaddress,740>;
-
-template <std::uint32_t baseaddress>
-using huffsymb54_t = huffsymb54_tt<"HUFFSYMB54",baseaddress,744>;
-
-template <std::uint32_t baseaddress>
-using huffsymb55_t = huffsymb55_tt<"HUFFSYMB55",baseaddress,748>;
-
-template <std::uint32_t baseaddress>
-using huffsymb56_t = huffsymb56_tt<"HUFFSYMB56",baseaddress,752>;
-
-template <std::uint32_t baseaddress>
-using huffsymb57_t = huffsymb57_tt<"HUFFSYMB57",baseaddress,756>;
-
-template <std::uint32_t baseaddress>
-using huffsymb58_t = huffsymb58_tt<"HUFFSYMB58",baseaddress,760>;
-
-template <std::uint32_t baseaddress>
-using huffsymb59_t = huffsymb59_tt<"HUFFSYMB59",baseaddress,764>;
-
-template <std::uint32_t baseaddress>
-using huffsymb60_t = huffsymb60_tt<"HUFFSYMB60",baseaddress,768>;
-
-template <std::uint32_t baseaddress>
-using huffsymb61_t = huffsymb61_tt<"HUFFSYMB61",baseaddress,772>;
-
-template <std::uint32_t baseaddress>
-using huffsymb62_t = huffsymb62_tt<"HUFFSYMB62",baseaddress,776>;
-
-template <std::uint32_t baseaddress>
-using huffsymb63_t = huffsymb63_tt<"HUFFSYMB63",baseaddress,780>;
-
-template <std::uint32_t baseaddress>
-using huffsymb64_t = huffsymb64_tt<"HUFFSYMB64",baseaddress,784>;
-
-template <std::uint32_t baseaddress>
-using huffsymb65_t = huffsymb65_tt<"HUFFSYMB65",baseaddress,788>;
-
-template <std::uint32_t baseaddress>
-using huffsymb66_t = huffsymb66_tt<"HUFFSYMB66",baseaddress,792>;
-
-template <std::uint32_t baseaddress>
-using huffsymb67_t = huffsymb67_tt<"HUFFSYMB67",baseaddress,796>;
-
-template <std::uint32_t baseaddress>
-using huffsymb68_t = huffsymb68_tt<"HUFFSYMB68",baseaddress,800>;
-
-template <std::uint32_t baseaddress>
-using huffsymb69_t = huffsymb69_tt<"HUFFSYMB69",baseaddress,804>;
-
-template <std::uint32_t baseaddress>
-using huffsymb70_t = huffsymb70_tt<"HUFFSYMB70",baseaddress,808>;
-
-template <std::uint32_t baseaddress>
-using huffsymb71_t = huffsymb71_tt<"HUFFSYMB71",baseaddress,812>;
-
-template <std::uint32_t baseaddress>
-using huffsymb72_t = huffsymb72_tt<"HUFFSYMB72",baseaddress,816>;
-
-template <std::uint32_t baseaddress>
-using huffsymb73_t = huffsymb73_tt<"HUFFSYMB73",baseaddress,820>;
-
-template <std::uint32_t baseaddress>
-using huffsymb74_t = huffsymb74_tt<"HUFFSYMB74",baseaddress,824>;
-
-template <std::uint32_t baseaddress>
-using huffsymb75_t = huffsymb75_tt<"HUFFSYMB75",baseaddress,828>;
-
-template <std::uint32_t baseaddress>
-using huffsymb76_t = huffsymb76_tt<"HUFFSYMB76",baseaddress,832>;
-
-template <std::uint32_t baseaddress>
-using huffsymb77_t = huffsymb77_tt<"HUFFSYMB77",baseaddress,836>;
-
-template <std::uint32_t baseaddress>
-using huffsymb78_t = huffsymb78_tt<"HUFFSYMB78",baseaddress,840>;
-
-template <std::uint32_t baseaddress>
-using huffsymb79_t = huffsymb79_tt<"HUFFSYMB79",baseaddress,844>;
-
-template <std::uint32_t baseaddress>
-using huffsymb80_t = huffsymb80_tt<"HUFFSYMB80",baseaddress,848>;
-
-template <std::uint32_t baseaddress>
-using huffsymb81_t = huffsymb81_tt<"HUFFSYMB81",baseaddress,852>;
-
-template <std::uint32_t baseaddress>
-using huffsymb82_t = huffsymb82_tt<"HUFFSYMB82",baseaddress,856>;
-
-template <std::uint32_t baseaddress>
-using huffsymb83_t = huffsymb83_tt<"HUFFSYMB83",baseaddress,860>;
-
-template <std::uint32_t baseaddress>
-using dhtmem0_t = dhtmem0_tt<"DHTMEM0",baseaddress,864>;
-
-template <std::uint32_t baseaddress>
-using dhtmem2_t = dhtmem2_tt<"DHTMEM2",baseaddress,868>;
-
-template <std::uint32_t baseaddress>
-using dhtmem3_t = dhtmem3_tt<"DHTMEM3",baseaddress,872>;
-
-template <std::uint32_t baseaddress>
-using dhtmem4_t = dhtmem4_tt<"DHTMEM4",baseaddress,876>;
-
-template <std::uint32_t baseaddress>
-using dhtmem5_t = dhtmem5_tt<"DHTMEM5",baseaddress,880>;
-
-template <std::uint32_t baseaddress>
-using dhtmem6_t = dhtmem6_tt<"DHTMEM6",baseaddress,884>;
-
-template <std::uint32_t baseaddress>
-using dhtmem7_t = dhtmem7_tt<"DHTMEM7",baseaddress,888>;
-
-template <std::uint32_t baseaddress>
-using dhtmem8_t = dhtmem8_tt<"DHTMEM8",baseaddress,892>;
-
-template <std::uint32_t baseaddress>
-using dhtmem9_t = dhtmem9_tt<"DHTMEM9",baseaddress,896>;
-
-template <std::uint32_t baseaddress>
-using dhtmem10_t = dhtmem10_tt<"DHTMEM10",baseaddress,900>;
-
-template <std::uint32_t baseaddress>
-using dhtmem11_t = dhtmem11_tt<"DHTMEM11",baseaddress,904>;
-
-template <std::uint32_t baseaddress>
-using dhtmem12_t = dhtmem12_tt<"DHTMEM12",baseaddress,908>;
-
-template <std::uint32_t baseaddress>
-using dhtmem13_t = dhtmem13_tt<"DHTMEM13",baseaddress,912>;
-
-template <std::uint32_t baseaddress>
-using dhtmem14_t = dhtmem14_tt<"DHTMEM14",baseaddress,916>;
-
-template <std::uint32_t baseaddress>
-using dhtmem15_t = dhtmem15_tt<"DHTMEM15",baseaddress,920>;
-
-template <std::uint32_t baseaddress>
-using dhtmem16_t = dhtmem16_tt<"DHTMEM16",baseaddress,924>;
-
-template <std::uint32_t baseaddress>
-using dhtmem17_t = dhtmem17_tt<"DHTMEM17",baseaddress,928>;
-
-template <std::uint32_t baseaddress>
-using dhtmem18_t = dhtmem18_tt<"DHTMEM18",baseaddress,932>;
-
-template <std::uint32_t baseaddress>
-using dhtmem19_t = dhtmem19_tt<"DHTMEM19",baseaddress,936>;
-
-template <std::uint32_t baseaddress>
-using dhtmem20_t = dhtmem20_tt<"DHTMEM20",baseaddress,940>;
-
-template <std::uint32_t baseaddress>
-using dhtmem21_t = dhtmem21_tt<"DHTMEM21",baseaddress,944>;
-
-template <std::uint32_t baseaddress>
-using dhtmem22_t = dhtmem22_tt<"DHTMEM22",baseaddress,948>;
-
-template <std::uint32_t baseaddress>
-using dhtmem23_t = dhtmem23_tt<"DHTMEM23",baseaddress,952>;
-
-template <std::uint32_t baseaddress>
-using dhtmem24_t = dhtmem24_tt<"DHTMEM24",baseaddress,956>;
-
-template <std::uint32_t baseaddress>
-using dhtmem25_t = dhtmem25_tt<"DHTMEM25",baseaddress,960>;
-
-template <std::uint32_t baseaddress>
-using dhtmem26_t = dhtmem26_tt<"DHTMEM26",baseaddress,964>;
-
-template <std::uint32_t baseaddress>
-using dhtmem27_t = dhtmem27_tt<"DHTMEM27",baseaddress,968>;
-
-template <std::uint32_t baseaddress>
-using dhtmem28_t = dhtmem28_tt<"DHTMEM28",baseaddress,972>;
-
-template <std::uint32_t baseaddress>
-using dhtmem29_t = dhtmem29_tt<"DHTMEM29",baseaddress,976>;
-
-template <std::uint32_t baseaddress>
-using dhtmem30_t = dhtmem30_tt<"DHTMEM30",baseaddress,980>;
-
-template <std::uint32_t baseaddress>
-using dhtmem31_t = dhtmem31_tt<"DHTMEM31",baseaddress,984>;
-
-template <std::uint32_t baseaddress>
-using dhtmem32_t = dhtmem32_tt<"DHTMEM32",baseaddress,988>;
-
-template <std::uint32_t baseaddress>
-using dhtmem33_t = dhtmem33_tt<"DHTMEM33",baseaddress,992>;
-
-template <std::uint32_t baseaddress>
-using dhtmem34_t = dhtmem34_tt<"DHTMEM34",baseaddress,996>;
-
-template <std::uint32_t baseaddress>
-using dhtmem35_t = dhtmem35_tt<"DHTMEM35",baseaddress,1000>;
-
-template <std::uint32_t baseaddress>
-using dhtmem36_t = dhtmem36_tt<"DHTMEM36",baseaddress,1004>;
-
-template <std::uint32_t baseaddress>
-using dhtmem37_t = dhtmem37_tt<"DHTMEM37",baseaddress,1008>;
-
-template <std::uint32_t baseaddress>
-using dhtmem38_t = dhtmem38_tt<"DHTMEM38",baseaddress,1012>;
-
-template <std::uint32_t baseaddress>
-using dhtmem39_t = dhtmem39_tt<"DHTMEM39",baseaddress,1016>;
-
-template <std::uint32_t baseaddress>
-using dhtmem40_t = dhtmem40_tt<"DHTMEM40",baseaddress,1020>;
-
-template <std::uint32_t baseaddress>
-using dhtmem41_t = dhtmem41_tt<"DHTMEM41",baseaddress,1024>;
-
-template <std::uint32_t baseaddress>
-using dhtmem42_t = dhtmem42_tt<"DHTMEM42",baseaddress,1028>;
-
-template <std::uint32_t baseaddress>
-using dhtmem43_t = dhtmem43_tt<"DHTMEM43",baseaddress,1032>;
-
-template <std::uint32_t baseaddress>
-using dhtmem44_t = dhtmem44_tt<"DHTMEM44",baseaddress,1036>;
-
-template <std::uint32_t baseaddress>
-using dhtmem45_t = dhtmem45_tt<"DHTMEM45",baseaddress,1040>;
-
-template <std::uint32_t baseaddress>
-using dhtmem46_t = dhtmem46_tt<"DHTMEM46",baseaddress,1044>;
-
-template <std::uint32_t baseaddress>
-using dhtmem47_t = dhtmem47_tt<"DHTMEM47",baseaddress,1048>;
-
-template <std::uint32_t baseaddress>
-using dhtmem48_t = dhtmem48_tt<"DHTMEM48",baseaddress,1052>;
-
-template <std::uint32_t baseaddress>
-using dhtmem49_t = dhtmem49_tt<"DHTMEM49",baseaddress,1056>;
-
-template <std::uint32_t baseaddress>
-using dhtmem50_t = dhtmem50_tt<"DHTMEM50",baseaddress,1060>;
-
-template <std::uint32_t baseaddress>
-using dhtmem51_t = dhtmem51_tt<"DHTMEM51",baseaddress,1064>;
-
-template <std::uint32_t baseaddress>
-using dhtmem52_t = dhtmem52_tt<"DHTMEM52",baseaddress,1068>;
-
-template <std::uint32_t baseaddress>
-using dhtmem53_t = dhtmem53_tt<"DHTMEM53",baseaddress,1072>;
-
-template <std::uint32_t baseaddress>
-using dhtmem54_t = dhtmem54_tt<"DHTMEM54",baseaddress,1076>;
-
-template <std::uint32_t baseaddress>
-using dhtmem55_t = dhtmem55_tt<"DHTMEM55",baseaddress,1080>;
-
-template <std::uint32_t baseaddress>
-using dhtmem56_t = dhtmem56_tt<"DHTMEM56",baseaddress,1084>;
-
-template <std::uint32_t baseaddress>
-using dhtmem57_t = dhtmem57_tt<"DHTMEM57",baseaddress,1088>;
-
-template <std::uint32_t baseaddress>
-using dhtmem58_t = dhtmem58_tt<"DHTMEM58",baseaddress,1092>;
-
-template <std::uint32_t baseaddress>
-using dhtmem59_t = dhtmem59_tt<"DHTMEM59",baseaddress,1096>;
-
-template <std::uint32_t baseaddress>
-using dhtmem60_t = dhtmem60_tt<"DHTMEM60",baseaddress,1100>;
-
-template <std::uint32_t baseaddress>
-using dhtmem61_t = dhtmem61_tt<"DHTMEM61",baseaddress,1104>;
-
-template <std::uint32_t baseaddress>
-using dhtmem62_t = dhtmem62_tt<"DHTMEM62",baseaddress,1108>;
-
-template <std::uint32_t baseaddress>
-using dhtmem63_t = dhtmem63_tt<"DHTMEM63",baseaddress,1112>;
-
-template <std::uint32_t baseaddress>
-using dhtmem64_t = dhtmem64_tt<"DHTMEM64",baseaddress,1116>;
-
-template <std::uint32_t baseaddress>
-using dhtmem65_t = dhtmem65_tt<"DHTMEM65",baseaddress,1120>;
-
-template <std::uint32_t baseaddress>
-using dhtmem66_t = dhtmem66_tt<"DHTMEM66",baseaddress,1124>;
-
-template <std::uint32_t baseaddress>
-using dhtmem67_t = dhtmem67_tt<"DHTMEM67",baseaddress,1128>;
-
-template <std::uint32_t baseaddress>
-using dhtmem68_t = dhtmem68_tt<"DHTMEM68",baseaddress,1132>;
-
-template <std::uint32_t baseaddress>
-using dhtmem69_t = dhtmem69_tt<"DHTMEM69",baseaddress,1136>;
-
-template <std::uint32_t baseaddress>
-using dhtmem70_t = dhtmem70_tt<"DHTMEM70",baseaddress,1140>;
-
-template <std::uint32_t baseaddress>
-using dhtmem71_t = dhtmem71_tt<"DHTMEM71",baseaddress,1144>;
-
-template <std::uint32_t baseaddress>
-using dhtmem72_t = dhtmem72_tt<"DHTMEM72",baseaddress,1148>;
-
-template <std::uint32_t baseaddress>
-using dhtmem73_t = dhtmem73_tt<"DHTMEM73",baseaddress,1152>;
-
-template <std::uint32_t baseaddress>
-using dhtmem74_t = dhtmem74_tt<"DHTMEM74",baseaddress,1156>;
-
-template <std::uint32_t baseaddress>
-using dhtmem75_t = dhtmem75_tt<"DHTMEM75",baseaddress,1160>;
-
-template <std::uint32_t baseaddress>
-using dhtmem76_t = dhtmem76_tt<"DHTMEM76",baseaddress,1164>;
-
-template <std::uint32_t baseaddress>
-using dhtmem77_t = dhtmem77_tt<"DHTMEM77",baseaddress,1168>;
-
-template <std::uint32_t baseaddress>
-using dhtmem78_t = dhtmem78_tt<"DHTMEM78",baseaddress,1172>;
-
-template <std::uint32_t baseaddress>
-using dhtmem79_t = dhtmem79_tt<"DHTMEM79",baseaddress,1176>;
-
-template <std::uint32_t baseaddress>
-using dhtmem80_t = dhtmem80_tt<"DHTMEM80",baseaddress,1180>;
-
-template <std::uint32_t baseaddress>
-using dhtmem81_t = dhtmem81_tt<"DHTMEM81",baseaddress,1184>;
-
-template <std::uint32_t baseaddress>
-using dhtmem82_t = dhtmem82_tt<"DHTMEM82",baseaddress,1188>;
-
-template <std::uint32_t baseaddress>
-using dhtmem83_t = dhtmem83_tt<"DHTMEM83",baseaddress,1192>;
-
-template <std::uint32_t baseaddress>
-using dhtmem84_t = dhtmem84_tt<"DHTMEM84",baseaddress,1196>;
-
-template <std::uint32_t baseaddress>
-using dhtmem85_t = dhtmem85_tt<"DHTMEM85",baseaddress,1200>;
-
-template <std::uint32_t baseaddress>
-using dhtmem86_t = dhtmem86_tt<"DHTMEM86",baseaddress,1204>;
-
-template <std::uint32_t baseaddress>
-using dhtmem87_t = dhtmem87_tt<"DHTMEM87",baseaddress,1208>;
-
-template <std::uint32_t baseaddress>
-using dhtmem88_t = dhtmem88_tt<"DHTMEM88",baseaddress,1212>;
-
-template <std::uint32_t baseaddress>
-using dhtmem89_t = dhtmem89_tt<"DHTMEM89",baseaddress,1216>;
-
-template <std::uint32_t baseaddress>
-using dhtmem90_t = dhtmem90_tt<"DHTMEM90",baseaddress,1220>;
-
-template <std::uint32_t baseaddress>
-using dhtmem91_t = dhtmem91_tt<"DHTMEM91",baseaddress,1224>;
-
-template <std::uint32_t baseaddress>
-using dhtmem92_t = dhtmem92_tt<"DHTMEM92",baseaddress,1228>;
-
-template <std::uint32_t baseaddress>
-using dhtmem93_t = dhtmem93_tt<"DHTMEM93",baseaddress,1232>;
-
-template <std::uint32_t baseaddress>
-using dhtmem94_t = dhtmem94_tt<"DHTMEM94",baseaddress,1236>;
-
-template <std::uint32_t baseaddress>
-using dhtmem95_t = dhtmem95_tt<"DHTMEM95",baseaddress,1240>;
-
-template <std::uint32_t baseaddress>
-using dhtmem96_t = dhtmem96_tt<"DHTMEM96",baseaddress,1244>;
-
-template <std::uint32_t baseaddress>
-using dhtmem97_t = dhtmem97_tt<"DHTMEM97",baseaddress,1248>;
-
-template <std::uint32_t baseaddress>
-using dhtmem98_t = dhtmem98_tt<"DHTMEM98",baseaddress,1252>;
-
-template <std::uint32_t baseaddress>
-using dhtmem99_t = dhtmem99_tt<"DHTMEM99",baseaddress,1256>;
-
-template <std::uint32_t baseaddress>
-using dhtmem100_t = dhtmem100_tt<"DHTMEM100",baseaddress,1260>;
-
-template <std::uint32_t baseaddress>
-using dhtmem101_t = dhtmem101_tt<"DHTMEM101",baseaddress,1264>;
-
-template <std::uint32_t baseaddress>
-using dhtmem102_t = dhtmem102_tt<"DHTMEM102",baseaddress,1268>;
-
-template <std::uint32_t baseaddress>
-using dhtmem103_t = dhtmem103_tt<"DHTMEM103",baseaddress,1272>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac0_0_t = huffenc_ac0_0_tt<"HUFFENC_AC0_0",baseaddress,1280>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac0_1_t = huffenc_ac0_1_tt<"HUFFENC_AC0_1",baseaddress,1284>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac0_2_t = huffenc_ac0_2_tt<"HUFFENC_AC0_2",baseaddress,1288>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac0_3_t = huffenc_ac0_3_tt<"HUFFENC_AC0_3",baseaddress,1292>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac0_4_t = huffenc_ac0_4_tt<"HUFFENC_AC0_4",baseaddress,1296>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac0_5_t = huffenc_ac0_5_tt<"HUFFENC_AC0_5",baseaddress,1300>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac0_6_t = huffenc_ac0_6_tt<"HUFFENC_AC0_6",baseaddress,1304>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac0_7_t = huffenc_ac0_7_tt<"HUFFENC_AC0_7",baseaddress,1308>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac0_8_t = huffenc_ac0_8_tt<"HUFFENC_AC0_8",baseaddress,1312>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac0_9_t = huffenc_ac0_9_tt<"HUFFENC_AC0_9",baseaddress,1316>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac0_10_t = huffenc_ac0_10_tt<"HUFFENC_AC0_10",baseaddress,1320>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac0_11_t = huffenc_ac0_11_tt<"HUFFENC_AC0_11",baseaddress,1324>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac0_12_t = huffenc_ac0_12_tt<"HUFFENC_AC0_12",baseaddress,1328>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac0_13_t = huffenc_ac0_13_tt<"HUFFENC_AC0_13",baseaddress,1332>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac0_14_t = huffenc_ac0_14_tt<"HUFFENC_AC0_14",baseaddress,1336>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac0_15_t = huffenc_ac0_15_tt<"HUFFENC_AC0_15",baseaddress,1340>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac0_16_t = huffenc_ac0_16_tt<"HUFFENC_AC0_16",baseaddress,1344>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac0_17_t = huffenc_ac0_17_tt<"HUFFENC_AC0_17",baseaddress,1348>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac0_18_t = huffenc_ac0_18_tt<"HUFFENC_AC0_18",baseaddress,1352>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac0_19_t = huffenc_ac0_19_tt<"HUFFENC_AC0_19",baseaddress,1356>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac0_20_t = huffenc_ac0_20_tt<"HUFFENC_AC0_20",baseaddress,1360>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac0_21_t = huffenc_ac0_21_tt<"HUFFENC_AC0_21",baseaddress,1364>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac0_22_t = huffenc_ac0_22_tt<"HUFFENC_AC0_22",baseaddress,1368>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac0_23_t = huffenc_ac0_23_tt<"HUFFENC_AC0_23",baseaddress,1372>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac0_24_t = huffenc_ac0_24_tt<"HUFFENC_AC0_24",baseaddress,1376>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac0_25_t = huffenc_ac0_25_tt<"HUFFENC_AC0_25",baseaddress,1380>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac0_26_t = huffenc_ac0_26_tt<"HUFFENC_AC0_26",baseaddress,1384>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac0_27_t = huffenc_ac0_27_tt<"HUFFENC_AC0_27",baseaddress,1388>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac0_28_t = huffenc_ac0_28_tt<"HUFFENC_AC0_28",baseaddress,1392>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac0_29_t = huffenc_ac0_29_tt<"HUFFENC_AC0_29",baseaddress,1396>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac0_30_t = huffenc_ac0_30_tt<"HUFFENC_AC0_30",baseaddress,1400>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac0_31_t = huffenc_ac0_31_tt<"HUFFENC_AC0_31",baseaddress,1404>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac0_32_t = huffenc_ac0_32_tt<"HUFFENC_AC0_32",baseaddress,1408>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac0_33_t = huffenc_ac0_33_tt<"HUFFENC_AC0_33",baseaddress,1412>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac0_34_t = huffenc_ac0_34_tt<"HUFFENC_AC0_34",baseaddress,1416>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac0_35_t = huffenc_ac0_35_tt<"HUFFENC_AC0_35",baseaddress,1420>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac0_36_t = huffenc_ac0_36_tt<"HUFFENC_AC0_36",baseaddress,1424>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac0_37_t = huffenc_ac0_37_tt<"HUFFENC_AC0_37",baseaddress,1428>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac0_38_t = huffenc_ac0_38_tt<"HUFFENC_AC0_38",baseaddress,1432>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac0_39_t = huffenc_ac0_39_tt<"HUFFENC_AC0_39",baseaddress,1436>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac0_40_t = huffenc_ac0_40_tt<"HUFFENC_AC0_40",baseaddress,1440>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac0_41_t = huffenc_ac0_41_tt<"HUFFENC_AC0_41",baseaddress,1444>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac0_42_t = huffenc_ac0_42_tt<"HUFFENC_AC0_42",baseaddress,1448>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac0_43_t = huffenc_ac0_43_tt<"HUFFENC_AC0_43",baseaddress,1452>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac0_44_t = huffenc_ac0_44_tt<"HUFFENC_AC0_44",baseaddress,1456>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac0_45_t = huffenc_ac0_45_tt<"HUFFENC_AC0_45",baseaddress,1460>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac0_46_t = huffenc_ac0_46_tt<"HUFFENC_AC0_46",baseaddress,1464>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac0_47_t = huffenc_ac0_47_tt<"HUFFENC_AC0_47",baseaddress,1468>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac0_48_t = huffenc_ac0_48_tt<"HUFFENC_AC0_48",baseaddress,1472>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac0_49_t = huffenc_ac0_49_tt<"HUFFENC_AC0_49",baseaddress,1476>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac0_50_t = huffenc_ac0_50_tt<"HUFFENC_AC0_50",baseaddress,1480>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac0_51_t = huffenc_ac0_51_tt<"HUFFENC_AC0_51",baseaddress,1484>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac0_52_t = huffenc_ac0_52_tt<"HUFFENC_AC0_52",baseaddress,1488>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac0_53_t = huffenc_ac0_53_tt<"HUFFENC_AC0_53",baseaddress,1492>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac0_54_t = huffenc_ac0_54_tt<"HUFFENC_AC0_54",baseaddress,1496>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac0_55_t = huffenc_ac0_55_tt<"HUFFENC_AC0_55",baseaddress,1500>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac0_56_t = huffenc_ac0_56_tt<"HUFFENC_AC0_56",baseaddress,1504>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac0_57_t = huffenc_ac0_57_tt<"HUFFENC_AC0_57",baseaddress,1508>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac0_58_t = huffenc_ac0_58_tt<"HUFFENC_AC0_58",baseaddress,1512>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac0_59_t = huffenc_ac0_59_tt<"HUFFENC_AC0_59",baseaddress,1516>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac0_60_t = huffenc_ac0_60_tt<"HUFFENC_AC0_60",baseaddress,1520>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac0_61_t = huffenc_ac0_61_tt<"HUFFENC_AC0_61",baseaddress,1524>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac0_62_t = huffenc_ac0_62_tt<"HUFFENC_AC0_62",baseaddress,1528>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac0_63_t = huffenc_ac0_63_tt<"HUFFENC_AC0_63",baseaddress,1532>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac0_64_t = huffenc_ac0_64_tt<"HUFFENC_AC0_64",baseaddress,1536>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac0_65_t = huffenc_ac0_65_tt<"HUFFENC_AC0_65",baseaddress,1540>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac0_66_t = huffenc_ac0_66_tt<"HUFFENC_AC0_66",baseaddress,1544>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac0_67_t = huffenc_ac0_67_tt<"HUFFENC_AC0_67",baseaddress,1548>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac0_68_t = huffenc_ac0_68_tt<"HUFFENC_AC0_68",baseaddress,1552>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac0_69_t = huffenc_ac0_69_tt<"HUFFENC_AC0_69",baseaddress,1556>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac0_70_t = huffenc_ac0_70_tt<"HUFFENC_AC0_70",baseaddress,1560>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac0_71_t = huffenc_ac0_71_tt<"HUFFENC_AC0_71",baseaddress,1564>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac0_72_t = huffenc_ac0_72_tt<"HUFFENC_AC0_72",baseaddress,1568>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac0_73_t = huffenc_ac0_73_tt<"HUFFENC_AC0_73",baseaddress,1572>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac0_74_t = huffenc_ac0_74_tt<"HUFFENC_AC0_74",baseaddress,1576>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac0_75_t = huffenc_ac0_75_tt<"HUFFENC_AC0_75",baseaddress,1580>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac0_76_t = huffenc_ac0_76_tt<"HUFFENC_AC0_76",baseaddress,1584>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac0_77_t = huffenc_ac0_77_tt<"HUFFENC_AC0_77",baseaddress,1588>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac0_78_t = huffenc_ac0_78_tt<"HUFFENC_AC0_78",baseaddress,1592>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac0_79_t = huffenc_ac0_79_tt<"HUFFENC_AC0_79",baseaddress,1596>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac0_80_t = huffenc_ac0_80_tt<"HUFFENC_AC0_80",baseaddress,1600>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac0_81_t = huffenc_ac0_81_tt<"HUFFENC_AC0_81",baseaddress,1604>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac0_82_t = huffenc_ac0_82_tt<"HUFFENC_AC0_82",baseaddress,1608>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac0_83_t = huffenc_ac0_83_tt<"HUFFENC_AC0_83",baseaddress,1612>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac0_84_t = huffenc_ac0_84_tt<"HUFFENC_AC0_84",baseaddress,1616>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac0_85_t = huffenc_ac0_85_tt<"HUFFENC_AC0_85",baseaddress,1620>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac0_86_t = huffenc_ac0_86_tt<"HUFFENC_AC0_86",baseaddress,1624>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac0_87_t = huffenc_ac0_87_tt<"HUFFENC_AC0_87",baseaddress,1628>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac1_0_t = huffenc_ac1_0_tt<"HUFFENC_AC1_0",baseaddress,1632>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac1_1_t = huffenc_ac1_1_tt<"HUFFENC_AC1_1",baseaddress,1636>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac1_2_t = huffenc_ac1_2_tt<"HUFFENC_AC1_2",baseaddress,1640>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac1_3_t = huffenc_ac1_3_tt<"HUFFENC_AC1_3",baseaddress,1644>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac1_4_t = huffenc_ac1_4_tt<"HUFFENC_AC1_4",baseaddress,1648>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac1_5_t = huffenc_ac1_5_tt<"HUFFENC_AC1_5",baseaddress,1652>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac1_6_t = huffenc_ac1_6_tt<"HUFFENC_AC1_6",baseaddress,1656>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac1_7_t = huffenc_ac1_7_tt<"HUFFENC_AC1_7",baseaddress,1660>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac1_8_t = huffenc_ac1_8_tt<"HUFFENC_AC1_8",baseaddress,1664>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac1_9_t = huffenc_ac1_9_tt<"HUFFENC_AC1_9",baseaddress,1668>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac1_10_t = huffenc_ac1_10_tt<"HUFFENC_AC1_10",baseaddress,1672>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac1_11_t = huffenc_ac1_11_tt<"HUFFENC_AC1_11",baseaddress,1676>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac1_12_t = huffenc_ac1_12_tt<"HUFFENC_AC1_12",baseaddress,1680>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac1_13_t = huffenc_ac1_13_tt<"HUFFENC_AC1_13",baseaddress,1684>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac1_14_t = huffenc_ac1_14_tt<"HUFFENC_AC1_14",baseaddress,1688>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac1_15_t = huffenc_ac1_15_tt<"HUFFENC_AC1_15",baseaddress,1692>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac1_16_t = huffenc_ac1_16_tt<"HUFFENC_AC1_16",baseaddress,1696>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac1_17_t = huffenc_ac1_17_tt<"HUFFENC_AC1_17",baseaddress,1700>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac1_18_t = huffenc_ac1_18_tt<"HUFFENC_AC1_18",baseaddress,1704>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac1_19_t = huffenc_ac1_19_tt<"HUFFENC_AC1_19",baseaddress,1708>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac1_20_t = huffenc_ac1_20_tt<"HUFFENC_AC1_20",baseaddress,1712>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac1_21_t = huffenc_ac1_21_tt<"HUFFENC_AC1_21",baseaddress,1716>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac1_22_t = huffenc_ac1_22_tt<"HUFFENC_AC1_22",baseaddress,1720>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac1_23_t = huffenc_ac1_23_tt<"HUFFENC_AC1_23",baseaddress,1724>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac1_24_t = huffenc_ac1_24_tt<"HUFFENC_AC1_24",baseaddress,1728>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac1_25_t = huffenc_ac1_25_tt<"HUFFENC_AC1_25",baseaddress,1732>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac1_26_t = huffenc_ac1_26_tt<"HUFFENC_AC1_26",baseaddress,1736>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac1_27_t = huffenc_ac1_27_tt<"HUFFENC_AC1_27",baseaddress,1740>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac1_28_t = huffenc_ac1_28_tt<"HUFFENC_AC1_28",baseaddress,1744>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac1_29_t = huffenc_ac1_29_tt<"HUFFENC_AC1_29",baseaddress,1748>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac1_30_t = huffenc_ac1_30_tt<"HUFFENC_AC1_30",baseaddress,1752>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac1_31_t = huffenc_ac1_31_tt<"HUFFENC_AC1_31",baseaddress,1756>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac1_32_t = huffenc_ac1_32_tt<"HUFFENC_AC1_32",baseaddress,1760>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac1_33_t = huffenc_ac1_33_tt<"HUFFENC_AC1_33",baseaddress,1764>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac1_34_t = huffenc_ac1_34_tt<"HUFFENC_AC1_34",baseaddress,1768>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac1_35_t = huffenc_ac1_35_tt<"HUFFENC_AC1_35",baseaddress,1772>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac1_36_t = huffenc_ac1_36_tt<"HUFFENC_AC1_36",baseaddress,1776>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac1_37_t = huffenc_ac1_37_tt<"HUFFENC_AC1_37",baseaddress,1780>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac1_38_t = huffenc_ac1_38_tt<"HUFFENC_AC1_38",baseaddress,1784>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac1_39_t = huffenc_ac1_39_tt<"HUFFENC_AC1_39",baseaddress,1788>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac1_40_t = huffenc_ac1_40_tt<"HUFFENC_AC1_40",baseaddress,1792>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac1_41_t = huffenc_ac1_41_tt<"HUFFENC_AC1_41",baseaddress,1796>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac1_42_t = huffenc_ac1_42_tt<"HUFFENC_AC1_42",baseaddress,1800>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac1_43_t = huffenc_ac1_43_tt<"HUFFENC_AC1_43",baseaddress,1804>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac1_44_t = huffenc_ac1_44_tt<"HUFFENC_AC1_44",baseaddress,1808>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac1_45_t = huffenc_ac1_45_tt<"HUFFENC_AC1_45",baseaddress,1812>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac1_46_t = huffenc_ac1_46_tt<"HUFFENC_AC1_46",baseaddress,1816>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac1_47_t = huffenc_ac1_47_tt<"HUFFENC_AC1_47",baseaddress,1820>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac1_48_t = huffenc_ac1_48_tt<"HUFFENC_AC1_48",baseaddress,1824>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac1_49_t = huffenc_ac1_49_tt<"HUFFENC_AC1_49",baseaddress,1828>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac1_50_t = huffenc_ac1_50_tt<"HUFFENC_AC1_50",baseaddress,1832>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac1_51_t = huffenc_ac1_51_tt<"HUFFENC_AC1_51",baseaddress,1836>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac1_52_t = huffenc_ac1_52_tt<"HUFFENC_AC1_52",baseaddress,1840>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac1_53_t = huffenc_ac1_53_tt<"HUFFENC_AC1_53",baseaddress,1844>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac1_54_t = huffenc_ac1_54_tt<"HUFFENC_AC1_54",baseaddress,1848>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac1_55_t = huffenc_ac1_55_tt<"HUFFENC_AC1_55",baseaddress,1852>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac1_56_t = huffenc_ac1_56_tt<"HUFFENC_AC1_56",baseaddress,1856>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac1_57_t = huffenc_ac1_57_tt<"HUFFENC_AC1_57",baseaddress,1860>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac1_58_t = huffenc_ac1_58_tt<"HUFFENC_AC1_58",baseaddress,1864>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac1_59_t = huffenc_ac1_59_tt<"HUFFENC_AC1_59",baseaddress,1868>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac1_60_t = huffenc_ac1_60_tt<"HUFFENC_AC1_60",baseaddress,1872>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac1_61_t = huffenc_ac1_61_tt<"HUFFENC_AC1_61",baseaddress,1876>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac1_62_t = huffenc_ac1_62_tt<"HUFFENC_AC1_62",baseaddress,1880>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac1_63_t = huffenc_ac1_63_tt<"HUFFENC_AC1_63",baseaddress,1884>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac1_64_t = huffenc_ac1_64_tt<"HUFFENC_AC1_64",baseaddress,1888>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac1_65_t = huffenc_ac1_65_tt<"HUFFENC_AC1_65",baseaddress,1892>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac1_66_t = huffenc_ac1_66_tt<"HUFFENC_AC1_66",baseaddress,1896>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac1_67_t = huffenc_ac1_67_tt<"HUFFENC_AC1_67",baseaddress,1900>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac1_68_t = huffenc_ac1_68_tt<"HUFFENC_AC1_68",baseaddress,1904>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac1_69_t = huffenc_ac1_69_tt<"HUFFENC_AC1_69",baseaddress,1908>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac1_70_t = huffenc_ac1_70_tt<"HUFFENC_AC1_70",baseaddress,1912>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac1_71_t = huffenc_ac1_71_tt<"HUFFENC_AC1_71",baseaddress,1916>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac1_72_t = huffenc_ac1_72_tt<"HUFFENC_AC1_72",baseaddress,1920>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac1_73_t = huffenc_ac1_73_tt<"HUFFENC_AC1_73",baseaddress,1924>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac1_74_t = huffenc_ac1_74_tt<"HUFFENC_AC1_74",baseaddress,1928>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac1_75_t = huffenc_ac1_75_tt<"HUFFENC_AC1_75",baseaddress,1932>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac1_76_t = huffenc_ac1_76_tt<"HUFFENC_AC1_76",baseaddress,1936>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac1_77_t = huffenc_ac1_77_tt<"HUFFENC_AC1_77",baseaddress,1940>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac1_78_t = huffenc_ac1_78_tt<"HUFFENC_AC1_78",baseaddress,1944>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac1_79_t = huffenc_ac1_79_tt<"HUFFENC_AC1_79",baseaddress,1948>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac1_80_t = huffenc_ac1_80_tt<"HUFFENC_AC1_80",baseaddress,1952>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac1_81_t = huffenc_ac1_81_tt<"HUFFENC_AC1_81",baseaddress,1956>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac1_82_t = huffenc_ac1_82_tt<"HUFFENC_AC1_82",baseaddress,1960>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac1_83_t = huffenc_ac1_83_tt<"HUFFENC_AC1_83",baseaddress,1964>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac1_84_t = huffenc_ac1_84_tt<"HUFFENC_AC1_84",baseaddress,1968>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac1_85_t = huffenc_ac1_85_tt<"HUFFENC_AC1_85",baseaddress,1972>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac1_86_t = huffenc_ac1_86_tt<"HUFFENC_AC1_86",baseaddress,1976>;
-
-template <std::uint32_t baseaddress>
-using huffenc_ac1_87_t = huffenc_ac1_87_tt<"HUFFENC_AC1_87",baseaddress,1980>;
-
-template <std::uint32_t baseaddress>
-using huffenc_dc0_0_t = huffenc_dc0_0_tt<"HUFFENC_DC0_0",baseaddress,1984>;
-
-template <std::uint32_t baseaddress>
-using huffenc_dc0_1_t = huffenc_dc0_1_tt<"HUFFENC_DC0_1",baseaddress,1988>;
-
-template <std::uint32_t baseaddress>
-using huffenc_dc0_2_t = huffenc_dc0_2_tt<"HUFFENC_DC0_2",baseaddress,1992>;
-
-template <std::uint32_t baseaddress>
-using huffenc_dc0_3_t = huffenc_dc0_3_tt<"HUFFENC_DC0_3",baseaddress,1996>;
-
-template <std::uint32_t baseaddress>
-using huffenc_dc0_4_t = huffenc_dc0_4_tt<"HUFFENC_DC0_4",baseaddress,2000>;
-
-template <std::uint32_t baseaddress>
-using huffenc_dc0_5_t = huffenc_dc0_5_tt<"HUFFENC_DC0_5",baseaddress,2004>;
-
-template <std::uint32_t baseaddress>
-using huffenc_dc0_6_t = huffenc_dc0_6_tt<"HUFFENC_DC0_6",baseaddress,2008>;
-
-template <std::uint32_t baseaddress>
-using huffenc_dc0_7_t = huffenc_dc0_7_tt<"HUFFENC_DC0_7",baseaddress,2012>;
-
-template <std::uint32_t baseaddress>
-using huffenc_dc1_0_t = huffenc_dc1_0_tt<"HUFFENC_DC1_0",baseaddress,2016>;
-
-template <std::uint32_t baseaddress>
-using huffenc_dc1_1_t = huffenc_dc1_1_tt<"HUFFENC_DC1_1",baseaddress,2020>;
-
-template <std::uint32_t baseaddress>
-using huffenc_dc1_2_t = huffenc_dc1_2_tt<"HUFFENC_DC1_2",baseaddress,2024>;
-
-template <std::uint32_t baseaddress>
-using huffenc_dc1_3_t = huffenc_dc1_3_tt<"HUFFENC_DC1_3",baseaddress,2028>;
-
-template <std::uint32_t baseaddress>
-using huffenc_dc1_4_t = huffenc_dc1_4_tt<"HUFFENC_DC1_4",baseaddress,2032>;
-
-template <std::uint32_t baseaddress>
-using huffenc_dc1_5_t = huffenc_dc1_5_tt<"HUFFENC_DC1_5",baseaddress,2036>;
-
-template <std::uint32_t baseaddress>
-using huffenc_dc1_6_t = huffenc_dc1_6_tt<"HUFFENC_DC1_6",baseaddress,2040>;
-
-template <std::uint32_t baseaddress>
-using huffenc_dc1_7_t = huffenc_dc1_7_tt<"HUFFENC_DC1_7",baseaddress,2044>;
+                                std::uint32_t,
+                                baseaddress + offset,
+                                access::rw,
+                                groov::field<"QMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using qmem3_10_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"QMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using qmem3_11_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"QMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using qmem3_12_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"QMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using qmem3_13_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"QMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using qmem3_14_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"QMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using qmem3_15_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"QMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffmin_0_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"HuffMin_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffmin_1_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"HuffMin_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffmin_2_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"HuffMin_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffmin_3_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"HuffMin_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffmin_4_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"HuffMin_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffmin_5_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"HuffMin_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffmin_6_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"HuffMin_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffmin_7_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"HuffMin_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffmin_8_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"HuffMin_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffmin_9_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"HuffMin_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffmin_10_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"HuffMin_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffmin_11_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"HuffMin_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffmin_12_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"HuffMin_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffmin_13_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"HuffMin_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffmin_14_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"HuffMin_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffmin_15_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"HuffMin_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffbase0_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED1", std::uint8_t, 31, 25, access::ro>,
+               groov::field<"HuffBase_RAM_1", std::uint16_t, 24, 16>,
+               groov::field<"RESERVED0", std::uint8_t, 15, 9, access::ro>,
+               groov::field<"HuffBase_RAM_0", std::uint16_t, 8, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffbase1_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED1", std::uint8_t, 31, 25, access::ro>,
+               groov::field<"HuffBase_RAM_1", std::uint16_t, 24, 16>,
+               groov::field<"RESERVED0", std::uint8_t, 15, 9, access::ro>,
+               groov::field<"HuffBase_RAM_0", std::uint16_t, 8, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffbase2_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED1", std::uint8_t, 31, 25, access::ro>,
+               groov::field<"HuffBase_RAM_1", std::uint16_t, 24, 16>,
+               groov::field<"RESERVED0", std::uint8_t, 15, 9, access::ro>,
+               groov::field<"HuffBase_RAM_0", std::uint16_t, 8, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffbase3_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED1", std::uint8_t, 31, 25, access::ro>,
+               groov::field<"HuffBase_RAM_1", std::uint16_t, 24, 16>,
+               groov::field<"RESERVED0", std::uint8_t, 15, 9, access::ro>,
+               groov::field<"HuffBase_RAM_0", std::uint16_t, 8, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffbase4_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED1", std::uint8_t, 31, 25, access::ro>,
+               groov::field<"HuffBase_RAM_1", std::uint16_t, 24, 16>,
+               groov::field<"RESERVED0", std::uint8_t, 15, 9, access::ro>,
+               groov::field<"HuffBase_RAM_0", std::uint16_t, 8, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffbase5_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED1", std::uint8_t, 31, 25, access::ro>,
+               groov::field<"HuffBase_RAM_1", std::uint16_t, 24, 16>,
+               groov::field<"RESERVED0", std::uint8_t, 15, 9, access::ro>,
+               groov::field<"HuffBase_RAM_0", std::uint16_t, 8, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffbase6_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED1", std::uint8_t, 31, 25, access::ro>,
+               groov::field<"HuffBase_RAM_1", std::uint16_t, 24, 16>,
+               groov::field<"RESERVED0", std::uint8_t, 15, 9, access::ro>,
+               groov::field<"HuffBase_RAM_0", std::uint16_t, 8, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffbase7_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED1", std::uint8_t, 31, 25, access::ro>,
+               groov::field<"HuffBase_RAM_1", std::uint16_t, 24, 16>,
+               groov::field<"RESERVED0", std::uint8_t, 15, 9, access::ro>,
+               groov::field<"HuffBase_RAM_0", std::uint16_t, 8, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffbase8_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED1", std::uint8_t, 31, 25, access::ro>,
+               groov::field<"HuffBase_RAM_1", std::uint16_t, 24, 16>,
+               groov::field<"RESERVED0", std::uint8_t, 15, 9, access::ro>,
+               groov::field<"HuffBase_RAM_0", std::uint16_t, 8, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffbase9_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED1", std::uint8_t, 31, 25, access::ro>,
+               groov::field<"HuffBase_RAM_1", std::uint16_t, 24, 16>,
+               groov::field<"RESERVED0", std::uint8_t, 15, 9, access::ro>,
+               groov::field<"HuffBase_RAM_0", std::uint16_t, 8, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffbase10_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED1", std::uint8_t, 31, 25, access::ro>,
+               groov::field<"HuffBase_RAM_1", std::uint16_t, 24, 16>,
+               groov::field<"RESERVED0", std::uint8_t, 15, 9, access::ro>,
+               groov::field<"HuffBase_RAM_0", std::uint16_t, 8, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffbase11_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED1", std::uint8_t, 31, 25, access::ro>,
+               groov::field<"HuffBase_RAM_1", std::uint16_t, 24, 16>,
+               groov::field<"RESERVED0", std::uint8_t, 15, 9, access::ro>,
+               groov::field<"HuffBase_RAM_0", std::uint16_t, 8, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffbase12_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED1", std::uint8_t, 31, 25, access::ro>,
+               groov::field<"HuffBase_RAM_1", std::uint16_t, 24, 16>,
+               groov::field<"RESERVED0", std::uint8_t, 15, 9, access::ro>,
+               groov::field<"HuffBase_RAM_0", std::uint16_t, 8, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffbase13_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED1", std::uint8_t, 31, 25, access::ro>,
+               groov::field<"HuffBase_RAM_1", std::uint16_t, 24, 16>,
+               groov::field<"RESERVED0", std::uint8_t, 15, 9, access::ro>,
+               groov::field<"HuffBase_RAM_0", std::uint16_t, 8, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffbase14_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED1", std::uint8_t, 31, 25, access::ro>,
+               groov::field<"HuffBase_RAM_1", std::uint16_t, 24, 16>,
+               groov::field<"RESERVED0", std::uint8_t, 15, 9, access::ro>,
+               groov::field<"HuffBase_RAM_0", std::uint16_t, 8, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffbase15_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED1", std::uint8_t, 31, 25, access::ro>,
+               groov::field<"HuffBase_RAM_1", std::uint16_t, 24, 16>,
+               groov::field<"RESERVED0", std::uint8_t, 15, 9, access::ro>,
+               groov::field<"HuffBase_RAM_0", std::uint16_t, 8, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffbase16_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED1", std::uint8_t, 31, 25, access::ro>,
+               groov::field<"HuffBase_RAM_1", std::uint16_t, 24, 16>,
+               groov::field<"RESERVED0", std::uint8_t, 15, 9, access::ro>,
+               groov::field<"HuffBase_RAM_0", std::uint16_t, 8, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffbase17_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED1", std::uint8_t, 31, 25, access::ro>,
+               groov::field<"HuffBase_RAM_1", std::uint16_t, 24, 16>,
+               groov::field<"RESERVED0", std::uint8_t, 15, 9, access::ro>,
+               groov::field<"HuffBase_RAM_0", std::uint16_t, 8, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffbase18_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED1", std::uint8_t, 31, 25, access::ro>,
+               groov::field<"HuffBase_RAM_1", std::uint16_t, 24, 16>,
+               groov::field<"RESERVED0", std::uint8_t, 15, 9, access::ro>,
+               groov::field<"HuffBase_RAM_0", std::uint16_t, 8, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffbase19_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED1", std::uint8_t, 31, 25, access::ro>,
+               groov::field<"HuffBase_RAM_1", std::uint16_t, 24, 16>,
+               groov::field<"RESERVED0", std::uint8_t, 15, 9, access::ro>,
+               groov::field<"HuffBase_RAM_0", std::uint16_t, 8, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffbase20_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED1", std::uint8_t, 31, 25, access::ro>,
+               groov::field<"HuffBase_RAM_1", std::uint16_t, 24, 16>,
+               groov::field<"RESERVED0", std::uint8_t, 15, 9, access::ro>,
+               groov::field<"HuffBase_RAM_0", std::uint16_t, 8, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffbase21_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED1", std::uint8_t, 31, 25, access::ro>,
+               groov::field<"HuffBase_RAM_1", std::uint16_t, 24, 16>,
+               groov::field<"RESERVED0", std::uint8_t, 15, 9, access::ro>,
+               groov::field<"HuffBase_RAM_0", std::uint16_t, 8, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffbase22_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED1", std::uint8_t, 31, 25, access::ro>,
+               groov::field<"HuffBase_RAM_1", std::uint16_t, 24, 16>,
+               groov::field<"RESERVED0", std::uint8_t, 15, 9, access::ro>,
+               groov::field<"HuffBase_RAM_0", std::uint16_t, 8, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffbase23_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED1", std::uint8_t, 31, 25, access::ro>,
+               groov::field<"HuffBase_RAM_1", std::uint16_t, 24, 16>,
+               groov::field<"RESERVED0", std::uint8_t, 15, 9, access::ro>,
+               groov::field<"HuffBase_RAM_0", std::uint16_t, 8, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffbase24_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED1", std::uint8_t, 31, 25, access::ro>,
+               groov::field<"HuffBase_RAM_1", std::uint16_t, 24, 16>,
+               groov::field<"RESERVED0", std::uint8_t, 15, 9, access::ro>,
+               groov::field<"HuffBase_RAM_0", std::uint16_t, 8, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffbase25_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED1", std::uint8_t, 31, 25, access::ro>,
+               groov::field<"HuffBase_RAM_1", std::uint16_t, 24, 16>,
+               groov::field<"RESERVED0", std::uint8_t, 15, 9, access::ro>,
+               groov::field<"HuffBase_RAM_0", std::uint16_t, 8, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffbase26_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED1", std::uint8_t, 31, 25, access::ro>,
+               groov::field<"HuffBase_RAM_1", std::uint16_t, 24, 16>,
+               groov::field<"RESERVED0", std::uint8_t, 15, 9, access::ro>,
+               groov::field<"HuffBase_RAM_0", std::uint16_t, 8, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffbase27_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED1", std::uint8_t, 31, 25, access::ro>,
+               groov::field<"HuffBase_RAM_1", std::uint16_t, 24, 16>,
+               groov::field<"RESERVED0", std::uint8_t, 15, 9, access::ro>,
+               groov::field<"HuffBase_RAM_0", std::uint16_t, 8, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffbase28_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED1", std::uint8_t, 31, 25, access::ro>,
+               groov::field<"HuffBase_RAM_1", std::uint16_t, 24, 16>,
+               groov::field<"RESERVED0", std::uint8_t, 15, 9, access::ro>,
+               groov::field<"HuffBase_RAM_0", std::uint16_t, 8, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffbase29_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED1", std::uint8_t, 31, 25, access::ro>,
+               groov::field<"HuffBase_RAM_1", std::uint16_t, 24, 16>,
+               groov::field<"RESERVED0", std::uint8_t, 15, 9, access::ro>,
+               groov::field<"HuffBase_RAM_0", std::uint16_t, 8, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffbase30_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED1", std::uint8_t, 31, 25, access::ro>,
+               groov::field<"HuffBase_RAM_1", std::uint16_t, 24, 16>,
+               groov::field<"RESERVED0", std::uint8_t, 15, 9, access::ro>,
+               groov::field<"HuffBase_RAM_0", std::uint16_t, 8, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffbase31_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED1", std::uint8_t, 31, 25, access::ro>,
+               groov::field<"HuffBase_RAM_1", std::uint16_t, 24, 16>,
+               groov::field<"RESERVED0", std::uint8_t, 15, 9, access::ro>,
+               groov::field<"HuffBase_RAM_0", std::uint16_t, 8, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffsymb0_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffsymb1_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffsymb2_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffsymb3_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffsymb4_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffsymb5_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffsymb6_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffsymb7_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffsymb8_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffsymb9_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffsymb10_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffsymb11_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffsymb12_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffsymb13_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffsymb14_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffsymb15_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffsymb16_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffsymb17_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffsymb18_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffsymb19_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffsymb20_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffsymb21_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffsymb22_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffsymb23_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffsymb24_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffsymb25_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffsymb26_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffsymb27_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffsymb28_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffsymb29_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffsymb30_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffsymb31_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffsymb32_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffsymb33_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffsymb34_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffsymb35_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffsymb36_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffsymb37_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffsymb38_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffsymb39_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffsymb40_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffsymb41_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffsymb42_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffsymb43_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffsymb44_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffsymb45_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffsymb46_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffsymb47_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffsymb48_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffsymb49_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffsymb50_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffsymb51_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffsymb52_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffsymb53_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffsymb54_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffsymb55_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffsymb56_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffsymb57_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffsymb58_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffsymb59_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffsymb60_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffsymb61_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffsymb62_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffsymb63_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffsymb64_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffsymb65_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffsymb66_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffsymb67_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffsymb68_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffsymb69_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffsymb70_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffsymb71_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffsymb72_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffsymb73_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffsymb74_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffsymb75_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffsymb76_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffsymb77_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffsymb78_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffsymb79_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffsymb80_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffsymb81_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffsymb82_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffsymb83_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"HuffSymb_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dhtmem0_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dhtmem2_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dhtmem3_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dhtmem4_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dhtmem5_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dhtmem6_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dhtmem7_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dhtmem8_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dhtmem9_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dhtmem10_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dhtmem11_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dhtmem12_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dhtmem13_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dhtmem14_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dhtmem15_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dhtmem16_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dhtmem17_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dhtmem18_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dhtmem19_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dhtmem20_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dhtmem21_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dhtmem22_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dhtmem23_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dhtmem24_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dhtmem25_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dhtmem26_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dhtmem27_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dhtmem28_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dhtmem29_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dhtmem30_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dhtmem31_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dhtmem32_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dhtmem33_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dhtmem34_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dhtmem35_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dhtmem36_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dhtmem37_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dhtmem38_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dhtmem39_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dhtmem40_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dhtmem41_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dhtmem42_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dhtmem43_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dhtmem44_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dhtmem45_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dhtmem46_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dhtmem47_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dhtmem48_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dhtmem49_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dhtmem50_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dhtmem51_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dhtmem52_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dhtmem53_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dhtmem54_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dhtmem55_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dhtmem56_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dhtmem57_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dhtmem58_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dhtmem59_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dhtmem60_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dhtmem61_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dhtmem62_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dhtmem63_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dhtmem64_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dhtmem65_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dhtmem66_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dhtmem67_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dhtmem68_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dhtmem69_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dhtmem70_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dhtmem71_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dhtmem72_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dhtmem73_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dhtmem74_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dhtmem75_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dhtmem76_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dhtmem77_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dhtmem78_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dhtmem79_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dhtmem80_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dhtmem81_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dhtmem82_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dhtmem83_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dhtmem84_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dhtmem85_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dhtmem86_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dhtmem87_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dhtmem88_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dhtmem89_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dhtmem90_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dhtmem91_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dhtmem92_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dhtmem93_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dhtmem94_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dhtmem95_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dhtmem96_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dhtmem97_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dhtmem98_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dhtmem99_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dhtmem100_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dhtmem101_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dhtmem102_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dhtmem103_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac0_0_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac0_1_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac0_2_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac0_3_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac0_4_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac0_5_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac0_6_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac0_7_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac0_8_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac0_9_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac0_10_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac0_11_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac0_12_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac0_13_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac0_14_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac0_15_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac0_16_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac0_17_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac0_18_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac0_19_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac0_20_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac0_21_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac0_22_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac0_23_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac0_24_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac0_25_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac0_26_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac0_27_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac0_28_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac0_29_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac0_30_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac0_31_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac0_32_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac0_33_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac0_34_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac0_35_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac0_36_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac0_37_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac0_38_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac0_39_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac0_40_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac0_41_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac0_42_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac0_43_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac0_44_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac0_45_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac0_46_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac0_47_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac0_48_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac0_49_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac0_50_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac0_51_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac0_52_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac0_53_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac0_54_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac0_55_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac0_56_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac0_57_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac0_58_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac0_59_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac0_60_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac0_61_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac0_62_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac0_63_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac0_64_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac0_65_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac0_66_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac0_67_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac0_68_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac0_69_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac0_70_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac0_71_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac0_72_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac0_73_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac0_74_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac0_75_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac0_76_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac0_77_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac0_78_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac0_79_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac0_80_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac0_81_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac0_82_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac0_83_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac0_84_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac0_85_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac0_86_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac0_87_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac1_0_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac1_1_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac1_2_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac1_3_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac1_4_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac1_5_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac1_6_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac1_7_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac1_8_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac1_9_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac1_10_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac1_11_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac1_12_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac1_13_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac1_14_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac1_15_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac1_16_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac1_17_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac1_18_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac1_19_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac1_20_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac1_21_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac1_22_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac1_23_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac1_24_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac1_25_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac1_26_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac1_27_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac1_28_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac1_29_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac1_30_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac1_31_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac1_32_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac1_33_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac1_34_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac1_35_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac1_36_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac1_37_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac1_38_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac1_39_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac1_40_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac1_41_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac1_42_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac1_43_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac1_44_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac1_45_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac1_46_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac1_47_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac1_48_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac1_49_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac1_50_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac1_51_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac1_52_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac1_53_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac1_54_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac1_55_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac1_56_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac1_57_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac1_58_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac1_59_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac1_60_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac1_61_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac1_62_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac1_63_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac1_64_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac1_65_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac1_66_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac1_67_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac1_68_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac1_69_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac1_70_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac1_71_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac1_72_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac1_73_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac1_74_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac1_75_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac1_76_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac1_77_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac1_78_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac1_79_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac1_80_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac1_81_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac1_82_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac1_83_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac1_84_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac1_85_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac1_86_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_ac1_87_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_dc0_0_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_dc0_1_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_dc0_2_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_dc0_3_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_dc0_4_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_dc0_5_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_dc0_6_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_dc0_7_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_dc1_0_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_dc1_1_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_dc1_2_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_dc1_3_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_dc1_4_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_dc1_5_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_dc1_6_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using huffenc_dc1_7_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"DHTMem_RAM", std::uint32_t, 31, 0>>;
+
+  template <std::uint32_t baseaddress>
+  using jpeg_confr0_t = jpeg_confr0_tt<"JPEG_CONFR0", baseaddress, 0>;
+
+  template <std::uint32_t baseaddress>
+  using jpeg_confr1_t = jpeg_confr1_tt<"JPEG_CONFR1", baseaddress, 4>;
+
+  template <std::uint32_t baseaddress>
+  using jpeg_confr2_t = jpeg_confr2_tt<"JPEG_CONFR2", baseaddress, 8>;
+
+  template <std::uint32_t baseaddress>
+  using jpeg_confr3_t = jpeg_confr3_tt<"JPEG_CONFR3", baseaddress, 12>;
+
+  template <std::uint32_t baseaddress>
+  using jpeg_confr4_t = jpeg_confr4_tt<"JPEG_CONFR4", baseaddress, 16>;
+
+  template <std::uint32_t baseaddress>
+  using jpeg_confr5_t = jpeg_confr5_tt<"JPEG_CONFR5", baseaddress, 20>;
+
+  template <std::uint32_t baseaddress>
+  using jpeg_confr6_t = jpeg_confr6_tt<"JPEG_CONFR6", baseaddress, 24>;
+
+  template <std::uint32_t baseaddress>
+  using jpeg_confr7_t = jpeg_confr7_tt<"JPEG_CONFR7", baseaddress, 28>;
+
+  template <std::uint32_t baseaddress>
+  using jpeg_cr_t = jpeg_cr_tt<"JPEG_CR", baseaddress, 48>;
+
+  template <std::uint32_t baseaddress>
+  using jpeg_sr_t = jpeg_sr_tt<"JPEG_SR", baseaddress, 52>;
+
+  template <std::uint32_t baseaddress>
+  using jpeg_cfr_t = jpeg_cfr_tt<"JPEG_CFR", baseaddress, 56>;
+
+  template <std::uint32_t baseaddress>
+  using jpeg_dir_t = jpeg_dir_tt<"JPEG_DIR", baseaddress, 64>;
+
+  template <std::uint32_t baseaddress>
+  using jpeg_dor_t = jpeg_dor_tt<"JPEG_DOR", baseaddress, 68>;
+
+  template <std::uint32_t baseaddress>
+  using qmem0_0_t = qmem0_0_tt<"QMEM0_0", baseaddress, 80>;
+
+  template <std::uint32_t baseaddress>
+  using qmem0_1_t = qmem0_1_tt<"QMEM0_1", baseaddress, 84>;
+
+  template <std::uint32_t baseaddress>
+  using qmem0_2_t = qmem0_2_tt<"QMEM0_2", baseaddress, 88>;
+
+  template <std::uint32_t baseaddress>
+  using qmem0_3_t = qmem0_3_tt<"QMEM0_3", baseaddress, 92>;
+
+  template <std::uint32_t baseaddress>
+  using qmem0_4_t = qmem0_4_tt<"QMEM0_4", baseaddress, 96>;
+
+  template <std::uint32_t baseaddress>
+  using qmem0_5_t = qmem0_5_tt<"QMEM0_5", baseaddress, 100>;
+
+  template <std::uint32_t baseaddress>
+  using qmem0_6_t = qmem0_6_tt<"QMEM0_6", baseaddress, 104>;
+
+  template <std::uint32_t baseaddress>
+  using qmem0_7_t = qmem0_7_tt<"QMEM0_7", baseaddress, 108>;
+
+  template <std::uint32_t baseaddress>
+  using qmem0_8_t = qmem0_8_tt<"QMEM0_8", baseaddress, 112>;
+
+  template <std::uint32_t baseaddress>
+  using qmem0_9_t = qmem0_9_tt<"QMEM0_9", baseaddress, 116>;
+
+  template <std::uint32_t baseaddress>
+  using qmem0_10_t = qmem0_10_tt<"QMEM0_10", baseaddress, 120>;
+
+  template <std::uint32_t baseaddress>
+  using qmem0_11_t = qmem0_11_tt<"QMEM0_11", baseaddress, 124>;
+
+  template <std::uint32_t baseaddress>
+  using qmem0_12_t = qmem0_12_tt<"QMEM0_12", baseaddress, 128>;
+
+  template <std::uint32_t baseaddress>
+  using qmem0_13_t = qmem0_13_tt<"QMEM0_13", baseaddress, 132>;
+
+  template <std::uint32_t baseaddress>
+  using qmem0_14_t = qmem0_14_tt<"QMEM0_14", baseaddress, 136>;
+
+  template <std::uint32_t baseaddress>
+  using qmem0_15_t = qmem0_15_tt<"QMEM0_15", baseaddress, 140>;
+
+  template <std::uint32_t baseaddress>
+  using qmem1_0_t = qmem1_0_tt<"QMEM1_0", baseaddress, 144>;
+
+  template <std::uint32_t baseaddress>
+  using qmem1_1_t = qmem1_1_tt<"QMEM1_1", baseaddress, 148>;
+
+  template <std::uint32_t baseaddress>
+  using qmem1_2_t = qmem1_2_tt<"QMEM1_2", baseaddress, 152>;
+
+  template <std::uint32_t baseaddress>
+  using qmem1_3_t = qmem1_3_tt<"QMEM1_3", baseaddress, 156>;
+
+  template <std::uint32_t baseaddress>
+  using qmem1_4_t = qmem1_4_tt<"QMEM1_4", baseaddress, 160>;
+
+  template <std::uint32_t baseaddress>
+  using qmem1_5_t = qmem1_5_tt<"QMEM1_5", baseaddress, 164>;
+
+  template <std::uint32_t baseaddress>
+  using qmem1_6_t = qmem1_6_tt<"QMEM1_6", baseaddress, 168>;
+
+  template <std::uint32_t baseaddress>
+  using qmem1_7_t = qmem1_7_tt<"QMEM1_7", baseaddress, 172>;
+
+  template <std::uint32_t baseaddress>
+  using qmem1_8_t = qmem1_8_tt<"QMEM1_8", baseaddress, 176>;
+
+  template <std::uint32_t baseaddress>
+  using qmem1_9_t = qmem1_9_tt<"QMEM1_9", baseaddress, 180>;
+
+  template <std::uint32_t baseaddress>
+  using qmem1_10_t = qmem1_10_tt<"QMEM1_10", baseaddress, 184>;
+
+  template <std::uint32_t baseaddress>
+  using qmem1_11_t = qmem1_11_tt<"QMEM1_11", baseaddress, 188>;
+
+  template <std::uint32_t baseaddress>
+  using qmem1_12_t = qmem1_12_tt<"QMEM1_12", baseaddress, 192>;
+
+  template <std::uint32_t baseaddress>
+  using qmem1_13_t = qmem1_13_tt<"QMEM1_13", baseaddress, 196>;
+
+  template <std::uint32_t baseaddress>
+  using qmem1_14_t = qmem1_14_tt<"QMEM1_14", baseaddress, 200>;
+
+  template <std::uint32_t baseaddress>
+  using qmem1_15_t = qmem1_15_tt<"QMEM1_15", baseaddress, 204>;
+
+  template <std::uint32_t baseaddress>
+  using qmem2_0_t = qmem2_0_tt<"QMEM2_0", baseaddress, 208>;
+
+  template <std::uint32_t baseaddress>
+  using qmem2_1_t = qmem2_1_tt<"QMEM2_1", baseaddress, 212>;
+
+  template <std::uint32_t baseaddress>
+  using qmem2_2_t = qmem2_2_tt<"QMEM2_2", baseaddress, 216>;
+
+  template <std::uint32_t baseaddress>
+  using qmem2_3_t = qmem2_3_tt<"QMEM2_3", baseaddress, 220>;
+
+  template <std::uint32_t baseaddress>
+  using qmem2_4_t = qmem2_4_tt<"QMEM2_4", baseaddress, 224>;
+
+  template <std::uint32_t baseaddress>
+  using qmem2_5_t = qmem2_5_tt<"QMEM2_5", baseaddress, 228>;
+
+  template <std::uint32_t baseaddress>
+  using qmem2_6_t = qmem2_6_tt<"QMEM2_6", baseaddress, 232>;
+
+  template <std::uint32_t baseaddress>
+  using qmem2_7_t = qmem2_7_tt<"QMEM2_7", baseaddress, 236>;
+
+  template <std::uint32_t baseaddress>
+  using qmem2_8_t = qmem2_8_tt<"QMEM2_8", baseaddress, 240>;
+
+  template <std::uint32_t baseaddress>
+  using qmem2_9_t = qmem2_9_tt<"QMEM2_9", baseaddress, 244>;
+
+  template <std::uint32_t baseaddress>
+  using qmem2_10_t = qmem2_10_tt<"QMEM2_10", baseaddress, 248>;
+
+  template <std::uint32_t baseaddress>
+  using qmem2_11_t = qmem2_11_tt<"QMEM2_11", baseaddress, 252>;
+
+  template <std::uint32_t baseaddress>
+  using qmem2_12_t = qmem2_12_tt<"QMEM2_12", baseaddress, 256>;
+
+  template <std::uint32_t baseaddress>
+  using qmem2_13_t = qmem2_13_tt<"QMEM2_13", baseaddress, 260>;
+
+  template <std::uint32_t baseaddress>
+  using qmem2_14_t = qmem2_14_tt<"QMEM2_14", baseaddress, 264>;
+
+  template <std::uint32_t baseaddress>
+  using qmem2_15_t = qmem2_15_tt<"QMEM2_15", baseaddress, 268>;
+
+  template <std::uint32_t baseaddress>
+  using qmem3_0_t = qmem3_0_tt<"QMEM3_0", baseaddress, 272>;
+
+  template <std::uint32_t baseaddress>
+  using qmem3_1_t = qmem3_1_tt<"QMEM3_1", baseaddress, 276>;
+
+  template <std::uint32_t baseaddress>
+  using qmem3_2_t = qmem3_2_tt<"QMEM3_2", baseaddress, 280>;
+
+  template <std::uint32_t baseaddress>
+  using qmem3_3_t = qmem3_3_tt<"QMEM3_3", baseaddress, 284>;
+
+  template <std::uint32_t baseaddress>
+  using qmem3_4_t = qmem3_4_tt<"QMEM3_4", baseaddress, 288>;
+
+  template <std::uint32_t baseaddress>
+  using qmem3_5_t = qmem3_5_tt<"QMEM3_5", baseaddress, 292>;
+
+  template <std::uint32_t baseaddress>
+  using qmem3_6_t = qmem3_6_tt<"QMEM3_6", baseaddress, 296>;
+
+  template <std::uint32_t baseaddress>
+  using qmem3_7_t = qmem3_7_tt<"QMEM3_7", baseaddress, 300>;
+
+  template <std::uint32_t baseaddress>
+  using qmem3_8_t = qmem3_8_tt<"QMEM3_8", baseaddress, 304>;
+
+  template <std::uint32_t baseaddress>
+  using qmem3_9_t = qmem3_9_tt<"QMEM3_9", baseaddress, 308>;
+
+  template <std::uint32_t baseaddress>
+  using qmem3_10_t = qmem3_10_tt<"QMEM3_10", baseaddress, 312>;
+
+  template <std::uint32_t baseaddress>
+  using qmem3_11_t = qmem3_11_tt<"QMEM3_11", baseaddress, 316>;
+
+  template <std::uint32_t baseaddress>
+  using qmem3_12_t = qmem3_12_tt<"QMEM3_12", baseaddress, 320>;
+
+  template <std::uint32_t baseaddress>
+  using qmem3_13_t = qmem3_13_tt<"QMEM3_13", baseaddress, 324>;
+
+  template <std::uint32_t baseaddress>
+  using qmem3_14_t = qmem3_14_tt<"QMEM3_14", baseaddress, 328>;
+
+  template <std::uint32_t baseaddress>
+  using qmem3_15_t = qmem3_15_tt<"QMEM3_15", baseaddress, 332>;
+
+  template <std::uint32_t baseaddress>
+  using huffmin_0_t = huffmin_0_tt<"HUFFMIN_0", baseaddress, 336>;
+
+  template <std::uint32_t baseaddress>
+  using huffmin_1_t = huffmin_1_tt<"HUFFMIN_1", baseaddress, 340>;
+
+  template <std::uint32_t baseaddress>
+  using huffmin_2_t = huffmin_2_tt<"HUFFMIN_2", baseaddress, 344>;
+
+  template <std::uint32_t baseaddress>
+  using huffmin_3_t = huffmin_3_tt<"HUFFMIN_3", baseaddress, 348>;
+
+  template <std::uint32_t baseaddress>
+  using huffmin_4_t = huffmin_4_tt<"HUFFMIN_4", baseaddress, 352>;
+
+  template <std::uint32_t baseaddress>
+  using huffmin_5_t = huffmin_5_tt<"HUFFMIN_5", baseaddress, 356>;
+
+  template <std::uint32_t baseaddress>
+  using huffmin_6_t = huffmin_6_tt<"HUFFMIN_6", baseaddress, 360>;
+
+  template <std::uint32_t baseaddress>
+  using huffmin_7_t = huffmin_7_tt<"HUFFMIN_7", baseaddress, 364>;
+
+  template <std::uint32_t baseaddress>
+  using huffmin_8_t = huffmin_8_tt<"HUFFMIN_8", baseaddress, 368>;
+
+  template <std::uint32_t baseaddress>
+  using huffmin_9_t = huffmin_9_tt<"HUFFMIN_9", baseaddress, 372>;
+
+  template <std::uint32_t baseaddress>
+  using huffmin_10_t = huffmin_10_tt<"HUFFMIN_10", baseaddress, 376>;
+
+  template <std::uint32_t baseaddress>
+  using huffmin_11_t = huffmin_11_tt<"HUFFMIN_11", baseaddress, 380>;
+
+  template <std::uint32_t baseaddress>
+  using huffmin_12_t = huffmin_12_tt<"HUFFMIN_12", baseaddress, 384>;
+
+  template <std::uint32_t baseaddress>
+  using huffmin_13_t = huffmin_13_tt<"HUFFMIN_13", baseaddress, 388>;
+
+  template <std::uint32_t baseaddress>
+  using huffmin_14_t = huffmin_14_tt<"HUFFMIN_14", baseaddress, 392>;
+
+  template <std::uint32_t baseaddress>
+  using huffmin_15_t = huffmin_15_tt<"HUFFMIN_15", baseaddress, 396>;
+
+  template <std::uint32_t baseaddress>
+  using huffbase0_t = huffbase0_tt<"HUFFBASE0", baseaddress, 400>;
+
+  template <std::uint32_t baseaddress>
+  using huffbase1_t = huffbase1_tt<"HUFFBASE1", baseaddress, 404>;
+
+  template <std::uint32_t baseaddress>
+  using huffbase2_t = huffbase2_tt<"HUFFBASE2", baseaddress, 408>;
+
+  template <std::uint32_t baseaddress>
+  using huffbase3_t = huffbase3_tt<"HUFFBASE3", baseaddress, 412>;
+
+  template <std::uint32_t baseaddress>
+  using huffbase4_t = huffbase4_tt<"HUFFBASE4", baseaddress, 416>;
+
+  template <std::uint32_t baseaddress>
+  using huffbase5_t = huffbase5_tt<"HUFFBASE5", baseaddress, 420>;
+
+  template <std::uint32_t baseaddress>
+  using huffbase6_t = huffbase6_tt<"HUFFBASE6", baseaddress, 424>;
+
+  template <std::uint32_t baseaddress>
+  using huffbase7_t = huffbase7_tt<"HUFFBASE7", baseaddress, 428>;
+
+  template <std::uint32_t baseaddress>
+  using huffbase8_t = huffbase8_tt<"HUFFBASE8", baseaddress, 432>;
+
+  template <std::uint32_t baseaddress>
+  using huffbase9_t = huffbase9_tt<"HUFFBASE9", baseaddress, 436>;
+
+  template <std::uint32_t baseaddress>
+  using huffbase10_t = huffbase10_tt<"HUFFBASE10", baseaddress, 440>;
+
+  template <std::uint32_t baseaddress>
+  using huffbase11_t = huffbase11_tt<"HUFFBASE11", baseaddress, 444>;
+
+  template <std::uint32_t baseaddress>
+  using huffbase12_t = huffbase12_tt<"HUFFBASE12", baseaddress, 448>;
+
+  template <std::uint32_t baseaddress>
+  using huffbase13_t = huffbase13_tt<"HUFFBASE13", baseaddress, 452>;
+
+  template <std::uint32_t baseaddress>
+  using huffbase14_t = huffbase14_tt<"HUFFBASE14", baseaddress, 456>;
+
+  template <std::uint32_t baseaddress>
+  using huffbase15_t = huffbase15_tt<"HUFFBASE15", baseaddress, 460>;
+
+  template <std::uint32_t baseaddress>
+  using huffbase16_t = huffbase16_tt<"HUFFBASE16", baseaddress, 464>;
+
+  template <std::uint32_t baseaddress>
+  using huffbase17_t = huffbase17_tt<"HUFFBASE17", baseaddress, 468>;
+
+  template <std::uint32_t baseaddress>
+  using huffbase18_t = huffbase18_tt<"HUFFBASE18", baseaddress, 472>;
+
+  template <std::uint32_t baseaddress>
+  using huffbase19_t = huffbase19_tt<"HUFFBASE19", baseaddress, 476>;
+
+  template <std::uint32_t baseaddress>
+  using huffbase20_t = huffbase20_tt<"HUFFBASE20", baseaddress, 480>;
+
+  template <std::uint32_t baseaddress>
+  using huffbase21_t = huffbase21_tt<"HUFFBASE21", baseaddress, 484>;
+
+  template <std::uint32_t baseaddress>
+  using huffbase22_t = huffbase22_tt<"HUFFBASE22", baseaddress, 488>;
+
+  template <std::uint32_t baseaddress>
+  using huffbase23_t = huffbase23_tt<"HUFFBASE23", baseaddress, 492>;
+
+  template <std::uint32_t baseaddress>
+  using huffbase24_t = huffbase24_tt<"HUFFBASE24", baseaddress, 496>;
+
+  template <std::uint32_t baseaddress>
+  using huffbase25_t = huffbase25_tt<"HUFFBASE25", baseaddress, 500>;
+
+  template <std::uint32_t baseaddress>
+  using huffbase26_t = huffbase26_tt<"HUFFBASE26", baseaddress, 504>;
+
+  template <std::uint32_t baseaddress>
+  using huffbase27_t = huffbase27_tt<"HUFFBASE27", baseaddress, 508>;
+
+  template <std::uint32_t baseaddress>
+  using huffbase28_t = huffbase28_tt<"HUFFBASE28", baseaddress, 512>;
+
+  template <std::uint32_t baseaddress>
+  using huffbase29_t = huffbase29_tt<"HUFFBASE29", baseaddress, 516>;
+
+  template <std::uint32_t baseaddress>
+  using huffbase30_t = huffbase30_tt<"HUFFBASE30", baseaddress, 520>;
+
+  template <std::uint32_t baseaddress>
+  using huffbase31_t = huffbase31_tt<"HUFFBASE31", baseaddress, 524>;
+
+  template <std::uint32_t baseaddress>
+  using huffsymb0_t = huffsymb0_tt<"HUFFSYMB0", baseaddress, 528>;
+
+  template <std::uint32_t baseaddress>
+  using huffsymb1_t = huffsymb1_tt<"HUFFSYMB1", baseaddress, 532>;
+
+  template <std::uint32_t baseaddress>
+  using huffsymb2_t = huffsymb2_tt<"HUFFSYMB2", baseaddress, 536>;
+
+  template <std::uint32_t baseaddress>
+  using huffsymb3_t = huffsymb3_tt<"HUFFSYMB3", baseaddress, 540>;
+
+  template <std::uint32_t baseaddress>
+  using huffsymb4_t = huffsymb4_tt<"HUFFSYMB4", baseaddress, 544>;
+
+  template <std::uint32_t baseaddress>
+  using huffsymb5_t = huffsymb5_tt<"HUFFSYMB5", baseaddress, 548>;
+
+  template <std::uint32_t baseaddress>
+  using huffsymb6_t = huffsymb6_tt<"HUFFSYMB6", baseaddress, 552>;
+
+  template <std::uint32_t baseaddress>
+  using huffsymb7_t = huffsymb7_tt<"HUFFSYMB7", baseaddress, 556>;
+
+  template <std::uint32_t baseaddress>
+  using huffsymb8_t = huffsymb8_tt<"HUFFSYMB8", baseaddress, 560>;
+
+  template <std::uint32_t baseaddress>
+  using huffsymb9_t = huffsymb9_tt<"HUFFSYMB9", baseaddress, 564>;
+
+  template <std::uint32_t baseaddress>
+  using huffsymb10_t = huffsymb10_tt<"HUFFSYMB10", baseaddress, 568>;
+
+  template <std::uint32_t baseaddress>
+  using huffsymb11_t = huffsymb11_tt<"HUFFSYMB11", baseaddress, 572>;
+
+  template <std::uint32_t baseaddress>
+  using huffsymb12_t = huffsymb12_tt<"HUFFSYMB12", baseaddress, 576>;
+
+  template <std::uint32_t baseaddress>
+  using huffsymb13_t = huffsymb13_tt<"HUFFSYMB13", baseaddress, 580>;
+
+  template <std::uint32_t baseaddress>
+  using huffsymb14_t = huffsymb14_tt<"HUFFSYMB14", baseaddress, 584>;
+
+  template <std::uint32_t baseaddress>
+  using huffsymb15_t = huffsymb15_tt<"HUFFSYMB15", baseaddress, 588>;
+
+  template <std::uint32_t baseaddress>
+  using huffsymb16_t = huffsymb16_tt<"HUFFSYMB16", baseaddress, 592>;
+
+  template <std::uint32_t baseaddress>
+  using huffsymb17_t = huffsymb17_tt<"HUFFSYMB17", baseaddress, 596>;
+
+  template <std::uint32_t baseaddress>
+  using huffsymb18_t = huffsymb18_tt<"HUFFSYMB18", baseaddress, 600>;
+
+  template <std::uint32_t baseaddress>
+  using huffsymb19_t = huffsymb19_tt<"HUFFSYMB19", baseaddress, 604>;
+
+  template <std::uint32_t baseaddress>
+  using huffsymb20_t = huffsymb20_tt<"HUFFSYMB20", baseaddress, 608>;
+
+  template <std::uint32_t baseaddress>
+  using huffsymb21_t = huffsymb21_tt<"HUFFSYMB21", baseaddress, 612>;
+
+  template <std::uint32_t baseaddress>
+  using huffsymb22_t = huffsymb22_tt<"HUFFSYMB22", baseaddress, 616>;
+
+  template <std::uint32_t baseaddress>
+  using huffsymb23_t = huffsymb23_tt<"HUFFSYMB23", baseaddress, 620>;
+
+  template <std::uint32_t baseaddress>
+  using huffsymb24_t = huffsymb24_tt<"HUFFSYMB24", baseaddress, 624>;
+
+  template <std::uint32_t baseaddress>
+  using huffsymb25_t = huffsymb25_tt<"HUFFSYMB25", baseaddress, 628>;
+
+  template <std::uint32_t baseaddress>
+  using huffsymb26_t = huffsymb26_tt<"HUFFSYMB26", baseaddress, 632>;
+
+  template <std::uint32_t baseaddress>
+  using huffsymb27_t = huffsymb27_tt<"HUFFSYMB27", baseaddress, 636>;
+
+  template <std::uint32_t baseaddress>
+  using huffsymb28_t = huffsymb28_tt<"HUFFSYMB28", baseaddress, 640>;
+
+  template <std::uint32_t baseaddress>
+  using huffsymb29_t = huffsymb29_tt<"HUFFSYMB29", baseaddress, 644>;
+
+  template <std::uint32_t baseaddress>
+  using huffsymb30_t = huffsymb30_tt<"HUFFSYMB30", baseaddress, 648>;
+
+  template <std::uint32_t baseaddress>
+  using huffsymb31_t = huffsymb31_tt<"HUFFSYMB31", baseaddress, 652>;
+
+  template <std::uint32_t baseaddress>
+  using huffsymb32_t = huffsymb32_tt<"HUFFSYMB32", baseaddress, 656>;
+
+  template <std::uint32_t baseaddress>
+  using huffsymb33_t = huffsymb33_tt<"HUFFSYMB33", baseaddress, 660>;
+
+  template <std::uint32_t baseaddress>
+  using huffsymb34_t = huffsymb34_tt<"HUFFSYMB34", baseaddress, 664>;
+
+  template <std::uint32_t baseaddress>
+  using huffsymb35_t = huffsymb35_tt<"HUFFSYMB35", baseaddress, 668>;
+
+  template <std::uint32_t baseaddress>
+  using huffsymb36_t = huffsymb36_tt<"HUFFSYMB36", baseaddress, 672>;
+
+  template <std::uint32_t baseaddress>
+  using huffsymb37_t = huffsymb37_tt<"HUFFSYMB37", baseaddress, 676>;
+
+  template <std::uint32_t baseaddress>
+  using huffsymb38_t = huffsymb38_tt<"HUFFSYMB38", baseaddress, 680>;
+
+  template <std::uint32_t baseaddress>
+  using huffsymb39_t = huffsymb39_tt<"HUFFSYMB39", baseaddress, 684>;
+
+  template <std::uint32_t baseaddress>
+  using huffsymb40_t = huffsymb40_tt<"HUFFSYMB40", baseaddress, 688>;
+
+  template <std::uint32_t baseaddress>
+  using huffsymb41_t = huffsymb41_tt<"HUFFSYMB41", baseaddress, 692>;
+
+  template <std::uint32_t baseaddress>
+  using huffsymb42_t = huffsymb42_tt<"HUFFSYMB42", baseaddress, 696>;
+
+  template <std::uint32_t baseaddress>
+  using huffsymb43_t = huffsymb43_tt<"HUFFSYMB43", baseaddress, 700>;
+
+  template <std::uint32_t baseaddress>
+  using huffsymb44_t = huffsymb44_tt<"HUFFSYMB44", baseaddress, 704>;
+
+  template <std::uint32_t baseaddress>
+  using huffsymb45_t = huffsymb45_tt<"HUFFSYMB45", baseaddress, 708>;
+
+  template <std::uint32_t baseaddress>
+  using huffsymb46_t = huffsymb46_tt<"HUFFSYMB46", baseaddress, 712>;
+
+  template <std::uint32_t baseaddress>
+  using huffsymb47_t = huffsymb47_tt<"HUFFSYMB47", baseaddress, 716>;
+
+  template <std::uint32_t baseaddress>
+  using huffsymb48_t = huffsymb48_tt<"HUFFSYMB48", baseaddress, 720>;
+
+  template <std::uint32_t baseaddress>
+  using huffsymb49_t = huffsymb49_tt<"HUFFSYMB49", baseaddress, 724>;
+
+  template <std::uint32_t baseaddress>
+  using huffsymb50_t = huffsymb50_tt<"HUFFSYMB50", baseaddress, 728>;
+
+  template <std::uint32_t baseaddress>
+  using huffsymb51_t = huffsymb51_tt<"HUFFSYMB51", baseaddress, 732>;
+
+  template <std::uint32_t baseaddress>
+  using huffsymb52_t = huffsymb52_tt<"HUFFSYMB52", baseaddress, 736>;
+
+  template <std::uint32_t baseaddress>
+  using huffsymb53_t = huffsymb53_tt<"HUFFSYMB53", baseaddress, 740>;
+
+  template <std::uint32_t baseaddress>
+  using huffsymb54_t = huffsymb54_tt<"HUFFSYMB54", baseaddress, 744>;
+
+  template <std::uint32_t baseaddress>
+  using huffsymb55_t = huffsymb55_tt<"HUFFSYMB55", baseaddress, 748>;
+
+  template <std::uint32_t baseaddress>
+  using huffsymb56_t = huffsymb56_tt<"HUFFSYMB56", baseaddress, 752>;
+
+  template <std::uint32_t baseaddress>
+  using huffsymb57_t = huffsymb57_tt<"HUFFSYMB57", baseaddress, 756>;
+
+  template <std::uint32_t baseaddress>
+  using huffsymb58_t = huffsymb58_tt<"HUFFSYMB58", baseaddress, 760>;
+
+  template <std::uint32_t baseaddress>
+  using huffsymb59_t = huffsymb59_tt<"HUFFSYMB59", baseaddress, 764>;
+
+  template <std::uint32_t baseaddress>
+  using huffsymb60_t = huffsymb60_tt<"HUFFSYMB60", baseaddress, 768>;
+
+  template <std::uint32_t baseaddress>
+  using huffsymb61_t = huffsymb61_tt<"HUFFSYMB61", baseaddress, 772>;
+
+  template <std::uint32_t baseaddress>
+  using huffsymb62_t = huffsymb62_tt<"HUFFSYMB62", baseaddress, 776>;
+
+  template <std::uint32_t baseaddress>
+  using huffsymb63_t = huffsymb63_tt<"HUFFSYMB63", baseaddress, 780>;
+
+  template <std::uint32_t baseaddress>
+  using huffsymb64_t = huffsymb64_tt<"HUFFSYMB64", baseaddress, 784>;
+
+  template <std::uint32_t baseaddress>
+  using huffsymb65_t = huffsymb65_tt<"HUFFSYMB65", baseaddress, 788>;
+
+  template <std::uint32_t baseaddress>
+  using huffsymb66_t = huffsymb66_tt<"HUFFSYMB66", baseaddress, 792>;
+
+  template <std::uint32_t baseaddress>
+  using huffsymb67_t = huffsymb67_tt<"HUFFSYMB67", baseaddress, 796>;
+
+  template <std::uint32_t baseaddress>
+  using huffsymb68_t = huffsymb68_tt<"HUFFSYMB68", baseaddress, 800>;
+
+  template <std::uint32_t baseaddress>
+  using huffsymb69_t = huffsymb69_tt<"HUFFSYMB69", baseaddress, 804>;
+
+  template <std::uint32_t baseaddress>
+  using huffsymb70_t = huffsymb70_tt<"HUFFSYMB70", baseaddress, 808>;
+
+  template <std::uint32_t baseaddress>
+  using huffsymb71_t = huffsymb71_tt<"HUFFSYMB71", baseaddress, 812>;
+
+  template <std::uint32_t baseaddress>
+  using huffsymb72_t = huffsymb72_tt<"HUFFSYMB72", baseaddress, 816>;
+
+  template <std::uint32_t baseaddress>
+  using huffsymb73_t = huffsymb73_tt<"HUFFSYMB73", baseaddress, 820>;
+
+  template <std::uint32_t baseaddress>
+  using huffsymb74_t = huffsymb74_tt<"HUFFSYMB74", baseaddress, 824>;
+
+  template <std::uint32_t baseaddress>
+  using huffsymb75_t = huffsymb75_tt<"HUFFSYMB75", baseaddress, 828>;
+
+  template <std::uint32_t baseaddress>
+  using huffsymb76_t = huffsymb76_tt<"HUFFSYMB76", baseaddress, 832>;
+
+  template <std::uint32_t baseaddress>
+  using huffsymb77_t = huffsymb77_tt<"HUFFSYMB77", baseaddress, 836>;
+
+  template <std::uint32_t baseaddress>
+  using huffsymb78_t = huffsymb78_tt<"HUFFSYMB78", baseaddress, 840>;
+
+  template <std::uint32_t baseaddress>
+  using huffsymb79_t = huffsymb79_tt<"HUFFSYMB79", baseaddress, 844>;
+
+  template <std::uint32_t baseaddress>
+  using huffsymb80_t = huffsymb80_tt<"HUFFSYMB80", baseaddress, 848>;
+
+  template <std::uint32_t baseaddress>
+  using huffsymb81_t = huffsymb81_tt<"HUFFSYMB81", baseaddress, 852>;
+
+  template <std::uint32_t baseaddress>
+  using huffsymb82_t = huffsymb82_tt<"HUFFSYMB82", baseaddress, 856>;
+
+  template <std::uint32_t baseaddress>
+  using huffsymb83_t = huffsymb83_tt<"HUFFSYMB83", baseaddress, 860>;
+
+  template <std::uint32_t baseaddress>
+  using dhtmem0_t = dhtmem0_tt<"DHTMEM0", baseaddress, 864>;
+
+  template <std::uint32_t baseaddress>
+  using dhtmem2_t = dhtmem2_tt<"DHTMEM2", baseaddress, 868>;
+
+  template <std::uint32_t baseaddress>
+  using dhtmem3_t = dhtmem3_tt<"DHTMEM3", baseaddress, 872>;
+
+  template <std::uint32_t baseaddress>
+  using dhtmem4_t = dhtmem4_tt<"DHTMEM4", baseaddress, 876>;
+
+  template <std::uint32_t baseaddress>
+  using dhtmem5_t = dhtmem5_tt<"DHTMEM5", baseaddress, 880>;
+
+  template <std::uint32_t baseaddress>
+  using dhtmem6_t = dhtmem6_tt<"DHTMEM6", baseaddress, 884>;
+
+  template <std::uint32_t baseaddress>
+  using dhtmem7_t = dhtmem7_tt<"DHTMEM7", baseaddress, 888>;
+
+  template <std::uint32_t baseaddress>
+  using dhtmem8_t = dhtmem8_tt<"DHTMEM8", baseaddress, 892>;
+
+  template <std::uint32_t baseaddress>
+  using dhtmem9_t = dhtmem9_tt<"DHTMEM9", baseaddress, 896>;
+
+  template <std::uint32_t baseaddress>
+  using dhtmem10_t = dhtmem10_tt<"DHTMEM10", baseaddress, 900>;
+
+  template <std::uint32_t baseaddress>
+  using dhtmem11_t = dhtmem11_tt<"DHTMEM11", baseaddress, 904>;
+
+  template <std::uint32_t baseaddress>
+  using dhtmem12_t = dhtmem12_tt<"DHTMEM12", baseaddress, 908>;
+
+  template <std::uint32_t baseaddress>
+  using dhtmem13_t = dhtmem13_tt<"DHTMEM13", baseaddress, 912>;
+
+  template <std::uint32_t baseaddress>
+  using dhtmem14_t = dhtmem14_tt<"DHTMEM14", baseaddress, 916>;
+
+  template <std::uint32_t baseaddress>
+  using dhtmem15_t = dhtmem15_tt<"DHTMEM15", baseaddress, 920>;
+
+  template <std::uint32_t baseaddress>
+  using dhtmem16_t = dhtmem16_tt<"DHTMEM16", baseaddress, 924>;
+
+  template <std::uint32_t baseaddress>
+  using dhtmem17_t = dhtmem17_tt<"DHTMEM17", baseaddress, 928>;
+
+  template <std::uint32_t baseaddress>
+  using dhtmem18_t = dhtmem18_tt<"DHTMEM18", baseaddress, 932>;
+
+  template <std::uint32_t baseaddress>
+  using dhtmem19_t = dhtmem19_tt<"DHTMEM19", baseaddress, 936>;
+
+  template <std::uint32_t baseaddress>
+  using dhtmem20_t = dhtmem20_tt<"DHTMEM20", baseaddress, 940>;
+
+  template <std::uint32_t baseaddress>
+  using dhtmem21_t = dhtmem21_tt<"DHTMEM21", baseaddress, 944>;
+
+  template <std::uint32_t baseaddress>
+  using dhtmem22_t = dhtmem22_tt<"DHTMEM22", baseaddress, 948>;
+
+  template <std::uint32_t baseaddress>
+  using dhtmem23_t = dhtmem23_tt<"DHTMEM23", baseaddress, 952>;
+
+  template <std::uint32_t baseaddress>
+  using dhtmem24_t = dhtmem24_tt<"DHTMEM24", baseaddress, 956>;
+
+  template <std::uint32_t baseaddress>
+  using dhtmem25_t = dhtmem25_tt<"DHTMEM25", baseaddress, 960>;
+
+  template <std::uint32_t baseaddress>
+  using dhtmem26_t = dhtmem26_tt<"DHTMEM26", baseaddress, 964>;
+
+  template <std::uint32_t baseaddress>
+  using dhtmem27_t = dhtmem27_tt<"DHTMEM27", baseaddress, 968>;
+
+  template <std::uint32_t baseaddress>
+  using dhtmem28_t = dhtmem28_tt<"DHTMEM28", baseaddress, 972>;
+
+  template <std::uint32_t baseaddress>
+  using dhtmem29_t = dhtmem29_tt<"DHTMEM29", baseaddress, 976>;
+
+  template <std::uint32_t baseaddress>
+  using dhtmem30_t = dhtmem30_tt<"DHTMEM30", baseaddress, 980>;
+
+  template <std::uint32_t baseaddress>
+  using dhtmem31_t = dhtmem31_tt<"DHTMEM31", baseaddress, 984>;
+
+  template <std::uint32_t baseaddress>
+  using dhtmem32_t = dhtmem32_tt<"DHTMEM32", baseaddress, 988>;
+
+  template <std::uint32_t baseaddress>
+  using dhtmem33_t = dhtmem33_tt<"DHTMEM33", baseaddress, 992>;
+
+  template <std::uint32_t baseaddress>
+  using dhtmem34_t = dhtmem34_tt<"DHTMEM34", baseaddress, 996>;
+
+  template <std::uint32_t baseaddress>
+  using dhtmem35_t = dhtmem35_tt<"DHTMEM35", baseaddress, 1000>;
+
+  template <std::uint32_t baseaddress>
+  using dhtmem36_t = dhtmem36_tt<"DHTMEM36", baseaddress, 1004>;
+
+  template <std::uint32_t baseaddress>
+  using dhtmem37_t = dhtmem37_tt<"DHTMEM37", baseaddress, 1008>;
+
+  template <std::uint32_t baseaddress>
+  using dhtmem38_t = dhtmem38_tt<"DHTMEM38", baseaddress, 1012>;
+
+  template <std::uint32_t baseaddress>
+  using dhtmem39_t = dhtmem39_tt<"DHTMEM39", baseaddress, 1016>;
+
+  template <std::uint32_t baseaddress>
+  using dhtmem40_t = dhtmem40_tt<"DHTMEM40", baseaddress, 1020>;
+
+  template <std::uint32_t baseaddress>
+  using dhtmem41_t = dhtmem41_tt<"DHTMEM41", baseaddress, 1024>;
+
+  template <std::uint32_t baseaddress>
+  using dhtmem42_t = dhtmem42_tt<"DHTMEM42", baseaddress, 1028>;
+
+  template <std::uint32_t baseaddress>
+  using dhtmem43_t = dhtmem43_tt<"DHTMEM43", baseaddress, 1032>;
+
+  template <std::uint32_t baseaddress>
+  using dhtmem44_t = dhtmem44_tt<"DHTMEM44", baseaddress, 1036>;
+
+  template <std::uint32_t baseaddress>
+  using dhtmem45_t = dhtmem45_tt<"DHTMEM45", baseaddress, 1040>;
+
+  template <std::uint32_t baseaddress>
+  using dhtmem46_t = dhtmem46_tt<"DHTMEM46", baseaddress, 1044>;
+
+  template <std::uint32_t baseaddress>
+  using dhtmem47_t = dhtmem47_tt<"DHTMEM47", baseaddress, 1048>;
+
+  template <std::uint32_t baseaddress>
+  using dhtmem48_t = dhtmem48_tt<"DHTMEM48", baseaddress, 1052>;
+
+  template <std::uint32_t baseaddress>
+  using dhtmem49_t = dhtmem49_tt<"DHTMEM49", baseaddress, 1056>;
+
+  template <std::uint32_t baseaddress>
+  using dhtmem50_t = dhtmem50_tt<"DHTMEM50", baseaddress, 1060>;
+
+  template <std::uint32_t baseaddress>
+  using dhtmem51_t = dhtmem51_tt<"DHTMEM51", baseaddress, 1064>;
+
+  template <std::uint32_t baseaddress>
+  using dhtmem52_t = dhtmem52_tt<"DHTMEM52", baseaddress, 1068>;
+
+  template <std::uint32_t baseaddress>
+  using dhtmem53_t = dhtmem53_tt<"DHTMEM53", baseaddress, 1072>;
+
+  template <std::uint32_t baseaddress>
+  using dhtmem54_t = dhtmem54_tt<"DHTMEM54", baseaddress, 1076>;
+
+  template <std::uint32_t baseaddress>
+  using dhtmem55_t = dhtmem55_tt<"DHTMEM55", baseaddress, 1080>;
+
+  template <std::uint32_t baseaddress>
+  using dhtmem56_t = dhtmem56_tt<"DHTMEM56", baseaddress, 1084>;
+
+  template <std::uint32_t baseaddress>
+  using dhtmem57_t = dhtmem57_tt<"DHTMEM57", baseaddress, 1088>;
+
+  template <std::uint32_t baseaddress>
+  using dhtmem58_t = dhtmem58_tt<"DHTMEM58", baseaddress, 1092>;
+
+  template <std::uint32_t baseaddress>
+  using dhtmem59_t = dhtmem59_tt<"DHTMEM59", baseaddress, 1096>;
+
+  template <std::uint32_t baseaddress>
+  using dhtmem60_t = dhtmem60_tt<"DHTMEM60", baseaddress, 1100>;
+
+  template <std::uint32_t baseaddress>
+  using dhtmem61_t = dhtmem61_tt<"DHTMEM61", baseaddress, 1104>;
+
+  template <std::uint32_t baseaddress>
+  using dhtmem62_t = dhtmem62_tt<"DHTMEM62", baseaddress, 1108>;
+
+  template <std::uint32_t baseaddress>
+  using dhtmem63_t = dhtmem63_tt<"DHTMEM63", baseaddress, 1112>;
+
+  template <std::uint32_t baseaddress>
+  using dhtmem64_t = dhtmem64_tt<"DHTMEM64", baseaddress, 1116>;
+
+  template <std::uint32_t baseaddress>
+  using dhtmem65_t = dhtmem65_tt<"DHTMEM65", baseaddress, 1120>;
+
+  template <std::uint32_t baseaddress>
+  using dhtmem66_t = dhtmem66_tt<"DHTMEM66", baseaddress, 1124>;
+
+  template <std::uint32_t baseaddress>
+  using dhtmem67_t = dhtmem67_tt<"DHTMEM67", baseaddress, 1128>;
+
+  template <std::uint32_t baseaddress>
+  using dhtmem68_t = dhtmem68_tt<"DHTMEM68", baseaddress, 1132>;
+
+  template <std::uint32_t baseaddress>
+  using dhtmem69_t = dhtmem69_tt<"DHTMEM69", baseaddress, 1136>;
+
+  template <std::uint32_t baseaddress>
+  using dhtmem70_t = dhtmem70_tt<"DHTMEM70", baseaddress, 1140>;
+
+  template <std::uint32_t baseaddress>
+  using dhtmem71_t = dhtmem71_tt<"DHTMEM71", baseaddress, 1144>;
+
+  template <std::uint32_t baseaddress>
+  using dhtmem72_t = dhtmem72_tt<"DHTMEM72", baseaddress, 1148>;
+
+  template <std::uint32_t baseaddress>
+  using dhtmem73_t = dhtmem73_tt<"DHTMEM73", baseaddress, 1152>;
+
+  template <std::uint32_t baseaddress>
+  using dhtmem74_t = dhtmem74_tt<"DHTMEM74", baseaddress, 1156>;
+
+  template <std::uint32_t baseaddress>
+  using dhtmem75_t = dhtmem75_tt<"DHTMEM75", baseaddress, 1160>;
+
+  template <std::uint32_t baseaddress>
+  using dhtmem76_t = dhtmem76_tt<"DHTMEM76", baseaddress, 1164>;
+
+  template <std::uint32_t baseaddress>
+  using dhtmem77_t = dhtmem77_tt<"DHTMEM77", baseaddress, 1168>;
+
+  template <std::uint32_t baseaddress>
+  using dhtmem78_t = dhtmem78_tt<"DHTMEM78", baseaddress, 1172>;
+
+  template <std::uint32_t baseaddress>
+  using dhtmem79_t = dhtmem79_tt<"DHTMEM79", baseaddress, 1176>;
+
+  template <std::uint32_t baseaddress>
+  using dhtmem80_t = dhtmem80_tt<"DHTMEM80", baseaddress, 1180>;
+
+  template <std::uint32_t baseaddress>
+  using dhtmem81_t = dhtmem81_tt<"DHTMEM81", baseaddress, 1184>;
+
+  template <std::uint32_t baseaddress>
+  using dhtmem82_t = dhtmem82_tt<"DHTMEM82", baseaddress, 1188>;
+
+  template <std::uint32_t baseaddress>
+  using dhtmem83_t = dhtmem83_tt<"DHTMEM83", baseaddress, 1192>;
+
+  template <std::uint32_t baseaddress>
+  using dhtmem84_t = dhtmem84_tt<"DHTMEM84", baseaddress, 1196>;
+
+  template <std::uint32_t baseaddress>
+  using dhtmem85_t = dhtmem85_tt<"DHTMEM85", baseaddress, 1200>;
+
+  template <std::uint32_t baseaddress>
+  using dhtmem86_t = dhtmem86_tt<"DHTMEM86", baseaddress, 1204>;
+
+  template <std::uint32_t baseaddress>
+  using dhtmem87_t = dhtmem87_tt<"DHTMEM87", baseaddress, 1208>;
+
+  template <std::uint32_t baseaddress>
+  using dhtmem88_t = dhtmem88_tt<"DHTMEM88", baseaddress, 1212>;
+
+  template <std::uint32_t baseaddress>
+  using dhtmem89_t = dhtmem89_tt<"DHTMEM89", baseaddress, 1216>;
+
+  template <std::uint32_t baseaddress>
+  using dhtmem90_t = dhtmem90_tt<"DHTMEM90", baseaddress, 1220>;
+
+  template <std::uint32_t baseaddress>
+  using dhtmem91_t = dhtmem91_tt<"DHTMEM91", baseaddress, 1224>;
+
+  template <std::uint32_t baseaddress>
+  using dhtmem92_t = dhtmem92_tt<"DHTMEM92", baseaddress, 1228>;
+
+  template <std::uint32_t baseaddress>
+  using dhtmem93_t = dhtmem93_tt<"DHTMEM93", baseaddress, 1232>;
+
+  template <std::uint32_t baseaddress>
+  using dhtmem94_t = dhtmem94_tt<"DHTMEM94", baseaddress, 1236>;
+
+  template <std::uint32_t baseaddress>
+  using dhtmem95_t = dhtmem95_tt<"DHTMEM95", baseaddress, 1240>;
+
+  template <std::uint32_t baseaddress>
+  using dhtmem96_t = dhtmem96_tt<"DHTMEM96", baseaddress, 1244>;
+
+  template <std::uint32_t baseaddress>
+  using dhtmem97_t = dhtmem97_tt<"DHTMEM97", baseaddress, 1248>;
+
+  template <std::uint32_t baseaddress>
+  using dhtmem98_t = dhtmem98_tt<"DHTMEM98", baseaddress, 1252>;
+
+  template <std::uint32_t baseaddress>
+  using dhtmem99_t = dhtmem99_tt<"DHTMEM99", baseaddress, 1256>;
+
+  template <std::uint32_t baseaddress>
+  using dhtmem100_t = dhtmem100_tt<"DHTMEM100", baseaddress, 1260>;
+
+  template <std::uint32_t baseaddress>
+  using dhtmem101_t = dhtmem101_tt<"DHTMEM101", baseaddress, 1264>;
+
+  template <std::uint32_t baseaddress>
+  using dhtmem102_t = dhtmem102_tt<"DHTMEM102", baseaddress, 1268>;
+
+  template <std::uint32_t baseaddress>
+  using dhtmem103_t = dhtmem103_tt<"DHTMEM103", baseaddress, 1272>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac0_0_t = huffenc_ac0_0_tt<"HUFFENC_AC0_0", baseaddress, 1280>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac0_1_t = huffenc_ac0_1_tt<"HUFFENC_AC0_1", baseaddress, 1284>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac0_2_t = huffenc_ac0_2_tt<"HUFFENC_AC0_2", baseaddress, 1288>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac0_3_t = huffenc_ac0_3_tt<"HUFFENC_AC0_3", baseaddress, 1292>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac0_4_t = huffenc_ac0_4_tt<"HUFFENC_AC0_4", baseaddress, 1296>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac0_5_t = huffenc_ac0_5_tt<"HUFFENC_AC0_5", baseaddress, 1300>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac0_6_t = huffenc_ac0_6_tt<"HUFFENC_AC0_6", baseaddress, 1304>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac0_7_t = huffenc_ac0_7_tt<"HUFFENC_AC0_7", baseaddress, 1308>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac0_8_t = huffenc_ac0_8_tt<"HUFFENC_AC0_8", baseaddress, 1312>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac0_9_t = huffenc_ac0_9_tt<"HUFFENC_AC0_9", baseaddress, 1316>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac0_10_t =
+    huffenc_ac0_10_tt<"HUFFENC_AC0_10", baseaddress, 1320>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac0_11_t =
+    huffenc_ac0_11_tt<"HUFFENC_AC0_11", baseaddress, 1324>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac0_12_t =
+    huffenc_ac0_12_tt<"HUFFENC_AC0_12", baseaddress, 1328>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac0_13_t =
+    huffenc_ac0_13_tt<"HUFFENC_AC0_13", baseaddress, 1332>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac0_14_t =
+    huffenc_ac0_14_tt<"HUFFENC_AC0_14", baseaddress, 1336>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac0_15_t =
+    huffenc_ac0_15_tt<"HUFFENC_AC0_15", baseaddress, 1340>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac0_16_t =
+    huffenc_ac0_16_tt<"HUFFENC_AC0_16", baseaddress, 1344>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac0_17_t =
+    huffenc_ac0_17_tt<"HUFFENC_AC0_17", baseaddress, 1348>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac0_18_t =
+    huffenc_ac0_18_tt<"HUFFENC_AC0_18", baseaddress, 1352>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac0_19_t =
+    huffenc_ac0_19_tt<"HUFFENC_AC0_19", baseaddress, 1356>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac0_20_t =
+    huffenc_ac0_20_tt<"HUFFENC_AC0_20", baseaddress, 1360>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac0_21_t =
+    huffenc_ac0_21_tt<"HUFFENC_AC0_21", baseaddress, 1364>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac0_22_t =
+    huffenc_ac0_22_tt<"HUFFENC_AC0_22", baseaddress, 1368>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac0_23_t =
+    huffenc_ac0_23_tt<"HUFFENC_AC0_23", baseaddress, 1372>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac0_24_t =
+    huffenc_ac0_24_tt<"HUFFENC_AC0_24", baseaddress, 1376>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac0_25_t =
+    huffenc_ac0_25_tt<"HUFFENC_AC0_25", baseaddress, 1380>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac0_26_t =
+    huffenc_ac0_26_tt<"HUFFENC_AC0_26", baseaddress, 1384>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac0_27_t =
+    huffenc_ac0_27_tt<"HUFFENC_AC0_27", baseaddress, 1388>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac0_28_t =
+    huffenc_ac0_28_tt<"HUFFENC_AC0_28", baseaddress, 1392>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac0_29_t =
+    huffenc_ac0_29_tt<"HUFFENC_AC0_29", baseaddress, 1396>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac0_30_t =
+    huffenc_ac0_30_tt<"HUFFENC_AC0_30", baseaddress, 1400>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac0_31_t =
+    huffenc_ac0_31_tt<"HUFFENC_AC0_31", baseaddress, 1404>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac0_32_t =
+    huffenc_ac0_32_tt<"HUFFENC_AC0_32", baseaddress, 1408>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac0_33_t =
+    huffenc_ac0_33_tt<"HUFFENC_AC0_33", baseaddress, 1412>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac0_34_t =
+    huffenc_ac0_34_tt<"HUFFENC_AC0_34", baseaddress, 1416>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac0_35_t =
+    huffenc_ac0_35_tt<"HUFFENC_AC0_35", baseaddress, 1420>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac0_36_t =
+    huffenc_ac0_36_tt<"HUFFENC_AC0_36", baseaddress, 1424>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac0_37_t =
+    huffenc_ac0_37_tt<"HUFFENC_AC0_37", baseaddress, 1428>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac0_38_t =
+    huffenc_ac0_38_tt<"HUFFENC_AC0_38", baseaddress, 1432>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac0_39_t =
+    huffenc_ac0_39_tt<"HUFFENC_AC0_39", baseaddress, 1436>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac0_40_t =
+    huffenc_ac0_40_tt<"HUFFENC_AC0_40", baseaddress, 1440>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac0_41_t =
+    huffenc_ac0_41_tt<"HUFFENC_AC0_41", baseaddress, 1444>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac0_42_t =
+    huffenc_ac0_42_tt<"HUFFENC_AC0_42", baseaddress, 1448>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac0_43_t =
+    huffenc_ac0_43_tt<"HUFFENC_AC0_43", baseaddress, 1452>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac0_44_t =
+    huffenc_ac0_44_tt<"HUFFENC_AC0_44", baseaddress, 1456>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac0_45_t =
+    huffenc_ac0_45_tt<"HUFFENC_AC0_45", baseaddress, 1460>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac0_46_t =
+    huffenc_ac0_46_tt<"HUFFENC_AC0_46", baseaddress, 1464>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac0_47_t =
+    huffenc_ac0_47_tt<"HUFFENC_AC0_47", baseaddress, 1468>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac0_48_t =
+    huffenc_ac0_48_tt<"HUFFENC_AC0_48", baseaddress, 1472>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac0_49_t =
+    huffenc_ac0_49_tt<"HUFFENC_AC0_49", baseaddress, 1476>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac0_50_t =
+    huffenc_ac0_50_tt<"HUFFENC_AC0_50", baseaddress, 1480>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac0_51_t =
+    huffenc_ac0_51_tt<"HUFFENC_AC0_51", baseaddress, 1484>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac0_52_t =
+    huffenc_ac0_52_tt<"HUFFENC_AC0_52", baseaddress, 1488>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac0_53_t =
+    huffenc_ac0_53_tt<"HUFFENC_AC0_53", baseaddress, 1492>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac0_54_t =
+    huffenc_ac0_54_tt<"HUFFENC_AC0_54", baseaddress, 1496>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac0_55_t =
+    huffenc_ac0_55_tt<"HUFFENC_AC0_55", baseaddress, 1500>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac0_56_t =
+    huffenc_ac0_56_tt<"HUFFENC_AC0_56", baseaddress, 1504>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac0_57_t =
+    huffenc_ac0_57_tt<"HUFFENC_AC0_57", baseaddress, 1508>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac0_58_t =
+    huffenc_ac0_58_tt<"HUFFENC_AC0_58", baseaddress, 1512>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac0_59_t =
+    huffenc_ac0_59_tt<"HUFFENC_AC0_59", baseaddress, 1516>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac0_60_t =
+    huffenc_ac0_60_tt<"HUFFENC_AC0_60", baseaddress, 1520>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac0_61_t =
+    huffenc_ac0_61_tt<"HUFFENC_AC0_61", baseaddress, 1524>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac0_62_t =
+    huffenc_ac0_62_tt<"HUFFENC_AC0_62", baseaddress, 1528>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac0_63_t =
+    huffenc_ac0_63_tt<"HUFFENC_AC0_63", baseaddress, 1532>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac0_64_t =
+    huffenc_ac0_64_tt<"HUFFENC_AC0_64", baseaddress, 1536>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac0_65_t =
+    huffenc_ac0_65_tt<"HUFFENC_AC0_65", baseaddress, 1540>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac0_66_t =
+    huffenc_ac0_66_tt<"HUFFENC_AC0_66", baseaddress, 1544>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac0_67_t =
+    huffenc_ac0_67_tt<"HUFFENC_AC0_67", baseaddress, 1548>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac0_68_t =
+    huffenc_ac0_68_tt<"HUFFENC_AC0_68", baseaddress, 1552>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac0_69_t =
+    huffenc_ac0_69_tt<"HUFFENC_AC0_69", baseaddress, 1556>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac0_70_t =
+    huffenc_ac0_70_tt<"HUFFENC_AC0_70", baseaddress, 1560>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac0_71_t =
+    huffenc_ac0_71_tt<"HUFFENC_AC0_71", baseaddress, 1564>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac0_72_t =
+    huffenc_ac0_72_tt<"HUFFENC_AC0_72", baseaddress, 1568>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac0_73_t =
+    huffenc_ac0_73_tt<"HUFFENC_AC0_73", baseaddress, 1572>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac0_74_t =
+    huffenc_ac0_74_tt<"HUFFENC_AC0_74", baseaddress, 1576>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac0_75_t =
+    huffenc_ac0_75_tt<"HUFFENC_AC0_75", baseaddress, 1580>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac0_76_t =
+    huffenc_ac0_76_tt<"HUFFENC_AC0_76", baseaddress, 1584>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac0_77_t =
+    huffenc_ac0_77_tt<"HUFFENC_AC0_77", baseaddress, 1588>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac0_78_t =
+    huffenc_ac0_78_tt<"HUFFENC_AC0_78", baseaddress, 1592>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac0_79_t =
+    huffenc_ac0_79_tt<"HUFFENC_AC0_79", baseaddress, 1596>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac0_80_t =
+    huffenc_ac0_80_tt<"HUFFENC_AC0_80", baseaddress, 1600>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac0_81_t =
+    huffenc_ac0_81_tt<"HUFFENC_AC0_81", baseaddress, 1604>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac0_82_t =
+    huffenc_ac0_82_tt<"HUFFENC_AC0_82", baseaddress, 1608>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac0_83_t =
+    huffenc_ac0_83_tt<"HUFFENC_AC0_83", baseaddress, 1612>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac0_84_t =
+    huffenc_ac0_84_tt<"HUFFENC_AC0_84", baseaddress, 1616>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac0_85_t =
+    huffenc_ac0_85_tt<"HUFFENC_AC0_85", baseaddress, 1620>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac0_86_t =
+    huffenc_ac0_86_tt<"HUFFENC_AC0_86", baseaddress, 1624>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac0_87_t =
+    huffenc_ac0_87_tt<"HUFFENC_AC0_87", baseaddress, 1628>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac1_0_t = huffenc_ac1_0_tt<"HUFFENC_AC1_0", baseaddress, 1632>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac1_1_t = huffenc_ac1_1_tt<"HUFFENC_AC1_1", baseaddress, 1636>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac1_2_t = huffenc_ac1_2_tt<"HUFFENC_AC1_2", baseaddress, 1640>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac1_3_t = huffenc_ac1_3_tt<"HUFFENC_AC1_3", baseaddress, 1644>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac1_4_t = huffenc_ac1_4_tt<"HUFFENC_AC1_4", baseaddress, 1648>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac1_5_t = huffenc_ac1_5_tt<"HUFFENC_AC1_5", baseaddress, 1652>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac1_6_t = huffenc_ac1_6_tt<"HUFFENC_AC1_6", baseaddress, 1656>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac1_7_t = huffenc_ac1_7_tt<"HUFFENC_AC1_7", baseaddress, 1660>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac1_8_t = huffenc_ac1_8_tt<"HUFFENC_AC1_8", baseaddress, 1664>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac1_9_t = huffenc_ac1_9_tt<"HUFFENC_AC1_9", baseaddress, 1668>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac1_10_t =
+    huffenc_ac1_10_tt<"HUFFENC_AC1_10", baseaddress, 1672>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac1_11_t =
+    huffenc_ac1_11_tt<"HUFFENC_AC1_11", baseaddress, 1676>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac1_12_t =
+    huffenc_ac1_12_tt<"HUFFENC_AC1_12", baseaddress, 1680>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac1_13_t =
+    huffenc_ac1_13_tt<"HUFFENC_AC1_13", baseaddress, 1684>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac1_14_t =
+    huffenc_ac1_14_tt<"HUFFENC_AC1_14", baseaddress, 1688>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac1_15_t =
+    huffenc_ac1_15_tt<"HUFFENC_AC1_15", baseaddress, 1692>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac1_16_t =
+    huffenc_ac1_16_tt<"HUFFENC_AC1_16", baseaddress, 1696>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac1_17_t =
+    huffenc_ac1_17_tt<"HUFFENC_AC1_17", baseaddress, 1700>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac1_18_t =
+    huffenc_ac1_18_tt<"HUFFENC_AC1_18", baseaddress, 1704>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac1_19_t =
+    huffenc_ac1_19_tt<"HUFFENC_AC1_19", baseaddress, 1708>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac1_20_t =
+    huffenc_ac1_20_tt<"HUFFENC_AC1_20", baseaddress, 1712>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac1_21_t =
+    huffenc_ac1_21_tt<"HUFFENC_AC1_21", baseaddress, 1716>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac1_22_t =
+    huffenc_ac1_22_tt<"HUFFENC_AC1_22", baseaddress, 1720>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac1_23_t =
+    huffenc_ac1_23_tt<"HUFFENC_AC1_23", baseaddress, 1724>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac1_24_t =
+    huffenc_ac1_24_tt<"HUFFENC_AC1_24", baseaddress, 1728>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac1_25_t =
+    huffenc_ac1_25_tt<"HUFFENC_AC1_25", baseaddress, 1732>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac1_26_t =
+    huffenc_ac1_26_tt<"HUFFENC_AC1_26", baseaddress, 1736>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac1_27_t =
+    huffenc_ac1_27_tt<"HUFFENC_AC1_27", baseaddress, 1740>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac1_28_t =
+    huffenc_ac1_28_tt<"HUFFENC_AC1_28", baseaddress, 1744>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac1_29_t =
+    huffenc_ac1_29_tt<"HUFFENC_AC1_29", baseaddress, 1748>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac1_30_t =
+    huffenc_ac1_30_tt<"HUFFENC_AC1_30", baseaddress, 1752>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac1_31_t =
+    huffenc_ac1_31_tt<"HUFFENC_AC1_31", baseaddress, 1756>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac1_32_t =
+    huffenc_ac1_32_tt<"HUFFENC_AC1_32", baseaddress, 1760>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac1_33_t =
+    huffenc_ac1_33_tt<"HUFFENC_AC1_33", baseaddress, 1764>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac1_34_t =
+    huffenc_ac1_34_tt<"HUFFENC_AC1_34", baseaddress, 1768>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac1_35_t =
+    huffenc_ac1_35_tt<"HUFFENC_AC1_35", baseaddress, 1772>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac1_36_t =
+    huffenc_ac1_36_tt<"HUFFENC_AC1_36", baseaddress, 1776>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac1_37_t =
+    huffenc_ac1_37_tt<"HUFFENC_AC1_37", baseaddress, 1780>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac1_38_t =
+    huffenc_ac1_38_tt<"HUFFENC_AC1_38", baseaddress, 1784>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac1_39_t =
+    huffenc_ac1_39_tt<"HUFFENC_AC1_39", baseaddress, 1788>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac1_40_t =
+    huffenc_ac1_40_tt<"HUFFENC_AC1_40", baseaddress, 1792>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac1_41_t =
+    huffenc_ac1_41_tt<"HUFFENC_AC1_41", baseaddress, 1796>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac1_42_t =
+    huffenc_ac1_42_tt<"HUFFENC_AC1_42", baseaddress, 1800>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac1_43_t =
+    huffenc_ac1_43_tt<"HUFFENC_AC1_43", baseaddress, 1804>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac1_44_t =
+    huffenc_ac1_44_tt<"HUFFENC_AC1_44", baseaddress, 1808>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac1_45_t =
+    huffenc_ac1_45_tt<"HUFFENC_AC1_45", baseaddress, 1812>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac1_46_t =
+    huffenc_ac1_46_tt<"HUFFENC_AC1_46", baseaddress, 1816>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac1_47_t =
+    huffenc_ac1_47_tt<"HUFFENC_AC1_47", baseaddress, 1820>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac1_48_t =
+    huffenc_ac1_48_tt<"HUFFENC_AC1_48", baseaddress, 1824>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac1_49_t =
+    huffenc_ac1_49_tt<"HUFFENC_AC1_49", baseaddress, 1828>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac1_50_t =
+    huffenc_ac1_50_tt<"HUFFENC_AC1_50", baseaddress, 1832>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac1_51_t =
+    huffenc_ac1_51_tt<"HUFFENC_AC1_51", baseaddress, 1836>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac1_52_t =
+    huffenc_ac1_52_tt<"HUFFENC_AC1_52", baseaddress, 1840>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac1_53_t =
+    huffenc_ac1_53_tt<"HUFFENC_AC1_53", baseaddress, 1844>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac1_54_t =
+    huffenc_ac1_54_tt<"HUFFENC_AC1_54", baseaddress, 1848>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac1_55_t =
+    huffenc_ac1_55_tt<"HUFFENC_AC1_55", baseaddress, 1852>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac1_56_t =
+    huffenc_ac1_56_tt<"HUFFENC_AC1_56", baseaddress, 1856>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac1_57_t =
+    huffenc_ac1_57_tt<"HUFFENC_AC1_57", baseaddress, 1860>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac1_58_t =
+    huffenc_ac1_58_tt<"HUFFENC_AC1_58", baseaddress, 1864>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac1_59_t =
+    huffenc_ac1_59_tt<"HUFFENC_AC1_59", baseaddress, 1868>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac1_60_t =
+    huffenc_ac1_60_tt<"HUFFENC_AC1_60", baseaddress, 1872>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac1_61_t =
+    huffenc_ac1_61_tt<"HUFFENC_AC1_61", baseaddress, 1876>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac1_62_t =
+    huffenc_ac1_62_tt<"HUFFENC_AC1_62", baseaddress, 1880>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac1_63_t =
+    huffenc_ac1_63_tt<"HUFFENC_AC1_63", baseaddress, 1884>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac1_64_t =
+    huffenc_ac1_64_tt<"HUFFENC_AC1_64", baseaddress, 1888>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac1_65_t =
+    huffenc_ac1_65_tt<"HUFFENC_AC1_65", baseaddress, 1892>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac1_66_t =
+    huffenc_ac1_66_tt<"HUFFENC_AC1_66", baseaddress, 1896>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac1_67_t =
+    huffenc_ac1_67_tt<"HUFFENC_AC1_67", baseaddress, 1900>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac1_68_t =
+    huffenc_ac1_68_tt<"HUFFENC_AC1_68", baseaddress, 1904>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac1_69_t =
+    huffenc_ac1_69_tt<"HUFFENC_AC1_69", baseaddress, 1908>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac1_70_t =
+    huffenc_ac1_70_tt<"HUFFENC_AC1_70", baseaddress, 1912>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac1_71_t =
+    huffenc_ac1_71_tt<"HUFFENC_AC1_71", baseaddress, 1916>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac1_72_t =
+    huffenc_ac1_72_tt<"HUFFENC_AC1_72", baseaddress, 1920>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac1_73_t =
+    huffenc_ac1_73_tt<"HUFFENC_AC1_73", baseaddress, 1924>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac1_74_t =
+    huffenc_ac1_74_tt<"HUFFENC_AC1_74", baseaddress, 1928>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac1_75_t =
+    huffenc_ac1_75_tt<"HUFFENC_AC1_75", baseaddress, 1932>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac1_76_t =
+    huffenc_ac1_76_tt<"HUFFENC_AC1_76", baseaddress, 1936>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac1_77_t =
+    huffenc_ac1_77_tt<"HUFFENC_AC1_77", baseaddress, 1940>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac1_78_t =
+    huffenc_ac1_78_tt<"HUFFENC_AC1_78", baseaddress, 1944>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac1_79_t =
+    huffenc_ac1_79_tt<"HUFFENC_AC1_79", baseaddress, 1948>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac1_80_t =
+    huffenc_ac1_80_tt<"HUFFENC_AC1_80", baseaddress, 1952>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac1_81_t =
+    huffenc_ac1_81_tt<"HUFFENC_AC1_81", baseaddress, 1956>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac1_82_t =
+    huffenc_ac1_82_tt<"HUFFENC_AC1_82", baseaddress, 1960>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac1_83_t =
+    huffenc_ac1_83_tt<"HUFFENC_AC1_83", baseaddress, 1964>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac1_84_t =
+    huffenc_ac1_84_tt<"HUFFENC_AC1_84", baseaddress, 1968>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac1_85_t =
+    huffenc_ac1_85_tt<"HUFFENC_AC1_85", baseaddress, 1972>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac1_86_t =
+    huffenc_ac1_86_tt<"HUFFENC_AC1_86", baseaddress, 1976>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_ac1_87_t =
+    huffenc_ac1_87_tt<"HUFFENC_AC1_87", baseaddress, 1980>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_dc0_0_t = huffenc_dc0_0_tt<"HUFFENC_DC0_0", baseaddress, 1984>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_dc0_1_t = huffenc_dc0_1_tt<"HUFFENC_DC0_1", baseaddress, 1988>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_dc0_2_t = huffenc_dc0_2_tt<"HUFFENC_DC0_2", baseaddress, 1992>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_dc0_3_t = huffenc_dc0_3_tt<"HUFFENC_DC0_3", baseaddress, 1996>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_dc0_4_t = huffenc_dc0_4_tt<"HUFFENC_DC0_4", baseaddress, 2000>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_dc0_5_t = huffenc_dc0_5_tt<"HUFFENC_DC0_5", baseaddress, 2004>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_dc0_6_t = huffenc_dc0_6_tt<"HUFFENC_DC0_6", baseaddress, 2008>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_dc0_7_t = huffenc_dc0_7_tt<"HUFFENC_DC0_7", baseaddress, 2012>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_dc1_0_t = huffenc_dc1_0_tt<"HUFFENC_DC1_0", baseaddress, 2016>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_dc1_1_t = huffenc_dc1_1_tt<"HUFFENC_DC1_1", baseaddress, 2020>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_dc1_2_t = huffenc_dc1_2_tt<"HUFFENC_DC1_2", baseaddress, 2024>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_dc1_3_t = huffenc_dc1_3_tt<"HUFFENC_DC1_3", baseaddress, 2028>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_dc1_4_t = huffenc_dc1_4_tt<"HUFFENC_DC1_4", baseaddress, 2032>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_dc1_5_t = huffenc_dc1_5_tt<"HUFFENC_DC1_5", baseaddress, 2036>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_dc1_6_t = huffenc_dc1_6_tt<"HUFFENC_DC1_6", baseaddress, 2040>;
+
+  template <std::uint32_t baseaddress>
+  using huffenc_dc1_7_t = huffenc_dc1_7_tt<"HUFFENC_DC1_7", baseaddress, 2044>;
 
 } // namespace jpeg
-

@@ -11,18 +11,17 @@ namespace stm32 {
 
 namespace dcb {
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dscsr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED1", std::uint16_t, 31, 17 ,access::ro>,
-  groov::field<"CDS", bool, 16, 16 >,
-  groov::field<"RESERVED0", std::uint16_t, 15, 0 ,access::ro>
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dscsr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED1", std::uint16_t, 31, 17, access::ro>,
+               groov::field<"CDS", bool, 16, 16>,
+               groov::field<"RESERVED0", std::uint16_t, 15, 0, access::ro>>;
 
-template <std::uint32_t baseaddress>
-using dscsr_t = dscsr_tt<"DSCSR",baseaddress,0>;
+  template <std::uint32_t baseaddress>
+  using dscsr_t = dscsr_tt<"DSCSR", baseaddress, 0>;
 
 } // namespace dcb
-

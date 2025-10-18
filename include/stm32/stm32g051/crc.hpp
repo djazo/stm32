@@ -11,65 +11,61 @@ namespace stm32 {
 
 namespace crc {
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using crc_dr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"DR", std::uint32_t, 31, 0 >
-  >;
+                               std::uint32_t,
+                               baseaddress + offset,
+                               access::rw,
+                               groov::field<"DR", std::uint32_t, 31, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using crc_idr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"IDR", std::uint32_t, 31, 0 >
-  >;
+                                std::uint32_t,
+                                baseaddress + offset,
+                                access::rw,
+                                groov::field<"IDR", std::uint32_t, 31, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using crc_cr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED1", std::uint32_t, 31, 8 ,access::ro>,
-  groov::field<"REV_OUT", bool, 7, 7 >,
-  groov::field<"REV_IN", std::uint8_t, 6, 5 >,
-  groov::field<"POLYSIZE", std::uint8_t, 4, 3 >,
-  groov::field<"RESERVED0", std::uint8_t, 2, 1 ,access::ro>,
-  groov::field<"RESET", bool, 0, 0 ,access::wo>
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using crc_cr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED1", std::uint32_t, 31, 8, access::ro>,
+               groov::field<"REV_OUT", bool, 7, 7>,
+               groov::field<"REV_IN", std::uint8_t, 6, 5>,
+               groov::field<"POLYSIZE", std::uint8_t, 4, 3>,
+               groov::field<"RESERVED0", std::uint8_t, 2, 1, access::ro>,
+               groov::field<"RESET", bool, 0, 0, access::wo>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using crc_init_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"CRC_INIT", std::uint32_t, 31, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using crc_init_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"CRC_INIT", std::uint32_t, 31, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using crc_pol_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"POL", std::uint32_t, 31, 0 >
-  >;
+                                std::uint32_t,
+                                baseaddress + offset,
+                                access::rw,
+                                groov::field<"POL", std::uint32_t, 31, 0>>;
 
-template <std::uint32_t baseaddress>
-using crc_dr_t = crc_dr_tt<"CRC_DR",baseaddress,0>;
+  template <std::uint32_t baseaddress>
+  using crc_dr_t = crc_dr_tt<"CRC_DR", baseaddress, 0>;
 
-template <std::uint32_t baseaddress>
-using crc_idr_t = crc_idr_tt<"CRC_IDR",baseaddress,4>;
+  template <std::uint32_t baseaddress>
+  using crc_idr_t = crc_idr_tt<"CRC_IDR", baseaddress, 4>;
 
-template <std::uint32_t baseaddress>
-using crc_cr_t = crc_cr_tt<"CRC_CR",baseaddress,8>;
+  template <std::uint32_t baseaddress>
+  using crc_cr_t = crc_cr_tt<"CRC_CR", baseaddress, 8>;
 
-template <std::uint32_t baseaddress>
-using crc_init_t = crc_init_tt<"CRC_INIT",baseaddress,16>;
+  template <std::uint32_t baseaddress>
+  using crc_init_t = crc_init_tt<"CRC_INIT", baseaddress, 16>;
 
-template <std::uint32_t baseaddress>
-using crc_pol_t = crc_pol_tt<"CRC_POL",baseaddress,20>;
+  template <std::uint32_t baseaddress>
+  using crc_pol_t = crc_pol_tt<"CRC_POL", baseaddress, 20>;
 
 } // namespace crc
-

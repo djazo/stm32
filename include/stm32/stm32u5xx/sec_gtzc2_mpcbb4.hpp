@@ -11,115 +11,114 @@ namespace stm32 {
 
 namespace sec_gtzc2_mpcbb4 {
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using mpcbb4_cr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"SRWILADIS", bool, 31, 31 >,
-  groov::field<"INVSECSTATE", bool, 30, 30 >,
-  groov::field<"RESERVED0", std::uint32_t, 29, 1 ,access::ro>,
-  groov::field<"GLOCK", bool, 0, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using mpcbb4_cr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"SRWILADIS", bool, 31, 31>,
+               groov::field<"INVSECSTATE", bool, 30, 30>,
+               groov::field<"RESERVED0", std::uint32_t, 29, 1, access::ro>,
+               groov::field<"GLOCK", bool, 0, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using mpcbb4_cfglock_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint32_t, 31, 1 ,access::ro>,
-  groov::field<"SPLCK0", bool, 0, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using mpcbb4_cfglock_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint32_t, 31, 1, access::ro>,
+               groov::field<"SPLCK0", bool, 0, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using mpcbb4_seccfgr0_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"SEC31", bool, 31, 31 >,
-  groov::field<"SEC30", bool, 30, 30 >,
-  groov::field<"SEC29", bool, 29, 29 >,
-  groov::field<"SEC28", bool, 28, 28 >,
-  groov::field<"SEC27", bool, 27, 27 >,
-  groov::field<"SEC26", bool, 26, 26 >,
-  groov::field<"SEC25", bool, 25, 25 >,
-  groov::field<"SEC24", bool, 24, 24 >,
-  groov::field<"SEC23", bool, 23, 23 >,
-  groov::field<"SEC22", bool, 22, 22 >,
-  groov::field<"SEC21", bool, 21, 21 >,
-  groov::field<"SEC20", bool, 20, 20 >,
-  groov::field<"SEC19", bool, 19, 19 >,
-  groov::field<"SEC18", bool, 18, 18 >,
-  groov::field<"SEC17", bool, 17, 17 >,
-  groov::field<"SEC16", bool, 16, 16 >,
-  groov::field<"SEC15", bool, 15, 15 >,
-  groov::field<"SEC14", bool, 14, 14 >,
-  groov::field<"SEC13", bool, 13, 13 >,
-  groov::field<"SEC12", bool, 12, 12 >,
-  groov::field<"SEC11", bool, 11, 11 >,
-  groov::field<"SEC10", bool, 10, 10 >,
-  groov::field<"SEC9", bool, 9, 9 >,
-  groov::field<"SEC8", bool, 8, 8 >,
-  groov::field<"SEC7", bool, 7, 7 >,
-  groov::field<"SEC6", bool, 6, 6 >,
-  groov::field<"SEC5", bool, 5, 5 >,
-  groov::field<"SEC4", bool, 4, 4 >,
-  groov::field<"SEC3", bool, 3, 3 >,
-  groov::field<"SEC2", bool, 2, 2 >,
-  groov::field<"SEC1", bool, 1, 1 >,
-  groov::field<"SEC0", bool, 0, 0 >
-  >;
+                                        std::uint32_t,
+                                        baseaddress + offset,
+                                        access::rw,
+                                        groov::field<"SEC31", bool, 31, 31>,
+                                        groov::field<"SEC30", bool, 30, 30>,
+                                        groov::field<"SEC29", bool, 29, 29>,
+                                        groov::field<"SEC28", bool, 28, 28>,
+                                        groov::field<"SEC27", bool, 27, 27>,
+                                        groov::field<"SEC26", bool, 26, 26>,
+                                        groov::field<"SEC25", bool, 25, 25>,
+                                        groov::field<"SEC24", bool, 24, 24>,
+                                        groov::field<"SEC23", bool, 23, 23>,
+                                        groov::field<"SEC22", bool, 22, 22>,
+                                        groov::field<"SEC21", bool, 21, 21>,
+                                        groov::field<"SEC20", bool, 20, 20>,
+                                        groov::field<"SEC19", bool, 19, 19>,
+                                        groov::field<"SEC18", bool, 18, 18>,
+                                        groov::field<"SEC17", bool, 17, 17>,
+                                        groov::field<"SEC16", bool, 16, 16>,
+                                        groov::field<"SEC15", bool, 15, 15>,
+                                        groov::field<"SEC14", bool, 14, 14>,
+                                        groov::field<"SEC13", bool, 13, 13>,
+                                        groov::field<"SEC12", bool, 12, 12>,
+                                        groov::field<"SEC11", bool, 11, 11>,
+                                        groov::field<"SEC10", bool, 10, 10>,
+                                        groov::field<"SEC9", bool, 9, 9>,
+                                        groov::field<"SEC8", bool, 8, 8>,
+                                        groov::field<"SEC7", bool, 7, 7>,
+                                        groov::field<"SEC6", bool, 6, 6>,
+                                        groov::field<"SEC5", bool, 5, 5>,
+                                        groov::field<"SEC4", bool, 4, 4>,
+                                        groov::field<"SEC3", bool, 3, 3>,
+                                        groov::field<"SEC2", bool, 2, 2>,
+                                        groov::field<"SEC1", bool, 1, 1>,
+                                        groov::field<"SEC0", bool, 0, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using mpcbb4_privcfgr0_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"PRIV31", bool, 31, 31 >,
-  groov::field<"PRIV30", bool, 30, 30 >,
-  groov::field<"PRIV29", bool, 29, 29 >,
-  groov::field<"PRIV28", bool, 28, 28 >,
-  groov::field<"PRIV27", bool, 27, 27 >,
-  groov::field<"PRIV26", bool, 26, 26 >,
-  groov::field<"PRIV25", bool, 25, 25 >,
-  groov::field<"PRIV24", bool, 24, 24 >,
-  groov::field<"PRIV23", bool, 23, 23 >,
-  groov::field<"PRIV22", bool, 22, 22 >,
-  groov::field<"PRIV21", bool, 21, 21 >,
-  groov::field<"PRIV20", bool, 20, 20 >,
-  groov::field<"PRIV19", bool, 19, 19 >,
-  groov::field<"PRIV18", bool, 18, 18 >,
-  groov::field<"PRIV17", bool, 17, 17 >,
-  groov::field<"PRIV16", bool, 16, 16 >,
-  groov::field<"PRIV15", bool, 15, 15 >,
-  groov::field<"PRIV14", bool, 14, 14 >,
-  groov::field<"PRIV13", bool, 13, 13 >,
-  groov::field<"PRIV12", bool, 12, 12 >,
-  groov::field<"PRIV11", bool, 11, 11 >,
-  groov::field<"PRIV10", bool, 10, 10 >,
-  groov::field<"PRIV9", bool, 9, 9 >,
-  groov::field<"PRIV8", bool, 8, 8 >,
-  groov::field<"PRIV7", bool, 7, 7 >,
-  groov::field<"PRIV6", bool, 6, 6 >,
-  groov::field<"PRIV5", bool, 5, 5 >,
-  groov::field<"PRIV4", bool, 4, 4 >,
-  groov::field<"PRIV3", bool, 3, 3 >,
-  groov::field<"PRIV2", bool, 2, 2 >,
-  groov::field<"PRIV1", bool, 1, 1 >,
-  groov::field<"PRIV0", bool, 0, 0 >
-  >;
+                                         std::uint32_t,
+                                         baseaddress + offset,
+                                         access::rw,
+                                         groov::field<"PRIV31", bool, 31, 31>,
+                                         groov::field<"PRIV30", bool, 30, 30>,
+                                         groov::field<"PRIV29", bool, 29, 29>,
+                                         groov::field<"PRIV28", bool, 28, 28>,
+                                         groov::field<"PRIV27", bool, 27, 27>,
+                                         groov::field<"PRIV26", bool, 26, 26>,
+                                         groov::field<"PRIV25", bool, 25, 25>,
+                                         groov::field<"PRIV24", bool, 24, 24>,
+                                         groov::field<"PRIV23", bool, 23, 23>,
+                                         groov::field<"PRIV22", bool, 22, 22>,
+                                         groov::field<"PRIV21", bool, 21, 21>,
+                                         groov::field<"PRIV20", bool, 20, 20>,
+                                         groov::field<"PRIV19", bool, 19, 19>,
+                                         groov::field<"PRIV18", bool, 18, 18>,
+                                         groov::field<"PRIV17", bool, 17, 17>,
+                                         groov::field<"PRIV16", bool, 16, 16>,
+                                         groov::field<"PRIV15", bool, 15, 15>,
+                                         groov::field<"PRIV14", bool, 14, 14>,
+                                         groov::field<"PRIV13", bool, 13, 13>,
+                                         groov::field<"PRIV12", bool, 12, 12>,
+                                         groov::field<"PRIV11", bool, 11, 11>,
+                                         groov::field<"PRIV10", bool, 10, 10>,
+                                         groov::field<"PRIV9", bool, 9, 9>,
+                                         groov::field<"PRIV8", bool, 8, 8>,
+                                         groov::field<"PRIV7", bool, 7, 7>,
+                                         groov::field<"PRIV6", bool, 6, 6>,
+                                         groov::field<"PRIV5", bool, 5, 5>,
+                                         groov::field<"PRIV4", bool, 4, 4>,
+                                         groov::field<"PRIV3", bool, 3, 3>,
+                                         groov::field<"PRIV2", bool, 2, 2>,
+                                         groov::field<"PRIV1", bool, 1, 1>,
+                                         groov::field<"PRIV0", bool, 0, 0>>;
 
-template <std::uint32_t baseaddress>
-using mpcbb4_cr_t = mpcbb4_cr_tt<"MPCBB4_CR",baseaddress,0>;
+  template <std::uint32_t baseaddress>
+  using mpcbb4_cr_t = mpcbb4_cr_tt<"MPCBB4_CR", baseaddress, 0>;
 
-template <std::uint32_t baseaddress>
-using mpcbb4_cfglock_t = mpcbb4_cfglock_tt<"MPCBB4_CFGLOCK",baseaddress,16>;
+  template <std::uint32_t baseaddress>
+  using mpcbb4_cfglock_t = mpcbb4_cfglock_tt<"MPCBB4_CFGLOCK", baseaddress, 16>;
 
-template <std::uint32_t baseaddress>
-using mpcbb4_seccfgr0_t = mpcbb4_seccfgr0_tt<"MPCBB4_SECCFGR0",baseaddress,256>;
+  template <std::uint32_t baseaddress>
+  using mpcbb4_seccfgr0_t =
+    mpcbb4_seccfgr0_tt<"MPCBB4_SECCFGR0", baseaddress, 256>;
 
-template <std::uint32_t baseaddress>
-using mpcbb4_privcfgr0_t = mpcbb4_privcfgr0_tt<"MPCBB4_PRIVCFGR0",baseaddress,512>;
+  template <std::uint32_t baseaddress>
+  using mpcbb4_privcfgr0_t =
+    mpcbb4_privcfgr0_tt<"MPCBB4_PRIVCFGR0", baseaddress, 512>;
 
 } // namespace sec_gtzc2_mpcbb4
-

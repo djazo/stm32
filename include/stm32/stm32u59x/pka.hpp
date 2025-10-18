@@ -11,62 +11,60 @@ namespace stm32 {
 
 namespace pka {
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using cr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED3", std::uint16_t, 31, 22 ,access::ro>,
-  groov::field<"OPERRIE", bool, 21, 21 >,
-  groov::field<"ADDRERRIE", bool, 20, 20 >,
-  groov::field<"RAMERRIE", bool, 19, 19 >,
-  groov::field<"RESERVED2", bool, 18, 18 ,access::ro>,
-  groov::field<"PROCENDIE", bool, 17, 17 >,
-  groov::field<"RESERVED1", std::uint8_t, 16, 14 ,access::ro>,
-  groov::field<"MODE", std::uint8_t, 13, 8 >,
-  groov::field<"RESERVED0", std::uint8_t, 7, 2 ,access::ro>,
-  groov::field<"START", bool, 1, 1 >,
-  groov::field<"EN", bool, 0, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using cr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED3", std::uint16_t, 31, 22, access::ro>,
+               groov::field<"OPERRIE", bool, 21, 21>,
+               groov::field<"ADDRERRIE", bool, 20, 20>,
+               groov::field<"RAMERRIE", bool, 19, 19>,
+               groov::field<"RESERVED2", bool, 18, 18, access::ro>,
+               groov::field<"PROCENDIE", bool, 17, 17>,
+               groov::field<"RESERVED1", std::uint8_t, 16, 14, access::ro>,
+               groov::field<"MODE", std::uint8_t, 13, 8>,
+               groov::field<"RESERVED0", std::uint8_t, 7, 2, access::ro>,
+               groov::field<"START", bool, 1, 1>,
+               groov::field<"EN", bool, 0, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
   using sr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::ro,
-  groov::field<"RESERVED2", std::uint16_t, 31, 22 >,
-  groov::field<"OPERRF", bool, 21, 21 >,
-  groov::field<"ADDRERRF", bool, 20, 20 >,
-  groov::field<"RAMERRF", bool, 19, 19 >,
-  groov::field<"RESERVED1", bool, 18, 18 >,
-  groov::field<"PROCENDF", bool, 17, 17 >,
-  groov::field<"BUSY", bool, 16, 16 >,
-  groov::field<"RESERVED0", std::uint16_t, 15, 1 >,
-  groov::field<"INITOK", bool, 0, 0 >
-  >;
+                           std::uint32_t,
+                           baseaddress + offset,
+                           access::ro,
+                           groov::field<"RESERVED2", std::uint16_t, 31, 22>,
+                           groov::field<"OPERRF", bool, 21, 21>,
+                           groov::field<"ADDRERRF", bool, 20, 20>,
+                           groov::field<"RAMERRF", bool, 19, 19>,
+                           groov::field<"RESERVED1", bool, 18, 18>,
+                           groov::field<"PROCENDF", bool, 17, 17>,
+                           groov::field<"BUSY", bool, 16, 16>,
+                           groov::field<"RESERVED0", std::uint16_t, 15, 1>,
+                           groov::field<"INITOK", bool, 0, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using clrfr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::wo,
-  groov::field<"RESERVED2", std::uint16_t, 31, 22 ,access::ro>,
-  groov::field<"OPERRFC", bool, 21, 21 >,
-  groov::field<"ADDRERRFC", bool, 20, 20 >,
-  groov::field<"RAMERRFC", bool, 19, 19 >,
-  groov::field<"RESERVED1", bool, 18, 18 ,access::ro>,
-  groov::field<"PROCENDFC", bool, 17, 17 >,
-  groov::field<"RESERVED0", std::uint32_t, 16, 0 ,access::ro>
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using clrfr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::wo,
+               groov::field<"RESERVED2", std::uint16_t, 31, 22, access::ro>,
+               groov::field<"OPERRFC", bool, 21, 21>,
+               groov::field<"ADDRERRFC", bool, 20, 20>,
+               groov::field<"RAMERRFC", bool, 19, 19>,
+               groov::field<"RESERVED1", bool, 18, 18, access::ro>,
+               groov::field<"PROCENDFC", bool, 17, 17>,
+               groov::field<"RESERVED0", std::uint32_t, 16, 0, access::ro>>;
 
-template <std::uint32_t baseaddress>
-using cr_t = cr_tt<"CR",baseaddress,0>;
+  template <std::uint32_t baseaddress>
+  using cr_t = cr_tt<"CR", baseaddress, 0>;
 
-template <std::uint32_t baseaddress>
-using sr_t = sr_tt<"SR",baseaddress,4>;
+  template <std::uint32_t baseaddress>
+  using sr_t = sr_tt<"SR", baseaddress, 4>;
 
-template <std::uint32_t baseaddress>
-using clrfr_t = clrfr_tt<"CLRFR",baseaddress,8>;
+  template <std::uint32_t baseaddress>
+  using clrfr_t = clrfr_tt<"CLRFR", baseaddress, 8>;
 
 } // namespace pka
-

@@ -11,35 +11,34 @@ namespace stm32 {
 
 namespace dlybos2 {
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dlyb_cr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED0", std::uint32_t, 31, 2 ,access::ro>,
-  groov::field<"SEN", bool, 1, 1 >,
-  groov::field<"DEN", bool, 0, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dlyb_cr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED0", std::uint32_t, 31, 2, access::ro>,
+               groov::field<"SEN", bool, 1, 1>,
+               groov::field<"DEN", bool, 0, 0>>;
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using dlyb_cfgr_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"LNGF", bool, 31, 31 ,access::ro>,
-  groov::field<"RESERVED2", std::uint8_t, 30, 28 ,access::ro>,
-  groov::field<"LNG", std::uint16_t, 27, 16 ,access::ro>,
-  groov::field<"RESERVED1", bool, 15, 15 ,access::ro>,
-  groov::field<"UNIT", std::uint8_t, 14, 8 >,
-  groov::field<"RESERVED0", std::uint8_t, 7, 4 ,access::ro>,
-  groov::field<"SEL", std::uint8_t, 3, 0 >
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using dlyb_cfgr_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"LNGF", bool, 31, 31, access::ro>,
+               groov::field<"RESERVED2", std::uint8_t, 30, 28, access::ro>,
+               groov::field<"LNG", std::uint16_t, 27, 16, access::ro>,
+               groov::field<"RESERVED1", bool, 15, 15, access::ro>,
+               groov::field<"UNIT", std::uint8_t, 14, 8>,
+               groov::field<"RESERVED0", std::uint8_t, 7, 4, access::ro>,
+               groov::field<"SEL", std::uint8_t, 3, 0>>;
 
-template <std::uint32_t baseaddress>
-using dlyb_cr_t = dlyb_cr_tt<"DLYB_CR",baseaddress,0>;
+  template <std::uint32_t baseaddress>
+  using dlyb_cr_t = dlyb_cr_tt<"DLYB_CR", baseaddress, 0>;
 
-template <std::uint32_t baseaddress>
-using dlyb_cfgr_t = dlyb_cfgr_tt<"DLYB_CFGR",baseaddress,4>;
+  template <std::uint32_t baseaddress>
+  using dlyb_cfgr_t = dlyb_cfgr_tt<"DLYB_CFGR", baseaddress, 4>;
 
 } // namespace dlybos2
-

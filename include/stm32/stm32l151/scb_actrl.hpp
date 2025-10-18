@@ -11,22 +11,21 @@ namespace stm32 {
 
 namespace scb_actrl {
 
-template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using actrl_tt = groov::reg<name,
- std::uint32_t,
-  baseaddress + offset,
- access::rw,
-  groov::field<"RESERVED2", std::uint32_t, 31, 13 ,access::ro>,
-  groov::field<"DISITMATBFLUSH", bool, 12, 12 >,
-  groov::field<"DISRAMODE", bool, 11, 11 >,
-  groov::field<"FPEXCODIS", bool, 10, 10 >,
-  groov::field<"RESERVED1", std::uint8_t, 9, 3 ,access::ro>,
-  groov::field<"DISFOLD", bool, 2, 2 >,
-  groov::field<"RESERVED0", std::uint8_t, 1, 0 ,access::ro>
-  >;
+  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  using actrl_tt =
+    groov::reg<name,
+               std::uint32_t,
+               baseaddress + offset,
+               access::rw,
+               groov::field<"RESERVED2", std::uint32_t, 31, 13, access::ro>,
+               groov::field<"DISITMATBFLUSH", bool, 12, 12>,
+               groov::field<"DISRAMODE", bool, 11, 11>,
+               groov::field<"FPEXCODIS", bool, 10, 10>,
+               groov::field<"RESERVED1", std::uint8_t, 9, 3, access::ro>,
+               groov::field<"DISFOLD", bool, 2, 2>,
+               groov::field<"RESERVED0", std::uint8_t, 1, 0, access::ro>>;
 
-template <std::uint32_t baseaddress>
-using actrl_t = actrl_tt<"ACTRL",baseaddress,0>;
+  template <std::uint32_t baseaddress>
+  using actrl_t = actrl_tt<"ACTRL", baseaddress, 0>;
 
 } // namespace scb_actrl
-
