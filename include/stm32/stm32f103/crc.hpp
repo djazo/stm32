@@ -7,42 +7,40 @@
 
 #include <stm32/common/access.hpp>
 #include <stm32/common/bittypes.hpp>
-namespace stm32 {
 
+namespace stm32 {
 namespace crc {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dr_tt = groov::reg<name,
                            std::uint32_t,
                            baseaddress + offset,
-                           access::rw,
+                           common::access::rw,
                            groov::field<"DR", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using idr_tt =
-    groov::reg<name,
-               std::uint32_t,
-               baseaddress + offset,
-               access::rw,
-               groov::field<"RESERVED0", std::uint32_t, 31, 8, access::ro>,
-               groov::field<"IDR", std::uint8_t, 7, 0>>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using idr_tt = groov::reg<
+    name,
+    std::uint32_t,
+    baseaddress + offset,
+    common::access::rw,
+    groov::field<"RESERVED0", std::uint32_t, 31, 8, common::access::ro>,
+    groov::field<"IDR", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using cr_tt =
-    groov::reg<name,
-               std::uint32_t,
-               baseaddress + offset,
-               access::wo,
-               groov::field<"RESERVED0", std::uint32_t, 31, 1, access::ro>,
-               groov::field<"RESET", bool, 0, 0>>;
-
-  template <std::uint32_t baseaddress>
-  using dr_t = dr_tt<"DR", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using idr_t = idr_tt<"IDR", baseaddress, 4>;
-
-  template <std::uint32_t baseaddress>
-  using cr_t = cr_tt<"CR", baseaddress, 8>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cr_tt = groov::reg<
+    name,
+    std::uint32_t,
+    baseaddress + offset,
+    common::access::wo,
+    groov::field<"RESERVED0", std::uint32_t, 31, 1, common::access::ro>,
+    groov::field<"RESET", bool, 0, 0>>;
 
 } // namespace crc
+} // namespace stm32

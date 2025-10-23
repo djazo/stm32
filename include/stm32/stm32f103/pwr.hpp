@@ -7,42 +7,42 @@
 
 #include <stm32/common/access.hpp>
 #include <stm32/common/bittypes.hpp>
+
 namespace stm32 {
 
 namespace pwr {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using cr_tt =
-    groov::reg<name,
-               std::uint32_t,
-               baseaddress + offset,
-               access::rw,
-               groov::field<"RESERVED0", std::uint32_t, 31, 9, access::ro>,
-               groov::field<"DBP", bool, 8, 8>,
-               groov::field<"PLS", std::uint8_t, 7, 5>,
-               groov::field<"PVDE", bool, 4, 4>,
-               groov::field<"CSBF", bool, 3, 3>,
-               groov::field<"CWUF", bool, 2, 2>,
-               groov::field<"PDDS", bool, 1, 1>,
-               groov::field<"LPDS", bool, 0, 0>>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cr_tt = groov::reg<
+    name,
+    std::uint32_t,
+    baseaddress + offset,
+    common::access::rw,
+    groov::field<"RESERVED0", std::uint32_t, 31, 9, common::access::ro>,
+    groov::field<"DBP", bool, 8, 8>,
+    groov::field<"PLS", std::uint8_t, 7, 5>,
+    groov::field<"PVDE", bool, 4, 4>,
+    groov::field<"CSBF", bool, 3, 3>,
+    groov::field<"CWUF", bool, 2, 2>,
+    groov::field<"PDDS", bool, 1, 1>,
+    groov::field<"LPDS", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
-  using csr_tt =
-    groov::reg<name,
-               std::uint32_t,
-               baseaddress + offset,
-               access::rw,
-               groov::field<"RESERVED1", std::uint32_t, 31, 9, access::ro>,
-               groov::field<"EWUP", bool, 8, 8>,
-               groov::field<"RESERVED0", std::uint8_t, 7, 3, access::ro>,
-               groov::field<"PVDO", bool, 2, 2, access::ro>,
-               groov::field<"SBF", bool, 1, 1, access::ro>,
-               groov::field<"WUF", bool, 0, 0, access::ro>>;
-
-  template <std::uint32_t baseaddress>
-  using cr_t = cr_tt<"CR", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using csr_t = csr_tt<"CSR", baseaddress, 4>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using csr_tt = groov::reg<
+    name,
+    std::uint32_t,
+    baseaddress + offset,
+    common::access::rw,
+    groov::field<"RESERVED1", std::uint32_t, 31, 9, common::access::ro>,
+    groov::field<"EWUP", bool, 8, 8>,
+    groov::field<"RESERVED0", std::uint8_t, 7, 3, common::access::ro>,
+    groov::field<"PVDO", bool, 2, 2, common::access::ro>,
+    groov::field<"SBF", bool, 1, 1, common::access::ro>,
+    groov::field<"WUF", bool, 0, 0, common::access::ro>>;
 
 } // namespace pwr
+} // namespace stm32
