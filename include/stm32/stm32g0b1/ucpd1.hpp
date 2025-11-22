@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace ucpd1 {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ucpd_cfgr1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -27,7 +29,9 @@ namespace ucpd1 {
                groov::field<"IFRGAP", std::uint8_t, 10, 6>,
                groov::field<"HBITCLKDIV", std::uint8_t, 5, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ucpd_cfgr2_tt =
     groov::reg<name,
                std::uint32_t,
@@ -39,7 +43,9 @@ namespace ucpd1 {
                groov::field<"RXFILT2N3", bool, 1, 1>,
                groov::field<"RXFILTDIS", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ucpd_cfgr3_tt =
     groov::reg<name,
                std::uint32_t,
@@ -54,7 +60,9 @@ namespace ucpd1 {
                groov::field<"TRIM1_NG_CC1A5", std::uint8_t, 8, 4>,
                groov::field<"TRIM1_NG_CCRPD", std::uint8_t, 3, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ucpd_cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -81,7 +89,9 @@ namespace ucpd1 {
                groov::field<"TXSEND", bool, 2, 2>,
                groov::field<"TXMODE", std::uint8_t, 1, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ucpd_imr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -107,7 +117,9 @@ namespace ucpd1 {
                groov::field<"TXMSGDISCIE", bool, 1, 1>,
                groov::field<"TXISIE", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ucpd_sr_tt = groov::reg<
     name,
     std::uint32_t,
@@ -134,7 +146,9 @@ namespace ucpd1 {
     groov::field<"TXMSGDISC", bool, 1, 1, access::ro>,
     groov::field<"TXIS", bool, 0, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ucpd_icr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -159,7 +173,9 @@ namespace ucpd1 {
                groov::field<"TXMSGDISCCF", bool, 1, 1, access::wo>,
                groov::field<"RESERVED0", bool, 0, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ucpd_tx_ordsetr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -168,7 +184,9 @@ namespace ucpd1 {
                groov::field<"RESERVED0", std::uint16_t, 31, 20, access::ro>,
                groov::field<"TXORDSET", std::uint32_t, 19, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ucpd_tx_payszr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -177,7 +195,9 @@ namespace ucpd1 {
                groov::field<"RESERVED0", std::uint32_t, 31, 10, access::ro>,
                groov::field<"TXPAYSZ", std::uint16_t, 9, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ucpd_txdr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -186,7 +206,9 @@ namespace ucpd1 {
                groov::field<"RESERVED0", std::uint32_t, 31, 8, access::ro>,
                groov::field<"TXDATA", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ucpd_rx_ordsetr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -197,7 +219,9 @@ namespace ucpd1 {
                groov::field<"RXSOP3OF4", bool, 3, 3, access::ro>,
                groov::field<"RXORDSET", std::uint8_t, 2, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ucpd_rx_payszr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -206,7 +230,9 @@ namespace ucpd1 {
                groov::field<"RESERVED0", std::uint32_t, 31, 10, access::ro>,
                groov::field<"RXPAYSZ", std::uint16_t, 9, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ucpd_rxdr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -215,7 +241,9 @@ namespace ucpd1 {
                groov::field<"RESERVED0", std::uint32_t, 31, 8, access::ro>,
                groov::field<"RXDATA", std::uint8_t, 7, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ucpd_rx_ordextr1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -224,7 +252,9 @@ namespace ucpd1 {
                groov::field<"RESERVED0", std::uint16_t, 31, 20, access::ro>,
                groov::field<"RXSOPX1", std::uint32_t, 19, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ucpd_rx_ordextr2_tt =
     groov::reg<name,
                std::uint32_t,
@@ -232,54 +262,5 @@ namespace ucpd1 {
                access::rw,
                groov::field<"RESERVED0", std::uint16_t, 31, 20, access::ro>,
                groov::field<"RXSOPX2", std::uint32_t, 19, 0>>;
-
-  template <std::uint32_t baseaddress>
-  using ucpd_cfgr1_t = ucpd_cfgr1_tt<"UCPD_CFGR1", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using ucpd_cfgr2_t = ucpd_cfgr2_tt<"UCPD_CFGR2", baseaddress, 4>;
-
-  template <std::uint32_t baseaddress>
-  using ucpd_cfgr3_t = ucpd_cfgr3_tt<"UCPD_CFGR3", baseaddress, 8>;
-
-  template <std::uint32_t baseaddress>
-  using ucpd_cr_t = ucpd_cr_tt<"UCPD_CR", baseaddress, 12>;
-
-  template <std::uint32_t baseaddress>
-  using ucpd_imr_t = ucpd_imr_tt<"UCPD_IMR", baseaddress, 16>;
-
-  template <std::uint32_t baseaddress>
-  using ucpd_sr_t = ucpd_sr_tt<"UCPD_SR", baseaddress, 20>;
-
-  template <std::uint32_t baseaddress>
-  using ucpd_icr_t = ucpd_icr_tt<"UCPD_ICR", baseaddress, 24>;
-
-  template <std::uint32_t baseaddress>
-  using ucpd_tx_ordsetr_t =
-    ucpd_tx_ordsetr_tt<"UCPD_TX_ORDSETR", baseaddress, 28>;
-
-  template <std::uint32_t baseaddress>
-  using ucpd_tx_payszr_t = ucpd_tx_payszr_tt<"UCPD_TX_PAYSZR", baseaddress, 32>;
-
-  template <std::uint32_t baseaddress>
-  using ucpd_txdr_t = ucpd_txdr_tt<"UCPD_TXDR", baseaddress, 36>;
-
-  template <std::uint32_t baseaddress>
-  using ucpd_rx_ordsetr_t =
-    ucpd_rx_ordsetr_tt<"UCPD_RX_ORDSETR", baseaddress, 40>;
-
-  template <std::uint32_t baseaddress>
-  using ucpd_rx_payszr_t = ucpd_rx_payszr_tt<"UCPD_RX_PAYSZR", baseaddress, 44>;
-
-  template <std::uint32_t baseaddress>
-  using ucpd_rxdr_t = ucpd_rxdr_tt<"UCPD_RXDR", baseaddress, 48>;
-
-  template <std::uint32_t baseaddress>
-  using ucpd_rx_ordextr1_t =
-    ucpd_rx_ordextr1_tt<"UCPD_RX_ORDEXTR1", baseaddress, 52>;
-
-  template <std::uint32_t baseaddress>
-  using ucpd_rx_ordextr2_t =
-    ucpd_rx_ordextr2_tt<"UCPD_RX_ORDEXTR2", baseaddress, 56>;
 
 } // namespace ucpd1

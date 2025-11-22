@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace bdma {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using bdma_isr_tt = groov::reg<name,
                                  std::uint32_t,
                                  baseaddress + offset,
@@ -49,7 +51,9 @@ namespace bdma {
                                  groov::field<"TCIF1", bool, 1, 1>,
                                  groov::field<"GIF1", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using bdma_ifcr_tt = groov::reg<name,
                                   std::uint32_t,
                                   baseaddress + offset,
@@ -87,7 +91,9 @@ namespace bdma {
                                   groov::field<"CTCIF1", bool, 1, 1>,
                                   groov::field<"CGIF1", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using bdma_ccr1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -107,7 +113,9 @@ namespace bdma {
                groov::field<"TCIE", bool, 1, 1>,
                groov::field<"EN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using bdma_cndtr1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -116,21 +124,27 @@ namespace bdma {
                groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
                groov::field<"NDT", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using bdma_cpar1_tt = groov::reg<name,
                                    std::uint32_t,
                                    baseaddress + offset,
                                    access::rw,
                                    groov::field<"PA", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using bdma_cmar1_tt = groov::reg<name,
                                    std::uint32_t,
                                    baseaddress + offset,
                                    access::rw,
                                    groov::field<"MA", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using bdma_ccr2_tt =
     groov::reg<name,
                std::uint32_t,
@@ -150,7 +164,9 @@ namespace bdma {
                groov::field<"TCIE", bool, 1, 1>,
                groov::field<"EN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using bdma_cndtr2_tt =
     groov::reg<name,
                std::uint32_t,
@@ -159,21 +175,27 @@ namespace bdma {
                groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
                groov::field<"NDT", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using bdma_cpar2_tt = groov::reg<name,
                                    std::uint32_t,
                                    baseaddress + offset,
                                    access::rw,
                                    groov::field<"PA", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using bdma_cmar2_tt = groov::reg<name,
                                    std::uint32_t,
                                    baseaddress + offset,
                                    access::rw,
                                    groov::field<"MA", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using bdma_ccr3_tt =
     groov::reg<name,
                std::uint32_t,
@@ -193,7 +215,9 @@ namespace bdma {
                groov::field<"TCIE", bool, 1, 1>,
                groov::field<"EN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using bdma_cndtr3_tt =
     groov::reg<name,
                std::uint32_t,
@@ -202,21 +226,27 @@ namespace bdma {
                groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
                groov::field<"NDT", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using bdma_cpar3_tt = groov::reg<name,
                                    std::uint32_t,
                                    baseaddress + offset,
                                    access::rw,
                                    groov::field<"PA", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using bdma_cmar3_tt = groov::reg<name,
                                    std::uint32_t,
                                    baseaddress + offset,
                                    access::rw,
                                    groov::field<"MA", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using bdma_ccr4_tt =
     groov::reg<name,
                std::uint32_t,
@@ -236,7 +266,9 @@ namespace bdma {
                groov::field<"TCIE", bool, 1, 1>,
                groov::field<"EN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using bdma_cndtr4_tt =
     groov::reg<name,
                std::uint32_t,
@@ -245,21 +277,27 @@ namespace bdma {
                groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
                groov::field<"NDT", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using bdma_cpar4_tt = groov::reg<name,
                                    std::uint32_t,
                                    baseaddress + offset,
                                    access::rw,
                                    groov::field<"PA", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using bdma_cmar4_tt = groov::reg<name,
                                    std::uint32_t,
                                    baseaddress + offset,
                                    access::rw,
                                    groov::field<"MA", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using bdma_ccr5_tt =
     groov::reg<name,
                std::uint32_t,
@@ -279,7 +317,9 @@ namespace bdma {
                groov::field<"TCIE", bool, 1, 1>,
                groov::field<"EN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using bdma_cndtr5_tt =
     groov::reg<name,
                std::uint32_t,
@@ -288,21 +328,27 @@ namespace bdma {
                groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
                groov::field<"NDT", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using bdma_cpar5_tt = groov::reg<name,
                                    std::uint32_t,
                                    baseaddress + offset,
                                    access::rw,
                                    groov::field<"PA", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using bdma_cmar5_tt = groov::reg<name,
                                    std::uint32_t,
                                    baseaddress + offset,
                                    access::rw,
                                    groov::field<"MA", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using bdma_ccr6_tt =
     groov::reg<name,
                std::uint32_t,
@@ -322,7 +368,9 @@ namespace bdma {
                groov::field<"TCIE", bool, 1, 1>,
                groov::field<"EN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using bdma_cndtr6_tt =
     groov::reg<name,
                std::uint32_t,
@@ -331,21 +379,27 @@ namespace bdma {
                groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
                groov::field<"NDT", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using bdma_cpar6_tt = groov::reg<name,
                                    std::uint32_t,
                                    baseaddress + offset,
                                    access::rw,
                                    groov::field<"PA", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using bdma_cmar6_tt = groov::reg<name,
                                    std::uint32_t,
                                    baseaddress + offset,
                                    access::rw,
                                    groov::field<"MA", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using bdma_ccr7_tt =
     groov::reg<name,
                std::uint32_t,
@@ -365,7 +419,9 @@ namespace bdma {
                groov::field<"TCIE", bool, 1, 1>,
                groov::field<"EN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using bdma_cndtr7_tt =
     groov::reg<name,
                std::uint32_t,
@@ -374,21 +430,27 @@ namespace bdma {
                groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
                groov::field<"NDT", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using bdma_cpar7_tt = groov::reg<name,
                                    std::uint32_t,
                                    baseaddress + offset,
                                    access::rw,
                                    groov::field<"PA", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using bdma_cmar7_tt = groov::reg<name,
                                    std::uint32_t,
                                    baseaddress + offset,
                                    access::rw,
                                    groov::field<"MA", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using bdma_ccr8_tt =
     groov::reg<name,
                std::uint32_t,
@@ -408,7 +470,9 @@ namespace bdma {
                groov::field<"TCIE", bool, 1, 1>,
                groov::field<"EN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using bdma_cndtr8_tt =
     groov::reg<name,
                std::uint32_t,
@@ -417,120 +481,22 @@ namespace bdma {
                groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
                groov::field<"NDT", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using bdma_cpar8_tt = groov::reg<name,
                                    std::uint32_t,
                                    baseaddress + offset,
                                    access::rw,
                                    groov::field<"PA", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using bdma_cmar8_tt = groov::reg<name,
                                    std::uint32_t,
                                    baseaddress + offset,
                                    access::rw,
                                    groov::field<"MA", std::uint32_t, 31, 0>>;
-
-  template <std::uint32_t baseaddress>
-  using bdma_isr_t = bdma_isr_tt<"BDMA_ISR", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using bdma_ifcr_t = bdma_ifcr_tt<"BDMA_IFCR", baseaddress, 4>;
-
-  template <std::uint32_t baseaddress>
-  using bdma_ccr1_t = bdma_ccr1_tt<"BDMA_CCR1", baseaddress, 8>;
-
-  template <std::uint32_t baseaddress>
-  using bdma_cndtr1_t = bdma_cndtr1_tt<"BDMA_CNDTR1", baseaddress, 12>;
-
-  template <std::uint32_t baseaddress>
-  using bdma_cpar1_t = bdma_cpar1_tt<"BDMA_CPAR1", baseaddress, 16>;
-
-  template <std::uint32_t baseaddress>
-  using bdma_cmar1_t = bdma_cmar1_tt<"BDMA_CMAR1", baseaddress, 20>;
-
-  template <std::uint32_t baseaddress>
-  using bdma_ccr2_t = bdma_ccr2_tt<"BDMA_CCR2", baseaddress, 28>;
-
-  template <std::uint32_t baseaddress>
-  using bdma_cndtr2_t = bdma_cndtr2_tt<"BDMA_CNDTR2", baseaddress, 32>;
-
-  template <std::uint32_t baseaddress>
-  using bdma_cpar2_t = bdma_cpar2_tt<"BDMA_CPAR2", baseaddress, 36>;
-
-  template <std::uint32_t baseaddress>
-  using bdma_cmar2_t = bdma_cmar2_tt<"BDMA_CMAR2", baseaddress, 40>;
-
-  template <std::uint32_t baseaddress>
-  using bdma_ccr3_t = bdma_ccr3_tt<"BDMA_CCR3", baseaddress, 48>;
-
-  template <std::uint32_t baseaddress>
-  using bdma_cndtr3_t = bdma_cndtr3_tt<"BDMA_CNDTR3", baseaddress, 52>;
-
-  template <std::uint32_t baseaddress>
-  using bdma_cpar3_t = bdma_cpar3_tt<"BDMA_CPAR3", baseaddress, 56>;
-
-  template <std::uint32_t baseaddress>
-  using bdma_cmar3_t = bdma_cmar3_tt<"BDMA_CMAR3", baseaddress, 60>;
-
-  template <std::uint32_t baseaddress>
-  using bdma_ccr4_t = bdma_ccr4_tt<"BDMA_CCR4", baseaddress, 68>;
-
-  template <std::uint32_t baseaddress>
-  using bdma_cndtr4_t = bdma_cndtr4_tt<"BDMA_CNDTR4", baseaddress, 72>;
-
-  template <std::uint32_t baseaddress>
-  using bdma_cpar4_t = bdma_cpar4_tt<"BDMA_CPAR4", baseaddress, 76>;
-
-  template <std::uint32_t baseaddress>
-  using bdma_cmar4_t = bdma_cmar4_tt<"BDMA_CMAR4", baseaddress, 80>;
-
-  template <std::uint32_t baseaddress>
-  using bdma_ccr5_t = bdma_ccr5_tt<"BDMA_CCR5", baseaddress, 88>;
-
-  template <std::uint32_t baseaddress>
-  using bdma_cndtr5_t = bdma_cndtr5_tt<"BDMA_CNDTR5", baseaddress, 92>;
-
-  template <std::uint32_t baseaddress>
-  using bdma_cpar5_t = bdma_cpar5_tt<"BDMA_CPAR5", baseaddress, 96>;
-
-  template <std::uint32_t baseaddress>
-  using bdma_cmar5_t = bdma_cmar5_tt<"BDMA_CMAR5", baseaddress, 100>;
-
-  template <std::uint32_t baseaddress>
-  using bdma_ccr6_t = bdma_ccr6_tt<"BDMA_CCR6", baseaddress, 108>;
-
-  template <std::uint32_t baseaddress>
-  using bdma_cndtr6_t = bdma_cndtr6_tt<"BDMA_CNDTR6", baseaddress, 112>;
-
-  template <std::uint32_t baseaddress>
-  using bdma_cpar6_t = bdma_cpar6_tt<"BDMA_CPAR6", baseaddress, 116>;
-
-  template <std::uint32_t baseaddress>
-  using bdma_cmar6_t = bdma_cmar6_tt<"BDMA_CMAR6", baseaddress, 120>;
-
-  template <std::uint32_t baseaddress>
-  using bdma_ccr7_t = bdma_ccr7_tt<"BDMA_CCR7", baseaddress, 128>;
-
-  template <std::uint32_t baseaddress>
-  using bdma_cndtr7_t = bdma_cndtr7_tt<"BDMA_CNDTR7", baseaddress, 132>;
-
-  template <std::uint32_t baseaddress>
-  using bdma_cpar7_t = bdma_cpar7_tt<"BDMA_CPAR7", baseaddress, 136>;
-
-  template <std::uint32_t baseaddress>
-  using bdma_cmar7_t = bdma_cmar7_tt<"BDMA_CMAR7", baseaddress, 140>;
-
-  template <std::uint32_t baseaddress>
-  using bdma_ccr8_t = bdma_ccr8_tt<"BDMA_CCR8", baseaddress, 148>;
-
-  template <std::uint32_t baseaddress>
-  using bdma_cndtr8_t = bdma_cndtr8_tt<"BDMA_CNDTR8", baseaddress, 152>;
-
-  template <std::uint32_t baseaddress>
-  using bdma_cpar8_t = bdma_cpar8_tt<"BDMA_CPAR8", baseaddress, 156>;
-
-  template <std::uint32_t baseaddress>
-  using bdma_cmar8_t = bdma_cmar8_tt<"BDMA_CMAR8", baseaddress, 160>;
 
 } // namespace bdma

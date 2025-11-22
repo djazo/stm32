@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace i2s2ext {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using cr1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -33,7 +35,9 @@ namespace i2s2ext {
                groov::field<"CPOL", bool, 1, 1>,
                groov::field<"CPHA", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using cr2_tt =
     groov::reg<name,
                std::uint32_t,
@@ -49,7 +53,9 @@ namespace i2s2ext {
                groov::field<"TXDMAEN", bool, 1, 1>,
                groov::field<"RXDMAEN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using sr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -66,7 +72,9 @@ namespace i2s2ext {
                groov::field<"TXE", bool, 1, 1, access::ro>,
                groov::field<"RXNE", bool, 0, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -75,7 +83,9 @@ namespace i2s2ext {
                groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
                groov::field<"DR", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using crcpr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -84,7 +94,9 @@ namespace i2s2ext {
                groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
                groov::field<"CRCPOLY", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using rxcrcr_tt = groov::reg<name,
                                std::uint32_t,
                                baseaddress + offset,
@@ -92,7 +104,9 @@ namespace i2s2ext {
                                groov::field<"RESERVED0", std::uint16_t, 31, 16>,
                                groov::field<"RxCRC", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using txcrcr_tt = groov::reg<name,
                                std::uint32_t,
                                baseaddress + offset,
@@ -100,7 +114,9 @@ namespace i2s2ext {
                                groov::field<"RESERVED0", std::uint16_t, 31, 16>,
                                groov::field<"TxCRC", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using i2scfgr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -117,7 +133,9 @@ namespace i2s2ext {
                groov::field<"DATLEN", std::uint8_t, 2, 1>,
                groov::field<"CHLEN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using i2spr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -127,32 +145,5 @@ namespace i2s2ext {
                groov::field<"MCKOE", bool, 9, 9>,
                groov::field<"ODD", bool, 8, 8>,
                groov::field<"I2SDIV", std::uint8_t, 7, 0>>;
-
-  template <std::uint32_t baseaddress>
-  using cr1_t = cr1_tt<"CR1", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using cr2_t = cr2_tt<"CR2", baseaddress, 4>;
-
-  template <std::uint32_t baseaddress>
-  using sr_t = sr_tt<"SR", baseaddress, 8>;
-
-  template <std::uint32_t baseaddress>
-  using dr_t = dr_tt<"DR", baseaddress, 12>;
-
-  template <std::uint32_t baseaddress>
-  using crcpr_t = crcpr_tt<"CRCPR", baseaddress, 16>;
-
-  template <std::uint32_t baseaddress>
-  using rxcrcr_t = rxcrcr_tt<"RXCRCR", baseaddress, 20>;
-
-  template <std::uint32_t baseaddress>
-  using txcrcr_t = txcrcr_tt<"TXCRCR", baseaddress, 24>;
-
-  template <std::uint32_t baseaddress>
-  using i2scfgr_t = i2scfgr_tt<"I2SCFGR", baseaddress, 28>;
-
-  template <std::uint32_t baseaddress>
-  using i2spr_t = i2spr_tt<"I2SPR", baseaddress, 32>;
 
 } // namespace i2s2ext

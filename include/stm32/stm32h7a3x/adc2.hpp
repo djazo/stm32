@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace adc2 {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using isr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -30,7 +32,9 @@ namespace adc2 {
                groov::field<"EOSMP", bool, 1, 1>,
                groov::field<"ADRDY", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ier_tt =
     groov::reg<name,
                std::uint32_t,
@@ -49,7 +53,9 @@ namespace adc2 {
                groov::field<"EOSMPIE", bool, 1, 1>,
                groov::field<"ADRDYIE", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -77,7 +83,9 @@ namespace adc2 {
                groov::field<"ADDIS", bool, 1, 1>,
                groov::field<"ADEN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using cfgr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -103,7 +111,9 @@ namespace adc2 {
                groov::field<"RES", std::uint8_t, 3, 2>,
                groov::field<"DMNGT", std::uint8_t, 1, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using cfgr2_tt =
     groov::reg<name,
                std::uint32_t,
@@ -124,7 +134,9 @@ namespace adc2 {
                groov::field<"JOVSE", bool, 1, 1>,
                groov::field<"ROVSE", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using smpr1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -142,7 +154,9 @@ namespace adc2 {
                groov::field<"SMP1", std::uint8_t, 5, 3>,
                groov::field<"RESERVED0", std::uint8_t, 2, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using smpr2_tt =
     groov::reg<name,
                std::uint32_t,
@@ -160,7 +174,9 @@ namespace adc2 {
                groov::field<"SMP11", std::uint8_t, 5, 3>,
                groov::field<"SMP10", std::uint8_t, 2, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ltr1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -169,7 +185,9 @@ namespace adc2 {
                groov::field<"RESERVED0", std::uint8_t, 31, 26, access::ro>,
                groov::field<"LTR1", std::uint32_t, 25, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using lhtr1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -178,7 +196,9 @@ namespace adc2 {
                groov::field<"RESERVED0", std::uint8_t, 31, 26, access::ro>,
                groov::field<"LHTR1", std::uint32_t, 25, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using sqr1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -195,7 +215,9 @@ namespace adc2 {
                groov::field<"RESERVED0", std::uint8_t, 5, 4, access::ro>,
                groov::field<"L3", std::uint8_t, 3, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using sqr2_tt =
     groov::reg<name,
                std::uint32_t,
@@ -212,7 +234,9 @@ namespace adc2 {
                groov::field<"RESERVED0", bool, 5, 5, access::ro>,
                groov::field<"SQ5", std::uint8_t, 4, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using sqr3_tt =
     groov::reg<name,
                std::uint32_t,
@@ -229,7 +253,9 @@ namespace adc2 {
                groov::field<"RESERVED0", bool, 5, 5, access::ro>,
                groov::field<"SQ10", std::uint8_t, 4, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using sqr4_tt =
     groov::reg<name,
                std::uint32_t,
@@ -240,7 +266,9 @@ namespace adc2 {
                groov::field<"RESERVED0", bool, 5, 5, access::ro>,
                groov::field<"SQ15", std::uint8_t, 4, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dr_tt = groov::reg<name,
                            std::uint32_t,
                            baseaddress + offset,
@@ -248,7 +276,9 @@ namespace adc2 {
                            groov::field<"RESERVED0", std::uint16_t, 31, 16>,
                            groov::field<"RDATA", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using jsqr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -265,7 +295,9 @@ namespace adc2 {
                groov::field<"JEXTSEL", std::uint8_t, 6, 2>,
                groov::field<"JL", std::uint8_t, 1, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ofr1_tt = groov::reg<name,
                              std::uint32_t,
                              baseaddress + offset,
@@ -274,7 +306,9 @@ namespace adc2 {
                              groov::field<"OFFSET1_CH", std::uint8_t, 30, 26>,
                              groov::field<"OFFSET1", std::uint32_t, 25, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ofr2_tt = groov::reg<name,
                              std::uint32_t,
                              baseaddress + offset,
@@ -283,7 +317,9 @@ namespace adc2 {
                              groov::field<"OFFSET1_CH", std::uint8_t, 30, 26>,
                              groov::field<"OFFSET1", std::uint32_t, 25, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ofr3_tt = groov::reg<name,
                              std::uint32_t,
                              baseaddress + offset,
@@ -292,7 +328,9 @@ namespace adc2 {
                              groov::field<"OFFSET1_CH", std::uint8_t, 30, 26>,
                              groov::field<"OFFSET1", std::uint32_t, 25, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ofr4_tt = groov::reg<name,
                              std::uint32_t,
                              baseaddress + offset,
@@ -301,35 +339,45 @@ namespace adc2 {
                              groov::field<"OFFSET1_CH", std::uint8_t, 30, 26>,
                              groov::field<"OFFSET1", std::uint32_t, 25, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using jdr1_tt = groov::reg<name,
                              std::uint32_t,
                              baseaddress + offset,
                              access::ro,
                              groov::field<"JDATA1", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using jdr2_tt = groov::reg<name,
                              std::uint32_t,
                              baseaddress + offset,
                              access::ro,
                              groov::field<"JDATA2", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using jdr3_tt = groov::reg<name,
                              std::uint32_t,
                              baseaddress + offset,
                              access::ro,
                              groov::field<"JDATA3", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using jdr4_tt = groov::reg<name,
                              std::uint32_t,
                              baseaddress + offset,
                              access::ro,
                              groov::field<"JDATA4", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using awd2cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -338,7 +386,9 @@ namespace adc2 {
                groov::field<"RESERVED0", std::uint16_t, 31, 20, access::ro>,
                groov::field<"AWD2CH", std::uint32_t, 19, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using awd3cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -348,7 +398,9 @@ namespace adc2 {
                groov::field<"AWD3CH", std::uint32_t, 20, 1>,
                groov::field<"RESERVED0", bool, 0, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using difsel_tt =
     groov::reg<name,
                std::uint32_t,
@@ -357,7 +409,9 @@ namespace adc2 {
                groov::field<"RESERVED0", std::uint16_t, 31, 20, access::ro>,
                groov::field<"DIFSEL", std::uint32_t, 19, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using calfact_tt =
     groov::reg<name,
                std::uint32_t,
@@ -368,7 +422,9 @@ namespace adc2 {
                groov::field<"RESERVED0", std::uint8_t, 15, 11, access::ro>,
                groov::field<"CALFACT_S", std::uint16_t, 10, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using pcsel_tt =
     groov::reg<name,
                std::uint32_t,
@@ -377,7 +433,9 @@ namespace adc2 {
                groov::field<"RESERVED0", std::uint16_t, 31, 20, access::ro>,
                groov::field<"PCSEL", std::uint32_t, 19, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ltr2_tt =
     groov::reg<name,
                std::uint32_t,
@@ -386,7 +444,9 @@ namespace adc2 {
                groov::field<"RESERVED0", std::uint8_t, 31, 26, access::ro>,
                groov::field<"LTR2", std::uint32_t, 25, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using htr2_tt =
     groov::reg<name,
                std::uint32_t,
@@ -395,7 +455,9 @@ namespace adc2 {
                groov::field<"RESERVED0", std::uint8_t, 31, 26, access::ro>,
                groov::field<"HTR2", std::uint32_t, 25, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ltr3_tt =
     groov::reg<name,
                std::uint32_t,
@@ -404,7 +466,9 @@ namespace adc2 {
                groov::field<"RESERVED0", std::uint8_t, 31, 26, access::ro>,
                groov::field<"LTR3", std::uint32_t, 25, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using htr3_tt =
     groov::reg<name,
                std::uint32_t,
@@ -413,7 +477,9 @@ namespace adc2 {
                groov::field<"RESERVED0", std::uint8_t, 31, 26, access::ro>,
                groov::field<"HTR3", std::uint32_t, 25, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using calfact2_tt =
     groov::reg<name,
                std::uint32_t,
@@ -421,104 +487,5 @@ namespace adc2 {
                access::rw,
                groov::field<"RESERVED0", std::uint8_t, 31, 30, access::ro>,
                groov::field<"LINCALFACT", std::uint32_t, 29, 0>>;
-
-  template <std::uint32_t baseaddress>
-  using isr_t = isr_tt<"ISR", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using ier_t = ier_tt<"IER", baseaddress, 4>;
-
-  template <std::uint32_t baseaddress>
-  using cr_t = cr_tt<"CR", baseaddress, 8>;
-
-  template <std::uint32_t baseaddress>
-  using cfgr_t = cfgr_tt<"CFGR", baseaddress, 12>;
-
-  template <std::uint32_t baseaddress>
-  using cfgr2_t = cfgr2_tt<"CFGR2", baseaddress, 16>;
-
-  template <std::uint32_t baseaddress>
-  using smpr1_t = smpr1_tt<"SMPR1", baseaddress, 20>;
-
-  template <std::uint32_t baseaddress>
-  using smpr2_t = smpr2_tt<"SMPR2", baseaddress, 24>;
-
-  template <std::uint32_t baseaddress>
-  using ltr1_t = ltr1_tt<"LTR1", baseaddress, 32>;
-
-  template <std::uint32_t baseaddress>
-  using lhtr1_t = lhtr1_tt<"LHTR1", baseaddress, 36>;
-
-  template <std::uint32_t baseaddress>
-  using sqr1_t = sqr1_tt<"SQR1", baseaddress, 48>;
-
-  template <std::uint32_t baseaddress>
-  using sqr2_t = sqr2_tt<"SQR2", baseaddress, 52>;
-
-  template <std::uint32_t baseaddress>
-  using sqr3_t = sqr3_tt<"SQR3", baseaddress, 56>;
-
-  template <std::uint32_t baseaddress>
-  using sqr4_t = sqr4_tt<"SQR4", baseaddress, 60>;
-
-  template <std::uint32_t baseaddress>
-  using dr_t = dr_tt<"DR", baseaddress, 64>;
-
-  template <std::uint32_t baseaddress>
-  using jsqr_t = jsqr_tt<"JSQR", baseaddress, 76>;
-
-  template <std::uint32_t baseaddress>
-  using ofr1_t = ofr1_tt<"OFR1", baseaddress, 96>;
-
-  template <std::uint32_t baseaddress>
-  using ofr2_t = ofr2_tt<"OFR2", baseaddress, 100>;
-
-  template <std::uint32_t baseaddress>
-  using ofr3_t = ofr3_tt<"OFR3", baseaddress, 104>;
-
-  template <std::uint32_t baseaddress>
-  using ofr4_t = ofr4_tt<"OFR4", baseaddress, 108>;
-
-  template <std::uint32_t baseaddress>
-  using jdr1_t = jdr1_tt<"JDR1", baseaddress, 128>;
-
-  template <std::uint32_t baseaddress>
-  using jdr2_t = jdr2_tt<"JDR2", baseaddress, 132>;
-
-  template <std::uint32_t baseaddress>
-  using jdr3_t = jdr3_tt<"JDR3", baseaddress, 136>;
-
-  template <std::uint32_t baseaddress>
-  using jdr4_t = jdr4_tt<"JDR4", baseaddress, 140>;
-
-  template <std::uint32_t baseaddress>
-  using awd2cr_t = awd2cr_tt<"AWD2CR", baseaddress, 160>;
-
-  template <std::uint32_t baseaddress>
-  using awd3cr_t = awd3cr_tt<"AWD3CR", baseaddress, 164>;
-
-  template <std::uint32_t baseaddress>
-  using difsel_t = difsel_tt<"DIFSEL", baseaddress, 192>;
-
-  template <std::uint32_t baseaddress>
-  using calfact_t = calfact_tt<"CALFACT", baseaddress, 196>;
-
-  template <std::uint32_t baseaddress>
-  using pcsel_t = pcsel_tt<"PCSEL", baseaddress, 28>;
-
-  template <std::uint32_t baseaddress>
-  using ltr2_t = ltr2_tt<"LTR2", baseaddress, 176>;
-
-  template <std::uint32_t baseaddress>
-  using htr2_t = htr2_tt<"HTR2", baseaddress, 180>;
-
-  template <std::uint32_t baseaddress>
-  using ltr3_t = ltr3_tt<"LTR3", baseaddress, 184>;
-
-  template <std::uint32_t baseaddress>
-  using htr3_t = htr3_tt<"HTR3", baseaddress, 188>;
-
-  template <std::uint32_t baseaddress>
-  using calfact2_t = calfact2_tt<"CALFACT2", baseaddress, 200>;
 
 } // namespace adc2

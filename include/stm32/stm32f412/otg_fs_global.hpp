@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace otg_fs_global {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using fs_gotgctl_tt =
     groov::reg<name,
                std::uint32_t,
@@ -31,7 +33,9 @@ namespace otg_fs_global {
                groov::field<"SRQ", bool, 1, 1>,
                groov::field<"SRQSCS", bool, 0, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using fs_gotgint_tt =
     groov::reg<name,
                std::uint32_t,
@@ -48,7 +52,9 @@ namespace otg_fs_global {
                groov::field<"SEDET", bool, 2, 2>,
                groov::field<"RESERVED0", std::uint8_t, 1, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using fs_gahbcfg_tt =
     groov::reg<name,
                std::uint32_t,
@@ -60,7 +66,9 @@ namespace otg_fs_global {
                groov::field<"RESERVED0", std::uint8_t, 6, 1, access::ro>,
                groov::field<"GINT", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using fs_gusbcfg_tt =
     groov::reg<name,
                std::uint32_t,
@@ -78,7 +86,9 @@ namespace otg_fs_global {
                groov::field<"RESERVED0", std::uint8_t, 5, 3, access::ro>,
                groov::field<"TOCAL", std::uint8_t, 2, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using fs_grstctl_tt =
     groov::reg<name,
                std::uint32_t,
@@ -94,7 +104,9 @@ namespace otg_fs_global {
                groov::field<"HSRST", bool, 1, 1>,
                groov::field<"CSRST", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using fs_gintsts_tt =
     groov::reg<name,
                std::uint32_t,
@@ -130,7 +142,9 @@ namespace otg_fs_global {
                groov::field<"MMIS", bool, 1, 1>,
                groov::field<"CMOD", bool, 0, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using fs_gintmsk_tt =
     groov::reg<name,
                std::uint32_t,
@@ -167,7 +181,9 @@ namespace otg_fs_global {
                groov::field<"MMISM", bool, 1, 1>,
                groov::field<"RESERVED0", bool, 0, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using fs_grxstsr_device_tt =
     groov::reg<name,
                std::uint32_t,
@@ -180,7 +196,9 @@ namespace otg_fs_global {
                groov::field<"BCNT", std::uint16_t, 14, 4>,
                groov::field<"EPNUM", std::uint8_t, 3, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using fs_grxstsr_host_tt =
     groov::reg<name,
                std::uint32_t,
@@ -193,7 +211,9 @@ namespace otg_fs_global {
                groov::field<"BCNT", std::uint16_t, 14, 4>,
                groov::field<"EPNUM", std::uint8_t, 3, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using fs_grxfsiz_tt =
     groov::reg<name,
                std::uint32_t,
@@ -202,7 +222,9 @@ namespace otg_fs_global {
                groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
                groov::field<"RXFD", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using fs_gnptxfsiz_device_tt =
     groov::reg<name,
                std::uint32_t,
@@ -211,7 +233,9 @@ namespace otg_fs_global {
                groov::field<"TX0FD", std::uint16_t, 31, 16>,
                groov::field<"TX0FSA", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using fs_gnptxfsiz_host_tt =
     groov::reg<name,
                std::uint32_t,
@@ -220,7 +244,9 @@ namespace otg_fs_global {
                groov::field<"NPTXFD", std::uint16_t, 31, 16>,
                groov::field<"NPTXFSA", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using fs_gnptxsts_tt =
     groov::reg<name,
                std::uint32_t,
@@ -231,7 +257,9 @@ namespace otg_fs_global {
                groov::field<"NPTQXSAV", std::uint8_t, 23, 16>,
                groov::field<"NPTXFSAV", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using fs_gccfg_tt =
     groov::reg<name,
                std::uint32_t,
@@ -250,7 +278,9 @@ namespace otg_fs_global {
                groov::field<"PDET", bool, 1, 1>,
                groov::field<"DCDET", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using fs_cid_tt =
     groov::reg<name,
                std::uint32_t,
@@ -258,7 +288,9 @@ namespace otg_fs_global {
                access::rw,
                groov::field<"PRODUCT_ID", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using fs_hptxfsiz_tt =
     groov::reg<name,
                std::uint32_t,
@@ -267,7 +299,9 @@ namespace otg_fs_global {
                groov::field<"PTXFSIZ", std::uint16_t, 31, 16>,
                groov::field<"PTXSA", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using fs_dieptxf1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -276,7 +310,9 @@ namespace otg_fs_global {
                groov::field<"INEPTXFD", std::uint16_t, 31, 16>,
                groov::field<"INEPTXSA", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using fs_dieptxf2_tt =
     groov::reg<name,
                std::uint32_t,
@@ -285,7 +321,9 @@ namespace otg_fs_global {
                groov::field<"INEPTXFD", std::uint16_t, 31, 16>,
                groov::field<"INEPTXSA", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using fs_dieptxf3_tt =
     groov::reg<name,
                std::uint32_t,
@@ -293,66 +331,5 @@ namespace otg_fs_global {
                access::rw,
                groov::field<"INEPTXFD", std::uint16_t, 31, 16>,
                groov::field<"INEPTXSA", std::uint16_t, 15, 0>>;
-
-  template <std::uint32_t baseaddress>
-  using fs_gotgctl_t = fs_gotgctl_tt<"FS_GOTGCTL", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using fs_gotgint_t = fs_gotgint_tt<"FS_GOTGINT", baseaddress, 4>;
-
-  template <std::uint32_t baseaddress>
-  using fs_gahbcfg_t = fs_gahbcfg_tt<"FS_GAHBCFG", baseaddress, 8>;
-
-  template <std::uint32_t baseaddress>
-  using fs_gusbcfg_t = fs_gusbcfg_tt<"FS_GUSBCFG", baseaddress, 12>;
-
-  template <std::uint32_t baseaddress>
-  using fs_grstctl_t = fs_grstctl_tt<"FS_GRSTCTL", baseaddress, 16>;
-
-  template <std::uint32_t baseaddress>
-  using fs_gintsts_t = fs_gintsts_tt<"FS_GINTSTS", baseaddress, 20>;
-
-  template <std::uint32_t baseaddress>
-  using fs_gintmsk_t = fs_gintmsk_tt<"FS_GINTMSK", baseaddress, 24>;
-
-  template <std::uint32_t baseaddress>
-  using fs_grxstsr_device_t =
-    fs_grxstsr_device_tt<"FS_GRXSTSR_Device", baseaddress, 28>;
-
-  template <std::uint32_t baseaddress>
-  using fs_grxstsr_host_t =
-    fs_grxstsr_host_tt<"FS_GRXSTSR_Host", baseaddress, 28>;
-
-  template <std::uint32_t baseaddress>
-  using fs_grxfsiz_t = fs_grxfsiz_tt<"FS_GRXFSIZ", baseaddress, 36>;
-
-  template <std::uint32_t baseaddress>
-  using fs_gnptxfsiz_device_t =
-    fs_gnptxfsiz_device_tt<"FS_GNPTXFSIZ_Device", baseaddress, 40>;
-
-  template <std::uint32_t baseaddress>
-  using fs_gnptxfsiz_host_t =
-    fs_gnptxfsiz_host_tt<"FS_GNPTXFSIZ_Host", baseaddress, 40>;
-
-  template <std::uint32_t baseaddress>
-  using fs_gnptxsts_t = fs_gnptxsts_tt<"FS_GNPTXSTS", baseaddress, 44>;
-
-  template <std::uint32_t baseaddress>
-  using fs_gccfg_t = fs_gccfg_tt<"FS_GCCFG", baseaddress, 56>;
-
-  template <std::uint32_t baseaddress>
-  using fs_cid_t = fs_cid_tt<"FS_CID", baseaddress, 60>;
-
-  template <std::uint32_t baseaddress>
-  using fs_hptxfsiz_t = fs_hptxfsiz_tt<"FS_HPTXFSIZ", baseaddress, 256>;
-
-  template <std::uint32_t baseaddress>
-  using fs_dieptxf1_t = fs_dieptxf1_tt<"FS_DIEPTXF1", baseaddress, 260>;
-
-  template <std::uint32_t baseaddress>
-  using fs_dieptxf2_t = fs_dieptxf2_tt<"FS_DIEPTXF2", baseaddress, 264>;
-
-  template <std::uint32_t baseaddress>
-  using fs_dieptxf3_t = fs_dieptxf3_tt<"FS_DIEPTXF3", baseaddress, 268>;
 
 } // namespace otg_fs_global

@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace pf {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using clidr_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
@@ -28,7 +30,9 @@ namespace pf {
                               groov::field<"CL2", std::uint8_t, 5, 3>,
                               groov::field<"CL1", std::uint8_t, 2, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ctr_tt = groov::reg<name,
                             std::uint32_t,
                             baseaddress + offset,
@@ -41,7 +45,9 @@ namespace pf {
                             groov::field<"RESERVED0", std::uint16_t, 15, 4>,
                             groov::field<"_IminLine", std::uint8_t, 3, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ccsidr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -54,14 +60,5 @@ namespace pf {
                groov::field<"NumSets", std::uint16_t, 27, 13>,
                groov::field<"Associativity", std::uint16_t, 12, 3>,
                groov::field<"LineSize", std::uint8_t, 2, 0>>;
-
-  template <std::uint32_t baseaddress>
-  using clidr_t = clidr_tt<"CLIDR", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using ctr_t = ctr_tt<"CTR", baseaddress, 4>;
-
-  template <std::uint32_t baseaddress>
-  using ccsidr_t = ccsidr_tt<"CCSIDR", baseaddress, 8>;
 
 } // namespace pf

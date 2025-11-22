@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace cryp {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -30,7 +32,9 @@ namespace cryp {
                groov::field<"ALGODIR", bool, 2, 2>,
                groov::field<"RESERVED0", std::uint8_t, 1, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using sr_tt = groov::reg<name,
                            std::uint32_t,
                            baseaddress + offset,
@@ -42,21 +46,27 @@ namespace cryp {
                            groov::field<"IFNF", bool, 1, 1>,
                            groov::field<"IFEM", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using din_tt = groov::reg<name,
                             std::uint32_t,
                             baseaddress + offset,
                             access::rw,
                             groov::field<"DATAIN", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dout_tt = groov::reg<name,
                              std::uint32_t,
                              baseaddress + offset,
                              access::ro,
                              groov::field<"DATAOUT", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dmacr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -66,7 +76,9 @@ namespace cryp {
                groov::field<"DOEN", bool, 1, 1>,
                groov::field<"DIEN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using imscr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -76,7 +88,9 @@ namespace cryp {
                groov::field<"OUTIM", bool, 1, 1>,
                groov::field<"INIM", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using risr_tt = groov::reg<name,
                              std::uint32_t,
                              baseaddress + offset,
@@ -85,7 +99,9 @@ namespace cryp {
                              groov::field<"OUTRIS", bool, 1, 1>,
                              groov::field<"INRIS", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using misr_tt = groov::reg<name,
                              std::uint32_t,
                              baseaddress + offset,
@@ -94,7 +110,9 @@ namespace cryp {
                              groov::field<"OUTMIS", bool, 1, 1>,
                              groov::field<"INMIS", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using k0lr_tt = groov::reg<name,
                              std::uint32_t,
                              baseaddress + offset,
@@ -132,7 +150,9 @@ namespace cryp {
                              groov::field<"k225", bool, 1, 1>,
                              groov::field<"k224", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using k0rr_tt = groov::reg<name,
                              std::uint32_t,
                              baseaddress + offset,
@@ -170,7 +190,9 @@ namespace cryp {
                              groov::field<"k193", bool, 1, 1>,
                              groov::field<"k192", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using k1lr_tt = groov::reg<name,
                              std::uint32_t,
                              baseaddress + offset,
@@ -208,7 +230,9 @@ namespace cryp {
                              groov::field<"k161", bool, 1, 1>,
                              groov::field<"k160", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using k1rr_tt = groov::reg<name,
                              std::uint32_t,
                              baseaddress + offset,
@@ -246,7 +270,9 @@ namespace cryp {
                              groov::field<"k129", bool, 1, 1>,
                              groov::field<"k128", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using k2lr_tt = groov::reg<name,
                              std::uint32_t,
                              baseaddress + offset,
@@ -284,7 +310,9 @@ namespace cryp {
                              groov::field<"k97", bool, 1, 1>,
                              groov::field<"k96", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using k2rr_tt = groov::reg<name,
                              std::uint32_t,
                              baseaddress + offset,
@@ -322,7 +350,9 @@ namespace cryp {
                              groov::field<"k65", bool, 1, 1>,
                              groov::field<"k64", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using k3lr_tt = groov::reg<name,
                              std::uint32_t,
                              baseaddress + offset,
@@ -360,7 +390,9 @@ namespace cryp {
                              groov::field<"k33", bool, 1, 1>,
                              groov::field<"k32", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using k3rr_tt = groov::reg<name,
                              std::uint32_t,
                              baseaddress + offset,
@@ -398,7 +430,9 @@ namespace cryp {
                              groov::field<"k1", bool, 1, 1>,
                              groov::field<"k0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using iv0lr_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
@@ -436,7 +470,9 @@ namespace cryp {
                               groov::field<"IV30", bool, 1, 1>,
                               groov::field<"IV31", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using iv0rr_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
@@ -474,7 +510,9 @@ namespace cryp {
                               groov::field<"IV62", bool, 1, 1>,
                               groov::field<"IV63", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using iv1lr_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
@@ -512,7 +550,9 @@ namespace cryp {
                               groov::field<"IV94", bool, 1, 1>,
                               groov::field<"IV95", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using iv1rr_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
@@ -550,7 +590,9 @@ namespace cryp {
                               groov::field<"IV126", bool, 1, 1>,
                               groov::field<"IV127", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using csgcmccm0r_tt =
     groov::reg<name,
                std::uint32_t,
@@ -558,7 +600,9 @@ namespace cryp {
                access::rw,
                groov::field<"CSGCMCCM0R", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using csgcmccm1r_tt =
     groov::reg<name,
                std::uint32_t,
@@ -566,7 +610,9 @@ namespace cryp {
                access::rw,
                groov::field<"CSGCMCCM1R", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using csgcmccm2r_tt =
     groov::reg<name,
                std::uint32_t,
@@ -574,7 +620,9 @@ namespace cryp {
                access::rw,
                groov::field<"CSGCMCCM2R", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using csgcmccm3r_tt =
     groov::reg<name,
                std::uint32_t,
@@ -582,7 +630,9 @@ namespace cryp {
                access::rw,
                groov::field<"CSGCMCCM3R", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using csgcmccm4r_tt =
     groov::reg<name,
                std::uint32_t,
@@ -590,7 +640,9 @@ namespace cryp {
                access::rw,
                groov::field<"CSGCMCCM4R", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using csgcmccm5r_tt =
     groov::reg<name,
                std::uint32_t,
@@ -598,7 +650,9 @@ namespace cryp {
                access::rw,
                groov::field<"CSGCMCCM5R", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using csgcmccm6r_tt =
     groov::reg<name,
                std::uint32_t,
@@ -606,7 +660,9 @@ namespace cryp {
                access::rw,
                groov::field<"CSGCMCCM6R", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using csgcmccm7r_tt =
     groov::reg<name,
                std::uint32_t,
@@ -614,168 +670,76 @@ namespace cryp {
                access::rw,
                groov::field<"CSGCMCCM7R", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using csgcm0r_tt = groov::reg<name,
                                 std::uint32_t,
                                 baseaddress + offset,
                                 access::rw,
                                 groov::field<"CSGCM0R", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using csgcm1r_tt = groov::reg<name,
                                 std::uint32_t,
                                 baseaddress + offset,
                                 access::rw,
                                 groov::field<"CSGCM1R", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using csgcm2r_tt = groov::reg<name,
                                 std::uint32_t,
                                 baseaddress + offset,
                                 access::rw,
                                 groov::field<"CSGCM2R", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using csgcm3r_tt = groov::reg<name,
                                 std::uint32_t,
                                 baseaddress + offset,
                                 access::rw,
                                 groov::field<"CSGCM3R", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using csgcm4r_tt = groov::reg<name,
                                 std::uint32_t,
                                 baseaddress + offset,
                                 access::rw,
                                 groov::field<"CSGCM4R", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using csgcm5r_tt = groov::reg<name,
                                 std::uint32_t,
                                 baseaddress + offset,
                                 access::rw,
                                 groov::field<"CSGCM5R", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using csgcm6r_tt = groov::reg<name,
                                 std::uint32_t,
                                 baseaddress + offset,
                                 access::rw,
                                 groov::field<"CSGCM6R", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using csgcm7r_tt = groov::reg<name,
                                 std::uint32_t,
                                 baseaddress + offset,
                                 access::rw,
                                 groov::field<"CSGCM7R", std::uint32_t, 31, 0>>;
-
-  template <std::uint32_t baseaddress>
-  using cr_t = cr_tt<"CR", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using sr_t = sr_tt<"SR", baseaddress, 4>;
-
-  template <std::uint32_t baseaddress>
-  using din_t = din_tt<"DIN", baseaddress, 8>;
-
-  template <std::uint32_t baseaddress>
-  using dout_t = dout_tt<"DOUT", baseaddress, 12>;
-
-  template <std::uint32_t baseaddress>
-  using dmacr_t = dmacr_tt<"DMACR", baseaddress, 16>;
-
-  template <std::uint32_t baseaddress>
-  using imscr_t = imscr_tt<"IMSCR", baseaddress, 20>;
-
-  template <std::uint32_t baseaddress>
-  using risr_t = risr_tt<"RISR", baseaddress, 24>;
-
-  template <std::uint32_t baseaddress>
-  using misr_t = misr_tt<"MISR", baseaddress, 28>;
-
-  template <std::uint32_t baseaddress>
-  using k0lr_t = k0lr_tt<"K0LR", baseaddress, 32>;
-
-  template <std::uint32_t baseaddress>
-  using k0rr_t = k0rr_tt<"K0RR", baseaddress, 36>;
-
-  template <std::uint32_t baseaddress>
-  using k1lr_t = k1lr_tt<"K1LR", baseaddress, 40>;
-
-  template <std::uint32_t baseaddress>
-  using k1rr_t = k1rr_tt<"K1RR", baseaddress, 44>;
-
-  template <std::uint32_t baseaddress>
-  using k2lr_t = k2lr_tt<"K2LR", baseaddress, 48>;
-
-  template <std::uint32_t baseaddress>
-  using k2rr_t = k2rr_tt<"K2RR", baseaddress, 52>;
-
-  template <std::uint32_t baseaddress>
-  using k3lr_t = k3lr_tt<"K3LR", baseaddress, 56>;
-
-  template <std::uint32_t baseaddress>
-  using k3rr_t = k3rr_tt<"K3RR", baseaddress, 60>;
-
-  template <std::uint32_t baseaddress>
-  using iv0lr_t = iv0lr_tt<"IV0LR", baseaddress, 64>;
-
-  template <std::uint32_t baseaddress>
-  using iv0rr_t = iv0rr_tt<"IV0RR", baseaddress, 68>;
-
-  template <std::uint32_t baseaddress>
-  using iv1lr_t = iv1lr_tt<"IV1LR", baseaddress, 72>;
-
-  template <std::uint32_t baseaddress>
-  using iv1rr_t = iv1rr_tt<"IV1RR", baseaddress, 76>;
-
-  template <std::uint32_t baseaddress>
-  using csgcmccm0r_t = csgcmccm0r_tt<"CSGCMCCM0R", baseaddress, 80>;
-
-  template <std::uint32_t baseaddress>
-  using csgcmccm1r_t = csgcmccm1r_tt<"CSGCMCCM1R", baseaddress, 84>;
-
-  template <std::uint32_t baseaddress>
-  using csgcmccm2r_t = csgcmccm2r_tt<"CSGCMCCM2R", baseaddress, 88>;
-
-  template <std::uint32_t baseaddress>
-  using csgcmccm3r_t = csgcmccm3r_tt<"CSGCMCCM3R", baseaddress, 92>;
-
-  template <std::uint32_t baseaddress>
-  using csgcmccm4r_t = csgcmccm4r_tt<"CSGCMCCM4R", baseaddress, 96>;
-
-  template <std::uint32_t baseaddress>
-  using csgcmccm5r_t = csgcmccm5r_tt<"CSGCMCCM5R", baseaddress, 100>;
-
-  template <std::uint32_t baseaddress>
-  using csgcmccm6r_t = csgcmccm6r_tt<"CSGCMCCM6R", baseaddress, 104>;
-
-  template <std::uint32_t baseaddress>
-  using csgcmccm7r_t = csgcmccm7r_tt<"CSGCMCCM7R", baseaddress, 108>;
-
-  template <std::uint32_t baseaddress>
-  using csgcm0r_t = csgcm0r_tt<"CSGCM0R", baseaddress, 112>;
-
-  template <std::uint32_t baseaddress>
-  using csgcm1r_t = csgcm1r_tt<"CSGCM1R", baseaddress, 116>;
-
-  template <std::uint32_t baseaddress>
-  using csgcm2r_t = csgcm2r_tt<"CSGCM2R", baseaddress, 120>;
-
-  template <std::uint32_t baseaddress>
-  using csgcm3r_t = csgcm3r_tt<"CSGCM3R", baseaddress, 124>;
-
-  template <std::uint32_t baseaddress>
-  using csgcm4r_t = csgcm4r_tt<"CSGCM4R", baseaddress, 128>;
-
-  template <std::uint32_t baseaddress>
-  using csgcm5r_t = csgcm5r_tt<"CSGCM5R", baseaddress, 132>;
-
-  template <std::uint32_t baseaddress>
-  using csgcm6r_t = csgcm6r_tt<"CSGCM6R", baseaddress, 136>;
-
-  template <std::uint32_t baseaddress>
-  using csgcm7r_t = csgcm7r_tt<"CSGCM7R", baseaddress, 140>;
 
 } // namespace cryp

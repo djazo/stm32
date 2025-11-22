@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace sec_fmc {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using fmc_bcr1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -38,7 +40,9 @@ namespace sec_fmc {
                groov::field<"MUXEN", bool, 1, 1>,
                groov::field<"MBKEN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using fmc_bcr2_tt =
     groov::reg<name,
                std::uint32_t,
@@ -65,7 +69,9 @@ namespace sec_fmc {
                groov::field<"MUXEN", bool, 1, 1>,
                groov::field<"MBKEN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using fmc_bcr3_tt =
     groov::reg<name,
                std::uint32_t,
@@ -92,7 +98,9 @@ namespace sec_fmc {
                groov::field<"MUXEN", bool, 1, 1>,
                groov::field<"MBKEN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using fmc_bcr4_tt =
     groov::reg<name,
                std::uint32_t,
@@ -119,7 +127,9 @@ namespace sec_fmc {
                groov::field<"MUXEN", bool, 1, 1>,
                groov::field<"MBKEN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using fmc_btr1_tt = groov::reg<name,
                                  std::uint32_t,
                                  baseaddress + offset,
@@ -133,7 +143,9 @@ namespace sec_fmc {
                                  groov::field<"ADDHLD", std::uint8_t, 7, 4>,
                                  groov::field<"ADDSET", std::uint8_t, 3, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using fmc_btr2_tt = groov::reg<name,
                                  std::uint32_t,
                                  baseaddress + offset,
@@ -147,7 +159,9 @@ namespace sec_fmc {
                                  groov::field<"ADDHLD", std::uint8_t, 7, 4>,
                                  groov::field<"ADDSET", std::uint8_t, 3, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using fmc_btr3_tt = groov::reg<name,
                                  std::uint32_t,
                                  baseaddress + offset,
@@ -161,7 +175,9 @@ namespace sec_fmc {
                                  groov::field<"ADDHLD", std::uint8_t, 7, 4>,
                                  groov::field<"ADDSET", std::uint8_t, 3, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using fmc_btr4_tt = groov::reg<name,
                                  std::uint32_t,
                                  baseaddress + offset,
@@ -175,7 +191,9 @@ namespace sec_fmc {
                                  groov::field<"ADDHLD", std::uint8_t, 7, 4>,
                                  groov::field<"ADDSET", std::uint8_t, 3, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using fmc_pcr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -193,7 +211,9 @@ namespace sec_fmc {
                groov::field<"PWAITEN", bool, 1, 1>,
                groov::field<"RESERVED0", bool, 0, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using fmc_sr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -208,7 +228,9 @@ namespace sec_fmc {
                groov::field<"ILS", bool, 1, 1>,
                groov::field<"IRS", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using fmc_pmem_tt = groov::reg<name,
                                  std::uint32_t,
                                  baseaddress + offset,
@@ -218,7 +240,9 @@ namespace sec_fmc {
                                  groov::field<"MEMWAIT", std::uint8_t, 15, 8>,
                                  groov::field<"MEMSET", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using fmc_patt_tt = groov::reg<name,
                                  std::uint32_t,
                                  baseaddress + offset,
@@ -228,14 +252,18 @@ namespace sec_fmc {
                                  groov::field<"ATTWAIT", std::uint8_t, 15, 8>,
                                  groov::field<"ATTSET", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using fmc_eccr_tt = groov::reg<name,
                                  std::uint32_t,
                                  baseaddress + offset,
                                  access::ro,
                                  groov::field<"ECC", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using fmc_bwtr1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -249,7 +277,9 @@ namespace sec_fmc {
                groov::field<"ADDHLD", std::uint8_t, 7, 4>,
                groov::field<"ADDSET", std::uint8_t, 3, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using fmc_bwtr2_tt =
     groov::reg<name,
                std::uint32_t,
@@ -263,7 +293,9 @@ namespace sec_fmc {
                groov::field<"ADDHLD", std::uint8_t, 7, 4>,
                groov::field<"ADDSET", std::uint8_t, 3, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using fmc_bwtr3_tt =
     groov::reg<name,
                std::uint32_t,
@@ -277,7 +309,9 @@ namespace sec_fmc {
                groov::field<"ADDHLD", std::uint8_t, 7, 4>,
                groov::field<"ADDSET", std::uint8_t, 3, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using fmc_bwtr4_tt =
     groov::reg<name,
                std::uint32_t,
@@ -291,7 +325,9 @@ namespace sec_fmc {
                groov::field<"ADDHLD", std::uint8_t, 7, 4>,
                groov::field<"ADDSET", std::uint8_t, 3, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using pcscntr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -303,59 +339,5 @@ namespace sec_fmc {
                groov::field<"CNTB2EN", bool, 17, 17>,
                groov::field<"CNTB1EN", bool, 16, 16>,
                groov::field<"CSCOUNT", std::uint16_t, 15, 0>>;
-
-  template <std::uint32_t baseaddress>
-  using fmc_bcr1_t = fmc_bcr1_tt<"FMC_BCR1", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using fmc_bcr2_t = fmc_bcr2_tt<"FMC_BCR2", baseaddress, 8>;
-
-  template <std::uint32_t baseaddress>
-  using fmc_bcr3_t = fmc_bcr3_tt<"FMC_BCR3", baseaddress, 16>;
-
-  template <std::uint32_t baseaddress>
-  using fmc_bcr4_t = fmc_bcr4_tt<"FMC_BCR4", baseaddress, 24>;
-
-  template <std::uint32_t baseaddress>
-  using fmc_btr1_t = fmc_btr1_tt<"FMC_BTR1", baseaddress, 4>;
-
-  template <std::uint32_t baseaddress>
-  using fmc_btr2_t = fmc_btr2_tt<"FMC_BTR2", baseaddress, 12>;
-
-  template <std::uint32_t baseaddress>
-  using fmc_btr3_t = fmc_btr3_tt<"FMC_BTR3", baseaddress, 20>;
-
-  template <std::uint32_t baseaddress>
-  using fmc_btr4_t = fmc_btr4_tt<"FMC_BTR4", baseaddress, 28>;
-
-  template <std::uint32_t baseaddress>
-  using fmc_pcr_t = fmc_pcr_tt<"FMC_PCR", baseaddress, 128>;
-
-  template <std::uint32_t baseaddress>
-  using fmc_sr_t = fmc_sr_tt<"FMC_SR", baseaddress, 132>;
-
-  template <std::uint32_t baseaddress>
-  using fmc_pmem_t = fmc_pmem_tt<"FMC_PMEM", baseaddress, 136>;
-
-  template <std::uint32_t baseaddress>
-  using fmc_patt_t = fmc_patt_tt<"FMC_PATT", baseaddress, 140>;
-
-  template <std::uint32_t baseaddress>
-  using fmc_eccr_t = fmc_eccr_tt<"FMC_ECCR", baseaddress, 148>;
-
-  template <std::uint32_t baseaddress>
-  using fmc_bwtr1_t = fmc_bwtr1_tt<"FMC_BWTR1", baseaddress, 260>;
-
-  template <std::uint32_t baseaddress>
-  using fmc_bwtr2_t = fmc_bwtr2_tt<"FMC_BWTR2", baseaddress, 268>;
-
-  template <std::uint32_t baseaddress>
-  using fmc_bwtr3_t = fmc_bwtr3_tt<"FMC_BWTR3", baseaddress, 276>;
-
-  template <std::uint32_t baseaddress>
-  using fmc_bwtr4_t = fmc_bwtr4_tt<"FMC_BWTR4", baseaddress, 284>;
-
-  template <std::uint32_t baseaddress>
-  using pcscntr_t = pcscntr_tt<"PCSCNTR", baseaddress, 32>;
 
 } // namespace sec_fmc

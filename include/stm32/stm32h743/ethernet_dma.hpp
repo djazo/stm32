@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace ethernet_dma {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dmamr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -26,7 +28,9 @@ namespace ethernet_dma {
                groov::field<"DA", bool, 1, 1, access::ro>,
                groov::field<"SWR", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dmasbmr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -40,7 +44,9 @@ namespace ethernet_dma {
                groov::field<"RESERVED0", std::uint16_t, 11, 1, access::ro>,
                groov::field<"FB", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dmaisr_tt = groov::reg<name,
                                std::uint32_t,
                                baseaddress + offset,
@@ -51,7 +57,9 @@ namespace ethernet_dma {
                                groov::field<"RESERVED0", std::uint16_t, 15, 1>,
                                groov::field<"DC0IS", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dmadsr_tt = groov::reg<name,
                                std::uint32_t,
                                baseaddress + offset,
@@ -62,7 +70,9 @@ namespace ethernet_dma {
                                groov::field<"RESERVED0", std::uint8_t, 7, 1>,
                                groov::field<"AXWHSTS", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dmaccr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -75,7 +85,9 @@ namespace ethernet_dma {
                groov::field<"RESERVED0", std::uint8_t, 15, 14, access::ro>,
                groov::field<"MSS", std::uint16_t, 13, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dmactxcr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -90,7 +102,9 @@ namespace ethernet_dma {
                groov::field<"RESERVED0", std::uint8_t, 3, 1, access::ro>,
                groov::field<"ST", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dmacrxcr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -103,7 +117,9 @@ namespace ethernet_dma {
                groov::field<"RBSZ", std::uint16_t, 14, 1>,
                groov::field<"SR", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dmactxdlar_tt =
     groov::reg<name,
                std::uint32_t,
@@ -112,7 +128,9 @@ namespace ethernet_dma {
                groov::field<"TDESLA", std::uint32_t, 31, 2>,
                groov::field<"RESERVED0", std::uint8_t, 1, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dmacrxdlar_tt =
     groov::reg<name,
                std::uint32_t,
@@ -121,7 +139,9 @@ namespace ethernet_dma {
                groov::field<"RDESLA", std::uint32_t, 31, 2>,
                groov::field<"RESERVED0", std::uint8_t, 1, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dmactxdtpr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -130,7 +150,9 @@ namespace ethernet_dma {
                groov::field<"TDT", std::uint32_t, 31, 2>,
                groov::field<"RESERVED0", std::uint8_t, 1, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dmacrxdtpr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -139,7 +161,9 @@ namespace ethernet_dma {
                groov::field<"RDT", std::uint32_t, 31, 2>,
                groov::field<"RESERVED0", std::uint8_t, 1, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dmactxrlr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -148,7 +172,9 @@ namespace ethernet_dma {
                groov::field<"RESERVED0", std::uint32_t, 31, 10, access::ro>,
                groov::field<"TDRL", std::uint16_t, 9, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dmacrxrlr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -157,7 +183,9 @@ namespace ethernet_dma {
                groov::field<"RESERVED0", std::uint32_t, 31, 10, access::ro>,
                groov::field<"RDRL", std::uint16_t, 9, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dmacier_tt =
     groov::reg<name,
                std::uint32_t,
@@ -179,7 +207,9 @@ namespace ethernet_dma {
                groov::field<"TXSE", bool, 1, 1>,
                groov::field<"TIE", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dmacrxiwtr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -188,7 +218,9 @@ namespace ethernet_dma {
                groov::field<"RESERVED0", std::uint32_t, 31, 8, access::ro>,
                groov::field<"RWT", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dmaccatxdr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -196,7 +228,9 @@ namespace ethernet_dma {
                access::ro,
                groov::field<"CURTDESAPTR", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dmaccarxdr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -204,7 +238,9 @@ namespace ethernet_dma {
                access::ro,
                groov::field<"CURRDESAPTR", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dmaccatxbr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -212,7 +248,9 @@ namespace ethernet_dma {
                access::ro,
                groov::field<"CURTBUFAPTR", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dmaccarxbr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -220,7 +258,9 @@ namespace ethernet_dma {
                access::ro,
                groov::field<"CURRBUFAPTR", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dmacsr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -244,7 +284,9 @@ namespace ethernet_dma {
                groov::field<"TPS", bool, 1, 1>,
                groov::field<"TI", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dmacmfcr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -254,68 +296,5 @@ namespace ethernet_dma {
                groov::field<"MFCO", bool, 15, 15>,
                groov::field<"RESERVED0", std::uint8_t, 14, 11>,
                groov::field<"MFC", std::uint16_t, 10, 0>>;
-
-  template <std::uint32_t baseaddress>
-  using dmamr_t = dmamr_tt<"DMAMR", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using dmasbmr_t = dmasbmr_tt<"DMASBMR", baseaddress, 4>;
-
-  template <std::uint32_t baseaddress>
-  using dmaisr_t = dmaisr_tt<"DMAISR", baseaddress, 8>;
-
-  template <std::uint32_t baseaddress>
-  using dmadsr_t = dmadsr_tt<"DMADSR", baseaddress, 12>;
-
-  template <std::uint32_t baseaddress>
-  using dmaccr_t = dmaccr_tt<"DMACCR", baseaddress, 256>;
-
-  template <std::uint32_t baseaddress>
-  using dmactxcr_t = dmactxcr_tt<"DMACTxCR", baseaddress, 260>;
-
-  template <std::uint32_t baseaddress>
-  using dmacrxcr_t = dmacrxcr_tt<"DMACRxCR", baseaddress, 264>;
-
-  template <std::uint32_t baseaddress>
-  using dmactxdlar_t = dmactxdlar_tt<"DMACTxDLAR", baseaddress, 276>;
-
-  template <std::uint32_t baseaddress>
-  using dmacrxdlar_t = dmacrxdlar_tt<"DMACRxDLAR", baseaddress, 284>;
-
-  template <std::uint32_t baseaddress>
-  using dmactxdtpr_t = dmactxdtpr_tt<"DMACTxDTPR", baseaddress, 288>;
-
-  template <std::uint32_t baseaddress>
-  using dmacrxdtpr_t = dmacrxdtpr_tt<"DMACRxDTPR", baseaddress, 296>;
-
-  template <std::uint32_t baseaddress>
-  using dmactxrlr_t = dmactxrlr_tt<"DMACTxRLR", baseaddress, 300>;
-
-  template <std::uint32_t baseaddress>
-  using dmacrxrlr_t = dmacrxrlr_tt<"DMACRxRLR", baseaddress, 304>;
-
-  template <std::uint32_t baseaddress>
-  using dmacier_t = dmacier_tt<"DMACIER", baseaddress, 308>;
-
-  template <std::uint32_t baseaddress>
-  using dmacrxiwtr_t = dmacrxiwtr_tt<"DMACRxIWTR", baseaddress, 312>;
-
-  template <std::uint32_t baseaddress>
-  using dmaccatxdr_t = dmaccatxdr_tt<"DMACCATxDR", baseaddress, 324>;
-
-  template <std::uint32_t baseaddress>
-  using dmaccarxdr_t = dmaccarxdr_tt<"DMACCARxDR", baseaddress, 332>;
-
-  template <std::uint32_t baseaddress>
-  using dmaccatxbr_t = dmaccatxbr_tt<"DMACCATxBR", baseaddress, 340>;
-
-  template <std::uint32_t baseaddress>
-  using dmaccarxbr_t = dmaccarxbr_tt<"DMACCARxBR", baseaddress, 348>;
-
-  template <std::uint32_t baseaddress>
-  using dmacsr_t = dmacsr_tt<"DMACSR", baseaddress, 352>;
-
-  template <std::uint32_t baseaddress>
-  using dmacmfcr_t = dmacmfcr_tt<"DMACMFCR", baseaddress, 364>;
 
 } // namespace ethernet_dma

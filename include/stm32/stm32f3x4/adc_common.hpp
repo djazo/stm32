@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace adc_common {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using adc1_csr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -42,7 +44,9 @@ namespace adc_common {
                groov::field<"EOSMP_MST", bool, 1, 1>,
                groov::field<"ADRDY_MST", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using adc1_ccr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -61,7 +65,9 @@ namespace adc_common {
                groov::field<"RESERVED0", std::uint8_t, 7, 5, access::ro>,
                groov::field<"DUAL", std::uint8_t, 4, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using adc1_cdr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -69,14 +75,5 @@ namespace adc_common {
                access::ro,
                groov::field<"RDATA_SLV", std::uint16_t, 31, 16>,
                groov::field<"RDATA_MST", std::uint16_t, 15, 0>>;
-
-  template <std::uint32_t baseaddress>
-  using adc1_csr_t = adc1_csr_tt<"ADC1_CSR", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using adc1_ccr_t = adc1_ccr_tt<"ADC1_CCR", baseaddress, 8>;
-
-  template <std::uint32_t baseaddress>
-  using adc1_cdr_t = adc1_cdr_tt<"ADC1_CDR", baseaddress, 12>;
 
 } // namespace adc_common

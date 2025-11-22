@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace mpu {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpu_typer_tt =
     groov::reg<name,
                std::uint32_t,
@@ -23,7 +25,9 @@ namespace mpu {
                groov::field<"RESERVED0", std::uint8_t, 7, 1>,
                groov::field<"SEPARATE", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpu_ctrl_tt =
     groov::reg<name,
                std::uint32_t,
@@ -34,7 +38,9 @@ namespace mpu {
                groov::field<"HFNMIENA", bool, 1, 1>,
                groov::field<"ENABLE", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpu_rnr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -43,7 +49,9 @@ namespace mpu {
                groov::field<"RESERVED0", std::uint32_t, 31, 8, access::ro>,
                groov::field<"REGION", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpu_rbar_tt = groov::reg<name,
                                  std::uint32_t,
                                  baseaddress + offset,
@@ -52,7 +60,9 @@ namespace mpu {
                                  groov::field<"VALID", bool, 4, 4>,
                                  groov::field<"REGION", std::uint8_t, 3, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpu_rasr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -71,20 +81,5 @@ namespace mpu {
                groov::field<"RESERVED0", std::uint8_t, 7, 6, access::ro>,
                groov::field<"SIZE", std::uint8_t, 5, 1>,
                groov::field<"ENABLE", bool, 0, 0>>;
-
-  template <std::uint32_t baseaddress>
-  using mpu_typer_t = mpu_typer_tt<"MPU_TYPER", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using mpu_ctrl_t = mpu_ctrl_tt<"MPU_CTRL", baseaddress, 4>;
-
-  template <std::uint32_t baseaddress>
-  using mpu_rnr_t = mpu_rnr_tt<"MPU_RNR", baseaddress, 8>;
-
-  template <std::uint32_t baseaddress>
-  using mpu_rbar_t = mpu_rbar_tt<"MPU_RBAR", baseaddress, 12>;
-
-  template <std::uint32_t baseaddress>
-  using mpu_rasr_t = mpu_rasr_tt<"MPU_RASR", baseaddress, 16>;
 
 } // namespace mpu

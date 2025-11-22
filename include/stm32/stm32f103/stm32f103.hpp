@@ -8,38 +8,39 @@
 #include <stm32/common/access.hpp>
 #include <stm32/common/bittypes.hpp>
 
-#include "adc.hpp"
-#include "afio.hpp"
-#include "bkp.hpp"
-#include "can.hpp"
-#include "crc.hpp"
-#include "dac.hpp"
-#include "dbg.hpp"
-#include "dma.hpp"
-#include "ethernet_dma.hpp"
-#include "ethernet_mac.hpp"
-#include "ethernet_mmc.hpp"
-#include "ethernet_ptp.hpp"
-#include "exti.hpp"
-#include "flash.hpp"
-#include "fsmc.hpp"
-#include "gpio.hpp"
-#include "i2c.hpp"
-#include "iwdg.hpp"
-#include "otg_fs_device.hpp"
-#include "otg_fs_global.hpp"
-#include "otg_fs_host.hpp"
-#include "otg_fs_pwrclk.hpp"
-#include "pwr.hpp"
-#include "rcc.hpp"
-#include "rtc.hpp"
-#include "sdio.hpp"
-#include "spi.hpp"
-#include "tim.hpp"
-#include "uart.hpp"
-#include "usart.hpp"
-#include "usb.hpp"
-#include "wwdg.hpp"
+#include <stm32/registers/stm32f1/adc.hpp>
+#include <stm32/registers/stm32f1/afio.hpp>
+#include <stm32/registers/stm32f1/bkp.hpp>
+#include <stm32/registers/stm32f1/can.hpp>
+#include <stm32/registers/stm32f1/crc.hpp>
+#include <stm32/registers/stm32f1/dac.hpp>
+#include <stm32/registers/stm32f1/dbg.hpp>
+#include <stm32/registers/stm32f1/dma.hpp>
+#include <stm32/registers/stm32f1/ethernet_dma.hpp>
+#include <stm32/registers/stm32f1/ethernet_mac.hpp>
+#include <stm32/registers/stm32f1/ethernet_mmc.hpp>
+#include <stm32/registers/stm32f1/ethernet_ptp.hpp>
+#include <stm32/registers/stm32f1/exti.hpp>
+#include <stm32/registers/stm32f1/flash.hpp>
+#include <stm32/registers/stm32f1/fsmc.hpp>
+#include <stm32/registers/stm32f1/gpio.hpp>
+#include <stm32/registers/stm32f1/i2c.hpp>
+#include <stm32/registers/stm32f1/iwdg.hpp>
+#include <stm32/registers/stm32f1/otg_fs_device.hpp>
+#include <stm32/registers/stm32f1/otg_fs_global.hpp>
+#include <stm32/registers/stm32f1/otg_fs_host.hpp>
+#include <stm32/registers/stm32f1/otg_fs_pwrclk.hpp>
+#include <stm32/registers/stm32f1/pwr.hpp>
+#include <stm32/registers/stm32f1/rcc.hpp>
+#include <stm32/registers/stm32f1/rtc.hpp>
+#include <stm32/registers/stm32f1/sdio.hpp>
+#include <stm32/registers/stm32f1/spi.hpp>
+#include <stm32/registers/stm32f1/tim.hpp>
+#include <stm32/registers/stm32f1/timer.hpp>
+#include <stm32/registers/stm32f1/uart.hpp>
+#include <stm32/registers/stm32f1/usart.hpp>
+#include <stm32/registers/stm32f1/usb.hpp>
+#include <stm32/registers/stm32f1/wwdg.hpp>
 
 namespace stm32 {
 
@@ -435,41 +436,38 @@ namespace wwdg {
    */
 namespace tim {
 
-  namespace tima {
-    template <stdx::ct_string name, std::uint32_t baseaddress>
-    using tim_t =
-      groov::group<name,
-                   groov::mmio_bus<>,
-                   cr1_tt<"CR1", baseaddress, 0>,
-                   cr2_tt<"CR2", baseaddress, 0x4>,
-                   smcr_tt<"SMCR", baseaddress, 0x8>,
-                   dier_tt<"DIER", baseaddress, 0xc>,
-                   sr_tt<"SR", baseaddress, 0x10>,
-                   egr_tt<"EGR", baseaddress, 0x14>,
-                   ccmr1_output_tt<"CCMR1_OUTPUT", baseaddress, 0x18>,
-                   ccmr1_input_tt<"CCMR1_INPUT", baseaddress, 0x18>,
-                   ccmr2_output_tt<"CCMR2_OUTPUT", baseaddress, 0x1c>,
-                   ccmr2_input_tt<"CCMR2_INPUT", baseaddress, 0x1c>,
-                   ccer_tt<"CCER", baseaddress, 0x20>,
-                   cnt_tt<"CNT", baseaddress, 0x24>,
-                   psc_tt<"PSC", baseaddress, 0x28>,
-                   arr_tt<"ARR", baseaddress, 0x2c>,
-                   ccrx_tt<"CCR1", baseaddress, 0x34>,
-                   ccrx_tt<"CCR2", baseaddress, 0x38>,
-                   ccrx_tt<"CCR3", baseaddress, 0x3c>,
-                   ccrx_tt<"CCR4", baseaddress, 0x40>,
-                   dcr_tt<"DCR", baseaddress, 0x48>,
-                   dmar_tt<"DMAR", baseaddress, 0x4c>,
-                   rcr_tt<"RCR", baseaddress, 0x30>,
-                   bdtr_tt<"BDTR", baseaddress, 0x44>>;
-
-  }
+  template <stdx::ct_string name, std::uint32_t baseaddress>
+  using tima_t =
+    groov::group<name,
+                 groov::mmio_bus<>,
+                 stm32::registers::timer::cr1_tt<"CR1", baseaddress, 0>,
+                 cr2_tt<"CR2", baseaddress, 0x4>,
+                 smcr_tt<"SMCR", baseaddress, 0x8>,
+                 dier_tt<"DIER", baseaddress, 0xc>,
+                 sr_tt<"SR", baseaddress, 0x10>,
+                 egr_tt<"EGR", baseaddress, 0x14>,
+                 ccmr1_output_tt<"CCMR1_OUTPUT", baseaddress, 0x18>,
+                 ccmr1_input_tt<"CCMR1_INPUT", baseaddress, 0x18>,
+                 ccmr2_output_tt<"CCMR2_OUTPUT", baseaddress, 0x1c>,
+                 ccmr2_input_tt<"CCMR2_INPUT", baseaddress, 0x1c>,
+                 ccer_tt<"CCER", baseaddress, 0x20>,
+                 stm32::registers::cnt_tt<"CNT", baseaddress, 0x24>,
+                 psc_tt<"PSC", baseaddress, 0x28>,
+                 arr_tt<"ARR", baseaddress, 0x2c>,
+                 ccrx_tt<"CCR1", baseaddress, 0x34>,
+                 ccrx_tt<"CCR2", baseaddress, 0x38>,
+                 ccrx_tt<"CCR3", baseaddress, 0x3c>,
+                 ccrx_tt<"CCR4", baseaddress, 0x40>,
+                 dcr_tt<"DCR", baseaddress, 0x48>,
+                 dmar_tt<"DMAR", baseaddress, 0x4c>,
+                 rcr_tt<"RCR", baseaddress, 0x30>,
+                 bdtr_tt<"BDTR", baseaddress, 0x44>>;
 
   constexpr std::uint32_t TIM1_BASE = 0x4001'2c00;
-  constexpr auto          tim1      = tima::tim_t<"tim1", TIM1_BASE>{};
+  constexpr auto          tim1      = tima_t<"tim1", TIM1_BASE>{};
 
   constexpr std::uint32_t TIM8_BASE = 0x4001'3400;
-  constexpr auto          tim8      = tima::tim_t<"tim8", TIM8_BASE>{};
+  constexpr auto          tim8      = tima_t<"tim8", TIM8_BASE>{};
 
   namespace timb {
     template <stdx::ct_string name, std::uint32_t baseaddress>

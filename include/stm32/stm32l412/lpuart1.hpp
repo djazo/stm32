@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace lpuart1 {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using cr1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -47,7 +49,9 @@ namespace lpuart1 {
                groov::field<"UESM", bool, 1, 1>,
                groov::field<"UE", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using cr2_tt =
     groov::reg<name,
                std::uint32_t,
@@ -67,7 +71,9 @@ namespace lpuart1 {
                groov::field<"ADDM7", bool, 4, 4>,
                groov::field<"RESERVED0", std::uint8_t, 3, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using cr3_tt =
     groov::reg<name,
                std::uint32_t,
@@ -93,7 +99,9 @@ namespace lpuart1 {
                groov::field<"RESERVED0", std::uint8_t, 2, 1, access::ro>,
                groov::field<"EIE", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using brr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -102,7 +110,9 @@ namespace lpuart1 {
                groov::field<"RESERVED0", std::uint16_t, 31, 20, access::ro>,
                groov::field<"BRR", std::uint32_t, 19, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using rqr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -114,7 +124,9 @@ namespace lpuart1 {
                groov::field<"SBKRQ", bool, 1, 1>,
                groov::field<"RESERVED0", bool, 0, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using isr_tt = groov::reg<name,
                             std::uint32_t,
                             baseaddress + offset,
@@ -140,7 +152,9 @@ namespace lpuart1 {
                             groov::field<"FE", bool, 1, 1>,
                             groov::field<"PE", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using icr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -161,7 +175,9 @@ namespace lpuart1 {
                groov::field<"FECF", bool, 1, 1>,
                groov::field<"PECF", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using rdr_tt = groov::reg<name,
                             std::uint32_t,
                             baseaddress + offset,
@@ -169,7 +185,9 @@ namespace lpuart1 {
                             groov::field<"RESERVED0", std::uint32_t, 31, 9>,
                             groov::field<"RDR", std::uint16_t, 8, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using tdr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -177,32 +195,5 @@ namespace lpuart1 {
                access::rw,
                groov::field<"RESERVED0", std::uint32_t, 31, 9, access::ro>,
                groov::field<"TDR", std::uint16_t, 8, 0>>;
-
-  template <std::uint32_t baseaddress>
-  using cr1_t = cr1_tt<"CR1", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using cr2_t = cr2_tt<"CR2", baseaddress, 4>;
-
-  template <std::uint32_t baseaddress>
-  using cr3_t = cr3_tt<"CR3", baseaddress, 8>;
-
-  template <std::uint32_t baseaddress>
-  using brr_t = brr_tt<"BRR", baseaddress, 12>;
-
-  template <std::uint32_t baseaddress>
-  using rqr_t = rqr_tt<"RQR", baseaddress, 24>;
-
-  template <std::uint32_t baseaddress>
-  using isr_t = isr_tt<"ISR", baseaddress, 28>;
-
-  template <std::uint32_t baseaddress>
-  using icr_t = icr_tt<"ICR", baseaddress, 32>;
-
-  template <std::uint32_t baseaddress>
-  using rdr_t = rdr_tt<"RDR", baseaddress, 36>;
-
-  template <std::uint32_t baseaddress>
-  using tdr_t = tdr_tt<"TDR", baseaddress, 40>;
 
 } // namespace lpuart1

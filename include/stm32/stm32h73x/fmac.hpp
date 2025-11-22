@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace fmac {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using fmac_x1bufcfg_tt =
     groov::reg<name,
                std::uint32_t,
@@ -23,7 +25,9 @@ namespace fmac {
                groov::field<"X1_BUF_SIZE", std::uint8_t, 15, 8>,
                groov::field<"X1_BASE", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using fmac_x2bufcfg_tt =
     groov::reg<name,
                std::uint32_t,
@@ -33,7 +37,9 @@ namespace fmac {
                groov::field<"X2_BUF_SIZE", std::uint8_t, 15, 8>,
                groov::field<"X2_BASE", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using fmac_ybufcfg_tt =
     groov::reg<name,
                std::uint32_t,
@@ -45,7 +51,9 @@ namespace fmac {
                groov::field<"Y_BUF_SIZE", std::uint8_t, 15, 8>,
                groov::field<"Y_BASE", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using fmac_param_tt = groov::reg<name,
                                    std::uint32_t,
                                    baseaddress + offset,
@@ -56,7 +64,9 @@ namespace fmac {
                                    groov::field<"Q", std::uint8_t, 15, 8>,
                                    groov::field<"P", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using fmac_cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -75,7 +85,9 @@ namespace fmac {
                groov::field<"WIEN", bool, 1, 1>,
                groov::field<"RIEN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using fmac_sr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -89,7 +101,9 @@ namespace fmac {
                groov::field<"X1FULL", bool, 1, 1, access::ro>,
                groov::field<"YEMPTY", bool, 0, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using fmac_wdata_tt =
     groov::reg<name,
                std::uint32_t,
@@ -98,7 +112,9 @@ namespace fmac {
                groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
                groov::field<"WDATA", std::uint16_t, 15, 0, access::wo>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using fmac_rdata_tt =
     groov::reg<name,
                std::uint32_t,
@@ -106,29 +122,5 @@ namespace fmac {
                access::rw,
                groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
                groov::field<"RDATA", std::uint16_t, 15, 0, access::ro>>;
-
-  template <std::uint32_t baseaddress>
-  using fmac_x1bufcfg_t = fmac_x1bufcfg_tt<"FMAC_X1BUFCFG", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using fmac_x2bufcfg_t = fmac_x2bufcfg_tt<"FMAC_X2BUFCFG", baseaddress, 4>;
-
-  template <std::uint32_t baseaddress>
-  using fmac_ybufcfg_t = fmac_ybufcfg_tt<"FMAC_YBUFCFG", baseaddress, 8>;
-
-  template <std::uint32_t baseaddress>
-  using fmac_param_t = fmac_param_tt<"FMAC_PARAM", baseaddress, 12>;
-
-  template <std::uint32_t baseaddress>
-  using fmac_cr_t = fmac_cr_tt<"FMAC_CR", baseaddress, 16>;
-
-  template <std::uint32_t baseaddress>
-  using fmac_sr_t = fmac_sr_tt<"FMAC_SR", baseaddress, 20>;
-
-  template <std::uint32_t baseaddress>
-  using fmac_wdata_t = fmac_wdata_tt<"FMAC_WDATA", baseaddress, 24>;
-
-  template <std::uint32_t baseaddress>
-  using fmac_rdata_t = fmac_rdata_tt<"FMAC_RDATA", baseaddress, 28>;
 
 } // namespace fmac

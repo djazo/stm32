@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace fpu_cpacr {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using cpacr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -20,8 +22,5 @@ namespace fpu_cpacr {
                groov::field<"RESERVED1", std::uint8_t, 31, 24, access::ro>,
                groov::field<"CP", std::uint8_t, 23, 20>,
                groov::field<"RESERVED0", std::uint32_t, 19, 0, access::ro>>;
-
-  template <std::uint32_t baseaddress>
-  using cpacr_t = cpacr_tt<"CPACR", baseaddress, 0>;
 
 } // namespace fpu_cpacr

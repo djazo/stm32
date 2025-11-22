@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace otg1_hs_pwrclk {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using otg_hs_pcgcr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -22,8 +24,5 @@ namespace otg1_hs_pwrclk {
                groov::field<"RESERVED0", std::uint8_t, 3, 2, access::ro>,
                groov::field<"GATEHCLK", bool, 1, 1>,
                groov::field<"STPPCLK", bool, 0, 0>>;
-
-  template <std::uint32_t baseaddress>
-  using otg_hs_pcgcr_t = otg_hs_pcgcr_tt<"OTG_HS_PCGCR", baseaddress, 0>;
 
 } // namespace otg1_hs_pwrclk

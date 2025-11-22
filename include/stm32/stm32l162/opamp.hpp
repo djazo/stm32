@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace opamp {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using csr_tt = groov::reg<name,
                             std::uint32_t,
                             baseaddress + offset,
@@ -49,7 +51,9 @@ namespace opamp {
                             groov::field<"S3SEL1", bool, 1, 1>,
                             groov::field<"OPA1PD", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using otr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -61,7 +65,9 @@ namespace opamp {
                groov::field<"AO2_OPT_OFFSET_TRIM", std::uint16_t, 19, 10>,
                groov::field<"AO1_OPT_OFFSET_TRIM", std::uint16_t, 9, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using lpotr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -71,14 +77,5 @@ namespace opamp {
                groov::field<"AO3_OPT_OFFSET_TRIM_LP", std::uint16_t, 29, 20>,
                groov::field<"AO2_OPT_OFFSET_TRIM_LP", std::uint16_t, 19, 10>,
                groov::field<"AO1_OPT_OFFSET_TRIM_LP", std::uint16_t, 9, 0>>;
-
-  template <std::uint32_t baseaddress>
-  using csr_t = csr_tt<"CSR", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using otr_t = otr_tt<"OTR", baseaddress, 4>;
-
-  template <std::uint32_t baseaddress>
-  using lpotr_t = lpotr_tt<"LPOTR", baseaddress, 8>;
 
 } // namespace opamp

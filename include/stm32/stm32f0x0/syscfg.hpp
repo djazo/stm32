@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace syscfg {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using cfgr1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -41,7 +43,9 @@ namespace syscfg {
                groov::field<"RESERVED0", std::uint8_t, 7, 2, access::ro>,
                groov::field<"MEM_MODE", std::uint8_t, 1, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using exticr1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -53,7 +57,9 @@ namespace syscfg {
                groov::field<"EXTI1", std::uint8_t, 7, 4>,
                groov::field<"EXTI0", std::uint8_t, 3, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using exticr2_tt =
     groov::reg<name,
                std::uint32_t,
@@ -65,7 +71,9 @@ namespace syscfg {
                groov::field<"EXTI5", std::uint8_t, 7, 4>,
                groov::field<"EXTI4", std::uint8_t, 3, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using exticr3_tt =
     groov::reg<name,
                std::uint32_t,
@@ -77,7 +85,9 @@ namespace syscfg {
                groov::field<"EXTI9", std::uint8_t, 7, 4>,
                groov::field<"EXTI8", std::uint8_t, 3, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using exticr4_tt =
     groov::reg<name,
                std::uint32_t,
@@ -89,7 +99,9 @@ namespace syscfg {
                groov::field<"EXTI13", std::uint8_t, 7, 4>,
                groov::field<"EXTI12", std::uint8_t, 3, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using cfgr2_tt =
     groov::reg<name,
                std::uint32_t,
@@ -101,23 +113,5 @@ namespace syscfg {
                groov::field<"PVD_LOCK", bool, 2, 2>,
                groov::field<"SRAM_PARITY_LOCK", bool, 1, 1>,
                groov::field<"LOCUP_LOCK", bool, 0, 0>>;
-
-  template <std::uint32_t baseaddress>
-  using cfgr1_t = cfgr1_tt<"CFGR1", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using exticr1_t = exticr1_tt<"EXTICR1", baseaddress, 8>;
-
-  template <std::uint32_t baseaddress>
-  using exticr2_t = exticr2_tt<"EXTICR2", baseaddress, 12>;
-
-  template <std::uint32_t baseaddress>
-  using exticr3_t = exticr3_tt<"EXTICR3", baseaddress, 16>;
-
-  template <std::uint32_t baseaddress>
-  using exticr4_t = exticr4_tt<"EXTICR4", baseaddress, 20>;
-
-  template <std::uint32_t baseaddress>
-  using cfgr2_t = cfgr2_tt<"CFGR2", baseaddress, 24>;
 
 } // namespace syscfg

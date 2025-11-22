@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace gpioc {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using gpio_moder_tt = groov::reg<name,
                                    std::uint32_t,
                                    baseaddress + offset,
@@ -33,7 +35,9 @@ namespace gpioc {
                                    groov::field<"MODE1", std::uint8_t, 3, 2>,
                                    groov::field<"MODE0", std::uint8_t, 1, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using gpio_otyper_tt =
     groov::reg<name,
                std::uint32_t,
@@ -57,7 +61,9 @@ namespace gpioc {
                groov::field<"OT1", bool, 1, 1>,
                groov::field<"OT0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using gpio_ospeedr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -80,7 +86,9 @@ namespace gpioc {
                groov::field<"OSPEED1", std::uint8_t, 3, 2>,
                groov::field<"OSPEED0", std::uint8_t, 1, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using gpio_pupdr_tt = groov::reg<name,
                                    std::uint32_t,
                                    baseaddress + offset,
@@ -102,7 +110,9 @@ namespace gpioc {
                                    groov::field<"PUPD1", std::uint8_t, 3, 2>,
                                    groov::field<"PUPD0", std::uint8_t, 1, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using gpio_idr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -126,7 +136,9 @@ namespace gpioc {
                groov::field<"ID1", bool, 1, 1>,
                groov::field<"ID0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using gpio_odr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -150,7 +162,9 @@ namespace gpioc {
                groov::field<"OD1", bool, 1, 1>,
                groov::field<"OD0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using gpio_bsrr_tt = groov::reg<name,
                                   std::uint32_t,
                                   baseaddress + offset,
@@ -188,7 +202,9 @@ namespace gpioc {
                                   groov::field<"BS1", bool, 1, 1>,
                                   groov::field<"BS0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using gpio_lckr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -213,7 +229,9 @@ namespace gpioc {
                groov::field<"LCK1", bool, 1, 1>,
                groov::field<"LCK0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using gpio_afrl_tt = groov::reg<name,
                                   std::uint32_t,
                                   baseaddress + offset,
@@ -227,7 +245,9 @@ namespace gpioc {
                                   groov::field<"AFSEL1", std::uint8_t, 7, 4>,
                                   groov::field<"AFSEL0", std::uint8_t, 3, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using gpio_afrh_tt = groov::reg<name,
                                   std::uint32_t,
                                   baseaddress + offset,
@@ -240,35 +260,5 @@ namespace gpioc {
                                   groov::field<"AFSEL10", std::uint8_t, 11, 8>,
                                   groov::field<"AFSEL9", std::uint8_t, 7, 4>,
                                   groov::field<"AFSEL8", std::uint8_t, 3, 0>>;
-
-  template <std::uint32_t baseaddress>
-  using gpio_moder_t = gpio_moder_tt<"GPIO_MODER", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using gpio_otyper_t = gpio_otyper_tt<"GPIO_OTYPER", baseaddress, 4>;
-
-  template <std::uint32_t baseaddress>
-  using gpio_ospeedr_t = gpio_ospeedr_tt<"GPIO_OSPEEDR", baseaddress, 8>;
-
-  template <std::uint32_t baseaddress>
-  using gpio_pupdr_t = gpio_pupdr_tt<"GPIO_PUPDR", baseaddress, 12>;
-
-  template <std::uint32_t baseaddress>
-  using gpio_idr_t = gpio_idr_tt<"GPIO_IDR", baseaddress, 16>;
-
-  template <std::uint32_t baseaddress>
-  using gpio_odr_t = gpio_odr_tt<"GPIO_ODR", baseaddress, 20>;
-
-  template <std::uint32_t baseaddress>
-  using gpio_bsrr_t = gpio_bsrr_tt<"GPIO_BSRR", baseaddress, 24>;
-
-  template <std::uint32_t baseaddress>
-  using gpio_lckr_t = gpio_lckr_tt<"GPIO_LCKR", baseaddress, 28>;
-
-  template <std::uint32_t baseaddress>
-  using gpio_afrl_t = gpio_afrl_tt<"GPIO_AFRL", baseaddress, 32>;
-
-  template <std::uint32_t baseaddress>
-  using gpio_afrh_t = gpio_afrh_tt<"GPIO_AFRH", baseaddress, 36>;
 
 } // namespace gpioc

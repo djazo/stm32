@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace sec_rng {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using rng_cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -32,7 +34,9 @@ namespace sec_rng {
                groov::field<"RNGEN", bool, 2, 2>,
                groov::field<"RESERVED0", std::uint8_t, 1, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using rng_sr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -46,30 +50,22 @@ namespace sec_rng {
                groov::field<"CECS", bool, 1, 1, access::ro>,
                groov::field<"DRDY", bool, 0, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using rng_dr_tt = groov::reg<name,
                                std::uint32_t,
                                baseaddress + offset,
                                access::ro,
                                groov::field<"RNDATA", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using rng_htcr_tt = groov::reg<name,
                                  std::uint32_t,
                                  baseaddress + offset,
                                  access::rw,
                                  groov::field<"HTCFG", std::uint32_t, 31, 0>>;
-
-  template <std::uint32_t baseaddress>
-  using rng_cr_t = rng_cr_tt<"RNG_CR", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using rng_sr_t = rng_sr_tt<"RNG_SR", baseaddress, 4>;
-
-  template <std::uint32_t baseaddress>
-  using rng_dr_t = rng_dr_tt<"RNG_DR", baseaddress, 8>;
-
-  template <std::uint32_t baseaddress>
-  using rng_htcr_t = rng_htcr_tt<"RNG_HTCR", baseaddress, 16>;
 
 } // namespace sec_rng

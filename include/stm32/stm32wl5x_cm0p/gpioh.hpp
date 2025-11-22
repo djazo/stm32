@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace gpioh {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using moder_tt =
     groov::reg<name,
                std::uint32_t,
@@ -21,7 +23,9 @@ namespace gpioh {
                groov::field<"MODER3", std::uint8_t, 7, 6>,
                groov::field<"RESERVED0", std::uint8_t, 5, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using otyper_tt =
     groov::reg<name,
                std::uint32_t,
@@ -31,7 +35,9 @@ namespace gpioh {
                groov::field<"OT3", bool, 3, 3>,
                groov::field<"RESERVED0", std::uint8_t, 2, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ospeedr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -41,7 +47,9 @@ namespace gpioh {
                groov::field<"OSPEEDR3", std::uint8_t, 7, 6>,
                groov::field<"RESERVED0", std::uint8_t, 5, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using pupdr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -51,7 +59,9 @@ namespace gpioh {
                groov::field<"PUPDR3", std::uint8_t, 7, 6>,
                groov::field<"RESERVED0", std::uint8_t, 5, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using idr_tt = groov::reg<name,
                             std::uint32_t,
                             baseaddress + offset,
@@ -60,7 +70,9 @@ namespace gpioh {
                             groov::field<"IDR3", bool, 3, 3>,
                             groov::field<"RESERVED0", std::uint8_t, 2, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using odr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -70,7 +82,9 @@ namespace gpioh {
                groov::field<"ODR3", bool, 3, 3>,
                groov::field<"RESERVED0", std::uint8_t, 2, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using bsrr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -82,7 +96,9 @@ namespace gpioh {
                groov::field<"BS3", bool, 3, 3>,
                groov::field<"RESERVED0", std::uint8_t, 2, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using lckr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -94,7 +110,9 @@ namespace gpioh {
                groov::field<"LCK3", bool, 3, 3>,
                groov::field<"RESERVED0", std::uint8_t, 2, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using afrl_tt =
     groov::reg<name,
                std::uint32_t,
@@ -104,7 +122,9 @@ namespace gpioh {
                groov::field<"AFRL3", std::uint8_t, 15, 12>,
                groov::field<"RESERVED0", std::uint16_t, 11, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using afrh_tt = groov::reg<name,
                              std::uint32_t,
                              baseaddress + offset,
@@ -118,7 +138,9 @@ namespace gpioh {
                              groov::field<"AFRH9", std::uint8_t, 7, 4>,
                              groov::field<"AFRH8", std::uint8_t, 3, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using brr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -127,38 +149,5 @@ namespace gpioh {
                groov::field<"RESERVED1", std::uint32_t, 31, 4, access::ro>,
                groov::field<"BR3", bool, 3, 3>,
                groov::field<"RESERVED0", std::uint8_t, 2, 0, access::ro>>;
-
-  template <std::uint32_t baseaddress>
-  using moder_t = moder_tt<"MODER", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using otyper_t = otyper_tt<"OTYPER", baseaddress, 4>;
-
-  template <std::uint32_t baseaddress>
-  using ospeedr_t = ospeedr_tt<"OSPEEDR", baseaddress, 8>;
-
-  template <std::uint32_t baseaddress>
-  using pupdr_t = pupdr_tt<"PUPDR", baseaddress, 12>;
-
-  template <std::uint32_t baseaddress>
-  using idr_t = idr_tt<"IDR", baseaddress, 16>;
-
-  template <std::uint32_t baseaddress>
-  using odr_t = odr_tt<"ODR", baseaddress, 20>;
-
-  template <std::uint32_t baseaddress>
-  using bsrr_t = bsrr_tt<"BSRR", baseaddress, 24>;
-
-  template <std::uint32_t baseaddress>
-  using lckr_t = lckr_tt<"LCKR", baseaddress, 28>;
-
-  template <std::uint32_t baseaddress>
-  using afrl_t = afrl_tt<"AFRL", baseaddress, 32>;
-
-  template <std::uint32_t baseaddress>
-  using afrh_t = afrh_tt<"AFRH", baseaddress, 36>;
-
-  template <std::uint32_t baseaddress>
-  using brr_t = brr_tt<"BRR", baseaddress, 40>;
 
 } // namespace gpioh

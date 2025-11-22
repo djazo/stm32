@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace sec_mdf1 {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using gcr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -22,7 +24,9 @@ namespace sec_mdf1 {
                groov::field<"RESERVED0", std::uint8_t, 3, 1, access::ro>,
                groov::field<"TRGO", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ckgcr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -44,7 +48,9 @@ namespace sec_mdf1 {
                groov::field<"CCK0EN", bool, 1, 1>,
                groov::field<"CKGDEN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mdf_sitf0cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -59,7 +65,9 @@ namespace sec_mdf1 {
                groov::field<"SCKSRC", std::uint8_t, 2, 1>,
                groov::field<"SITFEN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mdf_sitf1cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -74,7 +82,9 @@ namespace sec_mdf1 {
                groov::field<"SCKSRC", std::uint8_t, 2, 1>,
                groov::field<"SITFEN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mdf_sitf2cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -89,7 +99,9 @@ namespace sec_mdf1 {
                groov::field<"SCKSRC", std::uint8_t, 2, 1>,
                groov::field<"SITFEN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mdf_sitf3cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -104,7 +116,9 @@ namespace sec_mdf1 {
                groov::field<"SCKSRC", std::uint8_t, 2, 1>,
                groov::field<"SITFEN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mdf_sitf4cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -119,7 +133,9 @@ namespace sec_mdf1 {
                groov::field<"SCKSRC", std::uint8_t, 2, 1>,
                groov::field<"SITFEN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mdf_sitf5cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -134,7 +150,9 @@ namespace sec_mdf1 {
                groov::field<"SCKSRC", std::uint8_t, 2, 1>,
                groov::field<"SITFEN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mdf_bsmx0cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -144,7 +162,9 @@ namespace sec_mdf1 {
                groov::field<"RESERVED0", std::uint32_t, 30, 5, access::ro>,
                groov::field<"BSSEL", std::uint8_t, 4, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mdf_bsmx1cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -154,7 +174,9 @@ namespace sec_mdf1 {
                groov::field<"RESERVED0", std::uint32_t, 30, 5, access::ro>,
                groov::field<"BSSEL", std::uint8_t, 4, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mdf_bsmx2cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -164,7 +186,9 @@ namespace sec_mdf1 {
                groov::field<"RESERVED0", std::uint32_t, 30, 5, access::ro>,
                groov::field<"BSSEL", std::uint8_t, 4, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mdf_bsmx3cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -174,7 +198,9 @@ namespace sec_mdf1 {
                groov::field<"RESERVED0", std::uint32_t, 30, 5, access::ro>,
                groov::field<"BSSEL", std::uint8_t, 4, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mdf_bsmx4cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -184,7 +210,9 @@ namespace sec_mdf1 {
                groov::field<"RESERVED0", std::uint32_t, 30, 5, access::ro>,
                groov::field<"BSSEL", std::uint8_t, 4, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mdf_bsmx5cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -194,7 +222,9 @@ namespace sec_mdf1 {
                groov::field<"RESERVED0", std::uint32_t, 30, 5, access::ro>,
                groov::field<"BSSEL", std::uint8_t, 4, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mdf_dflt0cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -216,7 +246,9 @@ namespace sec_mdf1 {
                groov::field<"DMAEN", bool, 1, 1>,
                groov::field<"DFLTEN", bool, 0, 0, access::wo>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mdf_dflt1cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -238,7 +270,9 @@ namespace sec_mdf1 {
                groov::field<"DMAEN", bool, 1, 1>,
                groov::field<"DFLTEN", bool, 0, 0, access::wo>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mdf_dflt2cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -260,7 +294,9 @@ namespace sec_mdf1 {
                groov::field<"DMAEN", bool, 1, 1>,
                groov::field<"DFLTEN", bool, 0, 0, access::wo>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mdf_dflt3cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -282,7 +318,9 @@ namespace sec_mdf1 {
                groov::field<"DMAEN", bool, 1, 1>,
                groov::field<"DFLTEN", bool, 0, 0, access::wo>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mdf_dflt4cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -304,7 +342,9 @@ namespace sec_mdf1 {
                groov::field<"DMAEN", bool, 1, 1>,
                groov::field<"DFLTEN", bool, 0, 0, access::wo>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mdf_dflt5cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -326,7 +366,9 @@ namespace sec_mdf1 {
                groov::field<"DMAEN", bool, 1, 1>,
                groov::field<"DFLTEN", bool, 0, 0, access::wo>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mdf_dflt0cicr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -341,7 +383,9 @@ namespace sec_mdf1 {
                groov::field<"RESERVED0", std::uint8_t, 3, 2, access::ro>,
                groov::field<"DATSRC", std::uint8_t, 1, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mdf_dflt1cicr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -356,7 +400,9 @@ namespace sec_mdf1 {
                groov::field<"RESERVED0", std::uint8_t, 3, 2, access::ro>,
                groov::field<"DATSRC", std::uint8_t, 1, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mdf_dflt2cicr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -371,7 +417,9 @@ namespace sec_mdf1 {
                groov::field<"RESERVED0", std::uint8_t, 3, 2, access::ro>,
                groov::field<"DATSRC", std::uint8_t, 1, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mdf_dflt3cicr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -386,7 +434,9 @@ namespace sec_mdf1 {
                groov::field<"RESERVED0", std::uint8_t, 3, 2, access::ro>,
                groov::field<"DATSRC", std::uint8_t, 1, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mdf_dflt4cicr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -401,7 +451,9 @@ namespace sec_mdf1 {
                groov::field<"RESERVED0", std::uint8_t, 3, 2, access::ro>,
                groov::field<"DATSRC", std::uint8_t, 1, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mdf_dflt5cicr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -416,7 +468,9 @@ namespace sec_mdf1 {
                groov::field<"RESERVED0", std::uint8_t, 3, 2, access::ro>,
                groov::field<"DATSRC", std::uint8_t, 1, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mdf_dflt0rsfr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -430,7 +484,9 @@ namespace sec_mdf1 {
                groov::field<"RESERVED0", std::uint8_t, 3, 1, access::ro>,
                groov::field<"RSFLTBYP", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mdf_dflt1rsfr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -444,7 +500,9 @@ namespace sec_mdf1 {
                groov::field<"RESERVED0", std::uint8_t, 3, 1, access::ro>,
                groov::field<"RSFLTBYP", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mdf_dflt2rsfr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -458,7 +516,9 @@ namespace sec_mdf1 {
                groov::field<"RESERVED0", std::uint8_t, 3, 1, access::ro>,
                groov::field<"RSFLTBYP", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mdf_dflt3rsfr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -472,7 +532,9 @@ namespace sec_mdf1 {
                groov::field<"RESERVED0", std::uint8_t, 3, 1, access::ro>,
                groov::field<"RSFLTBYP", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mdf_dflt4rsfr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -486,7 +548,9 @@ namespace sec_mdf1 {
                groov::field<"RESERVED0", std::uint8_t, 3, 1, access::ro>,
                groov::field<"RSFLTBYP", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mdf_dflt5rsfr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -500,7 +564,9 @@ namespace sec_mdf1 {
                groov::field<"RESERVED0", std::uint8_t, 3, 1, access::ro>,
                groov::field<"RSFLTBYP", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mdf_dflt0intr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -511,7 +577,9 @@ namespace sec_mdf1 {
                groov::field<"RESERVED0", std::uint8_t, 3, 2, access::ro>,
                groov::field<"INTDIV", std::uint8_t, 1, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mdf_dflt1intr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -522,7 +590,9 @@ namespace sec_mdf1 {
                groov::field<"RESERVED0", std::uint8_t, 3, 2, access::ro>,
                groov::field<"INTDIV", std::uint8_t, 1, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mdf_dflt2intr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -533,7 +603,9 @@ namespace sec_mdf1 {
                groov::field<"RESERVED0", std::uint8_t, 3, 2, access::ro>,
                groov::field<"INTDIV", std::uint8_t, 1, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mdf_dflt3intr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -544,7 +616,9 @@ namespace sec_mdf1 {
                groov::field<"RESERVED0", std::uint8_t, 3, 2, access::ro>,
                groov::field<"INTDIV", std::uint8_t, 1, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mdf_dflt4intr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -555,7 +629,9 @@ namespace sec_mdf1 {
                groov::field<"RESERVED0", std::uint8_t, 3, 2, access::ro>,
                groov::field<"INTDIV", std::uint8_t, 1, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mdf_dflt5intr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -566,7 +642,9 @@ namespace sec_mdf1 {
                groov::field<"RESERVED0", std::uint8_t, 3, 2, access::ro>,
                groov::field<"INTDIV", std::uint8_t, 1, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mdf_old0cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -583,7 +661,9 @@ namespace sec_mdf1 {
                groov::field<"THINB", bool, 1, 1>,
                groov::field<"OLDEN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mdf_old1cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -600,7 +680,9 @@ namespace sec_mdf1 {
                groov::field<"THINB", bool, 1, 1>,
                groov::field<"OLDEN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mdf_old2cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -617,7 +699,9 @@ namespace sec_mdf1 {
                groov::field<"THINB", bool, 1, 1>,
                groov::field<"OLDEN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mdf_old3cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -634,7 +718,9 @@ namespace sec_mdf1 {
                groov::field<"THINB", bool, 1, 1>,
                groov::field<"OLDEN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mdf_old4cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -651,7 +737,9 @@ namespace sec_mdf1 {
                groov::field<"THINB", bool, 1, 1>,
                groov::field<"OLDEN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mdf_old5cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -668,7 +756,9 @@ namespace sec_mdf1 {
                groov::field<"THINB", bool, 1, 1>,
                groov::field<"OLDEN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mdf_old0thlr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -677,7 +767,9 @@ namespace sec_mdf1 {
                groov::field<"RESERVED0", std::uint8_t, 31, 26, access::ro>,
                groov::field<"OLDTHL", std::uint32_t, 25, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mdf_old1thlr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -686,7 +778,9 @@ namespace sec_mdf1 {
                groov::field<"RESERVED0", std::uint8_t, 31, 26, access::ro>,
                groov::field<"OLDTHL", std::uint32_t, 25, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mdf_old2thlr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -695,7 +789,9 @@ namespace sec_mdf1 {
                groov::field<"RESERVED0", std::uint8_t, 31, 26, access::ro>,
                groov::field<"OLDTHL", std::uint32_t, 25, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mdf_old3thlr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -704,7 +800,9 @@ namespace sec_mdf1 {
                groov::field<"RESERVED0", std::uint8_t, 31, 26, access::ro>,
                groov::field<"OLDTHL", std::uint32_t, 25, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mdf_old4thlr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -713,7 +811,9 @@ namespace sec_mdf1 {
                groov::field<"RESERVED0", std::uint8_t, 31, 26, access::ro>,
                groov::field<"OLDTHL", std::uint32_t, 25, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mdf_old5thlr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -722,7 +822,9 @@ namespace sec_mdf1 {
                groov::field<"RESERVED0", std::uint8_t, 31, 26, access::ro>,
                groov::field<"OLDTHL", std::uint32_t, 25, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mdf_old0thhr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -731,7 +833,9 @@ namespace sec_mdf1 {
                groov::field<"RESERVED0", std::uint8_t, 31, 26, access::ro>,
                groov::field<"OLDTHH", std::uint32_t, 25, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mdf_old1thhr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -740,7 +844,9 @@ namespace sec_mdf1 {
                groov::field<"RESERVED0", std::uint8_t, 31, 26, access::ro>,
                groov::field<"OLDTHH", std::uint32_t, 25, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mdf_old2thhr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -749,7 +855,9 @@ namespace sec_mdf1 {
                groov::field<"RESERVED0", std::uint8_t, 31, 26, access::ro>,
                groov::field<"OLDTHH", std::uint32_t, 25, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mdf_old3thhr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -758,7 +866,9 @@ namespace sec_mdf1 {
                groov::field<"RESERVED0", std::uint8_t, 31, 26, access::ro>,
                groov::field<"OLDTHH", std::uint32_t, 25, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mdf_old4thhr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -767,7 +877,9 @@ namespace sec_mdf1 {
                groov::field<"RESERVED0", std::uint8_t, 31, 26, access::ro>,
                groov::field<"OLDTHH", std::uint32_t, 25, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mdf_old5thhr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -776,7 +888,9 @@ namespace sec_mdf1 {
                groov::field<"RESERVED0", std::uint8_t, 31, 26, access::ro>,
                groov::field<"OLDTHH", std::uint32_t, 25, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mdf_dly0cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -786,7 +900,9 @@ namespace sec_mdf1 {
                groov::field<"RESERVED0", std::uint32_t, 30, 7, access::ro>,
                groov::field<"SKPDLY", std::uint8_t, 6, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mdf_dly1cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -796,7 +912,9 @@ namespace sec_mdf1 {
                groov::field<"RESERVED0", std::uint32_t, 30, 7, access::ro>,
                groov::field<"SKPDLY", std::uint8_t, 6, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mdf_dly2cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -806,7 +924,9 @@ namespace sec_mdf1 {
                groov::field<"RESERVED0", std::uint32_t, 30, 7, access::ro>,
                groov::field<"SKPDLY", std::uint8_t, 6, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mdf_dly3cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -816,7 +936,9 @@ namespace sec_mdf1 {
                groov::field<"RESERVED0", std::uint32_t, 30, 7, access::ro>,
                groov::field<"SKPDLY", std::uint8_t, 6, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mdf_dly4cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -826,7 +948,9 @@ namespace sec_mdf1 {
                groov::field<"RESERVED0", std::uint32_t, 30, 7, access::ro>,
                groov::field<"SKPDLY", std::uint8_t, 6, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mdf_dly5cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -836,7 +960,9 @@ namespace sec_mdf1 {
                groov::field<"RESERVED0", std::uint32_t, 30, 7, access::ro>,
                groov::field<"SKPDLY", std::uint8_t, 6, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mdf_scd0cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -850,7 +976,9 @@ namespace sec_mdf1 {
                groov::field<"RESERVED0", std::uint8_t, 3, 1, access::ro>,
                groov::field<"SCDEN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mdf_scd1cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -864,7 +992,9 @@ namespace sec_mdf1 {
                groov::field<"RESERVED0", std::uint8_t, 3, 1, access::ro>,
                groov::field<"SCDEN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mdf_scd2cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -878,7 +1008,9 @@ namespace sec_mdf1 {
                groov::field<"RESERVED0", std::uint8_t, 3, 1, access::ro>,
                groov::field<"SCDEN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mdf_scd3cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -892,7 +1024,9 @@ namespace sec_mdf1 {
                groov::field<"RESERVED0", std::uint8_t, 3, 1, access::ro>,
                groov::field<"SCDEN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mdf_scd4cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -906,7 +1040,9 @@ namespace sec_mdf1 {
                groov::field<"RESERVED0", std::uint8_t, 3, 1, access::ro>,
                groov::field<"SCDEN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mdf_scd5cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -920,7 +1056,9 @@ namespace sec_mdf1 {
                groov::field<"RESERVED0", std::uint8_t, 3, 1, access::ro>,
                groov::field<"SCDEN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mdf_dflt0ier_tt =
     groov::reg<name,
                std::uint32_t,
@@ -939,7 +1077,9 @@ namespace sec_mdf1 {
                groov::field<"DOVRIE", bool, 1, 1>,
                groov::field<"FTHIE", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mdf_dflt0isr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -959,7 +1099,9 @@ namespace sec_mdf1 {
                groov::field<"DOVRF", bool, 1, 1>,
                groov::field<"FTHF", bool, 0, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mdf_dflt1ier_tt =
     groov::reg<name,
                std::uint32_t,
@@ -978,7 +1120,9 @@ namespace sec_mdf1 {
                groov::field<"DOVRIE", bool, 1, 1>,
                groov::field<"FTHIE", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mdf_dflt2ier_tt =
     groov::reg<name,
                std::uint32_t,
@@ -997,7 +1141,9 @@ namespace sec_mdf1 {
                groov::field<"DOVRIE", bool, 1, 1>,
                groov::field<"FTHIE", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mdf_dflt3ier_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1016,7 +1162,9 @@ namespace sec_mdf1 {
                groov::field<"DOVRIE", bool, 1, 1>,
                groov::field<"FTHIE", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mdf_dflt4ier_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1035,7 +1183,9 @@ namespace sec_mdf1 {
                groov::field<"DOVRIE", bool, 1, 1>,
                groov::field<"FTHIE", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mdf_dflt5ier_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1054,7 +1204,9 @@ namespace sec_mdf1 {
                groov::field<"DOVRIE", bool, 1, 1>,
                groov::field<"FTHIE", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mdf_dflt1isr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1074,7 +1226,9 @@ namespace sec_mdf1 {
                groov::field<"DOVRF", bool, 1, 1>,
                groov::field<"FTHF", bool, 0, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mdf_dflt2isr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1094,7 +1248,9 @@ namespace sec_mdf1 {
                groov::field<"DOVRF", bool, 1, 1>,
                groov::field<"FTHF", bool, 0, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mdf_dflt3isr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1114,7 +1270,9 @@ namespace sec_mdf1 {
                groov::field<"DOVRF", bool, 1, 1>,
                groov::field<"FTHF", bool, 0, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mdf_dflt4isr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1134,7 +1292,9 @@ namespace sec_mdf1 {
                groov::field<"DOVRF", bool, 1, 1>,
                groov::field<"FTHF", bool, 0, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mdf_dflt5isr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1154,7 +1314,9 @@ namespace sec_mdf1 {
                groov::field<"DOVRF", bool, 1, 1>,
                groov::field<"FTHF", bool, 0, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mdf_oec0cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1163,7 +1325,9 @@ namespace sec_mdf1 {
                groov::field<"RESERVED0", std::uint8_t, 31, 26, access::ro>,
                groov::field<"OFFSET", std::uint32_t, 25, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mdf_oec1cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1172,7 +1336,9 @@ namespace sec_mdf1 {
                groov::field<"RESERVED0", std::uint8_t, 31, 26, access::ro>,
                groov::field<"OFFSET", std::uint32_t, 25, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mdf_oec2cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1181,7 +1347,9 @@ namespace sec_mdf1 {
                groov::field<"RESERVED0", std::uint8_t, 31, 26, access::ro>,
                groov::field<"OFFSET", std::uint32_t, 25, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mdf_oec3cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1190,7 +1358,9 @@ namespace sec_mdf1 {
                groov::field<"RESERVED0", std::uint8_t, 31, 26, access::ro>,
                groov::field<"OFFSET", std::uint32_t, 25, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mdf_oec4cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1199,7 +1369,9 @@ namespace sec_mdf1 {
                groov::field<"RESERVED0", std::uint8_t, 31, 26, access::ro>,
                groov::field<"OFFSET", std::uint32_t, 25, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mdf_oec5cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1208,7 +1380,9 @@ namespace sec_mdf1 {
                groov::field<"RESERVED0", std::uint8_t, 31, 26, access::ro>,
                groov::field<"OFFSET", std::uint32_t, 25, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mdf_snps0dr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1218,7 +1392,9 @@ namespace sec_mdf1 {
                groov::field<"EXTSDR", std::uint8_t, 15, 9>,
                groov::field<"MCICDC", std::uint16_t, 8, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mdf_snps1dr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1228,7 +1404,9 @@ namespace sec_mdf1 {
                groov::field<"EXTSDR", std::uint8_t, 15, 9>,
                groov::field<"MCICDC", std::uint16_t, 8, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mdf_snps2dr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1238,7 +1416,9 @@ namespace sec_mdf1 {
                groov::field<"EXTSDR", std::uint8_t, 15, 9>,
                groov::field<"MCICDC", std::uint16_t, 8, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mdf_snps3dr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1248,7 +1428,9 @@ namespace sec_mdf1 {
                groov::field<"EXTSDR", std::uint8_t, 15, 9>,
                groov::field<"MCICDC", std::uint16_t, 8, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mdf_snps4dr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1258,7 +1440,9 @@ namespace sec_mdf1 {
                groov::field<"EXTSDR", std::uint8_t, 15, 9>,
                groov::field<"MCICDC", std::uint16_t, 8, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mdf_snps5dr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1268,7 +1452,9 @@ namespace sec_mdf1 {
                groov::field<"EXTSDR", std::uint8_t, 15, 9>,
                groov::field<"MCICDC", std::uint16_t, 8, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mdf_dflt0dr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1277,7 +1463,9 @@ namespace sec_mdf1 {
                groov::field<"DR", std::uint32_t, 31, 8>,
                groov::field<"RESERVED0", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mdf_dflt1dr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1286,7 +1474,9 @@ namespace sec_mdf1 {
                groov::field<"DR", std::uint32_t, 31, 8>,
                groov::field<"RESERVED0", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mdf_dflt2dr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1295,7 +1485,9 @@ namespace sec_mdf1 {
                groov::field<"DR", std::uint32_t, 31, 8>,
                groov::field<"RESERVED0", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mdf_dflt3dr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1304,7 +1496,9 @@ namespace sec_mdf1 {
                groov::field<"DR", std::uint32_t, 31, 8>,
                groov::field<"RESERVED0", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mdf_dflt4dr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1313,7 +1507,9 @@ namespace sec_mdf1 {
                groov::field<"DR", std::uint32_t, 31, 8>,
                groov::field<"RESERVED0", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mdf_dflt5dr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1321,299 +1517,5 @@ namespace sec_mdf1 {
                access::ro,
                groov::field<"DR", std::uint32_t, 31, 8>,
                groov::field<"RESERVED0", std::uint8_t, 7, 0>>;
-
-  template <std::uint32_t baseaddress>
-  using gcr_t = gcr_tt<"GCR", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using ckgcr_t = ckgcr_tt<"CKGCR", baseaddress, 4>;
-
-  template <std::uint32_t baseaddress>
-  using mdf_sitf0cr_t = mdf_sitf0cr_tt<"MDF_SITF0CR", baseaddress, 128>;
-
-  template <std::uint32_t baseaddress>
-  using mdf_sitf1cr_t = mdf_sitf1cr_tt<"MDF_SITF1CR", baseaddress, 256>;
-
-  template <std::uint32_t baseaddress>
-  using mdf_sitf2cr_t = mdf_sitf2cr_tt<"MDF_SITF2CR", baseaddress, 384>;
-
-  template <std::uint32_t baseaddress>
-  using mdf_sitf3cr_t = mdf_sitf3cr_tt<"MDF_SITF3CR", baseaddress, 512>;
-
-  template <std::uint32_t baseaddress>
-  using mdf_sitf4cr_t = mdf_sitf4cr_tt<"MDF_SITF4CR", baseaddress, 640>;
-
-  template <std::uint32_t baseaddress>
-  using mdf_sitf5cr_t = mdf_sitf5cr_tt<"MDF_SITF5CR", baseaddress, 768>;
-
-  template <std::uint32_t baseaddress>
-  using mdf_bsmx0cr_t = mdf_bsmx0cr_tt<"MDF_BSMX0CR", baseaddress, 132>;
-
-  template <std::uint32_t baseaddress>
-  using mdf_bsmx1cr_t = mdf_bsmx1cr_tt<"MDF_BSMX1CR", baseaddress, 260>;
-
-  template <std::uint32_t baseaddress>
-  using mdf_bsmx2cr_t = mdf_bsmx2cr_tt<"MDF_BSMX2CR", baseaddress, 388>;
-
-  template <std::uint32_t baseaddress>
-  using mdf_bsmx3cr_t = mdf_bsmx3cr_tt<"MDF_BSMX3CR", baseaddress, 516>;
-
-  template <std::uint32_t baseaddress>
-  using mdf_bsmx4cr_t = mdf_bsmx4cr_tt<"MDF_BSMX4CR", baseaddress, 644>;
-
-  template <std::uint32_t baseaddress>
-  using mdf_bsmx5cr_t = mdf_bsmx5cr_tt<"MDF_BSMX5CR", baseaddress, 772>;
-
-  template <std::uint32_t baseaddress>
-  using mdf_dflt0cr_t = mdf_dflt0cr_tt<"MDF_DFLT0CR", baseaddress, 136>;
-
-  template <std::uint32_t baseaddress>
-  using mdf_dflt1cr_t = mdf_dflt1cr_tt<"MDF_DFLT1CR", baseaddress, 264>;
-
-  template <std::uint32_t baseaddress>
-  using mdf_dflt2cr_t = mdf_dflt2cr_tt<"MDF_DFLT2CR", baseaddress, 392>;
-
-  template <std::uint32_t baseaddress>
-  using mdf_dflt3cr_t = mdf_dflt3cr_tt<"MDF_DFLT3CR", baseaddress, 520>;
-
-  template <std::uint32_t baseaddress>
-  using mdf_dflt4cr_t = mdf_dflt4cr_tt<"MDF_DFLT4CR", baseaddress, 648>;
-
-  template <std::uint32_t baseaddress>
-  using mdf_dflt5cr_t = mdf_dflt5cr_tt<"MDF_DFLT5CR", baseaddress, 776>;
-
-  template <std::uint32_t baseaddress>
-  using mdf_dflt0cicr_t = mdf_dflt0cicr_tt<"MDF_DFLT0CICR", baseaddress, 140>;
-
-  template <std::uint32_t baseaddress>
-  using mdf_dflt1cicr_t = mdf_dflt1cicr_tt<"MDF_DFLT1CICR", baseaddress, 268>;
-
-  template <std::uint32_t baseaddress>
-  using mdf_dflt2cicr_t = mdf_dflt2cicr_tt<"MDF_DFLT2CICR", baseaddress, 396>;
-
-  template <std::uint32_t baseaddress>
-  using mdf_dflt3cicr_t = mdf_dflt3cicr_tt<"MDF_DFLT3CICR", baseaddress, 524>;
-
-  template <std::uint32_t baseaddress>
-  using mdf_dflt4cicr_t = mdf_dflt4cicr_tt<"MDF_DFLT4CICR", baseaddress, 652>;
-
-  template <std::uint32_t baseaddress>
-  using mdf_dflt5cicr_t = mdf_dflt5cicr_tt<"MDF_DFLT5CICR", baseaddress, 780>;
-
-  template <std::uint32_t baseaddress>
-  using mdf_dflt0rsfr_t = mdf_dflt0rsfr_tt<"MDF_DFLT0RSFR", baseaddress, 144>;
-
-  template <std::uint32_t baseaddress>
-  using mdf_dflt1rsfr_t = mdf_dflt1rsfr_tt<"MDF_DFLT1RSFR", baseaddress, 272>;
-
-  template <std::uint32_t baseaddress>
-  using mdf_dflt2rsfr_t = mdf_dflt2rsfr_tt<"MDF_DFLT2RSFR", baseaddress, 400>;
-
-  template <std::uint32_t baseaddress>
-  using mdf_dflt3rsfr_t = mdf_dflt3rsfr_tt<"MDF_DFLT3RSFR", baseaddress, 528>;
-
-  template <std::uint32_t baseaddress>
-  using mdf_dflt4rsfr_t = mdf_dflt4rsfr_tt<"MDF_DFLT4RSFR", baseaddress, 656>;
-
-  template <std::uint32_t baseaddress>
-  using mdf_dflt5rsfr_t = mdf_dflt5rsfr_tt<"MDF_DFLT5RSFR", baseaddress, 784>;
-
-  template <std::uint32_t baseaddress>
-  using mdf_dflt0intr_t = mdf_dflt0intr_tt<"MDF_DFLT0INTR", baseaddress, 148>;
-
-  template <std::uint32_t baseaddress>
-  using mdf_dflt1intr_t = mdf_dflt1intr_tt<"MDF_DFLT1INTR", baseaddress, 276>;
-
-  template <std::uint32_t baseaddress>
-  using mdf_dflt2intr_t = mdf_dflt2intr_tt<"MDF_DFLT2INTR", baseaddress, 404>;
-
-  template <std::uint32_t baseaddress>
-  using mdf_dflt3intr_t = mdf_dflt3intr_tt<"MDF_DFLT3INTR", baseaddress, 532>;
-
-  template <std::uint32_t baseaddress>
-  using mdf_dflt4intr_t = mdf_dflt4intr_tt<"MDF_DFLT4INTR", baseaddress, 660>;
-
-  template <std::uint32_t baseaddress>
-  using mdf_dflt5intr_t = mdf_dflt5intr_tt<"MDF_DFLT5INTR", baseaddress, 788>;
-
-  template <std::uint32_t baseaddress>
-  using mdf_old0cr_t = mdf_old0cr_tt<"MDF_OLD0CR", baseaddress, 152>;
-
-  template <std::uint32_t baseaddress>
-  using mdf_old1cr_t = mdf_old1cr_tt<"MDF_OLD1CR", baseaddress, 280>;
-
-  template <std::uint32_t baseaddress>
-  using mdf_old2cr_t = mdf_old2cr_tt<"MDF_OLD2CR", baseaddress, 408>;
-
-  template <std::uint32_t baseaddress>
-  using mdf_old3cr_t = mdf_old3cr_tt<"MDF_OLD3CR", baseaddress, 536>;
-
-  template <std::uint32_t baseaddress>
-  using mdf_old4cr_t = mdf_old4cr_tt<"MDF_OLD4CR", baseaddress, 664>;
-
-  template <std::uint32_t baseaddress>
-  using mdf_old5cr_t = mdf_old5cr_tt<"MDF_OLD5CR", baseaddress, 792>;
-
-  template <std::uint32_t baseaddress>
-  using mdf_old0thlr_t = mdf_old0thlr_tt<"MDF_OLD0THLR", baseaddress, 156>;
-
-  template <std::uint32_t baseaddress>
-  using mdf_old1thlr_t = mdf_old1thlr_tt<"MDF_OLD1THLR", baseaddress, 284>;
-
-  template <std::uint32_t baseaddress>
-  using mdf_old2thlr_t = mdf_old2thlr_tt<"MDF_OLD2THLR", baseaddress, 412>;
-
-  template <std::uint32_t baseaddress>
-  using mdf_old3thlr_t = mdf_old3thlr_tt<"MDF_OLD3THLR", baseaddress, 540>;
-
-  template <std::uint32_t baseaddress>
-  using mdf_old4thlr_t = mdf_old4thlr_tt<"MDF_OLD4THLR", baseaddress, 668>;
-
-  template <std::uint32_t baseaddress>
-  using mdf_old5thlr_t = mdf_old5thlr_tt<"MDF_OLD5THLR", baseaddress, 796>;
-
-  template <std::uint32_t baseaddress>
-  using mdf_old0thhr_t = mdf_old0thhr_tt<"MDF_OLD0THHR", baseaddress, 160>;
-
-  template <std::uint32_t baseaddress>
-  using mdf_old1thhr_t = mdf_old1thhr_tt<"MDF_OLD1THHR", baseaddress, 288>;
-
-  template <std::uint32_t baseaddress>
-  using mdf_old2thhr_t = mdf_old2thhr_tt<"MDF_OLD2THHR", baseaddress, 416>;
-
-  template <std::uint32_t baseaddress>
-  using mdf_old3thhr_t = mdf_old3thhr_tt<"MDF_OLD3THHR", baseaddress, 544>;
-
-  template <std::uint32_t baseaddress>
-  using mdf_old4thhr_t = mdf_old4thhr_tt<"MDF_OLD4THHR", baseaddress, 672>;
-
-  template <std::uint32_t baseaddress>
-  using mdf_old5thhr_t = mdf_old5thhr_tt<"MDF_OLD5THHR", baseaddress, 800>;
-
-  template <std::uint32_t baseaddress>
-  using mdf_dly0cr_t = mdf_dly0cr_tt<"MDF_DLY0CR", baseaddress, 164>;
-
-  template <std::uint32_t baseaddress>
-  using mdf_dly1cr_t = mdf_dly1cr_tt<"MDF_DLY1CR", baseaddress, 292>;
-
-  template <std::uint32_t baseaddress>
-  using mdf_dly2cr_t = mdf_dly2cr_tt<"MDF_DLY2CR", baseaddress, 420>;
-
-  template <std::uint32_t baseaddress>
-  using mdf_dly3cr_t = mdf_dly3cr_tt<"MDF_DLY3CR", baseaddress, 548>;
-
-  template <std::uint32_t baseaddress>
-  using mdf_dly4cr_t = mdf_dly4cr_tt<"MDF_DLY4CR", baseaddress, 676>;
-
-  template <std::uint32_t baseaddress>
-  using mdf_dly5cr_t = mdf_dly5cr_tt<"MDF_DLY5CR", baseaddress, 804>;
-
-  template <std::uint32_t baseaddress>
-  using mdf_scd0cr_t = mdf_scd0cr_tt<"MDF_SCD0CR", baseaddress, 168>;
-
-  template <std::uint32_t baseaddress>
-  using mdf_scd1cr_t = mdf_scd1cr_tt<"MDF_SCD1CR", baseaddress, 296>;
-
-  template <std::uint32_t baseaddress>
-  using mdf_scd2cr_t = mdf_scd2cr_tt<"MDF_SCD2CR", baseaddress, 424>;
-
-  template <std::uint32_t baseaddress>
-  using mdf_scd3cr_t = mdf_scd3cr_tt<"MDF_SCD3CR", baseaddress, 552>;
-
-  template <std::uint32_t baseaddress>
-  using mdf_scd4cr_t = mdf_scd4cr_tt<"MDF_SCD4CR", baseaddress, 680>;
-
-  template <std::uint32_t baseaddress>
-  using mdf_scd5cr_t = mdf_scd5cr_tt<"MDF_SCD5CR", baseaddress, 808>;
-
-  template <std::uint32_t baseaddress>
-  using mdf_dflt0ier_t = mdf_dflt0ier_tt<"MDF_DFLT0IER", baseaddress, 172>;
-
-  template <std::uint32_t baseaddress>
-  using mdf_dflt0isr_t = mdf_dflt0isr_tt<"MDF_DFLT0ISR", baseaddress, 176>;
-
-  template <std::uint32_t baseaddress>
-  using mdf_dflt1ier_t = mdf_dflt1ier_tt<"MDF_DFLT1IER", baseaddress, 300>;
-
-  template <std::uint32_t baseaddress>
-  using mdf_dflt2ier_t = mdf_dflt2ier_tt<"MDF_DFLT2IER", baseaddress, 428>;
-
-  template <std::uint32_t baseaddress>
-  using mdf_dflt3ier_t = mdf_dflt3ier_tt<"MDF_DFLT3IER", baseaddress, 556>;
-
-  template <std::uint32_t baseaddress>
-  using mdf_dflt4ier_t = mdf_dflt4ier_tt<"MDF_DFLT4IER", baseaddress, 684>;
-
-  template <std::uint32_t baseaddress>
-  using mdf_dflt5ier_t = mdf_dflt5ier_tt<"MDF_DFLT5IER", baseaddress, 812>;
-
-  template <std::uint32_t baseaddress>
-  using mdf_dflt1isr_t = mdf_dflt1isr_tt<"MDF_DFLT1ISR", baseaddress, 304>;
-
-  template <std::uint32_t baseaddress>
-  using mdf_dflt2isr_t = mdf_dflt2isr_tt<"MDF_DFLT2ISR", baseaddress, 432>;
-
-  template <std::uint32_t baseaddress>
-  using mdf_dflt3isr_t = mdf_dflt3isr_tt<"MDF_DFLT3ISR", baseaddress, 560>;
-
-  template <std::uint32_t baseaddress>
-  using mdf_dflt4isr_t = mdf_dflt4isr_tt<"MDF_DFLT4ISR", baseaddress, 688>;
-
-  template <std::uint32_t baseaddress>
-  using mdf_dflt5isr_t = mdf_dflt5isr_tt<"MDF_DFLT5ISR", baseaddress, 816>;
-
-  template <std::uint32_t baseaddress>
-  using mdf_oec0cr_t = mdf_oec0cr_tt<"MDF_OEC0CR", baseaddress, 180>;
-
-  template <std::uint32_t baseaddress>
-  using mdf_oec1cr_t = mdf_oec1cr_tt<"MDF_OEC1CR", baseaddress, 308>;
-
-  template <std::uint32_t baseaddress>
-  using mdf_oec2cr_t = mdf_oec2cr_tt<"MDF_OEC2CR", baseaddress, 436>;
-
-  template <std::uint32_t baseaddress>
-  using mdf_oec3cr_t = mdf_oec3cr_tt<"MDF_OEC3CR", baseaddress, 564>;
-
-  template <std::uint32_t baseaddress>
-  using mdf_oec4cr_t = mdf_oec4cr_tt<"MDF_OEC4CR", baseaddress, 692>;
-
-  template <std::uint32_t baseaddress>
-  using mdf_oec5cr_t = mdf_oec5cr_tt<"MDF_OEC5CR", baseaddress, 820>;
-
-  template <std::uint32_t baseaddress>
-  using mdf_snps0dr_t = mdf_snps0dr_tt<"MDF_SNPS0DR", baseaddress, 236>;
-
-  template <std::uint32_t baseaddress>
-  using mdf_snps1dr_t = mdf_snps1dr_tt<"MDF_SNPS1DR", baseaddress, 364>;
-
-  template <std::uint32_t baseaddress>
-  using mdf_snps2dr_t = mdf_snps2dr_tt<"MDF_SNPS2DR", baseaddress, 492>;
-
-  template <std::uint32_t baseaddress>
-  using mdf_snps3dr_t = mdf_snps3dr_tt<"MDF_SNPS3DR", baseaddress, 620>;
-
-  template <std::uint32_t baseaddress>
-  using mdf_snps4dr_t = mdf_snps4dr_tt<"MDF_SNPS4DR", baseaddress, 748>;
-
-  template <std::uint32_t baseaddress>
-  using mdf_snps5dr_t = mdf_snps5dr_tt<"MDF_SNPS5DR", baseaddress, 876>;
-
-  template <std::uint32_t baseaddress>
-  using mdf_dflt0dr_t = mdf_dflt0dr_tt<"MDF_DFLT0DR", baseaddress, 240>;
-
-  template <std::uint32_t baseaddress>
-  using mdf_dflt1dr_t = mdf_dflt1dr_tt<"MDF_DFLT1DR", baseaddress, 368>;
-
-  template <std::uint32_t baseaddress>
-  using mdf_dflt2dr_t = mdf_dflt2dr_tt<"MDF_DFLT2DR", baseaddress, 496>;
-
-  template <std::uint32_t baseaddress>
-  using mdf_dflt3dr_t = mdf_dflt3dr_tt<"MDF_DFLT3DR", baseaddress, 624>;
-
-  template <std::uint32_t baseaddress>
-  using mdf_dflt4dr_t = mdf_dflt4dr_tt<"MDF_DFLT4DR", baseaddress, 752>;
-
-  template <std::uint32_t baseaddress>
-  using mdf_dflt5dr_t = mdf_dflt5dr_tt<"MDF_DFLT5DR", baseaddress, 880>;
 
 } // namespace sec_mdf1

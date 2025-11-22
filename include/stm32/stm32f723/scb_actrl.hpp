@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace scb_actrl {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using actrl_tt =
     groov::reg<name,
                std::uint32_t,
@@ -24,8 +26,5 @@ namespace scb_actrl {
                groov::field<"RESERVED1", std::uint8_t, 9, 3, access::ro>,
                groov::field<"DISFOLD", bool, 2, 2>,
                groov::field<"RESERVED0", std::uint8_t, 1, 0, access::ro>>;
-
-  template <std::uint32_t baseaddress>
-  using actrl_t = actrl_tt<"ACTRL", baseaddress, 0>;
 
 } // namespace scb_actrl

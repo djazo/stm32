@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace sec_gtzc1_mpcbb3 {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpcbb3_cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -22,7 +24,9 @@ namespace sec_gtzc1_mpcbb3 {
                groov::field<"RESERVED0", std::uint32_t, 29, 1, access::ro>,
                groov::field<"GLOCK", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpcbb3_cfglock1_tt = groov::reg<name,
                                         std::uint32_t,
                                         baseaddress + offset,
@@ -60,7 +64,9 @@ namespace sec_gtzc1_mpcbb3 {
                                         groov::field<"SPLCK1", bool, 1, 1>,
                                         groov::field<"SPLCK0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpcbb3_cfglock2_tt =
     groov::reg<name,
                std::uint32_t,
@@ -88,7 +94,9 @@ namespace sec_gtzc1_mpcbb3 {
                groov::field<"SPLCK33", bool, 1, 1>,
                groov::field<"SPLCK32", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpcbb3_seccfgr0_tt = groov::reg<name,
                                         std::uint32_t,
                                         baseaddress + offset,
@@ -126,7 +134,9 @@ namespace sec_gtzc1_mpcbb3 {
                                         groov::field<"SEC1", bool, 1, 1>,
                                         groov::field<"SEC0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpcbb3_seccfgr1_tt = groov::reg<name,
                                         std::uint32_t,
                                         baseaddress + offset,
@@ -164,7 +174,9 @@ namespace sec_gtzc1_mpcbb3 {
                                         groov::field<"SEC1", bool, 1, 1>,
                                         groov::field<"SEC0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpcbb3_seccfgr2_tt = groov::reg<name,
                                         std::uint32_t,
                                         baseaddress + offset,
@@ -202,7 +214,9 @@ namespace sec_gtzc1_mpcbb3 {
                                         groov::field<"SEC1", bool, 1, 1>,
                                         groov::field<"SEC0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpcbb3_seccfgr3_tt = groov::reg<name,
                                         std::uint32_t,
                                         baseaddress + offset,
@@ -240,7 +254,9 @@ namespace sec_gtzc1_mpcbb3 {
                                         groov::field<"SEC1", bool, 1, 1>,
                                         groov::field<"SEC0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpcbb3_seccfgr4_tt = groov::reg<name,
                                         std::uint32_t,
                                         baseaddress + offset,
@@ -278,7 +294,9 @@ namespace sec_gtzc1_mpcbb3 {
                                         groov::field<"SEC1", bool, 1, 1>,
                                         groov::field<"SEC0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpcbb3_seccfgr5_tt = groov::reg<name,
                                         std::uint32_t,
                                         baseaddress + offset,
@@ -316,7 +334,9 @@ namespace sec_gtzc1_mpcbb3 {
                                         groov::field<"SEC1", bool, 1, 1>,
                                         groov::field<"SEC0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpcbb3_seccfgr6_tt = groov::reg<name,
                                         std::uint32_t,
                                         baseaddress + offset,
@@ -354,7 +374,9 @@ namespace sec_gtzc1_mpcbb3 {
                                         groov::field<"SEC1", bool, 1, 1>,
                                         groov::field<"SEC0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpcbb3_seccfgr7_tt = groov::reg<name,
                                         std::uint32_t,
                                         baseaddress + offset,
@@ -392,7 +414,9 @@ namespace sec_gtzc1_mpcbb3 {
                                         groov::field<"SEC1", bool, 1, 1>,
                                         groov::field<"SEC0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpcbb3_seccfgr8_tt = groov::reg<name,
                                         std::uint32_t,
                                         baseaddress + offset,
@@ -430,7 +454,9 @@ namespace sec_gtzc1_mpcbb3 {
                                         groov::field<"SEC1", bool, 1, 1>,
                                         groov::field<"SEC0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpcbb3_seccfgr9_tt = groov::reg<name,
                                         std::uint32_t,
                                         baseaddress + offset,
@@ -468,7 +494,9 @@ namespace sec_gtzc1_mpcbb3 {
                                         groov::field<"SEC1", bool, 1, 1>,
                                         groov::field<"SEC0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpcbb3_seccfgr10_tt = groov::reg<name,
                                          std::uint32_t,
                                          baseaddress + offset,
@@ -506,7 +534,9 @@ namespace sec_gtzc1_mpcbb3 {
                                          groov::field<"SEC1", bool, 1, 1>,
                                          groov::field<"SEC0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpcbb3_seccfgr11_tt = groov::reg<name,
                                          std::uint32_t,
                                          baseaddress + offset,
@@ -544,7 +574,9 @@ namespace sec_gtzc1_mpcbb3 {
                                          groov::field<"SEC1", bool, 1, 1>,
                                          groov::field<"SEC0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpcbb3_seccfgr12_tt = groov::reg<name,
                                          std::uint32_t,
                                          baseaddress + offset,
@@ -582,7 +614,9 @@ namespace sec_gtzc1_mpcbb3 {
                                          groov::field<"SEC1", bool, 1, 1>,
                                          groov::field<"SEC0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpcbb3_seccfgr13_tt = groov::reg<name,
                                          std::uint32_t,
                                          baseaddress + offset,
@@ -620,7 +654,9 @@ namespace sec_gtzc1_mpcbb3 {
                                          groov::field<"SEC1", bool, 1, 1>,
                                          groov::field<"SEC0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpcbb3_seccfgr14_tt = groov::reg<name,
                                          std::uint32_t,
                                          baseaddress + offset,
@@ -658,7 +694,9 @@ namespace sec_gtzc1_mpcbb3 {
                                          groov::field<"SEC1", bool, 1, 1>,
                                          groov::field<"SEC0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpcbb3_seccfgr15_tt = groov::reg<name,
                                          std::uint32_t,
                                          baseaddress + offset,
@@ -696,7 +734,9 @@ namespace sec_gtzc1_mpcbb3 {
                                          groov::field<"SEC1", bool, 1, 1>,
                                          groov::field<"SEC0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpcbb3_seccfgr16_tt = groov::reg<name,
                                          std::uint32_t,
                                          baseaddress + offset,
@@ -734,7 +774,9 @@ namespace sec_gtzc1_mpcbb3 {
                                          groov::field<"SEC1", bool, 1, 1>,
                                          groov::field<"SEC0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpcbb3_seccfgr17_tt = groov::reg<name,
                                          std::uint32_t,
                                          baseaddress + offset,
@@ -772,7 +814,9 @@ namespace sec_gtzc1_mpcbb3 {
                                          groov::field<"SEC1", bool, 1, 1>,
                                          groov::field<"SEC0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpcbb3_seccfgr18_tt = groov::reg<name,
                                          std::uint32_t,
                                          baseaddress + offset,
@@ -810,7 +854,9 @@ namespace sec_gtzc1_mpcbb3 {
                                          groov::field<"SEC1", bool, 1, 1>,
                                          groov::field<"SEC0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpcbb3_seccfgr19_tt = groov::reg<name,
                                          std::uint32_t,
                                          baseaddress + offset,
@@ -848,7 +894,9 @@ namespace sec_gtzc1_mpcbb3 {
                                          groov::field<"SEC1", bool, 1, 1>,
                                          groov::field<"SEC0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpcbb3_seccfgr20_tt = groov::reg<name,
                                          std::uint32_t,
                                          baseaddress + offset,
@@ -886,7 +934,9 @@ namespace sec_gtzc1_mpcbb3 {
                                          groov::field<"SEC1", bool, 1, 1>,
                                          groov::field<"SEC0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpcbb3_seccfgr21_tt = groov::reg<name,
                                          std::uint32_t,
                                          baseaddress + offset,
@@ -924,7 +974,9 @@ namespace sec_gtzc1_mpcbb3 {
                                          groov::field<"SEC1", bool, 1, 1>,
                                          groov::field<"SEC0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpcbb3_seccfgr22_tt = groov::reg<name,
                                          std::uint32_t,
                                          baseaddress + offset,
@@ -962,7 +1014,9 @@ namespace sec_gtzc1_mpcbb3 {
                                          groov::field<"SEC1", bool, 1, 1>,
                                          groov::field<"SEC0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpcbb3_seccfgr23_tt = groov::reg<name,
                                          std::uint32_t,
                                          baseaddress + offset,
@@ -1000,7 +1054,9 @@ namespace sec_gtzc1_mpcbb3 {
                                          groov::field<"SEC1", bool, 1, 1>,
                                          groov::field<"SEC0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpcbb3_seccfgr24_tt = groov::reg<name,
                                          std::uint32_t,
                                          baseaddress + offset,
@@ -1038,7 +1094,9 @@ namespace sec_gtzc1_mpcbb3 {
                                          groov::field<"SEC1", bool, 1, 1>,
                                          groov::field<"SEC0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpcbb3_seccfgr25_tt = groov::reg<name,
                                          std::uint32_t,
                                          baseaddress + offset,
@@ -1076,7 +1134,9 @@ namespace sec_gtzc1_mpcbb3 {
                                          groov::field<"SEC1", bool, 1, 1>,
                                          groov::field<"SEC0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpcbb3_seccfgr26_tt = groov::reg<name,
                                          std::uint32_t,
                                          baseaddress + offset,
@@ -1114,7 +1174,9 @@ namespace sec_gtzc1_mpcbb3 {
                                          groov::field<"SEC1", bool, 1, 1>,
                                          groov::field<"SEC0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpcbb3_seccfgr27_tt = groov::reg<name,
                                          std::uint32_t,
                                          baseaddress + offset,
@@ -1152,7 +1214,9 @@ namespace sec_gtzc1_mpcbb3 {
                                          groov::field<"SEC1", bool, 1, 1>,
                                          groov::field<"SEC0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpcbb3_seccfgr28_tt = groov::reg<name,
                                          std::uint32_t,
                                          baseaddress + offset,
@@ -1190,7 +1254,9 @@ namespace sec_gtzc1_mpcbb3 {
                                          groov::field<"SEC1", bool, 1, 1>,
                                          groov::field<"SEC0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpcbb3_seccfgr29_tt = groov::reg<name,
                                          std::uint32_t,
                                          baseaddress + offset,
@@ -1228,7 +1294,9 @@ namespace sec_gtzc1_mpcbb3 {
                                          groov::field<"SEC1", bool, 1, 1>,
                                          groov::field<"SEC0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpcbb3_seccfgr30_tt = groov::reg<name,
                                          std::uint32_t,
                                          baseaddress + offset,
@@ -1266,7 +1334,9 @@ namespace sec_gtzc1_mpcbb3 {
                                          groov::field<"SEC1", bool, 1, 1>,
                                          groov::field<"SEC0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpcbb3_seccfgr31_tt = groov::reg<name,
                                          std::uint32_t,
                                          baseaddress + offset,
@@ -1304,7 +1374,9 @@ namespace sec_gtzc1_mpcbb3 {
                                          groov::field<"SEC1", bool, 1, 1>,
                                          groov::field<"SEC0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpcbb3_seccfgr32_tt = groov::reg<name,
                                          std::uint32_t,
                                          baseaddress + offset,
@@ -1342,7 +1414,9 @@ namespace sec_gtzc1_mpcbb3 {
                                          groov::field<"SEC1", bool, 1, 1>,
                                          groov::field<"SEC0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpcbb3_seccfgr33_tt = groov::reg<name,
                                          std::uint32_t,
                                          baseaddress + offset,
@@ -1380,7 +1454,9 @@ namespace sec_gtzc1_mpcbb3 {
                                          groov::field<"SEC1", bool, 1, 1>,
                                          groov::field<"SEC0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpcbb3_seccfgr34_tt = groov::reg<name,
                                          std::uint32_t,
                                          baseaddress + offset,
@@ -1418,7 +1494,9 @@ namespace sec_gtzc1_mpcbb3 {
                                          groov::field<"SEC1", bool, 1, 1>,
                                          groov::field<"SEC0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpcbb3_seccfgr35_tt = groov::reg<name,
                                          std::uint32_t,
                                          baseaddress + offset,
@@ -1456,7 +1534,9 @@ namespace sec_gtzc1_mpcbb3 {
                                          groov::field<"SEC1", bool, 1, 1>,
                                          groov::field<"SEC0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpcbb3_seccfgr36_tt = groov::reg<name,
                                          std::uint32_t,
                                          baseaddress + offset,
@@ -1494,7 +1574,9 @@ namespace sec_gtzc1_mpcbb3 {
                                          groov::field<"SEC1", bool, 1, 1>,
                                          groov::field<"SEC0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpcbb3_seccfgr37_tt = groov::reg<name,
                                          std::uint32_t,
                                          baseaddress + offset,
@@ -1532,7 +1614,9 @@ namespace sec_gtzc1_mpcbb3 {
                                          groov::field<"SEC1", bool, 1, 1>,
                                          groov::field<"SEC0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpcbb3_seccfgr38_tt = groov::reg<name,
                                          std::uint32_t,
                                          baseaddress + offset,
@@ -1570,7 +1654,9 @@ namespace sec_gtzc1_mpcbb3 {
                                          groov::field<"SEC1", bool, 1, 1>,
                                          groov::field<"SEC0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpcbb3_seccfgr39_tt = groov::reg<name,
                                          std::uint32_t,
                                          baseaddress + offset,
@@ -1608,7 +1694,9 @@ namespace sec_gtzc1_mpcbb3 {
                                          groov::field<"SEC1", bool, 1, 1>,
                                          groov::field<"SEC0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpcbb3_seccfgr40_tt = groov::reg<name,
                                          std::uint32_t,
                                          baseaddress + offset,
@@ -1646,7 +1734,9 @@ namespace sec_gtzc1_mpcbb3 {
                                          groov::field<"SEC1", bool, 1, 1>,
                                          groov::field<"SEC0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpcbb3_seccfgr41_tt = groov::reg<name,
                                          std::uint32_t,
                                          baseaddress + offset,
@@ -1684,7 +1774,9 @@ namespace sec_gtzc1_mpcbb3 {
                                          groov::field<"SEC1", bool, 1, 1>,
                                          groov::field<"SEC0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpcbb3_seccfgr42_tt = groov::reg<name,
                                          std::uint32_t,
                                          baseaddress + offset,
@@ -1722,7 +1814,9 @@ namespace sec_gtzc1_mpcbb3 {
                                          groov::field<"SEC1", bool, 1, 1>,
                                          groov::field<"SEC0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpcbb3_seccfgr43_tt = groov::reg<name,
                                          std::uint32_t,
                                          baseaddress + offset,
@@ -1760,7 +1854,9 @@ namespace sec_gtzc1_mpcbb3 {
                                          groov::field<"SEC1", bool, 1, 1>,
                                          groov::field<"SEC0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpcbb3_seccfgr44_tt = groov::reg<name,
                                          std::uint32_t,
                                          baseaddress + offset,
@@ -1798,7 +1894,9 @@ namespace sec_gtzc1_mpcbb3 {
                                          groov::field<"SEC1", bool, 1, 1>,
                                          groov::field<"SEC0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpcbb3_seccfgr45_tt = groov::reg<name,
                                          std::uint32_t,
                                          baseaddress + offset,
@@ -1836,7 +1934,9 @@ namespace sec_gtzc1_mpcbb3 {
                                          groov::field<"SEC1", bool, 1, 1>,
                                          groov::field<"SEC0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpcbb3_seccfgr46_tt = groov::reg<name,
                                          std::uint32_t,
                                          baseaddress + offset,
@@ -1874,7 +1974,9 @@ namespace sec_gtzc1_mpcbb3 {
                                          groov::field<"SEC1", bool, 1, 1>,
                                          groov::field<"SEC0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpcbb3_seccfgr47_tt = groov::reg<name,
                                          std::uint32_t,
                                          baseaddress + offset,
@@ -1912,7 +2014,9 @@ namespace sec_gtzc1_mpcbb3 {
                                          groov::field<"SEC1", bool, 1, 1>,
                                          groov::field<"SEC0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpcbb3_seccfgr48_tt = groov::reg<name,
                                          std::uint32_t,
                                          baseaddress + offset,
@@ -1950,7 +2054,9 @@ namespace sec_gtzc1_mpcbb3 {
                                          groov::field<"SEC1", bool, 1, 1>,
                                          groov::field<"SEC0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpcbb3_seccfgr49_tt = groov::reg<name,
                                          std::uint32_t,
                                          baseaddress + offset,
@@ -1988,7 +2094,9 @@ namespace sec_gtzc1_mpcbb3 {
                                          groov::field<"SEC1", bool, 1, 1>,
                                          groov::field<"SEC0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpcbb3_seccfgr50_tt = groov::reg<name,
                                          std::uint32_t,
                                          baseaddress + offset,
@@ -2026,7 +2134,9 @@ namespace sec_gtzc1_mpcbb3 {
                                          groov::field<"SEC1", bool, 1, 1>,
                                          groov::field<"SEC0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpcbb3_seccfgr51_tt = groov::reg<name,
                                          std::uint32_t,
                                          baseaddress + offset,
@@ -2064,7 +2174,9 @@ namespace sec_gtzc1_mpcbb3 {
                                          groov::field<"SEC1", bool, 1, 1>,
                                          groov::field<"SEC0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpcbb3_privcfgr0_tt = groov::reg<name,
                                          std::uint32_t,
                                          baseaddress + offset,
@@ -2102,7 +2214,9 @@ namespace sec_gtzc1_mpcbb3 {
                                          groov::field<"PRIV1", bool, 1, 1>,
                                          groov::field<"PRIV0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpcbb3_privcfgr1_tt = groov::reg<name,
                                          std::uint32_t,
                                          baseaddress + offset,
@@ -2140,7 +2254,9 @@ namespace sec_gtzc1_mpcbb3 {
                                          groov::field<"PRIV1", bool, 1, 1>,
                                          groov::field<"PRIV0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpcbb3_privcfgr2_tt = groov::reg<name,
                                          std::uint32_t,
                                          baseaddress + offset,
@@ -2178,7 +2294,9 @@ namespace sec_gtzc1_mpcbb3 {
                                          groov::field<"PRIV1", bool, 1, 1>,
                                          groov::field<"PRIV0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpcbb3_privcfgr3_tt = groov::reg<name,
                                          std::uint32_t,
                                          baseaddress + offset,
@@ -2216,7 +2334,9 @@ namespace sec_gtzc1_mpcbb3 {
                                          groov::field<"PRIV1", bool, 1, 1>,
                                          groov::field<"PRIV0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpcbb3_privcfgr4_tt = groov::reg<name,
                                          std::uint32_t,
                                          baseaddress + offset,
@@ -2254,7 +2374,9 @@ namespace sec_gtzc1_mpcbb3 {
                                          groov::field<"PRIV1", bool, 1, 1>,
                                          groov::field<"PRIV0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpcbb3_privcfgr5_tt = groov::reg<name,
                                          std::uint32_t,
                                          baseaddress + offset,
@@ -2292,7 +2414,9 @@ namespace sec_gtzc1_mpcbb3 {
                                          groov::field<"PRIV1", bool, 1, 1>,
                                          groov::field<"PRIV0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpcbb3_privcfgr6_tt = groov::reg<name,
                                          std::uint32_t,
                                          baseaddress + offset,
@@ -2330,7 +2454,9 @@ namespace sec_gtzc1_mpcbb3 {
                                          groov::field<"PRIV1", bool, 1, 1>,
                                          groov::field<"PRIV0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpcbb3_privcfgr7_tt = groov::reg<name,
                                          std::uint32_t,
                                          baseaddress + offset,
@@ -2368,7 +2494,9 @@ namespace sec_gtzc1_mpcbb3 {
                                          groov::field<"PRIV1", bool, 1, 1>,
                                          groov::field<"PRIV0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpcbb3_privcfgr8_tt = groov::reg<name,
                                          std::uint32_t,
                                          baseaddress + offset,
@@ -2406,7 +2534,9 @@ namespace sec_gtzc1_mpcbb3 {
                                          groov::field<"PRIV1", bool, 1, 1>,
                                          groov::field<"PRIV0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpcbb3_privcfgr9_tt = groov::reg<name,
                                          std::uint32_t,
                                          baseaddress + offset,
@@ -2444,7 +2574,9 @@ namespace sec_gtzc1_mpcbb3 {
                                          groov::field<"PRIV1", bool, 1, 1>,
                                          groov::field<"PRIV0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpcbb3_privcfgr10_tt = groov::reg<name,
                                           std::uint32_t,
                                           baseaddress + offset,
@@ -2482,7 +2614,9 @@ namespace sec_gtzc1_mpcbb3 {
                                           groov::field<"PRIV1", bool, 1, 1>,
                                           groov::field<"PRIV0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpcbb3_privcfgr11_tt = groov::reg<name,
                                           std::uint32_t,
                                           baseaddress + offset,
@@ -2520,7 +2654,9 @@ namespace sec_gtzc1_mpcbb3 {
                                           groov::field<"PRIV1", bool, 1, 1>,
                                           groov::field<"PRIV0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpcbb3_privcfgr12_tt = groov::reg<name,
                                           std::uint32_t,
                                           baseaddress + offset,
@@ -2558,7 +2694,9 @@ namespace sec_gtzc1_mpcbb3 {
                                           groov::field<"PRIV1", bool, 1, 1>,
                                           groov::field<"PRIV0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpcbb3_privcfgr13_tt = groov::reg<name,
                                           std::uint32_t,
                                           baseaddress + offset,
@@ -2596,7 +2734,9 @@ namespace sec_gtzc1_mpcbb3 {
                                           groov::field<"PRIV1", bool, 1, 1>,
                                           groov::field<"PRIV0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpcbb3_privcfgr14_tt = groov::reg<name,
                                           std::uint32_t,
                                           baseaddress + offset,
@@ -2634,7 +2774,9 @@ namespace sec_gtzc1_mpcbb3 {
                                           groov::field<"PRIV1", bool, 1, 1>,
                                           groov::field<"PRIV0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpcbb3_privcfgr15_tt = groov::reg<name,
                                           std::uint32_t,
                                           baseaddress + offset,
@@ -2672,7 +2814,9 @@ namespace sec_gtzc1_mpcbb3 {
                                           groov::field<"PRIV1", bool, 1, 1>,
                                           groov::field<"PRIV0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpcbb3_privcfgr16_tt = groov::reg<name,
                                           std::uint32_t,
                                           baseaddress + offset,
@@ -2710,7 +2854,9 @@ namespace sec_gtzc1_mpcbb3 {
                                           groov::field<"PRIV1", bool, 1, 1>,
                                           groov::field<"PRIV0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpcbb3_privcfgr17_tt = groov::reg<name,
                                           std::uint32_t,
                                           baseaddress + offset,
@@ -2748,7 +2894,9 @@ namespace sec_gtzc1_mpcbb3 {
                                           groov::field<"PRIV1", bool, 1, 1>,
                                           groov::field<"PRIV0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpcbb3_privcfgr18_tt = groov::reg<name,
                                           std::uint32_t,
                                           baseaddress + offset,
@@ -2786,7 +2934,9 @@ namespace sec_gtzc1_mpcbb3 {
                                           groov::field<"PRIV1", bool, 1, 1>,
                                           groov::field<"PRIV0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpcbb3_privcfgr19_tt = groov::reg<name,
                                           std::uint32_t,
                                           baseaddress + offset,
@@ -2824,7 +2974,9 @@ namespace sec_gtzc1_mpcbb3 {
                                           groov::field<"PRIV1", bool, 1, 1>,
                                           groov::field<"PRIV0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpcbb3_privcfgr20_tt = groov::reg<name,
                                           std::uint32_t,
                                           baseaddress + offset,
@@ -2862,7 +3014,9 @@ namespace sec_gtzc1_mpcbb3 {
                                           groov::field<"PRIV1", bool, 1, 1>,
                                           groov::field<"PRIV0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpcbb3_privcfgr21_tt = groov::reg<name,
                                           std::uint32_t,
                                           baseaddress + offset,
@@ -2900,7 +3054,9 @@ namespace sec_gtzc1_mpcbb3 {
                                           groov::field<"PRIV1", bool, 1, 1>,
                                           groov::field<"PRIV0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpcbb3_privcfgr22_tt = groov::reg<name,
                                           std::uint32_t,
                                           baseaddress + offset,
@@ -2938,7 +3094,9 @@ namespace sec_gtzc1_mpcbb3 {
                                           groov::field<"PRIV1", bool, 1, 1>,
                                           groov::field<"PRIV0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpcbb3_privcfgr23_tt = groov::reg<name,
                                           std::uint32_t,
                                           baseaddress + offset,
@@ -2976,7 +3134,9 @@ namespace sec_gtzc1_mpcbb3 {
                                           groov::field<"PRIV1", bool, 1, 1>,
                                           groov::field<"PRIV0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpcbb3_privcfgr24_tt = groov::reg<name,
                                           std::uint32_t,
                                           baseaddress + offset,
@@ -3014,7 +3174,9 @@ namespace sec_gtzc1_mpcbb3 {
                                           groov::field<"PRIV1", bool, 1, 1>,
                                           groov::field<"PRIV0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpcbb3_privcfgr25_tt = groov::reg<name,
                                           std::uint32_t,
                                           baseaddress + offset,
@@ -3052,7 +3214,9 @@ namespace sec_gtzc1_mpcbb3 {
                                           groov::field<"PRIV1", bool, 1, 1>,
                                           groov::field<"PRIV0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpcbb3_privcfgr26_tt = groov::reg<name,
                                           std::uint32_t,
                                           baseaddress + offset,
@@ -3090,7 +3254,9 @@ namespace sec_gtzc1_mpcbb3 {
                                           groov::field<"PRIV1", bool, 1, 1>,
                                           groov::field<"PRIV0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpcbb3_privcfgr27_tt = groov::reg<name,
                                           std::uint32_t,
                                           baseaddress + offset,
@@ -3128,7 +3294,9 @@ namespace sec_gtzc1_mpcbb3 {
                                           groov::field<"PRIV1", bool, 1, 1>,
                                           groov::field<"PRIV0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpcbb3_privcfgr28_tt = groov::reg<name,
                                           std::uint32_t,
                                           baseaddress + offset,
@@ -3166,7 +3334,9 @@ namespace sec_gtzc1_mpcbb3 {
                                           groov::field<"PRIV1", bool, 1, 1>,
                                           groov::field<"PRIV0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpcbb3_privcfgr29_tt = groov::reg<name,
                                           std::uint32_t,
                                           baseaddress + offset,
@@ -3204,7 +3374,9 @@ namespace sec_gtzc1_mpcbb3 {
                                           groov::field<"PRIV1", bool, 1, 1>,
                                           groov::field<"PRIV0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpcbb3_privcfgr30_tt = groov::reg<name,
                                           std::uint32_t,
                                           baseaddress + offset,
@@ -3242,7 +3414,9 @@ namespace sec_gtzc1_mpcbb3 {
                                           groov::field<"PRIV1", bool, 1, 1>,
                                           groov::field<"PRIV0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpcbb3_privcfgr31_tt = groov::reg<name,
                                           std::uint32_t,
                                           baseaddress + offset,
@@ -3280,7 +3454,9 @@ namespace sec_gtzc1_mpcbb3 {
                                           groov::field<"PRIV1", bool, 1, 1>,
                                           groov::field<"PRIV0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpcbb3_privcfgr32_tt = groov::reg<name,
                                           std::uint32_t,
                                           baseaddress + offset,
@@ -3318,7 +3494,9 @@ namespace sec_gtzc1_mpcbb3 {
                                           groov::field<"PRIV1", bool, 1, 1>,
                                           groov::field<"PRIV0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpcbb3_privcfgr33_tt = groov::reg<name,
                                           std::uint32_t,
                                           baseaddress + offset,
@@ -3356,7 +3534,9 @@ namespace sec_gtzc1_mpcbb3 {
                                           groov::field<"PRIV1", bool, 1, 1>,
                                           groov::field<"PRIV0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpcbb3_privcfgr34_tt = groov::reg<name,
                                           std::uint32_t,
                                           baseaddress + offset,
@@ -3394,7 +3574,9 @@ namespace sec_gtzc1_mpcbb3 {
                                           groov::field<"PRIV1", bool, 1, 1>,
                                           groov::field<"PRIV0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpcbb3_privcfgr35_tt = groov::reg<name,
                                           std::uint32_t,
                                           baseaddress + offset,
@@ -3432,7 +3614,9 @@ namespace sec_gtzc1_mpcbb3 {
                                           groov::field<"PRIV1", bool, 1, 1>,
                                           groov::field<"PRIV0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpcbb3_privcfgr36_tt = groov::reg<name,
                                           std::uint32_t,
                                           baseaddress + offset,
@@ -3470,7 +3654,9 @@ namespace sec_gtzc1_mpcbb3 {
                                           groov::field<"PRIV1", bool, 1, 1>,
                                           groov::field<"PRIV0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpcbb3_privcfgr37_tt = groov::reg<name,
                                           std::uint32_t,
                                           baseaddress + offset,
@@ -3508,7 +3694,9 @@ namespace sec_gtzc1_mpcbb3 {
                                           groov::field<"PRIV1", bool, 1, 1>,
                                           groov::field<"PRIV0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpcbb3_privcfgr38_tt = groov::reg<name,
                                           std::uint32_t,
                                           baseaddress + offset,
@@ -3546,7 +3734,9 @@ namespace sec_gtzc1_mpcbb3 {
                                           groov::field<"PRIV1", bool, 1, 1>,
                                           groov::field<"PRIV0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpcbb3_privcfgr39_tt = groov::reg<name,
                                           std::uint32_t,
                                           baseaddress + offset,
@@ -3584,7 +3774,9 @@ namespace sec_gtzc1_mpcbb3 {
                                           groov::field<"PRIV1", bool, 1, 1>,
                                           groov::field<"PRIV0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpcbb3_privcfgr40_tt = groov::reg<name,
                                           std::uint32_t,
                                           baseaddress + offset,
@@ -3622,7 +3814,9 @@ namespace sec_gtzc1_mpcbb3 {
                                           groov::field<"PRIV1", bool, 1, 1>,
                                           groov::field<"PRIV0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpcbb3_privcfgr41_tt = groov::reg<name,
                                           std::uint32_t,
                                           baseaddress + offset,
@@ -3660,7 +3854,9 @@ namespace sec_gtzc1_mpcbb3 {
                                           groov::field<"PRIV1", bool, 1, 1>,
                                           groov::field<"PRIV0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpcbb3_privcfgr42_tt = groov::reg<name,
                                           std::uint32_t,
                                           baseaddress + offset,
@@ -3698,7 +3894,9 @@ namespace sec_gtzc1_mpcbb3 {
                                           groov::field<"PRIV1", bool, 1, 1>,
                                           groov::field<"PRIV0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpcbb3_privcfgr43_tt = groov::reg<name,
                                           std::uint32_t,
                                           baseaddress + offset,
@@ -3736,7 +3934,9 @@ namespace sec_gtzc1_mpcbb3 {
                                           groov::field<"PRIV1", bool, 1, 1>,
                                           groov::field<"PRIV0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpcbb3_privcfgr44_tt = groov::reg<name,
                                           std::uint32_t,
                                           baseaddress + offset,
@@ -3774,7 +3974,9 @@ namespace sec_gtzc1_mpcbb3 {
                                           groov::field<"PRIV1", bool, 1, 1>,
                                           groov::field<"PRIV0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpcbb3_privcfgr45_tt = groov::reg<name,
                                           std::uint32_t,
                                           baseaddress + offset,
@@ -3812,7 +4014,9 @@ namespace sec_gtzc1_mpcbb3 {
                                           groov::field<"PRIV1", bool, 1, 1>,
                                           groov::field<"PRIV0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpcbb3_privcfgr46_tt = groov::reg<name,
                                           std::uint32_t,
                                           baseaddress + offset,
@@ -3850,7 +4054,9 @@ namespace sec_gtzc1_mpcbb3 {
                                           groov::field<"PRIV1", bool, 1, 1>,
                                           groov::field<"PRIV0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpcbb3_privcfgr47_tt = groov::reg<name,
                                           std::uint32_t,
                                           baseaddress + offset,
@@ -3888,7 +4094,9 @@ namespace sec_gtzc1_mpcbb3 {
                                           groov::field<"PRIV1", bool, 1, 1>,
                                           groov::field<"PRIV0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpcbb3_privcfgr48_tt = groov::reg<name,
                                           std::uint32_t,
                                           baseaddress + offset,
@@ -3926,7 +4134,9 @@ namespace sec_gtzc1_mpcbb3 {
                                           groov::field<"PRIV1", bool, 1, 1>,
                                           groov::field<"PRIV0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpcbb3_privcfgr49_tt = groov::reg<name,
                                           std::uint32_t,
                                           baseaddress + offset,
@@ -3964,7 +4174,9 @@ namespace sec_gtzc1_mpcbb3 {
                                           groov::field<"PRIV1", bool, 1, 1>,
                                           groov::field<"PRIV0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpcbb3_privcfgr50_tt = groov::reg<name,
                                           std::uint32_t,
                                           baseaddress + offset,
@@ -4002,7 +4214,9 @@ namespace sec_gtzc1_mpcbb3 {
                                           groov::field<"PRIV1", bool, 1, 1>,
                                           groov::field<"PRIV0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpcbb3_privcfgr51_tt = groov::reg<name,
                                           std::uint32_t,
                                           baseaddress + offset,
@@ -4039,432 +4253,5 @@ namespace sec_gtzc1_mpcbb3 {
                                           groov::field<"PRIV2", bool, 2, 2>,
                                           groov::field<"PRIV1", bool, 1, 1>,
                                           groov::field<"PRIV0", bool, 0, 0>>;
-
-  template <std::uint32_t baseaddress>
-  using mpcbb3_cr_t = mpcbb3_cr_tt<"MPCBB3_CR", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using mpcbb3_cfglock1_t =
-    mpcbb3_cfglock1_tt<"MPCBB3_CFGLOCK1", baseaddress, 16>;
-
-  template <std::uint32_t baseaddress>
-  using mpcbb3_cfglock2_t =
-    mpcbb3_cfglock2_tt<"MPCBB3_CFGLOCK2", baseaddress, 20>;
-
-  template <std::uint32_t baseaddress>
-  using mpcbb3_seccfgr0_t =
-    mpcbb3_seccfgr0_tt<"MPCBB3_SECCFGR0", baseaddress, 256>;
-
-  template <std::uint32_t baseaddress>
-  using mpcbb3_seccfgr1_t =
-    mpcbb3_seccfgr1_tt<"MPCBB3_SECCFGR1", baseaddress, 260>;
-
-  template <std::uint32_t baseaddress>
-  using mpcbb3_seccfgr2_t =
-    mpcbb3_seccfgr2_tt<"MPCBB3_SECCFGR2", baseaddress, 264>;
-
-  template <std::uint32_t baseaddress>
-  using mpcbb3_seccfgr3_t =
-    mpcbb3_seccfgr3_tt<"MPCBB3_SECCFGR3", baseaddress, 268>;
-
-  template <std::uint32_t baseaddress>
-  using mpcbb3_seccfgr4_t =
-    mpcbb3_seccfgr4_tt<"MPCBB3_SECCFGR4", baseaddress, 272>;
-
-  template <std::uint32_t baseaddress>
-  using mpcbb3_seccfgr5_t =
-    mpcbb3_seccfgr5_tt<"MPCBB3_SECCFGR5", baseaddress, 276>;
-
-  template <std::uint32_t baseaddress>
-  using mpcbb3_seccfgr6_t =
-    mpcbb3_seccfgr6_tt<"MPCBB3_SECCFGR6", baseaddress, 280>;
-
-  template <std::uint32_t baseaddress>
-  using mpcbb3_seccfgr7_t =
-    mpcbb3_seccfgr7_tt<"MPCBB3_SECCFGR7", baseaddress, 284>;
-
-  template <std::uint32_t baseaddress>
-  using mpcbb3_seccfgr8_t =
-    mpcbb3_seccfgr8_tt<"MPCBB3_SECCFGR8", baseaddress, 288>;
-
-  template <std::uint32_t baseaddress>
-  using mpcbb3_seccfgr9_t =
-    mpcbb3_seccfgr9_tt<"MPCBB3_SECCFGR9", baseaddress, 292>;
-
-  template <std::uint32_t baseaddress>
-  using mpcbb3_seccfgr10_t =
-    mpcbb3_seccfgr10_tt<"MPCBB3_SECCFGR10", baseaddress, 296>;
-
-  template <std::uint32_t baseaddress>
-  using mpcbb3_seccfgr11_t =
-    mpcbb3_seccfgr11_tt<"MPCBB3_SECCFGR11", baseaddress, 300>;
-
-  template <std::uint32_t baseaddress>
-  using mpcbb3_seccfgr12_t =
-    mpcbb3_seccfgr12_tt<"MPCBB3_SECCFGR12", baseaddress, 304>;
-
-  template <std::uint32_t baseaddress>
-  using mpcbb3_seccfgr13_t =
-    mpcbb3_seccfgr13_tt<"MPCBB3_SECCFGR13", baseaddress, 308>;
-
-  template <std::uint32_t baseaddress>
-  using mpcbb3_seccfgr14_t =
-    mpcbb3_seccfgr14_tt<"MPCBB3_SECCFGR14", baseaddress, 312>;
-
-  template <std::uint32_t baseaddress>
-  using mpcbb3_seccfgr15_t =
-    mpcbb3_seccfgr15_tt<"MPCBB3_SECCFGR15", baseaddress, 316>;
-
-  template <std::uint32_t baseaddress>
-  using mpcbb3_seccfgr16_t =
-    mpcbb3_seccfgr16_tt<"MPCBB3_SECCFGR16", baseaddress, 320>;
-
-  template <std::uint32_t baseaddress>
-  using mpcbb3_seccfgr17_t =
-    mpcbb3_seccfgr17_tt<"MPCBB3_SECCFGR17", baseaddress, 324>;
-
-  template <std::uint32_t baseaddress>
-  using mpcbb3_seccfgr18_t =
-    mpcbb3_seccfgr18_tt<"MPCBB3_SECCFGR18", baseaddress, 328>;
-
-  template <std::uint32_t baseaddress>
-  using mpcbb3_seccfgr19_t =
-    mpcbb3_seccfgr19_tt<"MPCBB3_SECCFGR19", baseaddress, 332>;
-
-  template <std::uint32_t baseaddress>
-  using mpcbb3_seccfgr20_t =
-    mpcbb3_seccfgr20_tt<"MPCBB3_SECCFGR20", baseaddress, 336>;
-
-  template <std::uint32_t baseaddress>
-  using mpcbb3_seccfgr21_t =
-    mpcbb3_seccfgr21_tt<"MPCBB3_SECCFGR21", baseaddress, 340>;
-
-  template <std::uint32_t baseaddress>
-  using mpcbb3_seccfgr22_t =
-    mpcbb3_seccfgr22_tt<"MPCBB3_SECCFGR22", baseaddress, 344>;
-
-  template <std::uint32_t baseaddress>
-  using mpcbb3_seccfgr23_t =
-    mpcbb3_seccfgr23_tt<"MPCBB3_SECCFGR23", baseaddress, 348>;
-
-  template <std::uint32_t baseaddress>
-  using mpcbb3_seccfgr24_t =
-    mpcbb3_seccfgr24_tt<"MPCBB3_SECCFGR24", baseaddress, 352>;
-
-  template <std::uint32_t baseaddress>
-  using mpcbb3_seccfgr25_t =
-    mpcbb3_seccfgr25_tt<"MPCBB3_SECCFGR25", baseaddress, 356>;
-
-  template <std::uint32_t baseaddress>
-  using mpcbb3_seccfgr26_t =
-    mpcbb3_seccfgr26_tt<"MPCBB3_SECCFGR26", baseaddress, 360>;
-
-  template <std::uint32_t baseaddress>
-  using mpcbb3_seccfgr27_t =
-    mpcbb3_seccfgr27_tt<"MPCBB3_SECCFGR27", baseaddress, 364>;
-
-  template <std::uint32_t baseaddress>
-  using mpcbb3_seccfgr28_t =
-    mpcbb3_seccfgr28_tt<"MPCBB3_SECCFGR28", baseaddress, 368>;
-
-  template <std::uint32_t baseaddress>
-  using mpcbb3_seccfgr29_t =
-    mpcbb3_seccfgr29_tt<"MPCBB3_SECCFGR29", baseaddress, 372>;
-
-  template <std::uint32_t baseaddress>
-  using mpcbb3_seccfgr30_t =
-    mpcbb3_seccfgr30_tt<"MPCBB3_SECCFGR30", baseaddress, 376>;
-
-  template <std::uint32_t baseaddress>
-  using mpcbb3_seccfgr31_t =
-    mpcbb3_seccfgr31_tt<"MPCBB3_SECCFGR31", baseaddress, 380>;
-
-  template <std::uint32_t baseaddress>
-  using mpcbb3_seccfgr32_t =
-    mpcbb3_seccfgr32_tt<"MPCBB3_SECCFGR32", baseaddress, 384>;
-
-  template <std::uint32_t baseaddress>
-  using mpcbb3_seccfgr33_t =
-    mpcbb3_seccfgr33_tt<"MPCBB3_SECCFGR33", baseaddress, 388>;
-
-  template <std::uint32_t baseaddress>
-  using mpcbb3_seccfgr34_t =
-    mpcbb3_seccfgr34_tt<"MPCBB3_SECCFGR34", baseaddress, 392>;
-
-  template <std::uint32_t baseaddress>
-  using mpcbb3_seccfgr35_t =
-    mpcbb3_seccfgr35_tt<"MPCBB3_SECCFGR35", baseaddress, 396>;
-
-  template <std::uint32_t baseaddress>
-  using mpcbb3_seccfgr36_t =
-    mpcbb3_seccfgr36_tt<"MPCBB3_SECCFGR36", baseaddress, 400>;
-
-  template <std::uint32_t baseaddress>
-  using mpcbb3_seccfgr37_t =
-    mpcbb3_seccfgr37_tt<"MPCBB3_SECCFGR37", baseaddress, 404>;
-
-  template <std::uint32_t baseaddress>
-  using mpcbb3_seccfgr38_t =
-    mpcbb3_seccfgr38_tt<"MPCBB3_SECCFGR38", baseaddress, 408>;
-
-  template <std::uint32_t baseaddress>
-  using mpcbb3_seccfgr39_t =
-    mpcbb3_seccfgr39_tt<"MPCBB3_SECCFGR39", baseaddress, 412>;
-
-  template <std::uint32_t baseaddress>
-  using mpcbb3_seccfgr40_t =
-    mpcbb3_seccfgr40_tt<"MPCBB3_SECCFGR40", baseaddress, 416>;
-
-  template <std::uint32_t baseaddress>
-  using mpcbb3_seccfgr41_t =
-    mpcbb3_seccfgr41_tt<"MPCBB3_SECCFGR41", baseaddress, 420>;
-
-  template <std::uint32_t baseaddress>
-  using mpcbb3_seccfgr42_t =
-    mpcbb3_seccfgr42_tt<"MPCBB3_SECCFGR42", baseaddress, 424>;
-
-  template <std::uint32_t baseaddress>
-  using mpcbb3_seccfgr43_t =
-    mpcbb3_seccfgr43_tt<"MPCBB3_SECCFGR43", baseaddress, 428>;
-
-  template <std::uint32_t baseaddress>
-  using mpcbb3_seccfgr44_t =
-    mpcbb3_seccfgr44_tt<"MPCBB3_SECCFGR44", baseaddress, 432>;
-
-  template <std::uint32_t baseaddress>
-  using mpcbb3_seccfgr45_t =
-    mpcbb3_seccfgr45_tt<"MPCBB3_SECCFGR45", baseaddress, 436>;
-
-  template <std::uint32_t baseaddress>
-  using mpcbb3_seccfgr46_t =
-    mpcbb3_seccfgr46_tt<"MPCBB3_SECCFGR46", baseaddress, 440>;
-
-  template <std::uint32_t baseaddress>
-  using mpcbb3_seccfgr47_t =
-    mpcbb3_seccfgr47_tt<"MPCBB3_SECCFGR47", baseaddress, 444>;
-
-  template <std::uint32_t baseaddress>
-  using mpcbb3_seccfgr48_t =
-    mpcbb3_seccfgr48_tt<"MPCBB3_SECCFGR48", baseaddress, 448>;
-
-  template <std::uint32_t baseaddress>
-  using mpcbb3_seccfgr49_t =
-    mpcbb3_seccfgr49_tt<"MPCBB3_SECCFGR49", baseaddress, 452>;
-
-  template <std::uint32_t baseaddress>
-  using mpcbb3_seccfgr50_t =
-    mpcbb3_seccfgr50_tt<"MPCBB3_SECCFGR50", baseaddress, 456>;
-
-  template <std::uint32_t baseaddress>
-  using mpcbb3_seccfgr51_t =
-    mpcbb3_seccfgr51_tt<"MPCBB3_SECCFGR51", baseaddress, 460>;
-
-  template <std::uint32_t baseaddress>
-  using mpcbb3_privcfgr0_t =
-    mpcbb3_privcfgr0_tt<"MPCBB3_PRIVCFGR0", baseaddress, 512>;
-
-  template <std::uint32_t baseaddress>
-  using mpcbb3_privcfgr1_t =
-    mpcbb3_privcfgr1_tt<"MPCBB3_PRIVCFGR1", baseaddress, 516>;
-
-  template <std::uint32_t baseaddress>
-  using mpcbb3_privcfgr2_t =
-    mpcbb3_privcfgr2_tt<"MPCBB3_PRIVCFGR2", baseaddress, 520>;
-
-  template <std::uint32_t baseaddress>
-  using mpcbb3_privcfgr3_t =
-    mpcbb3_privcfgr3_tt<"MPCBB3_PRIVCFGR3", baseaddress, 524>;
-
-  template <std::uint32_t baseaddress>
-  using mpcbb3_privcfgr4_t =
-    mpcbb3_privcfgr4_tt<"MPCBB3_PRIVCFGR4", baseaddress, 528>;
-
-  template <std::uint32_t baseaddress>
-  using mpcbb3_privcfgr5_t =
-    mpcbb3_privcfgr5_tt<"MPCBB3_PRIVCFGR5", baseaddress, 532>;
-
-  template <std::uint32_t baseaddress>
-  using mpcbb3_privcfgr6_t =
-    mpcbb3_privcfgr6_tt<"MPCBB3_PRIVCFGR6", baseaddress, 536>;
-
-  template <std::uint32_t baseaddress>
-  using mpcbb3_privcfgr7_t =
-    mpcbb3_privcfgr7_tt<"MPCBB3_PRIVCFGR7", baseaddress, 540>;
-
-  template <std::uint32_t baseaddress>
-  using mpcbb3_privcfgr8_t =
-    mpcbb3_privcfgr8_tt<"MPCBB3_PRIVCFGR8", baseaddress, 544>;
-
-  template <std::uint32_t baseaddress>
-  using mpcbb3_privcfgr9_t =
-    mpcbb3_privcfgr9_tt<"MPCBB3_PRIVCFGR9", baseaddress, 548>;
-
-  template <std::uint32_t baseaddress>
-  using mpcbb3_privcfgr10_t =
-    mpcbb3_privcfgr10_tt<"MPCBB3_PRIVCFGR10", baseaddress, 552>;
-
-  template <std::uint32_t baseaddress>
-  using mpcbb3_privcfgr11_t =
-    mpcbb3_privcfgr11_tt<"MPCBB3_PRIVCFGR11", baseaddress, 556>;
-
-  template <std::uint32_t baseaddress>
-  using mpcbb3_privcfgr12_t =
-    mpcbb3_privcfgr12_tt<"MPCBB3_PRIVCFGR12", baseaddress, 560>;
-
-  template <std::uint32_t baseaddress>
-  using mpcbb3_privcfgr13_t =
-    mpcbb3_privcfgr13_tt<"MPCBB3_PRIVCFGR13", baseaddress, 564>;
-
-  template <std::uint32_t baseaddress>
-  using mpcbb3_privcfgr14_t =
-    mpcbb3_privcfgr14_tt<"MPCBB3_PRIVCFGR14", baseaddress, 568>;
-
-  template <std::uint32_t baseaddress>
-  using mpcbb3_privcfgr15_t =
-    mpcbb3_privcfgr15_tt<"MPCBB3_PRIVCFGR15", baseaddress, 572>;
-
-  template <std::uint32_t baseaddress>
-  using mpcbb3_privcfgr16_t =
-    mpcbb3_privcfgr16_tt<"MPCBB3_PRIVCFGR16", baseaddress, 576>;
-
-  template <std::uint32_t baseaddress>
-  using mpcbb3_privcfgr17_t =
-    mpcbb3_privcfgr17_tt<"MPCBB3_PRIVCFGR17", baseaddress, 580>;
-
-  template <std::uint32_t baseaddress>
-  using mpcbb3_privcfgr18_t =
-    mpcbb3_privcfgr18_tt<"MPCBB3_PRIVCFGR18", baseaddress, 584>;
-
-  template <std::uint32_t baseaddress>
-  using mpcbb3_privcfgr19_t =
-    mpcbb3_privcfgr19_tt<"MPCBB3_PRIVCFGR19", baseaddress, 588>;
-
-  template <std::uint32_t baseaddress>
-  using mpcbb3_privcfgr20_t =
-    mpcbb3_privcfgr20_tt<"MPCBB3_PRIVCFGR20", baseaddress, 592>;
-
-  template <std::uint32_t baseaddress>
-  using mpcbb3_privcfgr21_t =
-    mpcbb3_privcfgr21_tt<"MPCBB3_PRIVCFGR21", baseaddress, 596>;
-
-  template <std::uint32_t baseaddress>
-  using mpcbb3_privcfgr22_t =
-    mpcbb3_privcfgr22_tt<"MPCBB3_PRIVCFGR22", baseaddress, 600>;
-
-  template <std::uint32_t baseaddress>
-  using mpcbb3_privcfgr23_t =
-    mpcbb3_privcfgr23_tt<"MPCBB3_PRIVCFGR23", baseaddress, 604>;
-
-  template <std::uint32_t baseaddress>
-  using mpcbb3_privcfgr24_t =
-    mpcbb3_privcfgr24_tt<"MPCBB3_PRIVCFGR24", baseaddress, 608>;
-
-  template <std::uint32_t baseaddress>
-  using mpcbb3_privcfgr25_t =
-    mpcbb3_privcfgr25_tt<"MPCBB3_PRIVCFGR25", baseaddress, 612>;
-
-  template <std::uint32_t baseaddress>
-  using mpcbb3_privcfgr26_t =
-    mpcbb3_privcfgr26_tt<"MPCBB3_PRIVCFGR26", baseaddress, 616>;
-
-  template <std::uint32_t baseaddress>
-  using mpcbb3_privcfgr27_t =
-    mpcbb3_privcfgr27_tt<"MPCBB3_PRIVCFGR27", baseaddress, 620>;
-
-  template <std::uint32_t baseaddress>
-  using mpcbb3_privcfgr28_t =
-    mpcbb3_privcfgr28_tt<"MPCBB3_PRIVCFGR28", baseaddress, 624>;
-
-  template <std::uint32_t baseaddress>
-  using mpcbb3_privcfgr29_t =
-    mpcbb3_privcfgr29_tt<"MPCBB3_PRIVCFGR29", baseaddress, 628>;
-
-  template <std::uint32_t baseaddress>
-  using mpcbb3_privcfgr30_t =
-    mpcbb3_privcfgr30_tt<"MPCBB3_PRIVCFGR30", baseaddress, 632>;
-
-  template <std::uint32_t baseaddress>
-  using mpcbb3_privcfgr31_t =
-    mpcbb3_privcfgr31_tt<"MPCBB3_PRIVCFGR31", baseaddress, 636>;
-
-  template <std::uint32_t baseaddress>
-  using mpcbb3_privcfgr32_t =
-    mpcbb3_privcfgr32_tt<"MPCBB3_PRIVCFGR32", baseaddress, 640>;
-
-  template <std::uint32_t baseaddress>
-  using mpcbb3_privcfgr33_t =
-    mpcbb3_privcfgr33_tt<"MPCBB3_PRIVCFGR33", baseaddress, 644>;
-
-  template <std::uint32_t baseaddress>
-  using mpcbb3_privcfgr34_t =
-    mpcbb3_privcfgr34_tt<"MPCBB3_PRIVCFGR34", baseaddress, 648>;
-
-  template <std::uint32_t baseaddress>
-  using mpcbb3_privcfgr35_t =
-    mpcbb3_privcfgr35_tt<"MPCBB3_PRIVCFGR35", baseaddress, 652>;
-
-  template <std::uint32_t baseaddress>
-  using mpcbb3_privcfgr36_t =
-    mpcbb3_privcfgr36_tt<"MPCBB3_PRIVCFGR36", baseaddress, 656>;
-
-  template <std::uint32_t baseaddress>
-  using mpcbb3_privcfgr37_t =
-    mpcbb3_privcfgr37_tt<"MPCBB3_PRIVCFGR37", baseaddress, 660>;
-
-  template <std::uint32_t baseaddress>
-  using mpcbb3_privcfgr38_t =
-    mpcbb3_privcfgr38_tt<"MPCBB3_PRIVCFGR38", baseaddress, 664>;
-
-  template <std::uint32_t baseaddress>
-  using mpcbb3_privcfgr39_t =
-    mpcbb3_privcfgr39_tt<"MPCBB3_PRIVCFGR39", baseaddress, 668>;
-
-  template <std::uint32_t baseaddress>
-  using mpcbb3_privcfgr40_t =
-    mpcbb3_privcfgr40_tt<"MPCBB3_PRIVCFGR40", baseaddress, 672>;
-
-  template <std::uint32_t baseaddress>
-  using mpcbb3_privcfgr41_t =
-    mpcbb3_privcfgr41_tt<"MPCBB3_PRIVCFGR41", baseaddress, 676>;
-
-  template <std::uint32_t baseaddress>
-  using mpcbb3_privcfgr42_t =
-    mpcbb3_privcfgr42_tt<"MPCBB3_PRIVCFGR42", baseaddress, 680>;
-
-  template <std::uint32_t baseaddress>
-  using mpcbb3_privcfgr43_t =
-    mpcbb3_privcfgr43_tt<"MPCBB3_PRIVCFGR43", baseaddress, 684>;
-
-  template <std::uint32_t baseaddress>
-  using mpcbb3_privcfgr44_t =
-    mpcbb3_privcfgr44_tt<"MPCBB3_PRIVCFGR44", baseaddress, 688>;
-
-  template <std::uint32_t baseaddress>
-  using mpcbb3_privcfgr45_t =
-    mpcbb3_privcfgr45_tt<"MPCBB3_PRIVCFGR45", baseaddress, 692>;
-
-  template <std::uint32_t baseaddress>
-  using mpcbb3_privcfgr46_t =
-    mpcbb3_privcfgr46_tt<"MPCBB3_PRIVCFGR46", baseaddress, 696>;
-
-  template <std::uint32_t baseaddress>
-  using mpcbb3_privcfgr47_t =
-    mpcbb3_privcfgr47_tt<"MPCBB3_PRIVCFGR47", baseaddress, 700>;
-
-  template <std::uint32_t baseaddress>
-  using mpcbb3_privcfgr48_t =
-    mpcbb3_privcfgr48_tt<"MPCBB3_PRIVCFGR48", baseaddress, 704>;
-
-  template <std::uint32_t baseaddress>
-  using mpcbb3_privcfgr49_t =
-    mpcbb3_privcfgr49_tt<"MPCBB3_PRIVCFGR49", baseaddress, 708>;
-
-  template <std::uint32_t baseaddress>
-  using mpcbb3_privcfgr50_t =
-    mpcbb3_privcfgr50_tt<"MPCBB3_PRIVCFGR50", baseaddress, 712>;
-
-  template <std::uint32_t baseaddress>
-  using mpcbb3_privcfgr51_t =
-    mpcbb3_privcfgr51_tt<"MPCBB3_PRIVCFGR51", baseaddress, 716>;
 
 } // namespace sec_gtzc1_mpcbb3

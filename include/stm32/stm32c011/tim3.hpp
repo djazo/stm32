@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace tim3 {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using tim3_cr1_tt =
     groov::reg<name,
                std::uint16_t,
@@ -29,7 +31,9 @@ namespace tim3 {
                groov::field<"UDIS", bool, 1, 1>,
                groov::field<"CEN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using tim3_cr2_tt =
     groov::reg<name,
                std::uint16_t,
@@ -41,7 +45,9 @@ namespace tim3 {
                groov::field<"CCDS", bool, 3, 3>,
                groov::field<"RESERVED0", std::uint8_t, 2, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using tim3_smcr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -60,7 +66,9 @@ namespace tim3 {
                groov::field<"OCCS", bool, 3, 3>,
                groov::field<"SMS1", std::uint8_t, 2, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using tim3_dier_tt =
     groov::reg<name,
                std::uint16_t,
@@ -83,7 +91,9 @@ namespace tim3 {
                groov::field<"CC1IE", bool, 1, 1>,
                groov::field<"UIE", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using tim3_sr_tt =
     groov::reg<name,
                std::uint16_t,
@@ -103,7 +113,9 @@ namespace tim3 {
                groov::field<"CC1IF", bool, 1, 1>,
                groov::field<"UIF", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using tim3_egr_tt =
     groov::reg<name,
                std::uint16_t,
@@ -118,7 +130,9 @@ namespace tim3 {
                groov::field<"CC1G", bool, 1, 1, access::wo>,
                groov::field<"UG", bool, 0, 0, access::wo>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using tim3_ccmr1_input_tt =
     groov::reg<name,
                std::uint32_t,
@@ -132,7 +146,9 @@ namespace tim3 {
                groov::field<"IC1PSC", std::uint8_t, 3, 2>,
                groov::field<"CC1S", std::uint8_t, 1, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using tim3_ccmr1_output_tt =
     groov::reg<name,
                std::uint32_t,
@@ -153,7 +169,9 @@ namespace tim3 {
                groov::field<"OC1FE", bool, 2, 2>,
                groov::field<"CC1S", std::uint8_t, 1, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using tim3_ccmr2_input_tt =
     groov::reg<name,
                std::uint32_t,
@@ -167,7 +185,9 @@ namespace tim3 {
                groov::field<"IC3PSC", std::uint8_t, 3, 2>,
                groov::field<"CC3S", std::uint8_t, 1, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using tim3_ccmr2_output_tt =
     groov::reg<name,
                std::uint32_t,
@@ -188,7 +208,9 @@ namespace tim3 {
                groov::field<"OC3FE", bool, 2, 2>,
                groov::field<"CC3S", std::uint8_t, 1, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using tim3_ccer_tt =
     groov::reg<name,
                std::uint16_t,
@@ -212,7 +234,9 @@ namespace tim3 {
                groov::field<"CC1P", bool, 1, 1>,
                groov::field<"CC1E", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using tim3_cnt_tt =
     groov::reg<name,
                std::uint32_t,
@@ -221,7 +245,9 @@ namespace tim3 {
                groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
                groov::field<"CNT", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using tim3_cnt_alternate_tt =
     groov::reg<name,
                std::uint32_t,
@@ -231,7 +257,9 @@ namespace tim3 {
                groov::field<"RESERVED0", std::uint16_t, 30, 16, access::ro>,
                groov::field<"CNT", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using tim3_psc_tt =
     groov::reg<name,
                std::uint16_t,
@@ -240,7 +268,9 @@ namespace tim3 {
                groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
                groov::field<"PSC", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using tim3_arr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -249,7 +279,9 @@ namespace tim3 {
                groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
                groov::field<"ARR", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using tim3_ccr1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -258,7 +290,9 @@ namespace tim3 {
                groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
                groov::field<"CCR1", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using tim3_ccr2_tt =
     groov::reg<name,
                std::uint32_t,
@@ -267,7 +301,9 @@ namespace tim3 {
                groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
                groov::field<"CCR2", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using tim3_ccr3_tt =
     groov::reg<name,
                std::uint32_t,
@@ -276,7 +312,9 @@ namespace tim3 {
                groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
                groov::field<"CCR3", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using tim3_ccr4_tt =
     groov::reg<name,
                std::uint32_t,
@@ -285,7 +323,9 @@ namespace tim3 {
                groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
                groov::field<"CCR4", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using tim3_dcr_tt =
     groov::reg<name,
                std::uint16_t,
@@ -296,7 +336,9 @@ namespace tim3 {
                groov::field<"RESERVED0", std::uint8_t, 7, 5, access::ro>,
                groov::field<"DBA", std::uint8_t, 4, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using tim3_dmar_tt =
     groov::reg<name,
                std::uint16_t,
@@ -305,7 +347,9 @@ namespace tim3 {
                groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
                groov::field<"DMAB", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using tim3_af1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -315,7 +359,9 @@ namespace tim3 {
                groov::field<"ETRSEL", std::uint8_t, 17, 14>,
                groov::field<"RESERVED0", std::uint16_t, 13, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using tim3_tisel_tt =
     groov::reg<name,
                std::uint32_t,
@@ -327,79 +373,5 @@ namespace tim3 {
                groov::field<"TI2SEL", std::uint8_t, 11, 8>,
                groov::field<"RESERVED0", std::uint8_t, 7, 4, access::ro>,
                groov::field<"TI1SEL", std::uint8_t, 3, 0>>;
-
-  template <std::uint32_t baseaddress>
-  using tim3_cr1_t = tim3_cr1_tt<"TIM3_CR1", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using tim3_cr2_t = tim3_cr2_tt<"TIM3_CR2", baseaddress, 4>;
-
-  template <std::uint32_t baseaddress>
-  using tim3_smcr_t = tim3_smcr_tt<"TIM3_SMCR", baseaddress, 8>;
-
-  template <std::uint32_t baseaddress>
-  using tim3_dier_t = tim3_dier_tt<"TIM3_DIER", baseaddress, 12>;
-
-  template <std::uint32_t baseaddress>
-  using tim3_sr_t = tim3_sr_tt<"TIM3_SR", baseaddress, 16>;
-
-  template <std::uint32_t baseaddress>
-  using tim3_egr_t = tim3_egr_tt<"TIM3_EGR", baseaddress, 20>;
-
-  template <std::uint32_t baseaddress>
-  using tim3_ccmr1_input_t =
-    tim3_ccmr1_input_tt<"TIM3_CCMR1_input", baseaddress, 24>;
-
-  template <std::uint32_t baseaddress>
-  using tim3_ccmr1_output_t =
-    tim3_ccmr1_output_tt<"TIM3_CCMR1_output", baseaddress, 24>;
-
-  template <std::uint32_t baseaddress>
-  using tim3_ccmr2_input_t =
-    tim3_ccmr2_input_tt<"TIM3_CCMR2_input", baseaddress, 28>;
-
-  template <std::uint32_t baseaddress>
-  using tim3_ccmr2_output_t =
-    tim3_ccmr2_output_tt<"TIM3_CCMR2_output", baseaddress, 28>;
-
-  template <std::uint32_t baseaddress>
-  using tim3_ccer_t = tim3_ccer_tt<"TIM3_CCER", baseaddress, 32>;
-
-  template <std::uint32_t baseaddress>
-  using tim3_cnt_t = tim3_cnt_tt<"TIM3_CNT", baseaddress, 36>;
-
-  template <std::uint32_t baseaddress>
-  using tim3_cnt_alternate_t =
-    tim3_cnt_alternate_tt<"TIM3_CNT_alternate", baseaddress, 36>;
-
-  template <std::uint32_t baseaddress>
-  using tim3_psc_t = tim3_psc_tt<"TIM3_PSC", baseaddress, 40>;
-
-  template <std::uint32_t baseaddress>
-  using tim3_arr_t = tim3_arr_tt<"TIM3_ARR", baseaddress, 44>;
-
-  template <std::uint32_t baseaddress>
-  using tim3_ccr1_t = tim3_ccr1_tt<"TIM3_CCR1", baseaddress, 52>;
-
-  template <std::uint32_t baseaddress>
-  using tim3_ccr2_t = tim3_ccr2_tt<"TIM3_CCR2", baseaddress, 56>;
-
-  template <std::uint32_t baseaddress>
-  using tim3_ccr3_t = tim3_ccr3_tt<"TIM3_CCR3", baseaddress, 60>;
-
-  template <std::uint32_t baseaddress>
-  using tim3_ccr4_t = tim3_ccr4_tt<"TIM3_CCR4", baseaddress, 64>;
-
-  template <std::uint32_t baseaddress>
-  using tim3_dcr_t = tim3_dcr_tt<"TIM3_DCR", baseaddress, 72>;
-
-  template <std::uint32_t baseaddress>
-  using tim3_dmar_t = tim3_dmar_tt<"TIM3_DMAR", baseaddress, 76>;
-
-  template <std::uint32_t baseaddress>
-  using tim3_af1_t = tim3_af1_tt<"TIM3_AF1", baseaddress, 96>;
-
-  template <std::uint32_t baseaddress>
-  using tim3_tisel_t = tim3_tisel_tt<"TIM3_TISEL", baseaddress, 104>;
 
 } // namespace tim3

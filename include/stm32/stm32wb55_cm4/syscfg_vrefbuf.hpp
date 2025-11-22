@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace syscfg_vrefbuf {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using syscfg_memrmp_tt =
     groov::reg<name,
                std::uint32_t,
@@ -20,7 +22,9 @@ namespace syscfg_vrefbuf {
                groov::field<"RESERVED0", std::uint32_t, 31, 3, access::ro>,
                groov::field<"MEM_MODE", std::uint8_t, 2, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using syscfg_cfgr1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -39,7 +43,9 @@ namespace syscfg_vrefbuf {
                groov::field<"BOOSTEN", bool, 8, 8>,
                groov::field<"RESERVED0", std::uint8_t, 7, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using syscfg_exticr1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -54,7 +60,9 @@ namespace syscfg_vrefbuf {
                groov::field<"RESERVED0", bool, 3, 3, access::ro>,
                groov::field<"EXTI0", std::uint8_t, 2, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using syscfg_exticr2_tt =
     groov::reg<name,
                std::uint32_t,
@@ -69,7 +77,9 @@ namespace syscfg_vrefbuf {
                groov::field<"RESERVED0", bool, 3, 3, access::ro>,
                groov::field<"EXTI4", std::uint8_t, 2, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using syscfg_exticr3_tt =
     groov::reg<name,
                std::uint32_t,
@@ -84,7 +94,9 @@ namespace syscfg_vrefbuf {
                groov::field<"RESERVED0", bool, 3, 3, access::ro>,
                groov::field<"EXTI8", std::uint8_t, 2, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using syscfg_exticr4_tt =
     groov::reg<name,
                std::uint32_t,
@@ -99,7 +111,9 @@ namespace syscfg_vrefbuf {
                groov::field<"RESERVED0", bool, 3, 3, access::ro>,
                groov::field<"EXTI12", std::uint8_t, 2, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using syscfg_scsr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -110,7 +124,9 @@ namespace syscfg_vrefbuf {
                groov::field<"SRAM2BSY", bool, 1, 1, access::ro>,
                groov::field<"SRAM2ER", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using syscfg_cfgr2_tt =
     groov::reg<name,
                std::uint32_t,
@@ -124,7 +140,9 @@ namespace syscfg_vrefbuf {
                groov::field<"SPL", bool, 1, 1, access::wo>,
                groov::field<"CLL", bool, 0, 0, access::wo>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using syscfg_swpr_tt = groov::reg<name,
                                     std::uint32_t,
                                     baseaddress + offset,
@@ -162,7 +180,9 @@ namespace syscfg_vrefbuf {
                                     groov::field<"P1WP", bool, 1, 1>,
                                     groov::field<"P0WP", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using syscfg_skr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -171,7 +191,9 @@ namespace syscfg_vrefbuf {
                groov::field<"RESERVED0", std::uint32_t, 31, 8, access::ro>,
                groov::field<"KEY", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using syscfg_swpr2_tt = groov::reg<name,
                                      std::uint32_t,
                                      baseaddress + offset,
@@ -209,7 +231,9 @@ namespace syscfg_vrefbuf {
                                      groov::field<"P33WP", bool, 1, 1>,
                                      groov::field<"P32WP", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using vrefbuf_csr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -221,7 +245,9 @@ namespace syscfg_vrefbuf {
                groov::field<"HIZ", bool, 1, 1>,
                groov::field<"ENVR", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using vrefbuf_ccr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -230,7 +256,9 @@ namespace syscfg_vrefbuf {
                groov::field<"RESERVED0", std::uint32_t, 31, 6, access::ro>,
                groov::field<"TRIM", std::uint8_t, 5, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using syscfg_imr1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -253,7 +281,9 @@ namespace syscfg_vrefbuf {
                groov::field<"TIM1IM", bool, 13, 13>,
                groov::field<"RESERVED0", std::uint16_t, 12, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using syscfg_imr2_tt =
     groov::reg<name,
                std::uint32_t,
@@ -267,7 +297,9 @@ namespace syscfg_vrefbuf {
                groov::field<"PVM1IM", bool, 16, 16>,
                groov::field<"RESERVED0", std::uint16_t, 15, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using syscfg_c2imr1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -287,7 +319,9 @@ namespace syscfg_vrefbuf {
                groov::field<"RESERVED0", std::uint8_t, 2, 1, access::ro>,
                groov::field<"RTCSTAMP", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using syscfg_c2imr2_tt =
     groov::reg<name,
                std::uint32_t,
@@ -318,7 +352,9 @@ namespace syscfg_vrefbuf {
                groov::field<"DMA1_CH2_IM", bool, 1, 1>,
                groov::field<"DMA1_CH1_IM", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using syscfg_sipcr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -329,59 +365,5 @@ namespace syscfg_vrefbuf {
                groov::field<"SPKA", bool, 2, 2>,
                groov::field<"SAES2", bool, 1, 1>,
                groov::field<"SAES1", bool, 0, 0>>;
-
-  template <std::uint32_t baseaddress>
-  using syscfg_memrmp_t = syscfg_memrmp_tt<"SYSCFG_MEMRMP", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using syscfg_cfgr1_t = syscfg_cfgr1_tt<"SYSCFG_CFGR1", baseaddress, 4>;
-
-  template <std::uint32_t baseaddress>
-  using syscfg_exticr1_t = syscfg_exticr1_tt<"SYSCFG_EXTICR1", baseaddress, 8>;
-
-  template <std::uint32_t baseaddress>
-  using syscfg_exticr2_t = syscfg_exticr2_tt<"SYSCFG_EXTICR2", baseaddress, 12>;
-
-  template <std::uint32_t baseaddress>
-  using syscfg_exticr3_t = syscfg_exticr3_tt<"SYSCFG_EXTICR3", baseaddress, 16>;
-
-  template <std::uint32_t baseaddress>
-  using syscfg_exticr4_t = syscfg_exticr4_tt<"SYSCFG_EXTICR4", baseaddress, 20>;
-
-  template <std::uint32_t baseaddress>
-  using syscfg_scsr_t = syscfg_scsr_tt<"SYSCFG_SCSR", baseaddress, 24>;
-
-  template <std::uint32_t baseaddress>
-  using syscfg_cfgr2_t = syscfg_cfgr2_tt<"SYSCFG_CFGR2", baseaddress, 28>;
-
-  template <std::uint32_t baseaddress>
-  using syscfg_swpr_t = syscfg_swpr_tt<"SYSCFG_SWPR", baseaddress, 32>;
-
-  template <std::uint32_t baseaddress>
-  using syscfg_skr_t = syscfg_skr_tt<"SYSCFG_SKR", baseaddress, 36>;
-
-  template <std::uint32_t baseaddress>
-  using syscfg_swpr2_t = syscfg_swpr2_tt<"SYSCFG_SWPR2", baseaddress, 40>;
-
-  template <std::uint32_t baseaddress>
-  using vrefbuf_csr_t = vrefbuf_csr_tt<"VREFBUF_CSR", baseaddress, 48>;
-
-  template <std::uint32_t baseaddress>
-  using vrefbuf_ccr_t = vrefbuf_ccr_tt<"VREFBUF_CCR", baseaddress, 52>;
-
-  template <std::uint32_t baseaddress>
-  using syscfg_imr1_t = syscfg_imr1_tt<"SYSCFG_IMR1", baseaddress, 256>;
-
-  template <std::uint32_t baseaddress>
-  using syscfg_imr2_t = syscfg_imr2_tt<"SYSCFG_IMR2", baseaddress, 260>;
-
-  template <std::uint32_t baseaddress>
-  using syscfg_c2imr1_t = syscfg_c2imr1_tt<"SYSCFG_C2IMR1", baseaddress, 264>;
-
-  template <std::uint32_t baseaddress>
-  using syscfg_c2imr2_t = syscfg_c2imr2_tt<"SYSCFG_C2IMR2", baseaddress, 268>;
-
-  template <std::uint32_t baseaddress>
-  using syscfg_sipcr_t = syscfg_sipcr_tt<"SYSCFG_SIPCR", baseaddress, 272>;
 
 } // namespace syscfg_vrefbuf

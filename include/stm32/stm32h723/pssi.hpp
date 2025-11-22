@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace pssi {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using pssi_cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -32,7 +34,9 @@ namespace pssi {
                groov::field<"CKPOL", bool, 5, 5>,
                groov::field<"RESERVED0", std::uint8_t, 4, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using pssi_sr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -43,7 +47,9 @@ namespace pssi {
                groov::field<"RTT4B", bool, 2, 2, access::ro>,
                groov::field<"RESERVED0", std::uint8_t, 1, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using pssi_ris_tt =
     groov::reg<name,
                std::uint32_t,
@@ -53,7 +59,9 @@ namespace pssi {
                groov::field<"OVR_RIS", bool, 1, 1, access::ro>,
                groov::field<"RESERVED0", bool, 0, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using pssi_ier_tt =
     groov::reg<name,
                std::uint32_t,
@@ -63,7 +71,9 @@ namespace pssi {
                groov::field<"OVR_IE", bool, 1, 1>,
                groov::field<"RESERVED0", bool, 0, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using pssi_mis_tt =
     groov::reg<name,
                std::uint32_t,
@@ -73,7 +83,9 @@ namespace pssi {
                groov::field<"OVR_MIS", bool, 1, 1, access::ro>,
                groov::field<"RESERVED0", bool, 0, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using pssi_icr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -83,7 +95,9 @@ namespace pssi {
                groov::field<"OVR_ISC", bool, 1, 1, access::wo>,
                groov::field<"RESERVED0", bool, 0, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using pssi_dr_tt = groov::reg<name,
                                 std::uint32_t,
                                 baseaddress + offset,
@@ -92,26 +106,5 @@ namespace pssi {
                                 groov::field<"BYTE2", std::uint8_t, 23, 16>,
                                 groov::field<"BYTE1", std::uint8_t, 15, 8>,
                                 groov::field<"BYTE0", std::uint8_t, 7, 0>>;
-
-  template <std::uint32_t baseaddress>
-  using pssi_cr_t = pssi_cr_tt<"PSSI_CR", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using pssi_sr_t = pssi_sr_tt<"PSSI_SR", baseaddress, 4>;
-
-  template <std::uint32_t baseaddress>
-  using pssi_ris_t = pssi_ris_tt<"PSSI_RIS", baseaddress, 8>;
-
-  template <std::uint32_t baseaddress>
-  using pssi_ier_t = pssi_ier_tt<"PSSI_IER", baseaddress, 12>;
-
-  template <std::uint32_t baseaddress>
-  using pssi_mis_t = pssi_mis_tt<"PSSI_MIS", baseaddress, 16>;
-
-  template <std::uint32_t baseaddress>
-  using pssi_icr_t = pssi_icr_tt<"PSSI_ICR", baseaddress, 20>;
-
-  template <std::uint32_t baseaddress>
-  using pssi_dr_t = pssi_dr_tt<"PSSI_DR", baseaddress, 40>;
 
 } // namespace pssi

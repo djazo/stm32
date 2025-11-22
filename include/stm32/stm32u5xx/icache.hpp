@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace icache {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using icache_cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -27,7 +29,9 @@ namespace icache {
                groov::field<"CACHEINV", bool, 1, 1, access::wo>,
                groov::field<"EN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using icache_sr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -38,7 +42,9 @@ namespace icache {
                groov::field<"BSYENDF", bool, 1, 1>,
                groov::field<"BUSYF", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using icache_ier_tt =
     groov::reg<name,
                std::uint32_t,
@@ -49,7 +55,9 @@ namespace icache {
                groov::field<"BSYENDIE", bool, 1, 1>,
                groov::field<"RESERVED0", bool, 0, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using icache_fcr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -60,7 +68,9 @@ namespace icache {
                groov::field<"CBSYENDF", bool, 1, 1>,
                groov::field<"RESERVED0", bool, 0, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using icache_hmonr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -68,7 +78,9 @@ namespace icache {
                access::ro,
                groov::field<"HITMON", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using icache_mmonr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -77,7 +89,9 @@ namespace icache {
                groov::field<"RESERVED0", std::uint16_t, 31, 16>,
                groov::field<"MISSMON", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using icache_crr0_tt =
     groov::reg<name,
                std::uint32_t,
@@ -94,7 +108,9 @@ namespace icache {
                groov::field<"RESERVED0", bool, 8, 8, access::ro>,
                groov::field<"BASEADDR", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using icache_crr1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -111,7 +127,9 @@ namespace icache {
                groov::field<"RESERVED0", bool, 8, 8, access::ro>,
                groov::field<"BASEADDR", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using icache_crr2_tt =
     groov::reg<name,
                std::uint32_t,
@@ -128,7 +146,9 @@ namespace icache {
                groov::field<"RESERVED0", bool, 8, 8, access::ro>,
                groov::field<"BASEADDR", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using icache_crr3_tt =
     groov::reg<name,
                std::uint32_t,
@@ -144,35 +164,5 @@ namespace icache {
                groov::field<"RSIZE", std::uint8_t, 11, 9>,
                groov::field<"RESERVED0", bool, 8, 8, access::ro>,
                groov::field<"BASEADDR", std::uint8_t, 7, 0>>;
-
-  template <std::uint32_t baseaddress>
-  using icache_cr_t = icache_cr_tt<"ICACHE_CR", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using icache_sr_t = icache_sr_tt<"ICACHE_SR", baseaddress, 4>;
-
-  template <std::uint32_t baseaddress>
-  using icache_ier_t = icache_ier_tt<"ICACHE_IER", baseaddress, 8>;
-
-  template <std::uint32_t baseaddress>
-  using icache_fcr_t = icache_fcr_tt<"ICACHE_FCR", baseaddress, 12>;
-
-  template <std::uint32_t baseaddress>
-  using icache_hmonr_t = icache_hmonr_tt<"ICACHE_HMONR", baseaddress, 16>;
-
-  template <std::uint32_t baseaddress>
-  using icache_mmonr_t = icache_mmonr_tt<"ICACHE_MMONR", baseaddress, 20>;
-
-  template <std::uint32_t baseaddress>
-  using icache_crr0_t = icache_crr0_tt<"ICACHE_CRR0", baseaddress, 32>;
-
-  template <std::uint32_t baseaddress>
-  using icache_crr1_t = icache_crr1_tt<"ICACHE_CRR1", baseaddress, 36>;
-
-  template <std::uint32_t baseaddress>
-  using icache_crr2_t = icache_crr2_tt<"ICACHE_CRR2", baseaddress, 40>;
-
-  template <std::uint32_t baseaddress>
-  using icache_crr3_t = icache_crr3_tt<"ICACHE_CRR3", baseaddress, 44>;
 
 } // namespace icache

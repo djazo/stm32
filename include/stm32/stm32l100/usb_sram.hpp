@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace usb_sram {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using usb_ep0r_tt =
     groov::reg<name,
                std::uint32_t,
@@ -29,7 +31,9 @@ namespace usb_sram {
                groov::field<"STAT_TX", std::uint8_t, 5, 4>,
                groov::field<"EA", std::uint8_t, 3, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using usb_ep1r_tt =
     groov::reg<name,
                std::uint32_t,
@@ -47,7 +51,9 @@ namespace usb_sram {
                groov::field<"STAT_TX", std::uint8_t, 5, 4>,
                groov::field<"EA", std::uint8_t, 3, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using usb_ep2r_tt =
     groov::reg<name,
                std::uint32_t,
@@ -65,7 +71,9 @@ namespace usb_sram {
                groov::field<"STAT_TX", std::uint8_t, 5, 4>,
                groov::field<"EA", std::uint8_t, 3, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using usb_ep3r_tt =
     groov::reg<name,
                std::uint32_t,
@@ -83,7 +91,9 @@ namespace usb_sram {
                groov::field<"STAT_TX", std::uint8_t, 5, 4>,
                groov::field<"EA", std::uint8_t, 3, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using usb_ep4r_tt =
     groov::reg<name,
                std::uint32_t,
@@ -101,7 +111,9 @@ namespace usb_sram {
                groov::field<"STAT_TX", std::uint8_t, 5, 4>,
                groov::field<"EA", std::uint8_t, 3, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using usb_ep5r_tt =
     groov::reg<name,
                std::uint32_t,
@@ -119,7 +131,9 @@ namespace usb_sram {
                groov::field<"STAT_TX", std::uint8_t, 5, 4>,
                groov::field<"EA", std::uint8_t, 3, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using usb_ep6r_tt =
     groov::reg<name,
                std::uint32_t,
@@ -137,7 +151,9 @@ namespace usb_sram {
                groov::field<"STAT_TX", std::uint8_t, 5, 4>,
                groov::field<"EA", std::uint8_t, 3, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using usb_ep7r_tt =
     groov::reg<name,
                std::uint32_t,
@@ -155,7 +171,9 @@ namespace usb_sram {
                groov::field<"STAT_TX", std::uint8_t, 5, 4>,
                groov::field<"EA", std::uint8_t, 3, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using usb_cntr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -177,7 +195,9 @@ namespace usb_sram {
                groov::field<"PDWN", bool, 1, 1>,
                groov::field<"FRES", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using istr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -196,7 +216,9 @@ namespace usb_sram {
                groov::field<"DIR", bool, 4, 4>,
                groov::field<"EP_ID", std::uint8_t, 3, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using fnr_tt = groov::reg<name,
                             std::uint32_t,
                             baseaddress + offset,
@@ -208,7 +230,9 @@ namespace usb_sram {
                             groov::field<"LSOF", std::uint8_t, 12, 11>,
                             groov::field<"FN", std::uint16_t, 10, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using daddr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -218,7 +242,9 @@ namespace usb_sram {
                groov::field<"EF", bool, 7, 7>,
                groov::field<"ADD", std::uint8_t, 6, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using btable_tt =
     groov::reg<name,
                std::uint32_t,
@@ -227,44 +253,5 @@ namespace usb_sram {
                groov::field<"RESERVED1", std::uint16_t, 31, 16, access::ro>,
                groov::field<"BTABLE", std::uint16_t, 15, 3>,
                groov::field<"RESERVED0", std::uint8_t, 2, 0, access::ro>>;
-
-  template <std::uint32_t baseaddress>
-  using usb_ep0r_t = usb_ep0r_tt<"USB_EP0R", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using usb_ep1r_t = usb_ep1r_tt<"USB_EP1R", baseaddress, 4>;
-
-  template <std::uint32_t baseaddress>
-  using usb_ep2r_t = usb_ep2r_tt<"USB_EP2R", baseaddress, 8>;
-
-  template <std::uint32_t baseaddress>
-  using usb_ep3r_t = usb_ep3r_tt<"USB_EP3R", baseaddress, 12>;
-
-  template <std::uint32_t baseaddress>
-  using usb_ep4r_t = usb_ep4r_tt<"USB_EP4R", baseaddress, 16>;
-
-  template <std::uint32_t baseaddress>
-  using usb_ep5r_t = usb_ep5r_tt<"USB_EP5R", baseaddress, 20>;
-
-  template <std::uint32_t baseaddress>
-  using usb_ep6r_t = usb_ep6r_tt<"USB_EP6R", baseaddress, 24>;
-
-  template <std::uint32_t baseaddress>
-  using usb_ep7r_t = usb_ep7r_tt<"USB_EP7R", baseaddress, 28>;
-
-  template <std::uint32_t baseaddress>
-  using usb_cntr_t = usb_cntr_tt<"USB_CNTR", baseaddress, 64>;
-
-  template <std::uint32_t baseaddress>
-  using istr_t = istr_tt<"ISTR", baseaddress, 68>;
-
-  template <std::uint32_t baseaddress>
-  using fnr_t = fnr_tt<"FNR", baseaddress, 72>;
-
-  template <std::uint32_t baseaddress>
-  using daddr_t = daddr_tt<"DADDR", baseaddress, 76>;
-
-  template <std::uint32_t baseaddress>
-  using btable_t = btable_tt<"BTABLE", baseaddress, 80>;
 
 } // namespace usb_sram

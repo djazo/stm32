@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace hsem {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using hsem_r0_tt =
     groov::reg<name,
                std::uint32_t,
@@ -22,7 +24,9 @@ namespace hsem {
                groov::field<"MASTERID", std::uint8_t, 15, 8>,
                groov::field<"PROCID", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using hsem_r1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -33,7 +37,9 @@ namespace hsem {
                groov::field<"MASTERID", std::uint8_t, 15, 8>,
                groov::field<"PROCID", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using hsem_r2_tt =
     groov::reg<name,
                std::uint32_t,
@@ -44,7 +50,9 @@ namespace hsem {
                groov::field<"MASTERID", std::uint8_t, 15, 8>,
                groov::field<"PROCID", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using hsem_r3_tt =
     groov::reg<name,
                std::uint32_t,
@@ -55,7 +63,9 @@ namespace hsem {
                groov::field<"MASTERID", std::uint8_t, 15, 8>,
                groov::field<"PROCID", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using hsem_r4_tt =
     groov::reg<name,
                std::uint32_t,
@@ -66,7 +76,9 @@ namespace hsem {
                groov::field<"MASTERID", std::uint8_t, 15, 8>,
                groov::field<"PROCID", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using hsem_r5_tt =
     groov::reg<name,
                std::uint32_t,
@@ -77,7 +89,9 @@ namespace hsem {
                groov::field<"MASTERID", std::uint8_t, 15, 8>,
                groov::field<"PROCID", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using hsem_r6_tt =
     groov::reg<name,
                std::uint32_t,
@@ -88,7 +102,9 @@ namespace hsem {
                groov::field<"MASTERID", std::uint8_t, 15, 8>,
                groov::field<"PROCID", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using hsem_r7_tt =
     groov::reg<name,
                std::uint32_t,
@@ -99,7 +115,9 @@ namespace hsem {
                groov::field<"MASTERID", std::uint8_t, 15, 8>,
                groov::field<"PROCID", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using hsem_r8_tt =
     groov::reg<name,
                std::uint32_t,
@@ -110,7 +128,9 @@ namespace hsem {
                groov::field<"MASTERID", std::uint8_t, 15, 8>,
                groov::field<"PROCID", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using hsem_r9_tt =
     groov::reg<name,
                std::uint32_t,
@@ -121,7 +141,9 @@ namespace hsem {
                groov::field<"MASTERID", std::uint8_t, 15, 8>,
                groov::field<"PROCID", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using hsem_r10_tt =
     groov::reg<name,
                std::uint32_t,
@@ -132,7 +154,9 @@ namespace hsem {
                groov::field<"MASTERID", std::uint8_t, 15, 8>,
                groov::field<"PROCID", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using hsem_r11_tt =
     groov::reg<name,
                std::uint32_t,
@@ -143,7 +167,9 @@ namespace hsem {
                groov::field<"MASTERID", std::uint8_t, 15, 8>,
                groov::field<"PROCID", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using hsem_r12_tt =
     groov::reg<name,
                std::uint32_t,
@@ -154,7 +180,9 @@ namespace hsem {
                groov::field<"MASTERID", std::uint8_t, 15, 8>,
                groov::field<"PROCID", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using hsem_r13_tt =
     groov::reg<name,
                std::uint32_t,
@@ -165,7 +193,9 @@ namespace hsem {
                groov::field<"MASTERID", std::uint8_t, 15, 8>,
                groov::field<"PROCID", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using hsem_r14_tt =
     groov::reg<name,
                std::uint32_t,
@@ -176,7 +206,9 @@ namespace hsem {
                groov::field<"MASTERID", std::uint8_t, 15, 8>,
                groov::field<"PROCID", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using hsem_r15_tt =
     groov::reg<name,
                std::uint32_t,
@@ -187,7 +219,9 @@ namespace hsem {
                groov::field<"MASTERID", std::uint8_t, 15, 8>,
                groov::field<"PROCID", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using hsem_r16_tt =
     groov::reg<name,
                std::uint32_t,
@@ -198,7 +232,9 @@ namespace hsem {
                groov::field<"MASTERID", std::uint8_t, 15, 8>,
                groov::field<"PROCID", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using hsem_r17_tt =
     groov::reg<name,
                std::uint32_t,
@@ -209,7 +245,9 @@ namespace hsem {
                groov::field<"MASTERID", std::uint8_t, 15, 8>,
                groov::field<"PROCID", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using hsem_r18_tt =
     groov::reg<name,
                std::uint32_t,
@@ -220,7 +258,9 @@ namespace hsem {
                groov::field<"MASTERID", std::uint8_t, 15, 8>,
                groov::field<"PROCID", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using hsem_r19_tt =
     groov::reg<name,
                std::uint32_t,
@@ -231,7 +271,9 @@ namespace hsem {
                groov::field<"MASTERID", std::uint8_t, 15, 8>,
                groov::field<"PROCID", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using hsem_r20_tt =
     groov::reg<name,
                std::uint32_t,
@@ -242,7 +284,9 @@ namespace hsem {
                groov::field<"MASTERID", std::uint8_t, 15, 8>,
                groov::field<"PROCID", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using hsem_r21_tt =
     groov::reg<name,
                std::uint32_t,
@@ -253,7 +297,9 @@ namespace hsem {
                groov::field<"MASTERID", std::uint8_t, 15, 8>,
                groov::field<"PROCID", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using hsem_r22_tt =
     groov::reg<name,
                std::uint32_t,
@@ -264,7 +310,9 @@ namespace hsem {
                groov::field<"MASTERID", std::uint8_t, 15, 8>,
                groov::field<"PROCID", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using hsem_r23_tt =
     groov::reg<name,
                std::uint32_t,
@@ -275,7 +323,9 @@ namespace hsem {
                groov::field<"MASTERID", std::uint8_t, 15, 8>,
                groov::field<"PROCID", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using hsem_r24_tt =
     groov::reg<name,
                std::uint32_t,
@@ -286,7 +336,9 @@ namespace hsem {
                groov::field<"MASTERID", std::uint8_t, 15, 8>,
                groov::field<"PROCID", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using hsem_r25_tt =
     groov::reg<name,
                std::uint32_t,
@@ -297,7 +349,9 @@ namespace hsem {
                groov::field<"MASTERID", std::uint8_t, 15, 8>,
                groov::field<"PROCID", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using hsem_r26_tt =
     groov::reg<name,
                std::uint32_t,
@@ -308,7 +362,9 @@ namespace hsem {
                groov::field<"MASTERID", std::uint8_t, 15, 8>,
                groov::field<"PROCID", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using hsem_r27_tt =
     groov::reg<name,
                std::uint32_t,
@@ -319,7 +375,9 @@ namespace hsem {
                groov::field<"MASTERID", std::uint8_t, 15, 8>,
                groov::field<"PROCID", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using hsem_r28_tt =
     groov::reg<name,
                std::uint32_t,
@@ -330,7 +388,9 @@ namespace hsem {
                groov::field<"MASTERID", std::uint8_t, 15, 8>,
                groov::field<"PROCID", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using hsem_r29_tt =
     groov::reg<name,
                std::uint32_t,
@@ -341,7 +401,9 @@ namespace hsem {
                groov::field<"MASTERID", std::uint8_t, 15, 8>,
                groov::field<"PROCID", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using hsem_r30_tt =
     groov::reg<name,
                std::uint32_t,
@@ -352,7 +414,9 @@ namespace hsem {
                groov::field<"MASTERID", std::uint8_t, 15, 8>,
                groov::field<"PROCID", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using hsem_r31_tt =
     groov::reg<name,
                std::uint32_t,
@@ -363,7 +427,9 @@ namespace hsem {
                groov::field<"MASTERID", std::uint8_t, 15, 8>,
                groov::field<"PROCID", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using hsem_rlr0_tt =
     groov::reg<name,
                std::uint32_t,
@@ -374,7 +440,9 @@ namespace hsem {
                groov::field<"MASTERID", std::uint8_t, 15, 8>,
                groov::field<"PROCID", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using hsem_rlr1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -385,7 +453,9 @@ namespace hsem {
                groov::field<"MASTERID", std::uint8_t, 15, 8>,
                groov::field<"PROCID", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using hsem_rlr2_tt =
     groov::reg<name,
                std::uint32_t,
@@ -396,7 +466,9 @@ namespace hsem {
                groov::field<"MASTERID", std::uint8_t, 15, 8>,
                groov::field<"PROCID", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using hsem_rlr3_tt =
     groov::reg<name,
                std::uint32_t,
@@ -407,7 +479,9 @@ namespace hsem {
                groov::field<"MASTERID", std::uint8_t, 15, 8>,
                groov::field<"PROCID", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using hsem_rlr4_tt =
     groov::reg<name,
                std::uint32_t,
@@ -418,7 +492,9 @@ namespace hsem {
                groov::field<"MASTERID", std::uint8_t, 15, 8>,
                groov::field<"PROCID", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using hsem_rlr5_tt =
     groov::reg<name,
                std::uint32_t,
@@ -429,7 +505,9 @@ namespace hsem {
                groov::field<"MASTERID", std::uint8_t, 15, 8>,
                groov::field<"PROCID", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using hsem_rlr6_tt =
     groov::reg<name,
                std::uint32_t,
@@ -440,7 +518,9 @@ namespace hsem {
                groov::field<"MASTERID", std::uint8_t, 15, 8>,
                groov::field<"PROCID", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using hsem_rlr7_tt =
     groov::reg<name,
                std::uint32_t,
@@ -451,7 +531,9 @@ namespace hsem {
                groov::field<"MASTERID", std::uint8_t, 15, 8>,
                groov::field<"PROCID", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using hsem_rlr8_tt =
     groov::reg<name,
                std::uint32_t,
@@ -462,7 +544,9 @@ namespace hsem {
                groov::field<"MASTERID", std::uint8_t, 15, 8>,
                groov::field<"PROCID", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using hsem_rlr9_tt =
     groov::reg<name,
                std::uint32_t,
@@ -473,7 +557,9 @@ namespace hsem {
                groov::field<"MASTERID", std::uint8_t, 15, 8>,
                groov::field<"PROCID", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using hsem_rlr10_tt =
     groov::reg<name,
                std::uint32_t,
@@ -484,7 +570,9 @@ namespace hsem {
                groov::field<"MASTERID", std::uint8_t, 15, 8>,
                groov::field<"PROCID", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using hsem_rlr11_tt =
     groov::reg<name,
                std::uint32_t,
@@ -495,7 +583,9 @@ namespace hsem {
                groov::field<"MASTERID", std::uint8_t, 15, 8>,
                groov::field<"PROCID", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using hsem_rlr12_tt =
     groov::reg<name,
                std::uint32_t,
@@ -506,7 +596,9 @@ namespace hsem {
                groov::field<"MASTERID", std::uint8_t, 15, 8>,
                groov::field<"PROCID", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using hsem_rlr13_tt =
     groov::reg<name,
                std::uint32_t,
@@ -517,7 +609,9 @@ namespace hsem {
                groov::field<"MASTERID", std::uint8_t, 15, 8>,
                groov::field<"PROCID", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using hsem_rlr14_tt =
     groov::reg<name,
                std::uint32_t,
@@ -528,7 +622,9 @@ namespace hsem {
                groov::field<"MASTERID", std::uint8_t, 15, 8>,
                groov::field<"PROCID", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using hsem_rlr15_tt =
     groov::reg<name,
                std::uint32_t,
@@ -539,7 +635,9 @@ namespace hsem {
                groov::field<"MASTERID", std::uint8_t, 15, 8>,
                groov::field<"PROCID", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using hsem_rlr16_tt =
     groov::reg<name,
                std::uint32_t,
@@ -550,7 +648,9 @@ namespace hsem {
                groov::field<"MASTERID", std::uint8_t, 15, 8>,
                groov::field<"PROCID", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using hsem_rlr17_tt =
     groov::reg<name,
                std::uint32_t,
@@ -561,7 +661,9 @@ namespace hsem {
                groov::field<"MASTERID", std::uint8_t, 15, 8>,
                groov::field<"PROCID", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using hsem_rlr18_tt =
     groov::reg<name,
                std::uint32_t,
@@ -572,7 +674,9 @@ namespace hsem {
                groov::field<"MASTERID", std::uint8_t, 15, 8>,
                groov::field<"PROCID", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using hsem_rlr19_tt =
     groov::reg<name,
                std::uint32_t,
@@ -583,7 +687,9 @@ namespace hsem {
                groov::field<"MASTERID", std::uint8_t, 15, 8>,
                groov::field<"PROCID", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using hsem_rlr20_tt =
     groov::reg<name,
                std::uint32_t,
@@ -594,7 +700,9 @@ namespace hsem {
                groov::field<"MASTERID", std::uint8_t, 15, 8>,
                groov::field<"PROCID", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using hsem_rlr21_tt =
     groov::reg<name,
                std::uint32_t,
@@ -605,7 +713,9 @@ namespace hsem {
                groov::field<"MASTERID", std::uint8_t, 15, 8>,
                groov::field<"PROCID", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using hsem_rlr22_tt =
     groov::reg<name,
                std::uint32_t,
@@ -616,7 +726,9 @@ namespace hsem {
                groov::field<"MASTERID", std::uint8_t, 15, 8>,
                groov::field<"PROCID", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using hsem_rlr23_tt =
     groov::reg<name,
                std::uint32_t,
@@ -627,7 +739,9 @@ namespace hsem {
                groov::field<"MASTERID", std::uint8_t, 15, 8>,
                groov::field<"PROCID", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using hsem_rlr24_tt =
     groov::reg<name,
                std::uint32_t,
@@ -638,7 +752,9 @@ namespace hsem {
                groov::field<"MASTERID", std::uint8_t, 15, 8>,
                groov::field<"PROCID", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using hsem_rlr25_tt =
     groov::reg<name,
                std::uint32_t,
@@ -649,7 +765,9 @@ namespace hsem {
                groov::field<"MASTERID", std::uint8_t, 15, 8>,
                groov::field<"PROCID", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using hsem_rlr26_tt =
     groov::reg<name,
                std::uint32_t,
@@ -660,7 +778,9 @@ namespace hsem {
                groov::field<"MASTERID", std::uint8_t, 15, 8>,
                groov::field<"PROCID", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using hsem_rlr27_tt =
     groov::reg<name,
                std::uint32_t,
@@ -671,7 +791,9 @@ namespace hsem {
                groov::field<"MASTERID", std::uint8_t, 15, 8>,
                groov::field<"PROCID", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using hsem_rlr28_tt =
     groov::reg<name,
                std::uint32_t,
@@ -682,7 +804,9 @@ namespace hsem {
                groov::field<"MASTERID", std::uint8_t, 15, 8>,
                groov::field<"PROCID", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using hsem_rlr29_tt =
     groov::reg<name,
                std::uint32_t,
@@ -693,7 +817,9 @@ namespace hsem {
                groov::field<"MASTERID", std::uint8_t, 15, 8>,
                groov::field<"PROCID", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using hsem_rlr30_tt =
     groov::reg<name,
                std::uint32_t,
@@ -704,7 +830,9 @@ namespace hsem {
                groov::field<"MASTERID", std::uint8_t, 15, 8>,
                groov::field<"PROCID", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using hsem_rlr31_tt =
     groov::reg<name,
                std::uint32_t,
@@ -715,7 +843,9 @@ namespace hsem {
                groov::field<"MASTERID", std::uint8_t, 15, 8>,
                groov::field<"PROCID", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using hsem_c1ier_tt = groov::reg<name,
                                    std::uint32_t,
                                    baseaddress + offset,
@@ -753,7 +883,9 @@ namespace hsem {
                                    groov::field<"ISEM1", bool, 1, 1>,
                                    groov::field<"ISEM0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using hsem_c1icr_tt = groov::reg<name,
                                    std::uint32_t,
                                    baseaddress + offset,
@@ -791,7 +923,9 @@ namespace hsem {
                                    groov::field<"ISEM1", bool, 1, 1>,
                                    groov::field<"ISEM0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using hsem_c1isr_tt = groov::reg<name,
                                    std::uint32_t,
                                    baseaddress + offset,
@@ -829,7 +963,9 @@ namespace hsem {
                                    groov::field<"ISEM1", bool, 1, 1>,
                                    groov::field<"ISEM0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using hsem_c1misr_tt = groov::reg<name,
                                     std::uint32_t,
                                     baseaddress + offset,
@@ -867,7 +1003,9 @@ namespace hsem {
                                     groov::field<"ISEM1", bool, 1, 1>,
                                     groov::field<"ISEM0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using hsem_cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -878,7 +1016,9 @@ namespace hsem {
                groov::field<"COREID", std::uint8_t, 11, 8>,
                groov::field<"RESERVED0", std::uint8_t, 7, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using hsem_keyr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -886,215 +1026,5 @@ namespace hsem {
                access::rw,
                groov::field<"KEY", std::uint16_t, 31, 16>,
                groov::field<"RESERVED0", std::uint16_t, 15, 0, access::ro>>;
-
-  template <std::uint32_t baseaddress>
-  using hsem_r0_t = hsem_r0_tt<"HSEM_R0", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using hsem_r1_t = hsem_r1_tt<"HSEM_R1", baseaddress, 4>;
-
-  template <std::uint32_t baseaddress>
-  using hsem_r2_t = hsem_r2_tt<"HSEM_R2", baseaddress, 8>;
-
-  template <std::uint32_t baseaddress>
-  using hsem_r3_t = hsem_r3_tt<"HSEM_R3", baseaddress, 12>;
-
-  template <std::uint32_t baseaddress>
-  using hsem_r4_t = hsem_r4_tt<"HSEM_R4", baseaddress, 16>;
-
-  template <std::uint32_t baseaddress>
-  using hsem_r5_t = hsem_r5_tt<"HSEM_R5", baseaddress, 20>;
-
-  template <std::uint32_t baseaddress>
-  using hsem_r6_t = hsem_r6_tt<"HSEM_R6", baseaddress, 24>;
-
-  template <std::uint32_t baseaddress>
-  using hsem_r7_t = hsem_r7_tt<"HSEM_R7", baseaddress, 28>;
-
-  template <std::uint32_t baseaddress>
-  using hsem_r8_t = hsem_r8_tt<"HSEM_R8", baseaddress, 32>;
-
-  template <std::uint32_t baseaddress>
-  using hsem_r9_t = hsem_r9_tt<"HSEM_R9", baseaddress, 36>;
-
-  template <std::uint32_t baseaddress>
-  using hsem_r10_t = hsem_r10_tt<"HSEM_R10", baseaddress, 40>;
-
-  template <std::uint32_t baseaddress>
-  using hsem_r11_t = hsem_r11_tt<"HSEM_R11", baseaddress, 44>;
-
-  template <std::uint32_t baseaddress>
-  using hsem_r12_t = hsem_r12_tt<"HSEM_R12", baseaddress, 48>;
-
-  template <std::uint32_t baseaddress>
-  using hsem_r13_t = hsem_r13_tt<"HSEM_R13", baseaddress, 52>;
-
-  template <std::uint32_t baseaddress>
-  using hsem_r14_t = hsem_r14_tt<"HSEM_R14", baseaddress, 56>;
-
-  template <std::uint32_t baseaddress>
-  using hsem_r15_t = hsem_r15_tt<"HSEM_R15", baseaddress, 60>;
-
-  template <std::uint32_t baseaddress>
-  using hsem_r16_t = hsem_r16_tt<"HSEM_R16", baseaddress, 64>;
-
-  template <std::uint32_t baseaddress>
-  using hsem_r17_t = hsem_r17_tt<"HSEM_R17", baseaddress, 68>;
-
-  template <std::uint32_t baseaddress>
-  using hsem_r18_t = hsem_r18_tt<"HSEM_R18", baseaddress, 72>;
-
-  template <std::uint32_t baseaddress>
-  using hsem_r19_t = hsem_r19_tt<"HSEM_R19", baseaddress, 76>;
-
-  template <std::uint32_t baseaddress>
-  using hsem_r20_t = hsem_r20_tt<"HSEM_R20", baseaddress, 80>;
-
-  template <std::uint32_t baseaddress>
-  using hsem_r21_t = hsem_r21_tt<"HSEM_R21", baseaddress, 84>;
-
-  template <std::uint32_t baseaddress>
-  using hsem_r22_t = hsem_r22_tt<"HSEM_R22", baseaddress, 88>;
-
-  template <std::uint32_t baseaddress>
-  using hsem_r23_t = hsem_r23_tt<"HSEM_R23", baseaddress, 92>;
-
-  template <std::uint32_t baseaddress>
-  using hsem_r24_t = hsem_r24_tt<"HSEM_R24", baseaddress, 96>;
-
-  template <std::uint32_t baseaddress>
-  using hsem_r25_t = hsem_r25_tt<"HSEM_R25", baseaddress, 100>;
-
-  template <std::uint32_t baseaddress>
-  using hsem_r26_t = hsem_r26_tt<"HSEM_R26", baseaddress, 104>;
-
-  template <std::uint32_t baseaddress>
-  using hsem_r27_t = hsem_r27_tt<"HSEM_R27", baseaddress, 108>;
-
-  template <std::uint32_t baseaddress>
-  using hsem_r28_t = hsem_r28_tt<"HSEM_R28", baseaddress, 112>;
-
-  template <std::uint32_t baseaddress>
-  using hsem_r29_t = hsem_r29_tt<"HSEM_R29", baseaddress, 116>;
-
-  template <std::uint32_t baseaddress>
-  using hsem_r30_t = hsem_r30_tt<"HSEM_R30", baseaddress, 120>;
-
-  template <std::uint32_t baseaddress>
-  using hsem_r31_t = hsem_r31_tt<"HSEM_R31", baseaddress, 124>;
-
-  template <std::uint32_t baseaddress>
-  using hsem_rlr0_t = hsem_rlr0_tt<"HSEM_RLR0", baseaddress, 128>;
-
-  template <std::uint32_t baseaddress>
-  using hsem_rlr1_t = hsem_rlr1_tt<"HSEM_RLR1", baseaddress, 132>;
-
-  template <std::uint32_t baseaddress>
-  using hsem_rlr2_t = hsem_rlr2_tt<"HSEM_RLR2", baseaddress, 136>;
-
-  template <std::uint32_t baseaddress>
-  using hsem_rlr3_t = hsem_rlr3_tt<"HSEM_RLR3", baseaddress, 140>;
-
-  template <std::uint32_t baseaddress>
-  using hsem_rlr4_t = hsem_rlr4_tt<"HSEM_RLR4", baseaddress, 144>;
-
-  template <std::uint32_t baseaddress>
-  using hsem_rlr5_t = hsem_rlr5_tt<"HSEM_RLR5", baseaddress, 148>;
-
-  template <std::uint32_t baseaddress>
-  using hsem_rlr6_t = hsem_rlr6_tt<"HSEM_RLR6", baseaddress, 152>;
-
-  template <std::uint32_t baseaddress>
-  using hsem_rlr7_t = hsem_rlr7_tt<"HSEM_RLR7", baseaddress, 156>;
-
-  template <std::uint32_t baseaddress>
-  using hsem_rlr8_t = hsem_rlr8_tt<"HSEM_RLR8", baseaddress, 160>;
-
-  template <std::uint32_t baseaddress>
-  using hsem_rlr9_t = hsem_rlr9_tt<"HSEM_RLR9", baseaddress, 164>;
-
-  template <std::uint32_t baseaddress>
-  using hsem_rlr10_t = hsem_rlr10_tt<"HSEM_RLR10", baseaddress, 168>;
-
-  template <std::uint32_t baseaddress>
-  using hsem_rlr11_t = hsem_rlr11_tt<"HSEM_RLR11", baseaddress, 172>;
-
-  template <std::uint32_t baseaddress>
-  using hsem_rlr12_t = hsem_rlr12_tt<"HSEM_RLR12", baseaddress, 176>;
-
-  template <std::uint32_t baseaddress>
-  using hsem_rlr13_t = hsem_rlr13_tt<"HSEM_RLR13", baseaddress, 180>;
-
-  template <std::uint32_t baseaddress>
-  using hsem_rlr14_t = hsem_rlr14_tt<"HSEM_RLR14", baseaddress, 184>;
-
-  template <std::uint32_t baseaddress>
-  using hsem_rlr15_t = hsem_rlr15_tt<"HSEM_RLR15", baseaddress, 188>;
-
-  template <std::uint32_t baseaddress>
-  using hsem_rlr16_t = hsem_rlr16_tt<"HSEM_RLR16", baseaddress, 192>;
-
-  template <std::uint32_t baseaddress>
-  using hsem_rlr17_t = hsem_rlr17_tt<"HSEM_RLR17", baseaddress, 196>;
-
-  template <std::uint32_t baseaddress>
-  using hsem_rlr18_t = hsem_rlr18_tt<"HSEM_RLR18", baseaddress, 200>;
-
-  template <std::uint32_t baseaddress>
-  using hsem_rlr19_t = hsem_rlr19_tt<"HSEM_RLR19", baseaddress, 204>;
-
-  template <std::uint32_t baseaddress>
-  using hsem_rlr20_t = hsem_rlr20_tt<"HSEM_RLR20", baseaddress, 208>;
-
-  template <std::uint32_t baseaddress>
-  using hsem_rlr21_t = hsem_rlr21_tt<"HSEM_RLR21", baseaddress, 212>;
-
-  template <std::uint32_t baseaddress>
-  using hsem_rlr22_t = hsem_rlr22_tt<"HSEM_RLR22", baseaddress, 216>;
-
-  template <std::uint32_t baseaddress>
-  using hsem_rlr23_t = hsem_rlr23_tt<"HSEM_RLR23", baseaddress, 220>;
-
-  template <std::uint32_t baseaddress>
-  using hsem_rlr24_t = hsem_rlr24_tt<"HSEM_RLR24", baseaddress, 224>;
-
-  template <std::uint32_t baseaddress>
-  using hsem_rlr25_t = hsem_rlr25_tt<"HSEM_RLR25", baseaddress, 228>;
-
-  template <std::uint32_t baseaddress>
-  using hsem_rlr26_t = hsem_rlr26_tt<"HSEM_RLR26", baseaddress, 232>;
-
-  template <std::uint32_t baseaddress>
-  using hsem_rlr27_t = hsem_rlr27_tt<"HSEM_RLR27", baseaddress, 236>;
-
-  template <std::uint32_t baseaddress>
-  using hsem_rlr28_t = hsem_rlr28_tt<"HSEM_RLR28", baseaddress, 240>;
-
-  template <std::uint32_t baseaddress>
-  using hsem_rlr29_t = hsem_rlr29_tt<"HSEM_RLR29", baseaddress, 244>;
-
-  template <std::uint32_t baseaddress>
-  using hsem_rlr30_t = hsem_rlr30_tt<"HSEM_RLR30", baseaddress, 248>;
-
-  template <std::uint32_t baseaddress>
-  using hsem_rlr31_t = hsem_rlr31_tt<"HSEM_RLR31", baseaddress, 252>;
-
-  template <std::uint32_t baseaddress>
-  using hsem_c1ier_t = hsem_c1ier_tt<"HSEM_C1IER", baseaddress, 256>;
-
-  template <std::uint32_t baseaddress>
-  using hsem_c1icr_t = hsem_c1icr_tt<"HSEM_C1ICR", baseaddress, 260>;
-
-  template <std::uint32_t baseaddress>
-  using hsem_c1isr_t = hsem_c1isr_tt<"HSEM_C1ISR", baseaddress, 264>;
-
-  template <std::uint32_t baseaddress>
-  using hsem_c1misr_t = hsem_c1misr_tt<"HSEM_C1MISR", baseaddress, 268>;
-
-  template <std::uint32_t baseaddress>
-  using hsem_cr_t = hsem_cr_tt<"HSEM_CR", baseaddress, 320>;
-
-  template <std::uint32_t baseaddress>
-  using hsem_keyr_t = hsem_keyr_tt<"HSEM_KEYR", baseaddress, 324>;
 
 } // namespace hsem

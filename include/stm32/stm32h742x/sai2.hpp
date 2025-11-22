@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace sai2 {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using sai_gcr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -22,7 +24,9 @@ namespace sai2 {
                groov::field<"RESERVED0", std::uint8_t, 3, 2, access::ro>,
                groov::field<"SYNCIN", std::uint8_t, 1, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using sai_acr1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -47,7 +51,9 @@ namespace sai2 {
                groov::field<"PRTCFG", std::uint8_t, 3, 2>,
                groov::field<"MODE", std::uint8_t, 1, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using sai_acr2_tt =
     groov::reg<name,
                std::uint32_t,
@@ -63,7 +69,9 @@ namespace sai2 {
                groov::field<"FFLUSH", bool, 3, 3, access::wo>,
                groov::field<"FTH", std::uint8_t, 2, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using sai_afrcr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -77,7 +85,9 @@ namespace sai2 {
                groov::field<"FSALL", std::uint8_t, 14, 8>,
                groov::field<"FRL", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using sai_aslotr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -90,7 +100,9 @@ namespace sai2 {
                groov::field<"RESERVED0", bool, 5, 5, access::ro>,
                groov::field<"FBOFF", std::uint8_t, 4, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using sai_aim_tt =
     groov::reg<name,
                std::uint32_t,
@@ -105,7 +117,9 @@ namespace sai2 {
                groov::field<"MUTEDETIE", bool, 1, 1>,
                groov::field<"OVRUDRIE", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using sai_asr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -122,7 +136,9 @@ namespace sai2 {
                groov::field<"MUTEDET", bool, 1, 1>,
                groov::field<"OVRUDR", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using sai_aclrfr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -137,14 +153,18 @@ namespace sai2 {
                groov::field<"CMUTEDET", bool, 1, 1>,
                groov::field<"COVRUDR", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using sai_adr_tt = groov::reg<name,
                                 std::uint32_t,
                                 baseaddress + offset,
                                 access::rw,
                                 groov::field<"DATA", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using sai_bcr1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -169,7 +189,9 @@ namespace sai2 {
                groov::field<"PRTCFG", std::uint8_t, 3, 2>,
                groov::field<"MODE", std::uint8_t, 1, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using sai_bcr2_tt =
     groov::reg<name,
                std::uint32_t,
@@ -185,7 +207,9 @@ namespace sai2 {
                groov::field<"FFLUSH", bool, 3, 3, access::wo>,
                groov::field<"FTH", std::uint8_t, 2, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using sai_bfrcr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -199,7 +223,9 @@ namespace sai2 {
                groov::field<"FSALL", std::uint8_t, 14, 8>,
                groov::field<"FRL", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using sai_bslotr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -212,7 +238,9 @@ namespace sai2 {
                groov::field<"RESERVED0", bool, 5, 5, access::ro>,
                groov::field<"FBOFF", std::uint8_t, 4, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using sai_bim_tt =
     groov::reg<name,
                std::uint32_t,
@@ -227,7 +255,9 @@ namespace sai2 {
                groov::field<"MUTEDETIE", bool, 1, 1>,
                groov::field<"OVRUDRIE", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using sai_bsr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -244,7 +274,9 @@ namespace sai2 {
                groov::field<"MUTEDET", bool, 1, 1>,
                groov::field<"OVRUDR", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using sai_bclrfr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -259,14 +291,18 @@ namespace sai2 {
                groov::field<"CMUTEDET", bool, 1, 1>,
                groov::field<"COVRUDR", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using sai_bdr_tt = groov::reg<name,
                                 std::uint32_t,
                                 baseaddress + offset,
                                 access::rw,
                                 groov::field<"DATA", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using sai_pdmcr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -282,7 +318,9 @@ namespace sai2 {
                groov::field<"RESERVED0", std::uint8_t, 3, 1, access::ro>,
                groov::field<"PDMEN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using sai_pdmdly_tt =
     groov::reg<name,
                std::uint32_t,
@@ -304,62 +342,5 @@ namespace sai2 {
                groov::field<"DLYM1R", std::uint8_t, 6, 4>,
                groov::field<"RESERVED0", bool, 3, 3, access::ro>,
                groov::field<"DLYM1L", std::uint8_t, 2, 0>>;
-
-  template <std::uint32_t baseaddress>
-  using sai_gcr_t = sai_gcr_tt<"SAI_GCR", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using sai_acr1_t = sai_acr1_tt<"SAI_ACR1", baseaddress, 4>;
-
-  template <std::uint32_t baseaddress>
-  using sai_acr2_t = sai_acr2_tt<"SAI_ACR2", baseaddress, 8>;
-
-  template <std::uint32_t baseaddress>
-  using sai_afrcr_t = sai_afrcr_tt<"SAI_AFRCR", baseaddress, 12>;
-
-  template <std::uint32_t baseaddress>
-  using sai_aslotr_t = sai_aslotr_tt<"SAI_ASLOTR", baseaddress, 16>;
-
-  template <std::uint32_t baseaddress>
-  using sai_aim_t = sai_aim_tt<"SAI_AIM", baseaddress, 20>;
-
-  template <std::uint32_t baseaddress>
-  using sai_asr_t = sai_asr_tt<"SAI_ASR", baseaddress, 24>;
-
-  template <std::uint32_t baseaddress>
-  using sai_aclrfr_t = sai_aclrfr_tt<"SAI_ACLRFR", baseaddress, 28>;
-
-  template <std::uint32_t baseaddress>
-  using sai_adr_t = sai_adr_tt<"SAI_ADR", baseaddress, 32>;
-
-  template <std::uint32_t baseaddress>
-  using sai_bcr1_t = sai_bcr1_tt<"SAI_BCR1", baseaddress, 36>;
-
-  template <std::uint32_t baseaddress>
-  using sai_bcr2_t = sai_bcr2_tt<"SAI_BCR2", baseaddress, 40>;
-
-  template <std::uint32_t baseaddress>
-  using sai_bfrcr_t = sai_bfrcr_tt<"SAI_BFRCR", baseaddress, 44>;
-
-  template <std::uint32_t baseaddress>
-  using sai_bslotr_t = sai_bslotr_tt<"SAI_BSLOTR", baseaddress, 48>;
-
-  template <std::uint32_t baseaddress>
-  using sai_bim_t = sai_bim_tt<"SAI_BIM", baseaddress, 52>;
-
-  template <std::uint32_t baseaddress>
-  using sai_bsr_t = sai_bsr_tt<"SAI_BSR", baseaddress, 56>;
-
-  template <std::uint32_t baseaddress>
-  using sai_bclrfr_t = sai_bclrfr_tt<"SAI_BCLRFR", baseaddress, 60>;
-
-  template <std::uint32_t baseaddress>
-  using sai_bdr_t = sai_bdr_tt<"SAI_BDR", baseaddress, 64>;
-
-  template <std::uint32_t baseaddress>
-  using sai_pdmcr_t = sai_pdmcr_tt<"SAI_PDMCR", baseaddress, 68>;
-
-  template <std::uint32_t baseaddress>
-  using sai_pdmdly_t = sai_pdmdly_tt<"SAI_PDMDLY", baseaddress, 72>;
 
 } // namespace sai2

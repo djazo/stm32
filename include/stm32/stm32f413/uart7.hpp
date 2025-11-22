@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace uart7 {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using sr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -29,7 +31,9 @@ namespace uart7 {
                groov::field<"FE", bool, 1, 1, access::ro>,
                groov::field<"PE", bool, 0, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -38,7 +42,9 @@ namespace uart7 {
                groov::field<"RESERVED0", std::uint32_t, 31, 9, access::ro>,
                groov::field<"DR", std::uint16_t, 8, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using brr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -48,7 +54,9 @@ namespace uart7 {
                groov::field<"DIV_Mantissa", std::uint16_t, 15, 4>,
                groov::field<"DIV_Fraction", std::uint8_t, 3, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using cr1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -72,7 +80,9 @@ namespace uart7 {
                groov::field<"RWU", bool, 1, 1>,
                groov::field<"SBK", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using cr2_tt =
     groov::reg<name,
                std::uint32_t,
@@ -91,7 +101,9 @@ namespace uart7 {
                groov::field<"RESERVED0", bool, 4, 4, access::ro>,
                groov::field<"ADD", std::uint8_t, 3, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using cr3_tt =
     groov::reg<name,
                std::uint32_t,
@@ -111,7 +123,9 @@ namespace uart7 {
                groov::field<"IREN", bool, 1, 1>,
                groov::field<"EIE", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using gtpr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -120,26 +134,5 @@ namespace uart7 {
                groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
                groov::field<"GT", std::uint8_t, 15, 8>,
                groov::field<"PSC", std::uint8_t, 7, 0>>;
-
-  template <std::uint32_t baseaddress>
-  using sr_t = sr_tt<"SR", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using dr_t = dr_tt<"DR", baseaddress, 4>;
-
-  template <std::uint32_t baseaddress>
-  using brr_t = brr_tt<"BRR", baseaddress, 8>;
-
-  template <std::uint32_t baseaddress>
-  using cr1_t = cr1_tt<"CR1", baseaddress, 12>;
-
-  template <std::uint32_t baseaddress>
-  using cr2_t = cr2_tt<"CR2", baseaddress, 16>;
-
-  template <std::uint32_t baseaddress>
-  using cr3_t = cr3_tt<"CR3", baseaddress, 20>;
-
-  template <std::uint32_t baseaddress>
-  using gtpr_t = gtpr_tt<"GTPR", baseaddress, 24>;
 
 } // namespace uart7

@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace adc3_common {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using adc_csr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -30,7 +32,9 @@ namespace adc3_common {
                groov::field<"EOSMP_MST", bool, 1, 1, access::ro>,
                groov::field<"ADRDY_MST", bool, 0, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using adc_ccr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -43,11 +47,5 @@ namespace adc3_common {
                groov::field<"PRESC", std::uint8_t, 21, 18>,
                groov::field<"CKMODE", std::uint8_t, 17, 16>,
                groov::field<"RESERVED0", std::uint16_t, 15, 0, access::ro>>;
-
-  template <std::uint32_t baseaddress>
-  using adc_csr_t = adc_csr_tt<"ADC_CSR", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using adc_ccr_t = adc_ccr_tt<"ADC_CCR", baseaddress, 8>;
 
 } // namespace adc3_common

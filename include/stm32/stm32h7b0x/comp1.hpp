@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace comp1 {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using comp1_sr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -24,7 +26,9 @@ namespace comp1 {
                groov::field<"C2VAL", bool, 1, 1>,
                groov::field<"C1VAL", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using comp1_icfr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -35,7 +39,9 @@ namespace comp1 {
                groov::field<"CC1IF", bool, 16, 16>,
                groov::field<"RESERVED0", std::uint16_t, 15, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using comp1_or_tt = groov::reg<name,
                                  std::uint32_t,
                                  baseaddress + offset,
@@ -43,7 +49,9 @@ namespace comp1 {
                                  groov::field<"OR", std::uint32_t, 31, 11>,
                                  groov::field<"AFOP", std::uint16_t, 10, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using comp1_cfgr1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -68,7 +76,9 @@ namespace comp1 {
                groov::field<"BRGEN", bool, 1, 1>,
                groov::field<"EN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using comp1_cfgr2_tt =
     groov::reg<name,
                std::uint32_t,
@@ -93,20 +103,5 @@ namespace comp1 {
                groov::field<"SCALEN", bool, 2, 2>,
                groov::field<"BRGEN", bool, 1, 1>,
                groov::field<"EN", bool, 0, 0>>;
-
-  template <std::uint32_t baseaddress>
-  using comp1_sr_t = comp1_sr_tt<"COMP1_SR", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using comp1_icfr_t = comp1_icfr_tt<"COMP1_ICFR", baseaddress, 4>;
-
-  template <std::uint32_t baseaddress>
-  using comp1_or_t = comp1_or_tt<"COMP1_OR", baseaddress, 8>;
-
-  template <std::uint32_t baseaddress>
-  using comp1_cfgr1_t = comp1_cfgr1_tt<"COMP1_CFGR1", baseaddress, 12>;
-
-  template <std::uint32_t baseaddress>
-  using comp1_cfgr2_t = comp1_cfgr2_tt<"COMP1_CFGR2", baseaddress, 16>;
 
 } // namespace comp1

@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace firewall {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using cssa_tt =
     groov::reg<name,
                std::uint32_t,
@@ -21,7 +23,9 @@ namespace firewall {
                groov::field<"ADD", std::uint16_t, 23, 8>,
                groov::field<"RESERVED0", std::uint8_t, 7, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using csl_tt =
     groov::reg<name,
                std::uint32_t,
@@ -31,7 +35,9 @@ namespace firewall {
                groov::field<"LENG", std::uint16_t, 21, 8>,
                groov::field<"RESERVED0", std::uint8_t, 7, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using nvdssa_tt =
     groov::reg<name,
                std::uint32_t,
@@ -41,7 +47,9 @@ namespace firewall {
                groov::field<"ADD", std::uint16_t, 23, 8>,
                groov::field<"RESERVED0", std::uint8_t, 7, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using nvdsl_tt =
     groov::reg<name,
                std::uint32_t,
@@ -51,7 +59,9 @@ namespace firewall {
                groov::field<"LENG", std::uint16_t, 21, 8>,
                groov::field<"RESERVED0", std::uint8_t, 7, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using vdssa_tt =
     groov::reg<name,
                std::uint32_t,
@@ -61,7 +71,9 @@ namespace firewall {
                groov::field<"ADD", std::uint16_t, 15, 6>,
                groov::field<"RESERVED0", std::uint8_t, 5, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using vdsl_tt =
     groov::reg<name,
                std::uint32_t,
@@ -71,7 +83,9 @@ namespace firewall {
                groov::field<"LENG", std::uint16_t, 15, 6>,
                groov::field<"RESERVED0", std::uint8_t, 5, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -81,26 +95,5 @@ namespace firewall {
                groov::field<"VDE", bool, 2, 2>,
                groov::field<"VDS", bool, 1, 1>,
                groov::field<"FPA", bool, 0, 0>>;
-
-  template <std::uint32_t baseaddress>
-  using cssa_t = cssa_tt<"CSSA", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using csl_t = csl_tt<"CSL", baseaddress, 4>;
-
-  template <std::uint32_t baseaddress>
-  using nvdssa_t = nvdssa_tt<"NVDSSA", baseaddress, 8>;
-
-  template <std::uint32_t baseaddress>
-  using nvdsl_t = nvdsl_tt<"NVDSL", baseaddress, 12>;
-
-  template <std::uint32_t baseaddress>
-  using vdssa_t = vdssa_tt<"VDSSA", baseaddress, 16>;
-
-  template <std::uint32_t baseaddress>
-  using vdsl_t = vdsl_tt<"VDSL", baseaddress, 20>;
-
-  template <std::uint32_t baseaddress>
-  using cr_t = cr_tt<"CR", baseaddress, 32>;
 
 } // namespace firewall

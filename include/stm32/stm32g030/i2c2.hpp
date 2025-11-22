@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace i2c2 {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using cr1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -40,7 +42,9 @@ namespace i2c2 {
                groov::field<"TXIE", bool, 1, 1>,
                groov::field<"PE", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using cr2_tt =
     groov::reg<name,
                std::uint32_t,
@@ -59,7 +63,9 @@ namespace i2c2 {
                groov::field<"RD_WRN", bool, 10, 10>,
                groov::field<"SADD", std::uint16_t, 9, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using oar1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -73,7 +79,9 @@ namespace i2c2 {
                groov::field<"OA1_7_1", std::uint8_t, 7, 1>,
                groov::field<"OA1_0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using oar2_tt =
     groov::reg<name,
                std::uint32_t,
@@ -86,7 +94,9 @@ namespace i2c2 {
                groov::field<"OA2", std::uint8_t, 7, 1>,
                groov::field<"RESERVED0", bool, 0, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using timingr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -99,7 +109,9 @@ namespace i2c2 {
                groov::field<"SCLH", std::uint8_t, 15, 8>,
                groov::field<"SCLL", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using timeoutr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -113,7 +125,9 @@ namespace i2c2 {
                groov::field<"TIDLE", bool, 12, 12>,
                groov::field<"TIMEOUTA", std::uint16_t, 11, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using isr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -139,7 +153,9 @@ namespace i2c2 {
                groov::field<"TXIS", bool, 1, 1>,
                groov::field<"TXE", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using icr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -158,7 +174,9 @@ namespace i2c2 {
                groov::field<"ADDRCF", bool, 3, 3>,
                groov::field<"RESERVED0", std::uint8_t, 2, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using pecr_tt = groov::reg<name,
                              std::uint32_t,
                              baseaddress + offset,
@@ -166,7 +184,9 @@ namespace i2c2 {
                              groov::field<"RESERVED0", std::uint32_t, 31, 8>,
                              groov::field<"PEC", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using rxdr_tt = groov::reg<name,
                              std::uint32_t,
                              baseaddress + offset,
@@ -174,7 +194,9 @@ namespace i2c2 {
                              groov::field<"RESERVED0", std::uint32_t, 31, 8>,
                              groov::field<"RXDATA", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using txdr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -182,38 +204,5 @@ namespace i2c2 {
                access::rw,
                groov::field<"RESERVED0", std::uint32_t, 31, 8, access::ro>,
                groov::field<"TXDATA", std::uint8_t, 7, 0>>;
-
-  template <std::uint32_t baseaddress>
-  using cr1_t = cr1_tt<"CR1", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using cr2_t = cr2_tt<"CR2", baseaddress, 4>;
-
-  template <std::uint32_t baseaddress>
-  using oar1_t = oar1_tt<"OAR1", baseaddress, 8>;
-
-  template <std::uint32_t baseaddress>
-  using oar2_t = oar2_tt<"OAR2", baseaddress, 12>;
-
-  template <std::uint32_t baseaddress>
-  using timingr_t = timingr_tt<"TIMINGR", baseaddress, 16>;
-
-  template <std::uint32_t baseaddress>
-  using timeoutr_t = timeoutr_tt<"TIMEOUTR", baseaddress, 20>;
-
-  template <std::uint32_t baseaddress>
-  using isr_t = isr_tt<"ISR", baseaddress, 24>;
-
-  template <std::uint32_t baseaddress>
-  using icr_t = icr_tt<"ICR", baseaddress, 28>;
-
-  template <std::uint32_t baseaddress>
-  using pecr_t = pecr_tt<"PECR", baseaddress, 32>;
-
-  template <std::uint32_t baseaddress>
-  using rxdr_t = rxdr_tt<"RXDR", baseaddress, 36>;
-
-  template <std::uint32_t baseaddress>
-  using txdr_t = txdr_tt<"TXDR", baseaddress, 40>;
 
 } // namespace i2c2

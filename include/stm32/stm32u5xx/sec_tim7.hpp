@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace sec_tim7 {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using cr1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -28,7 +30,9 @@ namespace sec_tim7 {
                groov::field<"UDIS", bool, 1, 1>,
                groov::field<"CEN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using cr2_tt =
     groov::reg<name,
                std::uint32_t,
@@ -38,7 +42,9 @@ namespace sec_tim7 {
                groov::field<"MMS", std::uint8_t, 6, 4>,
                groov::field<"RESERVED0", std::uint8_t, 3, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dier_tt =
     groov::reg<name,
                std::uint32_t,
@@ -49,7 +55,9 @@ namespace sec_tim7 {
                groov::field<"RESERVED0", std::uint8_t, 7, 1, access::ro>,
                groov::field<"UIE", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using sr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -58,7 +66,9 @@ namespace sec_tim7 {
                groov::field<"RESERVED0", std::uint32_t, 31, 1, access::ro>,
                groov::field<"UIF", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using egr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -67,7 +77,9 @@ namespace sec_tim7 {
                groov::field<"RESERVED0", std::uint32_t, 31, 1, access::ro>,
                groov::field<"UG", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using cnt_tt =
     groov::reg<name,
                std::uint32_t,
@@ -77,7 +89,9 @@ namespace sec_tim7 {
                groov::field<"RESERVED0", std::uint16_t, 30, 16, access::ro>,
                groov::field<"CNT", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using psc_tt =
     groov::reg<name,
                std::uint32_t,
@@ -86,7 +100,9 @@ namespace sec_tim7 {
                groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
                groov::field<"PSC", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using arr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -94,29 +110,5 @@ namespace sec_tim7 {
                access::rw,
                groov::field<"RESERVED0", std::uint16_t, 31, 19, access::ro>,
                groov::field<"ARR", std::uint32_t, 18, 0>>;
-
-  template <std::uint32_t baseaddress>
-  using cr1_t = cr1_tt<"CR1", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using cr2_t = cr2_tt<"CR2", baseaddress, 4>;
-
-  template <std::uint32_t baseaddress>
-  using dier_t = dier_tt<"DIER", baseaddress, 12>;
-
-  template <std::uint32_t baseaddress>
-  using sr_t = sr_tt<"SR", baseaddress, 16>;
-
-  template <std::uint32_t baseaddress>
-  using egr_t = egr_tt<"EGR", baseaddress, 20>;
-
-  template <std::uint32_t baseaddress>
-  using cnt_t = cnt_tt<"CNT", baseaddress, 36>;
-
-  template <std::uint32_t baseaddress>
-  using psc_t = psc_tt<"PSC", baseaddress, 40>;
-
-  template <std::uint32_t baseaddress>
-  using arr_t = arr_tt<"ARR", baseaddress, 44>;
 
 } // namespace sec_tim7

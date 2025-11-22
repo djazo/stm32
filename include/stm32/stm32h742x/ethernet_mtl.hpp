@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace ethernet_mtl {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mtlomr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -24,7 +26,9 @@ namespace ethernet_mtl {
                groov::field<"DTXSTS", bool, 1, 1>,
                groov::field<"RESERVED0", bool, 0, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mtlisr_tt = groov::reg<name,
                                std::uint32_t,
                                baseaddress + offset,
@@ -32,7 +36,9 @@ namespace ethernet_mtl {
                                groov::field<"RESERVED0", std::uint32_t, 31, 1>,
                                groov::field<"Q0IS", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mtltxqomr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -46,7 +52,9 @@ namespace ethernet_mtl {
                groov::field<"TSF", bool, 1, 1>,
                groov::field<"FTQ", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mtltxqur_tt =
     groov::reg<name,
                std::uint32_t,
@@ -56,7 +64,9 @@ namespace ethernet_mtl {
                groov::field<"UFCNTOVF", bool, 11, 11>,
                groov::field<"UFFRMCNT", std::uint16_t, 10, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mtltxqdr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -73,7 +83,9 @@ namespace ethernet_mtl {
                groov::field<"TRCSTS", std::uint8_t, 2, 1>,
                groov::field<"TXQPAUSED", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mtlqicsr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -88,7 +100,9 @@ namespace ethernet_mtl {
                groov::field<"RESERVED0", std::uint8_t, 7, 1, access::ro>,
                groov::field<"TXUNFIS", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mtlrxqomr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -108,7 +122,9 @@ namespace ethernet_mtl {
                groov::field<"RESERVED0", bool, 2, 2, access::ro>,
                groov::field<"RTC", std::uint8_t, 1, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mtlrxqmpocr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -121,7 +137,9 @@ namespace ethernet_mtl {
                groov::field<"OVFCNTOVF", bool, 11, 11>,
                groov::field<"OVFPKTCNT", std::uint16_t, 10, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mtlrxqdr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -134,32 +152,5 @@ namespace ethernet_mtl {
                groov::field<"RESERVED0", bool, 3, 3>,
                groov::field<"RRCSTS", std::uint8_t, 2, 1>,
                groov::field<"RWCSTS", bool, 0, 0>>;
-
-  template <std::uint32_t baseaddress>
-  using mtlomr_t = mtlomr_tt<"MTLOMR", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using mtlisr_t = mtlisr_tt<"MTLISR", baseaddress, 32>;
-
-  template <std::uint32_t baseaddress>
-  using mtltxqomr_t = mtltxqomr_tt<"MTLTxQOMR", baseaddress, 256>;
-
-  template <std::uint32_t baseaddress>
-  using mtltxqur_t = mtltxqur_tt<"MTLTxQUR", baseaddress, 260>;
-
-  template <std::uint32_t baseaddress>
-  using mtltxqdr_t = mtltxqdr_tt<"MTLTxQDR", baseaddress, 264>;
-
-  template <std::uint32_t baseaddress>
-  using mtlqicsr_t = mtlqicsr_tt<"MTLQICSR", baseaddress, 300>;
-
-  template <std::uint32_t baseaddress>
-  using mtlrxqomr_t = mtlrxqomr_tt<"MTLRxQOMR", baseaddress, 304>;
-
-  template <std::uint32_t baseaddress>
-  using mtlrxqmpocr_t = mtlrxqmpocr_tt<"MTLRxQMPOCR", baseaddress, 308>;
-
-  template <std::uint32_t baseaddress>
-  using mtlrxqdr_t = mtlrxqdr_tt<"MTLRxQDR", baseaddress, 312>;
 
 } // namespace ethernet_mtl

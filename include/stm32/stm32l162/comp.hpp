@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace comp {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using csr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -40,8 +42,5 @@ namespace comp {
                groov::field<"PD10K", bool, 2, 2>,
                groov::field<"PU400K", bool, 1, 1>,
                groov::field<"PU10K", bool, 0, 0>>;
-
-  template <std::uint32_t baseaddress>
-  using csr_t = csr_tt<"CSR", baseaddress, 0>;
 
 } // namespace comp

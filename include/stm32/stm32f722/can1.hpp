@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace can1 {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mcr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -30,7 +32,9 @@ namespace can1 {
                groov::field<"SLEEP", bool, 1, 1>,
                groov::field<"INRQ", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using msr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -48,7 +52,9 @@ namespace can1 {
                groov::field<"SLAK", bool, 1, 1, access::ro>,
                groov::field<"INAK", bool, 0, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using tsr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -80,7 +86,9 @@ namespace can1 {
                groov::field<"TXOK0", bool, 1, 1>,
                groov::field<"RQCP0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using rf0r_tt =
     groov::reg<name,
                std::uint32_t,
@@ -93,7 +101,9 @@ namespace can1 {
                groov::field<"RESERVED0", bool, 2, 2, access::ro>,
                groov::field<"FMP0", std::uint8_t, 1, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using rf1r_tt =
     groov::reg<name,
                std::uint32_t,
@@ -106,7 +116,9 @@ namespace can1 {
                groov::field<"RESERVED0", bool, 2, 2, access::ro>,
                groov::field<"FMP1", std::uint8_t, 1, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ier_tt =
     groov::reg<name,
                std::uint32_t,
@@ -130,7 +142,9 @@ namespace can1 {
                groov::field<"FMPIE0", bool, 1, 1>,
                groov::field<"TMEIE", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using esr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -145,7 +159,9 @@ namespace can1 {
                groov::field<"EPVF", bool, 1, 1, access::ro>,
                groov::field<"EWGF", bool, 0, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using btr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -161,7 +177,9 @@ namespace can1 {
                groov::field<"RESERVED0", std::uint8_t, 15, 10, access::ro>,
                groov::field<"BRP", std::uint16_t, 9, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ti0r_tt = groov::reg<name,
                              std::uint32_t,
                              baseaddress + offset,
@@ -172,7 +190,9 @@ namespace can1 {
                              groov::field<"RTR", bool, 1, 1>,
                              groov::field<"TXRQ", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using tdt0r_tt =
     groov::reg<name,
                std::uint32_t,
@@ -184,7 +204,9 @@ namespace can1 {
                groov::field<"RESERVED0", std::uint8_t, 7, 4, access::ro>,
                groov::field<"DLC", std::uint8_t, 3, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using tdl0r_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
@@ -194,7 +216,9 @@ namespace can1 {
                               groov::field<"DATA1", std::uint8_t, 15, 8>,
                               groov::field<"DATA0", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using tdh0r_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
@@ -204,7 +228,9 @@ namespace can1 {
                               groov::field<"DATA5", std::uint8_t, 15, 8>,
                               groov::field<"DATA4", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ti1r_tt = groov::reg<name,
                              std::uint32_t,
                              baseaddress + offset,
@@ -215,7 +241,9 @@ namespace can1 {
                              groov::field<"RTR", bool, 1, 1>,
                              groov::field<"TXRQ", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using tdt1r_tt =
     groov::reg<name,
                std::uint32_t,
@@ -227,7 +255,9 @@ namespace can1 {
                groov::field<"RESERVED0", std::uint8_t, 7, 4, access::ro>,
                groov::field<"DLC", std::uint8_t, 3, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using tdl1r_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
@@ -237,7 +267,9 @@ namespace can1 {
                               groov::field<"DATA1", std::uint8_t, 15, 8>,
                               groov::field<"DATA0", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using tdh1r_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
@@ -247,7 +279,9 @@ namespace can1 {
                               groov::field<"DATA5", std::uint8_t, 15, 8>,
                               groov::field<"DATA4", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ti2r_tt = groov::reg<name,
                              std::uint32_t,
                              baseaddress + offset,
@@ -258,7 +292,9 @@ namespace can1 {
                              groov::field<"RTR", bool, 1, 1>,
                              groov::field<"TXRQ", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using tdt2r_tt =
     groov::reg<name,
                std::uint32_t,
@@ -270,7 +306,9 @@ namespace can1 {
                groov::field<"RESERVED0", std::uint8_t, 7, 4, access::ro>,
                groov::field<"DLC", std::uint8_t, 3, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using tdl2r_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
@@ -280,7 +318,9 @@ namespace can1 {
                               groov::field<"DATA1", std::uint8_t, 15, 8>,
                               groov::field<"DATA0", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using tdh2r_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
@@ -290,7 +330,9 @@ namespace can1 {
                               groov::field<"DATA5", std::uint8_t, 15, 8>,
                               groov::field<"DATA4", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ri0r_tt = groov::reg<name,
                              std::uint32_t,
                              baseaddress + offset,
@@ -301,7 +343,9 @@ namespace can1 {
                              groov::field<"RTR", bool, 1, 1>,
                              groov::field<"RESERVED0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using rdt0r_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
@@ -311,7 +355,9 @@ namespace can1 {
                               groov::field<"RESERVED0", std::uint8_t, 7, 4>,
                               groov::field<"DLC", std::uint8_t, 3, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using rdl0r_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
@@ -321,7 +367,9 @@ namespace can1 {
                               groov::field<"DATA1", std::uint8_t, 15, 8>,
                               groov::field<"DATA0", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using rdh0r_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
@@ -331,7 +379,9 @@ namespace can1 {
                               groov::field<"DATA5", std::uint8_t, 15, 8>,
                               groov::field<"DATA4", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ri1r_tt = groov::reg<name,
                              std::uint32_t,
                              baseaddress + offset,
@@ -342,7 +392,9 @@ namespace can1 {
                              groov::field<"RTR", bool, 1, 1>,
                              groov::field<"RESERVED0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using rdt1r_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
@@ -352,7 +404,9 @@ namespace can1 {
                               groov::field<"RESERVED0", std::uint8_t, 7, 4>,
                               groov::field<"DLC", std::uint8_t, 3, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using rdl1r_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
@@ -362,7 +416,9 @@ namespace can1 {
                               groov::field<"DATA1", std::uint8_t, 15, 8>,
                               groov::field<"DATA0", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using rdh1r_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
@@ -372,7 +428,9 @@ namespace can1 {
                               groov::field<"DATA5", std::uint8_t, 15, 8>,
                               groov::field<"DATA4", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using fmr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -381,7 +439,9 @@ namespace can1 {
                groov::field<"RESERVED0", std::uint32_t, 31, 1, access::ro>,
                groov::field<"FINIT", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using fm1r_tt =
     groov::reg<name,
                std::uint32_t,
@@ -403,7 +463,9 @@ namespace can1 {
                groov::field<"FBM1", bool, 1, 1>,
                groov::field<"FBM0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using fs1r_tt =
     groov::reg<name,
                std::uint32_t,
@@ -425,7 +487,9 @@ namespace can1 {
                groov::field<"FSC1", bool, 1, 1>,
                groov::field<"FSC0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ffa1r_tt =
     groov::reg<name,
                std::uint32_t,
@@ -447,7 +511,9 @@ namespace can1 {
                groov::field<"FFA1", bool, 1, 1>,
                groov::field<"FFA0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using fa1r_tt =
     groov::reg<name,
                std::uint32_t,
@@ -469,7 +535,9 @@ namespace can1 {
                groov::field<"FACT1", bool, 1, 1>,
                groov::field<"FACT0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using f0r1_tt = groov::reg<name,
                              std::uint32_t,
                              baseaddress + offset,
@@ -507,7 +575,9 @@ namespace can1 {
                              groov::field<"FB1", bool, 1, 1>,
                              groov::field<"FB0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using f0r2_tt = groov::reg<name,
                              std::uint32_t,
                              baseaddress + offset,
@@ -545,7 +615,9 @@ namespace can1 {
                              groov::field<"FB1", bool, 1, 1>,
                              groov::field<"FB0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using f1r1_tt = groov::reg<name,
                              std::uint32_t,
                              baseaddress + offset,
@@ -583,7 +655,9 @@ namespace can1 {
                              groov::field<"FB1", bool, 1, 1>,
                              groov::field<"FB0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using f1r2_tt = groov::reg<name,
                              std::uint32_t,
                              baseaddress + offset,
@@ -621,7 +695,9 @@ namespace can1 {
                              groov::field<"FB1", bool, 1, 1>,
                              groov::field<"FB0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using f2r1_tt = groov::reg<name,
                              std::uint32_t,
                              baseaddress + offset,
@@ -659,7 +735,9 @@ namespace can1 {
                              groov::field<"FB1", bool, 1, 1>,
                              groov::field<"FB0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using f2r2_tt = groov::reg<name,
                              std::uint32_t,
                              baseaddress + offset,
@@ -697,7 +775,9 @@ namespace can1 {
                              groov::field<"FB1", bool, 1, 1>,
                              groov::field<"FB0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using f3r1_tt = groov::reg<name,
                              std::uint32_t,
                              baseaddress + offset,
@@ -735,7 +815,9 @@ namespace can1 {
                              groov::field<"FB1", bool, 1, 1>,
                              groov::field<"FB0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using f3r2_tt = groov::reg<name,
                              std::uint32_t,
                              baseaddress + offset,
@@ -773,7 +855,9 @@ namespace can1 {
                              groov::field<"FB1", bool, 1, 1>,
                              groov::field<"FB0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using f4r1_tt = groov::reg<name,
                              std::uint32_t,
                              baseaddress + offset,
@@ -811,7 +895,9 @@ namespace can1 {
                              groov::field<"FB1", bool, 1, 1>,
                              groov::field<"FB0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using f4r2_tt = groov::reg<name,
                              std::uint32_t,
                              baseaddress + offset,
@@ -849,7 +935,9 @@ namespace can1 {
                              groov::field<"FB1", bool, 1, 1>,
                              groov::field<"FB0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using f5r1_tt = groov::reg<name,
                              std::uint32_t,
                              baseaddress + offset,
@@ -887,7 +975,9 @@ namespace can1 {
                              groov::field<"FB1", bool, 1, 1>,
                              groov::field<"FB0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using f5r2_tt = groov::reg<name,
                              std::uint32_t,
                              baseaddress + offset,
@@ -925,7 +1015,9 @@ namespace can1 {
                              groov::field<"FB1", bool, 1, 1>,
                              groov::field<"FB0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using f6r1_tt = groov::reg<name,
                              std::uint32_t,
                              baseaddress + offset,
@@ -963,7 +1055,9 @@ namespace can1 {
                              groov::field<"FB1", bool, 1, 1>,
                              groov::field<"FB0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using f6r2_tt = groov::reg<name,
                              std::uint32_t,
                              baseaddress + offset,
@@ -1001,7 +1095,9 @@ namespace can1 {
                              groov::field<"FB1", bool, 1, 1>,
                              groov::field<"FB0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using f7r1_tt = groov::reg<name,
                              std::uint32_t,
                              baseaddress + offset,
@@ -1039,7 +1135,9 @@ namespace can1 {
                              groov::field<"FB1", bool, 1, 1>,
                              groov::field<"FB0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using f7r2_tt = groov::reg<name,
                              std::uint32_t,
                              baseaddress + offset,
@@ -1077,7 +1175,9 @@ namespace can1 {
                              groov::field<"FB1", bool, 1, 1>,
                              groov::field<"FB0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using f8r1_tt = groov::reg<name,
                              std::uint32_t,
                              baseaddress + offset,
@@ -1115,7 +1215,9 @@ namespace can1 {
                              groov::field<"FB1", bool, 1, 1>,
                              groov::field<"FB0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using f8r2_tt = groov::reg<name,
                              std::uint32_t,
                              baseaddress + offset,
@@ -1153,7 +1255,9 @@ namespace can1 {
                              groov::field<"FB1", bool, 1, 1>,
                              groov::field<"FB0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using f9r1_tt = groov::reg<name,
                              std::uint32_t,
                              baseaddress + offset,
@@ -1191,7 +1295,9 @@ namespace can1 {
                              groov::field<"FB1", bool, 1, 1>,
                              groov::field<"FB0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using f9r2_tt = groov::reg<name,
                              std::uint32_t,
                              baseaddress + offset,
@@ -1229,7 +1335,9 @@ namespace can1 {
                              groov::field<"FB1", bool, 1, 1>,
                              groov::field<"FB0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using f10r1_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
@@ -1267,7 +1375,9 @@ namespace can1 {
                               groov::field<"FB1", bool, 1, 1>,
                               groov::field<"FB0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using f10r2_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
@@ -1305,7 +1415,9 @@ namespace can1 {
                               groov::field<"FB1", bool, 1, 1>,
                               groov::field<"FB0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using f11r1_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
@@ -1343,7 +1455,9 @@ namespace can1 {
                               groov::field<"FB1", bool, 1, 1>,
                               groov::field<"FB0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using f11r2_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
@@ -1381,7 +1495,9 @@ namespace can1 {
                               groov::field<"FB1", bool, 1, 1>,
                               groov::field<"FB0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using f12r1_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
@@ -1419,7 +1535,9 @@ namespace can1 {
                               groov::field<"FB1", bool, 1, 1>,
                               groov::field<"FB0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using f12r2_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
@@ -1457,7 +1575,9 @@ namespace can1 {
                               groov::field<"FB1", bool, 1, 1>,
                               groov::field<"FB0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using f13r1_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
@@ -1495,7 +1615,9 @@ namespace can1 {
                               groov::field<"FB1", bool, 1, 1>,
                               groov::field<"FB0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using f13r2_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
@@ -1533,7 +1655,9 @@ namespace can1 {
                               groov::field<"FB1", bool, 1, 1>,
                               groov::field<"FB0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using f14r1_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
@@ -1571,7 +1695,9 @@ namespace can1 {
                               groov::field<"FB1", bool, 1, 1>,
                               groov::field<"FB0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using f14r2_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
@@ -1609,7 +1735,9 @@ namespace can1 {
                               groov::field<"FB1", bool, 1, 1>,
                               groov::field<"FB0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using f15r1_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
@@ -1647,7 +1775,9 @@ namespace can1 {
                               groov::field<"FB1", bool, 1, 1>,
                               groov::field<"FB0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using f15r2_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
@@ -1685,7 +1815,9 @@ namespace can1 {
                               groov::field<"FB1", bool, 1, 1>,
                               groov::field<"FB0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using f16r1_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
@@ -1723,7 +1855,9 @@ namespace can1 {
                               groov::field<"FB1", bool, 1, 1>,
                               groov::field<"FB0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using f16r2_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
@@ -1761,7 +1895,9 @@ namespace can1 {
                               groov::field<"FB1", bool, 1, 1>,
                               groov::field<"FB0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using f17r1_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
@@ -1799,7 +1935,9 @@ namespace can1 {
                               groov::field<"FB1", bool, 1, 1>,
                               groov::field<"FB0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using f17r2_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
@@ -1837,7 +1975,9 @@ namespace can1 {
                               groov::field<"FB1", bool, 1, 1>,
                               groov::field<"FB0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using f18r1_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
@@ -1875,7 +2015,9 @@ namespace can1 {
                               groov::field<"FB1", bool, 1, 1>,
                               groov::field<"FB0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using f18r2_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
@@ -1913,7 +2055,9 @@ namespace can1 {
                               groov::field<"FB1", bool, 1, 1>,
                               groov::field<"FB0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using f19r1_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
@@ -1951,7 +2095,9 @@ namespace can1 {
                               groov::field<"FB1", bool, 1, 1>,
                               groov::field<"FB0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using f19r2_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
@@ -1989,7 +2135,9 @@ namespace can1 {
                               groov::field<"FB1", bool, 1, 1>,
                               groov::field<"FB0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using f20r1_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
@@ -2027,7 +2175,9 @@ namespace can1 {
                               groov::field<"FB1", bool, 1, 1>,
                               groov::field<"FB0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using f20r2_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
@@ -2065,7 +2215,9 @@ namespace can1 {
                               groov::field<"FB1", bool, 1, 1>,
                               groov::field<"FB0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using f21r1_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
@@ -2103,7 +2255,9 @@ namespace can1 {
                               groov::field<"FB1", bool, 1, 1>,
                               groov::field<"FB0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using f21r2_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
@@ -2141,7 +2295,9 @@ namespace can1 {
                               groov::field<"FB1", bool, 1, 1>,
                               groov::field<"FB0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using f22r1_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
@@ -2179,7 +2335,9 @@ namespace can1 {
                               groov::field<"FB1", bool, 1, 1>,
                               groov::field<"FB0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using f22r2_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
@@ -2217,7 +2375,9 @@ namespace can1 {
                               groov::field<"FB1", bool, 1, 1>,
                               groov::field<"FB0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using f23r1_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
@@ -2255,7 +2415,9 @@ namespace can1 {
                               groov::field<"FB1", bool, 1, 1>,
                               groov::field<"FB0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using f23r2_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
@@ -2293,7 +2455,9 @@ namespace can1 {
                               groov::field<"FB1", bool, 1, 1>,
                               groov::field<"FB0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using f24r1_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
@@ -2331,7 +2495,9 @@ namespace can1 {
                               groov::field<"FB1", bool, 1, 1>,
                               groov::field<"FB0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using f24r2_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
@@ -2369,7 +2535,9 @@ namespace can1 {
                               groov::field<"FB1", bool, 1, 1>,
                               groov::field<"FB0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using f25r1_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
@@ -2407,7 +2575,9 @@ namespace can1 {
                               groov::field<"FB1", bool, 1, 1>,
                               groov::field<"FB0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using f25r2_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
@@ -2445,7 +2615,9 @@ namespace can1 {
                               groov::field<"FB1", bool, 1, 1>,
                               groov::field<"FB0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using f26r1_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
@@ -2483,7 +2655,9 @@ namespace can1 {
                               groov::field<"FB1", bool, 1, 1>,
                               groov::field<"FB0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using f26r2_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
@@ -2521,7 +2695,9 @@ namespace can1 {
                               groov::field<"FB1", bool, 1, 1>,
                               groov::field<"FB0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using f27r1_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
@@ -2559,7 +2735,9 @@ namespace can1 {
                               groov::field<"FB1", bool, 1, 1>,
                               groov::field<"FB0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using f27r2_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
@@ -2596,272 +2774,5 @@ namespace can1 {
                               groov::field<"FB2", bool, 2, 2>,
                               groov::field<"FB1", bool, 1, 1>,
                               groov::field<"FB0", bool, 0, 0>>;
-
-  template <std::uint32_t baseaddress>
-  using mcr_t = mcr_tt<"MCR", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using msr_t = msr_tt<"MSR", baseaddress, 4>;
-
-  template <std::uint32_t baseaddress>
-  using tsr_t = tsr_tt<"TSR", baseaddress, 8>;
-
-  template <std::uint32_t baseaddress>
-  using rf0r_t = rf0r_tt<"RF0R", baseaddress, 12>;
-
-  template <std::uint32_t baseaddress>
-  using rf1r_t = rf1r_tt<"RF1R", baseaddress, 16>;
-
-  template <std::uint32_t baseaddress>
-  using ier_t = ier_tt<"IER", baseaddress, 20>;
-
-  template <std::uint32_t baseaddress>
-  using esr_t = esr_tt<"ESR", baseaddress, 24>;
-
-  template <std::uint32_t baseaddress>
-  using btr_t = btr_tt<"BTR", baseaddress, 28>;
-
-  template <std::uint32_t baseaddress>
-  using ti0r_t = ti0r_tt<"TI0R", baseaddress, 384>;
-
-  template <std::uint32_t baseaddress>
-  using tdt0r_t = tdt0r_tt<"TDT0R", baseaddress, 388>;
-
-  template <std::uint32_t baseaddress>
-  using tdl0r_t = tdl0r_tt<"TDL0R", baseaddress, 392>;
-
-  template <std::uint32_t baseaddress>
-  using tdh0r_t = tdh0r_tt<"TDH0R", baseaddress, 396>;
-
-  template <std::uint32_t baseaddress>
-  using ti1r_t = ti1r_tt<"TI1R", baseaddress, 400>;
-
-  template <std::uint32_t baseaddress>
-  using tdt1r_t = tdt1r_tt<"TDT1R", baseaddress, 404>;
-
-  template <std::uint32_t baseaddress>
-  using tdl1r_t = tdl1r_tt<"TDL1R", baseaddress, 408>;
-
-  template <std::uint32_t baseaddress>
-  using tdh1r_t = tdh1r_tt<"TDH1R", baseaddress, 412>;
-
-  template <std::uint32_t baseaddress>
-  using ti2r_t = ti2r_tt<"TI2R", baseaddress, 416>;
-
-  template <std::uint32_t baseaddress>
-  using tdt2r_t = tdt2r_tt<"TDT2R", baseaddress, 420>;
-
-  template <std::uint32_t baseaddress>
-  using tdl2r_t = tdl2r_tt<"TDL2R", baseaddress, 424>;
-
-  template <std::uint32_t baseaddress>
-  using tdh2r_t = tdh2r_tt<"TDH2R", baseaddress, 428>;
-
-  template <std::uint32_t baseaddress>
-  using ri0r_t = ri0r_tt<"RI0R", baseaddress, 432>;
-
-  template <std::uint32_t baseaddress>
-  using rdt0r_t = rdt0r_tt<"RDT0R", baseaddress, 436>;
-
-  template <std::uint32_t baseaddress>
-  using rdl0r_t = rdl0r_tt<"RDL0R", baseaddress, 440>;
-
-  template <std::uint32_t baseaddress>
-  using rdh0r_t = rdh0r_tt<"RDH0R", baseaddress, 444>;
-
-  template <std::uint32_t baseaddress>
-  using ri1r_t = ri1r_tt<"RI1R", baseaddress, 448>;
-
-  template <std::uint32_t baseaddress>
-  using rdt1r_t = rdt1r_tt<"RDT1R", baseaddress, 452>;
-
-  template <std::uint32_t baseaddress>
-  using rdl1r_t = rdl1r_tt<"RDL1R", baseaddress, 456>;
-
-  template <std::uint32_t baseaddress>
-  using rdh1r_t = rdh1r_tt<"RDH1R", baseaddress, 460>;
-
-  template <std::uint32_t baseaddress>
-  using fmr_t = fmr_tt<"FMR", baseaddress, 512>;
-
-  template <std::uint32_t baseaddress>
-  using fm1r_t = fm1r_tt<"FM1R", baseaddress, 516>;
-
-  template <std::uint32_t baseaddress>
-  using fs1r_t = fs1r_tt<"FS1R", baseaddress, 524>;
-
-  template <std::uint32_t baseaddress>
-  using ffa1r_t = ffa1r_tt<"FFA1R", baseaddress, 532>;
-
-  template <std::uint32_t baseaddress>
-  using fa1r_t = fa1r_tt<"FA1R", baseaddress, 540>;
-
-  template <std::uint32_t baseaddress>
-  using f0r1_t = f0r1_tt<"F0R1", baseaddress, 576>;
-
-  template <std::uint32_t baseaddress>
-  using f0r2_t = f0r2_tt<"F0R2", baseaddress, 580>;
-
-  template <std::uint32_t baseaddress>
-  using f1r1_t = f1r1_tt<"F1R1", baseaddress, 584>;
-
-  template <std::uint32_t baseaddress>
-  using f1r2_t = f1r2_tt<"F1R2", baseaddress, 588>;
-
-  template <std::uint32_t baseaddress>
-  using f2r1_t = f2r1_tt<"F2R1", baseaddress, 592>;
-
-  template <std::uint32_t baseaddress>
-  using f2r2_t = f2r2_tt<"F2R2", baseaddress, 596>;
-
-  template <std::uint32_t baseaddress>
-  using f3r1_t = f3r1_tt<"F3R1", baseaddress, 600>;
-
-  template <std::uint32_t baseaddress>
-  using f3r2_t = f3r2_tt<"F3R2", baseaddress, 604>;
-
-  template <std::uint32_t baseaddress>
-  using f4r1_t = f4r1_tt<"F4R1", baseaddress, 608>;
-
-  template <std::uint32_t baseaddress>
-  using f4r2_t = f4r2_tt<"F4R2", baseaddress, 612>;
-
-  template <std::uint32_t baseaddress>
-  using f5r1_t = f5r1_tt<"F5R1", baseaddress, 616>;
-
-  template <std::uint32_t baseaddress>
-  using f5r2_t = f5r2_tt<"F5R2", baseaddress, 620>;
-
-  template <std::uint32_t baseaddress>
-  using f6r1_t = f6r1_tt<"F6R1", baseaddress, 624>;
-
-  template <std::uint32_t baseaddress>
-  using f6r2_t = f6r2_tt<"F6R2", baseaddress, 628>;
-
-  template <std::uint32_t baseaddress>
-  using f7r1_t = f7r1_tt<"F7R1", baseaddress, 632>;
-
-  template <std::uint32_t baseaddress>
-  using f7r2_t = f7r2_tt<"F7R2", baseaddress, 636>;
-
-  template <std::uint32_t baseaddress>
-  using f8r1_t = f8r1_tt<"F8R1", baseaddress, 640>;
-
-  template <std::uint32_t baseaddress>
-  using f8r2_t = f8r2_tt<"F8R2", baseaddress, 644>;
-
-  template <std::uint32_t baseaddress>
-  using f9r1_t = f9r1_tt<"F9R1", baseaddress, 648>;
-
-  template <std::uint32_t baseaddress>
-  using f9r2_t = f9r2_tt<"F9R2", baseaddress, 652>;
-
-  template <std::uint32_t baseaddress>
-  using f10r1_t = f10r1_tt<"F10R1", baseaddress, 656>;
-
-  template <std::uint32_t baseaddress>
-  using f10r2_t = f10r2_tt<"F10R2", baseaddress, 660>;
-
-  template <std::uint32_t baseaddress>
-  using f11r1_t = f11r1_tt<"F11R1", baseaddress, 664>;
-
-  template <std::uint32_t baseaddress>
-  using f11r2_t = f11r2_tt<"F11R2", baseaddress, 668>;
-
-  template <std::uint32_t baseaddress>
-  using f12r1_t = f12r1_tt<"F12R1", baseaddress, 672>;
-
-  template <std::uint32_t baseaddress>
-  using f12r2_t = f12r2_tt<"F12R2", baseaddress, 676>;
-
-  template <std::uint32_t baseaddress>
-  using f13r1_t = f13r1_tt<"F13R1", baseaddress, 680>;
-
-  template <std::uint32_t baseaddress>
-  using f13r2_t = f13r2_tt<"F13R2", baseaddress, 684>;
-
-  template <std::uint32_t baseaddress>
-  using f14r1_t = f14r1_tt<"F14R1", baseaddress, 688>;
-
-  template <std::uint32_t baseaddress>
-  using f14r2_t = f14r2_tt<"F14R2", baseaddress, 692>;
-
-  template <std::uint32_t baseaddress>
-  using f15r1_t = f15r1_tt<"F15R1", baseaddress, 696>;
-
-  template <std::uint32_t baseaddress>
-  using f15r2_t = f15r2_tt<"F15R2", baseaddress, 700>;
-
-  template <std::uint32_t baseaddress>
-  using f16r1_t = f16r1_tt<"F16R1", baseaddress, 704>;
-
-  template <std::uint32_t baseaddress>
-  using f16r2_t = f16r2_tt<"F16R2", baseaddress, 708>;
-
-  template <std::uint32_t baseaddress>
-  using f17r1_t = f17r1_tt<"F17R1", baseaddress, 712>;
-
-  template <std::uint32_t baseaddress>
-  using f17r2_t = f17r2_tt<"F17R2", baseaddress, 716>;
-
-  template <std::uint32_t baseaddress>
-  using f18r1_t = f18r1_tt<"F18R1", baseaddress, 720>;
-
-  template <std::uint32_t baseaddress>
-  using f18r2_t = f18r2_tt<"F18R2", baseaddress, 724>;
-
-  template <std::uint32_t baseaddress>
-  using f19r1_t = f19r1_tt<"F19R1", baseaddress, 728>;
-
-  template <std::uint32_t baseaddress>
-  using f19r2_t = f19r2_tt<"F19R2", baseaddress, 732>;
-
-  template <std::uint32_t baseaddress>
-  using f20r1_t = f20r1_tt<"F20R1", baseaddress, 736>;
-
-  template <std::uint32_t baseaddress>
-  using f20r2_t = f20r2_tt<"F20R2", baseaddress, 740>;
-
-  template <std::uint32_t baseaddress>
-  using f21r1_t = f21r1_tt<"F21R1", baseaddress, 744>;
-
-  template <std::uint32_t baseaddress>
-  using f21r2_t = f21r2_tt<"F21R2", baseaddress, 748>;
-
-  template <std::uint32_t baseaddress>
-  using f22r1_t = f22r1_tt<"F22R1", baseaddress, 752>;
-
-  template <std::uint32_t baseaddress>
-  using f22r2_t = f22r2_tt<"F22R2", baseaddress, 756>;
-
-  template <std::uint32_t baseaddress>
-  using f23r1_t = f23r1_tt<"F23R1", baseaddress, 760>;
-
-  template <std::uint32_t baseaddress>
-  using f23r2_t = f23r2_tt<"F23R2", baseaddress, 764>;
-
-  template <std::uint32_t baseaddress>
-  using f24r1_t = f24r1_tt<"F24R1", baseaddress, 768>;
-
-  template <std::uint32_t baseaddress>
-  using f24r2_t = f24r2_tt<"F24R2", baseaddress, 772>;
-
-  template <std::uint32_t baseaddress>
-  using f25r1_t = f25r1_tt<"F25R1", baseaddress, 776>;
-
-  template <std::uint32_t baseaddress>
-  using f25r2_t = f25r2_tt<"F25R2", baseaddress, 780>;
-
-  template <std::uint32_t baseaddress>
-  using f26r1_t = f26r1_tt<"F26R1", baseaddress, 784>;
-
-  template <std::uint32_t baseaddress>
-  using f26r2_t = f26r2_tt<"F26R2", baseaddress, 788>;
-
-  template <std::uint32_t baseaddress>
-  using f27r1_t = f27r1_tt<"F27R1", baseaddress, 792>;
-
-  template <std::uint32_t baseaddress>
-  using f27r2_t = f27r2_tt<"F27R2", baseaddress, 796>;
 
 } // namespace can1

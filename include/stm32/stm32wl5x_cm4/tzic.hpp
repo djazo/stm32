@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace tzic {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ier1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -33,7 +35,9 @@ namespace tzic {
                groov::field<"TZSCIE", bool, 1, 1>,
                groov::field<"TZICIE", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using misr1_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
@@ -54,7 +58,9 @@ namespace tzic {
                               groov::field<"TZSCMF", bool, 1, 1>,
                               groov::field<"TZICMF", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using icr1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -75,14 +81,5 @@ namespace tzic {
                groov::field<"AESCF", bool, 2, 2>,
                groov::field<"TZSCCF", bool, 1, 1>,
                groov::field<"TZICCF", bool, 0, 0>>;
-
-  template <std::uint32_t baseaddress>
-  using ier1_t = ier1_tt<"IER1", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using misr1_t = misr1_tt<"MISR1", baseaddress, 16>;
-
-  template <std::uint32_t baseaddress>
-  using icr1_t = icr1_tt<"ICR1", baseaddress, 32>;
 
 } // namespace tzic

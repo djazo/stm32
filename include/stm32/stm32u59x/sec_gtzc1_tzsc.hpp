@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace sec_gtzc1_tzsc {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using tzsc_cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -20,7 +22,9 @@ namespace sec_gtzc1_tzsc {
                groov::field<"RESERVED0", std::uint32_t, 31, 1, access::ro>,
                groov::field<"LCK", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using tzsc_seccfgr1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -52,7 +56,9 @@ namespace sec_gtzc1_tzsc {
                groov::field<"TIM3SEC", bool, 1, 1>,
                groov::field<"TIM2SEC", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using tzsc_seccfgr2_tt =
     groov::reg<name,
                std::uint32_t,
@@ -71,7 +77,9 @@ namespace sec_gtzc1_tzsc {
                groov::field<"SPI1SEC", bool, 1, 1>,
                groov::field<"TIM1SEC", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using tzsc_seccfgr3_tt =
     groov::reg<name,
                std::uint32_t,
@@ -107,7 +115,9 @@ namespace sec_gtzc1_tzsc {
                groov::field<"CORDICSEC", bool, 1, 1>,
                groov::field<"MDF1SEC", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using tzsc_privcfgr1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -139,7 +149,9 @@ namespace sec_gtzc1_tzsc {
                groov::field<"TIM3PRIV", bool, 1, 1>,
                groov::field<"TIM2PRIV", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using tzsc_privcfgr2_tt =
     groov::reg<name,
                std::uint32_t,
@@ -158,7 +170,9 @@ namespace sec_gtzc1_tzsc {
                groov::field<"SPI1PRIV", bool, 1, 1>,
                groov::field<"TIM1PRIV", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using tzsc_privcfgr3_tt =
     groov::reg<name,
                std::uint32_t,
@@ -194,7 +208,9 @@ namespace sec_gtzc1_tzsc {
                groov::field<"CORDICPRIV", bool, 1, 1>,
                groov::field<"MDF1PRIV", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using tzsc_mpcwm1acfgr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -207,7 +223,9 @@ namespace sec_gtzc1_tzsc {
                groov::field<"SRLOCK", bool, 1, 1>,
                groov::field<"SREN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using tzsc_mpcwm1ar_tt =
     groov::reg<name,
                std::uint32_t,
@@ -218,7 +236,9 @@ namespace sec_gtzc1_tzsc {
                groov::field<"RESERVED0", std::uint8_t, 15, 11, access::ro>,
                groov::field<"SUBA_START", std::uint16_t, 10, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using tzsc_mpcwm1bcfgr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -231,7 +251,9 @@ namespace sec_gtzc1_tzsc {
                groov::field<"SRLOCK", bool, 1, 1>,
                groov::field<"SREN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using tzsc_mpcwm1br_tt =
     groov::reg<name,
                std::uint32_t,
@@ -242,7 +264,9 @@ namespace sec_gtzc1_tzsc {
                groov::field<"RESERVED0", std::uint8_t, 15, 11, access::ro>,
                groov::field<"SUBB_START", std::uint16_t, 10, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using tzsc_mpcwm2acfgr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -255,7 +279,9 @@ namespace sec_gtzc1_tzsc {
                groov::field<"SRLOCK", bool, 1, 1>,
                groov::field<"SREN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using tzsc_mpcwm2ar_tt =
     groov::reg<name,
                std::uint32_t,
@@ -266,7 +292,9 @@ namespace sec_gtzc1_tzsc {
                groov::field<"RESERVED0", std::uint8_t, 15, 11, access::ro>,
                groov::field<"SUBA_START", std::uint16_t, 10, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using tzsc_mpcwm2bcfgr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -279,7 +307,9 @@ namespace sec_gtzc1_tzsc {
                groov::field<"SRLOCK", bool, 1, 1>,
                groov::field<"SREN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using tzsc_mpcwm2br_tt =
     groov::reg<name,
                std::uint32_t,
@@ -290,7 +320,9 @@ namespace sec_gtzc1_tzsc {
                groov::field<"RESERVED0", std::uint8_t, 15, 11, access::ro>,
                groov::field<"SUBB_START", std::uint16_t, 10, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using tzsc_mpcwm3acfgr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -303,7 +335,9 @@ namespace sec_gtzc1_tzsc {
                groov::field<"SRLOCK", bool, 1, 1>,
                groov::field<"SREN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using tzsc_mpcwm3ar_tt =
     groov::reg<name,
                std::uint32_t,
@@ -314,7 +348,9 @@ namespace sec_gtzc1_tzsc {
                groov::field<"RESERVED0", std::uint8_t, 15, 11, access::ro>,
                groov::field<"SUBA_START", std::uint16_t, 10, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using tzsc_mpcwm4acfgr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -327,7 +363,9 @@ namespace sec_gtzc1_tzsc {
                groov::field<"SRLOCK", bool, 1, 1>,
                groov::field<"SREN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using tzsc_mpcwm4ar_tt =
     groov::reg<name,
                std::uint32_t,
@@ -338,7 +376,9 @@ namespace sec_gtzc1_tzsc {
                groov::field<"RESERVED0", std::uint8_t, 15, 11, access::ro>,
                groov::field<"SUBA_START", std::uint16_t, 10, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using tzsc_mpcwm5acfgr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -351,7 +391,9 @@ namespace sec_gtzc1_tzsc {
                groov::field<"SRLOCK", bool, 1, 1>,
                groov::field<"SREN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using tzsc_mpcwm5ar_tt =
     groov::reg<name,
                std::uint32_t,
@@ -362,7 +404,9 @@ namespace sec_gtzc1_tzsc {
                groov::field<"RESERVED0", std::uint8_t, 15, 11, access::ro>,
                groov::field<"SUBA_START", std::uint16_t, 10, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using tzsc_mpcwm5bcfgr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -375,7 +419,9 @@ namespace sec_gtzc1_tzsc {
                groov::field<"SRLOCK", bool, 1, 1>,
                groov::field<"SREN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using tzsc_mpcwm5br_tt =
     groov::reg<name,
                std::uint32_t,
@@ -386,7 +432,9 @@ namespace sec_gtzc1_tzsc {
                groov::field<"RESERVED0", std::uint8_t, 15, 11, access::ro>,
                groov::field<"SUBB_START", std::uint16_t, 10, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using tzsc_mpcwm6acfgr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -399,7 +447,9 @@ namespace sec_gtzc1_tzsc {
                groov::field<"SRLOCK", bool, 1, 1>,
                groov::field<"SREN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using tzsc_mpcwm6ar_tt =
     groov::reg<name,
                std::uint32_t,
@@ -410,7 +460,9 @@ namespace sec_gtzc1_tzsc {
                groov::field<"RESERVED0", std::uint8_t, 15, 11, access::ro>,
                groov::field<"SUBA_START", std::uint16_t, 10, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using tzsc_mpcwm6bcfgr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -423,7 +475,9 @@ namespace sec_gtzc1_tzsc {
                groov::field<"SRLOCK", bool, 1, 1>,
                groov::field<"SREN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using tzsc_mpcwm6br_tt =
     groov::reg<name,
                std::uint32_t,
@@ -433,96 +487,5 @@ namespace sec_gtzc1_tzsc {
                groov::field<"SUBB_LENGTH", std::uint16_t, 27, 16>,
                groov::field<"RESERVED0", std::uint8_t, 15, 11, access::ro>,
                groov::field<"SUBB_START", std::uint16_t, 10, 0>>;
-
-  template <std::uint32_t baseaddress>
-  using tzsc_cr_t = tzsc_cr_tt<"TZSC_CR", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using tzsc_seccfgr1_t = tzsc_seccfgr1_tt<"TZSC_SECCFGR1", baseaddress, 16>;
-
-  template <std::uint32_t baseaddress>
-  using tzsc_seccfgr2_t = tzsc_seccfgr2_tt<"TZSC_SECCFGR2", baseaddress, 20>;
-
-  template <std::uint32_t baseaddress>
-  using tzsc_seccfgr3_t = tzsc_seccfgr3_tt<"TZSC_SECCFGR3", baseaddress, 24>;
-
-  template <std::uint32_t baseaddress>
-  using tzsc_privcfgr1_t = tzsc_privcfgr1_tt<"TZSC_PRIVCFGR1", baseaddress, 32>;
-
-  template <std::uint32_t baseaddress>
-  using tzsc_privcfgr2_t = tzsc_privcfgr2_tt<"TZSC_PRIVCFGR2", baseaddress, 36>;
-
-  template <std::uint32_t baseaddress>
-  using tzsc_privcfgr3_t = tzsc_privcfgr3_tt<"TZSC_PRIVCFGR3", baseaddress, 40>;
-
-  template <std::uint32_t baseaddress>
-  using tzsc_mpcwm1acfgr_t =
-    tzsc_mpcwm1acfgr_tt<"TZSC_MPCWM1ACFGR", baseaddress, 64>;
-
-  template <std::uint32_t baseaddress>
-  using tzsc_mpcwm1ar_t = tzsc_mpcwm1ar_tt<"TZSC_MPCWM1AR", baseaddress, 68>;
-
-  template <std::uint32_t baseaddress>
-  using tzsc_mpcwm1bcfgr_t =
-    tzsc_mpcwm1bcfgr_tt<"TZSC_MPCWM1BCFGR", baseaddress, 72>;
-
-  template <std::uint32_t baseaddress>
-  using tzsc_mpcwm1br_t = tzsc_mpcwm1br_tt<"TZSC_MPCWM1BR", baseaddress, 76>;
-
-  template <std::uint32_t baseaddress>
-  using tzsc_mpcwm2acfgr_t =
-    tzsc_mpcwm2acfgr_tt<"TZSC_MPCWM2ACFGR", baseaddress, 80>;
-
-  template <std::uint32_t baseaddress>
-  using tzsc_mpcwm2ar_t = tzsc_mpcwm2ar_tt<"TZSC_MPCWM2AR", baseaddress, 84>;
-
-  template <std::uint32_t baseaddress>
-  using tzsc_mpcwm2bcfgr_t =
-    tzsc_mpcwm2bcfgr_tt<"TZSC_MPCWM2BCFGR", baseaddress, 88>;
-
-  template <std::uint32_t baseaddress>
-  using tzsc_mpcwm2br_t = tzsc_mpcwm2br_tt<"TZSC_MPCWM2BR", baseaddress, 92>;
-
-  template <std::uint32_t baseaddress>
-  using tzsc_mpcwm3acfgr_t =
-    tzsc_mpcwm3acfgr_tt<"TZSC_MPCWM3ACFGR", baseaddress, 96>;
-
-  template <std::uint32_t baseaddress>
-  using tzsc_mpcwm3ar_t = tzsc_mpcwm3ar_tt<"TZSC_MPCWM3AR", baseaddress, 100>;
-
-  template <std::uint32_t baseaddress>
-  using tzsc_mpcwm4acfgr_t =
-    tzsc_mpcwm4acfgr_tt<"TZSC_MPCWM4ACFGR", baseaddress, 112>;
-
-  template <std::uint32_t baseaddress>
-  using tzsc_mpcwm4ar_t = tzsc_mpcwm4ar_tt<"TZSC_MPCWM4AR", baseaddress, 116>;
-
-  template <std::uint32_t baseaddress>
-  using tzsc_mpcwm5acfgr_t =
-    tzsc_mpcwm5acfgr_tt<"TZSC_MPCWM5ACFGR", baseaddress, 128>;
-
-  template <std::uint32_t baseaddress>
-  using tzsc_mpcwm5ar_t = tzsc_mpcwm5ar_tt<"TZSC_MPCWM5AR", baseaddress, 132>;
-
-  template <std::uint32_t baseaddress>
-  using tzsc_mpcwm5bcfgr_t =
-    tzsc_mpcwm5bcfgr_tt<"TZSC_MPCWM5BCFGR", baseaddress, 136>;
-
-  template <std::uint32_t baseaddress>
-  using tzsc_mpcwm5br_t = tzsc_mpcwm5br_tt<"TZSC_MPCWM5BR", baseaddress, 140>;
-
-  template <std::uint32_t baseaddress>
-  using tzsc_mpcwm6acfgr_t =
-    tzsc_mpcwm6acfgr_tt<"TZSC_MPCWM6ACFGR", baseaddress, 144>;
-
-  template <std::uint32_t baseaddress>
-  using tzsc_mpcwm6ar_t = tzsc_mpcwm6ar_tt<"TZSC_MPCWM6AR", baseaddress, 148>;
-
-  template <std::uint32_t baseaddress>
-  using tzsc_mpcwm6bcfgr_t =
-    tzsc_mpcwm6bcfgr_tt<"TZSC_MPCWM6BCFGR", baseaddress, 152>;
-
-  template <std::uint32_t baseaddress>
-  using tzsc_mpcwm6br_t = tzsc_mpcwm6br_tt<"TZSC_MPCWM6BR", baseaddress, 156>;
 
 } // namespace sec_gtzc1_tzsc

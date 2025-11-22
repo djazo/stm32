@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace dcmi {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -31,7 +33,9 @@ namespace dcmi {
                groov::field<"CM", bool, 1, 1>,
                groov::field<"CAPTURE", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using sr_tt = groov::reg<name,
                            std::uint32_t,
                            baseaddress + offset,
@@ -41,7 +45,9 @@ namespace dcmi {
                            groov::field<"VSYNC", bool, 1, 1>,
                            groov::field<"HSYNC", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ris_tt = groov::reg<name,
                             std::uint32_t,
                             baseaddress + offset,
@@ -53,7 +59,9 @@ namespace dcmi {
                             groov::field<"OVR_RIS", bool, 1, 1>,
                             groov::field<"FRAME_RIS", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ier_tt =
     groov::reg<name,
                std::uint32_t,
@@ -66,7 +74,9 @@ namespace dcmi {
                groov::field<"OVR_IE", bool, 1, 1>,
                groov::field<"FRAME_IE", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mis_tt = groov::reg<name,
                             std::uint32_t,
                             baseaddress + offset,
@@ -78,7 +88,9 @@ namespace dcmi {
                             groov::field<"OVR_MIS", bool, 1, 1>,
                             groov::field<"FRAME_MIS", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using icr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -91,7 +103,9 @@ namespace dcmi {
                groov::field<"OVR_ISC", bool, 1, 1>,
                groov::field<"FRAME_ISC", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using escr_tt = groov::reg<name,
                              std::uint32_t,
                              baseaddress + offset,
@@ -101,7 +115,9 @@ namespace dcmi {
                              groov::field<"LSC", std::uint8_t, 15, 8>,
                              groov::field<"FSC", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using esur_tt = groov::reg<name,
                              std::uint32_t,
                              baseaddress + offset,
@@ -111,7 +127,9 @@ namespace dcmi {
                              groov::field<"LSU", std::uint8_t, 15, 8>,
                              groov::field<"FSU", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using cwstrt_tt =
     groov::reg<name,
                std::uint32_t,
@@ -122,7 +140,9 @@ namespace dcmi {
                groov::field<"RESERVED0", std::uint8_t, 15, 14, access::ro>,
                groov::field<"HOFFCNT", std::uint16_t, 13, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using cwsize_tt =
     groov::reg<name,
                std::uint32_t,
@@ -133,7 +153,9 @@ namespace dcmi {
                groov::field<"RESERVED0", std::uint8_t, 15, 14, access::ro>,
                groov::field<"CAPCNT", std::uint16_t, 13, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dr_tt = groov::reg<name,
                            std::uint32_t,
                            baseaddress + offset,
@@ -142,38 +164,5 @@ namespace dcmi {
                            groov::field<"Byte2", std::uint8_t, 23, 16>,
                            groov::field<"Byte1", std::uint8_t, 15, 8>,
                            groov::field<"Byte0", std::uint8_t, 7, 0>>;
-
-  template <std::uint32_t baseaddress>
-  using cr_t = cr_tt<"CR", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using sr_t = sr_tt<"SR", baseaddress, 4>;
-
-  template <std::uint32_t baseaddress>
-  using ris_t = ris_tt<"RIS", baseaddress, 8>;
-
-  template <std::uint32_t baseaddress>
-  using ier_t = ier_tt<"IER", baseaddress, 12>;
-
-  template <std::uint32_t baseaddress>
-  using mis_t = mis_tt<"MIS", baseaddress, 16>;
-
-  template <std::uint32_t baseaddress>
-  using icr_t = icr_tt<"ICR", baseaddress, 20>;
-
-  template <std::uint32_t baseaddress>
-  using escr_t = escr_tt<"ESCR", baseaddress, 24>;
-
-  template <std::uint32_t baseaddress>
-  using esur_t = esur_tt<"ESUR", baseaddress, 28>;
-
-  template <std::uint32_t baseaddress>
-  using cwstrt_t = cwstrt_tt<"CWSTRT", baseaddress, 32>;
-
-  template <std::uint32_t baseaddress>
-  using cwsize_t = cwsize_tt<"CWSIZE", baseaddress, 36>;
-
-  template <std::uint32_t baseaddress>
-  using dr_t = dr_tt<"DR", baseaddress, 40>;
 
 } // namespace dcmi

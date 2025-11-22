@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace lptim {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using isr_tt = groov::reg<name,
                             std::uint32_t,
                             baseaddress + offset,
@@ -25,7 +27,9 @@ namespace lptim {
                             groov::field<"ARRM", bool, 1, 1>,
                             groov::field<"CMPM", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using icr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -40,7 +44,9 @@ namespace lptim {
                groov::field<"ARRMCF", bool, 1, 1>,
                groov::field<"CMPMCF", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ier_tt =
     groov::reg<name,
                std::uint32_t,
@@ -55,7 +61,9 @@ namespace lptim {
                groov::field<"ARRMIE", bool, 1, 1>,
                groov::field<"CMPMIE", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using cfgr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -80,7 +88,9 @@ namespace lptim {
                groov::field<"CKPOL", std::uint8_t, 2, 1>,
                groov::field<"CKSEL", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -91,7 +101,9 @@ namespace lptim {
                groov::field<"SNGSTRT", bool, 1, 1>,
                groov::field<"ENABLE", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using cmp_tt =
     groov::reg<name,
                std::uint32_t,
@@ -100,7 +112,9 @@ namespace lptim {
                groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
                groov::field<"CMP", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using arr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -109,36 +123,14 @@ namespace lptim {
                groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
                groov::field<"ARR", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using cnt_tt = groov::reg<name,
                             std::uint32_t,
                             baseaddress + offset,
                             access::ro,
                             groov::field<"RESERVED0", std::uint16_t, 31, 16>,
                             groov::field<"CNT", std::uint16_t, 15, 0>>;
-
-  template <std::uint32_t baseaddress>
-  using isr_t = isr_tt<"ISR", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using icr_t = icr_tt<"ICR", baseaddress, 4>;
-
-  template <std::uint32_t baseaddress>
-  using ier_t = ier_tt<"IER", baseaddress, 8>;
-
-  template <std::uint32_t baseaddress>
-  using cfgr_t = cfgr_tt<"CFGR", baseaddress, 12>;
-
-  template <std::uint32_t baseaddress>
-  using cr_t = cr_tt<"CR", baseaddress, 16>;
-
-  template <std::uint32_t baseaddress>
-  using cmp_t = cmp_tt<"CMP", baseaddress, 20>;
-
-  template <std::uint32_t baseaddress>
-  using arr_t = arr_tt<"ARR", baseaddress, 24>;
-
-  template <std::uint32_t baseaddress>
-  using cnt_t = cnt_tt<"CNT", baseaddress, 28>;
 
 } // namespace lptim

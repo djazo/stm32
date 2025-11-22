@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace otg1_hs_global {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using otg_hs_gotgctl_tt =
     groov::reg<name,
                std::uint32_t,
@@ -32,7 +34,9 @@ namespace otg1_hs_global {
                groov::field<"SRQ", bool, 1, 1>,
                groov::field<"SRQSCS", bool, 0, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using otg_hs_gotgint_tt =
     groov::reg<name,
                std::uint32_t,
@@ -50,7 +54,9 @@ namespace otg1_hs_global {
                groov::field<"SEDET", bool, 2, 2>,
                groov::field<"RESERVED0", std::uint8_t, 1, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using otg_hs_gahbcfg_tt =
     groov::reg<name,
                std::uint32_t,
@@ -64,7 +70,9 @@ namespace otg1_hs_global {
                groov::field<"HBSTLEN", std::uint8_t, 4, 1>,
                groov::field<"GINT", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using otg_hs_gusbcfg_tt =
     groov::reg<name,
                std::uint32_t,
@@ -94,7 +102,9 @@ namespace otg1_hs_global {
                groov::field<"RESERVED0", std::uint8_t, 5, 3, access::ro>,
                groov::field<"TOCAL", std::uint8_t, 2, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using otg_hs_grstctl_tt =
     groov::reg<name,
                std::uint32_t,
@@ -111,7 +121,9 @@ namespace otg1_hs_global {
                groov::field<"HSRST", bool, 1, 1>,
                groov::field<"CSRST", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using otg_hs_gintsts_tt =
     groov::reg<name,
                std::uint32_t,
@@ -148,7 +160,9 @@ namespace otg1_hs_global {
                groov::field<"MMIS", bool, 1, 1>,
                groov::field<"CMOD", bool, 0, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using otg_hs_gintmsk_tt =
     groov::reg<name,
                std::uint32_t,
@@ -185,7 +199,9 @@ namespace otg1_hs_global {
                groov::field<"MMISM", bool, 1, 1>,
                groov::field<"RESERVED0", bool, 0, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using otg_hs_grxstsr_host_tt =
     groov::reg<name,
                std::uint32_t,
@@ -197,7 +213,9 @@ namespace otg1_hs_global {
                groov::field<"BCNT", std::uint16_t, 14, 4>,
                groov::field<"CHNUM", std::uint8_t, 3, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using otg_hs_grxstsp_host_tt =
     groov::reg<name,
                std::uint32_t,
@@ -209,7 +227,9 @@ namespace otg1_hs_global {
                groov::field<"BCNT", std::uint16_t, 14, 4>,
                groov::field<"CHNUM", std::uint8_t, 3, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using otg_hs_grxfsiz_tt =
     groov::reg<name,
                std::uint32_t,
@@ -218,7 +238,9 @@ namespace otg1_hs_global {
                groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
                groov::field<"RXFD", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using otg_hs_hnptxfsiz_host_tt =
     groov::reg<name,
                std::uint32_t,
@@ -227,7 +249,9 @@ namespace otg1_hs_global {
                groov::field<"NPTXFD", std::uint16_t, 31, 16>,
                groov::field<"NPTXFSA", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using otg_hs_dieptxf0_device_tt =
     groov::reg<name,
                std::uint32_t,
@@ -236,7 +260,9 @@ namespace otg1_hs_global {
                groov::field<"TX0FD", std::uint16_t, 31, 16>,
                groov::field<"TX0FSA", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using otg_hs_gnptxsts_tt =
     groov::reg<name,
                std::uint32_t,
@@ -247,7 +273,9 @@ namespace otg1_hs_global {
                groov::field<"NPTQXSAV", std::uint8_t, 23, 16>,
                groov::field<"NPTXFSAV", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using otg_hs_gccfg_tt =
     groov::reg<name,
                std::uint32_t,
@@ -266,7 +294,9 @@ namespace otg1_hs_global {
                groov::field<"PDET", bool, 1, 1>,
                groov::field<"DCDET", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using otg_hs_cid_tt =
     groov::reg<name,
                std::uint32_t,
@@ -274,7 +304,9 @@ namespace otg1_hs_global {
                access::rw,
                groov::field<"PRODUCT_ID", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using otg_hs_hptxfsiz_tt =
     groov::reg<name,
                std::uint32_t,
@@ -283,7 +315,9 @@ namespace otg1_hs_global {
                groov::field<"PTXFD", std::uint16_t, 31, 16>,
                groov::field<"PTXSA", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using otg_hs_dieptxf1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -292,7 +326,9 @@ namespace otg1_hs_global {
                groov::field<"INEPTXFD", std::uint16_t, 31, 16>,
                groov::field<"INEPTXSA", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using otg_hs_dieptxf2_tt =
     groov::reg<name,
                std::uint32_t,
@@ -301,7 +337,9 @@ namespace otg1_hs_global {
                groov::field<"INEPTXFD", std::uint16_t, 31, 16>,
                groov::field<"INEPTXSA", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using otg_hs_dieptxf3_tt =
     groov::reg<name,
                std::uint32_t,
@@ -310,7 +348,9 @@ namespace otg1_hs_global {
                groov::field<"INEPTXFD", std::uint16_t, 31, 16>,
                groov::field<"INEPTXSA", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using otg_hs_dieptxf4_tt =
     groov::reg<name,
                std::uint32_t,
@@ -319,7 +359,9 @@ namespace otg1_hs_global {
                groov::field<"INEPTXFD", std::uint16_t, 31, 16>,
                groov::field<"INEPTXSA", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using otg_hs_dieptxf5_tt =
     groov::reg<name,
                std::uint32_t,
@@ -328,7 +370,9 @@ namespace otg1_hs_global {
                groov::field<"INEPTXFD", std::uint16_t, 31, 16>,
                groov::field<"INEPTXSA", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using otg_hs_dieptxf6_tt =
     groov::reg<name,
                std::uint32_t,
@@ -337,7 +381,9 @@ namespace otg1_hs_global {
                groov::field<"INEPTXFD", std::uint16_t, 31, 16>,
                groov::field<"INEPTXSA", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using otg_hs_dieptxf7_tt =
     groov::reg<name,
                std::uint32_t,
@@ -346,7 +392,9 @@ namespace otg1_hs_global {
                groov::field<"INEPTXFD", std::uint16_t, 31, 16>,
                groov::field<"INEPTXSA", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using otg_hs_grxstsr_device_tt =
     groov::reg<name,
                std::uint32_t,
@@ -359,7 +407,9 @@ namespace otg1_hs_global {
                groov::field<"BCNT", std::uint16_t, 14, 4>,
                groov::field<"EPNUM", std::uint8_t, 3, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using otg_hs_grxstsp_device_tt =
     groov::reg<name,
                std::uint32_t,
@@ -372,7 +422,9 @@ namespace otg1_hs_global {
                groov::field<"BCNT", std::uint16_t, 14, 4>,
                groov::field<"EPNUM", std::uint8_t, 3, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using otg_hs_glpmcfg_tt =
     groov::reg<name,
                std::uint32_t,
@@ -394,98 +446,5 @@ namespace otg1_hs_global {
                groov::field<"BESL", std::uint8_t, 5, 2, access::ro>,
                groov::field<"LPMACK", bool, 1, 1>,
                groov::field<"LPMEN", bool, 0, 0>>;
-
-  template <std::uint32_t baseaddress>
-  using otg_hs_gotgctl_t = otg_hs_gotgctl_tt<"OTG_HS_GOTGCTL", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using otg_hs_gotgint_t = otg_hs_gotgint_tt<"OTG_HS_GOTGINT", baseaddress, 4>;
-
-  template <std::uint32_t baseaddress>
-  using otg_hs_gahbcfg_t = otg_hs_gahbcfg_tt<"OTG_HS_GAHBCFG", baseaddress, 8>;
-
-  template <std::uint32_t baseaddress>
-  using otg_hs_gusbcfg_t = otg_hs_gusbcfg_tt<"OTG_HS_GUSBCFG", baseaddress, 12>;
-
-  template <std::uint32_t baseaddress>
-  using otg_hs_grstctl_t = otg_hs_grstctl_tt<"OTG_HS_GRSTCTL", baseaddress, 16>;
-
-  template <std::uint32_t baseaddress>
-  using otg_hs_gintsts_t = otg_hs_gintsts_tt<"OTG_HS_GINTSTS", baseaddress, 20>;
-
-  template <std::uint32_t baseaddress>
-  using otg_hs_gintmsk_t = otg_hs_gintmsk_tt<"OTG_HS_GINTMSK", baseaddress, 24>;
-
-  template <std::uint32_t baseaddress>
-  using otg_hs_grxstsr_host_t =
-    otg_hs_grxstsr_host_tt<"OTG_HS_GRXSTSR_Host", baseaddress, 28>;
-
-  template <std::uint32_t baseaddress>
-  using otg_hs_grxstsp_host_t =
-    otg_hs_grxstsp_host_tt<"OTG_HS_GRXSTSP_Host", baseaddress, 32>;
-
-  template <std::uint32_t baseaddress>
-  using otg_hs_grxfsiz_t = otg_hs_grxfsiz_tt<"OTG_HS_GRXFSIZ", baseaddress, 36>;
-
-  template <std::uint32_t baseaddress>
-  using otg_hs_hnptxfsiz_host_t =
-    otg_hs_hnptxfsiz_host_tt<"OTG_HS_HNPTXFSIZ_Host", baseaddress, 40>;
-
-  template <std::uint32_t baseaddress>
-  using otg_hs_dieptxf0_device_t =
-    otg_hs_dieptxf0_device_tt<"OTG_HS_DIEPTXF0_Device", baseaddress, 40>;
-
-  template <std::uint32_t baseaddress>
-  using otg_hs_gnptxsts_t =
-    otg_hs_gnptxsts_tt<"OTG_HS_GNPTXSTS", baseaddress, 44>;
-
-  template <std::uint32_t baseaddress>
-  using otg_hs_gccfg_t = otg_hs_gccfg_tt<"OTG_HS_GCCFG", baseaddress, 56>;
-
-  template <std::uint32_t baseaddress>
-  using otg_hs_cid_t = otg_hs_cid_tt<"OTG_HS_CID", baseaddress, 60>;
-
-  template <std::uint32_t baseaddress>
-  using otg_hs_hptxfsiz_t =
-    otg_hs_hptxfsiz_tt<"OTG_HS_HPTXFSIZ", baseaddress, 256>;
-
-  template <std::uint32_t baseaddress>
-  using otg_hs_dieptxf1_t =
-    otg_hs_dieptxf1_tt<"OTG_HS_DIEPTXF1", baseaddress, 260>;
-
-  template <std::uint32_t baseaddress>
-  using otg_hs_dieptxf2_t =
-    otg_hs_dieptxf2_tt<"OTG_HS_DIEPTXF2", baseaddress, 264>;
-
-  template <std::uint32_t baseaddress>
-  using otg_hs_dieptxf3_t =
-    otg_hs_dieptxf3_tt<"OTG_HS_DIEPTXF3", baseaddress, 284>;
-
-  template <std::uint32_t baseaddress>
-  using otg_hs_dieptxf4_t =
-    otg_hs_dieptxf4_tt<"OTG_HS_DIEPTXF4", baseaddress, 288>;
-
-  template <std::uint32_t baseaddress>
-  using otg_hs_dieptxf5_t =
-    otg_hs_dieptxf5_tt<"OTG_HS_DIEPTXF5", baseaddress, 292>;
-
-  template <std::uint32_t baseaddress>
-  using otg_hs_dieptxf6_t =
-    otg_hs_dieptxf6_tt<"OTG_HS_DIEPTXF6", baseaddress, 296>;
-
-  template <std::uint32_t baseaddress>
-  using otg_hs_dieptxf7_t =
-    otg_hs_dieptxf7_tt<"OTG_HS_DIEPTXF7", baseaddress, 300>;
-
-  template <std::uint32_t baseaddress>
-  using otg_hs_grxstsr_device_t =
-    otg_hs_grxstsr_device_tt<"OTG_HS_GRXSTSR_Device", baseaddress, 28>;
-
-  template <std::uint32_t baseaddress>
-  using otg_hs_grxstsp_device_t =
-    otg_hs_grxstsp_device_tt<"OTG_HS_GRXSTSP_Device", baseaddress, 32>;
-
-  template <std::uint32_t baseaddress>
-  using otg_hs_glpmcfg_t = otg_hs_glpmcfg_tt<"OTG_HS_GLPMCFG", baseaddress, 84>;
 
 } // namespace otg1_hs_global

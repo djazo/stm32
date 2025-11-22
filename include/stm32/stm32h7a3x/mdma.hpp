@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace mdma {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using gisr0_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
@@ -34,7 +36,9 @@ namespace mdma {
                               groov::field<"GIF1", bool, 1, 1>,
                               groov::field<"GIF0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c0isr_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
@@ -48,7 +52,9 @@ namespace mdma {
                               groov::field<"CTCIF0", bool, 1, 1>,
                               groov::field<"TEIF0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c0ifcr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -61,7 +67,9 @@ namespace mdma {
                groov::field<"CCTCIF0", bool, 1, 1>,
                groov::field<"CTEIF0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c0esr_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
@@ -74,7 +82,9 @@ namespace mdma {
                               groov::field<"TED", bool, 7, 7>,
                               groov::field<"TEA", std::uint8_t, 6, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c0cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -95,7 +105,9 @@ namespace mdma {
                groov::field<"TEIE", bool, 1, 1>,
                groov::field<"EN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c0tcr_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
@@ -115,7 +127,9 @@ namespace mdma {
                               groov::field<"DINC", std::uint8_t, 3, 2>,
                               groov::field<"SINC", std::uint8_t, 1, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c0bndtr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -127,21 +141,27 @@ namespace mdma {
                groov::field<"RESERVED0", bool, 17, 17, access::ro>,
                groov::field<"BNDT", std::uint32_t, 16, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c0sar_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
                               access::rw,
                               groov::field<"SAR", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c0dar_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
                               access::rw,
                               groov::field<"DAR", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c0brur_tt = groov::reg<name,
                                std::uint32_t,
                                baseaddress + offset,
@@ -149,14 +169,18 @@ namespace mdma {
                                groov::field<"DUV", std::uint16_t, 31, 16>,
                                groov::field<"SUV", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c0lar_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
                               access::rw,
                               groov::field<"LAR", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c0tbr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -168,21 +192,27 @@ namespace mdma {
                groov::field<"RESERVED0", std::uint16_t, 15, 6, access::ro>,
                groov::field<"TSEL", std::uint8_t, 5, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c0mar_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
                               access::rw,
                               groov::field<"MAR", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c0mdr_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
                               access::rw,
                               groov::field<"MDR", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c1isr_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
@@ -196,7 +226,9 @@ namespace mdma {
                               groov::field<"CTCIF1", bool, 1, 1>,
                               groov::field<"TEIF1", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c1ifcr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -209,7 +241,9 @@ namespace mdma {
                groov::field<"CCTCIF1", bool, 1, 1>,
                groov::field<"CTEIF1", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c1esr_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
@@ -222,7 +256,9 @@ namespace mdma {
                               groov::field<"TED", bool, 7, 7>,
                               groov::field<"TEA", std::uint8_t, 6, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c1cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -243,7 +279,9 @@ namespace mdma {
                groov::field<"TEIE", bool, 1, 1>,
                groov::field<"EN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c1tcr_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
@@ -263,7 +301,9 @@ namespace mdma {
                               groov::field<"DINC", std::uint8_t, 3, 2>,
                               groov::field<"SINC", std::uint8_t, 1, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c1bndtr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -275,21 +315,27 @@ namespace mdma {
                groov::field<"RESERVED0", bool, 17, 17, access::ro>,
                groov::field<"BNDT", std::uint32_t, 16, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c1sar_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
                               access::rw,
                               groov::field<"SAR", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c1dar_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
                               access::rw,
                               groov::field<"DAR", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c1brur_tt = groov::reg<name,
                                std::uint32_t,
                                baseaddress + offset,
@@ -297,14 +343,18 @@ namespace mdma {
                                groov::field<"DUV", std::uint16_t, 31, 16>,
                                groov::field<"SUV", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c1lar_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
                               access::rw,
                               groov::field<"LAR", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c1tbr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -316,21 +366,27 @@ namespace mdma {
                groov::field<"RESERVED0", std::uint16_t, 15, 6, access::ro>,
                groov::field<"TSEL", std::uint8_t, 5, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c1mar_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
                               access::rw,
                               groov::field<"MAR", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c1mdr_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
                               access::rw,
                               groov::field<"MDR", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c2isr_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
@@ -344,7 +400,9 @@ namespace mdma {
                               groov::field<"CTCIF2", bool, 1, 1>,
                               groov::field<"TEIF2", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c2ifcr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -357,7 +415,9 @@ namespace mdma {
                groov::field<"CCTCIF2", bool, 1, 1>,
                groov::field<"CTEIF2", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c2esr_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
@@ -370,7 +430,9 @@ namespace mdma {
                               groov::field<"TED", bool, 7, 7>,
                               groov::field<"TEA", std::uint8_t, 6, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c2cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -391,7 +453,9 @@ namespace mdma {
                groov::field<"TEIE", bool, 1, 1>,
                groov::field<"EN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c2tcr_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
@@ -411,7 +475,9 @@ namespace mdma {
                               groov::field<"DINC", std::uint8_t, 3, 2>,
                               groov::field<"SINC", std::uint8_t, 1, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c2bndtr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -423,21 +489,27 @@ namespace mdma {
                groov::field<"RESERVED0", bool, 17, 17, access::ro>,
                groov::field<"BNDT", std::uint32_t, 16, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c2sar_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
                               access::rw,
                               groov::field<"SAR", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c2dar_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
                               access::rw,
                               groov::field<"DAR", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c2brur_tt = groov::reg<name,
                                std::uint32_t,
                                baseaddress + offset,
@@ -445,14 +517,18 @@ namespace mdma {
                                groov::field<"DUV", std::uint16_t, 31, 16>,
                                groov::field<"SUV", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c2lar_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
                               access::rw,
                               groov::field<"LAR", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c2tbr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -464,21 +540,27 @@ namespace mdma {
                groov::field<"RESERVED0", std::uint16_t, 15, 6, access::ro>,
                groov::field<"TSEL", std::uint8_t, 5, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c2mar_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
                               access::rw,
                               groov::field<"MAR", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c2mdr_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
                               access::rw,
                               groov::field<"MDR", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c3isr_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
@@ -492,7 +574,9 @@ namespace mdma {
                               groov::field<"CTCIF3", bool, 1, 1>,
                               groov::field<"TEIF3", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c3ifcr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -505,7 +589,9 @@ namespace mdma {
                groov::field<"CCTCIF3", bool, 1, 1>,
                groov::field<"CTEIF3", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c3esr_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
@@ -518,7 +604,9 @@ namespace mdma {
                               groov::field<"TED", bool, 7, 7>,
                               groov::field<"TEA", std::uint8_t, 6, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c3cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -539,7 +627,9 @@ namespace mdma {
                groov::field<"TEIE", bool, 1, 1>,
                groov::field<"EN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c3tcr_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
@@ -559,7 +649,9 @@ namespace mdma {
                               groov::field<"DINC", std::uint8_t, 3, 2>,
                               groov::field<"SINC", std::uint8_t, 1, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c3bndtr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -571,21 +663,27 @@ namespace mdma {
                groov::field<"RESERVED0", bool, 17, 17, access::ro>,
                groov::field<"BNDT", std::uint32_t, 16, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c3sar_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
                               access::rw,
                               groov::field<"SAR", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c3dar_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
                               access::rw,
                               groov::field<"DAR", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c3brur_tt = groov::reg<name,
                                std::uint32_t,
                                baseaddress + offset,
@@ -593,14 +691,18 @@ namespace mdma {
                                groov::field<"DUV", std::uint16_t, 31, 16>,
                                groov::field<"SUV", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c3lar_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
                               access::rw,
                               groov::field<"LAR", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c3tbr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -612,21 +714,27 @@ namespace mdma {
                groov::field<"RESERVED0", std::uint16_t, 15, 6, access::ro>,
                groov::field<"TSEL", std::uint8_t, 5, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c3mar_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
                               access::rw,
                               groov::field<"MAR", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c3mdr_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
                               access::rw,
                               groov::field<"MDR", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c4isr_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
@@ -640,7 +748,9 @@ namespace mdma {
                               groov::field<"CTCIF4", bool, 1, 1>,
                               groov::field<"TEIF4", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c4ifcr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -653,7 +763,9 @@ namespace mdma {
                groov::field<"CCTCIF4", bool, 1, 1>,
                groov::field<"CTEIF4", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c4esr_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
@@ -666,7 +778,9 @@ namespace mdma {
                               groov::field<"TED", bool, 7, 7>,
                               groov::field<"TEA", std::uint8_t, 6, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c4cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -687,7 +801,9 @@ namespace mdma {
                groov::field<"TEIE", bool, 1, 1>,
                groov::field<"EN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c4tcr_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
@@ -707,7 +823,9 @@ namespace mdma {
                               groov::field<"DINC", std::uint8_t, 3, 2>,
                               groov::field<"SINC", std::uint8_t, 1, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c4bndtr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -719,21 +837,27 @@ namespace mdma {
                groov::field<"RESERVED0", bool, 17, 17, access::ro>,
                groov::field<"BNDT", std::uint32_t, 16, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c4sar_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
                               access::rw,
                               groov::field<"SAR", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c4dar_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
                               access::rw,
                               groov::field<"DAR", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c4brur_tt = groov::reg<name,
                                std::uint32_t,
                                baseaddress + offset,
@@ -741,14 +865,18 @@ namespace mdma {
                                groov::field<"DUV", std::uint16_t, 31, 16>,
                                groov::field<"SUV", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c4lar_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
                               access::rw,
                               groov::field<"LAR", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c4tbr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -760,21 +888,27 @@ namespace mdma {
                groov::field<"RESERVED0", std::uint16_t, 15, 6, access::ro>,
                groov::field<"TSEL", std::uint8_t, 5, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c4mar_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
                               access::rw,
                               groov::field<"MAR", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c4mdr_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
                               access::rw,
                               groov::field<"MDR", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c5isr_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
@@ -788,7 +922,9 @@ namespace mdma {
                               groov::field<"CTCIF5", bool, 1, 1>,
                               groov::field<"TEIF5", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c5ifcr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -801,7 +937,9 @@ namespace mdma {
                groov::field<"CCTCIF5", bool, 1, 1>,
                groov::field<"CTEIF5", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c5esr_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
@@ -814,7 +952,9 @@ namespace mdma {
                               groov::field<"TED", bool, 7, 7>,
                               groov::field<"TEA", std::uint8_t, 6, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c5cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -835,7 +975,9 @@ namespace mdma {
                groov::field<"TEIE", bool, 1, 1>,
                groov::field<"EN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c5tcr_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
@@ -855,7 +997,9 @@ namespace mdma {
                               groov::field<"DINC", std::uint8_t, 3, 2>,
                               groov::field<"SINC", std::uint8_t, 1, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c5bndtr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -867,21 +1011,27 @@ namespace mdma {
                groov::field<"RESERVED0", bool, 17, 17, access::ro>,
                groov::field<"BNDT", std::uint32_t, 16, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c5sar_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
                               access::rw,
                               groov::field<"SAR", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c5dar_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
                               access::rw,
                               groov::field<"DAR", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c5brur_tt = groov::reg<name,
                                std::uint32_t,
                                baseaddress + offset,
@@ -889,14 +1039,18 @@ namespace mdma {
                                groov::field<"DUV", std::uint16_t, 31, 16>,
                                groov::field<"SUV", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c5lar_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
                               access::rw,
                               groov::field<"LAR", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c5tbr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -908,21 +1062,27 @@ namespace mdma {
                groov::field<"RESERVED0", std::uint16_t, 15, 6, access::ro>,
                groov::field<"TSEL", std::uint8_t, 5, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c5mar_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
                               access::rw,
                               groov::field<"MAR", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c5mdr_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
                               access::rw,
                               groov::field<"MDR", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c6isr_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
@@ -936,7 +1096,9 @@ namespace mdma {
                               groov::field<"CTCIF6", bool, 1, 1>,
                               groov::field<"TEIF6", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c6ifcr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -949,7 +1111,9 @@ namespace mdma {
                groov::field<"CCTCIF6", bool, 1, 1>,
                groov::field<"CTEIF6", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c6esr_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
@@ -962,7 +1126,9 @@ namespace mdma {
                               groov::field<"TED", bool, 7, 7>,
                               groov::field<"TEA", std::uint8_t, 6, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c6cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -983,7 +1149,9 @@ namespace mdma {
                groov::field<"TEIE", bool, 1, 1>,
                groov::field<"EN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c6tcr_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
@@ -1003,7 +1171,9 @@ namespace mdma {
                               groov::field<"DINC", std::uint8_t, 3, 2>,
                               groov::field<"SINC", std::uint8_t, 1, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c6bndtr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1015,21 +1185,27 @@ namespace mdma {
                groov::field<"RESERVED0", bool, 17, 17, access::ro>,
                groov::field<"BNDT", std::uint32_t, 16, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c6sar_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
                               access::rw,
                               groov::field<"SAR", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c6dar_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
                               access::rw,
                               groov::field<"DAR", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c6brur_tt = groov::reg<name,
                                std::uint32_t,
                                baseaddress + offset,
@@ -1037,14 +1213,18 @@ namespace mdma {
                                groov::field<"DUV", std::uint16_t, 31, 16>,
                                groov::field<"SUV", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c6lar_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
                               access::rw,
                               groov::field<"LAR", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c6tbr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1056,21 +1236,27 @@ namespace mdma {
                groov::field<"RESERVED0", std::uint16_t, 15, 6, access::ro>,
                groov::field<"TSEL", std::uint8_t, 5, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c6mar_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
                               access::rw,
                               groov::field<"MAR", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c6mdr_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
                               access::rw,
                               groov::field<"MDR", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c7isr_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
@@ -1084,7 +1270,9 @@ namespace mdma {
                               groov::field<"CTCIF7", bool, 1, 1>,
                               groov::field<"TEIF7", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c7ifcr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1097,7 +1285,9 @@ namespace mdma {
                groov::field<"CCTCIF7", bool, 1, 1>,
                groov::field<"CTEIF7", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c7esr_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
@@ -1110,7 +1300,9 @@ namespace mdma {
                               groov::field<"TED", bool, 7, 7>,
                               groov::field<"TEA", std::uint8_t, 6, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c7cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1131,7 +1323,9 @@ namespace mdma {
                groov::field<"TEIE", bool, 1, 1>,
                groov::field<"EN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c7tcr_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
@@ -1151,7 +1345,9 @@ namespace mdma {
                               groov::field<"DINC", std::uint8_t, 3, 2>,
                               groov::field<"SINC", std::uint8_t, 1, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c7bndtr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1163,21 +1359,27 @@ namespace mdma {
                groov::field<"RESERVED0", bool, 17, 17, access::ro>,
                groov::field<"BNDT", std::uint32_t, 16, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c7sar_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
                               access::rw,
                               groov::field<"SAR", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c7dar_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
                               access::rw,
                               groov::field<"DAR", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c7brur_tt = groov::reg<name,
                                std::uint32_t,
                                baseaddress + offset,
@@ -1185,14 +1387,18 @@ namespace mdma {
                                groov::field<"DUV", std::uint16_t, 31, 16>,
                                groov::field<"SUV", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c7lar_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
                               access::rw,
                               groov::field<"LAR", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c7tbr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1204,21 +1410,27 @@ namespace mdma {
                groov::field<"RESERVED0", std::uint16_t, 15, 6, access::ro>,
                groov::field<"TSEL", std::uint8_t, 5, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c7mar_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
                               access::rw,
                               groov::field<"MAR", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c7mdr_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
                               access::rw,
                               groov::field<"MDR", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c8isr_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
@@ -1232,7 +1444,9 @@ namespace mdma {
                               groov::field<"CTCIF8", bool, 1, 1>,
                               groov::field<"TEIF8", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c8ifcr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1245,7 +1459,9 @@ namespace mdma {
                groov::field<"CCTCIF8", bool, 1, 1>,
                groov::field<"CTEIF8", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c8esr_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
@@ -1258,7 +1474,9 @@ namespace mdma {
                               groov::field<"TED", bool, 7, 7>,
                               groov::field<"TEA", std::uint8_t, 6, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c8cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1279,7 +1497,9 @@ namespace mdma {
                groov::field<"TEIE", bool, 1, 1>,
                groov::field<"EN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c8tcr_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
@@ -1299,7 +1519,9 @@ namespace mdma {
                               groov::field<"DINC", std::uint8_t, 3, 2>,
                               groov::field<"SINC", std::uint8_t, 1, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c8bndtr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1311,21 +1533,27 @@ namespace mdma {
                groov::field<"RESERVED0", bool, 17, 17, access::ro>,
                groov::field<"BNDT", std::uint32_t, 16, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c8sar_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
                               access::rw,
                               groov::field<"SAR", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c8dar_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
                               access::rw,
                               groov::field<"DAR", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c8brur_tt = groov::reg<name,
                                std::uint32_t,
                                baseaddress + offset,
@@ -1333,14 +1561,18 @@ namespace mdma {
                                groov::field<"DUV", std::uint16_t, 31, 16>,
                                groov::field<"SUV", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c8lar_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
                               access::rw,
                               groov::field<"LAR", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c8tbr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1352,21 +1584,27 @@ namespace mdma {
                groov::field<"RESERVED0", std::uint16_t, 15, 6, access::ro>,
                groov::field<"TSEL", std::uint8_t, 5, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c8mar_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
                               access::rw,
                               groov::field<"MAR", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c8mdr_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
                               access::rw,
                               groov::field<"MDR", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c9isr_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
@@ -1380,7 +1618,9 @@ namespace mdma {
                               groov::field<"CTCIF9", bool, 1, 1>,
                               groov::field<"TEIF9", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c9ifcr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1393,7 +1633,9 @@ namespace mdma {
                groov::field<"CCTCIF9", bool, 1, 1>,
                groov::field<"CTEIF9", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c9esr_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
@@ -1406,7 +1648,9 @@ namespace mdma {
                               groov::field<"TED", bool, 7, 7>,
                               groov::field<"TEA", std::uint8_t, 6, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c9cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1427,7 +1671,9 @@ namespace mdma {
                groov::field<"TEIE", bool, 1, 1>,
                groov::field<"EN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c9tcr_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
@@ -1447,7 +1693,9 @@ namespace mdma {
                               groov::field<"DINC", std::uint8_t, 3, 2>,
                               groov::field<"SINC", std::uint8_t, 1, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c9bndtr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1459,21 +1707,27 @@ namespace mdma {
                groov::field<"RESERVED0", bool, 17, 17, access::ro>,
                groov::field<"BNDT", std::uint32_t, 16, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c9sar_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
                               access::rw,
                               groov::field<"SAR", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c9dar_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
                               access::rw,
                               groov::field<"DAR", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c9brur_tt = groov::reg<name,
                                std::uint32_t,
                                baseaddress + offset,
@@ -1481,14 +1735,18 @@ namespace mdma {
                                groov::field<"DUV", std::uint16_t, 31, 16>,
                                groov::field<"SUV", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c9lar_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
                               access::rw,
                               groov::field<"LAR", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c9tbr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1500,21 +1758,27 @@ namespace mdma {
                groov::field<"RESERVED0", std::uint16_t, 15, 6, access::ro>,
                groov::field<"TSEL", std::uint8_t, 5, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c9mar_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
                               access::rw,
                               groov::field<"MAR", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c9mdr_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
                               access::rw,
                               groov::field<"MDR", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c10isr_tt = groov::reg<name,
                                std::uint32_t,
                                baseaddress + offset,
@@ -1528,7 +1792,9 @@ namespace mdma {
                                groov::field<"CTCIF10", bool, 1, 1>,
                                groov::field<"TEIF10", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c10ifcr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1541,7 +1807,9 @@ namespace mdma {
                groov::field<"CCTCIF10", bool, 1, 1>,
                groov::field<"CTEIF10", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c10esr_tt = groov::reg<name,
                                std::uint32_t,
                                baseaddress + offset,
@@ -1554,7 +1822,9 @@ namespace mdma {
                                groov::field<"TED", bool, 7, 7>,
                                groov::field<"TEA", std::uint8_t, 6, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c10cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1575,7 +1845,9 @@ namespace mdma {
                groov::field<"TEIE", bool, 1, 1>,
                groov::field<"EN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c10tcr_tt = groov::reg<name,
                                std::uint32_t,
                                baseaddress + offset,
@@ -1595,7 +1867,9 @@ namespace mdma {
                                groov::field<"DINC", std::uint8_t, 3, 2>,
                                groov::field<"SINC", std::uint8_t, 1, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c10bndtr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1607,21 +1881,27 @@ namespace mdma {
                groov::field<"RESERVED0", bool, 17, 17, access::ro>,
                groov::field<"BNDT", std::uint32_t, 16, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c10sar_tt = groov::reg<name,
                                std::uint32_t,
                                baseaddress + offset,
                                access::rw,
                                groov::field<"SAR", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c10dar_tt = groov::reg<name,
                                std::uint32_t,
                                baseaddress + offset,
                                access::rw,
                                groov::field<"DAR", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c10brur_tt = groov::reg<name,
                                 std::uint32_t,
                                 baseaddress + offset,
@@ -1629,14 +1909,18 @@ namespace mdma {
                                 groov::field<"DUV", std::uint16_t, 31, 16>,
                                 groov::field<"SUV", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c10lar_tt = groov::reg<name,
                                std::uint32_t,
                                baseaddress + offset,
                                access::rw,
                                groov::field<"LAR", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c10tbr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1648,21 +1932,27 @@ namespace mdma {
                groov::field<"RESERVED0", std::uint16_t, 15, 6, access::ro>,
                groov::field<"TSEL", std::uint8_t, 5, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c10mar_tt = groov::reg<name,
                                std::uint32_t,
                                baseaddress + offset,
                                access::rw,
                                groov::field<"MAR", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c10mdr_tt = groov::reg<name,
                                std::uint32_t,
                                baseaddress + offset,
                                access::rw,
                                groov::field<"MDR", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c11isr_tt = groov::reg<name,
                                std::uint32_t,
                                baseaddress + offset,
@@ -1676,7 +1966,9 @@ namespace mdma {
                                groov::field<"CTCIF11", bool, 1, 1>,
                                groov::field<"TEIF11", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c11ifcr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1689,7 +1981,9 @@ namespace mdma {
                groov::field<"CCTCIF11", bool, 1, 1>,
                groov::field<"CTEIF11", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c11esr_tt = groov::reg<name,
                                std::uint32_t,
                                baseaddress + offset,
@@ -1702,7 +1996,9 @@ namespace mdma {
                                groov::field<"TED", bool, 7, 7>,
                                groov::field<"TEA", std::uint8_t, 6, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c11cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1723,7 +2019,9 @@ namespace mdma {
                groov::field<"TEIE", bool, 1, 1>,
                groov::field<"EN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c11tcr_tt = groov::reg<name,
                                std::uint32_t,
                                baseaddress + offset,
@@ -1743,7 +2041,9 @@ namespace mdma {
                                groov::field<"DINC", std::uint8_t, 3, 2>,
                                groov::field<"SINC", std::uint8_t, 1, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c11bndtr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1755,21 +2055,27 @@ namespace mdma {
                groov::field<"RESERVED0", bool, 17, 17, access::ro>,
                groov::field<"BNDT", std::uint32_t, 16, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c11sar_tt = groov::reg<name,
                                std::uint32_t,
                                baseaddress + offset,
                                access::rw,
                                groov::field<"SAR", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c11dar_tt = groov::reg<name,
                                std::uint32_t,
                                baseaddress + offset,
                                access::rw,
                                groov::field<"DAR", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c11brur_tt = groov::reg<name,
                                 std::uint32_t,
                                 baseaddress + offset,
@@ -1777,14 +2083,18 @@ namespace mdma {
                                 groov::field<"DUV", std::uint16_t, 31, 16>,
                                 groov::field<"SUV", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c11lar_tt = groov::reg<name,
                                std::uint32_t,
                                baseaddress + offset,
                                access::rw,
                                groov::field<"LAR", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c11tbr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1796,21 +2106,27 @@ namespace mdma {
                groov::field<"RESERVED0", std::uint16_t, 15, 6, access::ro>,
                groov::field<"TSEL", std::uint8_t, 5, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c11mar_tt = groov::reg<name,
                                std::uint32_t,
                                baseaddress + offset,
                                access::rw,
                                groov::field<"MAR", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c11mdr_tt = groov::reg<name,
                                std::uint32_t,
                                baseaddress + offset,
                                access::rw,
                                groov::field<"MDR", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c12isr_tt = groov::reg<name,
                                std::uint32_t,
                                baseaddress + offset,
@@ -1824,7 +2140,9 @@ namespace mdma {
                                groov::field<"CTCIF12", bool, 1, 1>,
                                groov::field<"TEIF12", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c12ifcr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1837,7 +2155,9 @@ namespace mdma {
                groov::field<"CCTCIF12", bool, 1, 1>,
                groov::field<"CTEIF12", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c12esr_tt = groov::reg<name,
                                std::uint32_t,
                                baseaddress + offset,
@@ -1850,7 +2170,9 @@ namespace mdma {
                                groov::field<"TED", bool, 7, 7>,
                                groov::field<"TEA", std::uint8_t, 6, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c12cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1871,7 +2193,9 @@ namespace mdma {
                groov::field<"TEIE", bool, 1, 1>,
                groov::field<"EN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c12tcr_tt = groov::reg<name,
                                std::uint32_t,
                                baseaddress + offset,
@@ -1891,7 +2215,9 @@ namespace mdma {
                                groov::field<"DINC", std::uint8_t, 3, 2>,
                                groov::field<"SINC", std::uint8_t, 1, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c12bndtr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1903,21 +2229,27 @@ namespace mdma {
                groov::field<"RESERVED0", bool, 17, 17, access::ro>,
                groov::field<"BNDT", std::uint32_t, 16, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c12sar_tt = groov::reg<name,
                                std::uint32_t,
                                baseaddress + offset,
                                access::rw,
                                groov::field<"SAR", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c12dar_tt = groov::reg<name,
                                std::uint32_t,
                                baseaddress + offset,
                                access::rw,
                                groov::field<"DAR", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c12brur_tt = groov::reg<name,
                                 std::uint32_t,
                                 baseaddress + offset,
@@ -1925,14 +2257,18 @@ namespace mdma {
                                 groov::field<"DUV", std::uint16_t, 31, 16>,
                                 groov::field<"SUV", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c12lar_tt = groov::reg<name,
                                std::uint32_t,
                                baseaddress + offset,
                                access::rw,
                                groov::field<"LAR", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c12tbr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1944,21 +2280,27 @@ namespace mdma {
                groov::field<"RESERVED0", std::uint16_t, 15, 6, access::ro>,
                groov::field<"TSEL", std::uint8_t, 5, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c12mar_tt = groov::reg<name,
                                std::uint32_t,
                                baseaddress + offset,
                                access::rw,
                                groov::field<"MAR", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c12mdr_tt = groov::reg<name,
                                std::uint32_t,
                                baseaddress + offset,
                                access::rw,
                                groov::field<"MDR", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c13isr_tt = groov::reg<name,
                                std::uint32_t,
                                baseaddress + offset,
@@ -1972,7 +2314,9 @@ namespace mdma {
                                groov::field<"CTCIF13", bool, 1, 1>,
                                groov::field<"TEIF13", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c13ifcr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1985,7 +2329,9 @@ namespace mdma {
                groov::field<"CCTCIF13", bool, 1, 1>,
                groov::field<"CTEIF13", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c13esr_tt = groov::reg<name,
                                std::uint32_t,
                                baseaddress + offset,
@@ -1998,7 +2344,9 @@ namespace mdma {
                                groov::field<"TED", bool, 7, 7>,
                                groov::field<"TEA", std::uint8_t, 6, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c13cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -2019,7 +2367,9 @@ namespace mdma {
                groov::field<"TEIE", bool, 1, 1>,
                groov::field<"EN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c13tcr_tt = groov::reg<name,
                                std::uint32_t,
                                baseaddress + offset,
@@ -2039,7 +2389,9 @@ namespace mdma {
                                groov::field<"DINC", std::uint8_t, 3, 2>,
                                groov::field<"SINC", std::uint8_t, 1, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c13bndtr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -2051,21 +2403,27 @@ namespace mdma {
                groov::field<"RESERVED0", bool, 17, 17, access::ro>,
                groov::field<"BNDT", std::uint32_t, 16, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c13sar_tt = groov::reg<name,
                                std::uint32_t,
                                baseaddress + offset,
                                access::rw,
                                groov::field<"SAR", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c13dar_tt = groov::reg<name,
                                std::uint32_t,
                                baseaddress + offset,
                                access::rw,
                                groov::field<"DAR", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c13brur_tt = groov::reg<name,
                                 std::uint32_t,
                                 baseaddress + offset,
@@ -2073,14 +2431,18 @@ namespace mdma {
                                 groov::field<"DUV", std::uint16_t, 31, 16>,
                                 groov::field<"SUV", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c13lar_tt = groov::reg<name,
                                std::uint32_t,
                                baseaddress + offset,
                                access::rw,
                                groov::field<"LAR", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c13tbr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -2092,21 +2454,27 @@ namespace mdma {
                groov::field<"RESERVED0", std::uint16_t, 15, 6, access::ro>,
                groov::field<"TSEL", std::uint8_t, 5, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c13mar_tt = groov::reg<name,
                                std::uint32_t,
                                baseaddress + offset,
                                access::rw,
                                groov::field<"MAR", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c13mdr_tt = groov::reg<name,
                                std::uint32_t,
                                baseaddress + offset,
                                access::rw,
                                groov::field<"MDR", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c14isr_tt = groov::reg<name,
                                std::uint32_t,
                                baseaddress + offset,
@@ -2120,7 +2488,9 @@ namespace mdma {
                                groov::field<"CTCIF14", bool, 1, 1>,
                                groov::field<"TEIF14", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c14ifcr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -2133,7 +2503,9 @@ namespace mdma {
                groov::field<"CCTCIF14", bool, 1, 1>,
                groov::field<"CTEIF14", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c14esr_tt = groov::reg<name,
                                std::uint32_t,
                                baseaddress + offset,
@@ -2146,7 +2518,9 @@ namespace mdma {
                                groov::field<"TED", bool, 7, 7>,
                                groov::field<"TEA", std::uint8_t, 6, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c14cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -2167,7 +2541,9 @@ namespace mdma {
                groov::field<"TEIE", bool, 1, 1>,
                groov::field<"EN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c14tcr_tt = groov::reg<name,
                                std::uint32_t,
                                baseaddress + offset,
@@ -2187,7 +2563,9 @@ namespace mdma {
                                groov::field<"DINC", std::uint8_t, 3, 2>,
                                groov::field<"SINC", std::uint8_t, 1, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c14bndtr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -2199,21 +2577,27 @@ namespace mdma {
                groov::field<"RESERVED0", bool, 17, 17, access::ro>,
                groov::field<"BNDT", std::uint32_t, 16, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c14sar_tt = groov::reg<name,
                                std::uint32_t,
                                baseaddress + offset,
                                access::rw,
                                groov::field<"SAR", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c14dar_tt = groov::reg<name,
                                std::uint32_t,
                                baseaddress + offset,
                                access::rw,
                                groov::field<"DAR", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c14brur_tt = groov::reg<name,
                                 std::uint32_t,
                                 baseaddress + offset,
@@ -2221,14 +2605,18 @@ namespace mdma {
                                 groov::field<"DUV", std::uint16_t, 31, 16>,
                                 groov::field<"SUV", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c14lar_tt = groov::reg<name,
                                std::uint32_t,
                                baseaddress + offset,
                                access::rw,
                                groov::field<"LAR", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c14tbr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -2240,21 +2628,27 @@ namespace mdma {
                groov::field<"RESERVED0", std::uint16_t, 15, 6, access::ro>,
                groov::field<"TSEL", std::uint8_t, 5, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c14mar_tt = groov::reg<name,
                                std::uint32_t,
                                baseaddress + offset,
                                access::rw,
                                groov::field<"MAR", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c14mdr_tt = groov::reg<name,
                                std::uint32_t,
                                baseaddress + offset,
                                access::rw,
                                groov::field<"MDR", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c15isr_tt = groov::reg<name,
                                std::uint32_t,
                                baseaddress + offset,
@@ -2268,7 +2662,9 @@ namespace mdma {
                                groov::field<"CTCIF15", bool, 1, 1>,
                                groov::field<"TEIF15", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c15ifcr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -2281,7 +2677,9 @@ namespace mdma {
                groov::field<"CCTCIF15", bool, 1, 1>,
                groov::field<"CTEIF15", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c15esr_tt = groov::reg<name,
                                std::uint32_t,
                                baseaddress + offset,
@@ -2294,7 +2692,9 @@ namespace mdma {
                                groov::field<"TED", bool, 7, 7>,
                                groov::field<"TEA", std::uint8_t, 6, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c15cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -2315,7 +2715,9 @@ namespace mdma {
                groov::field<"TEIE", bool, 1, 1>,
                groov::field<"EN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c15tcr_tt = groov::reg<name,
                                std::uint32_t,
                                baseaddress + offset,
@@ -2335,7 +2737,9 @@ namespace mdma {
                                groov::field<"DINC", std::uint8_t, 3, 2>,
                                groov::field<"SINC", std::uint8_t, 1, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c15bndtr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -2347,21 +2751,27 @@ namespace mdma {
                groov::field<"RESERVED0", bool, 17, 17, access::ro>,
                groov::field<"BNDT", std::uint32_t, 16, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c15sar_tt = groov::reg<name,
                                std::uint32_t,
                                baseaddress + offset,
                                access::rw,
                                groov::field<"SAR", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c15dar_tt = groov::reg<name,
                                std::uint32_t,
                                baseaddress + offset,
                                access::rw,
                                groov::field<"DAR", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c15brur_tt = groov::reg<name,
                                 std::uint32_t,
                                 baseaddress + offset,
@@ -2369,14 +2779,18 @@ namespace mdma {
                                 groov::field<"DUV", std::uint16_t, 31, 16>,
                                 groov::field<"SUV", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c15lar_tt = groov::reg<name,
                                std::uint32_t,
                                baseaddress + offset,
                                access::rw,
                                groov::field<"LAR", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c15tbr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -2388,645 +2802,22 @@ namespace mdma {
                groov::field<"RESERVED0", std::uint16_t, 15, 6, access::ro>,
                groov::field<"TSEL", std::uint8_t, 5, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c15mar_tt = groov::reg<name,
                                std::uint32_t,
                                baseaddress + offset,
                                access::rw,
                                groov::field<"MAR", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c15mdr_tt = groov::reg<name,
                                std::uint32_t,
                                baseaddress + offset,
                                access::rw,
                                groov::field<"MDR", std::uint32_t, 31, 0>>;
-
-  template <std::uint32_t baseaddress>
-  using gisr0_t = gisr0_tt<"GISR0", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using c0isr_t = c0isr_tt<"C0ISR", baseaddress, 64>;
-
-  template <std::uint32_t baseaddress>
-  using c0ifcr_t = c0ifcr_tt<"C0IFCR", baseaddress, 68>;
-
-  template <std::uint32_t baseaddress>
-  using c0esr_t = c0esr_tt<"C0ESR", baseaddress, 72>;
-
-  template <std::uint32_t baseaddress>
-  using c0cr_t = c0cr_tt<"C0CR", baseaddress, 76>;
-
-  template <std::uint32_t baseaddress>
-  using c0tcr_t = c0tcr_tt<"C0TCR", baseaddress, 80>;
-
-  template <std::uint32_t baseaddress>
-  using c0bndtr_t = c0bndtr_tt<"C0BNDTR", baseaddress, 84>;
-
-  template <std::uint32_t baseaddress>
-  using c0sar_t = c0sar_tt<"C0SAR", baseaddress, 88>;
-
-  template <std::uint32_t baseaddress>
-  using c0dar_t = c0dar_tt<"C0DAR", baseaddress, 92>;
-
-  template <std::uint32_t baseaddress>
-  using c0brur_t = c0brur_tt<"C0BRUR", baseaddress, 96>;
-
-  template <std::uint32_t baseaddress>
-  using c0lar_t = c0lar_tt<"C0LAR", baseaddress, 100>;
-
-  template <std::uint32_t baseaddress>
-  using c0tbr_t = c0tbr_tt<"C0TBR", baseaddress, 104>;
-
-  template <std::uint32_t baseaddress>
-  using c0mar_t = c0mar_tt<"C0MAR", baseaddress, 112>;
-
-  template <std::uint32_t baseaddress>
-  using c0mdr_t = c0mdr_tt<"C0MDR", baseaddress, 116>;
-
-  template <std::uint32_t baseaddress>
-  using c1isr_t = c1isr_tt<"C1ISR", baseaddress, 128>;
-
-  template <std::uint32_t baseaddress>
-  using c1ifcr_t = c1ifcr_tt<"C1IFCR", baseaddress, 132>;
-
-  template <std::uint32_t baseaddress>
-  using c1esr_t = c1esr_tt<"C1ESR", baseaddress, 136>;
-
-  template <std::uint32_t baseaddress>
-  using c1cr_t = c1cr_tt<"C1CR", baseaddress, 140>;
-
-  template <std::uint32_t baseaddress>
-  using c1tcr_t = c1tcr_tt<"C1TCR", baseaddress, 144>;
-
-  template <std::uint32_t baseaddress>
-  using c1bndtr_t = c1bndtr_tt<"C1BNDTR", baseaddress, 148>;
-
-  template <std::uint32_t baseaddress>
-  using c1sar_t = c1sar_tt<"C1SAR", baseaddress, 152>;
-
-  template <std::uint32_t baseaddress>
-  using c1dar_t = c1dar_tt<"C1DAR", baseaddress, 156>;
-
-  template <std::uint32_t baseaddress>
-  using c1brur_t = c1brur_tt<"C1BRUR", baseaddress, 160>;
-
-  template <std::uint32_t baseaddress>
-  using c1lar_t = c1lar_tt<"C1LAR", baseaddress, 164>;
-
-  template <std::uint32_t baseaddress>
-  using c1tbr_t = c1tbr_tt<"C1TBR", baseaddress, 168>;
-
-  template <std::uint32_t baseaddress>
-  using c1mar_t = c1mar_tt<"C1MAR", baseaddress, 176>;
-
-  template <std::uint32_t baseaddress>
-  using c1mdr_t = c1mdr_tt<"C1MDR", baseaddress, 180>;
-
-  template <std::uint32_t baseaddress>
-  using c2isr_t = c2isr_tt<"C2ISR", baseaddress, 192>;
-
-  template <std::uint32_t baseaddress>
-  using c2ifcr_t = c2ifcr_tt<"C2IFCR", baseaddress, 196>;
-
-  template <std::uint32_t baseaddress>
-  using c2esr_t = c2esr_tt<"C2ESR", baseaddress, 200>;
-
-  template <std::uint32_t baseaddress>
-  using c2cr_t = c2cr_tt<"C2CR", baseaddress, 204>;
-
-  template <std::uint32_t baseaddress>
-  using c2tcr_t = c2tcr_tt<"C2TCR", baseaddress, 208>;
-
-  template <std::uint32_t baseaddress>
-  using c2bndtr_t = c2bndtr_tt<"C2BNDTR", baseaddress, 212>;
-
-  template <std::uint32_t baseaddress>
-  using c2sar_t = c2sar_tt<"C2SAR", baseaddress, 216>;
-
-  template <std::uint32_t baseaddress>
-  using c2dar_t = c2dar_tt<"C2DAR", baseaddress, 220>;
-
-  template <std::uint32_t baseaddress>
-  using c2brur_t = c2brur_tt<"C2BRUR", baseaddress, 224>;
-
-  template <std::uint32_t baseaddress>
-  using c2lar_t = c2lar_tt<"C2LAR", baseaddress, 228>;
-
-  template <std::uint32_t baseaddress>
-  using c2tbr_t = c2tbr_tt<"C2TBR", baseaddress, 232>;
-
-  template <std::uint32_t baseaddress>
-  using c2mar_t = c2mar_tt<"C2MAR", baseaddress, 240>;
-
-  template <std::uint32_t baseaddress>
-  using c2mdr_t = c2mdr_tt<"C2MDR", baseaddress, 244>;
-
-  template <std::uint32_t baseaddress>
-  using c3isr_t = c3isr_tt<"C3ISR", baseaddress, 256>;
-
-  template <std::uint32_t baseaddress>
-  using c3ifcr_t = c3ifcr_tt<"C3IFCR", baseaddress, 260>;
-
-  template <std::uint32_t baseaddress>
-  using c3esr_t = c3esr_tt<"C3ESR", baseaddress, 264>;
-
-  template <std::uint32_t baseaddress>
-  using c3cr_t = c3cr_tt<"C3CR", baseaddress, 268>;
-
-  template <std::uint32_t baseaddress>
-  using c3tcr_t = c3tcr_tt<"C3TCR", baseaddress, 272>;
-
-  template <std::uint32_t baseaddress>
-  using c3bndtr_t = c3bndtr_tt<"C3BNDTR", baseaddress, 276>;
-
-  template <std::uint32_t baseaddress>
-  using c3sar_t = c3sar_tt<"C3SAR", baseaddress, 280>;
-
-  template <std::uint32_t baseaddress>
-  using c3dar_t = c3dar_tt<"C3DAR", baseaddress, 284>;
-
-  template <std::uint32_t baseaddress>
-  using c3brur_t = c3brur_tt<"C3BRUR", baseaddress, 288>;
-
-  template <std::uint32_t baseaddress>
-  using c3lar_t = c3lar_tt<"C3LAR", baseaddress, 292>;
-
-  template <std::uint32_t baseaddress>
-  using c3tbr_t = c3tbr_tt<"C3TBR", baseaddress, 296>;
-
-  template <std::uint32_t baseaddress>
-  using c3mar_t = c3mar_tt<"C3MAR", baseaddress, 304>;
-
-  template <std::uint32_t baseaddress>
-  using c3mdr_t = c3mdr_tt<"C3MDR", baseaddress, 308>;
-
-  template <std::uint32_t baseaddress>
-  using c4isr_t = c4isr_tt<"C4ISR", baseaddress, 320>;
-
-  template <std::uint32_t baseaddress>
-  using c4ifcr_t = c4ifcr_tt<"C4IFCR", baseaddress, 324>;
-
-  template <std::uint32_t baseaddress>
-  using c4esr_t = c4esr_tt<"C4ESR", baseaddress, 328>;
-
-  template <std::uint32_t baseaddress>
-  using c4cr_t = c4cr_tt<"C4CR", baseaddress, 332>;
-
-  template <std::uint32_t baseaddress>
-  using c4tcr_t = c4tcr_tt<"C4TCR", baseaddress, 336>;
-
-  template <std::uint32_t baseaddress>
-  using c4bndtr_t = c4bndtr_tt<"C4BNDTR", baseaddress, 340>;
-
-  template <std::uint32_t baseaddress>
-  using c4sar_t = c4sar_tt<"C4SAR", baseaddress, 344>;
-
-  template <std::uint32_t baseaddress>
-  using c4dar_t = c4dar_tt<"C4DAR", baseaddress, 348>;
-
-  template <std::uint32_t baseaddress>
-  using c4brur_t = c4brur_tt<"C4BRUR", baseaddress, 352>;
-
-  template <std::uint32_t baseaddress>
-  using c4lar_t = c4lar_tt<"C4LAR", baseaddress, 356>;
-
-  template <std::uint32_t baseaddress>
-  using c4tbr_t = c4tbr_tt<"C4TBR", baseaddress, 360>;
-
-  template <std::uint32_t baseaddress>
-  using c4mar_t = c4mar_tt<"C4MAR", baseaddress, 368>;
-
-  template <std::uint32_t baseaddress>
-  using c4mdr_t = c4mdr_tt<"C4MDR", baseaddress, 372>;
-
-  template <std::uint32_t baseaddress>
-  using c5isr_t = c5isr_tt<"C5ISR", baseaddress, 384>;
-
-  template <std::uint32_t baseaddress>
-  using c5ifcr_t = c5ifcr_tt<"C5IFCR", baseaddress, 388>;
-
-  template <std::uint32_t baseaddress>
-  using c5esr_t = c5esr_tt<"C5ESR", baseaddress, 392>;
-
-  template <std::uint32_t baseaddress>
-  using c5cr_t = c5cr_tt<"C5CR", baseaddress, 396>;
-
-  template <std::uint32_t baseaddress>
-  using c5tcr_t = c5tcr_tt<"C5TCR", baseaddress, 400>;
-
-  template <std::uint32_t baseaddress>
-  using c5bndtr_t = c5bndtr_tt<"C5BNDTR", baseaddress, 404>;
-
-  template <std::uint32_t baseaddress>
-  using c5sar_t = c5sar_tt<"C5SAR", baseaddress, 408>;
-
-  template <std::uint32_t baseaddress>
-  using c5dar_t = c5dar_tt<"C5DAR", baseaddress, 412>;
-
-  template <std::uint32_t baseaddress>
-  using c5brur_t = c5brur_tt<"C5BRUR", baseaddress, 416>;
-
-  template <std::uint32_t baseaddress>
-  using c5lar_t = c5lar_tt<"C5LAR", baseaddress, 420>;
-
-  template <std::uint32_t baseaddress>
-  using c5tbr_t = c5tbr_tt<"C5TBR", baseaddress, 424>;
-
-  template <std::uint32_t baseaddress>
-  using c5mar_t = c5mar_tt<"C5MAR", baseaddress, 432>;
-
-  template <std::uint32_t baseaddress>
-  using c5mdr_t = c5mdr_tt<"C5MDR", baseaddress, 436>;
-
-  template <std::uint32_t baseaddress>
-  using c6isr_t = c6isr_tt<"C6ISR", baseaddress, 448>;
-
-  template <std::uint32_t baseaddress>
-  using c6ifcr_t = c6ifcr_tt<"C6IFCR", baseaddress, 452>;
-
-  template <std::uint32_t baseaddress>
-  using c6esr_t = c6esr_tt<"C6ESR", baseaddress, 456>;
-
-  template <std::uint32_t baseaddress>
-  using c6cr_t = c6cr_tt<"C6CR", baseaddress, 460>;
-
-  template <std::uint32_t baseaddress>
-  using c6tcr_t = c6tcr_tt<"C6TCR", baseaddress, 464>;
-
-  template <std::uint32_t baseaddress>
-  using c6bndtr_t = c6bndtr_tt<"C6BNDTR", baseaddress, 468>;
-
-  template <std::uint32_t baseaddress>
-  using c6sar_t = c6sar_tt<"C6SAR", baseaddress, 472>;
-
-  template <std::uint32_t baseaddress>
-  using c6dar_t = c6dar_tt<"C6DAR", baseaddress, 476>;
-
-  template <std::uint32_t baseaddress>
-  using c6brur_t = c6brur_tt<"C6BRUR", baseaddress, 480>;
-
-  template <std::uint32_t baseaddress>
-  using c6lar_t = c6lar_tt<"C6LAR", baseaddress, 484>;
-
-  template <std::uint32_t baseaddress>
-  using c6tbr_t = c6tbr_tt<"C6TBR", baseaddress, 488>;
-
-  template <std::uint32_t baseaddress>
-  using c6mar_t = c6mar_tt<"C6MAR", baseaddress, 496>;
-
-  template <std::uint32_t baseaddress>
-  using c6mdr_t = c6mdr_tt<"C6MDR", baseaddress, 500>;
-
-  template <std::uint32_t baseaddress>
-  using c7isr_t = c7isr_tt<"C7ISR", baseaddress, 512>;
-
-  template <std::uint32_t baseaddress>
-  using c7ifcr_t = c7ifcr_tt<"C7IFCR", baseaddress, 516>;
-
-  template <std::uint32_t baseaddress>
-  using c7esr_t = c7esr_tt<"C7ESR", baseaddress, 520>;
-
-  template <std::uint32_t baseaddress>
-  using c7cr_t = c7cr_tt<"C7CR", baseaddress, 524>;
-
-  template <std::uint32_t baseaddress>
-  using c7tcr_t = c7tcr_tt<"C7TCR", baseaddress, 528>;
-
-  template <std::uint32_t baseaddress>
-  using c7bndtr_t = c7bndtr_tt<"C7BNDTR", baseaddress, 532>;
-
-  template <std::uint32_t baseaddress>
-  using c7sar_t = c7sar_tt<"C7SAR", baseaddress, 536>;
-
-  template <std::uint32_t baseaddress>
-  using c7dar_t = c7dar_tt<"C7DAR", baseaddress, 540>;
-
-  template <std::uint32_t baseaddress>
-  using c7brur_t = c7brur_tt<"C7BRUR", baseaddress, 544>;
-
-  template <std::uint32_t baseaddress>
-  using c7lar_t = c7lar_tt<"C7LAR", baseaddress, 548>;
-
-  template <std::uint32_t baseaddress>
-  using c7tbr_t = c7tbr_tt<"C7TBR", baseaddress, 552>;
-
-  template <std::uint32_t baseaddress>
-  using c7mar_t = c7mar_tt<"C7MAR", baseaddress, 560>;
-
-  template <std::uint32_t baseaddress>
-  using c7mdr_t = c7mdr_tt<"C7MDR", baseaddress, 564>;
-
-  template <std::uint32_t baseaddress>
-  using c8isr_t = c8isr_tt<"C8ISR", baseaddress, 576>;
-
-  template <std::uint32_t baseaddress>
-  using c8ifcr_t = c8ifcr_tt<"C8IFCR", baseaddress, 580>;
-
-  template <std::uint32_t baseaddress>
-  using c8esr_t = c8esr_tt<"C8ESR", baseaddress, 584>;
-
-  template <std::uint32_t baseaddress>
-  using c8cr_t = c8cr_tt<"C8CR", baseaddress, 588>;
-
-  template <std::uint32_t baseaddress>
-  using c8tcr_t = c8tcr_tt<"C8TCR", baseaddress, 592>;
-
-  template <std::uint32_t baseaddress>
-  using c8bndtr_t = c8bndtr_tt<"C8BNDTR", baseaddress, 596>;
-
-  template <std::uint32_t baseaddress>
-  using c8sar_t = c8sar_tt<"C8SAR", baseaddress, 600>;
-
-  template <std::uint32_t baseaddress>
-  using c8dar_t = c8dar_tt<"C8DAR", baseaddress, 604>;
-
-  template <std::uint32_t baseaddress>
-  using c8brur_t = c8brur_tt<"C8BRUR", baseaddress, 608>;
-
-  template <std::uint32_t baseaddress>
-  using c8lar_t = c8lar_tt<"C8LAR", baseaddress, 612>;
-
-  template <std::uint32_t baseaddress>
-  using c8tbr_t = c8tbr_tt<"C8TBR", baseaddress, 616>;
-
-  template <std::uint32_t baseaddress>
-  using c8mar_t = c8mar_tt<"C8MAR", baseaddress, 624>;
-
-  template <std::uint32_t baseaddress>
-  using c8mdr_t = c8mdr_tt<"C8MDR", baseaddress, 628>;
-
-  template <std::uint32_t baseaddress>
-  using c9isr_t = c9isr_tt<"C9ISR", baseaddress, 640>;
-
-  template <std::uint32_t baseaddress>
-  using c9ifcr_t = c9ifcr_tt<"C9IFCR", baseaddress, 644>;
-
-  template <std::uint32_t baseaddress>
-  using c9esr_t = c9esr_tt<"C9ESR", baseaddress, 648>;
-
-  template <std::uint32_t baseaddress>
-  using c9cr_t = c9cr_tt<"C9CR", baseaddress, 652>;
-
-  template <std::uint32_t baseaddress>
-  using c9tcr_t = c9tcr_tt<"C9TCR", baseaddress, 656>;
-
-  template <std::uint32_t baseaddress>
-  using c9bndtr_t = c9bndtr_tt<"C9BNDTR", baseaddress, 660>;
-
-  template <std::uint32_t baseaddress>
-  using c9sar_t = c9sar_tt<"C9SAR", baseaddress, 664>;
-
-  template <std::uint32_t baseaddress>
-  using c9dar_t = c9dar_tt<"C9DAR", baseaddress, 668>;
-
-  template <std::uint32_t baseaddress>
-  using c9brur_t = c9brur_tt<"C9BRUR", baseaddress, 672>;
-
-  template <std::uint32_t baseaddress>
-  using c9lar_t = c9lar_tt<"C9LAR", baseaddress, 676>;
-
-  template <std::uint32_t baseaddress>
-  using c9tbr_t = c9tbr_tt<"C9TBR", baseaddress, 680>;
-
-  template <std::uint32_t baseaddress>
-  using c9mar_t = c9mar_tt<"C9MAR", baseaddress, 688>;
-
-  template <std::uint32_t baseaddress>
-  using c9mdr_t = c9mdr_tt<"C9MDR", baseaddress, 692>;
-
-  template <std::uint32_t baseaddress>
-  using c10isr_t = c10isr_tt<"C10ISR", baseaddress, 704>;
-
-  template <std::uint32_t baseaddress>
-  using c10ifcr_t = c10ifcr_tt<"C10IFCR", baseaddress, 708>;
-
-  template <std::uint32_t baseaddress>
-  using c10esr_t = c10esr_tt<"C10ESR", baseaddress, 712>;
-
-  template <std::uint32_t baseaddress>
-  using c10cr_t = c10cr_tt<"C10CR", baseaddress, 716>;
-
-  template <std::uint32_t baseaddress>
-  using c10tcr_t = c10tcr_tt<"C10TCR", baseaddress, 720>;
-
-  template <std::uint32_t baseaddress>
-  using c10bndtr_t = c10bndtr_tt<"C10BNDTR", baseaddress, 724>;
-
-  template <std::uint32_t baseaddress>
-  using c10sar_t = c10sar_tt<"C10SAR", baseaddress, 728>;
-
-  template <std::uint32_t baseaddress>
-  using c10dar_t = c10dar_tt<"C10DAR", baseaddress, 732>;
-
-  template <std::uint32_t baseaddress>
-  using c10brur_t = c10brur_tt<"C10BRUR", baseaddress, 736>;
-
-  template <std::uint32_t baseaddress>
-  using c10lar_t = c10lar_tt<"C10LAR", baseaddress, 740>;
-
-  template <std::uint32_t baseaddress>
-  using c10tbr_t = c10tbr_tt<"C10TBR", baseaddress, 744>;
-
-  template <std::uint32_t baseaddress>
-  using c10mar_t = c10mar_tt<"C10MAR", baseaddress, 752>;
-
-  template <std::uint32_t baseaddress>
-  using c10mdr_t = c10mdr_tt<"C10MDR", baseaddress, 756>;
-
-  template <std::uint32_t baseaddress>
-  using c11isr_t = c11isr_tt<"C11ISR", baseaddress, 768>;
-
-  template <std::uint32_t baseaddress>
-  using c11ifcr_t = c11ifcr_tt<"C11IFCR", baseaddress, 772>;
-
-  template <std::uint32_t baseaddress>
-  using c11esr_t = c11esr_tt<"C11ESR", baseaddress, 776>;
-
-  template <std::uint32_t baseaddress>
-  using c11cr_t = c11cr_tt<"C11CR", baseaddress, 780>;
-
-  template <std::uint32_t baseaddress>
-  using c11tcr_t = c11tcr_tt<"C11TCR", baseaddress, 784>;
-
-  template <std::uint32_t baseaddress>
-  using c11bndtr_t = c11bndtr_tt<"C11BNDTR", baseaddress, 788>;
-
-  template <std::uint32_t baseaddress>
-  using c11sar_t = c11sar_tt<"C11SAR", baseaddress, 792>;
-
-  template <std::uint32_t baseaddress>
-  using c11dar_t = c11dar_tt<"C11DAR", baseaddress, 796>;
-
-  template <std::uint32_t baseaddress>
-  using c11brur_t = c11brur_tt<"C11BRUR", baseaddress, 800>;
-
-  template <std::uint32_t baseaddress>
-  using c11lar_t = c11lar_tt<"C11LAR", baseaddress, 804>;
-
-  template <std::uint32_t baseaddress>
-  using c11tbr_t = c11tbr_tt<"C11TBR", baseaddress, 808>;
-
-  template <std::uint32_t baseaddress>
-  using c11mar_t = c11mar_tt<"C11MAR", baseaddress, 816>;
-
-  template <std::uint32_t baseaddress>
-  using c11mdr_t = c11mdr_tt<"C11MDR", baseaddress, 820>;
-
-  template <std::uint32_t baseaddress>
-  using c12isr_t = c12isr_tt<"C12ISR", baseaddress, 832>;
-
-  template <std::uint32_t baseaddress>
-  using c12ifcr_t = c12ifcr_tt<"C12IFCR", baseaddress, 836>;
-
-  template <std::uint32_t baseaddress>
-  using c12esr_t = c12esr_tt<"C12ESR", baseaddress, 840>;
-
-  template <std::uint32_t baseaddress>
-  using c12cr_t = c12cr_tt<"C12CR", baseaddress, 844>;
-
-  template <std::uint32_t baseaddress>
-  using c12tcr_t = c12tcr_tt<"C12TCR", baseaddress, 848>;
-
-  template <std::uint32_t baseaddress>
-  using c12bndtr_t = c12bndtr_tt<"C12BNDTR", baseaddress, 852>;
-
-  template <std::uint32_t baseaddress>
-  using c12sar_t = c12sar_tt<"C12SAR", baseaddress, 856>;
-
-  template <std::uint32_t baseaddress>
-  using c12dar_t = c12dar_tt<"C12DAR", baseaddress, 860>;
-
-  template <std::uint32_t baseaddress>
-  using c12brur_t = c12brur_tt<"C12BRUR", baseaddress, 864>;
-
-  template <std::uint32_t baseaddress>
-  using c12lar_t = c12lar_tt<"C12LAR", baseaddress, 868>;
-
-  template <std::uint32_t baseaddress>
-  using c12tbr_t = c12tbr_tt<"C12TBR", baseaddress, 872>;
-
-  template <std::uint32_t baseaddress>
-  using c12mar_t = c12mar_tt<"C12MAR", baseaddress, 880>;
-
-  template <std::uint32_t baseaddress>
-  using c12mdr_t = c12mdr_tt<"C12MDR", baseaddress, 884>;
-
-  template <std::uint32_t baseaddress>
-  using c13isr_t = c13isr_tt<"C13ISR", baseaddress, 896>;
-
-  template <std::uint32_t baseaddress>
-  using c13ifcr_t = c13ifcr_tt<"C13IFCR", baseaddress, 900>;
-
-  template <std::uint32_t baseaddress>
-  using c13esr_t = c13esr_tt<"C13ESR", baseaddress, 904>;
-
-  template <std::uint32_t baseaddress>
-  using c13cr_t = c13cr_tt<"C13CR", baseaddress, 908>;
-
-  template <std::uint32_t baseaddress>
-  using c13tcr_t = c13tcr_tt<"C13TCR", baseaddress, 912>;
-
-  template <std::uint32_t baseaddress>
-  using c13bndtr_t = c13bndtr_tt<"C13BNDTR", baseaddress, 916>;
-
-  template <std::uint32_t baseaddress>
-  using c13sar_t = c13sar_tt<"C13SAR", baseaddress, 920>;
-
-  template <std::uint32_t baseaddress>
-  using c13dar_t = c13dar_tt<"C13DAR", baseaddress, 924>;
-
-  template <std::uint32_t baseaddress>
-  using c13brur_t = c13brur_tt<"C13BRUR", baseaddress, 928>;
-
-  template <std::uint32_t baseaddress>
-  using c13lar_t = c13lar_tt<"C13LAR", baseaddress, 932>;
-
-  template <std::uint32_t baseaddress>
-  using c13tbr_t = c13tbr_tt<"C13TBR", baseaddress, 936>;
-
-  template <std::uint32_t baseaddress>
-  using c13mar_t = c13mar_tt<"C13MAR", baseaddress, 944>;
-
-  template <std::uint32_t baseaddress>
-  using c13mdr_t = c13mdr_tt<"C13MDR", baseaddress, 948>;
-
-  template <std::uint32_t baseaddress>
-  using c14isr_t = c14isr_tt<"C14ISR", baseaddress, 960>;
-
-  template <std::uint32_t baseaddress>
-  using c14ifcr_t = c14ifcr_tt<"C14IFCR", baseaddress, 964>;
-
-  template <std::uint32_t baseaddress>
-  using c14esr_t = c14esr_tt<"C14ESR", baseaddress, 968>;
-
-  template <std::uint32_t baseaddress>
-  using c14cr_t = c14cr_tt<"C14CR", baseaddress, 972>;
-
-  template <std::uint32_t baseaddress>
-  using c14tcr_t = c14tcr_tt<"C14TCR", baseaddress, 976>;
-
-  template <std::uint32_t baseaddress>
-  using c14bndtr_t = c14bndtr_tt<"C14BNDTR", baseaddress, 980>;
-
-  template <std::uint32_t baseaddress>
-  using c14sar_t = c14sar_tt<"C14SAR", baseaddress, 984>;
-
-  template <std::uint32_t baseaddress>
-  using c14dar_t = c14dar_tt<"C14DAR", baseaddress, 988>;
-
-  template <std::uint32_t baseaddress>
-  using c14brur_t = c14brur_tt<"C14BRUR", baseaddress, 992>;
-
-  template <std::uint32_t baseaddress>
-  using c14lar_t = c14lar_tt<"C14LAR", baseaddress, 996>;
-
-  template <std::uint32_t baseaddress>
-  using c14tbr_t = c14tbr_tt<"C14TBR", baseaddress, 1000>;
-
-  template <std::uint32_t baseaddress>
-  using c14mar_t = c14mar_tt<"C14MAR", baseaddress, 1008>;
-
-  template <std::uint32_t baseaddress>
-  using c14mdr_t = c14mdr_tt<"C14MDR", baseaddress, 1012>;
-
-  template <std::uint32_t baseaddress>
-  using c15isr_t = c15isr_tt<"C15ISR", baseaddress, 1024>;
-
-  template <std::uint32_t baseaddress>
-  using c15ifcr_t = c15ifcr_tt<"C15IFCR", baseaddress, 1028>;
-
-  template <std::uint32_t baseaddress>
-  using c15esr_t = c15esr_tt<"C15ESR", baseaddress, 1032>;
-
-  template <std::uint32_t baseaddress>
-  using c15cr_t = c15cr_tt<"C15CR", baseaddress, 1036>;
-
-  template <std::uint32_t baseaddress>
-  using c15tcr_t = c15tcr_tt<"C15TCR", baseaddress, 1040>;
-
-  template <std::uint32_t baseaddress>
-  using c15bndtr_t = c15bndtr_tt<"C15BNDTR", baseaddress, 1044>;
-
-  template <std::uint32_t baseaddress>
-  using c15sar_t = c15sar_tt<"C15SAR", baseaddress, 1048>;
-
-  template <std::uint32_t baseaddress>
-  using c15dar_t = c15dar_tt<"C15DAR", baseaddress, 1052>;
-
-  template <std::uint32_t baseaddress>
-  using c15brur_t = c15brur_tt<"C15BRUR", baseaddress, 1056>;
-
-  template <std::uint32_t baseaddress>
-  using c15lar_t = c15lar_tt<"C15LAR", baseaddress, 1060>;
-
-  template <std::uint32_t baseaddress>
-  using c15tbr_t = c15tbr_tt<"C15TBR", baseaddress, 1064>;
-
-  template <std::uint32_t baseaddress>
-  using c15mar_t = c15mar_tt<"C15MAR", baseaddress, 1072>;
-
-  template <std::uint32_t baseaddress>
-  using c15mdr_t = c15mdr_tt<"C15MDR", baseaddress, 1076>;
 
 } // namespace mdma

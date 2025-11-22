@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace aes {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -36,7 +38,9 @@ namespace aes {
                groov::field<"DATATYPE", std::uint8_t, 2, 1>,
                groov::field<"EN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using sr_tt = groov::reg<name,
                            std::uint32_t,
                            baseaddress + offset,
@@ -47,105 +51,135 @@ namespace aes {
                            groov::field<"RDERR", bool, 1, 1>,
                            groov::field<"CCF", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dinr_tt = groov::reg<name,
                              std::uint32_t,
                              baseaddress + offset,
                              access::rw,
                              groov::field<"AES_DINR", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using doutr_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
                               access::ro,
                               groov::field<"AES_DOUTR", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using keyr0_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
                               access::wo,
                               groov::field<"AES_KEYR0", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using keyr1_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
                               access::wo,
                               groov::field<"AES_KEYR1", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using keyr2_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
                               access::wo,
                               groov::field<"AES_KEYR2", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using keyr3_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
                               access::wo,
                               groov::field<"AES_KEYR3", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ivr0_tt = groov::reg<name,
                              std::uint32_t,
                              baseaddress + offset,
                              access::rw,
                              groov::field<"AES_IVR0", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ivr1_tt = groov::reg<name,
                              std::uint32_t,
                              baseaddress + offset,
                              access::rw,
                              groov::field<"AES_IVR1", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ivr2_tt = groov::reg<name,
                              std::uint32_t,
                              baseaddress + offset,
                              access::rw,
                              groov::field<"AES_IVR2", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ivr3_tt = groov::reg<name,
                              std::uint32_t,
                              baseaddress + offset,
                              access::rw,
                              groov::field<"AES_IVR3", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using keyr4_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
                               access::wo,
                               groov::field<"AES_KEYR4", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using keyr5_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
                               access::wo,
                               groov::field<"AES_KEYR5", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using keyr6_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
                               access::wo,
                               groov::field<"AES_KEYR6", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using keyr7_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
                               access::wo,
                               groov::field<"AES_KEYR7", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using susp0r_tt =
     groov::reg<name,
                std::uint32_t,
@@ -153,7 +187,9 @@ namespace aes {
                access::rw,
                groov::field<"AES_SUSP0R", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using susp1r_tt =
     groov::reg<name,
                std::uint32_t,
@@ -161,7 +197,9 @@ namespace aes {
                access::rw,
                groov::field<"AES_SUSP1R", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using susp2r_tt =
     groov::reg<name,
                std::uint32_t,
@@ -169,7 +207,9 @@ namespace aes {
                access::rw,
                groov::field<"AES_SUSP2R", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using susp3r_tt =
     groov::reg<name,
                std::uint32_t,
@@ -177,7 +217,9 @@ namespace aes {
                access::rw,
                groov::field<"AES_SUSP3R", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using susp4r_tt =
     groov::reg<name,
                std::uint32_t,
@@ -185,7 +227,9 @@ namespace aes {
                access::rw,
                groov::field<"AES_SUSP4R", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using susp5r_tt =
     groov::reg<name,
                std::uint32_t,
@@ -193,7 +237,9 @@ namespace aes {
                access::rw,
                groov::field<"AES_SUSP5R", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using susp6r_tt =
     groov::reg<name,
                std::uint32_t,
@@ -201,84 +247,14 @@ namespace aes {
                access::rw,
                groov::field<"AES_SUSP6R", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using susp7r_tt =
     groov::reg<name,
                std::uint32_t,
                baseaddress + offset,
                access::rw,
                groov::field<"AES_SUSP7R", std::uint32_t, 31, 0>>;
-
-  template <std::uint32_t baseaddress>
-  using cr_t = cr_tt<"CR", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using sr_t = sr_tt<"SR", baseaddress, 4>;
-
-  template <std::uint32_t baseaddress>
-  using dinr_t = dinr_tt<"DINR", baseaddress, 8>;
-
-  template <std::uint32_t baseaddress>
-  using doutr_t = doutr_tt<"DOUTR", baseaddress, 12>;
-
-  template <std::uint32_t baseaddress>
-  using keyr0_t = keyr0_tt<"KEYR0", baseaddress, 16>;
-
-  template <std::uint32_t baseaddress>
-  using keyr1_t = keyr1_tt<"KEYR1", baseaddress, 20>;
-
-  template <std::uint32_t baseaddress>
-  using keyr2_t = keyr2_tt<"KEYR2", baseaddress, 24>;
-
-  template <std::uint32_t baseaddress>
-  using keyr3_t = keyr3_tt<"KEYR3", baseaddress, 28>;
-
-  template <std::uint32_t baseaddress>
-  using ivr0_t = ivr0_tt<"IVR0", baseaddress, 32>;
-
-  template <std::uint32_t baseaddress>
-  using ivr1_t = ivr1_tt<"IVR1", baseaddress, 36>;
-
-  template <std::uint32_t baseaddress>
-  using ivr2_t = ivr2_tt<"IVR2", baseaddress, 40>;
-
-  template <std::uint32_t baseaddress>
-  using ivr3_t = ivr3_tt<"IVR3", baseaddress, 44>;
-
-  template <std::uint32_t baseaddress>
-  using keyr4_t = keyr4_tt<"KEYR4", baseaddress, 48>;
-
-  template <std::uint32_t baseaddress>
-  using keyr5_t = keyr5_tt<"KEYR5", baseaddress, 52>;
-
-  template <std::uint32_t baseaddress>
-  using keyr6_t = keyr6_tt<"KEYR6", baseaddress, 56>;
-
-  template <std::uint32_t baseaddress>
-  using keyr7_t = keyr7_tt<"KEYR7", baseaddress, 60>;
-
-  template <std::uint32_t baseaddress>
-  using susp0r_t = susp0r_tt<"SUSP0R", baseaddress, 64>;
-
-  template <std::uint32_t baseaddress>
-  using susp1r_t = susp1r_tt<"SUSP1R", baseaddress, 68>;
-
-  template <std::uint32_t baseaddress>
-  using susp2r_t = susp2r_tt<"SUSP2R", baseaddress, 72>;
-
-  template <std::uint32_t baseaddress>
-  using susp3r_t = susp3r_tt<"SUSP3R", baseaddress, 76>;
-
-  template <std::uint32_t baseaddress>
-  using susp4r_t = susp4r_tt<"SUSP4R", baseaddress, 80>;
-
-  template <std::uint32_t baseaddress>
-  using susp5r_t = susp5r_tt<"SUSP5R", baseaddress, 84>;
-
-  template <std::uint32_t baseaddress>
-  using susp6r_t = susp6r_tt<"SUSP6R", baseaddress, 88>;
-
-  template <std::uint32_t baseaddress>
-  using susp7r_t = susp7r_tt<"SUSP7R", baseaddress, 92>;
 
 } // namespace aes

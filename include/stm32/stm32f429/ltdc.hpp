@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace ltdc {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using sscr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -22,7 +24,9 @@ namespace ltdc {
                groov::field<"RESERVED0", std::uint8_t, 15, 11, access::ro>,
                groov::field<"VSH", std::uint16_t, 10, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using bpcr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -33,7 +37,9 @@ namespace ltdc {
                groov::field<"RESERVED0", std::uint8_t, 15, 11, access::ro>,
                groov::field<"AVBP", std::uint16_t, 10, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using awcr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -44,7 +50,9 @@ namespace ltdc {
                groov::field<"RESERVED0", std::uint8_t, 15, 11, access::ro>,
                groov::field<"AAH", std::uint16_t, 10, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using twcr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -55,7 +63,9 @@ namespace ltdc {
                groov::field<"RESERVED0", std::uint8_t, 15, 11, access::ro>,
                groov::field<"TOTALH", std::uint16_t, 10, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using gcr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -76,7 +86,9 @@ namespace ltdc {
                groov::field<"RESERVED0", std::uint8_t, 3, 1, access::ro>,
                groov::field<"LTDCEN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using srcr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -86,7 +98,9 @@ namespace ltdc {
                groov::field<"VBR", bool, 1, 1>,
                groov::field<"IMR", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using bccr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -95,7 +109,9 @@ namespace ltdc {
                groov::field<"RESERVED0", std::uint8_t, 31, 24, access::ro>,
                groov::field<"BC", std::uint32_t, 23, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ier_tt =
     groov::reg<name,
                std::uint32_t,
@@ -107,7 +123,9 @@ namespace ltdc {
                groov::field<"FUIE", bool, 1, 1>,
                groov::field<"LIE", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using isr_tt = groov::reg<name,
                             std::uint32_t,
                             baseaddress + offset,
@@ -118,7 +136,9 @@ namespace ltdc {
                             groov::field<"FUIF", bool, 1, 1>,
                             groov::field<"LIF", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using icr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -130,7 +150,9 @@ namespace ltdc {
                groov::field<"CFUIF", bool, 1, 1>,
                groov::field<"CLIF", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using lipcr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -139,7 +161,9 @@ namespace ltdc {
                groov::field<"RESERVED0", std::uint32_t, 31, 11, access::ro>,
                groov::field<"LIPOS", std::uint16_t, 10, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using cpsr_tt = groov::reg<name,
                              std::uint32_t,
                              baseaddress + offset,
@@ -147,7 +171,9 @@ namespace ltdc {
                              groov::field<"CXPOS", std::uint16_t, 31, 16>,
                              groov::field<"CYPOS", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using cdsr_tt = groov::reg<name,
                              std::uint32_t,
                              baseaddress + offset,
@@ -158,7 +184,9 @@ namespace ltdc {
                              groov::field<"HDES", bool, 1, 1>,
                              groov::field<"VDES", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using l1cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -170,7 +198,9 @@ namespace ltdc {
                groov::field<"COLKEN", bool, 1, 1>,
                groov::field<"LEN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using l1whpcr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -181,7 +211,9 @@ namespace ltdc {
                groov::field<"RESERVED0", std::uint8_t, 15, 12, access::ro>,
                groov::field<"WHSTPOS", std::uint16_t, 11, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using l1wvpcr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -192,7 +224,9 @@ namespace ltdc {
                groov::field<"RESERVED0", std::uint8_t, 15, 11, access::ro>,
                groov::field<"WVSTPOS", std::uint16_t, 10, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using l1ckcr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -203,7 +237,9 @@ namespace ltdc {
                groov::field<"CKGREEN", std::uint8_t, 15, 8>,
                groov::field<"CKBLUE", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using l1pfcr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -212,7 +248,9 @@ namespace ltdc {
                groov::field<"RESERVED0", std::uint32_t, 31, 3, access::ro>,
                groov::field<"PF", std::uint8_t, 2, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using l1cacr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -221,7 +259,9 @@ namespace ltdc {
                groov::field<"RESERVED0", std::uint32_t, 31, 8, access::ro>,
                groov::field<"CONSTA", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using l1dccr_tt = groov::reg<name,
                                std::uint32_t,
                                baseaddress + offset,
@@ -231,7 +271,9 @@ namespace ltdc {
                                groov::field<"DCGREEN", std::uint8_t, 15, 8>,
                                groov::field<"DCBLUE", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using l1bfcr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -242,14 +284,18 @@ namespace ltdc {
                groov::field<"RESERVED0", std::uint8_t, 7, 3, access::ro>,
                groov::field<"BF2", std::uint8_t, 2, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using l1cfbar_tt = groov::reg<name,
                                 std::uint32_t,
                                 baseaddress + offset,
                                 access::rw,
                                 groov::field<"CFBADD", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using l1cfblr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -260,7 +306,9 @@ namespace ltdc {
                groov::field<"RESERVED0", std::uint8_t, 15, 13, access::ro>,
                groov::field<"CFBLL", std::uint16_t, 12, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using l1cfblnr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -269,7 +317,9 @@ namespace ltdc {
                groov::field<"RESERVED0", std::uint32_t, 31, 11, access::ro>,
                groov::field<"CFBLNBR", std::uint16_t, 10, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using l1clutwr_tt = groov::reg<name,
                                  std::uint32_t,
                                  baseaddress + offset,
@@ -279,7 +329,9 @@ namespace ltdc {
                                  groov::field<"GREEN", std::uint8_t, 15, 8>,
                                  groov::field<"BLUE", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using l2cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -291,7 +343,9 @@ namespace ltdc {
                groov::field<"COLKEN", bool, 1, 1>,
                groov::field<"LEN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using l2whpcr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -302,7 +356,9 @@ namespace ltdc {
                groov::field<"RESERVED0", std::uint8_t, 15, 12, access::ro>,
                groov::field<"WHSTPOS", std::uint16_t, 11, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using l2wvpcr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -313,7 +369,9 @@ namespace ltdc {
                groov::field<"RESERVED0", std::uint8_t, 15, 11, access::ro>,
                groov::field<"WVSTPOS", std::uint16_t, 10, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using l2ckcr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -324,7 +382,9 @@ namespace ltdc {
                groov::field<"CKGREEN", std::uint8_t, 14, 8>,
                groov::field<"CKBLUE", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using l2pfcr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -333,7 +393,9 @@ namespace ltdc {
                groov::field<"RESERVED0", std::uint32_t, 31, 3, access::ro>,
                groov::field<"PF", std::uint8_t, 2, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using l2cacr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -342,7 +404,9 @@ namespace ltdc {
                groov::field<"RESERVED0", std::uint32_t, 31, 8, access::ro>,
                groov::field<"CONSTA", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using l2dccr_tt = groov::reg<name,
                                std::uint32_t,
                                baseaddress + offset,
@@ -352,7 +416,9 @@ namespace ltdc {
                                groov::field<"DCGREEN", std::uint8_t, 15, 8>,
                                groov::field<"DCBLUE", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using l2bfcr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -363,14 +429,18 @@ namespace ltdc {
                groov::field<"RESERVED0", std::uint8_t, 7, 3, access::ro>,
                groov::field<"BF2", std::uint8_t, 2, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using l2cfbar_tt = groov::reg<name,
                                 std::uint32_t,
                                 baseaddress + offset,
                                 access::rw,
                                 groov::field<"CFBADD", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using l2cfblr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -381,7 +451,9 @@ namespace ltdc {
                groov::field<"RESERVED0", std::uint8_t, 15, 13, access::ro>,
                groov::field<"CFBLL", std::uint16_t, 12, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using l2cfblnr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -390,7 +462,9 @@ namespace ltdc {
                groov::field<"RESERVED0", std::uint32_t, 31, 11, access::ro>,
                groov::field<"CFBLNBR", std::uint16_t, 10, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using l2clutwr_tt = groov::reg<name,
                                  std::uint32_t,
                                  baseaddress + offset,
@@ -399,116 +473,5 @@ namespace ltdc {
                                  groov::field<"RED", std::uint8_t, 23, 16>,
                                  groov::field<"GREEN", std::uint8_t, 15, 8>,
                                  groov::field<"BLUE", std::uint8_t, 7, 0>>;
-
-  template <std::uint32_t baseaddress>
-  using sscr_t = sscr_tt<"SSCR", baseaddress, 8>;
-
-  template <std::uint32_t baseaddress>
-  using bpcr_t = bpcr_tt<"BPCR", baseaddress, 12>;
-
-  template <std::uint32_t baseaddress>
-  using awcr_t = awcr_tt<"AWCR", baseaddress, 16>;
-
-  template <std::uint32_t baseaddress>
-  using twcr_t = twcr_tt<"TWCR", baseaddress, 20>;
-
-  template <std::uint32_t baseaddress>
-  using gcr_t = gcr_tt<"GCR", baseaddress, 24>;
-
-  template <std::uint32_t baseaddress>
-  using srcr_t = srcr_tt<"SRCR", baseaddress, 36>;
-
-  template <std::uint32_t baseaddress>
-  using bccr_t = bccr_tt<"BCCR", baseaddress, 44>;
-
-  template <std::uint32_t baseaddress>
-  using ier_t = ier_tt<"IER", baseaddress, 52>;
-
-  template <std::uint32_t baseaddress>
-  using isr_t = isr_tt<"ISR", baseaddress, 56>;
-
-  template <std::uint32_t baseaddress>
-  using icr_t = icr_tt<"ICR", baseaddress, 60>;
-
-  template <std::uint32_t baseaddress>
-  using lipcr_t = lipcr_tt<"LIPCR", baseaddress, 64>;
-
-  template <std::uint32_t baseaddress>
-  using cpsr_t = cpsr_tt<"CPSR", baseaddress, 68>;
-
-  template <std::uint32_t baseaddress>
-  using cdsr_t = cdsr_tt<"CDSR", baseaddress, 72>;
-
-  template <std::uint32_t baseaddress>
-  using l1cr_t = l1cr_tt<"L1CR", baseaddress, 132>;
-
-  template <std::uint32_t baseaddress>
-  using l1whpcr_t = l1whpcr_tt<"L1WHPCR", baseaddress, 136>;
-
-  template <std::uint32_t baseaddress>
-  using l1wvpcr_t = l1wvpcr_tt<"L1WVPCR", baseaddress, 140>;
-
-  template <std::uint32_t baseaddress>
-  using l1ckcr_t = l1ckcr_tt<"L1CKCR", baseaddress, 144>;
-
-  template <std::uint32_t baseaddress>
-  using l1pfcr_t = l1pfcr_tt<"L1PFCR", baseaddress, 148>;
-
-  template <std::uint32_t baseaddress>
-  using l1cacr_t = l1cacr_tt<"L1CACR", baseaddress, 152>;
-
-  template <std::uint32_t baseaddress>
-  using l1dccr_t = l1dccr_tt<"L1DCCR", baseaddress, 156>;
-
-  template <std::uint32_t baseaddress>
-  using l1bfcr_t = l1bfcr_tt<"L1BFCR", baseaddress, 160>;
-
-  template <std::uint32_t baseaddress>
-  using l1cfbar_t = l1cfbar_tt<"L1CFBAR", baseaddress, 172>;
-
-  template <std::uint32_t baseaddress>
-  using l1cfblr_t = l1cfblr_tt<"L1CFBLR", baseaddress, 176>;
-
-  template <std::uint32_t baseaddress>
-  using l1cfblnr_t = l1cfblnr_tt<"L1CFBLNR", baseaddress, 180>;
-
-  template <std::uint32_t baseaddress>
-  using l1clutwr_t = l1clutwr_tt<"L1CLUTWR", baseaddress, 196>;
-
-  template <std::uint32_t baseaddress>
-  using l2cr_t = l2cr_tt<"L2CR", baseaddress, 260>;
-
-  template <std::uint32_t baseaddress>
-  using l2whpcr_t = l2whpcr_tt<"L2WHPCR", baseaddress, 264>;
-
-  template <std::uint32_t baseaddress>
-  using l2wvpcr_t = l2wvpcr_tt<"L2WVPCR", baseaddress, 268>;
-
-  template <std::uint32_t baseaddress>
-  using l2ckcr_t = l2ckcr_tt<"L2CKCR", baseaddress, 272>;
-
-  template <std::uint32_t baseaddress>
-  using l2pfcr_t = l2pfcr_tt<"L2PFCR", baseaddress, 276>;
-
-  template <std::uint32_t baseaddress>
-  using l2cacr_t = l2cacr_tt<"L2CACR", baseaddress, 280>;
-
-  template <std::uint32_t baseaddress>
-  using l2dccr_t = l2dccr_tt<"L2DCCR", baseaddress, 284>;
-
-  template <std::uint32_t baseaddress>
-  using l2bfcr_t = l2bfcr_tt<"L2BFCR", baseaddress, 288>;
-
-  template <std::uint32_t baseaddress>
-  using l2cfbar_t = l2cfbar_tt<"L2CFBAR", baseaddress, 300>;
-
-  template <std::uint32_t baseaddress>
-  using l2cfblr_t = l2cfblr_tt<"L2CFBLR", baseaddress, 304>;
-
-  template <std::uint32_t baseaddress>
-  using l2cfblnr_t = l2cfblnr_tt<"L2CFBLNR", baseaddress, 308>;
-
-  template <std::uint32_t baseaddress>
-  using l2clutwr_t = l2clutwr_tt<"L2CLUTWR", baseaddress, 324>;
 
 } // namespace ltdc

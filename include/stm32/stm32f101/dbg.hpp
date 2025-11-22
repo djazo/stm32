@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace dbg {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using idcode_tt = groov::reg<name,
                                std::uint32_t,
                                baseaddress + offset,
@@ -20,7 +22,9 @@ namespace dbg {
                                groov::field<"RESERVED0", std::uint8_t, 15, 12>,
                                groov::field<"DEV_ID", std::uint16_t, 11, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -53,11 +57,5 @@ namespace dbg {
                groov::field<"DBG_STANDBY", bool, 2, 2>,
                groov::field<"DBG_STOP", bool, 1, 1>,
                groov::field<"DBG_SLEEP", bool, 0, 0>>;
-
-  template <std::uint32_t baseaddress>
-  using idcode_t = idcode_tt<"IDCODE", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using cr_t = cr_tt<"CR", baseaddress, 4>;
 
 } // namespace dbg

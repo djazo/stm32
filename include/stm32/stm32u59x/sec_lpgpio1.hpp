@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace sec_lpgpio1 {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using lpgpio_moder_tt =
     groov::reg<name,
                std::uint32_t,
@@ -35,7 +37,9 @@ namespace sec_lpgpio1 {
                groov::field<"MODE1", bool, 1, 1>,
                groov::field<"MODE0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using lpgpio_idr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -59,7 +63,9 @@ namespace sec_lpgpio1 {
                groov::field<"ID1", bool, 1, 1>,
                groov::field<"ID0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using lpgpio_odr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -83,7 +89,9 @@ namespace sec_lpgpio1 {
                groov::field<"OD1", bool, 1, 1>,
                groov::field<"OD0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using lpgpio_bsrr_tt = groov::reg<name,
                                     std::uint32_t,
                                     baseaddress + offset,
@@ -121,7 +129,9 @@ namespace sec_lpgpio1 {
                                     groov::field<"BS1", bool, 1, 1>,
                                     groov::field<"BS0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using lpgpio_brr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -144,20 +154,5 @@ namespace sec_lpgpio1 {
                groov::field<"BR2", bool, 2, 2>,
                groov::field<"BR1", bool, 1, 1>,
                groov::field<"BR0", bool, 0, 0>>;
-
-  template <std::uint32_t baseaddress>
-  using lpgpio_moder_t = lpgpio_moder_tt<"LPGPIO_MODER", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using lpgpio_idr_t = lpgpio_idr_tt<"LPGPIO_IDR", baseaddress, 16>;
-
-  template <std::uint32_t baseaddress>
-  using lpgpio_odr_t = lpgpio_odr_tt<"LPGPIO_ODR", baseaddress, 20>;
-
-  template <std::uint32_t baseaddress>
-  using lpgpio_bsrr_t = lpgpio_bsrr_tt<"LPGPIO_BSRR", baseaddress, 24>;
-
-  template <std::uint32_t baseaddress>
-  using lpgpio_brr_t = lpgpio_brr_tt<"LPGPIO_BRR", baseaddress, 40>;
 
 } // namespace sec_lpgpio1

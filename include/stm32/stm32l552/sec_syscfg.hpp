@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace sec_syscfg {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using seccfgr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -23,7 +25,9 @@ namespace sec_syscfg {
                groov::field<"CLASSBSEC", bool, 1, 1>,
                groov::field<"SYSCFGSEC", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using cfgr1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -43,7 +47,9 @@ namespace sec_syscfg {
                groov::field<"BOOSTEN", bool, 8, 8>,
                groov::field<"RESERVED0", std::uint8_t, 7, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using fpuimr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -52,7 +58,9 @@ namespace sec_syscfg {
                groov::field<"RESERVED0", std::uint32_t, 31, 6, access::ro>,
                groov::field<"FPU_IE", std::uint8_t, 5, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using cnslckr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -62,7 +70,9 @@ namespace sec_syscfg {
                groov::field<"LOCKNSMPU", bool, 1, 1>,
                groov::field<"LOCKNSVTOR", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using cslockr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -73,7 +83,9 @@ namespace sec_syscfg {
                groov::field<"LOCKSMPU", bool, 1, 1>,
                groov::field<"LOCKSVTAIRCR", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using scsr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -83,7 +95,9 @@ namespace sec_syscfg {
                groov::field<"SRAM2BSY", bool, 1, 1, access::ro>,
                groov::field<"SRAM2ER", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using cfgr2_tt =
     groov::reg<name,
                std::uint32_t,
@@ -97,7 +111,9 @@ namespace sec_syscfg {
                groov::field<"SPL", bool, 1, 1, access::wo>,
                groov::field<"CLL", bool, 0, 0, access::wo>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using swpr_tt = groov::reg<name,
                              std::uint32_t,
                              baseaddress + offset,
@@ -135,7 +151,9 @@ namespace sec_syscfg {
                              groov::field<"P1WP", bool, 1, 1>,
                              groov::field<"P0WP", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using skr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -144,7 +162,9 @@ namespace sec_syscfg {
                groov::field<"RESERVED0", std::uint32_t, 31, 8, access::ro>,
                groov::field<"KEY", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using swpr2_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
@@ -182,7 +202,9 @@ namespace sec_syscfg {
                               groov::field<"P33WP", bool, 1, 1>,
                               groov::field<"P32WP", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using rsscmdr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -190,38 +212,5 @@ namespace sec_syscfg {
                access::rw,
                groov::field<"RESERVED0", std::uint32_t, 31, 8, access::ro>,
                groov::field<"RSSCMD", std::uint8_t, 7, 0>>;
-
-  template <std::uint32_t baseaddress>
-  using seccfgr_t = seccfgr_tt<"SECCFGR", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using cfgr1_t = cfgr1_tt<"CFGR1", baseaddress, 4>;
-
-  template <std::uint32_t baseaddress>
-  using fpuimr_t = fpuimr_tt<"FPUIMR", baseaddress, 8>;
-
-  template <std::uint32_t baseaddress>
-  using cnslckr_t = cnslckr_tt<"CNSLCKR", baseaddress, 12>;
-
-  template <std::uint32_t baseaddress>
-  using cslockr_t = cslockr_tt<"CSLOCKR", baseaddress, 16>;
-
-  template <std::uint32_t baseaddress>
-  using scsr_t = scsr_tt<"SCSR", baseaddress, 24>;
-
-  template <std::uint32_t baseaddress>
-  using cfgr2_t = cfgr2_tt<"CFGR2", baseaddress, 20>;
-
-  template <std::uint32_t baseaddress>
-  using swpr_t = swpr_tt<"SWPR", baseaddress, 32>;
-
-  template <std::uint32_t baseaddress>
-  using skr_t = skr_tt<"SKR", baseaddress, 28>;
-
-  template <std::uint32_t baseaddress>
-  using swpr2_t = swpr2_tt<"SWPR2", baseaddress, 36>;
-
-  template <std::uint32_t baseaddress>
-  using rsscmdr_t = rsscmdr_tt<"RSSCMDR", baseaddress, 44>;
 
 } // namespace sec_syscfg

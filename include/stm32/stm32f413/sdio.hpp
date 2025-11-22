@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace sdio {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using power_tt =
     groov::reg<name,
                std::uint32_t,
@@ -20,7 +22,9 @@ namespace sdio {
                groov::field<"RESERVED0", std::uint32_t, 31, 2, access::ro>,
                groov::field<"PWRCTRL", std::uint8_t, 1, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using clkcr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -35,14 +39,18 @@ namespace sdio {
                groov::field<"CLKEN", bool, 8, 8>,
                groov::field<"CLKDIV", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using arg_tt = groov::reg<name,
                             std::uint32_t,
                             baseaddress + offset,
                             access::rw,
                             groov::field<"CMDARG", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using cmd_tt =
     groov::reg<name,
                std::uint32_t,
@@ -59,7 +67,9 @@ namespace sdio {
                groov::field<"WAITRESP", std::uint8_t, 7, 6>,
                groov::field<"CMDINDEX", std::uint8_t, 5, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using respcmd_tt = groov::reg<name,
                                 std::uint32_t,
                                 baseaddress + offset,
@@ -67,7 +77,9 @@ namespace sdio {
                                 groov::field<"RESERVED0", std::uint32_t, 31, 6>,
                                 groov::field<"RESPCMD", std::uint8_t, 5, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using resp1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -75,7 +87,9 @@ namespace sdio {
                access::ro,
                groov::field<"CARDSTATUS1", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using resp2_tt =
     groov::reg<name,
                std::uint32_t,
@@ -83,7 +97,9 @@ namespace sdio {
                access::ro,
                groov::field<"CARDSTATUS2", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using resp3_tt =
     groov::reg<name,
                std::uint32_t,
@@ -91,7 +107,9 @@ namespace sdio {
                access::ro,
                groov::field<"CARDSTATUS3", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using resp4_tt =
     groov::reg<name,
                std::uint32_t,
@@ -99,14 +117,18 @@ namespace sdio {
                access::ro,
                groov::field<"CARDSTATUS4", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dtimer_tt = groov::reg<name,
                                std::uint32_t,
                                baseaddress + offset,
                                access::rw,
                                groov::field<"DATATIME", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dlen_tt =
     groov::reg<name,
                std::uint32_t,
@@ -115,7 +137,9 @@ namespace sdio {
                groov::field<"RESERVED0", std::uint8_t, 31, 25, access::ro>,
                groov::field<"DATALENGTH", std::uint32_t, 24, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dctrl_tt =
     groov::reg<name,
                std::uint32_t,
@@ -132,7 +156,9 @@ namespace sdio {
                groov::field<"DTDIR", bool, 1, 1>,
                groov::field<"DTEN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dcount_tt = groov::reg<name,
                                std::uint32_t,
                                baseaddress + offset,
@@ -140,7 +166,9 @@ namespace sdio {
                                groov::field<"RESERVED0", std::uint8_t, 31, 25>,
                                groov::field<"DATACOUNT", std::uint32_t, 24, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using sta_tt = groov::reg<name,
                             std::uint32_t,
                             baseaddress + offset,
@@ -171,7 +199,9 @@ namespace sdio {
                             groov::field<"DCRCFAIL", bool, 1, 1>,
                             groov::field<"CCRCFAIL", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using icr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -193,7 +223,9 @@ namespace sdio {
                groov::field<"DCRCFAILC", bool, 1, 1>,
                groov::field<"CCRCFAILC", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mask_tt =
     groov::reg<name,
                std::uint32_t,
@@ -225,7 +257,9 @@ namespace sdio {
                groov::field<"DCRCFAILIE", bool, 1, 1>,
                groov::field<"CCRCFAILIE", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using fifocnt_tt =
     groov::reg<name,
                std::uint32_t,
@@ -234,65 +268,13 @@ namespace sdio {
                groov::field<"RESERVED0", std::uint8_t, 31, 24>,
                groov::field<"FIFOCOUNT", std::uint32_t, 23, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using fifo_tt = groov::reg<name,
                              std::uint32_t,
                              baseaddress + offset,
                              access::rw,
                              groov::field<"FIFOData", std::uint32_t, 31, 0>>;
-
-  template <std::uint32_t baseaddress>
-  using power_t = power_tt<"POWER", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using clkcr_t = clkcr_tt<"CLKCR", baseaddress, 4>;
-
-  template <std::uint32_t baseaddress>
-  using arg_t = arg_tt<"ARG", baseaddress, 8>;
-
-  template <std::uint32_t baseaddress>
-  using cmd_t = cmd_tt<"CMD", baseaddress, 12>;
-
-  template <std::uint32_t baseaddress>
-  using respcmd_t = respcmd_tt<"RESPCMD", baseaddress, 16>;
-
-  template <std::uint32_t baseaddress>
-  using resp1_t = resp1_tt<"RESP1", baseaddress, 20>;
-
-  template <std::uint32_t baseaddress>
-  using resp2_t = resp2_tt<"RESP2", baseaddress, 24>;
-
-  template <std::uint32_t baseaddress>
-  using resp3_t = resp3_tt<"RESP3", baseaddress, 28>;
-
-  template <std::uint32_t baseaddress>
-  using resp4_t = resp4_tt<"RESP4", baseaddress, 32>;
-
-  template <std::uint32_t baseaddress>
-  using dtimer_t = dtimer_tt<"DTIMER", baseaddress, 36>;
-
-  template <std::uint32_t baseaddress>
-  using dlen_t = dlen_tt<"DLEN", baseaddress, 40>;
-
-  template <std::uint32_t baseaddress>
-  using dctrl_t = dctrl_tt<"DCTRL", baseaddress, 44>;
-
-  template <std::uint32_t baseaddress>
-  using dcount_t = dcount_tt<"DCOUNT", baseaddress, 48>;
-
-  template <std::uint32_t baseaddress>
-  using sta_t = sta_tt<"STA", baseaddress, 52>;
-
-  template <std::uint32_t baseaddress>
-  using icr_t = icr_tt<"ICR", baseaddress, 56>;
-
-  template <std::uint32_t baseaddress>
-  using mask_t = mask_tt<"MASK", baseaddress, 60>;
-
-  template <std::uint32_t baseaddress>
-  using fifocnt_t = fifocnt_tt<"FIFOCNT", baseaddress, 72>;
-
-  template <std::uint32_t baseaddress>
-  using fifo_t = fifo_tt<"FIFO", baseaddress, 128>;
 
 } // namespace sdio

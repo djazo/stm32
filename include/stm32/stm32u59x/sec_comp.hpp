@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace sec_comp {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using comp1_csr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -33,7 +35,9 @@ namespace sec_comp {
                groov::field<"RESERVED0", std::uint8_t, 3, 1, access::ro>,
                groov::field<"COMP1_EN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using comp2_csr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -54,11 +58,5 @@ namespace sec_comp {
                groov::field<"COM2_INMSEL", std::uint8_t, 7, 4>,
                groov::field<"RESERVED0", std::uint8_t, 3, 1, access::ro>,
                groov::field<"COM2_EN", bool, 0, 0>>;
-
-  template <std::uint32_t baseaddress>
-  using comp1_csr_t = comp1_csr_tt<"COMP1_CSR", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using comp2_csr_t = comp2_csr_tt<"COMP2_CSR", baseaddress, 4>;
 
 } // namespace sec_comp

@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace sec_gtzc2_mpcbb4 {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpcbb4_cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -22,7 +24,9 @@ namespace sec_gtzc2_mpcbb4 {
                groov::field<"RESERVED0", std::uint32_t, 29, 1, access::ro>,
                groov::field<"GLOCK", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpcbb4_cfglock_tt =
     groov::reg<name,
                std::uint32_t,
@@ -31,7 +35,9 @@ namespace sec_gtzc2_mpcbb4 {
                groov::field<"RESERVED0", std::uint32_t, 31, 1, access::ro>,
                groov::field<"SPLCK0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpcbb4_seccfgr0_tt = groov::reg<name,
                                         std::uint32_t,
                                         baseaddress + offset,
@@ -69,7 +75,9 @@ namespace sec_gtzc2_mpcbb4 {
                                         groov::field<"SEC1", bool, 1, 1>,
                                         groov::field<"SEC0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mpcbb4_privcfgr0_tt = groov::reg<name,
                                          std::uint32_t,
                                          baseaddress + offset,
@@ -106,19 +114,5 @@ namespace sec_gtzc2_mpcbb4 {
                                          groov::field<"PRIV2", bool, 2, 2>,
                                          groov::field<"PRIV1", bool, 1, 1>,
                                          groov::field<"PRIV0", bool, 0, 0>>;
-
-  template <std::uint32_t baseaddress>
-  using mpcbb4_cr_t = mpcbb4_cr_tt<"MPCBB4_CR", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using mpcbb4_cfglock_t = mpcbb4_cfglock_tt<"MPCBB4_CFGLOCK", baseaddress, 16>;
-
-  template <std::uint32_t baseaddress>
-  using mpcbb4_seccfgr0_t =
-    mpcbb4_seccfgr0_tt<"MPCBB4_SECCFGR0", baseaddress, 256>;
-
-  template <std::uint32_t baseaddress>
-  using mpcbb4_privcfgr0_t =
-    mpcbb4_privcfgr0_tt<"MPCBB4_PRIVCFGR0", baseaddress, 512>;
 
 } // namespace sec_gtzc2_mpcbb4

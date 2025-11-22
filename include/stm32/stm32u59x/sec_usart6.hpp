@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace sec_usart6 {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using cr1_enabled_tt = groov::reg<name,
                                     std::uint32_t,
                                     baseaddress + offset,
@@ -41,7 +43,9 @@ namespace sec_usart6 {
                                     groov::field<"UESM", bool, 1, 1>,
                                     groov::field<"UE", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using cr1_disabled_tt =
     groov::reg<name,
                std::uint32_t,
@@ -71,7 +75,9 @@ namespace sec_usart6 {
                groov::field<"UESM", bool, 1, 1>,
                groov::field<"UE", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using cr2_tt =
     groov::reg<name,
                std::uint32_t,
@@ -100,7 +106,9 @@ namespace sec_usart6 {
                groov::field<"RESERVED0", std::uint8_t, 2, 1, access::ro>,
                groov::field<"SLVEN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using cr3_tt =
     groov::reg<name,
                std::uint32_t,
@@ -131,7 +139,9 @@ namespace sec_usart6 {
                groov::field<"IREN", bool, 1, 1>,
                groov::field<"EIE", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using brr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -140,7 +150,9 @@ namespace sec_usart6 {
                groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
                groov::field<"BRR", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using gtpr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -150,7 +162,9 @@ namespace sec_usart6 {
                groov::field<"GT", std::uint8_t, 15, 8>,
                groov::field<"PSC", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using rtor_tt = groov::reg<name,
                              std::uint32_t,
                              baseaddress + offset,
@@ -158,7 +172,9 @@ namespace sec_usart6 {
                              groov::field<"BLEN", std::uint8_t, 31, 24>,
                              groov::field<"RTO", std::uint32_t, 23, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using rqr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -171,7 +187,9 @@ namespace sec_usart6 {
                groov::field<"SBKRQ", bool, 1, 1>,
                groov::field<"ABRRQ", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using isr_enabled_tt =
     groov::reg<name,
                std::uint32_t,
@@ -207,7 +225,9 @@ namespace sec_usart6 {
                groov::field<"FE", bool, 1, 1>,
                groov::field<"PE", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using isr_disabled_tt =
     groov::reg<name,
                std::uint32_t,
@@ -240,7 +260,9 @@ namespace sec_usart6 {
                groov::field<"FE", bool, 1, 1>,
                groov::field<"PE", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using icr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -264,7 +286,9 @@ namespace sec_usart6 {
                groov::field<"FECF", bool, 1, 1>,
                groov::field<"PECF", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using rdr_tt = groov::reg<name,
                             std::uint32_t,
                             baseaddress + offset,
@@ -272,7 +296,9 @@ namespace sec_usart6 {
                             groov::field<"RESERVED0", std::uint32_t, 31, 9>,
                             groov::field<"RDR", std::uint16_t, 8, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using tdr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -281,7 +307,9 @@ namespace sec_usart6 {
                groov::field<"RESERVED0", std::uint32_t, 31, 9, access::ro>,
                groov::field<"TDR", std::uint16_t, 8, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using presc_tt =
     groov::reg<name,
                std::uint32_t,
@@ -290,7 +318,9 @@ namespace sec_usart6 {
                groov::field<"RESERVED0", std::uint32_t, 31, 4, access::ro>,
                groov::field<"PRESCALER", std::uint8_t, 3, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using autocr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -303,50 +333,5 @@ namespace sec_usart6 {
                groov::field<"TRIGEN", bool, 17, 17>,
                groov::field<"TRIGPOL", bool, 16, 16>,
                groov::field<"TDN", std::uint16_t, 15, 0>>;
-
-  template <std::uint32_t baseaddress>
-  using cr1_enabled_t = cr1_enabled_tt<"CR1_enabled", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using cr1_disabled_t = cr1_disabled_tt<"CR1_disabled", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using cr2_t = cr2_tt<"CR2", baseaddress, 4>;
-
-  template <std::uint32_t baseaddress>
-  using cr3_t = cr3_tt<"CR3", baseaddress, 8>;
-
-  template <std::uint32_t baseaddress>
-  using brr_t = brr_tt<"BRR", baseaddress, 12>;
-
-  template <std::uint32_t baseaddress>
-  using gtpr_t = gtpr_tt<"GTPR", baseaddress, 16>;
-
-  template <std::uint32_t baseaddress>
-  using rtor_t = rtor_tt<"RTOR", baseaddress, 20>;
-
-  template <std::uint32_t baseaddress>
-  using rqr_t = rqr_tt<"RQR", baseaddress, 24>;
-
-  template <std::uint32_t baseaddress>
-  using isr_enabled_t = isr_enabled_tt<"ISR_enabled", baseaddress, 28>;
-
-  template <std::uint32_t baseaddress>
-  using isr_disabled_t = isr_disabled_tt<"ISR_disabled", baseaddress, 28>;
-
-  template <std::uint32_t baseaddress>
-  using icr_t = icr_tt<"ICR", baseaddress, 32>;
-
-  template <std::uint32_t baseaddress>
-  using rdr_t = rdr_tt<"RDR", baseaddress, 36>;
-
-  template <std::uint32_t baseaddress>
-  using tdr_t = tdr_tt<"TDR", baseaddress, 40>;
-
-  template <std::uint32_t baseaddress>
-  using presc_t = presc_tt<"PRESC", baseaddress, 44>;
-
-  template <std::uint32_t baseaddress>
-  using autocr_t = autocr_tt<"AUTOCR", baseaddress, 48>;
 
 } // namespace sec_usart6

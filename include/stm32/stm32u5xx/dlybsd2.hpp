@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace dlybsd2 {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dlyb_cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -21,7 +23,9 @@ namespace dlybsd2 {
                groov::field<"SEN", bool, 1, 1>,
                groov::field<"DEN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dlyb_cfgr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -34,11 +38,5 @@ namespace dlybsd2 {
                groov::field<"UNIT", std::uint8_t, 14, 8>,
                groov::field<"RESERVED0", std::uint8_t, 7, 4, access::ro>,
                groov::field<"SEL", std::uint8_t, 3, 0>>;
-
-  template <std::uint32_t baseaddress>
-  using dlyb_cr_t = dlyb_cr_tt<"DLYB_CR", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using dlyb_cfgr_t = dlyb_cfgr_tt<"DLYB_CFGR", baseaddress, 4>;
 
 } // namespace dlybsd2

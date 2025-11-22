@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace pwr {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using cr1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -35,7 +37,9 @@ namespace pwr {
                groov::field<"PDDS", bool, 1, 1>,
                groov::field<"LPDS", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using csr1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -55,7 +59,9 @@ namespace pwr {
                groov::field<"SBF", bool, 1, 1, access::ro>,
                groov::field<"WUIF", bool, 0, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using cr2_tt =
     groov::reg<name,
                std::uint32_t,
@@ -76,7 +82,9 @@ namespace pwr {
                groov::field<"CWUPF2", bool, 1, 1, access::ro>,
                groov::field<"CWUPF1", bool, 0, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using csr2_tt =
     groov::reg<name,
                std::uint32_t,
@@ -96,17 +104,5 @@ namespace pwr {
                groov::field<"WUPF3", bool, 2, 2, access::ro>,
                groov::field<"WUPF2", bool, 1, 1, access::ro>,
                groov::field<"WUPF1", bool, 0, 0, access::ro>>;
-
-  template <std::uint32_t baseaddress>
-  using cr1_t = cr1_tt<"CR1", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using csr1_t = csr1_tt<"CSR1", baseaddress, 4>;
-
-  template <std::uint32_t baseaddress>
-  using cr2_t = cr2_tt<"CR2", baseaddress, 8>;
-
-  template <std::uint32_t baseaddress>
-  using csr2_t = csr2_tt<"CSR2", baseaddress, 12>;
 
 } // namespace pwr

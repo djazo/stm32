@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace fpu {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using fpccr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -30,7 +32,9 @@ namespace fpu {
                groov::field<"USER", bool, 1, 1>,
                groov::field<"LSPACT", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using fpcar_tt =
     groov::reg<name,
                std::uint32_t,
@@ -39,7 +43,9 @@ namespace fpu {
                groov::field<"ADDRESS", std::uint32_t, 31, 3>,
                groov::field<"RESERVED0", std::uint8_t, 2, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using fpscr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -62,14 +68,5 @@ namespace fpu {
                groov::field<"OFC", bool, 2, 2>,
                groov::field<"DZC", bool, 1, 1>,
                groov::field<"IOC", bool, 0, 0>>;
-
-  template <std::uint32_t baseaddress>
-  using fpccr_t = fpccr_tt<"FPCCR", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using fpcar_t = fpcar_tt<"FPCAR", baseaddress, 4>;
-
-  template <std::uint32_t baseaddress>
-  using fpscr_t = fpscr_tt<"FPSCR", baseaddress, 8>;
 
 } // namespace fpu

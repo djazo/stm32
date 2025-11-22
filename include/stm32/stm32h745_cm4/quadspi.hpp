@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace quadspi {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -37,7 +39,9 @@ namespace quadspi {
                groov::field<"ABORT", bool, 1, 1>,
                groov::field<"EN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dcr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -50,7 +54,9 @@ namespace quadspi {
                groov::field<"RESERVED0", std::uint8_t, 7, 1, access::ro>,
                groov::field<"CKMODE", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using sr_tt = groov::reg<name,
                            std::uint32_t,
                            baseaddress + offset,
@@ -65,7 +71,9 @@ namespace quadspi {
                            groov::field<"TCF", bool, 1, 1>,
                            groov::field<"TEF", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using fcr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -78,14 +86,18 @@ namespace quadspi {
                groov::field<"CTCF", bool, 1, 1>,
                groov::field<"CTEF", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dlr_tt = groov::reg<name,
                             std::uint32_t,
                             baseaddress + offset,
                             access::rw,
                             groov::field<"DL", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ccr_tt = groov::reg<name,
                             std::uint32_t,
                             baseaddress + offset,
@@ -105,42 +117,54 @@ namespace quadspi {
                             groov::field<"IMODE", std::uint8_t, 9, 8>,
                             groov::field<"INSTRUCTION", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ar_tt = groov::reg<name,
                            std::uint32_t,
                            baseaddress + offset,
                            access::rw,
                            groov::field<"ADDRESS", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using abr_tt = groov::reg<name,
                             std::uint32_t,
                             baseaddress + offset,
                             access::rw,
                             groov::field<"ALTERNATE", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dr_tt = groov::reg<name,
                            std::uint32_t,
                            baseaddress + offset,
                            access::rw,
                            groov::field<"DATA", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using psmkr_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
                               access::rw,
                               groov::field<"MASK", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using psmar_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
                               access::rw,
                               groov::field<"MATCH", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using pir_tt =
     groov::reg<name,
                std::uint32_t,
@@ -149,7 +173,9 @@ namespace quadspi {
                groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
                groov::field<"INTERVAL", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using lptr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -157,44 +183,5 @@ namespace quadspi {
                access::rw,
                groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
                groov::field<"TIMEOUT", std::uint16_t, 15, 0>>;
-
-  template <std::uint32_t baseaddress>
-  using cr_t = cr_tt<"CR", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using dcr_t = dcr_tt<"DCR", baseaddress, 4>;
-
-  template <std::uint32_t baseaddress>
-  using sr_t = sr_tt<"SR", baseaddress, 8>;
-
-  template <std::uint32_t baseaddress>
-  using fcr_t = fcr_tt<"FCR", baseaddress, 12>;
-
-  template <std::uint32_t baseaddress>
-  using dlr_t = dlr_tt<"DLR", baseaddress, 16>;
-
-  template <std::uint32_t baseaddress>
-  using ccr_t = ccr_tt<"CCR", baseaddress, 20>;
-
-  template <std::uint32_t baseaddress>
-  using ar_t = ar_tt<"AR", baseaddress, 24>;
-
-  template <std::uint32_t baseaddress>
-  using abr_t = abr_tt<"ABR", baseaddress, 28>;
-
-  template <std::uint32_t baseaddress>
-  using dr_t = dr_tt<"DR", baseaddress, 32>;
-
-  template <std::uint32_t baseaddress>
-  using psmkr_t = psmkr_tt<"PSMKR", baseaddress, 36>;
-
-  template <std::uint32_t baseaddress>
-  using psmar_t = psmar_tt<"PSMAR", baseaddress, 40>;
-
-  template <std::uint32_t baseaddress>
-  using pir_t = pir_tt<"PIR", baseaddress, 44>;
-
-  template <std::uint32_t baseaddress>
-  using lptr_t = lptr_tt<"LPTR", baseaddress, 48>;
 
 } // namespace quadspi

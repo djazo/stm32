@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace exti {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using imr1_tt = groov::reg<name,
                              std::uint32_t,
                              baseaddress + offset,
@@ -49,7 +51,9 @@ namespace exti {
                              groov::field<"MR1", bool, 1, 1>,
                              groov::field<"MR0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using emr1_tt = groov::reg<name,
                              std::uint32_t,
                              baseaddress + offset,
@@ -87,7 +91,9 @@ namespace exti {
                              groov::field<"MR1", bool, 1, 1>,
                              groov::field<"MR0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using rtsr1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -121,7 +127,9 @@ namespace exti {
                groov::field<"TR1", bool, 1, 1>,
                groov::field<"TR0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ftsr1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -155,7 +163,9 @@ namespace exti {
                groov::field<"TR1", bool, 1, 1>,
                groov::field<"TR0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using swier1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -189,7 +199,9 @@ namespace exti {
                groov::field<"SWIER1", bool, 1, 1>,
                groov::field<"SWIER0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using pr1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -223,7 +235,9 @@ namespace exti {
                groov::field<"PR1", bool, 1, 1>,
                groov::field<"PR0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using imr2_tt =
     groov::reg<name,
                std::uint32_t,
@@ -235,7 +249,9 @@ namespace exti {
                groov::field<"MR33", bool, 1, 1>,
                groov::field<"MR32", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using emr2_tt =
     groov::reg<name,
                std::uint32_t,
@@ -247,7 +263,9 @@ namespace exti {
                groov::field<"MR33", bool, 1, 1>,
                groov::field<"MR32", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using rtsr2_tt =
     groov::reg<name,
                std::uint32_t,
@@ -257,7 +275,9 @@ namespace exti {
                groov::field<"TR33", bool, 1, 1>,
                groov::field<"TR32", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ftsr2_tt =
     groov::reg<name,
                std::uint32_t,
@@ -267,7 +287,9 @@ namespace exti {
                groov::field<"TR33", bool, 1, 1>,
                groov::field<"TR32", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using swier2_tt =
     groov::reg<name,
                std::uint32_t,
@@ -277,7 +299,9 @@ namespace exti {
                groov::field<"SWIER33", bool, 1, 1>,
                groov::field<"SWIER32", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using pr2_tt =
     groov::reg<name,
                std::uint32_t,
@@ -286,41 +310,5 @@ namespace exti {
                groov::field<"RESERVED0", std::uint32_t, 31, 2, access::ro>,
                groov::field<"PR33", bool, 1, 1>,
                groov::field<"PR32", bool, 0, 0>>;
-
-  template <std::uint32_t baseaddress>
-  using imr1_t = imr1_tt<"IMR1", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using emr1_t = emr1_tt<"EMR1", baseaddress, 4>;
-
-  template <std::uint32_t baseaddress>
-  using rtsr1_t = rtsr1_tt<"RTSR1", baseaddress, 8>;
-
-  template <std::uint32_t baseaddress>
-  using ftsr1_t = ftsr1_tt<"FTSR1", baseaddress, 12>;
-
-  template <std::uint32_t baseaddress>
-  using swier1_t = swier1_tt<"SWIER1", baseaddress, 16>;
-
-  template <std::uint32_t baseaddress>
-  using pr1_t = pr1_tt<"PR1", baseaddress, 20>;
-
-  template <std::uint32_t baseaddress>
-  using imr2_t = imr2_tt<"IMR2", baseaddress, 24>;
-
-  template <std::uint32_t baseaddress>
-  using emr2_t = emr2_tt<"EMR2", baseaddress, 28>;
-
-  template <std::uint32_t baseaddress>
-  using rtsr2_t = rtsr2_tt<"RTSR2", baseaddress, 32>;
-
-  template <std::uint32_t baseaddress>
-  using ftsr2_t = ftsr2_tt<"FTSR2", baseaddress, 36>;
-
-  template <std::uint32_t baseaddress>
-  using swier2_t = swier2_tt<"SWIER2", baseaddress, 40>;
-
-  template <std::uint32_t baseaddress>
-  using pr2_t = pr2_tt<"PR2", baseaddress, 44>;
 
 } // namespace exti

@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace hrtim_master {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mcr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -40,7 +42,9 @@ namespace hrtim_master {
                groov::field<"CONT", bool, 3, 3>,
                groov::field<"CK_PSC", std::uint8_t, 2, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using misr_tt = groov::reg<name,
                              std::uint32_t,
                              baseaddress + offset,
@@ -54,7 +58,9 @@ namespace hrtim_master {
                              groov::field<"MCMP2", bool, 1, 1>,
                              groov::field<"MCMP1", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using micr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -69,7 +75,9 @@ namespace hrtim_master {
                groov::field<"MCMP2C", bool, 1, 1>,
                groov::field<"MCMP1C", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mdier4_tt =
     groov::reg<name,
                std::uint32_t,
@@ -92,7 +100,9 @@ namespace hrtim_master {
                groov::field<"MCMP2IE", bool, 1, 1>,
                groov::field<"MCMP1IE", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mcntr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -101,7 +111,9 @@ namespace hrtim_master {
                groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
                groov::field<"MCNT", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mper_tt =
     groov::reg<name,
                std::uint32_t,
@@ -110,7 +122,9 @@ namespace hrtim_master {
                groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
                groov::field<"MPER", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mrep_tt =
     groov::reg<name,
                std::uint32_t,
@@ -119,7 +133,9 @@ namespace hrtim_master {
                groov::field<"RESERVED0", std::uint32_t, 31, 8, access::ro>,
                groov::field<"MREP", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mcmp1r_tt =
     groov::reg<name,
                std::uint32_t,
@@ -128,7 +144,9 @@ namespace hrtim_master {
                groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
                groov::field<"MCMP1", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mcmp2r_tt =
     groov::reg<name,
                std::uint32_t,
@@ -137,7 +155,9 @@ namespace hrtim_master {
                groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
                groov::field<"MCMP2", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mcmp3r_tt =
     groov::reg<name,
                std::uint32_t,
@@ -146,7 +166,9 @@ namespace hrtim_master {
                groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
                groov::field<"MCMP3", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mcmp4r_tt =
     groov::reg<name,
                std::uint32_t,
@@ -154,38 +176,5 @@ namespace hrtim_master {
                access::rw,
                groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
                groov::field<"MCMP4", std::uint16_t, 15, 0>>;
-
-  template <std::uint32_t baseaddress>
-  using mcr_t = mcr_tt<"MCR", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using misr_t = misr_tt<"MISR", baseaddress, 4>;
-
-  template <std::uint32_t baseaddress>
-  using micr_t = micr_tt<"MICR", baseaddress, 8>;
-
-  template <std::uint32_t baseaddress>
-  using mdier4_t = mdier4_tt<"MDIER4", baseaddress, 12>;
-
-  template <std::uint32_t baseaddress>
-  using mcntr_t = mcntr_tt<"MCNTR", baseaddress, 16>;
-
-  template <std::uint32_t baseaddress>
-  using mper_t = mper_tt<"MPER", baseaddress, 20>;
-
-  template <std::uint32_t baseaddress>
-  using mrep_t = mrep_tt<"MREP", baseaddress, 24>;
-
-  template <std::uint32_t baseaddress>
-  using mcmp1r_t = mcmp1r_tt<"MCMP1R", baseaddress, 28>;
-
-  template <std::uint32_t baseaddress>
-  using mcmp2r_t = mcmp2r_tt<"MCMP2R", baseaddress, 36>;
-
-  template <std::uint32_t baseaddress>
-  using mcmp3r_t = mcmp3r_tt<"MCMP3R", baseaddress, 40>;
-
-  template <std::uint32_t baseaddress>
-  using mcmp4r_t = mcmp4r_tt<"MCMP4R", baseaddress, 44>;
 
 } // namespace hrtim_master

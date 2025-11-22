@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace tzsc {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using tzsc_cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -20,7 +22,9 @@ namespace tzsc {
                groov::field<"RESERVED0", std::uint32_t, 31, 1, access::ro>,
                groov::field<"LCK", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using tzsc_seccfgr1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -33,7 +37,9 @@ namespace tzsc {
                groov::field<"AESSEC", bool, 2, 2>,
                groov::field<"RESERVED0", std::uint8_t, 1, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using tzsc_privcfgr1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -47,7 +53,9 @@ namespace tzsc {
                groov::field<"AESPRIV", bool, 2, 2>,
                groov::field<"RESERVED0", std::uint8_t, 1, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using tzsc_mpcwm1_upwmr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -57,7 +65,9 @@ namespace tzsc {
                groov::field<"LGTH", std::uint16_t, 27, 16>,
                groov::field<"RESERVED0", std::uint16_t, 15, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using tzsc_mpcwm1_upwwmr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -67,7 +77,9 @@ namespace tzsc {
                groov::field<"LGTH", std::uint16_t, 27, 16>,
                groov::field<"RESERVED0", std::uint16_t, 15, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using tzsc_mpcwm2_upwmr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -77,7 +89,9 @@ namespace tzsc {
                groov::field<"LGTH", std::uint16_t, 27, 16>,
                groov::field<"RESERVED0", std::uint16_t, 15, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using tzsc_mpcwm3_upwmr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -86,30 +100,5 @@ namespace tzsc {
                groov::field<"RESERVED1", std::uint8_t, 31, 28, access::ro>,
                groov::field<"LGTH", std::uint16_t, 27, 16>,
                groov::field<"RESERVED0", std::uint16_t, 15, 0, access::ro>>;
-
-  template <std::uint32_t baseaddress>
-  using tzsc_cr_t = tzsc_cr_tt<"TZSC_CR", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using tzsc_seccfgr1_t = tzsc_seccfgr1_tt<"TZSC_SECCFGR1", baseaddress, 16>;
-
-  template <std::uint32_t baseaddress>
-  using tzsc_privcfgr1_t = tzsc_privcfgr1_tt<"TZSC_PRIVCFGR1", baseaddress, 32>;
-
-  template <std::uint32_t baseaddress>
-  using tzsc_mpcwm1_upwmr_t =
-    tzsc_mpcwm1_upwmr_tt<"TZSC_MPCWM1_UPWMR", baseaddress, 304>;
-
-  template <std::uint32_t baseaddress>
-  using tzsc_mpcwm1_upwwmr_t =
-    tzsc_mpcwm1_upwwmr_tt<"TZSC_MPCWM1_UPWWMR", baseaddress, 308>;
-
-  template <std::uint32_t baseaddress>
-  using tzsc_mpcwm2_upwmr_t =
-    tzsc_mpcwm2_upwmr_tt<"TZSC_MPCWM2_UPWMR", baseaddress, 312>;
-
-  template <std::uint32_t baseaddress>
-  using tzsc_mpcwm3_upwmr_t =
-    tzsc_mpcwm3_upwmr_tt<"TZSC_MPCWM3_UPWMR", baseaddress, 320>;
 
 } // namespace tzsc

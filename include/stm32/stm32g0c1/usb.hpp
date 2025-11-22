@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace usb {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using usb_chep0r_tt =
     groov::reg<name,
                std::uint32_t,
@@ -34,7 +36,9 @@ namespace usb {
                groov::field<"STATTX", std::uint8_t, 5, 4, access::wo>,
                groov::field<"EA", std::uint8_t, 3, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using usb_chep1r_tt =
     groov::reg<name,
                std::uint32_t,
@@ -57,7 +61,9 @@ namespace usb {
                groov::field<"STATTX", std::uint8_t, 5, 4, access::wo>,
                groov::field<"EA", std::uint8_t, 3, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using usb_chep2r_tt =
     groov::reg<name,
                std::uint32_t,
@@ -80,7 +86,9 @@ namespace usb {
                groov::field<"STATTX", std::uint8_t, 5, 4, access::wo>,
                groov::field<"EA", std::uint8_t, 3, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using usb_chep3r_tt =
     groov::reg<name,
                std::uint32_t,
@@ -103,7 +111,9 @@ namespace usb {
                groov::field<"STATTX", std::uint8_t, 5, 4, access::wo>,
                groov::field<"EA", std::uint8_t, 3, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using usb_chep4r_tt =
     groov::reg<name,
                std::uint32_t,
@@ -126,7 +136,9 @@ namespace usb {
                groov::field<"STATTX", std::uint8_t, 5, 4, access::wo>,
                groov::field<"EA", std::uint8_t, 3, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using usb_chep5r_tt =
     groov::reg<name,
                std::uint32_t,
@@ -149,7 +161,9 @@ namespace usb {
                groov::field<"STATTX", std::uint8_t, 5, 4, access::wo>,
                groov::field<"EA", std::uint8_t, 3, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using usb_chep6r_tt =
     groov::reg<name,
                std::uint32_t,
@@ -172,7 +186,9 @@ namespace usb {
                groov::field<"STATTX", std::uint8_t, 5, 4, access::wo>,
                groov::field<"EA", std::uint8_t, 3, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using usb_chep7r_tt =
     groov::reg<name,
                std::uint32_t,
@@ -195,7 +211,9 @@ namespace usb {
                groov::field<"STATTX", std::uint8_t, 5, 4, access::wo>,
                groov::field<"EA", std::uint8_t, 3, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using usb_cntr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -221,7 +239,9 @@ namespace usb {
                groov::field<"PDWN", bool, 1, 1>,
                groov::field<"USBRST", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using usb_istr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -245,7 +265,9 @@ namespace usb {
                groov::field<"DIR", bool, 4, 4, access::ro>,
                groov::field<"IDN", std::uint8_t, 3, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using usb_fnr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -258,7 +280,9 @@ namespace usb {
                groov::field<"LSOF", std::uint8_t, 12, 11, access::ro>,
                groov::field<"FN", std::uint16_t, 10, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using usb_daddr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -268,7 +292,9 @@ namespace usb {
                groov::field<"EF", bool, 7, 7>,
                groov::field<"ADD", std::uint8_t, 6, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using usb_lpmcsr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -281,7 +307,9 @@ namespace usb {
                groov::field<"LPMACK", bool, 1, 1>,
                groov::field<"LPMEN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using usb_bcdr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -298,47 +326,5 @@ namespace usb {
                groov::field<"PDEN", bool, 2, 2>,
                groov::field<"DCDEN", bool, 1, 1>,
                groov::field<"BCDEN", bool, 0, 0>>;
-
-  template <std::uint32_t baseaddress>
-  using usb_chep0r_t = usb_chep0r_tt<"USB_CHEP0R", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using usb_chep1r_t = usb_chep1r_tt<"USB_CHEP1R", baseaddress, 4>;
-
-  template <std::uint32_t baseaddress>
-  using usb_chep2r_t = usb_chep2r_tt<"USB_CHEP2R", baseaddress, 8>;
-
-  template <std::uint32_t baseaddress>
-  using usb_chep3r_t = usb_chep3r_tt<"USB_CHEP3R", baseaddress, 12>;
-
-  template <std::uint32_t baseaddress>
-  using usb_chep4r_t = usb_chep4r_tt<"USB_CHEP4R", baseaddress, 16>;
-
-  template <std::uint32_t baseaddress>
-  using usb_chep5r_t = usb_chep5r_tt<"USB_CHEP5R", baseaddress, 20>;
-
-  template <std::uint32_t baseaddress>
-  using usb_chep6r_t = usb_chep6r_tt<"USB_CHEP6R", baseaddress, 24>;
-
-  template <std::uint32_t baseaddress>
-  using usb_chep7r_t = usb_chep7r_tt<"USB_CHEP7R", baseaddress, 28>;
-
-  template <std::uint32_t baseaddress>
-  using usb_cntr_t = usb_cntr_tt<"USB_CNTR", baseaddress, 64>;
-
-  template <std::uint32_t baseaddress>
-  using usb_istr_t = usb_istr_tt<"USB_ISTR", baseaddress, 68>;
-
-  template <std::uint32_t baseaddress>
-  using usb_fnr_t = usb_fnr_tt<"USB_FNR", baseaddress, 72>;
-
-  template <std::uint32_t baseaddress>
-  using usb_daddr_t = usb_daddr_tt<"USB_DADDR", baseaddress, 76>;
-
-  template <std::uint32_t baseaddress>
-  using usb_lpmcsr_t = usb_lpmcsr_tt<"USB_LPMCSR", baseaddress, 84>;
-
-  template <std::uint32_t baseaddress>
-  using usb_bcdr_t = usb_bcdr_tt<"USB_BCDR", baseaddress, 88>;
 
 } // namespace usb

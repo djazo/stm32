@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace cec {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using cec_cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -22,7 +24,9 @@ namespace cec {
                groov::field<"TXSOM", bool, 1, 1>,
                groov::field<"CECEN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using cec_cfgr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -39,7 +43,9 @@ namespace cec {
                groov::field<"RXTOL", bool, 3, 3>,
                groov::field<"SFT", std::uint8_t, 2, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using cec_txdr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -48,7 +54,9 @@ namespace cec {
                groov::field<"RESERVED0", std::uint32_t, 31, 8, access::ro>,
                groov::field<"TXD", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using cec_rxdr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -57,7 +65,9 @@ namespace cec {
                groov::field<"RESERVED0", std::uint32_t, 31, 8>,
                groov::field<"RXD", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using cec_isr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -78,7 +88,9 @@ namespace cec {
                groov::field<"RXEND", bool, 1, 1>,
                groov::field<"RXBR", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using cec_ier_tt =
     groov::reg<name,
                std::uint32_t,
@@ -98,23 +110,5 @@ namespace cec {
                groov::field<"RXOVRIE", bool, 2, 2>,
                groov::field<"RXENDIE", bool, 1, 1>,
                groov::field<"RXBRIE", bool, 0, 0>>;
-
-  template <std::uint32_t baseaddress>
-  using cec_cr_t = cec_cr_tt<"CEC_CR", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using cec_cfgr_t = cec_cfgr_tt<"CEC_CFGR", baseaddress, 4>;
-
-  template <std::uint32_t baseaddress>
-  using cec_txdr_t = cec_txdr_tt<"CEC_TXDR", baseaddress, 8>;
-
-  template <std::uint32_t baseaddress>
-  using cec_rxdr_t = cec_rxdr_tt<"CEC_RXDR", baseaddress, 12>;
-
-  template <std::uint32_t baseaddress>
-  using cec_isr_t = cec_isr_tt<"CEC_ISR", baseaddress, 16>;
-
-  template <std::uint32_t baseaddress>
-  using cec_ier_t = cec_ier_tt<"CEC_IER", baseaddress, 20>;
 
 } // namespace cec

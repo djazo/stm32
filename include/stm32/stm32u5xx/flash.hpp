@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace flash {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using flash_acr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -27,7 +29,9 @@ namespace flash {
                groov::field<"RESERVED0", std::uint8_t, 7, 4, access::ro>,
                groov::field<"LATENCY", std::uint8_t, 3, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using flash_nskeyr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -35,7 +39,9 @@ namespace flash {
                access::rw,
                groov::field<"NSKEY", std::uint32_t, 31, 0, access::wo>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using flash_seckeyr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -43,7 +49,9 @@ namespace flash {
                access::rw,
                groov::field<"SECKEY", std::uint32_t, 31, 0, access::wo>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using flash_optkeyr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -51,7 +59,9 @@ namespace flash {
                access::rw,
                groov::field<"OPTKEY", std::uint32_t, 31, 0, access::wo>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using flash_pdkey1r_tt =
     groov::reg<name,
                std::uint32_t,
@@ -59,7 +69,9 @@ namespace flash {
                access::rw,
                groov::field<"PDKEY1", std::uint32_t, 31, 0, access::wo>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using flash_pdkey2r_tt =
     groov::reg<name,
                std::uint32_t,
@@ -67,7 +79,9 @@ namespace flash {
                access::rw,
                groov::field<"PDKEY2", std::uint32_t, 31, 0, access::wo>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using flash_nssr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -92,7 +106,9 @@ namespace flash {
                groov::field<"OPERR", bool, 1, 1>,
                groov::field<"EOP", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using flash_secsr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -111,7 +127,9 @@ namespace flash {
                groov::field<"OPERR", bool, 1, 1>,
                groov::field<"EOP", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using flash_nscr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -137,7 +155,9 @@ namespace flash {
                groov::field<"PER", bool, 1, 1>,
                groov::field<"PG", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using flash_seccr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -162,7 +182,9 @@ namespace flash {
                groov::field<"PER", bool, 1, 1>,
                groov::field<"PG", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using flash_eccr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -178,7 +200,9 @@ namespace flash {
                groov::field<"RESERVED0", bool, 20, 20, access::ro>,
                groov::field<"ADDR_ECC", std::uint32_t, 19, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using flash_opsr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -191,7 +215,9 @@ namespace flash {
                groov::field<"RESERVED0", bool, 20, 20, access::ro>,
                groov::field<"ADDR_OP", std::uint32_t, 19, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using flash_optr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -221,7 +247,9 @@ namespace flash {
                groov::field<"BOR_LEV", std::uint8_t, 10, 8>,
                groov::field<"RDP", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using flash_nsbootadd0r_tt =
     groov::reg<name,
                std::uint32_t,
@@ -230,7 +258,9 @@ namespace flash {
                groov::field<"NSBOOTADD0", std::uint32_t, 31, 7>,
                groov::field<"RESERVED0", std::uint8_t, 6, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using flash_nsbootadd1r_tt =
     groov::reg<name,
                std::uint32_t,
@@ -239,7 +269,9 @@ namespace flash {
                groov::field<"NSBOOTADD1", std::uint32_t, 31, 7>,
                groov::field<"RESERVED0", std::uint8_t, 6, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using flash_secbootadd0r_tt =
     groov::reg<name,
                std::uint32_t,
@@ -249,7 +281,9 @@ namespace flash {
                groov::field<"RESERVED0", std::uint8_t, 6, 1, access::ro>,
                groov::field<"BOOT_LOCK", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using flash_secwm1r1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -260,7 +294,9 @@ namespace flash {
                groov::field<"RESERVED0", std::uint16_t, 15, 7, access::ro>,
                groov::field<"SECWM1_PSTRT", std::uint8_t, 6, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using flash_secwm1r2_tt =
     groov::reg<name,
                std::uint32_t,
@@ -271,7 +307,9 @@ namespace flash {
                groov::field<"HDP1_PEND", std::uint8_t, 22, 16>,
                groov::field<"RESERVED0", std::uint16_t, 15, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using flash_wrp1ar_tt =
     groov::reg<name,
                std::uint32_t,
@@ -283,7 +321,9 @@ namespace flash {
                groov::field<"RESERVED0", std::uint16_t, 15, 7, access::ro>,
                groov::field<"WRP1A_PSTRT", std::uint8_t, 6, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using flash_wrp1br_tt =
     groov::reg<name,
                std::uint32_t,
@@ -295,7 +335,9 @@ namespace flash {
                groov::field<"RESERVED0", std::uint16_t, 15, 7, access::ro>,
                groov::field<"WRP1B_PSTRT", std::uint8_t, 6, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using flash_secwm2r1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -306,7 +348,9 @@ namespace flash {
                groov::field<"RESERVED0", std::uint16_t, 15, 7, access::ro>,
                groov::field<"SECWM2_PSTRT", std::uint8_t, 6, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using flash_secwm2r2_tt =
     groov::reg<name,
                std::uint32_t,
@@ -317,7 +361,9 @@ namespace flash {
                groov::field<"HDP2_PEND", std::uint8_t, 22, 16>,
                groov::field<"RESERVED0", std::uint16_t, 15, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using flash_wrp2ar_tt =
     groov::reg<name,
                std::uint32_t,
@@ -329,7 +375,9 @@ namespace flash {
                groov::field<"RESERVED0", std::uint16_t, 15, 7, access::ro>,
                groov::field<"WRP2A_PSTRT", std::uint8_t, 6, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using flash_wrp2br_tt =
     groov::reg<name,
                std::uint32_t,
@@ -341,7 +389,9 @@ namespace flash {
                groov::field<"RESERVED0", std::uint16_t, 15, 7, access::ro>,
                groov::field<"WRP2B_PSTRT", std::uint8_t, 6, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using flash_oem1keyr1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -349,7 +399,9 @@ namespace flash {
                access::rw,
                groov::field<"OEM1KEY", std::uint32_t, 31, 0, access::wo>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using flash_oem1keyr2_tt =
     groov::reg<name,
                std::uint32_t,
@@ -357,7 +409,9 @@ namespace flash {
                access::rw,
                groov::field<"OEM1KEY", std::uint32_t, 31, 0, access::wo>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using flash_oem2keyr1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -365,7 +419,9 @@ namespace flash {
                access::rw,
                groov::field<"OEM2KEY", std::uint32_t, 31, 0, access::wo>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using flash_oem2keyr2_tt =
     groov::reg<name,
                std::uint32_t,
@@ -373,7 +429,9 @@ namespace flash {
                access::rw,
                groov::field<"OEM2KEY", std::uint32_t, 31, 0, access::wo>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using flash_sec1bbr1_tt = groov::reg<name,
                                        std::uint32_t,
                                        baseaddress + offset,
@@ -411,7 +469,9 @@ namespace flash {
                                        groov::field<"SEC1BB1", bool, 1, 1>,
                                        groov::field<"SEC1BB0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using flash_sec1bbr2_tt = groov::reg<name,
                                        std::uint32_t,
                                        baseaddress + offset,
@@ -449,7 +509,9 @@ namespace flash {
                                        groov::field<"SEC1BB1", bool, 1, 1>,
                                        groov::field<"SEC1BB0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using flash_sec1bbr3_tt = groov::reg<name,
                                        std::uint32_t,
                                        baseaddress + offset,
@@ -487,7 +549,9 @@ namespace flash {
                                        groov::field<"SEC1BB1", bool, 1, 1>,
                                        groov::field<"SEC1BB0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using flash_sec1bbr4_tt = groov::reg<name,
                                        std::uint32_t,
                                        baseaddress + offset,
@@ -525,7 +589,9 @@ namespace flash {
                                        groov::field<"SEC1BB1", bool, 1, 1>,
                                        groov::field<"SEC1BB0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using flash_sec2bbr1_tt = groov::reg<name,
                                        std::uint32_t,
                                        baseaddress + offset,
@@ -563,7 +629,9 @@ namespace flash {
                                        groov::field<"SEC2BB1", bool, 1, 1>,
                                        groov::field<"SEC2BB0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using flash_sec2bbr2_tt = groov::reg<name,
                                        std::uint32_t,
                                        baseaddress + offset,
@@ -601,7 +669,9 @@ namespace flash {
                                        groov::field<"SEC2BB1", bool, 1, 1>,
                                        groov::field<"SEC2BB0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using flash_sec2bbr3_tt = groov::reg<name,
                                        std::uint32_t,
                                        baseaddress + offset,
@@ -639,7 +709,9 @@ namespace flash {
                                        groov::field<"SEC2BB1", bool, 1, 1>,
                                        groov::field<"SEC2BB0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using flash_sec2bbr4_tt = groov::reg<name,
                                        std::uint32_t,
                                        baseaddress + offset,
@@ -677,7 +749,9 @@ namespace flash {
                                        groov::field<"SEC2BB1", bool, 1, 1>,
                                        groov::field<"SEC2BB0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using flash_sechdpcr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -687,7 +761,9 @@ namespace flash {
                groov::field<"HDP2_ACCDIS", bool, 1, 1>,
                groov::field<"HDP1_ACCDIS", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using flash_privcfgr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -697,7 +773,9 @@ namespace flash {
                groov::field<"NSPRIV", bool, 1, 1>,
                groov::field<"SPRIV", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using flash_priv1bbr1_tt = groov::reg<name,
                                         std::uint32_t,
                                         baseaddress + offset,
@@ -735,7 +813,9 @@ namespace flash {
                                         groov::field<"PRIV1BB1", bool, 1, 1>,
                                         groov::field<"PRIV1BB0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using flash_priv1bbr2_tt = groov::reg<name,
                                         std::uint32_t,
                                         baseaddress + offset,
@@ -773,7 +853,9 @@ namespace flash {
                                         groov::field<"PRIV1BB1", bool, 1, 1>,
                                         groov::field<"PRIV1BB0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using flash_priv1bbr3_tt = groov::reg<name,
                                         std::uint32_t,
                                         baseaddress + offset,
@@ -811,7 +893,9 @@ namespace flash {
                                         groov::field<"PRIV1BB1", bool, 1, 1>,
                                         groov::field<"PRIV1BB0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using flash_priv1bbr4_tt = groov::reg<name,
                                         std::uint32_t,
                                         baseaddress + offset,
@@ -849,7 +933,9 @@ namespace flash {
                                         groov::field<"PRIV1BB1", bool, 1, 1>,
                                         groov::field<"PRIV1BB0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using flash_priv2bbr1_tt = groov::reg<name,
                                         std::uint32_t,
                                         baseaddress + offset,
@@ -887,7 +973,9 @@ namespace flash {
                                         groov::field<"PRIV2BB1", bool, 1, 1>,
                                         groov::field<"PRIV2BB0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using flash_priv2bbr2_tt = groov::reg<name,
                                         std::uint32_t,
                                         baseaddress + offset,
@@ -925,7 +1013,9 @@ namespace flash {
                                         groov::field<"PRIV2BB1", bool, 1, 1>,
                                         groov::field<"PRIV2BB0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using flash_priv2bbr3_tt = groov::reg<name,
                                         std::uint32_t,
                                         baseaddress + offset,
@@ -963,7 +1053,9 @@ namespace flash {
                                         groov::field<"PRIV2BB1", bool, 1, 1>,
                                         groov::field<"PRIV2BB0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using flash_priv2bbr4_tt = groov::reg<name,
                                         std::uint32_t,
                                         baseaddress + offset,
@@ -1000,169 +1092,5 @@ namespace flash {
                                         groov::field<"PRIV2BB2", bool, 2, 2>,
                                         groov::field<"PRIV2BB1", bool, 1, 1>,
                                         groov::field<"PRIV2BB0", bool, 0, 0>>;
-
-  template <std::uint32_t baseaddress>
-  using flash_acr_t = flash_acr_tt<"FLASH_ACR", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using flash_nskeyr_t = flash_nskeyr_tt<"FLASH_NSKEYR", baseaddress, 8>;
-
-  template <std::uint32_t baseaddress>
-  using flash_seckeyr_t = flash_seckeyr_tt<"FLASH_SECKEYR", baseaddress, 12>;
-
-  template <std::uint32_t baseaddress>
-  using flash_optkeyr_t = flash_optkeyr_tt<"FLASH_OPTKEYR", baseaddress, 16>;
-
-  template <std::uint32_t baseaddress>
-  using flash_pdkey1r_t = flash_pdkey1r_tt<"FLASH_PDKEY1R", baseaddress, 24>;
-
-  template <std::uint32_t baseaddress>
-  using flash_pdkey2r_t = flash_pdkey2r_tt<"FLASH_PDKEY2R", baseaddress, 28>;
-
-  template <std::uint32_t baseaddress>
-  using flash_nssr_t = flash_nssr_tt<"FLASH_NSSR", baseaddress, 32>;
-
-  template <std::uint32_t baseaddress>
-  using flash_secsr_t = flash_secsr_tt<"FLASH_SECSR", baseaddress, 36>;
-
-  template <std::uint32_t baseaddress>
-  using flash_nscr_t = flash_nscr_tt<"FLASH_NSCR", baseaddress, 40>;
-
-  template <std::uint32_t baseaddress>
-  using flash_seccr_t = flash_seccr_tt<"FLASH_SECCR", baseaddress, 44>;
-
-  template <std::uint32_t baseaddress>
-  using flash_eccr_t = flash_eccr_tt<"FLASH_ECCR", baseaddress, 48>;
-
-  template <std::uint32_t baseaddress>
-  using flash_opsr_t = flash_opsr_tt<"FLASH_OPSR", baseaddress, 52>;
-
-  template <std::uint32_t baseaddress>
-  using flash_optr_t = flash_optr_tt<"FLASH_OPTR", baseaddress, 64>;
-
-  template <std::uint32_t baseaddress>
-  using flash_nsbootadd0r_t =
-    flash_nsbootadd0r_tt<"FLASH_NSBOOTADD0R", baseaddress, 68>;
-
-  template <std::uint32_t baseaddress>
-  using flash_nsbootadd1r_t =
-    flash_nsbootadd1r_tt<"FLASH_NSBOOTADD1R", baseaddress, 72>;
-
-  template <std::uint32_t baseaddress>
-  using flash_secbootadd0r_t =
-    flash_secbootadd0r_tt<"FLASH_SECBOOTADD0R", baseaddress, 76>;
-
-  template <std::uint32_t baseaddress>
-  using flash_secwm1r1_t = flash_secwm1r1_tt<"FLASH_SECWM1R1", baseaddress, 80>;
-
-  template <std::uint32_t baseaddress>
-  using flash_secwm1r2_t = flash_secwm1r2_tt<"FLASH_SECWM1R2", baseaddress, 84>;
-
-  template <std::uint32_t baseaddress>
-  using flash_wrp1ar_t = flash_wrp1ar_tt<"FLASH_WRP1AR", baseaddress, 88>;
-
-  template <std::uint32_t baseaddress>
-  using flash_wrp1br_t = flash_wrp1br_tt<"FLASH_WRP1BR", baseaddress, 92>;
-
-  template <std::uint32_t baseaddress>
-  using flash_secwm2r1_t = flash_secwm2r1_tt<"FLASH_SECWM2R1", baseaddress, 96>;
-
-  template <std::uint32_t baseaddress>
-  using flash_secwm2r2_t =
-    flash_secwm2r2_tt<"FLASH_SECWM2R2", baseaddress, 100>;
-
-  template <std::uint32_t baseaddress>
-  using flash_wrp2ar_t = flash_wrp2ar_tt<"FLASH_WRP2AR", baseaddress, 104>;
-
-  template <std::uint32_t baseaddress>
-  using flash_wrp2br_t = flash_wrp2br_tt<"FLASH_WRP2BR", baseaddress, 108>;
-
-  template <std::uint32_t baseaddress>
-  using flash_oem1keyr1_t =
-    flash_oem1keyr1_tt<"FLASH_OEM1KEYR1", baseaddress, 112>;
-
-  template <std::uint32_t baseaddress>
-  using flash_oem1keyr2_t =
-    flash_oem1keyr2_tt<"FLASH_OEM1KEYR2", baseaddress, 116>;
-
-  template <std::uint32_t baseaddress>
-  using flash_oem2keyr1_t =
-    flash_oem2keyr1_tt<"FLASH_OEM2KEYR1", baseaddress, 120>;
-
-  template <std::uint32_t baseaddress>
-  using flash_oem2keyr2_t =
-    flash_oem2keyr2_tt<"FLASH_OEM2KEYR2", baseaddress, 124>;
-
-  template <std::uint32_t baseaddress>
-  using flash_sec1bbr1_t =
-    flash_sec1bbr1_tt<"FLASH_SEC1BBR1", baseaddress, 128>;
-
-  template <std::uint32_t baseaddress>
-  using flash_sec1bbr2_t =
-    flash_sec1bbr2_tt<"FLASH_SEC1BBR2", baseaddress, 132>;
-
-  template <std::uint32_t baseaddress>
-  using flash_sec1bbr3_t =
-    flash_sec1bbr3_tt<"FLASH_SEC1BBR3", baseaddress, 136>;
-
-  template <std::uint32_t baseaddress>
-  using flash_sec1bbr4_t =
-    flash_sec1bbr4_tt<"FLASH_SEC1BBR4", baseaddress, 140>;
-
-  template <std::uint32_t baseaddress>
-  using flash_sec2bbr1_t =
-    flash_sec2bbr1_tt<"FLASH_SEC2BBR1", baseaddress, 160>;
-
-  template <std::uint32_t baseaddress>
-  using flash_sec2bbr2_t =
-    flash_sec2bbr2_tt<"FLASH_SEC2BBR2", baseaddress, 164>;
-
-  template <std::uint32_t baseaddress>
-  using flash_sec2bbr3_t =
-    flash_sec2bbr3_tt<"FLASH_SEC2BBR3", baseaddress, 168>;
-
-  template <std::uint32_t baseaddress>
-  using flash_sec2bbr4_t =
-    flash_sec2bbr4_tt<"FLASH_SEC2BBR4", baseaddress, 172>;
-
-  template <std::uint32_t baseaddress>
-  using flash_sechdpcr_t =
-    flash_sechdpcr_tt<"FLASH_SECHDPCR", baseaddress, 192>;
-
-  template <std::uint32_t baseaddress>
-  using flash_privcfgr_t =
-    flash_privcfgr_tt<"FLASH_PRIVCFGR", baseaddress, 196>;
-
-  template <std::uint32_t baseaddress>
-  using flash_priv1bbr1_t =
-    flash_priv1bbr1_tt<"FLASH_PRIV1BBR1", baseaddress, 208>;
-
-  template <std::uint32_t baseaddress>
-  using flash_priv1bbr2_t =
-    flash_priv1bbr2_tt<"FLASH_PRIV1BBR2", baseaddress, 212>;
-
-  template <std::uint32_t baseaddress>
-  using flash_priv1bbr3_t =
-    flash_priv1bbr3_tt<"FLASH_PRIV1BBR3", baseaddress, 216>;
-
-  template <std::uint32_t baseaddress>
-  using flash_priv1bbr4_t =
-    flash_priv1bbr4_tt<"FLASH_PRIV1BBR4", baseaddress, 220>;
-
-  template <std::uint32_t baseaddress>
-  using flash_priv2bbr1_t =
-    flash_priv2bbr1_tt<"FLASH_PRIV2BBR1", baseaddress, 240>;
-
-  template <std::uint32_t baseaddress>
-  using flash_priv2bbr2_t =
-    flash_priv2bbr2_tt<"FLASH_PRIV2BBR2", baseaddress, 244>;
-
-  template <std::uint32_t baseaddress>
-  using flash_priv2bbr3_t =
-    flash_priv2bbr3_tt<"FLASH_PRIV2BBR3", baseaddress, 248>;
-
-  template <std::uint32_t baseaddress>
-  using flash_priv2bbr4_t =
-    flash_priv2bbr4_tt<"FLASH_PRIV2BBR4", baseaddress, 252>;
 
 } // namespace flash

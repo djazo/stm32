@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace syscfg_comp_opamp {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using syscfg_cfgr1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -39,7 +41,9 @@ namespace syscfg_comp_opamp {
                groov::field<"RESERVED0", std::uint8_t, 4, 2, access::ro>,
                groov::field<"MEM_MODE", std::uint8_t, 1, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using syscfg_exticr1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -51,7 +55,9 @@ namespace syscfg_comp_opamp {
                groov::field<"EXTI1", std::uint8_t, 7, 4>,
                groov::field<"EXTI0", std::uint8_t, 3, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using syscfg_exticr2_tt =
     groov::reg<name,
                std::uint32_t,
@@ -63,7 +69,9 @@ namespace syscfg_comp_opamp {
                groov::field<"EXTI5", std::uint8_t, 7, 4>,
                groov::field<"EXTI4", std::uint8_t, 3, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using syscfg_exticr3_tt =
     groov::reg<name,
                std::uint32_t,
@@ -75,7 +83,9 @@ namespace syscfg_comp_opamp {
                groov::field<"EXTI9", std::uint8_t, 7, 4>,
                groov::field<"EXTI8", std::uint8_t, 3, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using syscfg_exticr4_tt =
     groov::reg<name,
                std::uint32_t,
@@ -87,7 +97,9 @@ namespace syscfg_comp_opamp {
                groov::field<"EXTI13", std::uint8_t, 7, 4>,
                groov::field<"EXTI12", std::uint8_t, 3, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using syscfg_cfgr2_tt =
     groov::reg<name,
                std::uint32_t,
@@ -102,7 +114,9 @@ namespace syscfg_comp_opamp {
                groov::field<"SRAM_PARITY_LOCK", bool, 1, 1>,
                groov::field<"LOCUP_LOCK", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using syscfg_rcr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -118,7 +132,9 @@ namespace syscfg_comp_opamp {
                groov::field<"PAGE1_WP", bool, 1, 1>,
                groov::field<"PAGE0_WP", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using syscfg_cfgr3_tt =
     groov::reg<name,
                std::uint32_t,
@@ -135,7 +151,9 @@ namespace syscfg_comp_opamp {
                groov::field<"SPI1_TX_DMA_RMP", std::uint8_t, 3, 2>,
                groov::field<"SPI1_RX_DMA_RMP", std::uint8_t, 1, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using opamp2_csr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -159,7 +177,9 @@ namespace syscfg_comp_opamp {
                groov::field<"FORCE_VP", bool, 1, 1>,
                groov::field<"OPAMP2EN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using comp2_csr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -181,7 +201,9 @@ namespace syscfg_comp_opamp {
                groov::field<"RESERVED0", bool, 1, 1, access::ro>,
                groov::field<"COMP2EN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using comp4_csr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -203,7 +225,9 @@ namespace syscfg_comp_opamp {
                groov::field<"RESERVED0", bool, 1, 1, access::ro>,
                groov::field<"COMP4EN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using comp6_csr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -224,41 +248,5 @@ namespace syscfg_comp_opamp {
                groov::field<"COMP6MODE", std::uint8_t, 3, 2>,
                groov::field<"RESERVED0", bool, 1, 1, access::ro>,
                groov::field<"COMP6EN", bool, 0, 0>>;
-
-  template <std::uint32_t baseaddress>
-  using syscfg_cfgr1_t = syscfg_cfgr1_tt<"SYSCFG_CFGR1", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using syscfg_exticr1_t = syscfg_exticr1_tt<"SYSCFG_EXTICR1", baseaddress, 8>;
-
-  template <std::uint32_t baseaddress>
-  using syscfg_exticr2_t = syscfg_exticr2_tt<"SYSCFG_EXTICR2", baseaddress, 12>;
-
-  template <std::uint32_t baseaddress>
-  using syscfg_exticr3_t = syscfg_exticr3_tt<"SYSCFG_EXTICR3", baseaddress, 16>;
-
-  template <std::uint32_t baseaddress>
-  using syscfg_exticr4_t = syscfg_exticr4_tt<"SYSCFG_EXTICR4", baseaddress, 20>;
-
-  template <std::uint32_t baseaddress>
-  using syscfg_cfgr2_t = syscfg_cfgr2_tt<"SYSCFG_CFGR2", baseaddress, 24>;
-
-  template <std::uint32_t baseaddress>
-  using syscfg_rcr_t = syscfg_rcr_tt<"SYSCFG_RCR", baseaddress, 4>;
-
-  template <std::uint32_t baseaddress>
-  using syscfg_cfgr3_t = syscfg_cfgr3_tt<"SYSCFG_CFGR3", baseaddress, 80>;
-
-  template <std::uint32_t baseaddress>
-  using opamp2_csr_t = opamp2_csr_tt<"OPAMP2_CSR", baseaddress, 60>;
-
-  template <std::uint32_t baseaddress>
-  using comp2_csr_t = comp2_csr_tt<"COMP2_CSR", baseaddress, 32>;
-
-  template <std::uint32_t baseaddress>
-  using comp4_csr_t = comp4_csr_tt<"COMP4_CSR", baseaddress, 40>;
-
-  template <std::uint32_t baseaddress>
-  using comp6_csr_t = comp6_csr_tt<"COMP6_CSR", baseaddress, 48>;
 
 } // namespace syscfg_comp_opamp

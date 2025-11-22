@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace dbg {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using idcode_tt = groov::reg<name,
                                std::uint32_t,
                                baseaddress + offset,
@@ -19,7 +21,9 @@ namespace dbg {
                                groov::field<"REV_ID", std::uint16_t, 31, 16>,
                                groov::field<"DEV_ID", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -30,7 +34,9 @@ namespace dbg {
                groov::field<"DBG_STOP", bool, 1, 1>,
                groov::field<"RESERVED0", bool, 0, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using apb_fz1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -51,7 +57,9 @@ namespace dbg {
                groov::field<"DBG_TIM3_STOP", bool, 1, 1>,
                groov::field<"DBG_TIMER2_STOP", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using apb_fz2_tt =
     groov::reg<name,
                std::uint32_t,
@@ -65,17 +73,5 @@ namespace dbg {
                groov::field<"RESERVED1", std::uint8_t, 14, 12, access::ro>,
                groov::field<"DBG_TIM1_STOP", bool, 11, 11>,
                groov::field<"RESERVED0", std::uint16_t, 10, 0, access::ro>>;
-
-  template <std::uint32_t baseaddress>
-  using idcode_t = idcode_tt<"IDCODE", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using cr_t = cr_tt<"CR", baseaddress, 4>;
-
-  template <std::uint32_t baseaddress>
-  using apb_fz1_t = apb_fz1_tt<"APB_FZ1", baseaddress, 8>;
-
-  template <std::uint32_t baseaddress>
-  using apb_fz2_t = apb_fz2_tt<"APB_FZ2", baseaddress, 12>;
 
 } // namespace dbg

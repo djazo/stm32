@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace saes {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -33,7 +35,9 @@ namespace saes {
                groov::field<"DATATYPE", std::uint8_t, 2, 1>,
                groov::field<"EN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using sr_tt = groov::reg<name,
                            std::uint32_t,
                            baseaddress + offset,
@@ -46,105 +50,135 @@ namespace saes {
                            groov::field<"RDERR", bool, 1, 1>,
                            groov::field<"CCF", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dinr_tt = groov::reg<name,
                              std::uint32_t,
                              baseaddress + offset,
                              access::wo,
                              groov::field<"DIN", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using doutr_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
                               access::ro,
                               groov::field<"DOUT", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using keyr0_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
                               access::wo,
                               groov::field<"KEY", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using keyr1_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
                               access::wo,
                               groov::field<"KEY", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using keyr2_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
                               access::wo,
                               groov::field<"KEYR", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using keyr3_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
                               access::wo,
                               groov::field<"SAES_KEYR3", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ivr0_tt = groov::reg<name,
                              std::uint32_t,
                              baseaddress + offset,
                              access::rw,
                              groov::field<"IVI", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ivr1_tt = groov::reg<name,
                              std::uint32_t,
                              baseaddress + offset,
                              access::rw,
                              groov::field<"IVI", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ivr2_tt = groov::reg<name,
                              std::uint32_t,
                              baseaddress + offset,
                              access::rw,
                              groov::field<"IVI", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ivr3_tt = groov::reg<name,
                              std::uint32_t,
                              baseaddress + offset,
                              access::rw,
                              groov::field<"IVI", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using keyr4_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
                               access::wo,
                               groov::field<"KEY", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using keyr5_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
                               access::wo,
                               groov::field<"KEY", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using keyr6_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
                               access::wo,
                               groov::field<"KEY", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using keyr7_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
                               access::wo,
                               groov::field<"KEY", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dpacfgr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -157,7 +191,9 @@ namespace saes {
                groov::field<"REDCFG", bool, 1, 1>,
                groov::field<"RESERVED0", bool, 0, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ier_tt =
     groov::reg<name,
                std::uint32_t,
@@ -169,7 +205,9 @@ namespace saes {
                groov::field<"RWEIE", bool, 1, 1>,
                groov::field<"CCFIE", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using isr_tt = groov::reg<name,
                             std::uint32_t,
                             baseaddress + offset,
@@ -180,7 +218,9 @@ namespace saes {
                             groov::field<"RWEIF", bool, 1, 1>,
                             groov::field<"CCF", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using icr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -191,65 +231,5 @@ namespace saes {
                groov::field<"KEIF", bool, 2, 2>,
                groov::field<"RWEIF", bool, 1, 1>,
                groov::field<"CCF", bool, 0, 0>>;
-
-  template <std::uint32_t baseaddress>
-  using cr_t = cr_tt<"CR", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using sr_t = sr_tt<"SR", baseaddress, 4>;
-
-  template <std::uint32_t baseaddress>
-  using dinr_t = dinr_tt<"DINR", baseaddress, 8>;
-
-  template <std::uint32_t baseaddress>
-  using doutr_t = doutr_tt<"DOUTR", baseaddress, 12>;
-
-  template <std::uint32_t baseaddress>
-  using keyr0_t = keyr0_tt<"KEYR0", baseaddress, 16>;
-
-  template <std::uint32_t baseaddress>
-  using keyr1_t = keyr1_tt<"KEYR1", baseaddress, 20>;
-
-  template <std::uint32_t baseaddress>
-  using keyr2_t = keyr2_tt<"KEYR2", baseaddress, 24>;
-
-  template <std::uint32_t baseaddress>
-  using keyr3_t = keyr3_tt<"KEYR3", baseaddress, 28>;
-
-  template <std::uint32_t baseaddress>
-  using ivr0_t = ivr0_tt<"IVR0", baseaddress, 32>;
-
-  template <std::uint32_t baseaddress>
-  using ivr1_t = ivr1_tt<"IVR1", baseaddress, 36>;
-
-  template <std::uint32_t baseaddress>
-  using ivr2_t = ivr2_tt<"IVR2", baseaddress, 40>;
-
-  template <std::uint32_t baseaddress>
-  using ivr3_t = ivr3_tt<"IVR3", baseaddress, 44>;
-
-  template <std::uint32_t baseaddress>
-  using keyr4_t = keyr4_tt<"KEYR4", baseaddress, 48>;
-
-  template <std::uint32_t baseaddress>
-  using keyr5_t = keyr5_tt<"KEYR5", baseaddress, 52>;
-
-  template <std::uint32_t baseaddress>
-  using keyr6_t = keyr6_tt<"KEYR6", baseaddress, 56>;
-
-  template <std::uint32_t baseaddress>
-  using keyr7_t = keyr7_tt<"KEYR7", baseaddress, 60>;
-
-  template <std::uint32_t baseaddress>
-  using dpacfgr_t = dpacfgr_tt<"DPACFGR", baseaddress, 256>;
-
-  template <std::uint32_t baseaddress>
-  using ier_t = ier_tt<"IER", baseaddress, 768>;
-
-  template <std::uint32_t baseaddress>
-  using isr_t = isr_tt<"ISR", baseaddress, 772>;
-
-  template <std::uint32_t baseaddress>
-  using icr_t = icr_tt<"ICR", baseaddress, 776>;
 
 } // namespace saes

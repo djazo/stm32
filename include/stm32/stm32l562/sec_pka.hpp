@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace sec_pka {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using pka_cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -28,7 +30,9 @@ namespace sec_pka {
                groov::field<"START", bool, 1, 1>,
                groov::field<"EN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using pka_sr_tt = groov::reg<name,
                                std::uint32_t,
                                baseaddress + offset,
@@ -41,7 +45,9 @@ namespace sec_pka {
                                groov::field<"BUSY", bool, 16, 16>,
                                groov::field<"RESERVED0", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using pka_clrfr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -53,14 +59,5 @@ namespace sec_pka {
                groov::field<"RESERVED1", bool, 18, 18, access::ro>,
                groov::field<"PROCENDFC", bool, 17, 17>,
                groov::field<"RESERVED0", std::uint32_t, 16, 0, access::ro>>;
-
-  template <std::uint32_t baseaddress>
-  using pka_cr_t = pka_cr_tt<"PKA_CR", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using pka_sr_t = pka_sr_tt<"PKA_SR", baseaddress, 4>;
-
-  template <std::uint32_t baseaddress>
-  using pka_clrfr_t = pka_clrfr_tt<"PKA_CLRFR", baseaddress, 8>;
 
 } // namespace sec_pka

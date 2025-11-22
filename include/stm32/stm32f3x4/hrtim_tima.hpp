@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace hrtim_tima {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using timacr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -40,7 +42,9 @@ namespace hrtim_tima {
                groov::field<"CONT", bool, 3, 3>,
                groov::field<"CK_PSCx", std::uint8_t, 2, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using timaisr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -70,7 +74,9 @@ namespace hrtim_tima {
                groov::field<"CMP2", bool, 1, 1>,
                groov::field<"CMP1", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using timaicr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -93,7 +99,9 @@ namespace hrtim_tima {
                groov::field<"CMP2C", bool, 1, 1>,
                groov::field<"CMP1C", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using timadier5_tt =
     groov::reg<name,
                std::uint32_t,
@@ -132,7 +140,9 @@ namespace hrtim_tima {
                groov::field<"CMP2IE", bool, 1, 1>,
                groov::field<"CMP1IE", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using cntar_tt =
     groov::reg<name,
                std::uint32_t,
@@ -141,7 +151,9 @@ namespace hrtim_tima {
                groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
                groov::field<"CNTx", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using perar_tt =
     groov::reg<name,
                std::uint32_t,
@@ -150,7 +162,9 @@ namespace hrtim_tima {
                groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
                groov::field<"PERx", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using repar_tt =
     groov::reg<name,
                std::uint32_t,
@@ -159,7 +173,9 @@ namespace hrtim_tima {
                groov::field<"RESERVED0", std::uint32_t, 31, 8, access::ro>,
                groov::field<"REPx", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using cmp1ar_tt =
     groov::reg<name,
                std::uint32_t,
@@ -168,7 +184,9 @@ namespace hrtim_tima {
                groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
                groov::field<"CMP1x", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using cmp1car_tt =
     groov::reg<name,
                std::uint32_t,
@@ -178,7 +196,9 @@ namespace hrtim_tima {
                groov::field<"REPx", std::uint8_t, 23, 16>,
                groov::field<"CMP1x", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using cmp2ar_tt =
     groov::reg<name,
                std::uint32_t,
@@ -187,7 +207,9 @@ namespace hrtim_tima {
                groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
                groov::field<"CMP2x", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using cmp3ar_tt =
     groov::reg<name,
                std::uint32_t,
@@ -196,7 +218,9 @@ namespace hrtim_tima {
                groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
                groov::field<"CMP3x", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using cmp4ar_tt =
     groov::reg<name,
                std::uint32_t,
@@ -205,7 +229,9 @@ namespace hrtim_tima {
                groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
                groov::field<"CMP4x", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using cpt1ar_tt = groov::reg<name,
                                std::uint32_t,
                                baseaddress + offset,
@@ -213,7 +239,9 @@ namespace hrtim_tima {
                                groov::field<"RESERVED0", std::uint16_t, 31, 16>,
                                groov::field<"CPT1x", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using cpt2ar_tt = groov::reg<name,
                                std::uint32_t,
                                baseaddress + offset,
@@ -221,7 +249,9 @@ namespace hrtim_tima {
                                groov::field<"RESERVED0", std::uint16_t, 31, 16>,
                                groov::field<"CPT2x", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dtar_tt =
     groov::reg<name,
                std::uint32_t,
@@ -239,7 +269,9 @@ namespace hrtim_tima {
                groov::field<"SDTRx", bool, 9, 9>,
                groov::field<"DTRx", std::uint16_t, 8, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using seta1r_tt = groov::reg<name,
                                std::uint32_t,
                                baseaddress + offset,
@@ -277,7 +309,9 @@ namespace hrtim_tima {
                                groov::field<"RESYNC", bool, 1, 1>,
                                groov::field<"SST", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using rsta1r_tt = groov::reg<name,
                                std::uint32_t,
                                baseaddress + offset,
@@ -315,7 +349,9 @@ namespace hrtim_tima {
                                groov::field<"RESYNC", bool, 1, 1>,
                                groov::field<"SRT", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using seta2r_tt = groov::reg<name,
                                std::uint32_t,
                                baseaddress + offset,
@@ -353,7 +389,9 @@ namespace hrtim_tima {
                                groov::field<"RESYNC", bool, 1, 1>,
                                groov::field<"SST", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using rsta2r_tt = groov::reg<name,
                                std::uint32_t,
                                baseaddress + offset,
@@ -391,7 +429,9 @@ namespace hrtim_tima {
                                groov::field<"RESYNC", bool, 1, 1>,
                                groov::field<"SRT", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eefar1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -413,7 +453,9 @@ namespace hrtim_tima {
                groov::field<"EE1FLTR", std::uint8_t, 4, 1>,
                groov::field<"EE1LTCH", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eefar2_tt =
     groov::reg<name,
                std::uint32_t,
@@ -435,7 +477,9 @@ namespace hrtim_tima {
                groov::field<"EE6FLTR", std::uint8_t, 4, 1>,
                groov::field<"EE6LTCH", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using rstar_tt =
     groov::reg<name,
                std::uint32_t,
@@ -474,7 +518,9 @@ namespace hrtim_tima {
                groov::field<"UPDT", bool, 1, 1>,
                groov::field<"RESERVED0", bool, 0, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using chpar_tt =
     groov::reg<name,
                std::uint32_t,
@@ -485,7 +531,9 @@ namespace hrtim_tima {
                groov::field<"CHPDTY", std::uint8_t, 6, 4>,
                groov::field<"CHPFRQ", std::uint8_t, 3, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using cpt1acr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -521,7 +569,9 @@ namespace hrtim_tima {
                groov::field<"UDPCPT", bool, 1, 1>,
                groov::field<"SWCPT", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using cpt2acr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -557,7 +607,9 @@ namespace hrtim_tima {
                groov::field<"UDPCPT", bool, 1, 1>,
                groov::field<"SWCPT", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using outar_tt =
     groov::reg<name,
                std::uint32_t,
@@ -582,7 +634,9 @@ namespace hrtim_tima {
                groov::field<"POL1", bool, 1, 1>,
                groov::field<"RESERVED0", bool, 0, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using fltar_tt =
     groov::reg<name,
                std::uint32_t,
@@ -595,86 +649,5 @@ namespace hrtim_tima {
                groov::field<"FLT3EN", bool, 2, 2>,
                groov::field<"FLT2EN", bool, 1, 1>,
                groov::field<"FLT1EN", bool, 0, 0>>;
-
-  template <std::uint32_t baseaddress>
-  using timacr_t = timacr_tt<"TIMACR", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using timaisr_t = timaisr_tt<"TIMAISR", baseaddress, 4>;
-
-  template <std::uint32_t baseaddress>
-  using timaicr_t = timaicr_tt<"TIMAICR", baseaddress, 8>;
-
-  template <std::uint32_t baseaddress>
-  using timadier5_t = timadier5_tt<"TIMADIER5", baseaddress, 12>;
-
-  template <std::uint32_t baseaddress>
-  using cntar_t = cntar_tt<"CNTAR", baseaddress, 16>;
-
-  template <std::uint32_t baseaddress>
-  using perar_t = perar_tt<"PERAR", baseaddress, 20>;
-
-  template <std::uint32_t baseaddress>
-  using repar_t = repar_tt<"REPAR", baseaddress, 24>;
-
-  template <std::uint32_t baseaddress>
-  using cmp1ar_t = cmp1ar_tt<"CMP1AR", baseaddress, 28>;
-
-  template <std::uint32_t baseaddress>
-  using cmp1car_t = cmp1car_tt<"CMP1CAR", baseaddress, 32>;
-
-  template <std::uint32_t baseaddress>
-  using cmp2ar_t = cmp2ar_tt<"CMP2AR", baseaddress, 36>;
-
-  template <std::uint32_t baseaddress>
-  using cmp3ar_t = cmp3ar_tt<"CMP3AR", baseaddress, 40>;
-
-  template <std::uint32_t baseaddress>
-  using cmp4ar_t = cmp4ar_tt<"CMP4AR", baseaddress, 44>;
-
-  template <std::uint32_t baseaddress>
-  using cpt1ar_t = cpt1ar_tt<"CPT1AR", baseaddress, 48>;
-
-  template <std::uint32_t baseaddress>
-  using cpt2ar_t = cpt2ar_tt<"CPT2AR", baseaddress, 52>;
-
-  template <std::uint32_t baseaddress>
-  using dtar_t = dtar_tt<"DTAR", baseaddress, 56>;
-
-  template <std::uint32_t baseaddress>
-  using seta1r_t = seta1r_tt<"SETA1R", baseaddress, 60>;
-
-  template <std::uint32_t baseaddress>
-  using rsta1r_t = rsta1r_tt<"RSTA1R", baseaddress, 64>;
-
-  template <std::uint32_t baseaddress>
-  using seta2r_t = seta2r_tt<"SETA2R", baseaddress, 68>;
-
-  template <std::uint32_t baseaddress>
-  using rsta2r_t = rsta2r_tt<"RSTA2R", baseaddress, 72>;
-
-  template <std::uint32_t baseaddress>
-  using eefar1_t = eefar1_tt<"EEFAR1", baseaddress, 76>;
-
-  template <std::uint32_t baseaddress>
-  using eefar2_t = eefar2_tt<"EEFAR2", baseaddress, 80>;
-
-  template <std::uint32_t baseaddress>
-  using rstar_t = rstar_tt<"RSTAR", baseaddress, 84>;
-
-  template <std::uint32_t baseaddress>
-  using chpar_t = chpar_tt<"CHPAR", baseaddress, 88>;
-
-  template <std::uint32_t baseaddress>
-  using cpt1acr_t = cpt1acr_tt<"CPT1ACR", baseaddress, 92>;
-
-  template <std::uint32_t baseaddress>
-  using cpt2acr_t = cpt2acr_tt<"CPT2ACR", baseaddress, 96>;
-
-  template <std::uint32_t baseaddress>
-  using outar_t = outar_tt<"OUTAR", baseaddress, 100>;
-
-  template <std::uint32_t baseaddress>
-  using fltar_t = fltar_tt<"FLTAR", baseaddress, 104>;
 
 } // namespace hrtim_tima

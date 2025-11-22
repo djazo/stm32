@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace adf1 {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using adf_gcr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -20,7 +22,9 @@ namespace adf1 {
                groov::field<"RESERVED0", std::uint32_t, 31, 1, access::ro>,
                groov::field<"TRGO", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using adf_ckgcr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -42,7 +46,9 @@ namespace adf1 {
                groov::field<"CCK0EN", bool, 1, 1>,
                groov::field<"CKGDEN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using adf_sitf0cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -57,7 +63,9 @@ namespace adf1 {
                groov::field<"SCKSRC", std::uint8_t, 2, 1>,
                groov::field<"SITFEN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using adf_bsmx0cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -67,7 +75,9 @@ namespace adf1 {
                groov::field<"RESERVED0", std::uint32_t, 30, 5, access::ro>,
                groov::field<"BSSEL", std::uint8_t, 4, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using adf_dflt0cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -86,7 +96,9 @@ namespace adf1 {
                groov::field<"DMAEN", bool, 1, 1>,
                groov::field<"DFLTEN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using adf_dflt0cicr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -101,7 +113,9 @@ namespace adf1 {
                groov::field<"RESERVED0", std::uint8_t, 3, 2, access::ro>,
                groov::field<"DATSRC", std::uint8_t, 1, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using adf_dflt0rsfr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -115,7 +129,9 @@ namespace adf1 {
                groov::field<"RESERVED0", std::uint8_t, 3, 1, access::ro>,
                groov::field<"RSFLTBYP", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using adf_dly0cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -125,7 +141,9 @@ namespace adf1 {
                groov::field<"RESERVED0", std::uint32_t, 30, 7, access::ro>,
                groov::field<"SKPDLY", std::uint8_t, 6, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using adf_dflt0ier_tt =
     groov::reg<name,
                std::uint32_t,
@@ -141,7 +159,9 @@ namespace adf1 {
                groov::field<"DOVRIE", bool, 1, 1>,
                groov::field<"FTHIE", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using adf_dflt0isr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -159,7 +179,9 @@ namespace adf1 {
                groov::field<"DOVRF", bool, 1, 1>,
                groov::field<"FTHF", bool, 0, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using adf_sadcr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -177,7 +199,9 @@ namespace adf1 {
                groov::field<"DATCAP", std::uint8_t, 2, 1>,
                groov::field<"SADEN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using adf_sadcfgr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -193,7 +217,9 @@ namespace adf1 {
                groov::field<"ANSLP", std::uint8_t, 6, 4>,
                groov::field<"SNTHR", std::uint8_t, 3, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using adf_sadsdlvr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -202,7 +228,9 @@ namespace adf1 {
                groov::field<"RESERVED0", std::uint32_t, 31, 15>,
                groov::field<"SDLVL", std::uint16_t, 14, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using adf_sadanlvr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -211,7 +239,9 @@ namespace adf1 {
                groov::field<"RESERVED0", std::uint32_t, 31, 15>,
                groov::field<"ANLVL", std::uint16_t, 14, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using adf_dflt0dr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -219,50 +249,5 @@ namespace adf1 {
                access::ro,
                groov::field<"DR", std::uint32_t, 31, 8>,
                groov::field<"RESERVED0", std::uint8_t, 7, 0>>;
-
-  template <std::uint32_t baseaddress>
-  using adf_gcr_t = adf_gcr_tt<"ADF_GCR", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using adf_ckgcr_t = adf_ckgcr_tt<"ADF_CKGCR", baseaddress, 4>;
-
-  template <std::uint32_t baseaddress>
-  using adf_sitf0cr_t = adf_sitf0cr_tt<"ADF_SITF0CR", baseaddress, 128>;
-
-  template <std::uint32_t baseaddress>
-  using adf_bsmx0cr_t = adf_bsmx0cr_tt<"ADF_BSMX0CR", baseaddress, 132>;
-
-  template <std::uint32_t baseaddress>
-  using adf_dflt0cr_t = adf_dflt0cr_tt<"ADF_DFLT0CR", baseaddress, 136>;
-
-  template <std::uint32_t baseaddress>
-  using adf_dflt0cicr_t = adf_dflt0cicr_tt<"ADF_DFLT0CICR", baseaddress, 140>;
-
-  template <std::uint32_t baseaddress>
-  using adf_dflt0rsfr_t = adf_dflt0rsfr_tt<"ADF_DFLT0RSFR", baseaddress, 144>;
-
-  template <std::uint32_t baseaddress>
-  using adf_dly0cr_t = adf_dly0cr_tt<"ADF_DLY0CR", baseaddress, 164>;
-
-  template <std::uint32_t baseaddress>
-  using adf_dflt0ier_t = adf_dflt0ier_tt<"ADF_DFLT0IER", baseaddress, 172>;
-
-  template <std::uint32_t baseaddress>
-  using adf_dflt0isr_t = adf_dflt0isr_tt<"ADF_DFLT0ISR", baseaddress, 176>;
-
-  template <std::uint32_t baseaddress>
-  using adf_sadcr_t = adf_sadcr_tt<"ADF_SADCR", baseaddress, 184>;
-
-  template <std::uint32_t baseaddress>
-  using adf_sadcfgr_t = adf_sadcfgr_tt<"ADF_SADCFGR", baseaddress, 188>;
-
-  template <std::uint32_t baseaddress>
-  using adf_sadsdlvr_t = adf_sadsdlvr_tt<"ADF_SADSDLVR", baseaddress, 192>;
-
-  template <std::uint32_t baseaddress>
-  using adf_sadanlvr_t = adf_sadanlvr_tt<"ADF_SADANLVR", baseaddress, 196>;
-
-  template <std::uint32_t baseaddress>
-  using adf_dflt0dr_t = adf_dflt0dr_tt<"ADF_DFLT0DR", baseaddress, 240>;
 
 } // namespace adf1

@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace sdmmc2 {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using sdmmc_power_tt =
     groov::reg<name,
                std::uint32_t,
@@ -23,7 +25,9 @@ namespace sdmmc2 {
                groov::field<"VSWITCH", bool, 2, 2>,
                groov::field<"PWRCTRL", std::uint8_t, 1, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using sdmmc_clkcr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -41,7 +45,9 @@ namespace sdmmc2 {
                groov::field<"RESERVED0", std::uint8_t, 11, 10, access::ro>,
                groov::field<"CLKDIV", std::uint16_t, 9, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using sdmmc_argr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -49,7 +55,9 @@ namespace sdmmc2 {
                access::rw,
                groov::field<"CMDARG", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using sdmmc_cmdr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -68,7 +76,9 @@ namespace sdmmc2 {
                groov::field<"CMDTRANS", bool, 6, 6>,
                groov::field<"CMDINDEX", std::uint8_t, 5, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using sdmmc_resp1r_tt =
     groov::reg<name,
                std::uint32_t,
@@ -76,7 +86,9 @@ namespace sdmmc2 {
                access::ro,
                groov::field<"CARDSTATUS1", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using sdmmc_resp2r_tt =
     groov::reg<name,
                std::uint32_t,
@@ -84,7 +96,9 @@ namespace sdmmc2 {
                access::ro,
                groov::field<"CARDSTATUS2", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using sdmmc_resp3r_tt =
     groov::reg<name,
                std::uint32_t,
@@ -92,7 +106,9 @@ namespace sdmmc2 {
                access::ro,
                groov::field<"CARDSTATUS3", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using sdmmc_resp4r_tt =
     groov::reg<name,
                std::uint32_t,
@@ -100,7 +116,9 @@ namespace sdmmc2 {
                access::ro,
                groov::field<"CARDSTATUS4", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using sdmmc_dtimer_tt =
     groov::reg<name,
                std::uint32_t,
@@ -108,7 +126,9 @@ namespace sdmmc2 {
                access::rw,
                groov::field<"DATATIME", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using sdmmc_dlenr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -117,7 +137,9 @@ namespace sdmmc2 {
                groov::field<"RESERVED0", std::uint8_t, 31, 25, access::ro>,
                groov::field<"DATALENGTH", std::uint32_t, 24, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using sdmmc_dctrl_tt =
     groov::reg<name,
                std::uint32_t,
@@ -135,7 +157,9 @@ namespace sdmmc2 {
                groov::field<"DTDIR", bool, 1, 1>,
                groov::field<"DTEN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using sdmmc_dcntr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -144,7 +168,9 @@ namespace sdmmc2 {
                groov::field<"RESERVED0", std::uint8_t, 31, 25>,
                groov::field<"DATACOUNT", std::uint32_t, 24, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using sdmmc_star_tt =
     groov::reg<name,
                std::uint32_t,
@@ -181,7 +207,9 @@ namespace sdmmc2 {
                groov::field<"DCRCFAIL", bool, 1, 1>,
                groov::field<"CCRCFAIL", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using sdmmc_icr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -210,7 +238,9 @@ namespace sdmmc2 {
                groov::field<"DCRCFAILC", bool, 1, 1>,
                groov::field<"CCRCFAILC", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using sdmmc_maskr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -245,7 +275,9 @@ namespace sdmmc2 {
                groov::field<"DCRCFAILIE", bool, 1, 1>,
                groov::field<"CCRCFAILIE", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using sdmmc_acktimer_tt =
     groov::reg<name,
                std::uint32_t,
@@ -254,7 +286,9 @@ namespace sdmmc2 {
                groov::field<"RESERVED0", std::uint8_t, 31, 25, access::ro>,
                groov::field<"ACKTIME", std::uint32_t, 24, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using sdmmc_idmactrlr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -265,7 +299,9 @@ namespace sdmmc2 {
                groov::field<"IDMABMODE", bool, 1, 1>,
                groov::field<"IDMAEN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using sdmmc_idmabsizer_tt =
     groov::reg<name,
                std::uint32_t,
@@ -275,7 +311,9 @@ namespace sdmmc2 {
                groov::field<"IDMABNDT", std::uint8_t, 12, 5>,
                groov::field<"RESERVED0", std::uint8_t, 4, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using sdmmc_idmabase0r_tt =
     groov::reg<name,
                std::uint32_t,
@@ -283,7 +321,9 @@ namespace sdmmc2 {
                access::rw,
                groov::field<"IDMABASE0", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using sdmmc_idmabase1r_tt =
     groov::reg<name,
                std::uint32_t,
@@ -291,7 +331,9 @@ namespace sdmmc2 {
                access::rw,
                groov::field<"IDMABASE1", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using sdmmc_fifor_tt =
     groov::reg<name,
                std::uint32_t,
@@ -299,7 +341,9 @@ namespace sdmmc2 {
                access::rw,
                groov::field<"FIFODATA", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using sdmmc_ver_tt =
     groov::reg<name,
                std::uint32_t,
@@ -309,14 +353,18 @@ namespace sdmmc2 {
                groov::field<"MAJREV", std::uint8_t, 7, 4>,
                groov::field<"MINREV", std::uint8_t, 3, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using sdmmc_id_tt = groov::reg<name,
                                  std::uint32_t,
                                  baseaddress + offset,
                                  access::ro,
                                  groov::field<"IP_ID", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using sdmmc_respcmdr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -324,81 +372,5 @@ namespace sdmmc2 {
                access::ro,
                groov::field<"RESERVED0", std::uint32_t, 31, 6>,
                groov::field<"RESPCMD", std::uint8_t, 5, 0>>;
-
-  template <std::uint32_t baseaddress>
-  using sdmmc_power_t = sdmmc_power_tt<"SDMMC_POWER", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using sdmmc_clkcr_t = sdmmc_clkcr_tt<"SDMMC_CLKCR", baseaddress, 4>;
-
-  template <std::uint32_t baseaddress>
-  using sdmmc_argr_t = sdmmc_argr_tt<"SDMMC_ARGR", baseaddress, 8>;
-
-  template <std::uint32_t baseaddress>
-  using sdmmc_cmdr_t = sdmmc_cmdr_tt<"SDMMC_CMDR", baseaddress, 12>;
-
-  template <std::uint32_t baseaddress>
-  using sdmmc_resp1r_t = sdmmc_resp1r_tt<"SDMMC_RESP1R", baseaddress, 20>;
-
-  template <std::uint32_t baseaddress>
-  using sdmmc_resp2r_t = sdmmc_resp2r_tt<"SDMMC_RESP2R", baseaddress, 24>;
-
-  template <std::uint32_t baseaddress>
-  using sdmmc_resp3r_t = sdmmc_resp3r_tt<"SDMMC_RESP3R", baseaddress, 28>;
-
-  template <std::uint32_t baseaddress>
-  using sdmmc_resp4r_t = sdmmc_resp4r_tt<"SDMMC_RESP4R", baseaddress, 32>;
-
-  template <std::uint32_t baseaddress>
-  using sdmmc_dtimer_t = sdmmc_dtimer_tt<"SDMMC_DTIMER", baseaddress, 36>;
-
-  template <std::uint32_t baseaddress>
-  using sdmmc_dlenr_t = sdmmc_dlenr_tt<"SDMMC_DLENR", baseaddress, 40>;
-
-  template <std::uint32_t baseaddress>
-  using sdmmc_dctrl_t = sdmmc_dctrl_tt<"SDMMC_DCTRL", baseaddress, 44>;
-
-  template <std::uint32_t baseaddress>
-  using sdmmc_dcntr_t = sdmmc_dcntr_tt<"SDMMC_DCNTR", baseaddress, 48>;
-
-  template <std::uint32_t baseaddress>
-  using sdmmc_star_t = sdmmc_star_tt<"SDMMC_STAR", baseaddress, 52>;
-
-  template <std::uint32_t baseaddress>
-  using sdmmc_icr_t = sdmmc_icr_tt<"SDMMC_ICR", baseaddress, 56>;
-
-  template <std::uint32_t baseaddress>
-  using sdmmc_maskr_t = sdmmc_maskr_tt<"SDMMC_MASKR", baseaddress, 60>;
-
-  template <std::uint32_t baseaddress>
-  using sdmmc_acktimer_t = sdmmc_acktimer_tt<"SDMMC_ACKTIMER", baseaddress, 64>;
-
-  template <std::uint32_t baseaddress>
-  using sdmmc_idmactrlr_t =
-    sdmmc_idmactrlr_tt<"SDMMC_IDMACTRLR", baseaddress, 80>;
-
-  template <std::uint32_t baseaddress>
-  using sdmmc_idmabsizer_t =
-    sdmmc_idmabsizer_tt<"SDMMC_IDMABSIZER", baseaddress, 84>;
-
-  template <std::uint32_t baseaddress>
-  using sdmmc_idmabase0r_t =
-    sdmmc_idmabase0r_tt<"SDMMC_IDMABASE0R", baseaddress, 88>;
-
-  template <std::uint32_t baseaddress>
-  using sdmmc_idmabase1r_t =
-    sdmmc_idmabase1r_tt<"SDMMC_IDMABASE1R", baseaddress, 92>;
-
-  template <std::uint32_t baseaddress>
-  using sdmmc_fifor_t = sdmmc_fifor_tt<"SDMMC_FIFOR", baseaddress, 128>;
-
-  template <std::uint32_t baseaddress>
-  using sdmmc_ver_t = sdmmc_ver_tt<"SDMMC_VER", baseaddress, 1012>;
-
-  template <std::uint32_t baseaddress>
-  using sdmmc_id_t = sdmmc_id_tt<"SDMMC_ID", baseaddress, 1016>;
-
-  template <std::uint32_t baseaddress>
-  using sdmmc_respcmdr_t = sdmmc_respcmdr_tt<"SDMMC_RESPCMDR", baseaddress, 16>;
 
 } // namespace sdmmc2

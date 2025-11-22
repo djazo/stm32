@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace vrefbuf {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using vrefbuf_csr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -24,7 +26,9 @@ namespace vrefbuf {
                groov::field<"HIZ", bool, 1, 1>,
                groov::field<"ENVR", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using vrefbuf_ccr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -32,11 +36,5 @@ namespace vrefbuf {
                access::rw,
                groov::field<"RESERVED0", std::uint32_t, 31, 6, access::ro>,
                groov::field<"TRIM", std::uint8_t, 5, 0>>;
-
-  template <std::uint32_t baseaddress>
-  using vrefbuf_csr_t = vrefbuf_csr_tt<"VREFBUF_CSR", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using vrefbuf_ccr_t = vrefbuf_ccr_tt<"VREFBUF_CCR", baseaddress, 4>;
 
 } // namespace vrefbuf

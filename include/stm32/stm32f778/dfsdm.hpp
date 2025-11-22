@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace dfsdm {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dfsdm_chcfg0r1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -32,7 +34,9 @@ namespace dfsdm {
                groov::field<"SPICKSEL", std::uint8_t, 3, 2>,
                groov::field<"SITP", std::uint8_t, 1, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dfsdm_chcfg1r1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -53,7 +57,9 @@ namespace dfsdm {
                groov::field<"SPICKSEL", std::uint8_t, 3, 2>,
                groov::field<"SITP", std::uint8_t, 1, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dfsdm_chcfg2r1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -74,7 +80,9 @@ namespace dfsdm {
                groov::field<"SPICKSEL", std::uint8_t, 3, 2>,
                groov::field<"SITP", std::uint8_t, 1, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dfsdm_chcfg3r1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -95,7 +103,9 @@ namespace dfsdm {
                groov::field<"SPICKSEL", std::uint8_t, 3, 2>,
                groov::field<"SITP", std::uint8_t, 1, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dfsdm_chcfg4r1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -116,7 +126,9 @@ namespace dfsdm {
                groov::field<"SPICKSEL", std::uint8_t, 3, 2>,
                groov::field<"SITP", std::uint8_t, 1, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dfsdm_chcfg5r1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -137,7 +149,9 @@ namespace dfsdm {
                groov::field<"SPICKSEL", std::uint8_t, 3, 2>,
                groov::field<"SITP", std::uint8_t, 1, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dfsdm_chcfg6r1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -158,7 +172,9 @@ namespace dfsdm {
                groov::field<"SPICKSEL", std::uint8_t, 3, 2>,
                groov::field<"SITP", std::uint8_t, 1, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dfsdm_chcfg7r1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -179,7 +195,9 @@ namespace dfsdm {
                groov::field<"SPICKSEL", std::uint8_t, 3, 2>,
                groov::field<"SITP", std::uint8_t, 1, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dfsdm_chcfg0r2_tt =
     groov::reg<name,
                std::uint32_t,
@@ -189,7 +207,9 @@ namespace dfsdm {
                groov::field<"DTRBS", std::uint8_t, 7, 3>,
                groov::field<"RESERVED0", std::uint8_t, 2, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dfsdm_chcfg1r2_tt =
     groov::reg<name,
                std::uint32_t,
@@ -199,7 +219,9 @@ namespace dfsdm {
                groov::field<"DTRBS", std::uint8_t, 7, 3>,
                groov::field<"RESERVED0", std::uint8_t, 2, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dfsdm_chcfg2r2_tt =
     groov::reg<name,
                std::uint32_t,
@@ -209,7 +231,9 @@ namespace dfsdm {
                groov::field<"DTRBS", std::uint8_t, 7, 3>,
                groov::field<"RESERVED0", std::uint8_t, 2, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dfsdm_chcfg3r2_tt =
     groov::reg<name,
                std::uint32_t,
@@ -219,7 +243,9 @@ namespace dfsdm {
                groov::field<"DTRBS", std::uint8_t, 7, 3>,
                groov::field<"RESERVED0", std::uint8_t, 2, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dfsdm_chcfg4r2_tt =
     groov::reg<name,
                std::uint32_t,
@@ -229,7 +255,9 @@ namespace dfsdm {
                groov::field<"DTRBS", std::uint8_t, 7, 3>,
                groov::field<"RESERVED0", std::uint8_t, 2, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dfsdm_chcfg5r2_tt =
     groov::reg<name,
                std::uint32_t,
@@ -239,7 +267,9 @@ namespace dfsdm {
                groov::field<"DTRBS", std::uint8_t, 7, 3>,
                groov::field<"RESERVED0", std::uint8_t, 2, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dfsdm_chcfg6r2_tt =
     groov::reg<name,
                std::uint32_t,
@@ -249,7 +279,9 @@ namespace dfsdm {
                groov::field<"DTRBS", std::uint8_t, 7, 3>,
                groov::field<"RESERVED0", std::uint8_t, 2, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dfsdm_chcfg7r2_tt =
     groov::reg<name,
                std::uint32_t,
@@ -259,7 +291,9 @@ namespace dfsdm {
                groov::field<"DTRBS", std::uint8_t, 7, 3>,
                groov::field<"RESERVED0", std::uint8_t, 2, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dfsdm_awscd0r_tt =
     groov::reg<name,
                std::uint32_t,
@@ -273,7 +307,9 @@ namespace dfsdm {
                groov::field<"RESERVED0", std::uint8_t, 11, 8, access::ro>,
                groov::field<"SCDT", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dfsdm_awscd1r_tt =
     groov::reg<name,
                std::uint32_t,
@@ -287,7 +323,9 @@ namespace dfsdm {
                groov::field<"RESERVED0", std::uint8_t, 11, 8, access::ro>,
                groov::field<"SCDT", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dfsdm_awscd2r_tt =
     groov::reg<name,
                std::uint32_t,
@@ -301,7 +339,9 @@ namespace dfsdm {
                groov::field<"RESERVED0", std::uint8_t, 11, 8, access::ro>,
                groov::field<"SCDT", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dfsdm_awscd3r_tt =
     groov::reg<name,
                std::uint32_t,
@@ -315,7 +355,9 @@ namespace dfsdm {
                groov::field<"RESERVED0", std::uint8_t, 11, 8, access::ro>,
                groov::field<"SCDT", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dfsdm_awscd4r_tt =
     groov::reg<name,
                std::uint32_t,
@@ -329,7 +371,9 @@ namespace dfsdm {
                groov::field<"RESERVED0", std::uint8_t, 11, 8, access::ro>,
                groov::field<"SCDT", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dfsdm_awscd5r_tt =
     groov::reg<name,
                std::uint32_t,
@@ -343,7 +387,9 @@ namespace dfsdm {
                groov::field<"RESERVED0", std::uint8_t, 11, 8, access::ro>,
                groov::field<"SCDT", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dfsdm_awscd6r_tt =
     groov::reg<name,
                std::uint32_t,
@@ -357,7 +403,9 @@ namespace dfsdm {
                groov::field<"RESERVED0", std::uint8_t, 11, 8, access::ro>,
                groov::field<"SCDT", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dfsdm_awscd7r_tt =
     groov::reg<name,
                std::uint32_t,
@@ -371,7 +419,9 @@ namespace dfsdm {
                groov::field<"RESERVED0", std::uint8_t, 11, 8, access::ro>,
                groov::field<"SCDT", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dfsdm_chwdat0r_tt =
     groov::reg<name,
                std::uint32_t,
@@ -380,7 +430,9 @@ namespace dfsdm {
                groov::field<"RESERVED0", std::uint16_t, 31, 16>,
                groov::field<"WDATA", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dfsdm_chwdat1r_tt =
     groov::reg<name,
                std::uint32_t,
@@ -389,7 +441,9 @@ namespace dfsdm {
                groov::field<"RESERVED0", std::uint16_t, 31, 16>,
                groov::field<"WDATA", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dfsdm_chwdat2r_tt =
     groov::reg<name,
                std::uint32_t,
@@ -398,7 +452,9 @@ namespace dfsdm {
                groov::field<"RESERVED0", std::uint16_t, 31, 16>,
                groov::field<"WDATA", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dfsdm_chwdat3r_tt =
     groov::reg<name,
                std::uint32_t,
@@ -407,7 +463,9 @@ namespace dfsdm {
                groov::field<"RESERVED0", std::uint16_t, 31, 16>,
                groov::field<"WDATA", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dfsdm_chwdat4r_tt =
     groov::reg<name,
                std::uint32_t,
@@ -416,7 +474,9 @@ namespace dfsdm {
                groov::field<"RESERVED0", std::uint16_t, 31, 16>,
                groov::field<"WDATA", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dfsdm_chwdat5r_tt =
     groov::reg<name,
                std::uint32_t,
@@ -425,7 +485,9 @@ namespace dfsdm {
                groov::field<"RESERVED0", std::uint16_t, 31, 16>,
                groov::field<"WDATA", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dfsdm_chwdat6r_tt =
     groov::reg<name,
                std::uint32_t,
@@ -434,7 +496,9 @@ namespace dfsdm {
                groov::field<"RESERVED0", std::uint16_t, 31, 16>,
                groov::field<"WDATA", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dfsdm_chwdat7r_tt =
     groov::reg<name,
                std::uint32_t,
@@ -443,7 +507,9 @@ namespace dfsdm {
                groov::field<"RESERVED0", std::uint16_t, 31, 16>,
                groov::field<"WDATA", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dfsdm_chdatin0r_tt =
     groov::reg<name,
                std::uint32_t,
@@ -452,7 +518,9 @@ namespace dfsdm {
                groov::field<"INDAT1", std::uint16_t, 31, 16>,
                groov::field<"INDAT0", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dfsdm_chdatin1r_tt =
     groov::reg<name,
                std::uint32_t,
@@ -461,7 +529,9 @@ namespace dfsdm {
                groov::field<"INDAT1", std::uint16_t, 31, 16>,
                groov::field<"INDAT0", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dfsdm_chdatin2r_tt =
     groov::reg<name,
                std::uint32_t,
@@ -470,7 +540,9 @@ namespace dfsdm {
                groov::field<"INDAT1", std::uint16_t, 31, 16>,
                groov::field<"INDAT0", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dfsdm_chdatin3r_tt =
     groov::reg<name,
                std::uint32_t,
@@ -479,7 +551,9 @@ namespace dfsdm {
                groov::field<"INDAT1", std::uint16_t, 31, 16>,
                groov::field<"INDAT0", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dfsdm_chdatin4r_tt =
     groov::reg<name,
                std::uint32_t,
@@ -488,7 +562,9 @@ namespace dfsdm {
                groov::field<"INDAT1", std::uint16_t, 31, 16>,
                groov::field<"INDAT0", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dfsdm_chdatin5r_tt =
     groov::reg<name,
                std::uint32_t,
@@ -497,7 +573,9 @@ namespace dfsdm {
                groov::field<"INDAT1", std::uint16_t, 31, 16>,
                groov::field<"INDAT0", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dfsdm_chdatin6r_tt =
     groov::reg<name,
                std::uint32_t,
@@ -506,7 +584,9 @@ namespace dfsdm {
                groov::field<"INDAT1", std::uint16_t, 31, 16>,
                groov::field<"INDAT0", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dfsdm_chdatin7r_tt =
     groov::reg<name,
                std::uint32_t,
@@ -515,7 +595,9 @@ namespace dfsdm {
                groov::field<"INDAT1", std::uint16_t, 31, 16>,
                groov::field<"INDAT0", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dfsdm0_cr1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -543,7 +625,9 @@ namespace dfsdm {
                groov::field<"JSWSTART", bool, 1, 1>,
                groov::field<"DFEN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dfsdm1_cr1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -571,7 +655,9 @@ namespace dfsdm {
                groov::field<"JSWSTART", bool, 1, 1>,
                groov::field<"DFEN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dfsdm2_cr1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -599,7 +685,9 @@ namespace dfsdm {
                groov::field<"JSWSTART", bool, 1, 1>,
                groov::field<"DFEN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dfsdm3_cr1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -627,7 +715,9 @@ namespace dfsdm {
                groov::field<"JSWSTART", bool, 1, 1>,
                groov::field<"DFEN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dfsdm0_cr2_tt =
     groov::reg<name,
                std::uint32_t,
@@ -645,7 +735,9 @@ namespace dfsdm {
                groov::field<"REOCIE", bool, 1, 1>,
                groov::field<"JEOCIE", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dfsdm1_cr2_tt =
     groov::reg<name,
                std::uint32_t,
@@ -663,7 +755,9 @@ namespace dfsdm {
                groov::field<"REOCIE", bool, 1, 1>,
                groov::field<"JEOCIE", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dfsdm2_cr2_tt =
     groov::reg<name,
                std::uint32_t,
@@ -681,7 +775,9 @@ namespace dfsdm {
                groov::field<"REOCIE", bool, 1, 1>,
                groov::field<"JEOCIE", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dfsdm3_cr2_tt =
     groov::reg<name,
                std::uint32_t,
@@ -699,7 +795,9 @@ namespace dfsdm {
                groov::field<"REOCIE", bool, 1, 1>,
                groov::field<"JEOCIE", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dfsdm0_isr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -717,7 +815,9 @@ namespace dfsdm {
                groov::field<"REOCF", bool, 1, 1>,
                groov::field<"JEOCF", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dfsdm1_isr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -735,7 +835,9 @@ namespace dfsdm {
                groov::field<"REOCF", bool, 1, 1>,
                groov::field<"JEOCF", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dfsdm2_isr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -753,7 +855,9 @@ namespace dfsdm {
                groov::field<"REOCF", bool, 1, 1>,
                groov::field<"JEOCF", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dfsdm3_isr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -771,7 +875,9 @@ namespace dfsdm {
                groov::field<"REOCF", bool, 1, 1>,
                groov::field<"JEOCF", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dfsdm0_icr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -784,7 +890,9 @@ namespace dfsdm {
                groov::field<"CLRJOVRF", bool, 2, 2>,
                groov::field<"RESERVED0", std::uint8_t, 1, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dfsdm1_icr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -797,7 +905,9 @@ namespace dfsdm {
                groov::field<"CLRJOVRF", bool, 2, 2>,
                groov::field<"RESERVED0", std::uint8_t, 1, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dfsdm2_icr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -810,7 +920,9 @@ namespace dfsdm {
                groov::field<"CLRJOVRF", bool, 2, 2>,
                groov::field<"RESERVED0", std::uint8_t, 1, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dfsdm3_icr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -823,7 +935,9 @@ namespace dfsdm {
                groov::field<"CLRJOVRF", bool, 2, 2>,
                groov::field<"RESERVED0", std::uint8_t, 1, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dfsdm0_jchgr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -832,7 +946,9 @@ namespace dfsdm {
                groov::field<"RESERVED0", std::uint32_t, 31, 8, access::ro>,
                groov::field<"JCHG", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dfsdm1_jchgr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -841,7 +957,9 @@ namespace dfsdm {
                groov::field<"RESERVED0", std::uint32_t, 31, 8, access::ro>,
                groov::field<"JCHG", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dfsdm2_jchgr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -850,7 +968,9 @@ namespace dfsdm {
                groov::field<"RESERVED0", std::uint32_t, 31, 8, access::ro>,
                groov::field<"JCHG", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dfsdm3_jchgr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -859,7 +979,9 @@ namespace dfsdm {
                groov::field<"RESERVED0", std::uint32_t, 31, 8, access::ro>,
                groov::field<"JCHG", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dfsdm0_fcr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -871,7 +993,9 @@ namespace dfsdm {
                groov::field<"RESERVED0", std::uint8_t, 15, 8, access::ro>,
                groov::field<"IOSR", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dfsdm1_fcr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -883,7 +1007,9 @@ namespace dfsdm {
                groov::field<"RESERVED0", std::uint8_t, 15, 8, access::ro>,
                groov::field<"IOSR", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dfsdm2_fcr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -895,7 +1021,9 @@ namespace dfsdm {
                groov::field<"RESERVED0", std::uint8_t, 15, 8, access::ro>,
                groov::field<"IOSR", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dfsdm3_fcr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -907,7 +1035,9 @@ namespace dfsdm {
                groov::field<"RESERVED0", std::uint8_t, 15, 8, access::ro>,
                groov::field<"IOSR", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dfsdm0_jdatar_tt =
     groov::reg<name,
                std::uint32_t,
@@ -917,7 +1047,9 @@ namespace dfsdm {
                groov::field<"RESERVED0", std::uint8_t, 7, 3>,
                groov::field<"JDATACH", std::uint8_t, 2, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dfsdm1_jdatar_tt =
     groov::reg<name,
                std::uint32_t,
@@ -927,7 +1059,9 @@ namespace dfsdm {
                groov::field<"RESERVED0", std::uint8_t, 7, 3>,
                groov::field<"JDATACH", std::uint8_t, 2, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dfsdm2_jdatar_tt =
     groov::reg<name,
                std::uint32_t,
@@ -937,7 +1071,9 @@ namespace dfsdm {
                groov::field<"RESERVED0", std::uint8_t, 7, 3>,
                groov::field<"JDATACH", std::uint8_t, 2, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dfsdm3_jdatar_tt =
     groov::reg<name,
                std::uint32_t,
@@ -947,7 +1083,9 @@ namespace dfsdm {
                groov::field<"RESERVED0", std::uint8_t, 7, 3>,
                groov::field<"JDATACH", std::uint8_t, 2, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dfsdm0_rdatar_tt =
     groov::reg<name,
                std::uint32_t,
@@ -959,7 +1097,9 @@ namespace dfsdm {
                groov::field<"RESERVED0", bool, 3, 3>,
                groov::field<"RDATACH", std::uint8_t, 2, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dfsdm1_rdatar_tt =
     groov::reg<name,
                std::uint32_t,
@@ -971,7 +1111,9 @@ namespace dfsdm {
                groov::field<"RESERVED0", bool, 3, 3>,
                groov::field<"RDATACH", std::uint8_t, 2, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dfsdm2_rdatar_tt =
     groov::reg<name,
                std::uint32_t,
@@ -983,7 +1125,9 @@ namespace dfsdm {
                groov::field<"RESERVED0", bool, 3, 3>,
                groov::field<"RDATACH", std::uint8_t, 2, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dfsdm3_rdatar_tt =
     groov::reg<name,
                std::uint32_t,
@@ -995,7 +1139,9 @@ namespace dfsdm {
                groov::field<"RESERVED0", bool, 3, 3>,
                groov::field<"RDATACH", std::uint8_t, 2, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dfsdm0_awhtr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1005,7 +1151,9 @@ namespace dfsdm {
                groov::field<"RESERVED0", std::uint8_t, 7, 4, access::ro>,
                groov::field<"BKAWH", std::uint8_t, 3, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dfsdm1_awhtr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1015,7 +1163,9 @@ namespace dfsdm {
                groov::field<"RESERVED0", std::uint8_t, 7, 4, access::ro>,
                groov::field<"BKAWH", std::uint8_t, 3, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dfsdm2_awhtr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1025,7 +1175,9 @@ namespace dfsdm {
                groov::field<"RESERVED0", std::uint8_t, 7, 4, access::ro>,
                groov::field<"BKAWH", std::uint8_t, 3, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dfsdm3_awhtr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1035,7 +1187,9 @@ namespace dfsdm {
                groov::field<"RESERVED0", std::uint8_t, 7, 4, access::ro>,
                groov::field<"BKAWH", std::uint8_t, 3, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dfsdm0_awltr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1045,7 +1199,9 @@ namespace dfsdm {
                groov::field<"RESERVED0", std::uint8_t, 7, 4, access::ro>,
                groov::field<"BKAWL", std::uint8_t, 3, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dfsdm1_awltr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1055,7 +1211,9 @@ namespace dfsdm {
                groov::field<"RESERVED0", std::uint8_t, 7, 4, access::ro>,
                groov::field<"BKAWL", std::uint8_t, 3, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dfsdm2_awltr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1065,7 +1223,9 @@ namespace dfsdm {
                groov::field<"RESERVED0", std::uint8_t, 7, 4, access::ro>,
                groov::field<"BKAWL", std::uint8_t, 3, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dfsdm3_awltr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1075,7 +1235,9 @@ namespace dfsdm {
                groov::field<"RESERVED0", std::uint8_t, 7, 4, access::ro>,
                groov::field<"BKAWL", std::uint8_t, 3, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dfsdm0_awsr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1085,7 +1247,9 @@ namespace dfsdm {
                groov::field<"AWHTF", std::uint8_t, 15, 8>,
                groov::field<"AWLTF", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dfsdm1_awsr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1095,7 +1259,9 @@ namespace dfsdm {
                groov::field<"AWHTF", std::uint8_t, 15, 8>,
                groov::field<"AWLTF", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dfsdm2_awsr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1105,7 +1271,9 @@ namespace dfsdm {
                groov::field<"AWHTF", std::uint8_t, 15, 8>,
                groov::field<"AWLTF", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dfsdm3_awsr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1115,7 +1283,9 @@ namespace dfsdm {
                groov::field<"AWHTF", std::uint8_t, 15, 8>,
                groov::field<"AWLTF", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dfsdm0_awcfr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1125,7 +1295,9 @@ namespace dfsdm {
                groov::field<"CLRAWHTF", std::uint8_t, 15, 8>,
                groov::field<"CLRAWLTF", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dfsdm1_awcfr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1135,7 +1307,9 @@ namespace dfsdm {
                groov::field<"CLRAWHTF", std::uint8_t, 15, 8>,
                groov::field<"CLRAWLTF", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dfsdm2_awcfr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1145,7 +1319,9 @@ namespace dfsdm {
                groov::field<"CLRAWHTF", std::uint8_t, 15, 8>,
                groov::field<"CLRAWLTF", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dfsdm3_awcfr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1155,7 +1331,9 @@ namespace dfsdm {
                groov::field<"CLRAWHTF", std::uint8_t, 15, 8>,
                groov::field<"CLRAWLTF", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dfsdm0_exmax_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1165,7 +1343,9 @@ namespace dfsdm {
                groov::field<"RESERVED0", std::uint8_t, 7, 3>,
                groov::field<"EXMAXCH", std::uint8_t, 2, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dfsdm1_exmax_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1175,7 +1355,9 @@ namespace dfsdm {
                groov::field<"RESERVED0", std::uint8_t, 7, 3>,
                groov::field<"EXMAXCH", std::uint8_t, 2, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dfsdm2_exmax_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1185,7 +1367,9 @@ namespace dfsdm {
                groov::field<"RESERVED0", std::uint8_t, 7, 3>,
                groov::field<"EXMAXCH", std::uint8_t, 2, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dfsdm3_exmax_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1195,7 +1379,9 @@ namespace dfsdm {
                groov::field<"RESERVED0", std::uint8_t, 7, 3>,
                groov::field<"EXMAXCH", std::uint8_t, 2, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dfsdm0_exmin_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1205,7 +1391,9 @@ namespace dfsdm {
                groov::field<"RESERVED0", std::uint8_t, 7, 3>,
                groov::field<"EXMINCH", std::uint8_t, 2, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dfsdm1_exmin_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1215,7 +1403,9 @@ namespace dfsdm {
                groov::field<"RESERVED0", std::uint8_t, 7, 3>,
                groov::field<"EXMINCH", std::uint8_t, 2, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dfsdm2_exmin_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1225,7 +1415,9 @@ namespace dfsdm {
                groov::field<"RESERVED0", std::uint8_t, 7, 3>,
                groov::field<"EXMINCH", std::uint8_t, 2, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dfsdm3_exmin_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1235,7 +1427,9 @@ namespace dfsdm {
                groov::field<"RESERVED0", std::uint8_t, 7, 3>,
                groov::field<"EXMINCH", std::uint8_t, 2, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dfsdm0_cnvtimr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1244,7 +1438,9 @@ namespace dfsdm {
                groov::field<"CNVCNT", std::uint32_t, 31, 4>,
                groov::field<"RESERVED0", std::uint8_t, 3, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dfsdm1_cnvtimr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1253,7 +1449,9 @@ namespace dfsdm {
                groov::field<"CNVCNT", std::uint32_t, 31, 4>,
                groov::field<"RESERVED0", std::uint8_t, 3, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dfsdm2_cnvtimr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1262,7 +1460,9 @@ namespace dfsdm {
                groov::field<"CNVCNT", std::uint32_t, 31, 4>,
                groov::field<"RESERVED0", std::uint8_t, 3, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dfsdm3_cnvtimr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1270,324 +1470,5 @@ namespace dfsdm {
                access::ro,
                groov::field<"CNVCNT", std::uint32_t, 31, 4>,
                groov::field<"RESERVED0", std::uint8_t, 3, 0>>;
-
-  template <std::uint32_t baseaddress>
-  using dfsdm_chcfg0r1_t = dfsdm_chcfg0r1_tt<"DFSDM_CHCFG0R1", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using dfsdm_chcfg1r1_t = dfsdm_chcfg1r1_tt<"DFSDM_CHCFG1R1", baseaddress, 4>;
-
-  template <std::uint32_t baseaddress>
-  using dfsdm_chcfg2r1_t = dfsdm_chcfg2r1_tt<"DFSDM_CHCFG2R1", baseaddress, 8>;
-
-  template <std::uint32_t baseaddress>
-  using dfsdm_chcfg3r1_t = dfsdm_chcfg3r1_tt<"DFSDM_CHCFG3R1", baseaddress, 12>;
-
-  template <std::uint32_t baseaddress>
-  using dfsdm_chcfg4r1_t = dfsdm_chcfg4r1_tt<"DFSDM_CHCFG4R1", baseaddress, 16>;
-
-  template <std::uint32_t baseaddress>
-  using dfsdm_chcfg5r1_t = dfsdm_chcfg5r1_tt<"DFSDM_CHCFG5R1", baseaddress, 20>;
-
-  template <std::uint32_t baseaddress>
-  using dfsdm_chcfg6r1_t = dfsdm_chcfg6r1_tt<"DFSDM_CHCFG6R1", baseaddress, 24>;
-
-  template <std::uint32_t baseaddress>
-  using dfsdm_chcfg7r1_t = dfsdm_chcfg7r1_tt<"DFSDM_CHCFG7R1", baseaddress, 28>;
-
-  template <std::uint32_t baseaddress>
-  using dfsdm_chcfg0r2_t = dfsdm_chcfg0r2_tt<"DFSDM_CHCFG0R2", baseaddress, 32>;
-
-  template <std::uint32_t baseaddress>
-  using dfsdm_chcfg1r2_t = dfsdm_chcfg1r2_tt<"DFSDM_CHCFG1R2", baseaddress, 36>;
-
-  template <std::uint32_t baseaddress>
-  using dfsdm_chcfg2r2_t = dfsdm_chcfg2r2_tt<"DFSDM_CHCFG2R2", baseaddress, 40>;
-
-  template <std::uint32_t baseaddress>
-  using dfsdm_chcfg3r2_t = dfsdm_chcfg3r2_tt<"DFSDM_CHCFG3R2", baseaddress, 44>;
-
-  template <std::uint32_t baseaddress>
-  using dfsdm_chcfg4r2_t = dfsdm_chcfg4r2_tt<"DFSDM_CHCFG4R2", baseaddress, 48>;
-
-  template <std::uint32_t baseaddress>
-  using dfsdm_chcfg5r2_t = dfsdm_chcfg5r2_tt<"DFSDM_CHCFG5R2", baseaddress, 52>;
-
-  template <std::uint32_t baseaddress>
-  using dfsdm_chcfg6r2_t = dfsdm_chcfg6r2_tt<"DFSDM_CHCFG6R2", baseaddress, 56>;
-
-  template <std::uint32_t baseaddress>
-  using dfsdm_chcfg7r2_t = dfsdm_chcfg7r2_tt<"DFSDM_CHCFG7R2", baseaddress, 60>;
-
-  template <std::uint32_t baseaddress>
-  using dfsdm_awscd0r_t = dfsdm_awscd0r_tt<"DFSDM_AWSCD0R", baseaddress, 64>;
-
-  template <std::uint32_t baseaddress>
-  using dfsdm_awscd1r_t = dfsdm_awscd1r_tt<"DFSDM_AWSCD1R", baseaddress, 68>;
-
-  template <std::uint32_t baseaddress>
-  using dfsdm_awscd2r_t = dfsdm_awscd2r_tt<"DFSDM_AWSCD2R", baseaddress, 72>;
-
-  template <std::uint32_t baseaddress>
-  using dfsdm_awscd3r_t = dfsdm_awscd3r_tt<"DFSDM_AWSCD3R", baseaddress, 76>;
-
-  template <std::uint32_t baseaddress>
-  using dfsdm_awscd4r_t = dfsdm_awscd4r_tt<"DFSDM_AWSCD4R", baseaddress, 80>;
-
-  template <std::uint32_t baseaddress>
-  using dfsdm_awscd5r_t = dfsdm_awscd5r_tt<"DFSDM_AWSCD5R", baseaddress, 84>;
-
-  template <std::uint32_t baseaddress>
-  using dfsdm_awscd6r_t = dfsdm_awscd6r_tt<"DFSDM_AWSCD6R", baseaddress, 88>;
-
-  template <std::uint32_t baseaddress>
-  using dfsdm_awscd7r_t = dfsdm_awscd7r_tt<"DFSDM_AWSCD7R", baseaddress, 92>;
-
-  template <std::uint32_t baseaddress>
-  using dfsdm_chwdat0r_t = dfsdm_chwdat0r_tt<"DFSDM_CHWDAT0R", baseaddress, 96>;
-
-  template <std::uint32_t baseaddress>
-  using dfsdm_chwdat1r_t =
-    dfsdm_chwdat1r_tt<"DFSDM_CHWDAT1R", baseaddress, 100>;
-
-  template <std::uint32_t baseaddress>
-  using dfsdm_chwdat2r_t =
-    dfsdm_chwdat2r_tt<"DFSDM_CHWDAT2R", baseaddress, 104>;
-
-  template <std::uint32_t baseaddress>
-  using dfsdm_chwdat3r_t =
-    dfsdm_chwdat3r_tt<"DFSDM_CHWDAT3R", baseaddress, 108>;
-
-  template <std::uint32_t baseaddress>
-  using dfsdm_chwdat4r_t =
-    dfsdm_chwdat4r_tt<"DFSDM_CHWDAT4R", baseaddress, 112>;
-
-  template <std::uint32_t baseaddress>
-  using dfsdm_chwdat5r_t =
-    dfsdm_chwdat5r_tt<"DFSDM_CHWDAT5R", baseaddress, 116>;
-
-  template <std::uint32_t baseaddress>
-  using dfsdm_chwdat6r_t =
-    dfsdm_chwdat6r_tt<"DFSDM_CHWDAT6R", baseaddress, 120>;
-
-  template <std::uint32_t baseaddress>
-  using dfsdm_chwdat7r_t =
-    dfsdm_chwdat7r_tt<"DFSDM_CHWDAT7R", baseaddress, 124>;
-
-  template <std::uint32_t baseaddress>
-  using dfsdm_chdatin0r_t =
-    dfsdm_chdatin0r_tt<"DFSDM_CHDATIN0R", baseaddress, 128>;
-
-  template <std::uint32_t baseaddress>
-  using dfsdm_chdatin1r_t =
-    dfsdm_chdatin1r_tt<"DFSDM_CHDATIN1R", baseaddress, 132>;
-
-  template <std::uint32_t baseaddress>
-  using dfsdm_chdatin2r_t =
-    dfsdm_chdatin2r_tt<"DFSDM_CHDATIN2R", baseaddress, 136>;
-
-  template <std::uint32_t baseaddress>
-  using dfsdm_chdatin3r_t =
-    dfsdm_chdatin3r_tt<"DFSDM_CHDATIN3R", baseaddress, 140>;
-
-  template <std::uint32_t baseaddress>
-  using dfsdm_chdatin4r_t =
-    dfsdm_chdatin4r_tt<"DFSDM_CHDATIN4R", baseaddress, 144>;
-
-  template <std::uint32_t baseaddress>
-  using dfsdm_chdatin5r_t =
-    dfsdm_chdatin5r_tt<"DFSDM_CHDATIN5R", baseaddress, 148>;
-
-  template <std::uint32_t baseaddress>
-  using dfsdm_chdatin6r_t =
-    dfsdm_chdatin6r_tt<"DFSDM_CHDATIN6R", baseaddress, 152>;
-
-  template <std::uint32_t baseaddress>
-  using dfsdm_chdatin7r_t =
-    dfsdm_chdatin7r_tt<"DFSDM_CHDATIN7R", baseaddress, 156>;
-
-  template <std::uint32_t baseaddress>
-  using dfsdm0_cr1_t = dfsdm0_cr1_tt<"DFSDM0_CR1", baseaddress, 160>;
-
-  template <std::uint32_t baseaddress>
-  using dfsdm1_cr1_t = dfsdm1_cr1_tt<"DFSDM1_CR1", baseaddress, 164>;
-
-  template <std::uint32_t baseaddress>
-  using dfsdm2_cr1_t = dfsdm2_cr1_tt<"DFSDM2_CR1", baseaddress, 168>;
-
-  template <std::uint32_t baseaddress>
-  using dfsdm3_cr1_t = dfsdm3_cr1_tt<"DFSDM3_CR1", baseaddress, 172>;
-
-  template <std::uint32_t baseaddress>
-  using dfsdm0_cr2_t = dfsdm0_cr2_tt<"DFSDM0_CR2", baseaddress, 176>;
-
-  template <std::uint32_t baseaddress>
-  using dfsdm1_cr2_t = dfsdm1_cr2_tt<"DFSDM1_CR2", baseaddress, 180>;
-
-  template <std::uint32_t baseaddress>
-  using dfsdm2_cr2_t = dfsdm2_cr2_tt<"DFSDM2_CR2", baseaddress, 184>;
-
-  template <std::uint32_t baseaddress>
-  using dfsdm3_cr2_t = dfsdm3_cr2_tt<"DFSDM3_CR2", baseaddress, 188>;
-
-  template <std::uint32_t baseaddress>
-  using dfsdm0_isr_t = dfsdm0_isr_tt<"DFSDM0_ISR", baseaddress, 192>;
-
-  template <std::uint32_t baseaddress>
-  using dfsdm1_isr_t = dfsdm1_isr_tt<"DFSDM1_ISR", baseaddress, 196>;
-
-  template <std::uint32_t baseaddress>
-  using dfsdm2_isr_t = dfsdm2_isr_tt<"DFSDM2_ISR", baseaddress, 200>;
-
-  template <std::uint32_t baseaddress>
-  using dfsdm3_isr_t = dfsdm3_isr_tt<"DFSDM3_ISR", baseaddress, 204>;
-
-  template <std::uint32_t baseaddress>
-  using dfsdm0_icr_t = dfsdm0_icr_tt<"DFSDM0_ICR", baseaddress, 208>;
-
-  template <std::uint32_t baseaddress>
-  using dfsdm1_icr_t = dfsdm1_icr_tt<"DFSDM1_ICR", baseaddress, 212>;
-
-  template <std::uint32_t baseaddress>
-  using dfsdm2_icr_t = dfsdm2_icr_tt<"DFSDM2_ICR", baseaddress, 216>;
-
-  template <std::uint32_t baseaddress>
-  using dfsdm3_icr_t = dfsdm3_icr_tt<"DFSDM3_ICR", baseaddress, 220>;
-
-  template <std::uint32_t baseaddress>
-  using dfsdm0_jchgr_t = dfsdm0_jchgr_tt<"DFSDM0_JCHGR", baseaddress, 224>;
-
-  template <std::uint32_t baseaddress>
-  using dfsdm1_jchgr_t = dfsdm1_jchgr_tt<"DFSDM1_JCHGR", baseaddress, 228>;
-
-  template <std::uint32_t baseaddress>
-  using dfsdm2_jchgr_t = dfsdm2_jchgr_tt<"DFSDM2_JCHGR", baseaddress, 232>;
-
-  template <std::uint32_t baseaddress>
-  using dfsdm3_jchgr_t = dfsdm3_jchgr_tt<"DFSDM3_JCHGR", baseaddress, 236>;
-
-  template <std::uint32_t baseaddress>
-  using dfsdm0_fcr_t = dfsdm0_fcr_tt<"DFSDM0_FCR", baseaddress, 240>;
-
-  template <std::uint32_t baseaddress>
-  using dfsdm1_fcr_t = dfsdm1_fcr_tt<"DFSDM1_FCR", baseaddress, 244>;
-
-  template <std::uint32_t baseaddress>
-  using dfsdm2_fcr_t = dfsdm2_fcr_tt<"DFSDM2_FCR", baseaddress, 248>;
-
-  template <std::uint32_t baseaddress>
-  using dfsdm3_fcr_t = dfsdm3_fcr_tt<"DFSDM3_FCR", baseaddress, 252>;
-
-  template <std::uint32_t baseaddress>
-  using dfsdm0_jdatar_t = dfsdm0_jdatar_tt<"DFSDM0_JDATAR", baseaddress, 256>;
-
-  template <std::uint32_t baseaddress>
-  using dfsdm1_jdatar_t = dfsdm1_jdatar_tt<"DFSDM1_JDATAR", baseaddress, 260>;
-
-  template <std::uint32_t baseaddress>
-  using dfsdm2_jdatar_t = dfsdm2_jdatar_tt<"DFSDM2_JDATAR", baseaddress, 264>;
-
-  template <std::uint32_t baseaddress>
-  using dfsdm3_jdatar_t = dfsdm3_jdatar_tt<"DFSDM3_JDATAR", baseaddress, 268>;
-
-  template <std::uint32_t baseaddress>
-  using dfsdm0_rdatar_t = dfsdm0_rdatar_tt<"DFSDM0_RDATAR", baseaddress, 272>;
-
-  template <std::uint32_t baseaddress>
-  using dfsdm1_rdatar_t = dfsdm1_rdatar_tt<"DFSDM1_RDATAR", baseaddress, 276>;
-
-  template <std::uint32_t baseaddress>
-  using dfsdm2_rdatar_t = dfsdm2_rdatar_tt<"DFSDM2_RDATAR", baseaddress, 280>;
-
-  template <std::uint32_t baseaddress>
-  using dfsdm3_rdatar_t = dfsdm3_rdatar_tt<"DFSDM3_RDATAR", baseaddress, 284>;
-
-  template <std::uint32_t baseaddress>
-  using dfsdm0_awhtr_t = dfsdm0_awhtr_tt<"DFSDM0_AWHTR", baseaddress, 288>;
-
-  template <std::uint32_t baseaddress>
-  using dfsdm1_awhtr_t = dfsdm1_awhtr_tt<"DFSDM1_AWHTR", baseaddress, 292>;
-
-  template <std::uint32_t baseaddress>
-  using dfsdm2_awhtr_t = dfsdm2_awhtr_tt<"DFSDM2_AWHTR", baseaddress, 296>;
-
-  template <std::uint32_t baseaddress>
-  using dfsdm3_awhtr_t = dfsdm3_awhtr_tt<"DFSDM3_AWHTR", baseaddress, 300>;
-
-  template <std::uint32_t baseaddress>
-  using dfsdm0_awltr_t = dfsdm0_awltr_tt<"DFSDM0_AWLTR", baseaddress, 304>;
-
-  template <std::uint32_t baseaddress>
-  using dfsdm1_awltr_t = dfsdm1_awltr_tt<"DFSDM1_AWLTR", baseaddress, 308>;
-
-  template <std::uint32_t baseaddress>
-  using dfsdm2_awltr_t = dfsdm2_awltr_tt<"DFSDM2_AWLTR", baseaddress, 312>;
-
-  template <std::uint32_t baseaddress>
-  using dfsdm3_awltr_t = dfsdm3_awltr_tt<"DFSDM3_AWLTR", baseaddress, 316>;
-
-  template <std::uint32_t baseaddress>
-  using dfsdm0_awsr_t = dfsdm0_awsr_tt<"DFSDM0_AWSR", baseaddress, 320>;
-
-  template <std::uint32_t baseaddress>
-  using dfsdm1_awsr_t = dfsdm1_awsr_tt<"DFSDM1_AWSR", baseaddress, 324>;
-
-  template <std::uint32_t baseaddress>
-  using dfsdm2_awsr_t = dfsdm2_awsr_tt<"DFSDM2_AWSR", baseaddress, 328>;
-
-  template <std::uint32_t baseaddress>
-  using dfsdm3_awsr_t = dfsdm3_awsr_tt<"DFSDM3_AWSR", baseaddress, 332>;
-
-  template <std::uint32_t baseaddress>
-  using dfsdm0_awcfr_t = dfsdm0_awcfr_tt<"DFSDM0_AWCFR", baseaddress, 336>;
-
-  template <std::uint32_t baseaddress>
-  using dfsdm1_awcfr_t = dfsdm1_awcfr_tt<"DFSDM1_AWCFR", baseaddress, 340>;
-
-  template <std::uint32_t baseaddress>
-  using dfsdm2_awcfr_t = dfsdm2_awcfr_tt<"DFSDM2_AWCFR", baseaddress, 344>;
-
-  template <std::uint32_t baseaddress>
-  using dfsdm3_awcfr_t = dfsdm3_awcfr_tt<"DFSDM3_AWCFR", baseaddress, 348>;
-
-  template <std::uint32_t baseaddress>
-  using dfsdm0_exmax_t = dfsdm0_exmax_tt<"DFSDM0_EXMAX", baseaddress, 352>;
-
-  template <std::uint32_t baseaddress>
-  using dfsdm1_exmax_t = dfsdm1_exmax_tt<"DFSDM1_EXMAX", baseaddress, 356>;
-
-  template <std::uint32_t baseaddress>
-  using dfsdm2_exmax_t = dfsdm2_exmax_tt<"DFSDM2_EXMAX", baseaddress, 360>;
-
-  template <std::uint32_t baseaddress>
-  using dfsdm3_exmax_t = dfsdm3_exmax_tt<"DFSDM3_EXMAX", baseaddress, 364>;
-
-  template <std::uint32_t baseaddress>
-  using dfsdm0_exmin_t = dfsdm0_exmin_tt<"DFSDM0_EXMIN", baseaddress, 368>;
-
-  template <std::uint32_t baseaddress>
-  using dfsdm1_exmin_t = dfsdm1_exmin_tt<"DFSDM1_EXMIN", baseaddress, 372>;
-
-  template <std::uint32_t baseaddress>
-  using dfsdm2_exmin_t = dfsdm2_exmin_tt<"DFSDM2_EXMIN", baseaddress, 376>;
-
-  template <std::uint32_t baseaddress>
-  using dfsdm3_exmin_t = dfsdm3_exmin_tt<"DFSDM3_EXMIN", baseaddress, 380>;
-
-  template <std::uint32_t baseaddress>
-  using dfsdm0_cnvtimr_t =
-    dfsdm0_cnvtimr_tt<"DFSDM0_CNVTIMR", baseaddress, 384>;
-
-  template <std::uint32_t baseaddress>
-  using dfsdm1_cnvtimr_t =
-    dfsdm1_cnvtimr_tt<"DFSDM1_CNVTIMR", baseaddress, 388>;
-
-  template <std::uint32_t baseaddress>
-  using dfsdm2_cnvtimr_t =
-    dfsdm2_cnvtimr_tt<"DFSDM2_CNVTIMR", baseaddress, 392>;
-
-  template <std::uint32_t baseaddress>
-  using dfsdm3_cnvtimr_t =
-    dfsdm3_cnvtimr_tt<"DFSDM3_CNVTIMR", baseaddress, 396>;
 
 } // namespace dfsdm

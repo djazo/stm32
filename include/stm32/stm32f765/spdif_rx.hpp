@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace spdif_rx {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -33,7 +35,9 @@ namespace spdif_rx {
                groov::field<"RXDMAEN", bool, 2, 2>,
                groov::field<"SPDIFEN", std::uint8_t, 1, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using imr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -48,7 +52,9 @@ namespace spdif_rx {
                groov::field<"CSRNEIE", bool, 1, 1>,
                groov::field<"RXNEIE", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using sr_tt = groov::reg<name,
                            std::uint32_t,
                            baseaddress + offset,
@@ -66,7 +72,9 @@ namespace spdif_rx {
                            groov::field<"CSRNE", bool, 1, 1>,
                            groov::field<"RXNE", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ifcr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -79,7 +87,9 @@ namespace spdif_rx {
                groov::field<"PERRCF", bool, 2, 2>,
                groov::field<"RESERVED0", std::uint8_t, 1, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dr_tt = groov::reg<name,
                            std::uint32_t,
                            baseaddress + offset,
@@ -92,7 +102,9 @@ namespace spdif_rx {
                            groov::field<"PE", bool, 24, 24>,
                            groov::field<"DR", std::uint32_t, 23, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using csr_tt = groov::reg<name,
                             std::uint32_t,
                             baseaddress + offset,
@@ -102,7 +114,9 @@ namespace spdif_rx {
                             groov::field<"CS", std::uint8_t, 23, 16>,
                             groov::field<"USR", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dir_tt = groov::reg<name,
                             std::uint32_t,
                             baseaddress + offset,
@@ -111,26 +125,5 @@ namespace spdif_rx {
                             groov::field<"TLO", std::uint16_t, 28, 16>,
                             groov::field<"RESERVED0", std::uint8_t, 15, 13>,
                             groov::field<"THI", std::uint16_t, 12, 0>>;
-
-  template <std::uint32_t baseaddress>
-  using cr_t = cr_tt<"CR", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using imr_t = imr_tt<"IMR", baseaddress, 4>;
-
-  template <std::uint32_t baseaddress>
-  using sr_t = sr_tt<"SR", baseaddress, 8>;
-
-  template <std::uint32_t baseaddress>
-  using ifcr_t = ifcr_tt<"IFCR", baseaddress, 12>;
-
-  template <std::uint32_t baseaddress>
-  using dr_t = dr_tt<"DR", baseaddress, 16>;
-
-  template <std::uint32_t baseaddress>
-  using csr_t = csr_tt<"CSR", baseaddress, 20>;
-
-  template <std::uint32_t baseaddress>
-  using dir_t = dir_tt<"DIR", baseaddress, 24>;
 
 } // namespace spdif_rx

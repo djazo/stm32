@@ -13,25 +13,25 @@ namespace stm32 {
 namespace adc {
 
   constexpr std::uint32_t ADC_BASE = 0x4001'2400;
-  template <stdx::ct_string name, std::uint32_t baseaddress>
-  using adc_t = groov::group<name,
+  template <std::uint32_t baseaddress>
+  using adc_t = groov::group<adc,
                              groov::mmio_bus<>,
-                             adc_isr<baseaddress>,
-                             adc_ier<baseaddress>,
-                             adc_cr<baseaddress>,
-                             adc_cfgr1<baseaddress>,
-                             adc_cfgr2<baseaddress>,
-                             adc_smpr<baseaddress>,
-                             adc_awd1tr<baseaddress>,
-                             adc_awd2tr<baseaddress>,
-                             adc_chselr_0<baseaddress>,
-                             adc_chselr_1<baseaddress>,
-                             adc_awd3tr<baseaddress>,
-                             adc_dr<baseaddress>,
-                             adc_awd2cr<baseaddress>,
-                             adc_awd3cr<baseaddress>,
-                             adc_calfact<baseaddress>,
-                             adc_ccr<baseaddress>>;
+                             adc_isr_tt<"ADC_ISR", baseaddress, 0>,
+                             adc_ier_tt<"ADC_IER", baseaddress, 0x4>,
+                             adc_cr_tt<"ADC_CR", baseaddress, 0x8>,
+                             adc_cfgr1_tt<"ADC_CFGR1", baseaddress, 0xc>,
+                             adc_cfgr2_tt<"ADC_CFGR2", baseaddress, 0x10>,
+                             adc_smpr_tt<"ADC_SMPR", baseaddress, 0x14>,
+                             adc_awd1tr_tt<"ADC_AWD1TR", baseaddress, 0x20>,
+                             adc_awd2tr_tt<"ADC_AWD2TR", baseaddress, 0x24>,
+                             adc_chselr_0_tt<"ADC_CHSELR_0", baseaddress, 0x28>,
+                             adc_chselr_1_tt<"ADC_CHSELR_1", baseaddress, 0x28>,
+                             adc_awd3tr_tt<"ADC_AWD3TR", baseaddress, 0x2c>,
+                             adc_dr_tt<"ADC_DR", baseaddress, 0x40>,
+                             adc_awd2cr_tt<"ADC_AWD2CR", baseaddress, 0xa0>,
+                             adc_awd3cr_tt<"ADC_AWD3CR", baseaddress, 0xa4>,
+                             adc_calfact_tt<"ADC_CALFACT", baseaddress, 0xb4>,
+                             adc_ccr_tt<"ADC_CCR", baseaddress, 0x308>>;
 
   constexpr auto adc = adc_t{};
 
@@ -40,18 +40,18 @@ namespace adc {
 namespace iwdg {
 
   constexpr std::uint32_t IWDG_BASE = 0x4000'3000;
-  template <stdx::ct_string name, std::uint32_t baseaddress>
-  using iwdg_t = groov::group<name,
+  template <std::uint32_t baseaddress>
+  using iwdg_t = groov::group<iwdg,
                               groov::mmio_bus<>,
-                              kr<baseaddress>,
-                              pr<baseaddress>,
-                              rlr<baseaddress>,
-                              sr<baseaddress>,
-                              winr<baseaddress>,
-                              hwcfgr<baseaddress>,
-                              verr<baseaddress>,
-                              ipidr<baseaddress>,
-                              sidr<baseaddress>>;
+                              kr_tt<"KR", baseaddress, 0>,
+                              pr_tt<"PR", baseaddress, 0x4>,
+                              rlr_tt<"RLR", baseaddress, 0x8>,
+                              sr_tt<"SR", baseaddress, 0xc>,
+                              winr_tt<"WINR", baseaddress, 0x10>,
+                              hwcfgr_tt<"HWCFGR", baseaddress, 0x3f0>,
+                              verr_tt<"VERR", baseaddress, 0x3f4>,
+                              ipidr_tt<"IPIDR", baseaddress, 0x3f8>,
+                              sidr_tt<"SIDR", baseaddress, 0x3fc>>;
 
   constexpr auto iwdg = iwdg_t{};
 
@@ -60,12 +60,12 @@ namespace iwdg {
 namespace wwdg {
 
   constexpr std::uint32_t WWDG_BASE = 0x4000'2c00;
-  template <stdx::ct_string name, std::uint32_t baseaddress>
-  using wwdg_t = groov::group<name,
+  template <std::uint32_t baseaddress>
+  using wwdg_t = groov::group<wwdg,
                               groov::mmio_bus<>,
-                              cr<baseaddress>,
-                              cfr<baseaddress>,
-                              sr<baseaddress>>;
+                              cr_tt<"CR", baseaddress, 0>,
+                              cfr_tt<"CFR", baseaddress, 0x4>,
+                              sr_tt<"SR", baseaddress, 0x8>>;
 
   constexpr auto wwdg = wwdg_t{};
 
@@ -74,20 +74,20 @@ namespace wwdg {
 namespace flash {
 
   constexpr std::uint32_t FLASH_BASE = 0x4002'2000;
-  template <stdx::ct_string name, std::uint32_t baseaddress>
-  using flash_t = groov::group<name,
+  template <std::uint32_t baseaddress>
+  using flash_t = groov::group<flash,
                                groov::mmio_bus<>,
-                               acr<baseaddress>,
-                               keyr<baseaddress>,
-                               optkeyr<baseaddress>,
-                               sr<baseaddress>,
-                               cr<baseaddress>,
-                               eccr<baseaddress>,
-                               optr<baseaddress>,
-                               wrp1ar<baseaddress>,
-                               wrp1br<baseaddress>,
-                               wrp2ar<baseaddress>,
-                               wrp2br<baseaddress>>;
+                               acr_tt<"ACR", baseaddress, 0>,
+                               keyr_tt<"KEYR", baseaddress, 0x8>,
+                               optkeyr_tt<"OPTKEYR", baseaddress, 0xc>,
+                               sr_tt<"SR", baseaddress, 0x10>,
+                               cr_tt<"CR", baseaddress, 0x14>,
+                               eccr_tt<"ECCR", baseaddress, 0x18>,
+                               optr_tt<"OPTR", baseaddress, 0x20>,
+                               wrp1ar_tt<"WRP1AR", baseaddress, 0x2c>,
+                               wrp1br_tt<"WRP1BR", baseaddress, 0x30>,
+                               wrp2ar_tt<"WRP2AR", baseaddress, 0x4c>,
+                               wrp2br_tt<"WRP2BR", baseaddress, 0x50>>;
 
   constexpr auto flash = flash_t{};
 
@@ -96,13 +96,13 @@ namespace flash {
 namespace dbg {
 
   constexpr std::uint32_t DBG_BASE = 0x4001'5800;
-  template <stdx::ct_string name, std::uint32_t baseaddress>
-  using dbg_t = groov::group<name,
+  template <std::uint32_t baseaddress>
+  using dbg_t = groov::group<dbg,
                              groov::mmio_bus<>,
-                             idcode<baseaddress>,
-                             cr<baseaddress>,
-                             apb_fz1<baseaddress>,
-                             apb_fz2<baseaddress>>;
+                             idcode_tt<"IDCODE", baseaddress, 0>,
+                             cr_tt<"CR", baseaddress, 0x4>,
+                             apb_fz1_tt<"APB_FZ1", baseaddress, 0x8>,
+                             apb_fz2_tt<"APB_FZ2", baseaddress, 0xc>>;
 
   constexpr auto dbg = dbg_t{};
 
@@ -111,32 +111,32 @@ namespace dbg {
 namespace rcc {
 
   constexpr std::uint32_t RCC_BASE = 0x4002'1000;
-  template <stdx::ct_string name, std::uint32_t baseaddress>
-  using rcc_t = groov::group<name,
+  template <std::uint32_t baseaddress>
+  using rcc_t = groov::group<rcc,
                              groov::mmio_bus<>,
-                             cr<baseaddress>,
-                             icscr<baseaddress>,
-                             cfgr<baseaddress>,
-                             pllsyscfgr<baseaddress>,
-                             cier<baseaddress>,
-                             cifr<baseaddress>,
-                             cicr<baseaddress>,
-                             ioprstr<baseaddress>,
-                             ahbrstr<baseaddress>,
-                             apbrstr1<baseaddress>,
-                             apbrstr2<baseaddress>,
-                             iopenr<baseaddress>,
-                             ahbenr<baseaddress>,
-                             apbenr1<baseaddress>,
-                             apbenr2<baseaddress>,
-                             iopsmenr<baseaddress>,
-                             ahbsmenr<baseaddress>,
-                             apbsmenr1<baseaddress>,
-                             apbsmenr2<baseaddress>,
-                             ccipr<baseaddress>,
-                             ccipr2<baseaddress>,
-                             bdcr<baseaddress>,
-                             csr<baseaddress>>;
+                             cr_tt<"CR", baseaddress, 0>,
+                             icscr_tt<"ICSCR", baseaddress, 0x4>,
+                             cfgr_tt<"CFGR", baseaddress, 0x8>,
+                             pllsyscfgr_tt<"PLLSYSCFGR", baseaddress, 0xc>,
+                             cier_tt<"CIER", baseaddress, 0x18>,
+                             cifr_tt<"CIFR", baseaddress, 0x1c>,
+                             cicr_tt<"CICR", baseaddress, 0x20>,
+                             ioprstr_tt<"IOPRSTR", baseaddress, 0x24>,
+                             ahbrstr_tt<"AHBRSTR", baseaddress, 0x28>,
+                             apbrstr1_tt<"APBRSTR1", baseaddress, 0x2c>,
+                             apbrstr2_tt<"APBRSTR2", baseaddress, 0x30>,
+                             iopenr_tt<"IOPENR", baseaddress, 0x34>,
+                             ahbenr_tt<"AHBENR", baseaddress, 0x38>,
+                             apbenr1_tt<"APBENR1", baseaddress, 0x3c>,
+                             apbenr2_tt<"APBENR2", baseaddress, 0x40>,
+                             iopsmenr_tt<"IOPSMENR", baseaddress, 0x44>,
+                             ahbsmenr_tt<"AHBSMENR", baseaddress, 0x48>,
+                             apbsmenr1_tt<"APBSMENR1", baseaddress, 0x4c>,
+                             apbsmenr2_tt<"APBSMENR2", baseaddress, 0x50>,
+                             ccipr_tt<"CCIPR", baseaddress, 0x54>,
+                             ccipr2_tt<"CCIPR2", baseaddress, 0x58>,
+                             bdcr_tt<"BDCR", baseaddress, 0x5c>,
+                             csr_tt<"CSR", baseaddress, 0x60>>;
 
   constexpr auto rcc = rcc_t{};
 
@@ -145,28 +145,28 @@ namespace rcc {
 namespace pwr {
 
   constexpr std::uint32_t PWR_BASE = 0x4000'7000;
-  template <stdx::ct_string name, std::uint32_t baseaddress>
-  using pwr_t = groov::group<name,
+  template <std::uint32_t baseaddress>
+  using pwr_t = groov::group<pwr,
                              groov::mmio_bus<>,
-                             cr1<baseaddress>,
-                             cr2<baseaddress>,
-                             cr3<baseaddress>,
-                             cr4<baseaddress>,
-                             sr1<baseaddress>,
-                             sr2<baseaddress>,
-                             scr<baseaddress>,
-                             pucra<baseaddress>,
-                             pdcra<baseaddress>,
-                             pucrb<baseaddress>,
-                             pdcrb<baseaddress>,
-                             pucrc<baseaddress>,
-                             pdcrc<baseaddress>,
-                             pucrd<baseaddress>,
-                             pdcrd<baseaddress>,
-                             pucre<baseaddress>,
-                             pdcre<baseaddress>,
-                             pucrf<baseaddress>,
-                             pdcrf<baseaddress>>;
+                             cr1_tt<"CR1", baseaddress, 0>,
+                             cr2_tt<"CR2", baseaddress, 0x4>,
+                             cr3_tt<"CR3", baseaddress, 0x8>,
+                             cr4_tt<"CR4", baseaddress, 0xc>,
+                             sr1_tt<"SR1", baseaddress, 0x10>,
+                             sr2_tt<"SR2", baseaddress, 0x14>,
+                             scr_tt<"SCR", baseaddress, 0x18>,
+                             pucra_tt<"PUCRA", baseaddress, 0x20>,
+                             pdcra_tt<"PDCRA", baseaddress, 0x24>,
+                             pucrb_tt<"PUCRB", baseaddress, 0x28>,
+                             pdcrb_tt<"PDCRB", baseaddress, 0x2c>,
+                             pucrc_tt<"PUCRC", baseaddress, 0x30>,
+                             pdcrc_tt<"PDCRC", baseaddress, 0x34>,
+                             pucrd_tt<"PUCRD", baseaddress, 0x38>,
+                             pdcrd_tt<"PDCRD", baseaddress, 0x3c>,
+                             pucre_tt<"PUCRE", baseaddress, 0x40>,
+                             pdcre_tt<"PDCRE", baseaddress, 0x44>,
+                             pucrf_tt<"PUCRF", baseaddress, 0x48>,
+                             pdcrf_tt<"PDCRF", baseaddress, 0x4c>>;
 
   constexpr auto pwr = pwr_t{};
 
@@ -175,39 +175,39 @@ namespace pwr {
 namespace dma {
 
   constexpr std::uint32_t DMA_BASE = 0x4002'0000;
-  template <stdx::ct_string name, std::uint32_t baseaddress>
-  using dma_t = groov::group<name,
+  template <std::uint32_t baseaddress>
+  using dma_t = groov::group<dma,
                              groov::mmio_bus<>,
-                             dma_isr<baseaddress>,
-                             dma_ifcr<baseaddress>,
-                             dma_ccr1<baseaddress>,
-                             dma_cndtr1<baseaddress>,
-                             dma_cpar1<baseaddress>,
-                             dma_cmar1<baseaddress>,
-                             dma_ccr2<baseaddress>,
-                             dma_cndtr2<baseaddress>,
-                             dma_cpar2<baseaddress>,
-                             dma_cmar2<baseaddress>,
-                             dma_ccr3<baseaddress>,
-                             dma_cndtr3<baseaddress>,
-                             dma_cpar3<baseaddress>,
-                             dma_cmar3<baseaddress>,
-                             dma_ccr4<baseaddress>,
-                             dma_cndtr4<baseaddress>,
-                             dma_cpar4<baseaddress>,
-                             dma_cmar4<baseaddress>,
-                             dma_ccr5<baseaddress>,
-                             dma_cndtr5<baseaddress>,
-                             dma_cpar5<baseaddress>,
-                             dma_cmar5<baseaddress>,
-                             dma_ccr6<baseaddress>,
-                             dma_cndtr6<baseaddress>,
-                             dma_cpar6<baseaddress>,
-                             dma_cmar6<baseaddress>,
-                             dma_ccr7<baseaddress>,
-                             dma_cndtr7<baseaddress>,
-                             dma_cpar7<baseaddress>,
-                             dma_cmar7<baseaddress>>;
+                             dma_isr_tt<"DMA_ISR", baseaddress, 0>,
+                             dma_ifcr_tt<"DMA_IFCR", baseaddress, 0x4>,
+                             dma_ccr1_tt<"DMA_CCR1", baseaddress, 0x8>,
+                             dma_cndtr1_tt<"DMA_CNDTR1", baseaddress, 0xc>,
+                             dma_cpar1_tt<"DMA_CPAR1", baseaddress, 0x10>,
+                             dma_cmar1_tt<"DMA_CMAR1", baseaddress, 0x14>,
+                             dma_ccr2_tt<"DMA_CCR2", baseaddress, 0x1c>,
+                             dma_cndtr2_tt<"DMA_CNDTR2", baseaddress, 0x20>,
+                             dma_cpar2_tt<"DMA_CPAR2", baseaddress, 0x24>,
+                             dma_cmar2_tt<"DMA_CMAR2", baseaddress, 0x28>,
+                             dma_ccr3_tt<"DMA_CCR3", baseaddress, 0x30>,
+                             dma_cndtr3_tt<"DMA_CNDTR3", baseaddress, 0x34>,
+                             dma_cpar3_tt<"DMA_CPAR3", baseaddress, 0x38>,
+                             dma_cmar3_tt<"DMA_CMAR3", baseaddress, 0x3c>,
+                             dma_ccr4_tt<"DMA_CCR4", baseaddress, 0x44>,
+                             dma_cndtr4_tt<"DMA_CNDTR4", baseaddress, 0x48>,
+                             dma_cpar4_tt<"DMA_CPAR4", baseaddress, 0x4c>,
+                             dma_cmar4_tt<"DMA_CMAR4", baseaddress, 0x50>,
+                             dma_ccr5_tt<"DMA_CCR5", baseaddress, 0x58>,
+                             dma_cndtr5_tt<"DMA_CNDTR5", baseaddress, 0x5c>,
+                             dma_cpar5_tt<"DMA_CPAR5", baseaddress, 0x60>,
+                             dma_cmar5_tt<"DMA_CMAR5", baseaddress, 0x64>,
+                             dma_ccr6_tt<"DMA_CCR6", baseaddress, 0x6c>,
+                             dma_cndtr6_tt<"DMA_CNDTR6", baseaddress, 0x70>,
+                             dma_cpar6_tt<"DMA_CPAR6", baseaddress, 0x74>,
+                             dma_cmar6_tt<"DMA_CMAR6", baseaddress, 0x78>,
+                             dma_ccr7_tt<"DMA_CCR7", baseaddress, 0x80>,
+                             dma_cndtr7_tt<"DMA_CNDTR7", baseaddress, 0x84>,
+                             dma_cpar7_tt<"DMA_CPAR7", baseaddress, 0x88>,
+                             dma_cmar7_tt<"DMA_CMAR7", baseaddress, 0x8c>>;
 
   constexpr auto dma = dma_t{};
 
@@ -216,29 +216,30 @@ namespace dma {
 namespace dmamux {
 
   constexpr std::uint32_t DMAMUX_BASE = 0x4002'0800;
-  template <stdx::ct_string name, std::uint32_t baseaddress>
-  using dmamux_t = groov::group<name,
-                                groov::mmio_bus<>,
-                                dmamux_c0cr<baseaddress>,
-                                dmamux_c1cr<baseaddress>,
-                                dmamux_c2cr<baseaddress>,
-                                dmamux_c3cr<baseaddress>,
-                                dmamux_c4cr<baseaddress>,
-                                dmamux_c5cr<baseaddress>,
-                                dmamux_c6cr<baseaddress>,
-                                dmamux_rg0cr<baseaddress>,
-                                dmamux_rg1cr<baseaddress>,
-                                dmamux_rg2cr<baseaddress>,
-                                dmamux_rg3cr<baseaddress>,
-                                dmamux_rgsr<baseaddress>,
-                                dmamux_rgcfr<baseaddress>,
-                                dmamux_csr<baseaddress>,
-                                dmamux_cfr<baseaddress>,
-                                dmamux_sidr<baseaddress>,
-                                dmamux_ipidr<baseaddress>,
-                                dmamux_verr<baseaddress>,
-                                dmamux_hwcfgr1<baseaddress>,
-                                dmamux_hwcfgr2<baseaddress>>;
+  template <std::uint32_t baseaddress>
+  using dmamux_t =
+    groov::group<dmamux,
+                 groov::mmio_bus<>,
+                 dmamux_c0cr_tt<"DMAMUX_C0CR", baseaddress, 0>,
+                 dmamux_c1cr_tt<"DMAMUX_C1CR", baseaddress, 0x4>,
+                 dmamux_c2cr_tt<"DMAMUX_C2CR", baseaddress, 0x8>,
+                 dmamux_c3cr_tt<"DMAMUX_C3CR", baseaddress, 0xc>,
+                 dmamux_c4cr_tt<"DMAMUX_C4CR", baseaddress, 0x10>,
+                 dmamux_c5cr_tt<"DMAMUX_C5CR", baseaddress, 0x14>,
+                 dmamux_c6cr_tt<"DMAMUX_C6CR", baseaddress, 0x18>,
+                 dmamux_rg0cr_tt<"DMAMUX_RG0CR", baseaddress, 0x100>,
+                 dmamux_rg1cr_tt<"DMAMUX_RG1CR", baseaddress, 0x104>,
+                 dmamux_rg2cr_tt<"DMAMUX_RG2CR", baseaddress, 0x108>,
+                 dmamux_rg3cr_tt<"DMAMUX_RG3CR", baseaddress, 0x10c>,
+                 dmamux_rgsr_tt<"DMAMUX_RGSR", baseaddress, 0x140>,
+                 dmamux_rgcfr_tt<"DMAMUX_RGCFR", baseaddress, 0x144>,
+                 dmamux_csr_tt<"DMAMUX_CSR", baseaddress, 0x80>,
+                 dmamux_cfr_tt<"DMAMUX_CFR", baseaddress, 0x84>,
+                 dmamux_sidr_tt<"DMAMUX_SIDR", baseaddress, 0x3fc>,
+                 dmamux_ipidr_tt<"DMAMUX_IPIDR", baseaddress, 0x3f8>,
+                 dmamux_verr_tt<"DMAMUX_VERR", baseaddress, 0x3f4>,
+                 dmamux_hwcfgr1_tt<"DMAMUX_HWCFGR1", baseaddress, 0x3f0>,
+                 dmamux_hwcfgr2_tt<"DMAMUX_HWCFGR2", baseaddress, 0x3ec>>;
 
   constexpr auto dmamux = dmamux_t{};
 
@@ -247,20 +248,20 @@ namespace dmamux {
 namespace gpioa {
 
   constexpr std::uint32_t GPIOA_BASE = 0x5000'0000;
-  template <stdx::ct_string name, std::uint32_t baseaddress>
-  using gpioa_t = groov::group<name,
+  template <std::uint32_t baseaddress>
+  using gpioa_t = groov::group<gpioa,
                                groov::mmio_bus<>,
-                               moder<baseaddress>,
-                               otyper<baseaddress>,
-                               ospeedr<baseaddress>,
-                               pupdr<baseaddress>,
-                               idr<baseaddress>,
-                               odr<baseaddress>,
-                               bsrr<baseaddress>,
-                               lckr<baseaddress>,
-                               afrl<baseaddress>,
-                               afrh<baseaddress>,
-                               brr<baseaddress>>;
+                               moder_tt<"MODER", baseaddress, 0>,
+                               otyper_tt<"OTYPER", baseaddress, 0x4>,
+                               ospeedr_tt<"OSPEEDR", baseaddress, 0x8>,
+                               pupdr_tt<"PUPDR", baseaddress, 0xc>,
+                               idr_tt<"IDR", baseaddress, 0x10>,
+                               odr_tt<"ODR", baseaddress, 0x14>,
+                               bsrr_tt<"BSRR", baseaddress, 0x18>,
+                               lckr_tt<"LCKR", baseaddress, 0x1c>,
+                               afrl_tt<"AFRL", baseaddress, 0x20>,
+                               afrh_tt<"AFRH", baseaddress, 0x24>,
+                               brr_tt<"BRR", baseaddress, 0x28>>;
 
   constexpr auto gpioa = gpioa_t{};
 
@@ -269,20 +270,20 @@ namespace gpioa {
 namespace gpiob {
 
   constexpr std::uint32_t GPIOB_BASE = 0x5000'0400;
-  template <stdx::ct_string name, std::uint32_t baseaddress>
-  using gpiob_t = groov::group<name,
+  template <std::uint32_t baseaddress>
+  using gpiob_t = groov::group<gpiob,
                                groov::mmio_bus<>,
-                               moder<baseaddress>,
-                               otyper<baseaddress>,
-                               ospeedr<baseaddress>,
-                               pupdr<baseaddress>,
-                               idr<baseaddress>,
-                               odr<baseaddress>,
-                               bsrr<baseaddress>,
-                               lckr<baseaddress>,
-                               afrl<baseaddress>,
-                               afrh<baseaddress>,
-                               brr<baseaddress>>;
+                               moder_tt<"MODER", baseaddress, 0>,
+                               otyper_tt<"OTYPER", baseaddress, 0x4>,
+                               ospeedr_tt<"OSPEEDR", baseaddress, 0x8>,
+                               pupdr_tt<"PUPDR", baseaddress, 0xc>,
+                               idr_tt<"IDR", baseaddress, 0x10>,
+                               odr_tt<"ODR", baseaddress, 0x14>,
+                               bsrr_tt<"BSRR", baseaddress, 0x18>,
+                               lckr_tt<"LCKR", baseaddress, 0x1c>,
+                               afrl_tt<"AFRL", baseaddress, 0x20>,
+                               afrh_tt<"AFRH", baseaddress, 0x24>,
+                               brr_tt<"BRR", baseaddress, 0x28>>;
 
   constexpr auto gpiob = gpiob_t{};
 
@@ -291,20 +292,20 @@ namespace gpiob {
 namespace gpioc {
 
   constexpr std::uint32_t GPIOC_BASE = 0x5000'0800;
-  template <stdx::ct_string name, std::uint32_t baseaddress>
-  using gpioc_t = groov::group<name,
+  template <std::uint32_t baseaddress>
+  using gpioc_t = groov::group<gpioc,
                                groov::mmio_bus<>,
-                               moder<baseaddress>,
-                               otyper<baseaddress>,
-                               ospeedr<baseaddress>,
-                               pupdr<baseaddress>,
-                               idr<baseaddress>,
-                               odr<baseaddress>,
-                               bsrr<baseaddress>,
-                               lckr<baseaddress>,
-                               afrl<baseaddress>,
-                               afrh<baseaddress>,
-                               brr<baseaddress>>;
+                               moder_tt<"MODER", baseaddress, 0>,
+                               otyper_tt<"OTYPER", baseaddress, 0x4>,
+                               ospeedr_tt<"OSPEEDR", baseaddress, 0x8>,
+                               pupdr_tt<"PUPDR", baseaddress, 0xc>,
+                               idr_tt<"IDR", baseaddress, 0x10>,
+                               odr_tt<"ODR", baseaddress, 0x14>,
+                               bsrr_tt<"BSRR", baseaddress, 0x18>,
+                               lckr_tt<"LCKR", baseaddress, 0x1c>,
+                               afrl_tt<"AFRL", baseaddress, 0x20>,
+                               afrh_tt<"AFRH", baseaddress, 0x24>,
+                               brr_tt<"BRR", baseaddress, 0x28>>;
 
   constexpr auto gpioc = gpioc_t{};
 
@@ -313,20 +314,20 @@ namespace gpioc {
 namespace gpiod {
 
   constexpr std::uint32_t GPIOD_BASE = 0x5000'0c00;
-  template <stdx::ct_string name, std::uint32_t baseaddress>
-  using gpiod_t = groov::group<name,
+  template <std::uint32_t baseaddress>
+  using gpiod_t = groov::group<gpiod,
                                groov::mmio_bus<>,
-                               moder<baseaddress>,
-                               otyper<baseaddress>,
-                               ospeedr<baseaddress>,
-                               pupdr<baseaddress>,
-                               idr<baseaddress>,
-                               odr<baseaddress>,
-                               bsrr<baseaddress>,
-                               lckr<baseaddress>,
-                               afrl<baseaddress>,
-                               afrh<baseaddress>,
-                               brr<baseaddress>>;
+                               moder_tt<"MODER", baseaddress, 0>,
+                               otyper_tt<"OTYPER", baseaddress, 0x4>,
+                               ospeedr_tt<"OSPEEDR", baseaddress, 0x8>,
+                               pupdr_tt<"PUPDR", baseaddress, 0xc>,
+                               idr_tt<"IDR", baseaddress, 0x10>,
+                               odr_tt<"ODR", baseaddress, 0x14>,
+                               bsrr_tt<"BSRR", baseaddress, 0x18>,
+                               lckr_tt<"LCKR", baseaddress, 0x1c>,
+                               afrl_tt<"AFRL", baseaddress, 0x20>,
+                               afrh_tt<"AFRH", baseaddress, 0x24>,
+                               brr_tt<"BRR", baseaddress, 0x28>>;
 
   constexpr auto gpiod = gpiod_t{};
 
@@ -335,20 +336,20 @@ namespace gpiod {
 namespace gpiof {
 
   constexpr std::uint32_t GPIOF_BASE = 0x5000'1400;
-  template <stdx::ct_string name, std::uint32_t baseaddress>
-  using gpiof_t = groov::group<name,
+  template <std::uint32_t baseaddress>
+  using gpiof_t = groov::group<gpiof,
                                groov::mmio_bus<>,
-                               moder<baseaddress>,
-                               otyper<baseaddress>,
-                               ospeedr<baseaddress>,
-                               pupdr<baseaddress>,
-                               idr<baseaddress>,
-                               odr<baseaddress>,
-                               bsrr<baseaddress>,
-                               lckr<baseaddress>,
-                               afrl<baseaddress>,
-                               afrh<baseaddress>,
-                               brr<baseaddress>>;
+                               moder_tt<"MODER", baseaddress, 0>,
+                               otyper_tt<"OTYPER", baseaddress, 0x4>,
+                               ospeedr_tt<"OSPEEDR", baseaddress, 0x8>,
+                               pupdr_tt<"PUPDR", baseaddress, 0xc>,
+                               idr_tt<"IDR", baseaddress, 0x10>,
+                               odr_tt<"ODR", baseaddress, 0x14>,
+                               bsrr_tt<"BSRR", baseaddress, 0x18>,
+                               lckr_tt<"LCKR", baseaddress, 0x1c>,
+                               afrl_tt<"AFRL", baseaddress, 0x20>,
+                               afrh_tt<"AFRH", baseaddress, 0x24>,
+                               brr_tt<"BRR", baseaddress, 0x28>>;
 
   constexpr auto gpiof = gpiof_t{};
 
@@ -357,12 +358,12 @@ namespace gpiof {
 namespace rng {
 
   constexpr std::uint32_t RNG_BASE = 0x4002'5000;
-  template <stdx::ct_string name, std::uint32_t baseaddress>
-  using rng_t = groov::group<name,
+  template <std::uint32_t baseaddress>
+  using rng_t = groov::group<rng,
                              groov::mmio_bus<>,
-                             cr<baseaddress>,
-                             sr<baseaddress>,
-                             dr<baseaddress>>;
+                             cr_tt<"CR", baseaddress, 0>,
+                             sr_tt<"SR", baseaddress, 0x4>,
+                             dr_tt<"DR", baseaddress, 0x8>>;
 
   constexpr auto rng = rng_t{};
 
@@ -371,14 +372,14 @@ namespace rng {
 namespace crc {
 
   constexpr std::uint32_t CRC_BASE = 0x4002'3000;
-  template <stdx::ct_string name, std::uint32_t baseaddress>
-  using crc_t = groov::group<name,
+  template <std::uint32_t baseaddress>
+  using crc_t = groov::group<crc,
                              groov::mmio_bus<>,
-                             dr<baseaddress>,
-                             idr<baseaddress>,
-                             cr<baseaddress>,
-                             init<baseaddress>,
-                             pol<baseaddress>>;
+                             dr_tt<"DR", baseaddress, 0>,
+                             idr_tt<"IDR", baseaddress, 0x4>,
+                             cr_tt<"CR", baseaddress, 0x8>,
+                             init_tt<"INIT", baseaddress, 0x10>,
+                             pol_tt<"POL", baseaddress, 0x14>>;
 
   constexpr auto crc = crc_t{};
 
@@ -387,20 +388,20 @@ namespace crc {
 namespace exti {
 
   constexpr std::uint32_t EXTI_BASE = 0x4002'1800;
-  template <stdx::ct_string name, std::uint32_t baseaddress>
-  using exti_t = groov::group<name,
+  template <std::uint32_t baseaddress>
+  using exti_t = groov::group<exti,
                               groov::mmio_bus<>,
-                              rtsr1<baseaddress>,
-                              ftsr1<baseaddress>,
-                              swier1<baseaddress>,
-                              rpr1<baseaddress>,
-                              fpr1<baseaddress>,
-                              exticr1<baseaddress>,
-                              exticr2<baseaddress>,
-                              exticr3<baseaddress>,
-                              exticr4<baseaddress>,
-                              imr1<baseaddress>,
-                              emr1<baseaddress>>;
+                              rtsr1_tt<"RTSR1", baseaddress, 0>,
+                              ftsr1_tt<"FTSR1", baseaddress, 0x4>,
+                              swier1_tt<"SWIER1", baseaddress, 0x8>,
+                              rpr1_tt<"RPR1", baseaddress, 0xc>,
+                              fpr1_tt<"FPR1", baseaddress, 0x10>,
+                              exticr1_tt<"EXTICR1", baseaddress, 0x60>,
+                              exticr2_tt<"EXTICR2", baseaddress, 0x64>,
+                              exticr3_tt<"EXTICR3", baseaddress, 0x68>,
+                              exticr4_tt<"EXTICR4", baseaddress, 0x6c>,
+                              imr1_tt<"IMR1", baseaddress, 0x80>,
+                              emr1_tt<"EMR1", baseaddress, 0x84>>;
 
   constexpr auto exti = exti_t{};
 
@@ -409,27 +410,28 @@ namespace exti {
 namespace tim15 {
 
   constexpr std::uint32_t TIM15_BASE = 0x4001'4000;
-  template <stdx::ct_string name, std::uint32_t baseaddress>
-  using tim15_t = groov::group<name,
-                               groov::mmio_bus<>,
-                               cr1<baseaddress>,
-                               cr2<baseaddress>,
-                               smcr<baseaddress>,
-                               dier<baseaddress>,
-                               sr<baseaddress>,
-                               egr<baseaddress>,
-                               ccmr1_output<baseaddress>,
-                               ccmr1_input<baseaddress>,
-                               ccer<baseaddress>,
-                               cnt<baseaddress>,
-                               psc<baseaddress>,
-                               arr<baseaddress>,
-                               rcr<baseaddress>,
-                               ccr1<baseaddress>,
-                               ccr2<baseaddress>,
-                               bdtr<baseaddress>,
-                               dcr<baseaddress>,
-                               dmar<baseaddress>>;
+  template <std::uint32_t baseaddress>
+  using tim15_t =
+    groov::group<tim15,
+                 groov::mmio_bus<>,
+                 cr1_tt<"CR1", baseaddress, 0>,
+                 cr2_tt<"CR2", baseaddress, 0x4>,
+                 smcr_tt<"SMCR", baseaddress, 0x8>,
+                 dier_tt<"DIER", baseaddress, 0xc>,
+                 sr_tt<"SR", baseaddress, 0x10>,
+                 egr_tt<"EGR", baseaddress, 0x14>,
+                 ccmr1_output_tt<"CCMR1_OUTPUT", baseaddress, 0x18>,
+                 ccmr1_input_tt<"CCMR1_INPUT", baseaddress, 0x18>,
+                 ccer_tt<"CCER", baseaddress, 0x20>,
+                 cnt_tt<"CNT", baseaddress, 0x24>,
+                 psc_tt<"PSC", baseaddress, 0x28>,
+                 arr_tt<"ARR", baseaddress, 0x2c>,
+                 rcr_tt<"RCR", baseaddress, 0x30>,
+                 ccr1_tt<"CCR1", baseaddress, 0x34>,
+                 ccr2_tt<"CCR2", baseaddress, 0x38>,
+                 bdtr_tt<"BDTR", baseaddress, 0x44>,
+                 dcr_tt<"DCR", baseaddress, 0x48>,
+                 dmar_tt<"DMAR", baseaddress, 0x4c>>;
 
   constexpr auto tim15 = tim15_t{};
 
@@ -438,27 +440,28 @@ namespace tim15 {
 namespace tim16 {
 
   constexpr std::uint32_t TIM16_BASE = 0x4001'4400;
-  template <stdx::ct_string name, std::uint32_t baseaddress>
-  using tim16_t = groov::group<name,
-                               groov::mmio_bus<>,
-                               cr1<baseaddress>,
-                               cr2<baseaddress>,
-                               dier<baseaddress>,
-                               sr<baseaddress>,
-                               egr<baseaddress>,
-                               ccmr1_output<baseaddress>,
-                               ccmr1_input<baseaddress>,
-                               ccer<baseaddress>,
-                               cnt<baseaddress>,
-                               psc<baseaddress>,
-                               arr<baseaddress>,
-                               rcr<baseaddress>,
-                               ccr1<baseaddress>,
-                               bdtr<baseaddress>,
-                               dcr<baseaddress>,
-                               dmar<baseaddress>,
-                               af1<baseaddress>,
-                               tisel<baseaddress>>;
+  template <std::uint32_t baseaddress>
+  using tim16_t =
+    groov::group<tim16,
+                 groov::mmio_bus<>,
+                 cr1_tt<"CR1", baseaddress, 0>,
+                 cr2_tt<"CR2", baseaddress, 0x4>,
+                 dier_tt<"DIER", baseaddress, 0xc>,
+                 sr_tt<"SR", baseaddress, 0x10>,
+                 egr_tt<"EGR", baseaddress, 0x14>,
+                 ccmr1_output_tt<"CCMR1_OUTPUT", baseaddress, 0x18>,
+                 ccmr1_input_tt<"CCMR1_INPUT", baseaddress, 0x18>,
+                 ccer_tt<"CCER", baseaddress, 0x20>,
+                 cnt_tt<"CNT", baseaddress, 0x24>,
+                 psc_tt<"PSC", baseaddress, 0x28>,
+                 arr_tt<"ARR", baseaddress, 0x2c>,
+                 rcr_tt<"RCR", baseaddress, 0x30>,
+                 ccr1_tt<"CCR1", baseaddress, 0x34>,
+                 bdtr_tt<"BDTR", baseaddress, 0x44>,
+                 dcr_tt<"DCR", baseaddress, 0x48>,
+                 dmar_tt<"DMAR", baseaddress, 0x4c>,
+                 af1_tt<"AF1", baseaddress, 0x60>,
+                 tisel_tt<"TISEL", baseaddress, 0x68>>;
 
   constexpr auto tim16 = tim16_t{};
 
@@ -467,27 +470,28 @@ namespace tim16 {
 namespace tim17 {
 
   constexpr std::uint32_t TIM17_BASE = 0x4001'4800;
-  template <stdx::ct_string name, std::uint32_t baseaddress>
-  using tim17_t = groov::group<name,
-                               groov::mmio_bus<>,
-                               cr1<baseaddress>,
-                               cr2<baseaddress>,
-                               dier<baseaddress>,
-                               sr<baseaddress>,
-                               egr<baseaddress>,
-                               ccmr1_output<baseaddress>,
-                               ccmr1_input<baseaddress>,
-                               ccer<baseaddress>,
-                               cnt<baseaddress>,
-                               psc<baseaddress>,
-                               arr<baseaddress>,
-                               rcr<baseaddress>,
-                               ccr1<baseaddress>,
-                               bdtr<baseaddress>,
-                               dcr<baseaddress>,
-                               dmar<baseaddress>,
-                               af1<baseaddress>,
-                               tisel<baseaddress>>;
+  template <std::uint32_t baseaddress>
+  using tim17_t =
+    groov::group<tim17,
+                 groov::mmio_bus<>,
+                 cr1_tt<"CR1", baseaddress, 0>,
+                 cr2_tt<"CR2", baseaddress, 0x4>,
+                 dier_tt<"DIER", baseaddress, 0xc>,
+                 sr_tt<"SR", baseaddress, 0x10>,
+                 egr_tt<"EGR", baseaddress, 0x14>,
+                 ccmr1_output_tt<"CCMR1_OUTPUT", baseaddress, 0x18>,
+                 ccmr1_input_tt<"CCMR1_INPUT", baseaddress, 0x18>,
+                 ccer_tt<"CCER", baseaddress, 0x20>,
+                 cnt_tt<"CNT", baseaddress, 0x24>,
+                 psc_tt<"PSC", baseaddress, 0x28>,
+                 arr_tt<"ARR", baseaddress, 0x2c>,
+                 rcr_tt<"RCR", baseaddress, 0x30>,
+                 ccr1_tt<"CCR1", baseaddress, 0x34>,
+                 bdtr_tt<"BDTR", baseaddress, 0x44>,
+                 dcr_tt<"DCR", baseaddress, 0x48>,
+                 dmar_tt<"DMAR", baseaddress, 0x4c>,
+                 af1_tt<"AF1", baseaddress, 0x60>,
+                 tisel_tt<"TISEL", baseaddress, 0x68>>;
 
   constexpr auto tim17 = tim17_t{};
 
@@ -496,21 +500,21 @@ namespace tim17 {
 namespace usart1 {
 
   constexpr std::uint32_t USART1_BASE = 0x4001'3800;
-  template <stdx::ct_string name, std::uint32_t baseaddress>
-  using usart1_t = groov::group<name,
+  template <std::uint32_t baseaddress>
+  using usart1_t = groov::group<usart1,
                                 groov::mmio_bus<>,
-                                cr1<baseaddress>,
-                                cr2<baseaddress>,
-                                cr3<baseaddress>,
-                                brr<baseaddress>,
-                                gtpr<baseaddress>,
-                                rtor<baseaddress>,
-                                rqr<baseaddress>,
-                                isr<baseaddress>,
-                                icr<baseaddress>,
-                                rdr<baseaddress>,
-                                tdr<baseaddress>,
-                                presc<baseaddress>>;
+                                cr1_tt<"CR1", baseaddress, 0>,
+                                cr2_tt<"CR2", baseaddress, 0x4>,
+                                cr3_tt<"CR3", baseaddress, 0x8>,
+                                brr_tt<"BRR", baseaddress, 0xc>,
+                                gtpr_tt<"GTPR", baseaddress, 0x10>,
+                                rtor_tt<"RTOR", baseaddress, 0x14>,
+                                rqr_tt<"RQR", baseaddress, 0x18>,
+                                isr_tt<"ISR", baseaddress, 0x1c>,
+                                icr_tt<"ICR", baseaddress, 0x20>,
+                                rdr_tt<"RDR", baseaddress, 0x24>,
+                                tdr_tt<"TDR", baseaddress, 0x28>,
+                                presc_tt<"PRESC", baseaddress, 0x2c>>;
 
   constexpr auto usart1 = usart1_t{};
 
@@ -519,21 +523,21 @@ namespace usart1 {
 namespace usart2 {
 
   constexpr std::uint32_t USART2_BASE = 0x4000'4400;
-  template <stdx::ct_string name, std::uint32_t baseaddress>
-  using usart2_t = groov::group<name,
+  template <std::uint32_t baseaddress>
+  using usart2_t = groov::group<usart2,
                                 groov::mmio_bus<>,
-                                cr1<baseaddress>,
-                                cr2<baseaddress>,
-                                cr3<baseaddress>,
-                                brr<baseaddress>,
-                                gtpr<baseaddress>,
-                                rtor<baseaddress>,
-                                rqr<baseaddress>,
-                                isr<baseaddress>,
-                                icr<baseaddress>,
-                                rdr<baseaddress>,
-                                tdr<baseaddress>,
-                                presc<baseaddress>>;
+                                cr1_tt<"CR1", baseaddress, 0>,
+                                cr2_tt<"CR2", baseaddress, 0x4>,
+                                cr3_tt<"CR3", baseaddress, 0x8>,
+                                brr_tt<"BRR", baseaddress, 0xc>,
+                                gtpr_tt<"GTPR", baseaddress, 0x10>,
+                                rtor_tt<"RTOR", baseaddress, 0x14>,
+                                rqr_tt<"RQR", baseaddress, 0x18>,
+                                isr_tt<"ISR", baseaddress, 0x1c>,
+                                icr_tt<"ICR", baseaddress, 0x20>,
+                                rdr_tt<"RDR", baseaddress, 0x24>,
+                                tdr_tt<"TDR", baseaddress, 0x28>,
+                                presc_tt<"PRESC", baseaddress, 0x2c>>;
 
   constexpr auto usart2 = usart2_t{};
 
@@ -542,21 +546,21 @@ namespace usart2 {
 namespace usart3 {
 
   constexpr std::uint32_t USART3_BASE = 0x4000'4800;
-  template <stdx::ct_string name, std::uint32_t baseaddress>
-  using usart3_t = groov::group<name,
+  template <std::uint32_t baseaddress>
+  using usart3_t = groov::group<usart3,
                                 groov::mmio_bus<>,
-                                cr1<baseaddress>,
-                                cr2<baseaddress>,
-                                cr3<baseaddress>,
-                                brr<baseaddress>,
-                                gtpr<baseaddress>,
-                                rtor<baseaddress>,
-                                rqr<baseaddress>,
-                                isr<baseaddress>,
-                                icr<baseaddress>,
-                                rdr<baseaddress>,
-                                tdr<baseaddress>,
-                                presc<baseaddress>>;
+                                cr1_tt<"CR1", baseaddress, 0>,
+                                cr2_tt<"CR2", baseaddress, 0x4>,
+                                cr3_tt<"CR3", baseaddress, 0x8>,
+                                brr_tt<"BRR", baseaddress, 0xc>,
+                                gtpr_tt<"GTPR", baseaddress, 0x10>,
+                                rtor_tt<"RTOR", baseaddress, 0x14>,
+                                rqr_tt<"RQR", baseaddress, 0x18>,
+                                isr_tt<"ISR", baseaddress, 0x1c>,
+                                icr_tt<"ICR", baseaddress, 0x20>,
+                                rdr_tt<"RDR", baseaddress, 0x24>,
+                                tdr_tt<"TDR", baseaddress, 0x28>,
+                                presc_tt<"PRESC", baseaddress, 0x2c>>;
 
   constexpr auto usart3 = usart3_t{};
 
@@ -565,21 +569,21 @@ namespace usart3 {
 namespace usart4 {
 
   constexpr std::uint32_t USART4_BASE = 0x4000'4c00;
-  template <stdx::ct_string name, std::uint32_t baseaddress>
-  using usart4_t = groov::group<name,
+  template <std::uint32_t baseaddress>
+  using usart4_t = groov::group<usart4,
                                 groov::mmio_bus<>,
-                                cr1<baseaddress>,
-                                cr2<baseaddress>,
-                                cr3<baseaddress>,
-                                brr<baseaddress>,
-                                gtpr<baseaddress>,
-                                rtor<baseaddress>,
-                                rqr<baseaddress>,
-                                isr<baseaddress>,
-                                icr<baseaddress>,
-                                rdr<baseaddress>,
-                                tdr<baseaddress>,
-                                presc<baseaddress>>;
+                                cr1_tt<"CR1", baseaddress, 0>,
+                                cr2_tt<"CR2", baseaddress, 0x4>,
+                                cr3_tt<"CR3", baseaddress, 0x8>,
+                                brr_tt<"BRR", baseaddress, 0xc>,
+                                gtpr_tt<"GTPR", baseaddress, 0x10>,
+                                rtor_tt<"RTOR", baseaddress, 0x14>,
+                                rqr_tt<"RQR", baseaddress, 0x18>,
+                                isr_tt<"ISR", baseaddress, 0x1c>,
+                                icr_tt<"ICR", baseaddress, 0x20>,
+                                rdr_tt<"RDR", baseaddress, 0x24>,
+                                tdr_tt<"TDR", baseaddress, 0x28>,
+                                presc_tt<"PRESC", baseaddress, 0x2c>>;
 
   constexpr auto usart4 = usart4_t{};
 
@@ -588,22 +592,22 @@ namespace usart4 {
 namespace spi1 {
 
   constexpr std::uint32_t SPI1_BASE = 0x4001'3000;
-  template <stdx::ct_string name, std::uint32_t baseaddress>
-  using spi1_t = groov::group<name,
+  template <std::uint32_t baseaddress>
+  using spi1_t = groov::group<spi1,
                               groov::mmio_bus<>,
-                              cr1<baseaddress>,
-                              cr2<baseaddress>,
-                              sr<baseaddress>,
-                              dr<baseaddress>,
-                              crcpr<baseaddress>,
-                              rxcrcr<baseaddress>,
-                              txcrcr<baseaddress>,
-                              i2scfgr<baseaddress>,
-                              i2spr<baseaddress>,
-                              hwcfgr<baseaddress>,
-                              verr<baseaddress>,
-                              ipidr<baseaddress>,
-                              sidr<baseaddress>>;
+                              cr1_tt<"CR1", baseaddress, 0>,
+                              cr2_tt<"CR2", baseaddress, 0x4>,
+                              sr_tt<"SR", baseaddress, 0x8>,
+                              dr_tt<"DR", baseaddress, 0xc>,
+                              crcpr_tt<"CRCPR", baseaddress, 0x10>,
+                              rxcrcr_tt<"RXCRCR", baseaddress, 0x14>,
+                              txcrcr_tt<"TXCRCR", baseaddress, 0x18>,
+                              i2scfgr_tt<"I2SCFGR", baseaddress, 0x1c>,
+                              i2spr_tt<"I2SPR", baseaddress, 0x20>,
+                              hwcfgr_tt<"HWCFGR", baseaddress, 0x3f0>,
+                              verr_tt<"VERR", baseaddress, 0x3f4>,
+                              ipidr_tt<"IPIDR", baseaddress, 0x3f8>,
+                              sidr_tt<"SIDR", baseaddress, 0x3fc>>;
 
   constexpr auto spi1 = spi1_t{};
 
@@ -612,22 +616,22 @@ namespace spi1 {
 namespace spi2 {
 
   constexpr std::uint32_t SPI2_BASE = 0x4000'3800;
-  template <stdx::ct_string name, std::uint32_t baseaddress>
-  using spi2_t = groov::group<name,
+  template <std::uint32_t baseaddress>
+  using spi2_t = groov::group<spi2,
                               groov::mmio_bus<>,
-                              cr1<baseaddress>,
-                              cr2<baseaddress>,
-                              sr<baseaddress>,
-                              dr<baseaddress>,
-                              crcpr<baseaddress>,
-                              rxcrcr<baseaddress>,
-                              txcrcr<baseaddress>,
-                              i2scfgr<baseaddress>,
-                              i2spr<baseaddress>,
-                              hwcfgr<baseaddress>,
-                              verr<baseaddress>,
-                              ipidr<baseaddress>,
-                              sidr<baseaddress>>;
+                              cr1_tt<"CR1", baseaddress, 0>,
+                              cr2_tt<"CR2", baseaddress, 0x4>,
+                              sr_tt<"SR", baseaddress, 0x8>,
+                              dr_tt<"DR", baseaddress, 0xc>,
+                              crcpr_tt<"CRCPR", baseaddress, 0x10>,
+                              rxcrcr_tt<"RXCRCR", baseaddress, 0x14>,
+                              txcrcr_tt<"TXCRCR", baseaddress, 0x18>,
+                              i2scfgr_tt<"I2SCFGR", baseaddress, 0x1c>,
+                              i2spr_tt<"I2SPR", baseaddress, 0x20>,
+                              hwcfgr_tt<"HWCFGR", baseaddress, 0x3f0>,
+                              verr_tt<"VERR", baseaddress, 0x3f4>,
+                              ipidr_tt<"IPIDR", baseaddress, 0x3f8>,
+                              sidr_tt<"SIDR", baseaddress, 0x3fc>>;
 
   constexpr auto spi2 = spi2_t{};
 
@@ -636,37 +640,38 @@ namespace spi2 {
 namespace tim1 {
 
   constexpr std::uint32_t TIM1_BASE = 0x4001'2c00;
-  template <stdx::ct_string name, std::uint32_t baseaddress>
-  using tim1_t = groov::group<name,
-                              groov::mmio_bus<>,
-                              cr1<baseaddress>,
-                              cr2<baseaddress>,
-                              smcr<baseaddress>,
-                              dier<baseaddress>,
-                              sr<baseaddress>,
-                              egr<baseaddress>,
-                              ccmr1_output<baseaddress>,
-                              ccmr1_input<baseaddress>,
-                              ccmr2_output<baseaddress>,
-                              ccmr2_input<baseaddress>,
-                              ccer<baseaddress>,
-                              cnt<baseaddress>,
-                              psc<baseaddress>,
-                              arr<baseaddress>,
-                              rcr<baseaddress>,
-                              ccr1<baseaddress>,
-                              ccr2<baseaddress>,
-                              ccr3<baseaddress>,
-                              ccr4<baseaddress>,
-                              bdtr<baseaddress>,
-                              dcr<baseaddress>,
-                              dmar<baseaddress>,
-                              or1<baseaddress>,
-                              ccmr3_output<baseaddress>,
-                              ccr5<baseaddress>,
-                              ccr6<baseaddress>,
-                              af1<baseaddress>,
-                              af2<baseaddress>>;
+  template <std::uint32_t baseaddress>
+  using tim1_t =
+    groov::group<tim1,
+                 groov::mmio_bus<>,
+                 cr1_tt<"CR1", baseaddress, 0>,
+                 cr2_tt<"CR2", baseaddress, 0x4>,
+                 smcr_tt<"SMCR", baseaddress, 0x8>,
+                 dier_tt<"DIER", baseaddress, 0xc>,
+                 sr_tt<"SR", baseaddress, 0x10>,
+                 egr_tt<"EGR", baseaddress, 0x14>,
+                 ccmr1_output_tt<"CCMR1_OUTPUT", baseaddress, 0x18>,
+                 ccmr1_input_tt<"CCMR1_INPUT", baseaddress, 0x18>,
+                 ccmr2_output_tt<"CCMR2_OUTPUT", baseaddress, 0x1c>,
+                 ccmr2_input_tt<"CCMR2_INPUT", baseaddress, 0x1c>,
+                 ccer_tt<"CCER", baseaddress, 0x20>,
+                 cnt_tt<"CNT", baseaddress, 0x24>,
+                 psc_tt<"PSC", baseaddress, 0x28>,
+                 arr_tt<"ARR", baseaddress, 0x2c>,
+                 rcr_tt<"RCR", baseaddress, 0x30>,
+                 ccr1_tt<"CCR1", baseaddress, 0x34>,
+                 ccr2_tt<"CCR2", baseaddress, 0x38>,
+                 ccr3_tt<"CCR3", baseaddress, 0x3c>,
+                 ccr4_tt<"CCR4", baseaddress, 0x40>,
+                 bdtr_tt<"BDTR", baseaddress, 0x44>,
+                 dcr_tt<"DCR", baseaddress, 0x48>,
+                 dmar_tt<"DMAR", baseaddress, 0x4c>,
+                 or1_tt<"OR1", baseaddress, 0x50>,
+                 ccmr3_output_tt<"CCMR3_OUTPUT", baseaddress, 0x54>,
+                 ccr5_tt<"CCR5", baseaddress, 0x58>,
+                 ccr6_tt<"CCR6", baseaddress, 0x5c>,
+                 af1_tt<"AF1", baseaddress, 0x60>,
+                 af2_tt<"AF2", baseaddress, 0x64>>;
 
   constexpr auto tim1 = tim1_t{};
 
@@ -675,11 +680,11 @@ namespace tim1 {
 namespace comp {
 
   constexpr std::uint32_t COMP_BASE = 0x4001'0200;
-  template <stdx::ct_string name, std::uint32_t baseaddress>
-  using comp_t = groov::group<name,
+  template <std::uint32_t baseaddress>
+  using comp_t = groov::group<comp,
                               groov::mmio_bus<>,
-                              comp1_csr<baseaddress>,
-                              comp2_csr<baseaddress>>;
+                              comp1_csr_tt<"COMP1_CSR", baseaddress, 0>,
+                              comp2_csr_tt<"COMP2_CSR", baseaddress, 0x4>>;
 
   constexpr auto comp = comp_t{};
 
@@ -688,39 +693,39 @@ namespace comp {
 namespace syscfg {
 
   constexpr std::uint32_t SYSCFG_BASE = 0x4001'0000;
-  template <stdx::ct_string name, std::uint32_t baseaddress>
-  using syscfg_t = groov::group<name,
+  template <std::uint32_t baseaddress>
+  using syscfg_t = groov::group<syscfg,
                                 groov::mmio_bus<>,
-                                cfgr1<baseaddress>,
-                                cfgr2<baseaddress>,
-                                itline0<baseaddress>,
-                                itline2<baseaddress>,
-                                itline3<baseaddress>,
-                                itline4<baseaddress>,
-                                itline5<baseaddress>,
-                                itline6<baseaddress>,
-                                itline7<baseaddress>,
-                                itline8<baseaddress>,
-                                itline9<baseaddress>,
-                                itline10<baseaddress>,
-                                itline11<baseaddress>,
-                                itline12<baseaddress>,
-                                itline13<baseaddress>,
-                                itline14<baseaddress>,
-                                itline16<baseaddress>,
-                                itline17<baseaddress>,
-                                itline18<baseaddress>,
-                                itline19<baseaddress>,
-                                itline20<baseaddress>,
-                                itline21<baseaddress>,
-                                itline22<baseaddress>,
-                                itline23<baseaddress>,
-                                itline24<baseaddress>,
-                                itline25<baseaddress>,
-                                itline26<baseaddress>,
-                                itline27<baseaddress>,
-                                itline28<baseaddress>,
-                                itline29<baseaddress>>;
+                                cfgr1_tt<"CFGR1", baseaddress, 0>,
+                                cfgr2_tt<"CFGR2", baseaddress, 0x18>,
+                                itline0_tt<"ITLINE0", baseaddress, 0x80>,
+                                itline2_tt<"ITLINE2", baseaddress, 0x88>,
+                                itline3_tt<"ITLINE3", baseaddress, 0x8c>,
+                                itline4_tt<"ITLINE4", baseaddress, 0x90>,
+                                itline5_tt<"ITLINE5", baseaddress, 0x94>,
+                                itline6_tt<"ITLINE6", baseaddress, 0x98>,
+                                itline7_tt<"ITLINE7", baseaddress, 0x9c>,
+                                itline8_tt<"ITLINE8", baseaddress, 0xa0>,
+                                itline9_tt<"ITLINE9", baseaddress, 0xa4>,
+                                itline10_tt<"ITLINE10", baseaddress, 0xa8>,
+                                itline11_tt<"ITLINE11", baseaddress, 0xac>,
+                                itline12_tt<"ITLINE12", baseaddress, 0xb0>,
+                                itline13_tt<"ITLINE13", baseaddress, 0xb4>,
+                                itline14_tt<"ITLINE14", baseaddress, 0xb8>,
+                                itline16_tt<"ITLINE16", baseaddress, 0xc0>,
+                                itline17_tt<"ITLINE17", baseaddress, 0xc4>,
+                                itline18_tt<"ITLINE18", baseaddress, 0xc8>,
+                                itline19_tt<"ITLINE19", baseaddress, 0xcc>,
+                                itline20_tt<"ITLINE20", baseaddress, 0xd0>,
+                                itline21_tt<"ITLINE21", baseaddress, 0xd4>,
+                                itline22_tt<"ITLINE22", baseaddress, 0xd8>,
+                                itline23_tt<"ITLINE23", baseaddress, 0xdc>,
+                                itline24_tt<"ITLINE24", baseaddress, 0xe0>,
+                                itline25_tt<"ITLINE25", baseaddress, 0xe4>,
+                                itline26_tt<"ITLINE26", baseaddress, 0xe8>,
+                                itline27_tt<"ITLINE27", baseaddress, 0xec>,
+                                itline28_tt<"ITLINE28", baseaddress, 0xf0>,
+                                itline29_tt<"ITLINE29", baseaddress, 0xf4>>;
 
   constexpr auto syscfg = syscfg_t{};
 
@@ -729,21 +734,21 @@ namespace syscfg {
 namespace tamp {
 
   constexpr std::uint32_t TAMP_BASE = 0x4000'b000;
-  template <stdx::ct_string name, std::uint32_t baseaddress>
-  using tamp_t = groov::group<name,
+  template <std::uint32_t baseaddress>
+  using tamp_t = groov::group<tamp,
                               groov::mmio_bus<>,
-                              tamp_cr1<baseaddress>,
-                              tamp_cr2<baseaddress>,
-                              tamp_fltcr<baseaddress>,
-                              tamp_ier<baseaddress>,
-                              tamp_sr<baseaddress>,
-                              tamp_misr<baseaddress>,
-                              tamp_scr<baseaddress>,
-                              tamp_bkp0r<baseaddress>,
-                              tamp_bkp1r<baseaddress>,
-                              tamp_bkp2r<baseaddress>,
-                              tamp_bkp3r<baseaddress>,
-                              tamp_bkp4r<baseaddress>>;
+                              tamp_cr1_tt<"TAMP_CR1", baseaddress, 0>,
+                              tamp_cr2_tt<"TAMP_CR2", baseaddress, 0x4>,
+                              tamp_fltcr_tt<"TAMP_FLTCR", baseaddress, 0xc>,
+                              tamp_ier_tt<"TAMP_IER", baseaddress, 0x2c>,
+                              tamp_sr_tt<"TAMP_SR", baseaddress, 0x30>,
+                              tamp_misr_tt<"TAMP_MISR", baseaddress, 0x34>,
+                              tamp_scr_tt<"TAMP_SCR", baseaddress, 0x3c>,
+                              tamp_bkp0r_tt<"TAMP_BKP0R", baseaddress, 0x100>,
+                              tamp_bkp1r_tt<"TAMP_BKP1R", baseaddress, 0x104>,
+                              tamp_bkp2r_tt<"TAMP_BKP2R", baseaddress, 0x108>,
+                              tamp_bkp3r_tt<"TAMP_BKP3R", baseaddress, 0x10c>,
+                              tamp_bkp4r_tt<"TAMP_BKP4R", baseaddress, 0x110>>;
 
   constexpr auto tamp = tamp_t{};
 
@@ -752,27 +757,27 @@ namespace tamp {
 namespace ucpd1 {
 
   constexpr std::uint32_t UCPD1_BASE = 0x4000'a000;
-  template <stdx::ct_string name, std::uint32_t baseaddress>
-  using ucpd1_t = groov::group<name,
+  template <std::uint32_t baseaddress>
+  using ucpd1_t = groov::group<ucpd1,
                                groov::mmio_bus<>,
-                               cfg1<baseaddress>,
-                               cfg2<baseaddress>,
-                               cfg3<baseaddress>,
-                               cr<baseaddress>,
-                               imr<baseaddress>,
-                               sr<baseaddress>,
-                               icr<baseaddress>,
-                               tx_ordset<baseaddress>,
-                               tx_paysz<baseaddress>,
-                               txdr<baseaddress>,
-                               rx_ordset<baseaddress>,
-                               rx_paysz<baseaddress>,
-                               rxdr<baseaddress>,
-                               rx_ordext1<baseaddress>,
-                               rx_ordext2<baseaddress>,
-                               ipver<baseaddress>,
-                               ipid<baseaddress>,
-                               mid<baseaddress>>;
+                               cfg1_tt<"CFG1", baseaddress, 0>,
+                               cfg2_tt<"CFG2", baseaddress, 0x4>,
+                               cfg3_tt<"CFG3", baseaddress, 0x8>,
+                               cr_tt<"CR", baseaddress, 0xc>,
+                               imr_tt<"IMR", baseaddress, 0x10>,
+                               sr_tt<"SR", baseaddress, 0x14>,
+                               icr_tt<"ICR", baseaddress, 0x18>,
+                               tx_ordset_tt<"TX_ORDSET", baseaddress, 0x1c>,
+                               tx_paysz_tt<"TX_PAYSZ", baseaddress, 0x20>,
+                               txdr_tt<"TXDR", baseaddress, 0x24>,
+                               rx_ordset_tt<"RX_ORDSET", baseaddress, 0x28>,
+                               rx_paysz_tt<"RX_PAYSZ", baseaddress, 0x2c>,
+                               rxdr_tt<"RXDR", baseaddress, 0x30>,
+                               rx_ordext1_tt<"RX_ORDEXT1", baseaddress, 0x34>,
+                               rx_ordext2_tt<"RX_ORDEXT2", baseaddress, 0x38>,
+                               ipver_tt<"IPVER", baseaddress, 0x3f4>,
+                               ipid_tt<"IPID", baseaddress, 0x3f8>,
+                               mid_tt<"MID", baseaddress, 0x3fc>>;
 
   constexpr auto ucpd1 = ucpd1_t{};
 
@@ -781,27 +786,27 @@ namespace ucpd1 {
 namespace ucpd2 {
 
   constexpr std::uint32_t UCPD2_BASE = 0x4000'a400;
-  template <stdx::ct_string name, std::uint32_t baseaddress>
-  using ucpd2_t = groov::group<name,
+  template <std::uint32_t baseaddress>
+  using ucpd2_t = groov::group<ucpd2,
                                groov::mmio_bus<>,
-                               cfg1<baseaddress>,
-                               cfg2<baseaddress>,
-                               cfg3<baseaddress>,
-                               cr<baseaddress>,
-                               imr<baseaddress>,
-                               sr<baseaddress>,
-                               icr<baseaddress>,
-                               tx_ordset<baseaddress>,
-                               tx_paysz<baseaddress>,
-                               txdr<baseaddress>,
-                               rx_ordset<baseaddress>,
-                               rx_paysz<baseaddress>,
-                               rxdr<baseaddress>,
-                               rx_ordext1<baseaddress>,
-                               rx_ordext2<baseaddress>,
-                               ipver<baseaddress>,
-                               ipid<baseaddress>,
-                               mid<baseaddress>>;
+                               cfg1_tt<"CFG1", baseaddress, 0>,
+                               cfg2_tt<"CFG2", baseaddress, 0x4>,
+                               cfg3_tt<"CFG3", baseaddress, 0x8>,
+                               cr_tt<"CR", baseaddress, 0xc>,
+                               imr_tt<"IMR", baseaddress, 0x10>,
+                               sr_tt<"SR", baseaddress, 0x14>,
+                               icr_tt<"ICR", baseaddress, 0x18>,
+                               tx_ordset_tt<"TX_ORDSET", baseaddress, 0x1c>,
+                               tx_paysz_tt<"TX_PAYSZ", baseaddress, 0x20>,
+                               txdr_tt<"TXDR", baseaddress, 0x24>,
+                               rx_ordset_tt<"RX_ORDSET", baseaddress, 0x28>,
+                               rx_paysz_tt<"RX_PAYSZ", baseaddress, 0x2c>,
+                               rxdr_tt<"RXDR", baseaddress, 0x30>,
+                               rx_ordext1_tt<"RX_ORDEXT1", baseaddress, 0x34>,
+                               rx_ordext2_tt<"RX_ORDEXT2", baseaddress, 0x38>,
+                               ipver_tt<"IPVER", baseaddress, 0x3f4>,
+                               ipid_tt<"IPID", baseaddress, 0x3f8>,
+                               mid_tt<"MID", baseaddress, 0x3fc>>;
 
   constexpr auto ucpd2 = ucpd2_t{};
 
@@ -810,18 +815,18 @@ namespace ucpd2 {
 namespace lptim1 {
 
   constexpr std::uint32_t LPTIM1_BASE = 0x4000'7c00;
-  template <stdx::ct_string name, std::uint32_t baseaddress>
-  using lptim1_t = groov::group<name,
+  template <std::uint32_t baseaddress>
+  using lptim1_t = groov::group<lptim1,
                                 groov::mmio_bus<>,
-                                isr<baseaddress>,
-                                icr<baseaddress>,
-                                ier<baseaddress>,
-                                cfgr<baseaddress>,
-                                cr<baseaddress>,
-                                cmp<baseaddress>,
-                                arr<baseaddress>,
-                                cnt<baseaddress>,
-                                cfgr2<baseaddress>>;
+                                isr_tt<"ISR", baseaddress, 0>,
+                                icr_tt<"ICR", baseaddress, 0x4>,
+                                ier_tt<"IER", baseaddress, 0x8>,
+                                cfgr_tt<"CFGR", baseaddress, 0xc>,
+                                cr_tt<"CR", baseaddress, 0x10>,
+                                cmp_tt<"CMP", baseaddress, 0x14>,
+                                arr_tt<"ARR", baseaddress, 0x18>,
+                                cnt_tt<"CNT", baseaddress, 0x1c>,
+                                cfgr2_tt<"CFGR2", baseaddress, 0x24>>;
 
   constexpr auto lptim1 = lptim1_t{};
 
@@ -830,18 +835,18 @@ namespace lptim1 {
 namespace lptim2 {
 
   constexpr std::uint32_t LPTIM2_BASE = 0x4000'9400;
-  template <stdx::ct_string name, std::uint32_t baseaddress>
-  using lptim2_t = groov::group<name,
+  template <std::uint32_t baseaddress>
+  using lptim2_t = groov::group<lptim2,
                                 groov::mmio_bus<>,
-                                isr<baseaddress>,
-                                icr<baseaddress>,
-                                ier<baseaddress>,
-                                cfgr<baseaddress>,
-                                cr<baseaddress>,
-                                cmp<baseaddress>,
-                                arr<baseaddress>,
-                                cnt<baseaddress>,
-                                cfgr2<baseaddress>>;
+                                isr_tt<"ISR", baseaddress, 0>,
+                                icr_tt<"ICR", baseaddress, 0x4>,
+                                ier_tt<"IER", baseaddress, 0x8>,
+                                cfgr_tt<"CFGR", baseaddress, 0xc>,
+                                cr_tt<"CR", baseaddress, 0x10>,
+                                cmp_tt<"CMP", baseaddress, 0x14>,
+                                arr_tt<"ARR", baseaddress, 0x18>,
+                                cnt_tt<"CNT", baseaddress, 0x1c>,
+                                cfgr2_tt<"CFGR2", baseaddress, 0x24>>;
 
   constexpr auto lptim2 = lptim2_t{};
 
@@ -850,24 +855,24 @@ namespace lptim2 {
 namespace lpuart {
 
   constexpr std::uint32_t LPUART_BASE = 0x4000'8000;
-  template <stdx::ct_string name, std::uint32_t baseaddress>
-  using lpuart_t = groov::group<name,
+  template <std::uint32_t baseaddress>
+  using lpuart_t = groov::group<lpuart,
                                 groov::mmio_bus<>,
-                                cr1<baseaddress>,
-                                cr2<baseaddress>,
-                                cr3<baseaddress>,
-                                brr<baseaddress>,
-                                rqr<baseaddress>,
-                                isr<baseaddress>,
-                                icr<baseaddress>,
-                                rdr<baseaddress>,
-                                tdr<baseaddress>,
-                                presc<baseaddress>,
-                                hwcfgr2<baseaddress>,
-                                hwcfgr1<baseaddress>,
-                                verr<baseaddress>,
-                                ipidr<baseaddress>,
-                                sidr<baseaddress>>;
+                                cr1_tt<"CR1", baseaddress, 0>,
+                                cr2_tt<"CR2", baseaddress, 0x4>,
+                                cr3_tt<"CR3", baseaddress, 0x8>,
+                                brr_tt<"BRR", baseaddress, 0xc>,
+                                rqr_tt<"RQR", baseaddress, 0x18>,
+                                isr_tt<"ISR", baseaddress, 0x1c>,
+                                icr_tt<"ICR", baseaddress, 0x20>,
+                                rdr_tt<"RDR", baseaddress, 0x24>,
+                                tdr_tt<"TDR", baseaddress, 0x28>,
+                                presc_tt<"PRESC", baseaddress, 0x2c>,
+                                hwcfgr2_tt<"HWCFGR2", baseaddress, 0x3ec>,
+                                hwcfgr1_tt<"HWCFGR1", baseaddress, 0x3f0>,
+                                verr_tt<"VERR", baseaddress, 0x3f4>,
+                                ipidr_tt<"IPIDR", baseaddress, 0x3f8>,
+                                sidr_tt<"SIDR", baseaddress, 0x3fc>>;
 
   constexpr auto lpuart = lpuart_t{};
 
@@ -876,15 +881,15 @@ namespace lpuart {
 namespace hdmi_cec {
 
   constexpr std::uint32_t HDMI_CEC_BASE = 0x4000'7800;
-  template <stdx::ct_string name, std::uint32_t baseaddress>
-  using hdmi_cec_t = groov::group<name,
+  template <std::uint32_t baseaddress>
+  using hdmi_cec_t = groov::group<hdmi_cec,
                                   groov::mmio_bus<>,
-                                  cec_cr<baseaddress>,
-                                  cec_cfgr<baseaddress>,
-                                  cec_txdr<baseaddress>,
-                                  cec_rxdr<baseaddress>,
-                                  cec_isr<baseaddress>,
-                                  cec_ier<baseaddress>>;
+                                  cec_cr_tt<"CEC_CR", baseaddress, 0>,
+                                  cec_cfgr_tt<"CEC_CFGR", baseaddress, 0x4>,
+                                  cec_txdr_tt<"CEC_TXDR", baseaddress, 0x8>,
+                                  cec_rxdr_tt<"CEC_RXDR", baseaddress, 0xc>,
+                                  cec_isr_tt<"CEC_ISR", baseaddress, 0x10>,
+                                  cec_ier_tt<"CEC_IER", baseaddress, 0x14>>;
 
   constexpr auto hdmi_cec = hdmi_cec_t{};
 
@@ -893,33 +898,33 @@ namespace hdmi_cec {
 namespace dac {
 
   constexpr std::uint32_t DAC_BASE = 0x4000'7400;
-  template <stdx::ct_string name, std::uint32_t baseaddress>
-  using dac_t = groov::group<name,
+  template <std::uint32_t baseaddress>
+  using dac_t = groov::group<dac,
                              groov::mmio_bus<>,
-                             dac_cr<baseaddress>,
-                             dac_swtrgr<baseaddress>,
-                             dac_dhr12r1<baseaddress>,
-                             dac_dhr12l1<baseaddress>,
-                             dac_dhr8r1<baseaddress>,
-                             dac_dhr12r2<baseaddress>,
-                             dac_dhr12l2<baseaddress>,
-                             dac_dhr8r2<baseaddress>,
-                             dac_dhr12rd<baseaddress>,
-                             dac_dhr12ld<baseaddress>,
-                             dac_dhr8rd<baseaddress>,
-                             dac_dor1<baseaddress>,
-                             dac_dor2<baseaddress>,
-                             dac_sr<baseaddress>,
-                             dac_ccr<baseaddress>,
-                             dac_mcr<baseaddress>,
-                             dac_shsr1<baseaddress>,
-                             dac_shsr2<baseaddress>,
-                             dac_shhr<baseaddress>,
-                             dac_shrr<baseaddress>,
-                             ip_hwcfgr0<baseaddress>,
-                             verr<baseaddress>,
-                             ipidr<baseaddress>,
-                             sidr<baseaddress>>;
+                             dac_cr_tt<"DAC_CR", baseaddress, 0>,
+                             dac_swtrgr_tt<"DAC_SWTRGR", baseaddress, 0x4>,
+                             dac_dhr12r1_tt<"DAC_DHR12R1", baseaddress, 0x8>,
+                             dac_dhr12l1_tt<"DAC_DHR12L1", baseaddress, 0xc>,
+                             dac_dhr8r1_tt<"DAC_DHR8R1", baseaddress, 0x10>,
+                             dac_dhr12r2_tt<"DAC_DHR12R2", baseaddress, 0x14>,
+                             dac_dhr12l2_tt<"DAC_DHR12L2", baseaddress, 0x18>,
+                             dac_dhr8r2_tt<"DAC_DHR8R2", baseaddress, 0x1c>,
+                             dac_dhr12rd_tt<"DAC_DHR12RD", baseaddress, 0x20>,
+                             dac_dhr12ld_tt<"DAC_DHR12LD", baseaddress, 0x24>,
+                             dac_dhr8rd_tt<"DAC_DHR8RD", baseaddress, 0x28>,
+                             dac_dor1_tt<"DAC_DOR1", baseaddress, 0x2c>,
+                             dac_dor2_tt<"DAC_DOR2", baseaddress, 0x30>,
+                             dac_sr_tt<"DAC_SR", baseaddress, 0x34>,
+                             dac_ccr_tt<"DAC_CCR", baseaddress, 0x38>,
+                             dac_mcr_tt<"DAC_MCR", baseaddress, 0x3c>,
+                             dac_shsr1_tt<"DAC_SHSR1", baseaddress, 0x40>,
+                             dac_shsr2_tt<"DAC_SHSR2", baseaddress, 0x44>,
+                             dac_shhr_tt<"DAC_SHHR", baseaddress, 0x48>,
+                             dac_shrr_tt<"DAC_SHRR", baseaddress, 0x4c>,
+                             ip_hwcfgr0_tt<"IP_HWCFGR0", baseaddress, 0x3f0>,
+                             verr_tt<"VERR", baseaddress, 0x3f4>,
+                             ipidr_tt<"IPIDR", baseaddress, 0x3f8>,
+                             sidr_tt<"SIDR", baseaddress, 0x3fc>>;
 
   constexpr auto dac = dac_t{};
 
@@ -928,20 +933,20 @@ namespace dac {
 namespace i2c1 {
 
   constexpr std::uint32_t I2C1_BASE = 0x4000'5400;
-  template <stdx::ct_string name, std::uint32_t baseaddress>
-  using i2c1_t = groov::group<name,
+  template <std::uint32_t baseaddress>
+  using i2c1_t = groov::group<i2c1,
                               groov::mmio_bus<>,
-                              cr1<baseaddress>,
-                              cr2<baseaddress>,
-                              oar1<baseaddress>,
-                              oar2<baseaddress>,
-                              timingr<baseaddress>,
-                              timeoutr<baseaddress>,
-                              isr<baseaddress>,
-                              icr<baseaddress>,
-                              pecr<baseaddress>,
-                              rxdr<baseaddress>,
-                              txdr<baseaddress>>;
+                              cr1_tt<"CR1", baseaddress, 0>,
+                              cr2_tt<"CR2", baseaddress, 0x4>,
+                              oar1_tt<"OAR1", baseaddress, 0x8>,
+                              oar2_tt<"OAR2", baseaddress, 0xc>,
+                              timingr_tt<"TIMINGR", baseaddress, 0x10>,
+                              timeoutr_tt<"TIMEOUTR", baseaddress, 0x14>,
+                              isr_tt<"ISR", baseaddress, 0x18>,
+                              icr_tt<"ICR", baseaddress, 0x1c>,
+                              pecr_tt<"PECR", baseaddress, 0x20>,
+                              rxdr_tt<"RXDR", baseaddress, 0x24>,
+                              txdr_tt<"TXDR", baseaddress, 0x28>>;
 
   constexpr auto i2c1 = i2c1_t{};
 
@@ -950,20 +955,20 @@ namespace i2c1 {
 namespace i2c2 {
 
   constexpr std::uint32_t I2C2_BASE = 0x4000'5800;
-  template <stdx::ct_string name, std::uint32_t baseaddress>
-  using i2c2_t = groov::group<name,
+  template <std::uint32_t baseaddress>
+  using i2c2_t = groov::group<i2c2,
                               groov::mmio_bus<>,
-                              cr1<baseaddress>,
-                              cr2<baseaddress>,
-                              oar1<baseaddress>,
-                              oar2<baseaddress>,
-                              timingr<baseaddress>,
-                              timeoutr<baseaddress>,
-                              isr<baseaddress>,
-                              icr<baseaddress>,
-                              pecr<baseaddress>,
-                              rxdr<baseaddress>,
-                              txdr<baseaddress>>;
+                              cr1_tt<"CR1", baseaddress, 0>,
+                              cr2_tt<"CR2", baseaddress, 0x4>,
+                              oar1_tt<"OAR1", baseaddress, 0x8>,
+                              oar2_tt<"OAR2", baseaddress, 0xc>,
+                              timingr_tt<"TIMINGR", baseaddress, 0x10>,
+                              timeoutr_tt<"TIMEOUTR", baseaddress, 0x14>,
+                              isr_tt<"ISR", baseaddress, 0x18>,
+                              icr_tt<"ICR", baseaddress, 0x1c>,
+                              pecr_tt<"PECR", baseaddress, 0x20>,
+                              rxdr_tt<"RXDR", baseaddress, 0x24>,
+                              txdr_tt<"TXDR", baseaddress, 0x28>>;
 
   constexpr auto i2c2 = i2c2_t{};
 
@@ -972,29 +977,29 @@ namespace i2c2 {
 namespace rtc {
 
   constexpr std::uint32_t RTC_BASE = 0x4000'2800;
-  template <stdx::ct_string name, std::uint32_t baseaddress>
-  using rtc_t = groov::group<name,
+  template <std::uint32_t baseaddress>
+  using rtc_t = groov::group<rtc,
                              groov::mmio_bus<>,
-                             rtc_tr<baseaddress>,
-                             rtc_dr<baseaddress>,
-                             rtc_ssr<baseaddress>,
-                             rtc_icsr<baseaddress>,
-                             rtc_prer<baseaddress>,
-                             rtc_wutr<baseaddress>,
-                             rtc_cr<baseaddress>,
-                             rtc_wpr<baseaddress>,
-                             rtc_calr<baseaddress>,
-                             rtc_shiftr<baseaddress>,
-                             rtc_tstr<baseaddress>,
-                             rtc_tsdr<baseaddress>,
-                             rtc_tsssr<baseaddress>,
-                             rtc_alrmar<baseaddress>,
-                             rtc_alrmassr<baseaddress>,
-                             rtc_alrmbr<baseaddress>,
-                             rtc_alrmbssr<baseaddress>,
-                             rtc_sr<baseaddress>,
-                             rtc_misr<baseaddress>,
-                             rtc_scr<baseaddress>>;
+                             rtc_tr_tt<"RTC_TR", baseaddress, 0>,
+                             rtc_dr_tt<"RTC_DR", baseaddress, 0x4>,
+                             rtc_ssr_tt<"RTC_SSR", baseaddress, 0x8>,
+                             rtc_icsr_tt<"RTC_ICSR", baseaddress, 0xc>,
+                             rtc_prer_tt<"RTC_PRER", baseaddress, 0x10>,
+                             rtc_wutr_tt<"RTC_WUTR", baseaddress, 0x14>,
+                             rtc_cr_tt<"RTC_CR", baseaddress, 0x18>,
+                             rtc_wpr_tt<"RTC_WPR", baseaddress, 0x24>,
+                             rtc_calr_tt<"RTC_CALR", baseaddress, 0x28>,
+                             rtc_shiftr_tt<"RTC_SHIFTR", baseaddress, 0x2c>,
+                             rtc_tstr_tt<"RTC_TSTR", baseaddress, 0x30>,
+                             rtc_tsdr_tt<"RTC_TSDR", baseaddress, 0x34>,
+                             rtc_tsssr_tt<"RTC_TSSSR", baseaddress, 0x38>,
+                             rtc_alrmar_tt<"RTC_ALRMAR", baseaddress, 0x40>,
+                             rtc_alrmassr_tt<"RTC_ALRMASSR", baseaddress, 0x44>,
+                             rtc_alrmbr_tt<"RTC_ALRMBR", baseaddress, 0x48>,
+                             rtc_alrmbssr_tt<"RTC_ALRMBSSR", baseaddress, 0x4c>,
+                             rtc_sr_tt<"RTC_SR", baseaddress, 0x50>,
+                             rtc_misr_tt<"RTC_MISR", baseaddress, 0x54>,
+                             rtc_scr_tt<"RTC_SCR", baseaddress, 0x5c>>;
 
   constexpr auto rtc = rtc_t{};
 
@@ -1003,21 +1008,22 @@ namespace rtc {
 namespace tim14 {
 
   constexpr std::uint32_t TIM14_BASE = 0x4000'2000;
-  template <stdx::ct_string name, std::uint32_t baseaddress>
-  using tim14_t = groov::group<name,
-                               groov::mmio_bus<>,
-                               cr1<baseaddress>,
-                               dier<baseaddress>,
-                               sr<baseaddress>,
-                               egr<baseaddress>,
-                               ccmr1_output<baseaddress>,
-                               ccmr1_input<baseaddress>,
-                               ccer<baseaddress>,
-                               cnt<baseaddress>,
-                               psc<baseaddress>,
-                               arr<baseaddress>,
-                               ccr1<baseaddress>,
-                               tisel<baseaddress>>;
+  template <std::uint32_t baseaddress>
+  using tim14_t =
+    groov::group<tim14,
+                 groov::mmio_bus<>,
+                 cr1_tt<"CR1", baseaddress, 0>,
+                 dier_tt<"DIER", baseaddress, 0xc>,
+                 sr_tt<"SR", baseaddress, 0x10>,
+                 egr_tt<"EGR", baseaddress, 0x14>,
+                 ccmr1_output_tt<"CCMR1_OUTPUT", baseaddress, 0x18>,
+                 ccmr1_input_tt<"CCMR1_INPUT", baseaddress, 0x18>,
+                 ccer_tt<"CCER", baseaddress, 0x20>,
+                 cnt_tt<"CNT", baseaddress, 0x24>,
+                 psc_tt<"PSC", baseaddress, 0x28>,
+                 arr_tt<"ARR", baseaddress, 0x2c>,
+                 ccr1_tt<"CCR1", baseaddress, 0x34>,
+                 tisel_tt<"TISEL", baseaddress, 0x68>>;
 
   constexpr auto tim14 = tim14_t{};
 
@@ -1026,17 +1032,17 @@ namespace tim14 {
 namespace tim6 {
 
   constexpr std::uint32_t TIM6_BASE = 0x4000'1000;
-  template <stdx::ct_string name, std::uint32_t baseaddress>
-  using tim6_t = groov::group<name,
+  template <std::uint32_t baseaddress>
+  using tim6_t = groov::group<tim6,
                               groov::mmio_bus<>,
-                              cr1<baseaddress>,
-                              cr2<baseaddress>,
-                              dier<baseaddress>,
-                              sr<baseaddress>,
-                              egr<baseaddress>,
-                              cnt<baseaddress>,
-                              psc<baseaddress>,
-                              arr<baseaddress>>;
+                              cr1_tt<"CR1", baseaddress, 0>,
+                              cr2_tt<"CR2", baseaddress, 0x4>,
+                              dier_tt<"DIER", baseaddress, 0xc>,
+                              sr_tt<"SR", baseaddress, 0x10>,
+                              egr_tt<"EGR", baseaddress, 0x14>,
+                              cnt_tt<"CNT", baseaddress, 0x24>,
+                              psc_tt<"PSC", baseaddress, 0x28>,
+                              arr_tt<"ARR", baseaddress, 0x2c>>;
 
   constexpr auto tim6 = tim6_t{};
 
@@ -1045,17 +1051,17 @@ namespace tim6 {
 namespace tim7 {
 
   constexpr std::uint32_t TIM7_BASE = 0x4000'1400;
-  template <stdx::ct_string name, std::uint32_t baseaddress>
-  using tim7_t = groov::group<name,
+  template <std::uint32_t baseaddress>
+  using tim7_t = groov::group<tim7,
                               groov::mmio_bus<>,
-                              cr1<baseaddress>,
-                              cr2<baseaddress>,
-                              dier<baseaddress>,
-                              sr<baseaddress>,
-                              egr<baseaddress>,
-                              cnt<baseaddress>,
-                              psc<baseaddress>,
-                              arr<baseaddress>>;
+                              cr1_tt<"CR1", baseaddress, 0>,
+                              cr2_tt<"CR2", baseaddress, 0x4>,
+                              dier_tt<"DIER", baseaddress, 0xc>,
+                              sr_tt<"SR", baseaddress, 0x10>,
+                              egr_tt<"EGR", baseaddress, 0x14>,
+                              cnt_tt<"CNT", baseaddress, 0x24>,
+                              psc_tt<"PSC", baseaddress, 0x28>,
+                              arr_tt<"ARR", baseaddress, 0x2c>>;
 
   constexpr auto tim7 = tim7_t{};
 
@@ -1064,32 +1070,33 @@ namespace tim7 {
 namespace tim2 {
 
   constexpr std::uint32_t TIM2_BASE = 0x4000'0000;
-  template <stdx::ct_string name, std::uint32_t baseaddress>
-  using tim2_t = groov::group<name,
-                              groov::mmio_bus<>,
-                              cr1<baseaddress>,
-                              cr2<baseaddress>,
-                              smcr<baseaddress>,
-                              dier<baseaddress>,
-                              sr<baseaddress>,
-                              egr<baseaddress>,
-                              ccmr1_output<baseaddress>,
-                              ccmr1_input<baseaddress>,
-                              ccmr2_output<baseaddress>,
-                              ccmr2_input<baseaddress>,
-                              ccer<baseaddress>,
-                              cnt<baseaddress>,
-                              psc<baseaddress>,
-                              arr<baseaddress>,
-                              ccr1<baseaddress>,
-                              ccr2<baseaddress>,
-                              ccr3<baseaddress>,
-                              ccr4<baseaddress>,
-                              dcr<baseaddress>,
-                              dmar<baseaddress>,
-                              or1<baseaddress>,
-                              af1<baseaddress>,
-                              tisel<baseaddress>>;
+  template <std::uint32_t baseaddress>
+  using tim2_t =
+    groov::group<tim2,
+                 groov::mmio_bus<>,
+                 cr1_tt<"CR1", baseaddress, 0>,
+                 cr2_tt<"CR2", baseaddress, 0x4>,
+                 smcr_tt<"SMCR", baseaddress, 0x8>,
+                 dier_tt<"DIER", baseaddress, 0xc>,
+                 sr_tt<"SR", baseaddress, 0x10>,
+                 egr_tt<"EGR", baseaddress, 0x14>,
+                 ccmr1_output_tt<"CCMR1_OUTPUT", baseaddress, 0x18>,
+                 ccmr1_input_tt<"CCMR1_INPUT", baseaddress, 0x18>,
+                 ccmr2_output_tt<"CCMR2_OUTPUT", baseaddress, 0x1c>,
+                 ccmr2_input_tt<"CCMR2_INPUT", baseaddress, 0x1c>,
+                 ccer_tt<"CCER", baseaddress, 0x20>,
+                 cnt_tt<"CNT", baseaddress, 0x24>,
+                 psc_tt<"PSC", baseaddress, 0x28>,
+                 arr_tt<"ARR", baseaddress, 0x2c>,
+                 ccr1_tt<"CCR1", baseaddress, 0x34>,
+                 ccr2_tt<"CCR2", baseaddress, 0x38>,
+                 ccr3_tt<"CCR3", baseaddress, 0x3c>,
+                 ccr4_tt<"CCR4", baseaddress, 0x40>,
+                 dcr_tt<"DCR", baseaddress, 0x48>,
+                 dmar_tt<"DMAR", baseaddress, 0x4c>,
+                 or1_tt<"OR1", baseaddress, 0x50>,
+                 af1_tt<"AF1", baseaddress, 0x60>,
+                 tisel_tt<"TISEL", baseaddress, 0x68>>;
 
   constexpr auto tim2 = tim2_t{};
 
@@ -1098,32 +1105,33 @@ namespace tim2 {
 namespace tim3 {
 
   constexpr std::uint32_t TIM3_BASE = 0x4000'0400;
-  template <stdx::ct_string name, std::uint32_t baseaddress>
-  using tim3_t = groov::group<name,
-                              groov::mmio_bus<>,
-                              cr1<baseaddress>,
-                              cr2<baseaddress>,
-                              smcr<baseaddress>,
-                              dier<baseaddress>,
-                              sr<baseaddress>,
-                              egr<baseaddress>,
-                              ccmr1_output<baseaddress>,
-                              ccmr1_input<baseaddress>,
-                              ccmr2_output<baseaddress>,
-                              ccmr2_input<baseaddress>,
-                              ccer<baseaddress>,
-                              cnt<baseaddress>,
-                              psc<baseaddress>,
-                              arr<baseaddress>,
-                              ccr1<baseaddress>,
-                              ccr2<baseaddress>,
-                              ccr3<baseaddress>,
-                              ccr4<baseaddress>,
-                              dcr<baseaddress>,
-                              dmar<baseaddress>,
-                              or1<baseaddress>,
-                              af1<baseaddress>,
-                              tisel<baseaddress>>;
+  template <std::uint32_t baseaddress>
+  using tim3_t =
+    groov::group<tim3,
+                 groov::mmio_bus<>,
+                 cr1_tt<"CR1", baseaddress, 0>,
+                 cr2_tt<"CR2", baseaddress, 0x4>,
+                 smcr_tt<"SMCR", baseaddress, 0x8>,
+                 dier_tt<"DIER", baseaddress, 0xc>,
+                 sr_tt<"SR", baseaddress, 0x10>,
+                 egr_tt<"EGR", baseaddress, 0x14>,
+                 ccmr1_output_tt<"CCMR1_OUTPUT", baseaddress, 0x18>,
+                 ccmr1_input_tt<"CCMR1_INPUT", baseaddress, 0x18>,
+                 ccmr2_output_tt<"CCMR2_OUTPUT", baseaddress, 0x1c>,
+                 ccmr2_input_tt<"CCMR2_INPUT", baseaddress, 0x1c>,
+                 ccer_tt<"CCER", baseaddress, 0x20>,
+                 cnt_tt<"CNT", baseaddress, 0x24>,
+                 psc_tt<"PSC", baseaddress, 0x28>,
+                 arr_tt<"ARR", baseaddress, 0x2c>,
+                 ccr1_tt<"CCR1", baseaddress, 0x34>,
+                 ccr2_tt<"CCR2", baseaddress, 0x38>,
+                 ccr3_tt<"CCR3", baseaddress, 0x3c>,
+                 ccr4_tt<"CCR4", baseaddress, 0x40>,
+                 dcr_tt<"DCR", baseaddress, 0x48>,
+                 dmar_tt<"DMAR", baseaddress, 0x4c>,
+                 or1_tt<"OR1", baseaddress, 0x50>,
+                 af1_tt<"AF1", baseaddress, 0x60>,
+                 tisel_tt<"TISEL", baseaddress, 0x68>>;
 
   constexpr auto tim3 = tim3_t{};
 

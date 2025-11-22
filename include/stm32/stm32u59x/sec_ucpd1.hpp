@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace sec_ucpd1 {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using cfgr1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -27,7 +29,9 @@ namespace sec_ucpd1 {
                groov::field<"IFRGAP", std::uint8_t, 10, 6>,
                groov::field<"HBITCLKDIV", std::uint8_t, 5, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using cfgr2_tt =
     groov::reg<name,
                std::uint32_t,
@@ -39,7 +43,9 @@ namespace sec_ucpd1 {
                groov::field<"RXFILT2N3", bool, 1, 1>,
                groov::field<"RXFILTDIS", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using cfgr3_tt =
     groov::reg<name,
                std::uint32_t,
@@ -54,7 +60,9 @@ namespace sec_ucpd1 {
                groov::field<"RESERVED0", std::uint8_t, 8, 4, access::ro>,
                groov::field<"TRIM1_NG_CCRPD", std::uint8_t, 3, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -78,7 +86,9 @@ namespace sec_ucpd1 {
                groov::field<"TXSEND", bool, 2, 2>,
                groov::field<"TXMODE", std::uint8_t, 1, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using imr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -104,7 +114,9 @@ namespace sec_ucpd1 {
                groov::field<"TXMSGDISCIE", bool, 1, 1>,
                groov::field<"TXISIE", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using sr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -131,7 +143,9 @@ namespace sec_ucpd1 {
                groov::field<"TXMSGDISC", bool, 1, 1>,
                groov::field<"TXIS", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using icr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -156,7 +170,9 @@ namespace sec_ucpd1 {
                groov::field<"TXMSGDISCCF", bool, 1, 1>,
                groov::field<"RESERVED0", bool, 0, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using tx_ordset_tt =
     groov::reg<name,
                std::uint32_t,
@@ -165,7 +181,9 @@ namespace sec_ucpd1 {
                groov::field<"RESERVED0", std::uint16_t, 31, 20, access::ro>,
                groov::field<"TXORDSET", std::uint32_t, 19, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using tx_paysz_tt =
     groov::reg<name,
                std::uint32_t,
@@ -174,7 +192,9 @@ namespace sec_ucpd1 {
                groov::field<"RESERVED0", std::uint32_t, 31, 10, access::ro>,
                groov::field<"TXPAYSZ", std::uint16_t, 9, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using txdr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -183,7 +203,9 @@ namespace sec_ucpd1 {
                groov::field<"RESERVED0", std::uint32_t, 31, 8, access::ro>,
                groov::field<"TXDATA", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using rx_ordset_tt =
     groov::reg<name,
                std::uint32_t,
@@ -194,7 +216,9 @@ namespace sec_ucpd1 {
                groov::field<"RXSOP3OF4", bool, 3, 3>,
                groov::field<"RXORDSET", std::uint8_t, 2, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using rx_paysz_tt =
     groov::reg<name,
                std::uint32_t,
@@ -203,7 +227,9 @@ namespace sec_ucpd1 {
                groov::field<"RESERVED0", std::uint32_t, 31, 10>,
                groov::field<"RXPAYSZ", std::uint16_t, 9, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using rxdr_tt = groov::reg<name,
                              std::uint32_t,
                              baseaddress + offset,
@@ -211,7 +237,9 @@ namespace sec_ucpd1 {
                              groov::field<"RESERVED0", std::uint32_t, 31, 8>,
                              groov::field<"RXDATA", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using rx_ordext1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -220,7 +248,9 @@ namespace sec_ucpd1 {
                groov::field<"RESERVED0", std::uint16_t, 31, 20, access::ro>,
                groov::field<"RXSOPX1", std::uint32_t, 19, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using rx_ordext2_tt =
     groov::reg<name,
                std::uint32_t,
@@ -228,50 +258,5 @@ namespace sec_ucpd1 {
                access::rw,
                groov::field<"RESERVED0", std::uint16_t, 31, 20, access::ro>,
                groov::field<"RXSOPX2", std::uint32_t, 19, 0>>;
-
-  template <std::uint32_t baseaddress>
-  using cfgr1_t = cfgr1_tt<"CFGR1", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using cfgr2_t = cfgr2_tt<"CFGR2", baseaddress, 4>;
-
-  template <std::uint32_t baseaddress>
-  using cfgr3_t = cfgr3_tt<"CFGR3", baseaddress, 8>;
-
-  template <std::uint32_t baseaddress>
-  using cr_t = cr_tt<"CR", baseaddress, 12>;
-
-  template <std::uint32_t baseaddress>
-  using imr_t = imr_tt<"IMR", baseaddress, 16>;
-
-  template <std::uint32_t baseaddress>
-  using sr_t = sr_tt<"SR", baseaddress, 20>;
-
-  template <std::uint32_t baseaddress>
-  using icr_t = icr_tt<"ICR", baseaddress, 24>;
-
-  template <std::uint32_t baseaddress>
-  using tx_ordset_t = tx_ordset_tt<"TX_ORDSET", baseaddress, 28>;
-
-  template <std::uint32_t baseaddress>
-  using tx_paysz_t = tx_paysz_tt<"TX_PAYSZ", baseaddress, 32>;
-
-  template <std::uint32_t baseaddress>
-  using txdr_t = txdr_tt<"TXDR", baseaddress, 36>;
-
-  template <std::uint32_t baseaddress>
-  using rx_ordset_t = rx_ordset_tt<"RX_ORDSET", baseaddress, 40>;
-
-  template <std::uint32_t baseaddress>
-  using rx_paysz_t = rx_paysz_tt<"RX_PAYSZ", baseaddress, 44>;
-
-  template <std::uint32_t baseaddress>
-  using rxdr_t = rxdr_tt<"RXDR", baseaddress, 48>;
-
-  template <std::uint32_t baseaddress>
-  using rx_ordext1_t = rx_ordext1_tt<"RX_ORDEXT1", baseaddress, 52>;
-
-  template <std::uint32_t baseaddress>
-  using rx_ordext2_t = rx_ordext2_tt<"RX_ORDEXT2", baseaddress, 56>;
 
 } // namespace sec_ucpd1

@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace swpmi1 {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -27,7 +29,9 @@ namespace swpmi1 {
                groov::field<"TXDMA", bool, 1, 1>,
                groov::field<"RXDMA", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using brr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -36,7 +40,9 @@ namespace swpmi1 {
                groov::field<"RESERVED0", std::uint32_t, 31, 6, access::ro>,
                groov::field<"BR", std::uint8_t, 5, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using isr_tt = groov::reg<name,
                             std::uint32_t,
                             baseaddress + offset,
@@ -54,7 +60,9 @@ namespace swpmi1 {
                             groov::field<"TXBEF", bool, 1, 1>,
                             groov::field<"RXBFF", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using icr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -70,7 +78,9 @@ namespace swpmi1 {
                groov::field<"CTXBEF", bool, 1, 1>,
                groov::field<"CRXBFF", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ier_tt =
     groov::reg<name,
                std::uint32_t,
@@ -87,7 +97,9 @@ namespace swpmi1 {
                groov::field<"TXBEIE", bool, 1, 1>,
                groov::field<"RXBFIE", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using rfl_tt = groov::reg<name,
                             std::uint32_t,
                             baseaddress + offset,
@@ -95,42 +107,22 @@ namespace swpmi1 {
                             groov::field<"RESERVED0", std::uint32_t, 31, 5>,
                             groov::field<"RFL", std::uint8_t, 4, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using tdr_tt = groov::reg<name,
                             std::uint32_t,
                             baseaddress + offset,
                             access::wo,
                             groov::field<"TD", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using rdr_tt = groov::reg<name,
                             std::uint32_t,
                             baseaddress + offset,
                             access::ro,
                             groov::field<"RD", std::uint32_t, 31, 0>>;
-
-  template <std::uint32_t baseaddress>
-  using cr_t = cr_tt<"CR", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using brr_t = brr_tt<"BRR", baseaddress, 4>;
-
-  template <std::uint32_t baseaddress>
-  using isr_t = isr_tt<"ISR", baseaddress, 12>;
-
-  template <std::uint32_t baseaddress>
-  using icr_t = icr_tt<"ICR", baseaddress, 16>;
-
-  template <std::uint32_t baseaddress>
-  using ier_t = ier_tt<"IER", baseaddress, 20>;
-
-  template <std::uint32_t baseaddress>
-  using rfl_t = rfl_tt<"RFL", baseaddress, 24>;
-
-  template <std::uint32_t baseaddress>
-  using tdr_t = tdr_tt<"TDR", baseaddress, 28>;
-
-  template <std::uint32_t baseaddress>
-  using rdr_t = rdr_tt<"RDR", baseaddress, 32>;
 
 } // namespace swpmi1

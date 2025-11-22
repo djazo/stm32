@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace sec_dcache2 {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dcache_cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -34,7 +36,9 @@ namespace sec_dcache2 {
                groov::field<"CACHEINV", bool, 1, 1, access::wo>,
                groov::field<"EN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dcache_sr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -47,7 +51,9 @@ namespace sec_dcache2 {
                groov::field<"BSYENDF", bool, 1, 1>,
                groov::field<"BUSYF", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dcache_ier_tt =
     groov::reg<name,
                std::uint32_t,
@@ -60,7 +66,9 @@ namespace sec_dcache2 {
                groov::field<"BSYENDIE", bool, 1, 1>,
                groov::field<"RESERVED0", bool, 0, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dcache_fcr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -73,7 +81,9 @@ namespace sec_dcache2 {
                groov::field<"CBSYENDF", bool, 1, 1>,
                groov::field<"RESERVED0", bool, 0, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dcache_rhmonr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -81,7 +91,9 @@ namespace sec_dcache2 {
                access::ro,
                groov::field<"RHITMON", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dcache_rmmonr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -90,7 +102,9 @@ namespace sec_dcache2 {
                groov::field<"RESERVED0", std::uint16_t, 31, 16>,
                groov::field<"MRISSMON", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dcache_whmonr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -98,7 +112,9 @@ namespace sec_dcache2 {
                access::ro,
                groov::field<"WHITMON", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dcache_wmmonr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -107,7 +123,9 @@ namespace sec_dcache2 {
                groov::field<"RESERVED0", std::uint16_t, 31, 16>,
                groov::field<"WMISSMON", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dcache_cmdrsaddrr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -116,7 +134,9 @@ namespace sec_dcache2 {
                groov::field<"CMDSTARTADDR", std::uint32_t, 31, 4>,
                groov::field<"RESERVED0", std::uint8_t, 3, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dcache_cmdreaddrr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -124,37 +144,5 @@ namespace sec_dcache2 {
                access::rw,
                groov::field<"CMDENDADDR", std::uint32_t, 31, 4>,
                groov::field<"RESERVED0", std::uint8_t, 3, 0, access::ro>>;
-
-  template <std::uint32_t baseaddress>
-  using dcache_cr_t = dcache_cr_tt<"DCACHE_CR", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using dcache_sr_t = dcache_sr_tt<"DCACHE_SR", baseaddress, 4>;
-
-  template <std::uint32_t baseaddress>
-  using dcache_ier_t = dcache_ier_tt<"DCACHE_IER", baseaddress, 8>;
-
-  template <std::uint32_t baseaddress>
-  using dcache_fcr_t = dcache_fcr_tt<"DCACHE_FCR", baseaddress, 12>;
-
-  template <std::uint32_t baseaddress>
-  using dcache_rhmonr_t = dcache_rhmonr_tt<"DCACHE_RHMONR", baseaddress, 16>;
-
-  template <std::uint32_t baseaddress>
-  using dcache_rmmonr_t = dcache_rmmonr_tt<"DCACHE_RMMONR", baseaddress, 20>;
-
-  template <std::uint32_t baseaddress>
-  using dcache_whmonr_t = dcache_whmonr_tt<"DCACHE_WHMONR", baseaddress, 32>;
-
-  template <std::uint32_t baseaddress>
-  using dcache_wmmonr_t = dcache_wmmonr_tt<"DCACHE_WMMONR", baseaddress, 36>;
-
-  template <std::uint32_t baseaddress>
-  using dcache_cmdrsaddrr_t =
-    dcache_cmdrsaddrr_tt<"DCACHE_CMDRSADDRR", baseaddress, 40>;
-
-  template <std::uint32_t baseaddress>
-  using dcache_cmdreaddrr_t =
-    dcache_cmdreaddrr_tt<"DCACHE_CMDREADDRR", baseaddress, 44>;
 
 } // namespace sec_dcache2

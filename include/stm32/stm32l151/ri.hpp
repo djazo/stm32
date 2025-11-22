@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace ri {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using icr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -28,7 +30,9 @@ namespace ri {
                groov::field<"IC2IOS", std::uint8_t, 7, 4>,
                groov::field<"IC1IOS", std::uint8_t, 3, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ascr1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -67,7 +71,9 @@ namespace ri {
                groov::field<"CH1GR1_2", bool, 1, 1>,
                groov::field<"CH0GR1_1", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ascr2_tt =
     groov::reg<name,
                std::uint32_t,
@@ -102,7 +108,9 @@ namespace ri {
                groov::field<"GR10_2", bool, 1, 1>,
                groov::field<"GR10_1", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using hyscr1_tt = groov::reg<name,
                                std::uint32_t,
                                baseaddress + offset,
@@ -110,7 +118,9 @@ namespace ri {
                                groov::field<"PB", std::uint16_t, 31, 16>,
                                groov::field<"PA", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using hyscr2_tt = groov::reg<name,
                                std::uint32_t,
                                baseaddress + offset,
@@ -118,7 +128,9 @@ namespace ri {
                                groov::field<"PD", std::uint16_t, 31, 16>,
                                groov::field<"PC", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using hyscr3_tt = groov::reg<name,
                                std::uint32_t,
                                baseaddress + offset,
@@ -126,7 +138,9 @@ namespace ri {
                                groov::field<"PF", std::uint16_t, 31, 16>,
                                groov::field<"PE", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using hyscr4_tt =
     groov::reg<name,
                std::uint32_t,
@@ -134,26 +148,5 @@ namespace ri {
                access::rw,
                groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
                groov::field<"PG", std::uint16_t, 15, 0>>;
-
-  template <std::uint32_t baseaddress>
-  using icr_t = icr_tt<"ICR", baseaddress, 4>;
-
-  template <std::uint32_t baseaddress>
-  using ascr1_t = ascr1_tt<"ASCR1", baseaddress, 8>;
-
-  template <std::uint32_t baseaddress>
-  using ascr2_t = ascr2_tt<"ASCR2", baseaddress, 12>;
-
-  template <std::uint32_t baseaddress>
-  using hyscr1_t = hyscr1_tt<"HYSCR1", baseaddress, 16>;
-
-  template <std::uint32_t baseaddress>
-  using hyscr2_t = hyscr2_tt<"HYSCR2", baseaddress, 20>;
-
-  template <std::uint32_t baseaddress>
-  using hyscr3_t = hyscr3_tt<"HYSCR3", baseaddress, 24>;
-
-  template <std::uint32_t baseaddress>
-  using hyscr4_t = hyscr4_tt<"HYSCR4", baseaddress, 28>;
 
 } // namespace ri

@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace bkp {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dr1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -20,7 +22,9 @@ namespace bkp {
                groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
                groov::field<"D1", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dr2_tt =
     groov::reg<name,
                std::uint32_t,
@@ -29,7 +33,9 @@ namespace bkp {
                groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
                groov::field<"D2", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dr3_tt =
     groov::reg<name,
                std::uint32_t,
@@ -38,7 +44,9 @@ namespace bkp {
                groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
                groov::field<"D3", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dr4_tt =
     groov::reg<name,
                std::uint32_t,
@@ -47,7 +55,9 @@ namespace bkp {
                groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
                groov::field<"D4", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dr5_tt =
     groov::reg<name,
                std::uint32_t,
@@ -56,7 +66,9 @@ namespace bkp {
                groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
                groov::field<"D5", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dr6_tt =
     groov::reg<name,
                std::uint32_t,
@@ -65,7 +77,9 @@ namespace bkp {
                groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
                groov::field<"D6", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dr7_tt =
     groov::reg<name,
                std::uint32_t,
@@ -74,7 +88,9 @@ namespace bkp {
                groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
                groov::field<"D7", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dr8_tt =
     groov::reg<name,
                std::uint32_t,
@@ -83,7 +99,9 @@ namespace bkp {
                groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
                groov::field<"D8", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dr9_tt =
     groov::reg<name,
                std::uint32_t,
@@ -92,7 +110,9 @@ namespace bkp {
                groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
                groov::field<"D9", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dr10_tt =
     groov::reg<name,
                std::uint32_t,
@@ -101,7 +121,9 @@ namespace bkp {
                groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
                groov::field<"D10", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using rtccr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -113,7 +135,9 @@ namespace bkp {
                groov::field<"CCO", bool, 7, 7>,
                groov::field<"CAL", std::uint8_t, 6, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -123,7 +147,9 @@ namespace bkp {
                groov::field<"TPAL", bool, 1, 1>,
                groov::field<"TPE", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using csr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -137,7 +163,9 @@ namespace bkp {
                groov::field<"CTI", bool, 1, 1, access::wo>,
                groov::field<"CTE", bool, 0, 0, access::wo>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dr11_tt =
     groov::reg<name,
                std::uint32_t,
@@ -146,7 +174,9 @@ namespace bkp {
                groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
                groov::field<"DR11", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dr12_tt =
     groov::reg<name,
                std::uint32_t,
@@ -155,7 +185,9 @@ namespace bkp {
                groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
                groov::field<"DR12", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dr13_tt =
     groov::reg<name,
                std::uint32_t,
@@ -164,7 +196,9 @@ namespace bkp {
                groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
                groov::field<"DR13", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dr14_tt =
     groov::reg<name,
                std::uint32_t,
@@ -173,7 +207,9 @@ namespace bkp {
                groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
                groov::field<"D14", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dr15_tt =
     groov::reg<name,
                std::uint32_t,
@@ -182,7 +218,9 @@ namespace bkp {
                groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
                groov::field<"D15", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dr16_tt =
     groov::reg<name,
                std::uint32_t,
@@ -191,7 +229,9 @@ namespace bkp {
                groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
                groov::field<"D16", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dr17_tt =
     groov::reg<name,
                std::uint32_t,
@@ -200,7 +240,9 @@ namespace bkp {
                groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
                groov::field<"D17", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dr18_tt =
     groov::reg<name,
                std::uint32_t,
@@ -209,7 +251,9 @@ namespace bkp {
                groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
                groov::field<"D18", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dr19_tt =
     groov::reg<name,
                std::uint32_t,
@@ -218,7 +262,9 @@ namespace bkp {
                groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
                groov::field<"D19", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dr20_tt =
     groov::reg<name,
                std::uint32_t,
@@ -227,7 +273,9 @@ namespace bkp {
                groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
                groov::field<"D20", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dr21_tt =
     groov::reg<name,
                std::uint32_t,
@@ -236,7 +284,9 @@ namespace bkp {
                groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
                groov::field<"D21", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dr22_tt =
     groov::reg<name,
                std::uint32_t,
@@ -245,7 +295,9 @@ namespace bkp {
                groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
                groov::field<"D22", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dr23_tt =
     groov::reg<name,
                std::uint32_t,
@@ -254,7 +306,9 @@ namespace bkp {
                groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
                groov::field<"D23", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dr24_tt =
     groov::reg<name,
                std::uint32_t,
@@ -263,7 +317,9 @@ namespace bkp {
                groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
                groov::field<"D24", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dr25_tt =
     groov::reg<name,
                std::uint32_t,
@@ -272,7 +328,9 @@ namespace bkp {
                groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
                groov::field<"D25", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dr26_tt =
     groov::reg<name,
                std::uint32_t,
@@ -281,7 +339,9 @@ namespace bkp {
                groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
                groov::field<"D26", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dr27_tt =
     groov::reg<name,
                std::uint32_t,
@@ -290,7 +350,9 @@ namespace bkp {
                groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
                groov::field<"D27", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dr28_tt =
     groov::reg<name,
                std::uint32_t,
@@ -299,7 +361,9 @@ namespace bkp {
                groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
                groov::field<"D28", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dr29_tt =
     groov::reg<name,
                std::uint32_t,
@@ -308,7 +372,9 @@ namespace bkp {
                groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
                groov::field<"D29", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dr30_tt =
     groov::reg<name,
                std::uint32_t,
@@ -317,7 +383,9 @@ namespace bkp {
                groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
                groov::field<"D30", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dr31_tt =
     groov::reg<name,
                std::uint32_t,
@@ -326,7 +394,9 @@ namespace bkp {
                groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
                groov::field<"D31", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dr32_tt =
     groov::reg<name,
                std::uint32_t,
@@ -335,7 +405,9 @@ namespace bkp {
                groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
                groov::field<"D32", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dr33_tt =
     groov::reg<name,
                std::uint32_t,
@@ -344,7 +416,9 @@ namespace bkp {
                groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
                groov::field<"D33", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dr34_tt =
     groov::reg<name,
                std::uint32_t,
@@ -353,7 +427,9 @@ namespace bkp {
                groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
                groov::field<"D34", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dr35_tt =
     groov::reg<name,
                std::uint32_t,
@@ -362,7 +438,9 @@ namespace bkp {
                groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
                groov::field<"D35", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dr36_tt =
     groov::reg<name,
                std::uint32_t,
@@ -371,7 +449,9 @@ namespace bkp {
                groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
                groov::field<"D36", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dr37_tt =
     groov::reg<name,
                std::uint32_t,
@@ -380,7 +460,9 @@ namespace bkp {
                groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
                groov::field<"D37", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dr38_tt =
     groov::reg<name,
                std::uint32_t,
@@ -389,7 +471,9 @@ namespace bkp {
                groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
                groov::field<"D38", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dr39_tt =
     groov::reg<name,
                std::uint32_t,
@@ -398,7 +482,9 @@ namespace bkp {
                groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
                groov::field<"D39", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dr40_tt =
     groov::reg<name,
                std::uint32_t,
@@ -407,7 +493,9 @@ namespace bkp {
                groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
                groov::field<"D40", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dr41_tt =
     groov::reg<name,
                std::uint32_t,
@@ -416,7 +504,9 @@ namespace bkp {
                groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
                groov::field<"D41", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dr42_tt =
     groov::reg<name,
                std::uint32_t,
@@ -424,140 +514,5 @@ namespace bkp {
                access::rw,
                groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
                groov::field<"D42", std::uint16_t, 15, 0>>;
-
-  template <std::uint32_t baseaddress>
-  using dr1_t = dr1_tt<"DR1", baseaddress, 4>;
-
-  template <std::uint32_t baseaddress>
-  using dr2_t = dr2_tt<"DR2", baseaddress, 8>;
-
-  template <std::uint32_t baseaddress>
-  using dr3_t = dr3_tt<"DR3", baseaddress, 12>;
-
-  template <std::uint32_t baseaddress>
-  using dr4_t = dr4_tt<"DR4", baseaddress, 16>;
-
-  template <std::uint32_t baseaddress>
-  using dr5_t = dr5_tt<"DR5", baseaddress, 20>;
-
-  template <std::uint32_t baseaddress>
-  using dr6_t = dr6_tt<"DR6", baseaddress, 24>;
-
-  template <std::uint32_t baseaddress>
-  using dr7_t = dr7_tt<"DR7", baseaddress, 28>;
-
-  template <std::uint32_t baseaddress>
-  using dr8_t = dr8_tt<"DR8", baseaddress, 32>;
-
-  template <std::uint32_t baseaddress>
-  using dr9_t = dr9_tt<"DR9", baseaddress, 36>;
-
-  template <std::uint32_t baseaddress>
-  using dr10_t = dr10_tt<"DR10", baseaddress, 40>;
-
-  template <std::uint32_t baseaddress>
-  using rtccr_t = rtccr_tt<"RTCCR", baseaddress, 44>;
-
-  template <std::uint32_t baseaddress>
-  using cr_t = cr_tt<"CR", baseaddress, 48>;
-
-  template <std::uint32_t baseaddress>
-  using csr_t = csr_tt<"CSR", baseaddress, 52>;
-
-  template <std::uint32_t baseaddress>
-  using dr11_t = dr11_tt<"DR11", baseaddress, 64>;
-
-  template <std::uint32_t baseaddress>
-  using dr12_t = dr12_tt<"DR12", baseaddress, 68>;
-
-  template <std::uint32_t baseaddress>
-  using dr13_t = dr13_tt<"DR13", baseaddress, 72>;
-
-  template <std::uint32_t baseaddress>
-  using dr14_t = dr14_tt<"DR14", baseaddress, 76>;
-
-  template <std::uint32_t baseaddress>
-  using dr15_t = dr15_tt<"DR15", baseaddress, 80>;
-
-  template <std::uint32_t baseaddress>
-  using dr16_t = dr16_tt<"DR16", baseaddress, 84>;
-
-  template <std::uint32_t baseaddress>
-  using dr17_t = dr17_tt<"DR17", baseaddress, 88>;
-
-  template <std::uint32_t baseaddress>
-  using dr18_t = dr18_tt<"DR18", baseaddress, 92>;
-
-  template <std::uint32_t baseaddress>
-  using dr19_t = dr19_tt<"DR19", baseaddress, 96>;
-
-  template <std::uint32_t baseaddress>
-  using dr20_t = dr20_tt<"DR20", baseaddress, 100>;
-
-  template <std::uint32_t baseaddress>
-  using dr21_t = dr21_tt<"DR21", baseaddress, 104>;
-
-  template <std::uint32_t baseaddress>
-  using dr22_t = dr22_tt<"DR22", baseaddress, 108>;
-
-  template <std::uint32_t baseaddress>
-  using dr23_t = dr23_tt<"DR23", baseaddress, 112>;
-
-  template <std::uint32_t baseaddress>
-  using dr24_t = dr24_tt<"DR24", baseaddress, 116>;
-
-  template <std::uint32_t baseaddress>
-  using dr25_t = dr25_tt<"DR25", baseaddress, 120>;
-
-  template <std::uint32_t baseaddress>
-  using dr26_t = dr26_tt<"DR26", baseaddress, 124>;
-
-  template <std::uint32_t baseaddress>
-  using dr27_t = dr27_tt<"DR27", baseaddress, 128>;
-
-  template <std::uint32_t baseaddress>
-  using dr28_t = dr28_tt<"DR28", baseaddress, 132>;
-
-  template <std::uint32_t baseaddress>
-  using dr29_t = dr29_tt<"DR29", baseaddress, 136>;
-
-  template <std::uint32_t baseaddress>
-  using dr30_t = dr30_tt<"DR30", baseaddress, 140>;
-
-  template <std::uint32_t baseaddress>
-  using dr31_t = dr31_tt<"DR31", baseaddress, 144>;
-
-  template <std::uint32_t baseaddress>
-  using dr32_t = dr32_tt<"DR32", baseaddress, 148>;
-
-  template <std::uint32_t baseaddress>
-  using dr33_t = dr33_tt<"DR33", baseaddress, 152>;
-
-  template <std::uint32_t baseaddress>
-  using dr34_t = dr34_tt<"DR34", baseaddress, 156>;
-
-  template <std::uint32_t baseaddress>
-  using dr35_t = dr35_tt<"DR35", baseaddress, 160>;
-
-  template <std::uint32_t baseaddress>
-  using dr36_t = dr36_tt<"DR36", baseaddress, 164>;
-
-  template <std::uint32_t baseaddress>
-  using dr37_t = dr37_tt<"DR37", baseaddress, 168>;
-
-  template <std::uint32_t baseaddress>
-  using dr38_t = dr38_tt<"DR38", baseaddress, 172>;
-
-  template <std::uint32_t baseaddress>
-  using dr39_t = dr39_tt<"DR39", baseaddress, 176>;
-
-  template <std::uint32_t baseaddress>
-  using dr40_t = dr40_tt<"DR40", baseaddress, 180>;
-
-  template <std::uint32_t baseaddress>
-  using dr41_t = dr41_tt<"DR41", baseaddress, 184>;
-
-  template <std::uint32_t baseaddress>
-  using dr42_t = dr42_tt<"DR42", baseaddress, 188>;
 
 } // namespace bkp

@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace adc_common {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using csr_tt = groov::reg<name,
                             std::uint32_t,
                             baseaddress + offset,
@@ -38,7 +40,9 @@ namespace adc_common {
                             groov::field<"EOC1", bool, 1, 1>,
                             groov::field<"AWD1", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ccr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -54,11 +58,5 @@ namespace adc_common {
                groov::field<"RESERVED1", bool, 12, 12, access::ro>,
                groov::field<"DELAY", std::uint8_t, 11, 8>,
                groov::field<"RESERVED0", std::uint8_t, 7, 0, access::ro>>;
-
-  template <std::uint32_t baseaddress>
-  using csr_t = csr_tt<"CSR", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using ccr_t = ccr_tt<"CCR", baseaddress, 4>;
 
 } // namespace adc_common

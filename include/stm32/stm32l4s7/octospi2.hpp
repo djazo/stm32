@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace octospi2 {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -38,7 +40,9 @@ namespace octospi2 {
                groov::field<"ABORT", bool, 1, 1>,
                groov::field<"EN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dcr1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -54,7 +58,9 @@ namespace octospi2 {
                groov::field<"FRCK", bool, 1, 1>,
                groov::field<"CKMODE", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dcr2_tt =
     groov::reg<name,
                std::uint32_t,
@@ -65,7 +71,9 @@ namespace octospi2 {
                groov::field<"RESERVED0", std::uint8_t, 15, 8, access::ro>,
                groov::field<"PRESCALER", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dcr3_tt =
     groov::reg<name,
                std::uint32_t,
@@ -75,7 +83,9 @@ namespace octospi2 {
                groov::field<"CSBOUND", std::uint8_t, 20, 16>,
                groov::field<"RESERVED0", std::uint16_t, 15, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using sr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -91,7 +101,9 @@ namespace octospi2 {
                groov::field<"TCF", bool, 1, 1>,
                groov::field<"TEF", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using fcr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -104,42 +116,54 @@ namespace octospi2 {
                groov::field<"CTCF", bool, 1, 1>,
                groov::field<"CTEF", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dlr_tt = groov::reg<name,
                             std::uint32_t,
                             baseaddress + offset,
                             access::rw,
                             groov::field<"DL", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ar_tt = groov::reg<name,
                            std::uint32_t,
                            baseaddress + offset,
                            access::rw,
                            groov::field<"ADDRESS", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dr_tt = groov::reg<name,
                            std::uint32_t,
                            baseaddress + offset,
                            access::rw,
                            groov::field<"DATA", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using psmkr_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
                               access::rw,
                               groov::field<"MASK", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using psmar_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
                               access::rw,
                               groov::field<"MATCH", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using pir_tt =
     groov::reg<name,
                std::uint32_t,
@@ -148,7 +172,9 @@ namespace octospi2 {
                groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
                groov::field<"INTERVAL", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ccr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -173,7 +199,9 @@ namespace octospi2 {
                groov::field<"IDTR", bool, 3, 3>,
                groov::field<"IMODE", std::uint8_t, 2, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using tcr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -186,21 +214,27 @@ namespace octospi2 {
                groov::field<"RESERVED0", std::uint32_t, 27, 5, access::ro>,
                groov::field<"DCYC", std::uint8_t, 4, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ir_tt = groov::reg<name,
                            std::uint32_t,
                            baseaddress + offset,
                            access::rw,
                            groov::field<"INSTRUCTION", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using abr_tt = groov::reg<name,
                             std::uint32_t,
                             baseaddress + offset,
                             access::rw,
                             groov::field<"ALTERNATE", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using lptr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -209,7 +243,9 @@ namespace octospi2 {
                groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
                groov::field<"TIMEOUT", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using wccr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -234,7 +270,9 @@ namespace octospi2 {
                groov::field<"IDTR", bool, 3, 3>,
                groov::field<"IMODE", std::uint8_t, 2, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using wtcr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -243,21 +281,27 @@ namespace octospi2 {
                groov::field<"RESERVED0", std::uint32_t, 31, 5, access::ro>,
                groov::field<"DCYC", std::uint8_t, 4, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using wir_tt = groov::reg<name,
                             std::uint32_t,
                             baseaddress + offset,
                             access::rw,
                             groov::field<"INSTRUCTION", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using wabr_tt = groov::reg<name,
                              std::uint32_t,
                              baseaddress + offset,
                              access::rw,
                              groov::field<"ALTERNATE", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using hlcr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -270,7 +314,9 @@ namespace octospi2 {
                groov::field<"WZL", bool, 1, 1>,
                groov::field<"LM", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using hwcfgr_tt = groov::reg<name,
                                std::uint32_t,
                                baseaddress + offset,
@@ -282,7 +328,9 @@ namespace octospi2 {
                                groov::field<"FIFO", std::uint8_t, 11, 4>,
                                groov::field<"AXI", std::uint8_t, 3, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ver_tt = groov::reg<name,
                             std::uint32_t,
                             baseaddress + offset,
@@ -290,96 +338,22 @@ namespace octospi2 {
                             groov::field<"RESERVED0", std::uint32_t, 31, 8>,
                             groov::field<"VER", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using id_tt = groov::reg<name,
                            std::uint32_t,
                            baseaddress + offset,
                            access::ro,
                            groov::field<"ID", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mid_tt = groov::reg<name,
                             std::uint32_t,
                             baseaddress + offset,
                             access::ro,
                             groov::field<"MID", std::uint32_t, 31, 0>>;
-
-  template <std::uint32_t baseaddress>
-  using cr_t = cr_tt<"CR", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using dcr1_t = dcr1_tt<"DCR1", baseaddress, 8>;
-
-  template <std::uint32_t baseaddress>
-  using dcr2_t = dcr2_tt<"DCR2", baseaddress, 12>;
-
-  template <std::uint32_t baseaddress>
-  using dcr3_t = dcr3_tt<"DCR3", baseaddress, 16>;
-
-  template <std::uint32_t baseaddress>
-  using sr_t = sr_tt<"SR", baseaddress, 32>;
-
-  template <std::uint32_t baseaddress>
-  using fcr_t = fcr_tt<"FCR", baseaddress, 36>;
-
-  template <std::uint32_t baseaddress>
-  using dlr_t = dlr_tt<"DLR", baseaddress, 64>;
-
-  template <std::uint32_t baseaddress>
-  using ar_t = ar_tt<"AR", baseaddress, 72>;
-
-  template <std::uint32_t baseaddress>
-  using dr_t = dr_tt<"DR", baseaddress, 80>;
-
-  template <std::uint32_t baseaddress>
-  using psmkr_t = psmkr_tt<"PSMKR", baseaddress, 128>;
-
-  template <std::uint32_t baseaddress>
-  using psmar_t = psmar_tt<"PSMAR", baseaddress, 136>;
-
-  template <std::uint32_t baseaddress>
-  using pir_t = pir_tt<"PIR", baseaddress, 144>;
-
-  template <std::uint32_t baseaddress>
-  using ccr_t = ccr_tt<"CCR", baseaddress, 256>;
-
-  template <std::uint32_t baseaddress>
-  using tcr_t = tcr_tt<"TCR", baseaddress, 264>;
-
-  template <std::uint32_t baseaddress>
-  using ir_t = ir_tt<"IR", baseaddress, 272>;
-
-  template <std::uint32_t baseaddress>
-  using abr_t = abr_tt<"ABR", baseaddress, 288>;
-
-  template <std::uint32_t baseaddress>
-  using lptr_t = lptr_tt<"LPTR", baseaddress, 304>;
-
-  template <std::uint32_t baseaddress>
-  using wccr_t = wccr_tt<"WCCR", baseaddress, 384>;
-
-  template <std::uint32_t baseaddress>
-  using wtcr_t = wtcr_tt<"WTCR", baseaddress, 392>;
-
-  template <std::uint32_t baseaddress>
-  using wir_t = wir_tt<"WIR", baseaddress, 400>;
-
-  template <std::uint32_t baseaddress>
-  using wabr_t = wabr_tt<"WABR", baseaddress, 416>;
-
-  template <std::uint32_t baseaddress>
-  using hlcr_t = hlcr_tt<"HLCR", baseaddress, 512>;
-
-  template <std::uint32_t baseaddress>
-  using hwcfgr_t = hwcfgr_tt<"HWCFGR", baseaddress, 1008>;
-
-  template <std::uint32_t baseaddress>
-  using ver_t = ver_tt<"VER", baseaddress, 1012>;
-
-  template <std::uint32_t baseaddress>
-  using id_t = id_tt<"ID", baseaddress, 1016>;
-
-  template <std::uint32_t baseaddress>
-  using mid_t = mid_tt<"MID", baseaddress, 1020>;
 
 } // namespace octospi2

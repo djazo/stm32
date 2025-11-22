@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace lpdma1 {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using lpdma_seccfgr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -23,7 +25,9 @@ namespace lpdma1 {
                groov::field<"SEC1", bool, 1, 1>,
                groov::field<"SEC0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using lpdma_privcfgr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -35,7 +39,9 @@ namespace lpdma1 {
                groov::field<"PRIV1", bool, 1, 1>,
                groov::field<"PRIV0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using lpdma_rcfglockr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -47,7 +53,9 @@ namespace lpdma1 {
                groov::field<"LOCK1", bool, 1, 1>,
                groov::field<"LOCK0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using lpdma_misr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -59,7 +67,9 @@ namespace lpdma1 {
                groov::field<"MIS1", bool, 1, 1, access::ro>,
                groov::field<"MIS0", bool, 0, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using lpdma_smisr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -71,7 +81,9 @@ namespace lpdma1 {
                groov::field<"MIS1", bool, 1, 1, access::ro>,
                groov::field<"MIS0", bool, 0, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using lpdma_c0lbar_tt =
     groov::reg<name,
                std::uint32_t,
@@ -80,7 +92,9 @@ namespace lpdma1 {
                groov::field<"LBA", std::uint16_t, 31, 16>,
                groov::field<"RESERVED0", std::uint16_t, 15, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using lpdma_c0fcr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -96,7 +110,9 @@ namespace lpdma1 {
                groov::field<"TCF", bool, 8, 8, access::wo>,
                groov::field<"RESERVED0", std::uint8_t, 7, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using lpdma_c0sr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -113,7 +129,9 @@ namespace lpdma1 {
                groov::field<"RESERVED0", std::uint8_t, 7, 1, access::ro>,
                groov::field<"IDLEF", bool, 0, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using lpdma_c0cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -136,7 +154,9 @@ namespace lpdma1 {
                groov::field<"RESET", bool, 1, 1, access::wo>,
                groov::field<"EN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using lpdma_c0tr1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -155,7 +175,9 @@ namespace lpdma1 {
                groov::field<"RESERVED0", bool, 2, 2, access::ro>,
                groov::field<"SDW_LOG2", std::uint8_t, 1, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using lpdma_c0tr2_tt =
     groov::reg<name,
                std::uint32_t,
@@ -174,7 +196,9 @@ namespace lpdma1 {
                groov::field<"RESERVED0", std::uint8_t, 8, 5, access::ro>,
                groov::field<"REQSEL", std::uint8_t, 4, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using lpdma_c0br1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -183,21 +207,27 @@ namespace lpdma1 {
                groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
                groov::field<"BNDT", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using lpdma_c0sar_tt = groov::reg<name,
                                     std::uint32_t,
                                     baseaddress + offset,
                                     access::rw,
                                     groov::field<"SA", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using lpdma_c0dar_tt = groov::reg<name,
                                     std::uint32_t,
                                     baseaddress + offset,
                                     access::rw,
                                     groov::field<"DA", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using lpdma_c0llr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -213,7 +243,9 @@ namespace lpdma1 {
                groov::field<"LA", std::uint16_t, 15, 2>,
                groov::field<"RESERVED0", std::uint8_t, 1, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using lpdma_c1lbar_tt =
     groov::reg<name,
                std::uint32_t,
@@ -222,7 +254,9 @@ namespace lpdma1 {
                groov::field<"LBA", std::uint16_t, 31, 16>,
                groov::field<"RESERVED0", std::uint16_t, 15, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using lpdma_c1fcr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -238,7 +272,9 @@ namespace lpdma1 {
                groov::field<"TCF", bool, 8, 8, access::wo>,
                groov::field<"RESERVED0", std::uint8_t, 7, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using lpdma_c1sr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -255,7 +291,9 @@ namespace lpdma1 {
                groov::field<"RESERVED0", std::uint8_t, 7, 1, access::ro>,
                groov::field<"IDLEF", bool, 0, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using lpdma_c1cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -278,7 +316,9 @@ namespace lpdma1 {
                groov::field<"RESET", bool, 1, 1, access::wo>,
                groov::field<"EN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using lpdma_c1tr1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -297,7 +337,9 @@ namespace lpdma1 {
                groov::field<"RESERVED0", bool, 2, 2, access::ro>,
                groov::field<"SDW_LOG2", std::uint8_t, 1, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using lpdma_c1tr2_tt =
     groov::reg<name,
                std::uint32_t,
@@ -316,7 +358,9 @@ namespace lpdma1 {
                groov::field<"RESERVED0", std::uint8_t, 8, 5, access::ro>,
                groov::field<"REQSEL", std::uint8_t, 4, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using lpdma_c1br1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -325,21 +369,27 @@ namespace lpdma1 {
                groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
                groov::field<"BNDT", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using lpdma_c1sar_tt = groov::reg<name,
                                     std::uint32_t,
                                     baseaddress + offset,
                                     access::rw,
                                     groov::field<"SA", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using lpdma_c1dar_tt = groov::reg<name,
                                     std::uint32_t,
                                     baseaddress + offset,
                                     access::rw,
                                     groov::field<"DA", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using lpdma_c1llr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -355,7 +405,9 @@ namespace lpdma1 {
                groov::field<"LA", std::uint16_t, 15, 2>,
                groov::field<"RESERVED0", std::uint8_t, 1, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using lpdma_c2lbar_tt =
     groov::reg<name,
                std::uint32_t,
@@ -364,7 +416,9 @@ namespace lpdma1 {
                groov::field<"LBA", std::uint16_t, 31, 16>,
                groov::field<"RESERVED0", std::uint16_t, 15, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using lpdma_c2fcr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -380,7 +434,9 @@ namespace lpdma1 {
                groov::field<"TCF", bool, 8, 8, access::wo>,
                groov::field<"RESERVED0", std::uint8_t, 7, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using lpdma_c2sr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -397,7 +453,9 @@ namespace lpdma1 {
                groov::field<"RESERVED0", std::uint8_t, 7, 1, access::ro>,
                groov::field<"IDLEF", bool, 0, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using lpdma_c2cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -420,7 +478,9 @@ namespace lpdma1 {
                groov::field<"RESET", bool, 1, 1, access::wo>,
                groov::field<"EN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using lpdma_c2tr1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -439,7 +499,9 @@ namespace lpdma1 {
                groov::field<"RESERVED0", bool, 2, 2, access::ro>,
                groov::field<"SDW_LOG2", std::uint8_t, 1, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using lpdma_c2tr2_tt =
     groov::reg<name,
                std::uint32_t,
@@ -458,7 +520,9 @@ namespace lpdma1 {
                groov::field<"RESERVED0", std::uint8_t, 8, 5, access::ro>,
                groov::field<"REQSEL", std::uint8_t, 4, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using lpdma_c2br1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -467,21 +531,27 @@ namespace lpdma1 {
                groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
                groov::field<"BNDT", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using lpdma_c2sar_tt = groov::reg<name,
                                     std::uint32_t,
                                     baseaddress + offset,
                                     access::rw,
                                     groov::field<"SA", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using lpdma_c2dar_tt = groov::reg<name,
                                     std::uint32_t,
                                     baseaddress + offset,
                                     access::rw,
                                     groov::field<"DA", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using lpdma_c2llr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -497,7 +567,9 @@ namespace lpdma1 {
                groov::field<"LA", std::uint16_t, 15, 2>,
                groov::field<"RESERVED0", std::uint8_t, 1, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using lpdma_c3lbar_tt =
     groov::reg<name,
                std::uint32_t,
@@ -506,7 +578,9 @@ namespace lpdma1 {
                groov::field<"LBA", std::uint16_t, 31, 16>,
                groov::field<"RESERVED0", std::uint16_t, 15, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using lpdma_c3fcr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -522,7 +596,9 @@ namespace lpdma1 {
                groov::field<"TCF", bool, 8, 8, access::wo>,
                groov::field<"RESERVED0", std::uint8_t, 7, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using lpdma_c3sr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -539,7 +615,9 @@ namespace lpdma1 {
                groov::field<"RESERVED0", std::uint8_t, 7, 1, access::ro>,
                groov::field<"IDLEF", bool, 0, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using lpdma_c3cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -562,7 +640,9 @@ namespace lpdma1 {
                groov::field<"RESET", bool, 1, 1, access::wo>,
                groov::field<"EN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using lpdma_c3tr1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -581,7 +661,9 @@ namespace lpdma1 {
                groov::field<"RESERVED0", bool, 2, 2, access::ro>,
                groov::field<"SDW_LOG2", std::uint8_t, 1, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using lpdma_c3tr2_tt =
     groov::reg<name,
                std::uint32_t,
@@ -600,7 +682,9 @@ namespace lpdma1 {
                groov::field<"RESERVED0", std::uint8_t, 8, 5, access::ro>,
                groov::field<"REQSEL", std::uint8_t, 4, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using lpdma_c3br1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -609,21 +693,27 @@ namespace lpdma1 {
                groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
                groov::field<"BNDT", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using lpdma_c3sar_tt = groov::reg<name,
                                     std::uint32_t,
                                     baseaddress + offset,
                                     access::rw,
                                     groov::field<"SA", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using lpdma_c3dar_tt = groov::reg<name,
                                     std::uint32_t,
                                     baseaddress + offset,
                                     access::rw,
                                     groov::field<"DA", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using lpdma_c3llr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -638,141 +728,5 @@ namespace lpdma1 {
                groov::field<"ULL", bool, 16, 16>,
                groov::field<"LA", std::uint16_t, 15, 2>,
                groov::field<"RESERVED0", std::uint8_t, 1, 0, access::ro>>;
-
-  template <std::uint32_t baseaddress>
-  using lpdma_seccfgr_t = lpdma_seccfgr_tt<"LPDMA_SECCFGR", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using lpdma_privcfgr_t = lpdma_privcfgr_tt<"LPDMA_PRIVCFGR", baseaddress, 4>;
-
-  template <std::uint32_t baseaddress>
-  using lpdma_rcfglockr_t =
-    lpdma_rcfglockr_tt<"LPDMA_RCFGLOCKR", baseaddress, 8>;
-
-  template <std::uint32_t baseaddress>
-  using lpdma_misr_t = lpdma_misr_tt<"LPDMA_MISR", baseaddress, 12>;
-
-  template <std::uint32_t baseaddress>
-  using lpdma_smisr_t = lpdma_smisr_tt<"LPDMA_SMISR", baseaddress, 16>;
-
-  template <std::uint32_t baseaddress>
-  using lpdma_c0lbar_t = lpdma_c0lbar_tt<"LPDMA_C0LBAR", baseaddress, 80>;
-
-  template <std::uint32_t baseaddress>
-  using lpdma_c0fcr_t = lpdma_c0fcr_tt<"LPDMA_C0FCR", baseaddress, 92>;
-
-  template <std::uint32_t baseaddress>
-  using lpdma_c0sr_t = lpdma_c0sr_tt<"LPDMA_C0SR", baseaddress, 96>;
-
-  template <std::uint32_t baseaddress>
-  using lpdma_c0cr_t = lpdma_c0cr_tt<"LPDMA_C0CR", baseaddress, 100>;
-
-  template <std::uint32_t baseaddress>
-  using lpdma_c0tr1_t = lpdma_c0tr1_tt<"LPDMA_C0TR1", baseaddress, 144>;
-
-  template <std::uint32_t baseaddress>
-  using lpdma_c0tr2_t = lpdma_c0tr2_tt<"LPDMA_C0TR2", baseaddress, 148>;
-
-  template <std::uint32_t baseaddress>
-  using lpdma_c0br1_t = lpdma_c0br1_tt<"LPDMA_C0BR1", baseaddress, 152>;
-
-  template <std::uint32_t baseaddress>
-  using lpdma_c0sar_t = lpdma_c0sar_tt<"LPDMA_C0SAR", baseaddress, 156>;
-
-  template <std::uint32_t baseaddress>
-  using lpdma_c0dar_t = lpdma_c0dar_tt<"LPDMA_C0DAR", baseaddress, 160>;
-
-  template <std::uint32_t baseaddress>
-  using lpdma_c0llr_t = lpdma_c0llr_tt<"LPDMA_C0LLR", baseaddress, 204>;
-
-  template <std::uint32_t baseaddress>
-  using lpdma_c1lbar_t = lpdma_c1lbar_tt<"LPDMA_C1LBAR", baseaddress, 208>;
-
-  template <std::uint32_t baseaddress>
-  using lpdma_c1fcr_t = lpdma_c1fcr_tt<"LPDMA_C1FCR", baseaddress, 220>;
-
-  template <std::uint32_t baseaddress>
-  using lpdma_c1sr_t = lpdma_c1sr_tt<"LPDMA_C1SR", baseaddress, 224>;
-
-  template <std::uint32_t baseaddress>
-  using lpdma_c1cr_t = lpdma_c1cr_tt<"LPDMA_C1CR", baseaddress, 228>;
-
-  template <std::uint32_t baseaddress>
-  using lpdma_c1tr1_t = lpdma_c1tr1_tt<"LPDMA_C1TR1", baseaddress, 272>;
-
-  template <std::uint32_t baseaddress>
-  using lpdma_c1tr2_t = lpdma_c1tr2_tt<"LPDMA_C1TR2", baseaddress, 276>;
-
-  template <std::uint32_t baseaddress>
-  using lpdma_c1br1_t = lpdma_c1br1_tt<"LPDMA_C1BR1", baseaddress, 280>;
-
-  template <std::uint32_t baseaddress>
-  using lpdma_c1sar_t = lpdma_c1sar_tt<"LPDMA_C1SAR", baseaddress, 284>;
-
-  template <std::uint32_t baseaddress>
-  using lpdma_c1dar_t = lpdma_c1dar_tt<"LPDMA_C1DAR", baseaddress, 288>;
-
-  template <std::uint32_t baseaddress>
-  using lpdma_c1llr_t = lpdma_c1llr_tt<"LPDMA_C1LLR", baseaddress, 332>;
-
-  template <std::uint32_t baseaddress>
-  using lpdma_c2lbar_t = lpdma_c2lbar_tt<"LPDMA_C2LBAR", baseaddress, 336>;
-
-  template <std::uint32_t baseaddress>
-  using lpdma_c2fcr_t = lpdma_c2fcr_tt<"LPDMA_C2FCR", baseaddress, 348>;
-
-  template <std::uint32_t baseaddress>
-  using lpdma_c2sr_t = lpdma_c2sr_tt<"LPDMA_C2SR", baseaddress, 352>;
-
-  template <std::uint32_t baseaddress>
-  using lpdma_c2cr_t = lpdma_c2cr_tt<"LPDMA_C2CR", baseaddress, 356>;
-
-  template <std::uint32_t baseaddress>
-  using lpdma_c2tr1_t = lpdma_c2tr1_tt<"LPDMA_C2TR1", baseaddress, 400>;
-
-  template <std::uint32_t baseaddress>
-  using lpdma_c2tr2_t = lpdma_c2tr2_tt<"LPDMA_C2TR2", baseaddress, 404>;
-
-  template <std::uint32_t baseaddress>
-  using lpdma_c2br1_t = lpdma_c2br1_tt<"LPDMA_C2BR1", baseaddress, 408>;
-
-  template <std::uint32_t baseaddress>
-  using lpdma_c2sar_t = lpdma_c2sar_tt<"LPDMA_C2SAR", baseaddress, 412>;
-
-  template <std::uint32_t baseaddress>
-  using lpdma_c2dar_t = lpdma_c2dar_tt<"LPDMA_C2DAR", baseaddress, 416>;
-
-  template <std::uint32_t baseaddress>
-  using lpdma_c2llr_t = lpdma_c2llr_tt<"LPDMA_C2LLR", baseaddress, 460>;
-
-  template <std::uint32_t baseaddress>
-  using lpdma_c3lbar_t = lpdma_c3lbar_tt<"LPDMA_C3LBAR", baseaddress, 464>;
-
-  template <std::uint32_t baseaddress>
-  using lpdma_c3fcr_t = lpdma_c3fcr_tt<"LPDMA_C3FCR", baseaddress, 476>;
-
-  template <std::uint32_t baseaddress>
-  using lpdma_c3sr_t = lpdma_c3sr_tt<"LPDMA_C3SR", baseaddress, 480>;
-
-  template <std::uint32_t baseaddress>
-  using lpdma_c3cr_t = lpdma_c3cr_tt<"LPDMA_C3CR", baseaddress, 484>;
-
-  template <std::uint32_t baseaddress>
-  using lpdma_c3tr1_t = lpdma_c3tr1_tt<"LPDMA_C3TR1", baseaddress, 528>;
-
-  template <std::uint32_t baseaddress>
-  using lpdma_c3tr2_t = lpdma_c3tr2_tt<"LPDMA_C3TR2", baseaddress, 532>;
-
-  template <std::uint32_t baseaddress>
-  using lpdma_c3br1_t = lpdma_c3br1_tt<"LPDMA_C3BR1", baseaddress, 536>;
-
-  template <std::uint32_t baseaddress>
-  using lpdma_c3sar_t = lpdma_c3sar_tt<"LPDMA_C3SAR", baseaddress, 540>;
-
-  template <std::uint32_t baseaddress>
-  using lpdma_c3dar_t = lpdma_c3dar_tt<"LPDMA_C3DAR", baseaddress, 544>;
-
-  template <std::uint32_t baseaddress>
-  using lpdma_c3llr_t = lpdma_c3llr_tt<"LPDMA_C3LLR", baseaddress, 588>;
 
 } // namespace lpdma1

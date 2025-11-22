@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace sec_gtzc_tzic {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ier1_tt = groov::reg<name,
                              std::uint32_t,
                              baseaddress + offset,
@@ -49,7 +51,9 @@ namespace sec_gtzc_tzic {
                              groov::field<"TIM3IE", bool, 1, 1>,
                              groov::field<"TIM2IE", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ier2_tt =
     groov::reg<name,
                std::uint32_t,
@@ -87,7 +91,9 @@ namespace sec_gtzc_tzic {
                groov::field<"USART1IE", bool, 1, 1>,
                groov::field<"TIM8IE", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ier3_tt =
     groov::reg<name,
                std::uint32_t,
@@ -103,7 +109,9 @@ namespace sec_gtzc_tzic {
                groov::field<"TZICIE", bool, 1, 1>,
                groov::field<"TZSCIE", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using sr1_tt = groov::reg<name,
                             std::uint32_t,
                             baseaddress + offset,
@@ -141,7 +149,9 @@ namespace sec_gtzc_tzic {
                             groov::field<"TIM3F", bool, 1, 1>,
                             groov::field<"TIM2F", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using sr2_tt =
     groov::reg<name,
                std::uint32_t,
@@ -179,7 +189,9 @@ namespace sec_gtzc_tzic {
                groov::field<"USART1F", bool, 1, 1>,
                groov::field<"TIM8F", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using sr3_tt =
     groov::reg<name,
                std::uint32_t,
@@ -195,7 +207,9 @@ namespace sec_gtzc_tzic {
                groov::field<"TZICF", bool, 1, 1>,
                groov::field<"TZSCF", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using fcr1_tt = groov::reg<name,
                              std::uint32_t,
                              baseaddress + offset,
@@ -233,7 +247,9 @@ namespace sec_gtzc_tzic {
                              groov::field<"TIM3FC", bool, 1, 1>,
                              groov::field<"TIM2FC", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using fcr2_tt =
     groov::reg<name,
                std::uint32_t,
@@ -271,7 +287,9 @@ namespace sec_gtzc_tzic {
                groov::field<"USART1FC", bool, 1, 1>,
                groov::field<"TIM8FC", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using fcr3_tt =
     groov::reg<name,
                std::uint32_t,
@@ -286,32 +304,5 @@ namespace sec_gtzc_tzic {
                groov::field<"MPCWM1FC", bool, 2, 2>,
                groov::field<"TZICFC", bool, 1, 1>,
                groov::field<"TZSCFC", bool, 0, 0>>;
-
-  template <std::uint32_t baseaddress>
-  using ier1_t = ier1_tt<"IER1", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using ier2_t = ier2_tt<"IER2", baseaddress, 4>;
-
-  template <std::uint32_t baseaddress>
-  using ier3_t = ier3_tt<"IER3", baseaddress, 8>;
-
-  template <std::uint32_t baseaddress>
-  using sr1_t = sr1_tt<"SR1", baseaddress, 16>;
-
-  template <std::uint32_t baseaddress>
-  using sr2_t = sr2_tt<"SR2", baseaddress, 20>;
-
-  template <std::uint32_t baseaddress>
-  using sr3_t = sr3_tt<"SR3", baseaddress, 24>;
-
-  template <std::uint32_t baseaddress>
-  using fcr1_t = fcr1_tt<"FCR1", baseaddress, 32>;
-
-  template <std::uint32_t baseaddress>
-  using fcr2_t = fcr2_tt<"FCR2", baseaddress, 36>;
-
-  template <std::uint32_t baseaddress>
-  using fcr3_t = fcr3_tt<"FCR3", baseaddress, 40>;
 
 } // namespace sec_gtzc_tzic

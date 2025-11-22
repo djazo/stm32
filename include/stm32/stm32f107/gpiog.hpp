@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace gpiog {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using crl_tt = groov::reg<name,
                             std::uint32_t,
                             baseaddress + offset,
@@ -33,7 +35,9 @@ namespace gpiog {
                             groov::field<"CNF0", std::uint8_t, 3, 2>,
                             groov::field<"MODE0", std::uint8_t, 1, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using crh_tt = groov::reg<name,
                             std::uint32_t,
                             baseaddress + offset,
@@ -55,7 +59,9 @@ namespace gpiog {
                             groov::field<"CNF8", std::uint8_t, 3, 2>,
                             groov::field<"MODE8", std::uint8_t, 1, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using idr_tt = groov::reg<name,
                             std::uint32_t,
                             baseaddress + offset,
@@ -78,7 +84,9 @@ namespace gpiog {
                             groov::field<"IDR1", bool, 1, 1>,
                             groov::field<"IDR0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using odr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -102,7 +110,9 @@ namespace gpiog {
                groov::field<"ODR1", bool, 1, 1>,
                groov::field<"ODR0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using bsrr_tt = groov::reg<name,
                              std::uint32_t,
                              baseaddress + offset,
@@ -140,7 +150,9 @@ namespace gpiog {
                              groov::field<"BS1", bool, 1, 1>,
                              groov::field<"BS0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using brr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -164,7 +176,9 @@ namespace gpiog {
                groov::field<"BR1", bool, 1, 1>,
                groov::field<"BR0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using lckr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -188,26 +202,5 @@ namespace gpiog {
                groov::field<"LCK2", bool, 2, 2>,
                groov::field<"LCK1", bool, 1, 1>,
                groov::field<"LCK0", bool, 0, 0>>;
-
-  template <std::uint32_t baseaddress>
-  using crl_t = crl_tt<"CRL", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using crh_t = crh_tt<"CRH", baseaddress, 4>;
-
-  template <std::uint32_t baseaddress>
-  using idr_t = idr_tt<"IDR", baseaddress, 8>;
-
-  template <std::uint32_t baseaddress>
-  using odr_t = odr_tt<"ODR", baseaddress, 12>;
-
-  template <std::uint32_t baseaddress>
-  using bsrr_t = bsrr_tt<"BSRR", baseaddress, 16>;
-
-  template <std::uint32_t baseaddress>
-  using brr_t = brr_tt<"BRR", baseaddress, 20>;
-
-  template <std::uint32_t baseaddress>
-  using lckr_t = lckr_tt<"LCKR", baseaddress, 24>;
 
 } // namespace gpiog

@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace rtc {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using tr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -28,7 +30,9 @@ namespace rtc {
                groov::field<"ST", std::uint8_t, 6, 4>,
                groov::field<"SU", std::uint8_t, 3, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -44,14 +48,18 @@ namespace rtc {
                groov::field<"DT", std::uint8_t, 5, 4>,
                groov::field<"DU", std::uint8_t, 3, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ssr_tt = groov::reg<name,
                             std::uint32_t,
                             baseaddress + offset,
                             access::ro,
                             groov::field<"SS", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using icsr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -70,7 +78,9 @@ namespace rtc {
                groov::field<"WUTWF", bool, 2, 2, access::ro>,
                groov::field<"RESERVED0", std::uint8_t, 1, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using prer_tt =
     groov::reg<name,
                std::uint32_t,
@@ -81,7 +91,9 @@ namespace rtc {
                groov::field<"RESERVED0", bool, 15, 15, access::ro>,
                groov::field<"PREDIV_S", std::uint16_t, 14, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using wutr_tt = groov::reg<name,
                              std::uint32_t,
                              baseaddress + offset,
@@ -89,7 +101,9 @@ namespace rtc {
                              groov::field<"WUTOCLR", std::uint32_t, 47, 16>,
                              groov::field<"WUT", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -124,7 +138,9 @@ namespace rtc {
                groov::field<"TSEDGE", bool, 3, 3>,
                groov::field<"WCKSEL", std::uint8_t, 2, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using wpr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -133,7 +149,9 @@ namespace rtc {
                groov::field<"RESERVED0", std::uint32_t, 31, 8, access::ro>,
                groov::field<"KEY", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using calr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -147,7 +165,9 @@ namespace rtc {
                groov::field<"RESERVED0", std::uint8_t, 11, 9, access::ro>,
                groov::field<"CALM", std::uint16_t, 8, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using shiftr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -157,7 +177,9 @@ namespace rtc {
                groov::field<"RESERVED0", std::uint16_t, 30, 15, access::ro>,
                groov::field<"SUBFS", std::uint16_t, 14, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using tstr_tt = groov::reg<name,
                              std::uint32_t,
                              baseaddress + offset,
@@ -173,7 +195,9 @@ namespace rtc {
                              groov::field<"ST", std::uint8_t, 6, 4>,
                              groov::field<"SU", std::uint8_t, 3, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using tsdr_tt = groov::reg<name,
                              std::uint32_t,
                              baseaddress + offset,
@@ -186,14 +210,18 @@ namespace rtc {
                              groov::field<"DT", std::uint8_t, 5, 4>,
                              groov::field<"DU", std::uint8_t, 3, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using tsssr_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
                               access::ro,
                               groov::field<"SS", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using alrmar_tt = groov::reg<name,
                                std::uint32_t,
                                baseaddress + offset,
@@ -213,7 +241,9 @@ namespace rtc {
                                groov::field<"ST", std::uint8_t, 6, 4>,
                                groov::field<"SU", std::uint8_t, 3, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using alrmassr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -225,7 +255,9 @@ namespace rtc {
                groov::field<"RESERVED0", std::uint16_t, 23, 15, access::ro>,
                groov::field<"SS", std::uint16_t, 14, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using alrmbr_tt = groov::reg<name,
                                std::uint32_t,
                                baseaddress + offset,
@@ -245,7 +277,9 @@ namespace rtc {
                                groov::field<"ST", std::uint8_t, 6, 4>,
                                groov::field<"SU", std::uint8_t, 3, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using alrmbssr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -257,7 +291,9 @@ namespace rtc {
                groov::field<"RESERVED0", std::uint16_t, 23, 15, access::ro>,
                groov::field<"SS", std::uint16_t, 14, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using sr_tt = groov::reg<name,
                            std::uint32_t,
                            baseaddress + offset,
@@ -271,7 +307,9 @@ namespace rtc {
                            groov::field<"ALRBF", bool, 1, 1>,
                            groov::field<"ALRAF", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using misr_tt = groov::reg<name,
                              std::uint32_t,
                              baseaddress + offset,
@@ -285,7 +323,9 @@ namespace rtc {
                              groov::field<"ALRBMF", bool, 1, 1>,
                              groov::field<"ALRMF", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using scr_tt = groov::reg<name,
                             std::uint32_t,
                             baseaddress + offset,
@@ -299,84 +339,22 @@ namespace rtc {
                             groov::field<"CALRBF", bool, 1, 1>,
                             groov::field<"CALRAF", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using alrabinr_tt = groov::reg<name,
                                  std::uint32_t,
                                  baseaddress + offset,
                                  access::rw,
                                  groov::field<"SS", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using alrbbinr_tt = groov::reg<name,
                                  std::uint32_t,
                                  baseaddress + offset,
                                  access::rw,
                                  groov::field<"SS", std::uint32_t, 31, 0>>;
-
-  template <std::uint32_t baseaddress>
-  using tr_t = tr_tt<"TR", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using dr_t = dr_tt<"DR", baseaddress, 4>;
-
-  template <std::uint32_t baseaddress>
-  using ssr_t = ssr_tt<"SSR", baseaddress, 8>;
-
-  template <std::uint32_t baseaddress>
-  using icsr_t = icsr_tt<"ICSR", baseaddress, 12>;
-
-  template <std::uint32_t baseaddress>
-  using prer_t = prer_tt<"PRER", baseaddress, 16>;
-
-  template <std::uint32_t baseaddress>
-  using wutr_t = wutr_tt<"WUTR", baseaddress, 20>;
-
-  template <std::uint32_t baseaddress>
-  using cr_t = cr_tt<"CR", baseaddress, 24>;
-
-  template <std::uint32_t baseaddress>
-  using wpr_t = wpr_tt<"WPR", baseaddress, 36>;
-
-  template <std::uint32_t baseaddress>
-  using calr_t = calr_tt<"CALR", baseaddress, 40>;
-
-  template <std::uint32_t baseaddress>
-  using shiftr_t = shiftr_tt<"SHIFTR", baseaddress, 44>;
-
-  template <std::uint32_t baseaddress>
-  using tstr_t = tstr_tt<"TSTR", baseaddress, 48>;
-
-  template <std::uint32_t baseaddress>
-  using tsdr_t = tsdr_tt<"TSDR", baseaddress, 52>;
-
-  template <std::uint32_t baseaddress>
-  using tsssr_t = tsssr_tt<"TSSSR", baseaddress, 56>;
-
-  template <std::uint32_t baseaddress>
-  using alrmar_t = alrmar_tt<"ALRMAR", baseaddress, 64>;
-
-  template <std::uint32_t baseaddress>
-  using alrmassr_t = alrmassr_tt<"ALRMASSR", baseaddress, 68>;
-
-  template <std::uint32_t baseaddress>
-  using alrmbr_t = alrmbr_tt<"ALRMBR", baseaddress, 72>;
-
-  template <std::uint32_t baseaddress>
-  using alrmbssr_t = alrmbssr_tt<"ALRMBSSR", baseaddress, 76>;
-
-  template <std::uint32_t baseaddress>
-  using sr_t = sr_tt<"SR", baseaddress, 80>;
-
-  template <std::uint32_t baseaddress>
-  using misr_t = misr_tt<"MISR", baseaddress, 84>;
-
-  template <std::uint32_t baseaddress>
-  using scr_t = scr_tt<"SCR", baseaddress, 92>;
-
-  template <std::uint32_t baseaddress>
-  using alrabinr_t = alrabinr_tt<"ALRABINR", baseaddress, 112>;
-
-  template <std::uint32_t baseaddress>
-  using alrbbinr_t = alrbbinr_tt<"ALRBBINR", baseaddress, 116>;
 
 } // namespace rtc

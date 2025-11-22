@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace pwr {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using pwr_cr1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -40,7 +42,9 @@ namespace pwr {
                groov::field<"RESERVED0", std::uint8_t, 3, 1, access::ro>,
                groov::field<"LPDS", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using pwr_csr1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -55,7 +59,9 @@ namespace pwr {
                groov::field<"PVDO", bool, 4, 4>,
                groov::field<"RESERVED0", std::uint8_t, 3, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using pwr_cr2_tt =
     groov::reg<name,
                std::uint32_t,
@@ -71,7 +77,9 @@ namespace pwr {
                groov::field<"RESERVED0", std::uint8_t, 3, 1, access::ro>,
                groov::field<"BREN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using pwr_cr3_tt =
     groov::reg<name,
                std::uint32_t,
@@ -93,7 +101,9 @@ namespace pwr {
                groov::field<"LDOEN", bool, 1, 1>,
                groov::field<"BYPASS", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using pwr_cpucr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -111,7 +121,9 @@ namespace pwr {
                groov::field<"RESERVED0", bool, 1, 1, access::ro>,
                groov::field<"RETDS_CD", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using pwr_srdcr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -122,7 +134,9 @@ namespace pwr {
                groov::field<"VOSRDY", bool, 13, 13, access::ro>,
                groov::field<"RESERVED0", std::uint16_t, 12, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using pwr_wkupcr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -136,7 +150,9 @@ namespace pwr {
                groov::field<"WKUPC2", bool, 1, 1>,
                groov::field<"WKUPC1", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using pwr_wkupfr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -150,7 +166,9 @@ namespace pwr {
                groov::field<"WKUPF2", bool, 1, 1>,
                groov::field<"WKUPF1", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using pwr_wkupepr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -177,32 +195,5 @@ namespace pwr {
                groov::field<"WKUPEN3", bool, 2, 2>,
                groov::field<"WKUPEN2", bool, 1, 1>,
                groov::field<"WKUPEN1", bool, 0, 0>>;
-
-  template <std::uint32_t baseaddress>
-  using pwr_cr1_t = pwr_cr1_tt<"PWR_CR1", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using pwr_csr1_t = pwr_csr1_tt<"PWR_CSR1", baseaddress, 4>;
-
-  template <std::uint32_t baseaddress>
-  using pwr_cr2_t = pwr_cr2_tt<"PWR_CR2", baseaddress, 8>;
-
-  template <std::uint32_t baseaddress>
-  using pwr_cr3_t = pwr_cr3_tt<"PWR_CR3", baseaddress, 12>;
-
-  template <std::uint32_t baseaddress>
-  using pwr_cpucr_t = pwr_cpucr_tt<"PWR_CPUCR", baseaddress, 16>;
-
-  template <std::uint32_t baseaddress>
-  using pwr_srdcr_t = pwr_srdcr_tt<"PWR_SRDCR", baseaddress, 24>;
-
-  template <std::uint32_t baseaddress>
-  using pwr_wkupcr_t = pwr_wkupcr_tt<"PWR_WKUPCR", baseaddress, 32>;
-
-  template <std::uint32_t baseaddress>
-  using pwr_wkupfr_t = pwr_wkupfr_tt<"PWR_WKUPFR", baseaddress, 36>;
-
-  template <std::uint32_t baseaddress>
-  using pwr_wkupepr_t = pwr_wkupepr_tt<"PWR_WKUPEPR", baseaddress, 40>;
 
 } // namespace pwr

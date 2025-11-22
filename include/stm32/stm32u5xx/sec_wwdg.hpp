@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace sec_wwdg {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -21,7 +23,9 @@ namespace sec_wwdg {
                groov::field<"WDGA", bool, 7, 7>,
                groov::field<"T", std::uint8_t, 6, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using cfr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -34,7 +38,9 @@ namespace sec_wwdg {
                groov::field<"RESERVED0", std::uint8_t, 8, 7, access::ro>,
                groov::field<"W", std::uint8_t, 6, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using sr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -42,14 +48,5 @@ namespace sec_wwdg {
                access::rw,
                groov::field<"RESERVED0", std::uint32_t, 31, 1, access::ro>,
                groov::field<"EWIF", bool, 0, 0>>;
-
-  template <std::uint32_t baseaddress>
-  using cr_t = cr_tt<"CR", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using cfr_t = cfr_tt<"CFR", baseaddress, 4>;
-
-  template <std::uint32_t baseaddress>
-  using sr_t = sr_tt<"SR", baseaddress, 8>;
 
 } // namespace sec_wwdg

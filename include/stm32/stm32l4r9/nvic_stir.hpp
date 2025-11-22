@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace nvic_stir {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using stir_tt =
     groov::reg<name,
                std::uint32_t,
@@ -19,8 +21,5 @@ namespace nvic_stir {
                access::rw,
                groov::field<"RESERVED0", std::uint32_t, 31, 9, access::ro>,
                groov::field<"INTID", std::uint16_t, 8, 0>>;
-
-  template <std::uint32_t baseaddress>
-  using stir_t = stir_tt<"STIR", baseaddress, 0>;
 
 } // namespace nvic_stir

@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace dmamux1 {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c0cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -27,7 +29,9 @@ namespace dmamux1 {
                groov::field<"SOIE", bool, 8, 8>,
                groov::field<"DMAREQ_ID", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c1cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -43,7 +47,9 @@ namespace dmamux1 {
                groov::field<"SOIE", bool, 8, 8>,
                groov::field<"DMAREQ_ID", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c2cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -59,7 +65,9 @@ namespace dmamux1 {
                groov::field<"SOIE", bool, 8, 8>,
                groov::field<"DMAREQ_ID", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c3cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -75,7 +83,9 @@ namespace dmamux1 {
                groov::field<"SOIE", bool, 8, 8>,
                groov::field<"DMAREQ_ID", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c4cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -91,7 +101,9 @@ namespace dmamux1 {
                groov::field<"SOIE", bool, 8, 8>,
                groov::field<"DMAREQ_ID", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c5cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -107,7 +119,9 @@ namespace dmamux1 {
                groov::field<"SOIE", bool, 8, 8>,
                groov::field<"DMAREQ_ID", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c6cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -123,7 +137,9 @@ namespace dmamux1 {
                groov::field<"SOIE", bool, 8, 8>,
                groov::field<"DMAREQ_ID", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c7cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -139,7 +155,9 @@ namespace dmamux1 {
                groov::field<"SOIE", bool, 8, 8>,
                groov::field<"DMAREQ_ID", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c8cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -155,7 +173,9 @@ namespace dmamux1 {
                groov::field<"SOIE", bool, 8, 8>,
                groov::field<"DMAREQ_ID", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c9cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -171,7 +191,9 @@ namespace dmamux1 {
                groov::field<"SOIE", bool, 8, 8>,
                groov::field<"DMAREQ_ID", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c10cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -187,7 +209,9 @@ namespace dmamux1 {
                groov::field<"SOIE", bool, 8, 8>,
                groov::field<"DMAREQ_ID", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c11cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -203,7 +227,9 @@ namespace dmamux1 {
                groov::field<"SOIE", bool, 8, 8>,
                groov::field<"DMAREQ_ID", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c12cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -219,7 +245,9 @@ namespace dmamux1 {
                groov::field<"SOIE", bool, 8, 8>,
                groov::field<"DMAREQ_ID", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c13cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -235,7 +263,9 @@ namespace dmamux1 {
                groov::field<"SOIE", bool, 8, 8>,
                groov::field<"DMAREQ_ID", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c14cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -251,7 +281,9 @@ namespace dmamux1 {
                groov::field<"SOIE", bool, 8, 8>,
                groov::field<"DMAREQ_ID", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c15cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -267,7 +299,9 @@ namespace dmamux1 {
                groov::field<"SOIE", bool, 8, 8>,
                groov::field<"DMAREQ_ID", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using rg0cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -282,7 +316,9 @@ namespace dmamux1 {
                groov::field<"RESERVED0", std::uint8_t, 7, 5, access::ro>,
                groov::field<"SIG_ID", std::uint8_t, 4, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using rg1cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -297,7 +333,9 @@ namespace dmamux1 {
                groov::field<"RESERVED0", std::uint8_t, 7, 5, access::ro>,
                groov::field<"SIG_ID", std::uint8_t, 4, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using rg2cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -312,7 +350,9 @@ namespace dmamux1 {
                groov::field<"RESERVED0", std::uint8_t, 7, 5, access::ro>,
                groov::field<"SIG_ID", std::uint8_t, 4, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using rg3cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -327,7 +367,9 @@ namespace dmamux1 {
                groov::field<"RESERVED0", std::uint8_t, 7, 5, access::ro>,
                groov::field<"SIG_ID", std::uint8_t, 4, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using rg4cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -342,7 +384,9 @@ namespace dmamux1 {
                groov::field<"RESERVED0", std::uint8_t, 7, 5, access::ro>,
                groov::field<"SIG_ID", std::uint8_t, 4, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using rg5cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -357,7 +401,9 @@ namespace dmamux1 {
                groov::field<"RESERVED0", std::uint8_t, 7, 5, access::ro>,
                groov::field<"SIG_ID", std::uint8_t, 4, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using rg6cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -372,7 +418,9 @@ namespace dmamux1 {
                groov::field<"RESERVED0", std::uint8_t, 7, 5, access::ro>,
                groov::field<"SIG_ID", std::uint8_t, 4, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using rg7cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -387,7 +435,9 @@ namespace dmamux1 {
                groov::field<"RESERVED0", std::uint8_t, 7, 5, access::ro>,
                groov::field<"SIG_ID", std::uint8_t, 4, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using rgsr_tt = groov::reg<name,
                              std::uint32_t,
                              baseaddress + offset,
@@ -395,7 +445,9 @@ namespace dmamux1 {
                              groov::field<"RESERVED0", std::uint32_t, 31, 8>,
                              groov::field<"OF", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using rgcfr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -404,7 +456,9 @@ namespace dmamux1 {
                groov::field<"RESERVED0", std::uint32_t, 31, 8, access::ro>,
                groov::field<"COF", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using csr_tt = groov::reg<name,
                             std::uint32_t,
                             baseaddress + offset,
@@ -412,7 +466,9 @@ namespace dmamux1 {
                             groov::field<"RESERVED0", std::uint16_t, 31, 16>,
                             groov::field<"SOF", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using cfr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -420,89 +476,5 @@ namespace dmamux1 {
                access::wo,
                groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
                groov::field<"CSOF", std::uint16_t, 15, 0>>;
-
-  template <std::uint32_t baseaddress>
-  using c0cr_t = c0cr_tt<"C0CR", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using c1cr_t = c1cr_tt<"C1CR", baseaddress, 4>;
-
-  template <std::uint32_t baseaddress>
-  using c2cr_t = c2cr_tt<"C2CR", baseaddress, 8>;
-
-  template <std::uint32_t baseaddress>
-  using c3cr_t = c3cr_tt<"C3CR", baseaddress, 12>;
-
-  template <std::uint32_t baseaddress>
-  using c4cr_t = c4cr_tt<"C4CR", baseaddress, 16>;
-
-  template <std::uint32_t baseaddress>
-  using c5cr_t = c5cr_tt<"C5CR", baseaddress, 20>;
-
-  template <std::uint32_t baseaddress>
-  using c6cr_t = c6cr_tt<"C6CR", baseaddress, 24>;
-
-  template <std::uint32_t baseaddress>
-  using c7cr_t = c7cr_tt<"C7CR", baseaddress, 28>;
-
-  template <std::uint32_t baseaddress>
-  using c8cr_t = c8cr_tt<"C8CR", baseaddress, 32>;
-
-  template <std::uint32_t baseaddress>
-  using c9cr_t = c9cr_tt<"C9CR", baseaddress, 36>;
-
-  template <std::uint32_t baseaddress>
-  using c10cr_t = c10cr_tt<"C10CR", baseaddress, 40>;
-
-  template <std::uint32_t baseaddress>
-  using c11cr_t = c11cr_tt<"C11CR", baseaddress, 44>;
-
-  template <std::uint32_t baseaddress>
-  using c12cr_t = c12cr_tt<"C12CR", baseaddress, 48>;
-
-  template <std::uint32_t baseaddress>
-  using c13cr_t = c13cr_tt<"C13CR", baseaddress, 52>;
-
-  template <std::uint32_t baseaddress>
-  using c14cr_t = c14cr_tt<"C14CR", baseaddress, 56>;
-
-  template <std::uint32_t baseaddress>
-  using c15cr_t = c15cr_tt<"C15CR", baseaddress, 60>;
-
-  template <std::uint32_t baseaddress>
-  using rg0cr_t = rg0cr_tt<"RG0CR", baseaddress, 256>;
-
-  template <std::uint32_t baseaddress>
-  using rg1cr_t = rg1cr_tt<"RG1CR", baseaddress, 260>;
-
-  template <std::uint32_t baseaddress>
-  using rg2cr_t = rg2cr_tt<"RG2CR", baseaddress, 264>;
-
-  template <std::uint32_t baseaddress>
-  using rg3cr_t = rg3cr_tt<"RG3CR", baseaddress, 268>;
-
-  template <std::uint32_t baseaddress>
-  using rg4cr_t = rg4cr_tt<"RG4CR", baseaddress, 272>;
-
-  template <std::uint32_t baseaddress>
-  using rg5cr_t = rg5cr_tt<"RG5CR", baseaddress, 276>;
-
-  template <std::uint32_t baseaddress>
-  using rg6cr_t = rg6cr_tt<"RG6CR", baseaddress, 280>;
-
-  template <std::uint32_t baseaddress>
-  using rg7cr_t = rg7cr_tt<"RG7CR", baseaddress, 284>;
-
-  template <std::uint32_t baseaddress>
-  using rgsr_t = rgsr_tt<"RGSR", baseaddress, 320>;
-
-  template <std::uint32_t baseaddress>
-  using rgcfr_t = rgcfr_tt<"RGCFR", baseaddress, 324>;
-
-  template <std::uint32_t baseaddress>
-  using csr_t = csr_tt<"CSR", baseaddress, 128>;
-
-  template <std::uint32_t baseaddress>
-  using cfr_t = cfr_tt<"CFR", baseaddress, 132>;
 
 } // namespace dmamux1

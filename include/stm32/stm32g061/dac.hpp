@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace dac {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dac_cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -36,7 +38,9 @@ namespace dac {
                groov::field<"TEN1", bool, 1, 1>,
                groov::field<"EN1", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dac_swtrgr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -46,7 +50,9 @@ namespace dac {
                groov::field<"SWTRIG2", bool, 1, 1>,
                groov::field<"SWTRIG1", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dac_dhr12r1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -55,7 +61,9 @@ namespace dac {
                groov::field<"RESERVED0", std::uint32_t, 31, 12, access::ro>,
                groov::field<"DACC1DHR", std::uint16_t, 11, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dac_dhr12l1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -65,7 +73,9 @@ namespace dac {
                groov::field<"DACC1DHR", std::uint16_t, 15, 4>,
                groov::field<"RESERVED0", std::uint8_t, 3, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dac_dhr8r1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -74,7 +84,9 @@ namespace dac {
                groov::field<"RESERVED0", std::uint32_t, 31, 8, access::ro>,
                groov::field<"DACC1DHR", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dac_dhr12r2_tt =
     groov::reg<name,
                std::uint32_t,
@@ -83,7 +95,9 @@ namespace dac {
                groov::field<"RESERVED0", std::uint32_t, 31, 12, access::ro>,
                groov::field<"DACC2DHR", std::uint16_t, 11, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dac_dhr12l2_tt =
     groov::reg<name,
                std::uint32_t,
@@ -93,7 +107,9 @@ namespace dac {
                groov::field<"DACC2DHR", std::uint16_t, 15, 4>,
                groov::field<"RESERVED0", std::uint8_t, 3, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dac_dhr8r2_tt =
     groov::reg<name,
                std::uint32_t,
@@ -102,7 +118,9 @@ namespace dac {
                groov::field<"RESERVED0", std::uint32_t, 31, 8, access::ro>,
                groov::field<"DACC2DHR", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dac_dhr12rd_tt =
     groov::reg<name,
                std::uint32_t,
@@ -113,7 +131,9 @@ namespace dac {
                groov::field<"RESERVED0", std::uint8_t, 15, 12, access::ro>,
                groov::field<"DACC1DHR", std::uint16_t, 11, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dac_dhr12ld_tt =
     groov::reg<name,
                std::uint32_t,
@@ -124,7 +144,9 @@ namespace dac {
                groov::field<"DACC1DHR", std::uint16_t, 15, 4>,
                groov::field<"RESERVED0", std::uint8_t, 3, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dac_dhr8rd_tt =
     groov::reg<name,
                std::uint32_t,
@@ -134,7 +156,9 @@ namespace dac {
                groov::field<"DACC2DHR", std::uint8_t, 15, 8>,
                groov::field<"DACC1DHR", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dac_dor1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -143,7 +167,9 @@ namespace dac {
                groov::field<"RESERVED0", std::uint32_t, 31, 12>,
                groov::field<"DACC1DOR", std::uint16_t, 11, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dac_dor2_tt =
     groov::reg<name,
                std::uint32_t,
@@ -152,7 +178,9 @@ namespace dac {
                groov::field<"RESERVED0", std::uint32_t, 31, 12>,
                groov::field<"DACC2DOR", std::uint16_t, 11, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dac_sr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -167,7 +195,9 @@ namespace dac {
                groov::field<"DMAUDR1", bool, 13, 13>,
                groov::field<"RESERVED0", std::uint16_t, 12, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dac_ccr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -178,7 +208,9 @@ namespace dac {
                groov::field<"RESERVED0", std::uint16_t, 15, 5, access::ro>,
                groov::field<"OTRIM1", std::uint8_t, 4, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dac_mcr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -189,7 +221,9 @@ namespace dac {
                groov::field<"RESERVED0", std::uint16_t, 15, 3, access::ro>,
                groov::field<"MODE1", std::uint8_t, 2, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dac_shsr1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -198,7 +232,9 @@ namespace dac {
                groov::field<"RESERVED0", std::uint32_t, 31, 10, access::ro>,
                groov::field<"TSAMPLE1", std::uint16_t, 9, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dac_shsr2_tt =
     groov::reg<name,
                std::uint32_t,
@@ -207,7 +243,9 @@ namespace dac {
                groov::field<"RESERVED0", std::uint32_t, 31, 10, access::ro>,
                groov::field<"TSAMPLE2", std::uint16_t, 9, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dac_shhr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -218,7 +256,9 @@ namespace dac {
                groov::field<"RESERVED0", std::uint8_t, 15, 10, access::ro>,
                groov::field<"THOLD1", std::uint16_t, 9, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dac_shrr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -228,65 +268,5 @@ namespace dac {
                groov::field<"TREFRESH2", std::uint8_t, 23, 16>,
                groov::field<"RESERVED0", std::uint8_t, 15, 8, access::ro>,
                groov::field<"TREFRESH1", std::uint8_t, 7, 0>>;
-
-  template <std::uint32_t baseaddress>
-  using dac_cr_t = dac_cr_tt<"DAC_CR", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using dac_swtrgr_t = dac_swtrgr_tt<"DAC_SWTRGR", baseaddress, 4>;
-
-  template <std::uint32_t baseaddress>
-  using dac_dhr12r1_t = dac_dhr12r1_tt<"DAC_DHR12R1", baseaddress, 8>;
-
-  template <std::uint32_t baseaddress>
-  using dac_dhr12l1_t = dac_dhr12l1_tt<"DAC_DHR12L1", baseaddress, 12>;
-
-  template <std::uint32_t baseaddress>
-  using dac_dhr8r1_t = dac_dhr8r1_tt<"DAC_DHR8R1", baseaddress, 16>;
-
-  template <std::uint32_t baseaddress>
-  using dac_dhr12r2_t = dac_dhr12r2_tt<"DAC_DHR12R2", baseaddress, 20>;
-
-  template <std::uint32_t baseaddress>
-  using dac_dhr12l2_t = dac_dhr12l2_tt<"DAC_DHR12L2", baseaddress, 24>;
-
-  template <std::uint32_t baseaddress>
-  using dac_dhr8r2_t = dac_dhr8r2_tt<"DAC_DHR8R2", baseaddress, 28>;
-
-  template <std::uint32_t baseaddress>
-  using dac_dhr12rd_t = dac_dhr12rd_tt<"DAC_DHR12RD", baseaddress, 32>;
-
-  template <std::uint32_t baseaddress>
-  using dac_dhr12ld_t = dac_dhr12ld_tt<"DAC_DHR12LD", baseaddress, 36>;
-
-  template <std::uint32_t baseaddress>
-  using dac_dhr8rd_t = dac_dhr8rd_tt<"DAC_DHR8RD", baseaddress, 40>;
-
-  template <std::uint32_t baseaddress>
-  using dac_dor1_t = dac_dor1_tt<"DAC_DOR1", baseaddress, 44>;
-
-  template <std::uint32_t baseaddress>
-  using dac_dor2_t = dac_dor2_tt<"DAC_DOR2", baseaddress, 48>;
-
-  template <std::uint32_t baseaddress>
-  using dac_sr_t = dac_sr_tt<"DAC_SR", baseaddress, 52>;
-
-  template <std::uint32_t baseaddress>
-  using dac_ccr_t = dac_ccr_tt<"DAC_CCR", baseaddress, 56>;
-
-  template <std::uint32_t baseaddress>
-  using dac_mcr_t = dac_mcr_tt<"DAC_MCR", baseaddress, 60>;
-
-  template <std::uint32_t baseaddress>
-  using dac_shsr1_t = dac_shsr1_tt<"DAC_SHSR1", baseaddress, 64>;
-
-  template <std::uint32_t baseaddress>
-  using dac_shsr2_t = dac_shsr2_tt<"DAC_SHSR2", baseaddress, 68>;
-
-  template <std::uint32_t baseaddress>
-  using dac_shhr_t = dac_shhr_tt<"DAC_SHHR", baseaddress, 72>;
-
-  template <std::uint32_t baseaddress>
-  using dac_shrr_t = dac_shrr_tt<"DAC_SHRR", baseaddress, 76>;
 
 } // namespace dac

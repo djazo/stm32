@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace dma {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dma_isr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -47,7 +49,9 @@ namespace dma {
                groov::field<"TCIF1", bool, 1, 1, access::ro>,
                groov::field<"GIF1", bool, 0, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dma_ifcr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -83,7 +87,9 @@ namespace dma {
                groov::field<"CTCIF1", bool, 1, 1, access::wo>,
                groov::field<"CGIF1", bool, 0, 0, access::wo>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dma_ccr1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -103,7 +109,9 @@ namespace dma {
                groov::field<"TCIE", bool, 1, 1>,
                groov::field<"EN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dma_cndtr1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -112,21 +120,27 @@ namespace dma {
                groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
                groov::field<"NDT", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dma_cpar1_tt = groov::reg<name,
                                   std::uint32_t,
                                   baseaddress + offset,
                                   access::rw,
                                   groov::field<"PA", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dma_cmar1_tt = groov::reg<name,
                                   std::uint32_t,
                                   baseaddress + offset,
                                   access::rw,
                                   groov::field<"MA", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dma_ccr2_tt =
     groov::reg<name,
                std::uint32_t,
@@ -146,7 +160,9 @@ namespace dma {
                groov::field<"TCIE", bool, 1, 1>,
                groov::field<"EN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dma_cndtr2_tt =
     groov::reg<name,
                std::uint32_t,
@@ -155,21 +171,27 @@ namespace dma {
                groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
                groov::field<"NDT", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dma_cpar2_tt = groov::reg<name,
                                   std::uint32_t,
                                   baseaddress + offset,
                                   access::rw,
                                   groov::field<"PA", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dma_cmar2_tt = groov::reg<name,
                                   std::uint32_t,
                                   baseaddress + offset,
                                   access::rw,
                                   groov::field<"MA", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dma_ccr3_tt =
     groov::reg<name,
                std::uint32_t,
@@ -189,7 +211,9 @@ namespace dma {
                groov::field<"TCIE", bool, 1, 1>,
                groov::field<"EN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dma_cndtr3_tt =
     groov::reg<name,
                std::uint32_t,
@@ -198,21 +222,27 @@ namespace dma {
                groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
                groov::field<"NDT", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dma_cpar3_tt = groov::reg<name,
                                   std::uint32_t,
                                   baseaddress + offset,
                                   access::rw,
                                   groov::field<"PA", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dma_cmar3_tt = groov::reg<name,
                                   std::uint32_t,
                                   baseaddress + offset,
                                   access::rw,
                                   groov::field<"MA", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dma_ccr4_tt =
     groov::reg<name,
                std::uint32_t,
@@ -232,7 +262,9 @@ namespace dma {
                groov::field<"TCIE", bool, 1, 1>,
                groov::field<"EN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dma_cndtr4_tt =
     groov::reg<name,
                std::uint32_t,
@@ -241,21 +273,27 @@ namespace dma {
                groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
                groov::field<"NDT", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dma_cpar4_tt = groov::reg<name,
                                   std::uint32_t,
                                   baseaddress + offset,
                                   access::rw,
                                   groov::field<"PA", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dma_cmar4_tt = groov::reg<name,
                                   std::uint32_t,
                                   baseaddress + offset,
                                   access::rw,
                                   groov::field<"MA", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dma_ccr5_tt =
     groov::reg<name,
                std::uint32_t,
@@ -275,7 +313,9 @@ namespace dma {
                groov::field<"TCIE", bool, 1, 1>,
                groov::field<"EN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dma_cndtr5_tt =
     groov::reg<name,
                std::uint32_t,
@@ -284,21 +324,27 @@ namespace dma {
                groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
                groov::field<"NDT", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dma_cpar5_tt = groov::reg<name,
                                   std::uint32_t,
                                   baseaddress + offset,
                                   access::rw,
                                   groov::field<"PA", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dma_cmar5_tt = groov::reg<name,
                                   std::uint32_t,
                                   baseaddress + offset,
                                   access::rw,
                                   groov::field<"MA", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dma_ccr6_tt =
     groov::reg<name,
                std::uint32_t,
@@ -318,7 +364,9 @@ namespace dma {
                groov::field<"TCIE", bool, 1, 1>,
                groov::field<"EN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dma_cndtr6_tt =
     groov::reg<name,
                std::uint32_t,
@@ -327,21 +375,27 @@ namespace dma {
                groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
                groov::field<"NDT", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dma_cpar6_tt = groov::reg<name,
                                   std::uint32_t,
                                   baseaddress + offset,
                                   access::rw,
                                   groov::field<"PA", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dma_cmar6_tt = groov::reg<name,
                                   std::uint32_t,
                                   baseaddress + offset,
                                   access::rw,
                                   groov::field<"MA", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dma_ccr7_tt =
     groov::reg<name,
                std::uint32_t,
@@ -361,7 +415,9 @@ namespace dma {
                groov::field<"TCIE", bool, 1, 1>,
                groov::field<"EN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dma_cndtr7_tt =
     groov::reg<name,
                std::uint32_t,
@@ -370,108 +426,22 @@ namespace dma {
                groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
                groov::field<"NDT", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dma_cpar7_tt = groov::reg<name,
                                   std::uint32_t,
                                   baseaddress + offset,
                                   access::rw,
                                   groov::field<"PA", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dma_cmar7_tt = groov::reg<name,
                                   std::uint32_t,
                                   baseaddress + offset,
                                   access::rw,
                                   groov::field<"MA", std::uint32_t, 31, 0>>;
-
-  template <std::uint32_t baseaddress>
-  using dma_isr_t = dma_isr_tt<"DMA_ISR", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using dma_ifcr_t = dma_ifcr_tt<"DMA_IFCR", baseaddress, 4>;
-
-  template <std::uint32_t baseaddress>
-  using dma_ccr1_t = dma_ccr1_tt<"DMA_CCR1", baseaddress, 8>;
-
-  template <std::uint32_t baseaddress>
-  using dma_cndtr1_t = dma_cndtr1_tt<"DMA_CNDTR1", baseaddress, 12>;
-
-  template <std::uint32_t baseaddress>
-  using dma_cpar1_t = dma_cpar1_tt<"DMA_CPAR1", baseaddress, 16>;
-
-  template <std::uint32_t baseaddress>
-  using dma_cmar1_t = dma_cmar1_tt<"DMA_CMAR1", baseaddress, 20>;
-
-  template <std::uint32_t baseaddress>
-  using dma_ccr2_t = dma_ccr2_tt<"DMA_CCR2", baseaddress, 28>;
-
-  template <std::uint32_t baseaddress>
-  using dma_cndtr2_t = dma_cndtr2_tt<"DMA_CNDTR2", baseaddress, 32>;
-
-  template <std::uint32_t baseaddress>
-  using dma_cpar2_t = dma_cpar2_tt<"DMA_CPAR2", baseaddress, 36>;
-
-  template <std::uint32_t baseaddress>
-  using dma_cmar2_t = dma_cmar2_tt<"DMA_CMAR2", baseaddress, 40>;
-
-  template <std::uint32_t baseaddress>
-  using dma_ccr3_t = dma_ccr3_tt<"DMA_CCR3", baseaddress, 48>;
-
-  template <std::uint32_t baseaddress>
-  using dma_cndtr3_t = dma_cndtr3_tt<"DMA_CNDTR3", baseaddress, 52>;
-
-  template <std::uint32_t baseaddress>
-  using dma_cpar3_t = dma_cpar3_tt<"DMA_CPAR3", baseaddress, 56>;
-
-  template <std::uint32_t baseaddress>
-  using dma_cmar3_t = dma_cmar3_tt<"DMA_CMAR3", baseaddress, 60>;
-
-  template <std::uint32_t baseaddress>
-  using dma_ccr4_t = dma_ccr4_tt<"DMA_CCR4", baseaddress, 68>;
-
-  template <std::uint32_t baseaddress>
-  using dma_cndtr4_t = dma_cndtr4_tt<"DMA_CNDTR4", baseaddress, 72>;
-
-  template <std::uint32_t baseaddress>
-  using dma_cpar4_t = dma_cpar4_tt<"DMA_CPAR4", baseaddress, 76>;
-
-  template <std::uint32_t baseaddress>
-  using dma_cmar4_t = dma_cmar4_tt<"DMA_CMAR4", baseaddress, 80>;
-
-  template <std::uint32_t baseaddress>
-  using dma_ccr5_t = dma_ccr5_tt<"DMA_CCR5", baseaddress, 88>;
-
-  template <std::uint32_t baseaddress>
-  using dma_cndtr5_t = dma_cndtr5_tt<"DMA_CNDTR5", baseaddress, 92>;
-
-  template <std::uint32_t baseaddress>
-  using dma_cpar5_t = dma_cpar5_tt<"DMA_CPAR5", baseaddress, 96>;
-
-  template <std::uint32_t baseaddress>
-  using dma_cmar5_t = dma_cmar5_tt<"DMA_CMAR5", baseaddress, 100>;
-
-  template <std::uint32_t baseaddress>
-  using dma_ccr6_t = dma_ccr6_tt<"DMA_CCR6", baseaddress, 108>;
-
-  template <std::uint32_t baseaddress>
-  using dma_cndtr6_t = dma_cndtr6_tt<"DMA_CNDTR6", baseaddress, 112>;
-
-  template <std::uint32_t baseaddress>
-  using dma_cpar6_t = dma_cpar6_tt<"DMA_CPAR6", baseaddress, 116>;
-
-  template <std::uint32_t baseaddress>
-  using dma_cmar6_t = dma_cmar6_tt<"DMA_CMAR6", baseaddress, 120>;
-
-  template <std::uint32_t baseaddress>
-  using dma_ccr7_t = dma_ccr7_tt<"DMA_CCR7", baseaddress, 128>;
-
-  template <std::uint32_t baseaddress>
-  using dma_cndtr7_t = dma_cndtr7_tt<"DMA_CNDTR7", baseaddress, 132>;
-
-  template <std::uint32_t baseaddress>
-  using dma_cpar7_t = dma_cpar7_tt<"DMA_CPAR7", baseaddress, 136>;
-
-  template <std::uint32_t baseaddress>
-  using dma_cmar7_t = dma_cmar7_tt<"DMA_CMAR7", baseaddress, 140>;
 
 } // namespace dma

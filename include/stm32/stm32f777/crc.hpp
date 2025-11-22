@@ -11,14 +11,18 @@ namespace stm32 {
 
 namespace crc {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dr_tt = groov::reg<name,
                            std::uint32_t,
                            baseaddress + offset,
                            access::rw,
                            groov::field<"DR", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using idr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -27,7 +31,9 @@ namespace crc {
                groov::field<"RESERVED0", std::uint32_t, 31, 8, access::ro>,
                groov::field<"IDR", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -36,33 +42,22 @@ namespace crc {
                groov::field<"RESERVED0", std::uint32_t, 31, 1, access::ro>,
                groov::field<"CR", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using init_tt = groov::reg<name,
                              std::uint32_t,
                              baseaddress + offset,
                              access::rw,
                              groov::field<"CRC_INIT", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using pol_tt = groov::reg<name,
                             std::uint32_t,
                             baseaddress + offset,
                             access::rw,
                             groov::field<"POL", std::uint32_t, 31, 0>>;
-
-  template <std::uint32_t baseaddress>
-  using dr_t = dr_tt<"DR", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using idr_t = idr_tt<"IDR", baseaddress, 4>;
-
-  template <std::uint32_t baseaddress>
-  using cr_t = cr_tt<"CR", baseaddress, 8>;
-
-  template <std::uint32_t baseaddress>
-  using init_t = init_tt<"INIT", baseaddress, 12>;
-
-  template <std::uint32_t baseaddress>
-  using pol_t = pol_tt<"POL", baseaddress, 16>;
 
 } // namespace crc

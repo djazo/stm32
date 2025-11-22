@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace rcc {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -35,7 +37,9 @@ namespace rcc {
                groov::field<"HSIRDY", bool, 1, 1, access::ro>,
                groov::field<"HSION", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using pllcfgr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -68,7 +72,9 @@ namespace rcc {
                groov::field<"PLLM1", bool, 1, 1>,
                groov::field<"PLLM0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using cfgr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -89,7 +95,9 @@ namespace rcc {
                groov::field<"SW1", bool, 1, 1>,
                groov::field<"SW0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using cir_tt =
     groov::reg<name,
                std::uint32_t,
@@ -121,7 +129,9 @@ namespace rcc {
                groov::field<"LSERDYF", bool, 1, 1, access::ro>,
                groov::field<"LSIRDYF", bool, 0, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ahb1rstr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -145,7 +155,9 @@ namespace rcc {
                groov::field<"GPIOBRST", bool, 1, 1>,
                groov::field<"GPIOARST", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ahb2rstr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -158,7 +170,9 @@ namespace rcc {
                groov::field<"AESRST", bool, 4, 4>,
                groov::field<"RESERVED0", std::uint8_t, 3, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ahb3rstr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -168,7 +182,9 @@ namespace rcc {
                groov::field<"QSPIRST", bool, 1, 1>,
                groov::field<"FMCRST", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using apb1rstr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -206,7 +222,9 @@ namespace rcc {
                groov::field<"TIM3RST", bool, 1, 1>,
                groov::field<"TIM2RST", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using apb2rstr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -237,7 +255,9 @@ namespace rcc {
                groov::field<"TIM8RST", bool, 1, 1>,
                groov::field<"TIM1RST", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ahb1enr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -265,7 +285,9 @@ namespace rcc {
                groov::field<"GPIOBEN", bool, 1, 1>,
                groov::field<"GPIOAEN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ahb2enr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -278,7 +300,9 @@ namespace rcc {
                groov::field<"AESEN", bool, 4, 4>,
                groov::field<"RESERVED0", std::uint8_t, 3, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ahb3enr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -288,7 +312,9 @@ namespace rcc {
                groov::field<"QSPIEN", bool, 1, 1>,
                groov::field<"FMCEN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using apb1enr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -325,7 +351,9 @@ namespace rcc {
                groov::field<"TIM3EN", bool, 1, 1>,
                groov::field<"TIM2EN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using apb2enr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -357,7 +385,9 @@ namespace rcc {
                groov::field<"TIM8EN", bool, 1, 1>,
                groov::field<"TIM1EN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ahb1lpenr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -396,7 +426,9 @@ namespace rcc {
                groov::field<"GPIOBLPEN", bool, 1, 1>,
                groov::field<"GPIOALPEN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ahb2lpenr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -409,7 +441,9 @@ namespace rcc {
                groov::field<"AESLPEN", bool, 4, 4>,
                groov::field<"RESERVED0", std::uint8_t, 3, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ahb3lpenr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -419,7 +453,9 @@ namespace rcc {
                groov::field<"QSPILPEN", bool, 1, 1>,
                groov::field<"FMCLPEN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using apb1lpenr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -457,7 +493,9 @@ namespace rcc {
                groov::field<"TIM3LPEN", bool, 1, 1>,
                groov::field<"TIM2LPEN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using apb2lpenr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -488,7 +526,9 @@ namespace rcc {
                groov::field<"TIM8LPEN", bool, 1, 1>,
                groov::field<"TIM1LPEN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using bdcr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -505,7 +545,9 @@ namespace rcc {
                groov::field<"LSERDY", bool, 1, 1, access::ro>,
                groov::field<"LSEON", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using csr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -523,7 +565,9 @@ namespace rcc {
                groov::field<"LSIRDY", bool, 1, 1, access::ro>,
                groov::field<"LSION", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using sscgr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -535,7 +579,9 @@ namespace rcc {
                groov::field<"INCSTEP", std::uint16_t, 27, 13>,
                groov::field<"MODPER", std::uint16_t, 12, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using plli2scfgr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -548,7 +594,9 @@ namespace rcc {
                groov::field<"PLLI2SN", std::uint16_t, 14, 6>,
                groov::field<"RESERVED0", std::uint8_t, 5, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using pllsaicfgr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -562,7 +610,9 @@ namespace rcc {
                groov::field<"PLLSAIN", std::uint16_t, 14, 6>,
                groov::field<"RESERVED0", std::uint8_t, 5, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dckcfgr1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -577,7 +627,9 @@ namespace rcc {
                groov::field<"RESERVED0", std::uint8_t, 7, 5, access::ro>,
                groov::field<"PLLI2SDIV", std::uint8_t, 4, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dckcfgr2_tt =
     groov::reg<name,
                std::uint32_t,
@@ -601,83 +653,5 @@ namespace rcc {
                groov::field<"UART3SEL", std::uint8_t, 5, 4>,
                groov::field<"UART2SEL", std::uint8_t, 3, 2>,
                groov::field<"UART1SEL", std::uint8_t, 1, 0>>;
-
-  template <std::uint32_t baseaddress>
-  using cr_t = cr_tt<"CR", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using pllcfgr_t = pllcfgr_tt<"PLLCFGR", baseaddress, 4>;
-
-  template <std::uint32_t baseaddress>
-  using cfgr_t = cfgr_tt<"CFGR", baseaddress, 8>;
-
-  template <std::uint32_t baseaddress>
-  using cir_t = cir_tt<"CIR", baseaddress, 12>;
-
-  template <std::uint32_t baseaddress>
-  using ahb1rstr_t = ahb1rstr_tt<"AHB1RSTR", baseaddress, 16>;
-
-  template <std::uint32_t baseaddress>
-  using ahb2rstr_t = ahb2rstr_tt<"AHB2RSTR", baseaddress, 20>;
-
-  template <std::uint32_t baseaddress>
-  using ahb3rstr_t = ahb3rstr_tt<"AHB3RSTR", baseaddress, 24>;
-
-  template <std::uint32_t baseaddress>
-  using apb1rstr_t = apb1rstr_tt<"APB1RSTR", baseaddress, 32>;
-
-  template <std::uint32_t baseaddress>
-  using apb2rstr_t = apb2rstr_tt<"APB2RSTR", baseaddress, 36>;
-
-  template <std::uint32_t baseaddress>
-  using ahb1enr_t = ahb1enr_tt<"AHB1ENR", baseaddress, 48>;
-
-  template <std::uint32_t baseaddress>
-  using ahb2enr_t = ahb2enr_tt<"AHB2ENR", baseaddress, 52>;
-
-  template <std::uint32_t baseaddress>
-  using ahb3enr_t = ahb3enr_tt<"AHB3ENR", baseaddress, 56>;
-
-  template <std::uint32_t baseaddress>
-  using apb1enr_t = apb1enr_tt<"APB1ENR", baseaddress, 64>;
-
-  template <std::uint32_t baseaddress>
-  using apb2enr_t = apb2enr_tt<"APB2ENR", baseaddress, 68>;
-
-  template <std::uint32_t baseaddress>
-  using ahb1lpenr_t = ahb1lpenr_tt<"AHB1LPENR", baseaddress, 80>;
-
-  template <std::uint32_t baseaddress>
-  using ahb2lpenr_t = ahb2lpenr_tt<"AHB2LPENR", baseaddress, 84>;
-
-  template <std::uint32_t baseaddress>
-  using ahb3lpenr_t = ahb3lpenr_tt<"AHB3LPENR", baseaddress, 88>;
-
-  template <std::uint32_t baseaddress>
-  using apb1lpenr_t = apb1lpenr_tt<"APB1LPENR", baseaddress, 96>;
-
-  template <std::uint32_t baseaddress>
-  using apb2lpenr_t = apb2lpenr_tt<"APB2LPENR", baseaddress, 100>;
-
-  template <std::uint32_t baseaddress>
-  using bdcr_t = bdcr_tt<"BDCR", baseaddress, 112>;
-
-  template <std::uint32_t baseaddress>
-  using csr_t = csr_tt<"CSR", baseaddress, 116>;
-
-  template <std::uint32_t baseaddress>
-  using sscgr_t = sscgr_tt<"SSCGR", baseaddress, 128>;
-
-  template <std::uint32_t baseaddress>
-  using plli2scfgr_t = plli2scfgr_tt<"PLLI2SCFGR", baseaddress, 132>;
-
-  template <std::uint32_t baseaddress>
-  using pllsaicfgr_t = pllsaicfgr_tt<"PLLSAICFGR", baseaddress, 136>;
-
-  template <std::uint32_t baseaddress>
-  using dckcfgr1_t = dckcfgr1_tt<"DCKCFGR1", baseaddress, 140>;
-
-  template <std::uint32_t baseaddress>
-  using dckcfgr2_t = dckcfgr2_tt<"DCKCFGR2", baseaddress, 144>;
 
 } // namespace rcc

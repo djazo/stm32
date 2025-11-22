@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace can2 {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using can_mcr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -30,7 +32,9 @@ namespace can2 {
                groov::field<"SLEEP", bool, 1, 1>,
                groov::field<"INRQ", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using can_msr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -48,7 +52,9 @@ namespace can2 {
                groov::field<"SLAK", bool, 1, 1, access::ro>,
                groov::field<"INAK", bool, 0, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using can_tsr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -80,7 +86,9 @@ namespace can2 {
                groov::field<"TXOK0", bool, 1, 1>,
                groov::field<"RQCP0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using can_rf0r_tt =
     groov::reg<name,
                std::uint32_t,
@@ -93,7 +101,9 @@ namespace can2 {
                groov::field<"RESERVED0", bool, 2, 2, access::ro>,
                groov::field<"FMP0", std::uint8_t, 1, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using can_rf1r_tt =
     groov::reg<name,
                std::uint32_t,
@@ -106,7 +116,9 @@ namespace can2 {
                groov::field<"RESERVED0", bool, 2, 2, access::ro>,
                groov::field<"FMP1", std::uint8_t, 1, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using can_ier_tt =
     groov::reg<name,
                std::uint32_t,
@@ -130,7 +142,9 @@ namespace can2 {
                groov::field<"FMPIE0", bool, 1, 1>,
                groov::field<"TMEIE", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using can_esr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -145,7 +159,9 @@ namespace can2 {
                groov::field<"EPVF", bool, 1, 1, access::ro>,
                groov::field<"EWGF", bool, 0, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using can_btr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -161,7 +177,9 @@ namespace can2 {
                groov::field<"RESERVED0", std::uint8_t, 15, 10, access::ro>,
                groov::field<"BRP", std::uint16_t, 9, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using can_ti0r_tt = groov::reg<name,
                                  std::uint32_t,
                                  baseaddress + offset,
@@ -172,7 +190,9 @@ namespace can2 {
                                  groov::field<"RTR", bool, 1, 1>,
                                  groov::field<"TXRQ", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using can_tdt0r_tt =
     groov::reg<name,
                std::uint32_t,
@@ -184,7 +204,9 @@ namespace can2 {
                groov::field<"RESERVED0", std::uint8_t, 7, 4, access::ro>,
                groov::field<"DLC", std::uint8_t, 3, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using can_tdl0r_tt = groov::reg<name,
                                   std::uint32_t,
                                   baseaddress + offset,
@@ -194,7 +216,9 @@ namespace can2 {
                                   groov::field<"DATA1", std::uint8_t, 15, 8>,
                                   groov::field<"DATA0", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using can_tdh0r_tt = groov::reg<name,
                                   std::uint32_t,
                                   baseaddress + offset,
@@ -204,7 +228,9 @@ namespace can2 {
                                   groov::field<"DATA5", std::uint8_t, 15, 8>,
                                   groov::field<"DATA4", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using can_ti1r_tt = groov::reg<name,
                                  std::uint32_t,
                                  baseaddress + offset,
@@ -215,7 +241,9 @@ namespace can2 {
                                  groov::field<"RTR", bool, 1, 1>,
                                  groov::field<"TXRQ", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using can_tdt1r_tt =
     groov::reg<name,
                std::uint32_t,
@@ -227,7 +255,9 @@ namespace can2 {
                groov::field<"RESERVED0", std::uint8_t, 7, 4, access::ro>,
                groov::field<"DLC", std::uint8_t, 3, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using can_tdl1r_tt = groov::reg<name,
                                   std::uint32_t,
                                   baseaddress + offset,
@@ -237,7 +267,9 @@ namespace can2 {
                                   groov::field<"DATA1", std::uint8_t, 15, 8>,
                                   groov::field<"DATA0", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using can_tdh1r_tt = groov::reg<name,
                                   std::uint32_t,
                                   baseaddress + offset,
@@ -247,7 +279,9 @@ namespace can2 {
                                   groov::field<"DATA5", std::uint8_t, 15, 8>,
                                   groov::field<"DATA4", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using can_ti2r_tt = groov::reg<name,
                                  std::uint32_t,
                                  baseaddress + offset,
@@ -258,7 +292,9 @@ namespace can2 {
                                  groov::field<"RTR", bool, 1, 1>,
                                  groov::field<"TXRQ", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using can_tdt2r_tt =
     groov::reg<name,
                std::uint32_t,
@@ -270,7 +306,9 @@ namespace can2 {
                groov::field<"RESERVED0", std::uint8_t, 7, 4, access::ro>,
                groov::field<"DLC", std::uint8_t, 3, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using can_tdl2r_tt = groov::reg<name,
                                   std::uint32_t,
                                   baseaddress + offset,
@@ -280,7 +318,9 @@ namespace can2 {
                                   groov::field<"DATA1", std::uint8_t, 15, 8>,
                                   groov::field<"DATA0", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using can_tdh2r_tt = groov::reg<name,
                                   std::uint32_t,
                                   baseaddress + offset,
@@ -290,7 +330,9 @@ namespace can2 {
                                   groov::field<"DATA5", std::uint8_t, 15, 8>,
                                   groov::field<"DATA4", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using can_ri0r_tt = groov::reg<name,
                                  std::uint32_t,
                                  baseaddress + offset,
@@ -301,7 +343,9 @@ namespace can2 {
                                  groov::field<"RTR", bool, 1, 1>,
                                  groov::field<"RESERVED0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using can_rdt0r_tt = groov::reg<name,
                                   std::uint32_t,
                                   baseaddress + offset,
@@ -311,7 +355,9 @@ namespace can2 {
                                   groov::field<"RESERVED0", std::uint8_t, 7, 4>,
                                   groov::field<"DLC", std::uint8_t, 3, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using can_rdl0r_tt = groov::reg<name,
                                   std::uint32_t,
                                   baseaddress + offset,
@@ -321,7 +367,9 @@ namespace can2 {
                                   groov::field<"DATA1", std::uint8_t, 15, 8>,
                                   groov::field<"DATA0", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using can_rdh0r_tt = groov::reg<name,
                                   std::uint32_t,
                                   baseaddress + offset,
@@ -331,7 +379,9 @@ namespace can2 {
                                   groov::field<"DATA5", std::uint8_t, 15, 8>,
                                   groov::field<"DATA4", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using can_ri1r_tt = groov::reg<name,
                                  std::uint32_t,
                                  baseaddress + offset,
@@ -342,7 +392,9 @@ namespace can2 {
                                  groov::field<"RTR", bool, 1, 1>,
                                  groov::field<"RESERVED0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using can_rdt1r_tt = groov::reg<name,
                                   std::uint32_t,
                                   baseaddress + offset,
@@ -352,7 +404,9 @@ namespace can2 {
                                   groov::field<"RESERVED0", std::uint8_t, 7, 4>,
                                   groov::field<"DLC", std::uint8_t, 3, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using can_rdl1r_tt = groov::reg<name,
                                   std::uint32_t,
                                   baseaddress + offset,
@@ -362,7 +416,9 @@ namespace can2 {
                                   groov::field<"DATA1", std::uint8_t, 15, 8>,
                                   groov::field<"DATA0", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using can_rdh1r_tt = groov::reg<name,
                                   std::uint32_t,
                                   baseaddress + offset,
@@ -371,89 +427,5 @@ namespace can2 {
                                   groov::field<"DATA6", std::uint8_t, 23, 16>,
                                   groov::field<"DATA5", std::uint8_t, 15, 8>,
                                   groov::field<"DATA4", std::uint8_t, 7, 0>>;
-
-  template <std::uint32_t baseaddress>
-  using can_mcr_t = can_mcr_tt<"CAN_MCR", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using can_msr_t = can_msr_tt<"CAN_MSR", baseaddress, 4>;
-
-  template <std::uint32_t baseaddress>
-  using can_tsr_t = can_tsr_tt<"CAN_TSR", baseaddress, 8>;
-
-  template <std::uint32_t baseaddress>
-  using can_rf0r_t = can_rf0r_tt<"CAN_RF0R", baseaddress, 12>;
-
-  template <std::uint32_t baseaddress>
-  using can_rf1r_t = can_rf1r_tt<"CAN_RF1R", baseaddress, 16>;
-
-  template <std::uint32_t baseaddress>
-  using can_ier_t = can_ier_tt<"CAN_IER", baseaddress, 20>;
-
-  template <std::uint32_t baseaddress>
-  using can_esr_t = can_esr_tt<"CAN_ESR", baseaddress, 24>;
-
-  template <std::uint32_t baseaddress>
-  using can_btr_t = can_btr_tt<"CAN_BTR", baseaddress, 28>;
-
-  template <std::uint32_t baseaddress>
-  using can_ti0r_t = can_ti0r_tt<"CAN_TI0R", baseaddress, 384>;
-
-  template <std::uint32_t baseaddress>
-  using can_tdt0r_t = can_tdt0r_tt<"CAN_TDT0R", baseaddress, 388>;
-
-  template <std::uint32_t baseaddress>
-  using can_tdl0r_t = can_tdl0r_tt<"CAN_TDL0R", baseaddress, 392>;
-
-  template <std::uint32_t baseaddress>
-  using can_tdh0r_t = can_tdh0r_tt<"CAN_TDH0R", baseaddress, 396>;
-
-  template <std::uint32_t baseaddress>
-  using can_ti1r_t = can_ti1r_tt<"CAN_TI1R", baseaddress, 400>;
-
-  template <std::uint32_t baseaddress>
-  using can_tdt1r_t = can_tdt1r_tt<"CAN_TDT1R", baseaddress, 404>;
-
-  template <std::uint32_t baseaddress>
-  using can_tdl1r_t = can_tdl1r_tt<"CAN_TDL1R", baseaddress, 408>;
-
-  template <std::uint32_t baseaddress>
-  using can_tdh1r_t = can_tdh1r_tt<"CAN_TDH1R", baseaddress, 412>;
-
-  template <std::uint32_t baseaddress>
-  using can_ti2r_t = can_ti2r_tt<"CAN_TI2R", baseaddress, 416>;
-
-  template <std::uint32_t baseaddress>
-  using can_tdt2r_t = can_tdt2r_tt<"CAN_TDT2R", baseaddress, 420>;
-
-  template <std::uint32_t baseaddress>
-  using can_tdl2r_t = can_tdl2r_tt<"CAN_TDL2R", baseaddress, 424>;
-
-  template <std::uint32_t baseaddress>
-  using can_tdh2r_t = can_tdh2r_tt<"CAN_TDH2R", baseaddress, 428>;
-
-  template <std::uint32_t baseaddress>
-  using can_ri0r_t = can_ri0r_tt<"CAN_RI0R", baseaddress, 432>;
-
-  template <std::uint32_t baseaddress>
-  using can_rdt0r_t = can_rdt0r_tt<"CAN_RDT0R", baseaddress, 436>;
-
-  template <std::uint32_t baseaddress>
-  using can_rdl0r_t = can_rdl0r_tt<"CAN_RDL0R", baseaddress, 440>;
-
-  template <std::uint32_t baseaddress>
-  using can_rdh0r_t = can_rdh0r_tt<"CAN_RDH0R", baseaddress, 444>;
-
-  template <std::uint32_t baseaddress>
-  using can_ri1r_t = can_ri1r_tt<"CAN_RI1R", baseaddress, 448>;
-
-  template <std::uint32_t baseaddress>
-  using can_rdt1r_t = can_rdt1r_tt<"CAN_RDT1R", baseaddress, 452>;
-
-  template <std::uint32_t baseaddress>
-  using can_rdl1r_t = can_rdl1r_tt<"CAN_RDL1R", baseaddress, 456>;
-
-  template <std::uint32_t baseaddress>
-  using can_rdh1r_t = can_rdh1r_tt<"CAN_RDH1R", baseaddress, 460>;
 
 } // namespace can2

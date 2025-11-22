@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace firewall {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using firewall_cssa_tt =
     groov::reg<name,
                std::uint32_t,
@@ -21,7 +23,9 @@ namespace firewall {
                groov::field<"ADD", std::uint16_t, 23, 8>,
                groov::field<"RESERVED0", std::uint8_t, 7, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using firewall_csl_tt =
     groov::reg<name,
                std::uint32_t,
@@ -31,7 +35,9 @@ namespace firewall {
                groov::field<"LENG", std::uint16_t, 21, 8>,
                groov::field<"RESERVED0", std::uint8_t, 7, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using firewall_nvdssa_tt =
     groov::reg<name,
                std::uint32_t,
@@ -41,7 +47,9 @@ namespace firewall {
                groov::field<"ADD", std::uint16_t, 23, 8>,
                groov::field<"RESERVED0", std::uint8_t, 7, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using firewall_nvdsl_tt =
     groov::reg<name,
                std::uint32_t,
@@ -51,7 +59,9 @@ namespace firewall {
                groov::field<"LENG", std::uint16_t, 21, 8>,
                groov::field<"RESERVED0", std::uint8_t, 7, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using firewall_vdssa_tt =
     groov::reg<name,
                std::uint32_t,
@@ -61,7 +71,9 @@ namespace firewall {
                groov::field<"ADD", std::uint16_t, 15, 6>,
                groov::field<"RESERVED0", std::uint8_t, 5, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using firewall_vdsl_tt =
     groov::reg<name,
                std::uint32_t,
@@ -71,7 +83,9 @@ namespace firewall {
                groov::field<"LENG", std::uint16_t, 15, 6>,
                groov::field<"RESERVED0", std::uint8_t, 5, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using firewall_cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -81,27 +95,5 @@ namespace firewall {
                groov::field<"VDE", bool, 2, 2>,
                groov::field<"VDS", bool, 1, 1>,
                groov::field<"FPA", bool, 0, 0>>;
-
-  template <std::uint32_t baseaddress>
-  using firewall_cssa_t = firewall_cssa_tt<"FIREWALL_CSSA", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using firewall_csl_t = firewall_csl_tt<"FIREWALL_CSL", baseaddress, 4>;
-
-  template <std::uint32_t baseaddress>
-  using firewall_nvdssa_t =
-    firewall_nvdssa_tt<"FIREWALL_NVDSSA", baseaddress, 8>;
-
-  template <std::uint32_t baseaddress>
-  using firewall_nvdsl_t = firewall_nvdsl_tt<"FIREWALL_NVDSL", baseaddress, 12>;
-
-  template <std::uint32_t baseaddress>
-  using firewall_vdssa_t = firewall_vdssa_tt<"FIREWALL_VDSSA", baseaddress, 16>;
-
-  template <std::uint32_t baseaddress>
-  using firewall_vdsl_t = firewall_vdsl_tt<"FIREWALL_VDSL", baseaddress, 20>;
-
-  template <std::uint32_t baseaddress>
-  using firewall_cr_t = firewall_cr_tt<"FIREWALL_CR", baseaddress, 32>;
 
 } // namespace firewall

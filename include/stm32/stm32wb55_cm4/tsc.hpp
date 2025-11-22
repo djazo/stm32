@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace tsc {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -31,7 +33,9 @@ namespace tsc {
                groov::field<"START", bool, 1, 1>,
                groov::field<"TSCE", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ier_tt =
     groov::reg<name,
                std::uint32_t,
@@ -41,7 +45,9 @@ namespace tsc {
                groov::field<"MCEIE", bool, 1, 1>,
                groov::field<"EOAIE", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using icr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -51,7 +57,9 @@ namespace tsc {
                groov::field<"MCEIC", bool, 1, 1>,
                groov::field<"EOAIC", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using isr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -61,7 +69,9 @@ namespace tsc {
                groov::field<"MCEF", bool, 1, 1>,
                groov::field<"EOAF", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using iohcr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -97,7 +107,9 @@ namespace tsc {
                groov::field<"G1_IO2", bool, 1, 1>,
                groov::field<"G1_IO1", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ioascr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -133,7 +145,9 @@ namespace tsc {
                groov::field<"G1_IO2", bool, 1, 1>,
                groov::field<"G1_IO1", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ioscr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -169,7 +183,9 @@ namespace tsc {
                groov::field<"G1_IO2", bool, 1, 1>,
                groov::field<"G1_IO1", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ioccr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -205,7 +221,9 @@ namespace tsc {
                groov::field<"G1_IO2", bool, 1, 1>,
                groov::field<"G1_IO1", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using iogcsr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -228,7 +246,9 @@ namespace tsc {
                groov::field<"G2E", bool, 1, 1>,
                groov::field<"G1E", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using iog1cr_tt = groov::reg<name,
                                std::uint32_t,
                                baseaddress + offset,
@@ -236,7 +256,9 @@ namespace tsc {
                                groov::field<"RESERVED0", std::uint32_t, 31, 14>,
                                groov::field<"CNT", std::uint16_t, 13, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using iog2cr_tt = groov::reg<name,
                                std::uint32_t,
                                baseaddress + offset,
@@ -244,7 +266,9 @@ namespace tsc {
                                groov::field<"RESERVED0", std::uint32_t, 31, 14>,
                                groov::field<"CNT", std::uint16_t, 13, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using iog3cr_tt = groov::reg<name,
                                std::uint32_t,
                                baseaddress + offset,
@@ -252,7 +276,9 @@ namespace tsc {
                                groov::field<"RESERVED0", std::uint32_t, 31, 14>,
                                groov::field<"CNT", std::uint16_t, 13, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using iog4cr_tt = groov::reg<name,
                                std::uint32_t,
                                baseaddress + offset,
@@ -260,7 +286,9 @@ namespace tsc {
                                groov::field<"RESERVED0", std::uint32_t, 31, 14>,
                                groov::field<"CNT", std::uint16_t, 13, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using iog5cr_tt = groov::reg<name,
                                std::uint32_t,
                                baseaddress + offset,
@@ -268,7 +296,9 @@ namespace tsc {
                                groov::field<"RESERVED0", std::uint32_t, 31, 14>,
                                groov::field<"CNT", std::uint16_t, 13, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using iog6cr_tt = groov::reg<name,
                                std::uint32_t,
                                baseaddress + offset,
@@ -276,60 +306,14 @@ namespace tsc {
                                groov::field<"RESERVED0", std::uint32_t, 31, 14>,
                                groov::field<"CNT", std::uint16_t, 13, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using iog7cr_tt = groov::reg<name,
                                std::uint32_t,
                                baseaddress + offset,
                                access::ro,
                                groov::field<"RESERVED0", std::uint32_t, 31, 14>,
                                groov::field<"CNT", std::uint16_t, 13, 0>>;
-
-  template <std::uint32_t baseaddress>
-  using cr_t = cr_tt<"CR", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using ier_t = ier_tt<"IER", baseaddress, 4>;
-
-  template <std::uint32_t baseaddress>
-  using icr_t = icr_tt<"ICR", baseaddress, 8>;
-
-  template <std::uint32_t baseaddress>
-  using isr_t = isr_tt<"ISR", baseaddress, 12>;
-
-  template <std::uint32_t baseaddress>
-  using iohcr_t = iohcr_tt<"IOHCR", baseaddress, 16>;
-
-  template <std::uint32_t baseaddress>
-  using ioascr_t = ioascr_tt<"IOASCR", baseaddress, 24>;
-
-  template <std::uint32_t baseaddress>
-  using ioscr_t = ioscr_tt<"IOSCR", baseaddress, 32>;
-
-  template <std::uint32_t baseaddress>
-  using ioccr_t = ioccr_tt<"IOCCR", baseaddress, 40>;
-
-  template <std::uint32_t baseaddress>
-  using iogcsr_t = iogcsr_tt<"IOGCSR", baseaddress, 48>;
-
-  template <std::uint32_t baseaddress>
-  using iog1cr_t = iog1cr_tt<"IOG1CR", baseaddress, 52>;
-
-  template <std::uint32_t baseaddress>
-  using iog2cr_t = iog2cr_tt<"IOG2CR", baseaddress, 56>;
-
-  template <std::uint32_t baseaddress>
-  using iog3cr_t = iog3cr_tt<"IOG3CR", baseaddress, 60>;
-
-  template <std::uint32_t baseaddress>
-  using iog4cr_t = iog4cr_tt<"IOG4CR", baseaddress, 64>;
-
-  template <std::uint32_t baseaddress>
-  using iog5cr_t = iog5cr_tt<"IOG5CR", baseaddress, 68>;
-
-  template <std::uint32_t baseaddress>
-  using iog6cr_t = iog6cr_tt<"IOG6CR", baseaddress, 72>;
-
-  template <std::uint32_t baseaddress>
-  using iog7cr_t = iog7cr_tt<"IOG7CR", baseaddress, 76>;
 
 } // namespace tsc

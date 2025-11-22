@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace gtzc2_tzsc {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using tzsc_cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -20,7 +22,9 @@ namespace gtzc2_tzsc {
                groov::field<"RESERVED0", std::uint32_t, 31, 1, access::ro>,
                groov::field<"LCK", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using tzsc_seccfgr1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -41,7 +45,9 @@ namespace gtzc2_tzsc {
                groov::field<"LPUART1SEC", bool, 1, 1>,
                groov::field<"SPI3SEC", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using tzsc_privcfgr1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -61,14 +67,5 @@ namespace gtzc2_tzsc {
                groov::field<"I2C3PRIV", bool, 2, 2>,
                groov::field<"LPUART1PRIV", bool, 1, 1>,
                groov::field<"SPI3PRIV", bool, 0, 0>>;
-
-  template <std::uint32_t baseaddress>
-  using tzsc_cr_t = tzsc_cr_tt<"TZSC_CR", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using tzsc_seccfgr1_t = tzsc_seccfgr1_tt<"TZSC_SECCFGR1", baseaddress, 16>;
-
-  template <std::uint32_t baseaddress>
-  using tzsc_privcfgr1_t = tzsc_privcfgr1_tt<"TZSC_PRIVCFGR1", baseaddress, 32>;
 
 } // namespace gtzc2_tzsc

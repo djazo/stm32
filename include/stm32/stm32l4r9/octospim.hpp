@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace octospim {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using p1cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -33,7 +35,9 @@ namespace octospim {
                groov::field<"CLKSRC", bool, 1, 1>,
                groov::field<"CLKEN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using p2cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -54,11 +58,5 @@ namespace octospim {
                groov::field<"RESERVED0", std::uint8_t, 3, 2, access::ro>,
                groov::field<"CLKSRC", bool, 1, 1>,
                groov::field<"CLKEN", bool, 0, 0>>;
-
-  template <std::uint32_t baseaddress>
-  using p1cr_t = p1cr_tt<"P1CR", baseaddress, 4>;
-
-  template <std::uint32_t baseaddress>
-  using p2cr_t = p2cr_tt<"P2CR", baseaddress, 8>;
 
 } // namespace octospim

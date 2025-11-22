@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace pka {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -29,7 +31,9 @@ namespace pka {
                groov::field<"START", bool, 1, 1>,
                groov::field<"EN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using sr_tt = groov::reg<name,
                            std::uint32_t,
                            baseaddress + offset,
@@ -42,7 +46,9 @@ namespace pka {
                            groov::field<"BUSY", bool, 16, 16>,
                            groov::field<"RESERVED0", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using clrfr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -55,7 +61,9 @@ namespace pka {
                groov::field<"PROCENDFC", bool, 17, 17>,
                groov::field<"RESERVED0", std::uint32_t, 16, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using verr_tt = groov::reg<name,
                              std::uint32_t,
                              baseaddress + offset,
@@ -64,36 +72,22 @@ namespace pka {
                              groov::field<"MAJREV", std::uint8_t, 7, 4>,
                              groov::field<"MINREV", std::uint8_t, 3, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ipidr_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
                               access::ro,
                               groov::field<"ID", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using sidr_tt = groov::reg<name,
                              std::uint32_t,
                              baseaddress + offset,
                              access::ro,
                              groov::field<"SID", std::uint32_t, 31, 0>>;
-
-  template <std::uint32_t baseaddress>
-  using cr_t = cr_tt<"CR", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using sr_t = sr_tt<"SR", baseaddress, 4>;
-
-  template <std::uint32_t baseaddress>
-  using clrfr_t = clrfr_tt<"CLRFR", baseaddress, 8>;
-
-  template <std::uint32_t baseaddress>
-  using verr_t = verr_tt<"VERR", baseaddress, 8180>;
-
-  template <std::uint32_t baseaddress>
-  using ipidr_t = ipidr_tt<"IPIDR", baseaddress, 8184>;
-
-  template <std::uint32_t baseaddress>
-  using sidr_t = sidr_tt<"SIDR", baseaddress, 8188>;
 
 } // namespace pka

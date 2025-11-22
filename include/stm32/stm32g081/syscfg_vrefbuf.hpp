@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace syscfg_vrefbuf {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using vrefbuf_csr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -24,7 +26,9 @@ namespace syscfg_vrefbuf {
                groov::field<"HIZ", bool, 1, 1>,
                groov::field<"ENVR", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using vrefbuf_ccr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -33,7 +37,9 @@ namespace syscfg_vrefbuf {
                groov::field<"RESERVED0", std::uint32_t, 31, 6, access::ro>,
                groov::field<"TRIM", std::uint8_t, 5, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using cfgr1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -54,7 +60,9 @@ namespace syscfg_vrefbuf {
                groov::field<"RESERVED0", std::uint8_t, 3, 2, access::ro>,
                groov::field<"MEM_MODE", std::uint8_t, 1, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using cfgr2_tt =
     groov::reg<name,
                std::uint32_t,
@@ -68,7 +76,9 @@ namespace syscfg_vrefbuf {
                groov::field<"SRAM_PARITY_LOCK", bool, 1, 1>,
                groov::field<"LOCKUP_LOCK", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using itline0_tt = groov::reg<name,
                                 std::uint32_t,
                                 baseaddress + offset,
@@ -76,7 +86,9 @@ namespace syscfg_vrefbuf {
                                 groov::field<"RESERVED0", std::uint32_t, 31, 1>,
                                 groov::field<"WWDG", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using itline1_tt = groov::reg<name,
                                 std::uint32_t,
                                 baseaddress + offset,
@@ -84,7 +96,9 @@ namespace syscfg_vrefbuf {
                                 groov::field<"RESERVED0", std::uint32_t, 31, 1>,
                                 groov::field<"PVDOUT", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using itline2_tt = groov::reg<name,
                                 std::uint32_t,
                                 baseaddress + offset,
@@ -93,7 +107,9 @@ namespace syscfg_vrefbuf {
                                 groov::field<"RTC", bool, 1, 1>,
                                 groov::field<"TAMP", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using itline3_tt = groov::reg<name,
                                 std::uint32_t,
                                 baseaddress + offset,
@@ -102,7 +118,9 @@ namespace syscfg_vrefbuf {
                                 groov::field<"FLASH_ECC", bool, 1, 1>,
                                 groov::field<"FLASH_ITF", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using itline4_tt = groov::reg<name,
                                 std::uint32_t,
                                 baseaddress + offset,
@@ -110,7 +128,9 @@ namespace syscfg_vrefbuf {
                                 groov::field<"RESERVED0", std::uint32_t, 31, 1>,
                                 groov::field<"RCC", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using itline5_tt = groov::reg<name,
                                 std::uint32_t,
                                 baseaddress + offset,
@@ -119,7 +139,9 @@ namespace syscfg_vrefbuf {
                                 groov::field<"EXTI1", bool, 1, 1>,
                                 groov::field<"EXTI0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using itline6_tt = groov::reg<name,
                                 std::uint32_t,
                                 baseaddress + offset,
@@ -128,7 +150,9 @@ namespace syscfg_vrefbuf {
                                 groov::field<"EXTI3", bool, 1, 1>,
                                 groov::field<"EXTI2", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using itline7_tt =
     groov::reg<name,
                std::uint32_t,
@@ -148,7 +172,9 @@ namespace syscfg_vrefbuf {
                groov::field<"EXTI5", bool, 1, 1>,
                groov::field<"EXTI4", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using itline8_tt = groov::reg<name,
                                 std::uint32_t,
                                 baseaddress + offset,
@@ -157,7 +183,9 @@ namespace syscfg_vrefbuf {
                                 groov::field<"UCPD2", bool, 1, 1>,
                                 groov::field<"UCPD1", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using itline9_tt = groov::reg<name,
                                 std::uint32_t,
                                 baseaddress + offset,
@@ -165,7 +193,9 @@ namespace syscfg_vrefbuf {
                                 groov::field<"RESERVED0", std::uint32_t, 31, 1>,
                                 groov::field<"DMA1_CH1", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using itline10_tt =
     groov::reg<name,
                std::uint32_t,
@@ -175,7 +205,9 @@ namespace syscfg_vrefbuf {
                groov::field<"DMA1_CH3", bool, 1, 1>,
                groov::field<"DMA1_CH2", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using itline11_tt =
     groov::reg<name,
                std::uint32_t,
@@ -188,7 +220,9 @@ namespace syscfg_vrefbuf {
                groov::field<"DMA1_CH4", bool, 1, 1>,
                groov::field<"DMAMUX", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using itline12_tt =
     groov::reg<name,
                std::uint32_t,
@@ -199,7 +233,9 @@ namespace syscfg_vrefbuf {
                groov::field<"COMP1", bool, 1, 1>,
                groov::field<"ADC", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using itline13_tt =
     groov::reg<name,
                std::uint32_t,
@@ -211,7 +247,9 @@ namespace syscfg_vrefbuf {
                groov::field<"TIM1_TRG", bool, 1, 1>,
                groov::field<"TIM1_CCU", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using itline14_tt =
     groov::reg<name,
                std::uint32_t,
@@ -220,7 +258,9 @@ namespace syscfg_vrefbuf {
                groov::field<"RESERVED0", std::uint32_t, 31, 1>,
                groov::field<"TIM1_CC", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using itline15_tt =
     groov::reg<name,
                std::uint32_t,
@@ -229,7 +269,9 @@ namespace syscfg_vrefbuf {
                groov::field<"RESERVED0", std::uint32_t, 31, 1>,
                groov::field<"TIM2", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using itline16_tt =
     groov::reg<name,
                std::uint32_t,
@@ -238,7 +280,9 @@ namespace syscfg_vrefbuf {
                groov::field<"RESERVED0", std::uint32_t, 31, 1>,
                groov::field<"TIM3", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using itline17_tt =
     groov::reg<name,
                std::uint32_t,
@@ -249,7 +293,9 @@ namespace syscfg_vrefbuf {
                groov::field<"DAC", bool, 1, 1>,
                groov::field<"TIM6", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using itline18_tt =
     groov::reg<name,
                std::uint32_t,
@@ -259,7 +305,9 @@ namespace syscfg_vrefbuf {
                groov::field<"LPTIM2", bool, 1, 1>,
                groov::field<"TIM7", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using itline19_tt =
     groov::reg<name,
                std::uint32_t,
@@ -268,7 +316,9 @@ namespace syscfg_vrefbuf {
                groov::field<"RESERVED0", std::uint32_t, 31, 1>,
                groov::field<"TIM14", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using itline20_tt =
     groov::reg<name,
                std::uint32_t,
@@ -277,7 +327,9 @@ namespace syscfg_vrefbuf {
                groov::field<"RESERVED0", std::uint32_t, 31, 1>,
                groov::field<"TIM15", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using itline21_tt =
     groov::reg<name,
                std::uint32_t,
@@ -286,7 +338,9 @@ namespace syscfg_vrefbuf {
                groov::field<"RESERVED0", std::uint32_t, 31, 1>,
                groov::field<"TIM16", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using itline22_tt =
     groov::reg<name,
                std::uint32_t,
@@ -295,7 +349,9 @@ namespace syscfg_vrefbuf {
                groov::field<"RESERVED0", std::uint32_t, 31, 1>,
                groov::field<"TIM17", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using itline23_tt =
     groov::reg<name,
                std::uint32_t,
@@ -304,7 +360,9 @@ namespace syscfg_vrefbuf {
                groov::field<"RESERVED0", std::uint32_t, 31, 1>,
                groov::field<"I2C1", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using itline24_tt =
     groov::reg<name,
                std::uint32_t,
@@ -313,7 +371,9 @@ namespace syscfg_vrefbuf {
                groov::field<"RESERVED0", std::uint32_t, 31, 1>,
                groov::field<"I2C2", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using itline25_tt =
     groov::reg<name,
                std::uint32_t,
@@ -322,7 +382,9 @@ namespace syscfg_vrefbuf {
                groov::field<"RESERVED0", std::uint32_t, 31, 1>,
                groov::field<"SPI1", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using itline26_tt =
     groov::reg<name,
                std::uint32_t,
@@ -331,7 +393,9 @@ namespace syscfg_vrefbuf {
                groov::field<"RESERVED0", std::uint32_t, 31, 1>,
                groov::field<"SPI2", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using itline27_tt =
     groov::reg<name,
                std::uint32_t,
@@ -340,7 +404,9 @@ namespace syscfg_vrefbuf {
                groov::field<"RESERVED0", std::uint32_t, 31, 1>,
                groov::field<"USART1", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using itline28_tt =
     groov::reg<name,
                std::uint32_t,
@@ -349,7 +415,9 @@ namespace syscfg_vrefbuf {
                groov::field<"RESERVED0", std::uint32_t, 31, 1>,
                groov::field<"USART2", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using itline29_tt =
     groov::reg<name,
                std::uint32_t,
@@ -360,7 +428,9 @@ namespace syscfg_vrefbuf {
                groov::field<"USART4", bool, 1, 1>,
                groov::field<"USART3", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using itline30_tt =
     groov::reg<name,
                std::uint32_t,
@@ -369,7 +439,9 @@ namespace syscfg_vrefbuf {
                groov::field<"RESERVED0", std::uint32_t, 31, 1>,
                groov::field<"USART2", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using itline31_tt =
     groov::reg<name,
                std::uint32_t,
@@ -378,113 +450,5 @@ namespace syscfg_vrefbuf {
                groov::field<"RESERVED0", std::uint32_t, 31, 2>,
                groov::field<"AES", bool, 1, 1>,
                groov::field<"RNG", bool, 0, 0>>;
-
-  template <std::uint32_t baseaddress>
-  using vrefbuf_csr_t = vrefbuf_csr_tt<"VREFBUF_CSR", baseaddress, 48>;
-
-  template <std::uint32_t baseaddress>
-  using vrefbuf_ccr_t = vrefbuf_ccr_tt<"VREFBUF_CCR", baseaddress, 52>;
-
-  template <std::uint32_t baseaddress>
-  using cfgr1_t = cfgr1_tt<"CFGR1", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using cfgr2_t = cfgr2_tt<"CFGR2", baseaddress, 24>;
-
-  template <std::uint32_t baseaddress>
-  using itline0_t = itline0_tt<"ITLINE0", baseaddress, 128>;
-
-  template <std::uint32_t baseaddress>
-  using itline1_t = itline1_tt<"ITLINE1", baseaddress, 132>;
-
-  template <std::uint32_t baseaddress>
-  using itline2_t = itline2_tt<"ITLINE2", baseaddress, 136>;
-
-  template <std::uint32_t baseaddress>
-  using itline3_t = itline3_tt<"ITLINE3", baseaddress, 140>;
-
-  template <std::uint32_t baseaddress>
-  using itline4_t = itline4_tt<"ITLINE4", baseaddress, 144>;
-
-  template <std::uint32_t baseaddress>
-  using itline5_t = itline5_tt<"ITLINE5", baseaddress, 148>;
-
-  template <std::uint32_t baseaddress>
-  using itline6_t = itline6_tt<"ITLINE6", baseaddress, 152>;
-
-  template <std::uint32_t baseaddress>
-  using itline7_t = itline7_tt<"ITLINE7", baseaddress, 156>;
-
-  template <std::uint32_t baseaddress>
-  using itline8_t = itline8_tt<"ITLINE8", baseaddress, 160>;
-
-  template <std::uint32_t baseaddress>
-  using itline9_t = itline9_tt<"ITLINE9", baseaddress, 164>;
-
-  template <std::uint32_t baseaddress>
-  using itline10_t = itline10_tt<"ITLINE10", baseaddress, 168>;
-
-  template <std::uint32_t baseaddress>
-  using itline11_t = itline11_tt<"ITLINE11", baseaddress, 172>;
-
-  template <std::uint32_t baseaddress>
-  using itline12_t = itline12_tt<"ITLINE12", baseaddress, 176>;
-
-  template <std::uint32_t baseaddress>
-  using itline13_t = itline13_tt<"ITLINE13", baseaddress, 180>;
-
-  template <std::uint32_t baseaddress>
-  using itline14_t = itline14_tt<"ITLINE14", baseaddress, 184>;
-
-  template <std::uint32_t baseaddress>
-  using itline15_t = itline15_tt<"ITLINE15", baseaddress, 188>;
-
-  template <std::uint32_t baseaddress>
-  using itline16_t = itline16_tt<"ITLINE16", baseaddress, 192>;
-
-  template <std::uint32_t baseaddress>
-  using itline17_t = itline17_tt<"ITLINE17", baseaddress, 196>;
-
-  template <std::uint32_t baseaddress>
-  using itline18_t = itline18_tt<"ITLINE18", baseaddress, 200>;
-
-  template <std::uint32_t baseaddress>
-  using itline19_t = itline19_tt<"ITLINE19", baseaddress, 204>;
-
-  template <std::uint32_t baseaddress>
-  using itline20_t = itline20_tt<"ITLINE20", baseaddress, 208>;
-
-  template <std::uint32_t baseaddress>
-  using itline21_t = itline21_tt<"ITLINE21", baseaddress, 212>;
-
-  template <std::uint32_t baseaddress>
-  using itline22_t = itline22_tt<"ITLINE22", baseaddress, 216>;
-
-  template <std::uint32_t baseaddress>
-  using itline23_t = itline23_tt<"ITLINE23", baseaddress, 220>;
-
-  template <std::uint32_t baseaddress>
-  using itline24_t = itline24_tt<"ITLINE24", baseaddress, 224>;
-
-  template <std::uint32_t baseaddress>
-  using itline25_t = itline25_tt<"ITLINE25", baseaddress, 228>;
-
-  template <std::uint32_t baseaddress>
-  using itline26_t = itline26_tt<"ITLINE26", baseaddress, 232>;
-
-  template <std::uint32_t baseaddress>
-  using itline27_t = itline27_tt<"ITLINE27", baseaddress, 236>;
-
-  template <std::uint32_t baseaddress>
-  using itline28_t = itline28_tt<"ITLINE28", baseaddress, 240>;
-
-  template <std::uint32_t baseaddress>
-  using itline29_t = itline29_tt<"ITLINE29", baseaddress, 244>;
-
-  template <std::uint32_t baseaddress>
-  using itline30_t = itline30_tt<"ITLINE30", baseaddress, 248>;
-
-  template <std::uint32_t baseaddress>
-  using itline31_t = itline31_tt<"ITLINE31", baseaddress, 252>;
 
 } // namespace syscfg_vrefbuf

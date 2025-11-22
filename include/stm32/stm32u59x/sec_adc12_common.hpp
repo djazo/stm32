@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace sec_adc12_common {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using adc12_csr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -44,7 +46,9 @@ namespace sec_adc12_common {
                groov::field<"EOSMP_MST", bool, 1, 1>,
                groov::field<"ADRDY_MST", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using adc12_ccr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -62,7 +66,9 @@ namespace sec_adc12_common {
                groov::field<"RESERVED0", std::uint8_t, 7, 5, access::ro>,
                groov::field<"DUAL", std::uint8_t, 4, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using adc12_cdr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -71,24 +77,14 @@ namespace sec_adc12_common {
                groov::field<"RDATA_SLV", std::uint16_t, 31, 16>,
                groov::field<"RDATA_MST", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using adc12_cdr2_tt =
     groov::reg<name,
                std::uint32_t,
                baseaddress + offset,
                access::ro,
                groov::field<"RDATA_ALT", std::uint32_t, 31, 0>>;
-
-  template <std::uint32_t baseaddress>
-  using adc12_csr_t = adc12_csr_tt<"ADC12_CSR", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using adc12_ccr_t = adc12_ccr_tt<"ADC12_CCR", baseaddress, 8>;
-
-  template <std::uint32_t baseaddress>
-  using adc12_cdr_t = adc12_cdr_tt<"ADC12_CDR", baseaddress, 12>;
-
-  template <std::uint32_t baseaddress>
-  using adc12_cdr2_t = adc12_cdr2_tt<"ADC12_CDR2", baseaddress, 16>;
 
 } // namespace sec_adc12_common

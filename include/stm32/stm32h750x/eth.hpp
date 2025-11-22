@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace eth {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_maccr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -44,7 +46,9 @@ namespace eth {
                groov::field<"TE", bool, 1, 1>,
                groov::field<"RE", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_macecr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -60,7 +64,9 @@ namespace eth {
                groov::field<"RESERVED0", std::uint8_t, 15, 14, access::ro>,
                groov::field<"GPSL", std::uint16_t, 13, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_macpfr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -84,7 +90,9 @@ namespace eth {
                groov::field<"HUC", bool, 1, 1>,
                groov::field<"PR", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_macwtr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -95,7 +103,9 @@ namespace eth {
                groov::field<"RESERVED0", std::uint8_t, 7, 4, access::ro>,
                groov::field<"WTO", std::uint8_t, 3, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_macht0r_tt =
     groov::reg<name,
                std::uint32_t,
@@ -103,7 +113,9 @@ namespace eth {
                access::rw,
                groov::field<"HT31T0", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_macht1r_tt =
     groov::reg<name,
                std::uint32_t,
@@ -111,7 +123,9 @@ namespace eth {
                access::rw,
                groov::field<"HT63T32", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_macvtr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -133,7 +147,9 @@ namespace eth {
                groov::field<"ETV", bool, 16, 16>,
                groov::field<"VL", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_macvhtr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -142,7 +158,9 @@ namespace eth {
                groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
                groov::field<"VLHT", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_macvir_tt =
     groov::reg<name,
                std::uint32_t,
@@ -160,7 +178,9 @@ namespace eth {
                groov::field<"VLC", std::uint8_t, 17, 16>,
                groov::field<"VLT", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_macviralternate_tt =
     groov::reg<name,
                std::uint32_t,
@@ -171,7 +191,9 @@ namespace eth {
                groov::field<"RESERVED0", std::uint8_t, 18, 16, access::ro>,
                groov::field<"VLT", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_macivir_tt =
     groov::reg<name,
                std::uint32_t,
@@ -184,7 +206,9 @@ namespace eth {
                groov::field<"VLC", std::uint8_t, 17, 16>,
                groov::field<"VLT", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_macqtxfcr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -198,7 +222,9 @@ namespace eth {
                groov::field<"TFE", bool, 1, 1>,
                groov::field<"FCB_BPA", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_macrxfcr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -208,7 +234,9 @@ namespace eth {
                groov::field<"UP", bool, 1, 1>,
                groov::field<"RFE", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_macisr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -228,7 +256,9 @@ namespace eth {
                groov::field<"PHYIS", bool, 3, 3, access::ro>,
                groov::field<"RESERVED0", std::uint8_t, 2, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_macier_tt =
     groov::reg<name,
                std::uint32_t,
@@ -244,7 +274,9 @@ namespace eth {
                groov::field<"PHYIE", bool, 3, 3>,
                groov::field<"RESERVED0", std::uint8_t, 2, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_macrxtxsr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -260,7 +292,9 @@ namespace eth {
                groov::field<"NCARR", bool, 1, 1>,
                groov::field<"TJT", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_macpcsr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -280,7 +314,9 @@ namespace eth {
                groov::field<"MGKPKTEN", bool, 1, 1>,
                groov::field<"PWRDWN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_macrwkpfr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -288,7 +324,9 @@ namespace eth {
                access::rw,
                groov::field<"MACRWKPFR", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_maclcsr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -310,7 +348,9 @@ namespace eth {
                groov::field<"TLPIEX", bool, 1, 1, access::ro>,
                groov::field<"TLPIEN", bool, 0, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_macltcr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -320,7 +360,9 @@ namespace eth {
                groov::field<"LST", std::uint16_t, 25, 16>,
                groov::field<"TWT", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_macletr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -329,7 +371,9 @@ namespace eth {
                groov::field<"RESERVED0", std::uint16_t, 31, 20, access::ro>,
                groov::field<"LPIET", std::uint32_t, 19, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_mac1ustcr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -338,7 +382,9 @@ namespace eth {
                groov::field<"RESERVED0", std::uint32_t, 31, 12, access::ro>,
                groov::field<"TIC_1US_CNTR", std::uint16_t, 11, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_macvr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -348,7 +394,9 @@ namespace eth {
                groov::field<"USERVER", std::uint8_t, 15, 8, access::ro>,
                groov::field<"SNPSVER", std::uint8_t, 7, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_macdr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -361,7 +409,9 @@ namespace eth {
                groov::field<"RFCFCSTS", std::uint8_t, 2, 1, access::ro>,
                groov::field<"RPESTS", bool, 0, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_machwf0r_tt =
     groov::reg<name,
                std::uint32_t,
@@ -392,7 +442,9 @@ namespace eth {
                groov::field<"GMIISEL", bool, 1, 1, access::ro>,
                groov::field<"MIISEL", bool, 0, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_machwf1r_tt =
     groov::reg<name,
                std::uint32_t,
@@ -418,7 +470,9 @@ namespace eth {
                groov::field<"RESERVED0", bool, 5, 5, access::ro>,
                groov::field<"RXFIFOSIZE", std::uint8_t, 4, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_machwf2r_tt =
     groov::reg<name,
                std::uint32_t,
@@ -437,7 +491,9 @@ namespace eth {
                groov::field<"RESERVED0", std::uint8_t, 5, 4, access::ro>,
                groov::field<"RXQCNT", std::uint8_t, 3, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_machwf3r_tt =
     groov::reg<name,
                std::uint32_t,
@@ -449,7 +505,9 @@ namespace eth {
                groov::field<"RESERVED0", bool, 3, 3, access::ro>,
                groov::field<"NRVF", std::uint8_t, 2, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_macmdioar_tt =
     groov::reg<name,
                std::uint32_t,
@@ -469,7 +527,9 @@ namespace eth {
                groov::field<"C45E", bool, 1, 1>,
                groov::field<"MB", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_macmdiodr_tt = groov::reg<name,
                                       std::uint32_t,
                                       baseaddress + offset,
@@ -477,7 +537,9 @@ namespace eth {
                                       groov::field<"RA", std::uint16_t, 31, 16>,
                                       groov::field<"MD", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_macarpar_tt =
     groov::reg<name,
                std::uint32_t,
@@ -485,7 +547,9 @@ namespace eth {
                access::rw,
                groov::field<"ARPPA", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_maccsrswcr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -496,7 +560,9 @@ namespace eth {
                groov::field<"RESERVED0", std::uint8_t, 7, 1, access::ro>,
                groov::field<"RCWE", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_maca0hr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -506,7 +572,9 @@ namespace eth {
                groov::field<"RESERVED0", std::uint16_t, 30, 16, access::ro>,
                groov::field<"ADDRHI", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_maca0lr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -514,7 +582,9 @@ namespace eth {
                access::rw,
                groov::field<"ADDRLO", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_maca1hr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -526,7 +596,9 @@ namespace eth {
                groov::field<"RESERVED0", std::uint8_t, 23, 16, access::ro>,
                groov::field<"ADDRHI", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_maca1lr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -534,7 +606,9 @@ namespace eth {
                access::rw,
                groov::field<"ADDRLO", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_maca2hr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -546,7 +620,9 @@ namespace eth {
                groov::field<"RESERVED0", std::uint8_t, 23, 16, access::ro>,
                groov::field<"ADDRHI", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_maca2lr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -554,7 +630,9 @@ namespace eth {
                access::rw,
                groov::field<"ADDRLO", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_maca3hr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -566,7 +644,9 @@ namespace eth {
                groov::field<"RESERVED0", std::uint8_t, 23, 16, access::ro>,
                groov::field<"ADDRHI", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_maca3lr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -574,7 +654,9 @@ namespace eth {
                access::rw,
                groov::field<"ADDRLO", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_mmc_control_tt =
     groov::reg<name,
                std::uint32_t,
@@ -590,7 +672,9 @@ namespace eth {
                groov::field<"CNTSTOPRO", bool, 1, 1>,
                groov::field<"CNTRST", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_mmc_rx_interrupt_tt =
     groov::reg<name,
                std::uint32_t,
@@ -606,7 +690,9 @@ namespace eth {
                groov::field<"RXCRCERPIS", bool, 5, 5>,
                groov::field<"RESERVED0", std::uint8_t, 4, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_mmc_tx_interrupt_tt =
     groov::reg<name,
                std::uint32_t,
@@ -622,7 +708,9 @@ namespace eth {
                groov::field<"TXSCOLGPIS", bool, 14, 14>,
                groov::field<"RESERVED0", std::uint16_t, 13, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_mmc_rx_interrupt_mask_tt =
     groov::reg<name,
                std::uint32_t,
@@ -638,7 +726,9 @@ namespace eth {
                groov::field<"RXCRCERPIM", bool, 5, 5>,
                groov::field<"RESERVED0", std::uint8_t, 4, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_mmc_tx_interrupt_mask_tt =
     groov::reg<name,
                std::uint32_t,
@@ -654,7 +744,9 @@ namespace eth {
                groov::field<"TXSCOLGPIM", bool, 14, 14>,
                groov::field<"RESERVED0", std::uint16_t, 13, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_tx_single_collision_good_packets_tt =
     groov::reg<name,
                std::uint32_t,
@@ -662,7 +754,9 @@ namespace eth {
                access::rw,
                groov::field<"TXSNGLCOLG", std::uint32_t, 31, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_tx_multiple_collision_good_packets_tt =
     groov::reg<name,
                std::uint32_t,
@@ -670,7 +764,9 @@ namespace eth {
                access::rw,
                groov::field<"TXMULTCOLG", std::uint32_t, 31, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_tx_packet_count_good_tt =
     groov::reg<name,
                std::uint32_t,
@@ -678,7 +774,9 @@ namespace eth {
                access::rw,
                groov::field<"TXPKTG", std::uint32_t, 31, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_rx_crc_error_packets_tt =
     groov::reg<name,
                std::uint32_t,
@@ -686,7 +784,9 @@ namespace eth {
                access::rw,
                groov::field<"RXCRCERR", std::uint32_t, 31, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_rx_alignment_error_packets_tt =
     groov::reg<name,
                std::uint32_t,
@@ -694,7 +794,9 @@ namespace eth {
                access::rw,
                groov::field<"RXALGNERR", std::uint32_t, 31, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_rx_unicast_packets_good_tt =
     groov::reg<name,
                std::uint32_t,
@@ -702,7 +804,9 @@ namespace eth {
                access::rw,
                groov::field<"RXUCASTG", std::uint32_t, 31, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_tx_lpi_usec_cntr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -710,7 +814,9 @@ namespace eth {
                access::rw,
                groov::field<"TXLPIUSC", std::uint32_t, 31, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_tx_lpi_tran_cntr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -718,7 +824,9 @@ namespace eth {
                access::rw,
                groov::field<"TXLPITRC", std::uint32_t, 31, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_rx_lpi_usec_cntr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -726,7 +834,9 @@ namespace eth {
                access::rw,
                groov::field<"RXLPIUSC", std::uint32_t, 31, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_rx_lpi_tran_cntr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -734,7 +844,9 @@ namespace eth {
                access::rw,
                groov::field<"RXLPITRC", std::uint32_t, 31, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_macl3l4c0r_tt =
     groov::reg<name,
                std::uint32_t,
@@ -756,7 +868,9 @@ namespace eth {
                groov::field<"RESERVED0", bool, 1, 1, access::ro>,
                groov::field<"L3PEN0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_macl4a0r_tt =
     groov::reg<name,
                std::uint32_t,
@@ -765,7 +879,9 @@ namespace eth {
                groov::field<"L4DP0", std::uint16_t, 31, 16>,
                groov::field<"L4SP0", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_macl3a00r_tt =
     groov::reg<name,
                std::uint32_t,
@@ -773,7 +889,9 @@ namespace eth {
                access::rw,
                groov::field<"L3A00", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_macl3a10r_tt =
     groov::reg<name,
                std::uint32_t,
@@ -781,7 +899,9 @@ namespace eth {
                access::rw,
                groov::field<"L3A10", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_macl3a20r_tt =
     groov::reg<name,
                std::uint32_t,
@@ -789,7 +909,9 @@ namespace eth {
                access::rw,
                groov::field<"L3A20", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_macl3a30r_tt =
     groov::reg<name,
                std::uint32_t,
@@ -797,7 +919,9 @@ namespace eth {
                access::rw,
                groov::field<"L3A30", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_macl3l4c1r_tt =
     groov::reg<name,
                std::uint32_t,
@@ -819,7 +943,9 @@ namespace eth {
                groov::field<"RESERVED0", bool, 1, 1, access::ro>,
                groov::field<"L3PEN1", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_macl4a1r_tt =
     groov::reg<name,
                std::uint32_t,
@@ -828,7 +954,9 @@ namespace eth {
                groov::field<"L4DP1", std::uint16_t, 31, 16>,
                groov::field<"L4SP1", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_macl3a01r_tt =
     groov::reg<name,
                std::uint32_t,
@@ -836,7 +964,9 @@ namespace eth {
                access::rw,
                groov::field<"L3A01", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_macl3a11r_tt =
     groov::reg<name,
                std::uint32_t,
@@ -844,7 +974,9 @@ namespace eth {
                access::rw,
                groov::field<"L3A11", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_macl3a21r_tt =
     groov::reg<name,
                std::uint32_t,
@@ -852,7 +984,9 @@ namespace eth {
                access::rw,
                groov::field<"L3A21", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_macl3a31r_tt =
     groov::reg<name,
                std::uint32_t,
@@ -860,7 +994,9 @@ namespace eth {
                access::rw,
                groov::field<"L3A31", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_mactscr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -889,7 +1025,9 @@ namespace eth {
                groov::field<"TSCFUPDT", bool, 1, 1>,
                groov::field<"TSENA", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_macssir_tt =
     groov::reg<name,
                std::uint32_t,
@@ -899,7 +1037,9 @@ namespace eth {
                groov::field<"SSINC", std::uint8_t, 23, 16>,
                groov::field<"RESERVED0", std::uint16_t, 15, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_macstsr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -907,7 +1047,9 @@ namespace eth {
                access::rw,
                groov::field<"TSS", std::uint32_t, 31, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_macstnr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -916,14 +1058,18 @@ namespace eth {
                groov::field<"RESERVED0", bool, 31, 31, access::ro>,
                groov::field<"TSSS", std::uint32_t, 30, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_macstsur_tt = groov::reg<name,
                                      std::uint32_t,
                                      baseaddress + offset,
                                      access::rw,
                                      groov::field<"TSS", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_macstnur_tt =
     groov::reg<name,
                std::uint32_t,
@@ -932,14 +1078,18 @@ namespace eth {
                groov::field<"ADDSUB", bool, 31, 31>,
                groov::field<"TSSS", std::uint32_t, 30, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_mactsar_tt = groov::reg<name,
                                     std::uint32_t,
                                     baseaddress + offset,
                                     access::rw,
                                     groov::field<"TSAR", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_mactssr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -957,7 +1107,9 @@ namespace eth {
                groov::field<"TSTARGT0", bool, 1, 1>,
                groov::field<"TSSOVF", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_mactxtssnr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -966,7 +1118,9 @@ namespace eth {
                groov::field<"TXTSSMIS", bool, 31, 31, access::ro>,
                groov::field<"TXTSSLO", std::uint32_t, 30, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_mactxtsssr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -974,7 +1128,9 @@ namespace eth {
                access::rw,
                groov::field<"TXTSSHI", std::uint32_t, 31, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_macacr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -988,7 +1144,9 @@ namespace eth {
                groov::field<"RESERVED0", std::uint8_t, 3, 1, access::ro>,
                groov::field<"ATSFC", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_macatsnr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -997,7 +1155,9 @@ namespace eth {
                groov::field<"RESERVED0", bool, 31, 31, access::ro>,
                groov::field<"AUXTSLO", std::uint32_t, 30, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_macatssr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1005,7 +1165,9 @@ namespace eth {
                access::rw,
                groov::field<"AUXTSHI", std::uint32_t, 31, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_mactsiacr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1013,7 +1175,9 @@ namespace eth {
                access::rw,
                groov::field<"OSTIAC", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_mactseacr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1021,7 +1185,9 @@ namespace eth {
                access::rw,
                groov::field<"OSTEAC", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_mactsicnr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1029,7 +1195,9 @@ namespace eth {
                access::rw,
                groov::field<"TSIC", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_mactsecnr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1037,7 +1205,9 @@ namespace eth {
                access::rw,
                groov::field<"TSEC", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_macppscr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1048,7 +1218,9 @@ namespace eth {
                groov::field<"PPSEN0", bool, 4, 4>,
                groov::field<"PPSCTRL", std::uint8_t, 3, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_macppscralternate_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1059,7 +1231,9 @@ namespace eth {
                groov::field<"PPSEN0", bool, 4, 4>,
                groov::field<"PPSCMD", std::uint8_t, 3, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_macppsttsr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1067,7 +1241,9 @@ namespace eth {
                access::rw,
                groov::field<"TSTRH0", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_macppsttnr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1076,7 +1252,9 @@ namespace eth {
                groov::field<"TRGTBUSY0", bool, 31, 31>,
                groov::field<"TTSL0", std::uint32_t, 30, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_macppsir_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1084,7 +1262,9 @@ namespace eth {
                access::rw,
                groov::field<"PPSINT0", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_macppswr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1092,7 +1272,9 @@ namespace eth {
                access::rw,
                groov::field<"PPSWIDTH0", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_macpocr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1109,7 +1291,9 @@ namespace eth {
                groov::field<"ASYNCEN", bool, 1, 1>,
                groov::field<"PTOEN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_macspi0r_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1117,7 +1301,9 @@ namespace eth {
                access::rw,
                groov::field<"SPI0", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_macspi1r_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1125,7 +1311,9 @@ namespace eth {
                access::rw,
                groov::field<"SPI1", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_macspi2r_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1134,7 +1322,9 @@ namespace eth {
                groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
                groov::field<"SPI2", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_maclmir_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1145,7 +1335,9 @@ namespace eth {
                groov::field<"DRSYNCR", std::uint8_t, 10, 8>,
                groov::field<"LSI", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_mtlomr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1158,7 +1350,9 @@ namespace eth {
                groov::field<"DTXSTS", bool, 1, 1>,
                groov::field<"RESERVED0", bool, 0, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_mtlisr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1167,7 +1361,9 @@ namespace eth {
                groov::field<"RESERVED0", std::uint32_t, 31, 1, access::ro>,
                groov::field<"Q0IS", bool, 0, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_mtltxqomr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1181,7 +1377,9 @@ namespace eth {
                groov::field<"TSF", bool, 1, 1>,
                groov::field<"FTQ", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_mtltxqur_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1191,7 +1389,9 @@ namespace eth {
                groov::field<"UFCNTOVF", bool, 11, 11>,
                groov::field<"UFFRMCNT", std::uint16_t, 10, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_mtltxqdr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1208,7 +1408,9 @@ namespace eth {
                groov::field<"TRCSTS", std::uint8_t, 2, 1, access::ro>,
                groov::field<"TXQPAUSED", bool, 0, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_mtlqicsr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1223,7 +1425,9 @@ namespace eth {
                groov::field<"RESERVED0", std::uint8_t, 7, 1, access::ro>,
                groov::field<"TXUNFIS", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_mtlrxqomr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1239,7 +1443,9 @@ namespace eth {
                groov::field<"RESERVED0", bool, 2, 2, access::ro>,
                groov::field<"RTC", std::uint8_t, 1, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_mtlrxqmpocr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1252,7 +1458,9 @@ namespace eth {
                groov::field<"OVFCNTOVF", bool, 11, 11>,
                groov::field<"OVFPKTCNT", std::uint16_t, 10, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_mtlrxqdr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1266,7 +1474,9 @@ namespace eth {
                groov::field<"RRCSTS", std::uint8_t, 2, 1, access::ro>,
                groov::field<"RWCSTS", bool, 0, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_dmamr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1281,7 +1491,9 @@ namespace eth {
                groov::field<"DA", bool, 1, 1>,
                groov::field<"SWR", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_dmasbmr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1295,7 +1507,9 @@ namespace eth {
                groov::field<"RESERVED0", std::uint16_t, 11, 1, access::ro>,
                groov::field<"FB", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_dmaisr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1307,7 +1521,9 @@ namespace eth {
                groov::field<"RESERVED0", std::uint16_t, 15, 1, access::ro>,
                groov::field<"DC0IS", bool, 0, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_dmadsr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1319,7 +1535,9 @@ namespace eth {
                groov::field<"RESERVED0", std::uint8_t, 7, 1, access::ro>,
                groov::field<"AXWHSTS", bool, 0, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_dmaccr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1332,7 +1550,9 @@ namespace eth {
                groov::field<"RESERVED0", std::uint8_t, 15, 14, access::ro>,
                groov::field<"MSS", std::uint16_t, 13, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_dmactxcr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1347,7 +1567,9 @@ namespace eth {
                groov::field<"RESERVED0", std::uint8_t, 3, 1, access::ro>,
                groov::field<"ST", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_dmacrxcr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1360,7 +1582,9 @@ namespace eth {
                groov::field<"RBSZ", std::uint16_t, 14, 1>,
                groov::field<"SR", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_dmactxdlar_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1368,7 +1592,9 @@ namespace eth {
                access::rw,
                groov::field<"TDESLA", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_dmacrxdlar_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1376,7 +1602,9 @@ namespace eth {
                access::rw,
                groov::field<"RDESLA", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_dmactxdtpr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1384,7 +1612,9 @@ namespace eth {
                access::rw,
                groov::field<"TDT", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_dmacrxdtpr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1392,7 +1622,9 @@ namespace eth {
                access::rw,
                groov::field<"RDT", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_dmactxrlr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1401,7 +1633,9 @@ namespace eth {
                groov::field<"RESERVED0", std::uint32_t, 31, 10, access::ro>,
                groov::field<"TDRL", std::uint16_t, 9, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_dmacrxrlr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1412,7 +1646,9 @@ namespace eth {
                groov::field<"RESERVED0", std::uint8_t, 15, 10, access::ro>,
                groov::field<"RDRL", std::uint16_t, 9, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_dmacier_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1434,7 +1670,9 @@ namespace eth {
                groov::field<"TXSE", bool, 1, 1>,
                groov::field<"TIE", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_dmacrxiwtr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1445,7 +1683,9 @@ namespace eth {
                groov::field<"RESERVED0", std::uint8_t, 15, 8, access::ro>,
                groov::field<"RWT", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_dmaccatxdr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1453,7 +1693,9 @@ namespace eth {
                access::rw,
                groov::field<"CURTDESAPTR", std::uint32_t, 31, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_dmaccarxdr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1461,7 +1703,9 @@ namespace eth {
                access::rw,
                groov::field<"CURRDESAPTR", std::uint32_t, 31, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_dmaccatxbr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1469,7 +1713,9 @@ namespace eth {
                access::rw,
                groov::field<"CURTBUFAPTR", std::uint32_t, 31, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_dmaccarxbr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1477,7 +1723,9 @@ namespace eth {
                access::rw,
                groov::field<"CURRBUFAPTR", std::uint32_t, 31, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_dmacsr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1501,7 +1749,9 @@ namespace eth {
                groov::field<"TPS", bool, 1, 1>,
                groov::field<"TI", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eth_dmacmfcr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -1511,428 +1761,5 @@ namespace eth {
                groov::field<"MFCO", bool, 15, 15>,
                groov::field<"RESERVED0", std::uint8_t, 14, 11, access::ro>,
                groov::field<"MFC", std::uint16_t, 10, 0>>;
-
-  template <std::uint32_t baseaddress>
-  using eth_maccr_t = eth_maccr_tt<"ETH_MACCR", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using eth_macecr_t = eth_macecr_tt<"ETH_MACECR", baseaddress, 4>;
-
-  template <std::uint32_t baseaddress>
-  using eth_macpfr_t = eth_macpfr_tt<"ETH_MACPFR", baseaddress, 8>;
-
-  template <std::uint32_t baseaddress>
-  using eth_macwtr_t = eth_macwtr_tt<"ETH_MACWTR", baseaddress, 12>;
-
-  template <std::uint32_t baseaddress>
-  using eth_macht0r_t = eth_macht0r_tt<"ETH_MACHT0R", baseaddress, 16>;
-
-  template <std::uint32_t baseaddress>
-  using eth_macht1r_t = eth_macht1r_tt<"ETH_MACHT1R", baseaddress, 20>;
-
-  template <std::uint32_t baseaddress>
-  using eth_macvtr_t = eth_macvtr_tt<"ETH_MACVTR", baseaddress, 80>;
-
-  template <std::uint32_t baseaddress>
-  using eth_macvhtr_t = eth_macvhtr_tt<"ETH_MACVHTR", baseaddress, 88>;
-
-  template <std::uint32_t baseaddress>
-  using eth_macvir_t = eth_macvir_tt<"ETH_MACVIR", baseaddress, 96>;
-
-  template <std::uint32_t baseaddress>
-  using eth_macviralternate_t =
-    eth_macviralternate_tt<"ETH_MACVIRALTERNATE", baseaddress, 96>;
-
-  template <std::uint32_t baseaddress>
-  using eth_macivir_t = eth_macivir_tt<"ETH_MACIVIR", baseaddress, 100>;
-
-  template <std::uint32_t baseaddress>
-  using eth_macqtxfcr_t = eth_macqtxfcr_tt<"ETH_MACQTXFCR", baseaddress, 112>;
-
-  template <std::uint32_t baseaddress>
-  using eth_macrxfcr_t = eth_macrxfcr_tt<"ETH_MACRXFCR", baseaddress, 144>;
-
-  template <std::uint32_t baseaddress>
-  using eth_macisr_t = eth_macisr_tt<"ETH_MACISR", baseaddress, 176>;
-
-  template <std::uint32_t baseaddress>
-  using eth_macier_t = eth_macier_tt<"ETH_MACIER", baseaddress, 180>;
-
-  template <std::uint32_t baseaddress>
-  using eth_macrxtxsr_t = eth_macrxtxsr_tt<"ETH_MACRXTXSR", baseaddress, 184>;
-
-  template <std::uint32_t baseaddress>
-  using eth_macpcsr_t = eth_macpcsr_tt<"ETH_MACPCSR", baseaddress, 192>;
-
-  template <std::uint32_t baseaddress>
-  using eth_macrwkpfr_t = eth_macrwkpfr_tt<"ETH_MACRWKPFR", baseaddress, 196>;
-
-  template <std::uint32_t baseaddress>
-  using eth_maclcsr_t = eth_maclcsr_tt<"ETH_MACLCSR", baseaddress, 208>;
-
-  template <std::uint32_t baseaddress>
-  using eth_macltcr_t = eth_macltcr_tt<"ETH_MACLTCR", baseaddress, 212>;
-
-  template <std::uint32_t baseaddress>
-  using eth_macletr_t = eth_macletr_tt<"ETH_MACLETR", baseaddress, 216>;
-
-  template <std::uint32_t baseaddress>
-  using eth_mac1ustcr_t = eth_mac1ustcr_tt<"ETH_MAC1USTCR", baseaddress, 220>;
-
-  template <std::uint32_t baseaddress>
-  using eth_macvr_t = eth_macvr_tt<"ETH_MACVR", baseaddress, 272>;
-
-  template <std::uint32_t baseaddress>
-  using eth_macdr_t = eth_macdr_tt<"ETH_MACDR", baseaddress, 276>;
-
-  template <std::uint32_t baseaddress>
-  using eth_machwf0r_t = eth_machwf0r_tt<"ETH_MACHWF0R", baseaddress, 284>;
-
-  template <std::uint32_t baseaddress>
-  using eth_machwf1r_t = eth_machwf1r_tt<"ETH_MACHWF1R", baseaddress, 288>;
-
-  template <std::uint32_t baseaddress>
-  using eth_machwf2r_t = eth_machwf2r_tt<"ETH_MACHWF2R", baseaddress, 292>;
-
-  template <std::uint32_t baseaddress>
-  using eth_machwf3r_t = eth_machwf3r_tt<"ETH_MACHWF3R", baseaddress, 296>;
-
-  template <std::uint32_t baseaddress>
-  using eth_macmdioar_t = eth_macmdioar_tt<"ETH_MACMDIOAR", baseaddress, 512>;
-
-  template <std::uint32_t baseaddress>
-  using eth_macmdiodr_t = eth_macmdiodr_tt<"ETH_MACMDIODR", baseaddress, 516>;
-
-  template <std::uint32_t baseaddress>
-  using eth_macarpar_t = eth_macarpar_tt<"ETH_MACARPAR", baseaddress, 528>;
-
-  template <std::uint32_t baseaddress>
-  using eth_maccsrswcr_t =
-    eth_maccsrswcr_tt<"ETH_MACCSRSWCR", baseaddress, 560>;
-
-  template <std::uint32_t baseaddress>
-  using eth_maca0hr_t = eth_maca0hr_tt<"ETH_MACA0HR", baseaddress, 768>;
-
-  template <std::uint32_t baseaddress>
-  using eth_maca0lr_t = eth_maca0lr_tt<"ETH_MACA0LR", baseaddress, 772>;
-
-  template <std::uint32_t baseaddress>
-  using eth_maca1hr_t = eth_maca1hr_tt<"ETH_MACA1HR", baseaddress, 776>;
-
-  template <std::uint32_t baseaddress>
-  using eth_maca1lr_t = eth_maca1lr_tt<"ETH_MACA1LR", baseaddress, 780>;
-
-  template <std::uint32_t baseaddress>
-  using eth_maca2hr_t = eth_maca2hr_tt<"ETH_MACA2HR", baseaddress, 784>;
-
-  template <std::uint32_t baseaddress>
-  using eth_maca2lr_t = eth_maca2lr_tt<"ETH_MACA2LR", baseaddress, 788>;
-
-  template <std::uint32_t baseaddress>
-  using eth_maca3hr_t = eth_maca3hr_tt<"ETH_MACA3HR", baseaddress, 792>;
-
-  template <std::uint32_t baseaddress>
-  using eth_maca3lr_t = eth_maca3lr_tt<"ETH_MACA3LR", baseaddress, 796>;
-
-  template <std::uint32_t baseaddress>
-  using eth_mmc_control_t =
-    eth_mmc_control_tt<"ETH_MMC_CONTROL", baseaddress, 1792>;
-
-  template <std::uint32_t baseaddress>
-  using eth_mmc_rx_interrupt_t =
-    eth_mmc_rx_interrupt_tt<"ETH_MMC_RX_INTERRUPT", baseaddress, 1796>;
-
-  template <std::uint32_t baseaddress>
-  using eth_mmc_tx_interrupt_t =
-    eth_mmc_tx_interrupt_tt<"ETH_MMC_TX_INTERRUPT", baseaddress, 1800>;
-
-  template <std::uint32_t baseaddress>
-  using eth_mmc_rx_interrupt_mask_t =
-    eth_mmc_rx_interrupt_mask_tt<"ETH_MMC_RX_INTERRUPT_MASK",
-                                 baseaddress,
-                                 1804>;
-
-  template <std::uint32_t baseaddress>
-  using eth_mmc_tx_interrupt_mask_t =
-    eth_mmc_tx_interrupt_mask_tt<"ETH_MMC_TX_INTERRUPT_MASK",
-                                 baseaddress,
-                                 1808>;
-
-  template <std::uint32_t baseaddress>
-  using eth_tx_single_collision_good_packets_t =
-    eth_tx_single_collision_good_packets_tt<
-      "ETH_TX_SINGLE_COLLISION_GOOD_PACKETS",
-      baseaddress,
-      1868>;
-
-  template <std::uint32_t baseaddress>
-  using eth_tx_multiple_collision_good_packets_t =
-    eth_tx_multiple_collision_good_packets_tt<
-      "ETH_TX_MULTIPLE_COLLISION_GOOD_PACKETS",
-      baseaddress,
-      1872>;
-
-  template <std::uint32_t baseaddress>
-  using eth_tx_packet_count_good_t =
-    eth_tx_packet_count_good_tt<"ETH_TX_PACKET_COUNT_GOOD", baseaddress, 1896>;
-
-  template <std::uint32_t baseaddress>
-  using eth_rx_crc_error_packets_t =
-    eth_rx_crc_error_packets_tt<"ETH_RX_CRC_ERROR_PACKETS", baseaddress, 1940>;
-
-  template <std::uint32_t baseaddress>
-  using eth_rx_alignment_error_packets_t =
-    eth_rx_alignment_error_packets_tt<"ETH_RX_ALIGNMENT_ERROR_PACKETS",
-                                      baseaddress,
-                                      1944>;
-
-  template <std::uint32_t baseaddress>
-  using eth_rx_unicast_packets_good_t =
-    eth_rx_unicast_packets_good_tt<"ETH_RX_UNICAST_PACKETS_GOOD",
-                                   baseaddress,
-                                   1988>;
-
-  template <std::uint32_t baseaddress>
-  using eth_tx_lpi_usec_cntr_t =
-    eth_tx_lpi_usec_cntr_tt<"ETH_TX_LPI_USEC_CNTR", baseaddress, 2028>;
-
-  template <std::uint32_t baseaddress>
-  using eth_tx_lpi_tran_cntr_t =
-    eth_tx_lpi_tran_cntr_tt<"ETH_TX_LPI_TRAN_CNTR", baseaddress, 2032>;
-
-  template <std::uint32_t baseaddress>
-  using eth_rx_lpi_usec_cntr_t =
-    eth_rx_lpi_usec_cntr_tt<"ETH_RX_LPI_USEC_CNTR", baseaddress, 2036>;
-
-  template <std::uint32_t baseaddress>
-  using eth_rx_lpi_tran_cntr_t =
-    eth_rx_lpi_tran_cntr_tt<"ETH_RX_LPI_TRAN_CNTR", baseaddress, 2040>;
-
-  template <std::uint32_t baseaddress>
-  using eth_macl3l4c0r_t =
-    eth_macl3l4c0r_tt<"ETH_MACL3L4C0R", baseaddress, 2304>;
-
-  template <std::uint32_t baseaddress>
-  using eth_macl4a0r_t = eth_macl4a0r_tt<"ETH_MACL4A0R", baseaddress, 2308>;
-
-  template <std::uint32_t baseaddress>
-  using eth_macl3a00r_t = eth_macl3a00r_tt<"ETH_MACL3A00R", baseaddress, 2320>;
-
-  template <std::uint32_t baseaddress>
-  using eth_macl3a10r_t = eth_macl3a10r_tt<"ETH_MACL3A10R", baseaddress, 2324>;
-
-  template <std::uint32_t baseaddress>
-  using eth_macl3a20r_t = eth_macl3a20r_tt<"ETH_MACL3A20R", baseaddress, 2328>;
-
-  template <std::uint32_t baseaddress>
-  using eth_macl3a30r_t = eth_macl3a30r_tt<"ETH_MACL3A30R", baseaddress, 2332>;
-
-  template <std::uint32_t baseaddress>
-  using eth_macl3l4c1r_t =
-    eth_macl3l4c1r_tt<"ETH_MACL3L4C1R", baseaddress, 2352>;
-
-  template <std::uint32_t baseaddress>
-  using eth_macl4a1r_t = eth_macl4a1r_tt<"ETH_MACL4A1R", baseaddress, 2356>;
-
-  template <std::uint32_t baseaddress>
-  using eth_macl3a01r_t = eth_macl3a01r_tt<"ETH_MACL3A01R", baseaddress, 2368>;
-
-  template <std::uint32_t baseaddress>
-  using eth_macl3a11r_t = eth_macl3a11r_tt<"ETH_MACL3A11R", baseaddress, 2372>;
-
-  template <std::uint32_t baseaddress>
-  using eth_macl3a21r_t = eth_macl3a21r_tt<"ETH_MACL3A21R", baseaddress, 2376>;
-
-  template <std::uint32_t baseaddress>
-  using eth_macl3a31r_t = eth_macl3a31r_tt<"ETH_MACL3A31R", baseaddress, 2380>;
-
-  template <std::uint32_t baseaddress>
-  using eth_mactscr_t = eth_mactscr_tt<"ETH_MACTSCR", baseaddress, 2816>;
-
-  template <std::uint32_t baseaddress>
-  using eth_macssir_t = eth_macssir_tt<"ETH_MACSSIR", baseaddress, 2820>;
-
-  template <std::uint32_t baseaddress>
-  using eth_macstsr_t = eth_macstsr_tt<"ETH_MACSTSR", baseaddress, 2824>;
-
-  template <std::uint32_t baseaddress>
-  using eth_macstnr_t = eth_macstnr_tt<"ETH_MACSTNR", baseaddress, 2828>;
-
-  template <std::uint32_t baseaddress>
-  using eth_macstsur_t = eth_macstsur_tt<"ETH_MACSTSUR", baseaddress, 2832>;
-
-  template <std::uint32_t baseaddress>
-  using eth_macstnur_t = eth_macstnur_tt<"ETH_MACSTNUR", baseaddress, 2836>;
-
-  template <std::uint32_t baseaddress>
-  using eth_mactsar_t = eth_mactsar_tt<"ETH_MACTSAR", baseaddress, 2840>;
-
-  template <std::uint32_t baseaddress>
-  using eth_mactssr_t = eth_mactssr_tt<"ETH_MACTSSR", baseaddress, 2848>;
-
-  template <std::uint32_t baseaddress>
-  using eth_mactxtssnr_t =
-    eth_mactxtssnr_tt<"ETH_MACTXTSSNR", baseaddress, 2864>;
-
-  template <std::uint32_t baseaddress>
-  using eth_mactxtsssr_t =
-    eth_mactxtsssr_tt<"ETH_MACTXTSSSR", baseaddress, 2868>;
-
-  template <std::uint32_t baseaddress>
-  using eth_macacr_t = eth_macacr_tt<"ETH_MACACR", baseaddress, 2880>;
-
-  template <std::uint32_t baseaddress>
-  using eth_macatsnr_t = eth_macatsnr_tt<"ETH_MACATSNR", baseaddress, 2888>;
-
-  template <std::uint32_t baseaddress>
-  using eth_macatssr_t = eth_macatssr_tt<"ETH_MACATSSR", baseaddress, 2892>;
-
-  template <std::uint32_t baseaddress>
-  using eth_mactsiacr_t = eth_mactsiacr_tt<"ETH_MACTSIACR", baseaddress, 2896>;
-
-  template <std::uint32_t baseaddress>
-  using eth_mactseacr_t = eth_mactseacr_tt<"ETH_MACTSEACR", baseaddress, 2900>;
-
-  template <std::uint32_t baseaddress>
-  using eth_mactsicnr_t = eth_mactsicnr_tt<"ETH_MACTSICNR", baseaddress, 2904>;
-
-  template <std::uint32_t baseaddress>
-  using eth_mactsecnr_t = eth_mactsecnr_tt<"ETH_MACTSECNR", baseaddress, 2908>;
-
-  template <std::uint32_t baseaddress>
-  using eth_macppscr_t = eth_macppscr_tt<"ETH_MACPPSCR", baseaddress, 2928>;
-
-  template <std::uint32_t baseaddress>
-  using eth_macppscralternate_t =
-    eth_macppscralternate_tt<"ETH_MACPPSCRALTERNATE", baseaddress, 2928>;
-
-  template <std::uint32_t baseaddress>
-  using eth_macppsttsr_t =
-    eth_macppsttsr_tt<"ETH_MACPPSTTSR", baseaddress, 2944>;
-
-  template <std::uint32_t baseaddress>
-  using eth_macppsttnr_t =
-    eth_macppsttnr_tt<"ETH_MACPPSTTNR", baseaddress, 2948>;
-
-  template <std::uint32_t baseaddress>
-  using eth_macppsir_t = eth_macppsir_tt<"ETH_MACPPSIR", baseaddress, 2952>;
-
-  template <std::uint32_t baseaddress>
-  using eth_macppswr_t = eth_macppswr_tt<"ETH_MACPPSWR", baseaddress, 2956>;
-
-  template <std::uint32_t baseaddress>
-  using eth_macpocr_t = eth_macpocr_tt<"ETH_MACPOCR", baseaddress, 3008>;
-
-  template <std::uint32_t baseaddress>
-  using eth_macspi0r_t = eth_macspi0r_tt<"ETH_MACSPI0R", baseaddress, 3012>;
-
-  template <std::uint32_t baseaddress>
-  using eth_macspi1r_t = eth_macspi1r_tt<"ETH_MACSPI1R", baseaddress, 3016>;
-
-  template <std::uint32_t baseaddress>
-  using eth_macspi2r_t = eth_macspi2r_tt<"ETH_MACSPI2R", baseaddress, 3020>;
-
-  template <std::uint32_t baseaddress>
-  using eth_maclmir_t = eth_maclmir_tt<"ETH_MACLMIR", baseaddress, 3024>;
-
-  template <std::uint32_t baseaddress>
-  using eth_mtlomr_t = eth_mtlomr_tt<"ETH_MTLOMR", baseaddress, 3072>;
-
-  template <std::uint32_t baseaddress>
-  using eth_mtlisr_t = eth_mtlisr_tt<"ETH_MTLISR", baseaddress, 3104>;
-
-  template <std::uint32_t baseaddress>
-  using eth_mtltxqomr_t = eth_mtltxqomr_tt<"ETH_MTLTXQOMR", baseaddress, 3328>;
-
-  template <std::uint32_t baseaddress>
-  using eth_mtltxqur_t = eth_mtltxqur_tt<"ETH_MTLTXQUR", baseaddress, 3332>;
-
-  template <std::uint32_t baseaddress>
-  using eth_mtltxqdr_t = eth_mtltxqdr_tt<"ETH_MTLTXQDR", baseaddress, 3336>;
-
-  template <std::uint32_t baseaddress>
-  using eth_mtlqicsr_t = eth_mtlqicsr_tt<"ETH_MTLQICSR", baseaddress, 3372>;
-
-  template <std::uint32_t baseaddress>
-  using eth_mtlrxqomr_t = eth_mtlrxqomr_tt<"ETH_MTLRXQOMR", baseaddress, 3376>;
-
-  template <std::uint32_t baseaddress>
-  using eth_mtlrxqmpocr_t =
-    eth_mtlrxqmpocr_tt<"ETH_MTLRXQMPOCR", baseaddress, 3380>;
-
-  template <std::uint32_t baseaddress>
-  using eth_mtlrxqdr_t = eth_mtlrxqdr_tt<"ETH_MTLRXQDR", baseaddress, 3384>;
-
-  template <std::uint32_t baseaddress>
-  using eth_dmamr_t = eth_dmamr_tt<"ETH_DMAMR", baseaddress, 4096>;
-
-  template <std::uint32_t baseaddress>
-  using eth_dmasbmr_t = eth_dmasbmr_tt<"ETH_DMASBMR", baseaddress, 4100>;
-
-  template <std::uint32_t baseaddress>
-  using eth_dmaisr_t = eth_dmaisr_tt<"ETH_DMAISR", baseaddress, 4104>;
-
-  template <std::uint32_t baseaddress>
-  using eth_dmadsr_t = eth_dmadsr_tt<"ETH_DMADSR", baseaddress, 4108>;
-
-  template <std::uint32_t baseaddress>
-  using eth_dmaccr_t = eth_dmaccr_tt<"ETH_DMACCR", baseaddress, 4352>;
-
-  template <std::uint32_t baseaddress>
-  using eth_dmactxcr_t = eth_dmactxcr_tt<"ETH_DMACTXCR", baseaddress, 4356>;
-
-  template <std::uint32_t baseaddress>
-  using eth_dmacrxcr_t = eth_dmacrxcr_tt<"ETH_DMACRXCR", baseaddress, 4360>;
-
-  template <std::uint32_t baseaddress>
-  using eth_dmactxdlar_t =
-    eth_dmactxdlar_tt<"ETH_DMACTXDLAR", baseaddress, 4372>;
-
-  template <std::uint32_t baseaddress>
-  using eth_dmacrxdlar_t =
-    eth_dmacrxdlar_tt<"ETH_DMACRXDLAR", baseaddress, 4380>;
-
-  template <std::uint32_t baseaddress>
-  using eth_dmactxdtpr_t =
-    eth_dmactxdtpr_tt<"ETH_DMACTXDTPR", baseaddress, 4384>;
-
-  template <std::uint32_t baseaddress>
-  using eth_dmacrxdtpr_t =
-    eth_dmacrxdtpr_tt<"ETH_DMACRXDTPR", baseaddress, 4392>;
-
-  template <std::uint32_t baseaddress>
-  using eth_dmactxrlr_t = eth_dmactxrlr_tt<"ETH_DMACTXRLR", baseaddress, 4396>;
-
-  template <std::uint32_t baseaddress>
-  using eth_dmacrxrlr_t = eth_dmacrxrlr_tt<"ETH_DMACRXRLR", baseaddress, 4400>;
-
-  template <std::uint32_t baseaddress>
-  using eth_dmacier_t = eth_dmacier_tt<"ETH_DMACIER", baseaddress, 4404>;
-
-  template <std::uint32_t baseaddress>
-  using eth_dmacrxiwtr_t =
-    eth_dmacrxiwtr_tt<"ETH_DMACRXIWTR", baseaddress, 4408>;
-
-  template <std::uint32_t baseaddress>
-  using eth_dmaccatxdr_t =
-    eth_dmaccatxdr_tt<"ETH_DMACCATXDR", baseaddress, 4420>;
-
-  template <std::uint32_t baseaddress>
-  using eth_dmaccarxdr_t =
-    eth_dmaccarxdr_tt<"ETH_DMACCARXDR", baseaddress, 4428>;
-
-  template <std::uint32_t baseaddress>
-  using eth_dmaccatxbr_t =
-    eth_dmaccatxbr_tt<"ETH_DMACCATXBR", baseaddress, 4436>;
-
-  template <std::uint32_t baseaddress>
-  using eth_dmaccarxbr_t =
-    eth_dmaccarxbr_tt<"ETH_DMACCARXBR", baseaddress, 4444>;
-
-  template <std::uint32_t baseaddress>
-  using eth_dmacsr_t = eth_dmacsr_tt<"ETH_DMACSR", baseaddress, 4448>;
-
-  template <std::uint32_t baseaddress>
-  using eth_dmacmfcr_t = eth_dmacmfcr_tt<"ETH_DMACMFCR", baseaddress, 4460>;
 
 } // namespace eth

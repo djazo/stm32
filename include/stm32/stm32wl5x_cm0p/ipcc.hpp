@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace ipcc {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ipcc_c1cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -22,7 +24,9 @@ namespace ipcc {
                groov::field<"RESERVED0", std::uint16_t, 15, 1, access::ro>,
                groov::field<"RXOIE", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ipcc_c1mr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -43,7 +47,9 @@ namespace ipcc {
                groov::field<"CH2OM", bool, 1, 1>,
                groov::field<"CH1OM", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ipcc_c1scr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -64,7 +70,9 @@ namespace ipcc {
                groov::field<"CH2C", bool, 1, 1>,
                groov::field<"CH1C", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ipcc_c1toc2sr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -78,7 +86,9 @@ namespace ipcc {
                groov::field<"CH2F", bool, 1, 1>,
                groov::field<"CH1F", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ipcc_c2cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -89,7 +99,9 @@ namespace ipcc {
                groov::field<"RESERVED0", std::uint16_t, 15, 1, access::ro>,
                groov::field<"RXOIE", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ipcc_c2mr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -110,7 +122,9 @@ namespace ipcc {
                groov::field<"CH2OM", bool, 1, 1>,
                groov::field<"CH1OM", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ipcc_c2scr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -131,7 +145,9 @@ namespace ipcc {
                groov::field<"CH2C", bool, 1, 1>,
                groov::field<"CH1C", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ipcc_c2toc1sr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -145,7 +161,9 @@ namespace ipcc {
                groov::field<"CH2F", bool, 1, 1>,
                groov::field<"CH1F", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ipcc_hwcfgr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -154,7 +172,9 @@ namespace ipcc {
                groov::field<"RESERVED0", std::uint32_t, 31, 8>,
                groov::field<"CHANNELS", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ipcc_verr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -164,54 +184,22 @@ namespace ipcc {
                groov::field<"MAJREV", std::uint8_t, 7, 4>,
                groov::field<"MINREV", std::uint8_t, 3, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ipcc_ipidr_tt = groov::reg<name,
                                    std::uint32_t,
                                    baseaddress + offset,
                                    access::ro,
                                    groov::field<"ID", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ipcc_sidr_tt = groov::reg<name,
                                   std::uint32_t,
                                   baseaddress + offset,
                                   access::ro,
                                   groov::field<"SID", std::uint32_t, 31, 0>>;
-
-  template <std::uint32_t baseaddress>
-  using ipcc_c1cr_t = ipcc_c1cr_tt<"IPCC_C1CR", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using ipcc_c1mr_t = ipcc_c1mr_tt<"IPCC_C1MR", baseaddress, 4>;
-
-  template <std::uint32_t baseaddress>
-  using ipcc_c1scr_t = ipcc_c1scr_tt<"IPCC_C1SCR", baseaddress, 8>;
-
-  template <std::uint32_t baseaddress>
-  using ipcc_c1toc2sr_t = ipcc_c1toc2sr_tt<"IPCC_C1TOC2SR", baseaddress, 12>;
-
-  template <std::uint32_t baseaddress>
-  using ipcc_c2cr_t = ipcc_c2cr_tt<"IPCC_C2CR", baseaddress, 16>;
-
-  template <std::uint32_t baseaddress>
-  using ipcc_c2mr_t = ipcc_c2mr_tt<"IPCC_C2MR", baseaddress, 20>;
-
-  template <std::uint32_t baseaddress>
-  using ipcc_c2scr_t = ipcc_c2scr_tt<"IPCC_C2SCR", baseaddress, 24>;
-
-  template <std::uint32_t baseaddress>
-  using ipcc_c2toc1sr_t = ipcc_c2toc1sr_tt<"IPCC_C2TOC1SR", baseaddress, 28>;
-
-  template <std::uint32_t baseaddress>
-  using ipcc_hwcfgr_t = ipcc_hwcfgr_tt<"IPCC_HWCFGR", baseaddress, 1008>;
-
-  template <std::uint32_t baseaddress>
-  using ipcc_verr_t = ipcc_verr_tt<"IPCC_VERR", baseaddress, 1012>;
-
-  template <std::uint32_t baseaddress>
-  using ipcc_ipidr_t = ipcc_ipidr_tt<"IPCC_IPIDR", baseaddress, 1016>;
-
-  template <std::uint32_t baseaddress>
-  using ipcc_sidr_t = ipcc_sidr_tt<"IPCC_SIDR", baseaddress, 1020>;
 
 } // namespace ipcc

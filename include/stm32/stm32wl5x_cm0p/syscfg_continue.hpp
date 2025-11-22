@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace syscfg_continue {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using imr1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -33,7 +35,9 @@ namespace syscfg_continue {
                groov::field<"RESERVED0", bool, 1, 1, access::ro>,
                groov::field<"RTCSTAMPTAMPLSECSSIM", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using imr2_tt =
     groov::reg<name,
                std::uint32_t,
@@ -45,7 +49,9 @@ namespace syscfg_continue {
                groov::field<"PVM3IM", bool, 18, 18>,
                groov::field<"RESERVED0", std::uint32_t, 17, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c2imr1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -83,7 +89,9 @@ namespace syscfg_continue {
                groov::field<"RTCALARMIM", bool, 1, 1>,
                groov::field<"RTCSTAMPTAMPLSECSSIM", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using c2imr2_tt =
     groov::reg<name,
                std::uint32_t,
@@ -110,17 +118,5 @@ namespace syscfg_continue {
                groov::field<"DMA1CH3IM", bool, 2, 2>,
                groov::field<"DMA1CH2IM", bool, 1, 1>,
                groov::field<"DMA1CH1IM", bool, 0, 0>>;
-
-  template <std::uint32_t baseaddress>
-  using imr1_t = imr1_tt<"IMR1", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using imr2_t = imr2_tt<"IMR2", baseaddress, 4>;
-
-  template <std::uint32_t baseaddress>
-  using c2imr1_t = c2imr1_tt<"C2IMR1", baseaddress, 8>;
-
-  template <std::uint32_t baseaddress>
-  using c2imr2_t = c2imr2_tt<"C2IMR2", baseaddress, 12>;
 
 } // namespace syscfg_continue

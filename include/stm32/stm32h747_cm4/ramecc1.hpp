@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace ramecc1 {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ier_tt =
     groov::reg<name,
                std::uint32_t,
@@ -23,7 +25,9 @@ namespace ramecc1 {
                groov::field<"GECCSEIE_", bool, 1, 1>,
                groov::field<"GIE", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using m1cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -36,7 +40,9 @@ namespace ramecc1 {
                groov::field<"ECCSEIE", bool, 2, 2>,
                groov::field<"RESERVED0", std::uint8_t, 1, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using m1sr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -49,7 +55,9 @@ namespace ramecc1 {
                groov::field<"ECCSEIE", bool, 2, 2>,
                groov::field<"RESERVED0", std::uint8_t, 1, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using m1far_tt =
     groov::reg<name,
                std::uint32_t,
@@ -62,7 +70,9 @@ namespace ramecc1 {
                groov::field<"ECCSEIE", bool, 2, 2>,
                groov::field<"RESERVED0", std::uint8_t, 1, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using m1fdrl_tt =
     groov::reg<name,
                std::uint32_t,
@@ -75,7 +85,9 @@ namespace ramecc1 {
                groov::field<"ECCSEIE", bool, 2, 2>,
                groov::field<"RESERVED0", std::uint8_t, 1, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using m1fdrh_tt =
     groov::reg<name,
                std::uint32_t,
@@ -88,7 +100,9 @@ namespace ramecc1 {
                groov::field<"ECCSEIE", bool, 2, 2>,
                groov::field<"RESERVED0", std::uint8_t, 1, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using m1fecr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -99,7 +113,9 @@ namespace ramecc1 {
                groov::field<"DEDF", bool, 1, 1>,
                groov::field<"SEDCF", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using m2cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -110,7 +126,9 @@ namespace ramecc1 {
                groov::field<"DEDF", bool, 1, 1>,
                groov::field<"SEDCF", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using m2sr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -121,7 +139,9 @@ namespace ramecc1 {
                groov::field<"DEDF", bool, 1, 1>,
                groov::field<"SEDCF", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using m2far_tt =
     groov::reg<name,
                std::uint32_t,
@@ -132,7 +152,9 @@ namespace ramecc1 {
                groov::field<"DEDF", bool, 1, 1>,
                groov::field<"SEDCF", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using m2fdrl_tt =
     groov::reg<name,
                std::uint32_t,
@@ -143,237 +165,184 @@ namespace ramecc1 {
                groov::field<"DEDF", bool, 1, 1>,
                groov::field<"SEDCF", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using m2fdrh_tt = groov::reg<name,
                                std::uint32_t,
                                baseaddress + offset,
                                access::ro,
                                groov::field<"FADD", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using m2fecr_tt = groov::reg<name,
                                std::uint32_t,
                                baseaddress + offset,
                                access::ro,
                                groov::field<"FADD", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using m3cr_tt = groov::reg<name,
                              std::uint32_t,
                              baseaddress + offset,
                              access::ro,
                              groov::field<"FADD", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using m3sr_tt = groov::reg<name,
                              std::uint32_t,
                              baseaddress + offset,
                              access::ro,
                              groov::field<"FADD", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using m3far_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
                               access::rw,
                               groov::field<"FADD", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using m3fdrl_tt = groov::reg<name,
                                std::uint32_t,
                                baseaddress + offset,
                                access::ro,
                                groov::field<"FDATAL", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using m3fdrh_tt = groov::reg<name,
                                std::uint32_t,
                                baseaddress + offset,
                                access::ro,
                                groov::field<"FDATAL", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using m3fecr_tt = groov::reg<name,
                                std::uint32_t,
                                baseaddress + offset,
                                access::ro,
                                groov::field<"FDATAL", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using m4cr_tt = groov::reg<name,
                              std::uint32_t,
                              baseaddress + offset,
                              access::ro,
                              groov::field<"FDATAL", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using m4sr_tt = groov::reg<name,
                              std::uint32_t,
                              baseaddress + offset,
                              access::ro,
                              groov::field<"FDATAL", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using m4far_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
                               access::ro,
                               groov::field<"FDATAH", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using m4fdrl_tt = groov::reg<name,
                                std::uint32_t,
                                baseaddress + offset,
                                access::rw,
                                groov::field<"FDATAH", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using m4fdrh_tt = groov::reg<name,
                                std::uint32_t,
                                baseaddress + offset,
                                access::ro,
                                groov::field<"FDATAH", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using m4fecr_tt = groov::reg<name,
                                std::uint32_t,
                                baseaddress + offset,
                                access::ro,
                                groov::field<"FDATAH", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using m5cr_tt = groov::reg<name,
                              std::uint32_t,
                              baseaddress + offset,
                              access::ro,
                              groov::field<"FEC", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using m5sr_tt = groov::reg<name,
                              std::uint32_t,
                              baseaddress + offset,
                              access::rw,
                              groov::field<"FEC", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using m5far_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
                               access::rw,
                               groov::field<"FEC", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using m5fdrl_tt = groov::reg<name,
                                std::uint32_t,
                                baseaddress + offset,
                                access::ro,
                                groov::field<"FEC", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using m5fdrh_tt = groov::reg<name,
                                std::uint32_t,
                                baseaddress + offset,
                                access::ro,
                                groov::field<"FEC", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using m5fecr_tt = groov::reg<name,
                                std::uint32_t,
                                baseaddress + offset,
                                access::ro,
                                groov::field<"FEC", std::uint32_t, 31, 0>>;
-
-  template <std::uint32_t baseaddress>
-  using ier_t = ier_tt<"IER", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using m1cr_t = m1cr_tt<"M1CR", baseaddress, 32>;
-
-  template <std::uint32_t baseaddress>
-  using m1sr_t = m1sr_tt<"M1SR", baseaddress, 36>;
-
-  template <std::uint32_t baseaddress>
-  using m1far_t = m1far_tt<"M1FAR", baseaddress, 40>;
-
-  template <std::uint32_t baseaddress>
-  using m1fdrl_t = m1fdrl_tt<"M1FDRL", baseaddress, 44>;
-
-  template <std::uint32_t baseaddress>
-  using m1fdrh_t = m1fdrh_tt<"M1FDRH", baseaddress, 48>;
-
-  template <std::uint32_t baseaddress>
-  using m1fecr_t = m1fecr_tt<"M1FECR", baseaddress, 52>;
-
-  template <std::uint32_t baseaddress>
-  using m2cr_t = m2cr_tt<"M2CR", baseaddress, 64>;
-
-  template <std::uint32_t baseaddress>
-  using m2sr_t = m2sr_tt<"M2SR", baseaddress, 68>;
-
-  template <std::uint32_t baseaddress>
-  using m2far_t = m2far_tt<"M2FAR", baseaddress, 72>;
-
-  template <std::uint32_t baseaddress>
-  using m2fdrl_t = m2fdrl_tt<"M2FDRL", baseaddress, 76>;
-
-  template <std::uint32_t baseaddress>
-  using m2fdrh_t = m2fdrh_tt<"M2FDRH", baseaddress, 80>;
-
-  template <std::uint32_t baseaddress>
-  using m2fecr_t = m2fecr_tt<"M2FECR", baseaddress, 88>;
-
-  template <std::uint32_t baseaddress>
-  using m3cr_t = m3cr_tt<"M3CR", baseaddress, 96>;
-
-  template <std::uint32_t baseaddress>
-  using m3sr_t = m3sr_tt<"M3SR", baseaddress, 100>;
-
-  template <std::uint32_t baseaddress>
-  using m3far_t = m3far_tt<"M3FAR", baseaddress, 104>;
-
-  template <std::uint32_t baseaddress>
-  using m3fdrl_t = m3fdrl_tt<"M3FDRL", baseaddress, 108>;
-
-  template <std::uint32_t baseaddress>
-  using m3fdrh_t = m3fdrh_tt<"M3FDRH", baseaddress, 112>;
-
-  template <std::uint32_t baseaddress>
-  using m3fecr_t = m3fecr_tt<"M3FECR", baseaddress, 124>;
-
-  template <std::uint32_t baseaddress>
-  using m4cr_t = m4cr_tt<"M4CR", baseaddress, 128>;
-
-  template <std::uint32_t baseaddress>
-  using m4sr_t = m4sr_tt<"M4SR", baseaddress, 132>;
-
-  template <std::uint32_t baseaddress>
-  using m4far_t = m4far_tt<"M4FAR", baseaddress, 136>;
-
-  template <std::uint32_t baseaddress>
-  using m4fdrl_t = m4fdrl_tt<"M4FDRL", baseaddress, 140>;
-
-  template <std::uint32_t baseaddress>
-  using m4fdrh_t = m4fdrh_tt<"M4FDRH", baseaddress, 144>;
-
-  template <std::uint32_t baseaddress>
-  using m4fecr_t = m4fecr_tt<"M4FECR", baseaddress, 144>;
-
-  template <std::uint32_t baseaddress>
-  using m5cr_t = m5cr_tt<"M5CR", baseaddress, 160>;
-
-  template <std::uint32_t baseaddress>
-  using m5sr_t = m5sr_tt<"M5SR", baseaddress, 164>;
-
-  template <std::uint32_t baseaddress>
-  using m5far_t = m5far_tt<"M5FAR", baseaddress, 168>;
-
-  template <std::uint32_t baseaddress>
-  using m5fdrl_t = m5fdrl_tt<"M5FDRL", baseaddress, 172>;
-
-  template <std::uint32_t baseaddress>
-  using m5fdrh_t = m5fdrh_tt<"M5FDRH", baseaddress, 176>;
-
-  template <std::uint32_t baseaddress>
-  using m5fecr_t = m5fecr_tt<"M5FECR", baseaddress, 180>;
 
 } // namespace ramecc1

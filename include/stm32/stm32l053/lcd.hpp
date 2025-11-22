@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace lcd {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -24,7 +26,9 @@ namespace lcd {
                groov::field<"VSEL", bool, 1, 1>,
                groov::field<"LCDEN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using fcr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -43,7 +47,9 @@ namespace lcd {
                groov::field<"SOFIE", bool, 1, 1>,
                groov::field<"HD", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using sr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -57,7 +63,9 @@ namespace lcd {
                groov::field<"SOF", bool, 1, 1, access::ro>,
                groov::field<"ENS", bool, 0, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using clr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -69,7 +77,9 @@ namespace lcd {
                groov::field<"SOFC", bool, 1, 1>,
                groov::field<"RESERVED0", bool, 0, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ram_com0_0_tt = groov::reg<name,
                                    std::uint32_t,
                                    baseaddress + offset,
@@ -107,7 +117,9 @@ namespace lcd {
                                    groov::field<"S01", bool, 1, 1>,
                                    groov::field<"S00", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ram_com0_1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -135,7 +147,9 @@ namespace lcd {
                groov::field<"S33", bool, 1, 1>,
                groov::field<"S32", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ram_com1_0_tt = groov::reg<name,
                                    std::uint32_t,
                                    baseaddress + offset,
@@ -173,7 +187,9 @@ namespace lcd {
                                    groov::field<"S01", bool, 1, 1>,
                                    groov::field<"S00", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ram_com1_1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -201,7 +217,9 @@ namespace lcd {
                groov::field<"S33", bool, 1, 1>,
                groov::field<"S32", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ram_com2_0_tt = groov::reg<name,
                                    std::uint32_t,
                                    baseaddress + offset,
@@ -239,7 +257,9 @@ namespace lcd {
                                    groov::field<"S01", bool, 1, 1>,
                                    groov::field<"S00", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ram_com2_1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -267,7 +287,9 @@ namespace lcd {
                groov::field<"S33", bool, 1, 1>,
                groov::field<"S32", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ram_com3_0_tt = groov::reg<name,
                                    std::uint32_t,
                                    baseaddress + offset,
@@ -305,7 +327,9 @@ namespace lcd {
                                    groov::field<"S01", bool, 1, 1>,
                                    groov::field<"S00", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ram_com3_1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -333,7 +357,9 @@ namespace lcd {
                groov::field<"S33", bool, 1, 1>,
                groov::field<"S32", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ram_com4_0_tt = groov::reg<name,
                                    std::uint32_t,
                                    baseaddress + offset,
@@ -371,7 +397,9 @@ namespace lcd {
                                    groov::field<"S01", bool, 1, 1>,
                                    groov::field<"S00", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ram_com4_1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -395,7 +423,9 @@ namespace lcd {
                groov::field<"S33", bool, 1, 1>,
                groov::field<"S32", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ram_com5_0_tt = groov::reg<name,
                                    std::uint32_t,
                                    baseaddress + offset,
@@ -433,7 +463,9 @@ namespace lcd {
                                    groov::field<"S01", bool, 1, 1>,
                                    groov::field<"S00", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ram_com5_1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -457,7 +489,9 @@ namespace lcd {
                groov::field<"S33", bool, 1, 1>,
                groov::field<"S32", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ram_com6_0_tt = groov::reg<name,
                                    std::uint32_t,
                                    baseaddress + offset,
@@ -495,7 +529,9 @@ namespace lcd {
                                    groov::field<"S01", bool, 1, 1>,
                                    groov::field<"S00", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ram_com6_1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -519,7 +555,9 @@ namespace lcd {
                groov::field<"S33", bool, 1, 1>,
                groov::field<"S32", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ram_com7_0_tt = groov::reg<name,
                                    std::uint32_t,
                                    baseaddress + offset,
@@ -557,7 +595,9 @@ namespace lcd {
                                    groov::field<"S01", bool, 1, 1>,
                                    groov::field<"S00", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ram_com7_1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -580,65 +620,5 @@ namespace lcd {
                groov::field<"S34", bool, 2, 2>,
                groov::field<"S33", bool, 1, 1>,
                groov::field<"S32", bool, 0, 0>>;
-
-  template <std::uint32_t baseaddress>
-  using cr_t = cr_tt<"CR", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using fcr_t = fcr_tt<"FCR", baseaddress, 4>;
-
-  template <std::uint32_t baseaddress>
-  using sr_t = sr_tt<"SR", baseaddress, 8>;
-
-  template <std::uint32_t baseaddress>
-  using clr_t = clr_tt<"CLR", baseaddress, 12>;
-
-  template <std::uint32_t baseaddress>
-  using ram_com0_0_t = ram_com0_0_tt<"RAM_COM0_0", baseaddress, 20>;
-
-  template <std::uint32_t baseaddress>
-  using ram_com0_1_t = ram_com0_1_tt<"RAM_COM0_1", baseaddress, 24>;
-
-  template <std::uint32_t baseaddress>
-  using ram_com1_0_t = ram_com1_0_tt<"RAM_COM1_0", baseaddress, 28>;
-
-  template <std::uint32_t baseaddress>
-  using ram_com1_1_t = ram_com1_1_tt<"RAM_COM1_1", baseaddress, 32>;
-
-  template <std::uint32_t baseaddress>
-  using ram_com2_0_t = ram_com2_0_tt<"RAM_COM2_0", baseaddress, 36>;
-
-  template <std::uint32_t baseaddress>
-  using ram_com2_1_t = ram_com2_1_tt<"RAM_COM2_1", baseaddress, 40>;
-
-  template <std::uint32_t baseaddress>
-  using ram_com3_0_t = ram_com3_0_tt<"RAM_COM3_0", baseaddress, 44>;
-
-  template <std::uint32_t baseaddress>
-  using ram_com3_1_t = ram_com3_1_tt<"RAM_COM3_1", baseaddress, 48>;
-
-  template <std::uint32_t baseaddress>
-  using ram_com4_0_t = ram_com4_0_tt<"RAM_COM4_0", baseaddress, 52>;
-
-  template <std::uint32_t baseaddress>
-  using ram_com4_1_t = ram_com4_1_tt<"RAM_COM4_1", baseaddress, 56>;
-
-  template <std::uint32_t baseaddress>
-  using ram_com5_0_t = ram_com5_0_tt<"RAM_COM5_0", baseaddress, 60>;
-
-  template <std::uint32_t baseaddress>
-  using ram_com5_1_t = ram_com5_1_tt<"RAM_COM5_1", baseaddress, 64>;
-
-  template <std::uint32_t baseaddress>
-  using ram_com6_0_t = ram_com6_0_tt<"RAM_COM6_0", baseaddress, 68>;
-
-  template <std::uint32_t baseaddress>
-  using ram_com6_1_t = ram_com6_1_tt<"RAM_COM6_1", baseaddress, 72>;
-
-  template <std::uint32_t baseaddress>
-  using ram_com7_0_t = ram_com7_0_tt<"RAM_COM7_0", baseaddress, 76>;
-
-  template <std::uint32_t baseaddress>
-  using ram_com7_1_t = ram_com7_1_tt<"RAM_COM7_1", baseaddress, 80>;
 
 } // namespace lcd

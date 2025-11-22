@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace scb {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using cpuid_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
@@ -22,7 +24,9 @@ namespace scb {
                               groov::field<"PartNo", std::uint16_t, 15, 4>,
                               groov::field<"Revision", std::uint8_t, 3, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using icsr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -42,7 +46,9 @@ namespace scb {
                groov::field<"RESERVED0", std::uint8_t, 10, 9, access::ro>,
                groov::field<"VECTACTIVE", std::uint16_t, 8, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using vtor_tt =
     groov::reg<name,
                std::uint32_t,
@@ -52,7 +58,9 @@ namespace scb {
                groov::field<"TBLOFF", std::uint32_t, 29, 9>,
                groov::field<"RESERVED0", std::uint16_t, 8, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using aircr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -67,7 +75,9 @@ namespace scb {
                groov::field<"VECTCLRACTIVE", bool, 1, 1>,
                groov::field<"VECTRESET", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using scr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -80,7 +90,9 @@ namespace scb {
                groov::field<"SLEEPONEXIT", bool, 1, 1>,
                groov::field<"RESERVED0", bool, 0, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ccr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -96,7 +108,9 @@ namespace scb {
                groov::field<"USERSETMPEND", bool, 1, 1>,
                groov::field<"NONBASETHRDENA", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using shpr1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -107,7 +121,9 @@ namespace scb {
                groov::field<"PRI_5", std::uint8_t, 15, 8>,
                groov::field<"PRI_4", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using shpr2_tt =
     groov::reg<name,
                std::uint32_t,
@@ -116,7 +132,9 @@ namespace scb {
                groov::field<"PRI_11", std::uint8_t, 31, 24>,
                groov::field<"RESERVED0", std::uint32_t, 23, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using shpr3_tt =
     groov::reg<name,
                std::uint32_t,
@@ -126,7 +144,9 @@ namespace scb {
                groov::field<"PRI_14", std::uint8_t, 23, 16>,
                groov::field<"RESERVED0", std::uint16_t, 15, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using shcsr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -151,7 +171,9 @@ namespace scb {
                groov::field<"BUSFAULTACT", bool, 1, 1>,
                groov::field<"MEMFAULTACT", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using cfsr_ufsr_bfsr_mmfsr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -182,7 +204,9 @@ namespace scb {
                groov::field<"IACCVIOL", bool, 1, 1>,
                groov::field<"RESERVED0", bool, 0, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using hfsr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -194,71 +218,31 @@ namespace scb {
                groov::field<"VECTTBL", bool, 1, 1>,
                groov::field<"RESERVED0", bool, 0, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mmfar_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
                               access::rw,
                               groov::field<"MMFAR", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using bfar_tt = groov::reg<name,
                              std::uint32_t,
                              baseaddress + offset,
                              access::rw,
                              groov::field<"BFAR", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using afsr_tt = groov::reg<name,
                              std::uint32_t,
                              baseaddress + offset,
                              access::rw,
                              groov::field<"IMPDEF", std::uint32_t, 31, 0>>;
-
-  template <std::uint32_t baseaddress>
-  using cpuid_t = cpuid_tt<"CPUID", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using icsr_t = icsr_tt<"ICSR", baseaddress, 4>;
-
-  template <std::uint32_t baseaddress>
-  using vtor_t = vtor_tt<"VTOR", baseaddress, 8>;
-
-  template <std::uint32_t baseaddress>
-  using aircr_t = aircr_tt<"AIRCR", baseaddress, 12>;
-
-  template <std::uint32_t baseaddress>
-  using scr_t = scr_tt<"SCR", baseaddress, 16>;
-
-  template <std::uint32_t baseaddress>
-  using ccr_t = ccr_tt<"CCR", baseaddress, 20>;
-
-  template <std::uint32_t baseaddress>
-  using shpr1_t = shpr1_tt<"SHPR1", baseaddress, 24>;
-
-  template <std::uint32_t baseaddress>
-  using shpr2_t = shpr2_tt<"SHPR2", baseaddress, 28>;
-
-  template <std::uint32_t baseaddress>
-  using shpr3_t = shpr3_tt<"SHPR3", baseaddress, 32>;
-
-  template <std::uint32_t baseaddress>
-  using shcsr_t = shcsr_tt<"SHCSR", baseaddress, 36>;
-
-  template <std::uint32_t baseaddress>
-  using cfsr_ufsr_bfsr_mmfsr_t =
-    cfsr_ufsr_bfsr_mmfsr_tt<"CFSR_UFSR_BFSR_MMFSR", baseaddress, 40>;
-
-  template <std::uint32_t baseaddress>
-  using hfsr_t = hfsr_tt<"HFSR", baseaddress, 44>;
-
-  template <std::uint32_t baseaddress>
-  using mmfar_t = mmfar_tt<"MMFAR", baseaddress, 52>;
-
-  template <std::uint32_t baseaddress>
-  using bfar_t = bfar_tt<"BFAR", baseaddress, 56>;
-
-  template <std::uint32_t baseaddress>
-  using afsr_t = afsr_tt<"AFSR", baseaddress, 60>;
 
 } // namespace scb

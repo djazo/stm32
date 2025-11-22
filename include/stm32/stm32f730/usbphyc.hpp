@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace usbphyc {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using pll1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -21,7 +23,9 @@ namespace usbphyc {
                groov::field<"PLL1SEL", std::uint8_t, 3, 1>,
                groov::field<"PLL1EN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using tune_tt =
     groov::reg<name,
                std::uint32_t,
@@ -47,7 +51,9 @@ namespace usbphyc {
                groov::field<"INCURRINT", bool, 1, 1>,
                groov::field<"INCURREN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ldo_tt =
     groov::reg<name,
                std::uint32_t,
@@ -57,14 +63,5 @@ namespace usbphyc {
                groov::field<"LDO_DISABLE", bool, 2, 2>,
                groov::field<"LDO_STATUS", bool, 1, 1, access::ro>,
                groov::field<"LDO_USED", bool, 0, 0, access::ro>>;
-
-  template <std::uint32_t baseaddress>
-  using pll1_t = pll1_tt<"PLL1", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using tune_t = tune_tt<"TUNE", baseaddress, 12>;
-
-  template <std::uint32_t baseaddress>
-  using ldo_t = ldo_tt<"LDO", baseaddress, 24>;
 
 } // namespace usbphyc

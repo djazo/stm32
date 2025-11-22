@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace cordic {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using cordic_csr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -31,7 +33,9 @@ namespace cordic {
                groov::field<"PRECISION", std::uint8_t, 7, 4>,
                groov::field<"FUNC", std::uint8_t, 3, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using cordic_wdata_tt =
     groov::reg<name,
                std::uint32_t,
@@ -39,21 +43,14 @@ namespace cordic {
                access::rw,
                groov::field<"ARG", std::uint32_t, 31, 0, access::wo>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using cordic_rdata_tt =
     groov::reg<name,
                std::uint32_t,
                baseaddress + offset,
                access::rw,
                groov::field<"RES", std::uint32_t, 31, 0, access::ro>>;
-
-  template <std::uint32_t baseaddress>
-  using cordic_csr_t = cordic_csr_tt<"CORDIC_CSR", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using cordic_wdata_t = cordic_wdata_tt<"CORDIC_WDATA", baseaddress, 4>;
-
-  template <std::uint32_t baseaddress>
-  using cordic_rdata_t = cordic_rdata_tt<"CORDIC_RDATA", baseaddress, 8>;
 
 } // namespace cordic

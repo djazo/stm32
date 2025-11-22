@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace ramcfg {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ram1cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -26,7 +28,9 @@ namespace ramcfg {
                groov::field<"RESERVED0", std::uint8_t, 3, 1, access::ro>,
                groov::field<"ECCE", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ram1isr_tt = groov::reg<name,
                                 std::uint32_t,
                                 baseaddress + offset,
@@ -37,7 +41,9 @@ namespace ramcfg {
                                 groov::field<"DED", bool, 1, 1>,
                                 groov::field<"SEDC", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ram1erkeyr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -46,7 +52,9 @@ namespace ramcfg {
                groov::field<"RESERVED0", std::uint32_t, 31, 8, access::ro>,
                groov::field<"ERASEKEY", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ram2cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -61,7 +69,9 @@ namespace ramcfg {
                groov::field<"RESERVED0", std::uint8_t, 3, 1, access::ro>,
                groov::field<"ECCE", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ram2ier_tt =
     groov::reg<name,
                std::uint32_t,
@@ -73,7 +83,9 @@ namespace ramcfg {
                groov::field<"DEIE", bool, 1, 1>,
                groov::field<"SEIE", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ram2isr_tt = groov::reg<name,
                                 std::uint32_t,
                                 baseaddress + offset,
@@ -84,21 +96,27 @@ namespace ramcfg {
                                 groov::field<"DED", bool, 1, 1>,
                                 groov::field<"SEDC", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ram2sear_tt = groov::reg<name,
                                  std::uint32_t,
                                  baseaddress + offset,
                                  access::ro,
                                  groov::field<"ESEA", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ram2dear_tt = groov::reg<name,
                                  std::uint32_t,
                                  baseaddress + offset,
                                  access::ro,
                                  groov::field<"EDEA", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ram2icr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -108,7 +126,9 @@ namespace ramcfg {
                groov::field<"CDED", bool, 1, 1>,
                groov::field<"CSEDC", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ram2wpr1_tt = groov::reg<name,
                                  std::uint32_t,
                                  baseaddress + offset,
@@ -146,7 +166,9 @@ namespace ramcfg {
                                  groov::field<"P1WP", bool, 1, 1>,
                                  groov::field<"P0WP", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ram2wpr2_tt = groov::reg<name,
                                  std::uint32_t,
                                  baseaddress + offset,
@@ -184,7 +206,9 @@ namespace ramcfg {
                                  groov::field<"P33WP", bool, 1, 1>,
                                  groov::field<"P32WP", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ram2ecckeyr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -193,7 +217,9 @@ namespace ramcfg {
                groov::field<"RESERVED0", std::uint32_t, 31, 8, access::ro>,
                groov::field<"ECCKEY", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ram2erkeyr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -202,7 +228,9 @@ namespace ramcfg {
                groov::field<"RESERVED0", std::uint32_t, 31, 8, access::ro>,
                groov::field<"ERASEKEY", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ram3cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -217,7 +245,9 @@ namespace ramcfg {
                groov::field<"RESERVED0", std::uint8_t, 3, 1, access::ro>,
                groov::field<"ECCE", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ram3ier_tt =
     groov::reg<name,
                std::uint32_t,
@@ -229,7 +259,9 @@ namespace ramcfg {
                groov::field<"DEIE", bool, 1, 1>,
                groov::field<"SEIE", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ram3isr_tt = groov::reg<name,
                                 std::uint32_t,
                                 baseaddress + offset,
@@ -240,21 +272,27 @@ namespace ramcfg {
                                 groov::field<"DED", bool, 1, 1>,
                                 groov::field<"SEDC", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ram3sear_tt = groov::reg<name,
                                  std::uint32_t,
                                  baseaddress + offset,
                                  access::ro,
                                  groov::field<"ESEA", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ram3dear_tt = groov::reg<name,
                                  std::uint32_t,
                                  baseaddress + offset,
                                  access::ro,
                                  groov::field<"EDEA", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ram3icr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -264,7 +302,9 @@ namespace ramcfg {
                groov::field<"CDED", bool, 1, 1>,
                groov::field<"CSEDC", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ram3ecckeyr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -273,7 +313,9 @@ namespace ramcfg {
                groov::field<"RESERVED0", std::uint32_t, 31, 8, access::ro>,
                groov::field<"ECCKEY", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ram3erkeyr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -282,7 +324,9 @@ namespace ramcfg {
                groov::field<"RESERVED0", std::uint32_t, 31, 8, access::ro>,
                groov::field<"ERASEKEY", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ram4cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -297,7 +341,9 @@ namespace ramcfg {
                groov::field<"RESERVED0", std::uint8_t, 3, 1, access::ro>,
                groov::field<"ECCE", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ram4isr_tt = groov::reg<name,
                                 std::uint32_t,
                                 baseaddress + offset,
@@ -308,7 +354,9 @@ namespace ramcfg {
                                 groov::field<"DED", bool, 1, 1>,
                                 groov::field<"SEDC", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ram4erkeyr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -317,7 +365,9 @@ namespace ramcfg {
                groov::field<"RESERVED0", std::uint32_t, 31, 8, access::ro>,
                groov::field<"ERASEKEY", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ram5cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -332,7 +382,9 @@ namespace ramcfg {
                groov::field<"RESERVED0", std::uint8_t, 3, 1, access::ro>,
                groov::field<"ECCE", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ram5ier_tt =
     groov::reg<name,
                std::uint32_t,
@@ -344,7 +396,9 @@ namespace ramcfg {
                groov::field<"DEIE", bool, 1, 1>,
                groov::field<"SEIE", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ram5isr_tt = groov::reg<name,
                                 std::uint32_t,
                                 baseaddress + offset,
@@ -355,21 +409,27 @@ namespace ramcfg {
                                 groov::field<"DED", bool, 1, 1>,
                                 groov::field<"SEDC", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ram5sear_tt = groov::reg<name,
                                  std::uint32_t,
                                  baseaddress + offset,
                                  access::ro,
                                  groov::field<"ESEA", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ram5dear_tt = groov::reg<name,
                                  std::uint32_t,
                                  baseaddress + offset,
                                  access::ro,
                                  groov::field<"EDEA", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ram5icr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -378,95 +438,5 @@ namespace ramcfg {
                groov::field<"RESERVED0", std::uint32_t, 31, 2, access::ro>,
                groov::field<"CDED", bool, 1, 1>,
                groov::field<"CSEDC", bool, 0, 0>>;
-
-  template <std::uint32_t baseaddress>
-  using ram1cr_t = ram1cr_tt<"RAM1CR", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using ram1isr_t = ram1isr_tt<"RAM1ISR", baseaddress, 8>;
-
-  template <std::uint32_t baseaddress>
-  using ram1erkeyr_t = ram1erkeyr_tt<"RAM1ERKEYR", baseaddress, 40>;
-
-  template <std::uint32_t baseaddress>
-  using ram2cr_t = ram2cr_tt<"RAM2CR", baseaddress, 64>;
-
-  template <std::uint32_t baseaddress>
-  using ram2ier_t = ram2ier_tt<"RAM2IER", baseaddress, 68>;
-
-  template <std::uint32_t baseaddress>
-  using ram2isr_t = ram2isr_tt<"RAM2ISR", baseaddress, 72>;
-
-  template <std::uint32_t baseaddress>
-  using ram2sear_t = ram2sear_tt<"RAM2SEAR", baseaddress, 76>;
-
-  template <std::uint32_t baseaddress>
-  using ram2dear_t = ram2dear_tt<"RAM2DEAR", baseaddress, 80>;
-
-  template <std::uint32_t baseaddress>
-  using ram2icr_t = ram2icr_tt<"RAM2ICR", baseaddress, 84>;
-
-  template <std::uint32_t baseaddress>
-  using ram2wpr1_t = ram2wpr1_tt<"RAM2WPR1", baseaddress, 88>;
-
-  template <std::uint32_t baseaddress>
-  using ram2wpr2_t = ram2wpr2_tt<"RAM2WPR2", baseaddress, 92>;
-
-  template <std::uint32_t baseaddress>
-  using ram2ecckeyr_t = ram2ecckeyr_tt<"RAM2ECCKEYR", baseaddress, 100>;
-
-  template <std::uint32_t baseaddress>
-  using ram2erkeyr_t = ram2erkeyr_tt<"RAM2ERKEYR", baseaddress, 104>;
-
-  template <std::uint32_t baseaddress>
-  using ram3cr_t = ram3cr_tt<"RAM3CR", baseaddress, 128>;
-
-  template <std::uint32_t baseaddress>
-  using ram3ier_t = ram3ier_tt<"RAM3IER", baseaddress, 132>;
-
-  template <std::uint32_t baseaddress>
-  using ram3isr_t = ram3isr_tt<"RAM3ISR", baseaddress, 136>;
-
-  template <std::uint32_t baseaddress>
-  using ram3sear_t = ram3sear_tt<"RAM3SEAR", baseaddress, 140>;
-
-  template <std::uint32_t baseaddress>
-  using ram3dear_t = ram3dear_tt<"RAM3DEAR", baseaddress, 144>;
-
-  template <std::uint32_t baseaddress>
-  using ram3icr_t = ram3icr_tt<"RAM3ICR", baseaddress, 148>;
-
-  template <std::uint32_t baseaddress>
-  using ram3ecckeyr_t = ram3ecckeyr_tt<"RAM3ECCKEYR", baseaddress, 164>;
-
-  template <std::uint32_t baseaddress>
-  using ram3erkeyr_t = ram3erkeyr_tt<"RAM3ERKEYR", baseaddress, 168>;
-
-  template <std::uint32_t baseaddress>
-  using ram4cr_t = ram4cr_tt<"RAM4CR", baseaddress, 192>;
-
-  template <std::uint32_t baseaddress>
-  using ram4isr_t = ram4isr_tt<"RAM4ISR", baseaddress, 200>;
-
-  template <std::uint32_t baseaddress>
-  using ram4erkeyr_t = ram4erkeyr_tt<"RAM4ERKEYR", baseaddress, 232>;
-
-  template <std::uint32_t baseaddress>
-  using ram5cr_t = ram5cr_tt<"RAM5CR", baseaddress, 256>;
-
-  template <std::uint32_t baseaddress>
-  using ram5ier_t = ram5ier_tt<"RAM5IER", baseaddress, 260>;
-
-  template <std::uint32_t baseaddress>
-  using ram5isr_t = ram5isr_tt<"RAM5ISR", baseaddress, 264>;
-
-  template <std::uint32_t baseaddress>
-  using ram5sear_t = ram5sear_tt<"RAM5SEAR", baseaddress, 268>;
-
-  template <std::uint32_t baseaddress>
-  using ram5dear_t = ram5dear_tt<"RAM5DEAR", baseaddress, 272>;
-
-  template <std::uint32_t baseaddress>
-  using ram5icr_t = ram5icr_tt<"RAM5ICR", baseaddress, 276>;
 
 } // namespace ramcfg

@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace syscfg {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using cfgr1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -30,7 +32,9 @@ namespace syscfg {
                groov::field<"RESERVED0", std::uint8_t, 3, 2, access::ro>,
                groov::field<"MEM_MODE", std::uint8_t, 1, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using cfgr2_tt =
     groov::reg<name,
                std::uint32_t,
@@ -52,11 +56,5 @@ namespace syscfg {
                groov::field<"PVD_LOCK", bool, 2, 2>,
                groov::field<"SRAM_PARITY_LOCK", bool, 1, 1>,
                groov::field<"LOCKUP_LOCK", bool, 0, 0>>;
-
-  template <std::uint32_t baseaddress>
-  using cfgr1_t = cfgr1_tt<"CFGR1", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using cfgr2_t = cfgr2_tt<"CFGR2", baseaddress, 24>;
 
 } // namespace syscfg

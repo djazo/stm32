@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace flash {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using acr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -30,28 +32,36 @@ namespace flash {
                groov::field<"RESERVED0", std::uint8_t, 7, 4, access::ro>,
                groov::field<"LATENCY", std::uint8_t, 3, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using pdkeyr_tt = groov::reg<name,
                                std::uint32_t,
                                baseaddress + offset,
                                access::wo,
                                groov::field<"PDKEYR", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using keyr_tt = groov::reg<name,
                              std::uint32_t,
                              baseaddress + offset,
                              access::wo,
                              groov::field<"KEYR", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using optkeyr_tt = groov::reg<name,
                                 std::uint32_t,
                                 baseaddress + offset,
                                 access::wo,
                                 groov::field<"OPTKEYR", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using sr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -73,7 +83,9 @@ namespace flash {
                groov::field<"OPERR", bool, 1, 1>,
                groov::field<"EOP", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -97,7 +109,9 @@ namespace flash {
                groov::field<"PER", bool, 1, 1>,
                groov::field<"PG", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using eccr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -115,7 +129,9 @@ namespace flash {
                groov::field<"RESERVED0", std::uint8_t, 20, 19, access::ro>,
                groov::field<"ADDR_ECC", std::uint32_t, 18, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using optr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -142,7 +158,9 @@ namespace flash {
                groov::field<"BOR_LEV", std::uint8_t, 10, 8>,
                groov::field<"RDP", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using pcrop1sr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -151,7 +169,9 @@ namespace flash {
                groov::field<"RESERVED0", std::uint32_t, 31, 15, access::ro>,
                groov::field<"PCROP1_STRT", std::uint16_t, 14, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using pcrop1er_tt =
     groov::reg<name,
                std::uint32_t,
@@ -161,7 +181,9 @@ namespace flash {
                groov::field<"RESERVED0", std::uint16_t, 30, 15, access::ro>,
                groov::field<"PCROP1_END", std::uint16_t, 14, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using wrp1ar_tt =
     groov::reg<name,
                std::uint32_t,
@@ -172,7 +194,9 @@ namespace flash {
                groov::field<"RESERVED0", std::uint16_t, 15, 7, access::ro>,
                groov::field<"WRP1A_STRT", std::uint8_t, 6, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using wrp1br_tt =
     groov::reg<name,
                std::uint32_t,
@@ -183,7 +207,9 @@ namespace flash {
                groov::field<"RESERVED0", std::uint16_t, 15, 7, access::ro>,
                groov::field<"WRP1B_STRT", std::uint8_t, 6, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using sec1r_tt =
     groov::reg<name,
                std::uint32_t,
@@ -193,44 +219,5 @@ namespace flash {
                groov::field<"BOOT_LOCK", bool, 16, 16>,
                groov::field<"RESERVED0", std::uint8_t, 15, 8, access::ro>,
                groov::field<"SEC_SIZE1", std::uint8_t, 7, 0>>;
-
-  template <std::uint32_t baseaddress>
-  using acr_t = acr_tt<"ACR", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using pdkeyr_t = pdkeyr_tt<"PDKEYR", baseaddress, 4>;
-
-  template <std::uint32_t baseaddress>
-  using keyr_t = keyr_tt<"KEYR", baseaddress, 8>;
-
-  template <std::uint32_t baseaddress>
-  using optkeyr_t = optkeyr_tt<"OPTKEYR", baseaddress, 12>;
-
-  template <std::uint32_t baseaddress>
-  using sr_t = sr_tt<"SR", baseaddress, 16>;
-
-  template <std::uint32_t baseaddress>
-  using cr_t = cr_tt<"CR", baseaddress, 20>;
-
-  template <std::uint32_t baseaddress>
-  using eccr_t = eccr_tt<"ECCR", baseaddress, 24>;
-
-  template <std::uint32_t baseaddress>
-  using optr_t = optr_tt<"OPTR", baseaddress, 32>;
-
-  template <std::uint32_t baseaddress>
-  using pcrop1sr_t = pcrop1sr_tt<"PCROP1SR", baseaddress, 36>;
-
-  template <std::uint32_t baseaddress>
-  using pcrop1er_t = pcrop1er_tt<"PCROP1ER", baseaddress, 40>;
-
-  template <std::uint32_t baseaddress>
-  using wrp1ar_t = wrp1ar_tt<"WRP1AR", baseaddress, 44>;
-
-  template <std::uint32_t baseaddress>
-  using wrp1br_t = wrp1br_tt<"WRP1BR", baseaddress, 48>;
-
-  template <std::uint32_t baseaddress>
-  using sec1r_t = sec1r_tt<"SEC1R", baseaddress, 112>;
 
 } // namespace flash

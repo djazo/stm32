@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace gpiod {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using gpiod_moder_tt =
     groov::reg<name,
                std::uint32_t,
@@ -34,7 +36,9 @@ namespace gpiod {
                groov::field<"MODE1", std::uint8_t, 3, 2>,
                groov::field<"MODE0", std::uint8_t, 1, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using gpiod_otyper_tt =
     groov::reg<name,
                std::uint32_t,
@@ -58,7 +62,9 @@ namespace gpiod {
                groov::field<"OT1", bool, 1, 1>,
                groov::field<"OT0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using gpiod_ospeedr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -81,7 +87,9 @@ namespace gpiod {
                groov::field<"OSPEED1", std::uint8_t, 3, 2>,
                groov::field<"OSPEED0", std::uint8_t, 1, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using gpiod_pupdr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -104,7 +112,9 @@ namespace gpiod {
                groov::field<"PUPD1", std::uint8_t, 3, 2>,
                groov::field<"PUPD0", std::uint8_t, 1, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using gpiod_idr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -128,7 +138,9 @@ namespace gpiod {
                groov::field<"ID1", bool, 1, 1, access::ro>,
                groov::field<"ID0", bool, 0, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using gpiod_odr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -152,7 +164,9 @@ namespace gpiod {
                groov::field<"OD1", bool, 1, 1>,
                groov::field<"OD0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using gpiod_bsrr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -191,7 +205,9 @@ namespace gpiod {
                groov::field<"BS1", bool, 1, 1, access::wo>,
                groov::field<"BS0", bool, 0, 0, access::wo>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using gpiod_lckr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -216,7 +232,9 @@ namespace gpiod {
                groov::field<"LCK1", bool, 1, 1>,
                groov::field<"LCK0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using gpiod_afrl_tt = groov::reg<name,
                                    std::uint32_t,
                                    baseaddress + offset,
@@ -230,7 +248,9 @@ namespace gpiod {
                                    groov::field<"AFSEL1", std::uint8_t, 7, 4>,
                                    groov::field<"AFSEL0", std::uint8_t, 3, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using gpiod_afrh_tt =
     groov::reg<name,
                std::uint32_t,
@@ -245,7 +265,9 @@ namespace gpiod {
                groov::field<"AFSEL9", std::uint8_t, 7, 4>,
                groov::field<"AFSEL8", std::uint8_t, 3, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using gpiod_brr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -268,38 +290,5 @@ namespace gpiod {
                groov::field<"BR2", bool, 2, 2, access::wo>,
                groov::field<"BR1", bool, 1, 1, access::wo>,
                groov::field<"BR0", bool, 0, 0, access::wo>>;
-
-  template <std::uint32_t baseaddress>
-  using gpiod_moder_t = gpiod_moder_tt<"GPIOD_MODER", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using gpiod_otyper_t = gpiod_otyper_tt<"GPIOD_OTYPER", baseaddress, 4>;
-
-  template <std::uint32_t baseaddress>
-  using gpiod_ospeedr_t = gpiod_ospeedr_tt<"GPIOD_OSPEEDR", baseaddress, 8>;
-
-  template <std::uint32_t baseaddress>
-  using gpiod_pupdr_t = gpiod_pupdr_tt<"GPIOD_PUPDR", baseaddress, 12>;
-
-  template <std::uint32_t baseaddress>
-  using gpiod_idr_t = gpiod_idr_tt<"GPIOD_IDR", baseaddress, 16>;
-
-  template <std::uint32_t baseaddress>
-  using gpiod_odr_t = gpiod_odr_tt<"GPIOD_ODR", baseaddress, 20>;
-
-  template <std::uint32_t baseaddress>
-  using gpiod_bsrr_t = gpiod_bsrr_tt<"GPIOD_BSRR", baseaddress, 24>;
-
-  template <std::uint32_t baseaddress>
-  using gpiod_lckr_t = gpiod_lckr_tt<"GPIOD_LCKR", baseaddress, 28>;
-
-  template <std::uint32_t baseaddress>
-  using gpiod_afrl_t = gpiod_afrl_tt<"GPIOD_AFRL", baseaddress, 32>;
-
-  template <std::uint32_t baseaddress>
-  using gpiod_afrh_t = gpiod_afrh_tt<"GPIOD_AFRH", baseaddress, 36>;
-
-  template <std::uint32_t baseaddress>
-  using gpiod_brr_t = gpiod_brr_tt<"GPIOD_BRR", baseaddress, 40>;
 
 } // namespace gpiod

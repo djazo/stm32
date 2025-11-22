@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace ac {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using itcmcr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -23,7 +25,9 @@ namespace ac {
                groov::field<"RMW", bool, 1, 1>,
                groov::field<"EN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dtcmcr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -35,7 +39,9 @@ namespace ac {
                groov::field<"RMW", bool, 1, 1>,
                groov::field<"EN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ahbpcr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -45,7 +51,9 @@ namespace ac {
                groov::field<"SZ", std::uint8_t, 3, 1>,
                groov::field<"EN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using cacr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -56,7 +64,9 @@ namespace ac {
                groov::field<"ECCEN", bool, 1, 1>,
                groov::field<"SIWT", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ahbscr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -67,7 +77,9 @@ namespace ac {
                groov::field<"TPRI", std::uint16_t, 10, 2>,
                groov::field<"CTL", std::uint8_t, 1, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using abfsr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -81,23 +93,5 @@ namespace ac {
                groov::field<"AHBP", bool, 2, 2>,
                groov::field<"DTCM", bool, 1, 1>,
                groov::field<"ITCM", bool, 0, 0>>;
-
-  template <std::uint32_t baseaddress>
-  using itcmcr_t = itcmcr_tt<"ITCMCR", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using dtcmcr_t = dtcmcr_tt<"DTCMCR", baseaddress, 4>;
-
-  template <std::uint32_t baseaddress>
-  using ahbpcr_t = ahbpcr_tt<"AHBPCR", baseaddress, 8>;
-
-  template <std::uint32_t baseaddress>
-  using cacr_t = cacr_tt<"CACR", baseaddress, 12>;
-
-  template <std::uint32_t baseaddress>
-  using ahbscr_t = ahbscr_tt<"AHBSCR", baseaddress, 16>;
-
-  template <std::uint32_t baseaddress>
-  using abfsr_t = abfsr_tt<"ABFSR", baseaddress, 24>;
 
 } // namespace ac

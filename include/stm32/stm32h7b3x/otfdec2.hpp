@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace otfdec2 {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -20,7 +22,9 @@ namespace otfdec2 {
                groov::field<"RESERVED0", std::uint32_t, 31, 1, access::ro>,
                groov::field<"ENC", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using r1cfgr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -35,7 +39,9 @@ namespace otfdec2 {
                groov::field<"CONFIGLOCK", bool, 1, 1>,
                groov::field<"REG_EN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using r2cfgr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -50,7 +56,9 @@ namespace otfdec2 {
                groov::field<"CONFIGLOCK", bool, 1, 1>,
                groov::field<"REG_EN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using r3cfgr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -65,7 +73,9 @@ namespace otfdec2 {
                groov::field<"CONFIGLOCK", bool, 1, 1>,
                groov::field<"REG_EN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using r4cfgr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -80,7 +90,9 @@ namespace otfdec2 {
                groov::field<"CONFIGLOCK", bool, 1, 1>,
                groov::field<"REG_EN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using r1startaddr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -88,7 +100,9 @@ namespace otfdec2 {
                access::rw,
                groov::field<"REGx_START_ADDR", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using r2startaddr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -96,7 +110,9 @@ namespace otfdec2 {
                access::rw,
                groov::field<"REGx_START_ADDR", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using r3startaddr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -104,7 +120,9 @@ namespace otfdec2 {
                access::rw,
                groov::field<"REGx_START_ADDR", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using r4startaddr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -112,7 +130,9 @@ namespace otfdec2 {
                access::rw,
                groov::field<"REGx_START_ADDR", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using r1endaddr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -120,7 +140,9 @@ namespace otfdec2 {
                access::rw,
                groov::field<"REGx_END_ADDR", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using r2endaddr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -128,7 +150,9 @@ namespace otfdec2 {
                access::rw,
                groov::field<"REGx_END_ADDR", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using r3endaddr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -136,7 +160,9 @@ namespace otfdec2 {
                access::rw,
                groov::field<"REGx_END_ADDR", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using r4endaddr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -144,7 +170,9 @@ namespace otfdec2 {
                access::rw,
                groov::field<"REGx_END_ADDR", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using r1noncer0_tt =
     groov::reg<name,
                std::uint32_t,
@@ -152,7 +180,9 @@ namespace otfdec2 {
                access::rw,
                groov::field<"REGx_NONCE", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using r2noncer0_tt =
     groov::reg<name,
                std::uint32_t,
@@ -160,7 +190,9 @@ namespace otfdec2 {
                access::rw,
                groov::field<"REGx_NONCE", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using r3noncer0_tt =
     groov::reg<name,
                std::uint32_t,
@@ -168,7 +200,9 @@ namespace otfdec2 {
                access::rw,
                groov::field<"REGx_NONCE", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using r4noncer0_tt =
     groov::reg<name,
                std::uint32_t,
@@ -176,7 +210,9 @@ namespace otfdec2 {
                access::rw,
                groov::field<"REGx_NONCE", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using r1noncer1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -184,7 +220,9 @@ namespace otfdec2 {
                access::rw,
                groov::field<"REGx_NONCE", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using r2noncer1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -192,7 +230,9 @@ namespace otfdec2 {
                access::rw,
                groov::field<"REGx_NONCE", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using r3noncer1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -200,7 +240,9 @@ namespace otfdec2 {
                access::rw,
                groov::field<"REGx_NONCE", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using r4noncer1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -208,70 +250,90 @@ namespace otfdec2 {
                access::rw,
                groov::field<"REGx_NONCE", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using r1keyr0_tt = groov::reg<name,
                                 std::uint32_t,
                                 baseaddress + offset,
                                 access::wo,
                                 groov::field<"REGx_KEY", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using r2keyr0_tt = groov::reg<name,
                                 std::uint32_t,
                                 baseaddress + offset,
                                 access::wo,
                                 groov::field<"REGx_KEY", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using r3keyr0_tt = groov::reg<name,
                                 std::uint32_t,
                                 baseaddress + offset,
                                 access::wo,
                                 groov::field<"REGx_KEY", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using r4keyr0_tt = groov::reg<name,
                                 std::uint32_t,
                                 baseaddress + offset,
                                 access::wo,
                                 groov::field<"REGx_KEY", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using r1keyr1_tt = groov::reg<name,
                                 std::uint32_t,
                                 baseaddress + offset,
                                 access::wo,
                                 groov::field<"REGx_KEY", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using r2keyr1_tt = groov::reg<name,
                                 std::uint32_t,
                                 baseaddress + offset,
                                 access::wo,
                                 groov::field<"REGx_KEY", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using r3keyr1_tt = groov::reg<name,
                                 std::uint32_t,
                                 baseaddress + offset,
                                 access::wo,
                                 groov::field<"REGx_KEY", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using r4keyr1_tt = groov::reg<name,
                                 std::uint32_t,
                                 baseaddress + offset,
                                 access::wo,
                                 groov::field<"REGx_KEY", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using r1keyr2_tt = groov::reg<name,
                                 std::uint32_t,
                                 baseaddress + offset,
                                 access::wo,
                                 groov::field<"REGx_KEY", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using r2keyr2_tt =
     groov::reg<name,
                std::uint32_t,
@@ -279,49 +341,63 @@ namespace otfdec2 {
                access::wo,
                groov::field<"REGx_KEY_", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using r3keyr2_tt = groov::reg<name,
                                 std::uint32_t,
                                 baseaddress + offset,
                                 access::wo,
                                 groov::field<"REGx_KEY", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using r4keyr2_tt = groov::reg<name,
                                 std::uint32_t,
                                 baseaddress + offset,
                                 access::wo,
                                 groov::field<"REGx_KEY", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using r1keyr3_tt = groov::reg<name,
                                 std::uint32_t,
                                 baseaddress + offset,
                                 access::wo,
                                 groov::field<"REGx_KEY", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using r2keyr3_tt = groov::reg<name,
                                 std::uint32_t,
                                 baseaddress + offset,
                                 access::wo,
                                 groov::field<"REGx_KEY", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using r3keyr3_tt = groov::reg<name,
                                 std::uint32_t,
                                 baseaddress + offset,
                                 access::wo,
                                 groov::field<"REGx_KEY", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using r4keyr3_tt = groov::reg<name,
                                 std::uint32_t,
                                 baseaddress + offset,
                                 access::wo,
                                 groov::field<"REGx_KEY", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using isr_tt = groov::reg<name,
                             std::uint32_t,
                             baseaddress + offset,
@@ -331,7 +407,9 @@ namespace otfdec2 {
                             groov::field<"XONEIF", bool, 1, 1>,
                             groov::field<"SEIF", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using icr_tt = groov::reg<name,
                             std::uint32_t,
                             baseaddress + offset,
@@ -341,7 +419,9 @@ namespace otfdec2 {
                             groov::field<"XONEIF", bool, 1, 1>,
                             groov::field<"SEIF", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ier_tt =
     groov::reg<name,
                std::uint32_t,
@@ -351,125 +431,5 @@ namespace otfdec2 {
                groov::field<"KEIE", bool, 2, 2>,
                groov::field<"XONEIE", bool, 1, 1>,
                groov::field<"SEIE", bool, 0, 0>>;
-
-  template <std::uint32_t baseaddress>
-  using cr_t = cr_tt<"CR", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using r1cfgr_t = r1cfgr_tt<"R1CFGR", baseaddress, 32>;
-
-  template <std::uint32_t baseaddress>
-  using r2cfgr_t = r2cfgr_tt<"R2CFGR", baseaddress, 80>;
-
-  template <std::uint32_t baseaddress>
-  using r3cfgr_t = r3cfgr_tt<"R3CFGR", baseaddress, 128>;
-
-  template <std::uint32_t baseaddress>
-  using r4cfgr_t = r4cfgr_tt<"R4CFGR", baseaddress, 176>;
-
-  template <std::uint32_t baseaddress>
-  using r1startaddr_t = r1startaddr_tt<"R1STARTADDR", baseaddress, 36>;
-
-  template <std::uint32_t baseaddress>
-  using r2startaddr_t = r2startaddr_tt<"R2STARTADDR", baseaddress, 84>;
-
-  template <std::uint32_t baseaddress>
-  using r3startaddr_t = r3startaddr_tt<"R3STARTADDR", baseaddress, 132>;
-
-  template <std::uint32_t baseaddress>
-  using r4startaddr_t = r4startaddr_tt<"R4STARTADDR", baseaddress, 180>;
-
-  template <std::uint32_t baseaddress>
-  using r1endaddr_t = r1endaddr_tt<"R1ENDADDR", baseaddress, 40>;
-
-  template <std::uint32_t baseaddress>
-  using r2endaddr_t = r2endaddr_tt<"R2ENDADDR", baseaddress, 88>;
-
-  template <std::uint32_t baseaddress>
-  using r3endaddr_t = r3endaddr_tt<"R3ENDADDR", baseaddress, 136>;
-
-  template <std::uint32_t baseaddress>
-  using r4endaddr_t = r4endaddr_tt<"R4ENDADDR", baseaddress, 140>;
-
-  template <std::uint32_t baseaddress>
-  using r1noncer0_t = r1noncer0_tt<"R1NONCER0", baseaddress, 44>;
-
-  template <std::uint32_t baseaddress>
-  using r2noncer0_t = r2noncer0_tt<"R2NONCER0", baseaddress, 92>;
-
-  template <std::uint32_t baseaddress>
-  using r3noncer0_t = r3noncer0_tt<"R3NONCER0", baseaddress, 140>;
-
-  template <std::uint32_t baseaddress>
-  using r4noncer0_t = r4noncer0_tt<"R4NONCER0", baseaddress, 188>;
-
-  template <std::uint32_t baseaddress>
-  using r1noncer1_t = r1noncer1_tt<"R1NONCER1", baseaddress, 48>;
-
-  template <std::uint32_t baseaddress>
-  using r2noncer1_t = r2noncer1_tt<"R2NONCER1", baseaddress, 96>;
-
-  template <std::uint32_t baseaddress>
-  using r3noncer1_t = r3noncer1_tt<"R3NONCER1", baseaddress, 144>;
-
-  template <std::uint32_t baseaddress>
-  using r4noncer1_t = r4noncer1_tt<"R4NONCER1", baseaddress, 192>;
-
-  template <std::uint32_t baseaddress>
-  using r1keyr0_t = r1keyr0_tt<"R1KEYR0", baseaddress, 52>;
-
-  template <std::uint32_t baseaddress>
-  using r2keyr0_t = r2keyr0_tt<"R2KEYR0", baseaddress, 100>;
-
-  template <std::uint32_t baseaddress>
-  using r3keyr0_t = r3keyr0_tt<"R3KEYR0", baseaddress, 148>;
-
-  template <std::uint32_t baseaddress>
-  using r4keyr0_t = r4keyr0_tt<"R4KEYR0", baseaddress, 196>;
-
-  template <std::uint32_t baseaddress>
-  using r1keyr1_t = r1keyr1_tt<"R1KEYR1", baseaddress, 56>;
-
-  template <std::uint32_t baseaddress>
-  using r2keyr1_t = r2keyr1_tt<"R2KEYR1", baseaddress, 104>;
-
-  template <std::uint32_t baseaddress>
-  using r3keyr1_t = r3keyr1_tt<"R3KEYR1", baseaddress, 152>;
-
-  template <std::uint32_t baseaddress>
-  using r4keyr1_t = r4keyr1_tt<"R4KEYR1", baseaddress, 200>;
-
-  template <std::uint32_t baseaddress>
-  using r1keyr2_t = r1keyr2_tt<"R1KEYR2", baseaddress, 60>;
-
-  template <std::uint32_t baseaddress>
-  using r2keyr2_t = r2keyr2_tt<"R2KEYR2", baseaddress, 108>;
-
-  template <std::uint32_t baseaddress>
-  using r3keyr2_t = r3keyr2_tt<"R3KEYR2", baseaddress, 156>;
-
-  template <std::uint32_t baseaddress>
-  using r4keyr2_t = r4keyr2_tt<"R4KEYR2", baseaddress, 204>;
-
-  template <std::uint32_t baseaddress>
-  using r1keyr3_t = r1keyr3_tt<"R1KEYR3", baseaddress, 64>;
-
-  template <std::uint32_t baseaddress>
-  using r2keyr3_t = r2keyr3_tt<"R2KEYR3", baseaddress, 112>;
-
-  template <std::uint32_t baseaddress>
-  using r3keyr3_t = r3keyr3_tt<"R3KEYR3", baseaddress, 160>;
-
-  template <std::uint32_t baseaddress>
-  using r4keyr3_t = r4keyr3_tt<"R4KEYR3", baseaddress, 208>;
-
-  template <std::uint32_t baseaddress>
-  using isr_t = isr_tt<"ISR", baseaddress, 768>;
-
-  template <std::uint32_t baseaddress>
-  using icr_t = icr_tt<"ICR", baseaddress, 772>;
-
-  template <std::uint32_t baseaddress>
-  using ier_t = ier_tt<"IER", baseaddress, 776>;
 
 } // namespace otfdec2

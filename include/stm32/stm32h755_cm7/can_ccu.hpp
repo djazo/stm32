@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace can_ccu {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using crel_tt = groov::reg<name,
                              std::uint32_t,
                              baseaddress + offset,
@@ -23,7 +25,9 @@ namespace can_ccu {
                              groov::field<"MON", std::uint8_t, 15, 8>,
                              groov::field<"DAY", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ccfg_tt =
     groov::reg<name,
                std::uint32_t,
@@ -38,7 +42,9 @@ namespace can_ccu {
                groov::field<"RESERVED0", bool, 5, 5, access::ro>,
                groov::field<"TQBT", std::uint8_t, 4, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using cstat_tt =
     groov::reg<name,
                std::uint32_t,
@@ -49,7 +55,9 @@ namespace can_ccu {
                groov::field<"TQC", std::uint16_t, 28, 18>,
                groov::field<"OCPC", std::uint32_t, 17, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using cwd_tt = groov::reg<name,
                             std::uint32_t,
                             baseaddress + offset,
@@ -57,7 +65,9 @@ namespace can_ccu {
                             groov::field<"WDV", std::uint16_t, 31, 16>,
                             groov::field<"WDC", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ir_tt =
     groov::reg<name,
                std::uint32_t,
@@ -67,7 +77,9 @@ namespace can_ccu {
                groov::field<"CSC", bool, 1, 1>,
                groov::field<"CWE", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ie_tt =
     groov::reg<name,
                std::uint32_t,
@@ -76,23 +88,5 @@ namespace can_ccu {
                groov::field<"RESERVED0", std::uint32_t, 31, 2, access::ro>,
                groov::field<"CSCE", bool, 1, 1>,
                groov::field<"CWEE", bool, 0, 0>>;
-
-  template <std::uint32_t baseaddress>
-  using crel_t = crel_tt<"CREL", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using ccfg_t = ccfg_tt<"CCFG", baseaddress, 4>;
-
-  template <std::uint32_t baseaddress>
-  using cstat_t = cstat_tt<"CSTAT", baseaddress, 8>;
-
-  template <std::uint32_t baseaddress>
-  using cwd_t = cwd_tt<"CWD", baseaddress, 12>;
-
-  template <std::uint32_t baseaddress>
-  using ir_t = ir_tt<"IR", baseaddress, 16>;
-
-  template <std::uint32_t baseaddress>
-  using ie_t = ie_tt<"IE", baseaddress, 20>;
 
 } // namespace can_ccu

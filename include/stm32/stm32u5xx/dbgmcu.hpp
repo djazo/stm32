@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace dbgmcu {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using idcode_tt = groov::reg<name,
                                std::uint32_t,
                                baseaddress + offset,
@@ -20,7 +22,9 @@ namespace dbgmcu {
                                groov::field<"RESERVED0", std::uint8_t, 15, 12>,
                                groov::field<"DEV_ID", std::uint16_t, 11, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -35,7 +39,9 @@ namespace dbgmcu {
                groov::field<"DBG_STOP", bool, 1, 1>,
                groov::field<"RESERVED0", bool, 0, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using apb1lfzr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -55,7 +61,9 @@ namespace dbgmcu {
                groov::field<"DBG_TIM3_STOP", bool, 1, 1>,
                groov::field<"DBG_TIM2_STOP", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using apb1hfzr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -67,7 +75,9 @@ namespace dbgmcu {
                groov::field<"DBG_I2C4_STOP", bool, 1, 1>,
                groov::field<"RESERVED0", bool, 0, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using apb2fzr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -83,7 +93,9 @@ namespace dbgmcu {
                groov::field<"DBG_TIM1_STOP", bool, 11, 11>,
                groov::field<"RESERVED0", std::uint16_t, 10, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using apb3fzr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -99,7 +111,9 @@ namespace dbgmcu {
                groov::field<"DBG_I2C3_STOP", bool, 10, 10>,
                groov::field<"RESERVED0", std::uint16_t, 9, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ahb1fzr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -123,7 +137,9 @@ namespace dbgmcu {
                groov::field<"DBG_GPDMA1_STOP", bool, 1, 1>,
                groov::field<"DBG_GPDMA0_STOP", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ahb3fzr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -135,7 +151,9 @@ namespace dbgmcu {
                groov::field<"DBG_LPDMA1_STOP", bool, 1, 1>,
                groov::field<"DBG_LPDMA0_STOP", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dbgmcu_sr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -145,7 +163,9 @@ namespace dbgmcu {
                groov::field<"AP_LOCKED", std::uint8_t, 15, 8>,
                groov::field<"AP_PRESENT", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dbgmcu_dbg_auth_host_tt =
     groov::reg<name,
                std::uint32_t,
@@ -153,7 +173,9 @@ namespace dbgmcu {
                access::ro,
                groov::field<"AUTH_KEY", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dbgmcu_dbg_auth_device_tt =
     groov::reg<name,
                std::uint32_t,
@@ -161,7 +183,9 @@ namespace dbgmcu {
                access::ro,
                groov::field<"AUTH_ID", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using pidr4_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
@@ -170,7 +194,9 @@ namespace dbgmcu {
                               groov::field<"KCOUNT_4", std::uint8_t, 7, 4>,
                               groov::field<"JEP106CON", std::uint8_t, 3, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using pidr0_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
@@ -178,7 +204,9 @@ namespace dbgmcu {
                               groov::field<"RESERVED0", std::uint32_t, 31, 8>,
                               groov::field<"PARTNUM", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using pidr1_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
@@ -187,7 +215,9 @@ namespace dbgmcu {
                               groov::field<"JEP106ID", std::uint8_t, 7, 4>,
                               groov::field<"PARTNUM", std::uint8_t, 3, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using pidr2_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
@@ -197,7 +227,9 @@ namespace dbgmcu {
                               groov::field<"JEDEC", bool, 3, 3>,
                               groov::field<"JEP106ID", std::uint8_t, 2, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using pidr3_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
@@ -206,7 +238,9 @@ namespace dbgmcu {
                               groov::field<"REVAND", std::uint8_t, 7, 4>,
                               groov::field<"CMOD", std::uint8_t, 3, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using cidr0_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
@@ -214,7 +248,9 @@ namespace dbgmcu {
                               groov::field<"RESERVED0", std::uint32_t, 31, 8>,
                               groov::field<"PREAMBLE", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using cidr1_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
@@ -223,7 +259,9 @@ namespace dbgmcu {
                               groov::field<"CLASS", std::uint8_t, 7, 4>,
                               groov::field<"PREAMBLE", std::uint8_t, 3, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using cidr2_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
@@ -231,74 +269,14 @@ namespace dbgmcu {
                               groov::field<"RESERVED0", std::uint32_t, 31, 8>,
                               groov::field<"PREAMBLE", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using cidr3_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
                               access::ro,
                               groov::field<"RESERVED0", std::uint32_t, 31, 8>,
                               groov::field<"PREAMBLE", std::uint8_t, 7, 0>>;
-
-  template <std::uint32_t baseaddress>
-  using idcode_t = idcode_tt<"IDCODE", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using cr_t = cr_tt<"CR", baseaddress, 4>;
-
-  template <std::uint32_t baseaddress>
-  using apb1lfzr_t = apb1lfzr_tt<"APB1LFZR", baseaddress, 8>;
-
-  template <std::uint32_t baseaddress>
-  using apb1hfzr_t = apb1hfzr_tt<"APB1HFZR", baseaddress, 12>;
-
-  template <std::uint32_t baseaddress>
-  using apb2fzr_t = apb2fzr_tt<"APB2FZR", baseaddress, 16>;
-
-  template <std::uint32_t baseaddress>
-  using apb3fzr_t = apb3fzr_tt<"APB3FZR", baseaddress, 20>;
-
-  template <std::uint32_t baseaddress>
-  using ahb1fzr_t = ahb1fzr_tt<"AHB1FZR", baseaddress, 32>;
-
-  template <std::uint32_t baseaddress>
-  using ahb3fzr_t = ahb3fzr_tt<"AHB3FZR", baseaddress, 40>;
-
-  template <std::uint32_t baseaddress>
-  using dbgmcu_sr_t = dbgmcu_sr_tt<"DBGMCU_SR", baseaddress, 252>;
-
-  template <std::uint32_t baseaddress>
-  using dbgmcu_dbg_auth_host_t =
-    dbgmcu_dbg_auth_host_tt<"DBGMCU_DBG_AUTH_HOST", baseaddress, 256>;
-
-  template <std::uint32_t baseaddress>
-  using dbgmcu_dbg_auth_device_t =
-    dbgmcu_dbg_auth_device_tt<"DBGMCU_DBG_AUTH_DEVICE", baseaddress, 260>;
-
-  template <std::uint32_t baseaddress>
-  using pidr4_t = pidr4_tt<"PIDR4", baseaddress, 4048>;
-
-  template <std::uint32_t baseaddress>
-  using pidr0_t = pidr0_tt<"PIDR0", baseaddress, 4064>;
-
-  template <std::uint32_t baseaddress>
-  using pidr1_t = pidr1_tt<"PIDR1", baseaddress, 4068>;
-
-  template <std::uint32_t baseaddress>
-  using pidr2_t = pidr2_tt<"PIDR2", baseaddress, 4072>;
-
-  template <std::uint32_t baseaddress>
-  using pidr3_t = pidr3_tt<"PIDR3", baseaddress, 4076>;
-
-  template <std::uint32_t baseaddress>
-  using cidr0_t = cidr0_tt<"CIDR0", baseaddress, 4080>;
-
-  template <std::uint32_t baseaddress>
-  using cidr1_t = cidr1_tt<"CIDR1", baseaddress, 4084>;
-
-  template <std::uint32_t baseaddress>
-  using cidr2_t = cidr2_tt<"CIDR2", baseaddress, 4088>;
-
-  template <std::uint32_t baseaddress>
-  using cidr3_t = cidr3_tt<"CIDR3", baseaddress, 4092>;
 
 } // namespace dbgmcu

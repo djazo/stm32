@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace opamp {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using opamp1_csr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -34,7 +36,9 @@ namespace opamp {
                groov::field<"FORCE_VP", bool, 1, 1>,
                groov::field<"OPAEN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using opamp2_csr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -57,7 +61,9 @@ namespace opamp {
                groov::field<"FORCE_VP", bool, 1, 1>,
                groov::field<"OPAEN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using opamp3_csr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -80,7 +86,9 @@ namespace opamp {
                groov::field<"FORCE_VP", bool, 1, 1>,
                groov::field<"OPAEN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using opamp4_csr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -103,7 +111,9 @@ namespace opamp {
                groov::field<"FORCE_VP", bool, 1, 1>,
                groov::field<"OPAEN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using opamp5_csr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -126,7 +136,9 @@ namespace opamp {
                groov::field<"FORCE_VP", bool, 1, 1>,
                groov::field<"OPAEN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using opamp6_csr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -149,7 +161,9 @@ namespace opamp {
                groov::field<"FORCE_VP", bool, 1, 1>,
                groov::field<"OPAEN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using opamp1_tcmr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -163,7 +177,9 @@ namespace opamp {
                groov::field<"VPS_SEL", std::uint8_t, 2, 1>,
                groov::field<"VMS_SEL", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using opamp2_tcmr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -177,7 +193,9 @@ namespace opamp {
                groov::field<"VPS_SEL", std::uint8_t, 2, 1>,
                groov::field<"VMS_SEL", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using opamp3_tcmr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -191,7 +209,9 @@ namespace opamp {
                groov::field<"VPS_SEL", std::uint8_t, 2, 1>,
                groov::field<"VMS_SEL", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using opamp4_tcmr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -205,7 +225,9 @@ namespace opamp {
                groov::field<"VPS_SEL", std::uint8_t, 2, 1>,
                groov::field<"VMS_SEL", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using opamp5_tcmr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -219,7 +241,9 @@ namespace opamp {
                groov::field<"VPS_SEL", std::uint8_t, 2, 1>,
                groov::field<"VMS_SEL", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using opamp6_tcmr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -232,41 +256,5 @@ namespace opamp {
                groov::field<"T1CM_EN", bool, 3, 3>,
                groov::field<"VPS_SEL", std::uint8_t, 2, 1>,
                groov::field<"VMS_SEL", bool, 0, 0>>;
-
-  template <std::uint32_t baseaddress>
-  using opamp1_csr_t = opamp1_csr_tt<"OPAMP1_CSR", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using opamp2_csr_t = opamp2_csr_tt<"OPAMP2_CSR", baseaddress, 4>;
-
-  template <std::uint32_t baseaddress>
-  using opamp3_csr_t = opamp3_csr_tt<"OPAMP3_CSR", baseaddress, 8>;
-
-  template <std::uint32_t baseaddress>
-  using opamp4_csr_t = opamp4_csr_tt<"OPAMP4_CSR", baseaddress, 12>;
-
-  template <std::uint32_t baseaddress>
-  using opamp5_csr_t = opamp5_csr_tt<"OPAMP5_CSR", baseaddress, 16>;
-
-  template <std::uint32_t baseaddress>
-  using opamp6_csr_t = opamp6_csr_tt<"OPAMP6_CSR", baseaddress, 20>;
-
-  template <std::uint32_t baseaddress>
-  using opamp1_tcmr_t = opamp1_tcmr_tt<"OPAMP1_TCMR", baseaddress, 24>;
-
-  template <std::uint32_t baseaddress>
-  using opamp2_tcmr_t = opamp2_tcmr_tt<"OPAMP2_TCMR", baseaddress, 28>;
-
-  template <std::uint32_t baseaddress>
-  using opamp3_tcmr_t = opamp3_tcmr_tt<"OPAMP3_TCMR", baseaddress, 32>;
-
-  template <std::uint32_t baseaddress>
-  using opamp4_tcmr_t = opamp4_tcmr_tt<"OPAMP4_TCMR", baseaddress, 36>;
-
-  template <std::uint32_t baseaddress>
-  using opamp5_tcmr_t = opamp5_tcmr_tt<"OPAMP5_TCMR", baseaddress, 40>;
-
-  template <std::uint32_t baseaddress>
-  using opamp6_tcmr_t = opamp6_tcmr_tt<"OPAMP6_TCMR", baseaddress, 44>;
 
 } // namespace opamp

@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace sec_spi3 {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using spi_cr1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -30,7 +32,9 @@ namespace sec_spi3 {
                groov::field<"RESERVED0", std::uint8_t, 7, 1, access::ro>,
                groov::field<"SPE", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using spi_cr2_tt =
     groov::reg<name,
                std::uint32_t,
@@ -39,7 +43,9 @@ namespace sec_spi3 {
                groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
                groov::field<"TSIZE", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using spi_cfg1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -58,7 +64,9 @@ namespace sec_spi3 {
                groov::field<"FTHLV", std::uint8_t, 8, 5>,
                groov::field<"DSIZE", std::uint8_t, 4, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using spi_cfg2_tt =
     groov::reg<name,
                std::uint32_t,
@@ -84,7 +92,9 @@ namespace sec_spi3 {
                groov::field<"MIDI", std::uint8_t, 7, 4>,
                groov::field<"MSSI", std::uint8_t, 3, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using spi_ier_tt =
     groov::reg<name,
                std::uint32_t,
@@ -102,7 +112,9 @@ namespace sec_spi3 {
                groov::field<"TXPIE", bool, 1, 1>,
                groov::field<"RXPIE", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using spi_sr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -125,7 +137,9 @@ namespace sec_spi3 {
                groov::field<"TXP", bool, 1, 1, access::ro>,
                groov::field<"RXP", bool, 0, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using spi_ifcr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -143,7 +157,9 @@ namespace sec_spi3 {
                groov::field<"EOTC", bool, 3, 3, access::wo>,
                groov::field<"RESERVED0", std::uint8_t, 2, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using spi_autocr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -155,7 +171,9 @@ namespace sec_spi3 {
                groov::field<"TRIGSEL", std::uint8_t, 19, 16>,
                groov::field<"RESERVED0", std::uint16_t, 15, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using spi_txdr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -163,7 +181,9 @@ namespace sec_spi3 {
                access::rw,
                groov::field<"TXDR", std::uint32_t, 31, 0, access::wo>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using spi_rxdr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -171,7 +191,9 @@ namespace sec_spi3 {
                access::rw,
                groov::field<"RXDR", std::uint32_t, 31, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using spi_crcpoly_tt =
     groov::reg<name,
                std::uint32_t,
@@ -179,7 +201,9 @@ namespace sec_spi3 {
                access::rw,
                groov::field<"CRCPOLY", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using spi_txcrc_tt =
     groov::reg<name,
                std::uint32_t,
@@ -187,7 +211,9 @@ namespace sec_spi3 {
                access::rw,
                groov::field<"TXCRC", std::uint32_t, 31, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using spi_rxcrc_tt =
     groov::reg<name,
                std::uint32_t,
@@ -195,53 +221,13 @@ namespace sec_spi3 {
                access::rw,
                groov::field<"RXCRC", std::uint32_t, 31, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using spi_udrdr_tt = groov::reg<name,
                                   std::uint32_t,
                                   baseaddress + offset,
                                   access::rw,
                                   groov::field<"UDRDR", std::uint32_t, 31, 0>>;
-
-  template <std::uint32_t baseaddress>
-  using spi_cr1_t = spi_cr1_tt<"SPI_CR1", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using spi_cr2_t = spi_cr2_tt<"SPI_CR2", baseaddress, 4>;
-
-  template <std::uint32_t baseaddress>
-  using spi_cfg1_t = spi_cfg1_tt<"SPI_CFG1", baseaddress, 8>;
-
-  template <std::uint32_t baseaddress>
-  using spi_cfg2_t = spi_cfg2_tt<"SPI_CFG2", baseaddress, 12>;
-
-  template <std::uint32_t baseaddress>
-  using spi_ier_t = spi_ier_tt<"SPI_IER", baseaddress, 16>;
-
-  template <std::uint32_t baseaddress>
-  using spi_sr_t = spi_sr_tt<"SPI_SR", baseaddress, 20>;
-
-  template <std::uint32_t baseaddress>
-  using spi_ifcr_t = spi_ifcr_tt<"SPI_IFCR", baseaddress, 24>;
-
-  template <std::uint32_t baseaddress>
-  using spi_autocr_t = spi_autocr_tt<"SPI_AUTOCR", baseaddress, 28>;
-
-  template <std::uint32_t baseaddress>
-  using spi_txdr_t = spi_txdr_tt<"SPI_TXDR", baseaddress, 32>;
-
-  template <std::uint32_t baseaddress>
-  using spi_rxdr_t = spi_rxdr_tt<"SPI_RXDR", baseaddress, 48>;
-
-  template <std::uint32_t baseaddress>
-  using spi_crcpoly_t = spi_crcpoly_tt<"SPI_CRCPOLY", baseaddress, 64>;
-
-  template <std::uint32_t baseaddress>
-  using spi_txcrc_t = spi_txcrc_tt<"SPI_TXCRC", baseaddress, 68>;
-
-  template <std::uint32_t baseaddress>
-  using spi_rxcrc_t = spi_rxcrc_tt<"SPI_RXCRC", baseaddress, 72>;
-
-  template <std::uint32_t baseaddress>
-  using spi_udrdr_t = spi_udrdr_tt<"SPI_UDRDR", baseaddress, 76>;
 
 } // namespace sec_spi3

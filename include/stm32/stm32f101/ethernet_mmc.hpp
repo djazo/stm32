@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace ethernet_mmc {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mmccr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -23,7 +25,9 @@ namespace ethernet_mmc {
                groov::field<"CSR", bool, 1, 1>,
                groov::field<"CR", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mmcrir_tt =
     groov::reg<name,
                std::uint32_t,
@@ -36,7 +40,9 @@ namespace ethernet_mmc {
                groov::field<"RFCES", bool, 5, 5>,
                groov::field<"RESERVED0", std::uint8_t, 4, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mmctir_tt =
     groov::reg<name,
                std::uint32_t,
@@ -49,7 +55,9 @@ namespace ethernet_mmc {
                groov::field<"TGFSCS", bool, 14, 14>,
                groov::field<"RESERVED0", std::uint16_t, 13, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mmcrimr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -62,7 +70,9 @@ namespace ethernet_mmc {
                groov::field<"RFCEM", bool, 5, 5>,
                groov::field<"RESERVED0", std::uint8_t, 4, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mmctimr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -75,7 +85,9 @@ namespace ethernet_mmc {
                groov::field<"TGFSCM", bool, 14, 14>,
                groov::field<"RESERVED0", std::uint16_t, 13, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mmctgfsccr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -83,7 +95,9 @@ namespace ethernet_mmc {
                access::ro,
                groov::field<"TGFSCC", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mmctgfmsccr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -91,65 +105,40 @@ namespace ethernet_mmc {
                access::ro,
                groov::field<"TGFMSCC", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mmctgfcr_tt = groov::reg<name,
                                  std::uint32_t,
                                  baseaddress + offset,
                                  access::ro,
                                  groov::field<"TGFC", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mmcrfcecr_tt = groov::reg<name,
                                   std::uint32_t,
                                   baseaddress + offset,
                                   access::ro,
                                   groov::field<"RFCFC", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mmcrfaecr_tt = groov::reg<name,
                                   std::uint32_t,
                                   baseaddress + offset,
                                   access::ro,
                                   groov::field<"RFAEC", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using mmcrgufcr_tt = groov::reg<name,
                                   std::uint32_t,
                                   baseaddress + offset,
                                   access::ro,
                                   groov::field<"RGUFC", std::uint32_t, 31, 0>>;
-
-  template <std::uint32_t baseaddress>
-  using mmccr_t = mmccr_tt<"MMCCR", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using mmcrir_t = mmcrir_tt<"MMCRIR", baseaddress, 4>;
-
-  template <std::uint32_t baseaddress>
-  using mmctir_t = mmctir_tt<"MMCTIR", baseaddress, 8>;
-
-  template <std::uint32_t baseaddress>
-  using mmcrimr_t = mmcrimr_tt<"MMCRIMR", baseaddress, 12>;
-
-  template <std::uint32_t baseaddress>
-  using mmctimr_t = mmctimr_tt<"MMCTIMR", baseaddress, 16>;
-
-  template <std::uint32_t baseaddress>
-  using mmctgfsccr_t = mmctgfsccr_tt<"MMCTGFSCCR", baseaddress, 76>;
-
-  template <std::uint32_t baseaddress>
-  using mmctgfmsccr_t = mmctgfmsccr_tt<"MMCTGFMSCCR", baseaddress, 80>;
-
-  template <std::uint32_t baseaddress>
-  using mmctgfcr_t = mmctgfcr_tt<"MMCTGFCR", baseaddress, 104>;
-
-  template <std::uint32_t baseaddress>
-  using mmcrfcecr_t = mmcrfcecr_tt<"MMCRFCECR", baseaddress, 148>;
-
-  template <std::uint32_t baseaddress>
-  using mmcrfaecr_t = mmcrfaecr_tt<"MMCRFAECR", baseaddress, 152>;
-
-  template <std::uint32_t baseaddress>
-  using mmcrgufcr_t = mmcrgufcr_tt<"MMCRGUFCR", baseaddress, 196>;
 
 } // namespace ethernet_mmc

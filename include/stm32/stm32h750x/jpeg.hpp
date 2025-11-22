@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace jpeg {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using jpeg_confr0_tt =
     groov::reg<name,
                std::uint32_t,
@@ -20,7 +22,9 @@ namespace jpeg {
                groov::field<"RESERVED0", std::uint32_t, 31, 1, access::ro>,
                groov::field<"START", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using jpeg_confr1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -35,7 +39,9 @@ namespace jpeg {
                groov::field<"RESERVED0", bool, 2, 2, access::ro>,
                groov::field<"NF", std::uint8_t, 1, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using jpeg_confr2_tt =
     groov::reg<name,
                std::uint32_t,
@@ -44,7 +50,9 @@ namespace jpeg {
                groov::field<"RESERVED0", std::uint8_t, 31, 26, access::ro>,
                groov::field<"NMCU", std::uint32_t, 25, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using jpeg_confr3_tt =
     groov::reg<name,
                std::uint32_t,
@@ -53,7 +61,9 @@ namespace jpeg {
                groov::field<"XSIZE", std::uint16_t, 31, 16>,
                groov::field<"RESERVED0", std::uint16_t, 15, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using jpeg_confrn1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -67,7 +77,9 @@ namespace jpeg {
                groov::field<"HA", bool, 1, 1>,
                groov::field<"HD", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using jpeg_confrn2_tt =
     groov::reg<name,
                std::uint32_t,
@@ -81,7 +93,9 @@ namespace jpeg {
                groov::field<"HA", bool, 1, 1>,
                groov::field<"HD", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using jpeg_confrn3_tt =
     groov::reg<name,
                std::uint32_t,
@@ -95,7 +109,9 @@ namespace jpeg {
                groov::field<"HA", bool, 1, 1>,
                groov::field<"HD", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using jpeg_confrn4_tt =
     groov::reg<name,
                std::uint32_t,
@@ -109,7 +125,9 @@ namespace jpeg {
                groov::field<"HA", bool, 1, 1>,
                groov::field<"HD", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using jpeg_cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -129,7 +147,9 @@ namespace jpeg {
                groov::field<"IFTIE", bool, 1, 1>,
                groov::field<"JCEN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using jpeg_sr_tt = groov::reg<name,
                                 std::uint32_t,
                                 baseaddress + offset,
@@ -144,7 +164,9 @@ namespace jpeg {
                                 groov::field<"IFTF", bool, 1, 1>,
                                 groov::field<"RESERVED0", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using jpeg_cfr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -155,57 +177,22 @@ namespace jpeg {
                groov::field<"CEOCF", bool, 5, 5>,
                groov::field<"RESERVED0", std::uint8_t, 4, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using jpeg_dir_tt = groov::reg<name,
                                  std::uint32_t,
                                  baseaddress + offset,
                                  access::wo,
                                  groov::field<"DATAIN", std::uint32_t, 31, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using jpeg_dor_tt = groov::reg<name,
                                  std::uint32_t,
                                  baseaddress + offset,
                                  access::ro,
                                  groov::field<"DATAOUT", std::uint32_t, 31, 0>>;
-
-  template <std::uint32_t baseaddress>
-  using jpeg_confr0_t = jpeg_confr0_tt<"JPEG_CONFR0", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using jpeg_confr1_t = jpeg_confr1_tt<"JPEG_CONFR1", baseaddress, 4>;
-
-  template <std::uint32_t baseaddress>
-  using jpeg_confr2_t = jpeg_confr2_tt<"JPEG_CONFR2", baseaddress, 8>;
-
-  template <std::uint32_t baseaddress>
-  using jpeg_confr3_t = jpeg_confr3_tt<"JPEG_CONFR3", baseaddress, 12>;
-
-  template <std::uint32_t baseaddress>
-  using jpeg_confrn1_t = jpeg_confrn1_tt<"JPEG_CONFRN1", baseaddress, 16>;
-
-  template <std::uint32_t baseaddress>
-  using jpeg_confrn2_t = jpeg_confrn2_tt<"JPEG_CONFRN2", baseaddress, 20>;
-
-  template <std::uint32_t baseaddress>
-  using jpeg_confrn3_t = jpeg_confrn3_tt<"JPEG_CONFRN3", baseaddress, 24>;
-
-  template <std::uint32_t baseaddress>
-  using jpeg_confrn4_t = jpeg_confrn4_tt<"JPEG_CONFRN4", baseaddress, 28>;
-
-  template <std::uint32_t baseaddress>
-  using jpeg_cr_t = jpeg_cr_tt<"JPEG_CR", baseaddress, 48>;
-
-  template <std::uint32_t baseaddress>
-  using jpeg_sr_t = jpeg_sr_tt<"JPEG_SR", baseaddress, 52>;
-
-  template <std::uint32_t baseaddress>
-  using jpeg_cfr_t = jpeg_cfr_tt<"JPEG_CFR", baseaddress, 56>;
-
-  template <std::uint32_t baseaddress>
-  using jpeg_dir_t = jpeg_dir_tt<"JPEG_DIR", baseaddress, 64>;
-
-  template <std::uint32_t baseaddress>
-  using jpeg_dor_t = jpeg_dor_tt<"JPEG_DOR", baseaddress, 68>;
 
 } // namespace jpeg

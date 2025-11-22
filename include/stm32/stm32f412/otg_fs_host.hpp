@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace otg_fs_host {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using fs_hcfg_tt =
     groov::reg<name,
                std::uint32_t,
@@ -21,7 +23,9 @@ namespace otg_fs_host {
                groov::field<"FSLSS", bool, 2, 2, access::ro>,
                groov::field<"FSLSPCS", std::uint8_t, 1, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using hfir_tt =
     groov::reg<name,
                std::uint32_t,
@@ -30,7 +34,9 @@ namespace otg_fs_host {
                groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
                groov::field<"FRIVL", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using fs_hfnum_tt = groov::reg<name,
                                  std::uint32_t,
                                  baseaddress + offset,
@@ -38,7 +44,9 @@ namespace otg_fs_host {
                                  groov::field<"FTREM", std::uint16_t, 31, 16>,
                                  groov::field<"FRNUM", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using fs_hptxsts_tt =
     groov::reg<name,
                std::uint32_t,
@@ -48,7 +56,9 @@ namespace otg_fs_host {
                groov::field<"PTXQSAV", std::uint8_t, 23, 16, access::ro>,
                groov::field<"PTXFSAVL", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using haint_tt = groov::reg<name,
                               std::uint32_t,
                               baseaddress + offset,
@@ -56,7 +66,9 @@ namespace otg_fs_host {
                               groov::field<"RESERVED0", std::uint16_t, 31, 16>,
                               groov::field<"HAINT", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using haintmsk_tt =
     groov::reg<name,
                std::uint32_t,
@@ -65,7 +77,9 @@ namespace otg_fs_host {
                groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
                groov::field<"HAINTM", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using fs_hprt_tt =
     groov::reg<name,
                std::uint32_t,
@@ -87,7 +101,9 @@ namespace otg_fs_host {
                groov::field<"PCDET", bool, 1, 1>,
                groov::field<"PCSTS", bool, 0, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using fs_hcchar0_tt =
     groov::reg<name,
                std::uint32_t,
@@ -105,7 +121,9 @@ namespace otg_fs_host {
                groov::field<"EPNUM", std::uint8_t, 14, 11>,
                groov::field<"MPSIZ", std::uint16_t, 10, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using fs_hcchar1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -123,7 +141,9 @@ namespace otg_fs_host {
                groov::field<"EPNUM", std::uint8_t, 14, 11>,
                groov::field<"MPSIZ", std::uint16_t, 10, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using fs_hcchar2_tt =
     groov::reg<name,
                std::uint32_t,
@@ -141,7 +161,9 @@ namespace otg_fs_host {
                groov::field<"EPNUM", std::uint8_t, 14, 11>,
                groov::field<"MPSIZ", std::uint16_t, 10, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using fs_hcchar3_tt =
     groov::reg<name,
                std::uint32_t,
@@ -159,7 +181,9 @@ namespace otg_fs_host {
                groov::field<"EPNUM", std::uint8_t, 14, 11>,
                groov::field<"MPSIZ", std::uint16_t, 10, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using fs_hcchar4_tt =
     groov::reg<name,
                std::uint32_t,
@@ -177,7 +201,9 @@ namespace otg_fs_host {
                groov::field<"EPNUM", std::uint8_t, 14, 11>,
                groov::field<"MPSIZ", std::uint16_t, 10, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using fs_hcchar5_tt =
     groov::reg<name,
                std::uint32_t,
@@ -195,7 +221,9 @@ namespace otg_fs_host {
                groov::field<"EPNUM", std::uint8_t, 14, 11>,
                groov::field<"MPSIZ", std::uint16_t, 10, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using fs_hcchar6_tt =
     groov::reg<name,
                std::uint32_t,
@@ -213,7 +241,9 @@ namespace otg_fs_host {
                groov::field<"EPNUM", std::uint8_t, 14, 11>,
                groov::field<"MPSIZ", std::uint16_t, 10, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using fs_hcchar7_tt =
     groov::reg<name,
                std::uint32_t,
@@ -231,7 +261,9 @@ namespace otg_fs_host {
                groov::field<"EPNUM", std::uint8_t, 14, 11>,
                groov::field<"MPSIZ", std::uint16_t, 10, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using fs_hcint0_tt =
     groov::reg<name,
                std::uint32_t,
@@ -250,7 +282,9 @@ namespace otg_fs_host {
                groov::field<"CHH", bool, 1, 1>,
                groov::field<"XFRC", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using fs_hcint1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -269,7 +303,9 @@ namespace otg_fs_host {
                groov::field<"CHH", bool, 1, 1>,
                groov::field<"XFRC", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using fs_hcint2_tt =
     groov::reg<name,
                std::uint32_t,
@@ -288,7 +324,9 @@ namespace otg_fs_host {
                groov::field<"CHH", bool, 1, 1>,
                groov::field<"XFRC", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using fs_hcint3_tt =
     groov::reg<name,
                std::uint32_t,
@@ -307,7 +345,9 @@ namespace otg_fs_host {
                groov::field<"CHH", bool, 1, 1>,
                groov::field<"XFRC", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using fs_hcint4_tt =
     groov::reg<name,
                std::uint32_t,
@@ -326,7 +366,9 @@ namespace otg_fs_host {
                groov::field<"CHH", bool, 1, 1>,
                groov::field<"XFRC", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using fs_hcint5_tt =
     groov::reg<name,
                std::uint32_t,
@@ -345,7 +387,9 @@ namespace otg_fs_host {
                groov::field<"CHH", bool, 1, 1>,
                groov::field<"XFRC", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using fs_hcint6_tt =
     groov::reg<name,
                std::uint32_t,
@@ -364,7 +408,9 @@ namespace otg_fs_host {
                groov::field<"CHH", bool, 1, 1>,
                groov::field<"XFRC", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using fs_hcint7_tt =
     groov::reg<name,
                std::uint32_t,
@@ -383,7 +429,9 @@ namespace otg_fs_host {
                groov::field<"CHH", bool, 1, 1>,
                groov::field<"XFRC", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using fs_hcintmsk0_tt =
     groov::reg<name,
                std::uint32_t,
@@ -402,7 +450,9 @@ namespace otg_fs_host {
                groov::field<"CHHM", bool, 1, 1>,
                groov::field<"XFRCM", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using fs_hcintmsk1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -421,7 +471,9 @@ namespace otg_fs_host {
                groov::field<"CHHM", bool, 1, 1>,
                groov::field<"XFRCM", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using fs_hcintmsk2_tt =
     groov::reg<name,
                std::uint32_t,
@@ -440,7 +492,9 @@ namespace otg_fs_host {
                groov::field<"CHHM", bool, 1, 1>,
                groov::field<"XFRCM", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using fs_hcintmsk3_tt =
     groov::reg<name,
                std::uint32_t,
@@ -459,7 +513,9 @@ namespace otg_fs_host {
                groov::field<"CHHM", bool, 1, 1>,
                groov::field<"XFRCM", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using fs_hcintmsk4_tt =
     groov::reg<name,
                std::uint32_t,
@@ -478,7 +534,9 @@ namespace otg_fs_host {
                groov::field<"CHHM", bool, 1, 1>,
                groov::field<"XFRCM", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using fs_hcintmsk5_tt =
     groov::reg<name,
                std::uint32_t,
@@ -497,7 +555,9 @@ namespace otg_fs_host {
                groov::field<"CHHM", bool, 1, 1>,
                groov::field<"XFRCM", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using fs_hcintmsk6_tt =
     groov::reg<name,
                std::uint32_t,
@@ -516,7 +576,9 @@ namespace otg_fs_host {
                groov::field<"CHHM", bool, 1, 1>,
                groov::field<"XFRCM", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using fs_hcintmsk7_tt =
     groov::reg<name,
                std::uint32_t,
@@ -535,7 +597,9 @@ namespace otg_fs_host {
                groov::field<"CHHM", bool, 1, 1>,
                groov::field<"XFRCM", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using fs_hctsiz0_tt =
     groov::reg<name,
                std::uint32_t,
@@ -546,7 +610,9 @@ namespace otg_fs_host {
                groov::field<"PKTCNT", std::uint16_t, 28, 19>,
                groov::field<"XFRSIZ", std::uint32_t, 18, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using fs_hctsiz1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -557,7 +623,9 @@ namespace otg_fs_host {
                groov::field<"PKTCNT", std::uint16_t, 28, 19>,
                groov::field<"XFRSIZ", std::uint32_t, 18, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using fs_hctsiz2_tt =
     groov::reg<name,
                std::uint32_t,
@@ -568,7 +636,9 @@ namespace otg_fs_host {
                groov::field<"PKTCNT", std::uint16_t, 28, 19>,
                groov::field<"XFRSIZ", std::uint32_t, 18, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using fs_hctsiz3_tt =
     groov::reg<name,
                std::uint32_t,
@@ -579,7 +649,9 @@ namespace otg_fs_host {
                groov::field<"PKTCNT", std::uint16_t, 28, 19>,
                groov::field<"XFRSIZ", std::uint32_t, 18, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using fs_hctsiz4_tt =
     groov::reg<name,
                std::uint32_t,
@@ -590,7 +662,9 @@ namespace otg_fs_host {
                groov::field<"PKTCNT", std::uint16_t, 28, 19>,
                groov::field<"XFRSIZ", std::uint32_t, 18, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using fs_hctsiz5_tt =
     groov::reg<name,
                std::uint32_t,
@@ -601,7 +675,9 @@ namespace otg_fs_host {
                groov::field<"PKTCNT", std::uint16_t, 28, 19>,
                groov::field<"XFRSIZ", std::uint32_t, 18, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using fs_hctsiz6_tt =
     groov::reg<name,
                std::uint32_t,
@@ -612,7 +688,9 @@ namespace otg_fs_host {
                groov::field<"PKTCNT", std::uint16_t, 28, 19>,
                groov::field<"XFRSIZ", std::uint32_t, 18, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using fs_hctsiz7_tt =
     groov::reg<name,
                std::uint32_t,
@@ -622,122 +700,5 @@ namespace otg_fs_host {
                groov::field<"DPID", std::uint8_t, 30, 29>,
                groov::field<"PKTCNT", std::uint16_t, 28, 19>,
                groov::field<"XFRSIZ", std::uint32_t, 18, 0>>;
-
-  template <std::uint32_t baseaddress>
-  using fs_hcfg_t = fs_hcfg_tt<"FS_HCFG", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using hfir_t = hfir_tt<"HFIR", baseaddress, 4>;
-
-  template <std::uint32_t baseaddress>
-  using fs_hfnum_t = fs_hfnum_tt<"FS_HFNUM", baseaddress, 8>;
-
-  template <std::uint32_t baseaddress>
-  using fs_hptxsts_t = fs_hptxsts_tt<"FS_HPTXSTS", baseaddress, 16>;
-
-  template <std::uint32_t baseaddress>
-  using haint_t = haint_tt<"HAINT", baseaddress, 20>;
-
-  template <std::uint32_t baseaddress>
-  using haintmsk_t = haintmsk_tt<"HAINTMSK", baseaddress, 24>;
-
-  template <std::uint32_t baseaddress>
-  using fs_hprt_t = fs_hprt_tt<"FS_HPRT", baseaddress, 64>;
-
-  template <std::uint32_t baseaddress>
-  using fs_hcchar0_t = fs_hcchar0_tt<"FS_HCCHAR0", baseaddress, 256>;
-
-  template <std::uint32_t baseaddress>
-  using fs_hcchar1_t = fs_hcchar1_tt<"FS_HCCHAR1", baseaddress, 288>;
-
-  template <std::uint32_t baseaddress>
-  using fs_hcchar2_t = fs_hcchar2_tt<"FS_HCCHAR2", baseaddress, 320>;
-
-  template <std::uint32_t baseaddress>
-  using fs_hcchar3_t = fs_hcchar3_tt<"FS_HCCHAR3", baseaddress, 352>;
-
-  template <std::uint32_t baseaddress>
-  using fs_hcchar4_t = fs_hcchar4_tt<"FS_HCCHAR4", baseaddress, 384>;
-
-  template <std::uint32_t baseaddress>
-  using fs_hcchar5_t = fs_hcchar5_tt<"FS_HCCHAR5", baseaddress, 416>;
-
-  template <std::uint32_t baseaddress>
-  using fs_hcchar6_t = fs_hcchar6_tt<"FS_HCCHAR6", baseaddress, 448>;
-
-  template <std::uint32_t baseaddress>
-  using fs_hcchar7_t = fs_hcchar7_tt<"FS_HCCHAR7", baseaddress, 480>;
-
-  template <std::uint32_t baseaddress>
-  using fs_hcint0_t = fs_hcint0_tt<"FS_HCINT0", baseaddress, 264>;
-
-  template <std::uint32_t baseaddress>
-  using fs_hcint1_t = fs_hcint1_tt<"FS_HCINT1", baseaddress, 296>;
-
-  template <std::uint32_t baseaddress>
-  using fs_hcint2_t = fs_hcint2_tt<"FS_HCINT2", baseaddress, 328>;
-
-  template <std::uint32_t baseaddress>
-  using fs_hcint3_t = fs_hcint3_tt<"FS_HCINT3", baseaddress, 360>;
-
-  template <std::uint32_t baseaddress>
-  using fs_hcint4_t = fs_hcint4_tt<"FS_HCINT4", baseaddress, 392>;
-
-  template <std::uint32_t baseaddress>
-  using fs_hcint5_t = fs_hcint5_tt<"FS_HCINT5", baseaddress, 424>;
-
-  template <std::uint32_t baseaddress>
-  using fs_hcint6_t = fs_hcint6_tt<"FS_HCINT6", baseaddress, 456>;
-
-  template <std::uint32_t baseaddress>
-  using fs_hcint7_t = fs_hcint7_tt<"FS_HCINT7", baseaddress, 488>;
-
-  template <std::uint32_t baseaddress>
-  using fs_hcintmsk0_t = fs_hcintmsk0_tt<"FS_HCINTMSK0", baseaddress, 268>;
-
-  template <std::uint32_t baseaddress>
-  using fs_hcintmsk1_t = fs_hcintmsk1_tt<"FS_HCINTMSK1", baseaddress, 300>;
-
-  template <std::uint32_t baseaddress>
-  using fs_hcintmsk2_t = fs_hcintmsk2_tt<"FS_HCINTMSK2", baseaddress, 332>;
-
-  template <std::uint32_t baseaddress>
-  using fs_hcintmsk3_t = fs_hcintmsk3_tt<"FS_HCINTMSK3", baseaddress, 364>;
-
-  template <std::uint32_t baseaddress>
-  using fs_hcintmsk4_t = fs_hcintmsk4_tt<"FS_HCINTMSK4", baseaddress, 396>;
-
-  template <std::uint32_t baseaddress>
-  using fs_hcintmsk5_t = fs_hcintmsk5_tt<"FS_HCINTMSK5", baseaddress, 428>;
-
-  template <std::uint32_t baseaddress>
-  using fs_hcintmsk6_t = fs_hcintmsk6_tt<"FS_HCINTMSK6", baseaddress, 460>;
-
-  template <std::uint32_t baseaddress>
-  using fs_hcintmsk7_t = fs_hcintmsk7_tt<"FS_HCINTMSK7", baseaddress, 492>;
-
-  template <std::uint32_t baseaddress>
-  using fs_hctsiz0_t = fs_hctsiz0_tt<"FS_HCTSIZ0", baseaddress, 272>;
-
-  template <std::uint32_t baseaddress>
-  using fs_hctsiz1_t = fs_hctsiz1_tt<"FS_HCTSIZ1", baseaddress, 304>;
-
-  template <std::uint32_t baseaddress>
-  using fs_hctsiz2_t = fs_hctsiz2_tt<"FS_HCTSIZ2", baseaddress, 336>;
-
-  template <std::uint32_t baseaddress>
-  using fs_hctsiz3_t = fs_hctsiz3_tt<"FS_HCTSIZ3", baseaddress, 368>;
-
-  template <std::uint32_t baseaddress>
-  using fs_hctsiz4_t = fs_hctsiz4_tt<"FS_HCTSIZ4", baseaddress, 400>;
-
-  template <std::uint32_t baseaddress>
-  using fs_hctsiz5_t = fs_hctsiz5_tt<"FS_HCTSIZ5", baseaddress, 432>;
-
-  template <std::uint32_t baseaddress>
-  using fs_hctsiz6_t = fs_hctsiz6_tt<"FS_HCTSIZ6", baseaddress, 464>;
-
-  template <std::uint32_t baseaddress>
-  using fs_hctsiz7_t = fs_hctsiz7_tt<"FS_HCTSIZ7", baseaddress, 496>;
 
 } // namespace otg_fs_host

@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace syscfg {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using pmcr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -35,7 +37,9 @@ namespace syscfg {
                groov::field<"I2C2FMP", bool, 1, 1>,
                groov::field<"I2C1FMP", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using exticr1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -47,7 +51,9 @@ namespace syscfg {
                groov::field<"EXTI1", std::uint8_t, 7, 4>,
                groov::field<"EXTI0", std::uint8_t, 3, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using exticr2_tt =
     groov::reg<name,
                std::uint32_t,
@@ -59,7 +65,9 @@ namespace syscfg {
                groov::field<"EXTI5", std::uint8_t, 7, 4>,
                groov::field<"EXTI4", std::uint8_t, 3, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using exticr3_tt =
     groov::reg<name,
                std::uint32_t,
@@ -71,7 +79,9 @@ namespace syscfg {
                groov::field<"EXTI9", std::uint8_t, 7, 4>,
                groov::field<"EXTI8", std::uint8_t, 3, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using exticr4_tt =
     groov::reg<name,
                std::uint32_t,
@@ -83,7 +93,9 @@ namespace syscfg {
                groov::field<"EXTI13", std::uint8_t, 7, 4>,
                groov::field<"EXTI12", std::uint8_t, 3, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using cccsr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -97,7 +109,9 @@ namespace syscfg {
                groov::field<"CS", bool, 1, 1>,
                groov::field<"EN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ccvr_tt = groov::reg<name,
                              std::uint32_t,
                              baseaddress + offset,
@@ -106,7 +120,9 @@ namespace syscfg {
                              groov::field<"PCV", std::uint8_t, 7, 4>,
                              groov::field<"NCV", std::uint8_t, 3, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using cccr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -116,7 +132,9 @@ namespace syscfg {
                groov::field<"PCC", std::uint8_t, 7, 4>,
                groov::field<"NCC", std::uint8_t, 3, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using pwrcr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -125,7 +143,9 @@ namespace syscfg {
                groov::field<"RESERVED0", std::uint32_t, 31, 4, access::ro>,
                groov::field<"ODEN", std::uint8_t, 3, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using pkgr_tt = groov::reg<name,
                              std::uint32_t,
                              baseaddress + offset,
@@ -133,7 +153,9 @@ namespace syscfg {
                              groov::field<"RESERVED0", std::uint32_t, 31, 4>,
                              groov::field<"PKG", std::uint8_t, 3, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ur0_tt = groov::reg<name,
                             std::uint32_t,
                             baseaddress + offset,
@@ -143,7 +165,9 @@ namespace syscfg {
                             groov::field<"RESERVED0", std::uint16_t, 15, 1>,
                             groov::field<"BKS", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ur2_tt =
     groov::reg<name,
                std::uint32_t,
@@ -153,7 +177,9 @@ namespace syscfg {
                groov::field<"RESERVED0", std::uint16_t, 15, 2, access::ro>,
                groov::field<"BORH", std::uint8_t, 1, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ur3_tt =
     groov::reg<name,
                std::uint32_t,
@@ -162,7 +188,9 @@ namespace syscfg {
                groov::field<"BOOT_ADD1", std::uint16_t, 31, 16>,
                groov::field<"RESERVED0", std::uint16_t, 15, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ur4_tt = groov::reg<name,
                             std::uint32_t,
                             baseaddress + offset,
@@ -171,7 +199,9 @@ namespace syscfg {
                             groov::field<"MEPAD_1", bool, 16, 16>,
                             groov::field<"RESERVED0", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ur5_tt = groov::reg<name,
                             std::uint32_t,
                             baseaddress + offset,
@@ -181,7 +211,9 @@ namespace syscfg {
                             groov::field<"RESERVED0", std::uint16_t, 15, 1>,
                             groov::field<"MESAD_1", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ur6_tt = groov::reg<name,
                             std::uint32_t,
                             baseaddress + offset,
@@ -191,7 +223,9 @@ namespace syscfg {
                             groov::field<"RESERVED0", std::uint8_t, 15, 12>,
                             groov::field<"PA_BEG_1", std::uint16_t, 11, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ur7_tt = groov::reg<name,
                             std::uint32_t,
                             baseaddress + offset,
@@ -201,7 +235,9 @@ namespace syscfg {
                             groov::field<"RESERVED0", std::uint8_t, 15, 12>,
                             groov::field<"SA_BEG_1", std::uint16_t, 11, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ur8_tt = groov::reg<name,
                             std::uint32_t,
                             baseaddress + offset,
@@ -211,7 +247,9 @@ namespace syscfg {
                             groov::field<"RESERVED0", std::uint16_t, 15, 1>,
                             groov::field<"MEPAD_2", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ur9_tt = groov::reg<name,
                             std::uint32_t,
                             baseaddress + offset,
@@ -221,7 +259,9 @@ namespace syscfg {
                             groov::field<"RESERVED0", std::uint8_t, 15, 8>,
                             groov::field<"WRPN_2", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ur10_tt = groov::reg<name,
                              std::uint32_t,
                              baseaddress + offset,
@@ -231,7 +271,9 @@ namespace syscfg {
                              groov::field<"RESERVED0", std::uint8_t, 15, 12>,
                              groov::field<"PA_END_2", std::uint16_t, 11, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ur11_tt = groov::reg<name,
                              std::uint32_t,
                              baseaddress + offset,
@@ -241,7 +283,9 @@ namespace syscfg {
                              groov::field<"RESERVED0", std::uint8_t, 15, 12>,
                              groov::field<"SA_END_2", std::uint16_t, 11, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ur12_tt = groov::reg<name,
                              std::uint32_t,
                              baseaddress + offset,
@@ -250,7 +294,9 @@ namespace syscfg {
                              groov::field<"SECURE", bool, 16, 16>,
                              groov::field<"RESERVED0", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ur13_tt = groov::reg<name,
                              std::uint32_t,
                              baseaddress + offset,
@@ -260,7 +306,9 @@ namespace syscfg {
                              groov::field<"RESERVED0", std::uint16_t, 15, 2>,
                              groov::field<"SDRS", std::uint8_t, 1, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ur14_tt =
     groov::reg<name,
                std::uint32_t,
@@ -269,7 +317,9 @@ namespace syscfg {
                groov::field<"RESERVED0", std::uint32_t, 31, 1, access::ro>,
                groov::field<"D1STPRST", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ur15_tt = groov::reg<name,
                              std::uint32_t,
                              baseaddress + offset,
@@ -278,7 +328,9 @@ namespace syscfg {
                              groov::field<"FZIWDGSTB", bool, 16, 16>,
                              groov::field<"RESERVED0", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ur16_tt = groov::reg<name,
                              std::uint32_t,
                              baseaddress + offset,
@@ -288,93 +340,14 @@ namespace syscfg {
                              groov::field<"RESERVED0", std::uint16_t, 15, 1>,
                              groov::field<"FZIWDGSTP", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ur17_tt = groov::reg<name,
                              std::uint32_t,
                              baseaddress + offset,
                              access::ro,
                              groov::field<"RESERVED0", std::uint32_t, 31, 1>,
                              groov::field<"IO_HSLV", bool, 0, 0>>;
-
-  template <std::uint32_t baseaddress>
-  using pmcr_t = pmcr_tt<"PMCR", baseaddress, 4>;
-
-  template <std::uint32_t baseaddress>
-  using exticr1_t = exticr1_tt<"EXTICR1", baseaddress, 8>;
-
-  template <std::uint32_t baseaddress>
-  using exticr2_t = exticr2_tt<"EXTICR2", baseaddress, 12>;
-
-  template <std::uint32_t baseaddress>
-  using exticr3_t = exticr3_tt<"EXTICR3", baseaddress, 16>;
-
-  template <std::uint32_t baseaddress>
-  using exticr4_t = exticr4_tt<"EXTICR4", baseaddress, 20>;
-
-  template <std::uint32_t baseaddress>
-  using cccsr_t = cccsr_tt<"CCCSR", baseaddress, 32>;
-
-  template <std::uint32_t baseaddress>
-  using ccvr_t = ccvr_tt<"CCVR", baseaddress, 36>;
-
-  template <std::uint32_t baseaddress>
-  using cccr_t = cccr_tt<"CCCR", baseaddress, 40>;
-
-  template <std::uint32_t baseaddress>
-  using pwrcr_t = pwrcr_tt<"PWRCR", baseaddress, 44>;
-
-  template <std::uint32_t baseaddress>
-  using pkgr_t = pkgr_tt<"PKGR", baseaddress, 292>;
-
-  template <std::uint32_t baseaddress>
-  using ur0_t = ur0_tt<"UR0", baseaddress, 768>;
-
-  template <std::uint32_t baseaddress>
-  using ur2_t = ur2_tt<"UR2", baseaddress, 776>;
-
-  template <std::uint32_t baseaddress>
-  using ur3_t = ur3_tt<"UR3", baseaddress, 780>;
-
-  template <std::uint32_t baseaddress>
-  using ur4_t = ur4_tt<"UR4", baseaddress, 784>;
-
-  template <std::uint32_t baseaddress>
-  using ur5_t = ur5_tt<"UR5", baseaddress, 788>;
-
-  template <std::uint32_t baseaddress>
-  using ur6_t = ur6_tt<"UR6", baseaddress, 792>;
-
-  template <std::uint32_t baseaddress>
-  using ur7_t = ur7_tt<"UR7", baseaddress, 796>;
-
-  template <std::uint32_t baseaddress>
-  using ur8_t = ur8_tt<"UR8", baseaddress, 800>;
-
-  template <std::uint32_t baseaddress>
-  using ur9_t = ur9_tt<"UR9", baseaddress, 804>;
-
-  template <std::uint32_t baseaddress>
-  using ur10_t = ur10_tt<"UR10", baseaddress, 808>;
-
-  template <std::uint32_t baseaddress>
-  using ur11_t = ur11_tt<"UR11", baseaddress, 812>;
-
-  template <std::uint32_t baseaddress>
-  using ur12_t = ur12_tt<"UR12", baseaddress, 816>;
-
-  template <std::uint32_t baseaddress>
-  using ur13_t = ur13_tt<"UR13", baseaddress, 820>;
-
-  template <std::uint32_t baseaddress>
-  using ur14_t = ur14_tt<"UR14", baseaddress, 824>;
-
-  template <std::uint32_t baseaddress>
-  using ur15_t = ur15_tt<"UR15", baseaddress, 828>;
-
-  template <std::uint32_t baseaddress>
-  using ur16_t = ur16_tt<"UR16", baseaddress, 832>;
-
-  template <std::uint32_t baseaddress>
-  using ur17_t = ur17_tt<"UR17", baseaddress, 836>;
 
 } // namespace syscfg

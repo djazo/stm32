@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace sec_lptim3 {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using isr_output_tt =
     groov::reg<name,
                std::uint32_t,
@@ -33,7 +35,9 @@ namespace sec_lptim3 {
                groov::field<"ARRM", bool, 1, 1>,
                groov::field<"CC1IF", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using isr_intput_tt =
     groov::reg<name,
                std::uint32_t,
@@ -56,7 +60,9 @@ namespace sec_lptim3 {
                groov::field<"ARRM", bool, 1, 1>,
                groov::field<"CC1IF", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using icr_output_tt =
     groov::reg<name,
                std::uint32_t,
@@ -78,7 +84,9 @@ namespace sec_lptim3 {
                groov::field<"ARRMCF", bool, 1, 1>,
                groov::field<"CC1IF", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using icr_intput_tt =
     groov::reg<name,
                std::uint32_t,
@@ -101,7 +109,9 @@ namespace sec_lptim3 {
                groov::field<"ARRMCF", bool, 1, 1>,
                groov::field<"CC1IF", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dier_output_tt =
     groov::reg<name,
                std::uint32_t,
@@ -123,7 +133,9 @@ namespace sec_lptim3 {
                groov::field<"ARRMIE", bool, 1, 1>,
                groov::field<"CC1IF", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using dier_intput_tt =
     groov::reg<name,
                std::uint32_t,
@@ -148,7 +160,9 @@ namespace sec_lptim3 {
                groov::field<"ARRMIE", bool, 1, 1>,
                groov::field<"CC1IF", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using cfgr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -173,7 +187,9 @@ namespace sec_lptim3 {
                groov::field<"CKPOL", std::uint8_t, 2, 1>,
                groov::field<"CKSEL", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using cr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -186,7 +202,9 @@ namespace sec_lptim3 {
                groov::field<"SNGSTRT", bool, 1, 1>,
                groov::field<"ENABLE", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ccr1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -195,7 +213,9 @@ namespace sec_lptim3 {
                groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
                groov::field<"CCR1", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using arr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -204,7 +224,9 @@ namespace sec_lptim3 {
                groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
                groov::field<"ARR", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using cnt_tt = groov::reg<name,
                             std::uint32_t,
                             baseaddress + offset,
@@ -212,7 +234,9 @@ namespace sec_lptim3 {
                             groov::field<"RESERVED0", std::uint16_t, 31, 16>,
                             groov::field<"CNT", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using cfgr2_tt =
     groov::reg<name,
                std::uint32_t,
@@ -227,7 +251,9 @@ namespace sec_lptim3 {
                groov::field<"RESERVED0", std::uint8_t, 3, 2, access::ro>,
                groov::field<"IN1SEL", std::uint8_t, 1, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using rcr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -236,7 +262,9 @@ namespace sec_lptim3 {
                groov::field<"RESERVED0", std::uint32_t, 31, 8, access::ro>,
                groov::field<"REP", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ccmr1_tt =
     groov::reg<name,
                std::uint32_t,
@@ -259,7 +287,9 @@ namespace sec_lptim3 {
                groov::field<"CC1E", bool, 1, 1>,
                groov::field<"CC1SEL", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using ccr2_tt =
     groov::reg<name,
                std::uint32_t,
@@ -267,50 +297,5 @@ namespace sec_lptim3 {
                access::rw,
                groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
                groov::field<"CCR2", std::uint16_t, 15, 0>>;
-
-  template <std::uint32_t baseaddress>
-  using isr_output_t = isr_output_tt<"ISR_output", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using isr_intput_t = isr_intput_tt<"ISR_intput", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using icr_output_t = icr_output_tt<"ICR_output", baseaddress, 4>;
-
-  template <std::uint32_t baseaddress>
-  using icr_intput_t = icr_intput_tt<"ICR_intput", baseaddress, 4>;
-
-  template <std::uint32_t baseaddress>
-  using dier_output_t = dier_output_tt<"DIER_output", baseaddress, 8>;
-
-  template <std::uint32_t baseaddress>
-  using dier_intput_t = dier_intput_tt<"DIER_intput", baseaddress, 8>;
-
-  template <std::uint32_t baseaddress>
-  using cfgr_t = cfgr_tt<"CFGR", baseaddress, 12>;
-
-  template <std::uint32_t baseaddress>
-  using cr_t = cr_tt<"CR", baseaddress, 16>;
-
-  template <std::uint32_t baseaddress>
-  using ccr1_t = ccr1_tt<"CCR1", baseaddress, 20>;
-
-  template <std::uint32_t baseaddress>
-  using arr_t = arr_tt<"ARR", baseaddress, 24>;
-
-  template <std::uint32_t baseaddress>
-  using cnt_t = cnt_tt<"CNT", baseaddress, 28>;
-
-  template <std::uint32_t baseaddress>
-  using cfgr2_t = cfgr2_tt<"CFGR2", baseaddress, 36>;
-
-  template <std::uint32_t baseaddress>
-  using rcr_t = rcr_tt<"RCR", baseaddress, 40>;
-
-  template <std::uint32_t baseaddress>
-  using ccmr1_t = ccmr1_tt<"CCMR1", baseaddress, 44>;
-
-  template <std::uint32_t baseaddress>
-  using ccr2_t = ccr2_tt<"CCR2", baseaddress, 52>;
 
 } // namespace sec_lptim3

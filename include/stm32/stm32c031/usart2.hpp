@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace usart2 {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using usart_cr1_enabled_tt =
     groov::reg<name,
                std::uint32_t,
@@ -42,7 +44,9 @@ namespace usart2 {
                groov::field<"UESM", bool, 1, 1>,
                groov::field<"UE", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using usart_cr1_disabled_tt =
     groov::reg<name,
                std::uint32_t,
@@ -72,7 +76,9 @@ namespace usart2 {
                groov::field<"UESM", bool, 1, 1>,
                groov::field<"UE", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using usart_cr2_tt =
     groov::reg<name,
                std::uint32_t,
@@ -101,7 +107,9 @@ namespace usart2 {
                groov::field<"RESERVED0", std::uint8_t, 2, 1, access::ro>,
                groov::field<"SLVEN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using usart_cr3_tt =
     groov::reg<name,
                std::uint32_t,
@@ -133,7 +141,9 @@ namespace usart2 {
                groov::field<"IREN", bool, 1, 1>,
                groov::field<"EIE", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using usart_brr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -142,7 +152,9 @@ namespace usart2 {
                groov::field<"RESERVED0", std::uint16_t, 31, 16, access::ro>,
                groov::field<"BRR", std::uint16_t, 15, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using usart_gtpr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -152,7 +164,9 @@ namespace usart2 {
                groov::field<"GT", std::uint8_t, 15, 8>,
                groov::field<"PSC", std::uint8_t, 7, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using usart_rtor_tt = groov::reg<name,
                                    std::uint32_t,
                                    baseaddress + offset,
@@ -160,7 +174,9 @@ namespace usart2 {
                                    groov::field<"BLEN", std::uint8_t, 31, 24>,
                                    groov::field<"RTO", std::uint32_t, 23, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using usart_rqr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -173,7 +189,9 @@ namespace usart2 {
                groov::field<"SBKRQ", bool, 1, 1, access::wo>,
                groov::field<"ABRRQ", bool, 0, 0, access::wo>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using usart_isr_enabled_tt =
     groov::reg<name,
                std::uint32_t,
@@ -209,7 +227,9 @@ namespace usart2 {
                groov::field<"FE", bool, 1, 1, access::ro>,
                groov::field<"PE", bool, 0, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using usart_isr_disabled_tt =
     groov::reg<name,
                std::uint32_t,
@@ -242,7 +262,9 @@ namespace usart2 {
                groov::field<"FE", bool, 1, 1, access::ro>,
                groov::field<"PE", bool, 0, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using usart_icr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -268,7 +290,9 @@ namespace usart2 {
                groov::field<"FECF", bool, 1, 1, access::wo>,
                groov::field<"PECF", bool, 0, 0, access::wo>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using usart_rdr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -277,7 +301,9 @@ namespace usart2 {
                groov::field<"RESERVED0", std::uint32_t, 31, 9, access::ro>,
                groov::field<"RDR", std::uint16_t, 8, 0, access::ro>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using usart_tdr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -286,7 +312,9 @@ namespace usart2 {
                groov::field<"RESERVED0", std::uint32_t, 31, 9, access::ro>,
                groov::field<"TDR", std::uint16_t, 8, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using usart_presc_tt =
     groov::reg<name,
                std::uint32_t,
@@ -294,51 +322,5 @@ namespace usart2 {
                access::rw,
                groov::field<"RESERVED0", std::uint32_t, 31, 4, access::ro>,
                groov::field<"PRESCALER", std::uint8_t, 3, 0>>;
-
-  template <std::uint32_t baseaddress>
-  using usart_cr1_enabled_t =
-    usart_cr1_enabled_tt<"USART_CR1_enabled", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using usart_cr1_disabled_t =
-    usart_cr1_disabled_tt<"USART_CR1_disabled", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using usart_cr2_t = usart_cr2_tt<"USART_CR2", baseaddress, 4>;
-
-  template <std::uint32_t baseaddress>
-  using usart_cr3_t = usart_cr3_tt<"USART_CR3", baseaddress, 8>;
-
-  template <std::uint32_t baseaddress>
-  using usart_brr_t = usart_brr_tt<"USART_BRR", baseaddress, 12>;
-
-  template <std::uint32_t baseaddress>
-  using usart_gtpr_t = usart_gtpr_tt<"USART_GTPR", baseaddress, 16>;
-
-  template <std::uint32_t baseaddress>
-  using usart_rtor_t = usart_rtor_tt<"USART_RTOR", baseaddress, 20>;
-
-  template <std::uint32_t baseaddress>
-  using usart_rqr_t = usart_rqr_tt<"USART_RQR", baseaddress, 24>;
-
-  template <std::uint32_t baseaddress>
-  using usart_isr_enabled_t =
-    usart_isr_enabled_tt<"USART_ISR_enabled", baseaddress, 28>;
-
-  template <std::uint32_t baseaddress>
-  using usart_isr_disabled_t =
-    usart_isr_disabled_tt<"USART_ISR_disabled", baseaddress, 28>;
-
-  template <std::uint32_t baseaddress>
-  using usart_icr_t = usart_icr_tt<"USART_ICR", baseaddress, 32>;
-
-  template <std::uint32_t baseaddress>
-  using usart_rdr_t = usart_rdr_tt<"USART_RDR", baseaddress, 36>;
-
-  template <std::uint32_t baseaddress>
-  using usart_tdr_t = usart_tdr_tt<"USART_TDR", baseaddress, 40>;
-
-  template <std::uint32_t baseaddress>
-  using usart_presc_t = usart_presc_tt<"USART_PRESC", baseaddress, 44>;
 
 } // namespace usart2

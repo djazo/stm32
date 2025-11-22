@@ -11,7 +11,9 @@ namespace stm32 {
 
 namespace comp {
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using comp_c1csr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -32,7 +34,9 @@ namespace comp {
                groov::field<"RESERVED0", std::uint8_t, 3, 1, access::ro>,
                groov::field<"EN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using comp_c2csr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -53,7 +57,9 @@ namespace comp {
                groov::field<"RESERVED0", std::uint8_t, 3, 1, access::ro>,
                groov::field<"EN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using comp_c3csr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -74,7 +80,9 @@ namespace comp {
                groov::field<"RESERVED0", std::uint8_t, 3, 1, access::ro>,
                groov::field<"EN", bool, 0, 0>>;
 
-  template <std::string name, std::uint32_t baseaddress, std::uint32_t offset>
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
   using comp_c4csr_tt =
     groov::reg<name,
                std::uint32_t,
@@ -94,17 +102,5 @@ namespace comp {
                groov::field<"INMSEL", std::uint8_t, 6, 4>,
                groov::field<"RESERVED0", std::uint8_t, 3, 1, access::ro>,
                groov::field<"EN", bool, 0, 0>>;
-
-  template <std::uint32_t baseaddress>
-  using comp_c1csr_t = comp_c1csr_tt<"COMP_C1CSR", baseaddress, 0>;
-
-  template <std::uint32_t baseaddress>
-  using comp_c2csr_t = comp_c2csr_tt<"COMP_C2CSR", baseaddress, 4>;
-
-  template <std::uint32_t baseaddress>
-  using comp_c3csr_t = comp_c3csr_tt<"COMP_C3CSR", baseaddress, 8>;
-
-  template <std::uint32_t baseaddress>
-  using comp_c4csr_t = comp_c4csr_tt<"COMP_C4CSR", baseaddress, 12>;
 
 } // namespace comp
