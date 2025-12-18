@@ -1,3 +1,0 @@
-[wrap-git]
-url = git@github.com:djazo/compile-time-init-build.git
-revision = meson
