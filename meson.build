@@ -1,3 +1,5 @@
+# stm32 hal
+
 project('stm32', 'cpp', version : '0.1.1',
   default_options : [
     'cpp_std=c++23',
@@ -8,7 +10,11 @@ project('stm32', 'cpp', version : '0.1.1',
 groov_sub = subproject('generic-register-operation-optimizer')
 groov_dep = groov_sub.get_variable('groov_dep')
 
+# cib
+cib_sub = subproject('compile-time-init-build')
+cib_dep = cib_sub('cub_dep')
+
 inc = include_directories('include')
 
 stm32_dep = declare_dependency( include_directories : inc,
-  dependencies: groov_dep)
+  dependencies: [groov_dep, cib_dep])
