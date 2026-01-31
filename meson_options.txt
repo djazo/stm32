@@ -1,0 +1,1 @@
+option('mcu', type: 'string', value: 'stm32f103', description: 'Target MCU')
