@@ -1,4 +1,4 @@
-# stm32 hal
+# stm32 register definitions
 
 project('stm32', 'cpp', version : '0.1.1',
   default_options : [
