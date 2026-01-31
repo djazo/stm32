@@ -17,12 +17,12 @@ namespace adc3 {
                std::uint32_t,
                baseaddress + offset,
                access::rw,
-               groov::field<"RESERVED0", std::uint32_t, 31, 5, access::ro>,
-               groov::field<"STRT", bool, 4, 4>,
-               groov::field<"JSTRT", bool, 3, 3>,
-               groov::field<"JEOC", bool, 2, 2>,
-               groov::field<"EOC", bool, 1, 1>,
-               groov::field<"AWD", bool, 0, 0>>;
+               groov::field<"reserved0", std::uint32_t, 31, 5, access::ro>,
+               groov::field<"strt", bool, 4, 4>,
+               groov::field<"jstrt", bool, 3, 3>,
+               groov::field<"jeoc", bool, 2, 2>,
+               groov::field<"eoc", bool, 1, 1>,
+               groov::field<"awd", bool, 0, 0>>;
 
   template <stdx::ct_string name,
             std::uint32_t   baseaddress,
@@ -32,20 +32,20 @@ namespace adc3 {
                std::uint32_t,
                baseaddress + offset,
                access::rw,
-               groov::field<"RESERVED1", std::uint8_t, 31, 24, access::ro>,
-               groov::field<"AWDEN", bool, 23, 23>,
-               groov::field<"JAWDEN", bool, 22, 22>,
-               groov::field<"RESERVED0", std::uint8_t, 21, 16, access::ro>,
-               groov::field<"DISCNUM", std::uint8_t, 15, 13>,
-               groov::field<"JDISCEN", bool, 12, 12>,
-               groov::field<"DISCEN", bool, 11, 11>,
-               groov::field<"JAUTO", bool, 10, 10>,
-               groov::field<"AWDSGL", bool, 9, 9>,
-               groov::field<"SCAN", bool, 8, 8>,
-               groov::field<"JEOCIE", bool, 7, 7>,
-               groov::field<"AWDIE", bool, 6, 6>,
-               groov::field<"EOCIE", bool, 5, 5>,
-               groov::field<"AWDCH", std::uint8_t, 4, 0>>;
+               groov::field<"reserved1", std::uint8_t, 31, 24, access::ro>,
+               groov::field<"awden", bool, 23, 23>,
+               groov::field<"jawden", bool, 22, 22>,
+               groov::field<"reserved0", std::uint8_t, 21, 16, access::ro>,
+               groov::field<"discnum", std::uint8_t, 15, 13>,
+               groov::field<"jdiscen", bool, 12, 12>,
+               groov::field<"discen", bool, 11, 11>,
+               groov::field<"jauto", bool, 10, 10>,
+               groov::field<"awdsgl", bool, 9, 9>,
+               groov::field<"scan", bool, 8, 8>,
+               groov::field<"jeocie", bool, 7, 7>,
+               groov::field<"awdie", bool, 6, 6>,
+               groov::field<"eocie", bool, 5, 5>,
+               groov::field<"awdch", std::uint8_t, 4, 0>>;
 
   template <stdx::ct_string name,
             std::uint32_t   baseaddress,
@@ -55,23 +55,23 @@ namespace adc3 {
                std::uint32_t,
                baseaddress + offset,
                access::rw,
-               groov::field<"RESERVED3", std::uint8_t, 31, 24, access::ro>,
-               groov::field<"TSVREFE", bool, 23, 23>,
-               groov::field<"SWSTART", bool, 22, 22>,
-               groov::field<"JSWSTART", bool, 21, 21>,
-               groov::field<"EXTTRIG", bool, 20, 20>,
-               groov::field<"EXTSEL", std::uint8_t, 19, 17>,
-               groov::field<"RESERVED2", bool, 16, 16, access::ro>,
-               groov::field<"JEXTTRIG", bool, 15, 15>,
-               groov::field<"JEXTSEL", std::uint8_t, 14, 12>,
-               groov::field<"ALIGN", bool, 11, 11>,
-               groov::field<"RESERVED1", std::uint8_t, 10, 9, access::ro>,
-               groov::field<"DMA", bool, 8, 8>,
-               groov::field<"RESERVED0", std::uint8_t, 7, 4, access::ro>,
-               groov::field<"RSTCAL", bool, 3, 3>,
-               groov::field<"CAL", bool, 2, 2>,
-               groov::field<"CONT", bool, 1, 1>,
-               groov::field<"ADON", bool, 0, 0>>;
+               groov::field<"reserved3", std::uint8_t, 31, 24, access::ro>,
+               groov::field<"tsvrefe", bool, 23, 23>,
+               groov::field<"swstart", bool, 22, 22>,
+               groov::field<"jswstart", bool, 21, 21>,
+               groov::field<"exttrig", bool, 20, 20>,
+               groov::field<"extsel", std::uint8_t, 19, 17>,
+               groov::field<"reserved2", bool, 16, 16, access::ro>,
+               groov::field<"jexttrig", bool, 15, 15>,
+               groov::field<"jextsel", std::uint8_t, 14, 12>,
+               groov::field<"align", bool, 11, 11>,
+               groov::field<"reserved1", std::uint8_t, 10, 9, access::ro>,
+               groov::field<"dma", bool, 8, 8>,
+               groov::field<"reserved0", std::uint8_t, 7, 4, access::ro>,
+               groov::field<"rstcal", bool, 3, 3>,
+               groov::field<"cal", bool, 2, 2>,
+               groov::field<"cont", bool, 1, 1>,
+               groov::field<"adon", bool, 0, 0>>;
 
   template <stdx::ct_string name,
             std::uint32_t   baseaddress,
@@ -81,15 +81,15 @@ namespace adc3 {
                std::uint32_t,
                baseaddress + offset,
                access::rw,
-               groov::field<"RESERVED0", std::uint8_t, 31, 24, access::ro>,
-               groov::field<"SMP17", std::uint8_t, 23, 21>,
-               groov::field<"SMP16", std::uint8_t, 20, 18>,
-               groov::field<"SMP15", std::uint8_t, 17, 15>,
-               groov::field<"SMP14", std::uint8_t, 14, 12>,
-               groov::field<"SMP13", std::uint8_t, 11, 9>,
-               groov::field<"SMP12", std::uint8_t, 8, 6>,
-               groov::field<"SMP11", std::uint8_t, 5, 3>,
-               groov::field<"SMP10", std::uint8_t, 2, 0>>;
+               groov::field<"reserved0", std::uint8_t, 31, 24, access::ro>,
+               groov::field<"smp17", std::uint8_t, 23, 21>,
+               groov::field<"smp16", std::uint8_t, 20, 18>,
+               groov::field<"smp15", std::uint8_t, 17, 15>,
+               groov::field<"smp14", std::uint8_t, 14, 12>,
+               groov::field<"smp13", std::uint8_t, 11, 9>,
+               groov::field<"smp12", std::uint8_t, 8, 6>,
+               groov::field<"smp11", std::uint8_t, 5, 3>,
+               groov::field<"smp10", std::uint8_t, 2, 0>>;
 
   template <stdx::ct_string name,
             std::uint32_t   baseaddress,
@@ -99,17 +99,17 @@ namespace adc3 {
                std::uint32_t,
                baseaddress + offset,
                access::rw,
-               groov::field<"RESERVED0", std::uint8_t, 31, 30, access::ro>,
-               groov::field<"SMP9", std::uint8_t, 29, 27>,
-               groov::field<"SMP8", std::uint8_t, 26, 24>,
-               groov::field<"SMP7", std::uint8_t, 23, 21>,
-               groov::field<"SMP6", std::uint8_t, 20, 18>,
-               groov::field<"SMP5", std::uint8_t, 17, 15>,
-               groov::field<"SMP4", std::uint8_t, 14, 12>,
-               groov::field<"SMP3", std::uint8_t, 11, 9>,
-               groov::field<"SMP2", std::uint8_t, 8, 6>,
-               groov::field<"SMP1", std::uint8_t, 5, 3>,
-               groov::field<"SMP0", std::uint8_t, 2, 0>>;
+               groov::field<"reserved0", std::uint8_t, 31, 30, access::ro>,
+               groov::field<"smp9", std::uint8_t, 29, 27>,
+               groov::field<"smp8", std::uint8_t, 26, 24>,
+               groov::field<"smp7", std::uint8_t, 23, 21>,
+               groov::field<"smp6", std::uint8_t, 20, 18>,
+               groov::field<"smp5", std::uint8_t, 17, 15>,
+               groov::field<"smp4", std::uint8_t, 14, 12>,
+               groov::field<"smp3", std::uint8_t, 11, 9>,
+               groov::field<"smp2", std::uint8_t, 8, 6>,
+               groov::field<"smp1", std::uint8_t, 5, 3>,
+               groov::field<"smp0", std::uint8_t, 2, 0>>;
 
   template <stdx::ct_string name,
             std::uint32_t   baseaddress,
@@ -119,8 +119,8 @@ namespace adc3 {
                std::uint32_t,
                baseaddress + offset,
                access::rw,
-               groov::field<"RESERVED0", std::uint32_t, 31, 12, access::ro>,
-               groov::field<"JOFFSET1", std::uint16_t, 11, 0>>;
+               groov::field<"reserved0", std::uint32_t, 31, 12, access::ro>,
+               groov::field<"joffset1", std::uint16_t, 11, 0>>;
 
   template <stdx::ct_string name,
             std::uint32_t   baseaddress,
@@ -130,8 +130,8 @@ namespace adc3 {
                std::uint32_t,
                baseaddress + offset,
                access::rw,
-               groov::field<"RESERVED0", std::uint32_t, 31, 12, access::ro>,
-               groov::field<"JOFFSET2", std::uint16_t, 11, 0>>;
+               groov::field<"reserved0", std::uint32_t, 31, 12, access::ro>,
+               groov::field<"joffset2", std::uint16_t, 11, 0>>;
 
   template <stdx::ct_string name,
             std::uint32_t   baseaddress,
@@ -141,8 +141,8 @@ namespace adc3 {
                std::uint32_t,
                baseaddress + offset,
                access::rw,
-               groov::field<"RESERVED0", std::uint32_t, 31, 12, access::ro>,
-               groov::field<"JOFFSET3", std::uint16_t, 11, 0>>;
+               groov::field<"reserved0", std::uint32_t, 31, 12, access::ro>,
+               groov::field<"joffset3", std::uint16_t, 11, 0>>;
 
   template <stdx::ct_string name,
             std::uint32_t   baseaddress,
@@ -152,8 +152,8 @@ namespace adc3 {
                std::uint32_t,
                baseaddress + offset,
                access::rw,
-               groov::field<"RESERVED0", std::uint32_t, 31, 12, access::ro>,
-               groov::field<"JOFFSET4", std::uint16_t, 11, 0>>;
+               groov::field<"reserved0", std::uint32_t, 31, 12, access::ro>,
+               groov::field<"joffset4", std::uint16_t, 11, 0>>;
 
   template <stdx::ct_string name,
             std::uint32_t   baseaddress,
@@ -163,8 +163,8 @@ namespace adc3 {
                std::uint32_t,
                baseaddress + offset,
                access::rw,
-               groov::field<"RESERVED0", std::uint32_t, 31, 12, access::ro>,
-               groov::field<"HT", std::uint16_t, 11, 0>>;
+               groov::field<"reserved0", std::uint32_t, 31, 12, access::ro>,
+               groov::field<"ht", std::uint16_t, 11, 0>>;
 
   template <stdx::ct_string name,
             std::uint32_t   baseaddress,
@@ -174,8 +174,8 @@ namespace adc3 {
                std::uint32_t,
                baseaddress + offset,
                access::rw,
-               groov::field<"RESERVED0", std::uint32_t, 31, 12, access::ro>,
-               groov::field<"LT", std::uint16_t, 11, 0>>;
+               groov::field<"reserved0", std::uint32_t, 31, 12, access::ro>,
+               groov::field<"lt", std::uint16_t, 11, 0>>;
 
   template <stdx::ct_string name,
             std::uint32_t   baseaddress,
@@ -185,12 +185,12 @@ namespace adc3 {
                std::uint32_t,
                baseaddress + offset,
                access::rw,
-               groov::field<"RESERVED0", std::uint8_t, 31, 24, access::ro>,
-               groov::field<"L", std::uint8_t, 23, 20>,
-               groov::field<"SQ16", std::uint8_t, 19, 15>,
-               groov::field<"SQ15", std::uint8_t, 14, 10>,
-               groov::field<"SQ14", std::uint8_t, 9, 5>,
-               groov::field<"SQ13", std::uint8_t, 4, 0>>;
+               groov::field<"reserved0", std::uint8_t, 31, 24, access::ro>,
+               groov::field<"l", std::uint8_t, 23, 20>,
+               groov::field<"sq16", std::uint8_t, 19, 15>,
+               groov::field<"sq15", std::uint8_t, 14, 10>,
+               groov::field<"sq14", std::uint8_t, 9, 5>,
+               groov::field<"sq13", std::uint8_t, 4, 0>>;
 
   template <stdx::ct_string name,
             std::uint32_t   baseaddress,
@@ -200,13 +200,13 @@ namespace adc3 {
                std::uint32_t,
                baseaddress + offset,
                access::rw,
-               groov::field<"RESERVED0", std::uint8_t, 31, 30, access::ro>,
-               groov::field<"SQ12", std::uint8_t, 29, 25>,
-               groov::field<"SQ11", std::uint8_t, 24, 20>,
-               groov::field<"SQ10", std::uint8_t, 19, 15>,
-               groov::field<"SQ9", std::uint8_t, 14, 10>,
-               groov::field<"SQ8", std::uint8_t, 9, 5>,
-               groov::field<"SQ7", std::uint8_t, 4, 0>>;
+               groov::field<"reserved0", std::uint8_t, 31, 30, access::ro>,
+               groov::field<"sq12", std::uint8_t, 29, 25>,
+               groov::field<"sq11", std::uint8_t, 24, 20>,
+               groov::field<"sq10", std::uint8_t, 19, 15>,
+               groov::field<"sq9", std::uint8_t, 14, 10>,
+               groov::field<"sq8", std::uint8_t, 9, 5>,
+               groov::field<"sq7", std::uint8_t, 4, 0>>;
 
   template <stdx::ct_string name,
             std::uint32_t   baseaddress,
@@ -216,13 +216,13 @@ namespace adc3 {
                std::uint32_t,
                baseaddress + offset,
                access::rw,
-               groov::field<"RESERVED0", std::uint8_t, 31, 30, access::ro>,
-               groov::field<"SQ6", std::uint8_t, 29, 25>,
-               groov::field<"SQ5", std::uint8_t, 24, 20>,
-               groov::field<"SQ4", std::uint8_t, 19, 15>,
-               groov::field<"SQ3", std::uint8_t, 14, 10>,
-               groov::field<"SQ2", std::uint8_t, 9, 5>,
-               groov::field<"SQ1", std::uint8_t, 4, 0>>;
+               groov::field<"reserved0", std::uint8_t, 31, 30, access::ro>,
+               groov::field<"sq6", std::uint8_t, 29, 25>,
+               groov::field<"sq5", std::uint8_t, 24, 20>,
+               groov::field<"sq4", std::uint8_t, 19, 15>,
+               groov::field<"sq3", std::uint8_t, 14, 10>,
+               groov::field<"sq2", std::uint8_t, 9, 5>,
+               groov::field<"sq1", std::uint8_t, 4, 0>>;
 
   template <stdx::ct_string name,
             std::uint32_t   baseaddress,
@@ -232,12 +232,12 @@ namespace adc3 {
                std::uint32_t,
                baseaddress + offset,
                access::rw,
-               groov::field<"RESERVED0", std::uint16_t, 31, 22, access::ro>,
-               groov::field<"JL", std::uint8_t, 21, 20>,
-               groov::field<"JSQ4", std::uint8_t, 19, 15>,
-               groov::field<"JSQ3", std::uint8_t, 14, 10>,
-               groov::field<"JSQ2", std::uint8_t, 9, 5>,
-               groov::field<"JSQ1", std::uint8_t, 4, 0>>;
+               groov::field<"reserved0", std::uint16_t, 31, 22, access::ro>,
+               groov::field<"jl", std::uint8_t, 21, 20>,
+               groov::field<"jsq4", std::uint8_t, 19, 15>,
+               groov::field<"jsq3", std::uint8_t, 14, 10>,
+               groov::field<"jsq2", std::uint8_t, 9, 5>,
+               groov::field<"jsq1", std::uint8_t, 4, 0>>;
 
   template <stdx::ct_string name,
             std::uint32_t   baseaddress,
@@ -247,8 +247,8 @@ namespace adc3 {
                std::uint32_t,
                baseaddress + offset,
                access::ro,
-               groov::field<"RESERVED0", std::uint16_t, 31, 16>,
-               groov::field<"JDATA", std::uint16_t, 15, 0>>;
+               groov::field<"reserved0", std::uint16_t, 31, 16>,
+               groov::field<"jdata", std::uint16_t, 15, 0>>;
 
   template <stdx::ct_string name,
             std::uint32_t   baseaddress,
@@ -258,8 +258,8 @@ namespace adc3 {
                std::uint32_t,
                baseaddress + offset,
                access::ro,
-               groov::field<"RESERVED0", std::uint16_t, 31, 16>,
-               groov::field<"JDATA", std::uint16_t, 15, 0>>;
+               groov::field<"reserved0", std::uint16_t, 31, 16>,
+               groov::field<"jdata", std::uint16_t, 15, 0>>;
 
   template <stdx::ct_string name,
             std::uint32_t   baseaddress,
@@ -269,8 +269,8 @@ namespace adc3 {
                std::uint32_t,
                baseaddress + offset,
                access::ro,
-               groov::field<"RESERVED0", std::uint16_t, 31, 16>,
-               groov::field<"JDATA", std::uint16_t, 15, 0>>;
+               groov::field<"reserved0", std::uint16_t, 31, 16>,
+               groov::field<"jdata", std::uint16_t, 15, 0>>;
 
   template <stdx::ct_string name,
             std::uint32_t   baseaddress,
@@ -280,8 +280,8 @@ namespace adc3 {
                std::uint32_t,
                baseaddress + offset,
                access::ro,
-               groov::field<"RESERVED0", std::uint16_t, 31, 16>,
-               groov::field<"JDATA", std::uint16_t, 15, 0>>;
+               groov::field<"reserved0", std::uint16_t, 31, 16>,
+               groov::field<"jdata", std::uint16_t, 15, 0>>;
 
   template <stdx::ct_string name,
             std::uint32_t   baseaddress,
@@ -291,7 +291,7 @@ namespace adc3 {
                std::uint32_t,
                baseaddress + offset,
                access::ro,
-               groov::field<"RESERVED0", std::uint16_t, 31, 16>,
-               groov::field<"DATA", std::uint16_t, 15, 0>>;
+               groov::field<"reserved0", std::uint16_t, 31, 16>,
+               groov::field<"data", std::uint16_t, 15, 0>>;
 
 } // namespace adc3
