@@ -6,6 +6,8 @@ project('stm32', 'cpp', version : '0.1.1',
   ]
 )
 
+namemangle = find_program('scripts/ioc2mcu.py')
+
 # groov
 groov_sub = subproject('generic-register-operation-optimizer')
 groov_dep = groov_sub.get_variable('groov_dep')
