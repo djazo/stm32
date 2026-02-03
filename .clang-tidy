@@ -20,7 +20,7 @@ HeaderFileExtensions:
 ImplementationFileExtensions:
   - cpp
 
-HeaderFilterRegex: '(common|mainboard|voiceboard)/.*'
+HeaderFilterRegex: 'include/.*'
 
 ExcludeHeaderFilterRegex: 'subprojects/.*'
 
@@ -29,9 +29,9 @@ FormatStyle: file
 CheckOptions:
   # Naming conventions matching project style
   readability-identifier-naming.ClassCase: CamelCase
-  readability-identifier-naming.StructCase: CamelCase
+  readability-identifier-naming.StructCase: lower_case
   readability-identifier-naming.EnumCase: CamelCase
-  readability-identifier-naming.EnumConstantCase: UPPER_CASE
+  readability-identifier-naming.EnumConstantCase: lower_case
   readability-identifier-naming.FunctionCase: lower_case
   readability-identifier-naming.MethodCase: lower_case
   readability-identifier-naming.MemberCase: lower_case
