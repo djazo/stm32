@@ -27,6 +27,8 @@ clang-format -i <file>
 - `include/stm32/common/` - Shared access types and bit type definitions
 - `include/stm32/<mcu>/` - MCU headers (one file per MCU)
 - `include/stm32/<mcu>/registers/' - register definitions
+- `include/stm32/<mcu>/peripherals/' - peripheral definitions
+- `include/stm32/<mcu>/<mcu>.hpp' - instantiations if config has peripheral enabled
 - `svd/` - STM32 SVD source files
 - `scripts/` - Code generation scripts
 

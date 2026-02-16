@@ -549,10 +549,68 @@ def process_mcu(
         content = generate_register_header(templates)
         (reg_dir / f'{ptype}.hpp').write_text(content)
 
-    # 7. Generate MCU aggregate header
+    # 7. Build type-to-peripherals mapping
+    type_peripherals: dict[str, list[Peripheral]] = defaultdict(list)
+    for p in peripherals:
+        ptype = periph_types[p.name]
+        type_peripherals[ptype].append(p)
+
+    # 8. Detect identical peripheral layouts for deduplication
+    #    peripheral_name -> shared namespace (None if unique)
+    shared_ns: dict[str, str | None] = {}
+    #    shared namespace -> representative peripheral
+    shared_representative: dict[str, Peripheral] = {}
+
+    for ptype, p_list in type_peripherals.items():
+        # Group by layout signature (sorted register dedup keys + offsets)
+        layout_groups: dict[str, list[Peripheral]] = defaultdict(list)
+        for p in p_list:
+            parts = []
+            for reg in p.registers:
+                dk = reg_template_map[(p.name, reg.name)]
+                parts.append((reg.name.lower(), dk, reg.offset))
+            parts.sort()
+            layout_sig = str(parts)
+            layout_groups[layout_sig].append(p)
+
+        multi = [ps for ps in layout_groups.values() if len(ps) > 1]
+        single = [ps[0] for ps in layout_groups.values()
+                  if len(ps) == 1]
+
+        for p in single:
+            shared_ns[p.name] = None
+
+        if len(multi) == 1:
+            ns = f'{ptype}x'
+            shared_representative[ns] = multi[0][0]
+            for p in multi[0]:
+                shared_ns[p.name] = ns
+        else:
+            for i, group in enumerate(multi):
+                ns = f'{ptype}x' if i == 0 else f'{ptype}x_v{i + 1}'
+                shared_representative[ns] = group[0]
+                for p in group:
+                    shared_ns[p.name] = ns
+
+    # 9. Generate peripheral header files
+    periph_dir = mcu_dir / 'peripherals'
+    periph_dir.mkdir(parents=True, exist_ok=True)
+
+    for ptype, p_list in sorted(type_peripherals.items()):
+        content = generate_peripheral_header(
+            mcu, ptype, p_list,
+            reg_template_map, sig_to_template,
+            shared_ns, shared_representative)
+        (periph_dir / f'{ptype}.hpp').write_text(content)
+
+    # 10. Generate addresses header
+    addresses = generate_addresses_header(mcu, peripherals)
+    (periph_dir / 'addresses.hpp').write_text(addresses)
+
+    # 11. Generate MCU aggregate header
     aggregate = generate_aggregate(
         mcu, peripherals, periph_types,
-        reg_template_map, sig_to_template, type_templates)
+        type_peripherals, shared_ns)
     (mcu_dir / f'{mcu}.hpp').write_text(aggregate)
 
     if verbose:
@@ -624,6 +682,140 @@ def generate_register_header(templates: list[RegisterTemplate]) -> str:
 
 
 # ---------------------------------------------------------------------------
+# Code generation: peripheral headers
+# ---------------------------------------------------------------------------
+
+def _emit_peripheral_namespace(
+    lines: list[str],
+    p: Peripheral,
+    name_label: str,
+    ns_name: str,
+    reg_template_map: dict[tuple[str, str], str],
+    sig_to_template: dict[str, RegisterTemplate],
+    shared: bool,
+) -> None:
+    """Emit a single peripheral namespace block.
+
+    If shared is True, the group type takes an additional
+    stdx::ct_string name template parameter.
+    """
+    lines.append('')
+    lines.append(f'namespace {ns_name} {{')
+
+    # Using aliases for each register
+    reg_aliases = []
+    for reg in p.registers:
+        dedup_key = reg_template_map[(p.name, reg.name)]
+        tmpl = sig_to_template[dedup_key]
+        tname = template_name(tmpl)
+        alias = f'{reg.name.lower()}_tt'
+        lines.append(f'  using {alias} = regs::{tname};')
+        reg_aliases.append((alias, reg.name.lower(), reg.offset))
+
+    lines.append('')
+
+    if shared:
+        lines.append(
+            '  template <stdx::ct_string name, '
+            'std::uint32_t baseaddress>')
+        lines.append(f'  using {ns_name}_t =')
+        lines.append(f'    groov::group<name,')
+    else:
+        lines.append('  template <std::uint32_t baseaddress>')
+        lines.append(f'  using {ns_name}_t =')
+        lines.append(f'    groov::group<"{name_label}",')
+
+    lines.append(f'                 groov::mmio_bus<>,')
+
+    for i, (alias, reg_lower, offset) in enumerate(reg_aliases):
+        comma = '>;' if i == len(reg_aliases) - 1 else ','
+        lines.append(
+            f'                 {alias}<"{reg_lower}", baseaddress, '
+            f'{format_offset(offset)}>{comma}')
+
+    lines.append('')
+    lines.append(f'}} // namespace {ns_name}')
+
+
+def generate_peripheral_header(
+    mcu: str,
+    ptype: str,
+    peripherals: list[Peripheral],
+    reg_template_map: dict[tuple[str, str], str],
+    sig_to_template: dict[str, RegisterTemplate],
+    shared_ns: dict[str, str | None],
+    shared_representative: dict[str, Peripheral],
+) -> str:
+    """Generate a peripherals/<type>.hpp file."""
+    lines = []
+    lines.append('/* File autogenerated with svd2groov */')
+    lines.append('#pragma once')
+    lines.append('')
+    lines.append('#include <groov/groov.hpp>')
+    lines.append(f'#include <stm32/{mcu}/registers/{ptype}.hpp>')
+    lines.append('')
+    lines.append(f'namespace stm32::{mcu} {{')
+
+    # Emit shared namespaces (one per shared group in this type)
+    emitted_shared: set[str] = set()
+    for p in peripherals:
+        ns = shared_ns.get(p.name)
+        if ns and ns not in emitted_shared:
+            rep = shared_representative[ns]
+            _emit_peripheral_namespace(
+                lines, rep, ns, ns,
+                reg_template_map, sig_to_template,
+                shared=True)
+            emitted_shared.add(ns)
+
+    # Emit non-shared peripherals
+    for p in peripherals:
+        if shared_ns.get(p.name) is None:
+            p_lower = p.name.lower()
+            _emit_peripheral_namespace(
+                lines, p, p_lower, p_lower,
+                reg_template_map, sig_to_template,
+                shared=False)
+
+    lines.append('')
+    lines.append(f'}} // namespace stm32::{mcu}')
+    lines.append('')
+    return '\n'.join(lines)
+
+
+# ---------------------------------------------------------------------------
+# Code generation: addresses header
+# ---------------------------------------------------------------------------
+
+def generate_addresses_header(
+    mcu: str,
+    peripherals: list[Peripheral],
+) -> str:
+    """Generate peripherals/addresses.hpp with all base addresses."""
+    lines = []
+    lines.append('/* File autogenerated with svd2groov */')
+    lines.append('#pragma once')
+    lines.append('')
+    lines.append('#include <cstdint>')
+    lines.append('')
+    lines.append(f'namespace stm32::{mcu} {{')
+
+    for p in sorted(peripherals, key=lambda p: p.name.lower()):
+        p_lower = p.name.lower()
+        p_upper = p.name.upper()
+        lines.append(
+            f'namespace {p_lower} {{ '
+            f'inline constexpr std::uint32_t {p_upper}_BASE = '
+            f'{format_address(p.base_address)}; '
+            f'}} // namespace {p_lower}')
+
+    lines.append('')
+    lines.append(f'}} // namespace stm32::{mcu}')
+    lines.append('')
+    return '\n'.join(lines)
+
+
+# ---------------------------------------------------------------------------
 # Code generation: MCU aggregate
 # ---------------------------------------------------------------------------
 
@@ -631,66 +823,62 @@ def generate_aggregate(
     mcu: str,
     peripherals: list[Peripheral],
     periph_types: dict[str, str],
-    reg_template_map: dict[tuple[str, str], str],
-    sig_to_template: dict[str, RegisterTemplate],
-    type_templates: dict[str, list[RegisterTemplate]],
+    type_peripherals: dict[str, list[Peripheral]],
+    shared_ns: dict[str, str | None],
 ) -> str:
     """Generate the <mcu>/<mcu>.hpp aggregate header."""
     lines = []
     lines.append(f'/* File autogenerated with svd2groov for {mcu} */')
     lines.append('#pragma once')
     lines.append('')
-    lines.append('#include <cstdint>')
-    lines.append('#include <groov/groov.hpp>')
-    lines.append('#include <stm32/common/access.hpp>')
-    lines.append('#include <stm32/common/bittypes.hpp>')
+    lines.append('#include <stm32/config.hpp>')
 
-    # Include register headers (sorted)
-    for ptype in sorted(type_templates.keys()):
-        lines.append(f'#include <stm32/{mcu}/registers/{ptype}.hpp>')
+    # Include peripheral headers (sorted)
+    for ptype in sorted(type_peripherals.keys()):
+        lines.append(f'#include <stm32/{mcu}/peripherals/{ptype}.hpp>')
+    lines.append('')
+    lines.append(f'#include <stm32/{mcu}/peripherals/addresses.hpp>')
+    lines.append('')
+    lines.append(f'namespace stm32::{mcu} {{')
+    lines.append('')
+    lines.append('namespace detail {')
+    lines.append('  struct peripheral_disabled {};')
+    lines.append('} // namespace detail')
+
+    lines.append('')
+    lines.append(f'}} // namespace stm32::{mcu}')
     lines.append('')
     lines.append('namespace stm32 {')
 
-    for p in peripherals:
+    for p in sorted(peripherals, key=lambda p: p.name.lower()):
         p_lower = p.name.lower()
         p_upper = p.name.upper()
-        ptype = periph_types[p.name]
+        ns = shared_ns.get(p.name)
 
         lines.append('')
-        lines.append(f'namespace {p_lower} {{')
         lines.append(
-            f'  constexpr std::uint32_t {p_upper}_BASE = '
-            f'{format_address(p.base_address)};')
-        lines.append('')
+            f'constexpr auto {p_lower} = [] consteval {{')
+        lines.append(
+            f'  if constexpr ({mcu}::config::{p_lower}) {{')
 
-        # Using aliases for each register
-        reg_aliases = []
-        for reg in p.registers:
-            dedup_key = reg_template_map[(p.name, reg.name)]
-            tmpl = sig_to_template[dedup_key]
-            tname = template_name(tmpl)
-            alias = f'{reg.name.lower()}_tt'
-            lines.append(f'  using {alias} = regs::{tname};')
-            reg_aliases.append((alias, reg.name.lower(), reg.offset))
-
-        lines.append('')
-        lines.append('  template <std::uint32_t baseaddress>')
-        lines.append(f'  using {p_lower}_t =')
-        lines.append(f'    groov::group<"{p_lower}",')
-        lines.append(f'                 groov::mmio_bus<>,')
-
-        for i, (alias, reg_lower, offset) in enumerate(reg_aliases):
-            comma = '>;' if i == len(reg_aliases) - 1 else ','
+        if ns:
+            # Shared: use shared namespace type with name parameter
             lines.append(
-                f'                 {alias}<"{reg_lower}", baseaddress, '
-                f'{format_offset(offset)}>{comma}')
+                f'    return {mcu}::{ns}::{ns}_t<'
+                f'"{p_lower}",{mcu}::{p_lower}::{p_upper}_BASE>{{}};')
+        else:
+            lines.append(
+                f'    return {mcu}::{p_lower}::{p_lower}_t<'
+                f'{mcu}::{p_lower}::{p_upper}_BASE>{{}};')
 
-        lines.append('')
-        lines.append(f'}} // namespace {p_lower}')
-        lines.append('')
         lines.append(
-            f'constexpr auto {p_lower} = '
-            f'{p_lower}::{p_lower}_t<{p_lower}::{p_upper}_BASE>{{}};')
+            f'  }} else {{')
+        lines.append(
+            f'    return {mcu}::detail::peripheral_disabled{{}};')
+        lines.append(
+            f'  }}')
+        lines.append(
+            f'}}();')
 
     lines.append('')
     lines.append('} // namespace stm32')
@@ -701,6 +889,12 @@ def generate_aggregate(
 # ---------------------------------------------------------------------------
 # Main
 # ---------------------------------------------------------------------------
+
+def list_peripherals(svd_path: str) -> list[str]:
+    """List all peripheral names from an SVD file (lowercase, sorted)."""
+    peripherals = parse_svd(svd_path)
+    return sorted(p.name.lower() for p in peripherals)
+
 
 def main():
     parser = argparse.ArgumentParser(
@@ -726,8 +920,20 @@ def main():
         action='store_true',
         help='Print deduplication statistics at end'
     )
+    parser.add_argument(
+        '--list-peripherals',
+        action='store_true',
+        help='Print peripheral names (one per line) and exit'
+    )
 
     args = parser.parse_args()
+
+    if args.list_peripherals:
+        for svd_path in args.svd_files:
+            for name in list_peripherals(svd_path):
+                print(name)
+        return
+
     output_base = Path(args.output)
 
     all_stats = []
