@@ -1,5 +1,0 @@
-#pragma once
-
-#include <stm32/@mcu@/@mcu@.hpp>
-
-namespace mcu = stm32::@mcu@;
