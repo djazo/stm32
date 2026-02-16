@@ -1,9 +1,8 @@
-# stm32 register definitions
-
 project('stm32', 'cpp', version : '0.1.1',
   default_options : [
     'cpp_std=c++23',
-  ]
+  ],
+  meson_version: ">=1.1"
 )
 
 fs = import('fs')
