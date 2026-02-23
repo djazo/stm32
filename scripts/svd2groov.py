@@ -233,7 +233,7 @@ def classify_bittype(field_name: str) -> str:
     """
     name = field_name.upper()
 
-    prefix = 'common::bittypes::'
+    prefix = 'common::'
 
     # bit_reset: suffix RST
     if name.endswith('RST'):
