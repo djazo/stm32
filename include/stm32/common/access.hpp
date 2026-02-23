@@ -6,8 +6,7 @@ namespace stm32::common::access {
 
 using rw  = groov::w::replace;
 using ro  = groov::read_only<groov::w::ignore>;
-using wo  = groov::w::replace;
-// using wo  = groov::write_only<groov::w::replace>;
+using wo  = groov::write_only<groov::w::replace>;
 using wr1 = groov::w::replace;
 
 } // namespace stm32::common::access
