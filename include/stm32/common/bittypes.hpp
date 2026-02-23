@@ -2,7 +2,7 @@
 
 #include <groov/groov.hpp>
 
-namespace stm32::common::bittypes {
+namespace stm32::common {
 
 enum class bit_enable : bool {
   ENABLE  = true,
@@ -73,4 +73,4 @@ enum class bit_reset : bool {
   one        = true
 };
 
-} // namespace stm32::common::bittypes
+} // namespace stm32::common
