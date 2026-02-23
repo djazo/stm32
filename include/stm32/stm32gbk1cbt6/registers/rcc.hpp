@@ -18,15 +18,15 @@ using rcc_rcc_ahb1enr_v1_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved2", std::uint32_t, 31, 13, common::access::ro>,
-               groov::field<"crcen", common::bittypes::bit_enable, 12, 12>,
+               groov::field<"crcen", common::bit_enable, 12, 12>,
                groov::field<"reserved1", std::uint8_t, 11, 9, common::access::ro>,
-               groov::field<"flashen", common::bittypes::bit_enable, 8, 8>,
+               groov::field<"flashen", common::bit_enable, 8, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 5, common::access::ro>,
-               groov::field<"fmacen", common::bittypes::bit_enable, 4, 4>,
-               groov::field<"cordicen", common::bittypes::bit_enable, 3, 3>,
-               groov::field<"dmamux1en", common::bittypes::bit_enable, 2, 2>,
-               groov::field<"dma2en", common::bittypes::bit_enable, 1, 1>,
-               groov::field<"dma1en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"fmacen", common::bit_enable, 4, 4>,
+               groov::field<"cordicen", common::bit_enable, 3, 3>,
+               groov::field<"dmamux1en", common::bit_enable, 2, 2>,
+               groov::field<"dma2en", common::bit_enable, 1, 1>,
+               groov::field<"dma1en", common::bit_enable, 0, 0>>;
 
 // rcc_rcc_ahb1rstr_v1: RCC_AHB1RSTR
 // Used by: RCC
@@ -39,15 +39,15 @@ using rcc_rcc_ahb1rstr_v1_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved2", std::uint32_t, 31, 13, common::access::ro>,
-               groov::field<"crcrst", common::bittypes::bit_reset, 12, 12>,
+               groov::field<"crcrst", common::bit_reset, 12, 12>,
                groov::field<"reserved1", std::uint8_t, 11, 9, common::access::ro>,
-               groov::field<"flashrst", common::bittypes::bit_reset, 8, 8>,
+               groov::field<"flashrst", common::bit_reset, 8, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 5, common::access::ro>,
-               groov::field<"fmacrst", common::bittypes::bit_reset, 4, 4>,
-               groov::field<"cordicrst", common::bittypes::bit_reset, 3, 3>,
-               groov::field<"dmamux1rst", common::bittypes::bit_reset, 2, 2>,
-               groov::field<"dma2rst", common::bittypes::bit_reset, 1, 1>,
-               groov::field<"dma1rst", common::bittypes::bit_reset, 0, 0>>;
+               groov::field<"fmacrst", common::bit_reset, 4, 4>,
+               groov::field<"cordicrst", common::bit_reset, 3, 3>,
+               groov::field<"dmamux1rst", common::bit_reset, 2, 2>,
+               groov::field<"dma2rst", common::bit_reset, 1, 1>,
+               groov::field<"dma1rst", common::bit_reset, 0, 0>>;
 
 // rcc_rcc_ahb1smenr_v1: RCC_AHB1SMENR
 // Used by: RCC
@@ -60,16 +60,16 @@ using rcc_rcc_ahb1smenr_v1_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved2", std::uint32_t, 31, 13, common::access::ro>,
-               groov::field<"crcsmen", common::bittypes::bit_enable, 12, 12>,
+               groov::field<"crcsmen", common::bit_enable, 12, 12>,
                groov::field<"reserved1", std::uint8_t, 11, 10, common::access::ro>,
-               groov::field<"sram1smen", common::bittypes::bit_enable, 9, 9>,
-               groov::field<"flashsmen", common::bittypes::bit_enable, 8, 8>,
+               groov::field<"sram1smen", common::bit_enable, 9, 9>,
+               groov::field<"flashsmen", common::bit_enable, 8, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 5, common::access::ro>,
-               groov::field<"fmacsmen", common::bittypes::bit_enable, 4, 4>,
-               groov::field<"cordicsmen", common::bittypes::bit_enable, 3, 3>,
-               groov::field<"dmamux1smen", common::bittypes::bit_enable, 2, 2>,
-               groov::field<"dma2smen", common::bittypes::bit_enable, 1, 1>,
-               groov::field<"dma1smen", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"fmacsmen", common::bit_enable, 4, 4>,
+               groov::field<"cordicsmen", common::bit_enable, 3, 3>,
+               groov::field<"dmamux1smen", common::bit_enable, 2, 2>,
+               groov::field<"dma2smen", common::bit_enable, 1, 1>,
+               groov::field<"dma1smen", common::bit_enable, 0, 0>>;
 
 // rcc_rcc_ahb2enr_v1: RCC_AHB2ENR
 // Used by: RCC
@@ -82,25 +82,25 @@ using rcc_rcc_ahb2enr_v1_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved4", std::uint8_t, 31, 27, common::access::ro>,
-               groov::field<"rngen", common::bittypes::bit_enable, 26, 26>,
+               groov::field<"rngen", common::bit_enable, 26, 26>,
                groov::field<"reserved3", bool, 25, 25, common::access::ro>,
-               groov::field<"aesen", common::bittypes::bit_enable, 24, 24>,
+               groov::field<"aesen", common::bit_enable, 24, 24>,
                groov::field<"reserved2", std::uint8_t, 23, 20, common::access::ro>,
-               groov::field<"dac4en", common::bittypes::bit_enable, 19, 19>,
-               groov::field<"dac3en", common::bittypes::bit_enable, 18, 18>,
-               groov::field<"dac2en", common::bittypes::bit_enable, 17, 17>,
-               groov::field<"dac1en", common::bittypes::bit_enable, 16, 16>,
+               groov::field<"dac4en", common::bit_enable, 19, 19>,
+               groov::field<"dac3en", common::bit_enable, 18, 18>,
+               groov::field<"dac2en", common::bit_enable, 17, 17>,
+               groov::field<"dac1en", common::bit_enable, 16, 16>,
                groov::field<"reserved1", bool, 15, 15, common::access::ro>,
-               groov::field<"adc345en", common::bittypes::bit_enable, 14, 14>,
-               groov::field<"adc12en", common::bittypes::bit_enable, 13, 13>,
+               groov::field<"adc345en", common::bit_enable, 14, 14>,
+               groov::field<"adc12en", common::bit_enable, 13, 13>,
                groov::field<"reserved0", std::uint8_t, 12, 7, common::access::ro>,
-               groov::field<"gpiogen", common::bittypes::bit_enable, 6, 6>,
-               groov::field<"gpiofen", common::bittypes::bit_enable, 5, 5>,
-               groov::field<"gpioeen", common::bittypes::bit_enable, 4, 4>,
-               groov::field<"gpioden", common::bittypes::bit_enable, 3, 3>,
-               groov::field<"gpiocen", common::bittypes::bit_enable, 2, 2>,
-               groov::field<"gpioben", common::bittypes::bit_enable, 1, 1>,
-               groov::field<"gpioaen", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"gpiogen", common::bit_enable, 6, 6>,
+               groov::field<"gpiofen", common::bit_enable, 5, 5>,
+               groov::field<"gpioeen", common::bit_enable, 4, 4>,
+               groov::field<"gpioden", common::bit_enable, 3, 3>,
+               groov::field<"gpiocen", common::bit_enable, 2, 2>,
+               groov::field<"gpioben", common::bit_enable, 1, 1>,
+               groov::field<"gpioaen", common::bit_enable, 0, 0>>;
 
 // rcc_rcc_ahb2rstr_v1: RCC_AHB2RSTR
 // Used by: RCC
@@ -113,25 +113,25 @@ using rcc_rcc_ahb2rstr_v1_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved4", std::uint8_t, 31, 27, common::access::ro>,
-               groov::field<"rngrst", common::bittypes::bit_reset, 26, 26>,
+               groov::field<"rngrst", common::bit_reset, 26, 26>,
                groov::field<"reserved3", bool, 25, 25, common::access::ro>,
-               groov::field<"aesrst", common::bittypes::bit_reset, 24, 24>,
+               groov::field<"aesrst", common::bit_reset, 24, 24>,
                groov::field<"reserved2", std::uint8_t, 23, 20, common::access::ro>,
-               groov::field<"dac4rst", common::bittypes::bit_reset, 19, 19>,
-               groov::field<"dac3rst", common::bittypes::bit_reset, 18, 18>,
-               groov::field<"dac2rst", common::bittypes::bit_reset, 17, 17>,
-               groov::field<"dac1rst", common::bittypes::bit_reset, 16, 16>,
+               groov::field<"dac4rst", common::bit_reset, 19, 19>,
+               groov::field<"dac3rst", common::bit_reset, 18, 18>,
+               groov::field<"dac2rst", common::bit_reset, 17, 17>,
+               groov::field<"dac1rst", common::bit_reset, 16, 16>,
                groov::field<"reserved1", bool, 15, 15, common::access::ro>,
-               groov::field<"adc345rst", common::bittypes::bit_reset, 14, 14>,
-               groov::field<"adc12rst", common::bittypes::bit_reset, 13, 13>,
+               groov::field<"adc345rst", common::bit_reset, 14, 14>,
+               groov::field<"adc12rst", common::bit_reset, 13, 13>,
                groov::field<"reserved0", std::uint8_t, 12, 7, common::access::ro>,
-               groov::field<"gpiogrst", common::bittypes::bit_reset, 6, 6>,
-               groov::field<"gpiofrst", common::bittypes::bit_reset, 5, 5>,
-               groov::field<"gpioerst", common::bittypes::bit_reset, 4, 4>,
-               groov::field<"gpiodrst", common::bittypes::bit_reset, 3, 3>,
-               groov::field<"gpiocrst", common::bittypes::bit_reset, 2, 2>,
-               groov::field<"gpiobrst", common::bittypes::bit_reset, 1, 1>,
-               groov::field<"gpioarst", common::bittypes::bit_reset, 0, 0>>;
+               groov::field<"gpiogrst", common::bit_reset, 6, 6>,
+               groov::field<"gpiofrst", common::bit_reset, 5, 5>,
+               groov::field<"gpioerst", common::bit_reset, 4, 4>,
+               groov::field<"gpiodrst", common::bit_reset, 3, 3>,
+               groov::field<"gpiocrst", common::bit_reset, 2, 2>,
+               groov::field<"gpiobrst", common::bit_reset, 1, 1>,
+               groov::field<"gpioarst", common::bit_reset, 0, 0>>;
 
 // rcc_rcc_ahb2smenr_v1: RCC_AHB2SMENR
 // Used by: RCC
@@ -144,28 +144,28 @@ using rcc_rcc_ahb2smenr_v1_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved5", std::uint8_t, 31, 27, common::access::ro>,
-               groov::field<"rngen", common::bittypes::bit_enable, 26, 26>,
+               groov::field<"rngen", common::bit_enable, 26, 26>,
                groov::field<"reserved4", bool, 25, 25, common::access::ro>,
-               groov::field<"aessmen", common::bittypes::bit_enable, 24, 24>,
+               groov::field<"aessmen", common::bit_enable, 24, 24>,
                groov::field<"reserved3", std::uint8_t, 23, 20, common::access::ro>,
-               groov::field<"dac4smen", common::bittypes::bit_enable, 19, 19>,
-               groov::field<"dac3smen", common::bittypes::bit_enable, 18, 18>,
-               groov::field<"dac2smen", common::bittypes::bit_enable, 17, 17>,
-               groov::field<"dac1smen", common::bittypes::bit_enable, 16, 16>,
+               groov::field<"dac4smen", common::bit_enable, 19, 19>,
+               groov::field<"dac3smen", common::bit_enable, 18, 18>,
+               groov::field<"dac2smen", common::bit_enable, 17, 17>,
+               groov::field<"dac1smen", common::bit_enable, 16, 16>,
                groov::field<"reserved2", bool, 15, 15, common::access::ro>,
-               groov::field<"adc345smen", common::bittypes::bit_enable, 14, 14>,
-               groov::field<"adc12smen", common::bittypes::bit_enable, 13, 13>,
+               groov::field<"adc345smen", common::bit_enable, 14, 14>,
+               groov::field<"adc12smen", common::bit_enable, 13, 13>,
                groov::field<"reserved1", std::uint8_t, 12, 11, common::access::ro>,
-               groov::field<"sram2smen", common::bittypes::bit_enable, 10, 10>,
-               groov::field<"ccmsramsmen", common::bittypes::bit_enable, 9, 9>,
+               groov::field<"sram2smen", common::bit_enable, 10, 10>,
+               groov::field<"ccmsramsmen", common::bit_enable, 9, 9>,
                groov::field<"reserved0", std::uint8_t, 8, 7, common::access::ro>,
-               groov::field<"gpiogsmen", common::bittypes::bit_enable, 6, 6>,
-               groov::field<"gpiofsmen", common::bittypes::bit_enable, 5, 5>,
-               groov::field<"gpioesmen", common::bittypes::bit_enable, 4, 4>,
-               groov::field<"gpiodsmen", common::bittypes::bit_enable, 3, 3>,
-               groov::field<"gpiocsmen", common::bittypes::bit_enable, 2, 2>,
-               groov::field<"gpiobsmen", common::bittypes::bit_enable, 1, 1>,
-               groov::field<"gpioasmen", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"gpiogsmen", common::bit_enable, 6, 6>,
+               groov::field<"gpiofsmen", common::bit_enable, 5, 5>,
+               groov::field<"gpioesmen", common::bit_enable, 4, 4>,
+               groov::field<"gpiodsmen", common::bit_enable, 3, 3>,
+               groov::field<"gpiocsmen", common::bit_enable, 2, 2>,
+               groov::field<"gpiobsmen", common::bit_enable, 1, 1>,
+               groov::field<"gpioasmen", common::bit_enable, 0, 0>>;
 
 // rcc_rcc_ahb3enr_v1: RCC_AHB3ENR
 // Used by: RCC
@@ -178,9 +178,9 @@ using rcc_rcc_ahb3enr_v1_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved1", std::uint32_t, 31, 9, common::access::ro>,
-               groov::field<"qspien", common::bittypes::bit_enable, 8, 8>,
+               groov::field<"qspien", common::bit_enable, 8, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"fmcen", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"fmcen", common::bit_enable, 0, 0>>;
 
 // rcc_rcc_ahb3rstr_v1: RCC_AHB3RSTR
 // Used by: RCC
@@ -193,9 +193,9 @@ using rcc_rcc_ahb3rstr_v1_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved1", std::uint32_t, 31, 9, common::access::ro>,
-               groov::field<"qspirst", common::bittypes::bit_reset, 8, 8>,
+               groov::field<"qspirst", common::bit_reset, 8, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"fmcrst", common::bittypes::bit_reset, 0, 0>>;
+               groov::field<"fmcrst", common::bit_reset, 0, 0>>;
 
 // rcc_rcc_ahb3smenr_v1: RCC_AHB3SMENR
 // Used by: RCC
@@ -208,9 +208,9 @@ using rcc_rcc_ahb3smenr_v1_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved1", std::uint32_t, 31, 9, common::access::ro>,
-               groov::field<"qspismen", common::bittypes::bit_enable, 8, 8>,
+               groov::field<"qspismen", common::bit_enable, 8, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"fmcsmen", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"fmcsmen", common::bit_enable, 0, 0>>;
 
 // rcc_rcc_apb1enr1_v1: RCC_APB1ENR1
 // Used by: RCC
@@ -222,35 +222,35 @@ using rcc_rcc_apb1enr1_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::rw,
-               groov::field<"lptim1en", common::bittypes::bit_enable, 31, 31>,
-               groov::field<"i2c3en", common::bittypes::bit_enable, 30, 30>,
+               groov::field<"lptim1en", common::bit_enable, 31, 31>,
+               groov::field<"i2c3en", common::bit_enable, 30, 30>,
                groov::field<"reserved6", bool, 29, 29, common::access::ro>,
-               groov::field<"pwren", common::bittypes::bit_enable, 28, 28>,
+               groov::field<"pwren", common::bit_enable, 28, 28>,
                groov::field<"reserved5", std::uint8_t, 27, 26, common::access::ro>,
-               groov::field<"fdcanen", common::bittypes::bit_enable, 25, 25>,
+               groov::field<"fdcanen", common::bit_enable, 25, 25>,
                groov::field<"reserved4", bool, 24, 24, common::access::ro>,
-               groov::field<"usben", common::bittypes::bit_enable, 23, 23>,
-               groov::field<"i2c2en", common::bittypes::bit_enable, 22, 22>,
-               groov::field<"i2c1en", common::bittypes::bit_enable, 21, 21>,
-               groov::field<"uart5en", common::bittypes::bit_enable, 20, 20>,
-               groov::field<"uart4en", common::bittypes::bit_enable, 19, 19>,
-               groov::field<"usart3en", common::bittypes::bit_enable, 18, 18>,
-               groov::field<"usart2en", common::bittypes::bit_enable, 17, 17>,
+               groov::field<"usben", common::bit_enable, 23, 23>,
+               groov::field<"i2c2en", common::bit_enable, 22, 22>,
+               groov::field<"i2c1en", common::bit_enable, 21, 21>,
+               groov::field<"uart5en", common::bit_enable, 20, 20>,
+               groov::field<"uart4en", common::bit_enable, 19, 19>,
+               groov::field<"usart3en", common::bit_enable, 18, 18>,
+               groov::field<"usart2en", common::bit_enable, 17, 17>,
                groov::field<"reserved3", bool, 16, 16, common::access::ro>,
-               groov::field<"spi3en", common::bittypes::bit_enable, 15, 15>,
-               groov::field<"spi2en", common::bittypes::bit_enable, 14, 14>,
+               groov::field<"spi3en", common::bit_enable, 15, 15>,
+               groov::field<"spi2en", common::bit_enable, 14, 14>,
                groov::field<"reserved2", std::uint8_t, 13, 12, common::access::ro>,
-               groov::field<"wwdgen", common::bittypes::bit_enable, 11, 11>,
-               groov::field<"rtcapben", common::bittypes::bit_enable, 10, 10>,
+               groov::field<"wwdgen", common::bit_enable, 11, 11>,
+               groov::field<"rtcapben", common::bit_enable, 10, 10>,
                groov::field<"reserved1", bool, 9, 9, common::access::ro>,
-               groov::field<"crsen", common::bittypes::bit_enable, 8, 8>,
+               groov::field<"crsen", common::bit_enable, 8, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 6, common::access::ro>,
-               groov::field<"tim7en", common::bittypes::bit_enable, 5, 5>,
-               groov::field<"tim6en", common::bittypes::bit_enable, 4, 4>,
-               groov::field<"tim5en", common::bittypes::bit_enable, 3, 3>,
-               groov::field<"tim4en", common::bittypes::bit_enable, 2, 2>,
-               groov::field<"tim3en", common::bittypes::bit_enable, 1, 1>,
-               groov::field<"tim2en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"tim7en", common::bit_enable, 5, 5>,
+               groov::field<"tim6en", common::bit_enable, 4, 4>,
+               groov::field<"tim5en", common::bit_enable, 3, 3>,
+               groov::field<"tim4en", common::bit_enable, 2, 2>,
+               groov::field<"tim3en", common::bit_enable, 1, 1>,
+               groov::field<"tim2en", common::bit_enable, 0, 0>>;
 
 // rcc_rcc_apb1enr2_v1: RCC_APB1ENR2
 // Used by: RCC
@@ -263,10 +263,10 @@ using rcc_rcc_apb1enr2_v1_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved1", std::uint32_t, 31, 9, common::access::ro>,
-               groov::field<"ucpd1en", common::bittypes::bit_enable, 8, 8>,
+               groov::field<"ucpd1en", common::bit_enable, 8, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 2, common::access::ro>,
-               groov::field<"i2c4en", common::bittypes::bit_enable, 1, 1>,
-               groov::field<"lpuart1en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"i2c4en", common::bit_enable, 1, 1>,
+               groov::field<"lpuart1en", common::bit_enable, 0, 0>>;
 
 // rcc_rcc_apb1rstr1_v1: RCC_APB1RSTR1
 // Used by: RCC
@@ -278,32 +278,32 @@ using rcc_rcc_apb1rstr1_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::rw,
-               groov::field<"lptim1rst", common::bittypes::bit_reset, 31, 31>,
-               groov::field<"i2c3rst", common::bittypes::bit_reset, 30, 30>,
+               groov::field<"lptim1rst", common::bit_reset, 31, 31>,
+               groov::field<"i2c3rst", common::bit_reset, 30, 30>,
                groov::field<"reserved5", bool, 29, 29, common::access::ro>,
-               groov::field<"pwrrst", common::bittypes::bit_reset, 28, 28>,
+               groov::field<"pwrrst", common::bit_reset, 28, 28>,
                groov::field<"reserved4", std::uint8_t, 27, 26, common::access::ro>,
-               groov::field<"fdcanrst", common::bittypes::bit_reset, 25, 25>,
+               groov::field<"fdcanrst", common::bit_reset, 25, 25>,
                groov::field<"reserved3", bool, 24, 24, common::access::ro>,
-               groov::field<"usbrst", common::bittypes::bit_reset, 23, 23>,
-               groov::field<"i2c2rst", common::bittypes::bit_reset, 22, 22>,
-               groov::field<"i2c1rst", common::bittypes::bit_reset, 21, 21>,
-               groov::field<"uart5rst", common::bittypes::bit_reset, 20, 20>,
-               groov::field<"uart4rst", common::bittypes::bit_reset, 19, 19>,
-               groov::field<"usart3rst", common::bittypes::bit_reset, 18, 18>,
-               groov::field<"usart2rst", common::bittypes::bit_reset, 17, 17>,
+               groov::field<"usbrst", common::bit_reset, 23, 23>,
+               groov::field<"i2c2rst", common::bit_reset, 22, 22>,
+               groov::field<"i2c1rst", common::bit_reset, 21, 21>,
+               groov::field<"uart5rst", common::bit_reset, 20, 20>,
+               groov::field<"uart4rst", common::bit_reset, 19, 19>,
+               groov::field<"usart3rst", common::bit_reset, 18, 18>,
+               groov::field<"usart2rst", common::bit_reset, 17, 17>,
                groov::field<"reserved2", bool, 16, 16, common::access::ro>,
-               groov::field<"spi3rst", common::bittypes::bit_reset, 15, 15>,
-               groov::field<"spi2rst", common::bittypes::bit_reset, 14, 14>,
+               groov::field<"spi3rst", common::bit_reset, 15, 15>,
+               groov::field<"spi2rst", common::bit_reset, 14, 14>,
                groov::field<"reserved1", std::uint8_t, 13, 9, common::access::ro>,
-               groov::field<"crsrst", common::bittypes::bit_reset, 8, 8>,
+               groov::field<"crsrst", common::bit_reset, 8, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 6, common::access::ro>,
-               groov::field<"tim7rst", common::bittypes::bit_reset, 5, 5>,
-               groov::field<"tim6rst", common::bittypes::bit_reset, 4, 4>,
-               groov::field<"tim5rst", common::bittypes::bit_reset, 3, 3>,
-               groov::field<"tim4rst", common::bittypes::bit_reset, 2, 2>,
-               groov::field<"tim3rst", common::bittypes::bit_reset, 1, 1>,
-               groov::field<"tim2rst", common::bittypes::bit_reset, 0, 0>>;
+               groov::field<"tim7rst", common::bit_reset, 5, 5>,
+               groov::field<"tim6rst", common::bit_reset, 4, 4>,
+               groov::field<"tim5rst", common::bit_reset, 3, 3>,
+               groov::field<"tim4rst", common::bit_reset, 2, 2>,
+               groov::field<"tim3rst", common::bit_reset, 1, 1>,
+               groov::field<"tim2rst", common::bit_reset, 0, 0>>;
 
 // rcc_rcc_apb1rstr2_v1: RCC_APB1RSTR2
 // Used by: RCC
@@ -316,10 +316,10 @@ using rcc_rcc_apb1rstr2_v1_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved1", std::uint32_t, 31, 9, common::access::ro>,
-               groov::field<"ucpd1rst", common::bittypes::bit_reset, 8, 8>,
+               groov::field<"ucpd1rst", common::bit_reset, 8, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 2, common::access::ro>,
-               groov::field<"i2c4rst", common::bittypes::bit_reset, 1, 1>,
-               groov::field<"lpuart1rst", common::bittypes::bit_reset, 0, 0>>;
+               groov::field<"i2c4rst", common::bit_reset, 1, 1>,
+               groov::field<"lpuart1rst", common::bit_reset, 0, 0>>;
 
 // rcc_rcc_apb1smenr1_v1: RCC_APB1SMENR1
 // Used by: RCC
@@ -331,35 +331,35 @@ using rcc_rcc_apb1smenr1_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::rw,
-               groov::field<"lptim1smen", common::bittypes::bit_enable, 31, 31>,
-               groov::field<"i2c3smen", common::bittypes::bit_enable, 30, 30>,
+               groov::field<"lptim1smen", common::bit_enable, 31, 31>,
+               groov::field<"i2c3smen", common::bit_enable, 30, 30>,
                groov::field<"reserved6", bool, 29, 29, common::access::ro>,
-               groov::field<"pwrsmen", common::bittypes::bit_enable, 28, 28>,
+               groov::field<"pwrsmen", common::bit_enable, 28, 28>,
                groov::field<"reserved5", std::uint8_t, 27, 26, common::access::ro>,
-               groov::field<"fdcansmen", common::bittypes::bit_enable, 25, 25>,
+               groov::field<"fdcansmen", common::bit_enable, 25, 25>,
                groov::field<"reserved4", bool, 24, 24, common::access::ro>,
-               groov::field<"usbsmen", common::bittypes::bit_enable, 23, 23>,
-               groov::field<"i2c2smen", common::bittypes::bit_enable, 22, 22>,
-               groov::field<"i2c1smen", common::bittypes::bit_enable, 21, 21>,
-               groov::field<"uart5smen", common::bittypes::bit_enable, 20, 20>,
-               groov::field<"uart4smen", common::bittypes::bit_enable, 19, 19>,
-               groov::field<"usart3smen", common::bittypes::bit_enable, 18, 18>,
-               groov::field<"usart2smen", common::bittypes::bit_enable, 17, 17>,
+               groov::field<"usbsmen", common::bit_enable, 23, 23>,
+               groov::field<"i2c2smen", common::bit_enable, 22, 22>,
+               groov::field<"i2c1smen", common::bit_enable, 21, 21>,
+               groov::field<"uart5smen", common::bit_enable, 20, 20>,
+               groov::field<"uart4smen", common::bit_enable, 19, 19>,
+               groov::field<"usart3smen", common::bit_enable, 18, 18>,
+               groov::field<"usart2smen", common::bit_enable, 17, 17>,
                groov::field<"reserved3", bool, 16, 16, common::access::ro>,
-               groov::field<"spi3smen", common::bittypes::bit_enable, 15, 15>,
-               groov::field<"spi2smen", common::bittypes::bit_enable, 14, 14>,
+               groov::field<"spi3smen", common::bit_enable, 15, 15>,
+               groov::field<"spi2smen", common::bit_enable, 14, 14>,
                groov::field<"reserved2", std::uint8_t, 13, 12, common::access::ro>,
-               groov::field<"wwdgsmen", common::bittypes::bit_enable, 11, 11>,
-               groov::field<"rtcapbsmen", common::bittypes::bit_enable, 10, 10>,
+               groov::field<"wwdgsmen", common::bit_enable, 11, 11>,
+               groov::field<"rtcapbsmen", common::bit_enable, 10, 10>,
                groov::field<"reserved1", bool, 9, 9, common::access::ro>,
-               groov::field<"crssmen", common::bittypes::bit_enable, 8, 8>,
+               groov::field<"crssmen", common::bit_enable, 8, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 6, common::access::ro>,
-               groov::field<"tim7smen", common::bittypes::bit_enable, 5, 5>,
-               groov::field<"tim6smen", common::bittypes::bit_enable, 4, 4>,
-               groov::field<"tim5smen", common::bittypes::bit_enable, 3, 3>,
-               groov::field<"tim4smen", common::bittypes::bit_enable, 2, 2>,
-               groov::field<"tim3smen", common::bittypes::bit_enable, 1, 1>,
-               groov::field<"tim2smen", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"tim7smen", common::bit_enable, 5, 5>,
+               groov::field<"tim6smen", common::bit_enable, 4, 4>,
+               groov::field<"tim5smen", common::bit_enable, 3, 3>,
+               groov::field<"tim4smen", common::bit_enable, 2, 2>,
+               groov::field<"tim3smen", common::bit_enable, 1, 1>,
+               groov::field<"tim2smen", common::bit_enable, 0, 0>>;
 
 // rcc_rcc_apb1smenr2_v1: RCC_APB1SMENR2
 // Used by: RCC
@@ -372,10 +372,10 @@ using rcc_rcc_apb1smenr2_v1_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved1", std::uint32_t, 31, 9, common::access::ro>,
-               groov::field<"ucpd1smen", common::bittypes::bit_enable, 8, 8>,
+               groov::field<"ucpd1smen", common::bit_enable, 8, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 2, common::access::ro>,
-               groov::field<"i2c4smen", common::bittypes::bit_enable, 1, 1>,
-               groov::field<"lpuart1smen", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"i2c4smen", common::bit_enable, 1, 1>,
+               groov::field<"lpuart1smen", common::bit_enable, 0, 0>>;
 
 // rcc_rcc_apb2enr_v1: RCC_APB2ENR
 // Used by: RCC
@@ -388,21 +388,21 @@ using rcc_rcc_apb2enr_v1_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved3", std::uint8_t, 31, 27, common::access::ro>,
-               groov::field<"hrtim1en", common::bittypes::bit_enable, 26, 26>,
+               groov::field<"hrtim1en", common::bit_enable, 26, 26>,
                groov::field<"reserved2", std::uint8_t, 25, 22, common::access::ro>,
-               groov::field<"sai1en", common::bittypes::bit_enable, 21, 21>,
-               groov::field<"tim20en", common::bittypes::bit_enable, 20, 20>,
+               groov::field<"sai1en", common::bit_enable, 21, 21>,
+               groov::field<"tim20en", common::bit_enable, 20, 20>,
                groov::field<"reserved1", bool, 19, 19, common::access::ro>,
-               groov::field<"tim17en", common::bittypes::bit_enable, 18, 18>,
-               groov::field<"tim16en", common::bittypes::bit_enable, 17, 17>,
-               groov::field<"tim15en", common::bittypes::bit_enable, 16, 16>,
-               groov::field<"spi4en", common::bittypes::bit_enable, 15, 15>,
-               groov::field<"usart1en", common::bittypes::bit_enable, 14, 14>,
-               groov::field<"tim8en", common::bittypes::bit_enable, 13, 13>,
-               groov::field<"spi1en", common::bittypes::bit_enable, 12, 12>,
-               groov::field<"tim1en", common::bittypes::bit_enable, 11, 11>,
+               groov::field<"tim17en", common::bit_enable, 18, 18>,
+               groov::field<"tim16en", common::bit_enable, 17, 17>,
+               groov::field<"tim15en", common::bit_enable, 16, 16>,
+               groov::field<"spi4en", common::bit_enable, 15, 15>,
+               groov::field<"usart1en", common::bit_enable, 14, 14>,
+               groov::field<"tim8en", common::bit_enable, 13, 13>,
+               groov::field<"spi1en", common::bit_enable, 12, 12>,
+               groov::field<"tim1en", common::bit_enable, 11, 11>,
                groov::field<"reserved0", std::uint16_t, 10, 1, common::access::ro>,
-               groov::field<"syscfgen", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"syscfgen", common::bit_enable, 0, 0>>;
 
 // rcc_rcc_apb2rstr_v1: RCC_APB2RSTR
 // Used by: RCC
@@ -415,21 +415,21 @@ using rcc_rcc_apb2rstr_v1_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved3", std::uint8_t, 31, 27, common::access::ro>,
-               groov::field<"hrtim1rst", common::bittypes::bit_reset, 26, 26>,
+               groov::field<"hrtim1rst", common::bit_reset, 26, 26>,
                groov::field<"reserved2", std::uint8_t, 25, 22, common::access::ro>,
-               groov::field<"sai1rst", common::bittypes::bit_reset, 21, 21>,
-               groov::field<"tim20rst", common::bittypes::bit_reset, 20, 20>,
+               groov::field<"sai1rst", common::bit_reset, 21, 21>,
+               groov::field<"tim20rst", common::bit_reset, 20, 20>,
                groov::field<"reserved1", bool, 19, 19, common::access::ro>,
-               groov::field<"tim17rst", common::bittypes::bit_reset, 18, 18>,
-               groov::field<"tim16rst", common::bittypes::bit_reset, 17, 17>,
-               groov::field<"tim15rst", common::bittypes::bit_reset, 16, 16>,
-               groov::field<"spi4rst", common::bittypes::bit_reset, 15, 15>,
-               groov::field<"usart1rst", common::bittypes::bit_reset, 14, 14>,
-               groov::field<"tim8rst", common::bittypes::bit_reset, 13, 13>,
-               groov::field<"spi1rst", common::bittypes::bit_reset, 12, 12>,
-               groov::field<"tim1rst", common::bittypes::bit_reset, 11, 11>,
+               groov::field<"tim17rst", common::bit_reset, 18, 18>,
+               groov::field<"tim16rst", common::bit_reset, 17, 17>,
+               groov::field<"tim15rst", common::bit_reset, 16, 16>,
+               groov::field<"spi4rst", common::bit_reset, 15, 15>,
+               groov::field<"usart1rst", common::bit_reset, 14, 14>,
+               groov::field<"tim8rst", common::bit_reset, 13, 13>,
+               groov::field<"spi1rst", common::bit_reset, 12, 12>,
+               groov::field<"tim1rst", common::bit_reset, 11, 11>,
                groov::field<"reserved0", std::uint16_t, 10, 1, common::access::ro>,
-               groov::field<"syscfgrst", common::bittypes::bit_reset, 0, 0>>;
+               groov::field<"syscfgrst", common::bit_reset, 0, 0>>;
 
 // rcc_rcc_apb2smenr_v1: RCC_APB2SMENR
 // Used by: RCC
@@ -442,21 +442,21 @@ using rcc_rcc_apb2smenr_v1_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved3", std::uint8_t, 31, 27, common::access::ro>,
-               groov::field<"hrtim1smen", common::bittypes::bit_enable, 26, 26>,
+               groov::field<"hrtim1smen", common::bit_enable, 26, 26>,
                groov::field<"reserved2", std::uint8_t, 25, 22, common::access::ro>,
-               groov::field<"sai1smen", common::bittypes::bit_enable, 21, 21>,
-               groov::field<"tim20smen", common::bittypes::bit_enable, 20, 20>,
+               groov::field<"sai1smen", common::bit_enable, 21, 21>,
+               groov::field<"tim20smen", common::bit_enable, 20, 20>,
                groov::field<"reserved1", bool, 19, 19, common::access::ro>,
-               groov::field<"tim17smen", common::bittypes::bit_enable, 18, 18>,
-               groov::field<"tim16smen", common::bittypes::bit_enable, 17, 17>,
-               groov::field<"tim15smen", common::bittypes::bit_enable, 16, 16>,
-               groov::field<"spi4smen", common::bittypes::bit_enable, 15, 15>,
-               groov::field<"usart1smen", common::bittypes::bit_enable, 14, 14>,
-               groov::field<"tim8smen", common::bittypes::bit_enable, 13, 13>,
-               groov::field<"spi1smen", common::bittypes::bit_enable, 12, 12>,
-               groov::field<"tim1smen", common::bittypes::bit_enable, 11, 11>,
+               groov::field<"tim17smen", common::bit_enable, 18, 18>,
+               groov::field<"tim16smen", common::bit_enable, 17, 17>,
+               groov::field<"tim15smen", common::bit_enable, 16, 16>,
+               groov::field<"spi4smen", common::bit_enable, 15, 15>,
+               groov::field<"usart1smen", common::bit_enable, 14, 14>,
+               groov::field<"tim8smen", common::bit_enable, 13, 13>,
+               groov::field<"spi1smen", common::bit_enable, 12, 12>,
+               groov::field<"tim1smen", common::bit_enable, 11, 11>,
                groov::field<"reserved0", std::uint16_t, 10, 1, common::access::ro>,
-               groov::field<"syscfgsmen", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"syscfgsmen", common::bit_enable, 0, 0>>;
 
 // rcc_rcc_bdcr_v1: RCC_BDCR
 // Used by: RCC
@@ -470,10 +470,10 @@ using rcc_rcc_bdcr_v1_tt =
              common::access::rw,
                groov::field<"reserved3", std::uint8_t, 31, 26, common::access::ro>,
                groov::field<"lscosel", bool, 25, 25>,
-               groov::field<"lscoen", common::bittypes::bit_enable, 24, 24>,
+               groov::field<"lscoen", common::bit_enable, 24, 24>,
                groov::field<"reserved2", std::uint8_t, 23, 17, common::access::ro>,
-               groov::field<"bdrst", common::bittypes::bit_reset, 16, 16>,
-               groov::field<"rtcen", common::bittypes::bit_enable, 15, 15>,
+               groov::field<"bdrst", common::bit_reset, 16, 16>,
+               groov::field<"rtcen", common::bit_enable, 15, 15>,
                groov::field<"reserved1", std::uint8_t, 14, 10, common::access::ro>,
                groov::field<"rtcsel", std::uint8_t, 9, 8>,
                groov::field<"reserved0", bool, 7, 7, common::access::ro>,
@@ -481,7 +481,7 @@ using rcc_rcc_bdcr_v1_tt =
                groov::field<"lsecsson", bool, 5, 5>,
                groov::field<"lsedrv", std::uint8_t, 4, 3>,
                groov::field<"lsebyp", bool, 2, 2>,
-               groov::field<"lserdy", common::bittypes::bit_ready, 1, 1, common::access::ro>,
+               groov::field<"lserdy", common::bit_ready, 1, 1, common::access::ro>,
                groov::field<"lseon", bool, 0, 0>>;
 
 // rcc_rcc_ccipr_v1: RCC_CCIPR
@@ -557,16 +557,16 @@ using rcc_rcc_cicr_v1_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved2", std::uint32_t, 31, 11, common::access::ro>,
-               groov::field<"hsi48rdyc", common::bittypes::bit_ready, 10, 10, common::access::wo>,
+               groov::field<"hsi48rdyc", common::bit_ready, 10, 10, common::access::wo>,
                groov::field<"lsecssc", bool, 9, 9, common::access::wo>,
                groov::field<"cssc", bool, 8, 8, common::access::wo>,
                groov::field<"reserved1", std::uint8_t, 7, 6, common::access::ro>,
-               groov::field<"pllrdyc", common::bittypes::bit_ready, 5, 5, common::access::wo>,
-               groov::field<"hserdyc", common::bittypes::bit_ready, 4, 4, common::access::wo>,
-               groov::field<"hsirdyc", common::bittypes::bit_ready, 3, 3, common::access::wo>,
+               groov::field<"pllrdyc", common::bit_ready, 5, 5, common::access::wo>,
+               groov::field<"hserdyc", common::bit_ready, 4, 4, common::access::wo>,
+               groov::field<"hsirdyc", common::bit_ready, 3, 3, common::access::wo>,
                groov::field<"reserved0", bool, 2, 2, common::access::ro>,
-               groov::field<"lserdyc", common::bittypes::bit_ready, 1, 1, common::access::wo>,
-               groov::field<"lsirdyc", common::bittypes::bit_ready, 0, 0, common::access::wo>>;
+               groov::field<"lserdyc", common::bit_ready, 1, 1, common::access::wo>,
+               groov::field<"lsirdyc", common::bit_ready, 0, 0, common::access::wo>>;
 
 // rcc_rcc_cier_v1: RCC_CIER
 // Used by: RCC
@@ -579,15 +579,15 @@ using rcc_rcc_cier_v1_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved2", std::uint32_t, 31, 11, common::access::ro>,
-               groov::field<"hsi48rdyie", common::bittypes::bit_ready, 10, 10>,
-               groov::field<"lsecssie", common::bittypes::bit_enable, 9, 9>,
+               groov::field<"hsi48rdyie", common::bit_ready, 10, 10>,
+               groov::field<"lsecssie", common::bit_enable, 9, 9>,
                groov::field<"reserved1", std::uint8_t, 8, 6, common::access::ro>,
-               groov::field<"pllrdyie", common::bittypes::bit_ready, 5, 5>,
-               groov::field<"hserdyie", common::bittypes::bit_ready, 4, 4>,
-               groov::field<"hsirdyie", common::bittypes::bit_ready, 3, 3>,
+               groov::field<"pllrdyie", common::bit_ready, 5, 5>,
+               groov::field<"hserdyie", common::bit_ready, 4, 4>,
+               groov::field<"hsirdyie", common::bit_ready, 3, 3>,
                groov::field<"reserved0", bool, 2, 2, common::access::ro>,
-               groov::field<"lserdyie", common::bittypes::bit_ready, 1, 1>,
-               groov::field<"lsirdyie", common::bittypes::bit_ready, 0, 0>>;
+               groov::field<"lserdyie", common::bit_ready, 1, 1>,
+               groov::field<"lsirdyie", common::bit_ready, 0, 0>>;
 
 // rcc_rcc_cifr_v1: RCC_CIFR
 // Used by: RCC
@@ -600,16 +600,16 @@ using rcc_rcc_cifr_v1_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved2", std::uint32_t, 31, 11, common::access::ro>,
-               groov::field<"hsi48rdyf", common::bittypes::bit_ready, 10, 10, common::access::ro>,
+               groov::field<"hsi48rdyf", common::bit_ready, 10, 10, common::access::ro>,
                groov::field<"lsecssf", bool, 9, 9, common::access::ro>,
                groov::field<"cssf", bool, 8, 8, common::access::ro>,
                groov::field<"reserved1", std::uint8_t, 7, 6, common::access::ro>,
-               groov::field<"pllrdyf", common::bittypes::bit_ready, 5, 5, common::access::ro>,
-               groov::field<"hserdyf", common::bittypes::bit_ready, 4, 4, common::access::ro>,
-               groov::field<"hsirdyf", common::bittypes::bit_ready, 3, 3, common::access::ro>,
+               groov::field<"pllrdyf", common::bit_ready, 5, 5, common::access::ro>,
+               groov::field<"hserdyf", common::bit_ready, 4, 4, common::access::ro>,
+               groov::field<"hsirdyf", common::bit_ready, 3, 3, common::access::ro>,
                groov::field<"reserved0", bool, 2, 2, common::access::ro>,
-               groov::field<"lserdyf", common::bittypes::bit_ready, 1, 1, common::access::ro>,
-               groov::field<"lsirdyf", common::bittypes::bit_ready, 0, 0, common::access::ro>>;
+               groov::field<"lserdyf", common::bit_ready, 1, 1, common::access::ro>,
+               groov::field<"lsirdyf", common::bit_ready, 0, 0, common::access::ro>>;
 
 // rcc_rcc_cr_v1: RCC_CR
 // Used by: RCC
@@ -622,15 +622,15 @@ using rcc_rcc_cr_v1_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved3", std::uint8_t, 31, 26, common::access::ro>,
-               groov::field<"pllrdy", common::bittypes::bit_ready, 25, 25, common::access::ro>,
+               groov::field<"pllrdy", common::bit_ready, 25, 25, common::access::ro>,
                groov::field<"pllon", bool, 24, 24>,
                groov::field<"reserved2", std::uint8_t, 23, 20, common::access::ro>,
                groov::field<"csson", bool, 19, 19>,
                groov::field<"hsebyp", bool, 18, 18>,
-               groov::field<"hserdy", common::bittypes::bit_ready, 17, 17, common::access::ro>,
+               groov::field<"hserdy", common::bit_ready, 17, 17, common::access::ro>,
                groov::field<"hseon", bool, 16, 16>,
                groov::field<"reserved1", std::uint8_t, 15, 11, common::access::ro>,
-               groov::field<"hsirdy", common::bittypes::bit_ready, 10, 10, common::access::ro>,
+               groov::field<"hsirdy", common::bit_ready, 10, 10, common::access::ro>,
                groov::field<"hsikeron", bool, 9, 9>,
                groov::field<"hsion", bool, 8, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 0, common::access::ro>>;
@@ -648,7 +648,7 @@ using rcc_rcc_crrcr_v1_tt =
                groov::field<"reserved1", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"hsi48cal", std::uint16_t, 15, 7, common::access::ro>,
                groov::field<"reserved0", std::uint8_t, 6, 2, common::access::ro>,
-               groov::field<"hsi48rdy", common::bittypes::bit_ready, 1, 1, common::access::ro>,
+               groov::field<"hsi48rdy", common::bit_ready, 1, 1, common::access::ro>,
                groov::field<"hsi48on", bool, 0, 0>>;
 
 // rcc_rcc_csr_v1: RCC_CSR
@@ -671,7 +671,7 @@ using rcc_rcc_csr_v1_tt =
                groov::field<"reserved1", bool, 24, 24, common::access::ro>,
                groov::field<"rmvf", bool, 23, 23>,
                groov::field<"reserved0", std::uint32_t, 22, 2, common::access::ro>,
-               groov::field<"lsirdy", common::bittypes::bit_ready, 1, 1, common::access::ro>,
+               groov::field<"lsirdy", common::bit_ready, 1, 1, common::access::ro>,
                groov::field<"lsion", bool, 0, 0>>;
 
 // rcc_rcc_icscr_v1: RCC_ICSCR
@@ -701,13 +701,13 @@ using rcc_rcc_pllcfgr_v1_tt =
              common::access::rw,
                groov::field<"pllpdiv", std::uint8_t, 31, 27>,
                groov::field<"pllr", std::uint8_t, 26, 25>,
-               groov::field<"pllren", common::bittypes::bit_enable, 24, 24>,
+               groov::field<"pllren", common::bit_enable, 24, 24>,
                groov::field<"reserved3", bool, 23, 23, common::access::ro>,
                groov::field<"pllq", std::uint8_t, 22, 21>,
-               groov::field<"pllqen", common::bittypes::bit_enable, 20, 20>,
+               groov::field<"pllqen", common::bit_enable, 20, 20>,
                groov::field<"reserved2", std::uint8_t, 19, 18, common::access::ro>,
                groov::field<"pllp", bool, 17, 17>,
-               groov::field<"pllpen", common::bittypes::bit_enable, 16, 16>,
+               groov::field<"pllpen", common::bit_enable, 16, 16>,
                groov::field<"reserved1", bool, 15, 15, common::access::ro>,
                groov::field<"plln", std::uint8_t, 14, 8>,
                groov::field<"pllm", std::uint8_t, 7, 4>,

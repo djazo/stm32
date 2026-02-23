@@ -76,20 +76,20 @@ using octospi_cr_v1_tt =
                groov::field<"pmm", bool, 23, 23>,
                groov::field<"apms", bool, 22, 22>,
                groov::field<"reserved2", bool, 21, 21, common::access::ro>,
-               groov::field<"toie", common::bittypes::bit_enable, 20, 20>,
-               groov::field<"smie", common::bittypes::bit_enable, 19, 19>,
-               groov::field<"ftie", common::bittypes::bit_enable, 18, 18>,
-               groov::field<"tcie", common::bittypes::bit_enable, 17, 17>,
-               groov::field<"teie", common::bittypes::bit_enable, 16, 16>,
+               groov::field<"toie", common::bit_enable, 20, 20>,
+               groov::field<"smie", common::bit_enable, 19, 19>,
+               groov::field<"ftie", common::bit_enable, 18, 18>,
+               groov::field<"tcie", common::bit_enable, 17, 17>,
+               groov::field<"teie", common::bit_enable, 16, 16>,
                groov::field<"reserved1", std::uint8_t, 15, 13, common::access::ro>,
                groov::field<"fthres", std::uint8_t, 12, 8>,
                groov::field<"fsel", bool, 7, 7>,
                groov::field<"dqm", bool, 6, 6>,
                groov::field<"reserved0", std::uint8_t, 5, 4, common::access::ro>,
-               groov::field<"tcen", common::bittypes::bit_enable, 3, 3>,
-               groov::field<"dmaen", common::bittypes::bit_enable, 2, 2>,
+               groov::field<"tcen", common::bit_enable, 3, 3>,
+               groov::field<"dmaen", common::bit_enable, 2, 2>,
                groov::field<"abort", bool, 1, 1>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // octospi_dcr1_v1: DCR1
 // Used by: OCTOSPI1, OCTOSPI2
@@ -109,7 +109,7 @@ using octospi_dcr1_v1_tt =
                groov::field<"csht", std::uint8_t, 10, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 2, common::access::ro>,
                groov::field<"frck", bool, 1, 1>,
-               groov::field<"ckmode", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"ckmode", common::bit_enable, 0, 0>>;
 
 // octospi_dcr2_v1: DCR2
 // Used by: OCTOSPI1, OCTOSPI2

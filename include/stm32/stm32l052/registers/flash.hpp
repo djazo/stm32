@@ -23,7 +23,7 @@ using flash_acr_v1_tt =
                groov::field<"run_pd", bool, 4, 4>,
                groov::field<"sleep_pd", bool, 3, 3>,
                groov::field<"reserved0", bool, 2, 2, common::access::ro>,
-               groov::field<"prften", common::bittypes::bit_enable, 1, 1>,
+               groov::field<"prften", common::bit_enable, 1, 1>,
                groov::field<"latency", bool, 0, 0>>;
 
 // flash_optkeyr_v1: OPTKEYR
@@ -85,8 +85,8 @@ using flash_pecr_v1_tt =
                groov::field<"nzdisable", bool, 23, 23>,
                groov::field<"reserved2", std::uint8_t, 22, 19, common::access::ro>,
                groov::field<"obl_launch", bool, 18, 18>,
-               groov::field<"errie", common::bittypes::bit_enable, 17, 17>,
-               groov::field<"eopie", common::bittypes::bit_enable, 16, 16>,
+               groov::field<"errie", common::bit_enable, 17, 17>,
+               groov::field<"eopie", common::bit_enable, 16, 16>,
                groov::field<"parallelbank", bool, 15, 15>,
                groov::field<"reserved1", std::uint8_t, 14, 11, common::access::ro>,
                groov::field<"fprg", bool, 10, 10>,
@@ -95,9 +95,9 @@ using flash_pecr_v1_tt =
                groov::field<"reserved0", std::uint8_t, 7, 5, common::access::ro>,
                groov::field<"data", bool, 4, 4>,
                groov::field<"prog", bool, 3, 3>,
-               groov::field<"optlock", common::bittypes::bit_locked, 2, 2>,
-               groov::field<"prglock", common::bittypes::bit_locked, 1, 1>,
-               groov::field<"pelock", common::bittypes::bit_locked, 0, 0>>;
+               groov::field<"optlock", common::bit_locked, 2, 2>,
+               groov::field<"prglock", common::bit_locked, 1, 1>,
+               groov::field<"pelock", common::bit_locked, 0, 0>>;
 
 // flash_pekeyr_v1: PEKEYR
 // Used by: Flash
@@ -147,7 +147,7 @@ using flash_sr_v1_tt =
                groov::field<"ready", bool, 3, 3, common::access::ro>,
                groov::field<"endhv", bool, 2, 2, common::access::ro>,
                groov::field<"eop", bool, 1, 1, common::access::ro>,
-               groov::field<"bsy", common::bittypes::bit_ready_bar, 0, 0, common::access::ro>>;
+               groov::field<"bsy", common::bit_ready_bar, 0, 0, common::access::ro>>;
 
 // flash_wrprot1_v1: WRPROT1
 // Used by: Flash

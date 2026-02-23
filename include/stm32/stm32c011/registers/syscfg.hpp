@@ -46,7 +46,7 @@ using syscfg_syscfg_cfgr2_v1_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved0", std::uint32_t, 31, 1, common::access::ro>,
-               groov::field<"lockup_lock", common::bittypes::bit_locked, 0, 0>>;
+               groov::field<"lockup_lock", common::bit_locked, 0, 0>>;
 
 // syscfg_syscfg_cfgr3_v1: SYSCFG_CFGR3
 // Used by: SYSCFG

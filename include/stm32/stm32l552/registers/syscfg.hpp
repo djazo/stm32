@@ -28,7 +28,7 @@ using syscfg_cfgr1_v1_tt =
                groov::field<"i2c_pb6_fmp", bool, 16, 16>,
                groov::field<"reserved1", std::uint8_t, 15, 10, common::access::ro>,
                groov::field<"anaswvdd", bool, 9, 9>,
-               groov::field<"boosten", common::bittypes::bit_enable, 8, 8>,
+               groov::field<"boosten", common::bit_enable, 8, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 0, common::access::ro>>;
 
 // syscfg_cfgr2_v1: CFGR2
@@ -60,8 +60,8 @@ using syscfg_cnslckr_v1_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved0", std::uint32_t, 31, 2, common::access::ro>,
-               groov::field<"locknsmpu", common::bittypes::bit_locked, 1, 1>,
-               groov::field<"locknsvtor", common::bittypes::bit_locked, 0, 0>>;
+               groov::field<"locknsmpu", common::bit_locked, 1, 1>,
+               groov::field<"locknsvtor", common::bit_locked, 0, 0>>;
 
 // syscfg_cslockr_v1: CSLOCKR
 // Used by: SYSCFG, SEC_SYSCFG
@@ -74,9 +74,9 @@ using syscfg_cslockr_v1_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved0", std::uint32_t, 31, 3, common::access::ro>,
-               groov::field<"locksau", common::bittypes::bit_locked, 2, 2>,
-               groov::field<"locksmpu", common::bittypes::bit_locked, 1, 1>,
-               groov::field<"locksvtaircr", common::bittypes::bit_locked, 0, 0>>;
+               groov::field<"locksau", common::bit_locked, 2, 2>,
+               groov::field<"locksmpu", common::bit_locked, 1, 1>,
+               groov::field<"locksvtaircr", common::bit_locked, 0, 0>>;
 
 // syscfg_fpuimr_v1: FPUIMR
 // Used by: SYSCFG, SEC_SYSCFG
@@ -115,7 +115,7 @@ using syscfg_scsr_v1_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved0", std::uint32_t, 31, 2, common::access::ro>,
-               groov::field<"sram2bsy", common::bittypes::bit_ready_bar, 1, 1, common::access::ro>,
+               groov::field<"sram2bsy", common::bit_ready_bar, 1, 1, common::access::ro>,
                groov::field<"sram2er", bool, 0, 0>>;
 
 // syscfg_seccfgr_v1: SECCFGR

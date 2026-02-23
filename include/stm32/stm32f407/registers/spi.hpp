@@ -18,16 +18,16 @@ using spi_cr1_v1_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
-               groov::field<"bidimode", common::bittypes::bit_enable, 15, 15>,
+               groov::field<"bidimode", common::bit_enable, 15, 15>,
                groov::field<"bidioe", bool, 14, 14>,
-               groov::field<"crcen", common::bittypes::bit_enable, 13, 13>,
+               groov::field<"crcen", common::bit_enable, 13, 13>,
                groov::field<"crcnext", bool, 12, 12>,
                groov::field<"dff", bool, 11, 11>,
                groov::field<"rxonly", bool, 10, 10>,
                groov::field<"ssm", bool, 9, 9>,
                groov::field<"ssi", bool, 8, 8>,
-               groov::field<"lsbfirst", common::bittypes::bit_reset, 7, 7>,
-               groov::field<"spe", common::bittypes::bit_enable, 6, 6>,
+               groov::field<"lsbfirst", common::bit_reset, 7, 7>,
+               groov::field<"spe", common::bit_enable, 6, 6>,
                groov::field<"br", std::uint8_t, 5, 3>,
                groov::field<"mstr", bool, 2, 2>,
                groov::field<"cpol", bool, 1, 1>,
@@ -44,14 +44,14 @@ using spi_cr2_v1_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved1", std::uint32_t, 31, 8, common::access::ro>,
-               groov::field<"txeie", common::bittypes::bit_enable, 7, 7>,
-               groov::field<"rxneie", common::bittypes::bit_enable, 6, 6>,
-               groov::field<"errie", common::bittypes::bit_enable, 5, 5>,
+               groov::field<"txeie", common::bit_enable, 7, 7>,
+               groov::field<"rxneie", common::bit_enable, 6, 6>,
+               groov::field<"errie", common::bit_enable, 5, 5>,
                groov::field<"frf", bool, 4, 4>,
                groov::field<"reserved0", bool, 3, 3, common::access::ro>,
                groov::field<"ssoe", bool, 2, 2>,
-               groov::field<"txdmaen", common::bittypes::bit_enable, 1, 1>,
-               groov::field<"rxdmaen", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"txdmaen", common::bit_enable, 1, 1>,
+               groov::field<"rxdmaen", common::bit_enable, 0, 0>>;
 
 // spi_crcpr_v1: CRCPR
 // Used by: SPI1, SPI2, SPI3, I2S2ext, I2S3ext, SPI4, SPI5, SPI6
@@ -98,7 +98,7 @@ using spi_i2scfgr_v1_tt =
                groov::field<"i2sstd", std::uint8_t, 5, 4>,
                groov::field<"ckpol", bool, 3, 3>,
                groov::field<"datlen", std::uint8_t, 2, 1>,
-               groov::field<"chlen", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"chlen", common::bit_enable, 0, 0>>;
 
 // spi_i2spr_v1: I2SPR
 // Used by: SPI1, SPI2, SPI3, I2S2ext, I2S3ext, SPI4, SPI5, SPI6
@@ -139,13 +139,13 @@ using spi_sr_v1_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved0", std::uint32_t, 31, 9, common::access::ro>,
-               groov::field<"tifrfe", common::bittypes::bit_enable, 8, 8, common::access::ro>,
-               groov::field<"bsy", common::bittypes::bit_ready_bar, 7, 7, common::access::ro>,
+               groov::field<"tifrfe", common::bit_enable, 8, 8, common::access::ro>,
+               groov::field<"bsy", common::bit_ready_bar, 7, 7, common::access::ro>,
                groov::field<"ovr", bool, 6, 6, common::access::ro>,
                groov::field<"modf", bool, 5, 5, common::access::ro>,
                groov::field<"crcerr", bool, 4, 4>,
                groov::field<"udr", bool, 3, 3, common::access::ro>,
-               groov::field<"chside", common::bittypes::bit_enable, 2, 2, common::access::ro>,
+               groov::field<"chside", common::bit_enable, 2, 2, common::access::ro>,
                groov::field<"txe", bool, 1, 1, common::access::ro>,
                groov::field<"rxne", bool, 0, 0, common::access::ro>>;
 

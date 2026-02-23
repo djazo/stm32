@@ -23,7 +23,7 @@ using hash_cr_v1_tt =
                groov::field<"dinne", bool, 12, 12, common::access::ro>,
                groov::field<"nbw", std::uint8_t, 11, 8, common::access::ro>,
                groov::field<"algo", bool, 7, 7>,
-               groov::field<"mode", common::bittypes::bit_enable, 6, 6>,
+               groov::field<"mode", common::bit_enable, 6, 6>,
                groov::field<"datatype", std::uint8_t, 5, 4>,
                groov::field<"dmae", bool, 3, 3>,
                groov::field<"init", bool, 2, 2, common::access::wo>,
@@ -724,8 +724,8 @@ using hash_imr_v1_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved0", std::uint32_t, 31, 2, common::access::ro>,
-               groov::field<"dcie", common::bittypes::bit_enable, 1, 1>,
-               groov::field<"dinie", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"dcie", common::bit_enable, 1, 1>,
+               groov::field<"dinie", common::bit_enable, 0, 0>>;
 
 // hash_sr_v1: SR
 // Used by: HASH

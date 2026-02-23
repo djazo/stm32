@@ -18,9 +18,9 @@ using ipcc_c1cr_v1_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved1", std::uint16_t, 31, 17, common::access::ro>,
-               groov::field<"txfie", common::bittypes::bit_enable, 16, 16>,
+               groov::field<"txfie", common::bit_enable, 16, 16>,
                groov::field<"reserved0", std::uint16_t, 15, 1, common::access::ro>,
-               groov::field<"rxoie", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"rxoie", common::bit_enable, 0, 0>>;
 
 // ipcc_c1mr_v1: C1MR
 // Used by: IPCC
@@ -101,9 +101,9 @@ using ipcc_c2cr_v1_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved1", std::uint16_t, 31, 17, common::access::ro>,
-               groov::field<"txfie", common::bittypes::bit_enable, 16, 16>,
+               groov::field<"txfie", common::bit_enable, 16, 16>,
                groov::field<"reserved0", std::uint16_t, 15, 1, common::access::ro>,
-               groov::field<"rxoie", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"rxoie", common::bit_enable, 0, 0>>;
 
 // ipcc_c2mr_v1: C2MR
 // Used by: IPCC

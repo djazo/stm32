@@ -20,6 +20,6 @@ using art_ctr_v1_tt =
                groov::field<"reserved1", std::uint16_t, 31, 20, common::access::ro>,
                groov::field<"pcacheaddr", std::uint16_t, 19, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 } // namespace stm32::regs

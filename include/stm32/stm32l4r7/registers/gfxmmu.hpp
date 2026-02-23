@@ -76,11 +76,11 @@ using gfxmmu_cr_v1_tt =
                groov::field<"reserved1", std::uint32_t, 31, 7, common::access::ro>,
                groov::field<"bm192", bool, 6, 6>,
                groov::field<"reserved0", bool, 5, 5, common::access::ro>,
-               groov::field<"ameie", common::bittypes::bit_enable, 4, 4>,
-               groov::field<"b3oie", common::bittypes::bit_enable, 3, 3>,
-               groov::field<"b2oie", common::bittypes::bit_enable, 2, 2>,
-               groov::field<"b1oie", common::bittypes::bit_enable, 1, 1>,
-               groov::field<"b0oie", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"ameie", common::bit_enable, 4, 4>,
+               groov::field<"b3oie", common::bit_enable, 3, 3>,
+               groov::field<"b2oie", common::bit_enable, 2, 2>,
+               groov::field<"b1oie", common::bit_enable, 1, 1>,
+               groov::field<"b0oie", common::bit_enable, 0, 0>>;
 
 // gfxmmu_dvr_v1: DVR
 // Used by: GFXMMU
@@ -151,7 +151,7 @@ using gfxmmu_lut0l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut1000h_v1: LUT1000H
 // Used by: GFXMMU
@@ -181,7 +181,7 @@ using gfxmmu_lut1000l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut1001h_v1: LUT1001H
 // Used by: GFXMMU
@@ -211,7 +211,7 @@ using gfxmmu_lut1001l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut1002h_v1: LUT1002H
 // Used by: GFXMMU
@@ -241,7 +241,7 @@ using gfxmmu_lut1002l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut1003h_v1: LUT1003H
 // Used by: GFXMMU
@@ -271,7 +271,7 @@ using gfxmmu_lut1003l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut1004h_v1: LUT1004H
 // Used by: GFXMMU
@@ -301,7 +301,7 @@ using gfxmmu_lut1004l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut1005h_v1: LUT1005H
 // Used by: GFXMMU
@@ -331,7 +331,7 @@ using gfxmmu_lut1005l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut1006h_v1: LUT1006H
 // Used by: GFXMMU
@@ -361,7 +361,7 @@ using gfxmmu_lut1006l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut1007h_v1: LUT1007H
 // Used by: GFXMMU
@@ -391,7 +391,7 @@ using gfxmmu_lut1007l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut1008h_v1: LUT1008H
 // Used by: GFXMMU
@@ -421,7 +421,7 @@ using gfxmmu_lut1008l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut1009h_v1: LUT1009H
 // Used by: GFXMMU
@@ -451,7 +451,7 @@ using gfxmmu_lut1009l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut100h_v1: LUT100H
 // Used by: GFXMMU
@@ -481,7 +481,7 @@ using gfxmmu_lut100l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut1010h_v1: LUT1010H
 // Used by: GFXMMU
@@ -511,7 +511,7 @@ using gfxmmu_lut1010l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut1011h_v1: LUT1011H
 // Used by: GFXMMU
@@ -541,7 +541,7 @@ using gfxmmu_lut1011l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut1012h_v1: LUT1012H
 // Used by: GFXMMU
@@ -571,7 +571,7 @@ using gfxmmu_lut1012l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut1013h_v1: LUT1013H
 // Used by: GFXMMU
@@ -601,7 +601,7 @@ using gfxmmu_lut1013l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut1014h_v1: LUT1014H
 // Used by: GFXMMU
@@ -631,7 +631,7 @@ using gfxmmu_lut1014l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut1015h_v1: LUT1015H
 // Used by: GFXMMU
@@ -661,7 +661,7 @@ using gfxmmu_lut1015l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut1016h_v1: LUT1016H
 // Used by: GFXMMU
@@ -691,7 +691,7 @@ using gfxmmu_lut1016l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut1017h_v1: LUT1017H
 // Used by: GFXMMU
@@ -721,7 +721,7 @@ using gfxmmu_lut1017l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut1018h_v1: LUT1018H
 // Used by: GFXMMU
@@ -751,7 +751,7 @@ using gfxmmu_lut1018l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut1019h_v1: LUT1019H
 // Used by: GFXMMU
@@ -781,7 +781,7 @@ using gfxmmu_lut1019l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut101h_v1: LUT101H
 // Used by: GFXMMU
@@ -811,7 +811,7 @@ using gfxmmu_lut101l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut1020h_v1: LUT1020H
 // Used by: GFXMMU
@@ -841,7 +841,7 @@ using gfxmmu_lut1020l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut1021h_v1: LUT1021H
 // Used by: GFXMMU
@@ -871,7 +871,7 @@ using gfxmmu_lut1021l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut1022h_v1: LUT1022H
 // Used by: GFXMMU
@@ -901,7 +901,7 @@ using gfxmmu_lut1022l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut1023h_v1: LUT1023H
 // Used by: GFXMMU
@@ -931,7 +931,7 @@ using gfxmmu_lut1023l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut102h_v1: LUT102H
 // Used by: GFXMMU
@@ -961,7 +961,7 @@ using gfxmmu_lut102l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut103h_v1: LUT103H
 // Used by: GFXMMU
@@ -991,7 +991,7 @@ using gfxmmu_lut103l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut104h_v1: LUT104H
 // Used by: GFXMMU
@@ -1021,7 +1021,7 @@ using gfxmmu_lut104l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut105h_v1: LUT105H
 // Used by: GFXMMU
@@ -1051,7 +1051,7 @@ using gfxmmu_lut105l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut106h_v1: LUT106H
 // Used by: GFXMMU
@@ -1081,7 +1081,7 @@ using gfxmmu_lut106l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut107h_v1: LUT107H
 // Used by: GFXMMU
@@ -1111,7 +1111,7 @@ using gfxmmu_lut107l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut108h_v1: LUT108H
 // Used by: GFXMMU
@@ -1141,7 +1141,7 @@ using gfxmmu_lut108l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut109h_v1: LUT109H
 // Used by: GFXMMU
@@ -1171,7 +1171,7 @@ using gfxmmu_lut109l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut10h_v1: LUT10H
 // Used by: GFXMMU
@@ -1201,7 +1201,7 @@ using gfxmmu_lut10l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut110h_v1: LUT110H
 // Used by: GFXMMU
@@ -1231,7 +1231,7 @@ using gfxmmu_lut110l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut111h_v1: LUT111H
 // Used by: GFXMMU
@@ -1261,7 +1261,7 @@ using gfxmmu_lut111l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut112h_v1: LUT112H
 // Used by: GFXMMU
@@ -1291,7 +1291,7 @@ using gfxmmu_lut112l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut113h_v1: LUT113H
 // Used by: GFXMMU
@@ -1321,7 +1321,7 @@ using gfxmmu_lut113l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut114h_v1: LUT114H
 // Used by: GFXMMU
@@ -1351,7 +1351,7 @@ using gfxmmu_lut114l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut115h_v1: LUT115H
 // Used by: GFXMMU
@@ -1381,7 +1381,7 @@ using gfxmmu_lut115l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut116h_v1: LUT116H
 // Used by: GFXMMU
@@ -1411,7 +1411,7 @@ using gfxmmu_lut116l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut117h_v1: LUT117H
 // Used by: GFXMMU
@@ -1441,7 +1441,7 @@ using gfxmmu_lut117l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut118h_v1: LUT118H
 // Used by: GFXMMU
@@ -1471,7 +1471,7 @@ using gfxmmu_lut118l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut119h_v1: LUT119H
 // Used by: GFXMMU
@@ -1501,7 +1501,7 @@ using gfxmmu_lut119l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut11h_v1: LUT11H
 // Used by: GFXMMU
@@ -1531,7 +1531,7 @@ using gfxmmu_lut11l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut120h_v1: LUT120H
 // Used by: GFXMMU
@@ -1561,7 +1561,7 @@ using gfxmmu_lut120l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut121h_v1: LUT121H
 // Used by: GFXMMU
@@ -1591,7 +1591,7 @@ using gfxmmu_lut121l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut122h_v1: LUT122H
 // Used by: GFXMMU
@@ -1621,7 +1621,7 @@ using gfxmmu_lut122l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut123h_v1: LUT123H
 // Used by: GFXMMU
@@ -1651,7 +1651,7 @@ using gfxmmu_lut123l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut124h_v1: LUT124H
 // Used by: GFXMMU
@@ -1681,7 +1681,7 @@ using gfxmmu_lut124l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut125h_v1: LUT125H
 // Used by: GFXMMU
@@ -1711,7 +1711,7 @@ using gfxmmu_lut125l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut126h_v1: LUT126H
 // Used by: GFXMMU
@@ -1741,7 +1741,7 @@ using gfxmmu_lut126l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut127h_v1: LUT127H
 // Used by: GFXMMU
@@ -1771,7 +1771,7 @@ using gfxmmu_lut127l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut128h_v1: LUT128H
 // Used by: GFXMMU
@@ -1801,7 +1801,7 @@ using gfxmmu_lut128l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut129h_v1: LUT129H
 // Used by: GFXMMU
@@ -1831,7 +1831,7 @@ using gfxmmu_lut129l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut12h_v1: LUT12H
 // Used by: GFXMMU
@@ -1861,7 +1861,7 @@ using gfxmmu_lut12l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut130h_v1: LUT130H
 // Used by: GFXMMU
@@ -1891,7 +1891,7 @@ using gfxmmu_lut130l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut131h_v1: LUT131H
 // Used by: GFXMMU
@@ -1921,7 +1921,7 @@ using gfxmmu_lut131l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut132h_v1: LUT132H
 // Used by: GFXMMU
@@ -1951,7 +1951,7 @@ using gfxmmu_lut132l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut133h_v1: LUT133H
 // Used by: GFXMMU
@@ -1981,7 +1981,7 @@ using gfxmmu_lut133l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut134h_v1: LUT134H
 // Used by: GFXMMU
@@ -2011,7 +2011,7 @@ using gfxmmu_lut134l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut135h_v1: LUT135H
 // Used by: GFXMMU
@@ -2041,7 +2041,7 @@ using gfxmmu_lut135l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut136h_v1: LUT136H
 // Used by: GFXMMU
@@ -2071,7 +2071,7 @@ using gfxmmu_lut136l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut137h_v1: LUT137H
 // Used by: GFXMMU
@@ -2101,7 +2101,7 @@ using gfxmmu_lut137l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut138h_v1: LUT138H
 // Used by: GFXMMU
@@ -2131,7 +2131,7 @@ using gfxmmu_lut138l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut139h_v1: LUT139H
 // Used by: GFXMMU
@@ -2161,7 +2161,7 @@ using gfxmmu_lut139l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut13h_v1: LUT13H
 // Used by: GFXMMU
@@ -2191,7 +2191,7 @@ using gfxmmu_lut13l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut140h_v1: LUT140H
 // Used by: GFXMMU
@@ -2221,7 +2221,7 @@ using gfxmmu_lut140l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut141h_v1: LUT141H
 // Used by: GFXMMU
@@ -2251,7 +2251,7 @@ using gfxmmu_lut141l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut142h_v1: LUT142H
 // Used by: GFXMMU
@@ -2281,7 +2281,7 @@ using gfxmmu_lut142l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut143h_v1: LUT143H
 // Used by: GFXMMU
@@ -2311,7 +2311,7 @@ using gfxmmu_lut143l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut144h_v1: LUT144H
 // Used by: GFXMMU
@@ -2341,7 +2341,7 @@ using gfxmmu_lut144l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut145h_v1: LUT145H
 // Used by: GFXMMU
@@ -2371,7 +2371,7 @@ using gfxmmu_lut145l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut146h_v1: LUT146H
 // Used by: GFXMMU
@@ -2401,7 +2401,7 @@ using gfxmmu_lut146l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut147h_v1: LUT147H
 // Used by: GFXMMU
@@ -2431,7 +2431,7 @@ using gfxmmu_lut147l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut148h_v1: LUT148H
 // Used by: GFXMMU
@@ -2461,7 +2461,7 @@ using gfxmmu_lut148l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut149h_v1: LUT149H
 // Used by: GFXMMU
@@ -2491,7 +2491,7 @@ using gfxmmu_lut149l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut14h_v1: LUT14H
 // Used by: GFXMMU
@@ -2521,7 +2521,7 @@ using gfxmmu_lut14l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut150h_v1: LUT150H
 // Used by: GFXMMU
@@ -2551,7 +2551,7 @@ using gfxmmu_lut150l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut151h_v1: LUT151H
 // Used by: GFXMMU
@@ -2581,7 +2581,7 @@ using gfxmmu_lut151l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut152h_v1: LUT152H
 // Used by: GFXMMU
@@ -2611,7 +2611,7 @@ using gfxmmu_lut152l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut153h_v1: LUT153H
 // Used by: GFXMMU
@@ -2641,7 +2641,7 @@ using gfxmmu_lut153l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut154h_v1: LUT154H
 // Used by: GFXMMU
@@ -2671,7 +2671,7 @@ using gfxmmu_lut154l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut155h_v1: LUT155H
 // Used by: GFXMMU
@@ -2701,7 +2701,7 @@ using gfxmmu_lut155l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut156h_v1: LUT156H
 // Used by: GFXMMU
@@ -2731,7 +2731,7 @@ using gfxmmu_lut156l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut157h_v1: LUT157H
 // Used by: GFXMMU
@@ -2761,7 +2761,7 @@ using gfxmmu_lut157l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut158h_v1: LUT158H
 // Used by: GFXMMU
@@ -2791,7 +2791,7 @@ using gfxmmu_lut158l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut159h_v1: LUT159H
 // Used by: GFXMMU
@@ -2821,7 +2821,7 @@ using gfxmmu_lut159l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut15h_v1: LUT15H
 // Used by: GFXMMU
@@ -2851,7 +2851,7 @@ using gfxmmu_lut15l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut160h_v1: LUT160H
 // Used by: GFXMMU
@@ -2881,7 +2881,7 @@ using gfxmmu_lut160l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut161h_v1: LUT161H
 // Used by: GFXMMU
@@ -2911,7 +2911,7 @@ using gfxmmu_lut161l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut162h_v1: LUT162H
 // Used by: GFXMMU
@@ -2941,7 +2941,7 @@ using gfxmmu_lut162l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut163h_v1: LUT163H
 // Used by: GFXMMU
@@ -2971,7 +2971,7 @@ using gfxmmu_lut163l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut164h_v1: LUT164H
 // Used by: GFXMMU
@@ -3001,7 +3001,7 @@ using gfxmmu_lut164l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut165h_v1: LUT165H
 // Used by: GFXMMU
@@ -3031,7 +3031,7 @@ using gfxmmu_lut165l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut166h_v1: LUT166H
 // Used by: GFXMMU
@@ -3061,7 +3061,7 @@ using gfxmmu_lut166l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut167h_v1: LUT167H
 // Used by: GFXMMU
@@ -3091,7 +3091,7 @@ using gfxmmu_lut167l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut168h_v1: LUT168H
 // Used by: GFXMMU
@@ -3121,7 +3121,7 @@ using gfxmmu_lut168l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut169h_v1: LUT169H
 // Used by: GFXMMU
@@ -3151,7 +3151,7 @@ using gfxmmu_lut169l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut16h_v1: LUT16H
 // Used by: GFXMMU
@@ -3181,7 +3181,7 @@ using gfxmmu_lut16l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut170h_v1: LUT170H
 // Used by: GFXMMU
@@ -3211,7 +3211,7 @@ using gfxmmu_lut170l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut171h_v1: LUT171H
 // Used by: GFXMMU
@@ -3241,7 +3241,7 @@ using gfxmmu_lut171l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut172h_v1: LUT172H
 // Used by: GFXMMU
@@ -3271,7 +3271,7 @@ using gfxmmu_lut172l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut173h_v1: LUT173H
 // Used by: GFXMMU
@@ -3301,7 +3301,7 @@ using gfxmmu_lut173l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut174h_v1: LUT174H
 // Used by: GFXMMU
@@ -3331,7 +3331,7 @@ using gfxmmu_lut174l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut175h_v1: LUT175H
 // Used by: GFXMMU
@@ -3361,7 +3361,7 @@ using gfxmmu_lut175l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut176h_v1: LUT176H
 // Used by: GFXMMU
@@ -3391,7 +3391,7 @@ using gfxmmu_lut176l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut177h_v1: LUT177H
 // Used by: GFXMMU
@@ -3421,7 +3421,7 @@ using gfxmmu_lut177l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut178h_v1: LUT178H
 // Used by: GFXMMU
@@ -3451,7 +3451,7 @@ using gfxmmu_lut178l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut179h_v1: LUT179H
 // Used by: GFXMMU
@@ -3481,7 +3481,7 @@ using gfxmmu_lut179l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut17h_v1: LUT17H
 // Used by: GFXMMU
@@ -3511,7 +3511,7 @@ using gfxmmu_lut17l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut180h_v1: LUT180H
 // Used by: GFXMMU
@@ -3541,7 +3541,7 @@ using gfxmmu_lut180l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut181h_v1: LUT181H
 // Used by: GFXMMU
@@ -3571,7 +3571,7 @@ using gfxmmu_lut181l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut182h_v1: LUT182H
 // Used by: GFXMMU
@@ -3601,7 +3601,7 @@ using gfxmmu_lut182l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut183h_v1: LUT183H
 // Used by: GFXMMU
@@ -3631,7 +3631,7 @@ using gfxmmu_lut183l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut184h_v1: LUT184H
 // Used by: GFXMMU
@@ -3661,7 +3661,7 @@ using gfxmmu_lut184l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut185h_v1: LUT185H
 // Used by: GFXMMU
@@ -3691,7 +3691,7 @@ using gfxmmu_lut185l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut186h_v1: LUT186H
 // Used by: GFXMMU
@@ -3721,7 +3721,7 @@ using gfxmmu_lut186l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut187h_v1: LUT187H
 // Used by: GFXMMU
@@ -3751,7 +3751,7 @@ using gfxmmu_lut187l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut188h_v1: LUT188H
 // Used by: GFXMMU
@@ -3781,7 +3781,7 @@ using gfxmmu_lut188l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut189h_v1: LUT189H
 // Used by: GFXMMU
@@ -3811,7 +3811,7 @@ using gfxmmu_lut189l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut18h_v1: LUT18H
 // Used by: GFXMMU
@@ -3841,7 +3841,7 @@ using gfxmmu_lut18l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut190h_v1: LUT190H
 // Used by: GFXMMU
@@ -3871,7 +3871,7 @@ using gfxmmu_lut190l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut191h_v1: LUT191H
 // Used by: GFXMMU
@@ -3901,7 +3901,7 @@ using gfxmmu_lut191l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut192h_v1: LUT192H
 // Used by: GFXMMU
@@ -3931,7 +3931,7 @@ using gfxmmu_lut192l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut193h_v1: LUT193H
 // Used by: GFXMMU
@@ -3961,7 +3961,7 @@ using gfxmmu_lut193l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut194h_v1: LUT194H
 // Used by: GFXMMU
@@ -3991,7 +3991,7 @@ using gfxmmu_lut194l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut195h_v1: LUT195H
 // Used by: GFXMMU
@@ -4021,7 +4021,7 @@ using gfxmmu_lut195l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut196h_v1: LUT196H
 // Used by: GFXMMU
@@ -4051,7 +4051,7 @@ using gfxmmu_lut196l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut197h_v1: LUT197H
 // Used by: GFXMMU
@@ -4081,7 +4081,7 @@ using gfxmmu_lut197l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut198h_v1: LUT198H
 // Used by: GFXMMU
@@ -4111,7 +4111,7 @@ using gfxmmu_lut198l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut199h_v1: LUT199H
 // Used by: GFXMMU
@@ -4141,7 +4141,7 @@ using gfxmmu_lut199l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut19h_v1: LUT19H
 // Used by: GFXMMU
@@ -4171,7 +4171,7 @@ using gfxmmu_lut19l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut1h_v1: LUT1H
 // Used by: GFXMMU
@@ -4201,7 +4201,7 @@ using gfxmmu_lut1l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut200h_v1: LUT200H
 // Used by: GFXMMU
@@ -4231,7 +4231,7 @@ using gfxmmu_lut200l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut201h_v1: LUT201H
 // Used by: GFXMMU
@@ -4261,7 +4261,7 @@ using gfxmmu_lut201l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut202h_v1: LUT202H
 // Used by: GFXMMU
@@ -4291,7 +4291,7 @@ using gfxmmu_lut202l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut203h_v1: LUT203H
 // Used by: GFXMMU
@@ -4321,7 +4321,7 @@ using gfxmmu_lut203l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut204h_v1: LUT204H
 // Used by: GFXMMU
@@ -4351,7 +4351,7 @@ using gfxmmu_lut204l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut205h_v1: LUT205H
 // Used by: GFXMMU
@@ -4381,7 +4381,7 @@ using gfxmmu_lut205l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut206h_v1: LUT206H
 // Used by: GFXMMU
@@ -4411,7 +4411,7 @@ using gfxmmu_lut206l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut207h_v1: LUT207H
 // Used by: GFXMMU
@@ -4441,7 +4441,7 @@ using gfxmmu_lut207l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut208h_v1: LUT208H
 // Used by: GFXMMU
@@ -4471,7 +4471,7 @@ using gfxmmu_lut208l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut209h_v1: LUT209H
 // Used by: GFXMMU
@@ -4501,7 +4501,7 @@ using gfxmmu_lut209l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut20h_v1: LUT20H
 // Used by: GFXMMU
@@ -4531,7 +4531,7 @@ using gfxmmu_lut20l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut210h_v1: LUT210H
 // Used by: GFXMMU
@@ -4561,7 +4561,7 @@ using gfxmmu_lut210l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut211h_v1: LUT211H
 // Used by: GFXMMU
@@ -4591,7 +4591,7 @@ using gfxmmu_lut211l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut212h_v1: LUT212H
 // Used by: GFXMMU
@@ -4621,7 +4621,7 @@ using gfxmmu_lut212l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut213h_v1: LUT213H
 // Used by: GFXMMU
@@ -4651,7 +4651,7 @@ using gfxmmu_lut213l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut214h_v1: LUT214H
 // Used by: GFXMMU
@@ -4681,7 +4681,7 @@ using gfxmmu_lut214l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut215h_v1: LUT215H
 // Used by: GFXMMU
@@ -4711,7 +4711,7 @@ using gfxmmu_lut215l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut216h_v1: LUT216H
 // Used by: GFXMMU
@@ -4741,7 +4741,7 @@ using gfxmmu_lut216l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut217h_v1: LUT217H
 // Used by: GFXMMU
@@ -4771,7 +4771,7 @@ using gfxmmu_lut217l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut218h_v1: LUT218H
 // Used by: GFXMMU
@@ -4801,7 +4801,7 @@ using gfxmmu_lut218l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut219h_v1: LUT219H
 // Used by: GFXMMU
@@ -4831,7 +4831,7 @@ using gfxmmu_lut219l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut21h_v1: LUT21H
 // Used by: GFXMMU
@@ -4861,7 +4861,7 @@ using gfxmmu_lut21l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut220h_v1: LUT220H
 // Used by: GFXMMU
@@ -4891,7 +4891,7 @@ using gfxmmu_lut220l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut221h_v1: LUT221H
 // Used by: GFXMMU
@@ -4921,7 +4921,7 @@ using gfxmmu_lut221l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut222h_v1: LUT222H
 // Used by: GFXMMU
@@ -4951,7 +4951,7 @@ using gfxmmu_lut222l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut223h_v1: LUT223H
 // Used by: GFXMMU
@@ -4981,7 +4981,7 @@ using gfxmmu_lut223l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut224h_v1: LUT224H
 // Used by: GFXMMU
@@ -5011,7 +5011,7 @@ using gfxmmu_lut224l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut225h_v1: LUT225H
 // Used by: GFXMMU
@@ -5041,7 +5041,7 @@ using gfxmmu_lut225l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut226h_v1: LUT226H
 // Used by: GFXMMU
@@ -5071,7 +5071,7 @@ using gfxmmu_lut226l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut227h_v1: LUT227H
 // Used by: GFXMMU
@@ -5101,7 +5101,7 @@ using gfxmmu_lut227l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut228h_v1: LUT228H
 // Used by: GFXMMU
@@ -5131,7 +5131,7 @@ using gfxmmu_lut228l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut229h_v1: LUT229H
 // Used by: GFXMMU
@@ -5161,7 +5161,7 @@ using gfxmmu_lut229l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut22h_v1: LUT22H
 // Used by: GFXMMU
@@ -5191,7 +5191,7 @@ using gfxmmu_lut22l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut230h_v1: LUT230H
 // Used by: GFXMMU
@@ -5221,7 +5221,7 @@ using gfxmmu_lut230l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut231h_v1: LUT231H
 // Used by: GFXMMU
@@ -5251,7 +5251,7 @@ using gfxmmu_lut231l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut232h_v1: LUT232H
 // Used by: GFXMMU
@@ -5281,7 +5281,7 @@ using gfxmmu_lut232l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut233h_v1: LUT233H
 // Used by: GFXMMU
@@ -5311,7 +5311,7 @@ using gfxmmu_lut233l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut234h_v1: LUT234H
 // Used by: GFXMMU
@@ -5341,7 +5341,7 @@ using gfxmmu_lut234l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut235h_v1: LUT235H
 // Used by: GFXMMU
@@ -5371,7 +5371,7 @@ using gfxmmu_lut235l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut236h_v1: LUT236H
 // Used by: GFXMMU
@@ -5401,7 +5401,7 @@ using gfxmmu_lut236l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut237h_v1: LUT237H
 // Used by: GFXMMU
@@ -5431,7 +5431,7 @@ using gfxmmu_lut237l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut238h_v1: LUT238H
 // Used by: GFXMMU
@@ -5461,7 +5461,7 @@ using gfxmmu_lut238l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut239h_v1: LUT239H
 // Used by: GFXMMU
@@ -5491,7 +5491,7 @@ using gfxmmu_lut239l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut23h_v1: LUT23H
 // Used by: GFXMMU
@@ -5521,7 +5521,7 @@ using gfxmmu_lut23l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut240h_v1: LUT240H
 // Used by: GFXMMU
@@ -5551,7 +5551,7 @@ using gfxmmu_lut240l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut241h_v1: LUT241H
 // Used by: GFXMMU
@@ -5581,7 +5581,7 @@ using gfxmmu_lut241l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut242h_v1: LUT242H
 // Used by: GFXMMU
@@ -5611,7 +5611,7 @@ using gfxmmu_lut242l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut243h_v1: LUT243H
 // Used by: GFXMMU
@@ -5641,7 +5641,7 @@ using gfxmmu_lut243l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut244h_v1: LUT244H
 // Used by: GFXMMU
@@ -5671,7 +5671,7 @@ using gfxmmu_lut244l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut245h_v1: LUT245H
 // Used by: GFXMMU
@@ -5701,7 +5701,7 @@ using gfxmmu_lut245l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut246h_v1: LUT246H
 // Used by: GFXMMU
@@ -5731,7 +5731,7 @@ using gfxmmu_lut246l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut247h_v1: LUT247H
 // Used by: GFXMMU
@@ -5761,7 +5761,7 @@ using gfxmmu_lut247l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut248h_v1: LUT248H
 // Used by: GFXMMU
@@ -5791,7 +5791,7 @@ using gfxmmu_lut248l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut249h_v1: LUT249H
 // Used by: GFXMMU
@@ -5821,7 +5821,7 @@ using gfxmmu_lut249l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut24h_v1: LUT24H
 // Used by: GFXMMU
@@ -5851,7 +5851,7 @@ using gfxmmu_lut24l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut250h_v1: LUT250H
 // Used by: GFXMMU
@@ -5881,7 +5881,7 @@ using gfxmmu_lut250l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut251h_v1: LUT251H
 // Used by: GFXMMU
@@ -5911,7 +5911,7 @@ using gfxmmu_lut251l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut252h_v1: LUT252H
 // Used by: GFXMMU
@@ -5941,7 +5941,7 @@ using gfxmmu_lut252l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut253h_v1: LUT253H
 // Used by: GFXMMU
@@ -5971,7 +5971,7 @@ using gfxmmu_lut253l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut254h_v1: LUT254H
 // Used by: GFXMMU
@@ -6001,7 +6001,7 @@ using gfxmmu_lut254l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut255h_v1: LUT255H
 // Used by: GFXMMU
@@ -6031,7 +6031,7 @@ using gfxmmu_lut255l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut256h_v1: LUT256H
 // Used by: GFXMMU
@@ -6061,7 +6061,7 @@ using gfxmmu_lut256l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut257h_v1: LUT257H
 // Used by: GFXMMU
@@ -6091,7 +6091,7 @@ using gfxmmu_lut257l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut258h_v1: LUT258H
 // Used by: GFXMMU
@@ -6121,7 +6121,7 @@ using gfxmmu_lut258l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut259h_v1: LUT259H
 // Used by: GFXMMU
@@ -6151,7 +6151,7 @@ using gfxmmu_lut259l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut25h_v1: LUT25H
 // Used by: GFXMMU
@@ -6181,7 +6181,7 @@ using gfxmmu_lut25l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut260h_v1: LUT260H
 // Used by: GFXMMU
@@ -6211,7 +6211,7 @@ using gfxmmu_lut260l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut261h_v1: LUT261H
 // Used by: GFXMMU
@@ -6241,7 +6241,7 @@ using gfxmmu_lut261l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut262h_v1: LUT262H
 // Used by: GFXMMU
@@ -6271,7 +6271,7 @@ using gfxmmu_lut262l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut263h_v1: LUT263H
 // Used by: GFXMMU
@@ -6301,7 +6301,7 @@ using gfxmmu_lut263l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut264h_v1: LUT264H
 // Used by: GFXMMU
@@ -6331,7 +6331,7 @@ using gfxmmu_lut264l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut265h_v1: LUT265H
 // Used by: GFXMMU
@@ -6361,7 +6361,7 @@ using gfxmmu_lut265l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut266h_v1: LUT266H
 // Used by: GFXMMU
@@ -6391,7 +6391,7 @@ using gfxmmu_lut266l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut267h_v1: LUT267H
 // Used by: GFXMMU
@@ -6421,7 +6421,7 @@ using gfxmmu_lut267l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut268h_v1: LUT268H
 // Used by: GFXMMU
@@ -6451,7 +6451,7 @@ using gfxmmu_lut268l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut269h_v1: LUT269H
 // Used by: GFXMMU
@@ -6481,7 +6481,7 @@ using gfxmmu_lut269l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut26h_v1: LUT26H
 // Used by: GFXMMU
@@ -6511,7 +6511,7 @@ using gfxmmu_lut26l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut270h_v1: LUT270H
 // Used by: GFXMMU
@@ -6541,7 +6541,7 @@ using gfxmmu_lut270l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut271h_v1: LUT271H
 // Used by: GFXMMU
@@ -6571,7 +6571,7 @@ using gfxmmu_lut271l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut272h_v1: LUT272H
 // Used by: GFXMMU
@@ -6601,7 +6601,7 @@ using gfxmmu_lut272l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut273h_v1: LUT273H
 // Used by: GFXMMU
@@ -6631,7 +6631,7 @@ using gfxmmu_lut273l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut274h_v1: LUT274H
 // Used by: GFXMMU
@@ -6661,7 +6661,7 @@ using gfxmmu_lut274l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut275h_v1: LUT275H
 // Used by: GFXMMU
@@ -6691,7 +6691,7 @@ using gfxmmu_lut275l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut276h_v1: LUT276H
 // Used by: GFXMMU
@@ -6721,7 +6721,7 @@ using gfxmmu_lut276l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut277h_v1: LUT277H
 // Used by: GFXMMU
@@ -6751,7 +6751,7 @@ using gfxmmu_lut277l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut278h_v1: LUT278H
 // Used by: GFXMMU
@@ -6781,7 +6781,7 @@ using gfxmmu_lut278l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut279h_v1: LUT279H
 // Used by: GFXMMU
@@ -6811,7 +6811,7 @@ using gfxmmu_lut279l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut27h_v1: LUT27H
 // Used by: GFXMMU
@@ -6841,7 +6841,7 @@ using gfxmmu_lut27l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut280h_v1: LUT280H
 // Used by: GFXMMU
@@ -6871,7 +6871,7 @@ using gfxmmu_lut280l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut281h_v1: LUT281H
 // Used by: GFXMMU
@@ -6901,7 +6901,7 @@ using gfxmmu_lut281l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut282h_v1: LUT282H
 // Used by: GFXMMU
@@ -6931,7 +6931,7 @@ using gfxmmu_lut282l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut283h_v1: LUT283H
 // Used by: GFXMMU
@@ -6961,7 +6961,7 @@ using gfxmmu_lut283l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut284h_v1: LUT284H
 // Used by: GFXMMU
@@ -6991,7 +6991,7 @@ using gfxmmu_lut284l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut285h_v1: LUT285H
 // Used by: GFXMMU
@@ -7021,7 +7021,7 @@ using gfxmmu_lut285l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut286h_v1: LUT286H
 // Used by: GFXMMU
@@ -7051,7 +7051,7 @@ using gfxmmu_lut286l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut287h_v1: LUT287H
 // Used by: GFXMMU
@@ -7081,7 +7081,7 @@ using gfxmmu_lut287l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut288h_v1: LUT288H
 // Used by: GFXMMU
@@ -7111,7 +7111,7 @@ using gfxmmu_lut288l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut289h_v1: LUT289H
 // Used by: GFXMMU
@@ -7141,7 +7141,7 @@ using gfxmmu_lut289l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut28h_v1: LUT28H
 // Used by: GFXMMU
@@ -7171,7 +7171,7 @@ using gfxmmu_lut28l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut290h_v1: LUT290H
 // Used by: GFXMMU
@@ -7201,7 +7201,7 @@ using gfxmmu_lut290l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut291h_v1: LUT291H
 // Used by: GFXMMU
@@ -7231,7 +7231,7 @@ using gfxmmu_lut291l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut292h_v1: LUT292H
 // Used by: GFXMMU
@@ -7261,7 +7261,7 @@ using gfxmmu_lut292l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut293h_v1: LUT293H
 // Used by: GFXMMU
@@ -7291,7 +7291,7 @@ using gfxmmu_lut293l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut294h_v1: LUT294H
 // Used by: GFXMMU
@@ -7321,7 +7321,7 @@ using gfxmmu_lut294l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut295h_v1: LUT295H
 // Used by: GFXMMU
@@ -7351,7 +7351,7 @@ using gfxmmu_lut295l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut296h_v1: LUT296H
 // Used by: GFXMMU
@@ -7381,7 +7381,7 @@ using gfxmmu_lut296l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut297h_v1: LUT297H
 // Used by: GFXMMU
@@ -7411,7 +7411,7 @@ using gfxmmu_lut297l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut298h_v1: LUT298H
 // Used by: GFXMMU
@@ -7441,7 +7441,7 @@ using gfxmmu_lut298l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut299h_v1: LUT299H
 // Used by: GFXMMU
@@ -7471,7 +7471,7 @@ using gfxmmu_lut299l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut29h_v1: LUT29H
 // Used by: GFXMMU
@@ -7501,7 +7501,7 @@ using gfxmmu_lut29l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut2h_v1: LUT2H
 // Used by: GFXMMU
@@ -7531,7 +7531,7 @@ using gfxmmu_lut2l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut300h_v1: LUT300H
 // Used by: GFXMMU
@@ -7561,7 +7561,7 @@ using gfxmmu_lut300l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut301h_v1: LUT301H
 // Used by: GFXMMU
@@ -7591,7 +7591,7 @@ using gfxmmu_lut301l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut302h_v1: LUT302H
 // Used by: GFXMMU
@@ -7621,7 +7621,7 @@ using gfxmmu_lut302l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut303h_v1: LUT303H
 // Used by: GFXMMU
@@ -7651,7 +7651,7 @@ using gfxmmu_lut303l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut304h_v1: LUT304H
 // Used by: GFXMMU
@@ -7681,7 +7681,7 @@ using gfxmmu_lut304l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut305h_v1: LUT305H
 // Used by: GFXMMU
@@ -7711,7 +7711,7 @@ using gfxmmu_lut305l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut306h_v1: LUT306H
 // Used by: GFXMMU
@@ -7741,7 +7741,7 @@ using gfxmmu_lut306l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut307h_v1: LUT307H
 // Used by: GFXMMU
@@ -7771,7 +7771,7 @@ using gfxmmu_lut307l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut308h_v1: LUT308H
 // Used by: GFXMMU
@@ -7801,7 +7801,7 @@ using gfxmmu_lut308l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut309h_v1: LUT309H
 // Used by: GFXMMU
@@ -7831,7 +7831,7 @@ using gfxmmu_lut309l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut30h_v1: LUT30H
 // Used by: GFXMMU
@@ -7861,7 +7861,7 @@ using gfxmmu_lut30l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut310h_v1: LUT310H
 // Used by: GFXMMU
@@ -7891,7 +7891,7 @@ using gfxmmu_lut310l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut311h_v1: LUT311H
 // Used by: GFXMMU
@@ -7921,7 +7921,7 @@ using gfxmmu_lut311l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut312h_v1: LUT312H
 // Used by: GFXMMU
@@ -7951,7 +7951,7 @@ using gfxmmu_lut312l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut313h_v1: LUT313H
 // Used by: GFXMMU
@@ -7981,7 +7981,7 @@ using gfxmmu_lut313l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut314h_v1: LUT314H
 // Used by: GFXMMU
@@ -8011,7 +8011,7 @@ using gfxmmu_lut314l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut315h_v1: LUT315H
 // Used by: GFXMMU
@@ -8041,7 +8041,7 @@ using gfxmmu_lut315l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut316h_v1: LUT316H
 // Used by: GFXMMU
@@ -8071,7 +8071,7 @@ using gfxmmu_lut316l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut317h_v1: LUT317H
 // Used by: GFXMMU
@@ -8101,7 +8101,7 @@ using gfxmmu_lut317l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut318h_v1: LUT318H
 // Used by: GFXMMU
@@ -8131,7 +8131,7 @@ using gfxmmu_lut318l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut319h_v1: LUT319H
 // Used by: GFXMMU
@@ -8161,7 +8161,7 @@ using gfxmmu_lut319l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut31h_v1: LUT31H
 // Used by: GFXMMU
@@ -8191,7 +8191,7 @@ using gfxmmu_lut31l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut320h_v1: LUT320H
 // Used by: GFXMMU
@@ -8221,7 +8221,7 @@ using gfxmmu_lut320l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut321h_v1: LUT321H
 // Used by: GFXMMU
@@ -8251,7 +8251,7 @@ using gfxmmu_lut321l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut322h_v1: LUT322H
 // Used by: GFXMMU
@@ -8281,7 +8281,7 @@ using gfxmmu_lut322l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut323h_v1: LUT323H
 // Used by: GFXMMU
@@ -8311,7 +8311,7 @@ using gfxmmu_lut323l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut324h_v1: LUT324H
 // Used by: GFXMMU
@@ -8341,7 +8341,7 @@ using gfxmmu_lut324l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut325h_v1: LUT325H
 // Used by: GFXMMU
@@ -8371,7 +8371,7 @@ using gfxmmu_lut325l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut326h_v1: LUT326H
 // Used by: GFXMMU
@@ -8401,7 +8401,7 @@ using gfxmmu_lut326l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut327h_v1: LUT327H
 // Used by: GFXMMU
@@ -8431,7 +8431,7 @@ using gfxmmu_lut327l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut328h_v1: LUT328H
 // Used by: GFXMMU
@@ -8461,7 +8461,7 @@ using gfxmmu_lut328l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut329h_v1: LUT329H
 // Used by: GFXMMU
@@ -8491,7 +8491,7 @@ using gfxmmu_lut329l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut32h_v1: LUT32H
 // Used by: GFXMMU
@@ -8521,7 +8521,7 @@ using gfxmmu_lut32l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut330h_v1: LUT330H
 // Used by: GFXMMU
@@ -8551,7 +8551,7 @@ using gfxmmu_lut330l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut331h_v1: LUT331H
 // Used by: GFXMMU
@@ -8581,7 +8581,7 @@ using gfxmmu_lut331l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut332h_v1: LUT332H
 // Used by: GFXMMU
@@ -8611,7 +8611,7 @@ using gfxmmu_lut332l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut333h_v1: LUT333H
 // Used by: GFXMMU
@@ -8641,7 +8641,7 @@ using gfxmmu_lut333l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut334h_v1: LUT334H
 // Used by: GFXMMU
@@ -8671,7 +8671,7 @@ using gfxmmu_lut334l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut335h_v1: LUT335H
 // Used by: GFXMMU
@@ -8701,7 +8701,7 @@ using gfxmmu_lut335l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut336h_v1: LUT336H
 // Used by: GFXMMU
@@ -8731,7 +8731,7 @@ using gfxmmu_lut336l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut337h_v1: LUT337H
 // Used by: GFXMMU
@@ -8761,7 +8761,7 @@ using gfxmmu_lut337l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut338h_v1: LUT338H
 // Used by: GFXMMU
@@ -8791,7 +8791,7 @@ using gfxmmu_lut338l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut339h_v1: LUT339H
 // Used by: GFXMMU
@@ -8821,7 +8821,7 @@ using gfxmmu_lut339l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut33h_v1: LUT33H
 // Used by: GFXMMU
@@ -8851,7 +8851,7 @@ using gfxmmu_lut33l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut340h_v1: LUT340H
 // Used by: GFXMMU
@@ -8881,7 +8881,7 @@ using gfxmmu_lut340l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut341h_v1: LUT341H
 // Used by: GFXMMU
@@ -8911,7 +8911,7 @@ using gfxmmu_lut341l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut342h_v1: LUT342H
 // Used by: GFXMMU
@@ -8941,7 +8941,7 @@ using gfxmmu_lut342l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut343h_v1: LUT343H
 // Used by: GFXMMU
@@ -8971,7 +8971,7 @@ using gfxmmu_lut343l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut344h_v1: LUT344H
 // Used by: GFXMMU
@@ -9001,7 +9001,7 @@ using gfxmmu_lut344l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut345h_v1: LUT345H
 // Used by: GFXMMU
@@ -9031,7 +9031,7 @@ using gfxmmu_lut345l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut346h_v1: LUT346H
 // Used by: GFXMMU
@@ -9061,7 +9061,7 @@ using gfxmmu_lut346l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut347h_v1: LUT347H
 // Used by: GFXMMU
@@ -9091,7 +9091,7 @@ using gfxmmu_lut347l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut348h_v1: LUT348H
 // Used by: GFXMMU
@@ -9121,7 +9121,7 @@ using gfxmmu_lut348l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut349h_v1: LUT349H
 // Used by: GFXMMU
@@ -9151,7 +9151,7 @@ using gfxmmu_lut349l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut34h_v1: LUT34H
 // Used by: GFXMMU
@@ -9181,7 +9181,7 @@ using gfxmmu_lut34l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut350h_v1: LUT350H
 // Used by: GFXMMU
@@ -9211,7 +9211,7 @@ using gfxmmu_lut350l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut351h_v1: LUT351H
 // Used by: GFXMMU
@@ -9241,7 +9241,7 @@ using gfxmmu_lut351l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut352h_v1: LUT352H
 // Used by: GFXMMU
@@ -9271,7 +9271,7 @@ using gfxmmu_lut352l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut353h_v1: LUT353H
 // Used by: GFXMMU
@@ -9301,7 +9301,7 @@ using gfxmmu_lut353l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut354h_v1: LUT354H
 // Used by: GFXMMU
@@ -9331,7 +9331,7 @@ using gfxmmu_lut354l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut355h_v1: LUT355H
 // Used by: GFXMMU
@@ -9361,7 +9361,7 @@ using gfxmmu_lut355l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut356h_v1: LUT356H
 // Used by: GFXMMU
@@ -9391,7 +9391,7 @@ using gfxmmu_lut356l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut357h_v1: LUT357H
 // Used by: GFXMMU
@@ -9421,7 +9421,7 @@ using gfxmmu_lut357l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut358h_v1: LUT358H
 // Used by: GFXMMU
@@ -9451,7 +9451,7 @@ using gfxmmu_lut358l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut359h_v1: LUT359H
 // Used by: GFXMMU
@@ -9481,7 +9481,7 @@ using gfxmmu_lut359l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut35h_v1: LUT35H
 // Used by: GFXMMU
@@ -9511,7 +9511,7 @@ using gfxmmu_lut35l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut360h_v1: LUT360H
 // Used by: GFXMMU
@@ -9541,7 +9541,7 @@ using gfxmmu_lut360l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut361h_v1: LUT361H
 // Used by: GFXMMU
@@ -9571,7 +9571,7 @@ using gfxmmu_lut361l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut362h_v1: LUT362H
 // Used by: GFXMMU
@@ -9601,7 +9601,7 @@ using gfxmmu_lut362l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut363h_v1: LUT363H
 // Used by: GFXMMU
@@ -9631,7 +9631,7 @@ using gfxmmu_lut363l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut364h_v1: LUT364H
 // Used by: GFXMMU
@@ -9661,7 +9661,7 @@ using gfxmmu_lut364l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut365h_v1: LUT365H
 // Used by: GFXMMU
@@ -9691,7 +9691,7 @@ using gfxmmu_lut365l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut366h_v1: LUT366H
 // Used by: GFXMMU
@@ -9721,7 +9721,7 @@ using gfxmmu_lut366l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut367h_v1: LUT367H
 // Used by: GFXMMU
@@ -9751,7 +9751,7 @@ using gfxmmu_lut367l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut368h_v1: LUT368H
 // Used by: GFXMMU
@@ -9781,7 +9781,7 @@ using gfxmmu_lut368l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut369h_v1: LUT369H
 // Used by: GFXMMU
@@ -9811,7 +9811,7 @@ using gfxmmu_lut369l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut36h_v1: LUT36H
 // Used by: GFXMMU
@@ -9841,7 +9841,7 @@ using gfxmmu_lut36l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut370h_v1: LUT370H
 // Used by: GFXMMU
@@ -9871,7 +9871,7 @@ using gfxmmu_lut370l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut371h_v1: LUT371H
 // Used by: GFXMMU
@@ -9901,7 +9901,7 @@ using gfxmmu_lut371l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut372h_v1: LUT372H
 // Used by: GFXMMU
@@ -9931,7 +9931,7 @@ using gfxmmu_lut372l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut373h_v1: LUT373H
 // Used by: GFXMMU
@@ -9961,7 +9961,7 @@ using gfxmmu_lut373l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut374h_v1: LUT374H
 // Used by: GFXMMU
@@ -9991,7 +9991,7 @@ using gfxmmu_lut374l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut375h_v1: LUT375H
 // Used by: GFXMMU
@@ -10021,7 +10021,7 @@ using gfxmmu_lut375l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut376h_v1: LUT376H
 // Used by: GFXMMU
@@ -10051,7 +10051,7 @@ using gfxmmu_lut376l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut377h_v1: LUT377H
 // Used by: GFXMMU
@@ -10081,7 +10081,7 @@ using gfxmmu_lut377l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut378h_v1: LUT378H
 // Used by: GFXMMU
@@ -10111,7 +10111,7 @@ using gfxmmu_lut378l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut379h_v1: LUT379H
 // Used by: GFXMMU
@@ -10141,7 +10141,7 @@ using gfxmmu_lut379l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut37h_v1: LUT37H
 // Used by: GFXMMU
@@ -10171,7 +10171,7 @@ using gfxmmu_lut37l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut380h_v1: LUT380H
 // Used by: GFXMMU
@@ -10201,7 +10201,7 @@ using gfxmmu_lut380l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut381h_v1: LUT381H
 // Used by: GFXMMU
@@ -10231,7 +10231,7 @@ using gfxmmu_lut381l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut382h_v1: LUT382H
 // Used by: GFXMMU
@@ -10261,7 +10261,7 @@ using gfxmmu_lut382l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut383h_v1: LUT383H
 // Used by: GFXMMU
@@ -10291,7 +10291,7 @@ using gfxmmu_lut383l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut384h_v1: LUT384H
 // Used by: GFXMMU
@@ -10321,7 +10321,7 @@ using gfxmmu_lut384l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut385h_v1: LUT385H
 // Used by: GFXMMU
@@ -10351,7 +10351,7 @@ using gfxmmu_lut385l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut386h_v1: LUT386H
 // Used by: GFXMMU
@@ -10381,7 +10381,7 @@ using gfxmmu_lut386l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut387h_v1: LUT387H
 // Used by: GFXMMU
@@ -10411,7 +10411,7 @@ using gfxmmu_lut387l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut388h_v1: LUT388H
 // Used by: GFXMMU
@@ -10441,7 +10441,7 @@ using gfxmmu_lut388l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut389h_v1: LUT389H
 // Used by: GFXMMU
@@ -10471,7 +10471,7 @@ using gfxmmu_lut389l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut38h_v1: LUT38H
 // Used by: GFXMMU
@@ -10501,7 +10501,7 @@ using gfxmmu_lut38l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut390h_v1: LUT390H
 // Used by: GFXMMU
@@ -10531,7 +10531,7 @@ using gfxmmu_lut390l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut391h_v1: LUT391H
 // Used by: GFXMMU
@@ -10561,7 +10561,7 @@ using gfxmmu_lut391l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut392h_v1: LUT392H
 // Used by: GFXMMU
@@ -10591,7 +10591,7 @@ using gfxmmu_lut392l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut393h_v1: LUT393H
 // Used by: GFXMMU
@@ -10621,7 +10621,7 @@ using gfxmmu_lut393l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut394h_v1: LUT394H
 // Used by: GFXMMU
@@ -10651,7 +10651,7 @@ using gfxmmu_lut394l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut395h_v1: LUT395H
 // Used by: GFXMMU
@@ -10681,7 +10681,7 @@ using gfxmmu_lut395l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut396h_v1: LUT396H
 // Used by: GFXMMU
@@ -10711,7 +10711,7 @@ using gfxmmu_lut396l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut397h_v1: LUT397H
 // Used by: GFXMMU
@@ -10741,7 +10741,7 @@ using gfxmmu_lut397l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut398h_v1: LUT398H
 // Used by: GFXMMU
@@ -10771,7 +10771,7 @@ using gfxmmu_lut398l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut399h_v1: LUT399H
 // Used by: GFXMMU
@@ -10801,7 +10801,7 @@ using gfxmmu_lut399l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut39h_v1: LUT39H
 // Used by: GFXMMU
@@ -10831,7 +10831,7 @@ using gfxmmu_lut39l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut3h_v1: LUT3H
 // Used by: GFXMMU
@@ -10861,7 +10861,7 @@ using gfxmmu_lut3l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut400h_v1: LUT400H
 // Used by: GFXMMU
@@ -10891,7 +10891,7 @@ using gfxmmu_lut400l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut401h_v1: LUT401H
 // Used by: GFXMMU
@@ -10921,7 +10921,7 @@ using gfxmmu_lut401l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut402h_v1: LUT402H
 // Used by: GFXMMU
@@ -10951,7 +10951,7 @@ using gfxmmu_lut402l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut403h_v1: LUT403H
 // Used by: GFXMMU
@@ -10981,7 +10981,7 @@ using gfxmmu_lut403l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut404h_v1: LUT404H
 // Used by: GFXMMU
@@ -11011,7 +11011,7 @@ using gfxmmu_lut404l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut405h_v1: LUT405H
 // Used by: GFXMMU
@@ -11041,7 +11041,7 @@ using gfxmmu_lut405l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut406h_v1: LUT406H
 // Used by: GFXMMU
@@ -11071,7 +11071,7 @@ using gfxmmu_lut406l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut407h_v1: LUT407H
 // Used by: GFXMMU
@@ -11101,7 +11101,7 @@ using gfxmmu_lut407l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut408h_v1: LUT408H
 // Used by: GFXMMU
@@ -11131,7 +11131,7 @@ using gfxmmu_lut408l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut409h_v1: LUT409H
 // Used by: GFXMMU
@@ -11161,7 +11161,7 @@ using gfxmmu_lut409l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut40h_v1: LUT40H
 // Used by: GFXMMU
@@ -11191,7 +11191,7 @@ using gfxmmu_lut40l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut410h_v1: LUT410H
 // Used by: GFXMMU
@@ -11221,7 +11221,7 @@ using gfxmmu_lut410l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut411h_v1: LUT411H
 // Used by: GFXMMU
@@ -11251,7 +11251,7 @@ using gfxmmu_lut411l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut412h_v1: LUT412H
 // Used by: GFXMMU
@@ -11281,7 +11281,7 @@ using gfxmmu_lut412l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut413h_v1: LUT413H
 // Used by: GFXMMU
@@ -11311,7 +11311,7 @@ using gfxmmu_lut413l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut414h_v1: LUT414H
 // Used by: GFXMMU
@@ -11341,7 +11341,7 @@ using gfxmmu_lut414l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut415h_v1: LUT415H
 // Used by: GFXMMU
@@ -11371,7 +11371,7 @@ using gfxmmu_lut415l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut416h_v1: LUT416H
 // Used by: GFXMMU
@@ -11401,7 +11401,7 @@ using gfxmmu_lut416l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut417h_v1: LUT417H
 // Used by: GFXMMU
@@ -11431,7 +11431,7 @@ using gfxmmu_lut417l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut418h_v1: LUT418H
 // Used by: GFXMMU
@@ -11461,7 +11461,7 @@ using gfxmmu_lut418l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut419h_v1: LUT419H
 // Used by: GFXMMU
@@ -11491,7 +11491,7 @@ using gfxmmu_lut419l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut41h_v1: LUT41H
 // Used by: GFXMMU
@@ -11521,7 +11521,7 @@ using gfxmmu_lut41l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut420h_v1: LUT420H
 // Used by: GFXMMU
@@ -11551,7 +11551,7 @@ using gfxmmu_lut420l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut421h_v1: LUT421H
 // Used by: GFXMMU
@@ -11581,7 +11581,7 @@ using gfxmmu_lut421l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut422h_v1: LUT422H
 // Used by: GFXMMU
@@ -11611,7 +11611,7 @@ using gfxmmu_lut422l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut423h_v1: LUT423H
 // Used by: GFXMMU
@@ -11641,7 +11641,7 @@ using gfxmmu_lut423l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut424h_v1: LUT424H
 // Used by: GFXMMU
@@ -11671,7 +11671,7 @@ using gfxmmu_lut424l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut425h_v1: LUT425H
 // Used by: GFXMMU
@@ -11701,7 +11701,7 @@ using gfxmmu_lut425l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut426h_v1: LUT426H
 // Used by: GFXMMU
@@ -11731,7 +11731,7 @@ using gfxmmu_lut426l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut427h_v1: LUT427H
 // Used by: GFXMMU
@@ -11761,7 +11761,7 @@ using gfxmmu_lut427l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut428h_v1: LUT428H
 // Used by: GFXMMU
@@ -11791,7 +11791,7 @@ using gfxmmu_lut428l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut429h_v1: LUT429H
 // Used by: GFXMMU
@@ -11821,7 +11821,7 @@ using gfxmmu_lut429l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut42h_v1: LUT42H
 // Used by: GFXMMU
@@ -11851,7 +11851,7 @@ using gfxmmu_lut42l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut430h_v1: LUT430H
 // Used by: GFXMMU
@@ -11881,7 +11881,7 @@ using gfxmmu_lut430l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut431h_v1: LUT431H
 // Used by: GFXMMU
@@ -11911,7 +11911,7 @@ using gfxmmu_lut431l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut432h_v1: LUT432H
 // Used by: GFXMMU
@@ -11941,7 +11941,7 @@ using gfxmmu_lut432l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut433h_v1: LUT433H
 // Used by: GFXMMU
@@ -11971,7 +11971,7 @@ using gfxmmu_lut433l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut434h_v1: LUT434H
 // Used by: GFXMMU
@@ -12001,7 +12001,7 @@ using gfxmmu_lut434l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut435h_v1: LUT435H
 // Used by: GFXMMU
@@ -12031,7 +12031,7 @@ using gfxmmu_lut435l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut436h_v1: LUT436H
 // Used by: GFXMMU
@@ -12061,7 +12061,7 @@ using gfxmmu_lut436l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut437h_v1: LUT437H
 // Used by: GFXMMU
@@ -12091,7 +12091,7 @@ using gfxmmu_lut437l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut438h_v1: LUT438H
 // Used by: GFXMMU
@@ -12121,7 +12121,7 @@ using gfxmmu_lut438l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut439h_v1: LUT439H
 // Used by: GFXMMU
@@ -12151,7 +12151,7 @@ using gfxmmu_lut439l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut43h_v1: LUT43H
 // Used by: GFXMMU
@@ -12181,7 +12181,7 @@ using gfxmmu_lut43l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut440h_v1: LUT440H
 // Used by: GFXMMU
@@ -12211,7 +12211,7 @@ using gfxmmu_lut440l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut441h_v1: LUT441H
 // Used by: GFXMMU
@@ -12241,7 +12241,7 @@ using gfxmmu_lut441l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut442h_v1: LUT442H
 // Used by: GFXMMU
@@ -12271,7 +12271,7 @@ using gfxmmu_lut442l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut443h_v1: LUT443H
 // Used by: GFXMMU
@@ -12301,7 +12301,7 @@ using gfxmmu_lut443l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut444h_v1: LUT444H
 // Used by: GFXMMU
@@ -12331,7 +12331,7 @@ using gfxmmu_lut444l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut445h_v1: LUT445H
 // Used by: GFXMMU
@@ -12361,7 +12361,7 @@ using gfxmmu_lut445l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut446h_v1: LUT446H
 // Used by: GFXMMU
@@ -12391,7 +12391,7 @@ using gfxmmu_lut446l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut447h_v1: LUT447H
 // Used by: GFXMMU
@@ -12421,7 +12421,7 @@ using gfxmmu_lut447l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut448h_v1: LUT448H
 // Used by: GFXMMU
@@ -12451,7 +12451,7 @@ using gfxmmu_lut448l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut449h_v1: LUT449H
 // Used by: GFXMMU
@@ -12481,7 +12481,7 @@ using gfxmmu_lut449l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut44h_v1: LUT44H
 // Used by: GFXMMU
@@ -12511,7 +12511,7 @@ using gfxmmu_lut44l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut450h_v1: LUT450H
 // Used by: GFXMMU
@@ -12541,7 +12541,7 @@ using gfxmmu_lut450l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut451h_v1: LUT451H
 // Used by: GFXMMU
@@ -12571,7 +12571,7 @@ using gfxmmu_lut451l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut452h_v1: LUT452H
 // Used by: GFXMMU
@@ -12601,7 +12601,7 @@ using gfxmmu_lut452l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut453h_v1: LUT453H
 // Used by: GFXMMU
@@ -12631,7 +12631,7 @@ using gfxmmu_lut453l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut454h_v1: LUT454H
 // Used by: GFXMMU
@@ -12661,7 +12661,7 @@ using gfxmmu_lut454l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut455h_v1: LUT455H
 // Used by: GFXMMU
@@ -12691,7 +12691,7 @@ using gfxmmu_lut455l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut456h_v1: LUT456H
 // Used by: GFXMMU
@@ -12721,7 +12721,7 @@ using gfxmmu_lut456l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut457h_v1: LUT457H
 // Used by: GFXMMU
@@ -12751,7 +12751,7 @@ using gfxmmu_lut457l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut458h_v1: LUT458H
 // Used by: GFXMMU
@@ -12781,7 +12781,7 @@ using gfxmmu_lut458l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut459h_v1: LUT459H
 // Used by: GFXMMU
@@ -12811,7 +12811,7 @@ using gfxmmu_lut459l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut45h_v1: LUT45H
 // Used by: GFXMMU
@@ -12841,7 +12841,7 @@ using gfxmmu_lut45l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut460h_v1: LUT460H
 // Used by: GFXMMU
@@ -12871,7 +12871,7 @@ using gfxmmu_lut460l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut461h_v1: LUT461H
 // Used by: GFXMMU
@@ -12901,7 +12901,7 @@ using gfxmmu_lut461l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut462h_v1: LUT462H
 // Used by: GFXMMU
@@ -12931,7 +12931,7 @@ using gfxmmu_lut462l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut463h_v1: LUT463H
 // Used by: GFXMMU
@@ -12961,7 +12961,7 @@ using gfxmmu_lut463l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut464h_v1: LUT464H
 // Used by: GFXMMU
@@ -12991,7 +12991,7 @@ using gfxmmu_lut464l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut465h_v1: LUT465H
 // Used by: GFXMMU
@@ -13021,7 +13021,7 @@ using gfxmmu_lut465l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut466h_v1: LUT466H
 // Used by: GFXMMU
@@ -13051,7 +13051,7 @@ using gfxmmu_lut466l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut467h_v1: LUT467H
 // Used by: GFXMMU
@@ -13081,7 +13081,7 @@ using gfxmmu_lut467l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut468h_v1: LUT468H
 // Used by: GFXMMU
@@ -13111,7 +13111,7 @@ using gfxmmu_lut468l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut469h_v1: LUT469H
 // Used by: GFXMMU
@@ -13141,7 +13141,7 @@ using gfxmmu_lut469l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut46h_v1: LUT46H
 // Used by: GFXMMU
@@ -13171,7 +13171,7 @@ using gfxmmu_lut46l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut470h_v1: LUT470H
 // Used by: GFXMMU
@@ -13201,7 +13201,7 @@ using gfxmmu_lut470l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut471h_v1: LUT471H
 // Used by: GFXMMU
@@ -13231,7 +13231,7 @@ using gfxmmu_lut471l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut472h_v1: LUT472H
 // Used by: GFXMMU
@@ -13261,7 +13261,7 @@ using gfxmmu_lut472l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut473h_v1: LUT473H
 // Used by: GFXMMU
@@ -13291,7 +13291,7 @@ using gfxmmu_lut473l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut474h_v1: LUT474H
 // Used by: GFXMMU
@@ -13321,7 +13321,7 @@ using gfxmmu_lut474l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut475h_v1: LUT475H
 // Used by: GFXMMU
@@ -13351,7 +13351,7 @@ using gfxmmu_lut475l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut476h_v1: LUT476H
 // Used by: GFXMMU
@@ -13381,7 +13381,7 @@ using gfxmmu_lut476l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut477h_v1: LUT477H
 // Used by: GFXMMU
@@ -13411,7 +13411,7 @@ using gfxmmu_lut477l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut478h_v1: LUT478H
 // Used by: GFXMMU
@@ -13441,7 +13441,7 @@ using gfxmmu_lut478l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut479h_v1: LUT479H
 // Used by: GFXMMU
@@ -13471,7 +13471,7 @@ using gfxmmu_lut479l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut47h_v1: LUT47H
 // Used by: GFXMMU
@@ -13501,7 +13501,7 @@ using gfxmmu_lut47l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut480h_v1: LUT480H
 // Used by: GFXMMU
@@ -13531,7 +13531,7 @@ using gfxmmu_lut480l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut481h_v1: LUT481H
 // Used by: GFXMMU
@@ -13561,7 +13561,7 @@ using gfxmmu_lut481l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut482h_v1: LUT482H
 // Used by: GFXMMU
@@ -13591,7 +13591,7 @@ using gfxmmu_lut482l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut483h_v1: LUT483H
 // Used by: GFXMMU
@@ -13621,7 +13621,7 @@ using gfxmmu_lut483l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut484h_v1: LUT484H
 // Used by: GFXMMU
@@ -13651,7 +13651,7 @@ using gfxmmu_lut484l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut485h_v1: LUT485H
 // Used by: GFXMMU
@@ -13681,7 +13681,7 @@ using gfxmmu_lut485l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut486h_v1: LUT486H
 // Used by: GFXMMU
@@ -13711,7 +13711,7 @@ using gfxmmu_lut486l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut487h_v1: LUT487H
 // Used by: GFXMMU
@@ -13741,7 +13741,7 @@ using gfxmmu_lut487l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut488h_v1: LUT488H
 // Used by: GFXMMU
@@ -13771,7 +13771,7 @@ using gfxmmu_lut488l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut489h_v1: LUT489H
 // Used by: GFXMMU
@@ -13801,7 +13801,7 @@ using gfxmmu_lut489l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut48h_v1: LUT48H
 // Used by: GFXMMU
@@ -13831,7 +13831,7 @@ using gfxmmu_lut48l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut490h_v1: LUT490H
 // Used by: GFXMMU
@@ -13861,7 +13861,7 @@ using gfxmmu_lut490l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut491h_v1: LUT491H
 // Used by: GFXMMU
@@ -13891,7 +13891,7 @@ using gfxmmu_lut491l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut492h_v1: LUT492H
 // Used by: GFXMMU
@@ -13921,7 +13921,7 @@ using gfxmmu_lut492l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut493h_v1: LUT493H
 // Used by: GFXMMU
@@ -13951,7 +13951,7 @@ using gfxmmu_lut493l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut494h_v1: LUT494H
 // Used by: GFXMMU
@@ -13981,7 +13981,7 @@ using gfxmmu_lut494l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut495h_v1: LUT495H
 // Used by: GFXMMU
@@ -14011,7 +14011,7 @@ using gfxmmu_lut495l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut496h_v1: LUT496H
 // Used by: GFXMMU
@@ -14041,7 +14041,7 @@ using gfxmmu_lut496l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut497h_v1: LUT497H
 // Used by: GFXMMU
@@ -14071,7 +14071,7 @@ using gfxmmu_lut497l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut498h_v1: LUT498H
 // Used by: GFXMMU
@@ -14101,7 +14101,7 @@ using gfxmmu_lut498l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut499h_v1: LUT499H
 // Used by: GFXMMU
@@ -14131,7 +14131,7 @@ using gfxmmu_lut499l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut49h_v1: LUT49H
 // Used by: GFXMMU
@@ -14161,7 +14161,7 @@ using gfxmmu_lut49l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut4h_v1: LUT4H
 // Used by: GFXMMU
@@ -14191,7 +14191,7 @@ using gfxmmu_lut4l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut500h_v1: LUT500H
 // Used by: GFXMMU
@@ -14221,7 +14221,7 @@ using gfxmmu_lut500l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut501h_v1: LUT501H
 // Used by: GFXMMU
@@ -14251,7 +14251,7 @@ using gfxmmu_lut501l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut502h_v1: LUT502H
 // Used by: GFXMMU
@@ -14281,7 +14281,7 @@ using gfxmmu_lut502l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut503h_v1: LUT503H
 // Used by: GFXMMU
@@ -14311,7 +14311,7 @@ using gfxmmu_lut503l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut504h_v1: LUT504H
 // Used by: GFXMMU
@@ -14341,7 +14341,7 @@ using gfxmmu_lut504l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut505h_v1: LUT505H
 // Used by: GFXMMU
@@ -14371,7 +14371,7 @@ using gfxmmu_lut505l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut506h_v1: LUT506H
 // Used by: GFXMMU
@@ -14401,7 +14401,7 @@ using gfxmmu_lut506l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut507h_v1: LUT507H
 // Used by: GFXMMU
@@ -14431,7 +14431,7 @@ using gfxmmu_lut507l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut508h_v1: LUT508H
 // Used by: GFXMMU
@@ -14461,7 +14461,7 @@ using gfxmmu_lut508l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut509h_v1: LUT509H
 // Used by: GFXMMU
@@ -14491,7 +14491,7 @@ using gfxmmu_lut509l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut50h_v1: LUT50H
 // Used by: GFXMMU
@@ -14521,7 +14521,7 @@ using gfxmmu_lut50l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut510h_v1: LUT510H
 // Used by: GFXMMU
@@ -14551,7 +14551,7 @@ using gfxmmu_lut510l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut511h_v1: LUT511H
 // Used by: GFXMMU
@@ -14581,7 +14581,7 @@ using gfxmmu_lut511l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut512h_v1: LUT512H
 // Used by: GFXMMU
@@ -14611,7 +14611,7 @@ using gfxmmu_lut512l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut513h_v1: LUT513H
 // Used by: GFXMMU
@@ -14641,7 +14641,7 @@ using gfxmmu_lut513l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut514h_v1: LUT514H
 // Used by: GFXMMU
@@ -14671,7 +14671,7 @@ using gfxmmu_lut514l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut515h_v1: LUT515H
 // Used by: GFXMMU
@@ -14701,7 +14701,7 @@ using gfxmmu_lut515l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut516h_v1: LUT516H
 // Used by: GFXMMU
@@ -14731,7 +14731,7 @@ using gfxmmu_lut516l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut517h_v1: LUT517H
 // Used by: GFXMMU
@@ -14761,7 +14761,7 @@ using gfxmmu_lut517l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut518h_v1: LUT518H
 // Used by: GFXMMU
@@ -14791,7 +14791,7 @@ using gfxmmu_lut518l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut519h_v1: LUT519H
 // Used by: GFXMMU
@@ -14821,7 +14821,7 @@ using gfxmmu_lut519l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut51h_v1: LUT51H
 // Used by: GFXMMU
@@ -14851,7 +14851,7 @@ using gfxmmu_lut51l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut520h_v1: LUT520H
 // Used by: GFXMMU
@@ -14881,7 +14881,7 @@ using gfxmmu_lut520l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut521h_v1: LUT521H
 // Used by: GFXMMU
@@ -14911,7 +14911,7 @@ using gfxmmu_lut521l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut522h_v1: LUT522H
 // Used by: GFXMMU
@@ -14941,7 +14941,7 @@ using gfxmmu_lut522l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut523h_v1: LUT523H
 // Used by: GFXMMU
@@ -14971,7 +14971,7 @@ using gfxmmu_lut523l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut524h_v1: LUT524H
 // Used by: GFXMMU
@@ -15001,7 +15001,7 @@ using gfxmmu_lut524l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut525h_v1: LUT525H
 // Used by: GFXMMU
@@ -15031,7 +15031,7 @@ using gfxmmu_lut525l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut526h_v1: LUT526H
 // Used by: GFXMMU
@@ -15061,7 +15061,7 @@ using gfxmmu_lut526l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut527h_v1: LUT527H
 // Used by: GFXMMU
@@ -15091,7 +15091,7 @@ using gfxmmu_lut527l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut528h_v1: LUT528H
 // Used by: GFXMMU
@@ -15121,7 +15121,7 @@ using gfxmmu_lut528l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut529h_v1: LUT529H
 // Used by: GFXMMU
@@ -15151,7 +15151,7 @@ using gfxmmu_lut529l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut52h_v1: LUT52H
 // Used by: GFXMMU
@@ -15181,7 +15181,7 @@ using gfxmmu_lut52l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut530h_v1: LUT530H
 // Used by: GFXMMU
@@ -15211,7 +15211,7 @@ using gfxmmu_lut530l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut531h_v1: LUT531H
 // Used by: GFXMMU
@@ -15241,7 +15241,7 @@ using gfxmmu_lut531l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut532h_v1: LUT532H
 // Used by: GFXMMU
@@ -15271,7 +15271,7 @@ using gfxmmu_lut532l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut533h_v1: LUT533H
 // Used by: GFXMMU
@@ -15301,7 +15301,7 @@ using gfxmmu_lut533l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut534h_v1: LUT534H
 // Used by: GFXMMU
@@ -15331,7 +15331,7 @@ using gfxmmu_lut534l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut535h_v1: LUT535H
 // Used by: GFXMMU
@@ -15361,7 +15361,7 @@ using gfxmmu_lut535l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut536h_v1: LUT536H
 // Used by: GFXMMU
@@ -15391,7 +15391,7 @@ using gfxmmu_lut536l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut537h_v1: LUT537H
 // Used by: GFXMMU
@@ -15421,7 +15421,7 @@ using gfxmmu_lut537l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut538h_v1: LUT538H
 // Used by: GFXMMU
@@ -15451,7 +15451,7 @@ using gfxmmu_lut538l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut539h_v1: LUT539H
 // Used by: GFXMMU
@@ -15481,7 +15481,7 @@ using gfxmmu_lut539l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut53h_v1: LUT53H
 // Used by: GFXMMU
@@ -15511,7 +15511,7 @@ using gfxmmu_lut53l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut540h_v1: LUT540H
 // Used by: GFXMMU
@@ -15541,7 +15541,7 @@ using gfxmmu_lut540l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut541h_v1: LUT541H
 // Used by: GFXMMU
@@ -15571,7 +15571,7 @@ using gfxmmu_lut541l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut542h_v1: LUT542H
 // Used by: GFXMMU
@@ -15601,7 +15601,7 @@ using gfxmmu_lut542l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut543h_v1: LUT543H
 // Used by: GFXMMU
@@ -15631,7 +15631,7 @@ using gfxmmu_lut543l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut544h_v1: LUT544H
 // Used by: GFXMMU
@@ -15661,7 +15661,7 @@ using gfxmmu_lut544l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut545h_v1: LUT545H
 // Used by: GFXMMU
@@ -15691,7 +15691,7 @@ using gfxmmu_lut545l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut546h_v1: LUT546H
 // Used by: GFXMMU
@@ -15721,7 +15721,7 @@ using gfxmmu_lut546l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut547h_v1: LUT547H
 // Used by: GFXMMU
@@ -15751,7 +15751,7 @@ using gfxmmu_lut547l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut548h_v1: LUT548H
 // Used by: GFXMMU
@@ -15781,7 +15781,7 @@ using gfxmmu_lut548l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut549h_v1: LUT549H
 // Used by: GFXMMU
@@ -15811,7 +15811,7 @@ using gfxmmu_lut549l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut54h_v1: LUT54H
 // Used by: GFXMMU
@@ -15841,7 +15841,7 @@ using gfxmmu_lut54l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut550h_v1: LUT550H
 // Used by: GFXMMU
@@ -15871,7 +15871,7 @@ using gfxmmu_lut550l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut551h_v1: LUT551H
 // Used by: GFXMMU
@@ -15901,7 +15901,7 @@ using gfxmmu_lut551l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut552h_v1: LUT552H
 // Used by: GFXMMU
@@ -15931,7 +15931,7 @@ using gfxmmu_lut552l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut553h_v1: LUT553H
 // Used by: GFXMMU
@@ -15961,7 +15961,7 @@ using gfxmmu_lut553l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut554h_v1: LUT554H
 // Used by: GFXMMU
@@ -15991,7 +15991,7 @@ using gfxmmu_lut554l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut555h_v1: LUT555H
 // Used by: GFXMMU
@@ -16021,7 +16021,7 @@ using gfxmmu_lut555l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut556h_v1: LUT556H
 // Used by: GFXMMU
@@ -16051,7 +16051,7 @@ using gfxmmu_lut556l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut557h_v1: LUT557H
 // Used by: GFXMMU
@@ -16081,7 +16081,7 @@ using gfxmmu_lut557l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut558h_v1: LUT558H
 // Used by: GFXMMU
@@ -16111,7 +16111,7 @@ using gfxmmu_lut558l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut559h_v1: LUT559H
 // Used by: GFXMMU
@@ -16141,7 +16141,7 @@ using gfxmmu_lut559l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut55h_v1: LUT55H
 // Used by: GFXMMU
@@ -16171,7 +16171,7 @@ using gfxmmu_lut55l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut560h_v1: LUT560H
 // Used by: GFXMMU
@@ -16201,7 +16201,7 @@ using gfxmmu_lut560l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut561h_v1: LUT561H
 // Used by: GFXMMU
@@ -16231,7 +16231,7 @@ using gfxmmu_lut561l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut562h_v1: LUT562H
 // Used by: GFXMMU
@@ -16261,7 +16261,7 @@ using gfxmmu_lut562l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut563h_v1: LUT563H
 // Used by: GFXMMU
@@ -16291,7 +16291,7 @@ using gfxmmu_lut563l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut564h_v1: LUT564H
 // Used by: GFXMMU
@@ -16321,7 +16321,7 @@ using gfxmmu_lut564l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut565h_v1: LUT565H
 // Used by: GFXMMU
@@ -16351,7 +16351,7 @@ using gfxmmu_lut565l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut566h_v1: LUT566H
 // Used by: GFXMMU
@@ -16381,7 +16381,7 @@ using gfxmmu_lut566l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut567h_v1: LUT567H
 // Used by: GFXMMU
@@ -16411,7 +16411,7 @@ using gfxmmu_lut567l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut568h_v1: LUT568H
 // Used by: GFXMMU
@@ -16441,7 +16441,7 @@ using gfxmmu_lut568l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut569h_v1: LUT569H
 // Used by: GFXMMU
@@ -16471,7 +16471,7 @@ using gfxmmu_lut569l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut56h_v1: LUT56H
 // Used by: GFXMMU
@@ -16501,7 +16501,7 @@ using gfxmmu_lut56l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut570h_v1: LUT570H
 // Used by: GFXMMU
@@ -16531,7 +16531,7 @@ using gfxmmu_lut570l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut571h_v1: LUT571H
 // Used by: GFXMMU
@@ -16561,7 +16561,7 @@ using gfxmmu_lut571l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut572h_v1: LUT572H
 // Used by: GFXMMU
@@ -16591,7 +16591,7 @@ using gfxmmu_lut572l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut573h_v1: LUT573H
 // Used by: GFXMMU
@@ -16621,7 +16621,7 @@ using gfxmmu_lut573l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut574h_v1: LUT574H
 // Used by: GFXMMU
@@ -16651,7 +16651,7 @@ using gfxmmu_lut574l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut575h_v1: LUT575H
 // Used by: GFXMMU
@@ -16681,7 +16681,7 @@ using gfxmmu_lut575l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut576h_v1: LUT576H
 // Used by: GFXMMU
@@ -16711,7 +16711,7 @@ using gfxmmu_lut576l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut577h_v1: LUT577H
 // Used by: GFXMMU
@@ -16741,7 +16741,7 @@ using gfxmmu_lut577l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut578h_v1: LUT578H
 // Used by: GFXMMU
@@ -16771,7 +16771,7 @@ using gfxmmu_lut578l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut579h_v1: LUT579H
 // Used by: GFXMMU
@@ -16801,7 +16801,7 @@ using gfxmmu_lut579l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut57h_v1: LUT57H
 // Used by: GFXMMU
@@ -16831,7 +16831,7 @@ using gfxmmu_lut57l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut580h_v1: LUT580H
 // Used by: GFXMMU
@@ -16861,7 +16861,7 @@ using gfxmmu_lut580l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut581h_v1: LUT581H
 // Used by: GFXMMU
@@ -16891,7 +16891,7 @@ using gfxmmu_lut581l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut582h_v1: LUT582H
 // Used by: GFXMMU
@@ -16921,7 +16921,7 @@ using gfxmmu_lut582l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut583h_v1: LUT583H
 // Used by: GFXMMU
@@ -16951,7 +16951,7 @@ using gfxmmu_lut583l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut584h_v1: LUT584H
 // Used by: GFXMMU
@@ -16981,7 +16981,7 @@ using gfxmmu_lut584l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut585h_v1: LUT585H
 // Used by: GFXMMU
@@ -17011,7 +17011,7 @@ using gfxmmu_lut585l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut586h_v1: LUT586H
 // Used by: GFXMMU
@@ -17041,7 +17041,7 @@ using gfxmmu_lut586l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut587h_v1: LUT587H
 // Used by: GFXMMU
@@ -17071,7 +17071,7 @@ using gfxmmu_lut587l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut588h_v1: LUT588H
 // Used by: GFXMMU
@@ -17101,7 +17101,7 @@ using gfxmmu_lut588l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut589h_v1: LUT589H
 // Used by: GFXMMU
@@ -17131,7 +17131,7 @@ using gfxmmu_lut589l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut58h_v1: LUT58H
 // Used by: GFXMMU
@@ -17161,7 +17161,7 @@ using gfxmmu_lut58l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut590h_v1: LUT590H
 // Used by: GFXMMU
@@ -17191,7 +17191,7 @@ using gfxmmu_lut590l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut591h_v1: LUT591H
 // Used by: GFXMMU
@@ -17221,7 +17221,7 @@ using gfxmmu_lut591l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut592h_v1: LUT592H
 // Used by: GFXMMU
@@ -17251,7 +17251,7 @@ using gfxmmu_lut592l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut593h_v1: LUT593H
 // Used by: GFXMMU
@@ -17281,7 +17281,7 @@ using gfxmmu_lut593l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut594h_v1: LUT594H
 // Used by: GFXMMU
@@ -17311,7 +17311,7 @@ using gfxmmu_lut594l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut595h_v1: LUT595H
 // Used by: GFXMMU
@@ -17341,7 +17341,7 @@ using gfxmmu_lut595l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut596h_v1: LUT596H
 // Used by: GFXMMU
@@ -17371,7 +17371,7 @@ using gfxmmu_lut596l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut597h_v1: LUT597H
 // Used by: GFXMMU
@@ -17401,7 +17401,7 @@ using gfxmmu_lut597l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut598h_v1: LUT598H
 // Used by: GFXMMU
@@ -17431,7 +17431,7 @@ using gfxmmu_lut598l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut599h_v1: LUT599H
 // Used by: GFXMMU
@@ -17461,7 +17461,7 @@ using gfxmmu_lut599l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut59h_v1: LUT59H
 // Used by: GFXMMU
@@ -17491,7 +17491,7 @@ using gfxmmu_lut59l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut5h_v1: LUT5H
 // Used by: GFXMMU
@@ -17521,7 +17521,7 @@ using gfxmmu_lut5l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut600h_v1: LUT600H
 // Used by: GFXMMU
@@ -17551,7 +17551,7 @@ using gfxmmu_lut600l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut601h_v1: LUT601H
 // Used by: GFXMMU
@@ -17581,7 +17581,7 @@ using gfxmmu_lut601l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut602h_v1: LUT602H
 // Used by: GFXMMU
@@ -17611,7 +17611,7 @@ using gfxmmu_lut602l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut603h_v1: LUT603H
 // Used by: GFXMMU
@@ -17641,7 +17641,7 @@ using gfxmmu_lut603l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut604h_v1: LUT604H
 // Used by: GFXMMU
@@ -17671,7 +17671,7 @@ using gfxmmu_lut604l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut605h_v1: LUT605H
 // Used by: GFXMMU
@@ -17701,7 +17701,7 @@ using gfxmmu_lut605l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut606h_v1: LUT606H
 // Used by: GFXMMU
@@ -17731,7 +17731,7 @@ using gfxmmu_lut606l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut607h_v1: LUT607H
 // Used by: GFXMMU
@@ -17761,7 +17761,7 @@ using gfxmmu_lut607l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut608h_v1: LUT608H
 // Used by: GFXMMU
@@ -17791,7 +17791,7 @@ using gfxmmu_lut608l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut609h_v1: LUT609H
 // Used by: GFXMMU
@@ -17821,7 +17821,7 @@ using gfxmmu_lut609l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut60h_v1: LUT60H
 // Used by: GFXMMU
@@ -17851,7 +17851,7 @@ using gfxmmu_lut60l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut610h_v1: LUT610H
 // Used by: GFXMMU
@@ -17881,7 +17881,7 @@ using gfxmmu_lut610l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut611h_v1: LUT611H
 // Used by: GFXMMU
@@ -17911,7 +17911,7 @@ using gfxmmu_lut611l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut612h_v1: LUT612H
 // Used by: GFXMMU
@@ -17941,7 +17941,7 @@ using gfxmmu_lut612l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut613h_v1: LUT613H
 // Used by: GFXMMU
@@ -17971,7 +17971,7 @@ using gfxmmu_lut613l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut614h_v1: LUT614H
 // Used by: GFXMMU
@@ -18001,7 +18001,7 @@ using gfxmmu_lut614l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut615h_v1: LUT615H
 // Used by: GFXMMU
@@ -18031,7 +18031,7 @@ using gfxmmu_lut615l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut616h_v1: LUT616H
 // Used by: GFXMMU
@@ -18061,7 +18061,7 @@ using gfxmmu_lut616l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut617h_v1: LUT617H
 // Used by: GFXMMU
@@ -18091,7 +18091,7 @@ using gfxmmu_lut617l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut618h_v1: LUT618H
 // Used by: GFXMMU
@@ -18121,7 +18121,7 @@ using gfxmmu_lut618l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut619h_v1: LUT619H
 // Used by: GFXMMU
@@ -18151,7 +18151,7 @@ using gfxmmu_lut619l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut61h_v1: LUT61H
 // Used by: GFXMMU
@@ -18181,7 +18181,7 @@ using gfxmmu_lut61l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut620h_v1: LUT620H
 // Used by: GFXMMU
@@ -18211,7 +18211,7 @@ using gfxmmu_lut620l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut621h_v1: LUT621H
 // Used by: GFXMMU
@@ -18241,7 +18241,7 @@ using gfxmmu_lut621l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut622h_v1: LUT622H
 // Used by: GFXMMU
@@ -18271,7 +18271,7 @@ using gfxmmu_lut622l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut623h_v1: LUT623H
 // Used by: GFXMMU
@@ -18301,7 +18301,7 @@ using gfxmmu_lut623l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut624h_v1: LUT624H
 // Used by: GFXMMU
@@ -18331,7 +18331,7 @@ using gfxmmu_lut624l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut625h_v1: LUT625H
 // Used by: GFXMMU
@@ -18361,7 +18361,7 @@ using gfxmmu_lut625l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut626h_v1: LUT626H
 // Used by: GFXMMU
@@ -18391,7 +18391,7 @@ using gfxmmu_lut626l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut627h_v1: LUT627H
 // Used by: GFXMMU
@@ -18421,7 +18421,7 @@ using gfxmmu_lut627l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut628h_v1: LUT628H
 // Used by: GFXMMU
@@ -18451,7 +18451,7 @@ using gfxmmu_lut628l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut629h_v1: LUT629H
 // Used by: GFXMMU
@@ -18481,7 +18481,7 @@ using gfxmmu_lut629l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut62h_v1: LUT62H
 // Used by: GFXMMU
@@ -18511,7 +18511,7 @@ using gfxmmu_lut62l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut630h_v1: LUT630H
 // Used by: GFXMMU
@@ -18541,7 +18541,7 @@ using gfxmmu_lut630l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut631h_v1: LUT631H
 // Used by: GFXMMU
@@ -18571,7 +18571,7 @@ using gfxmmu_lut631l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut632h_v1: LUT632H
 // Used by: GFXMMU
@@ -18601,7 +18601,7 @@ using gfxmmu_lut632l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut633h_v1: LUT633H
 // Used by: GFXMMU
@@ -18631,7 +18631,7 @@ using gfxmmu_lut633l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut634h_v1: LUT634H
 // Used by: GFXMMU
@@ -18661,7 +18661,7 @@ using gfxmmu_lut634l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut635h_v1: LUT635H
 // Used by: GFXMMU
@@ -18691,7 +18691,7 @@ using gfxmmu_lut635l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut636h_v1: LUT636H
 // Used by: GFXMMU
@@ -18721,7 +18721,7 @@ using gfxmmu_lut636l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut637h_v1: LUT637H
 // Used by: GFXMMU
@@ -18751,7 +18751,7 @@ using gfxmmu_lut637l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut638h_v1: LUT638H
 // Used by: GFXMMU
@@ -18781,7 +18781,7 @@ using gfxmmu_lut638l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut639h_v1: LUT639H
 // Used by: GFXMMU
@@ -18811,7 +18811,7 @@ using gfxmmu_lut639l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut63h_v1: LUT63H
 // Used by: GFXMMU
@@ -18841,7 +18841,7 @@ using gfxmmu_lut63l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut640h_v1: LUT640H
 // Used by: GFXMMU
@@ -18871,7 +18871,7 @@ using gfxmmu_lut640l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut641h_v1: LUT641H
 // Used by: GFXMMU
@@ -18901,7 +18901,7 @@ using gfxmmu_lut641l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut642h_v1: LUT642H
 // Used by: GFXMMU
@@ -18931,7 +18931,7 @@ using gfxmmu_lut642l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut643h_v1: LUT643H
 // Used by: GFXMMU
@@ -18961,7 +18961,7 @@ using gfxmmu_lut643l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut644h_v1: LUT644H
 // Used by: GFXMMU
@@ -18991,7 +18991,7 @@ using gfxmmu_lut644l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut645h_v1: LUT645H
 // Used by: GFXMMU
@@ -19021,7 +19021,7 @@ using gfxmmu_lut645l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut646h_v1: LUT646H
 // Used by: GFXMMU
@@ -19051,7 +19051,7 @@ using gfxmmu_lut646l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut647h_v1: LUT647H
 // Used by: GFXMMU
@@ -19081,7 +19081,7 @@ using gfxmmu_lut647l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut648h_v1: LUT648H
 // Used by: GFXMMU
@@ -19111,7 +19111,7 @@ using gfxmmu_lut648l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut649h_v1: LUT649H
 // Used by: GFXMMU
@@ -19141,7 +19141,7 @@ using gfxmmu_lut649l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut64h_v1: LUT64H
 // Used by: GFXMMU
@@ -19171,7 +19171,7 @@ using gfxmmu_lut64l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut650h_v1: LUT650H
 // Used by: GFXMMU
@@ -19201,7 +19201,7 @@ using gfxmmu_lut650l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut651h_v1: LUT651H
 // Used by: GFXMMU
@@ -19231,7 +19231,7 @@ using gfxmmu_lut651l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut652h_v1: LUT652H
 // Used by: GFXMMU
@@ -19261,7 +19261,7 @@ using gfxmmu_lut652l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut653h_v1: LUT653H
 // Used by: GFXMMU
@@ -19291,7 +19291,7 @@ using gfxmmu_lut653l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut654h_v1: LUT654H
 // Used by: GFXMMU
@@ -19321,7 +19321,7 @@ using gfxmmu_lut654l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut655h_v1: LUT655H
 // Used by: GFXMMU
@@ -19351,7 +19351,7 @@ using gfxmmu_lut655l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut656h_v1: LUT656H
 // Used by: GFXMMU
@@ -19381,7 +19381,7 @@ using gfxmmu_lut656l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut657h_v1: LUT657H
 // Used by: GFXMMU
@@ -19411,7 +19411,7 @@ using gfxmmu_lut657l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut658h_v1: LUT658H
 // Used by: GFXMMU
@@ -19441,7 +19441,7 @@ using gfxmmu_lut658l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut659h_v1: LUT659H
 // Used by: GFXMMU
@@ -19471,7 +19471,7 @@ using gfxmmu_lut659l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut65h_v1: LUT65H
 // Used by: GFXMMU
@@ -19501,7 +19501,7 @@ using gfxmmu_lut65l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut660h_v1: LUT660H
 // Used by: GFXMMU
@@ -19531,7 +19531,7 @@ using gfxmmu_lut660l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut661h_v1: LUT661H
 // Used by: GFXMMU
@@ -19561,7 +19561,7 @@ using gfxmmu_lut661l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut662h_v1: LUT662H
 // Used by: GFXMMU
@@ -19591,7 +19591,7 @@ using gfxmmu_lut662l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut663h_v1: LUT663H
 // Used by: GFXMMU
@@ -19621,7 +19621,7 @@ using gfxmmu_lut663l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut664h_v1: LUT664H
 // Used by: GFXMMU
@@ -19651,7 +19651,7 @@ using gfxmmu_lut664l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut665h_v1: LUT665H
 // Used by: GFXMMU
@@ -19681,7 +19681,7 @@ using gfxmmu_lut665l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut666h_v1: LUT666H
 // Used by: GFXMMU
@@ -19711,7 +19711,7 @@ using gfxmmu_lut666l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut667h_v1: LUT667H
 // Used by: GFXMMU
@@ -19741,7 +19741,7 @@ using gfxmmu_lut667l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut668h_v1: LUT668H
 // Used by: GFXMMU
@@ -19771,7 +19771,7 @@ using gfxmmu_lut668l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut669h_v1: LUT669H
 // Used by: GFXMMU
@@ -19801,7 +19801,7 @@ using gfxmmu_lut669l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut66h_v1: LUT66H
 // Used by: GFXMMU
@@ -19831,7 +19831,7 @@ using gfxmmu_lut66l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut670h_v1: LUT670H
 // Used by: GFXMMU
@@ -19861,7 +19861,7 @@ using gfxmmu_lut670l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut671h_v1: LUT671H
 // Used by: GFXMMU
@@ -19891,7 +19891,7 @@ using gfxmmu_lut671l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut672h_v1: LUT672H
 // Used by: GFXMMU
@@ -19921,7 +19921,7 @@ using gfxmmu_lut672l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut673h_v1: LUT673H
 // Used by: GFXMMU
@@ -19951,7 +19951,7 @@ using gfxmmu_lut673l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut674h_v1: LUT674H
 // Used by: GFXMMU
@@ -19981,7 +19981,7 @@ using gfxmmu_lut674l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut675h_v1: LUT675H
 // Used by: GFXMMU
@@ -20011,7 +20011,7 @@ using gfxmmu_lut675l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut676h_v1: LUT676H
 // Used by: GFXMMU
@@ -20041,7 +20041,7 @@ using gfxmmu_lut676l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut677h_v1: LUT677H
 // Used by: GFXMMU
@@ -20071,7 +20071,7 @@ using gfxmmu_lut677l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut678h_v1: LUT678H
 // Used by: GFXMMU
@@ -20101,7 +20101,7 @@ using gfxmmu_lut678l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut679h_v1: LUT679H
 // Used by: GFXMMU
@@ -20131,7 +20131,7 @@ using gfxmmu_lut679l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut67h_v1: LUT67H
 // Used by: GFXMMU
@@ -20161,7 +20161,7 @@ using gfxmmu_lut67l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut680h_v1: LUT680H
 // Used by: GFXMMU
@@ -20191,7 +20191,7 @@ using gfxmmu_lut680l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut681h_v1: LUT681H
 // Used by: GFXMMU
@@ -20221,7 +20221,7 @@ using gfxmmu_lut681l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut682h_v1: LUT682H
 // Used by: GFXMMU
@@ -20251,7 +20251,7 @@ using gfxmmu_lut682l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut683h_v1: LUT683H
 // Used by: GFXMMU
@@ -20281,7 +20281,7 @@ using gfxmmu_lut683l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut684h_v1: LUT684H
 // Used by: GFXMMU
@@ -20311,7 +20311,7 @@ using gfxmmu_lut684l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut685h_v1: LUT685H
 // Used by: GFXMMU
@@ -20341,7 +20341,7 @@ using gfxmmu_lut685l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut686h_v1: LUT686H
 // Used by: GFXMMU
@@ -20371,7 +20371,7 @@ using gfxmmu_lut686l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut687h_v1: LUT687H
 // Used by: GFXMMU
@@ -20401,7 +20401,7 @@ using gfxmmu_lut687l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut688h_v1: LUT688H
 // Used by: GFXMMU
@@ -20431,7 +20431,7 @@ using gfxmmu_lut688l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut689h_v1: LUT689H
 // Used by: GFXMMU
@@ -20461,7 +20461,7 @@ using gfxmmu_lut689l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut68h_v1: LUT68H
 // Used by: GFXMMU
@@ -20491,7 +20491,7 @@ using gfxmmu_lut68l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut690h_v1: LUT690H
 // Used by: GFXMMU
@@ -20521,7 +20521,7 @@ using gfxmmu_lut690l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut691h_v1: LUT691H
 // Used by: GFXMMU
@@ -20551,7 +20551,7 @@ using gfxmmu_lut691l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut692h_v1: LUT692H
 // Used by: GFXMMU
@@ -20581,7 +20581,7 @@ using gfxmmu_lut692l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut693h_v1: LUT693H
 // Used by: GFXMMU
@@ -20611,7 +20611,7 @@ using gfxmmu_lut693l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut694h_v1: LUT694H
 // Used by: GFXMMU
@@ -20641,7 +20641,7 @@ using gfxmmu_lut694l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut695h_v1: LUT695H
 // Used by: GFXMMU
@@ -20671,7 +20671,7 @@ using gfxmmu_lut695l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut696h_v1: LUT696H
 // Used by: GFXMMU
@@ -20701,7 +20701,7 @@ using gfxmmu_lut696l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut697h_v1: LUT697H
 // Used by: GFXMMU
@@ -20731,7 +20731,7 @@ using gfxmmu_lut697l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut698h_v1: LUT698H
 // Used by: GFXMMU
@@ -20761,7 +20761,7 @@ using gfxmmu_lut698l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut699h_v1: LUT699H
 // Used by: GFXMMU
@@ -20791,7 +20791,7 @@ using gfxmmu_lut699l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut69h_v1: LUT69H
 // Used by: GFXMMU
@@ -20821,7 +20821,7 @@ using gfxmmu_lut69l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut6h_v1: LUT6H
 // Used by: GFXMMU
@@ -20851,7 +20851,7 @@ using gfxmmu_lut6l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut700h_v1: LUT700H
 // Used by: GFXMMU
@@ -20881,7 +20881,7 @@ using gfxmmu_lut700l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut701h_v1: LUT701H
 // Used by: GFXMMU
@@ -20911,7 +20911,7 @@ using gfxmmu_lut701l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut702h_v1: LUT702H
 // Used by: GFXMMU
@@ -20941,7 +20941,7 @@ using gfxmmu_lut702l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut703h_v1: LUT703H
 // Used by: GFXMMU
@@ -20971,7 +20971,7 @@ using gfxmmu_lut703l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut704h_v1: LUT704H
 // Used by: GFXMMU
@@ -21001,7 +21001,7 @@ using gfxmmu_lut704l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut705h_v1: LUT705H
 // Used by: GFXMMU
@@ -21031,7 +21031,7 @@ using gfxmmu_lut705l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut706h_v1: LUT706H
 // Used by: GFXMMU
@@ -21061,7 +21061,7 @@ using gfxmmu_lut706l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut707h_v1: LUT707H
 // Used by: GFXMMU
@@ -21091,7 +21091,7 @@ using gfxmmu_lut707l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut708h_v1: LUT708H
 // Used by: GFXMMU
@@ -21121,7 +21121,7 @@ using gfxmmu_lut708l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut709h_v1: LUT709H
 // Used by: GFXMMU
@@ -21151,7 +21151,7 @@ using gfxmmu_lut709l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut70h_v1: LUT70H
 // Used by: GFXMMU
@@ -21181,7 +21181,7 @@ using gfxmmu_lut70l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut710h_v1: LUT710H
 // Used by: GFXMMU
@@ -21211,7 +21211,7 @@ using gfxmmu_lut710l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut711h_v1: LUT711H
 // Used by: GFXMMU
@@ -21241,7 +21241,7 @@ using gfxmmu_lut711l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut712h_v1: LUT712H
 // Used by: GFXMMU
@@ -21271,7 +21271,7 @@ using gfxmmu_lut712l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut713h_v1: LUT713H
 // Used by: GFXMMU
@@ -21301,7 +21301,7 @@ using gfxmmu_lut713l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut714h_v1: LUT714H
 // Used by: GFXMMU
@@ -21331,7 +21331,7 @@ using gfxmmu_lut714l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut715h_v1: LUT715H
 // Used by: GFXMMU
@@ -21361,7 +21361,7 @@ using gfxmmu_lut715l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut716h_v1: LUT716H
 // Used by: GFXMMU
@@ -21391,7 +21391,7 @@ using gfxmmu_lut716l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut717h_v1: LUT717H
 // Used by: GFXMMU
@@ -21421,7 +21421,7 @@ using gfxmmu_lut717l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut718h_v1: LUT718H
 // Used by: GFXMMU
@@ -21451,7 +21451,7 @@ using gfxmmu_lut718l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut719h_v1: LUT719H
 // Used by: GFXMMU
@@ -21481,7 +21481,7 @@ using gfxmmu_lut719l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut71h_v1: LUT71H
 // Used by: GFXMMU
@@ -21511,7 +21511,7 @@ using gfxmmu_lut71l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut720h_v1: LUT720H
 // Used by: GFXMMU
@@ -21541,7 +21541,7 @@ using gfxmmu_lut720l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut721h_v1: LUT721H
 // Used by: GFXMMU
@@ -21571,7 +21571,7 @@ using gfxmmu_lut721l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut722h_v1: LUT722H
 // Used by: GFXMMU
@@ -21601,7 +21601,7 @@ using gfxmmu_lut722l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut723h_v1: LUT723H
 // Used by: GFXMMU
@@ -21631,7 +21631,7 @@ using gfxmmu_lut723l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut724h_v1: LUT724H
 // Used by: GFXMMU
@@ -21661,7 +21661,7 @@ using gfxmmu_lut724l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut725h_v1: LUT725H
 // Used by: GFXMMU
@@ -21691,7 +21691,7 @@ using gfxmmu_lut725l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut726h_v1: LUT726H
 // Used by: GFXMMU
@@ -21721,7 +21721,7 @@ using gfxmmu_lut726l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut727h_v1: LUT727H
 // Used by: GFXMMU
@@ -21751,7 +21751,7 @@ using gfxmmu_lut727l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut728h_v1: LUT728H
 // Used by: GFXMMU
@@ -21781,7 +21781,7 @@ using gfxmmu_lut728l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut729h_v1: LUT729H
 // Used by: GFXMMU
@@ -21811,7 +21811,7 @@ using gfxmmu_lut729l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut72h_v1: LUT72H
 // Used by: GFXMMU
@@ -21841,7 +21841,7 @@ using gfxmmu_lut72l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut730h_v1: LUT730H
 // Used by: GFXMMU
@@ -21871,7 +21871,7 @@ using gfxmmu_lut730l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut731h_v1: LUT731H
 // Used by: GFXMMU
@@ -21901,7 +21901,7 @@ using gfxmmu_lut731l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut732h_v1: LUT732H
 // Used by: GFXMMU
@@ -21931,7 +21931,7 @@ using gfxmmu_lut732l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut733h_v1: LUT733H
 // Used by: GFXMMU
@@ -21961,7 +21961,7 @@ using gfxmmu_lut733l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut734h_v1: LUT734H
 // Used by: GFXMMU
@@ -21991,7 +21991,7 @@ using gfxmmu_lut734l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut735h_v1: LUT735H
 // Used by: GFXMMU
@@ -22021,7 +22021,7 @@ using gfxmmu_lut735l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut736h_v1: LUT736H
 // Used by: GFXMMU
@@ -22051,7 +22051,7 @@ using gfxmmu_lut736l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut737h_v1: LUT737H
 // Used by: GFXMMU
@@ -22081,7 +22081,7 @@ using gfxmmu_lut737l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut738h_v1: LUT738H
 // Used by: GFXMMU
@@ -22111,7 +22111,7 @@ using gfxmmu_lut738l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut739h_v1: LUT739H
 // Used by: GFXMMU
@@ -22141,7 +22141,7 @@ using gfxmmu_lut739l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut73h_v1: LUT73H
 // Used by: GFXMMU
@@ -22171,7 +22171,7 @@ using gfxmmu_lut73l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut740h_v1: LUT740H
 // Used by: GFXMMU
@@ -22201,7 +22201,7 @@ using gfxmmu_lut740l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut741h_v1: LUT741H
 // Used by: GFXMMU
@@ -22231,7 +22231,7 @@ using gfxmmu_lut741l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut742h_v1: LUT742H
 // Used by: GFXMMU
@@ -22261,7 +22261,7 @@ using gfxmmu_lut742l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut743h_v1: LUT743H
 // Used by: GFXMMU
@@ -22291,7 +22291,7 @@ using gfxmmu_lut743l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut744h_v1: LUT744H
 // Used by: GFXMMU
@@ -22321,7 +22321,7 @@ using gfxmmu_lut744l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut745h_v1: LUT745H
 // Used by: GFXMMU
@@ -22351,7 +22351,7 @@ using gfxmmu_lut745l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut746h_v1: LUT746H
 // Used by: GFXMMU
@@ -22381,7 +22381,7 @@ using gfxmmu_lut746l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut747h_v1: LUT747H
 // Used by: GFXMMU
@@ -22411,7 +22411,7 @@ using gfxmmu_lut747l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut748h_v1: LUT748H
 // Used by: GFXMMU
@@ -22441,7 +22441,7 @@ using gfxmmu_lut748l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut749h_v1: LUT749H
 // Used by: GFXMMU
@@ -22471,7 +22471,7 @@ using gfxmmu_lut749l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut74h_v1: LUT74H
 // Used by: GFXMMU
@@ -22501,7 +22501,7 @@ using gfxmmu_lut74l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut750h_v1: LUT750H
 // Used by: GFXMMU
@@ -22531,7 +22531,7 @@ using gfxmmu_lut750l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut751h_v1: LUT751H
 // Used by: GFXMMU
@@ -22561,7 +22561,7 @@ using gfxmmu_lut751l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut752h_v1: LUT752H
 // Used by: GFXMMU
@@ -22591,7 +22591,7 @@ using gfxmmu_lut752l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut753h_v1: LUT753H
 // Used by: GFXMMU
@@ -22621,7 +22621,7 @@ using gfxmmu_lut753l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut754h_v1: LUT754H
 // Used by: GFXMMU
@@ -22651,7 +22651,7 @@ using gfxmmu_lut754l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut755h_v1: LUT755H
 // Used by: GFXMMU
@@ -22681,7 +22681,7 @@ using gfxmmu_lut755l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut756h_v1: LUT756H
 // Used by: GFXMMU
@@ -22711,7 +22711,7 @@ using gfxmmu_lut756l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut757h_v1: LUT757H
 // Used by: GFXMMU
@@ -22741,7 +22741,7 @@ using gfxmmu_lut757l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut758h_v1: LUT758H
 // Used by: GFXMMU
@@ -22771,7 +22771,7 @@ using gfxmmu_lut758l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut759h_v1: LUT759H
 // Used by: GFXMMU
@@ -22801,7 +22801,7 @@ using gfxmmu_lut759l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut75h_v1: LUT75H
 // Used by: GFXMMU
@@ -22831,7 +22831,7 @@ using gfxmmu_lut75l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut760h_v1: LUT760H
 // Used by: GFXMMU
@@ -22861,7 +22861,7 @@ using gfxmmu_lut760l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut761h_v1: LUT761H
 // Used by: GFXMMU
@@ -22891,7 +22891,7 @@ using gfxmmu_lut761l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut762h_v1: LUT762H
 // Used by: GFXMMU
@@ -22921,7 +22921,7 @@ using gfxmmu_lut762l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut763h_v1: LUT763H
 // Used by: GFXMMU
@@ -22951,7 +22951,7 @@ using gfxmmu_lut763l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut764h_v1: LUT764H
 // Used by: GFXMMU
@@ -22981,7 +22981,7 @@ using gfxmmu_lut764l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut765h_v1: LUT765H
 // Used by: GFXMMU
@@ -23011,7 +23011,7 @@ using gfxmmu_lut765l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut766h_v1: LUT766H
 // Used by: GFXMMU
@@ -23041,7 +23041,7 @@ using gfxmmu_lut766l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut767h_v1: LUT767H
 // Used by: GFXMMU
@@ -23071,7 +23071,7 @@ using gfxmmu_lut767l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut768h_v1: LUT768H
 // Used by: GFXMMU
@@ -23101,7 +23101,7 @@ using gfxmmu_lut768l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut769h_v1: LUT769H
 // Used by: GFXMMU
@@ -23131,7 +23131,7 @@ using gfxmmu_lut769l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut76h_v1: LUT76H
 // Used by: GFXMMU
@@ -23161,7 +23161,7 @@ using gfxmmu_lut76l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut770h_v1: LUT770H
 // Used by: GFXMMU
@@ -23191,7 +23191,7 @@ using gfxmmu_lut770l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut771h_v1: LUT771H
 // Used by: GFXMMU
@@ -23221,7 +23221,7 @@ using gfxmmu_lut771l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut772h_v1: LUT772H
 // Used by: GFXMMU
@@ -23251,7 +23251,7 @@ using gfxmmu_lut772l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut773h_v1: LUT773H
 // Used by: GFXMMU
@@ -23281,7 +23281,7 @@ using gfxmmu_lut773l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut774h_v1: LUT774H
 // Used by: GFXMMU
@@ -23311,7 +23311,7 @@ using gfxmmu_lut774l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut775h_v1: LUT775H
 // Used by: GFXMMU
@@ -23341,7 +23341,7 @@ using gfxmmu_lut775l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut776h_v1: LUT776H
 // Used by: GFXMMU
@@ -23371,7 +23371,7 @@ using gfxmmu_lut776l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut777h_v1: LUT777H
 // Used by: GFXMMU
@@ -23401,7 +23401,7 @@ using gfxmmu_lut777l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut778h_v1: LUT778H
 // Used by: GFXMMU
@@ -23431,7 +23431,7 @@ using gfxmmu_lut778l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut779h_v1: LUT779H
 // Used by: GFXMMU
@@ -23461,7 +23461,7 @@ using gfxmmu_lut779l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut77h_v1: LUT77H
 // Used by: GFXMMU
@@ -23491,7 +23491,7 @@ using gfxmmu_lut77l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut780h_v1: LUT780H
 // Used by: GFXMMU
@@ -23521,7 +23521,7 @@ using gfxmmu_lut780l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut781h_v1: LUT781H
 // Used by: GFXMMU
@@ -23551,7 +23551,7 @@ using gfxmmu_lut781l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut782h_v1: LUT782H
 // Used by: GFXMMU
@@ -23581,7 +23581,7 @@ using gfxmmu_lut782l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut783h_v1: LUT783H
 // Used by: GFXMMU
@@ -23611,7 +23611,7 @@ using gfxmmu_lut783l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut784h_v1: LUT784H
 // Used by: GFXMMU
@@ -23641,7 +23641,7 @@ using gfxmmu_lut784l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut785h_v1: LUT785H
 // Used by: GFXMMU
@@ -23671,7 +23671,7 @@ using gfxmmu_lut785l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut786h_v1: LUT786H
 // Used by: GFXMMU
@@ -23701,7 +23701,7 @@ using gfxmmu_lut786l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut787h_v1: LUT787H
 // Used by: GFXMMU
@@ -23731,7 +23731,7 @@ using gfxmmu_lut787l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut788h_v1: LUT788H
 // Used by: GFXMMU
@@ -23761,7 +23761,7 @@ using gfxmmu_lut788l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut789h_v1: LUT789H
 // Used by: GFXMMU
@@ -23791,7 +23791,7 @@ using gfxmmu_lut789l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut78h_v1: LUT78H
 // Used by: GFXMMU
@@ -23821,7 +23821,7 @@ using gfxmmu_lut78l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut790h_v1: LUT790H
 // Used by: GFXMMU
@@ -23851,7 +23851,7 @@ using gfxmmu_lut790l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut791h_v1: LUT791H
 // Used by: GFXMMU
@@ -23881,7 +23881,7 @@ using gfxmmu_lut791l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut792h_v1: LUT792H
 // Used by: GFXMMU
@@ -23911,7 +23911,7 @@ using gfxmmu_lut792l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut793h_v1: LUT793H
 // Used by: GFXMMU
@@ -23941,7 +23941,7 @@ using gfxmmu_lut793l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut794h_v1: LUT794H
 // Used by: GFXMMU
@@ -23971,7 +23971,7 @@ using gfxmmu_lut794l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut795h_v1: LUT795H
 // Used by: GFXMMU
@@ -24001,7 +24001,7 @@ using gfxmmu_lut795l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut796h_v1: LUT796H
 // Used by: GFXMMU
@@ -24031,7 +24031,7 @@ using gfxmmu_lut796l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut797h_v1: LUT797H
 // Used by: GFXMMU
@@ -24061,7 +24061,7 @@ using gfxmmu_lut797l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut798h_v1: LUT798H
 // Used by: GFXMMU
@@ -24091,7 +24091,7 @@ using gfxmmu_lut798l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut799h_v1: LUT799H
 // Used by: GFXMMU
@@ -24121,7 +24121,7 @@ using gfxmmu_lut799l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut79h_v1: LUT79H
 // Used by: GFXMMU
@@ -24151,7 +24151,7 @@ using gfxmmu_lut79l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut7h_v1: LUT7H
 // Used by: GFXMMU
@@ -24181,7 +24181,7 @@ using gfxmmu_lut7l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut800h_v1: LUT800H
 // Used by: GFXMMU
@@ -24211,7 +24211,7 @@ using gfxmmu_lut800l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut801h_v1: LUT801H
 // Used by: GFXMMU
@@ -24241,7 +24241,7 @@ using gfxmmu_lut801l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut802h_v1: LUT802H
 // Used by: GFXMMU
@@ -24271,7 +24271,7 @@ using gfxmmu_lut802l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut803h_v1: LUT803H
 // Used by: GFXMMU
@@ -24301,7 +24301,7 @@ using gfxmmu_lut803l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut804h_v1: LUT804H
 // Used by: GFXMMU
@@ -24331,7 +24331,7 @@ using gfxmmu_lut804l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut805h_v1: LUT805H
 // Used by: GFXMMU
@@ -24361,7 +24361,7 @@ using gfxmmu_lut805l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut806h_v1: LUT806H
 // Used by: GFXMMU
@@ -24391,7 +24391,7 @@ using gfxmmu_lut806l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut807h_v1: LUT807H
 // Used by: GFXMMU
@@ -24421,7 +24421,7 @@ using gfxmmu_lut807l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut808h_v1: LUT808H
 // Used by: GFXMMU
@@ -24451,7 +24451,7 @@ using gfxmmu_lut808l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut809h_v1: LUT809H
 // Used by: GFXMMU
@@ -24481,7 +24481,7 @@ using gfxmmu_lut809l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut80h_v1: LUT80H
 // Used by: GFXMMU
@@ -24511,7 +24511,7 @@ using gfxmmu_lut80l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut810h_v1: LUT810H
 // Used by: GFXMMU
@@ -24541,7 +24541,7 @@ using gfxmmu_lut810l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut811h_v1: LUT811H
 // Used by: GFXMMU
@@ -24571,7 +24571,7 @@ using gfxmmu_lut811l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut812h_v1: LUT812H
 // Used by: GFXMMU
@@ -24601,7 +24601,7 @@ using gfxmmu_lut812l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut813h_v1: LUT813H
 // Used by: GFXMMU
@@ -24631,7 +24631,7 @@ using gfxmmu_lut813l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut814h_v1: LUT814H
 // Used by: GFXMMU
@@ -24661,7 +24661,7 @@ using gfxmmu_lut814l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut815h_v1: LUT815H
 // Used by: GFXMMU
@@ -24691,7 +24691,7 @@ using gfxmmu_lut815l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut816h_v1: LUT816H
 // Used by: GFXMMU
@@ -24721,7 +24721,7 @@ using gfxmmu_lut816l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut817h_v1: LUT817H
 // Used by: GFXMMU
@@ -24751,7 +24751,7 @@ using gfxmmu_lut817l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut818h_v1: LUT818H
 // Used by: GFXMMU
@@ -24781,7 +24781,7 @@ using gfxmmu_lut818l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut819h_v1: LUT819H
 // Used by: GFXMMU
@@ -24811,7 +24811,7 @@ using gfxmmu_lut819l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut81h_v1: LUT81H
 // Used by: GFXMMU
@@ -24841,7 +24841,7 @@ using gfxmmu_lut81l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut820h_v1: LUT820H
 // Used by: GFXMMU
@@ -24871,7 +24871,7 @@ using gfxmmu_lut820l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut821h_v1: LUT821H
 // Used by: GFXMMU
@@ -24901,7 +24901,7 @@ using gfxmmu_lut821l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut822h_v1: LUT822H
 // Used by: GFXMMU
@@ -24931,7 +24931,7 @@ using gfxmmu_lut822l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut823h_v1: LUT823H
 // Used by: GFXMMU
@@ -24961,7 +24961,7 @@ using gfxmmu_lut823l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut824h_v1: LUT824H
 // Used by: GFXMMU
@@ -24991,7 +24991,7 @@ using gfxmmu_lut824l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut825h_v1: LUT825H
 // Used by: GFXMMU
@@ -25021,7 +25021,7 @@ using gfxmmu_lut825l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut826h_v1: LUT826H
 // Used by: GFXMMU
@@ -25051,7 +25051,7 @@ using gfxmmu_lut826l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut827h_v1: LUT827H
 // Used by: GFXMMU
@@ -25081,7 +25081,7 @@ using gfxmmu_lut827l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut828h_v1: LUT828H
 // Used by: GFXMMU
@@ -25111,7 +25111,7 @@ using gfxmmu_lut828l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut829h_v1: LUT829H
 // Used by: GFXMMU
@@ -25141,7 +25141,7 @@ using gfxmmu_lut829l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut82h_v1: LUT82H
 // Used by: GFXMMU
@@ -25171,7 +25171,7 @@ using gfxmmu_lut82l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut830h_v1: LUT830H
 // Used by: GFXMMU
@@ -25201,7 +25201,7 @@ using gfxmmu_lut830l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut831h_v1: LUT831H
 // Used by: GFXMMU
@@ -25231,7 +25231,7 @@ using gfxmmu_lut831l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut832h_v1: LUT832H
 // Used by: GFXMMU
@@ -25261,7 +25261,7 @@ using gfxmmu_lut832l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut833h_v1: LUT833H
 // Used by: GFXMMU
@@ -25291,7 +25291,7 @@ using gfxmmu_lut833l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut834h_v1: LUT834H
 // Used by: GFXMMU
@@ -25321,7 +25321,7 @@ using gfxmmu_lut834l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut835h_v1: LUT835H
 // Used by: GFXMMU
@@ -25351,7 +25351,7 @@ using gfxmmu_lut835l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut836h_v1: LUT836H
 // Used by: GFXMMU
@@ -25381,7 +25381,7 @@ using gfxmmu_lut836l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut837h_v1: LUT837H
 // Used by: GFXMMU
@@ -25411,7 +25411,7 @@ using gfxmmu_lut837l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut838h_v1: LUT838H
 // Used by: GFXMMU
@@ -25441,7 +25441,7 @@ using gfxmmu_lut838l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut839h_v1: LUT839H
 // Used by: GFXMMU
@@ -25471,7 +25471,7 @@ using gfxmmu_lut839l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut83h_v1: LUT83H
 // Used by: GFXMMU
@@ -25501,7 +25501,7 @@ using gfxmmu_lut83l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut840h_v1: LUT840H
 // Used by: GFXMMU
@@ -25531,7 +25531,7 @@ using gfxmmu_lut840l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut841h_v1: LUT841H
 // Used by: GFXMMU
@@ -25561,7 +25561,7 @@ using gfxmmu_lut841l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut842h_v1: LUT842H
 // Used by: GFXMMU
@@ -25591,7 +25591,7 @@ using gfxmmu_lut842l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut843h_v1: LUT843H
 // Used by: GFXMMU
@@ -25621,7 +25621,7 @@ using gfxmmu_lut843l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut844h_v1: LUT844H
 // Used by: GFXMMU
@@ -25651,7 +25651,7 @@ using gfxmmu_lut844l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut845h_v1: LUT845H
 // Used by: GFXMMU
@@ -25681,7 +25681,7 @@ using gfxmmu_lut845l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut846h_v1: LUT846H
 // Used by: GFXMMU
@@ -25711,7 +25711,7 @@ using gfxmmu_lut846l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut847h_v1: LUT847H
 // Used by: GFXMMU
@@ -25741,7 +25741,7 @@ using gfxmmu_lut847l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut848h_v1: LUT848H
 // Used by: GFXMMU
@@ -25771,7 +25771,7 @@ using gfxmmu_lut848l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut849h_v1: LUT849H
 // Used by: GFXMMU
@@ -25801,7 +25801,7 @@ using gfxmmu_lut849l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut84h_v1: LUT84H
 // Used by: GFXMMU
@@ -25831,7 +25831,7 @@ using gfxmmu_lut84l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut850h_v1: LUT850H
 // Used by: GFXMMU
@@ -25861,7 +25861,7 @@ using gfxmmu_lut850l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut851h_v1: LUT851H
 // Used by: GFXMMU
@@ -25891,7 +25891,7 @@ using gfxmmu_lut851l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut852h_v1: LUT852H
 // Used by: GFXMMU
@@ -25921,7 +25921,7 @@ using gfxmmu_lut852l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut853h_v1: LUT853H
 // Used by: GFXMMU
@@ -25951,7 +25951,7 @@ using gfxmmu_lut853l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut854h_v1: LUT854H
 // Used by: GFXMMU
@@ -25981,7 +25981,7 @@ using gfxmmu_lut854l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut855h_v1: LUT855H
 // Used by: GFXMMU
@@ -26011,7 +26011,7 @@ using gfxmmu_lut855l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut856h_v1: LUT856H
 // Used by: GFXMMU
@@ -26041,7 +26041,7 @@ using gfxmmu_lut856l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut857h_v1: LUT857H
 // Used by: GFXMMU
@@ -26071,7 +26071,7 @@ using gfxmmu_lut857l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut858h_v1: LUT858H
 // Used by: GFXMMU
@@ -26101,7 +26101,7 @@ using gfxmmu_lut858l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut859h_v1: LUT859H
 // Used by: GFXMMU
@@ -26131,7 +26131,7 @@ using gfxmmu_lut859l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut85h_v1: LUT85H
 // Used by: GFXMMU
@@ -26161,7 +26161,7 @@ using gfxmmu_lut85l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut860h_v1: LUT860H
 // Used by: GFXMMU
@@ -26191,7 +26191,7 @@ using gfxmmu_lut860l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut861h_v1: LUT861H
 // Used by: GFXMMU
@@ -26221,7 +26221,7 @@ using gfxmmu_lut861l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut862h_v1: LUT862H
 // Used by: GFXMMU
@@ -26251,7 +26251,7 @@ using gfxmmu_lut862l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut863h_v1: LUT863H
 // Used by: GFXMMU
@@ -26281,7 +26281,7 @@ using gfxmmu_lut863l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut864h_v1: LUT864H
 // Used by: GFXMMU
@@ -26311,7 +26311,7 @@ using gfxmmu_lut864l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut865h_v1: LUT865H
 // Used by: GFXMMU
@@ -26341,7 +26341,7 @@ using gfxmmu_lut865l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut866h_v1: LUT866H
 // Used by: GFXMMU
@@ -26371,7 +26371,7 @@ using gfxmmu_lut866l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut867h_v1: LUT867H
 // Used by: GFXMMU
@@ -26401,7 +26401,7 @@ using gfxmmu_lut867l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut868h_v1: LUT868H
 // Used by: GFXMMU
@@ -26431,7 +26431,7 @@ using gfxmmu_lut868l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut869h_v1: LUT869H
 // Used by: GFXMMU
@@ -26461,7 +26461,7 @@ using gfxmmu_lut869l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut86h_v1: LUT86H
 // Used by: GFXMMU
@@ -26491,7 +26491,7 @@ using gfxmmu_lut86l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut870h_v1: LUT870H
 // Used by: GFXMMU
@@ -26521,7 +26521,7 @@ using gfxmmu_lut870l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut871h_v1: LUT871H
 // Used by: GFXMMU
@@ -26551,7 +26551,7 @@ using gfxmmu_lut871l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut872h_v1: LUT872H
 // Used by: GFXMMU
@@ -26581,7 +26581,7 @@ using gfxmmu_lut872l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut873h_v1: LUT873H
 // Used by: GFXMMU
@@ -26611,7 +26611,7 @@ using gfxmmu_lut873l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut874h_v1: LUT874H
 // Used by: GFXMMU
@@ -26641,7 +26641,7 @@ using gfxmmu_lut874l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut875h_v1: LUT875H
 // Used by: GFXMMU
@@ -26671,7 +26671,7 @@ using gfxmmu_lut875l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut876h_v1: LUT876H
 // Used by: GFXMMU
@@ -26701,7 +26701,7 @@ using gfxmmu_lut876l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut877h_v1: LUT877H
 // Used by: GFXMMU
@@ -26731,7 +26731,7 @@ using gfxmmu_lut877l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut878h_v1: LUT878H
 // Used by: GFXMMU
@@ -26761,7 +26761,7 @@ using gfxmmu_lut878l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut879h_v1: LUT879H
 // Used by: GFXMMU
@@ -26791,7 +26791,7 @@ using gfxmmu_lut879l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut87h_v1: LUT87H
 // Used by: GFXMMU
@@ -26821,7 +26821,7 @@ using gfxmmu_lut87l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut880h_v1: LUT880H
 // Used by: GFXMMU
@@ -26851,7 +26851,7 @@ using gfxmmu_lut880l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut881h_v1: LUT881H
 // Used by: GFXMMU
@@ -26881,7 +26881,7 @@ using gfxmmu_lut881l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut882h_v1: LUT882H
 // Used by: GFXMMU
@@ -26911,7 +26911,7 @@ using gfxmmu_lut882l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut883h_v1: LUT883H
 // Used by: GFXMMU
@@ -26941,7 +26941,7 @@ using gfxmmu_lut883l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut884h_v1: LUT884H
 // Used by: GFXMMU
@@ -26971,7 +26971,7 @@ using gfxmmu_lut884l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut885h_v1: LUT885H
 // Used by: GFXMMU
@@ -27001,7 +27001,7 @@ using gfxmmu_lut885l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut886h_v1: LUT886H
 // Used by: GFXMMU
@@ -27031,7 +27031,7 @@ using gfxmmu_lut886l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut887h_v1: LUT887H
 // Used by: GFXMMU
@@ -27061,7 +27061,7 @@ using gfxmmu_lut887l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut888h_v1: LUT888H
 // Used by: GFXMMU
@@ -27091,7 +27091,7 @@ using gfxmmu_lut888l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut889h_v1: LUT889H
 // Used by: GFXMMU
@@ -27121,7 +27121,7 @@ using gfxmmu_lut889l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut88h_v1: LUT88H
 // Used by: GFXMMU
@@ -27151,7 +27151,7 @@ using gfxmmu_lut88l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut890h_v1: LUT890H
 // Used by: GFXMMU
@@ -27181,7 +27181,7 @@ using gfxmmu_lut890l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut891h_v1: LUT891H
 // Used by: GFXMMU
@@ -27211,7 +27211,7 @@ using gfxmmu_lut891l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut892h_v1: LUT892H
 // Used by: GFXMMU
@@ -27241,7 +27241,7 @@ using gfxmmu_lut892l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut893h_v1: LUT893H
 // Used by: GFXMMU
@@ -27271,7 +27271,7 @@ using gfxmmu_lut893l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut894h_v1: LUT894H
 // Used by: GFXMMU
@@ -27301,7 +27301,7 @@ using gfxmmu_lut894l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut895h_v1: LUT895H
 // Used by: GFXMMU
@@ -27331,7 +27331,7 @@ using gfxmmu_lut895l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut896h_v1: LUT896H
 // Used by: GFXMMU
@@ -27361,7 +27361,7 @@ using gfxmmu_lut896l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut897h_v1: LUT897H
 // Used by: GFXMMU
@@ -27391,7 +27391,7 @@ using gfxmmu_lut897l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut898h_v1: LUT898H
 // Used by: GFXMMU
@@ -27421,7 +27421,7 @@ using gfxmmu_lut898l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut899h_v1: LUT899H
 // Used by: GFXMMU
@@ -27451,7 +27451,7 @@ using gfxmmu_lut899l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut89h_v1: LUT89H
 // Used by: GFXMMU
@@ -27481,7 +27481,7 @@ using gfxmmu_lut89l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut8h_v1: LUT8H
 // Used by: GFXMMU
@@ -27511,7 +27511,7 @@ using gfxmmu_lut8l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut900h_v1: LUT900H
 // Used by: GFXMMU
@@ -27541,7 +27541,7 @@ using gfxmmu_lut900l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut901h_v1: LUT901H
 // Used by: GFXMMU
@@ -27571,7 +27571,7 @@ using gfxmmu_lut901l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut902h_v1: LUT902H
 // Used by: GFXMMU
@@ -27601,7 +27601,7 @@ using gfxmmu_lut902l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut903h_v1: LUT903H
 // Used by: GFXMMU
@@ -27631,7 +27631,7 @@ using gfxmmu_lut903l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut904h_v1: LUT904H
 // Used by: GFXMMU
@@ -27661,7 +27661,7 @@ using gfxmmu_lut904l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut905h_v1: LUT905H
 // Used by: GFXMMU
@@ -27691,7 +27691,7 @@ using gfxmmu_lut905l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut906h_v1: LUT906H
 // Used by: GFXMMU
@@ -27721,7 +27721,7 @@ using gfxmmu_lut906l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut907h_v1: LUT907H
 // Used by: GFXMMU
@@ -27751,7 +27751,7 @@ using gfxmmu_lut907l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut908h_v1: LUT908H
 // Used by: GFXMMU
@@ -27781,7 +27781,7 @@ using gfxmmu_lut908l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut909h_v1: LUT909H
 // Used by: GFXMMU
@@ -27811,7 +27811,7 @@ using gfxmmu_lut909l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut90h_v1: LUT90H
 // Used by: GFXMMU
@@ -27841,7 +27841,7 @@ using gfxmmu_lut90l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut910h_v1: LUT910H
 // Used by: GFXMMU
@@ -27871,7 +27871,7 @@ using gfxmmu_lut910l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut911h_v1: LUT911H
 // Used by: GFXMMU
@@ -27901,7 +27901,7 @@ using gfxmmu_lut911l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut912h_v1: LUT912H
 // Used by: GFXMMU
@@ -27931,7 +27931,7 @@ using gfxmmu_lut912l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut913h_v1: LUT913H
 // Used by: GFXMMU
@@ -27961,7 +27961,7 @@ using gfxmmu_lut913l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut914h_v1: LUT914H
 // Used by: GFXMMU
@@ -27991,7 +27991,7 @@ using gfxmmu_lut914l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut915h_v1: LUT915H
 // Used by: GFXMMU
@@ -28021,7 +28021,7 @@ using gfxmmu_lut915l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut916h_v1: LUT916H
 // Used by: GFXMMU
@@ -28051,7 +28051,7 @@ using gfxmmu_lut916l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut917h_v1: LUT917H
 // Used by: GFXMMU
@@ -28081,7 +28081,7 @@ using gfxmmu_lut917l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut918h_v1: LUT918H
 // Used by: GFXMMU
@@ -28111,7 +28111,7 @@ using gfxmmu_lut918l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut919h_v1: LUT919H
 // Used by: GFXMMU
@@ -28141,7 +28141,7 @@ using gfxmmu_lut919l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut91h_v1: LUT91H
 // Used by: GFXMMU
@@ -28171,7 +28171,7 @@ using gfxmmu_lut91l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut920h_v1: LUT920H
 // Used by: GFXMMU
@@ -28201,7 +28201,7 @@ using gfxmmu_lut920l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut921h_v1: LUT921H
 // Used by: GFXMMU
@@ -28231,7 +28231,7 @@ using gfxmmu_lut921l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut922h_v1: LUT922H
 // Used by: GFXMMU
@@ -28261,7 +28261,7 @@ using gfxmmu_lut922l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut923h_v1: LUT923H
 // Used by: GFXMMU
@@ -28291,7 +28291,7 @@ using gfxmmu_lut923l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut924h_v1: LUT924H
 // Used by: GFXMMU
@@ -28321,7 +28321,7 @@ using gfxmmu_lut924l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut925h_v1: LUT925H
 // Used by: GFXMMU
@@ -28351,7 +28351,7 @@ using gfxmmu_lut925l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut926h_v1: LUT926H
 // Used by: GFXMMU
@@ -28381,7 +28381,7 @@ using gfxmmu_lut926l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut927h_v1: LUT927H
 // Used by: GFXMMU
@@ -28411,7 +28411,7 @@ using gfxmmu_lut927l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut928h_v1: LUT928H
 // Used by: GFXMMU
@@ -28441,7 +28441,7 @@ using gfxmmu_lut928l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut929h_v1: LUT929H
 // Used by: GFXMMU
@@ -28471,7 +28471,7 @@ using gfxmmu_lut929l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut92h_v1: LUT92H
 // Used by: GFXMMU
@@ -28501,7 +28501,7 @@ using gfxmmu_lut92l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut930h_v1: LUT930H
 // Used by: GFXMMU
@@ -28531,7 +28531,7 @@ using gfxmmu_lut930l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut931h_v1: LUT931H
 // Used by: GFXMMU
@@ -28561,7 +28561,7 @@ using gfxmmu_lut931l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut932h_v1: LUT932H
 // Used by: GFXMMU
@@ -28591,7 +28591,7 @@ using gfxmmu_lut932l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut933h_v1: LUT933H
 // Used by: GFXMMU
@@ -28621,7 +28621,7 @@ using gfxmmu_lut933l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut934h_v1: LUT934H
 // Used by: GFXMMU
@@ -28651,7 +28651,7 @@ using gfxmmu_lut934l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut935h_v1: LUT935H
 // Used by: GFXMMU
@@ -28681,7 +28681,7 @@ using gfxmmu_lut935l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut936h_v1: LUT936H
 // Used by: GFXMMU
@@ -28711,7 +28711,7 @@ using gfxmmu_lut936l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut937h_v1: LUT937H
 // Used by: GFXMMU
@@ -28741,7 +28741,7 @@ using gfxmmu_lut937l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut938h_v1: LUT938H
 // Used by: GFXMMU
@@ -28771,7 +28771,7 @@ using gfxmmu_lut938l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut939h_v1: LUT939H
 // Used by: GFXMMU
@@ -28801,7 +28801,7 @@ using gfxmmu_lut939l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut93h_v1: LUT93H
 // Used by: GFXMMU
@@ -28831,7 +28831,7 @@ using gfxmmu_lut93l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut940h_v1: LUT940H
 // Used by: GFXMMU
@@ -28861,7 +28861,7 @@ using gfxmmu_lut940l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut941h_v1: LUT941H
 // Used by: GFXMMU
@@ -28891,7 +28891,7 @@ using gfxmmu_lut941l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut942h_v1: LUT942H
 // Used by: GFXMMU
@@ -28921,7 +28921,7 @@ using gfxmmu_lut942l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut943h_v1: LUT943H
 // Used by: GFXMMU
@@ -28951,7 +28951,7 @@ using gfxmmu_lut943l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut944h_v1: LUT944H
 // Used by: GFXMMU
@@ -28981,7 +28981,7 @@ using gfxmmu_lut944l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut945h_v1: LUT945H
 // Used by: GFXMMU
@@ -29011,7 +29011,7 @@ using gfxmmu_lut945l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut946h_v1: LUT946H
 // Used by: GFXMMU
@@ -29041,7 +29041,7 @@ using gfxmmu_lut946l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut947h_v1: LUT947H
 // Used by: GFXMMU
@@ -29071,7 +29071,7 @@ using gfxmmu_lut947l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut948h_v1: LUT948H
 // Used by: GFXMMU
@@ -29101,7 +29101,7 @@ using gfxmmu_lut948l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut949h_v1: LUT949H
 // Used by: GFXMMU
@@ -29131,7 +29131,7 @@ using gfxmmu_lut949l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut94h_v1: LUT94H
 // Used by: GFXMMU
@@ -29161,7 +29161,7 @@ using gfxmmu_lut94l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut950h_v1: LUT950H
 // Used by: GFXMMU
@@ -29191,7 +29191,7 @@ using gfxmmu_lut950l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut951h_v1: LUT951H
 // Used by: GFXMMU
@@ -29221,7 +29221,7 @@ using gfxmmu_lut951l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut952h_v1: LUT952H
 // Used by: GFXMMU
@@ -29251,7 +29251,7 @@ using gfxmmu_lut952l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut953h_v1: LUT953H
 // Used by: GFXMMU
@@ -29281,7 +29281,7 @@ using gfxmmu_lut953l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut954h_v1: LUT954H
 // Used by: GFXMMU
@@ -29311,7 +29311,7 @@ using gfxmmu_lut954l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut955h_v1: LUT955H
 // Used by: GFXMMU
@@ -29341,7 +29341,7 @@ using gfxmmu_lut955l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut956h_v1: LUT956H
 // Used by: GFXMMU
@@ -29371,7 +29371,7 @@ using gfxmmu_lut956l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut957h_v1: LUT957H
 // Used by: GFXMMU
@@ -29401,7 +29401,7 @@ using gfxmmu_lut957l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut958h_v1: LUT958H
 // Used by: GFXMMU
@@ -29431,7 +29431,7 @@ using gfxmmu_lut958l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut959h_v1: LUT959H
 // Used by: GFXMMU
@@ -29461,7 +29461,7 @@ using gfxmmu_lut959l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut95h_v1: LUT95H
 // Used by: GFXMMU
@@ -29491,7 +29491,7 @@ using gfxmmu_lut95l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut960h_v1: LUT960H
 // Used by: GFXMMU
@@ -29521,7 +29521,7 @@ using gfxmmu_lut960l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut961h_v1: LUT961H
 // Used by: GFXMMU
@@ -29551,7 +29551,7 @@ using gfxmmu_lut961l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut962h_v1: LUT962H
 // Used by: GFXMMU
@@ -29581,7 +29581,7 @@ using gfxmmu_lut962l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut963h_v1: LUT963H
 // Used by: GFXMMU
@@ -29611,7 +29611,7 @@ using gfxmmu_lut963l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut964h_v1: LUT964H
 // Used by: GFXMMU
@@ -29641,7 +29641,7 @@ using gfxmmu_lut964l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut965h_v1: LUT965H
 // Used by: GFXMMU
@@ -29671,7 +29671,7 @@ using gfxmmu_lut965l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut966h_v1: LUT966H
 // Used by: GFXMMU
@@ -29701,7 +29701,7 @@ using gfxmmu_lut966l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut967h_v1: LUT967H
 // Used by: GFXMMU
@@ -29731,7 +29731,7 @@ using gfxmmu_lut967l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut968h_v1: LUT968H
 // Used by: GFXMMU
@@ -29761,7 +29761,7 @@ using gfxmmu_lut968l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut969h_v1: LUT969H
 // Used by: GFXMMU
@@ -29791,7 +29791,7 @@ using gfxmmu_lut969l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut96h_v1: LUT96H
 // Used by: GFXMMU
@@ -29821,7 +29821,7 @@ using gfxmmu_lut96l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut970h_v1: LUT970H
 // Used by: GFXMMU
@@ -29851,7 +29851,7 @@ using gfxmmu_lut970l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut971h_v1: LUT971H
 // Used by: GFXMMU
@@ -29881,7 +29881,7 @@ using gfxmmu_lut971l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut972h_v1: LUT972H
 // Used by: GFXMMU
@@ -29911,7 +29911,7 @@ using gfxmmu_lut972l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut973h_v1: LUT973H
 // Used by: GFXMMU
@@ -29941,7 +29941,7 @@ using gfxmmu_lut973l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut974h_v1: LUT974H
 // Used by: GFXMMU
@@ -29971,7 +29971,7 @@ using gfxmmu_lut974l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut975h_v1: LUT975H
 // Used by: GFXMMU
@@ -30001,7 +30001,7 @@ using gfxmmu_lut975l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut976h_v1: LUT976H
 // Used by: GFXMMU
@@ -30031,7 +30031,7 @@ using gfxmmu_lut976l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut977h_v1: LUT977H
 // Used by: GFXMMU
@@ -30061,7 +30061,7 @@ using gfxmmu_lut977l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut978h_v1: LUT978H
 // Used by: GFXMMU
@@ -30091,7 +30091,7 @@ using gfxmmu_lut978l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut979h_v1: LUT979H
 // Used by: GFXMMU
@@ -30121,7 +30121,7 @@ using gfxmmu_lut979l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut97h_v1: LUT97H
 // Used by: GFXMMU
@@ -30151,7 +30151,7 @@ using gfxmmu_lut97l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut980h_v1: LUT980H
 // Used by: GFXMMU
@@ -30181,7 +30181,7 @@ using gfxmmu_lut980l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut981h_v1: LUT981H
 // Used by: GFXMMU
@@ -30211,7 +30211,7 @@ using gfxmmu_lut981l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut982h_v1: LUT982H
 // Used by: GFXMMU
@@ -30241,7 +30241,7 @@ using gfxmmu_lut982l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut983h_v1: LUT983H
 // Used by: GFXMMU
@@ -30271,7 +30271,7 @@ using gfxmmu_lut983l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut984h_v1: LUT984H
 // Used by: GFXMMU
@@ -30301,7 +30301,7 @@ using gfxmmu_lut984l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut985h_v1: LUT985H
 // Used by: GFXMMU
@@ -30331,7 +30331,7 @@ using gfxmmu_lut985l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut986h_v1: LUT986H
 // Used by: GFXMMU
@@ -30361,7 +30361,7 @@ using gfxmmu_lut986l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut987h_v1: LUT987H
 // Used by: GFXMMU
@@ -30391,7 +30391,7 @@ using gfxmmu_lut987l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut988h_v1: LUT988H
 // Used by: GFXMMU
@@ -30421,7 +30421,7 @@ using gfxmmu_lut988l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut989h_v1: LUT989H
 // Used by: GFXMMU
@@ -30451,7 +30451,7 @@ using gfxmmu_lut989l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut98h_v1: LUT98H
 // Used by: GFXMMU
@@ -30481,7 +30481,7 @@ using gfxmmu_lut98l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut990h_v1: LUT990H
 // Used by: GFXMMU
@@ -30511,7 +30511,7 @@ using gfxmmu_lut990l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut991h_v1: LUT991H
 // Used by: GFXMMU
@@ -30541,7 +30541,7 @@ using gfxmmu_lut991l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut992h_v1: LUT992H
 // Used by: GFXMMU
@@ -30571,7 +30571,7 @@ using gfxmmu_lut992l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut993h_v1: LUT993H
 // Used by: GFXMMU
@@ -30601,7 +30601,7 @@ using gfxmmu_lut993l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut994h_v1: LUT994H
 // Used by: GFXMMU
@@ -30631,7 +30631,7 @@ using gfxmmu_lut994l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut995h_v1: LUT995H
 // Used by: GFXMMU
@@ -30661,7 +30661,7 @@ using gfxmmu_lut995l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut996h_v1: LUT996H
 // Used by: GFXMMU
@@ -30691,7 +30691,7 @@ using gfxmmu_lut996l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut997h_v1: LUT997H
 // Used by: GFXMMU
@@ -30721,7 +30721,7 @@ using gfxmmu_lut997l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut998h_v1: LUT998H
 // Used by: GFXMMU
@@ -30751,7 +30751,7 @@ using gfxmmu_lut998l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut999h_v1: LUT999H
 // Used by: GFXMMU
@@ -30781,7 +30781,7 @@ using gfxmmu_lut999l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut99h_v1: LUT99H
 // Used by: GFXMMU
@@ -30811,7 +30811,7 @@ using gfxmmu_lut99l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_lut9h_v1: LUT9H
 // Used by: GFXMMU
@@ -30841,7 +30841,7 @@ using gfxmmu_lut9l_v1_tt =
                groov::field<"lvb", std::uint8_t, 23, 16>,
                groov::field<"fvb", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // gfxmmu_sidr_v1: SIDR
 // Used by: GFXMMU

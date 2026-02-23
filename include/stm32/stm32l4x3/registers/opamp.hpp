@@ -30,7 +30,7 @@ using opamp_opamp1_csr_v1_tt =
                groov::field<"pga_gain", std::uint8_t, 5, 4>,
                groov::field<"opamode", std::uint8_t, 3, 2>,
                groov::field<"opalpm", bool, 1, 1>,
-               groov::field<"opaen", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"opaen", common::bit_enable, 0, 0>>;
 
 // opamp_opamp1_lpotr_v1: OPAMP1_LPOTR
 // Used by: OPAMP

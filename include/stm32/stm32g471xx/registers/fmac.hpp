@@ -19,16 +19,16 @@ using fmac_cr_v1_tt =
              common::access::rw,
                groov::field<"reserved2", std::uint16_t, 31, 17, common::access::ro>,
                groov::field<"reset", bool, 16, 16>,
-               groov::field<"clipen", common::bittypes::bit_enable, 15, 15>,
+               groov::field<"clipen", common::bit_enable, 15, 15>,
                groov::field<"reserved1", std::uint8_t, 14, 10, common::access::ro>,
-               groov::field<"dmawen", common::bittypes::bit_enable, 9, 9>,
-               groov::field<"dmaren", common::bittypes::bit_enable, 8, 8>,
+               groov::field<"dmawen", common::bit_enable, 9, 9>,
+               groov::field<"dmaren", common::bit_enable, 8, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 5, common::access::ro>,
-               groov::field<"satien", common::bittypes::bit_enable, 4, 4>,
-               groov::field<"unflien", common::bittypes::bit_enable, 3, 3>,
-               groov::field<"ovflien", common::bittypes::bit_enable, 2, 2>,
-               groov::field<"wien", common::bittypes::bit_enable, 1, 1>,
-               groov::field<"rien", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"satien", common::bit_enable, 4, 4>,
+               groov::field<"unflien", common::bit_enable, 3, 3>,
+               groov::field<"ovflien", common::bit_enable, 2, 2>,
+               groov::field<"wien", common::bit_enable, 1, 1>,
+               groov::field<"rien", common::bit_enable, 0, 0>>;
 
 // fmac_param_v1: PARAM
 // Used by: FMAC

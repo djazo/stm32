@@ -18,7 +18,7 @@ using firewall_cr_v1_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved0", std::uint32_t, 31, 3, common::access::ro>,
-               groov::field<"vde", common::bittypes::bit_enable, 2, 2>,
+               groov::field<"vde", common::bit_enable, 2, 2>,
                groov::field<"vds", bool, 1, 1>,
                groov::field<"fpa", bool, 0, 0>>;
 

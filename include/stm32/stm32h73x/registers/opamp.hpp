@@ -32,7 +32,7 @@ using opamp_opamp1_csr_v1_tt =
                groov::field<"reserved0", bool, 4, 4, common::access::ro>,
                groov::field<"vp_sel", std::uint8_t, 3, 2>,
                groov::field<"force_vp", bool, 1, 1>,
-               groov::field<"opaen", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"opaen", common::bit_enable, 0, 0>>;
 
 // opamp_opamp1_hsotr_v1: OPAMP1_HSOTR
 // Used by: OPAMP
@@ -88,7 +88,7 @@ using opamp_opamp2_csr_v1_tt =
                groov::field<"vm_sel", std::uint8_t, 6, 5>,
                groov::field<"reserved0", std::uint8_t, 4, 2, common::access::ro>,
                groov::field<"force_vp", bool, 1, 1>,
-               groov::field<"opaen", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"opaen", common::bit_enable, 0, 0>>;
 
 // opamp_opamp2_hsotr_v1: OPAMP2_HSOTR
 // Used by: OPAMP

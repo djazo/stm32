@@ -37,7 +37,7 @@ using syscfg_cccsr_v1_tt =
                groov::field<"ready", bool, 8, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 2, common::access::ro>,
                groov::field<"cs", bool, 1, 1>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // syscfg_ccvr_v1: CCVR
 // Used by: SYSCFG
@@ -227,7 +227,7 @@ using syscfg_ur13_v1_tt =
              baseaddress + offset,
              common::access::ro,
                groov::field<"reserved1", std::uint16_t, 31, 17>,
-               groov::field<"d1sbrst", common::bittypes::bit_reset, 16, 16>,
+               groov::field<"d1sbrst", common::bit_reset, 16, 16>,
                groov::field<"reserved0", std::uint16_t, 15, 2>,
                groov::field<"sdrs", std::uint8_t, 1, 0>>;
 
@@ -242,7 +242,7 @@ using syscfg_ur14_v1_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved0", std::uint32_t, 31, 1, common::access::ro>,
-               groov::field<"d1stprst", common::bittypes::bit_reset, 0, 0>>;
+               groov::field<"d1stprst", common::bit_reset, 0, 0>>;
 
 // syscfg_ur15_v1: UR15
 // Used by: SYSCFG

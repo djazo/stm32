@@ -44,7 +44,7 @@ using pwr_cr2_v1_tt =
                groov::field<"pvme2", bool, 5, 5>,
                groov::field<"pvme1", bool, 4, 4>,
                groov::field<"pls", std::uint8_t, 3, 1>,
-               groov::field<"pvde", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"pvde", common::bit_enable, 0, 0>>;
 
 // pwr_cr3_v1: CR3
 // Used by: PWR, SEC_PWR
@@ -57,10 +57,10 @@ using pwr_cr3_v1_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved2", std::uint32_t, 31, 15, common::access::ro>,
-               groov::field<"ucpd_dbdis", common::bittypes::bit_enable_bar, 14, 14>,
+               groov::field<"ucpd_dbdis", common::bit_enable_bar, 14, 14>,
                groov::field<"ucpd_stdby", bool, 13, 13>,
                groov::field<"reserved1", bool, 12, 12, common::access::ro>,
-               groov::field<"ulpmen", common::bittypes::bit_enable, 11, 11>,
+               groov::field<"ulpmen", common::bit_enable, 11, 11>,
                groov::field<"apc", bool, 10, 10>,
                groov::field<"rrs", std::uint8_t, 9, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 5, common::access::ro>,
@@ -81,9 +81,9 @@ using pwr_cr4_v1_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved2", std::uint16_t, 31, 16, common::access::ro>,
-               groov::field<"smpslpen", common::bittypes::bit_enable, 15, 15>,
-               groov::field<"smpsfsten", common::bittypes::bit_enable, 14, 14>,
-               groov::field<"extsmpsen", common::bittypes::bit_enable, 13, 13>,
+               groov::field<"smpslpen", common::bit_enable, 15, 15>,
+               groov::field<"smpsfsten", common::bit_enable, 14, 14>,
+               groov::field<"extsmpsen", common::bit_enable, 13, 13>,
                groov::field<"smpsbyp", bool, 12, 12>,
                groov::field<"reserved1", std::uint8_t, 11, 10, common::access::ro>,
                groov::field<"vbrs", bool, 9, 9>,
@@ -608,10 +608,10 @@ using pwr_sr1_v1_tt =
              baseaddress + offset,
              common::access::ro,
                groov::field<"reserved3", std::uint16_t, 31, 16>,
-               groov::field<"smpshprdy", common::bittypes::bit_ready, 15, 15>,
+               groov::field<"smpshprdy", common::bit_ready, 15, 15>,
                groov::field<"reserved2", bool, 14, 14>,
-               groov::field<"extsmpsrdy", common::bittypes::bit_ready, 13, 13>,
-               groov::field<"smpsbyprdy", common::bittypes::bit_ready, 12, 12>,
+               groov::field<"extsmpsrdy", common::bit_ready, 13, 13>,
+               groov::field<"smpsbyprdy", common::bit_ready, 12, 12>,
                groov::field<"reserved1", std::uint8_t, 11, 9>,
                groov::field<"sbf", bool, 8, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 5>,

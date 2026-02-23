@@ -17,7 +17,7 @@ using aes_cr_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::rw,
-               groov::field<"iprst", common::bittypes::bit_reset, 31, 31>,
+               groov::field<"iprst", common::bit_reset, 31, 31>,
                groov::field<"reserved4", std::uint8_t, 30, 26, common::access::ro>,
                groov::field<"kmod", std::uint8_t, 25, 24>,
                groov::field<"npblb", std::uint8_t, 23, 20>,
@@ -27,13 +27,13 @@ using aes_cr_v1_tt =
                groov::field<"chmod_2", bool, 16, 16>,
                groov::field<"reserved1", bool, 15, 15, common::access::ro>,
                groov::field<"gcmph", std::uint8_t, 14, 13>,
-               groov::field<"dmaouten", common::bittypes::bit_enable, 12, 12>,
-               groov::field<"dmainen", common::bittypes::bit_enable, 11, 11>,
+               groov::field<"dmaouten", common::bit_enable, 12, 12>,
+               groov::field<"dmainen", common::bit_enable, 11, 11>,
                groov::field<"reserved0", std::uint8_t, 10, 7, common::access::ro>,
                groov::field<"chmod", std::uint8_t, 6, 5>,
                groov::field<"mode", std::uint8_t, 4, 3>,
                groov::field<"datatype", std::uint8_t, 2, 1>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // aes_dinr_v1: DINR
 // Used by: AES, SEC_AES
@@ -85,10 +85,10 @@ using aes_ier_v1_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved0", std::uint32_t, 31, 4, common::access::ro>,
-               groov::field<"rngeie", common::bittypes::bit_enable, 3, 3>,
-               groov::field<"keie", common::bittypes::bit_enable, 2, 2>,
-               groov::field<"rweie", common::bittypes::bit_enable, 1, 1>,
-               groov::field<"ccfie", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"rngeie", common::bit_enable, 3, 3>,
+               groov::field<"keie", common::bit_enable, 2, 2>,
+               groov::field<"rweie", common::bit_enable, 1, 1>,
+               groov::field<"ccfie", common::bit_enable, 0, 0>>;
 
 // aes_isr_v1: ISR
 // Used by: AES, SEC_AES

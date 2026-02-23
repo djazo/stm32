@@ -130,8 +130,8 @@ using sdadc_cr1_v1_tt =
              common::access::rw,
                groov::field<"init", bool, 31, 31>,
                groov::field<"reserved2", std::uint16_t, 30, 18, common::access::ro>,
-               groov::field<"rdmaen", common::bittypes::bit_enable, 17, 17>,
-               groov::field<"jdmaen", common::bittypes::bit_enable, 16, 16>,
+               groov::field<"rdmaen", common::bit_enable, 17, 17>,
+               groov::field<"jdmaen", common::bit_enable, 16, 16>,
                groov::field<"rsync", bool, 15, 15>,
                groov::field<"jsync", bool, 14, 14>,
                groov::field<"reserved1", bool, 13, 13, common::access::ro>,
@@ -140,11 +140,11 @@ using sdadc_cr1_v1_tt =
                groov::field<"slowck", bool, 10, 10>,
                groov::field<"refv", std::uint8_t, 9, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 5, common::access::ro>,
-               groov::field<"rovrie", common::bittypes::bit_enable, 4, 4>,
-               groov::field<"reocie", common::bittypes::bit_enable, 3, 3>,
-               groov::field<"jovrie", common::bittypes::bit_enable, 2, 2>,
-               groov::field<"jeocie", common::bittypes::bit_enable, 1, 1>,
-               groov::field<"eocalie", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"rovrie", common::bit_enable, 4, 4>,
+               groov::field<"reocie", common::bit_enable, 3, 3>,
+               groov::field<"jovrie", common::bit_enable, 2, 2>,
+               groov::field<"jeocie", common::bit_enable, 1, 1>,
+               groov::field<"eocalie", common::bit_enable, 0, 0>>;
 
 // sdadc_cr2_v1: CR2
 // Used by: SDADC1, SDADC2, SDADC3
@@ -184,7 +184,7 @@ using sdadc_isr_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::ro,
-               groov::field<"initrdy", common::bittypes::bit_ready, 31, 31>,
+               groov::field<"initrdy", common::bit_ready, 31, 31>,
                groov::field<"reserved1", std::uint16_t, 30, 16>,
                groov::field<"stabip", bool, 15, 15>,
                groov::field<"rcip", bool, 14, 14>,

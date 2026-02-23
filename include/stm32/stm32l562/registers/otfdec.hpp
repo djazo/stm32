@@ -46,9 +46,9 @@ using otfdec_ier_v1_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved0", std::uint32_t, 31, 3, common::access::ro>,
-               groov::field<"keie", common::bittypes::bit_enable, 2, 2>,
-               groov::field<"xoneie", common::bittypes::bit_enable, 1, 1>,
-               groov::field<"seie", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"keie", common::bit_enable, 2, 2>,
+               groov::field<"xoneie", common::bit_enable, 1, 1>,
+               groov::field<"seie", common::bit_enable, 0, 0>>;
 
 // otfdec_isr_v1: ISR
 // Used by: OTFDEC1, SEC_OTFDEC1
@@ -80,9 +80,9 @@ using otfdec_r1cfgr_v1_tt =
                groov::field<"reserved1", std::uint8_t, 7, 6, common::access::ro>,
                groov::field<"mode", std::uint8_t, 5, 4>,
                groov::field<"reserved0", bool, 3, 3, common::access::ro>,
-               groov::field<"keylock", common::bittypes::bit_locked, 2, 2>,
-               groov::field<"configlock", common::bittypes::bit_locked, 1, 1>,
-               groov::field<"reg_en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"keylock", common::bit_locked, 2, 2>,
+               groov::field<"configlock", common::bit_locked, 1, 1>,
+               groov::field<"reg_en", common::bit_enable, 0, 0>>;
 
 // otfdec_r1endaddr_v1: R1ENDADDR
 // Used by: OTFDEC1, SEC_OTFDEC1
@@ -195,9 +195,9 @@ using otfdec_r2cfgr_v1_tt =
                groov::field<"reserved1", std::uint8_t, 7, 6, common::access::ro>,
                groov::field<"mode", std::uint8_t, 5, 4>,
                groov::field<"reserved0", bool, 3, 3, common::access::ro>,
-               groov::field<"keylock", common::bittypes::bit_locked, 2, 2>,
-               groov::field<"configlock", common::bittypes::bit_locked, 1, 1>,
-               groov::field<"reg_en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"keylock", common::bit_locked, 2, 2>,
+               groov::field<"configlock", common::bit_locked, 1, 1>,
+               groov::field<"reg_en", common::bit_enable, 0, 0>>;
 
 // otfdec_r2endaddr_v1: R2ENDADDR
 // Used by: OTFDEC1, SEC_OTFDEC1
@@ -310,9 +310,9 @@ using otfdec_r3cfgr_v1_tt =
                groov::field<"reserved1", std::uint8_t, 7, 6, common::access::ro>,
                groov::field<"mode", std::uint8_t, 5, 4>,
                groov::field<"reserved0", bool, 3, 3, common::access::ro>,
-               groov::field<"keylock", common::bittypes::bit_locked, 2, 2>,
-               groov::field<"configlock", common::bittypes::bit_locked, 1, 1>,
-               groov::field<"reg_en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"keylock", common::bit_locked, 2, 2>,
+               groov::field<"configlock", common::bit_locked, 1, 1>,
+               groov::field<"reg_en", common::bit_enable, 0, 0>>;
 
 // otfdec_r3endaddr_v1: R3ENDADDR
 // Used by: OTFDEC1, SEC_OTFDEC1
@@ -425,9 +425,9 @@ using otfdec_r4cfgr_v1_tt =
                groov::field<"reserved1", std::uint8_t, 7, 6, common::access::ro>,
                groov::field<"mode", std::uint8_t, 5, 4>,
                groov::field<"reserved0", bool, 3, 3, common::access::ro>,
-               groov::field<"keylock", common::bittypes::bit_locked, 2, 2>,
-               groov::field<"configlock", common::bittypes::bit_locked, 1, 1>,
-               groov::field<"reg_en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"keylock", common::bit_locked, 2, 2>,
+               groov::field<"configlock", common::bit_locked, 1, 1>,
+               groov::field<"reg_en", common::bit_enable, 0, 0>>;
 
 // otfdec_r4endaddr_v1: R4ENDADDR
 // Used by: OTFDEC1, SEC_OTFDEC1

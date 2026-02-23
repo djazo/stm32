@@ -36,7 +36,7 @@ using dlyb_dlyb_cr_v1_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved0", std::uint32_t, 31, 2, common::access::ro>,
-               groov::field<"sen", common::bittypes::bit_enable, 1, 1>,
-               groov::field<"den", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"sen", common::bit_enable, 1, 1>,
+               groov::field<"den", common::bit_enable, 0, 0>>;
 
 } // namespace stm32::regs

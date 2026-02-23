@@ -43,7 +43,7 @@ using pwr_cr2_v1_tt =
                groov::field<"reserved0", bool, 5, 5, common::access::ro>,
                groov::field<"pvme1", bool, 4, 4>,
                groov::field<"pls", std::uint8_t, 3, 1>,
-               groov::field<"pvde", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"pvde", common::bit_enable, 0, 0>>;
 
 // pwr_cr3_v1: CR3
 // Used by: PWR
@@ -432,7 +432,7 @@ using pwr_sr1_v1_tt =
                groov::field<"reserved3", std::uint16_t, 31, 16>,
                groov::field<"wufi", bool, 15, 15>,
                groov::field<"reserved2", bool, 14, 14>,
-               groov::field<"ext_smps_rdy", common::bittypes::bit_ready, 13, 13>,
+               groov::field<"ext_smps_rdy", common::bit_ready, 13, 13>,
                groov::field<"reserved1", std::uint8_t, 12, 9>,
                groov::field<"sbf", bool, 8, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 5>,

@@ -18,7 +18,7 @@ using iwdg_ewcr_v1_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved1", std::uint16_t, 31, 16, common::access::ro>,
-               groov::field<"ewie", common::bittypes::bit_enable, 15, 15>,
+               groov::field<"ewie", common::bit_enable, 15, 15>,
                groov::field<"ewic", bool, 14, 14>,
                groov::field<"reserved0", std::uint8_t, 13, 12, common::access::ro>,
                groov::field<"ewit", std::uint16_t, 11, 0>>;

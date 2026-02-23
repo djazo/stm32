@@ -18,9 +18,9 @@ using adc_common_adc1_ccr_v1_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved3", std::uint8_t, 31, 25, common::access::ro>,
-               groov::field<"vbaten", common::bittypes::bit_enable, 24, 24>,
-               groov::field<"tsen", common::bittypes::bit_enable, 23, 23>,
-               groov::field<"vrefen", common::bittypes::bit_enable, 22, 22>,
+               groov::field<"vbaten", common::bit_enable, 24, 24>,
+               groov::field<"tsen", common::bit_enable, 23, 23>,
+               groov::field<"vrefen", common::bit_enable, 22, 22>,
                groov::field<"reserved2", std::uint8_t, 21, 18, common::access::ro>,
                groov::field<"ckmode", std::uint8_t, 17, 16>,
                groov::field<"mdma", std::uint8_t, 15, 14>,
@@ -64,7 +64,7 @@ using adc_common_adc1_csr_v1_tt =
                groov::field<"eos_slv", bool, 19, 19>,
                groov::field<"eoc_slv", bool, 18, 18>,
                groov::field<"eosmp_slv", bool, 17, 17>,
-               groov::field<"adrdy_slv", common::bittypes::bit_ready, 16, 16>,
+               groov::field<"adrdy_slv", common::bit_ready, 16, 16>,
                groov::field<"reserved0", std::uint8_t, 15, 11>,
                groov::field<"jqovf_mst", bool, 10, 10>,
                groov::field<"awd3_mst", bool, 9, 9>,
@@ -76,6 +76,6 @@ using adc_common_adc1_csr_v1_tt =
                groov::field<"eos_mst", bool, 3, 3>,
                groov::field<"eoc_mst", bool, 2, 2>,
                groov::field<"eosmp_mst", bool, 1, 1>,
-               groov::field<"adrdy_mst", common::bittypes::bit_ready, 0, 0>>;
+               groov::field<"adrdy_mst", common::bit_ready, 0, 0>>;
 
 } // namespace stm32::regs

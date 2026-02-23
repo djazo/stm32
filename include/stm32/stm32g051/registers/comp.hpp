@@ -17,7 +17,7 @@ using comp_comp1_csr_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::rw,
-               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"lock", common::bit_locked, 31, 31>,
                groov::field<"value", bool, 30, 30, common::access::ro>,
                groov::field<"reserved3", std::uint8_t, 29, 25, common::access::ro>,
                groov::field<"blanksel", std::uint8_t, 24, 20>,
@@ -26,12 +26,12 @@ using comp_comp1_csr_v1_tt =
                groov::field<"polarity", bool, 15, 15>,
                groov::field<"winout", bool, 14, 14>,
                groov::field<"reserved2", std::uint8_t, 13, 12, common::access::ro>,
-               groov::field<"winmode", common::bittypes::bit_enable, 11, 11>,
+               groov::field<"winmode", common::bit_enable, 11, 11>,
                groov::field<"reserved1", bool, 10, 10, common::access::ro>,
                groov::field<"inpsel", std::uint8_t, 9, 8>,
                groov::field<"inmsel", std::uint8_t, 7, 4>,
                groov::field<"reserved0", std::uint8_t, 3, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // comp_comp2_csr_v1: COMP2_CSR
 // Used by: COMP
@@ -43,7 +43,7 @@ using comp_comp2_csr_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::rw,
-               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"lock", common::bit_locked, 31, 31>,
                groov::field<"value", bool, 30, 30, common::access::ro>,
                groov::field<"reserved3", std::uint8_t, 29, 25, common::access::ro>,
                groov::field<"blanksel", std::uint8_t, 24, 20>,
@@ -52,12 +52,12 @@ using comp_comp2_csr_v1_tt =
                groov::field<"polarity", bool, 15, 15>,
                groov::field<"winout", bool, 14, 14>,
                groov::field<"reserved2", std::uint8_t, 13, 12, common::access::ro>,
-               groov::field<"winmode", common::bittypes::bit_enable, 11, 11>,
+               groov::field<"winmode", common::bit_enable, 11, 11>,
                groov::field<"reserved1", bool, 10, 10, common::access::ro>,
                groov::field<"inpsel", std::uint8_t, 9, 8>,
                groov::field<"inmsel", std::uint8_t, 7, 4>,
                groov::field<"reserved0", std::uint8_t, 3, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // comp_comp3_csr_v1: COMP3_CSR
 // Used by: COMP
@@ -69,7 +69,7 @@ using comp_comp3_csr_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::rw,
-               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"lock", common::bit_locked, 31, 31>,
                groov::field<"value", bool, 30, 30, common::access::ro>,
                groov::field<"reserved3", std::uint8_t, 29, 25, common::access::ro>,
                groov::field<"blanksel", std::uint8_t, 24, 20>,
@@ -78,11 +78,11 @@ using comp_comp3_csr_v1_tt =
                groov::field<"polarity", bool, 15, 15>,
                groov::field<"winout", bool, 14, 14>,
                groov::field<"reserved2", std::uint8_t, 13, 12, common::access::ro>,
-               groov::field<"winmode", common::bittypes::bit_enable, 11, 11>,
+               groov::field<"winmode", common::bit_enable, 11, 11>,
                groov::field<"reserved1", bool, 10, 10, common::access::ro>,
                groov::field<"inpsel", std::uint8_t, 9, 8>,
                groov::field<"inmsel", std::uint8_t, 7, 4>,
                groov::field<"reserved0", std::uint8_t, 3, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 } // namespace stm32::regs

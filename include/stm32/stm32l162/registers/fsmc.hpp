@@ -22,18 +22,18 @@ using fsmc_bcr1_v1_tt =
                groov::field<"reserved1", std::uint8_t, 18, 16, common::access::ro>,
                groov::field<"asyncwait", bool, 15, 15>,
                groov::field<"extmod", bool, 14, 14>,
-               groov::field<"waiten", common::bittypes::bit_enable, 13, 13>,
-               groov::field<"wren", common::bittypes::bit_enable, 12, 12>,
+               groov::field<"waiten", common::bit_enable, 13, 13>,
+               groov::field<"wren", common::bit_enable, 12, 12>,
                groov::field<"waitcfg", bool, 11, 11>,
                groov::field<"wrapmod", bool, 10, 10>,
                groov::field<"waitpol", bool, 9, 9>,
-               groov::field<"bursten", common::bittypes::bit_enable, 8, 8>,
+               groov::field<"bursten", common::bit_enable, 8, 8>,
                groov::field<"reserved0", bool, 7, 7, common::access::ro>,
-               groov::field<"faccen", common::bittypes::bit_enable, 6, 6>,
+               groov::field<"faccen", common::bit_enable, 6, 6>,
                groov::field<"mwid", std::uint8_t, 5, 4>,
                groov::field<"mtyp", std::uint8_t, 3, 2>,
-               groov::field<"muxen", common::bittypes::bit_enable, 1, 1>,
-               groov::field<"mbken", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"muxen", common::bit_enable, 1, 1>,
+               groov::field<"mbken", common::bit_enable, 0, 0>>;
 
 // fsmc_bcr2_v1: BCR2
 // Used by: FSMC
@@ -50,18 +50,18 @@ using fsmc_bcr2_v1_tt =
                groov::field<"reserved1", std::uint8_t, 18, 16, common::access::ro>,
                groov::field<"asyncwait", bool, 15, 15>,
                groov::field<"extmod", bool, 14, 14>,
-               groov::field<"waiten", common::bittypes::bit_enable, 13, 13>,
-               groov::field<"wren", common::bittypes::bit_enable, 12, 12>,
+               groov::field<"waiten", common::bit_enable, 13, 13>,
+               groov::field<"wren", common::bit_enable, 12, 12>,
                groov::field<"waitcfg", bool, 11, 11>,
                groov::field<"wrapmod", bool, 10, 10>,
                groov::field<"waitpol", bool, 9, 9>,
-               groov::field<"bursten", common::bittypes::bit_enable, 8, 8>,
+               groov::field<"bursten", common::bit_enable, 8, 8>,
                groov::field<"reserved0", bool, 7, 7, common::access::ro>,
-               groov::field<"faccen", common::bittypes::bit_enable, 6, 6>,
+               groov::field<"faccen", common::bit_enable, 6, 6>,
                groov::field<"mwid", std::uint8_t, 5, 4>,
                groov::field<"mtyp", std::uint8_t, 3, 2>,
-               groov::field<"muxen", common::bittypes::bit_enable, 1, 1>,
-               groov::field<"mbken", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"muxen", common::bit_enable, 1, 1>,
+               groov::field<"mbken", common::bit_enable, 0, 0>>;
 
 // fsmc_bcr3_v1: BCR3
 // Used by: FSMC
@@ -78,18 +78,18 @@ using fsmc_bcr3_v1_tt =
                groov::field<"reserved1", std::uint8_t, 18, 16, common::access::ro>,
                groov::field<"asyncwait", bool, 15, 15>,
                groov::field<"extmod", bool, 14, 14>,
-               groov::field<"waiten", common::bittypes::bit_enable, 13, 13>,
-               groov::field<"wren", common::bittypes::bit_enable, 12, 12>,
+               groov::field<"waiten", common::bit_enable, 13, 13>,
+               groov::field<"wren", common::bit_enable, 12, 12>,
                groov::field<"waitcfg", bool, 11, 11>,
                groov::field<"wrapmod", bool, 10, 10>,
                groov::field<"waitpol", bool, 9, 9>,
-               groov::field<"bursten", common::bittypes::bit_enable, 8, 8>,
+               groov::field<"bursten", common::bit_enable, 8, 8>,
                groov::field<"reserved0", bool, 7, 7, common::access::ro>,
-               groov::field<"faccen", common::bittypes::bit_enable, 6, 6>,
+               groov::field<"faccen", common::bit_enable, 6, 6>,
                groov::field<"mwid", std::uint8_t, 5, 4>,
                groov::field<"mtyp", std::uint8_t, 3, 2>,
-               groov::field<"muxen", common::bittypes::bit_enable, 1, 1>,
-               groov::field<"mbken", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"muxen", common::bit_enable, 1, 1>,
+               groov::field<"mbken", common::bit_enable, 0, 0>>;
 
 // fsmc_bcr4_v1: BCR4
 // Used by: FSMC
@@ -106,18 +106,18 @@ using fsmc_bcr4_v1_tt =
                groov::field<"reserved1", std::uint8_t, 18, 16, common::access::ro>,
                groov::field<"asyncwait", bool, 15, 15>,
                groov::field<"extmod", bool, 14, 14>,
-               groov::field<"waiten", common::bittypes::bit_enable, 13, 13>,
-               groov::field<"wren", common::bittypes::bit_enable, 12, 12>,
+               groov::field<"waiten", common::bit_enable, 13, 13>,
+               groov::field<"wren", common::bit_enable, 12, 12>,
                groov::field<"waitcfg", bool, 11, 11>,
                groov::field<"wrapmod", bool, 10, 10>,
                groov::field<"waitpol", bool, 9, 9>,
-               groov::field<"bursten", common::bittypes::bit_enable, 8, 8>,
+               groov::field<"bursten", common::bit_enable, 8, 8>,
                groov::field<"reserved0", bool, 7, 7, common::access::ro>,
-               groov::field<"faccen", common::bittypes::bit_enable, 6, 6>,
+               groov::field<"faccen", common::bit_enable, 6, 6>,
                groov::field<"mwid", std::uint8_t, 5, 4>,
                groov::field<"mtyp", std::uint8_t, 3, 2>,
-               groov::field<"muxen", common::bittypes::bit_enable, 1, 1>,
-               groov::field<"mbken", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"muxen", common::bit_enable, 1, 1>,
+               groov::field<"mbken", common::bit_enable, 0, 0>>;
 
 // fsmc_btr1_v1: BTR1
 // Used by: FSMC

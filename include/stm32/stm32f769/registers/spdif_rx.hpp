@@ -23,14 +23,14 @@ using spdif_rx_cr_v1_tt =
                groov::field<"wfa", bool, 14, 14>,
                groov::field<"nbtr", std::uint8_t, 13, 12>,
                groov::field<"chsel", bool, 11, 11>,
-               groov::field<"cbdmaen", common::bittypes::bit_enable, 10, 10>,
+               groov::field<"cbdmaen", common::bit_enable, 10, 10>,
                groov::field<"ptmsk", bool, 9, 9>,
                groov::field<"cumsk", bool, 8, 8>,
                groov::field<"vmsk", bool, 7, 7>,
                groov::field<"pmsk", bool, 6, 6>,
                groov::field<"drfmt", std::uint8_t, 5, 4>,
                groov::field<"rxsteo", bool, 3, 3>,
-               groov::field<"rxdmaen", common::bittypes::bit_enable, 2, 2>,
+               groov::field<"rxdmaen", common::bit_enable, 2, 2>,
                groov::field<"spdifen", std::uint8_t, 1, 0>>;
 
 // spdif_rx_csr_v1: CSR
@@ -78,7 +78,7 @@ using spdif_rx_dr_v1_tt =
                groov::field<"c", bool, 27, 27>,
                groov::field<"u", bool, 26, 26>,
                groov::field<"v", bool, 25, 25>,
-               groov::field<"pe", common::bittypes::bit_enable, 24, 24>,
+               groov::field<"pe", common::bit_enable, 24, 24>,
                groov::field<"dr", std::uint32_t, 23, 0>>;
 
 // spdif_rx_ifcr_v1: IFCR
@@ -109,13 +109,13 @@ using spdif_rx_imr_v1_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved0", std::uint32_t, 31, 7, common::access::ro>,
-               groov::field<"ifeie", common::bittypes::bit_enable, 6, 6>,
-               groov::field<"syncdie", common::bittypes::bit_enable, 5, 5>,
-               groov::field<"sblkie", common::bittypes::bit_enable, 4, 4>,
-               groov::field<"ovrie", common::bittypes::bit_enable, 3, 3>,
-               groov::field<"perrie", common::bittypes::bit_enable, 2, 2>,
-               groov::field<"csrneie", common::bittypes::bit_enable, 1, 1>,
-               groov::field<"rxneie", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"ifeie", common::bit_enable, 6, 6>,
+               groov::field<"syncdie", common::bit_enable, 5, 5>,
+               groov::field<"sblkie", common::bit_enable, 4, 4>,
+               groov::field<"ovrie", common::bit_enable, 3, 3>,
+               groov::field<"perrie", common::bit_enable, 2, 2>,
+               groov::field<"csrneie", common::bit_enable, 1, 1>,
+               groov::field<"rxneie", common::bit_enable, 0, 0>>;
 
 // spdif_rx_sr_v1: SR
 // Used by: SPDIFRX

@@ -218,7 +218,7 @@ using exti_lockr_v1_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved0", std::uint32_t, 31, 1, common::access::ro>,
-               groov::field<"lock", common::bittypes::bit_locked, 0, 0>>;
+               groov::field<"lock", common::bit_locked, 0, 0>>;
 
 // exti_privcfgr1_v1: PRIVCFGR1
 // Used by: EXTI, SEC_EXTI

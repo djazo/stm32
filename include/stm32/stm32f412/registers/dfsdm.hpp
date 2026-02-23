@@ -161,7 +161,7 @@ using dfsdm_chcfg0r1_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::rw,
-               groov::field<"dfsdmen", common::bittypes::bit_enable, 31, 31>,
+               groov::field<"dfsdmen", common::bit_enable, 31, 31>,
                groov::field<"ckoutsrc", bool, 30, 30>,
                groov::field<"reserved2", std::uint8_t, 29, 24, common::access::ro>,
                groov::field<"ckoutdiv", std::uint8_t, 23, 16>,
@@ -169,9 +169,9 @@ using dfsdm_chcfg0r1_v1_tt =
                groov::field<"datmpx", std::uint8_t, 13, 12>,
                groov::field<"reserved1", std::uint8_t, 11, 9, common::access::ro>,
                groov::field<"chinsel", bool, 8, 8>,
-               groov::field<"chen", common::bittypes::bit_enable, 7, 7>,
-               groov::field<"ckaben", common::bittypes::bit_enable, 6, 6>,
-               groov::field<"scden", common::bittypes::bit_enable, 5, 5>,
+               groov::field<"chen", common::bit_enable, 7, 7>,
+               groov::field<"ckaben", common::bit_enable, 6, 6>,
+               groov::field<"scden", common::bit_enable, 5, 5>,
                groov::field<"reserved0", bool, 4, 4, common::access::ro>,
                groov::field<"spicksel", std::uint8_t, 3, 2>,
                groov::field<"sitp", std::uint8_t, 1, 0>>;
@@ -205,9 +205,9 @@ using dfsdm_chcfg1r1_v1_tt =
                groov::field<"datmpx", std::uint8_t, 13, 12>,
                groov::field<"reserved1", std::uint8_t, 11, 9, common::access::ro>,
                groov::field<"chinsel", bool, 8, 8>,
-               groov::field<"chen", common::bittypes::bit_enable, 7, 7>,
-               groov::field<"ckaben", common::bittypes::bit_enable, 6, 6>,
-               groov::field<"scden", common::bittypes::bit_enable, 5, 5>,
+               groov::field<"chen", common::bit_enable, 7, 7>,
+               groov::field<"ckaben", common::bit_enable, 6, 6>,
+               groov::field<"scden", common::bit_enable, 5, 5>,
                groov::field<"reserved0", bool, 4, 4, common::access::ro>,
                groov::field<"spicksel", std::uint8_t, 3, 2>,
                groov::field<"sitp", std::uint8_t, 1, 0>>;
@@ -241,9 +241,9 @@ using dfsdm_chcfg2r1_v1_tt =
                groov::field<"datmpx", std::uint8_t, 13, 12>,
                groov::field<"reserved1", std::uint8_t, 11, 9, common::access::ro>,
                groov::field<"chinsel", bool, 8, 8>,
-               groov::field<"chen", common::bittypes::bit_enable, 7, 7>,
-               groov::field<"ckaben", common::bittypes::bit_enable, 6, 6>,
-               groov::field<"scden", common::bittypes::bit_enable, 5, 5>,
+               groov::field<"chen", common::bit_enable, 7, 7>,
+               groov::field<"ckaben", common::bit_enable, 6, 6>,
+               groov::field<"scden", common::bit_enable, 5, 5>,
                groov::field<"reserved0", bool, 4, 4, common::access::ro>,
                groov::field<"spicksel", std::uint8_t, 3, 2>,
                groov::field<"sitp", std::uint8_t, 1, 0>>;
@@ -277,9 +277,9 @@ using dfsdm_chcfg3r1_v1_tt =
                groov::field<"datmpx", std::uint8_t, 13, 12>,
                groov::field<"reserved1", std::uint8_t, 11, 9, common::access::ro>,
                groov::field<"chinsel", bool, 8, 8>,
-               groov::field<"chen", common::bittypes::bit_enable, 7, 7>,
-               groov::field<"ckaben", common::bittypes::bit_enable, 6, 6>,
-               groov::field<"scden", common::bittypes::bit_enable, 5, 5>,
+               groov::field<"chen", common::bit_enable, 7, 7>,
+               groov::field<"ckaben", common::bit_enable, 6, 6>,
+               groov::field<"scden", common::bit_enable, 5, 5>,
                groov::field<"reserved0", bool, 4, 4, common::access::ro>,
                groov::field<"spicksel", std::uint8_t, 3, 2>,
                groov::field<"sitp", std::uint8_t, 1, 0>>;
@@ -313,9 +313,9 @@ using dfsdm_chcfg4r1_v1_tt =
                groov::field<"datmpx", std::uint8_t, 13, 12>,
                groov::field<"reserved1", std::uint8_t, 11, 9, common::access::ro>,
                groov::field<"chinsel", bool, 8, 8>,
-               groov::field<"chen", common::bittypes::bit_enable, 7, 7>,
-               groov::field<"ckaben", common::bittypes::bit_enable, 6, 6>,
-               groov::field<"scden", common::bittypes::bit_enable, 5, 5>,
+               groov::field<"chen", common::bit_enable, 7, 7>,
+               groov::field<"ckaben", common::bit_enable, 6, 6>,
+               groov::field<"scden", common::bit_enable, 5, 5>,
                groov::field<"reserved0", bool, 4, 4, common::access::ro>,
                groov::field<"spicksel", std::uint8_t, 3, 2>,
                groov::field<"sitp", std::uint8_t, 1, 0>>;
@@ -349,9 +349,9 @@ using dfsdm_chcfg5r1_v1_tt =
                groov::field<"datmpx", std::uint8_t, 13, 12>,
                groov::field<"reserved1", std::uint8_t, 11, 9, common::access::ro>,
                groov::field<"chinsel", bool, 8, 8>,
-               groov::field<"chen", common::bittypes::bit_enable, 7, 7>,
-               groov::field<"ckaben", common::bittypes::bit_enable, 6, 6>,
-               groov::field<"scden", common::bittypes::bit_enable, 5, 5>,
+               groov::field<"chen", common::bit_enable, 7, 7>,
+               groov::field<"ckaben", common::bit_enable, 6, 6>,
+               groov::field<"scden", common::bit_enable, 5, 5>,
                groov::field<"reserved0", bool, 4, 4, common::access::ro>,
                groov::field<"spicksel", std::uint8_t, 3, 2>,
                groov::field<"sitp", std::uint8_t, 1, 0>>;
@@ -385,9 +385,9 @@ using dfsdm_chcfg6r1_v1_tt =
                groov::field<"datmpx", std::uint8_t, 13, 12>,
                groov::field<"reserved1", std::uint8_t, 11, 9, common::access::ro>,
                groov::field<"chinsel", bool, 8, 8>,
-               groov::field<"chen", common::bittypes::bit_enable, 7, 7>,
-               groov::field<"ckaben", common::bittypes::bit_enable, 6, 6>,
-               groov::field<"scden", common::bittypes::bit_enable, 5, 5>,
+               groov::field<"chen", common::bit_enable, 7, 7>,
+               groov::field<"ckaben", common::bit_enable, 6, 6>,
+               groov::field<"scden", common::bit_enable, 5, 5>,
                groov::field<"reserved0", bool, 4, 4, common::access::ro>,
                groov::field<"spicksel", std::uint8_t, 3, 2>,
                groov::field<"sitp", std::uint8_t, 1, 0>>;
@@ -421,9 +421,9 @@ using dfsdm_chcfg7r1_v1_tt =
                groov::field<"datmpx", std::uint8_t, 13, 12>,
                groov::field<"reserved1", std::uint8_t, 11, 9, common::access::ro>,
                groov::field<"chinsel", bool, 8, 8>,
-               groov::field<"chen", common::bittypes::bit_enable, 7, 7>,
-               groov::field<"ckaben", common::bittypes::bit_enable, 6, 6>,
-               groov::field<"scden", common::bittypes::bit_enable, 5, 5>,
+               groov::field<"chen", common::bit_enable, 7, 7>,
+               groov::field<"ckaben", common::bit_enable, 6, 6>,
+               groov::field<"scden", common::bit_enable, 5, 5>,
                groov::field<"reserved0", bool, 4, 4, common::access::ro>,
                groov::field<"spicksel", std::uint8_t, 3, 2>,
                groov::field<"sitp", std::uint8_t, 1, 0>>;
@@ -735,7 +735,7 @@ using dfsdm_dfsdm0_cr1_v1_tt =
                groov::field<"reserved6", std::uint8_t, 28, 27, common::access::ro>,
                groov::field<"rch", std::uint8_t, 26, 24>,
                groov::field<"reserved5", std::uint8_t, 23, 22, common::access::ro>,
-               groov::field<"rdmaen", common::bittypes::bit_enable, 21, 21>,
+               groov::field<"rdmaen", common::bit_enable, 21, 21>,
                groov::field<"reserved4", bool, 20, 20, common::access::ro>,
                groov::field<"rsync", bool, 19, 19>,
                groov::field<"rcont", bool, 18, 18>,
@@ -745,12 +745,12 @@ using dfsdm_dfsdm0_cr1_v1_tt =
                groov::field<"reserved2", std::uint8_t, 12, 11, common::access::ro>,
                groov::field<"jextsel", std::uint8_t, 10, 8>,
                groov::field<"reserved1", std::uint8_t, 7, 6, common::access::ro>,
-               groov::field<"jdmaen", common::bittypes::bit_enable, 5, 5>,
+               groov::field<"jdmaen", common::bit_enable, 5, 5>,
                groov::field<"jscan", bool, 4, 4>,
                groov::field<"jsync", bool, 3, 3>,
                groov::field<"reserved0", bool, 2, 2, common::access::ro>,
                groov::field<"jswstart", bool, 1, 1>,
-               groov::field<"dfen", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"dfen", common::bit_enable, 0, 0>>;
 
 // dfsdm_dfsdm0_cr2_v1: DFSDM0_CR2
 // Used by: DFSDM
@@ -766,13 +766,13 @@ using dfsdm_dfsdm0_cr2_v1_tt =
                groov::field<"awdch", std::uint8_t, 23, 16>,
                groov::field<"exch", std::uint8_t, 15, 8>,
                groov::field<"reserved0", bool, 7, 7, common::access::ro>,
-               groov::field<"ckabie", common::bittypes::bit_enable, 6, 6>,
-               groov::field<"scdie", common::bittypes::bit_enable, 5, 5>,
-               groov::field<"awdie", common::bittypes::bit_enable, 4, 4>,
-               groov::field<"rovrie", common::bittypes::bit_enable, 3, 3>,
-               groov::field<"jovrie", common::bittypes::bit_enable, 2, 2>,
-               groov::field<"reocie", common::bittypes::bit_enable, 1, 1>,
-               groov::field<"jeocie", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"ckabie", common::bit_enable, 6, 6>,
+               groov::field<"scdie", common::bit_enable, 5, 5>,
+               groov::field<"awdie", common::bit_enable, 4, 4>,
+               groov::field<"rovrie", common::bit_enable, 3, 3>,
+               groov::field<"jovrie", common::bit_enable, 2, 2>,
+               groov::field<"reocie", common::bit_enable, 1, 1>,
+               groov::field<"jeocie", common::bit_enable, 0, 0>>;
 
 // dfsdm_dfsdm0_exmax_v1: DFSDM0_EXMAX
 // Used by: DFSDM
@@ -985,7 +985,7 @@ using dfsdm_dfsdm1_cr1_v1_tt =
                groov::field<"reserved6", std::uint8_t, 28, 27, common::access::ro>,
                groov::field<"rch", std::uint8_t, 26, 24>,
                groov::field<"reserved5", std::uint8_t, 23, 22, common::access::ro>,
-               groov::field<"rdmaen", common::bittypes::bit_enable, 21, 21>,
+               groov::field<"rdmaen", common::bit_enable, 21, 21>,
                groov::field<"reserved4", bool, 20, 20, common::access::ro>,
                groov::field<"rsync", bool, 19, 19>,
                groov::field<"rcont", bool, 18, 18>,
@@ -995,12 +995,12 @@ using dfsdm_dfsdm1_cr1_v1_tt =
                groov::field<"reserved2", std::uint8_t, 12, 11, common::access::ro>,
                groov::field<"jextsel", std::uint8_t, 10, 8>,
                groov::field<"reserved1", std::uint8_t, 7, 6, common::access::ro>,
-               groov::field<"jdmaen", common::bittypes::bit_enable, 5, 5>,
+               groov::field<"jdmaen", common::bit_enable, 5, 5>,
                groov::field<"jscan", bool, 4, 4>,
                groov::field<"jsync", bool, 3, 3>,
                groov::field<"reserved0", bool, 2, 2, common::access::ro>,
                groov::field<"jswstart", bool, 1, 1>,
-               groov::field<"dfen", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"dfen", common::bit_enable, 0, 0>>;
 
 // dfsdm_dfsdm1_cr2_v1: DFSDM1_CR2
 // Used by: DFSDM
@@ -1016,13 +1016,13 @@ using dfsdm_dfsdm1_cr2_v1_tt =
                groov::field<"awdch", std::uint8_t, 23, 16>,
                groov::field<"exch", std::uint8_t, 15, 8>,
                groov::field<"reserved0", bool, 7, 7, common::access::ro>,
-               groov::field<"ckabie", common::bittypes::bit_enable, 6, 6>,
-               groov::field<"scdie", common::bittypes::bit_enable, 5, 5>,
-               groov::field<"awdie", common::bittypes::bit_enable, 4, 4>,
-               groov::field<"rovrie", common::bittypes::bit_enable, 3, 3>,
-               groov::field<"jovrie", common::bittypes::bit_enable, 2, 2>,
-               groov::field<"reocie", common::bittypes::bit_enable, 1, 1>,
-               groov::field<"jeocie", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"ckabie", common::bit_enable, 6, 6>,
+               groov::field<"scdie", common::bit_enable, 5, 5>,
+               groov::field<"awdie", common::bit_enable, 4, 4>,
+               groov::field<"rovrie", common::bit_enable, 3, 3>,
+               groov::field<"jovrie", common::bit_enable, 2, 2>,
+               groov::field<"reocie", common::bit_enable, 1, 1>,
+               groov::field<"jeocie", common::bit_enable, 0, 0>>;
 
 // dfsdm_dfsdm1_exmax_v1: DFSDM1_EXMAX
 // Used by: DFSDM
@@ -1235,7 +1235,7 @@ using dfsdm_dfsdm2_cr1_v1_tt =
                groov::field<"reserved6", std::uint8_t, 28, 27, common::access::ro>,
                groov::field<"rch", std::uint8_t, 26, 24>,
                groov::field<"reserved5", std::uint8_t, 23, 22, common::access::ro>,
-               groov::field<"rdmaen", common::bittypes::bit_enable, 21, 21>,
+               groov::field<"rdmaen", common::bit_enable, 21, 21>,
                groov::field<"reserved4", bool, 20, 20, common::access::ro>,
                groov::field<"rsync", bool, 19, 19>,
                groov::field<"rcont", bool, 18, 18>,
@@ -1245,12 +1245,12 @@ using dfsdm_dfsdm2_cr1_v1_tt =
                groov::field<"reserved2", std::uint8_t, 12, 11, common::access::ro>,
                groov::field<"jextsel", std::uint8_t, 10, 8>,
                groov::field<"reserved1", std::uint8_t, 7, 6, common::access::ro>,
-               groov::field<"jdmaen", common::bittypes::bit_enable, 5, 5>,
+               groov::field<"jdmaen", common::bit_enable, 5, 5>,
                groov::field<"jscan", bool, 4, 4>,
                groov::field<"jsync", bool, 3, 3>,
                groov::field<"reserved0", bool, 2, 2, common::access::ro>,
                groov::field<"jswstart", bool, 1, 1>,
-               groov::field<"dfen", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"dfen", common::bit_enable, 0, 0>>;
 
 // dfsdm_dfsdm2_cr2_v1: DFSDM2_CR2
 // Used by: DFSDM
@@ -1266,13 +1266,13 @@ using dfsdm_dfsdm2_cr2_v1_tt =
                groov::field<"awdch", std::uint8_t, 23, 16>,
                groov::field<"exch", std::uint8_t, 15, 8>,
                groov::field<"reserved0", bool, 7, 7, common::access::ro>,
-               groov::field<"ckabie", common::bittypes::bit_enable, 6, 6>,
-               groov::field<"scdie", common::bittypes::bit_enable, 5, 5>,
-               groov::field<"awdie", common::bittypes::bit_enable, 4, 4>,
-               groov::field<"rovrie", common::bittypes::bit_enable, 3, 3>,
-               groov::field<"jovrie", common::bittypes::bit_enable, 2, 2>,
-               groov::field<"reocie", common::bittypes::bit_enable, 1, 1>,
-               groov::field<"jeocie", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"ckabie", common::bit_enable, 6, 6>,
+               groov::field<"scdie", common::bit_enable, 5, 5>,
+               groov::field<"awdie", common::bit_enable, 4, 4>,
+               groov::field<"rovrie", common::bit_enable, 3, 3>,
+               groov::field<"jovrie", common::bit_enable, 2, 2>,
+               groov::field<"reocie", common::bit_enable, 1, 1>,
+               groov::field<"jeocie", common::bit_enable, 0, 0>>;
 
 // dfsdm_dfsdm2_exmax_v1: DFSDM2_EXMAX
 // Used by: DFSDM
@@ -1485,7 +1485,7 @@ using dfsdm_dfsdm3_cr1_v1_tt =
                groov::field<"reserved6", std::uint8_t, 28, 27, common::access::ro>,
                groov::field<"rch", std::uint8_t, 26, 24>,
                groov::field<"reserved5", std::uint8_t, 23, 22, common::access::ro>,
-               groov::field<"rdmaen", common::bittypes::bit_enable, 21, 21>,
+               groov::field<"rdmaen", common::bit_enable, 21, 21>,
                groov::field<"reserved4", bool, 20, 20, common::access::ro>,
                groov::field<"rsync", bool, 19, 19>,
                groov::field<"rcont", bool, 18, 18>,
@@ -1495,12 +1495,12 @@ using dfsdm_dfsdm3_cr1_v1_tt =
                groov::field<"reserved2", std::uint8_t, 12, 11, common::access::ro>,
                groov::field<"jextsel", std::uint8_t, 10, 8>,
                groov::field<"reserved1", std::uint8_t, 7, 6, common::access::ro>,
-               groov::field<"jdmaen", common::bittypes::bit_enable, 5, 5>,
+               groov::field<"jdmaen", common::bit_enable, 5, 5>,
                groov::field<"jscan", bool, 4, 4>,
                groov::field<"jsync", bool, 3, 3>,
                groov::field<"reserved0", bool, 2, 2, common::access::ro>,
                groov::field<"jswstart", bool, 1, 1>,
-               groov::field<"dfen", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"dfen", common::bit_enable, 0, 0>>;
 
 // dfsdm_dfsdm3_cr2_v1: DFSDM3_CR2
 // Used by: DFSDM
@@ -1516,13 +1516,13 @@ using dfsdm_dfsdm3_cr2_v1_tt =
                groov::field<"awdch", std::uint8_t, 23, 16>,
                groov::field<"exch", std::uint8_t, 15, 8>,
                groov::field<"reserved0", bool, 7, 7, common::access::ro>,
-               groov::field<"ckabie", common::bittypes::bit_enable, 6, 6>,
-               groov::field<"scdie", common::bittypes::bit_enable, 5, 5>,
-               groov::field<"awdie", common::bittypes::bit_enable, 4, 4>,
-               groov::field<"rovrie", common::bittypes::bit_enable, 3, 3>,
-               groov::field<"jovrie", common::bittypes::bit_enable, 2, 2>,
-               groov::field<"reocie", common::bittypes::bit_enable, 1, 1>,
-               groov::field<"jeocie", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"ckabie", common::bit_enable, 6, 6>,
+               groov::field<"scdie", common::bit_enable, 5, 5>,
+               groov::field<"awdie", common::bit_enable, 4, 4>,
+               groov::field<"rovrie", common::bit_enable, 3, 3>,
+               groov::field<"jovrie", common::bit_enable, 2, 2>,
+               groov::field<"reocie", common::bit_enable, 1, 1>,
+               groov::field<"jeocie", common::bit_enable, 0, 0>>;
 
 // dfsdm_dfsdm3_exmax_v1: DFSDM3_EXMAX
 // Used by: DFSDM

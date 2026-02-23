@@ -36,10 +36,10 @@ using mdios_mdios_cr_v1_tt =
                groov::field<"port_address", std::uint8_t, 12, 8>,
                groov::field<"dpc", bool, 7, 7>,
                groov::field<"reserved0", std::uint8_t, 6, 4, common::access::ro>,
-               groov::field<"eie", common::bittypes::bit_enable, 3, 3>,
-               groov::field<"rdie", common::bittypes::bit_enable, 2, 2>,
-               groov::field<"wrie", common::bittypes::bit_enable, 1, 1>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"eie", common::bit_enable, 3, 3>,
+               groov::field<"rdie", common::bit_enable, 2, 2>,
+               groov::field<"wrie", common::bit_enable, 1, 1>,
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // mdios_mdios_crdfr_v1: MDIOS_CRDFR
 // Used by: MDIOS

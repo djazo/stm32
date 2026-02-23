@@ -21,9 +21,9 @@ using hdmi_cec_cec_cfgr_v1_tt =
                groov::field<"oar", std::uint16_t, 30, 16>,
                groov::field<"reserved0", std::uint8_t, 15, 9, common::access::ro>,
                groov::field<"sftop", bool, 8, 8>,
-               groov::field<"brdnogen", common::bittypes::bit_enable, 7, 7>,
-               groov::field<"lbpegen", common::bittypes::bit_enable, 6, 6>,
-               groov::field<"bregen", common::bittypes::bit_enable, 5, 5>,
+               groov::field<"brdnogen", common::bit_enable, 7, 7>,
+               groov::field<"lbpegen", common::bit_enable, 6, 6>,
+               groov::field<"bregen", common::bit_enable, 5, 5>,
                groov::field<"brestp", bool, 4, 4>,
                groov::field<"rxtol", bool, 3, 3>,
                groov::field<"sft", std::uint8_t, 2, 0>>;
@@ -41,7 +41,7 @@ using hdmi_cec_cec_cr_v1_tt =
                groov::field<"reserved0", std::uint32_t, 31, 3, common::access::ro>,
                groov::field<"txeom", bool, 2, 2, common::access::ro>,
                groov::field<"txsom", bool, 1, 1, common::access::ro>,
-               groov::field<"cecen", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"cecen", common::bit_enable, 0, 0>>;
 
 // hdmi_cec_cec_ier_v1: CEC_IER
 // Used by: HDMI_CEC
@@ -54,19 +54,19 @@ using hdmi_cec_cec_ier_v1_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved0", std::uint32_t, 31, 13, common::access::ro>,
-               groov::field<"txackie", common::bittypes::bit_enable, 12, 12>,
-               groov::field<"txerrie", common::bittypes::bit_enable, 11, 11>,
-               groov::field<"txudrie", common::bittypes::bit_enable, 10, 10>,
-               groov::field<"txendie", common::bittypes::bit_enable, 9, 9>,
-               groov::field<"txbrie", common::bittypes::bit_enable, 8, 8>,
-               groov::field<"arblstie", common::bittypes::bit_enable, 7, 7>,
-               groov::field<"rxackie", common::bittypes::bit_enable, 6, 6>,
-               groov::field<"lbpeie", common::bittypes::bit_enable, 5, 5>,
-               groov::field<"sbpeie", common::bittypes::bit_enable, 4, 4>,
-               groov::field<"breie", common::bittypes::bit_enable, 3, 3>,
-               groov::field<"rxovrie", common::bittypes::bit_enable, 2, 2>,
-               groov::field<"rxendie", common::bittypes::bit_enable, 1, 1>,
-               groov::field<"rxbrie", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"txackie", common::bit_enable, 12, 12>,
+               groov::field<"txerrie", common::bit_enable, 11, 11>,
+               groov::field<"txudrie", common::bit_enable, 10, 10>,
+               groov::field<"txendie", common::bit_enable, 9, 9>,
+               groov::field<"txbrie", common::bit_enable, 8, 8>,
+               groov::field<"arblstie", common::bit_enable, 7, 7>,
+               groov::field<"rxackie", common::bit_enable, 6, 6>,
+               groov::field<"lbpeie", common::bit_enable, 5, 5>,
+               groov::field<"sbpeie", common::bit_enable, 4, 4>,
+               groov::field<"breie", common::bit_enable, 3, 3>,
+               groov::field<"rxovrie", common::bit_enable, 2, 2>,
+               groov::field<"rxendie", common::bit_enable, 1, 1>,
+               groov::field<"rxbrie", common::bit_enable, 0, 0>>;
 
 // hdmi_cec_cec_isr_v1: CEC_ISR
 // Used by: HDMI_CEC
@@ -86,8 +86,8 @@ using hdmi_cec_cec_isr_v1_tt =
                groov::field<"txbr", bool, 8, 8>,
                groov::field<"arblst", bool, 7, 7>,
                groov::field<"rxacke", bool, 6, 6>,
-               groov::field<"lbpe", common::bittypes::bit_enable, 5, 5>,
-               groov::field<"sbpe", common::bittypes::bit_enable, 4, 4>,
+               groov::field<"lbpe", common::bit_enable, 5, 5>,
+               groov::field<"sbpe", common::bit_enable, 4, 4>,
                groov::field<"bre", bool, 3, 3>,
                groov::field<"rxovr", bool, 2, 2>,
                groov::field<"rxend", bool, 1, 1>,

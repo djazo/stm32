@@ -70,9 +70,9 @@ using rtc_crh_v1_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved0", std::uint32_t, 31, 3, common::access::ro>,
-               groov::field<"owie", common::bittypes::bit_enable, 2, 2>,
-               groov::field<"alrie", common::bittypes::bit_enable, 1, 1>,
-               groov::field<"secie", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"owie", common::bit_enable, 2, 2>,
+               groov::field<"alrie", common::bit_enable, 1, 1>,
+               groov::field<"secie", common::bit_enable, 0, 0>>;
 
 // rtc_crl_v1: CRL
 // Used by: RTC

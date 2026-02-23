@@ -19,7 +19,7 @@ using bkp_cr_v1_tt =
              common::access::rw,
                groov::field<"reserved0", std::uint32_t, 31, 2, common::access::ro>,
                groov::field<"tpal", bool, 1, 1>,
-               groov::field<"tpe", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"tpe", common::bit_enable, 0, 0>>;
 
 // bkp_csr_v1: CSR
 // Used by: BKP
@@ -35,7 +35,7 @@ using bkp_csr_v1_tt =
                groov::field<"tif", bool, 9, 9, common::access::ro>,
                groov::field<"tef", bool, 8, 8, common::access::ro>,
                groov::field<"reserved0", std::uint8_t, 7, 3, common::access::ro>,
-               groov::field<"tpie", common::bittypes::bit_enable, 2, 2>,
+               groov::field<"tpie", common::bit_enable, 2, 2>,
                groov::field<"cti", bool, 1, 1, common::access::wo>,
                groov::field<"cte", bool, 0, 0, common::access::wo>>;
 

@@ -17,7 +17,7 @@ using comp1_comp1_cfgr1_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::rw,
-               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"lock", common::bit_locked, 31, 31>,
                groov::field<"reserved6", std::uint8_t, 30, 28, common::access::ro>,
                groov::field<"blanking", std::uint8_t, 27, 24>,
                groov::field<"reserved5", std::uint8_t, 23, 21, common::access::ro>,
@@ -29,12 +29,12 @@ using comp1_comp1_cfgr1_v1_tt =
                groov::field<"reserved2", std::uint8_t, 11, 10, common::access::ro>,
                groov::field<"hyst", std::uint8_t, 9, 8>,
                groov::field<"reserved1", bool, 7, 7, common::access::ro>,
-               groov::field<"iten", common::bittypes::bit_enable, 6, 6>,
+               groov::field<"iten", common::bit_enable, 6, 6>,
                groov::field<"reserved0", std::uint8_t, 5, 4, common::access::ro>,
                groov::field<"polarity", bool, 3, 3>,
-               groov::field<"scalen", common::bittypes::bit_enable, 2, 2>,
-               groov::field<"brgen", common::bittypes::bit_enable, 1, 1>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"scalen", common::bit_enable, 2, 2>,
+               groov::field<"brgen", common::bit_enable, 1, 1>,
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // comp1_comp1_cfgr2_v1: COMP1_CFGR2
 // Used by: COMP1
@@ -46,7 +46,7 @@ using comp1_comp1_cfgr2_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::rw,
-               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"lock", common::bit_locked, 31, 31>,
                groov::field<"reserved6", std::uint8_t, 30, 28, common::access::ro>,
                groov::field<"blanking", std::uint8_t, 27, 24>,
                groov::field<"reserved5", std::uint8_t, 23, 21, common::access::ro>,
@@ -58,13 +58,13 @@ using comp1_comp1_cfgr2_v1_tt =
                groov::field<"reserved2", std::uint8_t, 11, 10, common::access::ro>,
                groov::field<"hyst", std::uint8_t, 9, 8>,
                groov::field<"reserved1", bool, 7, 7, common::access::ro>,
-               groov::field<"iten", common::bittypes::bit_enable, 6, 6>,
+               groov::field<"iten", common::bit_enable, 6, 6>,
                groov::field<"reserved0", bool, 5, 5, common::access::ro>,
-               groov::field<"winmode", common::bittypes::bit_enable, 4, 4>,
+               groov::field<"winmode", common::bit_enable, 4, 4>,
                groov::field<"polarity", bool, 3, 3>,
-               groov::field<"scalen", common::bittypes::bit_enable, 2, 2>,
-               groov::field<"brgen", common::bittypes::bit_enable, 1, 1>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"scalen", common::bit_enable, 2, 2>,
+               groov::field<"brgen", common::bit_enable, 1, 1>,
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // comp1_comp1_icfr_v1: COMP1_ICFR
 // Used by: COMP1

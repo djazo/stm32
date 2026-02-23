@@ -2640,14 +2640,14 @@ using can_ier_v1_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved2", std::uint16_t, 31, 18, common::access::ro>,
-               groov::field<"slkie", common::bittypes::bit_enable, 17, 17>,
-               groov::field<"wkuie", common::bittypes::bit_enable, 16, 16>,
-               groov::field<"errie", common::bittypes::bit_enable, 15, 15>,
+               groov::field<"slkie", common::bit_enable, 17, 17>,
+               groov::field<"wkuie", common::bit_enable, 16, 16>,
+               groov::field<"errie", common::bit_enable, 15, 15>,
                groov::field<"reserved1", std::uint8_t, 14, 12, common::access::ro>,
-               groov::field<"lecie", common::bittypes::bit_enable, 11, 11>,
-               groov::field<"bofie", common::bittypes::bit_enable, 10, 10>,
-               groov::field<"epvie", common::bittypes::bit_enable, 9, 9>,
-               groov::field<"ewgie", common::bittypes::bit_enable, 8, 8>,
+               groov::field<"lecie", common::bit_enable, 11, 11>,
+               groov::field<"bofie", common::bit_enable, 10, 10>,
+               groov::field<"epvie", common::bit_enable, 9, 9>,
+               groov::field<"ewgie", common::bit_enable, 8, 8>,
                groov::field<"reserved0", bool, 7, 7, common::access::ro>,
                groov::field<"fovie1", bool, 6, 6>,
                groov::field<"ffie1", bool, 5, 5>,
@@ -2655,7 +2655,7 @@ using can_ier_v1_tt =
                groov::field<"fovie0", bool, 3, 3>,
                groov::field<"ffie0", bool, 2, 2>,
                groov::field<"fmpie0", bool, 1, 1>,
-               groov::field<"tmeie", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"tmeie", common::bit_enable, 0, 0>>;
 
 // can_mcr_v1: MCR
 // Used by: CAN
@@ -2838,7 +2838,7 @@ using can_ri0r_v1_tt =
              common::access::ro,
                groov::field<"stid", std::uint16_t, 31, 21>,
                groov::field<"exid", std::uint32_t, 20, 3>,
-               groov::field<"ide", common::bittypes::bit_enable, 2, 2>,
+               groov::field<"ide", common::bit_enable, 2, 2>,
                groov::field<"rtr", bool, 1, 1>,
                groov::field<"reserved0", bool, 0, 0>>;
 
@@ -2854,7 +2854,7 @@ using can_ri1r_v1_tt =
              common::access::ro,
                groov::field<"stid", std::uint16_t, 31, 21>,
                groov::field<"exid", std::uint32_t, 20, 3>,
-               groov::field<"ide", common::bittypes::bit_enable, 2, 2>,
+               groov::field<"ide", common::bit_enable, 2, 2>,
                groov::field<"rtr", bool, 1, 1>,
                groov::field<"reserved0", bool, 0, 0>>;
 
@@ -3008,7 +3008,7 @@ using can_ti0r_v1_tt =
              common::access::rw,
                groov::field<"stid", std::uint16_t, 31, 21>,
                groov::field<"exid", std::uint32_t, 20, 3>,
-               groov::field<"ide", common::bittypes::bit_enable, 2, 2>,
+               groov::field<"ide", common::bit_enable, 2, 2>,
                groov::field<"rtr", bool, 1, 1>,
                groov::field<"txrq", bool, 0, 0>>;
 
@@ -3024,7 +3024,7 @@ using can_ti1r_v1_tt =
              common::access::rw,
                groov::field<"stid", std::uint16_t, 31, 21>,
                groov::field<"exid", std::uint32_t, 20, 3>,
-               groov::field<"ide", common::bittypes::bit_enable, 2, 2>,
+               groov::field<"ide", common::bit_enable, 2, 2>,
                groov::field<"rtr", bool, 1, 1>,
                groov::field<"txrq", bool, 0, 0>>;
 
@@ -3040,7 +3040,7 @@ using can_ti2r_v1_tt =
              common::access::rw,
                groov::field<"stid", std::uint16_t, 31, 21>,
                groov::field<"exid", std::uint32_t, 20, 3>,
-               groov::field<"ide", common::bittypes::bit_enable, 2, 2>,
+               groov::field<"ide", common::bit_enable, 2, 2>,
                groov::field<"rtr", bool, 1, 1>,
                groov::field<"txrq", bool, 0, 0>>;
 

@@ -40,7 +40,7 @@ using syscfg_cfgr2_v1_tt =
                groov::field<"i2c_pb7_fmp", bool, 9, 9>,
                groov::field<"i2c_pb6_fmp", bool, 8, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"fwdisen", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"fwdisen", common::bit_enable, 0, 0>>;
 
 // syscfg_cfgr3_v1: CFGR3
 // Used by: SYSCFG_COMP
@@ -52,12 +52,12 @@ using syscfg_cfgr3_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::rw,
-               groov::field<"ref_lock", common::bittypes::bit_locked, 31, 31, common::access::wo>,
-               groov::field<"vrefint_rdyf", common::bittypes::bit_ready, 30, 30, common::access::ro>,
-               groov::field<"vrefint_comp_rdyf", common::bittypes::bit_ready, 29, 29, common::access::ro>,
-               groov::field<"vrefint_adc_rdyf", common::bittypes::bit_ready, 28, 28, common::access::ro>,
-               groov::field<"sensor_adc_rdyf", common::bittypes::bit_ready, 27, 27, common::access::ro>,
-               groov::field<"ref_rc48mhz_rdyf", common::bittypes::bit_ready, 26, 26, common::access::ro>,
+               groov::field<"ref_lock", common::bit_locked, 31, 31, common::access::wo>,
+               groov::field<"vrefint_rdyf", common::bit_ready, 30, 30, common::access::ro>,
+               groov::field<"vrefint_comp_rdyf", common::bit_ready, 29, 29, common::access::ro>,
+               groov::field<"vrefint_adc_rdyf", common::bit_ready, 28, 28, common::access::ro>,
+               groov::field<"sensor_adc_rdyf", common::bit_ready, 27, 27, common::access::ro>,
+               groov::field<"ref_rc48mhz_rdyf", common::bit_ready, 26, 26, common::access::ro>,
                groov::field<"reserved3", std::uint16_t, 25, 14, common::access::ro>,
                groov::field<"enref_rc48mhz", bool, 13, 13>,
                groov::field<"enbuf_vrefint_comp", bool, 12, 12>,
@@ -79,7 +79,7 @@ using syscfg_comp1_csr_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::rw,
-               groov::field<"comp1lock", common::bittypes::bit_locked, 31, 31, common::access::ro>,
+               groov::field<"comp1lock", common::bit_locked, 31, 31, common::access::ro>,
                groov::field<"comp1value", bool, 30, 30, common::access::ro>,
                groov::field<"reserved4", std::uint16_t, 29, 16, common::access::ro>,
                groov::field<"comp1polarity", bool, 15, 15>,
@@ -90,7 +90,7 @@ using syscfg_comp1_csr_v1_tt =
                groov::field<"reserved1", std::uint8_t, 7, 6, common::access::ro>,
                groov::field<"comp1innsel", std::uint8_t, 5, 4>,
                groov::field<"reserved0", std::uint8_t, 3, 1, common::access::ro>,
-               groov::field<"comp1en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"comp1en", common::bit_enable, 0, 0>>;
 
 // syscfg_comp2_csr_v1: COMP2_CSR
 // Used by: SYSCFG_COMP
@@ -102,7 +102,7 @@ using syscfg_comp2_csr_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::rw,
-               groov::field<"comp2lock", common::bittypes::bit_locked, 31, 31, common::access::ro>,
+               groov::field<"comp2lock", common::bit_locked, 31, 31, common::access::ro>,
                groov::field<"comp2value", bool, 30, 30, common::access::ro>,
                groov::field<"reserved4", std::uint16_t, 29, 16, common::access::ro>,
                groov::field<"comp2polarity", bool, 15, 15>,
@@ -115,7 +115,7 @@ using syscfg_comp2_csr_v1_tt =
                groov::field<"comp2innsel", std::uint8_t, 6, 4>,
                groov::field<"comp2speed", bool, 3, 3>,
                groov::field<"reserved0", std::uint8_t, 2, 1, common::access::ro>,
-               groov::field<"comp2en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"comp2en", common::bit_enable, 0, 0>>;
 
 // syscfg_exticr1_v1: EXTICR1
 // Used by: SYSCFG_COMP

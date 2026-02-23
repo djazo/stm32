@@ -20,7 +20,7 @@ using dma2d_amtcr_v1_tt =
                groov::field<"reserved1", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"dt", std::uint8_t, 15, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // dma2d_bgcmar_v1: BGCMAR
 // Used by: DMA2D
@@ -109,12 +109,12 @@ using dma2d_cr_v1_tt =
                groov::field<"reserved2", std::uint16_t, 31, 18, common::access::ro>,
                groov::field<"mode", std::uint8_t, 17, 16>,
                groov::field<"reserved1", std::uint8_t, 15, 14, common::access::ro>,
-               groov::field<"ceie", common::bittypes::bit_enable, 13, 13>,
-               groov::field<"ctcie", common::bittypes::bit_enable, 12, 12>,
-               groov::field<"caeie", common::bittypes::bit_enable, 11, 11>,
-               groov::field<"twie", common::bittypes::bit_enable, 10, 10>,
-               groov::field<"tcie", common::bittypes::bit_enable, 9, 9>,
-               groov::field<"teie", common::bittypes::bit_enable, 8, 8>,
+               groov::field<"ceie", common::bit_enable, 13, 13>,
+               groov::field<"ctcie", common::bit_enable, 12, 12>,
+               groov::field<"caeie", common::bit_enable, 11, 11>,
+               groov::field<"twie", common::bit_enable, 10, 10>,
+               groov::field<"tcie", common::bit_enable, 9, 9>,
+               groov::field<"teie", common::bit_enable, 8, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 3, common::access::ro>,
                groov::field<"abort", bool, 2, 2>,
                groov::field<"susp", bool, 1, 1>,

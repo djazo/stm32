@@ -54,9 +54,9 @@ using syscfg_cfgr2_v1_tt =
                groov::field<"reserved1", std::uint32_t, 31, 9, common::access::ro>,
                groov::field<"sram_pef", bool, 8, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 3, common::access::ro>,
-               groov::field<"pvd_lock", common::bittypes::bit_locked, 2, 2>,
-               groov::field<"sram_parity_lock", common::bittypes::bit_locked, 1, 1>,
-               groov::field<"locup_lock", common::bittypes::bit_locked, 0, 0>>;
+               groov::field<"pvd_lock", common::bit_locked, 2, 2>,
+               groov::field<"sram_parity_lock", common::bit_locked, 1, 1>,
+               groov::field<"locup_lock", common::bit_locked, 0, 0>>;
 
 // syscfg_exticr1_v1: EXTICR1
 // Used by: SYSCFG

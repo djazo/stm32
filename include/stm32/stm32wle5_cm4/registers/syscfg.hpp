@@ -100,7 +100,7 @@ using syscfg_cfgr1_v1_tt =
                groov::field<"i2c_pb7_fmp", bool, 17, 17>,
                groov::field<"i2c_pb6_fmp", bool, 16, 16>,
                groov::field<"reserved1", std::uint8_t, 15, 9, common::access::ro>,
-               groov::field<"boosten", common::bittypes::bit_enable, 8, 8>,
+               groov::field<"boosten", common::bit_enable, 8, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 0, common::access::ro>>;
 
 // syscfg_cfgr2_v1: CFGR2
@@ -276,9 +276,9 @@ using syscfg_scsr_v1_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved1", std::uint32_t, 31, 9, common::access::ro>,
-               groov::field<"pkasrambsy", common::bittypes::bit_ready_bar, 8, 8, common::access::ro>,
+               groov::field<"pkasrambsy", common::bit_ready_bar, 8, 8, common::access::ro>,
                groov::field<"reserved0", std::uint8_t, 7, 2, common::access::ro>,
-               groov::field<"srambsy", common::bittypes::bit_ready_bar, 1, 1, common::access::ro>,
+               groov::field<"srambsy", common::bit_ready_bar, 1, 1, common::access::ro>,
                groov::field<"sram2er", bool, 0, 0>>;
 
 // syscfg_skr_v1: SKR

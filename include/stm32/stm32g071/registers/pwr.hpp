@@ -41,7 +41,7 @@ using pwr_cr2_v1_tt =
                groov::field<"reserved0", std::uint32_t, 31, 7, common::access::ro>,
                groov::field<"pvdrt", std::uint8_t, 6, 4>,
                groov::field<"pvdft", std::uint8_t, 3, 1>,
-               groov::field<"pvde", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"pvde", common::bit_enable, 0, 0>>;
 
 // pwr_cr3_v1: CR3
 // Used by: PWR
@@ -57,7 +57,7 @@ using pwr_cr3_v1_tt =
                groov::field<"eiwul", bool, 15, 15>,
                groov::field<"reserved2", std::uint8_t, 14, 11, common::access::ro>,
                groov::field<"apc", bool, 10, 10>,
-               groov::field<"ulpen", common::bittypes::bit_enable, 9, 9>,
+               groov::field<"ulpen", common::bit_enable, 9, 9>,
                groov::field<"rrs", bool, 8, 8>,
                groov::field<"reserved1", std::uint8_t, 7, 6, common::access::ro>,
                groov::field<"ewup6", bool, 5, 5>,
@@ -387,7 +387,7 @@ using pwr_sr2_v1_tt =
                groov::field<"vosf", bool, 10, 10>,
                groov::field<"reglpf", bool, 9, 9>,
                groov::field<"reglps", bool, 8, 8>,
-               groov::field<"flash_rdy", common::bittypes::bit_ready, 7, 7>,
+               groov::field<"flash_rdy", common::bit_ready, 7, 7>,
                groov::field<"reserved0", std::uint8_t, 6, 0>>;
 
 } // namespace stm32::regs

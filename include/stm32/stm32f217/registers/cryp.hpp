@@ -18,7 +18,7 @@ using cryp_cr_v1_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved2", std::uint16_t, 31, 16, common::access::ro>,
-               groov::field<"crypen", common::bittypes::bit_enable, 15, 15>,
+               groov::field<"crypen", common::bit_enable, 15, 15>,
                groov::field<"fflush", bool, 14, 14, common::access::wo>,
                groov::field<"reserved1", std::uint8_t, 13, 10, common::access::ro>,
                groov::field<"keysize", std::uint8_t, 9, 8>,
@@ -50,8 +50,8 @@ using cryp_dmacr_v1_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved0", std::uint32_t, 31, 2, common::access::ro>,
-               groov::field<"doen", common::bittypes::bit_enable, 1, 1>,
-               groov::field<"dien", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"doen", common::bit_enable, 1, 1>,
+               groov::field<"dien", common::bit_enable, 0, 0>>;
 
 // cryp_dout_v1: DOUT
 // Used by: CRYP

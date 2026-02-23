@@ -18,10 +18,10 @@ using flash_acr_v1_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved2", std::uint32_t, 31, 12, common::access::ro>,
-               groov::field<"artrst", common::bittypes::bit_reset, 11, 11>,
+               groov::field<"artrst", common::bit_reset, 11, 11>,
                groov::field<"reserved1", bool, 10, 10, common::access::ro>,
-               groov::field<"arten", common::bittypes::bit_enable, 9, 9>,
-               groov::field<"prften", common::bittypes::bit_enable, 8, 8>,
+               groov::field<"arten", common::bit_enable, 9, 9>,
+               groov::field<"prften", common::bit_enable, 8, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 4, common::access::ro>,
                groov::field<"latency", std::uint8_t, 3, 0>>;
 
@@ -35,10 +35,10 @@ using flash_cr_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::rw,
-               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"lock", common::bit_locked, 31, 31>,
                groov::field<"reserved2", std::uint8_t, 30, 26, common::access::ro>,
-               groov::field<"errie", common::bittypes::bit_enable, 25, 25>,
-               groov::field<"eopie", common::bittypes::bit_enable, 24, 24>,
+               groov::field<"errie", common::bit_enable, 25, 25>,
+               groov::field<"eopie", common::bit_enable, 24, 24>,
                groov::field<"reserved1", std::uint8_t, 23, 17, common::access::ro>,
                groov::field<"strt", bool, 16, 16>,
                groov::field<"mer1", bool, 15, 15>,
@@ -83,7 +83,7 @@ using flash_optcr_v1_tt =
                groov::field<"wwdg_sw", bool, 4, 4>,
                groov::field<"bor_lev", std::uint8_t, 3, 2>,
                groov::field<"optstrt", bool, 1, 1>,
-               groov::field<"optlock", common::bittypes::bit_locked, 0, 0>>;
+               groov::field<"optlock", common::bit_locked, 0, 0>>;
 
 // flash_optcr1_v1: OPTCR1
 // Used by: FLASH
@@ -121,7 +121,7 @@ using flash_sr_v1_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved2", std::uint16_t, 31, 17, common::access::ro>,
-               groov::field<"bsy", common::bittypes::bit_ready_bar, 16, 16, common::access::ro>,
+               groov::field<"bsy", common::bit_ready_bar, 16, 16, common::access::ro>,
                groov::field<"reserved1", std::uint8_t, 15, 8, common::access::ro>,
                groov::field<"erserr", bool, 7, 7>,
                groov::field<"pgperr", bool, 6, 6>,

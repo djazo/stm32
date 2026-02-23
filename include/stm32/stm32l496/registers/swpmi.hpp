@@ -35,8 +35,8 @@ using swpmi_cr_v1_tt =
                groov::field<"reserved0", std::uint8_t, 9, 6, common::access::ro>,
                groov::field<"swpact", bool, 5, 5>,
                groov::field<"lpbk", bool, 4, 4>,
-               groov::field<"txmode", common::bittypes::bit_enable, 3, 3>,
-               groov::field<"rxmode", common::bittypes::bit_enable, 2, 2>,
+               groov::field<"txmode", common::bit_enable, 3, 3>,
+               groov::field<"rxmode", common::bit_enable, 2, 2>,
                groov::field<"txdma", bool, 1, 1>,
                groov::field<"rxdma", bool, 0, 0>>;
 
@@ -71,15 +71,15 @@ using swpmi_ier_v1_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved0", std::uint32_t, 31, 9, common::access::ro>,
-               groov::field<"srie", common::bittypes::bit_enable, 8, 8>,
-               groov::field<"tcie", common::bittypes::bit_enable, 7, 7>,
-               groov::field<"tie", common::bittypes::bit_enable, 6, 6>,
-               groov::field<"rie", common::bittypes::bit_enable, 5, 5>,
-               groov::field<"txunrie", common::bittypes::bit_enable, 4, 4>,
-               groov::field<"rxovrie", common::bittypes::bit_enable, 3, 3>,
-               groov::field<"rxberie", common::bittypes::bit_enable, 2, 2>,
-               groov::field<"txbeie", common::bittypes::bit_enable, 1, 1>,
-               groov::field<"rxbfie", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"srie", common::bit_enable, 8, 8>,
+               groov::field<"tcie", common::bit_enable, 7, 7>,
+               groov::field<"tie", common::bit_enable, 6, 6>,
+               groov::field<"rie", common::bit_enable, 5, 5>,
+               groov::field<"txunrie", common::bit_enable, 4, 4>,
+               groov::field<"rxovrie", common::bit_enable, 3, 3>,
+               groov::field<"rxberie", common::bit_enable, 2, 2>,
+               groov::field<"txbeie", common::bit_enable, 1, 1>,
+               groov::field<"rxbfie", common::bit_enable, 0, 0>>;
 
 // swpmi_isr_v1: ISR
 // Used by: SWPMI1

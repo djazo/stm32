@@ -37,7 +37,7 @@ using syscfg_cccsr_v1_tt =
                groov::field<"ready", bool, 8, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 2, common::access::ro>,
                groov::field<"cs", bool, 1, 1>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // syscfg_ccvr_v1: CCVR
 // Used by: SYSCFG

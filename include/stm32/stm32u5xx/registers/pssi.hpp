@@ -17,8 +17,8 @@ using pssi_cr_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::rw,
-               groov::field<"outen", common::bittypes::bit_enable, 31, 31>,
-               groov::field<"dmaen", common::bittypes::bit_enable, 30, 30>,
+               groov::field<"outen", common::bit_enable, 31, 31>,
+               groov::field<"dmaen", common::bit_enable, 30, 30>,
                groov::field<"reserved5", std::uint16_t, 29, 21, common::access::ro>,
                groov::field<"derdycfg", std::uint8_t, 20, 18>,
                groov::field<"reserved4", std::uint8_t, 17, 15, common::access::ro>,
@@ -26,7 +26,7 @@ using pssi_cr_v1_tt =
                groov::field<"reserved3", std::uint8_t, 13, 12, common::access::ro>,
                groov::field<"edm", std::uint8_t, 11, 10>,
                groov::field<"reserved2", bool, 9, 9, common::access::ro>,
-               groov::field<"rdypol", common::bittypes::bit_ready, 8, 8>,
+               groov::field<"rdypol", common::bit_ready, 8, 8>,
                groov::field<"reserved1", bool, 7, 7, common::access::ro>,
                groov::field<"depol", bool, 6, 6>,
                groov::field<"ckpol", bool, 5, 5>,
@@ -72,7 +72,7 @@ using pssi_ier_v1_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved1", std::uint32_t, 31, 2, common::access::ro>,
-               groov::field<"ovr_ie", common::bittypes::bit_enable, 1, 1>,
+               groov::field<"ovr_ie", common::bit_enable, 1, 1>,
                groov::field<"reserved0", bool, 0, 0, common::access::ro>>;
 
 // pssi_mis_v1: MIS

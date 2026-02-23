@@ -19,8 +19,8 @@ using scb_actrl_v1_tt =
              common::access::rw,
                groov::field<"reserved2", std::uint32_t, 31, 13, common::access::ro>,
                groov::field<"disitmatbflush", bool, 12, 12>,
-               groov::field<"disramode", common::bittypes::bit_enable, 11, 11>,
-               groov::field<"fpexcodis", common::bittypes::bit_enable_bar, 10, 10>,
+               groov::field<"disramode", common::bit_enable, 11, 11>,
+               groov::field<"fpexcodis", common::bit_enable_bar, 10, 10>,
                groov::field<"reserved1", std::uint8_t, 9, 3, common::access::ro>,
                groov::field<"disfold", bool, 2, 2>,
                groov::field<"reserved0", std::uint8_t, 1, 0, common::access::ro>>;

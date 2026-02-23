@@ -136,7 +136,7 @@ using flash_cr1_v1_tt =
                groov::field<"pgserrie1", bool, 18, 18>,
                groov::field<"wrperrie1", bool, 17, 17>,
                groov::field<"eopie1", bool, 16, 16>,
-               groov::field<"crc_en", common::bittypes::bit_enable, 15, 15>,
+               groov::field<"crc_en", common::bit_enable, 15, 15>,
                groov::field<"reserved0", std::uint8_t, 14, 11, common::access::ro>,
                groov::field<"snb1", std::uint8_t, 10, 8>,
                groov::field<"start1", bool, 7, 7>,
@@ -145,7 +145,7 @@ using flash_cr1_v1_tt =
                groov::field<"ber1", bool, 3, 3>,
                groov::field<"ser1", bool, 2, 2>,
                groov::field<"pg1", bool, 1, 1>,
-               groov::field<"lock1", common::bittypes::bit_locked, 0, 0>>;
+               groov::field<"lock1", common::bit_locked, 0, 0>>;
 
 // flash_cr2_v1: CR2
 // Used by: Flash
@@ -170,7 +170,7 @@ using flash_cr2_v1_tt =
                groov::field<"pgserrie2", bool, 18, 18>,
                groov::field<"wrperrie2", bool, 17, 17>,
                groov::field<"eopie2", bool, 16, 16>,
-               groov::field<"crc_en", common::bittypes::bit_enable, 15, 15>,
+               groov::field<"crc_en", common::bit_enable, 15, 15>,
                groov::field<"reserved0", std::uint8_t, 14, 11, common::access::ro>,
                groov::field<"snb2", std::uint8_t, 10, 8>,
                groov::field<"start2", bool, 7, 7>,
@@ -179,7 +179,7 @@ using flash_cr2_v1_tt =
                groov::field<"ber2", bool, 3, 3>,
                groov::field<"ser2", bool, 2, 2>,
                groov::field<"pg2", bool, 1, 1>,
-               groov::field<"lock2", common::bittypes::bit_locked, 0, 0>>;
+               groov::field<"lock2", common::bit_locked, 0, 0>>;
 
 // flash_crccr1_v1: CRCCR1
 // Used by: Flash
@@ -376,12 +376,12 @@ using flash_optcr_v1_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"swap_bank", bool, 31, 31>,
-               groov::field<"optchangeerrie", common::bittypes::bit_enable, 30, 30>,
+               groov::field<"optchangeerrie", common::bit_enable, 30, 30>,
                groov::field<"reserved1", std::uint32_t, 29, 5, common::access::ro>,
                groov::field<"mer", bool, 4, 4>,
                groov::field<"reserved0", std::uint8_t, 3, 2, common::access::ro>,
                groov::field<"optstart", bool, 1, 1>,
-               groov::field<"optlock", common::bittypes::bit_locked, 0, 0>>;
+               groov::field<"optlock", common::bit_locked, 0, 0>>;
 
 // flash_optcr__v1: OPTCR_
 // Used by: Flash
@@ -394,12 +394,12 @@ using flash_optcr__v1_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"swap_bank", bool, 31, 31>,
-               groov::field<"optchangeerrie", common::bittypes::bit_enable, 30, 30>,
+               groov::field<"optchangeerrie", common::bit_enable, 30, 30>,
                groov::field<"reserved1", std::uint32_t, 29, 5, common::access::ro>,
                groov::field<"mer", bool, 4, 4>,
                groov::field<"reserved0", std::uint8_t, 3, 2, common::access::ro>,
                groov::field<"optstart", bool, 1, 1>,
-               groov::field<"optlock", common::bittypes::bit_locked, 0, 0>>;
+               groov::field<"optlock", common::bit_locked, 0, 0>>;
 
 // flash_optkeyr_v1: OPTKEYR
 // Used by: Flash
@@ -702,7 +702,7 @@ using flash_sr1_v1_tt =
                groov::field<"crc_busy1", bool, 3, 3>,
                groov::field<"qw1", bool, 2, 2>,
                groov::field<"wbne1", bool, 1, 1>,
-               groov::field<"bsy1", common::bittypes::bit_ready_bar, 0, 0>>;
+               groov::field<"bsy1", common::bit_ready_bar, 0, 0>>;
 
 // flash_sr2_v1: SR2
 // Used by: Flash
@@ -731,7 +731,7 @@ using flash_sr2_v1_tt =
                groov::field<"crc_busy2", bool, 3, 3>,
                groov::field<"qw2", bool, 2, 2>,
                groov::field<"wbne2", bool, 1, 1>,
-               groov::field<"bsy2", common::bittypes::bit_ready_bar, 0, 0>>;
+               groov::field<"bsy2", common::bit_ready_bar, 0, 0>>;
 
 // flash_wpsn_cur1r_v1: WPSN_CUR1R
 // Used by: Flash

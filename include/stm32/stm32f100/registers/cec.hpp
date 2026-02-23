@@ -20,8 +20,8 @@ using cec_cfgr_v1_tt =
                groov::field<"reserved0", std::uint32_t, 31, 4, common::access::ro>,
                groov::field<"bpem", bool, 3, 3>,
                groov::field<"btem", bool, 2, 2>,
-               groov::field<"ie", common::bittypes::bit_enable, 1, 1>,
-               groov::field<"pe", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"ie", common::bit_enable, 1, 1>,
+               groov::field<"pe", common::bit_enable, 0, 0>>;
 
 // cec_csr_v1: CSR
 // Used by: CEC
@@ -54,12 +54,12 @@ using cec_esr_v1_tt =
              baseaddress + offset,
              common::access::ro,
                groov::field<"reserved0", std::uint32_t, 31, 7>,
-               groov::field<"tbtfe", common::bittypes::bit_enable, 6, 6>,
+               groov::field<"tbtfe", common::bit_enable, 6, 6>,
                groov::field<"line", bool, 5, 5>,
                groov::field<"acke", bool, 4, 4>,
                groov::field<"sbe", bool, 3, 3>,
-               groov::field<"rbtfe", common::bittypes::bit_enable, 2, 2>,
-               groov::field<"bpe", common::bittypes::bit_enable, 1, 1>,
+               groov::field<"rbtfe", common::bit_enable, 2, 2>,
+               groov::field<"bpe", common::bit_enable, 1, 1>,
                groov::field<"bte", bool, 0, 0>>;
 
 // cec_oar_v1: OAR

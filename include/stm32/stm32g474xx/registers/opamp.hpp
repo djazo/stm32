@@ -17,7 +17,7 @@ using opamp_opamp1_csr_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::rw,
-               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"lock", common::bit_locked, 31, 31>,
                groov::field<"calout", bool, 30, 30>,
                groov::field<"reserved1", bool, 29, 29, common::access::ro>,
                groov::field<"trimoffsetn", std::uint8_t, 28, 24>,
@@ -26,13 +26,13 @@ using opamp_opamp1_csr_v1_tt =
                groov::field<"calsel", std::uint8_t, 13, 12>,
                groov::field<"calon", bool, 11, 11>,
                groov::field<"reserved0", std::uint8_t, 10, 9, common::access::ro>,
-               groov::field<"opaintoen", common::bittypes::bit_enable, 8, 8>,
+               groov::field<"opaintoen", common::bit_enable, 8, 8>,
                groov::field<"opahsm", bool, 7, 7>,
                groov::field<"vm_sel", std::uint8_t, 6, 5>,
                groov::field<"usertrim", bool, 4, 4>,
                groov::field<"vp_sel", std::uint8_t, 3, 2>,
                groov::field<"force_vp", bool, 1, 1>,
-               groov::field<"opaen", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"opaen", common::bit_enable, 0, 0>>;
 
 // opamp_opamp1_tcmr_v1: OPAMP1_TCMR
 // Used by: OPAMP
@@ -44,11 +44,11 @@ using opamp_opamp1_tcmr_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::rw,
-               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"lock", common::bit_locked, 31, 31>,
                groov::field<"reserved0", std::uint32_t, 30, 6, common::access::ro>,
-               groov::field<"t20cm_en", common::bittypes::bit_enable, 5, 5>,
-               groov::field<"t8cm_en", common::bittypes::bit_enable, 4, 4>,
-               groov::field<"t1cm_en", common::bittypes::bit_enable, 3, 3>,
+               groov::field<"t20cm_en", common::bit_enable, 5, 5>,
+               groov::field<"t8cm_en", common::bit_enable, 4, 4>,
+               groov::field<"t1cm_en", common::bit_enable, 3, 3>,
                groov::field<"vps_sel", std::uint8_t, 2, 1>,
                groov::field<"vms_sel", bool, 0, 0>>;
 
@@ -62,7 +62,7 @@ using opamp_opamp2_csr_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::rw,
-               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"lock", common::bit_locked, 31, 31>,
                groov::field<"calout", bool, 30, 30>,
                groov::field<"reserved1", bool, 29, 29, common::access::ro>,
                groov::field<"trimoffsetn", std::uint8_t, 28, 24>,
@@ -71,13 +71,13 @@ using opamp_opamp2_csr_v1_tt =
                groov::field<"calsel", std::uint8_t, 13, 12>,
                groov::field<"calon", bool, 11, 11>,
                groov::field<"reserved0", std::uint8_t, 10, 9, common::access::ro>,
-               groov::field<"opaintoen", common::bittypes::bit_enable, 8, 8>,
+               groov::field<"opaintoen", common::bit_enable, 8, 8>,
                groov::field<"opahsm", bool, 7, 7>,
                groov::field<"vm_sel", std::uint8_t, 6, 5>,
                groov::field<"usertrim", bool, 4, 4>,
                groov::field<"vp_sel", std::uint8_t, 3, 2>,
                groov::field<"force_vp", bool, 1, 1>,
-               groov::field<"opaen", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"opaen", common::bit_enable, 0, 0>>;
 
 // opamp_opamp2_tcmr_v1: OPAMP2_TCMR
 // Used by: OPAMP
@@ -89,11 +89,11 @@ using opamp_opamp2_tcmr_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::rw,
-               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"lock", common::bit_locked, 31, 31>,
                groov::field<"reserved0", std::uint32_t, 30, 6, common::access::ro>,
-               groov::field<"t20cm_en", common::bittypes::bit_enable, 5, 5>,
-               groov::field<"t8cm_en", common::bittypes::bit_enable, 4, 4>,
-               groov::field<"t1cm_en", common::bittypes::bit_enable, 3, 3>,
+               groov::field<"t20cm_en", common::bit_enable, 5, 5>,
+               groov::field<"t8cm_en", common::bit_enable, 4, 4>,
+               groov::field<"t1cm_en", common::bit_enable, 3, 3>,
                groov::field<"vps_sel", std::uint8_t, 2, 1>,
                groov::field<"vms_sel", bool, 0, 0>>;
 
@@ -107,7 +107,7 @@ using opamp_opamp3_csr_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::rw,
-               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"lock", common::bit_locked, 31, 31>,
                groov::field<"calout", bool, 30, 30>,
                groov::field<"reserved1", bool, 29, 29, common::access::ro>,
                groov::field<"trimoffsetn", std::uint8_t, 28, 24>,
@@ -116,13 +116,13 @@ using opamp_opamp3_csr_v1_tt =
                groov::field<"calsel", std::uint8_t, 13, 12>,
                groov::field<"calon", bool, 11, 11>,
                groov::field<"reserved0", std::uint8_t, 10, 9, common::access::ro>,
-               groov::field<"opaintoen", common::bittypes::bit_enable, 8, 8>,
+               groov::field<"opaintoen", common::bit_enable, 8, 8>,
                groov::field<"opahsm", bool, 7, 7>,
                groov::field<"vm_sel", std::uint8_t, 6, 5>,
                groov::field<"usertrim", bool, 4, 4>,
                groov::field<"vp_sel", std::uint8_t, 3, 2>,
                groov::field<"force_vp", bool, 1, 1>,
-               groov::field<"opaen", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"opaen", common::bit_enable, 0, 0>>;
 
 // opamp_opamp3_tcmr_v1: OPAMP3_TCMR
 // Used by: OPAMP
@@ -134,11 +134,11 @@ using opamp_opamp3_tcmr_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::rw,
-               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"lock", common::bit_locked, 31, 31>,
                groov::field<"reserved0", std::uint32_t, 30, 6, common::access::ro>,
-               groov::field<"t20cm_en", common::bittypes::bit_enable, 5, 5>,
-               groov::field<"t8cm_en", common::bittypes::bit_enable, 4, 4>,
-               groov::field<"t1cm_en", common::bittypes::bit_enable, 3, 3>,
+               groov::field<"t20cm_en", common::bit_enable, 5, 5>,
+               groov::field<"t8cm_en", common::bit_enable, 4, 4>,
+               groov::field<"t1cm_en", common::bit_enable, 3, 3>,
                groov::field<"vps_sel", std::uint8_t, 2, 1>,
                groov::field<"vms_sel", bool, 0, 0>>;
 
@@ -152,7 +152,7 @@ using opamp_opamp4_csr_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::rw,
-               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"lock", common::bit_locked, 31, 31>,
                groov::field<"calout", bool, 30, 30>,
                groov::field<"reserved1", bool, 29, 29, common::access::ro>,
                groov::field<"trimoffsetn", std::uint8_t, 28, 24>,
@@ -161,13 +161,13 @@ using opamp_opamp4_csr_v1_tt =
                groov::field<"calsel", std::uint8_t, 13, 12>,
                groov::field<"calon", bool, 11, 11>,
                groov::field<"reserved0", std::uint8_t, 10, 9, common::access::ro>,
-               groov::field<"opaintoen", common::bittypes::bit_enable, 8, 8>,
+               groov::field<"opaintoen", common::bit_enable, 8, 8>,
                groov::field<"opahsm", bool, 7, 7>,
                groov::field<"vm_sel", std::uint8_t, 6, 5>,
                groov::field<"usertrim", bool, 4, 4>,
                groov::field<"vp_sel", std::uint8_t, 3, 2>,
                groov::field<"force_vp", bool, 1, 1>,
-               groov::field<"opaen", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"opaen", common::bit_enable, 0, 0>>;
 
 // opamp_opamp4_tcmr_v1: OPAMP4_TCMR
 // Used by: OPAMP
@@ -179,11 +179,11 @@ using opamp_opamp4_tcmr_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::rw,
-               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"lock", common::bit_locked, 31, 31>,
                groov::field<"reserved0", std::uint32_t, 30, 6, common::access::ro>,
-               groov::field<"t20cm_en", common::bittypes::bit_enable, 5, 5>,
-               groov::field<"t8cm_en", common::bittypes::bit_enable, 4, 4>,
-               groov::field<"t1cm_en", common::bittypes::bit_enable, 3, 3>,
+               groov::field<"t20cm_en", common::bit_enable, 5, 5>,
+               groov::field<"t8cm_en", common::bit_enable, 4, 4>,
+               groov::field<"t1cm_en", common::bit_enable, 3, 3>,
                groov::field<"vps_sel", std::uint8_t, 2, 1>,
                groov::field<"vms_sel", bool, 0, 0>>;
 
@@ -197,7 +197,7 @@ using opamp_opamp5_csr_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::rw,
-               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"lock", common::bit_locked, 31, 31>,
                groov::field<"calout", bool, 30, 30>,
                groov::field<"reserved1", bool, 29, 29, common::access::ro>,
                groov::field<"trimoffsetn", std::uint8_t, 28, 24>,
@@ -206,13 +206,13 @@ using opamp_opamp5_csr_v1_tt =
                groov::field<"calsel", std::uint8_t, 13, 12>,
                groov::field<"calon", bool, 11, 11>,
                groov::field<"reserved0", std::uint8_t, 10, 9, common::access::ro>,
-               groov::field<"opaintoen", common::bittypes::bit_enable, 8, 8>,
+               groov::field<"opaintoen", common::bit_enable, 8, 8>,
                groov::field<"opahsm", bool, 7, 7>,
                groov::field<"vm_sel", std::uint8_t, 6, 5>,
                groov::field<"usertrim", bool, 4, 4>,
                groov::field<"vp_sel", std::uint8_t, 3, 2>,
                groov::field<"force_vp", bool, 1, 1>,
-               groov::field<"opaen", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"opaen", common::bit_enable, 0, 0>>;
 
 // opamp_opamp5_tcmr_v1: OPAMP5_TCMR
 // Used by: OPAMP
@@ -224,11 +224,11 @@ using opamp_opamp5_tcmr_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::rw,
-               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"lock", common::bit_locked, 31, 31>,
                groov::field<"reserved0", std::uint32_t, 30, 6, common::access::ro>,
-               groov::field<"t20cm_en", common::bittypes::bit_enable, 5, 5>,
-               groov::field<"t8cm_en", common::bittypes::bit_enable, 4, 4>,
-               groov::field<"t1cm_en", common::bittypes::bit_enable, 3, 3>,
+               groov::field<"t20cm_en", common::bit_enable, 5, 5>,
+               groov::field<"t8cm_en", common::bit_enable, 4, 4>,
+               groov::field<"t1cm_en", common::bit_enable, 3, 3>,
                groov::field<"vps_sel", std::uint8_t, 2, 1>,
                groov::field<"vms_sel", bool, 0, 0>>;
 
@@ -242,7 +242,7 @@ using opamp_opamp6_csr_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::rw,
-               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"lock", common::bit_locked, 31, 31>,
                groov::field<"calout", bool, 30, 30>,
                groov::field<"reserved1", bool, 29, 29, common::access::ro>,
                groov::field<"trimoffsetn", std::uint8_t, 28, 24>,
@@ -251,13 +251,13 @@ using opamp_opamp6_csr_v1_tt =
                groov::field<"calsel", std::uint8_t, 13, 12>,
                groov::field<"calon", bool, 11, 11>,
                groov::field<"reserved0", std::uint8_t, 10, 9, common::access::ro>,
-               groov::field<"opaintoen", common::bittypes::bit_enable, 8, 8>,
+               groov::field<"opaintoen", common::bit_enable, 8, 8>,
                groov::field<"opahsm", bool, 7, 7>,
                groov::field<"vm_sel", std::uint8_t, 6, 5>,
                groov::field<"usertrim", bool, 4, 4>,
                groov::field<"vp_sel", std::uint8_t, 3, 2>,
                groov::field<"force_vp", bool, 1, 1>,
-               groov::field<"opaen", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"opaen", common::bit_enable, 0, 0>>;
 
 // opamp_opamp6_tcmr_v1: OPAMP6_TCMR
 // Used by: OPAMP
@@ -269,11 +269,11 @@ using opamp_opamp6_tcmr_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::rw,
-               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"lock", common::bit_locked, 31, 31>,
                groov::field<"reserved0", std::uint32_t, 30, 6, common::access::ro>,
-               groov::field<"t20cm_en", common::bittypes::bit_enable, 5, 5>,
-               groov::field<"t8cm_en", common::bittypes::bit_enable, 4, 4>,
-               groov::field<"t1cm_en", common::bittypes::bit_enable, 3, 3>,
+               groov::field<"t20cm_en", common::bit_enable, 5, 5>,
+               groov::field<"t8cm_en", common::bit_enable, 4, 4>,
+               groov::field<"t1cm_en", common::bit_enable, 3, 3>,
                groov::field<"vps_sel", std::uint8_t, 2, 1>,
                groov::field<"vms_sel", bool, 0, 0>>;
 

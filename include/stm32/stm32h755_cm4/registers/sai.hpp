@@ -20,7 +20,7 @@ using sai_sai_aclrfr_v1_tt =
                groov::field<"reserved1", std::uint32_t, 31, 7, common::access::ro>,
                groov::field<"clfsdet", bool, 6, 6>,
                groov::field<"cafsdet", bool, 5, 5>,
-               groov::field<"ccnrdy", common::bittypes::bit_ready, 4, 4>,
+               groov::field<"ccnrdy", common::bit_ready, 4, 4>,
                groov::field<"reserved0", bool, 3, 3, common::access::ro>,
                groov::field<"cwckcfg", bool, 2, 2>,
                groov::field<"cmutedet", bool, 1, 1>,
@@ -42,14 +42,14 @@ using sai_sai_acr1_v1_tt =
                groov::field<"mckdiv", std::uint8_t, 23, 20>,
                groov::field<"nomck", bool, 19, 19>,
                groov::field<"reserved2", bool, 18, 18, common::access::ro>,
-               groov::field<"dmaen", common::bittypes::bit_enable, 17, 17>,
-               groov::field<"saixen", common::bittypes::bit_enable, 16, 16>,
+               groov::field<"dmaen", common::bit_enable, 17, 17>,
+               groov::field<"saixen", common::bit_enable, 16, 16>,
                groov::field<"reserved1", std::uint8_t, 15, 14, common::access::ro>,
                groov::field<"outdriv", bool, 13, 13>,
                groov::field<"mono", bool, 12, 12>,
                groov::field<"syncen", std::uint8_t, 11, 10>,
                groov::field<"ckstr", bool, 9, 9>,
-               groov::field<"lsbfirst", common::bittypes::bit_reset, 8, 8>,
+               groov::field<"lsbfirst", common::bit_reset, 8, 8>,
                groov::field<"ds", std::uint8_t, 7, 5>,
                groov::field<"reserved0", bool, 4, 4, common::access::ro>,
                groov::field<"prtcfg", std::uint8_t, 3, 2>,
@@ -116,13 +116,13 @@ using sai_sai_aim_v1_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved0", std::uint32_t, 31, 7, common::access::ro>,
-               groov::field<"lfsdetie", common::bittypes::bit_enable, 6, 6>,
-               groov::field<"afsdetie", common::bittypes::bit_enable, 5, 5>,
-               groov::field<"cnrdyie", common::bittypes::bit_ready, 4, 4>,
-               groov::field<"freqie", common::bittypes::bit_enable, 3, 3>,
-               groov::field<"wckcfgie", common::bittypes::bit_enable, 2, 2>,
-               groov::field<"mutedetie", common::bittypes::bit_enable, 1, 1>,
-               groov::field<"ovrudrie", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"lfsdetie", common::bit_enable, 6, 6>,
+               groov::field<"afsdetie", common::bit_enable, 5, 5>,
+               groov::field<"cnrdyie", common::bit_ready, 4, 4>,
+               groov::field<"freqie", common::bit_enable, 3, 3>,
+               groov::field<"wckcfgie", common::bit_enable, 2, 2>,
+               groov::field<"mutedetie", common::bit_enable, 1, 1>,
+               groov::field<"ovrudrie", common::bit_enable, 0, 0>>;
 
 // sai_sai_aslotr_v1: SAI_ASLOTR
 // Used by: SAI4, SAI1, SAI2, SAI3
@@ -156,7 +156,7 @@ using sai_sai_asr_v1_tt =
                groov::field<"reserved0", std::uint16_t, 15, 7>,
                groov::field<"lfsdet", bool, 6, 6>,
                groov::field<"afsdet", bool, 5, 5>,
-               groov::field<"cnrdy", common::bittypes::bit_ready, 4, 4>,
+               groov::field<"cnrdy", common::bit_ready, 4, 4>,
                groov::field<"freq", bool, 3, 3>,
                groov::field<"wckcfg", bool, 2, 2>,
                groov::field<"mutedet", bool, 1, 1>,
@@ -175,7 +175,7 @@ using sai_sai_bclrfr_v1_tt =
                groov::field<"reserved1", std::uint32_t, 31, 7, common::access::ro>,
                groov::field<"clfsdet", bool, 6, 6>,
                groov::field<"cafsdet", bool, 5, 5>,
-               groov::field<"ccnrdy", common::bittypes::bit_ready, 4, 4>,
+               groov::field<"ccnrdy", common::bit_ready, 4, 4>,
                groov::field<"reserved0", bool, 3, 3, common::access::ro>,
                groov::field<"cwckcfg", bool, 2, 2>,
                groov::field<"cmutedet", bool, 1, 1>,
@@ -197,14 +197,14 @@ using sai_sai_bcr1_v1_tt =
                groov::field<"mckdiv", std::uint8_t, 23, 20>,
                groov::field<"nomck", bool, 19, 19>,
                groov::field<"reserved2", bool, 18, 18, common::access::ro>,
-               groov::field<"dmaen", common::bittypes::bit_enable, 17, 17>,
-               groov::field<"saixen", common::bittypes::bit_enable, 16, 16>,
+               groov::field<"dmaen", common::bit_enable, 17, 17>,
+               groov::field<"saixen", common::bit_enable, 16, 16>,
                groov::field<"reserved1", std::uint8_t, 15, 14, common::access::ro>,
                groov::field<"outdriv", bool, 13, 13>,
                groov::field<"mono", bool, 12, 12>,
                groov::field<"syncen", std::uint8_t, 11, 10>,
                groov::field<"ckstr", bool, 9, 9>,
-               groov::field<"lsbfirst", common::bittypes::bit_reset, 8, 8>,
+               groov::field<"lsbfirst", common::bit_reset, 8, 8>,
                groov::field<"ds", std::uint8_t, 7, 5>,
                groov::field<"reserved0", bool, 4, 4, common::access::ro>,
                groov::field<"prtcfg", std::uint8_t, 3, 2>,
@@ -271,13 +271,13 @@ using sai_sai_bim_v1_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved0", std::uint32_t, 31, 7, common::access::ro>,
-               groov::field<"lfsdetie", common::bittypes::bit_enable, 6, 6>,
-               groov::field<"afsdetie", common::bittypes::bit_enable, 5, 5>,
-               groov::field<"cnrdyie", common::bittypes::bit_ready, 4, 4>,
-               groov::field<"freqie", common::bittypes::bit_enable, 3, 3>,
-               groov::field<"wckcfgie", common::bittypes::bit_enable, 2, 2>,
-               groov::field<"mutedetie", common::bittypes::bit_enable, 1, 1>,
-               groov::field<"ovrudrie", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"lfsdetie", common::bit_enable, 6, 6>,
+               groov::field<"afsdetie", common::bit_enable, 5, 5>,
+               groov::field<"cnrdyie", common::bit_ready, 4, 4>,
+               groov::field<"freqie", common::bit_enable, 3, 3>,
+               groov::field<"wckcfgie", common::bit_enable, 2, 2>,
+               groov::field<"mutedetie", common::bit_enable, 1, 1>,
+               groov::field<"ovrudrie", common::bit_enable, 0, 0>>;
 
 // sai_sai_bslotr_v1: SAI_BSLOTR
 // Used by: SAI4, SAI1, SAI2, SAI3
@@ -311,7 +311,7 @@ using sai_sai_bsr_v1_tt =
                groov::field<"reserved0", std::uint16_t, 15, 7>,
                groov::field<"lfsdet", bool, 6, 6>,
                groov::field<"afsdet", bool, 5, 5>,
-               groov::field<"cnrdy", common::bittypes::bit_ready, 4, 4>,
+               groov::field<"cnrdy", common::bit_ready, 4, 4>,
                groov::field<"freq", bool, 3, 3>,
                groov::field<"wckcfg", bool, 2, 2>,
                groov::field<"mutedet", bool, 1, 1>,
@@ -350,7 +350,7 @@ using sai_sai_pdmcr_v1_tt =
                groov::field<"reserved1", std::uint8_t, 7, 6, common::access::ro>,
                groov::field<"micnbr", std::uint8_t, 5, 4>,
                groov::field<"reserved0", std::uint8_t, 3, 1, common::access::ro>,
-               groov::field<"pdmen", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"pdmen", common::bit_enable, 0, 0>>;
 
 // sai_sai_pdmdly_v1: SAI_PDMDLY
 // Used by: SAI4, SAI1, SAI2, SAI3

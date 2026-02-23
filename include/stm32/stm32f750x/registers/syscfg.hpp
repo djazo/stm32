@@ -99,7 +99,7 @@ using syscfg_memrm_v1_tt =
                groov::field<"reserved2", std::uint32_t, 31, 12, common::access::ro>,
                groov::field<"swp_fmc", std::uint8_t, 11, 10>,
                groov::field<"reserved1", bool, 9, 9, common::access::ro>,
-               groov::field<"fb_mode", common::bittypes::bit_enable, 8, 8>,
+               groov::field<"fb_mode", common::bit_enable, 8, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 3, common::access::ro>,
                groov::field<"mem_mode", std::uint8_t, 2, 0>>;
 

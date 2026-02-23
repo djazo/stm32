@@ -43,7 +43,7 @@ using usb_cntr_v1_tt =
                groov::field<"reserved0", std::uint8_t, 7, 5, common::access::ro>,
                groov::field<"resume", bool, 4, 4>,
                groov::field<"fsusp", bool, 3, 3>,
-               groov::field<"lpmode", common::bittypes::bit_enable, 2, 2>,
+               groov::field<"lpmode", common::bit_enable, 2, 2>,
                groov::field<"pdwn", bool, 1, 1>,
                groov::field<"fres", bool, 0, 0>>;
 
@@ -250,7 +250,7 @@ using usb_fnr_v1_tt =
                groov::field<"reserved0", std::uint16_t, 31, 16>,
                groov::field<"rxdp", bool, 15, 15>,
                groov::field<"rxdm", bool, 14, 14>,
-               groov::field<"lck", common::bittypes::bit_locked, 13, 13>,
+               groov::field<"lck", common::bit_locked, 13, 13>,
                groov::field<"lsof", std::uint8_t, 12, 11>,
                groov::field<"fn", std::uint16_t, 10, 0>>;
 

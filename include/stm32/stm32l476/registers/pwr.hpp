@@ -44,7 +44,7 @@ using pwr_cr2_v1_tt =
                groov::field<"pvme2", bool, 5, 5>,
                groov::field<"pvme1", bool, 4, 4>,
                groov::field<"pls", std::uint8_t, 3, 1>,
-               groov::field<"pvde", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"pvde", common::bit_enable, 0, 0>>;
 
 // pwr_cr3_v1: CR3
 // Used by: PWR

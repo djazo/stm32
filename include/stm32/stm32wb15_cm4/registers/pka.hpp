@@ -35,16 +35,16 @@ using pka_cr_v1_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved3", std::uint16_t, 31, 21, common::access::ro>,
-               groov::field<"addrerrie", common::bittypes::bit_enable, 20, 20>,
-               groov::field<"ramerrie", common::bittypes::bit_enable, 19, 19>,
+               groov::field<"addrerrie", common::bit_enable, 20, 20>,
+               groov::field<"ramerrie", common::bit_enable, 19, 19>,
                groov::field<"reserved2", bool, 18, 18, common::access::ro>,
-               groov::field<"procendie", common::bittypes::bit_enable, 17, 17>,
+               groov::field<"procendie", common::bit_enable, 17, 17>,
                groov::field<"reserved1", std::uint8_t, 16, 14, common::access::ro>,
                groov::field<"mode", std::uint8_t, 13, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 3, common::access::ro>,
                groov::field<"seclvl", bool, 2, 2>,
                groov::field<"start", bool, 1, 1>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // pka_sr_v1: SR
 // Used by: PKA

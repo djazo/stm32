@@ -29,9 +29,9 @@ using mdf_ckgcr_v1_tt =
                groov::field<"cck0dir", bool, 5, 5>,
                groov::field<"ckgmod", bool, 4, 4>,
                groov::field<"reserved0", bool, 3, 3, common::access::ro>,
-               groov::field<"cck1en", common::bittypes::bit_enable, 2, 2>,
-               groov::field<"cck0en", common::bittypes::bit_enable, 1, 1>,
-               groov::field<"ckgden", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"cck1en", common::bit_enable, 2, 2>,
+               groov::field<"cck0en", common::bit_enable, 1, 1>,
+               groov::field<"ckgden", common::bit_enable, 0, 0>>;
 
 // mdf_gcr_v1: GCR
 // Used by: MDF1, SEC_MDF1
@@ -174,8 +174,8 @@ using mdf_mdf_dflt0cr_v1_tt =
                groov::field<"acqmod", std::uint8_t, 6, 4>,
                groov::field<"reserved0", bool, 3, 3, common::access::ro>,
                groov::field<"fth", bool, 2, 2>,
-               groov::field<"dmaen", common::bittypes::bit_enable, 1, 1>,
-               groov::field<"dflten", common::bittypes::bit_enable, 0, 0, common::access::wo>>;
+               groov::field<"dmaen", common::bit_enable, 1, 1>,
+               groov::field<"dflten", common::bit_enable, 0, 0, common::access::wo>>;
 
 // mdf_mdf_dflt0dr_v1: MDF_DFLT0DR
 // Used by: MDF1, SEC_MDF1
@@ -201,17 +201,17 @@ using mdf_mdf_dflt0ier_v1_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved2", std::uint32_t, 31, 12, common::access::ro>,
-               groov::field<"rfovrie", common::bittypes::bit_enable, 11, 11>,
-               groov::field<"ckabie", common::bittypes::bit_enable, 10, 10>,
-               groov::field<"satie", common::bittypes::bit_enable, 9, 9>,
-               groov::field<"scdie", common::bittypes::bit_enable, 8, 8>,
-               groov::field<"ssovrie", common::bittypes::bit_enable, 7, 7>,
+               groov::field<"rfovrie", common::bit_enable, 11, 11>,
+               groov::field<"ckabie", common::bit_enable, 10, 10>,
+               groov::field<"satie", common::bit_enable, 9, 9>,
+               groov::field<"scdie", common::bit_enable, 8, 8>,
+               groov::field<"ssovrie", common::bit_enable, 7, 7>,
                groov::field<"reserved1", std::uint8_t, 6, 5, common::access::ro>,
-               groov::field<"oldie", common::bittypes::bit_enable, 4, 4>,
+               groov::field<"oldie", common::bit_enable, 4, 4>,
                groov::field<"reserved0", bool, 3, 3, common::access::ro>,
-               groov::field<"ssdrie", common::bittypes::bit_enable, 2, 2>,
-               groov::field<"dovrie", common::bittypes::bit_enable, 1, 1>,
-               groov::field<"fthie", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"ssdrie", common::bit_enable, 2, 2>,
+               groov::field<"dovrie", common::bit_enable, 1, 1>,
+               groov::field<"fthie", common::bit_enable, 0, 0>>;
 
 // mdf_mdf_dflt0intr_v1: MDF_DFLT0INTR
 // Used by: MDF1, SEC_MDF1
@@ -312,8 +312,8 @@ using mdf_mdf_dflt1cr_v1_tt =
                groov::field<"acqmod", std::uint8_t, 6, 4>,
                groov::field<"reserved0", bool, 3, 3, common::access::ro>,
                groov::field<"fth", bool, 2, 2>,
-               groov::field<"dmaen", common::bittypes::bit_enable, 1, 1>,
-               groov::field<"dflten", common::bittypes::bit_enable, 0, 0, common::access::wo>>;
+               groov::field<"dmaen", common::bit_enable, 1, 1>,
+               groov::field<"dflten", common::bit_enable, 0, 0, common::access::wo>>;
 
 // mdf_mdf_dflt1dr_v1: MDF_DFLT1DR
 // Used by: MDF1, SEC_MDF1
@@ -339,17 +339,17 @@ using mdf_mdf_dflt1ier_v1_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved2", std::uint32_t, 31, 12, common::access::ro>,
-               groov::field<"rfovrie", common::bittypes::bit_enable, 11, 11>,
-               groov::field<"ckabie", common::bittypes::bit_enable, 10, 10>,
-               groov::field<"satie", common::bittypes::bit_enable, 9, 9>,
-               groov::field<"scdie", common::bittypes::bit_enable, 8, 8>,
-               groov::field<"ssovrie", common::bittypes::bit_enable, 7, 7>,
+               groov::field<"rfovrie", common::bit_enable, 11, 11>,
+               groov::field<"ckabie", common::bit_enable, 10, 10>,
+               groov::field<"satie", common::bit_enable, 9, 9>,
+               groov::field<"scdie", common::bit_enable, 8, 8>,
+               groov::field<"ssovrie", common::bit_enable, 7, 7>,
                groov::field<"reserved1", std::uint8_t, 6, 5, common::access::ro>,
-               groov::field<"oldie", common::bittypes::bit_enable, 4, 4>,
+               groov::field<"oldie", common::bit_enable, 4, 4>,
                groov::field<"reserved0", bool, 3, 3, common::access::ro>,
-               groov::field<"ssdrie", common::bittypes::bit_enable, 2, 2>,
-               groov::field<"dovrie", common::bittypes::bit_enable, 1, 1>,
-               groov::field<"fthie", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"ssdrie", common::bit_enable, 2, 2>,
+               groov::field<"dovrie", common::bit_enable, 1, 1>,
+               groov::field<"fthie", common::bit_enable, 0, 0>>;
 
 // mdf_mdf_dflt1intr_v1: MDF_DFLT1INTR
 // Used by: MDF1, SEC_MDF1
@@ -450,8 +450,8 @@ using mdf_mdf_dflt2cr_v1_tt =
                groov::field<"acqmod", std::uint8_t, 6, 4>,
                groov::field<"reserved0", bool, 3, 3, common::access::ro>,
                groov::field<"fth", bool, 2, 2>,
-               groov::field<"dmaen", common::bittypes::bit_enable, 1, 1>,
-               groov::field<"dflten", common::bittypes::bit_enable, 0, 0, common::access::wo>>;
+               groov::field<"dmaen", common::bit_enable, 1, 1>,
+               groov::field<"dflten", common::bit_enable, 0, 0, common::access::wo>>;
 
 // mdf_mdf_dflt2dr_v1: MDF_DFLT2DR
 // Used by: MDF1, SEC_MDF1
@@ -477,17 +477,17 @@ using mdf_mdf_dflt2ier_v1_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved2", std::uint32_t, 31, 12, common::access::ro>,
-               groov::field<"rfovrie", common::bittypes::bit_enable, 11, 11>,
-               groov::field<"ckabie", common::bittypes::bit_enable, 10, 10>,
-               groov::field<"satie", common::bittypes::bit_enable, 9, 9>,
-               groov::field<"scdie", common::bittypes::bit_enable, 8, 8>,
-               groov::field<"ssovrie", common::bittypes::bit_enable, 7, 7>,
+               groov::field<"rfovrie", common::bit_enable, 11, 11>,
+               groov::field<"ckabie", common::bit_enable, 10, 10>,
+               groov::field<"satie", common::bit_enable, 9, 9>,
+               groov::field<"scdie", common::bit_enable, 8, 8>,
+               groov::field<"ssovrie", common::bit_enable, 7, 7>,
                groov::field<"reserved1", std::uint8_t, 6, 5, common::access::ro>,
-               groov::field<"oldie", common::bittypes::bit_enable, 4, 4>,
+               groov::field<"oldie", common::bit_enable, 4, 4>,
                groov::field<"reserved0", bool, 3, 3, common::access::ro>,
-               groov::field<"ssdrie", common::bittypes::bit_enable, 2, 2>,
-               groov::field<"dovrie", common::bittypes::bit_enable, 1, 1>,
-               groov::field<"fthie", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"ssdrie", common::bit_enable, 2, 2>,
+               groov::field<"dovrie", common::bit_enable, 1, 1>,
+               groov::field<"fthie", common::bit_enable, 0, 0>>;
 
 // mdf_mdf_dflt2intr_v1: MDF_DFLT2INTR
 // Used by: MDF1, SEC_MDF1
@@ -588,8 +588,8 @@ using mdf_mdf_dflt3cr_v1_tt =
                groov::field<"acqmod", std::uint8_t, 6, 4>,
                groov::field<"reserved0", bool, 3, 3, common::access::ro>,
                groov::field<"fth", bool, 2, 2>,
-               groov::field<"dmaen", common::bittypes::bit_enable, 1, 1>,
-               groov::field<"dflten", common::bittypes::bit_enable, 0, 0, common::access::wo>>;
+               groov::field<"dmaen", common::bit_enable, 1, 1>,
+               groov::field<"dflten", common::bit_enable, 0, 0, common::access::wo>>;
 
 // mdf_mdf_dflt3dr_v1: MDF_DFLT3DR
 // Used by: MDF1, SEC_MDF1
@@ -615,17 +615,17 @@ using mdf_mdf_dflt3ier_v1_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved2", std::uint32_t, 31, 12, common::access::ro>,
-               groov::field<"rfovrie", common::bittypes::bit_enable, 11, 11>,
-               groov::field<"ckabie", common::bittypes::bit_enable, 10, 10>,
-               groov::field<"satie", common::bittypes::bit_enable, 9, 9>,
-               groov::field<"scdie", common::bittypes::bit_enable, 8, 8>,
-               groov::field<"ssovrie", common::bittypes::bit_enable, 7, 7>,
+               groov::field<"rfovrie", common::bit_enable, 11, 11>,
+               groov::field<"ckabie", common::bit_enable, 10, 10>,
+               groov::field<"satie", common::bit_enable, 9, 9>,
+               groov::field<"scdie", common::bit_enable, 8, 8>,
+               groov::field<"ssovrie", common::bit_enable, 7, 7>,
                groov::field<"reserved1", std::uint8_t, 6, 5, common::access::ro>,
-               groov::field<"oldie", common::bittypes::bit_enable, 4, 4>,
+               groov::field<"oldie", common::bit_enable, 4, 4>,
                groov::field<"reserved0", bool, 3, 3, common::access::ro>,
-               groov::field<"ssdrie", common::bittypes::bit_enable, 2, 2>,
-               groov::field<"dovrie", common::bittypes::bit_enable, 1, 1>,
-               groov::field<"fthie", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"ssdrie", common::bit_enable, 2, 2>,
+               groov::field<"dovrie", common::bit_enable, 1, 1>,
+               groov::field<"fthie", common::bit_enable, 0, 0>>;
 
 // mdf_mdf_dflt3intr_v1: MDF_DFLT3INTR
 // Used by: MDF1, SEC_MDF1
@@ -726,8 +726,8 @@ using mdf_mdf_dflt4cr_v1_tt =
                groov::field<"acqmod", std::uint8_t, 6, 4>,
                groov::field<"reserved0", bool, 3, 3, common::access::ro>,
                groov::field<"fth", bool, 2, 2>,
-               groov::field<"dmaen", common::bittypes::bit_enable, 1, 1>,
-               groov::field<"dflten", common::bittypes::bit_enable, 0, 0, common::access::wo>>;
+               groov::field<"dmaen", common::bit_enable, 1, 1>,
+               groov::field<"dflten", common::bit_enable, 0, 0, common::access::wo>>;
 
 // mdf_mdf_dflt4dr_v1: MDF_DFLT4DR
 // Used by: MDF1, SEC_MDF1
@@ -753,17 +753,17 @@ using mdf_mdf_dflt4ier_v1_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved2", std::uint32_t, 31, 12, common::access::ro>,
-               groov::field<"rfovrie", common::bittypes::bit_enable, 11, 11>,
-               groov::field<"ckabie", common::bittypes::bit_enable, 10, 10>,
-               groov::field<"satie", common::bittypes::bit_enable, 9, 9>,
-               groov::field<"scdie", common::bittypes::bit_enable, 8, 8>,
-               groov::field<"ssovrie", common::bittypes::bit_enable, 7, 7>,
+               groov::field<"rfovrie", common::bit_enable, 11, 11>,
+               groov::field<"ckabie", common::bit_enable, 10, 10>,
+               groov::field<"satie", common::bit_enable, 9, 9>,
+               groov::field<"scdie", common::bit_enable, 8, 8>,
+               groov::field<"ssovrie", common::bit_enable, 7, 7>,
                groov::field<"reserved1", std::uint8_t, 6, 5, common::access::ro>,
-               groov::field<"oldie", common::bittypes::bit_enable, 4, 4>,
+               groov::field<"oldie", common::bit_enable, 4, 4>,
                groov::field<"reserved0", bool, 3, 3, common::access::ro>,
-               groov::field<"ssdrie", common::bittypes::bit_enable, 2, 2>,
-               groov::field<"dovrie", common::bittypes::bit_enable, 1, 1>,
-               groov::field<"fthie", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"ssdrie", common::bit_enable, 2, 2>,
+               groov::field<"dovrie", common::bit_enable, 1, 1>,
+               groov::field<"fthie", common::bit_enable, 0, 0>>;
 
 // mdf_mdf_dflt4intr_v1: MDF_DFLT4INTR
 // Used by: MDF1, SEC_MDF1
@@ -864,8 +864,8 @@ using mdf_mdf_dflt5cr_v1_tt =
                groov::field<"acqmod", std::uint8_t, 6, 4>,
                groov::field<"reserved0", bool, 3, 3, common::access::ro>,
                groov::field<"fth", bool, 2, 2>,
-               groov::field<"dmaen", common::bittypes::bit_enable, 1, 1>,
-               groov::field<"dflten", common::bittypes::bit_enable, 0, 0, common::access::wo>>;
+               groov::field<"dmaen", common::bit_enable, 1, 1>,
+               groov::field<"dflten", common::bit_enable, 0, 0, common::access::wo>>;
 
 // mdf_mdf_dflt5dr_v1: MDF_DFLT5DR
 // Used by: MDF1, SEC_MDF1
@@ -891,17 +891,17 @@ using mdf_mdf_dflt5ier_v1_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved2", std::uint32_t, 31, 12, common::access::ro>,
-               groov::field<"rfovrie", common::bittypes::bit_enable, 11, 11>,
-               groov::field<"ckabie", common::bittypes::bit_enable, 10, 10>,
-               groov::field<"satie", common::bittypes::bit_enable, 9, 9>,
-               groov::field<"scdie", common::bittypes::bit_enable, 8, 8>,
-               groov::field<"ssovrie", common::bittypes::bit_enable, 7, 7>,
+               groov::field<"rfovrie", common::bit_enable, 11, 11>,
+               groov::field<"ckabie", common::bit_enable, 10, 10>,
+               groov::field<"satie", common::bit_enable, 9, 9>,
+               groov::field<"scdie", common::bit_enable, 8, 8>,
+               groov::field<"ssovrie", common::bit_enable, 7, 7>,
                groov::field<"reserved1", std::uint8_t, 6, 5, common::access::ro>,
-               groov::field<"oldie", common::bittypes::bit_enable, 4, 4>,
+               groov::field<"oldie", common::bit_enable, 4, 4>,
                groov::field<"reserved0", bool, 3, 3, common::access::ro>,
-               groov::field<"ssdrie", common::bittypes::bit_enable, 2, 2>,
-               groov::field<"dovrie", common::bittypes::bit_enable, 1, 1>,
-               groov::field<"fthie", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"ssdrie", common::bit_enable, 2, 2>,
+               groov::field<"dovrie", common::bit_enable, 1, 1>,
+               groov::field<"fthie", common::bit_enable, 0, 0>>;
 
 // mdf_mdf_dflt5intr_v1: MDF_DFLT5INTR
 // Used by: MDF1, SEC_MDF1
@@ -1141,7 +1141,7 @@ using mdf_mdf_old0cr_v1_tt =
                groov::field<"bkold", std::uint8_t, 7, 4>,
                groov::field<"reserved0", std::uint8_t, 3, 2, common::access::ro>,
                groov::field<"thinb", bool, 1, 1>,
-               groov::field<"olden", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"olden", common::bit_enable, 0, 0>>;
 
 // mdf_mdf_old0thhr_v1: MDF_OLD0THHR
 // Used by: MDF1, SEC_MDF1
@@ -1188,7 +1188,7 @@ using mdf_mdf_old1cr_v1_tt =
                groov::field<"bkold", std::uint8_t, 7, 4>,
                groov::field<"reserved0", std::uint8_t, 3, 2, common::access::ro>,
                groov::field<"thinb", bool, 1, 1>,
-               groov::field<"olden", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"olden", common::bit_enable, 0, 0>>;
 
 // mdf_mdf_old1thhr_v1: MDF_OLD1THHR
 // Used by: MDF1, SEC_MDF1
@@ -1235,7 +1235,7 @@ using mdf_mdf_old2cr_v1_tt =
                groov::field<"bkold", std::uint8_t, 7, 4>,
                groov::field<"reserved0", std::uint8_t, 3, 2, common::access::ro>,
                groov::field<"thinb", bool, 1, 1>,
-               groov::field<"olden", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"olden", common::bit_enable, 0, 0>>;
 
 // mdf_mdf_old2thhr_v1: MDF_OLD2THHR
 // Used by: MDF1, SEC_MDF1
@@ -1282,7 +1282,7 @@ using mdf_mdf_old3cr_v1_tt =
                groov::field<"bkold", std::uint8_t, 7, 4>,
                groov::field<"reserved0", std::uint8_t, 3, 2, common::access::ro>,
                groov::field<"thinb", bool, 1, 1>,
-               groov::field<"olden", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"olden", common::bit_enable, 0, 0>>;
 
 // mdf_mdf_old3thhr_v1: MDF_OLD3THHR
 // Used by: MDF1, SEC_MDF1
@@ -1329,7 +1329,7 @@ using mdf_mdf_old4cr_v1_tt =
                groov::field<"bkold", std::uint8_t, 7, 4>,
                groov::field<"reserved0", std::uint8_t, 3, 2, common::access::ro>,
                groov::field<"thinb", bool, 1, 1>,
-               groov::field<"olden", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"olden", common::bit_enable, 0, 0>>;
 
 // mdf_mdf_old4thhr_v1: MDF_OLD4THHR
 // Used by: MDF1, SEC_MDF1
@@ -1376,7 +1376,7 @@ using mdf_mdf_old5cr_v1_tt =
                groov::field<"bkold", std::uint8_t, 7, 4>,
                groov::field<"reserved0", std::uint8_t, 3, 2, common::access::ro>,
                groov::field<"thinb", bool, 1, 1>,
-               groov::field<"olden", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"olden", common::bit_enable, 0, 0>>;
 
 // mdf_mdf_old5thhr_v1: MDF_OLD5THHR
 // Used by: MDF1, SEC_MDF1
@@ -1420,7 +1420,7 @@ using mdf_mdf_scd0cr_v1_tt =
                groov::field<"reserved1", std::uint8_t, 11, 8, common::access::ro>,
                groov::field<"bkscd", std::uint8_t, 7, 4>,
                groov::field<"reserved0", std::uint8_t, 3, 1, common::access::ro>,
-               groov::field<"scden", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"scden", common::bit_enable, 0, 0>>;
 
 // mdf_mdf_scd1cr_v1: MDF_SCD1CR
 // Used by: MDF1, SEC_MDF1
@@ -1438,7 +1438,7 @@ using mdf_mdf_scd1cr_v1_tt =
                groov::field<"reserved1", std::uint8_t, 11, 8, common::access::ro>,
                groov::field<"bkscd", std::uint8_t, 7, 4>,
                groov::field<"reserved0", std::uint8_t, 3, 1, common::access::ro>,
-               groov::field<"scden", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"scden", common::bit_enable, 0, 0>>;
 
 // mdf_mdf_scd2cr_v1: MDF_SCD2CR
 // Used by: MDF1, SEC_MDF1
@@ -1456,7 +1456,7 @@ using mdf_mdf_scd2cr_v1_tt =
                groov::field<"reserved1", std::uint8_t, 11, 8, common::access::ro>,
                groov::field<"bkscd", std::uint8_t, 7, 4>,
                groov::field<"reserved0", std::uint8_t, 3, 1, common::access::ro>,
-               groov::field<"scden", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"scden", common::bit_enable, 0, 0>>;
 
 // mdf_mdf_scd3cr_v1: MDF_SCD3CR
 // Used by: MDF1, SEC_MDF1
@@ -1474,7 +1474,7 @@ using mdf_mdf_scd3cr_v1_tt =
                groov::field<"reserved1", std::uint8_t, 11, 8, common::access::ro>,
                groov::field<"bkscd", std::uint8_t, 7, 4>,
                groov::field<"reserved0", std::uint8_t, 3, 1, common::access::ro>,
-               groov::field<"scden", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"scden", common::bit_enable, 0, 0>>;
 
 // mdf_mdf_scd4cr_v1: MDF_SCD4CR
 // Used by: MDF1, SEC_MDF1
@@ -1492,7 +1492,7 @@ using mdf_mdf_scd4cr_v1_tt =
                groov::field<"reserved1", std::uint8_t, 11, 8, common::access::ro>,
                groov::field<"bkscd", std::uint8_t, 7, 4>,
                groov::field<"reserved0", std::uint8_t, 3, 1, common::access::ro>,
-               groov::field<"scden", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"scden", common::bit_enable, 0, 0>>;
 
 // mdf_mdf_scd5cr_v1: MDF_SCD5CR
 // Used by: MDF1, SEC_MDF1
@@ -1510,7 +1510,7 @@ using mdf_mdf_scd5cr_v1_tt =
                groov::field<"reserved1", std::uint8_t, 11, 8, common::access::ro>,
                groov::field<"bkscd", std::uint8_t, 7, 4>,
                groov::field<"reserved0", std::uint8_t, 3, 1, common::access::ro>,
-               groov::field<"scden", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"scden", common::bit_enable, 0, 0>>;
 
 // mdf_mdf_sitf0cr_v1: MDF_SITF0CR
 // Used by: MDF1, SEC_MDF1
@@ -1529,7 +1529,7 @@ using mdf_mdf_sitf0cr_v1_tt =
                groov::field<"sitfmod", std::uint8_t, 5, 4>,
                groov::field<"reserved0", bool, 3, 3, common::access::ro>,
                groov::field<"scksrc", std::uint8_t, 2, 1>,
-               groov::field<"sitfen", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"sitfen", common::bit_enable, 0, 0>>;
 
 // mdf_mdf_sitf1cr_v1: MDF_SITF1CR
 // Used by: MDF1, SEC_MDF1
@@ -1548,7 +1548,7 @@ using mdf_mdf_sitf1cr_v1_tt =
                groov::field<"sitfmod", std::uint8_t, 5, 4>,
                groov::field<"reserved0", bool, 3, 3, common::access::ro>,
                groov::field<"scksrc", std::uint8_t, 2, 1>,
-               groov::field<"sitfen", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"sitfen", common::bit_enable, 0, 0>>;
 
 // mdf_mdf_sitf2cr_v1: MDF_SITF2CR
 // Used by: MDF1, SEC_MDF1
@@ -1567,7 +1567,7 @@ using mdf_mdf_sitf2cr_v1_tt =
                groov::field<"sitfmod", std::uint8_t, 5, 4>,
                groov::field<"reserved0", bool, 3, 3, common::access::ro>,
                groov::field<"scksrc", std::uint8_t, 2, 1>,
-               groov::field<"sitfen", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"sitfen", common::bit_enable, 0, 0>>;
 
 // mdf_mdf_sitf3cr_v1: MDF_SITF3CR
 // Used by: MDF1, SEC_MDF1
@@ -1586,7 +1586,7 @@ using mdf_mdf_sitf3cr_v1_tt =
                groov::field<"sitfmod", std::uint8_t, 5, 4>,
                groov::field<"reserved0", bool, 3, 3, common::access::ro>,
                groov::field<"scksrc", std::uint8_t, 2, 1>,
-               groov::field<"sitfen", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"sitfen", common::bit_enable, 0, 0>>;
 
 // mdf_mdf_sitf4cr_v1: MDF_SITF4CR
 // Used by: MDF1, SEC_MDF1
@@ -1605,7 +1605,7 @@ using mdf_mdf_sitf4cr_v1_tt =
                groov::field<"sitfmod", std::uint8_t, 5, 4>,
                groov::field<"reserved0", bool, 3, 3, common::access::ro>,
                groov::field<"scksrc", std::uint8_t, 2, 1>,
-               groov::field<"sitfen", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"sitfen", common::bit_enable, 0, 0>>;
 
 // mdf_mdf_sitf5cr_v1: MDF_SITF5CR
 // Used by: MDF1, SEC_MDF1
@@ -1624,7 +1624,7 @@ using mdf_mdf_sitf5cr_v1_tt =
                groov::field<"sitfmod", std::uint8_t, 5, 4>,
                groov::field<"reserved0", bool, 3, 3, common::access::ro>,
                groov::field<"scksrc", std::uint8_t, 2, 1>,
-               groov::field<"sitfen", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"sitfen", common::bit_enable, 0, 0>>;
 
 // mdf_mdf_snps0dr_v1: MDF_SNPS0DR
 // Used by: MDF1, SEC_MDF1

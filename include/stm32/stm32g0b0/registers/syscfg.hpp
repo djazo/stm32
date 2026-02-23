@@ -30,7 +30,7 @@ using syscfg_cfgr1_v1_tt =
                groov::field<"reserved1", std::uint8_t, 15, 11, common::access::ro>,
                groov::field<"ucpd2_strobe", bool, 10, 10>,
                groov::field<"ucpd1_strobe", bool, 9, 9>,
-               groov::field<"boosten", common::bittypes::bit_enable, 8, 8>,
+               groov::field<"boosten", common::bit_enable, 8, 8>,
                groov::field<"ir_mod", std::uint8_t, 7, 6>,
                groov::field<"ir_pol", bool, 5, 5>,
                groov::field<"pa12_rmp", bool, 4, 4>,
@@ -51,10 +51,10 @@ using syscfg_cfgr2_v1_tt =
                groov::field<"reserved2", std::uint32_t, 31, 9, common::access::ro>,
                groov::field<"sram_pef", bool, 8, 8>,
                groov::field<"reserved1", std::uint8_t, 7, 4, common::access::ro>,
-               groov::field<"ecc_lock", common::bittypes::bit_locked, 3, 3>,
+               groov::field<"ecc_lock", common::bit_locked, 3, 3>,
                groov::field<"reserved0", bool, 2, 2, common::access::ro>,
-               groov::field<"sram_parity_lock", common::bittypes::bit_locked, 1, 1>,
-               groov::field<"lockup_lock", common::bittypes::bit_locked, 0, 0>>;
+               groov::field<"sram_parity_lock", common::bit_locked, 1, 1>,
+               groov::field<"lockup_lock", common::bit_locked, 0, 0>>;
 
 // syscfg_itline0_v1: ITLINE0
 // Used by: SYSCFG

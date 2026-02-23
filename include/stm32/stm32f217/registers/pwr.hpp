@@ -21,7 +21,7 @@ using pwr_cr_v1_tt =
                groov::field<"fpds", bool, 9, 9>,
                groov::field<"dbp", bool, 8, 8>,
                groov::field<"pls", std::uint8_t, 7, 5>,
-               groov::field<"pvde", common::bittypes::bit_enable, 4, 4>,
+               groov::field<"pvde", common::bit_enable, 4, 4>,
                groov::field<"csbf", bool, 3, 3>,
                groov::field<"cwuf", bool, 2, 2>,
                groov::field<"pdds", bool, 1, 1>,

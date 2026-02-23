@@ -24,7 +24,7 @@ using dmamux_c0cr_v1_tt =
                groov::field<"se", bool, 16, 16>,
                groov::field<"reserved0", std::uint8_t, 15, 10, common::access::ro>,
                groov::field<"ege", bool, 9, 9>,
-               groov::field<"soie", common::bittypes::bit_enable, 8, 8>,
+               groov::field<"soie", common::bit_enable, 8, 8>,
                groov::field<"dmareq_id", std::uint8_t, 7, 0>>;
 
 // dmamux_c1cr_v1: C1CR
@@ -44,7 +44,7 @@ using dmamux_c1cr_v1_tt =
                groov::field<"se", bool, 16, 16>,
                groov::field<"reserved0", std::uint8_t, 15, 10, common::access::ro>,
                groov::field<"ege", bool, 9, 9>,
-               groov::field<"soie", common::bittypes::bit_enable, 8, 8>,
+               groov::field<"soie", common::bit_enable, 8, 8>,
                groov::field<"dmareq_id", std::uint8_t, 7, 0>>;
 
 // dmamux_c2cr_v1: C2CR
@@ -64,7 +64,7 @@ using dmamux_c2cr_v1_tt =
                groov::field<"se", bool, 16, 16>,
                groov::field<"reserved0", std::uint8_t, 15, 10, common::access::ro>,
                groov::field<"ege", bool, 9, 9>,
-               groov::field<"soie", common::bittypes::bit_enable, 8, 8>,
+               groov::field<"soie", common::bit_enable, 8, 8>,
                groov::field<"dmareq_id", std::uint8_t, 7, 0>>;
 
 // dmamux_c3cr_v1: C3CR
@@ -84,7 +84,7 @@ using dmamux_c3cr_v1_tt =
                groov::field<"se", bool, 16, 16>,
                groov::field<"reserved0", std::uint8_t, 15, 10, common::access::ro>,
                groov::field<"ege", bool, 9, 9>,
-               groov::field<"soie", common::bittypes::bit_enable, 8, 8>,
+               groov::field<"soie", common::bit_enable, 8, 8>,
                groov::field<"dmareq_id", std::uint8_t, 7, 0>>;
 
 // dmamux_c4cr_v1: C4CR
@@ -104,7 +104,7 @@ using dmamux_c4cr_v1_tt =
                groov::field<"se", bool, 16, 16>,
                groov::field<"reserved0", std::uint8_t, 15, 10, common::access::ro>,
                groov::field<"ege", bool, 9, 9>,
-               groov::field<"soie", common::bittypes::bit_enable, 8, 8>,
+               groov::field<"soie", common::bit_enable, 8, 8>,
                groov::field<"dmareq_id", std::uint8_t, 7, 0>>;
 
 // dmamux_c5cr_v1: C5CR
@@ -124,7 +124,7 @@ using dmamux_c5cr_v1_tt =
                groov::field<"se", bool, 16, 16>,
                groov::field<"reserved0", std::uint8_t, 15, 10, common::access::ro>,
                groov::field<"ege", bool, 9, 9>,
-               groov::field<"soie", common::bittypes::bit_enable, 8, 8>,
+               groov::field<"soie", common::bit_enable, 8, 8>,
                groov::field<"dmareq_id", std::uint8_t, 7, 0>>;
 
 // dmamux_c6cr_v1: C6CR
@@ -144,7 +144,7 @@ using dmamux_c6cr_v1_tt =
                groov::field<"se", bool, 16, 16>,
                groov::field<"reserved0", std::uint8_t, 15, 10, common::access::ro>,
                groov::field<"ege", bool, 9, 9>,
-               groov::field<"soie", common::bittypes::bit_enable, 8, 8>,
+               groov::field<"soie", common::bit_enable, 8, 8>,
                groov::field<"dmareq_id", std::uint8_t, 7, 0>>;
 
 // dmamux_c7cr_v1: C7CR
@@ -164,7 +164,7 @@ using dmamux_c7cr_v1_tt =
                groov::field<"se", bool, 16, 16>,
                groov::field<"reserved0", std::uint8_t, 15, 10, common::access::ro>,
                groov::field<"ege", bool, 9, 9>,
-               groov::field<"soie", common::bittypes::bit_enable, 8, 8>,
+               groov::field<"soie", common::bit_enable, 8, 8>,
                groov::field<"dmareq_id", std::uint8_t, 7, 0>>;
 
 // dmamux_cfr_v1: CFR
@@ -210,7 +210,7 @@ using dmamux_dmamux1_c0cr_v1_tt =
                groov::field<"se", bool, 16, 16>,
                groov::field<"reserved0", std::uint8_t, 15, 10, common::access::ro>,
                groov::field<"ege", bool, 9, 9>,
-               groov::field<"soie", common::bittypes::bit_enable, 8, 8>,
+               groov::field<"soie", common::bit_enable, 8, 8>,
                groov::field<"dmareq_id", std::uint8_t, 7, 0>>;
 
 // dmamux_dmamux1_c10cr_v1: DMAMUX1_C10CR
@@ -230,7 +230,7 @@ using dmamux_dmamux1_c10cr_v1_tt =
                groov::field<"se", bool, 16, 16>,
                groov::field<"reserved0", std::uint8_t, 15, 10, common::access::ro>,
                groov::field<"ege", bool, 9, 9>,
-               groov::field<"soie", common::bittypes::bit_enable, 8, 8>,
+               groov::field<"soie", common::bit_enable, 8, 8>,
                groov::field<"dmareq_id", std::uint8_t, 7, 0>>;
 
 // dmamux_dmamux1_c11cr_v1: DMAMUX1_C11CR
@@ -250,7 +250,7 @@ using dmamux_dmamux1_c11cr_v1_tt =
                groov::field<"se", bool, 16, 16>,
                groov::field<"reserved0", std::uint8_t, 15, 10, common::access::ro>,
                groov::field<"ege", bool, 9, 9>,
-               groov::field<"soie", common::bittypes::bit_enable, 8, 8>,
+               groov::field<"soie", common::bit_enable, 8, 8>,
                groov::field<"dmareq_id", std::uint8_t, 7, 0>>;
 
 // dmamux_dmamux1_c12cr_v1: DMAMUX1_C12CR
@@ -270,7 +270,7 @@ using dmamux_dmamux1_c12cr_v1_tt =
                groov::field<"se", bool, 16, 16>,
                groov::field<"reserved0", std::uint8_t, 15, 10, common::access::ro>,
                groov::field<"ege", bool, 9, 9>,
-               groov::field<"soie", common::bittypes::bit_enable, 8, 8>,
+               groov::field<"soie", common::bit_enable, 8, 8>,
                groov::field<"dmareq_id", std::uint8_t, 7, 0>>;
 
 // dmamux_dmamux1_c13cr_v1: DMAMUX1_C13CR
@@ -290,7 +290,7 @@ using dmamux_dmamux1_c13cr_v1_tt =
                groov::field<"se", bool, 16, 16>,
                groov::field<"reserved0", std::uint8_t, 15, 10, common::access::ro>,
                groov::field<"ege", bool, 9, 9>,
-               groov::field<"soie", common::bittypes::bit_enable, 8, 8>,
+               groov::field<"soie", common::bit_enable, 8, 8>,
                groov::field<"dmareq_id", std::uint8_t, 7, 0>>;
 
 // dmamux_dmamux1_c14cr_v1: DMAMUX1_C14CR
@@ -310,7 +310,7 @@ using dmamux_dmamux1_c14cr_v1_tt =
                groov::field<"se", bool, 16, 16>,
                groov::field<"reserved0", std::uint8_t, 15, 10, common::access::ro>,
                groov::field<"ege", bool, 9, 9>,
-               groov::field<"soie", common::bittypes::bit_enable, 8, 8>,
+               groov::field<"soie", common::bit_enable, 8, 8>,
                groov::field<"dmareq_id", std::uint8_t, 7, 0>>;
 
 // dmamux_dmamux1_c15cr_v1: DMAMUX1_C15CR
@@ -330,7 +330,7 @@ using dmamux_dmamux1_c15cr_v1_tt =
                groov::field<"se", bool, 16, 16>,
                groov::field<"reserved0", std::uint8_t, 15, 10, common::access::ro>,
                groov::field<"ege", bool, 9, 9>,
-               groov::field<"soie", common::bittypes::bit_enable, 8, 8>,
+               groov::field<"soie", common::bit_enable, 8, 8>,
                groov::field<"dmareq_id", std::uint8_t, 7, 0>>;
 
 // dmamux_dmamux1_c1cr_v1: DMAMUX1_C1CR
@@ -350,7 +350,7 @@ using dmamux_dmamux1_c1cr_v1_tt =
                groov::field<"se", bool, 16, 16>,
                groov::field<"reserved0", std::uint8_t, 15, 10, common::access::ro>,
                groov::field<"ege", bool, 9, 9>,
-               groov::field<"soie", common::bittypes::bit_enable, 8, 8>,
+               groov::field<"soie", common::bit_enable, 8, 8>,
                groov::field<"dmareq_id", std::uint8_t, 7, 0>>;
 
 // dmamux_dmamux1_c2cr_v1: DMAMUX1_C2CR
@@ -370,7 +370,7 @@ using dmamux_dmamux1_c2cr_v1_tt =
                groov::field<"se", bool, 16, 16>,
                groov::field<"reserved0", std::uint8_t, 15, 10, common::access::ro>,
                groov::field<"ege", bool, 9, 9>,
-               groov::field<"soie", common::bittypes::bit_enable, 8, 8>,
+               groov::field<"soie", common::bit_enable, 8, 8>,
                groov::field<"dmareq_id", std::uint8_t, 7, 0>>;
 
 // dmamux_dmamux1_c3cr_v1: DMAMUX1_C3CR
@@ -390,7 +390,7 @@ using dmamux_dmamux1_c3cr_v1_tt =
                groov::field<"se", bool, 16, 16>,
                groov::field<"reserved0", std::uint8_t, 15, 10, common::access::ro>,
                groov::field<"ege", bool, 9, 9>,
-               groov::field<"soie", common::bittypes::bit_enable, 8, 8>,
+               groov::field<"soie", common::bit_enable, 8, 8>,
                groov::field<"dmareq_id", std::uint8_t, 7, 0>>;
 
 // dmamux_dmamux1_c4cr_v1: DMAMUX1_C4CR
@@ -410,7 +410,7 @@ using dmamux_dmamux1_c4cr_v1_tt =
                groov::field<"se", bool, 16, 16>,
                groov::field<"reserved0", std::uint8_t, 15, 10, common::access::ro>,
                groov::field<"ege", bool, 9, 9>,
-               groov::field<"soie", common::bittypes::bit_enable, 8, 8>,
+               groov::field<"soie", common::bit_enable, 8, 8>,
                groov::field<"dmareq_id", std::uint8_t, 7, 0>>;
 
 // dmamux_dmamux1_c5cr_v1: DMAMUX1_C5CR
@@ -430,7 +430,7 @@ using dmamux_dmamux1_c5cr_v1_tt =
                groov::field<"se", bool, 16, 16>,
                groov::field<"reserved0", std::uint8_t, 15, 10, common::access::ro>,
                groov::field<"ege", bool, 9, 9>,
-               groov::field<"soie", common::bittypes::bit_enable, 8, 8>,
+               groov::field<"soie", common::bit_enable, 8, 8>,
                groov::field<"dmareq_id", std::uint8_t, 7, 0>>;
 
 // dmamux_dmamux1_c6cr_v1: DMAMUX1_C6CR
@@ -450,7 +450,7 @@ using dmamux_dmamux1_c6cr_v1_tt =
                groov::field<"se", bool, 16, 16>,
                groov::field<"reserved0", std::uint8_t, 15, 10, common::access::ro>,
                groov::field<"ege", bool, 9, 9>,
-               groov::field<"soie", common::bittypes::bit_enable, 8, 8>,
+               groov::field<"soie", common::bit_enable, 8, 8>,
                groov::field<"dmareq_id", std::uint8_t, 7, 0>>;
 
 // dmamux_dmamux1_c7cr_v1: DMAMUX1_C7CR
@@ -470,7 +470,7 @@ using dmamux_dmamux1_c7cr_v1_tt =
                groov::field<"se", bool, 16, 16>,
                groov::field<"reserved0", std::uint8_t, 15, 10, common::access::ro>,
                groov::field<"ege", bool, 9, 9>,
-               groov::field<"soie", common::bittypes::bit_enable, 8, 8>,
+               groov::field<"soie", common::bit_enable, 8, 8>,
                groov::field<"dmareq_id", std::uint8_t, 7, 0>>;
 
 // dmamux_dmamux1_c8cr_v1: DMAMUX1_C8CR
@@ -490,7 +490,7 @@ using dmamux_dmamux1_c8cr_v1_tt =
                groov::field<"se", bool, 16, 16>,
                groov::field<"reserved0", std::uint8_t, 15, 10, common::access::ro>,
                groov::field<"ege", bool, 9, 9>,
-               groov::field<"soie", common::bittypes::bit_enable, 8, 8>,
+               groov::field<"soie", common::bit_enable, 8, 8>,
                groov::field<"dmareq_id", std::uint8_t, 7, 0>>;
 
 // dmamux_dmamux1_c9cr_v1: DMAMUX1_C9CR
@@ -510,7 +510,7 @@ using dmamux_dmamux1_c9cr_v1_tt =
                groov::field<"se", bool, 16, 16>,
                groov::field<"reserved0", std::uint8_t, 15, 10, common::access::ro>,
                groov::field<"ege", bool, 9, 9>,
-               groov::field<"soie", common::bittypes::bit_enable, 8, 8>,
+               groov::field<"soie", common::bit_enable, 8, 8>,
                groov::field<"dmareq_id", std::uint8_t, 7, 0>>;
 
 // dmamux_dmamux1_cfr_v1: DMAMUX1_CFR
@@ -554,7 +554,7 @@ using dmamux_dmamux1_rg0cr_v1_tt =
                groov::field<"gpol", std::uint8_t, 18, 17>,
                groov::field<"ge", bool, 16, 16>,
                groov::field<"reserved1", std::uint8_t, 15, 9, common::access::ro>,
-               groov::field<"oie", common::bittypes::bit_enable, 8, 8>,
+               groov::field<"oie", common::bit_enable, 8, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 5, common::access::ro>,
                groov::field<"sig_id", std::uint8_t, 4, 0>>;
 
@@ -573,7 +573,7 @@ using dmamux_dmamux1_rg1cr_v1_tt =
                groov::field<"gpol", std::uint8_t, 18, 17>,
                groov::field<"ge", bool, 16, 16>,
                groov::field<"reserved1", std::uint8_t, 15, 9, common::access::ro>,
-               groov::field<"oie", common::bittypes::bit_enable, 8, 8>,
+               groov::field<"oie", common::bit_enable, 8, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 5, common::access::ro>,
                groov::field<"sig_id", std::uint8_t, 4, 0>>;
 
@@ -592,7 +592,7 @@ using dmamux_dmamux1_rg2cr_v1_tt =
                groov::field<"gpol", std::uint8_t, 18, 17>,
                groov::field<"ge", bool, 16, 16>,
                groov::field<"reserved1", std::uint8_t, 15, 9, common::access::ro>,
-               groov::field<"oie", common::bittypes::bit_enable, 8, 8>,
+               groov::field<"oie", common::bit_enable, 8, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 5, common::access::ro>,
                groov::field<"sig_id", std::uint8_t, 4, 0>>;
 
@@ -611,7 +611,7 @@ using dmamux_dmamux1_rg3cr_v1_tt =
                groov::field<"gpol", std::uint8_t, 18, 17>,
                groov::field<"ge", bool, 16, 16>,
                groov::field<"reserved1", std::uint8_t, 15, 9, common::access::ro>,
-               groov::field<"oie", common::bittypes::bit_enable, 8, 8>,
+               groov::field<"oie", common::bit_enable, 8, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 5, common::access::ro>,
                groov::field<"sig_id", std::uint8_t, 4, 0>>;
 
@@ -630,7 +630,7 @@ using dmamux_dmamux1_rg4cr_v1_tt =
                groov::field<"gpol", std::uint8_t, 18, 17>,
                groov::field<"ge", bool, 16, 16>,
                groov::field<"reserved1", std::uint8_t, 15, 9, common::access::ro>,
-               groov::field<"oie", common::bittypes::bit_enable, 8, 8>,
+               groov::field<"oie", common::bit_enable, 8, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 5, common::access::ro>,
                groov::field<"sig_id", std::uint8_t, 4, 0>>;
 
@@ -649,7 +649,7 @@ using dmamux_dmamux1_rg5cr_v1_tt =
                groov::field<"gpol", std::uint8_t, 18, 17>,
                groov::field<"ge", bool, 16, 16>,
                groov::field<"reserved1", std::uint8_t, 15, 9, common::access::ro>,
-               groov::field<"oie", common::bittypes::bit_enable, 8, 8>,
+               groov::field<"oie", common::bit_enable, 8, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 5, common::access::ro>,
                groov::field<"sig_id", std::uint8_t, 4, 0>>;
 
@@ -668,7 +668,7 @@ using dmamux_dmamux1_rg6cr_v1_tt =
                groov::field<"gpol", std::uint8_t, 18, 17>,
                groov::field<"ge", bool, 16, 16>,
                groov::field<"reserved1", std::uint8_t, 15, 9, common::access::ro>,
-               groov::field<"oie", common::bittypes::bit_enable, 8, 8>,
+               groov::field<"oie", common::bit_enable, 8, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 5, common::access::ro>,
                groov::field<"sig_id", std::uint8_t, 4, 0>>;
 
@@ -687,7 +687,7 @@ using dmamux_dmamux1_rg7cr_v1_tt =
                groov::field<"gpol", std::uint8_t, 18, 17>,
                groov::field<"ge", bool, 16, 16>,
                groov::field<"reserved1", std::uint8_t, 15, 9, common::access::ro>,
-               groov::field<"oie", common::bittypes::bit_enable, 8, 8>,
+               groov::field<"oie", common::bit_enable, 8, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 5, common::access::ro>,
                groov::field<"sig_id", std::uint8_t, 4, 0>>;
 
@@ -732,7 +732,7 @@ using dmamux_rg0cr_v1_tt =
                groov::field<"gpol", std::uint8_t, 18, 17>,
                groov::field<"ge", bool, 16, 16>,
                groov::field<"reserved1", std::uint8_t, 15, 9, common::access::ro>,
-               groov::field<"oie", common::bittypes::bit_enable, 8, 8>,
+               groov::field<"oie", common::bit_enable, 8, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 5, common::access::ro>,
                groov::field<"sig_id", std::uint8_t, 4, 0>>;
 
@@ -751,7 +751,7 @@ using dmamux_rg1cr_v1_tt =
                groov::field<"gpol", std::uint8_t, 18, 17>,
                groov::field<"ge", bool, 16, 16>,
                groov::field<"reserved1", std::uint8_t, 15, 9, common::access::ro>,
-               groov::field<"oie", common::bittypes::bit_enable, 8, 8>,
+               groov::field<"oie", common::bit_enable, 8, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 5, common::access::ro>,
                groov::field<"sig_id", std::uint8_t, 4, 0>>;
 
@@ -770,7 +770,7 @@ using dmamux_rg2cr_v1_tt =
                groov::field<"gpol", std::uint8_t, 18, 17>,
                groov::field<"ge", bool, 16, 16>,
                groov::field<"reserved1", std::uint8_t, 15, 9, common::access::ro>,
-               groov::field<"oie", common::bittypes::bit_enable, 8, 8>,
+               groov::field<"oie", common::bit_enable, 8, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 5, common::access::ro>,
                groov::field<"sig_id", std::uint8_t, 4, 0>>;
 
@@ -789,7 +789,7 @@ using dmamux_rg3cr_v1_tt =
                groov::field<"gpol", std::uint8_t, 18, 17>,
                groov::field<"ge", bool, 16, 16>,
                groov::field<"reserved1", std::uint8_t, 15, 9, common::access::ro>,
-               groov::field<"oie", common::bittypes::bit_enable, 8, 8>,
+               groov::field<"oie", common::bit_enable, 8, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 5, common::access::ro>,
                groov::field<"sig_id", std::uint8_t, 4, 0>>;
 
@@ -808,7 +808,7 @@ using dmamux_rg4cr_v1_tt =
                groov::field<"gpol", std::uint8_t, 18, 17>,
                groov::field<"ge", bool, 16, 16>,
                groov::field<"reserved1", std::uint8_t, 15, 9, common::access::ro>,
-               groov::field<"oie", common::bittypes::bit_enable, 8, 8>,
+               groov::field<"oie", common::bit_enable, 8, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 5, common::access::ro>,
                groov::field<"sig_id", std::uint8_t, 4, 0>>;
 
@@ -827,7 +827,7 @@ using dmamux_rg5cr_v1_tt =
                groov::field<"gpol", std::uint8_t, 18, 17>,
                groov::field<"ge", bool, 16, 16>,
                groov::field<"reserved1", std::uint8_t, 15, 9, common::access::ro>,
-               groov::field<"oie", common::bittypes::bit_enable, 8, 8>,
+               groov::field<"oie", common::bit_enable, 8, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 5, common::access::ro>,
                groov::field<"sig_id", std::uint8_t, 4, 0>>;
 
@@ -846,7 +846,7 @@ using dmamux_rg6cr_v1_tt =
                groov::field<"gpol", std::uint8_t, 18, 17>,
                groov::field<"ge", bool, 16, 16>,
                groov::field<"reserved1", std::uint8_t, 15, 9, common::access::ro>,
-               groov::field<"oie", common::bittypes::bit_enable, 8, 8>,
+               groov::field<"oie", common::bit_enable, 8, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 5, common::access::ro>,
                groov::field<"sig_id", std::uint8_t, 4, 0>>;
 
@@ -865,7 +865,7 @@ using dmamux_rg7cr_v1_tt =
                groov::field<"gpol", std::uint8_t, 18, 17>,
                groov::field<"ge", bool, 16, 16>,
                groov::field<"reserved1", std::uint8_t, 15, 9, common::access::ro>,
-               groov::field<"oie", common::bittypes::bit_enable, 8, 8>,
+               groov::field<"oie", common::bit_enable, 8, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 5, common::access::ro>,
                groov::field<"sig_id", std::uint8_t, 4, 0>>;
 

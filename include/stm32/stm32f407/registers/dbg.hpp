@@ -74,7 +74,7 @@ using dbg_dbgmcu_cr_v1_tt =
                groov::field<"dbg_i2c2_smbus_timeout", bool, 16, 16>,
                groov::field<"reserved1", std::uint8_t, 15, 8, common::access::ro>,
                groov::field<"trace_mode", std::uint8_t, 7, 6>,
-               groov::field<"trace_ioen", common::bittypes::bit_enable, 5, 5>,
+               groov::field<"trace_ioen", common::bit_enable, 5, 5>,
                groov::field<"reserved0", std::uint8_t, 4, 3, common::access::ro>,
                groov::field<"dbg_standby", bool, 2, 2>,
                groov::field<"dbg_stop", bool, 1, 1>,

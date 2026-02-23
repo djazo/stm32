@@ -139,11 +139,11 @@ using dcmi_ier_v1_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved0", std::uint32_t, 31, 5, common::access::ro>,
-               groov::field<"line_ie", common::bittypes::bit_enable, 4, 4>,
-               groov::field<"vsync_ie", common::bittypes::bit_enable, 3, 3>,
-               groov::field<"err_ie", common::bittypes::bit_enable, 2, 2>,
-               groov::field<"ovr_ie", common::bittypes::bit_enable, 1, 1>,
-               groov::field<"frame_ie", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"line_ie", common::bit_enable, 4, 4>,
+               groov::field<"vsync_ie", common::bit_enable, 3, 3>,
+               groov::field<"err_ie", common::bit_enable, 2, 2>,
+               groov::field<"ovr_ie", common::bit_enable, 1, 1>,
+               groov::field<"frame_ie", common::bit_enable, 0, 0>>;
 
 // dcmi_mis_v1: MIS
 // Used by: DCMI

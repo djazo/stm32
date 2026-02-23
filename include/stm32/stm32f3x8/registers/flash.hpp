@@ -47,12 +47,12 @@ using flash_cr_v1_tt =
              common::access::rw,
                groov::field<"reserved3", std::uint32_t, 31, 14, common::access::ro>,
                groov::field<"force_optload", bool, 13, 13>,
-               groov::field<"eopie", common::bittypes::bit_enable, 12, 12>,
+               groov::field<"eopie", common::bit_enable, 12, 12>,
                groov::field<"reserved2", bool, 11, 11, common::access::ro>,
-               groov::field<"errie", common::bittypes::bit_enable, 10, 10>,
+               groov::field<"errie", common::bit_enable, 10, 10>,
                groov::field<"optwre", bool, 9, 9>,
                groov::field<"reserved1", bool, 8, 8, common::access::ro>,
-               groov::field<"lock", common::bittypes::bit_locked, 7, 7>,
+               groov::field<"lock", common::bit_locked, 7, 7>,
                groov::field<"strt", bool, 6, 6>,
                groov::field<"opter", bool, 5, 5>,
                groov::field<"optpg", bool, 4, 4>,
@@ -126,7 +126,7 @@ using flash_sr_v1_tt =
                groov::field<"reserved1", bool, 3, 3, common::access::ro>,
                groov::field<"pgerr", bool, 2, 2>,
                groov::field<"reserved0", bool, 1, 1, common::access::ro>,
-               groov::field<"bsy", common::bittypes::bit_ready_bar, 0, 0, common::access::ro>>;
+               groov::field<"bsy", common::bit_ready_bar, 0, 0, common::access::ro>>;
 
 // flash_wrpr_v1: WRPR
 // Used by: Flash

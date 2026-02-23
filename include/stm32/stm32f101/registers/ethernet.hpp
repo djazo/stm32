@@ -91,20 +91,20 @@ using ethernet_dmaier_v1_tt =
                groov::field<"reserved1", std::uint16_t, 31, 17, common::access::ro>,
                groov::field<"nise", bool, 16, 16>,
                groov::field<"aise", bool, 15, 15>,
-               groov::field<"erie", common::bittypes::bit_enable, 14, 14>,
-               groov::field<"fbeie", common::bittypes::bit_enable, 13, 13>,
+               groov::field<"erie", common::bit_enable, 14, 14>,
+               groov::field<"fbeie", common::bit_enable, 13, 13>,
                groov::field<"reserved0", std::uint8_t, 12, 11, common::access::ro>,
-               groov::field<"etie", common::bittypes::bit_enable, 10, 10>,
-               groov::field<"rwtie", common::bittypes::bit_enable, 9, 9>,
-               groov::field<"rpsie", common::bittypes::bit_enable, 8, 8>,
-               groov::field<"rbuie", common::bittypes::bit_enable, 7, 7>,
-               groov::field<"rie", common::bittypes::bit_enable, 6, 6>,
-               groov::field<"tuie", common::bittypes::bit_enable, 5, 5>,
-               groov::field<"roie", common::bittypes::bit_enable, 4, 4>,
-               groov::field<"tjtie", common::bittypes::bit_enable, 3, 3>,
-               groov::field<"tbuie", common::bittypes::bit_enable, 2, 2>,
-               groov::field<"tpsie", common::bittypes::bit_enable, 1, 1>,
-               groov::field<"tie", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"etie", common::bit_enable, 10, 10>,
+               groov::field<"rwtie", common::bit_enable, 9, 9>,
+               groov::field<"rpsie", common::bit_enable, 8, 8>,
+               groov::field<"rbuie", common::bit_enable, 7, 7>,
+               groov::field<"rie", common::bit_enable, 6, 6>,
+               groov::field<"tuie", common::bit_enable, 5, 5>,
+               groov::field<"roie", common::bit_enable, 4, 4>,
+               groov::field<"tjtie", common::bit_enable, 3, 3>,
+               groov::field<"tbuie", common::bit_enable, 2, 2>,
+               groov::field<"tpsie", common::bit_enable, 1, 1>,
+               groov::field<"tie", common::bit_enable, 0, 0>>;
 
 // ethernet_dmamfbocr_v1: DMAMFBOCR
 // Used by: ETHERNET_DMA
@@ -507,8 +507,8 @@ using ethernet_macpmtcsr_v1_tt =
                groov::field<"wfr", bool, 6, 6>,
                groov::field<"mpr", bool, 5, 5>,
                groov::field<"reserved0", std::uint8_t, 4, 3, common::access::ro>,
-               groov::field<"wfe", common::bittypes::bit_enable, 2, 2>,
-               groov::field<"mpe", common::bittypes::bit_enable, 1, 1>,
+               groov::field<"wfe", common::bit_enable, 2, 2>,
+               groov::field<"mpe", common::bit_enable, 1, 1>,
                groov::field<"pd", bool, 0, 0>>;
 
 // ethernet_macrwuffr_v1: MACRWUFFR

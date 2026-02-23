@@ -45,7 +45,7 @@ using pwr_cr2_v1_tt =
                groov::field<"pvmendac", bool, 7, 7>,
                groov::field<"pvdrt", std::uint8_t, 6, 4>,
                groov::field<"pvdft", std::uint8_t, 3, 1>,
-               groov::field<"pvde", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"pvde", common::bit_enable, 0, 0>>;
 
 // pwr_cr3_v1: CR3
 // Used by: PWR
@@ -484,7 +484,7 @@ using pwr_sr2_v1_tt =
                groov::field<"vosf", bool, 10, 10>,
                groov::field<"reglpf", bool, 9, 9>,
                groov::field<"reglps", bool, 8, 8>,
-               groov::field<"flash_rdy", common::bittypes::bit_ready, 7, 7>,
+               groov::field<"flash_rdy", common::bit_ready, 7, 7>,
                groov::field<"reserved0", std::uint8_t, 6, 0>>;
 
 } // namespace stm32::regs

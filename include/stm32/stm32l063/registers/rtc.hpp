@@ -182,10 +182,10 @@ using rtc_cr_v1_tt =
                groov::field<"bkp", bool, 18, 18>,
                groov::field<"sub1h", bool, 17, 17, common::access::wo>,
                groov::field<"add1h", bool, 16, 16, common::access::wo>,
-               groov::field<"tsie", common::bittypes::bit_enable, 15, 15>,
-               groov::field<"wutie", common::bittypes::bit_enable, 14, 14>,
-               groov::field<"alrbie", common::bittypes::bit_enable, 13, 13>,
-               groov::field<"alraie", common::bittypes::bit_enable, 12, 12>,
+               groov::field<"tsie", common::bit_enable, 15, 15>,
+               groov::field<"wutie", common::bit_enable, 14, 14>,
+               groov::field<"alrbie", common::bit_enable, 13, 13>,
+               groov::field<"alraie", common::bit_enable, 12, 12>,
                groov::field<"tse", bool, 11, 11>,
                groov::field<"wute", bool, 10, 10>,
                groov::field<"alrbe", bool, 9, 9>,
@@ -256,7 +256,7 @@ using rtc_or_v1_tt =
              common::access::rw,
                groov::field<"reserved0", std::uint32_t, 31, 2, common::access::ro>,
                groov::field<"rtc_out_rmp", bool, 1, 1>,
-               groov::field<"rtc_alarm_type", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"rtc_alarm_type", common::bit_enable, 0, 0>>;
 
 // rtc_prer_v1: PRER
 // Used by: RTC
@@ -312,21 +312,21 @@ using rtc_tampcr_v1_tt =
                groov::field<"reserved1", std::uint16_t, 31, 22, common::access::ro>,
                groov::field<"tamp2mf", bool, 21, 21>,
                groov::field<"tamp2noerase", bool, 20, 20>,
-               groov::field<"tamp2ie", common::bittypes::bit_enable, 19, 19>,
+               groov::field<"tamp2ie", common::bit_enable, 19, 19>,
                groov::field<"tamp1mf", bool, 18, 18>,
                groov::field<"tamp1noerase", bool, 17, 17>,
-               groov::field<"tamp1ie", common::bittypes::bit_enable, 16, 16>,
-               groov::field<"tamppudis", common::bittypes::bit_enable_bar, 15, 15>,
+               groov::field<"tamp1ie", common::bit_enable, 16, 16>,
+               groov::field<"tamppudis", common::bit_enable_bar, 15, 15>,
                groov::field<"tampprch", std::uint8_t, 14, 13>,
                groov::field<"tampflt", std::uint8_t, 12, 11>,
                groov::field<"tampfreq", std::uint8_t, 10, 8>,
                groov::field<"tampts", bool, 7, 7>,
                groov::field<"reserved0", std::uint8_t, 6, 5, common::access::ro>,
                groov::field<"tamp2_trg", bool, 4, 4>,
-               groov::field<"tamp2e", common::bittypes::bit_enable, 3, 3>,
-               groov::field<"tampie", common::bittypes::bit_enable, 2, 2>,
+               groov::field<"tamp2e", common::bit_enable, 3, 3>,
+               groov::field<"tampie", common::bit_enable, 2, 2>,
                groov::field<"tamp1trg", bool, 1, 1>,
-               groov::field<"tamp1e", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"tamp1e", common::bit_enable, 0, 0>>;
 
 // rtc_tr_v1: TR
 // Used by: RTC

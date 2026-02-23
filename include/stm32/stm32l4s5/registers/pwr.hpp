@@ -44,7 +44,7 @@ using pwr_cr2_v1_tt =
                groov::field<"pvme2", bool, 5, 5>,
                groov::field<"pvme1", bool, 4, 4>,
                groov::field<"pls", std::uint8_t, 3, 1>,
-               groov::field<"pvde", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"pvde", common::bit_enable, 0, 0>>;
 
 // pwr_cr3_v1: CR3
 // Used by: PWR
@@ -100,7 +100,7 @@ using pwr_cr5_v1_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved1", std::uint32_t, 31, 9, common::access::ro>,
-               groov::field<"r1mode", common::bittypes::bit_enable, 8, 8>,
+               groov::field<"r1mode", common::bit_enable, 8, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 0, common::access::ro>>;
 
 // pwr_pdcra_v1: PDCRA

@@ -17,20 +17,20 @@ using rng_cr_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::rw,
-               groov::field<"configlock", common::bittypes::bit_locked, 31, 31>,
-               groov::field<"condrst", common::bittypes::bit_reset, 30, 30>,
+               groov::field<"configlock", common::bit_locked, 31, 31>,
+               groov::field<"condrst", common::bit_reset, 30, 30>,
                groov::field<"reserved3", std::uint8_t, 29, 26, common::access::ro>,
                groov::field<"rng_config1", std::uint8_t, 25, 20>,
                groov::field<"clkdiv", std::uint8_t, 19, 16>,
                groov::field<"rng_config2", std::uint8_t, 15, 13>,
                groov::field<"nistc", bool, 12, 12>,
                groov::field<"rng_config3", std::uint8_t, 11, 8>,
-               groov::field<"ardis", common::bittypes::bit_enable_bar, 7, 7>,
+               groov::field<"ardis", common::bit_enable_bar, 7, 7>,
                groov::field<"reserved2", bool, 6, 6, common::access::ro>,
                groov::field<"ced", bool, 5, 5>,
                groov::field<"reserved1", bool, 4, 4, common::access::ro>,
-               groov::field<"ie", common::bittypes::bit_enable, 3, 3>,
-               groov::field<"rngen", common::bittypes::bit_enable, 2, 2>,
+               groov::field<"ie", common::bit_enable, 3, 3>,
+               groov::field<"rngen", common::bit_enable, 2, 2>,
                groov::field<"reserved0", std::uint8_t, 1, 0, common::access::ro>>;
 
 // rng_dr_v1: DR
@@ -73,6 +73,6 @@ using rng_sr_v1_tt =
                groov::field<"reserved0", std::uint8_t, 4, 3, common::access::ro>,
                groov::field<"secs", bool, 2, 2, common::access::ro>,
                groov::field<"cecs", bool, 1, 1, common::access::ro>,
-               groov::field<"drdy", common::bittypes::bit_ready, 0, 0, common::access::ro>>;
+               groov::field<"drdy", common::bit_ready, 0, 0, common::access::ro>>;
 
 } // namespace stm32::regs

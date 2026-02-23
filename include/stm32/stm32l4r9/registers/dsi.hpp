@@ -90,7 +90,7 @@ using dsi_dsi_cr_v1_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved0", std::uint32_t, 31, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // dsi_dsi_dltrc_v1: DSI_DLTRC
 // Used by: DSI
@@ -152,12 +152,12 @@ using dsi_dsi_fir1_v1_tt =
              common::access::wo,
                groov::field<"reserved0", std::uint32_t, 31, 13, common::access::ro>,
                groov::field<"fgprxe", bool, 12, 12>,
-               groov::field<"fgprde", common::bittypes::bit_enable, 11, 11>,
+               groov::field<"fgprde", common::bit_enable, 11, 11>,
                groov::field<"fgptxe", bool, 10, 10>,
                groov::field<"fgpwre", bool, 9, 9>,
                groov::field<"fgcwre", bool, 8, 8>,
                groov::field<"flpwre", bool, 7, 7>,
-               groov::field<"feotpe", common::bittypes::bit_enable, 6, 6>,
+               groov::field<"feotpe", common::bit_enable, 6, 6>,
                groov::field<"fpse", bool, 5, 5>,
                groov::field<"fcrce", bool, 4, 4>,
                groov::field<"feccme", bool, 3, 3>,
@@ -209,11 +209,11 @@ using dsi_dsi_gpsr_v1_tt =
                groov::field<"reserved0", std::uint32_t, 31, 7>,
                groov::field<"rcb", bool, 6, 6>,
                groov::field<"prdff", bool, 5, 5>,
-               groov::field<"prdfe", common::bittypes::bit_enable, 4, 4>,
+               groov::field<"prdfe", common::bit_enable, 4, 4>,
                groov::field<"pwrff", bool, 3, 3>,
-               groov::field<"pwrfe", common::bittypes::bit_enable, 2, 2>,
+               groov::field<"pwrfe", common::bit_enable, 2, 2>,
                groov::field<"cmdff", bool, 1, 1>,
-               groov::field<"cmdfe", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"cmdfe", common::bit_enable, 0, 0>>;
 
 // dsi_dsi_gvcidr_v1: DSI_GVCIDR
 // Used by: DSI
@@ -239,27 +239,27 @@ using dsi_dsi_ier0_v1_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved0", std::uint16_t, 31, 21, common::access::ro>,
-               groov::field<"pe4ie", common::bittypes::bit_enable, 20, 20>,
-               groov::field<"pe3ie", common::bittypes::bit_enable, 19, 19>,
-               groov::field<"pe2ie", common::bittypes::bit_enable, 18, 18>,
-               groov::field<"pe1ie", common::bittypes::bit_enable, 17, 17>,
-               groov::field<"pe0ie", common::bittypes::bit_enable, 16, 16>,
-               groov::field<"ae15ie", common::bittypes::bit_enable, 15, 15>,
-               groov::field<"ae14ie", common::bittypes::bit_enable, 14, 14>,
-               groov::field<"ae13ie", common::bittypes::bit_enable, 13, 13>,
-               groov::field<"ae12ie", common::bittypes::bit_enable, 12, 12>,
-               groov::field<"ae11ie", common::bittypes::bit_enable, 11, 11>,
-               groov::field<"ae10ie", common::bittypes::bit_enable, 10, 10>,
-               groov::field<"ae9ie", common::bittypes::bit_enable, 9, 9>,
-               groov::field<"ae8ie", common::bittypes::bit_enable, 8, 8>,
-               groov::field<"ae7ie", common::bittypes::bit_enable, 7, 7>,
-               groov::field<"ae6ie", common::bittypes::bit_enable, 6, 6>,
-               groov::field<"ae5ie", common::bittypes::bit_enable, 5, 5>,
-               groov::field<"ae4ie", common::bittypes::bit_enable, 4, 4>,
-               groov::field<"ae3ie", common::bittypes::bit_enable, 3, 3>,
-               groov::field<"ae2ie", common::bittypes::bit_enable, 2, 2>,
-               groov::field<"ae1ie", common::bittypes::bit_enable, 1, 1>,
-               groov::field<"ae0ie", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"pe4ie", common::bit_enable, 20, 20>,
+               groov::field<"pe3ie", common::bit_enable, 19, 19>,
+               groov::field<"pe2ie", common::bit_enable, 18, 18>,
+               groov::field<"pe1ie", common::bit_enable, 17, 17>,
+               groov::field<"pe0ie", common::bit_enable, 16, 16>,
+               groov::field<"ae15ie", common::bit_enable, 15, 15>,
+               groov::field<"ae14ie", common::bit_enable, 14, 14>,
+               groov::field<"ae13ie", common::bit_enable, 13, 13>,
+               groov::field<"ae12ie", common::bit_enable, 12, 12>,
+               groov::field<"ae11ie", common::bit_enable, 11, 11>,
+               groov::field<"ae10ie", common::bit_enable, 10, 10>,
+               groov::field<"ae9ie", common::bit_enable, 9, 9>,
+               groov::field<"ae8ie", common::bit_enable, 8, 8>,
+               groov::field<"ae7ie", common::bit_enable, 7, 7>,
+               groov::field<"ae6ie", common::bit_enable, 6, 6>,
+               groov::field<"ae5ie", common::bit_enable, 5, 5>,
+               groov::field<"ae4ie", common::bit_enable, 4, 4>,
+               groov::field<"ae3ie", common::bit_enable, 3, 3>,
+               groov::field<"ae2ie", common::bit_enable, 2, 2>,
+               groov::field<"ae1ie", common::bit_enable, 1, 1>,
+               groov::field<"ae0ie", common::bit_enable, 0, 0>>;
 
 // dsi_dsi_ier1_v1: DSI_IER1
 // Used by: DSI
@@ -272,19 +272,19 @@ using dsi_dsi_ier1_v1_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved0", std::uint32_t, 31, 13, common::access::ro>,
-               groov::field<"gprxeie", common::bittypes::bit_enable, 12, 12>,
-               groov::field<"gprdeie", common::bittypes::bit_enable, 11, 11>,
-               groov::field<"gptxeie", common::bittypes::bit_enable, 10, 10>,
-               groov::field<"gpwreie", common::bittypes::bit_enable, 9, 9>,
-               groov::field<"gcwreie", common::bittypes::bit_enable, 8, 8>,
-               groov::field<"lpwreie", common::bittypes::bit_enable, 7, 7>,
-               groov::field<"eotpeie", common::bittypes::bit_enable, 6, 6>,
-               groov::field<"pseie", common::bittypes::bit_enable, 5, 5>,
-               groov::field<"crceie", common::bittypes::bit_enable, 4, 4>,
-               groov::field<"eccmeie", common::bittypes::bit_enable, 3, 3>,
-               groov::field<"eccseie", common::bittypes::bit_enable, 2, 2>,
-               groov::field<"tolprxie", common::bittypes::bit_enable, 1, 1>,
-               groov::field<"tohstxie", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"gprxeie", common::bit_enable, 12, 12>,
+               groov::field<"gprdeie", common::bit_enable, 11, 11>,
+               groov::field<"gptxeie", common::bit_enable, 10, 10>,
+               groov::field<"gpwreie", common::bit_enable, 9, 9>,
+               groov::field<"gcwreie", common::bit_enable, 8, 8>,
+               groov::field<"lpwreie", common::bit_enable, 7, 7>,
+               groov::field<"eotpeie", common::bit_enable, 6, 6>,
+               groov::field<"pseie", common::bit_enable, 5, 5>,
+               groov::field<"crceie", common::bit_enable, 4, 4>,
+               groov::field<"eccmeie", common::bit_enable, 3, 3>,
+               groov::field<"eccseie", common::bit_enable, 2, 2>,
+               groov::field<"tolprxie", common::bit_enable, 1, 1>,
+               groov::field<"tohstxie", common::bit_enable, 0, 0>>;
 
 // dsi_dsi_isr0_v1: DSI_ISR0
 // Used by: DSI
@@ -331,12 +331,12 @@ using dsi_dsi_isr1_v1_tt =
              common::access::ro,
                groov::field<"reserved0", std::uint32_t, 31, 13>,
                groov::field<"gprxe", bool, 12, 12>,
-               groov::field<"gprde", common::bittypes::bit_enable, 11, 11>,
+               groov::field<"gprde", common::bit_enable, 11, 11>,
                groov::field<"gptxe", bool, 10, 10>,
                groov::field<"gpwre", bool, 9, 9>,
                groov::field<"gcwre", bool, 8, 8>,
                groov::field<"lpwre", bool, 7, 7>,
-               groov::field<"eotpe", common::bittypes::bit_enable, 6, 6>,
+               groov::field<"eotpe", common::bit_enable, 6, 6>,
                groov::field<"pse", bool, 5, 5>,
                groov::field<"crce", bool, 4, 4>,
                groov::field<"eccme", bool, 3, 3>,
@@ -355,7 +355,7 @@ using dsi_dsi_lcccr_v1_tt =
              baseaddress + offset,
              common::access::ro,
                groov::field<"reserved1", std::uint32_t, 31, 9>,
-               groov::field<"lpe", common::bittypes::bit_enable, 8, 8>,
+               groov::field<"lpe", common::bit_enable, 8, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 4>,
                groov::field<"colc", std::uint8_t, 3, 0>>;
 
@@ -383,7 +383,7 @@ using dsi_dsi_lcolcr_v1_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved1", std::uint32_t, 31, 9, common::access::ro>,
-               groov::field<"lpe", common::bittypes::bit_enable, 8, 8>,
+               groov::field<"lpe", common::bit_enable, 8, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 4, common::access::ro>,
                groov::field<"colc", std::uint8_t, 3, 0>>;
 
@@ -515,7 +515,7 @@ using dsi_dsi_pctlr_v1_tt =
              common::access::rw,
                groov::field<"reserved1", std::uint32_t, 31, 3, common::access::ro>,
                groov::field<"cke", bool, 2, 2>,
-               groov::field<"den", common::bittypes::bit_enable, 1, 1>,
+               groov::field<"den", common::bit_enable, 1, 1>,
                groov::field<"reserved0", bool, 0, 0, common::access::ro>>;
 
 // dsi_dsi_psr_v1: DSI_PSR
@@ -765,11 +765,11 @@ using dsi_dsi_vmccr_v1_tt =
                groov::field<"reserved0", std::uint32_t, 31, 10>,
                groov::field<"lpce", bool, 9, 9>,
                groov::field<"fbtaae", bool, 8, 8>,
-               groov::field<"lphfe", common::bittypes::bit_enable, 7, 7>,
-               groov::field<"lphbpe", common::bittypes::bit_enable, 6, 6>,
+               groov::field<"lphfe", common::bit_enable, 7, 7>,
+               groov::field<"lphbpe", common::bit_enable, 6, 6>,
                groov::field<"lpvae", bool, 5, 5>,
-               groov::field<"lpvfpe", common::bittypes::bit_enable, 4, 4>,
-               groov::field<"lpvbpe", common::bittypes::bit_enable, 3, 3>,
+               groov::field<"lpvfpe", common::bit_enable, 4, 4>,
+               groov::field<"lpvbpe", common::bit_enable, 3, 3>,
                groov::field<"lpvsae", bool, 2, 2>,
                groov::field<"vmt", std::uint8_t, 1, 0>>;
 
@@ -791,11 +791,11 @@ using dsi_dsi_vmcr_v1_tt =
                groov::field<"pge", bool, 16, 16>,
                groov::field<"lpce", bool, 15, 15>,
                groov::field<"fbtaae", bool, 14, 14>,
-               groov::field<"lphfpe", common::bittypes::bit_enable, 13, 13>,
-               groov::field<"lphbpe", common::bittypes::bit_enable, 12, 12>,
+               groov::field<"lphfpe", common::bit_enable, 13, 13>,
+               groov::field<"lphbpe", common::bit_enable, 12, 12>,
                groov::field<"lpvae", bool, 11, 11>,
-               groov::field<"lpvfpe", common::bittypes::bit_enable, 10, 10>,
-               groov::field<"lpvbpe", common::bittypes::bit_enable, 9, 9>,
+               groov::field<"lpvfpe", common::bit_enable, 10, 10>,
+               groov::field<"lpvbpe", common::bit_enable, 9, 9>,
                groov::field<"lpvsae", bool, 8, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 2, common::access::ro>,
                groov::field<"vmt", std::uint8_t, 1, 0>>;
@@ -877,7 +877,7 @@ using dsi_dsi_vscr_v1_tt =
                groov::field<"reserved1", std::uint32_t, 31, 9, common::access::ro>,
                groov::field<"ur", bool, 8, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // dsi_dsi_vvaccr_v1: DSI_VVACCR
 // Used by: DSI
@@ -1012,8 +1012,8 @@ using dsi_dsi_wcr_v1_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved0", std::uint32_t, 31, 4, common::access::ro>,
-               groov::field<"dsien", common::bittypes::bit_enable, 3, 3>,
-               groov::field<"ltdcen", common::bittypes::bit_enable, 2, 2>,
+               groov::field<"dsien", common::bit_enable, 3, 3>,
+               groov::field<"ltdcen", common::bit_enable, 2, 2>,
                groov::field<"shtdn", bool, 1, 1>,
                groov::field<"colm", bool, 0, 0>>;
 
@@ -1028,13 +1028,13 @@ using dsi_dsi_wier_v1_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved2", std::uint32_t, 31, 14, common::access::ro>,
-               groov::field<"rrie", common::bittypes::bit_enable, 13, 13>,
+               groov::field<"rrie", common::bit_enable, 13, 13>,
                groov::field<"reserved1", std::uint8_t, 12, 11, common::access::ro>,
-               groov::field<"plluie", common::bittypes::bit_enable, 10, 10>,
-               groov::field<"plllie", common::bittypes::bit_enable, 9, 9>,
+               groov::field<"plluie", common::bit_enable, 10, 10>,
+               groov::field<"plllie", common::bit_enable, 9, 9>,
                groov::field<"reserved0", std::uint8_t, 8, 2, common::access::ro>,
-               groov::field<"erie", common::bittypes::bit_enable, 1, 1>,
-               groov::field<"teie", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"erie", common::bit_enable, 1, 1>,
+               groov::field<"teie", common::bit_enable, 0, 0>>;
 
 // dsi_dsi_wifcr_v1: DSI_WIFCR
 // Used by: DSI
@@ -1088,16 +1088,16 @@ using dsi_dsi_wpcr0_v1_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved2", std::uint8_t, 31, 28, common::access::ro>,
-               groov::field<"tclkposten", common::bittypes::bit_enable, 27, 27>,
-               groov::field<"tlpxcen", common::bittypes::bit_enable, 26, 26>,
-               groov::field<"thsexiten", common::bittypes::bit_enable, 25, 25>,
-               groov::field<"tlpxden", common::bittypes::bit_enable, 24, 24>,
-               groov::field<"thszeroen", common::bittypes::bit_enable, 23, 23>,
-               groov::field<"thstrailen", common::bittypes::bit_enable, 22, 22>,
-               groov::field<"thsprepen", common::bittypes::bit_enable, 21, 21>,
-               groov::field<"tclkzeroen", common::bittypes::bit_enable, 20, 20>,
-               groov::field<"tclkprepen", common::bittypes::bit_enable, 19, 19>,
-               groov::field<"pden", common::bittypes::bit_enable, 18, 18>,
+               groov::field<"tclkposten", common::bit_enable, 27, 27>,
+               groov::field<"tlpxcen", common::bit_enable, 26, 26>,
+               groov::field<"thsexiten", common::bit_enable, 25, 25>,
+               groov::field<"tlpxden", common::bit_enable, 24, 24>,
+               groov::field<"thszeroen", common::bit_enable, 23, 23>,
+               groov::field<"thstrailen", common::bit_enable, 22, 22>,
+               groov::field<"thsprepen", common::bit_enable, 21, 21>,
+               groov::field<"tclkzeroen", common::bit_enable, 20, 20>,
+               groov::field<"tclkprepen", common::bit_enable, 19, 19>,
+               groov::field<"pden", common::bit_enable, 18, 18>,
                groov::field<"reserved1", bool, 17, 17, common::access::ro>,
                groov::field<"tddl", bool, 16, 16>,
                groov::field<"reserved0", bool, 15, 15, common::access::ro>,
@@ -1192,7 +1192,7 @@ using dsi_dsi_wrpcr_v1_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved4", std::uint8_t, 31, 25, common::access::ro>,
-               groov::field<"regen", common::bittypes::bit_enable, 24, 24>,
+               groov::field<"regen", common::bit_enable, 24, 24>,
                groov::field<"reserved3", std::uint8_t, 23, 18, common::access::ro>,
                groov::field<"odf", std::uint8_t, 17, 16>,
                groov::field<"reserved2", bool, 15, 15, common::access::ro>,
@@ -1200,6 +1200,6 @@ using dsi_dsi_wrpcr_v1_tt =
                groov::field<"reserved1", std::uint8_t, 10, 9, common::access::ro>,
                groov::field<"ndiv", std::uint8_t, 8, 2>,
                groov::field<"reserved0", bool, 1, 1, common::access::ro>,
-               groov::field<"pllen", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"pllen", common::bit_enable, 0, 0>>;
 
 } // namespace stm32::regs

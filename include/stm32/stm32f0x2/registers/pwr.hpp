@@ -20,7 +20,7 @@ using pwr_cr_v1_tt =
                groov::field<"reserved0", std::uint32_t, 31, 9, common::access::ro>,
                groov::field<"dbp", bool, 8, 8>,
                groov::field<"pls", std::uint8_t, 7, 5>,
-               groov::field<"pvde", common::bittypes::bit_enable, 4, 4>,
+               groov::field<"pvde", common::bit_enable, 4, 4>,
                groov::field<"csbf", bool, 3, 3>,
                groov::field<"cwuf", bool, 2, 2>,
                groov::field<"pdds", bool, 1, 1>,
@@ -46,7 +46,7 @@ using pwr_csr_v1_tt =
                groov::field<"ewup2", bool, 9, 9>,
                groov::field<"ewup1", bool, 8, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 4, common::access::ro>,
-               groov::field<"vrefintrdy", common::bittypes::bit_ready, 3, 3, common::access::ro>,
+               groov::field<"vrefintrdy", common::bit_ready, 3, 3, common::access::ro>,
                groov::field<"pvdo", bool, 2, 2, common::access::ro>,
                groov::field<"sbf", bool, 1, 1, common::access::ro>,
                groov::field<"wuf", bool, 0, 0, common::access::ro>>;

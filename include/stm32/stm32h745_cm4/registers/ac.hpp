@@ -38,7 +38,7 @@ using ac_ahbpcr_v1_tt =
              common::access::rw,
                groov::field<"reserved0", std::uint32_t, 31, 4, common::access::ro>,
                groov::field<"sz", std::uint8_t, 3, 1>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // ac_ahbscr_v1: AHBSCR
 // Used by: AC
@@ -67,7 +67,7 @@ using ac_cacr_v1_tt =
              common::access::rw,
                groov::field<"reserved0", std::uint32_t, 31, 3, common::access::ro>,
                groov::field<"forcewt", bool, 2, 2>,
-               groov::field<"eccen", common::bittypes::bit_enable, 1, 1>,
+               groov::field<"eccen", common::bit_enable, 1, 1>,
                groov::field<"siwt", bool, 0, 0>>;
 
 // ac_dtcmcr_v1: DTCMCR
@@ -82,9 +82,9 @@ using ac_dtcmcr_v1_tt =
              common::access::rw,
                groov::field<"reserved0", std::uint32_t, 31, 7, common::access::ro>,
                groov::field<"sz", std::uint8_t, 6, 3>,
-               groov::field<"reten", common::bittypes::bit_enable, 2, 2>,
+               groov::field<"reten", common::bit_enable, 2, 2>,
                groov::field<"rmw", bool, 1, 1>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // ac_itcmcr_v1: ITCMCR
 // Used by: AC
@@ -98,8 +98,8 @@ using ac_itcmcr_v1_tt =
              common::access::rw,
                groov::field<"reserved0", std::uint32_t, 31, 7, common::access::ro>,
                groov::field<"sz", std::uint8_t, 6, 3>,
-               groov::field<"reten", common::bittypes::bit_enable, 2, 2>,
+               groov::field<"reten", common::bit_enable, 2, 2>,
                groov::field<"rmw", bool, 1, 1>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 } // namespace stm32::regs

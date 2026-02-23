@@ -17,17 +17,17 @@ using syscfg_comp_csr_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::rw,
-               groov::field<"comp2lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"comp2lock", common::bit_locked, 31, 31>,
                groov::field<"comp2out", bool, 30, 30, common::access::ro>,
                groov::field<"comp2hyst", std::uint8_t, 29, 28>,
                groov::field<"comp2pol", bool, 27, 27>,
                groov::field<"comp2outsel", std::uint8_t, 26, 24>,
-               groov::field<"wndwen", common::bittypes::bit_enable, 23, 23>,
+               groov::field<"wndwen", common::bit_enable, 23, 23>,
                groov::field<"comp2insel", std::uint8_t, 22, 20>,
                groov::field<"comp2mode", std::uint8_t, 19, 18>,
                groov::field<"reserved1", bool, 17, 17, common::access::ro>,
-               groov::field<"comp2en", common::bittypes::bit_enable, 16, 16>,
-               groov::field<"comp1lock", common::bittypes::bit_locked, 15, 15>,
+               groov::field<"comp2en", common::bit_enable, 16, 16>,
+               groov::field<"comp1lock", common::bit_locked, 15, 15>,
                groov::field<"comp1out", bool, 14, 14, common::access::ro>,
                groov::field<"comp1hyst", std::uint8_t, 13, 12>,
                groov::field<"comp1pol", bool, 11, 11>,
@@ -36,7 +36,7 @@ using syscfg_comp_csr_v1_tt =
                groov::field<"comp1insel", std::uint8_t, 6, 4>,
                groov::field<"comp1mode", std::uint8_t, 3, 2>,
                groov::field<"comp1_inp_dac", bool, 1, 1>,
-               groov::field<"comp1en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"comp1en", common::bit_enable, 0, 0>>;
 
 // syscfg_syscfg_cfgr1_v1: SYSCFG_CFGR1
 // Used by: SYSCFG_COMP
@@ -85,9 +85,9 @@ using syscfg_syscfg_cfgr2_v1_tt =
                groov::field<"reserved1", std::uint32_t, 31, 9, common::access::ro>,
                groov::field<"sram_pef", bool, 8, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 3, common::access::ro>,
-               groov::field<"pvd_lock", common::bittypes::bit_locked, 2, 2>,
-               groov::field<"sram_parity_lock", common::bittypes::bit_locked, 1, 1>,
-               groov::field<"locup_lock", common::bittypes::bit_locked, 0, 0>>;
+               groov::field<"pvd_lock", common::bit_locked, 2, 2>,
+               groov::field<"sram_parity_lock", common::bit_locked, 1, 1>,
+               groov::field<"locup_lock", common::bit_locked, 0, 0>>;
 
 // syscfg_syscfg_exticr1_v1: SYSCFG_EXTICR1
 // Used by: SYSCFG_COMP

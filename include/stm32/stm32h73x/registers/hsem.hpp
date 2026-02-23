@@ -217,7 +217,7 @@ using hsem_hsem_r0_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::rw,
-               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"lock", common::bit_locked, 31, 31>,
                groov::field<"reserved0", std::uint16_t, 30, 16, common::access::ro>,
                groov::field<"masterid", std::uint8_t, 15, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
@@ -232,7 +232,7 @@ using hsem_hsem_r1_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::rw,
-               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"lock", common::bit_locked, 31, 31>,
                groov::field<"reserved0", std::uint16_t, 30, 16, common::access::ro>,
                groov::field<"masterid", std::uint8_t, 15, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
@@ -247,7 +247,7 @@ using hsem_hsem_r10_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::rw,
-               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"lock", common::bit_locked, 31, 31>,
                groov::field<"reserved0", std::uint16_t, 30, 16, common::access::ro>,
                groov::field<"masterid", std::uint8_t, 15, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
@@ -262,7 +262,7 @@ using hsem_hsem_r11_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::rw,
-               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"lock", common::bit_locked, 31, 31>,
                groov::field<"reserved0", std::uint16_t, 30, 16, common::access::ro>,
                groov::field<"masterid", std::uint8_t, 15, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
@@ -277,7 +277,7 @@ using hsem_hsem_r12_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::rw,
-               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"lock", common::bit_locked, 31, 31>,
                groov::field<"reserved0", std::uint16_t, 30, 16, common::access::ro>,
                groov::field<"masterid", std::uint8_t, 15, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
@@ -292,7 +292,7 @@ using hsem_hsem_r13_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::rw,
-               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"lock", common::bit_locked, 31, 31>,
                groov::field<"reserved0", std::uint16_t, 30, 16, common::access::ro>,
                groov::field<"masterid", std::uint8_t, 15, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
@@ -307,7 +307,7 @@ using hsem_hsem_r14_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::rw,
-               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"lock", common::bit_locked, 31, 31>,
                groov::field<"reserved0", std::uint16_t, 30, 16, common::access::ro>,
                groov::field<"masterid", std::uint8_t, 15, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
@@ -322,7 +322,7 @@ using hsem_hsem_r15_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::rw,
-               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"lock", common::bit_locked, 31, 31>,
                groov::field<"reserved0", std::uint16_t, 30, 16, common::access::ro>,
                groov::field<"masterid", std::uint8_t, 15, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
@@ -337,7 +337,7 @@ using hsem_hsem_r16_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::rw,
-               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"lock", common::bit_locked, 31, 31>,
                groov::field<"reserved0", std::uint16_t, 30, 16, common::access::ro>,
                groov::field<"masterid", std::uint8_t, 15, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
@@ -352,7 +352,7 @@ using hsem_hsem_r17_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::rw,
-               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"lock", common::bit_locked, 31, 31>,
                groov::field<"reserved0", std::uint16_t, 30, 16, common::access::ro>,
                groov::field<"masterid", std::uint8_t, 15, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
@@ -367,7 +367,7 @@ using hsem_hsem_r18_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::rw,
-               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"lock", common::bit_locked, 31, 31>,
                groov::field<"reserved0", std::uint16_t, 30, 16, common::access::ro>,
                groov::field<"masterid", std::uint8_t, 15, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
@@ -382,7 +382,7 @@ using hsem_hsem_r19_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::rw,
-               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"lock", common::bit_locked, 31, 31>,
                groov::field<"reserved0", std::uint16_t, 30, 16, common::access::ro>,
                groov::field<"masterid", std::uint8_t, 15, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
@@ -397,7 +397,7 @@ using hsem_hsem_r2_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::rw,
-               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"lock", common::bit_locked, 31, 31>,
                groov::field<"reserved0", std::uint16_t, 30, 16, common::access::ro>,
                groov::field<"masterid", std::uint8_t, 15, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
@@ -412,7 +412,7 @@ using hsem_hsem_r20_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::rw,
-               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"lock", common::bit_locked, 31, 31>,
                groov::field<"reserved0", std::uint16_t, 30, 16, common::access::ro>,
                groov::field<"masterid", std::uint8_t, 15, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
@@ -427,7 +427,7 @@ using hsem_hsem_r21_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::rw,
-               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"lock", common::bit_locked, 31, 31>,
                groov::field<"reserved0", std::uint16_t, 30, 16, common::access::ro>,
                groov::field<"masterid", std::uint8_t, 15, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
@@ -442,7 +442,7 @@ using hsem_hsem_r22_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::rw,
-               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"lock", common::bit_locked, 31, 31>,
                groov::field<"reserved0", std::uint16_t, 30, 16, common::access::ro>,
                groov::field<"masterid", std::uint8_t, 15, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
@@ -457,7 +457,7 @@ using hsem_hsem_r23_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::rw,
-               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"lock", common::bit_locked, 31, 31>,
                groov::field<"reserved0", std::uint16_t, 30, 16, common::access::ro>,
                groov::field<"masterid", std::uint8_t, 15, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
@@ -472,7 +472,7 @@ using hsem_hsem_r24_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::rw,
-               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"lock", common::bit_locked, 31, 31>,
                groov::field<"reserved0", std::uint16_t, 30, 16, common::access::ro>,
                groov::field<"masterid", std::uint8_t, 15, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
@@ -487,7 +487,7 @@ using hsem_hsem_r25_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::rw,
-               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"lock", common::bit_locked, 31, 31>,
                groov::field<"reserved0", std::uint16_t, 30, 16, common::access::ro>,
                groov::field<"masterid", std::uint8_t, 15, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
@@ -502,7 +502,7 @@ using hsem_hsem_r26_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::rw,
-               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"lock", common::bit_locked, 31, 31>,
                groov::field<"reserved0", std::uint16_t, 30, 16, common::access::ro>,
                groov::field<"masterid", std::uint8_t, 15, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
@@ -517,7 +517,7 @@ using hsem_hsem_r27_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::rw,
-               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"lock", common::bit_locked, 31, 31>,
                groov::field<"reserved0", std::uint16_t, 30, 16, common::access::ro>,
                groov::field<"masterid", std::uint8_t, 15, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
@@ -532,7 +532,7 @@ using hsem_hsem_r28_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::rw,
-               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"lock", common::bit_locked, 31, 31>,
                groov::field<"reserved0", std::uint16_t, 30, 16, common::access::ro>,
                groov::field<"masterid", std::uint8_t, 15, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
@@ -547,7 +547,7 @@ using hsem_hsem_r29_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::rw,
-               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"lock", common::bit_locked, 31, 31>,
                groov::field<"reserved0", std::uint16_t, 30, 16, common::access::ro>,
                groov::field<"masterid", std::uint8_t, 15, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
@@ -562,7 +562,7 @@ using hsem_hsem_r3_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::rw,
-               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"lock", common::bit_locked, 31, 31>,
                groov::field<"reserved0", std::uint16_t, 30, 16, common::access::ro>,
                groov::field<"masterid", std::uint8_t, 15, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
@@ -577,7 +577,7 @@ using hsem_hsem_r30_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::rw,
-               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"lock", common::bit_locked, 31, 31>,
                groov::field<"reserved0", std::uint16_t, 30, 16, common::access::ro>,
                groov::field<"masterid", std::uint8_t, 15, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
@@ -592,7 +592,7 @@ using hsem_hsem_r31_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::rw,
-               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"lock", common::bit_locked, 31, 31>,
                groov::field<"reserved0", std::uint16_t, 30, 16, common::access::ro>,
                groov::field<"masterid", std::uint8_t, 15, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
@@ -607,7 +607,7 @@ using hsem_hsem_r4_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::rw,
-               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"lock", common::bit_locked, 31, 31>,
                groov::field<"reserved0", std::uint16_t, 30, 16, common::access::ro>,
                groov::field<"masterid", std::uint8_t, 15, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
@@ -622,7 +622,7 @@ using hsem_hsem_r5_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::rw,
-               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"lock", common::bit_locked, 31, 31>,
                groov::field<"reserved0", std::uint16_t, 30, 16, common::access::ro>,
                groov::field<"masterid", std::uint8_t, 15, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
@@ -637,7 +637,7 @@ using hsem_hsem_r6_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::rw,
-               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"lock", common::bit_locked, 31, 31>,
                groov::field<"reserved0", std::uint16_t, 30, 16, common::access::ro>,
                groov::field<"masterid", std::uint8_t, 15, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
@@ -652,7 +652,7 @@ using hsem_hsem_r7_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::rw,
-               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"lock", common::bit_locked, 31, 31>,
                groov::field<"reserved0", std::uint16_t, 30, 16, common::access::ro>,
                groov::field<"masterid", std::uint8_t, 15, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
@@ -667,7 +667,7 @@ using hsem_hsem_r8_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::rw,
-               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"lock", common::bit_locked, 31, 31>,
                groov::field<"reserved0", std::uint16_t, 30, 16, common::access::ro>,
                groov::field<"masterid", std::uint8_t, 15, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
@@ -682,7 +682,7 @@ using hsem_hsem_r9_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::rw,
-               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"lock", common::bit_locked, 31, 31>,
                groov::field<"reserved0", std::uint16_t, 30, 16, common::access::ro>,
                groov::field<"masterid", std::uint8_t, 15, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
@@ -697,7 +697,7 @@ using hsem_hsem_rlr0_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::ro,
-               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"lock", common::bit_locked, 31, 31>,
                groov::field<"reserved0", std::uint16_t, 30, 16>,
                groov::field<"masterid", std::uint8_t, 15, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
@@ -712,7 +712,7 @@ using hsem_hsem_rlr1_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::ro,
-               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"lock", common::bit_locked, 31, 31>,
                groov::field<"reserved0", std::uint16_t, 30, 16>,
                groov::field<"masterid", std::uint8_t, 15, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
@@ -727,7 +727,7 @@ using hsem_hsem_rlr10_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::ro,
-               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"lock", common::bit_locked, 31, 31>,
                groov::field<"reserved0", std::uint16_t, 30, 16>,
                groov::field<"masterid", std::uint8_t, 15, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
@@ -742,7 +742,7 @@ using hsem_hsem_rlr11_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::ro,
-               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"lock", common::bit_locked, 31, 31>,
                groov::field<"reserved0", std::uint16_t, 30, 16>,
                groov::field<"masterid", std::uint8_t, 15, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
@@ -757,7 +757,7 @@ using hsem_hsem_rlr12_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::ro,
-               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"lock", common::bit_locked, 31, 31>,
                groov::field<"reserved0", std::uint16_t, 30, 16>,
                groov::field<"masterid", std::uint8_t, 15, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
@@ -772,7 +772,7 @@ using hsem_hsem_rlr13_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::ro,
-               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"lock", common::bit_locked, 31, 31>,
                groov::field<"reserved0", std::uint16_t, 30, 16>,
                groov::field<"masterid", std::uint8_t, 15, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
@@ -787,7 +787,7 @@ using hsem_hsem_rlr14_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::ro,
-               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"lock", common::bit_locked, 31, 31>,
                groov::field<"reserved0", std::uint16_t, 30, 16>,
                groov::field<"masterid", std::uint8_t, 15, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
@@ -802,7 +802,7 @@ using hsem_hsem_rlr15_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::ro,
-               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"lock", common::bit_locked, 31, 31>,
                groov::field<"reserved0", std::uint16_t, 30, 16>,
                groov::field<"masterid", std::uint8_t, 15, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
@@ -817,7 +817,7 @@ using hsem_hsem_rlr16_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::ro,
-               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"lock", common::bit_locked, 31, 31>,
                groov::field<"reserved0", std::uint16_t, 30, 16>,
                groov::field<"masterid", std::uint8_t, 15, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
@@ -832,7 +832,7 @@ using hsem_hsem_rlr17_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::ro,
-               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"lock", common::bit_locked, 31, 31>,
                groov::field<"reserved0", std::uint16_t, 30, 16>,
                groov::field<"masterid", std::uint8_t, 15, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
@@ -847,7 +847,7 @@ using hsem_hsem_rlr18_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::ro,
-               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"lock", common::bit_locked, 31, 31>,
                groov::field<"reserved0", std::uint16_t, 30, 16>,
                groov::field<"masterid", std::uint8_t, 15, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
@@ -862,7 +862,7 @@ using hsem_hsem_rlr19_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::ro,
-               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"lock", common::bit_locked, 31, 31>,
                groov::field<"reserved0", std::uint16_t, 30, 16>,
                groov::field<"masterid", std::uint8_t, 15, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
@@ -877,7 +877,7 @@ using hsem_hsem_rlr2_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::ro,
-               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"lock", common::bit_locked, 31, 31>,
                groov::field<"reserved0", std::uint16_t, 30, 16>,
                groov::field<"masterid", std::uint8_t, 15, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
@@ -892,7 +892,7 @@ using hsem_hsem_rlr20_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::ro,
-               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"lock", common::bit_locked, 31, 31>,
                groov::field<"reserved0", std::uint16_t, 30, 16>,
                groov::field<"masterid", std::uint8_t, 15, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
@@ -907,7 +907,7 @@ using hsem_hsem_rlr21_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::ro,
-               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"lock", common::bit_locked, 31, 31>,
                groov::field<"reserved0", std::uint16_t, 30, 16>,
                groov::field<"masterid", std::uint8_t, 15, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
@@ -922,7 +922,7 @@ using hsem_hsem_rlr22_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::ro,
-               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"lock", common::bit_locked, 31, 31>,
                groov::field<"reserved0", std::uint16_t, 30, 16>,
                groov::field<"masterid", std::uint8_t, 15, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
@@ -937,7 +937,7 @@ using hsem_hsem_rlr23_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::ro,
-               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"lock", common::bit_locked, 31, 31>,
                groov::field<"reserved0", std::uint16_t, 30, 16>,
                groov::field<"masterid", std::uint8_t, 15, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
@@ -952,7 +952,7 @@ using hsem_hsem_rlr24_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::ro,
-               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"lock", common::bit_locked, 31, 31>,
                groov::field<"reserved0", std::uint16_t, 30, 16>,
                groov::field<"masterid", std::uint8_t, 15, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
@@ -967,7 +967,7 @@ using hsem_hsem_rlr25_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::ro,
-               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"lock", common::bit_locked, 31, 31>,
                groov::field<"reserved0", std::uint16_t, 30, 16>,
                groov::field<"masterid", std::uint8_t, 15, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
@@ -982,7 +982,7 @@ using hsem_hsem_rlr26_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::ro,
-               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"lock", common::bit_locked, 31, 31>,
                groov::field<"reserved0", std::uint16_t, 30, 16>,
                groov::field<"masterid", std::uint8_t, 15, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
@@ -997,7 +997,7 @@ using hsem_hsem_rlr27_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::ro,
-               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"lock", common::bit_locked, 31, 31>,
                groov::field<"reserved0", std::uint16_t, 30, 16>,
                groov::field<"masterid", std::uint8_t, 15, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
@@ -1012,7 +1012,7 @@ using hsem_hsem_rlr28_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::ro,
-               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"lock", common::bit_locked, 31, 31>,
                groov::field<"reserved0", std::uint16_t, 30, 16>,
                groov::field<"masterid", std::uint8_t, 15, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
@@ -1027,7 +1027,7 @@ using hsem_hsem_rlr29_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::ro,
-               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"lock", common::bit_locked, 31, 31>,
                groov::field<"reserved0", std::uint16_t, 30, 16>,
                groov::field<"masterid", std::uint8_t, 15, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
@@ -1042,7 +1042,7 @@ using hsem_hsem_rlr3_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::ro,
-               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"lock", common::bit_locked, 31, 31>,
                groov::field<"reserved0", std::uint16_t, 30, 16>,
                groov::field<"masterid", std::uint8_t, 15, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
@@ -1057,7 +1057,7 @@ using hsem_hsem_rlr30_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::ro,
-               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"lock", common::bit_locked, 31, 31>,
                groov::field<"reserved0", std::uint16_t, 30, 16>,
                groov::field<"masterid", std::uint8_t, 15, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
@@ -1072,7 +1072,7 @@ using hsem_hsem_rlr31_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::ro,
-               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"lock", common::bit_locked, 31, 31>,
                groov::field<"reserved0", std::uint16_t, 30, 16>,
                groov::field<"masterid", std::uint8_t, 15, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
@@ -1087,7 +1087,7 @@ using hsem_hsem_rlr4_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::ro,
-               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"lock", common::bit_locked, 31, 31>,
                groov::field<"reserved0", std::uint16_t, 30, 16>,
                groov::field<"masterid", std::uint8_t, 15, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
@@ -1102,7 +1102,7 @@ using hsem_hsem_rlr5_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::ro,
-               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"lock", common::bit_locked, 31, 31>,
                groov::field<"reserved0", std::uint16_t, 30, 16>,
                groov::field<"masterid", std::uint8_t, 15, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
@@ -1117,7 +1117,7 @@ using hsem_hsem_rlr6_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::ro,
-               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"lock", common::bit_locked, 31, 31>,
                groov::field<"reserved0", std::uint16_t, 30, 16>,
                groov::field<"masterid", std::uint8_t, 15, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
@@ -1132,7 +1132,7 @@ using hsem_hsem_rlr7_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::ro,
-               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"lock", common::bit_locked, 31, 31>,
                groov::field<"reserved0", std::uint16_t, 30, 16>,
                groov::field<"masterid", std::uint8_t, 15, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
@@ -1147,7 +1147,7 @@ using hsem_hsem_rlr8_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::ro,
-               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"lock", common::bit_locked, 31, 31>,
                groov::field<"reserved0", std::uint16_t, 30, 16>,
                groov::field<"masterid", std::uint8_t, 15, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
@@ -1162,7 +1162,7 @@ using hsem_hsem_rlr9_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::ro,
-               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"lock", common::bit_locked, 31, 31>,
                groov::field<"reserved0", std::uint16_t, 30, 16>,
                groov::field<"masterid", std::uint8_t, 15, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;

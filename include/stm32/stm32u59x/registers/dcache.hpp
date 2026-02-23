@@ -43,22 +43,22 @@ using dcache_dcache_cr_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::rw,
-               groov::field<"hburst", common::bittypes::bit_reset, 31, 31>,
+               groov::field<"hburst", common::bit_reset, 31, 31>,
                groov::field<"reserved2", std::uint8_t, 30, 24, common::access::ro>,
-               groov::field<"wmissmrst", common::bittypes::bit_reset, 23, 23>,
-               groov::field<"whitmrst", common::bittypes::bit_reset, 22, 22>,
-               groov::field<"wmissmen", common::bittypes::bit_enable, 21, 21>,
-               groov::field<"whitmen", common::bittypes::bit_enable, 20, 20>,
-               groov::field<"rmissmrst", common::bittypes::bit_reset, 19, 19>,
-               groov::field<"rhitmrst", common::bittypes::bit_reset, 18, 18>,
-               groov::field<"rmissmen", common::bittypes::bit_enable, 17, 17>,
-               groov::field<"rhitmen", common::bittypes::bit_enable, 16, 16>,
+               groov::field<"wmissmrst", common::bit_reset, 23, 23>,
+               groov::field<"whitmrst", common::bit_reset, 22, 22>,
+               groov::field<"wmissmen", common::bit_enable, 21, 21>,
+               groov::field<"whitmen", common::bit_enable, 20, 20>,
+               groov::field<"rmissmrst", common::bit_reset, 19, 19>,
+               groov::field<"rhitmrst", common::bit_reset, 18, 18>,
+               groov::field<"rmissmen", common::bit_enable, 17, 17>,
+               groov::field<"rhitmen", common::bit_enable, 16, 16>,
                groov::field<"reserved1", std::uint8_t, 15, 12, common::access::ro>,
                groov::field<"startcmd", bool, 11, 11, common::access::wo>,
                groov::field<"cachecmd", std::uint8_t, 10, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 2, common::access::ro>,
                groov::field<"cacheinv", bool, 1, 1, common::access::wo>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // dcache_dcache_fcr_v1: DCACHE_FCR
 // Used by: DCACHE1, SEC_DCACHE1, DCACHE2, SEC_DCACHE2
@@ -74,7 +74,7 @@ using dcache_dcache_fcr_v1_tt =
                groov::field<"ccmdendf", bool, 4, 4>,
                groov::field<"reserved1", bool, 3, 3, common::access::ro>,
                groov::field<"cerrf", bool, 2, 2>,
-               groov::field<"cbsyendf", common::bittypes::bit_ready_bar, 1, 1>,
+               groov::field<"cbsyendf", common::bit_ready_bar, 1, 1>,
                groov::field<"reserved0", bool, 0, 0, common::access::ro>>;
 
 // dcache_dcache_ier_v1: DCACHE_IER
@@ -88,10 +88,10 @@ using dcache_dcache_ier_v1_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved2", std::uint32_t, 31, 5, common::access::ro>,
-               groov::field<"cmdendie", common::bittypes::bit_enable, 4, 4>,
+               groov::field<"cmdendie", common::bit_enable, 4, 4>,
                groov::field<"reserved1", bool, 3, 3, common::access::ro>,
-               groov::field<"errie", common::bittypes::bit_enable, 2, 2>,
-               groov::field<"bsyendie", common::bittypes::bit_ready_bar, 1, 1>,
+               groov::field<"errie", common::bit_enable, 2, 2>,
+               groov::field<"bsyendie", common::bit_ready_bar, 1, 1>,
                groov::field<"reserved0", bool, 0, 0, common::access::ro>>;
 
 // dcache_dcache_rhmonr_v1: DCACHE_RHMONR
@@ -133,7 +133,7 @@ using dcache_dcache_sr_v1_tt =
                groov::field<"cmdendf", bool, 4, 4>,
                groov::field<"busycmdf", bool, 3, 3>,
                groov::field<"errf", bool, 2, 2>,
-               groov::field<"bsyendf", common::bittypes::bit_ready_bar, 1, 1>,
+               groov::field<"bsyendf", common::bit_ready_bar, 1, 1>,
                groov::field<"busyf", bool, 0, 0>>;
 
 // dcache_dcache_whmonr_v1: DCACHE_WHMONR

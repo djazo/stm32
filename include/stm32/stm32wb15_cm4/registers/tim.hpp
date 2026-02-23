@@ -38,8 +38,8 @@ using tim_af1_v1_tt =
                groov::field<"bkcmp1p", bool, 10, 10>,
                groov::field<"bkinp", bool, 9, 9>,
                groov::field<"reserved0", std::uint8_t, 8, 3, common::access::ro>,
-               groov::field<"bkcmp2e", common::bittypes::bit_enable, 2, 2>,
-               groov::field<"bkcmp1e", common::bittypes::bit_enable, 1, 1>,
+               groov::field<"bkcmp2e", common::bit_enable, 2, 2>,
+               groov::field<"bkcmp1e", common::bit_enable, 1, 1>,
                groov::field<"bkine", bool, 0, 0>>;
 
 // tim_af2_v1: AF2
@@ -56,10 +56,10 @@ using tim_af2_v1_tt =
                groov::field<"bk2cmp2p", bool, 11, 11>,
                groov::field<"bk2cmp1p", bool, 10, 10>,
                groov::field<"bk2inp", bool, 9, 9>,
-               groov::field<"bk2dfbk0e", common::bittypes::bit_enable, 8, 8>,
+               groov::field<"bk2dfbk0e", common::bit_enable, 8, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 3, common::access::ro>,
-               groov::field<"bk2cmp2e", common::bittypes::bit_enable, 2, 2>,
-               groov::field<"bk2cmp1e", common::bittypes::bit_enable, 1, 1>,
+               groov::field<"bk2cmp2e", common::bit_enable, 2, 2>,
+               groov::field<"bk2cmp1e", common::bit_enable, 1, 1>,
                groov::field<"bk2ine", bool, 0, 0>>;
 
 // tim_arr_v1: ARR
@@ -100,7 +100,7 @@ using tim_bdtr_v1_tt =
              common::access::rw,
                groov::field<"reserved0", std::uint8_t, 31, 26, common::access::ro>,
                groov::field<"bk2p", bool, 25, 25>,
-               groov::field<"bk2e", common::bittypes::bit_enable, 24, 24>,
+               groov::field<"bk2e", common::bit_enable, 24, 24>,
                groov::field<"bk2f", std::uint8_t, 23, 20>,
                groov::field<"bkf", std::uint8_t, 19, 16>,
                groov::field<"moe", bool, 15, 15>,
@@ -124,26 +124,26 @@ using tim_ccer_v1_tt =
              common::access::rw,
                groov::field<"reserved2", std::uint16_t, 31, 22, common::access::ro>,
                groov::field<"cc6p", bool, 21, 21>,
-               groov::field<"cc6e", common::bittypes::bit_enable, 20, 20>,
+               groov::field<"cc6e", common::bit_enable, 20, 20>,
                groov::field<"reserved1", std::uint8_t, 19, 18, common::access::ro>,
                groov::field<"cc5p", bool, 17, 17>,
-               groov::field<"cc5e", common::bittypes::bit_enable, 16, 16>,
+               groov::field<"cc5e", common::bit_enable, 16, 16>,
                groov::field<"cc4np", bool, 15, 15>,
                groov::field<"reserved0", bool, 14, 14, common::access::ro>,
                groov::field<"cc4p", bool, 13, 13>,
-               groov::field<"cc4e", common::bittypes::bit_enable, 12, 12>,
+               groov::field<"cc4e", common::bit_enable, 12, 12>,
                groov::field<"cc3np", bool, 11, 11>,
                groov::field<"cc3ne", bool, 10, 10>,
                groov::field<"cc3p", bool, 9, 9>,
-               groov::field<"cc3e", common::bittypes::bit_enable, 8, 8>,
+               groov::field<"cc3e", common::bit_enable, 8, 8>,
                groov::field<"cc2np", bool, 7, 7>,
                groov::field<"cc2ne", bool, 6, 6>,
                groov::field<"cc2p", bool, 5, 5>,
-               groov::field<"cc2e", common::bittypes::bit_enable, 4, 4>,
+               groov::field<"cc2e", common::bit_enable, 4, 4>,
                groov::field<"cc1np", bool, 3, 3>,
                groov::field<"cc1ne", bool, 2, 2>,
                groov::field<"cc1p", bool, 1, 1>,
-               groov::field<"cc1e", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"cc1e", common::bit_enable, 0, 0>>;
 
 // tim_ccer_v2: CCER
 // Used by: TIM2
@@ -159,19 +159,19 @@ using tim_ccer_v2_tt =
                groov::field<"cc4np", bool, 15, 15>,
                groov::field<"reserved3", bool, 14, 14, common::access::ro>,
                groov::field<"cc4p", bool, 13, 13>,
-               groov::field<"cc4e", common::bittypes::bit_enable, 12, 12>,
+               groov::field<"cc4e", common::bit_enable, 12, 12>,
                groov::field<"cc3np", bool, 11, 11>,
                groov::field<"reserved2", bool, 10, 10, common::access::ro>,
                groov::field<"cc3p", bool, 9, 9>,
-               groov::field<"cc3e", common::bittypes::bit_enable, 8, 8>,
+               groov::field<"cc3e", common::bit_enable, 8, 8>,
                groov::field<"cc2np", bool, 7, 7>,
                groov::field<"reserved1", bool, 6, 6, common::access::ro>,
                groov::field<"cc2p", bool, 5, 5>,
-               groov::field<"cc2e", common::bittypes::bit_enable, 4, 4>,
+               groov::field<"cc2e", common::bit_enable, 4, 4>,
                groov::field<"cc1np", bool, 3, 3>,
                groov::field<"reserved0", bool, 2, 2, common::access::ro>,
                groov::field<"cc1p", bool, 1, 1>,
-               groov::field<"cc1e", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"cc1e", common::bit_enable, 0, 0>>;
 
 // tim_ccmr1_input_v1: CCMR1_INPUT
 // Used by: TIM1
@@ -225,13 +225,13 @@ using tim_ccmr1_output_v1_tt =
                groov::field<"oc1m_3", bool, 16, 16>,
                groov::field<"oc2ce", bool, 15, 15>,
                groov::field<"oc2m", std::uint8_t, 14, 12>,
-               groov::field<"oc2pe", common::bittypes::bit_enable, 11, 11>,
-               groov::field<"oc2fe", common::bittypes::bit_enable, 10, 10>,
+               groov::field<"oc2pe", common::bit_enable, 11, 11>,
+               groov::field<"oc2fe", common::bit_enable, 10, 10>,
                groov::field<"cc2s", std::uint8_t, 9, 8>,
                groov::field<"oc1ce", bool, 7, 7>,
                groov::field<"oc1m", std::uint8_t, 6, 4>,
-               groov::field<"oc1pe", common::bittypes::bit_enable, 3, 3>,
-               groov::field<"oc1fe", common::bittypes::bit_enable, 2, 2>,
+               groov::field<"oc1pe", common::bit_enable, 3, 3>,
+               groov::field<"oc1fe", common::bit_enable, 2, 2>,
                groov::field<"cc1s", std::uint8_t, 1, 0>>;
 
 // tim_ccmr2_input_v1: CCMR2_INPUT
@@ -286,13 +286,13 @@ using tim_ccmr2_output_v1_tt =
                groov::field<"oc3m_3", bool, 16, 16>,
                groov::field<"oc4ce", bool, 15, 15>,
                groov::field<"oc4m", std::uint8_t, 14, 12>,
-               groov::field<"oc4pe", common::bittypes::bit_enable, 11, 11>,
-               groov::field<"oc4fe", common::bittypes::bit_enable, 10, 10>,
+               groov::field<"oc4pe", common::bit_enable, 11, 11>,
+               groov::field<"oc4fe", common::bit_enable, 10, 10>,
                groov::field<"cc4s", std::uint8_t, 9, 8>,
                groov::field<"oc3ce", bool, 7, 7>,
                groov::field<"oc3m", std::uint8_t, 6, 4>,
-               groov::field<"oc3pe", common::bittypes::bit_enable, 3, 3>,
-               groov::field<"oc3fe", common::bittypes::bit_enable, 2, 2>,
+               groov::field<"oc3pe", common::bit_enable, 3, 3>,
+               groov::field<"oc3fe", common::bit_enable, 2, 2>,
                groov::field<"cc3s", std::uint8_t, 1, 0>>;
 
 // tim_ccmr3_output_v1: CCMR3_OUTPUT
@@ -311,13 +311,13 @@ using tim_ccmr3_output_v1_tt =
                groov::field<"oc5m_bit3", bool, 16, 16>,
                groov::field<"oc6ce", bool, 15, 15>,
                groov::field<"oc6m", std::uint8_t, 14, 12>,
-               groov::field<"oc6pe", common::bittypes::bit_enable, 11, 11>,
-               groov::field<"oc6fe", common::bittypes::bit_enable, 10, 10>,
+               groov::field<"oc6pe", common::bit_enable, 11, 11>,
+               groov::field<"oc6fe", common::bit_enable, 10, 10>,
                groov::field<"reserved1", std::uint8_t, 9, 8, common::access::ro>,
                groov::field<"oc5ce", bool, 7, 7>,
                groov::field<"oc5m", std::uint8_t, 6, 4>,
-               groov::field<"oc5pe", common::bittypes::bit_enable, 3, 3>,
-               groov::field<"oc5fe", common::bittypes::bit_enable, 2, 2>,
+               groov::field<"oc5pe", common::bit_enable, 3, 3>,
+               groov::field<"oc5fe", common::bit_enable, 2, 2>,
                groov::field<"reserved0", std::uint8_t, 1, 0, common::access::ro>>;
 
 // tim_ccr1_v1: CCR1
@@ -495,13 +495,13 @@ using tim_cr1_v1_tt =
                groov::field<"uifremap", bool, 11, 11>,
                groov::field<"reserved0", bool, 10, 10, common::access::ro>,
                groov::field<"ckd", std::uint8_t, 9, 8>,
-               groov::field<"arpe", common::bittypes::bit_enable, 7, 7>,
+               groov::field<"arpe", common::bit_enable, 7, 7>,
                groov::field<"cms", std::uint8_t, 6, 5>,
                groov::field<"dir", bool, 4, 4>,
                groov::field<"opm", bool, 3, 3>,
                groov::field<"urs", bool, 2, 2>,
-               groov::field<"udis", common::bittypes::bit_enable_bar, 1, 1>,
-               groov::field<"cen", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"udis", common::bit_enable_bar, 1, 1>,
+               groov::field<"cen", common::bit_enable, 0, 0>>;
 
 // tim_cr2_v1: CR2
 // Used by: TIM1
@@ -576,21 +576,21 @@ using tim_dier_v1_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved0", std::uint32_t, 31, 15, common::access::ro>,
-               groov::field<"tde", common::bittypes::bit_enable, 14, 14>,
-               groov::field<"comde", common::bittypes::bit_enable, 13, 13>,
-               groov::field<"cc4de", common::bittypes::bit_enable, 12, 12>,
-               groov::field<"cc3de", common::bittypes::bit_enable, 11, 11>,
-               groov::field<"cc2de", common::bittypes::bit_enable, 10, 10>,
-               groov::field<"cc1de", common::bittypes::bit_enable, 9, 9>,
-               groov::field<"ude", common::bittypes::bit_enable, 8, 8>,
-               groov::field<"bie", common::bittypes::bit_enable, 7, 7>,
-               groov::field<"tie", common::bittypes::bit_enable, 6, 6>,
-               groov::field<"comie", common::bittypes::bit_enable, 5, 5>,
-               groov::field<"cc4ie", common::bittypes::bit_enable, 4, 4>,
-               groov::field<"cc3ie", common::bittypes::bit_enable, 3, 3>,
-               groov::field<"cc2ie", common::bittypes::bit_enable, 2, 2>,
-               groov::field<"cc1ie", common::bittypes::bit_enable, 1, 1>,
-               groov::field<"uie", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"tde", common::bit_enable, 14, 14>,
+               groov::field<"comde", common::bit_enable, 13, 13>,
+               groov::field<"cc4de", common::bit_enable, 12, 12>,
+               groov::field<"cc3de", common::bit_enable, 11, 11>,
+               groov::field<"cc2de", common::bit_enable, 10, 10>,
+               groov::field<"cc1de", common::bit_enable, 9, 9>,
+               groov::field<"ude", common::bit_enable, 8, 8>,
+               groov::field<"bie", common::bit_enable, 7, 7>,
+               groov::field<"tie", common::bit_enable, 6, 6>,
+               groov::field<"comie", common::bit_enable, 5, 5>,
+               groov::field<"cc4ie", common::bit_enable, 4, 4>,
+               groov::field<"cc3ie", common::bit_enable, 3, 3>,
+               groov::field<"cc2ie", common::bit_enable, 2, 2>,
+               groov::field<"cc1ie", common::bit_enable, 1, 1>,
+               groov::field<"uie", common::bit_enable, 0, 0>>;
 
 // tim_dier_v2: DIER
 // Used by: TIM2
@@ -603,19 +603,19 @@ using tim_dier_v2_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved2", std::uint32_t, 31, 13, common::access::ro>,
-               groov::field<"cc4de", common::bittypes::bit_enable, 12, 12>,
-               groov::field<"cc3de", common::bittypes::bit_enable, 11, 11>,
-               groov::field<"cc2de", common::bittypes::bit_enable, 10, 10>,
-               groov::field<"cc1de", common::bittypes::bit_enable, 9, 9>,
-               groov::field<"ude", common::bittypes::bit_enable, 8, 8>,
+               groov::field<"cc4de", common::bit_enable, 12, 12>,
+               groov::field<"cc3de", common::bit_enable, 11, 11>,
+               groov::field<"cc2de", common::bit_enable, 10, 10>,
+               groov::field<"cc1de", common::bit_enable, 9, 9>,
+               groov::field<"ude", common::bit_enable, 8, 8>,
                groov::field<"reserved1", bool, 7, 7, common::access::ro>,
-               groov::field<"tie", common::bittypes::bit_enable, 6, 6>,
+               groov::field<"tie", common::bit_enable, 6, 6>,
                groov::field<"reserved0", bool, 5, 5, common::access::ro>,
-               groov::field<"cc4ie", common::bittypes::bit_enable, 4, 4>,
-               groov::field<"cc3ie", common::bittypes::bit_enable, 3, 3>,
-               groov::field<"cc2ie", common::bittypes::bit_enable, 2, 2>,
-               groov::field<"cc1ie", common::bittypes::bit_enable, 1, 1>,
-               groov::field<"uie", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"cc4ie", common::bit_enable, 4, 4>,
+               groov::field<"cc3ie", common::bit_enable, 3, 3>,
+               groov::field<"cc2ie", common::bit_enable, 2, 2>,
+               groov::field<"cc1ie", common::bit_enable, 1, 1>,
+               groov::field<"uie", common::bit_enable, 0, 0>>;
 
 // tim_dmar_v1: DMAR
 // Used by: TIM1, TIM2

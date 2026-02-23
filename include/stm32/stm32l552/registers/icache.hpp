@@ -18,14 +18,14 @@ using icache_icache_cr_v1_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved1", std::uint16_t, 31, 20, common::access::ro>,
-               groov::field<"missmrst", common::bittypes::bit_reset, 19, 19>,
-               groov::field<"hitmrst", common::bittypes::bit_reset, 18, 18>,
-               groov::field<"missmen", common::bittypes::bit_enable, 17, 17>,
-               groov::field<"hitmen", common::bittypes::bit_enable, 16, 16>,
+               groov::field<"missmrst", common::bit_reset, 19, 19>,
+               groov::field<"hitmrst", common::bit_reset, 18, 18>,
+               groov::field<"missmen", common::bit_enable, 17, 17>,
+               groov::field<"hitmen", common::bit_enable, 16, 16>,
                groov::field<"reserved0", std::uint16_t, 15, 3, common::access::ro>,
                groov::field<"waysel", bool, 2, 2>,
                groov::field<"cacheinv", bool, 1, 1>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // icache_icache_crr0_v1: ICACHE_CRR0
 // Used by: ICache, SEC_ICache
@@ -37,12 +37,12 @@ using icache_icache_crr0_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::rw,
-               groov::field<"hburst", common::bittypes::bit_reset, 31, 31>,
+               groov::field<"hburst", common::bit_reset, 31, 31>,
                groov::field<"reserved3", std::uint8_t, 30, 29, common::access::ro>,
                groov::field<"mstsel", bool, 28, 28>,
                groov::field<"reserved2", bool, 27, 27, common::access::ro>,
                groov::field<"remapaddr", std::uint16_t, 26, 16>,
-               groov::field<"ren", common::bittypes::bit_enable, 15, 15>,
+               groov::field<"ren", common::bit_enable, 15, 15>,
                groov::field<"reserved1", std::uint8_t, 14, 12, common::access::ro>,
                groov::field<"rsize", std::uint8_t, 11, 9>,
                groov::field<"reserved0", bool, 8, 8, common::access::ro>,
@@ -58,12 +58,12 @@ using icache_icache_crr1_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::rw,
-               groov::field<"hburst", common::bittypes::bit_reset, 31, 31>,
+               groov::field<"hburst", common::bit_reset, 31, 31>,
                groov::field<"reserved3", std::uint8_t, 30, 29, common::access::ro>,
                groov::field<"mstsel", bool, 28, 28>,
                groov::field<"reserved2", bool, 27, 27, common::access::ro>,
                groov::field<"remapaddr", std::uint16_t, 26, 16>,
-               groov::field<"ren", common::bittypes::bit_enable, 15, 15>,
+               groov::field<"ren", common::bit_enable, 15, 15>,
                groov::field<"reserved1", std::uint8_t, 14, 12, common::access::ro>,
                groov::field<"rsize", std::uint8_t, 11, 9>,
                groov::field<"reserved0", bool, 8, 8, common::access::ro>,
@@ -79,12 +79,12 @@ using icache_icache_crr2_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::rw,
-               groov::field<"hburst", common::bittypes::bit_reset, 31, 31>,
+               groov::field<"hburst", common::bit_reset, 31, 31>,
                groov::field<"reserved3", std::uint8_t, 30, 29, common::access::ro>,
                groov::field<"mstsel", bool, 28, 28>,
                groov::field<"reserved2", bool, 27, 27, common::access::ro>,
                groov::field<"remapaddr", std::uint16_t, 26, 16>,
-               groov::field<"ren", common::bittypes::bit_enable, 15, 15>,
+               groov::field<"ren", common::bit_enable, 15, 15>,
                groov::field<"reserved1", std::uint8_t, 14, 12, common::access::ro>,
                groov::field<"rsize", std::uint8_t, 11, 9>,
                groov::field<"reserved0", bool, 8, 8, common::access::ro>,
@@ -100,12 +100,12 @@ using icache_icache_crr3_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::rw,
-               groov::field<"hburst", common::bittypes::bit_reset, 31, 31>,
+               groov::field<"hburst", common::bit_reset, 31, 31>,
                groov::field<"reserved3", std::uint8_t, 30, 29, common::access::ro>,
                groov::field<"mstsel", bool, 28, 28>,
                groov::field<"reserved2", bool, 27, 27, common::access::ro>,
                groov::field<"remapaddr", std::uint16_t, 26, 16>,
-               groov::field<"ren", common::bittypes::bit_enable, 15, 15>,
+               groov::field<"ren", common::bit_enable, 15, 15>,
                groov::field<"reserved1", std::uint8_t, 14, 12, common::access::ro>,
                groov::field<"rsize", std::uint8_t, 11, 9>,
                groov::field<"reserved0", bool, 8, 8, common::access::ro>,
@@ -123,7 +123,7 @@ using icache_icache_fcr_v1_tt =
              common::access::wo,
                groov::field<"reserved1", std::uint32_t, 31, 3, common::access::ro>,
                groov::field<"cerrf", bool, 2, 2>,
-               groov::field<"cbsyendf", common::bittypes::bit_ready_bar, 1, 1>,
+               groov::field<"cbsyendf", common::bit_ready_bar, 1, 1>,
                groov::field<"reserved0", bool, 0, 0, common::access::ro>>;
 
 // icache_icache_hmonr_v1: ICACHE_HMONR
@@ -149,8 +149,8 @@ using icache_icache_ier_v1_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved1", std::uint32_t, 31, 3, common::access::ro>,
-               groov::field<"errie", common::bittypes::bit_enable, 2, 2>,
-               groov::field<"bsyendie", common::bittypes::bit_ready_bar, 1, 1>,
+               groov::field<"errie", common::bit_enable, 2, 2>,
+               groov::field<"bsyendie", common::bit_ready_bar, 1, 1>,
                groov::field<"reserved0", bool, 0, 0, common::access::ro>>;
 
 // icache_icache_mmonr_v1: ICACHE_MMONR
@@ -178,7 +178,7 @@ using icache_icache_sr_v1_tt =
              common::access::ro,
                groov::field<"reserved0", std::uint32_t, 31, 3>,
                groov::field<"errf", bool, 2, 2>,
-               groov::field<"bsyendf", common::bittypes::bit_ready_bar, 1, 1>,
+               groov::field<"bsyendf", common::bit_ready_bar, 1, 1>,
                groov::field<"busyf", bool, 0, 0>>;
 
 } // namespace stm32::regs

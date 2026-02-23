@@ -200,30 +200,30 @@ using gtzc_ier1_v1_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved1", std::uint8_t, 31, 24, common::access::ro>,
-               groov::field<"i2c6ie", common::bittypes::bit_enable, 23, 23>,
-               groov::field<"i2c5ie", common::bittypes::bit_enable, 22, 22>,
-               groov::field<"usart6ie", common::bittypes::bit_enable, 21, 21>,
+               groov::field<"i2c6ie", common::bit_enable, 23, 23>,
+               groov::field<"i2c5ie", common::bit_enable, 22, 22>,
+               groov::field<"usart6ie", common::bit_enable, 21, 21>,
                groov::field<"reserved0", bool, 20, 20, common::access::ro>,
-               groov::field<"ucpd1ie", common::bittypes::bit_enable, 19, 19>,
-               groov::field<"fdcan1ie", common::bittypes::bit_enable, 18, 18>,
-               groov::field<"lptim2ie", common::bittypes::bit_enable, 17, 17>,
-               groov::field<"i2c4ie", common::bittypes::bit_enable, 16, 16>,
-               groov::field<"crsie", common::bittypes::bit_enable, 15, 15>,
-               groov::field<"i2c2ie", common::bittypes::bit_enable, 14, 14>,
-               groov::field<"i2c1ie", common::bittypes::bit_enable, 13, 13>,
-               groov::field<"uart5ie", common::bittypes::bit_enable, 12, 12>,
-               groov::field<"usart4ie", common::bittypes::bit_enable, 11, 11>,
-               groov::field<"usart3ie", common::bittypes::bit_enable, 10, 10>,
-               groov::field<"usart2ie", common::bittypes::bit_enable, 9, 9>,
-               groov::field<"spi2ie", common::bittypes::bit_enable, 8, 8>,
-               groov::field<"iwdgie", common::bittypes::bit_enable, 7, 7>,
-               groov::field<"wwdgie", common::bittypes::bit_enable, 6, 6>,
-               groov::field<"tim7ie", common::bittypes::bit_enable, 5, 5>,
-               groov::field<"tim6ie", common::bittypes::bit_enable, 4, 4>,
-               groov::field<"tim5ie", common::bittypes::bit_enable, 3, 3>,
-               groov::field<"tim4ie", common::bittypes::bit_enable, 2, 2>,
-               groov::field<"tim3ie", common::bittypes::bit_enable, 1, 1>,
-               groov::field<"tim2ie", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"ucpd1ie", common::bit_enable, 19, 19>,
+               groov::field<"fdcan1ie", common::bit_enable, 18, 18>,
+               groov::field<"lptim2ie", common::bit_enable, 17, 17>,
+               groov::field<"i2c4ie", common::bit_enable, 16, 16>,
+               groov::field<"crsie", common::bit_enable, 15, 15>,
+               groov::field<"i2c2ie", common::bit_enable, 14, 14>,
+               groov::field<"i2c1ie", common::bit_enable, 13, 13>,
+               groov::field<"uart5ie", common::bit_enable, 12, 12>,
+               groov::field<"usart4ie", common::bit_enable, 11, 11>,
+               groov::field<"usart3ie", common::bit_enable, 10, 10>,
+               groov::field<"usart2ie", common::bit_enable, 9, 9>,
+               groov::field<"spi2ie", common::bit_enable, 8, 8>,
+               groov::field<"iwdgie", common::bit_enable, 7, 7>,
+               groov::field<"wwdgie", common::bit_enable, 6, 6>,
+               groov::field<"tim7ie", common::bit_enable, 5, 5>,
+               groov::field<"tim6ie", common::bit_enable, 4, 4>,
+               groov::field<"tim5ie", common::bit_enable, 3, 3>,
+               groov::field<"tim4ie", common::bit_enable, 2, 2>,
+               groov::field<"tim3ie", common::bit_enable, 1, 1>,
+               groov::field<"tim2ie", common::bit_enable, 0, 0>>;
 
 // gtzc_ier1_v2: IER1
 // Used by: GTZC2_TZIC, SEC_GTZC2_TZIC
@@ -236,19 +236,19 @@ using gtzc_ier1_v2_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved1", std::uint32_t, 31, 13, common::access::ro>,
-               groov::field<"adf1ie", common::bittypes::bit_enable, 12, 12>,
-               groov::field<"dac1ie", common::bittypes::bit_enable, 11, 11>,
+               groov::field<"adf1ie", common::bit_enable, 12, 12>,
+               groov::field<"dac1ie", common::bit_enable, 11, 11>,
                groov::field<"reserved0", bool, 10, 10, common::access::ro>,
-               groov::field<"vrefbufie", common::bittypes::bit_enable, 9, 9>,
-               groov::field<"adc2ie", common::bittypes::bit_enable, 8, 8>,
-               groov::field<"compie", common::bittypes::bit_enable, 7, 7>,
-               groov::field<"opampie", common::bittypes::bit_enable, 6, 6>,
-               groov::field<"lptim4ie", common::bittypes::bit_enable, 5, 5>,
-               groov::field<"lptim3ie", common::bittypes::bit_enable, 4, 4>,
-               groov::field<"lptim1ie", common::bittypes::bit_enable, 3, 3>,
-               groov::field<"i2c3ie", common::bittypes::bit_enable, 2, 2>,
-               groov::field<"lpuart1ie", common::bittypes::bit_enable, 1, 1>,
-               groov::field<"spi3ie", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"vrefbufie", common::bit_enable, 9, 9>,
+               groov::field<"adc2ie", common::bit_enable, 8, 8>,
+               groov::field<"compie", common::bit_enable, 7, 7>,
+               groov::field<"opampie", common::bit_enable, 6, 6>,
+               groov::field<"lptim4ie", common::bit_enable, 5, 5>,
+               groov::field<"lptim3ie", common::bit_enable, 4, 4>,
+               groov::field<"lptim1ie", common::bit_enable, 3, 3>,
+               groov::field<"i2c3ie", common::bit_enable, 2, 2>,
+               groov::field<"lpuart1ie", common::bit_enable, 1, 1>,
+               groov::field<"spi3ie", common::bit_enable, 0, 0>>;
 
 // gtzc_ier2_v1: IER2
 // Used by: GTZC1_TZIC, SEC_GTZC1_TZIC
@@ -261,17 +261,17 @@ using gtzc_ier2_v1_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved0", std::uint32_t, 31, 11, common::access::ro>,
-               groov::field<"dsiie", common::bittypes::bit_enable, 10, 10>,
-               groov::field<"ltdcie", common::bittypes::bit_enable, 9, 9>,
-               groov::field<"sai2ie", common::bittypes::bit_enable, 8, 8>,
-               groov::field<"sai1ie", common::bittypes::bit_enable, 7, 7>,
-               groov::field<"tim17ie", common::bittypes::bit_enable, 6, 6>,
-               groov::field<"tim16ie", common::bittypes::bit_enable, 5, 5>,
-               groov::field<"tim15ie", common::bittypes::bit_enable, 4, 4>,
-               groov::field<"usart1ie", common::bittypes::bit_enable, 3, 3>,
-               groov::field<"tim8ie", common::bittypes::bit_enable, 2, 2>,
-               groov::field<"spi1ie", common::bittypes::bit_enable, 1, 1>,
-               groov::field<"tim1ie", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"dsiie", common::bit_enable, 10, 10>,
+               groov::field<"ltdcie", common::bit_enable, 9, 9>,
+               groov::field<"sai2ie", common::bit_enable, 8, 8>,
+               groov::field<"sai1ie", common::bit_enable, 7, 7>,
+               groov::field<"tim17ie", common::bit_enable, 6, 6>,
+               groov::field<"tim16ie", common::bit_enable, 5, 5>,
+               groov::field<"tim15ie", common::bit_enable, 4, 4>,
+               groov::field<"usart1ie", common::bit_enable, 3, 3>,
+               groov::field<"tim8ie", common::bit_enable, 2, 2>,
+               groov::field<"spi1ie", common::bit_enable, 1, 1>,
+               groov::field<"tim1ie", common::bit_enable, 0, 0>>;
 
 // gtzc_ier2_v2: IER2
 // Used by: GTZC2_TZIC, SEC_GTZC2_TZIC
@@ -284,19 +284,19 @@ using gtzc_ier2_v2_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved2", std::uint8_t, 31, 26, common::access::ro>,
-               groov::field<"mpcbb4_regie", common::bittypes::bit_enable, 25, 25>,
-               groov::field<"sram4ie", common::bittypes::bit_enable, 24, 24>,
+               groov::field<"mpcbb4_regie", common::bit_enable, 25, 25>,
+               groov::field<"sram4ie", common::bit_enable, 24, 24>,
                groov::field<"reserved1", std::uint8_t, 23, 16, common::access::ro>,
-               groov::field<"tzic2ie", common::bittypes::bit_enable, 15, 15>,
-               groov::field<"tzsc2ie", common::bittypes::bit_enable, 14, 14>,
+               groov::field<"tzic2ie", common::bit_enable, 15, 15>,
+               groov::field<"tzsc2ie", common::bit_enable, 14, 14>,
                groov::field<"reserved0", std::uint8_t, 13, 7, common::access::ro>,
-               groov::field<"extiie", common::bittypes::bit_enable, 6, 6>,
-               groov::field<"lpdma1ie", common::bittypes::bit_enable, 5, 5>,
-               groov::field<"rccie", common::bittypes::bit_enable, 4, 4>,
-               groov::field<"pwrie", common::bittypes::bit_enable, 3, 3>,
-               groov::field<"tampie", common::bittypes::bit_enable, 2, 2>,
-               groov::field<"rtcie", common::bittypes::bit_enable, 1, 1>,
-               groov::field<"syscfgie", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"extiie", common::bit_enable, 6, 6>,
+               groov::field<"lpdma1ie", common::bit_enable, 5, 5>,
+               groov::field<"rccie", common::bit_enable, 4, 4>,
+               groov::field<"pwrie", common::bit_enable, 3, 3>,
+               groov::field<"tampie", common::bit_enable, 2, 2>,
+               groov::field<"rtcie", common::bit_enable, 1, 1>,
+               groov::field<"syscfgie", common::bit_enable, 0, 0>>;
 
 // gtzc_ier3_v1: IER3
 // Used by: GTZC1_TZIC, SEC_GTZC1_TZIC
@@ -309,34 +309,34 @@ using gtzc_ier3_v1_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved0", std::uint8_t, 31, 28, common::access::ro>,
-               groov::field<"dcache2_regie", common::bittypes::bit_enable, 27, 27>,
-               groov::field<"hspi1_regie", common::bittypes::bit_enable, 26, 26>,
-               groov::field<"gfxmmu_regie", common::bittypes::bit_enable, 25, 25>,
-               groov::field<"gfxmmuie", common::bittypes::bit_enable, 24, 24>,
-               groov::field<"gpu2die", common::bittypes::bit_enable, 23, 23>,
-               groov::field<"ramcfgie", common::bittypes::bit_enable, 22, 22>,
-               groov::field<"octospi2_regie", common::bittypes::bit_enable, 21, 21>,
-               groov::field<"octospi1_regie", common::bittypes::bit_enable, 20, 20>,
-               groov::field<"fsmc_regie", common::bittypes::bit_enable, 19, 19>,
-               groov::field<"sdmmc2ie", common::bittypes::bit_enable, 18, 18>,
-               groov::field<"sdmmc1ie", common::bittypes::bit_enable, 17, 17>,
-               groov::field<"octospimie", common::bittypes::bit_enable, 16, 16>,
-               groov::field<"saesie", common::bittypes::bit_enable, 15, 15>,
-               groov::field<"pkaie", common::bittypes::bit_enable, 14, 14>,
-               groov::field<"rngie", common::bittypes::bit_enable, 13, 13>,
-               groov::field<"hashie", common::bittypes::bit_enable, 12, 12>,
-               groov::field<"aesie", common::bittypes::bit_enable, 11, 11>,
-               groov::field<"otgie", common::bittypes::bit_enable, 10, 10>,
-               groov::field<"dcmiie", common::bittypes::bit_enable, 9, 9>,
-               groov::field<"adc1i2e", common::bittypes::bit_enable, 8, 8>,
-               groov::field<"dcache1_regie", common::bittypes::bit_enable, 7, 7>,
-               groov::field<"icache_regie", common::bittypes::bit_enable, 6, 6>,
-               groov::field<"dma2die", common::bittypes::bit_enable, 5, 5>,
-               groov::field<"tscie", common::bittypes::bit_enable, 4, 4>,
-               groov::field<"crcie", common::bittypes::bit_enable, 3, 3>,
-               groov::field<"fmacie", common::bittypes::bit_enable, 2, 2>,
-               groov::field<"cordicie", common::bittypes::bit_enable, 1, 1>,
-               groov::field<"mdf1ie", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"dcache2_regie", common::bit_enable, 27, 27>,
+               groov::field<"hspi1_regie", common::bit_enable, 26, 26>,
+               groov::field<"gfxmmu_regie", common::bit_enable, 25, 25>,
+               groov::field<"gfxmmuie", common::bit_enable, 24, 24>,
+               groov::field<"gpu2die", common::bit_enable, 23, 23>,
+               groov::field<"ramcfgie", common::bit_enable, 22, 22>,
+               groov::field<"octospi2_regie", common::bit_enable, 21, 21>,
+               groov::field<"octospi1_regie", common::bit_enable, 20, 20>,
+               groov::field<"fsmc_regie", common::bit_enable, 19, 19>,
+               groov::field<"sdmmc2ie", common::bit_enable, 18, 18>,
+               groov::field<"sdmmc1ie", common::bit_enable, 17, 17>,
+               groov::field<"octospimie", common::bit_enable, 16, 16>,
+               groov::field<"saesie", common::bit_enable, 15, 15>,
+               groov::field<"pkaie", common::bit_enable, 14, 14>,
+               groov::field<"rngie", common::bit_enable, 13, 13>,
+               groov::field<"hashie", common::bit_enable, 12, 12>,
+               groov::field<"aesie", common::bit_enable, 11, 11>,
+               groov::field<"otgie", common::bit_enable, 10, 10>,
+               groov::field<"dcmiie", common::bit_enable, 9, 9>,
+               groov::field<"adc1i2e", common::bit_enable, 8, 8>,
+               groov::field<"dcache1_regie", common::bit_enable, 7, 7>,
+               groov::field<"icache_regie", common::bit_enable, 6, 6>,
+               groov::field<"dma2die", common::bit_enable, 5, 5>,
+               groov::field<"tscie", common::bit_enable, 4, 4>,
+               groov::field<"crcie", common::bit_enable, 3, 3>,
+               groov::field<"fmacie", common::bit_enable, 2, 2>,
+               groov::field<"cordicie", common::bit_enable, 1, 1>,
+               groov::field<"mdf1ie", common::bit_enable, 0, 0>>;
 
 // gtzc_ier4_v1: IER4
 // Used by: GTZC1_TZIC, SEC_GTZC1_TZIC
@@ -348,28 +348,28 @@ using gtzc_ier4_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::rw,
-               groov::field<"mpcbb5_regie", common::bittypes::bit_enable, 31, 31>,
-               groov::field<"sram5ie", common::bittypes::bit_enable, 30, 30>,
-               groov::field<"mpcbb3_regie", common::bittypes::bit_enable, 29, 29>,
-               groov::field<"sram3ie", common::bittypes::bit_enable, 28, 28>,
-               groov::field<"mpcbb2_regie", common::bittypes::bit_enable, 27, 27>,
-               groov::field<"sram2ie", common::bittypes::bit_enable, 26, 26>,
-               groov::field<"mpcbb1_regie", common::bittypes::bit_enable, 25, 25>,
-               groov::field<"sram1ie", common::bittypes::bit_enable, 24, 24>,
+               groov::field<"mpcbb5_regie", common::bit_enable, 31, 31>,
+               groov::field<"sram5ie", common::bit_enable, 30, 30>,
+               groov::field<"mpcbb3_regie", common::bit_enable, 29, 29>,
+               groov::field<"sram3ie", common::bit_enable, 28, 28>,
+               groov::field<"mpcbb2_regie", common::bit_enable, 27, 27>,
+               groov::field<"sram2ie", common::bit_enable, 26, 26>,
+               groov::field<"mpcbb1_regie", common::bit_enable, 25, 25>,
+               groov::field<"sram1ie", common::bit_enable, 24, 24>,
                groov::field<"reserved1", std::uint8_t, 23, 21, common::access::ro>,
-               groov::field<"hspi1_memie", common::bittypes::bit_enable, 20, 20>,
-               groov::field<"octospi2_memie", common::bittypes::bit_enable, 19, 19>,
-               groov::field<"bkpsramie", common::bittypes::bit_enable, 18, 18>,
-               groov::field<"fsmc_memie", common::bittypes::bit_enable, 17, 17>,
-               groov::field<"octospi1_memie", common::bittypes::bit_enable, 16, 16>,
-               groov::field<"tzic1ie", common::bittypes::bit_enable, 15, 15>,
-               groov::field<"tzsc1ie", common::bittypes::bit_enable, 14, 14>,
+               groov::field<"hspi1_memie", common::bit_enable, 20, 20>,
+               groov::field<"octospi2_memie", common::bit_enable, 19, 19>,
+               groov::field<"bkpsramie", common::bit_enable, 18, 18>,
+               groov::field<"fsmc_memie", common::bit_enable, 17, 17>,
+               groov::field<"octospi1_memie", common::bit_enable, 16, 16>,
+               groov::field<"tzic1ie", common::bit_enable, 15, 15>,
+               groov::field<"tzsc1ie", common::bit_enable, 14, 14>,
                groov::field<"reserved0", std::uint16_t, 13, 5, common::access::ro>,
-               groov::field<"otfdec2ie", common::bittypes::bit_enable, 4, 4>,
-               groov::field<"otfdec1ie", common::bittypes::bit_enable, 3, 3>,
-               groov::field<"flashie", common::bittypes::bit_enable, 2, 2>,
-               groov::field<"flash_regie", common::bittypes::bit_enable, 1, 1>,
-               groov::field<"gpdma1ie", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"otfdec2ie", common::bit_enable, 4, 4>,
+               groov::field<"otfdec1ie", common::bit_enable, 3, 3>,
+               groov::field<"flashie", common::bit_enable, 2, 2>,
+               groov::field<"flash_regie", common::bit_enable, 1, 1>,
+               groov::field<"gpdma1ie", common::bit_enable, 0, 0>>;
 
 // gtzc_mpcbb1_cfglock1_v1: MPCBB1_CFGLOCK1
 // Used by: GTZC1_MPCBB1, SEC_GTZC1_MPCBB1
@@ -456,10 +456,10 @@ using gtzc_mpcbb1_cr_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::rw,
-               groov::field<"srwiladis", common::bittypes::bit_enable_bar, 31, 31>,
+               groov::field<"srwiladis", common::bit_enable_bar, 31, 31>,
                groov::field<"invsecstate", bool, 30, 30>,
                groov::field<"reserved0", std::uint32_t, 29, 1, common::access::ro>,
-               groov::field<"glock", common::bittypes::bit_locked, 0, 0>>;
+               groov::field<"glock", common::bit_locked, 0, 0>>;
 
 // gtzc_mpcbb1_privcfgr0_v1: MPCBB1_PRIVCFGR0
 // Used by: GTZC1_MPCBB1, SEC_GTZC1_MPCBB1
@@ -5018,10 +5018,10 @@ using gtzc_mpcbb2_cr_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::rw,
-               groov::field<"srwiladis", common::bittypes::bit_enable_bar, 31, 31>,
+               groov::field<"srwiladis", common::bit_enable_bar, 31, 31>,
                groov::field<"invsecstate", bool, 30, 30>,
                groov::field<"reserved0", std::uint32_t, 29, 1, common::access::ro>,
-               groov::field<"glock", common::bittypes::bit_locked, 0, 0>>;
+               groov::field<"glock", common::bit_locked, 0, 0>>;
 
 // gtzc_mpcbb2_privcfgr0_v1: MPCBB2_PRIVCFGR0
 // Used by: GTZC1_MPCBB2, SEC_GTZC1_MPCBB2
@@ -9580,10 +9580,10 @@ using gtzc_mpcbb3_cr_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::rw,
-               groov::field<"srwiladis", common::bittypes::bit_enable_bar, 31, 31>,
+               groov::field<"srwiladis", common::bit_enable_bar, 31, 31>,
                groov::field<"invsecstate", bool, 30, 30>,
                groov::field<"reserved0", std::uint32_t, 29, 1, common::access::ro>,
-               groov::field<"glock", common::bittypes::bit_locked, 0, 0>>;
+               groov::field<"glock", common::bit_locked, 0, 0>>;
 
 // gtzc_mpcbb3_privcfgr0_v1: MPCBB3_PRIVCFGR0
 // Used by: GTZC1_MPCBB3, SEC_GTZC1_MPCBB3
@@ -14080,10 +14080,10 @@ using gtzc_mpcbb4_cr_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::rw,
-               groov::field<"srwiladis", common::bittypes::bit_enable_bar, 31, 31>,
+               groov::field<"srwiladis", common::bit_enable_bar, 31, 31>,
                groov::field<"invsecstate", bool, 30, 30>,
                groov::field<"reserved0", std::uint32_t, 29, 1, common::access::ro>,
-               groov::field<"glock", common::bittypes::bit_locked, 0, 0>>;
+               groov::field<"glock", common::bit_locked, 0, 0>>;
 
 // gtzc_mpcbb4_privcfgr0_v1: MPCBB4_PRIVCFGR0
 // Used by: GTZC2_MPCBB4, SEC_GTZC2_MPCBB4
@@ -14256,10 +14256,10 @@ using gtzc_mpcbb5_cr_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::rw,
-               groov::field<"srwiladis", common::bittypes::bit_enable_bar, 31, 31>,
+               groov::field<"srwiladis", common::bit_enable_bar, 31, 31>,
                groov::field<"invsecstate", bool, 30, 30>,
                groov::field<"reserved0", std::uint32_t, 29, 1, common::access::ro>,
-               groov::field<"glock", common::bittypes::bit_locked, 0, 0>>;
+               groov::field<"glock", common::bit_locked, 0, 0>>;
 
 // gtzc_mpcbb5_privcfgr0_v1: MPCBB5_PRIVCFGR0
 // Used by: GTZC1_MPCBB5, SEC_GTZC1_MPCBB5
@@ -18926,7 +18926,7 @@ using gtzc_tzsc_cr_v1_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved0", std::uint32_t, 31, 1, common::access::ro>,
-               groov::field<"lck", common::bittypes::bit_locked, 0, 0>>;
+               groov::field<"lck", common::bit_locked, 0, 0>>;
 
 // gtzc_tzsc_mpcwm1acfgr_v1: TZSC_MPCWM1ACFGR
 // Used by: GTZC1_TZSC, SEC_GTZC1_TZSC
@@ -18942,8 +18942,8 @@ using gtzc_tzsc_mpcwm1acfgr_v1_tt =
                groov::field<"priv", bool, 9, 9>,
                groov::field<"sec", bool, 8, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 2, common::access::ro>,
-               groov::field<"srlock", common::bittypes::bit_locked, 1, 1>,
-               groov::field<"sren", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"srlock", common::bit_locked, 1, 1>,
+               groov::field<"sren", common::bit_enable, 0, 0>>;
 
 // gtzc_tzsc_mpcwm1ar_v1: TZSC_MPCWM1AR
 // Used by: GTZC1_TZSC, SEC_GTZC1_TZSC
@@ -18974,8 +18974,8 @@ using gtzc_tzsc_mpcwm1bcfgr_v1_tt =
                groov::field<"priv", bool, 9, 9>,
                groov::field<"sec", bool, 8, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 2, common::access::ro>,
-               groov::field<"srlock", common::bittypes::bit_locked, 1, 1>,
-               groov::field<"sren", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"srlock", common::bit_locked, 1, 1>,
+               groov::field<"sren", common::bit_enable, 0, 0>>;
 
 // gtzc_tzsc_mpcwm1br_v1: TZSC_MPCWM1BR
 // Used by: GTZC1_TZSC, SEC_GTZC1_TZSC
@@ -19006,8 +19006,8 @@ using gtzc_tzsc_mpcwm2acfgr_v1_tt =
                groov::field<"priv", bool, 9, 9>,
                groov::field<"sec", bool, 8, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 2, common::access::ro>,
-               groov::field<"srlock", common::bittypes::bit_locked, 1, 1>,
-               groov::field<"sren", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"srlock", common::bit_locked, 1, 1>,
+               groov::field<"sren", common::bit_enable, 0, 0>>;
 
 // gtzc_tzsc_mpcwm2ar_v1: TZSC_MPCWM2AR
 // Used by: GTZC1_TZSC, SEC_GTZC1_TZSC
@@ -19038,8 +19038,8 @@ using gtzc_tzsc_mpcwm2bcfgr_v1_tt =
                groov::field<"priv", bool, 9, 9>,
                groov::field<"sec", bool, 8, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 2, common::access::ro>,
-               groov::field<"srlock", common::bittypes::bit_locked, 1, 1>,
-               groov::field<"sren", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"srlock", common::bit_locked, 1, 1>,
+               groov::field<"sren", common::bit_enable, 0, 0>>;
 
 // gtzc_tzsc_mpcwm2br_v1: TZSC_MPCWM2BR
 // Used by: GTZC1_TZSC, SEC_GTZC1_TZSC
@@ -19070,8 +19070,8 @@ using gtzc_tzsc_mpcwm3acfgr_v1_tt =
                groov::field<"priv", bool, 9, 9>,
                groov::field<"sec", bool, 8, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 2, common::access::ro>,
-               groov::field<"srlock", common::bittypes::bit_locked, 1, 1>,
-               groov::field<"sren", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"srlock", common::bit_locked, 1, 1>,
+               groov::field<"sren", common::bit_enable, 0, 0>>;
 
 // gtzc_tzsc_mpcwm3ar_v1: TZSC_MPCWM3AR
 // Used by: GTZC1_TZSC, SEC_GTZC1_TZSC
@@ -19102,8 +19102,8 @@ using gtzc_tzsc_mpcwm4acfgr_v1_tt =
                groov::field<"priv", bool, 9, 9>,
                groov::field<"sec", bool, 8, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 2, common::access::ro>,
-               groov::field<"srlock", common::bittypes::bit_locked, 1, 1>,
-               groov::field<"sren", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"srlock", common::bit_locked, 1, 1>,
+               groov::field<"sren", common::bit_enable, 0, 0>>;
 
 // gtzc_tzsc_mpcwm4ar_v1: TZSC_MPCWM4AR
 // Used by: GTZC1_TZSC, SEC_GTZC1_TZSC
@@ -19134,8 +19134,8 @@ using gtzc_tzsc_mpcwm5acfgr_v1_tt =
                groov::field<"priv", bool, 9, 9>,
                groov::field<"sec", bool, 8, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 2, common::access::ro>,
-               groov::field<"srlock", common::bittypes::bit_locked, 1, 1>,
-               groov::field<"sren", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"srlock", common::bit_locked, 1, 1>,
+               groov::field<"sren", common::bit_enable, 0, 0>>;
 
 // gtzc_tzsc_mpcwm5ar_v1: TZSC_MPCWM5AR
 // Used by: GTZC1_TZSC, SEC_GTZC1_TZSC
@@ -19166,8 +19166,8 @@ using gtzc_tzsc_mpcwm5bcfgr_v1_tt =
                groov::field<"priv", bool, 9, 9>,
                groov::field<"sec", bool, 8, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 2, common::access::ro>,
-               groov::field<"srlock", common::bittypes::bit_locked, 1, 1>,
-               groov::field<"sren", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"srlock", common::bit_locked, 1, 1>,
+               groov::field<"sren", common::bit_enable, 0, 0>>;
 
 // gtzc_tzsc_mpcwm5br_v1: TZSC_MPCWM5BR
 // Used by: GTZC1_TZSC, SEC_GTZC1_TZSC
@@ -19198,8 +19198,8 @@ using gtzc_tzsc_mpcwm6acfgr_v1_tt =
                groov::field<"priv", bool, 9, 9>,
                groov::field<"sec", bool, 8, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 2, common::access::ro>,
-               groov::field<"srlock", common::bittypes::bit_locked, 1, 1>,
-               groov::field<"sren", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"srlock", common::bit_locked, 1, 1>,
+               groov::field<"sren", common::bit_enable, 0, 0>>;
 
 // gtzc_tzsc_mpcwm6ar_v1: TZSC_MPCWM6AR
 // Used by: GTZC1_TZSC, SEC_GTZC1_TZSC
@@ -19230,8 +19230,8 @@ using gtzc_tzsc_mpcwm6bcfgr_v1_tt =
                groov::field<"priv", bool, 9, 9>,
                groov::field<"sec", bool, 8, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 2, common::access::ro>,
-               groov::field<"srlock", common::bittypes::bit_locked, 1, 1>,
-               groov::field<"sren", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"srlock", common::bit_locked, 1, 1>,
+               groov::field<"sren", common::bit_enable, 0, 0>>;
 
 // gtzc_tzsc_mpcwm6br_v1: TZSC_MPCWM6BR
 // Used by: GTZC1_TZSC, SEC_GTZC1_TZSC

@@ -50,7 +50,7 @@ using jpeg_confr1_v1_tt =
                groov::field<"hdr", bool, 8, 8>,
                groov::field<"ns", std::uint8_t, 7, 6>,
                groov::field<"colorspace", std::uint8_t, 5, 4>,
-               groov::field<"de", common::bittypes::bit_enable, 3, 3>,
+               groov::field<"de", common::bit_enable, 3, 3>,
                groov::field<"reserved0", bool, 2, 2, common::access::ro>,
                groov::field<"nf", std::uint8_t, 1, 0>>;
 
@@ -165,16 +165,16 @@ using jpeg_cr_v1_tt =
                groov::field<"reserved1", std::uint32_t, 31, 15, common::access::ro>,
                groov::field<"off", bool, 14, 14>,
                groov::field<"iff", bool, 13, 13>,
-               groov::field<"odmaen", common::bittypes::bit_enable, 12, 12>,
-               groov::field<"idmaen", common::bittypes::bit_enable, 11, 11>,
+               groov::field<"odmaen", common::bit_enable, 12, 12>,
+               groov::field<"idmaen", common::bit_enable, 11, 11>,
                groov::field<"reserved0", std::uint8_t, 10, 7, common::access::ro>,
-               groov::field<"hpdie", common::bittypes::bit_enable, 6, 6>,
-               groov::field<"eocie", common::bittypes::bit_enable, 5, 5>,
-               groov::field<"ofneie", common::bittypes::bit_enable, 4, 4>,
-               groov::field<"oftie", common::bittypes::bit_enable, 3, 3>,
-               groov::field<"ifnfie", common::bittypes::bit_enable, 2, 2>,
-               groov::field<"iftie", common::bittypes::bit_enable, 1, 1>,
-               groov::field<"jcen", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"hpdie", common::bit_enable, 6, 6>,
+               groov::field<"eocie", common::bit_enable, 5, 5>,
+               groov::field<"ofneie", common::bit_enable, 4, 4>,
+               groov::field<"oftie", common::bit_enable, 3, 3>,
+               groov::field<"ifnfie", common::bit_enable, 2, 2>,
+               groov::field<"iftie", common::bit_enable, 1, 1>,
+               groov::field<"jcen", common::bit_enable, 0, 0>>;
 
 // jpeg_dir_v1: DIR
 // Used by: JPEG

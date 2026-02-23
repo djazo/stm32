@@ -56,8 +56,8 @@ using tsc_ier_v1_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved0", std::uint32_t, 31, 2, common::access::ro>,
-               groov::field<"mceie", common::bittypes::bit_enable, 1, 1>,
-               groov::field<"eoaie", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"mceie", common::bit_enable, 1, 1>,
+               groov::field<"eoaie", common::bit_enable, 0, 0>>;
 
 // tsc_ioascr_v1: IOASCR
 // Used by: TSC
@@ -262,13 +262,13 @@ using tsc_iogcsr_v1_tt =
                groov::field<"g2s", bool, 17, 17, common::access::ro>,
                groov::field<"g1s", bool, 16, 16, common::access::ro>,
                groov::field<"reserved0", std::uint16_t, 15, 7, common::access::ro>,
-               groov::field<"g7e", common::bittypes::bit_enable, 6, 6>,
-               groov::field<"g6e", common::bittypes::bit_enable, 5, 5>,
-               groov::field<"g5e", common::bittypes::bit_enable, 4, 4>,
-               groov::field<"g4e", common::bittypes::bit_enable, 3, 3>,
-               groov::field<"g3e", common::bittypes::bit_enable, 2, 2>,
-               groov::field<"g2e", common::bittypes::bit_enable, 1, 1>,
-               groov::field<"g1e", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"g7e", common::bit_enable, 6, 6>,
+               groov::field<"g6e", common::bit_enable, 5, 5>,
+               groov::field<"g5e", common::bit_enable, 4, 4>,
+               groov::field<"g4e", common::bit_enable, 3, 3>,
+               groov::field<"g3e", common::bit_enable, 2, 2>,
+               groov::field<"g2e", common::bit_enable, 1, 1>,
+               groov::field<"g1e", common::bit_enable, 0, 0>>;
 
 // tsc_iohcr_v1: IOHCR
 // Used by: TSC

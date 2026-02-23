@@ -18,22 +18,22 @@ using spdifrx_cr_v1_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved2", std::uint16_t, 31, 22, common::access::ro>,
-               groov::field<"cksbkpen", common::bittypes::bit_enable, 21, 21>,
-               groov::field<"cksen", common::bittypes::bit_enable, 20, 20>,
+               groov::field<"cksbkpen", common::bit_enable, 21, 21>,
+               groov::field<"cksen", common::bit_enable, 20, 20>,
                groov::field<"reserved1", bool, 19, 19, common::access::ro>,
                groov::field<"insel", std::uint8_t, 18, 16>,
                groov::field<"reserved0", bool, 15, 15, common::access::ro>,
                groov::field<"wfa", bool, 14, 14>,
                groov::field<"nbtr", std::uint8_t, 13, 12>,
                groov::field<"chsel", bool, 11, 11>,
-               groov::field<"cbdmaen", common::bittypes::bit_enable, 10, 10>,
+               groov::field<"cbdmaen", common::bit_enable, 10, 10>,
                groov::field<"ptmsk", bool, 9, 9>,
                groov::field<"cumsk", bool, 8, 8>,
                groov::field<"vmsk", bool, 7, 7>,
                groov::field<"pmsk", bool, 6, 6>,
                groov::field<"drfmt", std::uint8_t, 5, 4>,
                groov::field<"rxsteo", bool, 3, 3>,
-               groov::field<"rxdmaen", common::bittypes::bit_enable, 2, 2>,
+               groov::field<"rxdmaen", common::bit_enable, 2, 2>,
                groov::field<"spdifrxen", std::uint8_t, 1, 0>>;
 
 // spdifrx_csr_v1: CSR
@@ -81,7 +81,7 @@ using spdifrx_dr_00_v1_tt =
                groov::field<"c", bool, 27, 27>,
                groov::field<"u", bool, 26, 26>,
                groov::field<"v", bool, 25, 25>,
-               groov::field<"pe", common::bittypes::bit_enable, 24, 24>,
+               groov::field<"pe", common::bit_enable, 24, 24>,
                groov::field<"dr", std::uint32_t, 23, 0>>;
 
 // spdifrx_dr_01_v1: DR_01
@@ -100,7 +100,7 @@ using spdifrx_dr_01_v1_tt =
                groov::field<"c", bool, 3, 3>,
                groov::field<"u", bool, 2, 2>,
                groov::field<"v", bool, 1, 1>,
-               groov::field<"pe", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"pe", common::bit_enable, 0, 0>>;
 
 // spdifrx_dr_10_v1: DR_10
 // Used by: SPDIFRX
@@ -155,13 +155,13 @@ using spdifrx_imr_v1_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved0", std::uint32_t, 31, 7, common::access::ro>,
-               groov::field<"ifeie", common::bittypes::bit_enable, 6, 6>,
-               groov::field<"syncdie", common::bittypes::bit_enable, 5, 5>,
-               groov::field<"sblkie", common::bittypes::bit_enable, 4, 4>,
-               groov::field<"ovrie", common::bittypes::bit_enable, 3, 3>,
-               groov::field<"perrie", common::bittypes::bit_enable, 2, 2>,
-               groov::field<"csrneie", common::bittypes::bit_enable, 1, 1>,
-               groov::field<"rxneie", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"ifeie", common::bit_enable, 6, 6>,
+               groov::field<"syncdie", common::bit_enable, 5, 5>,
+               groov::field<"sblkie", common::bit_enable, 4, 4>,
+               groov::field<"ovrie", common::bit_enable, 3, 3>,
+               groov::field<"perrie", common::bit_enable, 2, 2>,
+               groov::field<"csrneie", common::bit_enable, 1, 1>,
+               groov::field<"rxneie", common::bit_enable, 0, 0>>;
 
 // spdifrx_sidr_v1: SIDR
 // Used by: SPDIFRX

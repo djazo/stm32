@@ -42,7 +42,7 @@ using pwr_cr2_v1_tt =
                groov::field<"pvme3", bool, 6, 6>,
                groov::field<"reserved0", std::uint8_t, 5, 4, common::access::ro>,
                groov::field<"pls", std::uint8_t, 3, 1>,
-               groov::field<"pvde", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"pvde", common::bit_enable, 0, 0>>;
 
 // pwr_cr3_v1: CR3
 // Used by: PWR
@@ -63,7 +63,7 @@ using pwr_cr3_v1_tt =
                groov::field<"apc", bool, 10, 10>,
                groov::field<"rrs", bool, 9, 9>,
                groov::field<"ewpvd", bool, 8, 8>,
-               groov::field<"eulpen", common::bittypes::bit_enable, 7, 7>,
+               groov::field<"eulpen", common::bit_enable, 7, 7>,
                groov::field<"reserved0", std::uint8_t, 6, 3, common::access::ro>,
                groov::field<"ewup3", bool, 2, 2>,
                groov::field<"ewup2", bool, 1, 1>,
@@ -100,8 +100,8 @@ using pwr_cr5_v1_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved1", std::uint16_t, 31, 16, common::access::ro>,
-               groov::field<"smpsen", common::bittypes::bit_enable, 15, 15>,
-               groov::field<"rfeolen", common::bittypes::bit_enable, 14, 14>,
+               groov::field<"smpsen", common::bit_enable, 15, 15>,
+               groov::field<"rfeolen", common::bit_enable, 14, 14>,
                groov::field<"reserved0", std::uint16_t, 13, 0, common::access::ro>>;
 
 // pwr_extscr_v1: EXTSCR
@@ -366,11 +366,11 @@ using pwr_sr2_v1_tt =
                groov::field<"vosf", bool, 10, 10>,
                groov::field<"reglpf", bool, 9, 9>,
                groov::field<"reglps", bool, 8, 8>,
-               groov::field<"flashrdy", common::bittypes::bit_ready, 7, 7>,
+               groov::field<"flashrdy", common::bit_ready, 7, 7>,
                groov::field<"regmrs", bool, 6, 6>,
                groov::field<"rfeolf", bool, 5, 5>,
-               groov::field<"ldordy", common::bittypes::bit_ready, 4, 4>,
-               groov::field<"smpsrdy", common::bittypes::bit_ready, 3, 3>,
+               groov::field<"ldordy", common::bit_ready, 4, 4>,
+               groov::field<"smpsrdy", common::bit_ready, 3, 3>,
                groov::field<"rfbusyms", bool, 2, 2>,
                groov::field<"rfbusys", bool, 1, 1>,
                groov::field<"reserved0", bool, 0, 0>>;

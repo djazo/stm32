@@ -41,7 +41,7 @@ using pwr_pwr_cr2_v1_tt =
                groov::field<"pvmen1", bool, 6, 6>,
                groov::field<"reserved0", std::uint8_t, 5, 4, common::access::ro>,
                groov::field<"pvdls", std::uint8_t, 3, 1>,
-               groov::field<"pvde", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"pvde", common::bit_enable, 0, 0>>;
 
 // pwr_pwr_cr3_v1: PWR_CR3
 // Used by: PWR
@@ -55,7 +55,7 @@ using pwr_pwr_cr3_v1_tt =
              common::access::rw,
                groov::field<"reserved3", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"eiwul", bool, 15, 15>,
-               groov::field<"ucpd1_dbdis", common::bittypes::bit_enable_bar, 14, 14>,
+               groov::field<"ucpd1_dbdis", common::bit_enable_bar, 14, 14>,
                groov::field<"ucpd1_stdby", bool, 13, 13>,
                groov::field<"reserved2", std::uint8_t, 12, 11, common::access::ro>,
                groov::field<"apc", bool, 10, 10>,
@@ -99,7 +99,7 @@ using pwr_pwr_cr5_v1_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved1", std::uint32_t, 31, 9, common::access::ro>,
-               groov::field<"r1mode", common::bittypes::bit_enable, 8, 8>,
+               groov::field<"r1mode", common::bit_enable, 8, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 0, common::access::ro>>;
 
 // pwr_pwr_pdcra_v1: PWR_PDCRA

@@ -24,10 +24,10 @@ using usb_bcdr_v1_tt =
                groov::field<"sdet", bool, 6, 6, common::access::ro>,
                groov::field<"pdet", bool, 5, 5, common::access::ro>,
                groov::field<"dcdet", bool, 4, 4, common::access::ro>,
-               groov::field<"sden", common::bittypes::bit_enable, 3, 3>,
-               groov::field<"pden", common::bittypes::bit_enable, 2, 2>,
-               groov::field<"dcden", common::bittypes::bit_enable, 1, 1>,
-               groov::field<"bcden", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"sden", common::bit_enable, 3, 3>,
+               groov::field<"pden", common::bit_enable, 2, 2>,
+               groov::field<"dcden", common::bit_enable, 1, 1>,
+               groov::field<"bcden", common::bit_enable, 0, 0>>;
 
 // usb_btable_v1: BTABLE
 // Used by: USB
@@ -67,7 +67,7 @@ using usb_cntr_v1_tt =
                groov::field<"l1resume", bool, 5, 5>,
                groov::field<"resume", bool, 4, 4>,
                groov::field<"fsusp", bool, 3, 3>,
-               groov::field<"lpmode", common::bittypes::bit_enable, 2, 2>,
+               groov::field<"lpmode", common::bit_enable, 2, 2>,
                groov::field<"pdwn", bool, 1, 1>,
                groov::field<"fres", bool, 0, 0>>;
 
@@ -274,7 +274,7 @@ using usb_fnr_v1_tt =
                groov::field<"reserved0", std::uint16_t, 31, 16>,
                groov::field<"rxdp", bool, 15, 15>,
                groov::field<"rxdm", bool, 14, 14>,
-               groov::field<"lck", common::bittypes::bit_locked, 13, 13>,
+               groov::field<"lck", common::bit_locked, 13, 13>,
                groov::field<"lsof", std::uint8_t, 12, 11>,
                groov::field<"fn", std::uint16_t, 10, 0>>;
 
@@ -317,6 +317,6 @@ using usb_lpmcsr_v1_tt =
                groov::field<"remwake", bool, 3, 3, common::access::ro>,
                groov::field<"reserved0", bool, 2, 2, common::access::ro>,
                groov::field<"lpmack", bool, 1, 1>,
-               groov::field<"lpmen", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"lpmen", common::bit_enable, 0, 0>>;
 
 } // namespace stm32::regs

@@ -18,7 +18,7 @@ using dac_dac_autocr_v1_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved1", std::uint16_t, 31, 23, common::access::ro>,
-               groov::field<"automode", common::bittypes::bit_enable, 22, 22>,
+               groov::field<"automode", common::bit_enable, 22, 22>,
                groov::field<"reserved0", std::uint32_t, 21, 0, common::access::ro>>;
 
 // dac_dac_ccr_v1: DAC_CCR
@@ -319,13 +319,13 @@ using dac_dac_sr_v1_tt =
                groov::field<"cal_flag2", bool, 30, 30, common::access::ro>,
                groov::field<"dmaudr2", bool, 29, 29>,
                groov::field<"dorstat2", bool, 28, 28, common::access::ro>,
-               groov::field<"dac2rdy", common::bittypes::bit_ready, 27, 27, common::access::ro>,
+               groov::field<"dac2rdy", common::bit_ready, 27, 27, common::access::ro>,
                groov::field<"reserved1", std::uint16_t, 26, 16, common::access::ro>,
                groov::field<"bwst1", bool, 15, 15, common::access::ro>,
                groov::field<"cal_flag1", bool, 14, 14, common::access::ro>,
                groov::field<"dmaudr1", bool, 13, 13>,
                groov::field<"dorstat1", bool, 12, 12, common::access::ro>,
-               groov::field<"dac1rdy", common::bittypes::bit_ready, 11, 11, common::access::ro>,
+               groov::field<"dac1rdy", common::bit_ready, 11, 11, common::access::ro>,
                groov::field<"reserved0", std::uint16_t, 10, 0, common::access::ro>>;
 
 // dac_dac_swtrgr_v1: DAC_SWTRGR

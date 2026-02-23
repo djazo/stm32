@@ -38,13 +38,13 @@ using crs_crs_cr_v1_tt =
                groov::field<"reserved1", std::uint32_t, 31, 14, common::access::ro>,
                groov::field<"trim", std::uint8_t, 13, 8>,
                groov::field<"swsync", bool, 7, 7, common::access::ro>,
-               groov::field<"autotrimen", common::bittypes::bit_enable, 6, 6>,
-               groov::field<"cen", common::bittypes::bit_enable, 5, 5>,
+               groov::field<"autotrimen", common::bit_enable, 6, 6>,
+               groov::field<"cen", common::bit_enable, 5, 5>,
                groov::field<"reserved0", bool, 4, 4, common::access::ro>,
-               groov::field<"esyncie", common::bittypes::bit_enable, 3, 3>,
-               groov::field<"errie", common::bittypes::bit_enable, 2, 2>,
-               groov::field<"syncwarnie", common::bittypes::bit_enable, 1, 1>,
-               groov::field<"syncokie", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"esyncie", common::bit_enable, 3, 3>,
+               groov::field<"errie", common::bit_enable, 2, 2>,
+               groov::field<"syncwarnie", common::bit_enable, 1, 1>,
+               groov::field<"syncokie", common::bit_enable, 0, 0>>;
 
 // crs_crs_icr_v1: CRS_ICR
 // Used by: CRS

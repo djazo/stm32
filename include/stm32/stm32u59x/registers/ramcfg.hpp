@@ -126,8 +126,8 @@ using ramcfg_m2ier_v1_tt =
                groov::field<"reserved1", std::uint32_t, 31, 4, common::access::ro>,
                groov::field<"eccnmi", bool, 3, 3>,
                groov::field<"reserved0", bool, 2, 2, common::access::ro>,
-               groov::field<"deie", common::bittypes::bit_enable, 1, 1>,
-               groov::field<"seie", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"deie", common::bit_enable, 1, 1>,
+               groov::field<"seie", common::bit_enable, 0, 0>>;
 
 // ramcfg_m2isr_v1: M2ISR
 // Used by: RAMCFG, SEC_RAMCFG
@@ -327,8 +327,8 @@ using ramcfg_m3ier_v1_tt =
                groov::field<"reserved1", std::uint32_t, 31, 4, common::access::ro>,
                groov::field<"eccnmi", bool, 3, 3>,
                groov::field<"reserved0", bool, 2, 2, common::access::ro>,
-               groov::field<"deie", common::bittypes::bit_enable, 1, 1>,
-               groov::field<"seie", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"deie", common::bit_enable, 1, 1>,
+               groov::field<"seie", common::bit_enable, 0, 0>>;
 
 // ramcfg_m3isr_v1: M3ISR
 // Used by: RAMCFG, SEC_RAMCFG
@@ -490,8 +490,8 @@ using ramcfg_m5ier_v1_tt =
                groov::field<"reserved1", std::uint32_t, 31, 4, common::access::ro>,
                groov::field<"eccnmi", bool, 3, 3>,
                groov::field<"reserved0", bool, 2, 2, common::access::ro>,
-               groov::field<"deie", common::bittypes::bit_enable, 1, 1>,
-               groov::field<"seie", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"deie", common::bit_enable, 1, 1>,
+               groov::field<"seie", common::bit_enable, 0, 0>>;
 
 // ramcfg_m5isr_v1: M5ISR
 // Used by: RAMCFG, SEC_RAMCFG

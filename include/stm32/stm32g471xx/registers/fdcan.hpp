@@ -141,28 +141,28 @@ using fdcan_ie_v1_tt =
              common::access::rw,
                groov::field<"reserved0", std::uint8_t, 31, 24, common::access::ro>,
                groov::field<"arae", bool, 23, 23>,
-               groov::field<"pede", common::bittypes::bit_enable, 22, 22>,
+               groov::field<"pede", common::bit_enable, 22, 22>,
                groov::field<"peae", bool, 21, 21>,
-               groov::field<"wdie", common::bittypes::bit_enable, 20, 20>,
+               groov::field<"wdie", common::bit_enable, 20, 20>,
                groov::field<"boe", bool, 19, 19>,
                groov::field<"ewe", bool, 18, 18>,
-               groov::field<"epe", common::bittypes::bit_enable, 17, 17>,
+               groov::field<"epe", common::bit_enable, 17, 17>,
                groov::field<"eloe", bool, 16, 16>,
                groov::field<"tooe", bool, 15, 15>,
-               groov::field<"mrafe", common::bittypes::bit_enable, 14, 14>,
+               groov::field<"mrafe", common::bit_enable, 14, 14>,
                groov::field<"tswe", bool, 13, 13>,
                groov::field<"tefle", bool, 12, 12>,
-               groov::field<"teffe", common::bittypes::bit_enable, 11, 11>,
+               groov::field<"teffe", common::bit_enable, 11, 11>,
                groov::field<"tefne", bool, 10, 10>,
                groov::field<"tfee", bool, 9, 9>,
-               groov::field<"tcfe", common::bittypes::bit_enable, 8, 8>,
+               groov::field<"tcfe", common::bit_enable, 8, 8>,
                groov::field<"tce", bool, 7, 7>,
                groov::field<"hpme", bool, 6, 6>,
                groov::field<"rf1le", bool, 5, 5>,
-               groov::field<"rf1fe", common::bittypes::bit_enable, 4, 4>,
+               groov::field<"rf1fe", common::bit_enable, 4, 4>,
                groov::field<"rf1ne", bool, 3, 3>,
                groov::field<"rf0le", bool, 2, 2>,
-               groov::field<"rf0fe", common::bittypes::bit_enable, 1, 1>,
+               groov::field<"rf0fe", common::bit_enable, 1, 1>,
                groov::field<"rf0ne", bool, 0, 0>>;
 
 // fdcan_ile_v1: ILE
@@ -223,7 +223,7 @@ using fdcan_ir_v1_tt =
                groov::field<"tefl", bool, 12, 12>,
                groov::field<"teff", bool, 11, 11>,
                groov::field<"tefn", bool, 10, 10>,
-               groov::field<"tfe", common::bittypes::bit_enable, 9, 9>,
+               groov::field<"tfe", common::bit_enable, 9, 9>,
                groov::field<"tcf", bool, 8, 8>,
                groov::field<"tc", bool, 7, 7>,
                groov::field<"hpm", bool, 6, 6>,
@@ -375,7 +375,7 @@ using fdcan_rxgfc_v1_tt =
                groov::field<"anfs", std::uint8_t, 5, 4>,
                groov::field<"anfe", std::uint8_t, 3, 2>,
                groov::field<"rrfs", bool, 1, 1>,
-               groov::field<"rrfe", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"rrfe", common::bit_enable, 0, 0>>;
 
 // fdcan_tdcr_v1: TDCR
 // Used by: FDCAN, FDCAN1, FDCAN2

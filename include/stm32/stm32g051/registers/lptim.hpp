@@ -32,7 +32,7 @@ using lptim_lptim_cfgr_v1_tt =
              common::access::rw,
                groov::field<"reserved4", std::uint8_t, 31, 25, common::access::ro>,
                groov::field<"enc", bool, 24, 24>,
-               groov::field<"countmode", common::bittypes::bit_enable, 23, 23>,
+               groov::field<"countmode", common::bit_enable, 23, 23>,
                groov::field<"preload", bool, 22, 22>,
                groov::field<"wavpol", bool, 21, 21>,
                groov::field<"wave", bool, 20, 20>,
@@ -102,7 +102,7 @@ using lptim_lptim_cr_v1_tt =
              common::access::rw,
                groov::field<"reserved0", std::uint32_t, 31, 5, common::access::ro>,
                groov::field<"rstare", bool, 4, 4>,
-               groov::field<"countrst", common::bittypes::bit_reset, 3, 3>,
+               groov::field<"countrst", common::bit_reset, 3, 3>,
                groov::field<"cntstrt", bool, 2, 2>,
                groov::field<"sngstrt", bool, 1, 1>,
                groov::field<"enable", bool, 0, 0>>;
@@ -137,13 +137,13 @@ using lptim_lptim_ier_v1_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved0", std::uint32_t, 31, 7, common::access::ro>,
-               groov::field<"downie", common::bittypes::bit_enable, 6, 6>,
-               groov::field<"upie", common::bittypes::bit_enable, 5, 5>,
-               groov::field<"arrokie", common::bittypes::bit_enable, 4, 4>,
-               groov::field<"cmpokie", common::bittypes::bit_enable, 3, 3>,
-               groov::field<"exttrigie", common::bittypes::bit_enable, 2, 2>,
-               groov::field<"arrmie", common::bittypes::bit_enable, 1, 1>,
-               groov::field<"cmpmie", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"downie", common::bit_enable, 6, 6>,
+               groov::field<"upie", common::bit_enable, 5, 5>,
+               groov::field<"arrokie", common::bit_enable, 4, 4>,
+               groov::field<"cmpokie", common::bit_enable, 3, 3>,
+               groov::field<"exttrigie", common::bit_enable, 2, 2>,
+               groov::field<"arrmie", common::bit_enable, 1, 1>,
+               groov::field<"cmpmie", common::bit_enable, 0, 0>>;
 
 // lptim_lptim_isr_v1: LPTIM_ISR
 // Used by: LPTIM1, LPTIM2

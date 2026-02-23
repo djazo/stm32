@@ -76,20 +76,20 @@ using octospi_cr_v1_tt =
                groov::field<"pmm", bool, 23, 23>,
                groov::field<"apms", bool, 22, 22>,
                groov::field<"reserved2", bool, 21, 21, common::access::ro>,
-               groov::field<"toie", common::bittypes::bit_enable, 20, 20>,
-               groov::field<"smie", common::bittypes::bit_enable, 19, 19>,
-               groov::field<"ftie", common::bittypes::bit_enable, 18, 18>,
-               groov::field<"tcie", common::bittypes::bit_enable, 17, 17>,
-               groov::field<"teie", common::bittypes::bit_enable, 16, 16>,
+               groov::field<"toie", common::bit_enable, 20, 20>,
+               groov::field<"smie", common::bit_enable, 19, 19>,
+               groov::field<"ftie", common::bit_enable, 18, 18>,
+               groov::field<"tcie", common::bit_enable, 17, 17>,
+               groov::field<"teie", common::bit_enable, 16, 16>,
                groov::field<"reserved1", std::uint8_t, 15, 13, common::access::ro>,
                groov::field<"fthres", std::uint8_t, 12, 8>,
                groov::field<"fsel", bool, 7, 7>,
                groov::field<"dqm", bool, 6, 6>,
                groov::field<"reserved0", std::uint8_t, 5, 4, common::access::ro>,
-               groov::field<"tcen", common::bittypes::bit_enable, 3, 3>,
-               groov::field<"dmaen", common::bittypes::bit_enable, 2, 2>,
+               groov::field<"tcen", common::bit_enable, 3, 3>,
+               groov::field<"dmaen", common::bit_enable, 2, 2>,
                groov::field<"abort", bool, 1, 1>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // octospi_cr_v2: CR
 // Used by: OCTOSPIM, SEC_OCTOSPIM
@@ -104,7 +104,7 @@ using octospi_cr_v2_tt =
                groov::field<"reserved1", std::uint8_t, 31, 24, common::access::ro>,
                groov::field<"req2ack_time", std::uint8_t, 23, 16>,
                groov::field<"reserved0", std::uint16_t, 15, 1, common::access::ro>,
-               groov::field<"muxen", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"muxen", common::bit_enable, 0, 0>>;
 
 // octospi_dcr1_v1: DCR1
 // Used by: OCTOSPI1, SEC_OCTOSPI1, OCTOSPI2, SEC_OCTOSPI2
@@ -126,7 +126,7 @@ using octospi_dcr1_v1_tt =
                groov::field<"dlybyp", bool, 3, 3>,
                groov::field<"reserved0", bool, 2, 2, common::access::ro>,
                groov::field<"frck", bool, 1, 1>,
-               groov::field<"ckmode", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"ckmode", common::bit_enable, 0, 0>>;
 
 // octospi_dcr2_v1: DCR2
 // Used by: OCTOSPI1, SEC_OCTOSPI1, OCTOSPI2, SEC_OCTOSPI2
@@ -265,19 +265,19 @@ using octospi_p1cr_v1_tt =
              common::access::rw,
                groov::field<"reserved4", std::uint8_t, 31, 27, common::access::ro>,
                groov::field<"iohsrc", std::uint8_t, 26, 25>,
-               groov::field<"iohen", common::bittypes::bit_enable, 24, 24>,
+               groov::field<"iohen", common::bit_enable, 24, 24>,
                groov::field<"reserved3", std::uint8_t, 23, 19, common::access::ro>,
                groov::field<"iolsrc", std::uint8_t, 18, 17>,
-               groov::field<"iolen", common::bittypes::bit_enable, 16, 16>,
+               groov::field<"iolen", common::bit_enable, 16, 16>,
                groov::field<"reserved2", std::uint8_t, 15, 10, common::access::ro>,
                groov::field<"ncssrc", bool, 9, 9>,
-               groov::field<"ncsen", common::bittypes::bit_enable, 8, 8>,
+               groov::field<"ncsen", common::bit_enable, 8, 8>,
                groov::field<"reserved1", std::uint8_t, 7, 6, common::access::ro>,
                groov::field<"dqssrc", bool, 5, 5>,
-               groov::field<"dqsen", common::bittypes::bit_enable, 4, 4>,
+               groov::field<"dqsen", common::bit_enable, 4, 4>,
                groov::field<"reserved0", std::uint8_t, 3, 2, common::access::ro>,
                groov::field<"clksrc", bool, 1, 1>,
-               groov::field<"clken", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"clken", common::bit_enable, 0, 0>>;
 
 // octospi_p2cr_v1: P2CR
 // Used by: OCTOSPIM, SEC_OCTOSPIM
@@ -291,19 +291,19 @@ using octospi_p2cr_v1_tt =
              common::access::rw,
                groov::field<"reserved4", std::uint8_t, 31, 27, common::access::ro>,
                groov::field<"iohsrc", std::uint8_t, 26, 25>,
-               groov::field<"iohen", common::bittypes::bit_enable, 24, 24>,
+               groov::field<"iohen", common::bit_enable, 24, 24>,
                groov::field<"reserved3", std::uint8_t, 23, 19, common::access::ro>,
                groov::field<"iolsrc", std::uint8_t, 18, 17>,
-               groov::field<"iolen", common::bittypes::bit_enable, 16, 16>,
+               groov::field<"iolen", common::bit_enable, 16, 16>,
                groov::field<"reserved2", std::uint8_t, 15, 10, common::access::ro>,
                groov::field<"ncssrc", bool, 9, 9>,
-               groov::field<"ncsen", common::bittypes::bit_enable, 8, 8>,
+               groov::field<"ncsen", common::bit_enable, 8, 8>,
                groov::field<"reserved1", std::uint8_t, 7, 6, common::access::ro>,
                groov::field<"dqssrc", bool, 5, 5>,
-               groov::field<"dqsen", common::bittypes::bit_enable, 4, 4>,
+               groov::field<"dqsen", common::bit_enable, 4, 4>,
                groov::field<"reserved0", std::uint8_t, 3, 2, common::access::ro>,
                groov::field<"clksrc", bool, 1, 1>,
-               groov::field<"clken", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"clken", common::bit_enable, 0, 0>>;
 
 // octospi_pir_v1: PIR
 // Used by: OCTOSPI1, SEC_OCTOSPI1, OCTOSPI2, SEC_OCTOSPI2

@@ -49,7 +49,7 @@ using pwr_csr_v1_tt =
                groov::field<"reserved1", std::uint8_t, 7, 6, common::access::ro>,
                groov::field<"reglpf", bool, 5, 5, common::access::ro>,
                groov::field<"vosf", bool, 4, 4, common::access::ro>,
-               groov::field<"vrefintrdyf", common::bittypes::bit_ready, 3, 3, common::access::ro>,
+               groov::field<"vrefintrdyf", common::bit_ready, 3, 3, common::access::ro>,
                groov::field<"reserved0", bool, 2, 2, common::access::ro>,
                groov::field<"sbf", bool, 1, 1, common::access::ro>,
                groov::field<"wuf", bool, 0, 0, common::access::ro>>;

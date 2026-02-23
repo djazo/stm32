@@ -292,7 +292,7 @@ using pwr_pwr_sr2_v1_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved1", std::uint32_t, 31, 8, common::access::ro>,
-               groov::field<"flash_rdy", common::bittypes::bit_ready, 7, 7, common::access::ro>,
+               groov::field<"flash_rdy", common::bit_ready, 7, 7, common::access::ro>,
                groov::field<"reserved0", std::uint8_t, 6, 0, common::access::ro>>;
 
 } // namespace stm32::regs

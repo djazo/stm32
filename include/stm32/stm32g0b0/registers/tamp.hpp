@@ -78,14 +78,14 @@ using tamp_tamp_cr1_v1_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved1", std::uint16_t, 31, 22, common::access::ro>,
-               groov::field<"itamp6e", common::bittypes::bit_enable, 21, 21>,
-               groov::field<"itamp5e", common::bittypes::bit_enable, 20, 20>,
-               groov::field<"itamp4e", common::bittypes::bit_enable, 19, 19>,
-               groov::field<"itamp3e", common::bittypes::bit_enable, 18, 18>,
+               groov::field<"itamp6e", common::bit_enable, 21, 21>,
+               groov::field<"itamp5e", common::bit_enable, 20, 20>,
+               groov::field<"itamp4e", common::bit_enable, 19, 19>,
+               groov::field<"itamp3e", common::bit_enable, 18, 18>,
                groov::field<"reserved0", std::uint16_t, 17, 3, common::access::ro>,
-               groov::field<"tamp3e", common::bittypes::bit_enable, 2, 2>,
-               groov::field<"tamp2e", common::bittypes::bit_enable, 1, 1>,
-               groov::field<"tamp1e", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"tamp3e", common::bit_enable, 2, 2>,
+               groov::field<"tamp2e", common::bit_enable, 1, 1>,
+               groov::field<"tamp1e", common::bit_enable, 0, 0>>;
 
 // tamp_tamp_cr2_v1: TAMP_CR2
 // Used by: TAMP
@@ -121,7 +121,7 @@ using tamp_tamp_fltcr_v1_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved0", std::uint32_t, 31, 8, common::access::ro>,
-               groov::field<"tamppudis", common::bittypes::bit_enable_bar, 7, 7>,
+               groov::field<"tamppudis", common::bit_enable_bar, 7, 7>,
                groov::field<"tampprch", std::uint8_t, 6, 5>,
                groov::field<"tampflt", std::uint8_t, 4, 3>,
                groov::field<"tampfreq", std::uint8_t, 2, 0>>;
@@ -137,14 +137,14 @@ using tamp_tamp_ier_v1_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved1", std::uint16_t, 31, 22, common::access::ro>,
-               groov::field<"itamp6ie", common::bittypes::bit_enable, 21, 21>,
-               groov::field<"itamp5ie", common::bittypes::bit_enable, 20, 20>,
-               groov::field<"itamp4ie", common::bittypes::bit_enable, 19, 19>,
-               groov::field<"itamp3ie", common::bittypes::bit_enable, 18, 18>,
+               groov::field<"itamp6ie", common::bit_enable, 21, 21>,
+               groov::field<"itamp5ie", common::bit_enable, 20, 20>,
+               groov::field<"itamp4ie", common::bit_enable, 19, 19>,
+               groov::field<"itamp3ie", common::bit_enable, 18, 18>,
                groov::field<"reserved0", std::uint16_t, 17, 3, common::access::ro>,
-               groov::field<"tamp3ie", common::bittypes::bit_enable, 2, 2>,
-               groov::field<"tamp2ie", common::bittypes::bit_enable, 1, 1>,
-               groov::field<"tamp1ie", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"tamp3ie", common::bit_enable, 2, 2>,
+               groov::field<"tamp2ie", common::bit_enable, 1, 1>,
+               groov::field<"tamp1ie", common::bit_enable, 0, 0>>;
 
 // tamp_tamp_misr_v1: TAMP_MISR
 // Used by: TAMP

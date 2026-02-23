@@ -96,7 +96,7 @@ using lcd_gcr_v1_tt =
                groov::field<"depol", bool, 29, 29>,
                groov::field<"pcpol", bool, 28, 28>,
                groov::field<"reserved4", std::uint16_t, 27, 17, common::access::ro>,
-               groov::field<"den", common::bittypes::bit_enable, 16, 16>,
+               groov::field<"den", common::bit_enable, 16, 16>,
                groov::field<"reserved3", bool, 15, 15, common::access::ro>,
                groov::field<"drw", std::uint8_t, 14, 12, common::access::ro>,
                groov::field<"reserved2", bool, 11, 11, common::access::ro>,
@@ -104,7 +104,7 @@ using lcd_gcr_v1_tt =
                groov::field<"reserved1", bool, 7, 7, common::access::ro>,
                groov::field<"dbw", std::uint8_t, 6, 4, common::access::ro>,
                groov::field<"reserved0", std::uint8_t, 3, 1, common::access::ro>,
-               groov::field<"ltdcen", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"ltdcen", common::bit_enable, 0, 0>>;
 
 // lcd_icr_v1: ICR
 // Used by: LTCD
@@ -133,10 +133,10 @@ using lcd_ier_v1_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved0", std::uint32_t, 31, 4, common::access::ro>,
-               groov::field<"rrie", common::bittypes::bit_enable, 3, 3>,
-               groov::field<"terrie", common::bittypes::bit_enable, 2, 2>,
-               groov::field<"fuie", common::bittypes::bit_enable, 1, 1>,
-               groov::field<"lie", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"rrie", common::bit_enable, 3, 3>,
+               groov::field<"terrie", common::bit_enable, 2, 2>,
+               groov::field<"fuie", common::bit_enable, 1, 1>,
+               groov::field<"lie", common::bit_enable, 0, 0>>;
 
 // lcd_isr_v1: ISR
 // Used by: LTCD
@@ -263,10 +263,10 @@ using lcd_l1cr_v1_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved1", std::uint32_t, 31, 5, common::access::ro>,
-               groov::field<"cluten", common::bittypes::bit_enable, 4, 4>,
+               groov::field<"cluten", common::bit_enable, 4, 4>,
                groov::field<"reserved0", std::uint8_t, 3, 2, common::access::ro>,
-               groov::field<"colken", common::bittypes::bit_enable, 1, 1>,
-               groov::field<"len", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"colken", common::bit_enable, 1, 1>,
+               groov::field<"len", common::bit_enable, 0, 0>>;
 
 // lcd_l1dccr_v1: L1DCCR
 // Used by: LTCD
@@ -435,10 +435,10 @@ using lcd_l2cr_v1_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved1", std::uint32_t, 31, 5, common::access::ro>,
-               groov::field<"cluten", common::bittypes::bit_enable, 4, 4>,
+               groov::field<"cluten", common::bit_enable, 4, 4>,
                groov::field<"reserved0", std::uint8_t, 3, 2, common::access::ro>,
-               groov::field<"colken", common::bittypes::bit_enable, 1, 1>,
-               groov::field<"len", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"colken", common::bit_enable, 1, 1>,
+               groov::field<"len", common::bit_enable, 0, 0>>;
 
 // lcd_l2dccr_v1: L2DCCR
 // Used by: LTCD

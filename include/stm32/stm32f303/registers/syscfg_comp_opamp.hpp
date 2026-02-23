@@ -17,7 +17,7 @@ using syscfg_comp_opamp_comp1_csr_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::rw,
-               groov::field<"comp1lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"comp1lock", common::bit_locked, 31, 31>,
                groov::field<"comp1out", bool, 30, 30, common::access::ro>,
                groov::field<"reserved2", std::uint16_t, 29, 21, common::access::ro>,
                groov::field<"comp1_blanking", std::uint8_t, 20, 18>,
@@ -29,7 +29,7 @@ using syscfg_comp_opamp_comp1_csr_v1_tt =
                groov::field<"comp1insel", std::uint8_t, 6, 4>,
                groov::field<"comp1mode", std::uint8_t, 3, 2>,
                groov::field<"comp1_inp_dac", bool, 1, 1>,
-               groov::field<"comp1en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"comp1en", common::bit_enable, 0, 0>>;
 
 // syscfg_comp_opamp_comp2_csr_v1: COMP2_CSR
 // Used by: SYSCFG_COMP_OPAMP
@@ -41,7 +41,7 @@ using syscfg_comp_opamp_comp2_csr_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::rw,
-               groov::field<"comp2lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"comp2lock", common::bit_locked, 31, 31>,
                groov::field<"comp2out", bool, 30, 30>,
                groov::field<"reserved3", std::uint16_t, 29, 21, common::access::ro>,
                groov::field<"comp2_blanking", std::uint8_t, 20, 18>,
@@ -55,7 +55,7 @@ using syscfg_comp_opamp_comp2_csr_v1_tt =
                groov::field<"comp2insel", std::uint8_t, 6, 4>,
                groov::field<"comp2mode", std::uint8_t, 3, 2>,
                groov::field<"reserved0", bool, 1, 1, common::access::ro>,
-               groov::field<"comp2en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"comp2en", common::bit_enable, 0, 0>>;
 
 // syscfg_comp_opamp_comp3_csr_v1: COMP3_CSR
 // Used by: SYSCFG_COMP_OPAMP
@@ -67,7 +67,7 @@ using syscfg_comp_opamp_comp3_csr_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::rw,
-               groov::field<"comp3lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"comp3lock", common::bit_locked, 31, 31>,
                groov::field<"comp3out", bool, 30, 30, common::access::ro>,
                groov::field<"reserved3", std::uint16_t, 29, 21, common::access::ro>,
                groov::field<"comp3_blanking", std::uint8_t, 20, 18>,
@@ -80,7 +80,7 @@ using syscfg_comp_opamp_comp3_csr_v1_tt =
                groov::field<"comp3insel", std::uint8_t, 6, 4>,
                groov::field<"comp3mode", std::uint8_t, 3, 2>,
                groov::field<"reserved0", bool, 1, 1, common::access::ro>,
-               groov::field<"comp3en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"comp3en", common::bit_enable, 0, 0>>;
 
 // syscfg_comp_opamp_comp4_csr_v1: COMP4_CSR
 // Used by: SYSCFG_COMP_OPAMP
@@ -92,7 +92,7 @@ using syscfg_comp_opamp_comp4_csr_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::rw,
-               groov::field<"comp4lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"comp4lock", common::bit_locked, 31, 31>,
                groov::field<"comp4out", bool, 30, 30, common::access::ro>,
                groov::field<"reserved3", std::uint16_t, 29, 21, common::access::ro>,
                groov::field<"comp4_blanking", std::uint8_t, 20, 18>,
@@ -100,13 +100,13 @@ using syscfg_comp_opamp_comp4_csr_v1_tt =
                groov::field<"comp4pol", bool, 15, 15>,
                groov::field<"reserved2", bool, 14, 14, common::access::ro>,
                groov::field<"comp4_out_sel", std::uint8_t, 13, 10>,
-               groov::field<"com4winmode", common::bittypes::bit_enable, 9, 9>,
+               groov::field<"com4winmode", common::bit_enable, 9, 9>,
                groov::field<"reserved1", bool, 8, 8, common::access::ro>,
                groov::field<"comp4inpsel", bool, 7, 7>,
                groov::field<"comp4insel", std::uint8_t, 6, 4>,
                groov::field<"comp4mode", std::uint8_t, 3, 2>,
                groov::field<"reserved0", bool, 1, 1, common::access::ro>,
-               groov::field<"comp4en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"comp4en", common::bit_enable, 0, 0>>;
 
 // syscfg_comp_opamp_comp5_csr_v1: COMP5_CSR
 // Used by: SYSCFG_COMP_OPAMP
@@ -118,7 +118,7 @@ using syscfg_comp_opamp_comp5_csr_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::rw,
-               groov::field<"comp5lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"comp5lock", common::bit_locked, 31, 31>,
                groov::field<"comp5out", bool, 30, 30, common::access::ro>,
                groov::field<"reserved3", std::uint16_t, 29, 21, common::access::ro>,
                groov::field<"comp5_blanking", std::uint8_t, 20, 18>,
@@ -131,7 +131,7 @@ using syscfg_comp_opamp_comp5_csr_v1_tt =
                groov::field<"comp5insel", std::uint8_t, 6, 4>,
                groov::field<"comp5mode", std::uint8_t, 3, 2>,
                groov::field<"reserved0", bool, 1, 1, common::access::ro>,
-               groov::field<"comp5en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"comp5en", common::bit_enable, 0, 0>>;
 
 // syscfg_comp_opamp_comp6_csr_v1: COMP6_CSR
 // Used by: SYSCFG_COMP_OPAMP
@@ -143,7 +143,7 @@ using syscfg_comp_opamp_comp6_csr_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::rw,
-               groov::field<"comp6lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"comp6lock", common::bit_locked, 31, 31>,
                groov::field<"comp6out", bool, 30, 30, common::access::ro>,
                groov::field<"reserved3", std::uint16_t, 29, 21, common::access::ro>,
                groov::field<"comp6_blanking", std::uint8_t, 20, 18>,
@@ -151,13 +151,13 @@ using syscfg_comp_opamp_comp6_csr_v1_tt =
                groov::field<"comp6pol", bool, 15, 15>,
                groov::field<"reserved2", bool, 14, 14, common::access::ro>,
                groov::field<"comp6_out_sel", std::uint8_t, 13, 10>,
-               groov::field<"com6winmode", common::bittypes::bit_enable, 9, 9>,
+               groov::field<"com6winmode", common::bit_enable, 9, 9>,
                groov::field<"reserved1", bool, 8, 8, common::access::ro>,
                groov::field<"comp6inpsel", bool, 7, 7>,
                groov::field<"comp6insel", std::uint8_t, 6, 4>,
                groov::field<"comp6mode", std::uint8_t, 3, 2>,
                groov::field<"reserved0", bool, 1, 1, common::access::ro>,
-               groov::field<"comp6en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"comp6en", common::bit_enable, 0, 0>>;
 
 // syscfg_comp_opamp_comp7_csr_v1: COMP7_CSR
 // Used by: SYSCFG_COMP_OPAMP
@@ -169,7 +169,7 @@ using syscfg_comp_opamp_comp7_csr_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::rw,
-               groov::field<"comp7lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"comp7lock", common::bit_locked, 31, 31>,
                groov::field<"comp7out", bool, 30, 30, common::access::ro>,
                groov::field<"reserved3", std::uint16_t, 29, 21, common::access::ro>,
                groov::field<"comp7_blanking", std::uint8_t, 20, 18>,
@@ -182,7 +182,7 @@ using syscfg_comp_opamp_comp7_csr_v1_tt =
                groov::field<"comp7insel", std::uint8_t, 6, 4>,
                groov::field<"comp7mode", std::uint8_t, 3, 2>,
                groov::field<"reserved0", bool, 1, 1, common::access::ro>,
-               groov::field<"comp7en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"comp7en", common::bit_enable, 0, 0>>;
 
 // syscfg_comp_opamp_opamp1_csr_v1: OPAMP1_CSR
 // Used by: SYSCFG_COMP_OPAMP
@@ -194,7 +194,7 @@ using syscfg_comp_opamp_opamp1_csr_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::rw,
-               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"lock", common::bit_locked, 31, 31>,
                groov::field<"outcal", bool, 30, 30, common::access::ro>,
                groov::field<"tstref", bool, 29, 29>,
                groov::field<"trimoffsetn", std::uint8_t, 28, 24>,
@@ -205,12 +205,12 @@ using syscfg_comp_opamp_opamp1_csr_v1_tt =
                groov::field<"calon", bool, 11, 11>,
                groov::field<"vps_sel", std::uint8_t, 10, 9>,
                groov::field<"vms_sel", bool, 8, 8>,
-               groov::field<"tcm_en", common::bittypes::bit_enable, 7, 7>,
+               groov::field<"tcm_en", common::bit_enable, 7, 7>,
                groov::field<"vm_sel", std::uint8_t, 6, 5>,
                groov::field<"reserved0", bool, 4, 4, common::access::ro>,
                groov::field<"vp_sel", std::uint8_t, 3, 2>,
                groov::field<"force_vp", bool, 1, 1>,
-               groov::field<"opamp1_en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"opamp1_en", common::bit_enable, 0, 0>>;
 
 // syscfg_comp_opamp_opamp2_csr_v1: OPAMP2_CSR
 // Used by: SYSCFG_COMP_OPAMP
@@ -222,7 +222,7 @@ using syscfg_comp_opamp_opamp2_csr_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::rw,
-               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"lock", common::bit_locked, 31, 31>,
                groov::field<"outcal", bool, 30, 30, common::access::ro>,
                groov::field<"tstref", bool, 29, 29>,
                groov::field<"trimoffsetn", std::uint8_t, 28, 24>,
@@ -233,12 +233,12 @@ using syscfg_comp_opamp_opamp2_csr_v1_tt =
                groov::field<"calon", bool, 11, 11>,
                groov::field<"vps_sel", std::uint8_t, 10, 9>,
                groov::field<"vms_sel", bool, 8, 8>,
-               groov::field<"tcm_en", common::bittypes::bit_enable, 7, 7>,
+               groov::field<"tcm_en", common::bit_enable, 7, 7>,
                groov::field<"vm_sel", std::uint8_t, 6, 5>,
                groov::field<"reserved0", bool, 4, 4, common::access::ro>,
                groov::field<"vp_sel", std::uint8_t, 3, 2>,
                groov::field<"force_vp", bool, 1, 1>,
-               groov::field<"opamp2en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"opamp2en", common::bit_enable, 0, 0>>;
 
 // syscfg_comp_opamp_opamp3_csr_v1: OPAMP3_CSR
 // Used by: SYSCFG_COMP_OPAMP
@@ -250,7 +250,7 @@ using syscfg_comp_opamp_opamp3_csr_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::rw,
-               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"lock", common::bit_locked, 31, 31>,
                groov::field<"outcal", bool, 30, 30, common::access::ro>,
                groov::field<"tstref", bool, 29, 29>,
                groov::field<"trimoffsetn", std::uint8_t, 28, 24>,
@@ -261,12 +261,12 @@ using syscfg_comp_opamp_opamp3_csr_v1_tt =
                groov::field<"calon", bool, 11, 11>,
                groov::field<"vps_sel", std::uint8_t, 10, 9>,
                groov::field<"vms_sel", bool, 8, 8>,
-               groov::field<"tcm_en", common::bittypes::bit_enable, 7, 7>,
+               groov::field<"tcm_en", common::bit_enable, 7, 7>,
                groov::field<"vm_sel", std::uint8_t, 6, 5>,
                groov::field<"reserved0", bool, 4, 4, common::access::ro>,
                groov::field<"vp_sel", std::uint8_t, 3, 2>,
                groov::field<"force_vp", bool, 1, 1>,
-               groov::field<"opamp3en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"opamp3en", common::bit_enable, 0, 0>>;
 
 // syscfg_comp_opamp_opamp4_csr_v1: OPAMP4_CSR
 // Used by: SYSCFG_COMP_OPAMP
@@ -278,7 +278,7 @@ using syscfg_comp_opamp_opamp4_csr_v1_tt =
              std::uint32_t,
              baseaddress + offset,
              common::access::rw,
-               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"lock", common::bit_locked, 31, 31>,
                groov::field<"outcal", bool, 30, 30, common::access::ro>,
                groov::field<"tstref", bool, 29, 29>,
                groov::field<"trimoffsetn", std::uint8_t, 28, 24>,
@@ -289,12 +289,12 @@ using syscfg_comp_opamp_opamp4_csr_v1_tt =
                groov::field<"calon", bool, 11, 11>,
                groov::field<"vps_sel", std::uint8_t, 10, 9>,
                groov::field<"vms_sel", bool, 8, 8>,
-               groov::field<"tcm_en", common::bittypes::bit_enable, 7, 7>,
+               groov::field<"tcm_en", common::bit_enable, 7, 7>,
                groov::field<"vm_sel", std::uint8_t, 6, 5>,
                groov::field<"reserved0", bool, 4, 4, common::access::ro>,
                groov::field<"vp_sel", std::uint8_t, 3, 2>,
                groov::field<"force_vp", bool, 1, 1>,
-               groov::field<"opamp4en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"opamp4en", common::bit_enable, 0, 0>>;
 
 // syscfg_comp_opamp_syscfg_cfgr1_v1: SYSCFG_CFGR1
 // Used by: SYSCFG_COMP_OPAMP
@@ -343,9 +343,9 @@ using syscfg_comp_opamp_syscfg_cfgr2_v1_tt =
                groov::field<"reserved1", std::uint8_t, 7, 5, common::access::ro>,
                groov::field<"byp_add_par", bool, 4, 4>,
                groov::field<"reserved0", bool, 3, 3, common::access::ro>,
-               groov::field<"pvd_lock", common::bittypes::bit_locked, 2, 2>,
-               groov::field<"sram_parity_lock", common::bittypes::bit_locked, 1, 1>,
-               groov::field<"locup_lock", common::bittypes::bit_locked, 0, 0>>;
+               groov::field<"pvd_lock", common::bit_locked, 2, 2>,
+               groov::field<"sram_parity_lock", common::bit_locked, 1, 1>,
+               groov::field<"locup_lock", common::bit_locked, 0, 0>>;
 
 // syscfg_comp_opamp_syscfg_cfgr3_v1: SYSCFG_CFGR3
 // Used by: SYSCFG_COMP_OPAMP

@@ -25,16 +25,16 @@ using aes1_cr_v1_tt =
                groov::field<"chmod2", bool, 16, 16>,
                groov::field<"reserved0", bool, 15, 15, common::access::ro>,
                groov::field<"gcmph", std::uint8_t, 14, 13>,
-               groov::field<"dmaouten", common::bittypes::bit_enable, 12, 12>,
-               groov::field<"dmainen", common::bittypes::bit_enable, 11, 11>,
-               groov::field<"errie", common::bittypes::bit_enable, 10, 10>,
-               groov::field<"ccfie", common::bittypes::bit_enable, 9, 9>,
+               groov::field<"dmaouten", common::bit_enable, 12, 12>,
+               groov::field<"dmainen", common::bit_enable, 11, 11>,
+               groov::field<"errie", common::bit_enable, 10, 10>,
+               groov::field<"ccfie", common::bit_enable, 9, 9>,
                groov::field<"errc", bool, 8, 8>,
                groov::field<"ccfc", bool, 7, 7>,
                groov::field<"chmod10", std::uint8_t, 6, 5>,
                groov::field<"mode", std::uint8_t, 4, 3>,
                groov::field<"datatype", std::uint8_t, 2, 1>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // aes1_dinr_v1: DINR
 // Used by: AES1, AES2

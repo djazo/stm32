@@ -18,8 +18,8 @@ using rng_cr_v1_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved1", std::uint32_t, 31, 4, common::access::ro>,
-               groov::field<"ie", common::bittypes::bit_enable, 3, 3>,
-               groov::field<"rngen", common::bittypes::bit_enable, 2, 2>,
+               groov::field<"ie", common::bit_enable, 3, 3>,
+               groov::field<"rngen", common::bit_enable, 2, 2>,
                groov::field<"reserved0", std::uint8_t, 1, 0, common::access::ro>>;
 
 // rng_dr_v1: DR
@@ -50,6 +50,6 @@ using rng_sr_v1_tt =
                groov::field<"reserved0", std::uint8_t, 4, 3, common::access::ro>,
                groov::field<"secs", bool, 2, 2, common::access::ro>,
                groov::field<"cecs", bool, 1, 1, common::access::ro>,
-               groov::field<"drdy", common::bittypes::bit_ready, 0, 0, common::access::ro>>;
+               groov::field<"drdy", common::bit_ready, 0, 0, common::access::ro>>;
 
 } // namespace stm32::regs

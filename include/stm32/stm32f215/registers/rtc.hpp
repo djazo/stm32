@@ -330,10 +330,10 @@ using rtc_cr_v1_tt =
                groov::field<"bkp", bool, 18, 18>,
                groov::field<"sub1h", bool, 17, 17>,
                groov::field<"add1h", bool, 16, 16>,
-               groov::field<"tsie", common::bittypes::bit_enable, 15, 15>,
-               groov::field<"wutie", common::bittypes::bit_enable, 14, 14>,
-               groov::field<"alrbie", common::bittypes::bit_enable, 13, 13>,
-               groov::field<"alraie", common::bittypes::bit_enable, 12, 12>,
+               groov::field<"tsie", common::bit_enable, 15, 15>,
+               groov::field<"wutie", common::bit_enable, 14, 14>,
+               groov::field<"alrbie", common::bit_enable, 13, 13>,
+               groov::field<"alraie", common::bit_enable, 12, 12>,
                groov::field<"tse", bool, 11, 11>,
                groov::field<"wute", bool, 10, 10>,
                groov::field<"alrbe", bool, 9, 9>,
@@ -417,13 +417,13 @@ using rtc_tafcr_v1_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved1", std::uint16_t, 31, 19, common::access::ro>,
-               groov::field<"alarmouttype", common::bittypes::bit_enable, 18, 18>,
+               groov::field<"alarmouttype", common::bit_enable, 18, 18>,
                groov::field<"tsinsel", bool, 17, 17>,
                groov::field<"tamp1insel", bool, 16, 16>,
                groov::field<"reserved0", std::uint16_t, 15, 3, common::access::ro>,
-               groov::field<"tampie", common::bittypes::bit_enable, 2, 2>,
+               groov::field<"tampie", common::bit_enable, 2, 2>,
                groov::field<"tamp1trg", bool, 1, 1>,
-               groov::field<"tamp1e", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"tamp1e", common::bit_enable, 0, 0>>;
 
 // rtc_tr_v1: TR
 // Used by: RTC

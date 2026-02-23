@@ -34,7 +34,7 @@ using usbphyc_pll1_v1_tt =
              common::access::rw,
                groov::field<"reserved0", std::uint32_t, 31, 4, common::access::ro>,
                groov::field<"pll1sel", std::uint8_t, 3, 1>,
-               groov::field<"pll1en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"pll1en", common::bit_enable, 0, 0>>;
 
 // usbphyc_tune_v1: TUNE
 // Used by: USBPHYC
@@ -52,7 +52,7 @@ using usbphyc_tune_v1_tt =
                groov::field<"hsrxoff", std::uint8_t, 21, 20>,
                groov::field<"hsfallpreem", bool, 19, 19>,
                groov::field<"stagsel", bool, 18, 18>,
-               groov::field<"hdrxgneqen", common::bittypes::bit_enable, 17, 17>,
+               groov::field<"hdrxgneqen", common::bit_enable, 17, 17>,
                groov::field<"sqlchctl", std::uint8_t, 16, 15>,
                groov::field<"hsdrvchkztrm", std::uint8_t, 14, 13>,
                groov::field<"hsdrvchkitrm", std::uint8_t, 12, 9>,
@@ -62,8 +62,8 @@ using usbphyc_tune_v1_tt =
                groov::field<"hsdrvdclev", bool, 5, 5>,
                groov::field<"hsdrvdccur", bool, 4, 4>,
                groov::field<"hsdrvslew", bool, 3, 3>,
-               groov::field<"lfscapen", common::bittypes::bit_enable, 2, 2>,
+               groov::field<"lfscapen", common::bit_enable, 2, 2>,
                groov::field<"incurrint", bool, 1, 1>,
-               groov::field<"incurren", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"incurren", common::bit_enable, 0, 0>>;
 
 } // namespace stm32::regs

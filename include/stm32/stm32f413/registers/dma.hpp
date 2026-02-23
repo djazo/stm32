@@ -181,11 +181,11 @@ using dma_s0cr_v1_tt =
                groov::field<"circ", bool, 8, 8>,
                groov::field<"dir", std::uint8_t, 7, 6>,
                groov::field<"pfctrl", bool, 5, 5>,
-               groov::field<"tcie", common::bittypes::bit_enable, 4, 4>,
-               groov::field<"htie", common::bittypes::bit_enable, 3, 3>,
-               groov::field<"teie", common::bittypes::bit_enable, 2, 2>,
-               groov::field<"dmeie", common::bittypes::bit_enable, 1, 1>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"tcie", common::bit_enable, 4, 4>,
+               groov::field<"htie", common::bit_enable, 3, 3>,
+               groov::field<"teie", common::bit_enable, 2, 2>,
+               groov::field<"dmeie", common::bit_enable, 1, 1>,
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // dma_s0fcr_v1: S0FCR
 // Used by: DMA1, DMA2
@@ -198,10 +198,10 @@ using dma_s0fcr_v1_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved1", std::uint32_t, 31, 8, common::access::ro>,
-               groov::field<"feie", common::bittypes::bit_enable, 7, 7>,
+               groov::field<"feie", common::bit_enable, 7, 7>,
                groov::field<"reserved0", bool, 6, 6, common::access::ro>,
                groov::field<"fs", std::uint8_t, 5, 3, common::access::ro>,
-               groov::field<"dmdis", common::bittypes::bit_enable_bar, 2, 2>,
+               groov::field<"dmdis", common::bit_enable_bar, 2, 2>,
                groov::field<"fth", std::uint8_t, 1, 0>>;
 
 // dma_s0m0ar_v1: S0M0AR
@@ -279,11 +279,11 @@ using dma_s1cr_v1_tt =
                groov::field<"circ", bool, 8, 8>,
                groov::field<"dir", std::uint8_t, 7, 6>,
                groov::field<"pfctrl", bool, 5, 5>,
-               groov::field<"tcie", common::bittypes::bit_enable, 4, 4>,
-               groov::field<"htie", common::bittypes::bit_enable, 3, 3>,
-               groov::field<"teie", common::bittypes::bit_enable, 2, 2>,
-               groov::field<"dmeie", common::bittypes::bit_enable, 1, 1>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"tcie", common::bit_enable, 4, 4>,
+               groov::field<"htie", common::bit_enable, 3, 3>,
+               groov::field<"teie", common::bit_enable, 2, 2>,
+               groov::field<"dmeie", common::bit_enable, 1, 1>,
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // dma_s1fcr_v1: S1FCR
 // Used by: DMA1, DMA2
@@ -296,10 +296,10 @@ using dma_s1fcr_v1_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved1", std::uint32_t, 31, 8, common::access::ro>,
-               groov::field<"feie", common::bittypes::bit_enable, 7, 7>,
+               groov::field<"feie", common::bit_enable, 7, 7>,
                groov::field<"reserved0", bool, 6, 6, common::access::ro>,
                groov::field<"fs", std::uint8_t, 5, 3, common::access::ro>,
-               groov::field<"dmdis", common::bittypes::bit_enable_bar, 2, 2>,
+               groov::field<"dmdis", common::bit_enable_bar, 2, 2>,
                groov::field<"fth", std::uint8_t, 1, 0>>;
 
 // dma_s1m0ar_v1: S1M0AR
@@ -377,11 +377,11 @@ using dma_s2cr_v1_tt =
                groov::field<"circ", bool, 8, 8>,
                groov::field<"dir", std::uint8_t, 7, 6>,
                groov::field<"pfctrl", bool, 5, 5>,
-               groov::field<"tcie", common::bittypes::bit_enable, 4, 4>,
-               groov::field<"htie", common::bittypes::bit_enable, 3, 3>,
-               groov::field<"teie", common::bittypes::bit_enable, 2, 2>,
-               groov::field<"dmeie", common::bittypes::bit_enable, 1, 1>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"tcie", common::bit_enable, 4, 4>,
+               groov::field<"htie", common::bit_enable, 3, 3>,
+               groov::field<"teie", common::bit_enable, 2, 2>,
+               groov::field<"dmeie", common::bit_enable, 1, 1>,
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // dma_s2fcr_v1: S2FCR
 // Used by: DMA1, DMA2
@@ -394,10 +394,10 @@ using dma_s2fcr_v1_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved1", std::uint32_t, 31, 8, common::access::ro>,
-               groov::field<"feie", common::bittypes::bit_enable, 7, 7>,
+               groov::field<"feie", common::bit_enable, 7, 7>,
                groov::field<"reserved0", bool, 6, 6, common::access::ro>,
                groov::field<"fs", std::uint8_t, 5, 3, common::access::ro>,
-               groov::field<"dmdis", common::bittypes::bit_enable_bar, 2, 2>,
+               groov::field<"dmdis", common::bit_enable_bar, 2, 2>,
                groov::field<"fth", std::uint8_t, 1, 0>>;
 
 // dma_s2m0ar_v1: S2M0AR
@@ -475,11 +475,11 @@ using dma_s3cr_v1_tt =
                groov::field<"circ", bool, 8, 8>,
                groov::field<"dir", std::uint8_t, 7, 6>,
                groov::field<"pfctrl", bool, 5, 5>,
-               groov::field<"tcie", common::bittypes::bit_enable, 4, 4>,
-               groov::field<"htie", common::bittypes::bit_enable, 3, 3>,
-               groov::field<"teie", common::bittypes::bit_enable, 2, 2>,
-               groov::field<"dmeie", common::bittypes::bit_enable, 1, 1>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"tcie", common::bit_enable, 4, 4>,
+               groov::field<"htie", common::bit_enable, 3, 3>,
+               groov::field<"teie", common::bit_enable, 2, 2>,
+               groov::field<"dmeie", common::bit_enable, 1, 1>,
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // dma_s3fcr_v1: S3FCR
 // Used by: DMA1, DMA2
@@ -492,10 +492,10 @@ using dma_s3fcr_v1_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved1", std::uint32_t, 31, 8, common::access::ro>,
-               groov::field<"feie", common::bittypes::bit_enable, 7, 7>,
+               groov::field<"feie", common::bit_enable, 7, 7>,
                groov::field<"reserved0", bool, 6, 6, common::access::ro>,
                groov::field<"fs", std::uint8_t, 5, 3, common::access::ro>,
-               groov::field<"dmdis", common::bittypes::bit_enable_bar, 2, 2>,
+               groov::field<"dmdis", common::bit_enable_bar, 2, 2>,
                groov::field<"fth", std::uint8_t, 1, 0>>;
 
 // dma_s3m0ar_v1: S3M0AR
@@ -573,11 +573,11 @@ using dma_s4cr_v1_tt =
                groov::field<"circ", bool, 8, 8>,
                groov::field<"dir", std::uint8_t, 7, 6>,
                groov::field<"pfctrl", bool, 5, 5>,
-               groov::field<"tcie", common::bittypes::bit_enable, 4, 4>,
-               groov::field<"htie", common::bittypes::bit_enable, 3, 3>,
-               groov::field<"teie", common::bittypes::bit_enable, 2, 2>,
-               groov::field<"dmeie", common::bittypes::bit_enable, 1, 1>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"tcie", common::bit_enable, 4, 4>,
+               groov::field<"htie", common::bit_enable, 3, 3>,
+               groov::field<"teie", common::bit_enable, 2, 2>,
+               groov::field<"dmeie", common::bit_enable, 1, 1>,
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // dma_s4fcr_v1: S4FCR
 // Used by: DMA1, DMA2
@@ -590,10 +590,10 @@ using dma_s4fcr_v1_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved1", std::uint32_t, 31, 8, common::access::ro>,
-               groov::field<"feie", common::bittypes::bit_enable, 7, 7>,
+               groov::field<"feie", common::bit_enable, 7, 7>,
                groov::field<"reserved0", bool, 6, 6, common::access::ro>,
                groov::field<"fs", std::uint8_t, 5, 3, common::access::ro>,
-               groov::field<"dmdis", common::bittypes::bit_enable_bar, 2, 2>,
+               groov::field<"dmdis", common::bit_enable_bar, 2, 2>,
                groov::field<"fth", std::uint8_t, 1, 0>>;
 
 // dma_s4m0ar_v1: S4M0AR
@@ -671,11 +671,11 @@ using dma_s5cr_v1_tt =
                groov::field<"circ", bool, 8, 8>,
                groov::field<"dir", std::uint8_t, 7, 6>,
                groov::field<"pfctrl", bool, 5, 5>,
-               groov::field<"tcie", common::bittypes::bit_enable, 4, 4>,
-               groov::field<"htie", common::bittypes::bit_enable, 3, 3>,
-               groov::field<"teie", common::bittypes::bit_enable, 2, 2>,
-               groov::field<"dmeie", common::bittypes::bit_enable, 1, 1>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"tcie", common::bit_enable, 4, 4>,
+               groov::field<"htie", common::bit_enable, 3, 3>,
+               groov::field<"teie", common::bit_enable, 2, 2>,
+               groov::field<"dmeie", common::bit_enable, 1, 1>,
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // dma_s5fcr_v1: S5FCR
 // Used by: DMA1, DMA2
@@ -688,10 +688,10 @@ using dma_s5fcr_v1_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved1", std::uint32_t, 31, 8, common::access::ro>,
-               groov::field<"feie", common::bittypes::bit_enable, 7, 7>,
+               groov::field<"feie", common::bit_enable, 7, 7>,
                groov::field<"reserved0", bool, 6, 6, common::access::ro>,
                groov::field<"fs", std::uint8_t, 5, 3, common::access::ro>,
-               groov::field<"dmdis", common::bittypes::bit_enable_bar, 2, 2>,
+               groov::field<"dmdis", common::bit_enable_bar, 2, 2>,
                groov::field<"fth", std::uint8_t, 1, 0>>;
 
 // dma_s5m0ar_v1: S5M0AR
@@ -769,11 +769,11 @@ using dma_s6cr_v1_tt =
                groov::field<"circ", bool, 8, 8>,
                groov::field<"dir", std::uint8_t, 7, 6>,
                groov::field<"pfctrl", bool, 5, 5>,
-               groov::field<"tcie", common::bittypes::bit_enable, 4, 4>,
-               groov::field<"htie", common::bittypes::bit_enable, 3, 3>,
-               groov::field<"teie", common::bittypes::bit_enable, 2, 2>,
-               groov::field<"dmeie", common::bittypes::bit_enable, 1, 1>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"tcie", common::bit_enable, 4, 4>,
+               groov::field<"htie", common::bit_enable, 3, 3>,
+               groov::field<"teie", common::bit_enable, 2, 2>,
+               groov::field<"dmeie", common::bit_enable, 1, 1>,
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // dma_s6fcr_v1: S6FCR
 // Used by: DMA1, DMA2
@@ -786,10 +786,10 @@ using dma_s6fcr_v1_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved1", std::uint32_t, 31, 8, common::access::ro>,
-               groov::field<"feie", common::bittypes::bit_enable, 7, 7>,
+               groov::field<"feie", common::bit_enable, 7, 7>,
                groov::field<"reserved0", bool, 6, 6, common::access::ro>,
                groov::field<"fs", std::uint8_t, 5, 3, common::access::ro>,
-               groov::field<"dmdis", common::bittypes::bit_enable_bar, 2, 2>,
+               groov::field<"dmdis", common::bit_enable_bar, 2, 2>,
                groov::field<"fth", std::uint8_t, 1, 0>>;
 
 // dma_s6m0ar_v1: S6M0AR
@@ -867,11 +867,11 @@ using dma_s7cr_v1_tt =
                groov::field<"circ", bool, 8, 8>,
                groov::field<"dir", std::uint8_t, 7, 6>,
                groov::field<"pfctrl", bool, 5, 5>,
-               groov::field<"tcie", common::bittypes::bit_enable, 4, 4>,
-               groov::field<"htie", common::bittypes::bit_enable, 3, 3>,
-               groov::field<"teie", common::bittypes::bit_enable, 2, 2>,
-               groov::field<"dmeie", common::bittypes::bit_enable, 1, 1>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"tcie", common::bit_enable, 4, 4>,
+               groov::field<"htie", common::bit_enable, 3, 3>,
+               groov::field<"teie", common::bit_enable, 2, 2>,
+               groov::field<"dmeie", common::bit_enable, 1, 1>,
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // dma_s7fcr_v1: S7FCR
 // Used by: DMA1, DMA2
@@ -884,10 +884,10 @@ using dma_s7fcr_v1_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved1", std::uint32_t, 31, 8, common::access::ro>,
-               groov::field<"feie", common::bittypes::bit_enable, 7, 7>,
+               groov::field<"feie", common::bit_enable, 7, 7>,
                groov::field<"reserved0", bool, 6, 6, common::access::ro>,
                groov::field<"fs", std::uint8_t, 5, 3, common::access::ro>,
-               groov::field<"dmdis", common::bittypes::bit_enable_bar, 2, 2>,
+               groov::field<"dmdis", common::bit_enable_bar, 2, 2>,
                groov::field<"fth", std::uint8_t, 1, 0>>;
 
 // dma_s7m0ar_v1: S7M0AR

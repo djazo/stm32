@@ -44,20 +44,20 @@ using tzsc_ier1_v1_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved0", std::uint32_t, 31, 14, common::access::ro>,
-               groov::field<"pkaie", common::bittypes::bit_enable, 13, 13>,
-               groov::field<"sram2ie", common::bittypes::bit_enable, 12, 12>,
-               groov::field<"sram1ie", common::bittypes::bit_enable, 11, 11>,
-               groov::field<"flashie", common::bittypes::bit_enable, 10, 10>,
-               groov::field<"dmamux1ie", common::bittypes::bit_enable, 9, 9>,
-               groov::field<"dma2ie", common::bittypes::bit_enable, 8, 8>,
-               groov::field<"dma1ie", common::bittypes::bit_enable, 7, 7>,
-               groov::field<"flashifie", common::bittypes::bit_enable, 6, 6>,
-               groov::field<"pwrie", common::bittypes::bit_enable, 5, 5>,
-               groov::field<"subghzspiie", common::bittypes::bit_enable, 4, 4>,
-               groov::field<"rngie", common::bittypes::bit_enable, 3, 3>,
-               groov::field<"aesie", common::bittypes::bit_enable, 2, 2>,
-               groov::field<"tzscie", common::bittypes::bit_enable, 1, 1>,
-               groov::field<"tzicie", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"pkaie", common::bit_enable, 13, 13>,
+               groov::field<"sram2ie", common::bit_enable, 12, 12>,
+               groov::field<"sram1ie", common::bit_enable, 11, 11>,
+               groov::field<"flashie", common::bit_enable, 10, 10>,
+               groov::field<"dmamux1ie", common::bit_enable, 9, 9>,
+               groov::field<"dma2ie", common::bit_enable, 8, 8>,
+               groov::field<"dma1ie", common::bit_enable, 7, 7>,
+               groov::field<"flashifie", common::bit_enable, 6, 6>,
+               groov::field<"pwrie", common::bit_enable, 5, 5>,
+               groov::field<"subghzspiie", common::bit_enable, 4, 4>,
+               groov::field<"rngie", common::bit_enable, 3, 3>,
+               groov::field<"aesie", common::bit_enable, 2, 2>,
+               groov::field<"tzscie", common::bit_enable, 1, 1>,
+               groov::field<"tzicie", common::bit_enable, 0, 0>>;
 
 // tzsc_misr1_v1: MISR1
 // Used by: TZIC
@@ -96,7 +96,7 @@ using tzsc_tzsc_cr_v1_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved0", std::uint32_t, 31, 1, common::access::ro>,
-               groov::field<"lck", common::bittypes::bit_locked, 0, 0>>;
+               groov::field<"lck", common::bit_locked, 0, 0>>;
 
 // tzsc_tzsc_mpcwm1_upwmr_v1: TZSC_MPCWM1_UPWMR
 // Used by: TZSC

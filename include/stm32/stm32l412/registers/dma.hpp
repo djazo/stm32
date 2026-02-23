@@ -26,10 +26,10 @@ using dma_ccr1_v1_tt =
                groov::field<"pinc", bool, 6, 6>,
                groov::field<"circ", bool, 5, 5>,
                groov::field<"dir", bool, 4, 4>,
-               groov::field<"teie", common::bittypes::bit_enable, 3, 3>,
-               groov::field<"htie", common::bittypes::bit_enable, 2, 2>,
-               groov::field<"tcie", common::bittypes::bit_enable, 1, 1>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"teie", common::bit_enable, 3, 3>,
+               groov::field<"htie", common::bit_enable, 2, 2>,
+               groov::field<"tcie", common::bit_enable, 1, 1>,
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // dma_ccr2_v1: CCR2
 // Used by: DMA1, DMA2
@@ -50,10 +50,10 @@ using dma_ccr2_v1_tt =
                groov::field<"pinc", bool, 6, 6>,
                groov::field<"circ", bool, 5, 5>,
                groov::field<"dir", bool, 4, 4>,
-               groov::field<"teie", common::bittypes::bit_enable, 3, 3>,
-               groov::field<"htie", common::bittypes::bit_enable, 2, 2>,
-               groov::field<"tcie", common::bittypes::bit_enable, 1, 1>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"teie", common::bit_enable, 3, 3>,
+               groov::field<"htie", common::bit_enable, 2, 2>,
+               groov::field<"tcie", common::bit_enable, 1, 1>,
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // dma_ccr3_v1: CCR3
 // Used by: DMA1, DMA2
@@ -74,10 +74,10 @@ using dma_ccr3_v1_tt =
                groov::field<"pinc", bool, 6, 6>,
                groov::field<"circ", bool, 5, 5>,
                groov::field<"dir", bool, 4, 4>,
-               groov::field<"teie", common::bittypes::bit_enable, 3, 3>,
-               groov::field<"htie", common::bittypes::bit_enable, 2, 2>,
-               groov::field<"tcie", common::bittypes::bit_enable, 1, 1>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"teie", common::bit_enable, 3, 3>,
+               groov::field<"htie", common::bit_enable, 2, 2>,
+               groov::field<"tcie", common::bit_enable, 1, 1>,
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // dma_ccr4_v1: CCR4
 // Used by: DMA1, DMA2
@@ -98,10 +98,10 @@ using dma_ccr4_v1_tt =
                groov::field<"pinc", bool, 6, 6>,
                groov::field<"circ", bool, 5, 5>,
                groov::field<"dir", bool, 4, 4>,
-               groov::field<"teie", common::bittypes::bit_enable, 3, 3>,
-               groov::field<"htie", common::bittypes::bit_enable, 2, 2>,
-               groov::field<"tcie", common::bittypes::bit_enable, 1, 1>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"teie", common::bit_enable, 3, 3>,
+               groov::field<"htie", common::bit_enable, 2, 2>,
+               groov::field<"tcie", common::bit_enable, 1, 1>,
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // dma_ccr5_v1: CCR5
 // Used by: DMA1, DMA2
@@ -122,10 +122,10 @@ using dma_ccr5_v1_tt =
                groov::field<"pinc", bool, 6, 6>,
                groov::field<"circ", bool, 5, 5>,
                groov::field<"dir", bool, 4, 4>,
-               groov::field<"teie", common::bittypes::bit_enable, 3, 3>,
-               groov::field<"htie", common::bittypes::bit_enable, 2, 2>,
-               groov::field<"tcie", common::bittypes::bit_enable, 1, 1>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"teie", common::bit_enable, 3, 3>,
+               groov::field<"htie", common::bit_enable, 2, 2>,
+               groov::field<"tcie", common::bit_enable, 1, 1>,
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // dma_ccr6_v1: CCR6
 // Used by: DMA1, DMA2
@@ -146,10 +146,10 @@ using dma_ccr6_v1_tt =
                groov::field<"pinc", bool, 6, 6>,
                groov::field<"circ", bool, 5, 5>,
                groov::field<"dir", bool, 4, 4>,
-               groov::field<"teie", common::bittypes::bit_enable, 3, 3>,
-               groov::field<"htie", common::bittypes::bit_enable, 2, 2>,
-               groov::field<"tcie", common::bittypes::bit_enable, 1, 1>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"teie", common::bit_enable, 3, 3>,
+               groov::field<"htie", common::bit_enable, 2, 2>,
+               groov::field<"tcie", common::bit_enable, 1, 1>,
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // dma_ccr7_v1: CCR7
 // Used by: DMA1, DMA2
@@ -170,10 +170,10 @@ using dma_ccr7_v1_tt =
                groov::field<"pinc", bool, 6, 6>,
                groov::field<"circ", bool, 5, 5>,
                groov::field<"dir", bool, 4, 4>,
-               groov::field<"teie", common::bittypes::bit_enable, 3, 3>,
-               groov::field<"htie", common::bittypes::bit_enable, 2, 2>,
-               groov::field<"tcie", common::bittypes::bit_enable, 1, 1>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"teie", common::bit_enable, 3, 3>,
+               groov::field<"htie", common::bit_enable, 2, 2>,
+               groov::field<"tcie", common::bit_enable, 1, 1>,
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // dma_cmar1_v1: CMAR1
 // Used by: DMA1, DMA2

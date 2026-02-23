@@ -88,7 +88,7 @@ using pwr_cr2_v1_tt =
                groov::field<"reserved0", bool, 5, 5, common::access::ro>,
                groov::field<"pvme1", bool, 4, 4>,
                groov::field<"pls", std::uint8_t, 3, 1>,
-               groov::field<"pvde", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"pvde", common::bit_enable, 0, 0>>;
 
 // pwr_cr3_v1: CR3
 // Used by: PWR
@@ -104,7 +104,7 @@ using pwr_cr3_v1_tt =
                groov::field<"eiwul", bool, 15, 15>,
                groov::field<"ec2h", bool, 14, 14>,
                groov::field<"e802a", bool, 13, 13>,
-               groov::field<"ecrpe", common::bittypes::bit_enable, 12, 12>,
+               groov::field<"ecrpe", common::bit_enable, 12, 12>,
                groov::field<"eblea", bool, 11, 11>,
                groov::field<"apc", bool, 10, 10>,
                groov::field<"rrs", bool, 9, 9>,
@@ -150,7 +150,7 @@ using pwr_cr5_v1_tt =
              common::access::rw,
                groov::field<"reserved2", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"sdeb", bool, 15, 15>,
-               groov::field<"sdben", common::bittypes::bit_enable, 14, 14>,
+               groov::field<"sdben", common::bit_enable, 14, 14>,
                groov::field<"reserved1", std::uint8_t, 13, 10, common::access::ro>,
                groov::field<"smpscfg", bool, 9, 9>,
                groov::field<"borhc", bool, 8, 8>,

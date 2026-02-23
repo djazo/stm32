@@ -38,7 +38,7 @@ using lcd_cr_v1_tt =
                groov::field<"bias", std::uint8_t, 6, 5>,
                groov::field<"duty", std::uint8_t, 4, 2>,
                groov::field<"vsel", bool, 1, 1>,
-               groov::field<"lcden", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"lcden", common::bit_enable, 0, 0>>;
 
 // lcd_fcr_v1: FCR
 // Used by: LCD
@@ -58,9 +58,9 @@ using lcd_fcr_v1_tt =
                groov::field<"cc", std::uint8_t, 12, 10>,
                groov::field<"dead", std::uint8_t, 9, 7>,
                groov::field<"pon", std::uint8_t, 6, 4>,
-               groov::field<"uddie", common::bittypes::bit_enable, 3, 3>,
+               groov::field<"uddie", common::bit_enable, 3, 3>,
                groov::field<"reserved0", bool, 2, 2, common::access::ro>,
-               groov::field<"sofie", common::bittypes::bit_enable, 1, 1>,
+               groov::field<"sofie", common::bit_enable, 1, 1>,
                groov::field<"hd", bool, 0, 0>>;
 
 // lcd_ram_com0_v1: RAM_COM0
@@ -419,7 +419,7 @@ using lcd_sr_v1_tt =
              common::access::rw,
                groov::field<"reserved0", std::uint32_t, 31, 6, common::access::ro>,
                groov::field<"fcrsf", bool, 5, 5, common::access::ro>,
-               groov::field<"rdy", common::bittypes::bit_ready, 4, 4, common::access::ro>,
+               groov::field<"rdy", common::bit_ready, 4, 4, common::access::ro>,
                groov::field<"udd", bool, 3, 3, common::access::ro>,
                groov::field<"udr", bool, 2, 2>,
                groov::field<"sof", bool, 1, 1, common::access::ro>,

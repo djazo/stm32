@@ -35,17 +35,17 @@ using lpdma_lpdma_c0cr_v1_tt =
                groov::field<"reserved2", std::uint8_t, 21, 17, common::access::ro>,
                groov::field<"lsm", bool, 16, 16>,
                groov::field<"reserved1", bool, 15, 15, common::access::ro>,
-               groov::field<"toie", common::bittypes::bit_enable, 14, 14>,
-               groov::field<"suspie", common::bittypes::bit_enable, 13, 13>,
-               groov::field<"useie", common::bittypes::bit_enable, 12, 12>,
-               groov::field<"uleie", common::bittypes::bit_enable, 11, 11>,
-               groov::field<"dteie", common::bittypes::bit_enable, 10, 10>,
-               groov::field<"htie", common::bittypes::bit_enable, 9, 9>,
-               groov::field<"tcie", common::bittypes::bit_enable, 8, 8>,
+               groov::field<"toie", common::bit_enable, 14, 14>,
+               groov::field<"suspie", common::bit_enable, 13, 13>,
+               groov::field<"useie", common::bit_enable, 12, 12>,
+               groov::field<"uleie", common::bit_enable, 11, 11>,
+               groov::field<"dteie", common::bit_enable, 10, 10>,
+               groov::field<"htie", common::bit_enable, 9, 9>,
+               groov::field<"tcie", common::bit_enable, 8, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 3, common::access::ro>,
                groov::field<"susp", bool, 2, 2>,
                groov::field<"reset", bool, 1, 1, common::access::wo>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // lpdma_lpdma_c0dar_v1: LPDMA_C0DAR
 // Used by: LPDMA1, SEC_LPDMA1
@@ -219,17 +219,17 @@ using lpdma_lpdma_c1cr_v1_tt =
                groov::field<"reserved2", std::uint8_t, 21, 17, common::access::ro>,
                groov::field<"lsm", bool, 16, 16>,
                groov::field<"reserved1", bool, 15, 15, common::access::ro>,
-               groov::field<"toie", common::bittypes::bit_enable, 14, 14>,
-               groov::field<"suspie", common::bittypes::bit_enable, 13, 13>,
-               groov::field<"useie", common::bittypes::bit_enable, 12, 12>,
-               groov::field<"uleie", common::bittypes::bit_enable, 11, 11>,
-               groov::field<"dteie", common::bittypes::bit_enable, 10, 10>,
-               groov::field<"htie", common::bittypes::bit_enable, 9, 9>,
-               groov::field<"tcie", common::bittypes::bit_enable, 8, 8>,
+               groov::field<"toie", common::bit_enable, 14, 14>,
+               groov::field<"suspie", common::bit_enable, 13, 13>,
+               groov::field<"useie", common::bit_enable, 12, 12>,
+               groov::field<"uleie", common::bit_enable, 11, 11>,
+               groov::field<"dteie", common::bit_enable, 10, 10>,
+               groov::field<"htie", common::bit_enable, 9, 9>,
+               groov::field<"tcie", common::bit_enable, 8, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 3, common::access::ro>,
                groov::field<"susp", bool, 2, 2>,
                groov::field<"reset", bool, 1, 1, common::access::wo>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // lpdma_lpdma_c1dar_v1: LPDMA_C1DAR
 // Used by: LPDMA1, SEC_LPDMA1
@@ -403,17 +403,17 @@ using lpdma_lpdma_c2cr_v1_tt =
                groov::field<"reserved2", std::uint8_t, 21, 17, common::access::ro>,
                groov::field<"lsm", bool, 16, 16>,
                groov::field<"reserved1", bool, 15, 15, common::access::ro>,
-               groov::field<"toie", common::bittypes::bit_enable, 14, 14>,
-               groov::field<"suspie", common::bittypes::bit_enable, 13, 13>,
-               groov::field<"useie", common::bittypes::bit_enable, 12, 12>,
-               groov::field<"uleie", common::bittypes::bit_enable, 11, 11>,
-               groov::field<"dteie", common::bittypes::bit_enable, 10, 10>,
-               groov::field<"htie", common::bittypes::bit_enable, 9, 9>,
-               groov::field<"tcie", common::bittypes::bit_enable, 8, 8>,
+               groov::field<"toie", common::bit_enable, 14, 14>,
+               groov::field<"suspie", common::bit_enable, 13, 13>,
+               groov::field<"useie", common::bit_enable, 12, 12>,
+               groov::field<"uleie", common::bit_enable, 11, 11>,
+               groov::field<"dteie", common::bit_enable, 10, 10>,
+               groov::field<"htie", common::bit_enable, 9, 9>,
+               groov::field<"tcie", common::bit_enable, 8, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 3, common::access::ro>,
                groov::field<"susp", bool, 2, 2>,
                groov::field<"reset", bool, 1, 1, common::access::wo>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // lpdma_lpdma_c2dar_v1: LPDMA_C2DAR
 // Used by: LPDMA1, SEC_LPDMA1
@@ -587,17 +587,17 @@ using lpdma_lpdma_c3cr_v1_tt =
                groov::field<"reserved2", std::uint8_t, 21, 17, common::access::ro>,
                groov::field<"lsm", bool, 16, 16>,
                groov::field<"reserved1", bool, 15, 15, common::access::ro>,
-               groov::field<"toie", common::bittypes::bit_enable, 14, 14>,
-               groov::field<"suspie", common::bittypes::bit_enable, 13, 13>,
-               groov::field<"useie", common::bittypes::bit_enable, 12, 12>,
-               groov::field<"uleie", common::bittypes::bit_enable, 11, 11>,
-               groov::field<"dteie", common::bittypes::bit_enable, 10, 10>,
-               groov::field<"htie", common::bittypes::bit_enable, 9, 9>,
-               groov::field<"tcie", common::bittypes::bit_enable, 8, 8>,
+               groov::field<"toie", common::bit_enable, 14, 14>,
+               groov::field<"suspie", common::bit_enable, 13, 13>,
+               groov::field<"useie", common::bit_enable, 12, 12>,
+               groov::field<"uleie", common::bit_enable, 11, 11>,
+               groov::field<"dteie", common::bit_enable, 10, 10>,
+               groov::field<"htie", common::bit_enable, 9, 9>,
+               groov::field<"tcie", common::bit_enable, 8, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 3, common::access::ro>,
                groov::field<"susp", bool, 2, 2>,
                groov::field<"reset", bool, 1, 1, common::access::wo>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // lpdma_lpdma_c3dar_v1: LPDMA_C3DAR
 // Used by: LPDMA1, SEC_LPDMA1
@@ -786,10 +786,10 @@ using lpdma_lpdma_rcfglockr_v1_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved0", std::uint32_t, 31, 4, common::access::ro>,
-               groov::field<"lock3", common::bittypes::bit_locked, 3, 3>,
-               groov::field<"lock2", common::bittypes::bit_locked, 2, 2>,
-               groov::field<"lock1", common::bittypes::bit_locked, 1, 1>,
-               groov::field<"lock0", common::bittypes::bit_locked, 0, 0>>;
+               groov::field<"lock3", common::bit_locked, 3, 3>,
+               groov::field<"lock2", common::bit_locked, 2, 2>,
+               groov::field<"lock1", common::bit_locked, 1, 1>,
+               groov::field<"lock0", common::bit_locked, 0, 0>>;
 
 // lpdma_lpdma_seccfgr_v1: LPDMA_SECCFGR
 // Used by: LPDMA1, SEC_LPDMA1

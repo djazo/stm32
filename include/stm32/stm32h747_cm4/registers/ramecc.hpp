@@ -18,10 +18,10 @@ using ramecc_ier_v1_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved0", std::uint32_t, 31, 4, common::access::ro>,
-               groov::field<"geccdebwie", common::bittypes::bit_enable, 3, 3>,
-               groov::field<"geccdeie", common::bittypes::bit_enable, 2, 2>,
+               groov::field<"geccdebwie", common::bit_enable, 3, 3>,
+               groov::field<"geccdeie", common::bit_enable, 2, 2>,
                groov::field<"geccseie_", bool, 1, 1>,
-               groov::field<"gie", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"gie", common::bit_enable, 0, 0>>;
 
 // ramecc_m1cr_v1: M1CR
 // Used by: RAMECC1, RAMECC2, RAMECC3
@@ -34,10 +34,10 @@ using ramecc_m1cr_v1_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved1", std::uint32_t, 31, 6, common::access::ro>,
-               groov::field<"eccelen", common::bittypes::bit_enable, 5, 5>,
-               groov::field<"eccdebwie", common::bittypes::bit_enable, 4, 4>,
-               groov::field<"eccdeie", common::bittypes::bit_enable, 3, 3>,
-               groov::field<"eccseie", common::bittypes::bit_enable, 2, 2>,
+               groov::field<"eccelen", common::bit_enable, 5, 5>,
+               groov::field<"eccdebwie", common::bit_enable, 4, 4>,
+               groov::field<"eccdeie", common::bit_enable, 3, 3>,
+               groov::field<"eccseie", common::bit_enable, 2, 2>,
                groov::field<"reserved0", std::uint8_t, 1, 0, common::access::ro>>;
 
 // ramecc_m1far_v1: M1FAR
@@ -51,10 +51,10 @@ using ramecc_m1far_v1_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved1", std::uint32_t, 31, 6, common::access::ro>,
-               groov::field<"eccelen", common::bittypes::bit_enable, 5, 5>,
-               groov::field<"eccdebwie", common::bittypes::bit_enable, 4, 4>,
-               groov::field<"eccdeie", common::bittypes::bit_enable, 3, 3>,
-               groov::field<"eccseie", common::bittypes::bit_enable, 2, 2>,
+               groov::field<"eccelen", common::bit_enable, 5, 5>,
+               groov::field<"eccdebwie", common::bit_enable, 4, 4>,
+               groov::field<"eccdeie", common::bit_enable, 3, 3>,
+               groov::field<"eccseie", common::bit_enable, 2, 2>,
                groov::field<"reserved0", std::uint8_t, 1, 0, common::access::ro>>;
 
 // ramecc_m1far_v2: M1FAR
@@ -80,10 +80,10 @@ using ramecc_m1fdrh_v1_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved1", std::uint32_t, 31, 6, common::access::ro>,
-               groov::field<"eccelen", common::bittypes::bit_enable, 5, 5>,
-               groov::field<"eccdebwie", common::bittypes::bit_enable, 4, 4>,
-               groov::field<"eccdeie", common::bittypes::bit_enable, 3, 3>,
-               groov::field<"eccseie", common::bittypes::bit_enable, 2, 2>,
+               groov::field<"eccelen", common::bit_enable, 5, 5>,
+               groov::field<"eccdebwie", common::bit_enable, 4, 4>,
+               groov::field<"eccdeie", common::bit_enable, 3, 3>,
+               groov::field<"eccseie", common::bit_enable, 2, 2>,
                groov::field<"reserved0", std::uint8_t, 1, 0, common::access::ro>>;
 
 // ramecc_m1fdrh_v2: M1FDRH
@@ -109,10 +109,10 @@ using ramecc_m1fdrl_v1_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved1", std::uint32_t, 31, 6, common::access::ro>,
-               groov::field<"eccelen", common::bittypes::bit_enable, 5, 5>,
-               groov::field<"eccdebwie", common::bittypes::bit_enable, 4, 4>,
-               groov::field<"eccdeie", common::bittypes::bit_enable, 3, 3>,
-               groov::field<"eccseie", common::bittypes::bit_enable, 2, 2>,
+               groov::field<"eccelen", common::bit_enable, 5, 5>,
+               groov::field<"eccdebwie", common::bit_enable, 4, 4>,
+               groov::field<"eccdeie", common::bit_enable, 3, 3>,
+               groov::field<"eccseie", common::bit_enable, 2, 2>,
                groov::field<"reserved0", std::uint8_t, 1, 0, common::access::ro>>;
 
 // ramecc_m1fdrl_v2: M1FDRL
@@ -165,10 +165,10 @@ using ramecc_m1sr_v1_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved1", std::uint32_t, 31, 6, common::access::ro>,
-               groov::field<"eccelen", common::bittypes::bit_enable, 5, 5>,
-               groov::field<"eccdebwie", common::bittypes::bit_enable, 4, 4>,
-               groov::field<"eccdeie", common::bittypes::bit_enable, 3, 3>,
-               groov::field<"eccseie", common::bittypes::bit_enable, 2, 2>,
+               groov::field<"eccelen", common::bit_enable, 5, 5>,
+               groov::field<"eccdebwie", common::bit_enable, 4, 4>,
+               groov::field<"eccdeie", common::bit_enable, 3, 3>,
+               groov::field<"eccseie", common::bit_enable, 2, 2>,
                groov::field<"reserved0", std::uint8_t, 1, 0, common::access::ro>>;
 
 // ramecc_m1sr_v2: M1SR
@@ -212,10 +212,10 @@ using ramecc_m2cr_v2_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved1", std::uint32_t, 31, 6, common::access::ro>,
-               groov::field<"eccelen", common::bittypes::bit_enable, 5, 5>,
-               groov::field<"eccdebwie", common::bittypes::bit_enable, 4, 4>,
-               groov::field<"eccdeie", common::bittypes::bit_enable, 3, 3>,
-               groov::field<"eccseie", common::bittypes::bit_enable, 2, 2>,
+               groov::field<"eccelen", common::bit_enable, 5, 5>,
+               groov::field<"eccdebwie", common::bit_enable, 4, 4>,
+               groov::field<"eccdeie", common::bit_enable, 3, 3>,
+               groov::field<"eccseie", common::bit_enable, 2, 2>,
                groov::field<"reserved0", std::uint8_t, 1, 0, common::access::ro>>;
 
 // ramecc_m2far_v1: M2FAR
@@ -358,10 +358,10 @@ using ramecc_m3cr_v2_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved1", std::uint32_t, 31, 6, common::access::ro>,
-               groov::field<"eccelen", common::bittypes::bit_enable, 5, 5>,
-               groov::field<"eccdebwie", common::bittypes::bit_enable, 4, 4>,
-               groov::field<"eccdeie", common::bittypes::bit_enable, 3, 3>,
-               groov::field<"eccseie", common::bittypes::bit_enable, 2, 2>,
+               groov::field<"eccelen", common::bit_enable, 5, 5>,
+               groov::field<"eccdebwie", common::bit_enable, 4, 4>,
+               groov::field<"eccdeie", common::bit_enable, 3, 3>,
+               groov::field<"eccseie", common::bit_enable, 2, 2>,
                groov::field<"reserved0", std::uint8_t, 1, 0, common::access::ro>>;
 
 // ramecc_m3far_v1: M3FAR
@@ -498,10 +498,10 @@ using ramecc_m4cr_v2_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved1", std::uint32_t, 31, 6, common::access::ro>,
-               groov::field<"eccelen", common::bittypes::bit_enable, 5, 5>,
-               groov::field<"eccdebwie", common::bittypes::bit_enable, 4, 4>,
-               groov::field<"eccdeie", common::bittypes::bit_enable, 3, 3>,
-               groov::field<"eccseie", common::bittypes::bit_enable, 2, 2>,
+               groov::field<"eccelen", common::bit_enable, 5, 5>,
+               groov::field<"eccdebwie", common::bit_enable, 4, 4>,
+               groov::field<"eccdeie", common::bit_enable, 3, 3>,
+               groov::field<"eccseie", common::bit_enable, 2, 2>,
                groov::field<"reserved0", std::uint8_t, 1, 0, common::access::ro>>;
 
 // ramecc_m4far_v1: M4FAR
@@ -638,10 +638,10 @@ using ramecc_m5cr_v2_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved1", std::uint32_t, 31, 6, common::access::ro>,
-               groov::field<"eccelen", common::bittypes::bit_enable, 5, 5>,
-               groov::field<"eccdebwie", common::bittypes::bit_enable, 4, 4>,
-               groov::field<"eccdeie", common::bittypes::bit_enable, 3, 3>,
-               groov::field<"eccseie", common::bittypes::bit_enable, 2, 2>,
+               groov::field<"eccelen", common::bit_enable, 5, 5>,
+               groov::field<"eccdebwie", common::bit_enable, 4, 4>,
+               groov::field<"eccdeie", common::bit_enable, 3, 3>,
+               groov::field<"eccseie", common::bit_enable, 2, 2>,
                groov::field<"reserved0", std::uint8_t, 1, 0, common::access::ro>>;
 
 // ramecc_m5far_v1: M5FAR

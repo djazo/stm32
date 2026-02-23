@@ -54,12 +54,12 @@ using mdma_mdma_c0cr_v1_tt =
                groov::field<"bex", bool, 12, 12>,
                groov::field<"reserved0", std::uint8_t, 11, 8, common::access::ro>,
                groov::field<"pl", std::uint8_t, 7, 6>,
-               groov::field<"tcie", common::bittypes::bit_enable, 5, 5>,
-               groov::field<"btie", common::bittypes::bit_enable, 4, 4>,
-               groov::field<"brtie", common::bittypes::bit_enable, 3, 3>,
-               groov::field<"ctcie", common::bittypes::bit_enable, 2, 2>,
-               groov::field<"teie", common::bittypes::bit_enable, 1, 1>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"tcie", common::bit_enable, 5, 5>,
+               groov::field<"btie", common::bit_enable, 4, 4>,
+               groov::field<"brtie", common::bit_enable, 3, 3>,
+               groov::field<"ctcie", common::bit_enable, 2, 2>,
+               groov::field<"teie", common::bit_enable, 1, 1>,
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // mdma_mdma_c0dar_v1: MDMA_C0DAR
 // Used by: MDMA
@@ -263,12 +263,12 @@ using mdma_mdma_c10cr_v1_tt =
                groov::field<"bex", bool, 12, 12>,
                groov::field<"reserved0", std::uint8_t, 11, 8, common::access::ro>,
                groov::field<"pl", std::uint8_t, 7, 6>,
-               groov::field<"tcie", common::bittypes::bit_enable, 5, 5>,
-               groov::field<"btie", common::bittypes::bit_enable, 4, 4>,
-               groov::field<"brtie", common::bittypes::bit_enable, 3, 3>,
-               groov::field<"ctcie", common::bittypes::bit_enable, 2, 2>,
-               groov::field<"teie", common::bittypes::bit_enable, 1, 1>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"tcie", common::bit_enable, 5, 5>,
+               groov::field<"btie", common::bit_enable, 4, 4>,
+               groov::field<"brtie", common::bit_enable, 3, 3>,
+               groov::field<"ctcie", common::bit_enable, 2, 2>,
+               groov::field<"teie", common::bit_enable, 1, 1>,
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // mdma_mdma_c10dar_v1: MDMA_C10DAR
 // Used by: MDMA
@@ -472,12 +472,12 @@ using mdma_mdma_c11cr_v1_tt =
                groov::field<"bex", bool, 12, 12>,
                groov::field<"reserved0", std::uint8_t, 11, 8, common::access::ro>,
                groov::field<"pl", std::uint8_t, 7, 6>,
-               groov::field<"tcie", common::bittypes::bit_enable, 5, 5>,
-               groov::field<"btie", common::bittypes::bit_enable, 4, 4>,
-               groov::field<"brtie", common::bittypes::bit_enable, 3, 3>,
-               groov::field<"ctcie", common::bittypes::bit_enable, 2, 2>,
-               groov::field<"teie", common::bittypes::bit_enable, 1, 1>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"tcie", common::bit_enable, 5, 5>,
+               groov::field<"btie", common::bit_enable, 4, 4>,
+               groov::field<"brtie", common::bit_enable, 3, 3>,
+               groov::field<"ctcie", common::bit_enable, 2, 2>,
+               groov::field<"teie", common::bit_enable, 1, 1>,
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // mdma_mdma_c11dar_v1: MDMA_C11DAR
 // Used by: MDMA
@@ -681,12 +681,12 @@ using mdma_mdma_c12cr_v1_tt =
                groov::field<"bex", bool, 12, 12>,
                groov::field<"reserved0", std::uint8_t, 11, 8, common::access::ro>,
                groov::field<"pl", std::uint8_t, 7, 6>,
-               groov::field<"tcie", common::bittypes::bit_enable, 5, 5>,
-               groov::field<"btie", common::bittypes::bit_enable, 4, 4>,
-               groov::field<"brtie", common::bittypes::bit_enable, 3, 3>,
-               groov::field<"ctcie", common::bittypes::bit_enable, 2, 2>,
-               groov::field<"teie", common::bittypes::bit_enable, 1, 1>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"tcie", common::bit_enable, 5, 5>,
+               groov::field<"btie", common::bit_enable, 4, 4>,
+               groov::field<"brtie", common::bit_enable, 3, 3>,
+               groov::field<"ctcie", common::bit_enable, 2, 2>,
+               groov::field<"teie", common::bit_enable, 1, 1>,
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // mdma_mdma_c12dar_v1: MDMA_C12DAR
 // Used by: MDMA
@@ -890,12 +890,12 @@ using mdma_mdma_c13cr_v1_tt =
                groov::field<"bex", bool, 12, 12>,
                groov::field<"reserved0", std::uint8_t, 11, 8, common::access::ro>,
                groov::field<"pl", std::uint8_t, 7, 6>,
-               groov::field<"tcie", common::bittypes::bit_enable, 5, 5>,
-               groov::field<"btie", common::bittypes::bit_enable, 4, 4>,
-               groov::field<"brtie", common::bittypes::bit_enable, 3, 3>,
-               groov::field<"ctcie", common::bittypes::bit_enable, 2, 2>,
-               groov::field<"teie", common::bittypes::bit_enable, 1, 1>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"tcie", common::bit_enable, 5, 5>,
+               groov::field<"btie", common::bit_enable, 4, 4>,
+               groov::field<"brtie", common::bit_enable, 3, 3>,
+               groov::field<"ctcie", common::bit_enable, 2, 2>,
+               groov::field<"teie", common::bit_enable, 1, 1>,
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // mdma_mdma_c13dar_v1: MDMA_C13DAR
 // Used by: MDMA
@@ -1099,12 +1099,12 @@ using mdma_mdma_c14cr_v1_tt =
                groov::field<"bex", bool, 12, 12>,
                groov::field<"reserved0", std::uint8_t, 11, 8, common::access::ro>,
                groov::field<"pl", std::uint8_t, 7, 6>,
-               groov::field<"tcie", common::bittypes::bit_enable, 5, 5>,
-               groov::field<"btie", common::bittypes::bit_enable, 4, 4>,
-               groov::field<"brtie", common::bittypes::bit_enable, 3, 3>,
-               groov::field<"ctcie", common::bittypes::bit_enable, 2, 2>,
-               groov::field<"teie", common::bittypes::bit_enable, 1, 1>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"tcie", common::bit_enable, 5, 5>,
+               groov::field<"btie", common::bit_enable, 4, 4>,
+               groov::field<"brtie", common::bit_enable, 3, 3>,
+               groov::field<"ctcie", common::bit_enable, 2, 2>,
+               groov::field<"teie", common::bit_enable, 1, 1>,
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // mdma_mdma_c14dar_v1: MDMA_C14DAR
 // Used by: MDMA
@@ -1308,12 +1308,12 @@ using mdma_mdma_c15cr_v1_tt =
                groov::field<"bex", bool, 12, 12>,
                groov::field<"reserved0", std::uint8_t, 11, 8, common::access::ro>,
                groov::field<"pl", std::uint8_t, 7, 6>,
-               groov::field<"tcie", common::bittypes::bit_enable, 5, 5>,
-               groov::field<"btie", common::bittypes::bit_enable, 4, 4>,
-               groov::field<"brtie", common::bittypes::bit_enable, 3, 3>,
-               groov::field<"ctcie", common::bittypes::bit_enable, 2, 2>,
-               groov::field<"teie", common::bittypes::bit_enable, 1, 1>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"tcie", common::bit_enable, 5, 5>,
+               groov::field<"btie", common::bit_enable, 4, 4>,
+               groov::field<"brtie", common::bit_enable, 3, 3>,
+               groov::field<"ctcie", common::bit_enable, 2, 2>,
+               groov::field<"teie", common::bit_enable, 1, 1>,
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // mdma_mdma_c15dar_v1: MDMA_C15DAR
 // Used by: MDMA
@@ -1517,12 +1517,12 @@ using mdma_mdma_c1cr_v1_tt =
                groov::field<"bex", bool, 12, 12>,
                groov::field<"reserved0", std::uint8_t, 11, 8, common::access::ro>,
                groov::field<"pl", std::uint8_t, 7, 6>,
-               groov::field<"tcie", common::bittypes::bit_enable, 5, 5>,
-               groov::field<"btie", common::bittypes::bit_enable, 4, 4>,
-               groov::field<"brtie", common::bittypes::bit_enable, 3, 3>,
-               groov::field<"ctcie", common::bittypes::bit_enable, 2, 2>,
-               groov::field<"teie", common::bittypes::bit_enable, 1, 1>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"tcie", common::bit_enable, 5, 5>,
+               groov::field<"btie", common::bit_enable, 4, 4>,
+               groov::field<"brtie", common::bit_enable, 3, 3>,
+               groov::field<"ctcie", common::bit_enable, 2, 2>,
+               groov::field<"teie", common::bit_enable, 1, 1>,
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // mdma_mdma_c1dar_v1: MDMA_C1DAR
 // Used by: MDMA
@@ -1726,12 +1726,12 @@ using mdma_mdma_c2cr_v1_tt =
                groov::field<"bex", bool, 12, 12>,
                groov::field<"reserved0", std::uint8_t, 11, 8, common::access::ro>,
                groov::field<"pl", std::uint8_t, 7, 6>,
-               groov::field<"tcie", common::bittypes::bit_enable, 5, 5>,
-               groov::field<"btie", common::bittypes::bit_enable, 4, 4>,
-               groov::field<"brtie", common::bittypes::bit_enable, 3, 3>,
-               groov::field<"ctcie", common::bittypes::bit_enable, 2, 2>,
-               groov::field<"teie", common::bittypes::bit_enable, 1, 1>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"tcie", common::bit_enable, 5, 5>,
+               groov::field<"btie", common::bit_enable, 4, 4>,
+               groov::field<"brtie", common::bit_enable, 3, 3>,
+               groov::field<"ctcie", common::bit_enable, 2, 2>,
+               groov::field<"teie", common::bit_enable, 1, 1>,
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // mdma_mdma_c2dar_v1: MDMA_C2DAR
 // Used by: MDMA
@@ -1935,12 +1935,12 @@ using mdma_mdma_c3cr_v1_tt =
                groov::field<"bex", bool, 12, 12>,
                groov::field<"reserved0", std::uint8_t, 11, 8, common::access::ro>,
                groov::field<"pl", std::uint8_t, 7, 6>,
-               groov::field<"tcie", common::bittypes::bit_enable, 5, 5>,
-               groov::field<"btie", common::bittypes::bit_enable, 4, 4>,
-               groov::field<"brtie", common::bittypes::bit_enable, 3, 3>,
-               groov::field<"ctcie", common::bittypes::bit_enable, 2, 2>,
-               groov::field<"teie", common::bittypes::bit_enable, 1, 1>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"tcie", common::bit_enable, 5, 5>,
+               groov::field<"btie", common::bit_enable, 4, 4>,
+               groov::field<"brtie", common::bit_enable, 3, 3>,
+               groov::field<"ctcie", common::bit_enable, 2, 2>,
+               groov::field<"teie", common::bit_enable, 1, 1>,
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // mdma_mdma_c3dar_v1: MDMA_C3DAR
 // Used by: MDMA
@@ -2144,12 +2144,12 @@ using mdma_mdma_c4cr_v1_tt =
                groov::field<"bex", bool, 12, 12>,
                groov::field<"reserved0", std::uint8_t, 11, 8, common::access::ro>,
                groov::field<"pl", std::uint8_t, 7, 6>,
-               groov::field<"tcie", common::bittypes::bit_enable, 5, 5>,
-               groov::field<"btie", common::bittypes::bit_enable, 4, 4>,
-               groov::field<"brtie", common::bittypes::bit_enable, 3, 3>,
-               groov::field<"ctcie", common::bittypes::bit_enable, 2, 2>,
-               groov::field<"teie", common::bittypes::bit_enable, 1, 1>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"tcie", common::bit_enable, 5, 5>,
+               groov::field<"btie", common::bit_enable, 4, 4>,
+               groov::field<"brtie", common::bit_enable, 3, 3>,
+               groov::field<"ctcie", common::bit_enable, 2, 2>,
+               groov::field<"teie", common::bit_enable, 1, 1>,
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // mdma_mdma_c4dar_v1: MDMA_C4DAR
 // Used by: MDMA
@@ -2353,12 +2353,12 @@ using mdma_mdma_c5cr_v1_tt =
                groov::field<"bex", bool, 12, 12>,
                groov::field<"reserved0", std::uint8_t, 11, 8, common::access::ro>,
                groov::field<"pl", std::uint8_t, 7, 6>,
-               groov::field<"tcie", common::bittypes::bit_enable, 5, 5>,
-               groov::field<"btie", common::bittypes::bit_enable, 4, 4>,
-               groov::field<"brtie", common::bittypes::bit_enable, 3, 3>,
-               groov::field<"ctcie", common::bittypes::bit_enable, 2, 2>,
-               groov::field<"teie", common::bittypes::bit_enable, 1, 1>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"tcie", common::bit_enable, 5, 5>,
+               groov::field<"btie", common::bit_enable, 4, 4>,
+               groov::field<"brtie", common::bit_enable, 3, 3>,
+               groov::field<"ctcie", common::bit_enable, 2, 2>,
+               groov::field<"teie", common::bit_enable, 1, 1>,
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // mdma_mdma_c5dar_v1: MDMA_C5DAR
 // Used by: MDMA
@@ -2562,12 +2562,12 @@ using mdma_mdma_c6cr_v1_tt =
                groov::field<"bex", bool, 12, 12>,
                groov::field<"reserved0", std::uint8_t, 11, 8, common::access::ro>,
                groov::field<"pl", std::uint8_t, 7, 6>,
-               groov::field<"tcie", common::bittypes::bit_enable, 5, 5>,
-               groov::field<"btie", common::bittypes::bit_enable, 4, 4>,
-               groov::field<"brtie", common::bittypes::bit_enable, 3, 3>,
-               groov::field<"ctcie", common::bittypes::bit_enable, 2, 2>,
-               groov::field<"teie", common::bittypes::bit_enable, 1, 1>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"tcie", common::bit_enable, 5, 5>,
+               groov::field<"btie", common::bit_enable, 4, 4>,
+               groov::field<"brtie", common::bit_enable, 3, 3>,
+               groov::field<"ctcie", common::bit_enable, 2, 2>,
+               groov::field<"teie", common::bit_enable, 1, 1>,
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // mdma_mdma_c6dar_v1: MDMA_C6DAR
 // Used by: MDMA
@@ -2771,12 +2771,12 @@ using mdma_mdma_c7cr_v1_tt =
                groov::field<"bex", bool, 12, 12>,
                groov::field<"reserved0", std::uint8_t, 11, 8, common::access::ro>,
                groov::field<"pl", std::uint8_t, 7, 6>,
-               groov::field<"tcie", common::bittypes::bit_enable, 5, 5>,
-               groov::field<"btie", common::bittypes::bit_enable, 4, 4>,
-               groov::field<"brtie", common::bittypes::bit_enable, 3, 3>,
-               groov::field<"ctcie", common::bittypes::bit_enable, 2, 2>,
-               groov::field<"teie", common::bittypes::bit_enable, 1, 1>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"tcie", common::bit_enable, 5, 5>,
+               groov::field<"btie", common::bit_enable, 4, 4>,
+               groov::field<"brtie", common::bit_enable, 3, 3>,
+               groov::field<"ctcie", common::bit_enable, 2, 2>,
+               groov::field<"teie", common::bit_enable, 1, 1>,
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // mdma_mdma_c7dar_v1: MDMA_C7DAR
 // Used by: MDMA
@@ -2980,12 +2980,12 @@ using mdma_mdma_c8cr_v1_tt =
                groov::field<"bex", bool, 12, 12>,
                groov::field<"reserved0", std::uint8_t, 11, 8, common::access::ro>,
                groov::field<"pl", std::uint8_t, 7, 6>,
-               groov::field<"tcie", common::bittypes::bit_enable, 5, 5>,
-               groov::field<"btie", common::bittypes::bit_enable, 4, 4>,
-               groov::field<"brtie", common::bittypes::bit_enable, 3, 3>,
-               groov::field<"ctcie", common::bittypes::bit_enable, 2, 2>,
-               groov::field<"teie", common::bittypes::bit_enable, 1, 1>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"tcie", common::bit_enable, 5, 5>,
+               groov::field<"btie", common::bit_enable, 4, 4>,
+               groov::field<"brtie", common::bit_enable, 3, 3>,
+               groov::field<"ctcie", common::bit_enable, 2, 2>,
+               groov::field<"teie", common::bit_enable, 1, 1>,
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // mdma_mdma_c8dar_v1: MDMA_C8DAR
 // Used by: MDMA
@@ -3189,12 +3189,12 @@ using mdma_mdma_c9cr_v1_tt =
                groov::field<"bex", bool, 12, 12>,
                groov::field<"reserved0", std::uint8_t, 11, 8, common::access::ro>,
                groov::field<"pl", std::uint8_t, 7, 6>,
-               groov::field<"tcie", common::bittypes::bit_enable, 5, 5>,
-               groov::field<"btie", common::bittypes::bit_enable, 4, 4>,
-               groov::field<"brtie", common::bittypes::bit_enable, 3, 3>,
-               groov::field<"ctcie", common::bittypes::bit_enable, 2, 2>,
-               groov::field<"teie", common::bittypes::bit_enable, 1, 1>,
-               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"tcie", common::bit_enable, 5, 5>,
+               groov::field<"btie", common::bit_enable, 4, 4>,
+               groov::field<"brtie", common::bit_enable, 3, 3>,
+               groov::field<"ctcie", common::bit_enable, 2, 2>,
+               groov::field<"teie", common::bit_enable, 1, 1>,
+               groov::field<"en", common::bit_enable, 0, 0>>;
 
 // mdma_mdma_c9dar_v1: MDMA_C9DAR
 // Used by: MDMA

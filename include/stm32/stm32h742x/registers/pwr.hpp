@@ -42,13 +42,13 @@ using pwr_cr1_v1_tt =
              common::access::rw,
                groov::field<"reserved2", std::uint16_t, 31, 19, common::access::ro>,
                groov::field<"als", std::uint8_t, 18, 17>,
-               groov::field<"avden", common::bittypes::bit_enable, 16, 16>,
+               groov::field<"avden", common::bit_enable, 16, 16>,
                groov::field<"svos", std::uint8_t, 15, 14>,
                groov::field<"reserved1", std::uint8_t, 13, 10, common::access::ro>,
                groov::field<"flps", bool, 9, 9>,
                groov::field<"dbp", bool, 8, 8>,
                groov::field<"pls", std::uint8_t, 7, 5>,
-               groov::field<"pvde", common::bittypes::bit_enable, 4, 4>,
+               groov::field<"pvde", common::bit_enable, 4, 4>,
                groov::field<"reserved0", std::uint8_t, 3, 1, common::access::ro>,
                groov::field<"lpds", bool, 0, 0>>;
 
@@ -68,11 +68,11 @@ using pwr_cr2_v1_tt =
                groov::field<"vbath", bool, 21, 21, common::access::ro>,
                groov::field<"vbatl", bool, 20, 20, common::access::ro>,
                groov::field<"reserved2", std::uint8_t, 19, 17, common::access::ro>,
-               groov::field<"brrdy", common::bittypes::bit_ready, 16, 16, common::access::ro>,
+               groov::field<"brrdy", common::bit_ready, 16, 16, common::access::ro>,
                groov::field<"reserved1", std::uint16_t, 15, 5, common::access::ro>,
-               groov::field<"monen", common::bittypes::bit_enable, 4, 4>,
+               groov::field<"monen", common::bit_enable, 4, 4>,
                groov::field<"reserved0", std::uint8_t, 3, 1, common::access::ro>,
-               groov::field<"bren", common::bittypes::bit_enable, 0, 0>>;
+               groov::field<"bren", common::bit_enable, 0, 0>>;
 
 // pwr_cr3_v1: CR3
 // Used by: PWR
@@ -85,15 +85,15 @@ using pwr_cr3_v1_tt =
              baseaddress + offset,
              common::access::rw,
                groov::field<"reserved2", std::uint8_t, 31, 27, common::access::ro>,
-               groov::field<"usb33rdy", common::bittypes::bit_ready, 26, 26, common::access::ro>,
-               groov::field<"usbregen", common::bittypes::bit_enable, 25, 25>,
-               groov::field<"usb33den", common::bittypes::bit_enable, 24, 24>,
+               groov::field<"usb33rdy", common::bit_ready, 26, 26, common::access::ro>,
+               groov::field<"usbregen", common::bit_enable, 25, 25>,
+               groov::field<"usb33den", common::bit_enable, 24, 24>,
                groov::field<"reserved1", std::uint16_t, 23, 10, common::access::ro>,
                groov::field<"vbrs", bool, 9, 9>,
                groov::field<"vbe", bool, 8, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 3, common::access::ro>,
-               groov::field<"scuen", common::bittypes::bit_enable, 2, 2>,
-               groov::field<"ldoen", common::bittypes::bit_enable, 1, 1>,
+               groov::field<"scuen", common::bit_enable, 2, 2>,
+               groov::field<"ldoen", common::bit_enable, 1, 1>,
                groov::field<"bypass", bool, 0, 0>>;
 
 // pwr_csr1_v1: CSR1
@@ -109,7 +109,7 @@ using pwr_csr1_v1_tt =
                groov::field<"reserved2", std::uint16_t, 31, 17>,
                groov::field<"avdo", bool, 16, 16>,
                groov::field<"actvos", std::uint8_t, 15, 14>,
-               groov::field<"actvosrdy", common::bittypes::bit_ready, 13, 13>,
+               groov::field<"actvosrdy", common::bit_ready, 13, 13>,
                groov::field<"reserved1", std::uint8_t, 12, 5>,
                groov::field<"pvdo", bool, 4, 4>,
                groov::field<"reserved0", std::uint8_t, 3, 0>>;
@@ -126,7 +126,7 @@ using pwr_d3cr_v1_tt =
              common::access::rw,
                groov::field<"reserved1", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"vos", std::uint8_t, 15, 14>,
-               groov::field<"vosrdy", common::bittypes::bit_ready, 13, 13, common::access::ro>,
+               groov::field<"vosrdy", common::bit_ready, 13, 13, common::access::ro>,
                groov::field<"reserved0", std::uint16_t, 12, 0, common::access::ro>>;
 
 // pwr_wkupcr_v1: WKUPCR
