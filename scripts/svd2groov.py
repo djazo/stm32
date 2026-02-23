@@ -233,49 +233,51 @@ def classify_bittype(field_name: str) -> str:
     """
     name = field_name.upper()
 
+    prefix = 'common::bittypes::'
+
     # bit_reset: suffix RST
     if name.endswith('RST'):
-        return 'bit_reset'
+        return f'{prefix}bit_reset'
 
     # bit_locked: contains LOCK or suffix LCK
     if 'LOCK' in name or name.endswith('LCK'):
-        return 'bit_locked'
+        return f'{prefix}bit_locked'
 
     # bit_ready: contains RDY
     if 'RDY' in name:
-        return 'bit_ready'
+        return f'{prefix}bit_ready'
 
     # bit_ready_bar: BSY (busy = not ready)
     if 'BSY' in name:
-        return 'bit_ready_bar'
+        return f'{prefix}bit_ready_bar'
 
     # bit_enable_bar: suffix DIS
     if name.endswith('DIS'):
-        return 'bit_enable_bar'
+        return f'{prefix}bit_enable_bar'
 
     # bit_enable: suffix EN
     if name.endswith('EN'):
-        return 'bit_enable'
+        return f'{prefix}bit_enable'
 
     # bit_enable: suffix IE (interrupt enable)
     if name.endswith('IE'):
-        return 'bit_enable'
+        return f'{prefix}bit_enable'
 
     # bit_enable: suffix DE (DMA enable)
     if name.endswith('DE'):
-        return 'bit_enable'
+        return f'{prefix}bit_enable'
 
     # bit_enable: suffix PE (preload enable)
     if name.endswith('PE'):
-        return 'bit_enable'
+        return f'{prefix}bit_enable'
 
     # bit_enable: suffix FE (fast enable)
     if name.endswith('FE'):
-        return 'bit_enable'
+        return f'{prefix}bit_enable'
 
     # bit_enable: digit + E (CC1E, CC2E, etc.)
     if len(name) >= 2 and name[-1] == 'E' and name[-2].isdigit():
-        return 'bit_enable'
+        return f'{prefix}bit_enable'
 
     return 'bool'
 
@@ -431,7 +433,7 @@ def field_line(f: Field, register_access: str, is_last: bool) -> str:
 
     # Only emit access if different from register default
     if groov_access and groov_access != reg_groov_access:
-        access_str = f', access::{groov_access}'
+        access_str = f', common::access::{groov_access}'
     else:
         access_str = ''
 
@@ -555,42 +557,51 @@ def process_mcu(
         ptype = periph_types[p.name]
         type_peripherals[ptype].append(p)
 
-    # 8. Detect identical peripheral layouts for deduplication
+    # 8. Detect shared peripheral types using SVD derivedFrom attribute.
     #    peripheral_name -> shared namespace (None if unique)
     shared_ns: dict[str, str | None] = {}
     #    shared namespace -> representative peripheral
     shared_representative: dict[str, Peripheral] = {}
 
+    periph_by_name = {p.name: p for p in peripherals}
+
     for ptype, p_list in type_peripherals.items():
-        # Group by layout signature (sorted register dedup keys + offsets)
-        layout_groups: dict[str, list[Peripheral]] = defaultdict(list)
+        ptype_names = {p.name for p in p_list}
+
+        # Build source -> [direct derived children] map within this ptype
+        children: dict[str, list[str]] = defaultdict(list)
         for p in p_list:
-            parts = []
-            for reg in p.registers:
-                dk = reg_template_map[(p.name, reg.name)]
-                parts.append((reg.name.lower(), dk, reg.offset))
-            parts.sort()
-            layout_sig = str(parts)
-            layout_groups[layout_sig].append(p)
+            if p.derived_from and p.derived_from in ptype_names:
+                children[p.derived_from].append(p.name)
 
-        multi = [ps for ps in layout_groups.values() if len(ps) > 1]
-        single = [ps[0] for ps in layout_groups.values()
-                  if len(ps) == 1]
+        # Each source-with-children forms a group (source + its derived)
+        # Sources that are themselves derived are not treated as group roots
+        in_group: set[str] = set()
+        groups: list[list[Peripheral]] = []
+        for p in p_list:
+            is_derived = p.derived_from and p.derived_from in ptype_names
+            if children.get(p.name) and not is_derived:
+                group = [p] + [periph_by_name[c] for c in children[p.name]]
+                groups.append(group)
+                for member in group:
+                    in_group.add(member.name)
 
-        for p in single:
-            shared_ns[p.name] = None
-
-        if len(multi) == 1:
+        # Assign shared namespaces to groups, standalone to the rest
+        if len(groups) == 1:
             ns = f'{ptype}x'
-            shared_representative[ns] = multi[0][0]
-            for p in multi[0]:
+            shared_representative[ns] = groups[0][0]
+            for p in groups[0]:
                 shared_ns[p.name] = ns
-        else:
-            for i, group in enumerate(multi):
+        elif len(groups) > 1:
+            for i, group in enumerate(groups):
                 ns = f'{ptype}x' if i == 0 else f'{ptype}x_v{i + 1}'
                 shared_representative[ns] = group[0]
                 for p in group:
                     shared_ns[p.name] = ns
+
+        for p in p_list:
+            if p.name not in in_group:
+                shared_ns[p.name] = None
 
     # 9. Generate peripheral header files
     periph_dir = mcu_dir / 'peripherals'
@@ -666,7 +677,7 @@ def generate_register_header(templates: list[RegisterTemplate]) -> str:
         lines.append('  groov::reg<name,')
         lines.append('             std::uint32_t,')
         lines.append('             baseaddress + offset,')
-        lines.append(f'             access::{groov_access},')
+        lines.append(f'             common::access::{groov_access},')
 
         for i, f in enumerate(tmpl.fields):
             is_last = (i == len(tmpl.fields) - 1)
@@ -702,14 +713,18 @@ def _emit_peripheral_namespace(
     lines.append('')
     lines.append(f'namespace {ns_name} {{')
 
-    # Using aliases for each register
+    # Using aliases for each register (as template aliases)
     reg_aliases = []
     for reg in p.registers:
         dedup_key = reg_template_map[(p.name, reg.name)]
         tmpl = sig_to_template[dedup_key]
         tname = template_name(tmpl)
         alias = f'{reg.name.lower()}_tt'
-        lines.append(f'  using {alias} = regs::{tname};')
+        lines.append(f'  template <stdx::ct_string name,')
+        lines.append(f'            std::uint32_t   baseaddress,')
+        lines.append(f'            std::uint32_t   offset>')
+        lines.append(
+            f'  using {alias} = regs::{tname}<name, baseaddress, offset>;')
         reg_aliases.append((alias, reg.name.lower(), reg.offset))
 
     lines.append('')
