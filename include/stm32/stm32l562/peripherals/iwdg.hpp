@@ -7,11 +7,26 @@
 namespace stm32::stm32l562 {
 
 namespace iwdgx {
-  using kr_tt = regs::iwdg_kr_v1_tt;
-  using pr_tt = regs::iwdg_pr_v1_tt;
-  using rlr_tt = regs::iwdg_rlr_v1_tt;
-  using sr_tt = regs::iwdg_sr_v1_tt;
-  using winr_tt = regs::iwdg_winr_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using kr_tt = regs::iwdg_kr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using pr_tt = regs::iwdg_pr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rlr_tt = regs::iwdg_rlr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using sr_tt = regs::iwdg_sr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using winr_tt = regs::iwdg_winr_v1_tt<name, baseaddress, offset>;
 
   template <stdx::ct_string name, std::uint32_t baseaddress>
   using iwdgx_t =

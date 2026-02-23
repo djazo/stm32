@@ -16,12 +16,12 @@ using sdadc_clrisr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved2", std::uint32_t, 31, 5, access::ro>,
+             common::access::rw,
+               groov::field<"reserved2", std::uint32_t, 31, 5, common::access::ro>,
                groov::field<"clrrovrf", bool, 4, 4>,
-               groov::field<"reserved1", bool, 3, 3, access::ro>,
+               groov::field<"reserved1", bool, 3, 3, common::access::ro>,
                groov::field<"clrjovrf", bool, 2, 2>,
-               groov::field<"reserved0", bool, 1, 1, access::ro>,
+               groov::field<"reserved0", bool, 1, 1, common::access::ro>,
                groov::field<"clreocalf", bool, 0, 0>>;
 
 // sdadc_conf0r_v1: CONF0R
@@ -33,13 +33,13 @@ using sdadc_conf0r_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"common0", std::uint8_t, 31, 30>,
-               groov::field<"reserved2", std::uint8_t, 29, 28, access::ro>,
+               groov::field<"reserved2", std::uint8_t, 29, 28, common::access::ro>,
                groov::field<"se0", std::uint8_t, 27, 26>,
-               groov::field<"reserved1", std::uint8_t, 25, 23, access::ro>,
+               groov::field<"reserved1", std::uint8_t, 25, 23, common::access::ro>,
                groov::field<"gain0", std::uint8_t, 22, 20>,
-               groov::field<"reserved0", std::uint8_t, 19, 12, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 19, 12, common::access::ro>,
                groov::field<"offset0", std::uint16_t, 11, 0>>;
 
 // sdadc_conf1r_v1: CONF1R
@@ -51,13 +51,13 @@ using sdadc_conf1r_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"common1", std::uint8_t, 31, 30>,
-               groov::field<"reserved2", std::uint8_t, 29, 28, access::ro>,
+               groov::field<"reserved2", std::uint8_t, 29, 28, common::access::ro>,
                groov::field<"se1", std::uint8_t, 27, 26>,
-               groov::field<"reserved1", std::uint8_t, 25, 23, access::ro>,
+               groov::field<"reserved1", std::uint8_t, 25, 23, common::access::ro>,
                groov::field<"gain1", std::uint8_t, 22, 20>,
-               groov::field<"reserved0", std::uint8_t, 19, 12, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 19, 12, common::access::ro>,
                groov::field<"offset1", std::uint16_t, 11, 0>>;
 
 // sdadc_conf2r_v1: CONF2R
@@ -69,13 +69,13 @@ using sdadc_conf2r_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"common2", std::uint8_t, 31, 30>,
-               groov::field<"reserved2", std::uint8_t, 29, 28, access::ro>,
+               groov::field<"reserved2", std::uint8_t, 29, 28, common::access::ro>,
                groov::field<"se2", std::uint8_t, 27, 26>,
-               groov::field<"reserved1", std::uint8_t, 25, 23, access::ro>,
+               groov::field<"reserved1", std::uint8_t, 25, 23, common::access::ro>,
                groov::field<"gain2", std::uint8_t, 22, 20>,
-               groov::field<"reserved0", std::uint8_t, 19, 12, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 19, 12, common::access::ro>,
                groov::field<"offset2", std::uint16_t, 11, 0>>;
 
 // sdadc_confchr1_v1: CONFCHR1
@@ -87,22 +87,22 @@ using sdadc_confchr1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved7", std::uint8_t, 31, 30, access::ro>,
+             common::access::rw,
+               groov::field<"reserved7", std::uint8_t, 31, 30, common::access::ro>,
                groov::field<"confch7", std::uint8_t, 29, 28>,
-               groov::field<"reserved6", std::uint8_t, 27, 26, access::ro>,
+               groov::field<"reserved6", std::uint8_t, 27, 26, common::access::ro>,
                groov::field<"confch6", std::uint8_t, 25, 24>,
-               groov::field<"reserved5", std::uint8_t, 23, 22, access::ro>,
+               groov::field<"reserved5", std::uint8_t, 23, 22, common::access::ro>,
                groov::field<"confch5", std::uint8_t, 21, 20>,
-               groov::field<"reserved4", std::uint8_t, 19, 18, access::ro>,
+               groov::field<"reserved4", std::uint8_t, 19, 18, common::access::ro>,
                groov::field<"confch4", std::uint8_t, 17, 16>,
-               groov::field<"reserved3", std::uint8_t, 15, 14, access::ro>,
+               groov::field<"reserved3", std::uint8_t, 15, 14, common::access::ro>,
                groov::field<"confch3", std::uint8_t, 13, 12>,
-               groov::field<"reserved2", std::uint8_t, 11, 10, access::ro>,
+               groov::field<"reserved2", std::uint8_t, 11, 10, common::access::ro>,
                groov::field<"confch2", std::uint8_t, 9, 8>,
-               groov::field<"reserved1", std::uint8_t, 7, 6, access::ro>,
+               groov::field<"reserved1", std::uint8_t, 7, 6, common::access::ro>,
                groov::field<"confch1", std::uint8_t, 5, 4>,
-               groov::field<"reserved0", std::uint8_t, 3, 2, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 3, 2, common::access::ro>,
                groov::field<"confch0", std::uint8_t, 1, 0>>;
 
 // sdadc_confchr2_v1: CONFCHR2
@@ -114,8 +114,8 @@ using sdadc_confchr2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 2, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 2, common::access::ro>,
                groov::field<"confch8", std::uint8_t, 1, 0>>;
 
 // sdadc_cr1_v1: CR1
@@ -127,24 +127,24 @@ using sdadc_cr1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"init", bool, 31, 31>,
-               groov::field<"reserved2", std::uint16_t, 30, 18, access::ro>,
-               groov::field<"rdmaen", bit_enable, 17, 17>,
-               groov::field<"jdmaen", bit_enable, 16, 16>,
+               groov::field<"reserved2", std::uint16_t, 30, 18, common::access::ro>,
+               groov::field<"rdmaen", common::bittypes::bit_enable, 17, 17>,
+               groov::field<"jdmaen", common::bittypes::bit_enable, 16, 16>,
                groov::field<"rsync", bool, 15, 15>,
                groov::field<"jsync", bool, 14, 14>,
-               groov::field<"reserved1", bool, 13, 13, access::ro>,
+               groov::field<"reserved1", bool, 13, 13, common::access::ro>,
                groov::field<"pdi", bool, 12, 12>,
                groov::field<"sbi", bool, 11, 11>,
                groov::field<"slowck", bool, 10, 10>,
                groov::field<"refv", std::uint8_t, 9, 8>,
-               groov::field<"reserved0", std::uint8_t, 7, 5, access::ro>,
-               groov::field<"rovrie", bit_enable, 4, 4>,
-               groov::field<"reocie", bit_enable, 3, 3>,
-               groov::field<"jovrie", bit_enable, 2, 2>,
-               groov::field<"jeocie", bit_enable, 1, 1>,
-               groov::field<"eocalie", bit_enable, 0, 0>>;
+               groov::field<"reserved0", std::uint8_t, 7, 5, common::access::ro>,
+               groov::field<"rovrie", common::bittypes::bit_enable, 4, 4>,
+               groov::field<"reocie", common::bittypes::bit_enable, 3, 3>,
+               groov::field<"jovrie", common::bittypes::bit_enable, 2, 2>,
+               groov::field<"jeocie", common::bittypes::bit_enable, 1, 1>,
+               groov::field<"eocalie", common::bittypes::bit_enable, 0, 0>>;
 
 // sdadc_cr2_v1: CR2
 // Used by: SDADC1, SDADC2, SDADC3
@@ -155,22 +155,22 @@ using sdadc_cr2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved4", std::uint8_t, 31, 25, access::ro>,
+             common::access::rw,
+               groov::field<"reserved4", std::uint8_t, 31, 25, common::access::ro>,
                groov::field<"fast", bool, 24, 24>,
                groov::field<"rswstart", bool, 23, 23>,
                groov::field<"rcont", bool, 22, 22>,
-               groov::field<"reserved3", std::uint8_t, 21, 20, access::ro>,
+               groov::field<"reserved3", std::uint8_t, 21, 20, common::access::ro>,
                groov::field<"rch", std::uint8_t, 19, 16>,
                groov::field<"jswstart", bool, 15, 15>,
                groov::field<"jexten", std::uint8_t, 14, 13>,
-               groov::field<"reserved2", bool, 12, 12, access::ro>,
+               groov::field<"reserved2", bool, 12, 12, common::access::ro>,
                groov::field<"jextsel", std::uint8_t, 11, 8>,
-               groov::field<"reserved1", bool, 7, 7, access::ro>,
+               groov::field<"reserved1", bool, 7, 7, common::access::ro>,
                groov::field<"jds", bool, 6, 6>,
                groov::field<"jcont", bool, 5, 5>,
                groov::field<"startcalib", bool, 4, 4>,
-               groov::field<"reserved0", bool, 3, 3, access::ro>,
+               groov::field<"reserved0", bool, 3, 3, common::access::ro>,
                groov::field<"calibcnt", std::uint8_t, 2, 1>,
                groov::field<"adon", bool, 0, 0>>;
 
@@ -183,8 +183,8 @@ using sdadc_isr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
-               groov::field<"initrdy", bit_ready, 31, 31>,
+             common::access::ro,
+               groov::field<"initrdy", common::bittypes::bit_ready, 31, 31>,
                groov::field<"reserved1", std::uint16_t, 30, 16>,
                groov::field<"stabip", bool, 15, 15>,
                groov::field<"rcip", bool, 14, 14>,
@@ -206,8 +206,8 @@ using sdadc_jchgr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 9, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 9, common::access::ro>,
                groov::field<"jchg", std::uint16_t, 8, 0>>;
 
 // sdadc_jdata12r_v1: JDATA12R
@@ -219,7 +219,7 @@ using sdadc_jdata12r_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"jdata2", std::uint16_t, 31, 16>,
                groov::field<"jdata1", std::uint16_t, 15, 0>>;
 
@@ -232,7 +232,7 @@ using sdadc_jdata13r_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"jdata3", std::uint16_t, 31, 16>,
                groov::field<"jdata1", std::uint16_t, 15, 0>>;
 
@@ -245,7 +245,7 @@ using sdadc_jdatar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved1", std::uint8_t, 31, 29>,
                groov::field<"jdatach", std::uint8_t, 28, 25>,
                groov::field<"reserved0", std::uint16_t, 24, 16>,
@@ -260,7 +260,7 @@ using sdadc_rdata12r_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"rdata2", std::uint16_t, 31, 16>,
                groov::field<"rdata1", std::uint16_t, 15, 0>>;
 
@@ -273,7 +273,7 @@ using sdadc_rdata13r_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"rdata3", std::uint16_t, 31, 16>,
                groov::field<"rdata1", std::uint16_t, 15, 0>>;
 
@@ -286,7 +286,7 @@ using sdadc_rdatar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint16_t, 31, 16>,
                groov::field<"rdata", std::uint16_t, 15, 0>>;
 

@@ -7,30 +7,102 @@
 namespace stm32::stm32g061 {
 
 namespace timx {
-  using cr1_tt = regs::tim_cr1_v1_tt;
-  using cr2_tt = regs::tim_cr2_v1_tt;
-  using smcr_tt = regs::tim_smcr_v1_tt;
-  using dier_tt = regs::tim_dier_v1_tt;
-  using sr_tt = regs::tim_sr_v1_tt;
-  using egr_tt = regs::tim_egr_v1_tt;
-  using ccmr1_output_tt = regs::tim_ccmr1_output_v2_tt;
-  using ccmr1_input_tt = regs::tim_ccmr1_input_v2_tt;
-  using ccmr2_output_tt = regs::tim_ccmr2_output_v2_tt;
-  using ccmr2_input_tt = regs::tim_ccmr2_input_v2_tt;
-  using ccer_tt = regs::tim_ccer_v1_tt;
-  using cnt_tt = regs::tim_cnt_v1_tt;
-  using cnt_alternate5_tt = regs::tim_cnt_alternate5_v1_tt;
-  using psc_tt = regs::tim_psc_v1_tt;
-  using arr_tt = regs::tim_arr_v1_tt;
-  using ccr1_tt = regs::tim_ccr1_v1_tt;
-  using ccr2_tt = regs::tim_ccr2_v1_tt;
-  using ccr3_tt = regs::tim_ccr3_v1_tt;
-  using ccr4_tt = regs::tim_ccr4_v1_tt;
-  using dcr_tt = regs::tim_dcr_v1_tt;
-  using dmar_tt = regs::tim_dmar_v1_tt;
-  using or1_tt = regs::tim_or1_v1_tt;
-  using af1_tt = regs::tim_af1_v1_tt;
-  using tisel_tt = regs::tim_tisel_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cr1_tt = regs::tim_cr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cr2_tt = regs::tim_cr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using smcr_tt = regs::tim_smcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dier_tt = regs::tim_dier_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using sr_tt = regs::tim_sr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using egr_tt = regs::tim_egr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ccmr1_output_tt = regs::tim_ccmr1_output_v2_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ccmr1_input_tt = regs::tim_ccmr1_input_v2_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ccmr2_output_tt = regs::tim_ccmr2_output_v2_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ccmr2_input_tt = regs::tim_ccmr2_input_v2_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ccer_tt = regs::tim_ccer_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cnt_tt = regs::tim_cnt_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cnt_alternate5_tt = regs::tim_cnt_alternate5_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using psc_tt = regs::tim_psc_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using arr_tt = regs::tim_arr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ccr1_tt = regs::tim_ccr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ccr2_tt = regs::tim_ccr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ccr3_tt = regs::tim_ccr3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ccr4_tt = regs::tim_ccr4_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dcr_tt = regs::tim_dcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dmar_tt = regs::tim_dmar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using or1_tt = regs::tim_or1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using af1_tt = regs::tim_af1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using tisel_tt = regs::tim_tisel_v1_tt<name, baseaddress, offset>;
 
   template <stdx::ct_string name, std::uint32_t baseaddress>
   using timx_t =
@@ -64,14 +136,38 @@ namespace timx {
 } // namespace timx
 
 namespace timx_v2 {
-  using cr1_tt = regs::tim_cr1_v2_tt;
-  using cr2_tt = regs::tim_cr2_v2_tt;
-  using dier_tt = regs::tim_dier_v2_tt;
-  using sr_tt = regs::tim_sr_v2_tt;
-  using egr_tt = regs::tim_egr_v2_tt;
-  using cnt_tt = regs::tim_cnt_v2_tt;
-  using psc_tt = regs::tim_psc_v1_tt;
-  using arr_tt = regs::tim_arr_v2_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cr1_tt = regs::tim_cr1_v2_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cr2_tt = regs::tim_cr2_v2_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dier_tt = regs::tim_dier_v2_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using sr_tt = regs::tim_sr_v2_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using egr_tt = regs::tim_egr_v2_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cnt_tt = regs::tim_cnt_v2_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using psc_tt = regs::tim_psc_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using arr_tt = regs::tim_arr_v2_tt<name, baseaddress, offset>;
 
   template <stdx::ct_string name, std::uint32_t baseaddress>
   using timx_v2_t =
@@ -89,24 +185,78 @@ namespace timx_v2 {
 } // namespace timx_v2
 
 namespace timx_v3 {
-  using cr1_tt = regs::tim_cr1_v3_tt;
-  using cr2_tt = regs::tim_cr2_v4_tt;
-  using dier_tt = regs::tim_dier_v5_tt;
-  using sr_tt = regs::tim_sr_v5_tt;
-  using egr_tt = regs::tim_egr_v5_tt;
-  using ccmr1_output_tt = regs::tim_ccmr1_output_v3_tt;
-  using ccmr1_input_tt = regs::tim_ccmr1_input_v3_tt;
-  using ccer_tt = regs::tim_ccer_v4_tt;
-  using cnt_tt = regs::tim_cnt_v2_tt;
-  using psc_tt = regs::tim_psc_v1_tt;
-  using arr_tt = regs::tim_arr_v2_tt;
-  using rcr_tt = regs::tim_rcr_v1_tt;
-  using ccr1_tt = regs::tim_ccr1_v2_tt;
-  using bdtr_tt = regs::tim_bdtr_v1_tt;
-  using dcr_tt = regs::tim_dcr_v1_tt;
-  using dmar_tt = regs::tim_dmar_v1_tt;
-  using af1_tt = regs::tim_af1_v3_tt;
-  using tisel_tt = regs::tim_tisel_v2_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cr1_tt = regs::tim_cr1_v3_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cr2_tt = regs::tim_cr2_v4_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dier_tt = regs::tim_dier_v5_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using sr_tt = regs::tim_sr_v5_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using egr_tt = regs::tim_egr_v5_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ccmr1_output_tt = regs::tim_ccmr1_output_v3_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ccmr1_input_tt = regs::tim_ccmr1_input_v3_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ccer_tt = regs::tim_ccer_v4_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cnt_tt = regs::tim_cnt_v2_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using psc_tt = regs::tim_psc_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using arr_tt = regs::tim_arr_v2_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rcr_tt = regs::tim_rcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ccr1_tt = regs::tim_ccr1_v2_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using bdtr_tt = regs::tim_bdtr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dcr_tt = regs::tim_dcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dmar_tt = regs::tim_dmar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using af1_tt = regs::tim_af1_v3_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using tisel_tt = regs::tim_tisel_v2_tt<name, baseaddress, offset>;
 
   template <stdx::ct_string name, std::uint32_t baseaddress>
   using timx_v3_t =
@@ -134,35 +284,122 @@ namespace timx_v3 {
 } // namespace timx_v3
 
 namespace tim1 {
-  using tim1_cr1_tt = regs::tim_tim1_cr1_v1_tt;
-  using tim1_cr2_tt = regs::tim_tim1_cr2_v1_tt;
-  using tim1_smcr_tt = regs::tim_tim1_smcr_v1_tt;
-  using tim1_dier_tt = regs::tim_tim1_dier_v1_tt;
-  using tim1_sr_tt = regs::tim_tim1_sr_v1_tt;
-  using tim1_egr_tt = regs::tim_tim1_egr_v1_tt;
-  using ccmr1_output_tt = regs::tim_ccmr1_output_v1_tt;
-  using ccmr1_input_tt = regs::tim_ccmr1_input_v1_tt;
-  using ccmr2_output_tt = regs::tim_ccmr2_output_v1_tt;
-  using ccmr2_input_tt = regs::tim_ccmr2_input_v1_tt;
-  using tim1_ccer_tt = regs::tim_tim1_ccer_v1_tt;
-  using tim1_cnt_tt = regs::tim_tim1_cnt_v1_tt;
-  using tim1_psc_tt = regs::tim_tim1_psc_v1_tt;
-  using tim1_arr_tt = regs::tim_tim1_arr_v1_tt;
-  using tim1_rcr_tt = regs::tim_tim1_rcr_v1_tt;
-  using tim1_ccr1_tt = regs::tim_tim1_ccr1_v1_tt;
-  using tim1_ccr2_tt = regs::tim_tim1_ccr2_v1_tt;
-  using tim1_ccr3_tt = regs::tim_tim1_ccr3_v1_tt;
-  using tim1_ccr4_tt = regs::tim_tim1_ccr4_v1_tt;
-  using tim1_bdtr_tt = regs::tim_tim1_bdtr_v1_tt;
-  using tim1_dcr_tt = regs::tim_tim1_dcr_v1_tt;
-  using tim1_dmar_tt = regs::tim_tim1_dmar_v1_tt;
-  using tim1_or1_tt = regs::tim_tim1_or1_v1_tt;
-  using ccmr3_output_tt = regs::tim_ccmr3_output_v1_tt;
-  using tim1_ccr5_tt = regs::tim_tim1_ccr5_v1_tt;
-  using tim1_ccr6_tt = regs::tim_tim1_ccr6_v1_tt;
-  using tim1_af1_tt = regs::tim_tim1_af1_v1_tt;
-  using tim1_af2_tt = regs::tim_tim1_af2_v1_tt;
-  using tim1_tisel_tt = regs::tim_tim1_tisel_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using tim1_cr1_tt = regs::tim_tim1_cr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using tim1_cr2_tt = regs::tim_tim1_cr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using tim1_smcr_tt = regs::tim_tim1_smcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using tim1_dier_tt = regs::tim_tim1_dier_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using tim1_sr_tt = regs::tim_tim1_sr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using tim1_egr_tt = regs::tim_tim1_egr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ccmr1_output_tt = regs::tim_ccmr1_output_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ccmr1_input_tt = regs::tim_ccmr1_input_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ccmr2_output_tt = regs::tim_ccmr2_output_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ccmr2_input_tt = regs::tim_ccmr2_input_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using tim1_ccer_tt = regs::tim_tim1_ccer_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using tim1_cnt_tt = regs::tim_tim1_cnt_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using tim1_psc_tt = regs::tim_tim1_psc_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using tim1_arr_tt = regs::tim_tim1_arr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using tim1_rcr_tt = regs::tim_tim1_rcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using tim1_ccr1_tt = regs::tim_tim1_ccr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using tim1_ccr2_tt = regs::tim_tim1_ccr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using tim1_ccr3_tt = regs::tim_tim1_ccr3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using tim1_ccr4_tt = regs::tim_tim1_ccr4_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using tim1_bdtr_tt = regs::tim_tim1_bdtr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using tim1_dcr_tt = regs::tim_tim1_dcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using tim1_dmar_tt = regs::tim_tim1_dmar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using tim1_or1_tt = regs::tim_tim1_or1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ccmr3_output_tt = regs::tim_ccmr3_output_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using tim1_ccr5_tt = regs::tim_tim1_ccr5_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using tim1_ccr6_tt = regs::tim_tim1_ccr6_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using tim1_af1_tt = regs::tim_tim1_af1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using tim1_af2_tt = regs::tim_tim1_af2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using tim1_tisel_tt = regs::tim_tim1_tisel_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using tim1_t =
@@ -201,18 +438,54 @@ namespace tim1 {
 } // namespace tim1
 
 namespace tim14 {
-  using cr1_tt = regs::tim_cr1_v3_tt;
-  using dier_tt = regs::tim_dier_v3_tt;
-  using sr_tt = regs::tim_sr_v3_tt;
-  using egr_tt = regs::tim_egr_v3_tt;
-  using ccmr1_output_tt = regs::tim_ccmr1_output_v3_tt;
-  using ccmr1_input_tt = regs::tim_ccmr1_input_v3_tt;
-  using ccer_tt = regs::tim_ccer_v2_tt;
-  using cnt_tt = regs::tim_cnt_v3_tt;
-  using psc_tt = regs::tim_psc_v1_tt;
-  using arr_tt = regs::tim_arr_v2_tt;
-  using ccr1_tt = regs::tim_ccr1_v2_tt;
-  using tisel_tt = regs::tim_tisel_v2_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cr1_tt = regs::tim_cr1_v3_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dier_tt = regs::tim_dier_v3_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using sr_tt = regs::tim_sr_v3_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using egr_tt = regs::tim_egr_v3_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ccmr1_output_tt = regs::tim_ccmr1_output_v3_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ccmr1_input_tt = regs::tim_ccmr1_input_v3_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ccer_tt = regs::tim_ccer_v2_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cnt_tt = regs::tim_cnt_v3_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using psc_tt = regs::tim_psc_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using arr_tt = regs::tim_arr_v2_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ccr1_tt = regs::tim_ccr1_v2_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using tisel_tt = regs::tim_tisel_v2_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using tim14_t =
@@ -234,26 +507,86 @@ namespace tim14 {
 } // namespace tim14
 
 namespace tim15 {
-  using cr1_tt = regs::tim_cr1_v3_tt;
-  using cr2_tt = regs::tim_cr2_v3_tt;
-  using smcr_tt = regs::tim_smcr_v2_tt;
-  using dier_tt = regs::tim_dier_v4_tt;
-  using sr_tt = regs::tim_sr_v4_tt;
-  using egr_tt = regs::tim_egr_v4_tt;
-  using ccmr1_output_tt = regs::tim_ccmr1_output_v4_tt;
-  using ccmr1_input_tt = regs::tim_ccmr1_input_v1_tt;
-  using ccer_tt = regs::tim_ccer_v3_tt;
-  using cnt_tt = regs::tim_cnt_v2_tt;
-  using psc_tt = regs::tim_psc_v1_tt;
-  using arr_tt = regs::tim_arr_v2_tt;
-  using rcr_tt = regs::tim_rcr_v1_tt;
-  using ccr1_tt = regs::tim_ccr1_v2_tt;
-  using ccr2_tt = regs::tim_ccr2_v2_tt;
-  using bdtr_tt = regs::tim_bdtr_v1_tt;
-  using dcr_tt = regs::tim_dcr_v1_tt;
-  using dmar_tt = regs::tim_dmar_v1_tt;
-  using af1_tt = regs::tim_af1_v2_tt;
-  using tisel_tt = regs::tim_tisel_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cr1_tt = regs::tim_cr1_v3_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cr2_tt = regs::tim_cr2_v3_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using smcr_tt = regs::tim_smcr_v2_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dier_tt = regs::tim_dier_v4_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using sr_tt = regs::tim_sr_v4_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using egr_tt = regs::tim_egr_v4_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ccmr1_output_tt = regs::tim_ccmr1_output_v4_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ccmr1_input_tt = regs::tim_ccmr1_input_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ccer_tt = regs::tim_ccer_v3_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cnt_tt = regs::tim_cnt_v2_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using psc_tt = regs::tim_psc_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using arr_tt = regs::tim_arr_v2_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rcr_tt = regs::tim_rcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ccr1_tt = regs::tim_ccr1_v2_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ccr2_tt = regs::tim_ccr2_v2_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using bdtr_tt = regs::tim_bdtr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dcr_tt = regs::tim_dcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dmar_tt = regs::tim_dmar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using af1_tt = regs::tim_af1_v2_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using tisel_tt = regs::tim_tisel_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using tim15_t =

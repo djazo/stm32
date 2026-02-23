@@ -7,22 +7,70 @@
 namespace stm32::stm32f373 {
 
 namespace sdadcx {
-  using cr1_tt = regs::sdadc_cr1_v1_tt;
-  using cr2_tt = regs::sdadc_cr2_v1_tt;
-  using isr_tt = regs::sdadc_isr_v1_tt;
-  using clrisr_tt = regs::sdadc_clrisr_v1_tt;
-  using jchgr_tt = regs::sdadc_jchgr_v1_tt;
-  using conf0r_tt = regs::sdadc_conf0r_v1_tt;
-  using conf1r_tt = regs::sdadc_conf1r_v1_tt;
-  using conf2r_tt = regs::sdadc_conf2r_v1_tt;
-  using confchr1_tt = regs::sdadc_confchr1_v1_tt;
-  using confchr2_tt = regs::sdadc_confchr2_v1_tt;
-  using jdatar_tt = regs::sdadc_jdatar_v1_tt;
-  using rdatar_tt = regs::sdadc_rdatar_v1_tt;
-  using jdata12r_tt = regs::sdadc_jdata12r_v1_tt;
-  using rdata12r_tt = regs::sdadc_rdata12r_v1_tt;
-  using jdata13r_tt = regs::sdadc_jdata13r_v1_tt;
-  using rdata13r_tt = regs::sdadc_rdata13r_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cr1_tt = regs::sdadc_cr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cr2_tt = regs::sdadc_cr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using isr_tt = regs::sdadc_isr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using clrisr_tt = regs::sdadc_clrisr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using jchgr_tt = regs::sdadc_jchgr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using conf0r_tt = regs::sdadc_conf0r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using conf1r_tt = regs::sdadc_conf1r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using conf2r_tt = regs::sdadc_conf2r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using confchr1_tt = regs::sdadc_confchr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using confchr2_tt = regs::sdadc_confchr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using jdatar_tt = regs::sdadc_jdatar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rdatar_tt = regs::sdadc_rdatar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using jdata12r_tt = regs::sdadc_jdata12r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rdata12r_tt = regs::sdadc_rdata12r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using jdata13r_tt = regs::sdadc_jdata13r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rdata13r_tt = regs::sdadc_rdata13r_v1_tt<name, baseaddress, offset>;
 
   template <stdx::ct_string name, std::uint32_t baseaddress>
   using sdadcx_t =

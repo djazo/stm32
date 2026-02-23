@@ -7,15 +7,42 @@
 namespace stm32::stm32f412 {
 
 namespace i2cx {
-  using cr1_tt = regs::i2c_cr1_v1_tt;
-  using cr2_tt = regs::i2c_cr2_v1_tt;
-  using oar1_tt = regs::i2c_oar1_v1_tt;
-  using oar2_tt = regs::i2c_oar2_v1_tt;
-  using dr_tt = regs::i2c_dr_v1_tt;
-  using sr1_tt = regs::i2c_sr1_v1_tt;
-  using sr2_tt = regs::i2c_sr2_v1_tt;
-  using ccr_tt = regs::i2c_ccr_v1_tt;
-  using trise_tt = regs::i2c_trise_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cr1_tt = regs::i2c_cr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cr2_tt = regs::i2c_cr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using oar1_tt = regs::i2c_oar1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using oar2_tt = regs::i2c_oar2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dr_tt = regs::i2c_dr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using sr1_tt = regs::i2c_sr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using sr2_tt = regs::i2c_sr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ccr_tt = regs::i2c_ccr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using trise_tt = regs::i2c_trise_v1_tt<name, baseaddress, offset>;
 
   template <stdx::ct_string name, std::uint32_t baseaddress>
   using i2cx_t =
@@ -34,17 +61,50 @@ namespace i2cx {
 } // namespace i2cx
 
 namespace i2c4 {
-  using cr1_tt = regs::i2c_cr1_v2_tt;
-  using cr2_tt = regs::i2c_cr2_v2_tt;
-  using oar1_tt = regs::i2c_oar1_v2_tt;
-  using oar2_tt = regs::i2c_oar2_v2_tt;
-  using timingr_tt = regs::i2c_timingr_v1_tt;
-  using timeoutr_tt = regs::i2c_timeoutr_v1_tt;
-  using isr_tt = regs::i2c_isr_v1_tt;
-  using icr_tt = regs::i2c_icr_v1_tt;
-  using pecr_tt = regs::i2c_pecr_v1_tt;
-  using rxdr_tt = regs::i2c_rxdr_v1_tt;
-  using txdr_tt = regs::i2c_txdr_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cr1_tt = regs::i2c_cr1_v2_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cr2_tt = regs::i2c_cr2_v2_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using oar1_tt = regs::i2c_oar1_v2_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using oar2_tt = regs::i2c_oar2_v2_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using timingr_tt = regs::i2c_timingr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using timeoutr_tt = regs::i2c_timeoutr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using isr_tt = regs::i2c_isr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using icr_tt = regs::i2c_icr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using pecr_tt = regs::i2c_pecr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rxdr_tt = regs::i2c_rxdr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using txdr_tt = regs::i2c_txdr_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using i2c4_t =

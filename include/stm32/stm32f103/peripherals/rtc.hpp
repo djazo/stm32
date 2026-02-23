@@ -7,16 +7,46 @@
 namespace stm32::stm32f103 {
 
 namespace rtc {
-  using crh_tt = regs::rtc_crh_v1_tt;
-  using crl_tt = regs::rtc_crl_v1_tt;
-  using prlh_tt = regs::rtc_prlh_v1_tt;
-  using prll_tt = regs::rtc_prll_v1_tt;
-  using divh_tt = regs::rtc_divh_v1_tt;
-  using divl_tt = regs::rtc_divl_v1_tt;
-  using cnth_tt = regs::rtc_cnth_v1_tt;
-  using cntl_tt = regs::rtc_cntl_v1_tt;
-  using alrh_tt = regs::rtc_alrh_v1_tt;
-  using alrl_tt = regs::rtc_alrl_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using crh_tt = regs::rtc_crh_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using crl_tt = regs::rtc_crl_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using prlh_tt = regs::rtc_prlh_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using prll_tt = regs::rtc_prll_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using divh_tt = regs::rtc_divh_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using divl_tt = regs::rtc_divl_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cnth_tt = regs::rtc_cnth_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cntl_tt = regs::rtc_cntl_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using alrh_tt = regs::rtc_alrh_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using alrl_tt = regs::rtc_alrl_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using rtc_t =

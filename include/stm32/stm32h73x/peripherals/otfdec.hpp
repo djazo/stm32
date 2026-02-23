@@ -7,45 +7,162 @@
 namespace stm32::stm32h73x {
 
 namespace otfdecx {
-  using otfdec_r1cfgr_tt = regs::otfdec_otfdec_r1cfgr_v1_tt;
-  using otfdec_r1startaddr_tt = regs::otfdec_otfdec_r1startaddr_v1_tt;
-  using otfdec_r1endaddr_tt = regs::otfdec_otfdec_r1endaddr_v1_tt;
-  using otfdec_r1noncer0_tt = regs::otfdec_otfdec_r1noncer0_v1_tt;
-  using otfdec_r1noncer1_tt = regs::otfdec_otfdec_r1noncer1_v1_tt;
-  using otfdec_r1keyr0_tt = regs::otfdec_otfdec_r1keyr0_v1_tt;
-  using otfdec_r1keyr1_tt = regs::otfdec_otfdec_r1keyr1_v1_tt;
-  using otfdec_r1keyr2_tt = regs::otfdec_otfdec_r1keyr2_v1_tt;
-  using otfdec_r1keyr3_tt = regs::otfdec_otfdec_r1keyr3_v1_tt;
-  using otfdec_r2cfgr_tt = regs::otfdec_otfdec_r2cfgr_v1_tt;
-  using otfdec_r2startaddr_tt = regs::otfdec_otfdec_r2startaddr_v1_tt;
-  using otfdec_r2endaddr_tt = regs::otfdec_otfdec_r2endaddr_v1_tt;
-  using otfdec_r2noncer0_tt = regs::otfdec_otfdec_r2noncer0_v1_tt;
-  using otfdec_r2noncer1_tt = regs::otfdec_otfdec_r2noncer1_v1_tt;
-  using otfdec_r2keyr0_tt = regs::otfdec_otfdec_r2keyr0_v1_tt;
-  using otfdec_r2keyr1_tt = regs::otfdec_otfdec_r2keyr1_v1_tt;
-  using otfdec_r2keyr2_tt = regs::otfdec_otfdec_r2keyr2_v1_tt;
-  using otfdec_r2keyr3_tt = regs::otfdec_otfdec_r2keyr3_v1_tt;
-  using otfdec_r3cfgr_tt = regs::otfdec_otfdec_r3cfgr_v1_tt;
-  using otfdec_r3startaddr_tt = regs::otfdec_otfdec_r3startaddr_v1_tt;
-  using otfdec_r3endaddr_tt = regs::otfdec_otfdec_r3endaddr_v1_tt;
-  using otfdec_r3noncer0_tt = regs::otfdec_otfdec_r3noncer0_v1_tt;
-  using otfdec_r3noncer1_tt = regs::otfdec_otfdec_r3noncer1_v1_tt;
-  using otfdec_r3keyr0_tt = regs::otfdec_otfdec_r3keyr0_v1_tt;
-  using otfdec_r3keyr1_tt = regs::otfdec_otfdec_r3keyr1_v1_tt;
-  using otfdec_r3keyr2_tt = regs::otfdec_otfdec_r3keyr2_v1_tt;
-  using otfdec_r3keyr3_tt = regs::otfdec_otfdec_r3keyr3_v1_tt;
-  using otfdec_r4cfgr_tt = regs::otfdec_otfdec_r4cfgr_v1_tt;
-  using otfdec_r4startaddr_tt = regs::otfdec_otfdec_r4startaddr_v1_tt;
-  using otfdec_r4endaddr_tt = regs::otfdec_otfdec_r4endaddr_v1_tt;
-  using otfdec_r4noncer0_tt = regs::otfdec_otfdec_r4noncer0_v1_tt;
-  using otfdec_r4noncer1_tt = regs::otfdec_otfdec_r4noncer1_v1_tt;
-  using otfdec_r4keyr0_tt = regs::otfdec_otfdec_r4keyr0_v1_tt;
-  using otfdec_r4keyr1_tt = regs::otfdec_otfdec_r4keyr1_v1_tt;
-  using otfdec_r4keyr2_tt = regs::otfdec_otfdec_r4keyr2_v1_tt;
-  using otfdec_r4keyr3_tt = regs::otfdec_otfdec_r4keyr3_v1_tt;
-  using otfdec_isr_tt = regs::otfdec_otfdec_isr_v1_tt;
-  using otfdec_icr_tt = regs::otfdec_otfdec_icr_v1_tt;
-  using otfdec_ier_tt = regs::otfdec_otfdec_ier_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otfdec_r1cfgr_tt = regs::otfdec_otfdec_r1cfgr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otfdec_r1startaddr_tt = regs::otfdec_otfdec_r1startaddr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otfdec_r1endaddr_tt = regs::otfdec_otfdec_r1endaddr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otfdec_r1noncer0_tt = regs::otfdec_otfdec_r1noncer0_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otfdec_r1noncer1_tt = regs::otfdec_otfdec_r1noncer1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otfdec_r1keyr0_tt = regs::otfdec_otfdec_r1keyr0_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otfdec_r1keyr1_tt = regs::otfdec_otfdec_r1keyr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otfdec_r1keyr2_tt = regs::otfdec_otfdec_r1keyr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otfdec_r1keyr3_tt = regs::otfdec_otfdec_r1keyr3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otfdec_r2cfgr_tt = regs::otfdec_otfdec_r2cfgr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otfdec_r2startaddr_tt = regs::otfdec_otfdec_r2startaddr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otfdec_r2endaddr_tt = regs::otfdec_otfdec_r2endaddr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otfdec_r2noncer0_tt = regs::otfdec_otfdec_r2noncer0_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otfdec_r2noncer1_tt = regs::otfdec_otfdec_r2noncer1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otfdec_r2keyr0_tt = regs::otfdec_otfdec_r2keyr0_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otfdec_r2keyr1_tt = regs::otfdec_otfdec_r2keyr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otfdec_r2keyr2_tt = regs::otfdec_otfdec_r2keyr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otfdec_r2keyr3_tt = regs::otfdec_otfdec_r2keyr3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otfdec_r3cfgr_tt = regs::otfdec_otfdec_r3cfgr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otfdec_r3startaddr_tt = regs::otfdec_otfdec_r3startaddr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otfdec_r3endaddr_tt = regs::otfdec_otfdec_r3endaddr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otfdec_r3noncer0_tt = regs::otfdec_otfdec_r3noncer0_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otfdec_r3noncer1_tt = regs::otfdec_otfdec_r3noncer1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otfdec_r3keyr0_tt = regs::otfdec_otfdec_r3keyr0_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otfdec_r3keyr1_tt = regs::otfdec_otfdec_r3keyr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otfdec_r3keyr2_tt = regs::otfdec_otfdec_r3keyr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otfdec_r3keyr3_tt = regs::otfdec_otfdec_r3keyr3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otfdec_r4cfgr_tt = regs::otfdec_otfdec_r4cfgr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otfdec_r4startaddr_tt = regs::otfdec_otfdec_r4startaddr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otfdec_r4endaddr_tt = regs::otfdec_otfdec_r4endaddr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otfdec_r4noncer0_tt = regs::otfdec_otfdec_r4noncer0_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otfdec_r4noncer1_tt = regs::otfdec_otfdec_r4noncer1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otfdec_r4keyr0_tt = regs::otfdec_otfdec_r4keyr0_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otfdec_r4keyr1_tt = regs::otfdec_otfdec_r4keyr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otfdec_r4keyr2_tt = regs::otfdec_otfdec_r4keyr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otfdec_r4keyr3_tt = regs::otfdec_otfdec_r4keyr3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otfdec_isr_tt = regs::otfdec_otfdec_isr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otfdec_icr_tt = regs::otfdec_otfdec_icr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otfdec_ier_tt = regs::otfdec_otfdec_ier_v1_tt<name, baseaddress, offset>;
 
   template <stdx::ct_string name, std::uint32_t baseaddress>
   using otfdecx_t =

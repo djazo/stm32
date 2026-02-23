@@ -7,24 +7,78 @@
 namespace stm32::stm32gbk1cbt6 {
 
 namespace sai {
-  using bcr1_tt = regs::sai_bcr1_v1_tt;
-  using bcr2_tt = regs::sai_bcr2_v1_tt;
-  using bfrcr_tt = regs::sai_bfrcr_v1_tt;
-  using bslotr_tt = regs::sai_bslotr_v1_tt;
-  using bim_tt = regs::sai_bim_v1_tt;
-  using bsr_tt = regs::sai_bsr_v1_tt;
-  using bclrfr_tt = regs::sai_bclrfr_v1_tt;
-  using bdr_tt = regs::sai_bdr_v1_tt;
-  using acr1_tt = regs::sai_acr1_v1_tt;
-  using acr2_tt = regs::sai_acr2_v1_tt;
-  using afrcr_tt = regs::sai_afrcr_v1_tt;
-  using aslotr_tt = regs::sai_aslotr_v1_tt;
-  using aim_tt = regs::sai_aim_v1_tt;
-  using asr_tt = regs::sai_asr_v1_tt;
-  using aclrfr_tt = regs::sai_aclrfr_v1_tt;
-  using adr_tt = regs::sai_adr_v1_tt;
-  using pdmcr_tt = regs::sai_pdmcr_v1_tt;
-  using pdmdly_tt = regs::sai_pdmdly_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using bcr1_tt = regs::sai_bcr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using bcr2_tt = regs::sai_bcr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using bfrcr_tt = regs::sai_bfrcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using bslotr_tt = regs::sai_bslotr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using bim_tt = regs::sai_bim_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using bsr_tt = regs::sai_bsr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using bclrfr_tt = regs::sai_bclrfr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using bdr_tt = regs::sai_bdr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using acr1_tt = regs::sai_acr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using acr2_tt = regs::sai_acr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using afrcr_tt = regs::sai_afrcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using aslotr_tt = regs::sai_aslotr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using aim_tt = regs::sai_aim_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using asr_tt = regs::sai_asr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using aclrfr_tt = regs::sai_aclrfr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using adr_tt = regs::sai_adr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using pdmcr_tt = regs::sai_pdmcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using pdmdly_tt = regs::sai_pdmdly_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using sai_t =

@@ -7,15 +7,42 @@
 namespace stm32::stm32h7a3x {
 
 namespace syscfg {
-  using pmcr_tt = regs::syscfg_pmcr_v1_tt;
-  using exticr1_tt = regs::syscfg_exticr1_v1_tt;
-  using exticr2_tt = regs::syscfg_exticr2_v1_tt;
-  using exticr3_tt = regs::syscfg_exticr3_v1_tt;
-  using exticr4_tt = regs::syscfg_exticr4_v1_tt;
-  using cccsr_tt = regs::syscfg_cccsr_v1_tt;
-  using ccvr_tt = regs::syscfg_ccvr_v1_tt;
-  using cccr_tt = regs::syscfg_cccr_v1_tt;
-  using syscfg_brk_lockupr_tt = regs::syscfg_syscfg_brk_lockupr_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using pmcr_tt = regs::syscfg_pmcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using exticr1_tt = regs::syscfg_exticr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using exticr2_tt = regs::syscfg_exticr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using exticr3_tt = regs::syscfg_exticr3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using exticr4_tt = regs::syscfg_exticr4_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cccsr_tt = regs::syscfg_cccsr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ccvr_tt = regs::syscfg_ccvr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cccr_tt = regs::syscfg_cccr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using syscfg_brk_lockupr_tt = regs::syscfg_syscfg_brk_lockupr_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using syscfg_t =

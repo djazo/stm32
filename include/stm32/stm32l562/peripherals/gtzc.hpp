@@ -7,15 +7,42 @@
 namespace stm32::stm32l562 {
 
 namespace gtzcx {
-  using ier1_tt = regs::gtzc_ier1_v1_tt;
-  using ier2_tt = regs::gtzc_ier2_v1_tt;
-  using ier3_tt = regs::gtzc_ier3_v1_tt;
-  using sr1_tt = regs::gtzc_sr1_v1_tt;
-  using sr2_tt = regs::gtzc_sr2_v1_tt;
-  using sr3_tt = regs::gtzc_sr3_v1_tt;
-  using fcr1_tt = regs::gtzc_fcr1_v1_tt;
-  using fcr2_tt = regs::gtzc_fcr2_v1_tt;
-  using fcr3_tt = regs::gtzc_fcr3_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ier1_tt = regs::gtzc_ier1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ier2_tt = regs::gtzc_ier2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ier3_tt = regs::gtzc_ier3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using sr1_tt = regs::gtzc_sr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using sr2_tt = regs::gtzc_sr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using sr3_tt = regs::gtzc_sr3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fcr1_tt = regs::gtzc_fcr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fcr2_tt = regs::gtzc_fcr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fcr3_tt = regs::gtzc_fcr3_v1_tt<name, baseaddress, offset>;
 
   template <stdx::ct_string name, std::uint32_t baseaddress>
   using gtzcx_t =
@@ -34,16 +61,46 @@ namespace gtzcx {
 } // namespace gtzcx
 
 namespace gtzcx_v2 {
-  using tzsc_cr_tt = regs::gtzc_tzsc_cr_v1_tt;
-  using tzsc_seccfgr1_tt = regs::gtzc_tzsc_seccfgr1_v1_tt;
-  using tzsc_seccfgr2_tt = regs::gtzc_tzsc_seccfgr2_v1_tt;
-  using tzsc_privcfgr1_tt = regs::gtzc_tzsc_privcfgr1_v1_tt;
-  using tzsc_privcfgr2_tt = regs::gtzc_tzsc_privcfgr2_v1_tt;
-  using tzsc_mpcwm1_nswmr1_tt = regs::gtzc_tzsc_mpcwm1_nswmr1_v1_tt;
-  using tzsc_mpcwm1_nswmr2_tt = regs::gtzc_tzsc_mpcwm1_nswmr2_v1_tt;
-  using tzsc_mpcwm2_nswmr1_tt = regs::gtzc_tzsc_mpcwm2_nswmr1_v1_tt;
-  using tzsc_mpcwm3_nswmr1_tt = regs::gtzc_tzsc_mpcwm3_nswmr1_v1_tt;
-  using tzsc_mpcwm2_nswmr2_tt = regs::gtzc_tzsc_mpcwm2_nswmr2_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using tzsc_cr_tt = regs::gtzc_tzsc_cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using tzsc_seccfgr1_tt = regs::gtzc_tzsc_seccfgr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using tzsc_seccfgr2_tt = regs::gtzc_tzsc_seccfgr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using tzsc_privcfgr1_tt = regs::gtzc_tzsc_privcfgr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using tzsc_privcfgr2_tt = regs::gtzc_tzsc_privcfgr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using tzsc_mpcwm1_nswmr1_tt = regs::gtzc_tzsc_mpcwm1_nswmr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using tzsc_mpcwm1_nswmr2_tt = regs::gtzc_tzsc_mpcwm1_nswmr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using tzsc_mpcwm2_nswmr1_tt = regs::gtzc_tzsc_mpcwm2_nswmr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using tzsc_mpcwm3_nswmr1_tt = regs::gtzc_tzsc_mpcwm3_nswmr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using tzsc_mpcwm2_nswmr2_tt = regs::gtzc_tzsc_mpcwm2_nswmr2_v1_tt<name, baseaddress, offset>;
 
   template <stdx::ct_string name, std::uint32_t baseaddress>
   using gtzcx_v2_t =
@@ -63,73 +120,274 @@ namespace gtzcx_v2 {
 } // namespace gtzcx_v2
 
 namespace gtzc_mpcbb1 {
-  using mpcbb1_cr_tt = regs::gtzc_mpcbb1_cr_v1_tt;
-  using mpcbb1_lckvtr1_tt = regs::gtzc_mpcbb1_lckvtr1_v1_tt;
-  using mpcbb1_lckvtr2_tt = regs::gtzc_mpcbb1_lckvtr2_v1_tt;
-  using mpcbb1_vctr0_tt = regs::gtzc_mpcbb1_vctr0_v1_tt;
-  using mpcbb1_vctr1_tt = regs::gtzc_mpcbb1_vctr1_v1_tt;
-  using mpcbb1_vctr2_tt = regs::gtzc_mpcbb1_vctr2_v1_tt;
-  using mpcbb1_vctr3_tt = regs::gtzc_mpcbb1_vctr3_v1_tt;
-  using mpcbb1_vctr4_tt = regs::gtzc_mpcbb1_vctr4_v1_tt;
-  using mpcbb1_vctr5_tt = regs::gtzc_mpcbb1_vctr5_v1_tt;
-  using mpcbb1_vctr6_tt = regs::gtzc_mpcbb1_vctr6_v1_tt;
-  using mpcbb1_vctr7_tt = regs::gtzc_mpcbb1_vctr7_v1_tt;
-  using mpcbb1_vctr8_tt = regs::gtzc_mpcbb1_vctr8_v1_tt;
-  using mpcbb1_vctr9_tt = regs::gtzc_mpcbb1_vctr9_v1_tt;
-  using mpcbb1_vctr10_tt = regs::gtzc_mpcbb1_vctr10_v1_tt;
-  using mpcbb1_vctr11_tt = regs::gtzc_mpcbb1_vctr11_v1_tt;
-  using mpcbb1_vctr12_tt = regs::gtzc_mpcbb1_vctr12_v1_tt;
-  using mpcbb1_vctr13_tt = regs::gtzc_mpcbb1_vctr13_v1_tt;
-  using mpcbb1_vctr14_tt = regs::gtzc_mpcbb1_vctr14_v1_tt;
-  using mpcbb1_vctr15_tt = regs::gtzc_mpcbb1_vctr15_v1_tt;
-  using mpcbb1_vctr16_tt = regs::gtzc_mpcbb1_vctr16_v1_tt;
-  using mpcbb1_vctr17_tt = regs::gtzc_mpcbb1_vctr17_v1_tt;
-  using mpcbb1_vctr18_tt = regs::gtzc_mpcbb1_vctr18_v1_tt;
-  using mpcbb1_vctr19_tt = regs::gtzc_mpcbb1_vctr19_v1_tt;
-  using mpcbb1_vctr20_tt = regs::gtzc_mpcbb1_vctr20_v1_tt;
-  using mpcbb1_vctr21_tt = regs::gtzc_mpcbb1_vctr21_v1_tt;
-  using mpcbb1_vctr22_tt = regs::gtzc_mpcbb1_vctr22_v1_tt;
-  using mpcbb1_vctr23_tt = regs::gtzc_mpcbb1_vctr23_v1_tt;
-  using mpcbb1_vctr24_tt = regs::gtzc_mpcbb1_vctr24_v1_tt;
-  using mpcbb1_vctr25_tt = regs::gtzc_mpcbb1_vctr25_v1_tt;
-  using mpcbb1_vctr26_tt = regs::gtzc_mpcbb1_vctr26_v1_tt;
-  using mpcbb1_vctr27_tt = regs::gtzc_mpcbb1_vctr27_v1_tt;
-  using mpcbb1_vctr28_tt = regs::gtzc_mpcbb1_vctr28_v1_tt;
-  using mpcbb1_vctr29_tt = regs::gtzc_mpcbb1_vctr29_v1_tt;
-  using mpcbb1_vctr30_tt = regs::gtzc_mpcbb1_vctr30_v1_tt;
-  using mpcbb1_vctr31_tt = regs::gtzc_mpcbb1_vctr31_v1_tt;
-  using mpcbb1_vctr32_tt = regs::gtzc_mpcbb1_vctr32_v1_tt;
-  using mpcbb1_vctr33_tt = regs::gtzc_mpcbb1_vctr33_v1_tt;
-  using mpcbb1_vctr34_tt = regs::gtzc_mpcbb1_vctr34_v1_tt;
-  using mpcbb1_vctr35_tt = regs::gtzc_mpcbb1_vctr35_v1_tt;
-  using mpcbb1_vctr36_tt = regs::gtzc_mpcbb1_vctr36_v1_tt;
-  using mpcbb1_vctr37_tt = regs::gtzc_mpcbb1_vctr37_v1_tt;
-  using mpcbb1_vctr38_tt = regs::gtzc_mpcbb1_vctr38_v1_tt;
-  using mpcbb1_vctr39_tt = regs::gtzc_mpcbb1_vctr39_v1_tt;
-  using mpcbb1_vctr40_tt = regs::gtzc_mpcbb1_vctr40_v1_tt;
-  using mpcbb1_vctr41_tt = regs::gtzc_mpcbb1_vctr41_v1_tt;
-  using mpcbb1_vctr42_tt = regs::gtzc_mpcbb1_vctr42_v1_tt;
-  using mpcbb1_vctr43_tt = regs::gtzc_mpcbb1_vctr43_v1_tt;
-  using mpcbb1_vctr44_tt = regs::gtzc_mpcbb1_vctr44_v1_tt;
-  using mpcbb1_vctr45_tt = regs::gtzc_mpcbb1_vctr45_v1_tt;
-  using mpcbb1_vctr46_tt = regs::gtzc_mpcbb1_vctr46_v1_tt;
-  using mpcbb1_vctr47_tt = regs::gtzc_mpcbb1_vctr47_v1_tt;
-  using mpcbb1_vctr48_tt = regs::gtzc_mpcbb1_vctr48_v1_tt;
-  using mpcbb1_vctr49_tt = regs::gtzc_mpcbb1_vctr49_v1_tt;
-  using mpcbb1_vctr50_tt = regs::gtzc_mpcbb1_vctr50_v1_tt;
-  using mpcbb1_vctr51_tt = regs::gtzc_mpcbb1_vctr51_v1_tt;
-  using mpcbb1_vctr52_tt = regs::gtzc_mpcbb1_vctr52_v1_tt;
-  using mpcbb1_vctr53_tt = regs::gtzc_mpcbb1_vctr53_v1_tt;
-  using mpcbb1_vctr54_tt = regs::gtzc_mpcbb1_vctr54_v1_tt;
-  using mpcbb1_vctr55_tt = regs::gtzc_mpcbb1_vctr55_v1_tt;
-  using mpcbb1_vctr56_tt = regs::gtzc_mpcbb1_vctr56_v1_tt;
-  using mpcbb1_vctr57_tt = regs::gtzc_mpcbb1_vctr57_v1_tt;
-  using mpcbb1_vctr58_tt = regs::gtzc_mpcbb1_vctr58_v1_tt;
-  using mpcbb1_vctr59_tt = regs::gtzc_mpcbb1_vctr59_v1_tt;
-  using mpcbb1_vctr60_tt = regs::gtzc_mpcbb1_vctr60_v1_tt;
-  using mpcbb1_vctr61_tt = regs::gtzc_mpcbb1_vctr61_v1_tt;
-  using mpcbb1_vctr62_tt = regs::gtzc_mpcbb1_vctr62_v1_tt;
-  using mpcbb1_vctr63_tt = regs::gtzc_mpcbb1_vctr63_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb1_cr_tt = regs::gtzc_mpcbb1_cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb1_lckvtr1_tt = regs::gtzc_mpcbb1_lckvtr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb1_lckvtr2_tt = regs::gtzc_mpcbb1_lckvtr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb1_vctr0_tt = regs::gtzc_mpcbb1_vctr0_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb1_vctr1_tt = regs::gtzc_mpcbb1_vctr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb1_vctr2_tt = regs::gtzc_mpcbb1_vctr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb1_vctr3_tt = regs::gtzc_mpcbb1_vctr3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb1_vctr4_tt = regs::gtzc_mpcbb1_vctr4_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb1_vctr5_tt = regs::gtzc_mpcbb1_vctr5_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb1_vctr6_tt = regs::gtzc_mpcbb1_vctr6_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb1_vctr7_tt = regs::gtzc_mpcbb1_vctr7_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb1_vctr8_tt = regs::gtzc_mpcbb1_vctr8_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb1_vctr9_tt = regs::gtzc_mpcbb1_vctr9_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb1_vctr10_tt = regs::gtzc_mpcbb1_vctr10_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb1_vctr11_tt = regs::gtzc_mpcbb1_vctr11_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb1_vctr12_tt = regs::gtzc_mpcbb1_vctr12_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb1_vctr13_tt = regs::gtzc_mpcbb1_vctr13_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb1_vctr14_tt = regs::gtzc_mpcbb1_vctr14_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb1_vctr15_tt = regs::gtzc_mpcbb1_vctr15_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb1_vctr16_tt = regs::gtzc_mpcbb1_vctr16_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb1_vctr17_tt = regs::gtzc_mpcbb1_vctr17_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb1_vctr18_tt = regs::gtzc_mpcbb1_vctr18_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb1_vctr19_tt = regs::gtzc_mpcbb1_vctr19_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb1_vctr20_tt = regs::gtzc_mpcbb1_vctr20_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb1_vctr21_tt = regs::gtzc_mpcbb1_vctr21_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb1_vctr22_tt = regs::gtzc_mpcbb1_vctr22_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb1_vctr23_tt = regs::gtzc_mpcbb1_vctr23_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb1_vctr24_tt = regs::gtzc_mpcbb1_vctr24_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb1_vctr25_tt = regs::gtzc_mpcbb1_vctr25_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb1_vctr26_tt = regs::gtzc_mpcbb1_vctr26_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb1_vctr27_tt = regs::gtzc_mpcbb1_vctr27_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb1_vctr28_tt = regs::gtzc_mpcbb1_vctr28_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb1_vctr29_tt = regs::gtzc_mpcbb1_vctr29_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb1_vctr30_tt = regs::gtzc_mpcbb1_vctr30_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb1_vctr31_tt = regs::gtzc_mpcbb1_vctr31_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb1_vctr32_tt = regs::gtzc_mpcbb1_vctr32_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb1_vctr33_tt = regs::gtzc_mpcbb1_vctr33_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb1_vctr34_tt = regs::gtzc_mpcbb1_vctr34_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb1_vctr35_tt = regs::gtzc_mpcbb1_vctr35_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb1_vctr36_tt = regs::gtzc_mpcbb1_vctr36_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb1_vctr37_tt = regs::gtzc_mpcbb1_vctr37_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb1_vctr38_tt = regs::gtzc_mpcbb1_vctr38_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb1_vctr39_tt = regs::gtzc_mpcbb1_vctr39_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb1_vctr40_tt = regs::gtzc_mpcbb1_vctr40_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb1_vctr41_tt = regs::gtzc_mpcbb1_vctr41_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb1_vctr42_tt = regs::gtzc_mpcbb1_vctr42_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb1_vctr43_tt = regs::gtzc_mpcbb1_vctr43_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb1_vctr44_tt = regs::gtzc_mpcbb1_vctr44_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb1_vctr45_tt = regs::gtzc_mpcbb1_vctr45_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb1_vctr46_tt = regs::gtzc_mpcbb1_vctr46_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb1_vctr47_tt = regs::gtzc_mpcbb1_vctr47_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb1_vctr48_tt = regs::gtzc_mpcbb1_vctr48_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb1_vctr49_tt = regs::gtzc_mpcbb1_vctr49_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb1_vctr50_tt = regs::gtzc_mpcbb1_vctr50_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb1_vctr51_tt = regs::gtzc_mpcbb1_vctr51_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb1_vctr52_tt = regs::gtzc_mpcbb1_vctr52_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb1_vctr53_tt = regs::gtzc_mpcbb1_vctr53_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb1_vctr54_tt = regs::gtzc_mpcbb1_vctr54_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb1_vctr55_tt = regs::gtzc_mpcbb1_vctr55_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb1_vctr56_tt = regs::gtzc_mpcbb1_vctr56_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb1_vctr57_tt = regs::gtzc_mpcbb1_vctr57_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb1_vctr58_tt = regs::gtzc_mpcbb1_vctr58_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb1_vctr59_tt = regs::gtzc_mpcbb1_vctr59_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb1_vctr60_tt = regs::gtzc_mpcbb1_vctr60_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb1_vctr61_tt = regs::gtzc_mpcbb1_vctr61_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb1_vctr62_tt = regs::gtzc_mpcbb1_vctr62_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb1_vctr63_tt = regs::gtzc_mpcbb1_vctr63_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using gtzc_mpcbb1_t =
@@ -206,73 +464,274 @@ namespace gtzc_mpcbb1 {
 } // namespace gtzc_mpcbb1
 
 namespace gtzc_mpcbb2 {
-  using mpcbb2_cr_tt = regs::gtzc_mpcbb2_cr_v1_tt;
-  using mpcbb2_lckvtr1_tt = regs::gtzc_mpcbb2_lckvtr1_v1_tt;
-  using mpcbb2_lckvtr2_tt = regs::gtzc_mpcbb2_lckvtr2_v1_tt;
-  using mpcbb2_vctr0_tt = regs::gtzc_mpcbb2_vctr0_v1_tt;
-  using mpcbb2_vctr1_tt = regs::gtzc_mpcbb2_vctr1_v1_tt;
-  using mpcbb2_vctr2_tt = regs::gtzc_mpcbb2_vctr2_v1_tt;
-  using mpcbb2_vctr3_tt = regs::gtzc_mpcbb2_vctr3_v1_tt;
-  using mpcbb2_vctr4_tt = regs::gtzc_mpcbb2_vctr4_v1_tt;
-  using mpcbb2_vctr5_tt = regs::gtzc_mpcbb2_vctr5_v1_tt;
-  using mpcbb2_vctr6_tt = regs::gtzc_mpcbb2_vctr6_v1_tt;
-  using mpcbb2_vctr7_tt = regs::gtzc_mpcbb2_vctr7_v1_tt;
-  using mpcbb2_vctr8_tt = regs::gtzc_mpcbb2_vctr8_v1_tt;
-  using mpcbb2_vctr9_tt = regs::gtzc_mpcbb2_vctr9_v1_tt;
-  using mpcbb2_vctr10_tt = regs::gtzc_mpcbb2_vctr10_v1_tt;
-  using mpcbb2_vctr11_tt = regs::gtzc_mpcbb2_vctr11_v1_tt;
-  using mpcbb2_vctr12_tt = regs::gtzc_mpcbb2_vctr12_v1_tt;
-  using mpcbb2_vctr13_tt = regs::gtzc_mpcbb2_vctr13_v1_tt;
-  using mpcbb2_vctr14_tt = regs::gtzc_mpcbb2_vctr14_v1_tt;
-  using mpcbb2_vctr15_tt = regs::gtzc_mpcbb2_vctr15_v1_tt;
-  using mpcbb2_vctr16_tt = regs::gtzc_mpcbb2_vctr16_v1_tt;
-  using mpcbb2_vctr17_tt = regs::gtzc_mpcbb2_vctr17_v1_tt;
-  using mpcbb2_vctr18_tt = regs::gtzc_mpcbb2_vctr18_v1_tt;
-  using mpcbb2_vctr19_tt = regs::gtzc_mpcbb2_vctr19_v1_tt;
-  using mpcbb2_vctr20_tt = regs::gtzc_mpcbb2_vctr20_v1_tt;
-  using mpcbb2_vctr21_tt = regs::gtzc_mpcbb2_vctr21_v1_tt;
-  using mpcbb2_vctr22_tt = regs::gtzc_mpcbb2_vctr22_v1_tt;
-  using mpcbb2_vctr23_tt = regs::gtzc_mpcbb2_vctr23_v1_tt;
-  using mpcbb2_vctr24_tt = regs::gtzc_mpcbb2_vctr24_v1_tt;
-  using mpcbb2_vctr25_tt = regs::gtzc_mpcbb2_vctr25_v1_tt;
-  using mpcbb2_vctr26_tt = regs::gtzc_mpcbb2_vctr26_v1_tt;
-  using mpcbb2_vctr27_tt = regs::gtzc_mpcbb2_vctr27_v1_tt;
-  using mpcbb2_vctr28_tt = regs::gtzc_mpcbb2_vctr28_v1_tt;
-  using mpcbb2_vctr29_tt = regs::gtzc_mpcbb2_vctr29_v1_tt;
-  using mpcbb2_vctr30_tt = regs::gtzc_mpcbb2_vctr30_v1_tt;
-  using mpcbb2_vctr31_tt = regs::gtzc_mpcbb2_vctr31_v1_tt;
-  using mpcbb2_vctr32_tt = regs::gtzc_mpcbb2_vctr32_v1_tt;
-  using mpcbb2_vctr33_tt = regs::gtzc_mpcbb2_vctr33_v1_tt;
-  using mpcbb2_vctr34_tt = regs::gtzc_mpcbb2_vctr34_v1_tt;
-  using mpcbb2_vctr35_tt = regs::gtzc_mpcbb2_vctr35_v1_tt;
-  using mpcbb2_vctr36_tt = regs::gtzc_mpcbb2_vctr36_v1_tt;
-  using mpcbb2_vctr37_tt = regs::gtzc_mpcbb2_vctr37_v1_tt;
-  using mpcbb2_vctr38_tt = regs::gtzc_mpcbb2_vctr38_v1_tt;
-  using mpcbb2_vctr39_tt = regs::gtzc_mpcbb2_vctr39_v1_tt;
-  using mpcbb2_vctr40_tt = regs::gtzc_mpcbb2_vctr40_v1_tt;
-  using mpcbb2_vctr41_tt = regs::gtzc_mpcbb2_vctr41_v1_tt;
-  using mpcbb2_vctr42_tt = regs::gtzc_mpcbb2_vctr42_v1_tt;
-  using mpcbb2_vctr43_tt = regs::gtzc_mpcbb2_vctr43_v1_tt;
-  using mpcbb2_vctr44_tt = regs::gtzc_mpcbb2_vctr44_v1_tt;
-  using mpcbb2_vctr45_tt = regs::gtzc_mpcbb2_vctr45_v1_tt;
-  using mpcbb2_vctr46_tt = regs::gtzc_mpcbb2_vctr46_v1_tt;
-  using mpcbb2_vctr47_tt = regs::gtzc_mpcbb2_vctr47_v1_tt;
-  using mpcbb2_vctr48_tt = regs::gtzc_mpcbb2_vctr48_v1_tt;
-  using mpcbb2_vctr49_tt = regs::gtzc_mpcbb2_vctr49_v1_tt;
-  using mpcbb2_vctr50_tt = regs::gtzc_mpcbb2_vctr50_v1_tt;
-  using mpcbb2_vctr51_tt = regs::gtzc_mpcbb2_vctr51_v1_tt;
-  using mpcbb2_vctr52_tt = regs::gtzc_mpcbb2_vctr52_v1_tt;
-  using mpcbb2_vctr53_tt = regs::gtzc_mpcbb2_vctr53_v1_tt;
-  using mpcbb2_vctr54_tt = regs::gtzc_mpcbb2_vctr54_v1_tt;
-  using mpcbb2_vctr55_tt = regs::gtzc_mpcbb2_vctr55_v1_tt;
-  using mpcbb2_vctr56_tt = regs::gtzc_mpcbb2_vctr56_v1_tt;
-  using mpcbb2_vctr57_tt = regs::gtzc_mpcbb2_vctr57_v1_tt;
-  using mpcbb2_vctr58_tt = regs::gtzc_mpcbb2_vctr58_v1_tt;
-  using mpcbb2_vctr59_tt = regs::gtzc_mpcbb2_vctr59_v1_tt;
-  using mpcbb2_vctr60_tt = regs::gtzc_mpcbb2_vctr60_v1_tt;
-  using mpcbb2_vctr61_tt = regs::gtzc_mpcbb2_vctr61_v1_tt;
-  using mpcbb2_vctr62_tt = regs::gtzc_mpcbb2_vctr62_v1_tt;
-  using mpcbb2_vctr63_tt = regs::gtzc_mpcbb2_vctr63_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb2_cr_tt = regs::gtzc_mpcbb2_cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb2_lckvtr1_tt = regs::gtzc_mpcbb2_lckvtr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb2_lckvtr2_tt = regs::gtzc_mpcbb2_lckvtr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb2_vctr0_tt = regs::gtzc_mpcbb2_vctr0_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb2_vctr1_tt = regs::gtzc_mpcbb2_vctr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb2_vctr2_tt = regs::gtzc_mpcbb2_vctr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb2_vctr3_tt = regs::gtzc_mpcbb2_vctr3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb2_vctr4_tt = regs::gtzc_mpcbb2_vctr4_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb2_vctr5_tt = regs::gtzc_mpcbb2_vctr5_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb2_vctr6_tt = regs::gtzc_mpcbb2_vctr6_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb2_vctr7_tt = regs::gtzc_mpcbb2_vctr7_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb2_vctr8_tt = regs::gtzc_mpcbb2_vctr8_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb2_vctr9_tt = regs::gtzc_mpcbb2_vctr9_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb2_vctr10_tt = regs::gtzc_mpcbb2_vctr10_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb2_vctr11_tt = regs::gtzc_mpcbb2_vctr11_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb2_vctr12_tt = regs::gtzc_mpcbb2_vctr12_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb2_vctr13_tt = regs::gtzc_mpcbb2_vctr13_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb2_vctr14_tt = regs::gtzc_mpcbb2_vctr14_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb2_vctr15_tt = regs::gtzc_mpcbb2_vctr15_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb2_vctr16_tt = regs::gtzc_mpcbb2_vctr16_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb2_vctr17_tt = regs::gtzc_mpcbb2_vctr17_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb2_vctr18_tt = regs::gtzc_mpcbb2_vctr18_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb2_vctr19_tt = regs::gtzc_mpcbb2_vctr19_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb2_vctr20_tt = regs::gtzc_mpcbb2_vctr20_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb2_vctr21_tt = regs::gtzc_mpcbb2_vctr21_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb2_vctr22_tt = regs::gtzc_mpcbb2_vctr22_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb2_vctr23_tt = regs::gtzc_mpcbb2_vctr23_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb2_vctr24_tt = regs::gtzc_mpcbb2_vctr24_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb2_vctr25_tt = regs::gtzc_mpcbb2_vctr25_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb2_vctr26_tt = regs::gtzc_mpcbb2_vctr26_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb2_vctr27_tt = regs::gtzc_mpcbb2_vctr27_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb2_vctr28_tt = regs::gtzc_mpcbb2_vctr28_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb2_vctr29_tt = regs::gtzc_mpcbb2_vctr29_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb2_vctr30_tt = regs::gtzc_mpcbb2_vctr30_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb2_vctr31_tt = regs::gtzc_mpcbb2_vctr31_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb2_vctr32_tt = regs::gtzc_mpcbb2_vctr32_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb2_vctr33_tt = regs::gtzc_mpcbb2_vctr33_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb2_vctr34_tt = regs::gtzc_mpcbb2_vctr34_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb2_vctr35_tt = regs::gtzc_mpcbb2_vctr35_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb2_vctr36_tt = regs::gtzc_mpcbb2_vctr36_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb2_vctr37_tt = regs::gtzc_mpcbb2_vctr37_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb2_vctr38_tt = regs::gtzc_mpcbb2_vctr38_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb2_vctr39_tt = regs::gtzc_mpcbb2_vctr39_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb2_vctr40_tt = regs::gtzc_mpcbb2_vctr40_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb2_vctr41_tt = regs::gtzc_mpcbb2_vctr41_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb2_vctr42_tt = regs::gtzc_mpcbb2_vctr42_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb2_vctr43_tt = regs::gtzc_mpcbb2_vctr43_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb2_vctr44_tt = regs::gtzc_mpcbb2_vctr44_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb2_vctr45_tt = regs::gtzc_mpcbb2_vctr45_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb2_vctr46_tt = regs::gtzc_mpcbb2_vctr46_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb2_vctr47_tt = regs::gtzc_mpcbb2_vctr47_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb2_vctr48_tt = regs::gtzc_mpcbb2_vctr48_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb2_vctr49_tt = regs::gtzc_mpcbb2_vctr49_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb2_vctr50_tt = regs::gtzc_mpcbb2_vctr50_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb2_vctr51_tt = regs::gtzc_mpcbb2_vctr51_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb2_vctr52_tt = regs::gtzc_mpcbb2_vctr52_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb2_vctr53_tt = regs::gtzc_mpcbb2_vctr53_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb2_vctr54_tt = regs::gtzc_mpcbb2_vctr54_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb2_vctr55_tt = regs::gtzc_mpcbb2_vctr55_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb2_vctr56_tt = regs::gtzc_mpcbb2_vctr56_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb2_vctr57_tt = regs::gtzc_mpcbb2_vctr57_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb2_vctr58_tt = regs::gtzc_mpcbb2_vctr58_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb2_vctr59_tt = regs::gtzc_mpcbb2_vctr59_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb2_vctr60_tt = regs::gtzc_mpcbb2_vctr60_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb2_vctr61_tt = regs::gtzc_mpcbb2_vctr61_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb2_vctr62_tt = regs::gtzc_mpcbb2_vctr62_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpcbb2_vctr63_tt = regs::gtzc_mpcbb2_vctr63_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using gtzc_mpcbb2_t =

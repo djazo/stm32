@@ -7,9 +7,18 @@
 namespace stm32::stm32f3x4 {
 
 namespace adc_common {
-  using adc1_csr_tt = regs::adc_common_adc1_csr_v1_tt;
-  using adc1_ccr_tt = regs::adc_common_adc1_ccr_v1_tt;
-  using adc1_cdr_tt = regs::adc_common_adc1_cdr_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using adc1_csr_tt = regs::adc_common_adc1_csr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using adc1_ccr_tt = regs::adc_common_adc1_ccr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using adc1_cdr_tt = regs::adc_common_adc1_cdr_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using adc_common_t =

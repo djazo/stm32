@@ -7,19 +7,58 @@
 namespace stm32::stm32u59x {
 
 namespace lpuartx {
-  using cr1_enabled_tt = regs::lpuart_cr1_enabled_v1_tt;
-  using cr1_disabled_tt = regs::lpuart_cr1_disabled_v1_tt;
-  using cr2_tt = regs::lpuart_cr2_v1_tt;
-  using cr3_tt = regs::lpuart_cr3_v1_tt;
-  using brr_tt = regs::lpuart_brr_v1_tt;
-  using rqr_tt = regs::lpuart_rqr_v1_tt;
-  using isr_enabled_tt = regs::lpuart_isr_enabled_v1_tt;
-  using isr_disabled_tt = regs::lpuart_isr_disabled_v1_tt;
-  using icr_tt = regs::lpuart_icr_v1_tt;
-  using rdr_tt = regs::lpuart_rdr_v1_tt;
-  using tdr_tt = regs::lpuart_tdr_v1_tt;
-  using presc_tt = regs::lpuart_presc_v1_tt;
-  using autocr_tt = regs::lpuart_autocr_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cr1_enabled_tt = regs::lpuart_cr1_enabled_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cr1_disabled_tt = regs::lpuart_cr1_disabled_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cr2_tt = regs::lpuart_cr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cr3_tt = regs::lpuart_cr3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using brr_tt = regs::lpuart_brr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rqr_tt = regs::lpuart_rqr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using isr_enabled_tt = regs::lpuart_isr_enabled_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using isr_disabled_tt = regs::lpuart_isr_disabled_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using icr_tt = regs::lpuart_icr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rdr_tt = regs::lpuart_rdr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using tdr_tt = regs::lpuart_tdr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using presc_tt = regs::lpuart_presc_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using autocr_tt = regs::lpuart_autocr_v1_tt<name, baseaddress, offset>;
 
   template <stdx::ct_string name, std::uint32_t baseaddress>
   using lpuartx_t =

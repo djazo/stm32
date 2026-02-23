@@ -16,12 +16,12 @@ using crc_crc_cr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint32_t, 31, 8, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint32_t, 31, 8, common::access::ro>,
                groov::field<"rev_out", bool, 7, 7>,
                groov::field<"rev_in", std::uint8_t, 6, 5>,
                groov::field<"polysize", std::uint8_t, 4, 3>,
-               groov::field<"reserved0", std::uint8_t, 2, 1, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 2, 1, common::access::ro>,
                groov::field<"reset", bool, 0, 0>>;
 
 // crc_crc_dr_v1: CRC_DR
@@ -33,7 +33,7 @@ using crc_crc_dr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dr", std::uint32_t, 31, 0>>;
 
 // crc_crc_idr_v1: CRC_IDR
@@ -45,7 +45,7 @@ using crc_crc_idr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"gpdr", std::uint32_t, 31, 0>>;
 
 // crc_crc_init_v1: CRC_INIT
@@ -57,7 +57,7 @@ using crc_crc_init_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"crc_init", std::uint32_t, 31, 0>>;
 
 // crc_crc_pol_v1: CRC_POL
@@ -69,7 +69,7 @@ using crc_crc_pol_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"pol", std::uint32_t, 31, 0>>;
 
 } // namespace stm32::regs

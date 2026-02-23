@@ -16,8 +16,8 @@ using bdma_bdma_ccr0_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 15, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 15, common::access::ro>,
                groov::field<"mem2mem", bool, 14, 14>,
                groov::field<"pl", std::uint8_t, 13, 12>,
                groov::field<"msize", std::uint8_t, 11, 10>,
@@ -26,10 +26,10 @@ using bdma_bdma_ccr0_v1_tt =
                groov::field<"pinc", bool, 6, 6>,
                groov::field<"circ", bool, 5, 5>,
                groov::field<"dir", bool, 4, 4>,
-               groov::field<"teie", bit_enable, 3, 3>,
-               groov::field<"htie", bit_enable, 2, 2>,
-               groov::field<"tcie", bit_enable, 1, 1>,
-               groov::field<"en", bit_enable, 0, 0>>;
+               groov::field<"teie", common::bittypes::bit_enable, 3, 3>,
+               groov::field<"htie", common::bittypes::bit_enable, 2, 2>,
+               groov::field<"tcie", common::bittypes::bit_enable, 1, 1>,
+               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
 
 // bdma_bdma_ccr1_v1: BDMA_CCR1
 // Used by: BDMA1, BDMA2
@@ -40,8 +40,8 @@ using bdma_bdma_ccr1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 15, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 15, common::access::ro>,
                groov::field<"mem2mem", bool, 14, 14>,
                groov::field<"pl", std::uint8_t, 13, 12>,
                groov::field<"msize", std::uint8_t, 11, 10>,
@@ -50,10 +50,10 @@ using bdma_bdma_ccr1_v1_tt =
                groov::field<"pinc", bool, 6, 6>,
                groov::field<"circ", bool, 5, 5>,
                groov::field<"dir", bool, 4, 4>,
-               groov::field<"teie", bit_enable, 3, 3>,
-               groov::field<"htie", bit_enable, 2, 2>,
-               groov::field<"tcie", bit_enable, 1, 1>,
-               groov::field<"en", bit_enable, 0, 0>>;
+               groov::field<"teie", common::bittypes::bit_enable, 3, 3>,
+               groov::field<"htie", common::bittypes::bit_enable, 2, 2>,
+               groov::field<"tcie", common::bittypes::bit_enable, 1, 1>,
+               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
 
 // bdma_bdma_ccr2_v1: BDMA_CCR2
 // Used by: BDMA1, BDMA2
@@ -64,8 +64,8 @@ using bdma_bdma_ccr2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 15, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 15, common::access::ro>,
                groov::field<"mem2mem", bool, 14, 14>,
                groov::field<"pl", std::uint8_t, 13, 12>,
                groov::field<"msize", std::uint8_t, 11, 10>,
@@ -74,10 +74,10 @@ using bdma_bdma_ccr2_v1_tt =
                groov::field<"pinc", bool, 6, 6>,
                groov::field<"circ", bool, 5, 5>,
                groov::field<"dir", bool, 4, 4>,
-               groov::field<"teie", bit_enable, 3, 3>,
-               groov::field<"htie", bit_enable, 2, 2>,
-               groov::field<"tcie", bit_enable, 1, 1>,
-               groov::field<"en", bit_enable, 0, 0>>;
+               groov::field<"teie", common::bittypes::bit_enable, 3, 3>,
+               groov::field<"htie", common::bittypes::bit_enable, 2, 2>,
+               groov::field<"tcie", common::bittypes::bit_enable, 1, 1>,
+               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
 
 // bdma_bdma_ccr3_v1: BDMA_CCR3
 // Used by: BDMA1, BDMA2
@@ -88,8 +88,8 @@ using bdma_bdma_ccr3_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 15, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 15, common::access::ro>,
                groov::field<"mem2mem", bool, 14, 14>,
                groov::field<"pl", std::uint8_t, 13, 12>,
                groov::field<"msize", std::uint8_t, 11, 10>,
@@ -98,10 +98,10 @@ using bdma_bdma_ccr3_v1_tt =
                groov::field<"pinc", bool, 6, 6>,
                groov::field<"circ", bool, 5, 5>,
                groov::field<"dir", bool, 4, 4>,
-               groov::field<"teie", bit_enable, 3, 3>,
-               groov::field<"htie", bit_enable, 2, 2>,
-               groov::field<"tcie", bit_enable, 1, 1>,
-               groov::field<"en", bit_enable, 0, 0>>;
+               groov::field<"teie", common::bittypes::bit_enable, 3, 3>,
+               groov::field<"htie", common::bittypes::bit_enable, 2, 2>,
+               groov::field<"tcie", common::bittypes::bit_enable, 1, 1>,
+               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
 
 // bdma_bdma_ccr4_v1: BDMA_CCR4
 // Used by: BDMA1, BDMA2
@@ -112,8 +112,8 @@ using bdma_bdma_ccr4_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 15, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 15, common::access::ro>,
                groov::field<"mem2mem", bool, 14, 14>,
                groov::field<"pl", std::uint8_t, 13, 12>,
                groov::field<"msize", std::uint8_t, 11, 10>,
@@ -122,10 +122,10 @@ using bdma_bdma_ccr4_v1_tt =
                groov::field<"pinc", bool, 6, 6>,
                groov::field<"circ", bool, 5, 5>,
                groov::field<"dir", bool, 4, 4>,
-               groov::field<"teie", bit_enable, 3, 3>,
-               groov::field<"htie", bit_enable, 2, 2>,
-               groov::field<"tcie", bit_enable, 1, 1>,
-               groov::field<"en", bit_enable, 0, 0>>;
+               groov::field<"teie", common::bittypes::bit_enable, 3, 3>,
+               groov::field<"htie", common::bittypes::bit_enable, 2, 2>,
+               groov::field<"tcie", common::bittypes::bit_enable, 1, 1>,
+               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
 
 // bdma_bdma_ccr5_v1: BDMA_CCR5
 // Used by: BDMA1, BDMA2
@@ -136,8 +136,8 @@ using bdma_bdma_ccr5_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 15, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 15, common::access::ro>,
                groov::field<"mem2mem", bool, 14, 14>,
                groov::field<"pl", std::uint8_t, 13, 12>,
                groov::field<"msize", std::uint8_t, 11, 10>,
@@ -146,10 +146,10 @@ using bdma_bdma_ccr5_v1_tt =
                groov::field<"pinc", bool, 6, 6>,
                groov::field<"circ", bool, 5, 5>,
                groov::field<"dir", bool, 4, 4>,
-               groov::field<"teie", bit_enable, 3, 3>,
-               groov::field<"htie", bit_enable, 2, 2>,
-               groov::field<"tcie", bit_enable, 1, 1>,
-               groov::field<"en", bit_enable, 0, 0>>;
+               groov::field<"teie", common::bittypes::bit_enable, 3, 3>,
+               groov::field<"htie", common::bittypes::bit_enable, 2, 2>,
+               groov::field<"tcie", common::bittypes::bit_enable, 1, 1>,
+               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
 
 // bdma_bdma_ccr6_v1: BDMA_CCR6
 // Used by: BDMA1, BDMA2
@@ -160,8 +160,8 @@ using bdma_bdma_ccr6_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 15, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 15, common::access::ro>,
                groov::field<"mem2mem", bool, 14, 14>,
                groov::field<"pl", std::uint8_t, 13, 12>,
                groov::field<"msize", std::uint8_t, 11, 10>,
@@ -170,10 +170,10 @@ using bdma_bdma_ccr6_v1_tt =
                groov::field<"pinc", bool, 6, 6>,
                groov::field<"circ", bool, 5, 5>,
                groov::field<"dir", bool, 4, 4>,
-               groov::field<"teie", bit_enable, 3, 3>,
-               groov::field<"htie", bit_enable, 2, 2>,
-               groov::field<"tcie", bit_enable, 1, 1>,
-               groov::field<"en", bit_enable, 0, 0>>;
+               groov::field<"teie", common::bittypes::bit_enable, 3, 3>,
+               groov::field<"htie", common::bittypes::bit_enable, 2, 2>,
+               groov::field<"tcie", common::bittypes::bit_enable, 1, 1>,
+               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
 
 // bdma_bdma_ccr7_v1: BDMA_CCR7
 // Used by: BDMA1, BDMA2
@@ -184,8 +184,8 @@ using bdma_bdma_ccr7_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 15, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 15, common::access::ro>,
                groov::field<"mem2mem", bool, 14, 14>,
                groov::field<"pl", std::uint8_t, 13, 12>,
                groov::field<"msize", std::uint8_t, 11, 10>,
@@ -194,10 +194,10 @@ using bdma_bdma_ccr7_v1_tt =
                groov::field<"pinc", bool, 6, 6>,
                groov::field<"circ", bool, 5, 5>,
                groov::field<"dir", bool, 4, 4>,
-               groov::field<"teie", bit_enable, 3, 3>,
-               groov::field<"htie", bit_enable, 2, 2>,
-               groov::field<"tcie", bit_enable, 1, 1>,
-               groov::field<"en", bit_enable, 0, 0>>;
+               groov::field<"teie", common::bittypes::bit_enable, 3, 3>,
+               groov::field<"htie", common::bittypes::bit_enable, 2, 2>,
+               groov::field<"tcie", common::bittypes::bit_enable, 1, 1>,
+               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
 
 // bdma_bdma_cm0ar0_v1: BDMA_CM0AR0
 // Used by: BDMA1, BDMA2
@@ -208,7 +208,7 @@ using bdma_bdma_cm0ar0_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"ma", std::uint32_t, 31, 0>>;
 
 // bdma_bdma_cm0ar1_v1: BDMA_CM0AR1
@@ -220,7 +220,7 @@ using bdma_bdma_cm0ar1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"ma", std::uint32_t, 31, 0>>;
 
 // bdma_bdma_cm0ar2_v1: BDMA_CM0AR2
@@ -232,7 +232,7 @@ using bdma_bdma_cm0ar2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"ma", std::uint32_t, 31, 0>>;
 
 // bdma_bdma_cm0ar3_v1: BDMA_CM0AR3
@@ -244,7 +244,7 @@ using bdma_bdma_cm0ar3_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"ma", std::uint32_t, 31, 0>>;
 
 // bdma_bdma_cm0ar4_v1: BDMA_CM0AR4
@@ -256,7 +256,7 @@ using bdma_bdma_cm0ar4_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"ma", std::uint32_t, 31, 0>>;
 
 // bdma_bdma_cm0ar5_v1: BDMA_CM0AR5
@@ -268,7 +268,7 @@ using bdma_bdma_cm0ar5_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"ma", std::uint32_t, 31, 0>>;
 
 // bdma_bdma_cm0ar6_v1: BDMA_CM0AR6
@@ -280,7 +280,7 @@ using bdma_bdma_cm0ar6_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"ma", std::uint32_t, 31, 0>>;
 
 // bdma_bdma_cm0ar7_v1: BDMA_CM0AR7
@@ -292,7 +292,7 @@ using bdma_bdma_cm0ar7_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"ma", std::uint32_t, 31, 0>>;
 
 // bdma_bdma_cm1ar0_v1: BDMA_CM1AR0
@@ -304,8 +304,8 @@ using bdma_bdma_cm1ar0_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 0, access::ro>>;
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 0, common::access::ro>>;
 
 // bdma_bdma_cm1ar1_v1: BDMA_CM1AR1
 // Used by: BDMA1, BDMA2
@@ -316,8 +316,8 @@ using bdma_bdma_cm1ar1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 0, access::ro>>;
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 0, common::access::ro>>;
 
 // bdma_bdma_cm1ar2_v1: BDMA_CM1AR2
 // Used by: BDMA1, BDMA2
@@ -328,8 +328,8 @@ using bdma_bdma_cm1ar2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 0, access::ro>>;
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 0, common::access::ro>>;
 
 // bdma_bdma_cm1ar3_v1: BDMA_CM1AR3
 // Used by: BDMA1, BDMA2
@@ -340,8 +340,8 @@ using bdma_bdma_cm1ar3_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 0, access::ro>>;
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 0, common::access::ro>>;
 
 // bdma_bdma_cm1ar4_v1: BDMA_CM1AR4
 // Used by: BDMA1, BDMA2
@@ -352,8 +352,8 @@ using bdma_bdma_cm1ar4_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 0, access::ro>>;
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 0, common::access::ro>>;
 
 // bdma_bdma_cm1ar5_v1: BDMA_CM1AR5
 // Used by: BDMA1, BDMA2
@@ -364,8 +364,8 @@ using bdma_bdma_cm1ar5_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 0, access::ro>>;
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 0, common::access::ro>>;
 
 // bdma_bdma_cm1ar6_v1: BDMA_CM1AR6
 // Used by: BDMA1, BDMA2
@@ -376,8 +376,8 @@ using bdma_bdma_cm1ar6_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 0, access::ro>>;
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 0, common::access::ro>>;
 
 // bdma_bdma_cm1ar7_v1: BDMA_CM1AR7
 // Used by: BDMA1, BDMA2
@@ -388,8 +388,8 @@ using bdma_bdma_cm1ar7_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 0, access::ro>>;
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 0, common::access::ro>>;
 
 // bdma_bdma_cndtr0_v1: BDMA_CNDTR0
 // Used by: BDMA1, BDMA2
@@ -400,8 +400,8 @@ using bdma_bdma_cndtr0_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"ndt", std::uint16_t, 15, 0>>;
 
 // bdma_bdma_cndtr1_v1: BDMA_CNDTR1
@@ -413,8 +413,8 @@ using bdma_bdma_cndtr1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"ndt", std::uint16_t, 15, 0>>;
 
 // bdma_bdma_cndtr2_v1: BDMA_CNDTR2
@@ -426,8 +426,8 @@ using bdma_bdma_cndtr2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"ndt", std::uint16_t, 15, 0>>;
 
 // bdma_bdma_cndtr3_v1: BDMA_CNDTR3
@@ -439,8 +439,8 @@ using bdma_bdma_cndtr3_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"ndt", std::uint16_t, 15, 0>>;
 
 // bdma_bdma_cndtr4_v1: BDMA_CNDTR4
@@ -452,8 +452,8 @@ using bdma_bdma_cndtr4_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"ndt", std::uint16_t, 15, 0>>;
 
 // bdma_bdma_cndtr5_v1: BDMA_CNDTR5
@@ -465,8 +465,8 @@ using bdma_bdma_cndtr5_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"ndt", std::uint16_t, 15, 0>>;
 
 // bdma_bdma_cndtr6_v1: BDMA_CNDTR6
@@ -478,8 +478,8 @@ using bdma_bdma_cndtr6_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"ndt", std::uint16_t, 15, 0>>;
 
 // bdma_bdma_cndtr7_v1: BDMA_CNDTR7
@@ -491,8 +491,8 @@ using bdma_bdma_cndtr7_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"ndt", std::uint16_t, 15, 0>>;
 
 // bdma_bdma_cpar0_v1: BDMA_CPAR0
@@ -504,7 +504,7 @@ using bdma_bdma_cpar0_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"pa", std::uint32_t, 31, 0>>;
 
 // bdma_bdma_cpar1_v1: BDMA_CPAR1
@@ -516,7 +516,7 @@ using bdma_bdma_cpar1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"pa", std::uint32_t, 31, 0>>;
 
 // bdma_bdma_cpar2_v1: BDMA_CPAR2
@@ -528,7 +528,7 @@ using bdma_bdma_cpar2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"pa", std::uint32_t, 31, 0>>;
 
 // bdma_bdma_cpar3_v1: BDMA_CPAR3
@@ -540,7 +540,7 @@ using bdma_bdma_cpar3_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"pa", std::uint32_t, 31, 0>>;
 
 // bdma_bdma_cpar4_v1: BDMA_CPAR4
@@ -552,7 +552,7 @@ using bdma_bdma_cpar4_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"pa", std::uint32_t, 31, 0>>;
 
 // bdma_bdma_cpar5_v1: BDMA_CPAR5
@@ -564,7 +564,7 @@ using bdma_bdma_cpar5_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"pa", std::uint32_t, 31, 0>>;
 
 // bdma_bdma_cpar6_v1: BDMA_CPAR6
@@ -576,7 +576,7 @@ using bdma_bdma_cpar6_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"pa", std::uint32_t, 31, 0>>;
 
 // bdma_bdma_cpar7_v1: BDMA_CPAR7
@@ -588,7 +588,7 @@ using bdma_bdma_cpar7_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"pa", std::uint32_t, 31, 0>>;
 
 // bdma_bdma_ifcr_v1: BDMA_IFCR
@@ -600,7 +600,7 @@ using bdma_bdma_ifcr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::wo,
+             common::access::wo,
                groov::field<"cteif8", bool, 31, 31>,
                groov::field<"chtif8", bool, 30, 30>,
                groov::field<"ctcif8", bool, 29, 29>,
@@ -643,7 +643,7 @@ using bdma_bdma_isr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"teif8", bool, 31, 31>,
                groov::field<"htif8", bool, 30, 30>,
                groov::field<"tcif8", bool, 29, 29>,

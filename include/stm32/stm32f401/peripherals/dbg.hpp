@@ -7,10 +7,22 @@
 namespace stm32::stm32f401 {
 
 namespace dbg {
-  using dbgmcu_idcode_tt = regs::dbg_dbgmcu_idcode_v1_tt;
-  using dbgmcu_cr_tt = regs::dbg_dbgmcu_cr_v1_tt;
-  using dbgmcu_apb1_fz_tt = regs::dbg_dbgmcu_apb1_fz_v1_tt;
-  using dbgmcu_apb2_fz_tt = regs::dbg_dbgmcu_apb2_fz_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dbgmcu_idcode_tt = regs::dbg_dbgmcu_idcode_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dbgmcu_cr_tt = regs::dbg_dbgmcu_cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dbgmcu_apb1_fz_tt = regs::dbg_dbgmcu_apb1_fz_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dbgmcu_apb2_fz_tt = regs::dbg_dbgmcu_apb2_fz_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using dbg_t =

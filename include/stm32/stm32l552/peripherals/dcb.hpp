@@ -7,7 +7,10 @@
 namespace stm32::stm32l552 {
 
 namespace dcb {
-  using dscsr_tt = regs::dcb_dscsr_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dscsr_tt = regs::dcb_dscsr_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using dcb_t =

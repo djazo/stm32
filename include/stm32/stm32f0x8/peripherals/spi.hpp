@@ -7,15 +7,42 @@
 namespace stm32::stm32f0x8 {
 
 namespace spix {
-  using cr1_tt = regs::spi_cr1_v1_tt;
-  using cr2_tt = regs::spi_cr2_v1_tt;
-  using sr_tt = regs::spi_sr_v1_tt;
-  using dr_tt = regs::spi_dr_v1_tt;
-  using crcpr_tt = regs::spi_crcpr_v1_tt;
-  using rxcrcr_tt = regs::spi_rxcrcr_v1_tt;
-  using txcrcr_tt = regs::spi_txcrcr_v1_tt;
-  using i2scfgr_tt = regs::spi_i2scfgr_v1_tt;
-  using i2spr_tt = regs::spi_i2spr_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cr1_tt = regs::spi_cr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cr2_tt = regs::spi_cr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using sr_tt = regs::spi_sr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dr_tt = regs::spi_dr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using crcpr_tt = regs::spi_crcpr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rxcrcr_tt = regs::spi_rxcrcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using txcrcr_tt = regs::spi_txcrcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using i2scfgr_tt = regs::spi_i2scfgr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using i2spr_tt = regs::spi_i2spr_v1_tt<name, baseaddress, offset>;
 
   template <stdx::ct_string name, std::uint32_t baseaddress>
   using spix_t =

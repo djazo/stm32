@@ -7,15 +7,42 @@
 namespace stm32::stm32h73x {
 
 namespace swpmi {
-  using cr_tt = regs::swpmi_cr_v1_tt;
-  using brr_tt = regs::swpmi_brr_v1_tt;
-  using isr_tt = regs::swpmi_isr_v1_tt;
-  using icr_tt = regs::swpmi_icr_v1_tt;
-  using ier_tt = regs::swpmi_ier_v1_tt;
-  using rfl_tt = regs::swpmi_rfl_v1_tt;
-  using tdr_tt = regs::swpmi_tdr_v1_tt;
-  using rdr_tt = regs::swpmi_rdr_v1_tt;
-  using or_tt = regs::swpmi_or_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cr_tt = regs::swpmi_cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using brr_tt = regs::swpmi_brr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using isr_tt = regs::swpmi_isr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using icr_tt = regs::swpmi_icr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ier_tt = regs::swpmi_ier_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rfl_tt = regs::swpmi_rfl_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using tdr_tt = regs::swpmi_tdr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rdr_tt = regs::swpmi_rdr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using or_tt = regs::swpmi_or_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using swpmi_t =

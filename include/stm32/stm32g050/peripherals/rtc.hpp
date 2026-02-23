@@ -7,26 +7,86 @@
 namespace stm32::stm32g050 {
 
 namespace rtc {
-  using rtc_tr_tt = regs::rtc_rtc_tr_v1_tt;
-  using rtc_dr_tt = regs::rtc_rtc_dr_v1_tt;
-  using rtc_ssr_tt = regs::rtc_rtc_ssr_v1_tt;
-  using rtc_icsr_tt = regs::rtc_rtc_icsr_v1_tt;
-  using rtc_prer_tt = regs::rtc_rtc_prer_v1_tt;
-  using rtc_wutr_tt = regs::rtc_rtc_wutr_v1_tt;
-  using rtc_cr_tt = regs::rtc_rtc_cr_v1_tt;
-  using rtc_wpr_tt = regs::rtc_rtc_wpr_v1_tt;
-  using rtc_calr_tt = regs::rtc_rtc_calr_v1_tt;
-  using rtc_shiftr_tt = regs::rtc_rtc_shiftr_v1_tt;
-  using rtc_tstr_tt = regs::rtc_rtc_tstr_v1_tt;
-  using rtc_tsdr_tt = regs::rtc_rtc_tsdr_v1_tt;
-  using rtc_tsssr_tt = regs::rtc_rtc_tsssr_v1_tt;
-  using rtc_alrmar_tt = regs::rtc_rtc_alrmar_v1_tt;
-  using rtc_alrmassr_tt = regs::rtc_rtc_alrmassr_v1_tt;
-  using rtc_alrmbr_tt = regs::rtc_rtc_alrmbr_v1_tt;
-  using rtc_alrmbssr_tt = regs::rtc_rtc_alrmbssr_v1_tt;
-  using rtc_sr_tt = regs::rtc_rtc_sr_v1_tt;
-  using rtc_misr_tt = regs::rtc_rtc_misr_v1_tt;
-  using rtc_scr_tt = regs::rtc_rtc_scr_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rtc_tr_tt = regs::rtc_rtc_tr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rtc_dr_tt = regs::rtc_rtc_dr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rtc_ssr_tt = regs::rtc_rtc_ssr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rtc_icsr_tt = regs::rtc_rtc_icsr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rtc_prer_tt = regs::rtc_rtc_prer_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rtc_wutr_tt = regs::rtc_rtc_wutr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rtc_cr_tt = regs::rtc_rtc_cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rtc_wpr_tt = regs::rtc_rtc_wpr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rtc_calr_tt = regs::rtc_rtc_calr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rtc_shiftr_tt = regs::rtc_rtc_shiftr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rtc_tstr_tt = regs::rtc_rtc_tstr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rtc_tsdr_tt = regs::rtc_rtc_tsdr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rtc_tsssr_tt = regs::rtc_rtc_tsssr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rtc_alrmar_tt = regs::rtc_rtc_alrmar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rtc_alrmassr_tt = regs::rtc_rtc_alrmassr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rtc_alrmbr_tt = regs::rtc_rtc_alrmbr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rtc_alrmbssr_tt = regs::rtc_rtc_alrmbssr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rtc_sr_tt = regs::rtc_rtc_sr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rtc_misr_tt = regs::rtc_rtc_misr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rtc_scr_tt = regs::rtc_rtc_scr_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using rtc_t =

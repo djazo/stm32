@@ -16,8 +16,8 @@ using lpdma_lpdma_c0br1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"bndt", std::uint16_t, 15, 0>>;
 
 // lpdma_lpdma_c0cr_v1: LPDMA_C0CR
@@ -29,23 +29,23 @@ using lpdma_lpdma_c0cr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved3", std::uint8_t, 31, 24, access::ro>,
+             common::access::rw,
+               groov::field<"reserved3", std::uint8_t, 31, 24, common::access::ro>,
                groov::field<"prio", std::uint8_t, 23, 22>,
-               groov::field<"reserved2", std::uint8_t, 21, 17, access::ro>,
+               groov::field<"reserved2", std::uint8_t, 21, 17, common::access::ro>,
                groov::field<"lsm", bool, 16, 16>,
-               groov::field<"reserved1", bool, 15, 15, access::ro>,
-               groov::field<"toie", bit_enable, 14, 14>,
-               groov::field<"suspie", bit_enable, 13, 13>,
-               groov::field<"useie", bit_enable, 12, 12>,
-               groov::field<"uleie", bit_enable, 11, 11>,
-               groov::field<"dteie", bit_enable, 10, 10>,
-               groov::field<"htie", bit_enable, 9, 9>,
-               groov::field<"tcie", bit_enable, 8, 8>,
-               groov::field<"reserved0", std::uint8_t, 7, 3, access::ro>,
+               groov::field<"reserved1", bool, 15, 15, common::access::ro>,
+               groov::field<"toie", common::bittypes::bit_enable, 14, 14>,
+               groov::field<"suspie", common::bittypes::bit_enable, 13, 13>,
+               groov::field<"useie", common::bittypes::bit_enable, 12, 12>,
+               groov::field<"uleie", common::bittypes::bit_enable, 11, 11>,
+               groov::field<"dteie", common::bittypes::bit_enable, 10, 10>,
+               groov::field<"htie", common::bittypes::bit_enable, 9, 9>,
+               groov::field<"tcie", common::bittypes::bit_enable, 8, 8>,
+               groov::field<"reserved0", std::uint8_t, 7, 3, common::access::ro>,
                groov::field<"susp", bool, 2, 2>,
-               groov::field<"reset", bool, 1, 1, access::wo>,
-               groov::field<"en", bit_enable, 0, 0>>;
+               groov::field<"reset", bool, 1, 1, common::access::wo>,
+               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
 
 // lpdma_lpdma_c0dar_v1: LPDMA_C0DAR
 // Used by: LPDMA1, SEC_LPDMA1
@@ -56,7 +56,7 @@ using lpdma_lpdma_c0dar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"da", std::uint32_t, 31, 0>>;
 
 // lpdma_lpdma_c0fcr_v1: LPDMA_C0FCR
@@ -68,16 +68,16 @@ using lpdma_lpdma_c0fcr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint32_t, 31, 15, access::ro>,
-               groov::field<"tof", bool, 14, 14, access::wo>,
-               groov::field<"suspf", bool, 13, 13, access::wo>,
-               groov::field<"usef", bool, 12, 12, access::wo>,
-               groov::field<"ulef", bool, 11, 11, access::wo>,
-               groov::field<"dtef", bool, 10, 10, access::wo>,
-               groov::field<"htf", bool, 9, 9, access::wo>,
-               groov::field<"tcf", bool, 8, 8, access::wo>,
-               groov::field<"reserved0", std::uint8_t, 7, 0, access::ro>>;
+             common::access::rw,
+               groov::field<"reserved1", std::uint32_t, 31, 15, common::access::ro>,
+               groov::field<"tof", bool, 14, 14, common::access::wo>,
+               groov::field<"suspf", bool, 13, 13, common::access::wo>,
+               groov::field<"usef", bool, 12, 12, common::access::wo>,
+               groov::field<"ulef", bool, 11, 11, common::access::wo>,
+               groov::field<"dtef", bool, 10, 10, common::access::wo>,
+               groov::field<"htf", bool, 9, 9, common::access::wo>,
+               groov::field<"tcf", bool, 8, 8, common::access::wo>,
+               groov::field<"reserved0", std::uint8_t, 7, 0, common::access::ro>>;
 
 // lpdma_lpdma_c0lbar_v1: LPDMA_C0LBAR
 // Used by: LPDMA1, SEC_LPDMA1
@@ -88,9 +88,9 @@ using lpdma_lpdma_c0lbar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"lba", std::uint16_t, 31, 16>,
-               groov::field<"reserved0", std::uint16_t, 15, 0, access::ro>>;
+               groov::field<"reserved0", std::uint16_t, 15, 0, common::access::ro>>;
 
 // lpdma_lpdma_c0llr_v1: LPDMA_C0LLR
 // Used by: LPDMA1, SEC_LPDMA1
@@ -101,16 +101,16 @@ using lpdma_lpdma_c0llr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"ut1", bool, 31, 31>,
                groov::field<"ut2", bool, 30, 30>,
                groov::field<"ub1", bool, 29, 29>,
                groov::field<"usa", bool, 28, 28>,
                groov::field<"uda", bool, 27, 27>,
-               groov::field<"reserved1", std::uint16_t, 26, 17, access::ro>,
+               groov::field<"reserved1", std::uint16_t, 26, 17, common::access::ro>,
                groov::field<"ull", bool, 16, 16>,
                groov::field<"la", std::uint16_t, 15, 2>,
-               groov::field<"reserved0", std::uint8_t, 1, 0, access::ro>>;
+               groov::field<"reserved0", std::uint8_t, 1, 0, common::access::ro>>;
 
 // lpdma_lpdma_c0sar_v1: LPDMA_C0SAR
 // Used by: LPDMA1, SEC_LPDMA1
@@ -121,7 +121,7 @@ using lpdma_lpdma_c0sar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"sa", std::uint32_t, 31, 0>>;
 
 // lpdma_lpdma_c0sr_v1: LPDMA_C0SR
@@ -133,17 +133,17 @@ using lpdma_lpdma_c0sr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint32_t, 31, 15, access::ro>,
-               groov::field<"tof", bool, 14, 14, access::ro>,
-               groov::field<"suspf", bool, 13, 13, access::ro>,
-               groov::field<"usef", bool, 12, 12, access::ro>,
-               groov::field<"ulef", bool, 11, 11, access::ro>,
-               groov::field<"dtef", bool, 10, 10, access::ro>,
-               groov::field<"htf", bool, 9, 9, access::ro>,
-               groov::field<"tcf", bool, 8, 8, access::ro>,
-               groov::field<"reserved0", std::uint8_t, 7, 1, access::ro>,
-               groov::field<"idlef", bool, 0, 0, access::ro>>;
+             common::access::rw,
+               groov::field<"reserved1", std::uint32_t, 31, 15, common::access::ro>,
+               groov::field<"tof", bool, 14, 14, common::access::ro>,
+               groov::field<"suspf", bool, 13, 13, common::access::ro>,
+               groov::field<"usef", bool, 12, 12, common::access::ro>,
+               groov::field<"ulef", bool, 11, 11, common::access::ro>,
+               groov::field<"dtef", bool, 10, 10, common::access::ro>,
+               groov::field<"htf", bool, 9, 9, common::access::ro>,
+               groov::field<"tcf", bool, 8, 8, common::access::ro>,
+               groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
+               groov::field<"idlef", bool, 0, 0, common::access::ro>>;
 
 // lpdma_lpdma_c0tr1_v1: LPDMA_C0TR1
 // Used by: LPDMA1, SEC_LPDMA1
@@ -154,18 +154,18 @@ using lpdma_lpdma_c0tr1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dsec", bool, 31, 31>,
-               groov::field<"reserved4", std::uint16_t, 30, 20, access::ro>,
+               groov::field<"reserved4", std::uint16_t, 30, 20, common::access::ro>,
                groov::field<"dinc", bool, 19, 19>,
-               groov::field<"reserved3", bool, 18, 18, access::ro>,
+               groov::field<"reserved3", bool, 18, 18, common::access::ro>,
                groov::field<"ddw_log2", std::uint8_t, 17, 16>,
                groov::field<"ssec", bool, 15, 15>,
-               groov::field<"reserved2", std::uint8_t, 14, 12, access::ro>,
+               groov::field<"reserved2", std::uint8_t, 14, 12, common::access::ro>,
                groov::field<"pam", bool, 11, 11>,
-               groov::field<"reserved1", std::uint8_t, 10, 4, access::ro>,
+               groov::field<"reserved1", std::uint8_t, 10, 4, common::access::ro>,
                groov::field<"sinc", bool, 3, 3>,
-               groov::field<"reserved0", bool, 2, 2, access::ro>,
+               groov::field<"reserved0", bool, 2, 2, common::access::ro>,
                groov::field<"sdw_log2", std::uint8_t, 1, 0>>;
 
 // lpdma_lpdma_c0tr2_v1: LPDMA_C0TR2
@@ -177,18 +177,18 @@ using lpdma_lpdma_c0tr2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"tcem", std::uint8_t, 31, 30>,
-               groov::field<"reserved4", std::uint8_t, 29, 26, access::ro>,
+               groov::field<"reserved4", std::uint8_t, 29, 26, common::access::ro>,
                groov::field<"trigpol", std::uint8_t, 25, 24>,
-               groov::field<"reserved3", std::uint8_t, 23, 21, access::ro>,
+               groov::field<"reserved3", std::uint8_t, 23, 21, common::access::ro>,
                groov::field<"trigsel", std::uint8_t, 20, 16>,
                groov::field<"trigm", std::uint8_t, 15, 14>,
-               groov::field<"reserved2", std::uint8_t, 13, 12, access::ro>,
+               groov::field<"reserved2", std::uint8_t, 13, 12, common::access::ro>,
                groov::field<"breq", bool, 11, 11>,
-               groov::field<"reserved1", bool, 10, 10, access::ro>,
+               groov::field<"reserved1", bool, 10, 10, common::access::ro>,
                groov::field<"swreq", bool, 9, 9>,
-               groov::field<"reserved0", std::uint8_t, 8, 5, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 8, 5, common::access::ro>,
                groov::field<"reqsel", std::uint8_t, 4, 0>>;
 
 // lpdma_lpdma_c1br1_v1: LPDMA_C1BR1
@@ -200,8 +200,8 @@ using lpdma_lpdma_c1br1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"bndt", std::uint16_t, 15, 0>>;
 
 // lpdma_lpdma_c1cr_v1: LPDMA_C1CR
@@ -213,23 +213,23 @@ using lpdma_lpdma_c1cr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved3", std::uint8_t, 31, 24, access::ro>,
+             common::access::rw,
+               groov::field<"reserved3", std::uint8_t, 31, 24, common::access::ro>,
                groov::field<"prio", std::uint8_t, 23, 22>,
-               groov::field<"reserved2", std::uint8_t, 21, 17, access::ro>,
+               groov::field<"reserved2", std::uint8_t, 21, 17, common::access::ro>,
                groov::field<"lsm", bool, 16, 16>,
-               groov::field<"reserved1", bool, 15, 15, access::ro>,
-               groov::field<"toie", bit_enable, 14, 14>,
-               groov::field<"suspie", bit_enable, 13, 13>,
-               groov::field<"useie", bit_enable, 12, 12>,
-               groov::field<"uleie", bit_enable, 11, 11>,
-               groov::field<"dteie", bit_enable, 10, 10>,
-               groov::field<"htie", bit_enable, 9, 9>,
-               groov::field<"tcie", bit_enable, 8, 8>,
-               groov::field<"reserved0", std::uint8_t, 7, 3, access::ro>,
+               groov::field<"reserved1", bool, 15, 15, common::access::ro>,
+               groov::field<"toie", common::bittypes::bit_enable, 14, 14>,
+               groov::field<"suspie", common::bittypes::bit_enable, 13, 13>,
+               groov::field<"useie", common::bittypes::bit_enable, 12, 12>,
+               groov::field<"uleie", common::bittypes::bit_enable, 11, 11>,
+               groov::field<"dteie", common::bittypes::bit_enable, 10, 10>,
+               groov::field<"htie", common::bittypes::bit_enable, 9, 9>,
+               groov::field<"tcie", common::bittypes::bit_enable, 8, 8>,
+               groov::field<"reserved0", std::uint8_t, 7, 3, common::access::ro>,
                groov::field<"susp", bool, 2, 2>,
-               groov::field<"reset", bool, 1, 1, access::wo>,
-               groov::field<"en", bit_enable, 0, 0>>;
+               groov::field<"reset", bool, 1, 1, common::access::wo>,
+               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
 
 // lpdma_lpdma_c1dar_v1: LPDMA_C1DAR
 // Used by: LPDMA1, SEC_LPDMA1
@@ -240,7 +240,7 @@ using lpdma_lpdma_c1dar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"da", std::uint32_t, 31, 0>>;
 
 // lpdma_lpdma_c1fcr_v1: LPDMA_C1FCR
@@ -252,16 +252,16 @@ using lpdma_lpdma_c1fcr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint32_t, 31, 15, access::ro>,
-               groov::field<"tof", bool, 14, 14, access::wo>,
-               groov::field<"suspf", bool, 13, 13, access::wo>,
-               groov::field<"usef", bool, 12, 12, access::wo>,
-               groov::field<"ulef", bool, 11, 11, access::wo>,
-               groov::field<"dtef", bool, 10, 10, access::wo>,
-               groov::field<"htf", bool, 9, 9, access::wo>,
-               groov::field<"tcf", bool, 8, 8, access::wo>,
-               groov::field<"reserved0", std::uint8_t, 7, 0, access::ro>>;
+             common::access::rw,
+               groov::field<"reserved1", std::uint32_t, 31, 15, common::access::ro>,
+               groov::field<"tof", bool, 14, 14, common::access::wo>,
+               groov::field<"suspf", bool, 13, 13, common::access::wo>,
+               groov::field<"usef", bool, 12, 12, common::access::wo>,
+               groov::field<"ulef", bool, 11, 11, common::access::wo>,
+               groov::field<"dtef", bool, 10, 10, common::access::wo>,
+               groov::field<"htf", bool, 9, 9, common::access::wo>,
+               groov::field<"tcf", bool, 8, 8, common::access::wo>,
+               groov::field<"reserved0", std::uint8_t, 7, 0, common::access::ro>>;
 
 // lpdma_lpdma_c1lbar_v1: LPDMA_C1LBAR
 // Used by: LPDMA1, SEC_LPDMA1
@@ -272,9 +272,9 @@ using lpdma_lpdma_c1lbar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"lba", std::uint16_t, 31, 16>,
-               groov::field<"reserved0", std::uint16_t, 15, 0, access::ro>>;
+               groov::field<"reserved0", std::uint16_t, 15, 0, common::access::ro>>;
 
 // lpdma_lpdma_c1llr_v1: LPDMA_C1LLR
 // Used by: LPDMA1, SEC_LPDMA1
@@ -285,16 +285,16 @@ using lpdma_lpdma_c1llr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"ut1", bool, 31, 31>,
                groov::field<"ut2", bool, 30, 30>,
                groov::field<"ub1", bool, 29, 29>,
                groov::field<"usa", bool, 28, 28>,
                groov::field<"uda", bool, 27, 27>,
-               groov::field<"reserved1", std::uint16_t, 26, 17, access::ro>,
+               groov::field<"reserved1", std::uint16_t, 26, 17, common::access::ro>,
                groov::field<"ull", bool, 16, 16>,
                groov::field<"la", std::uint16_t, 15, 2>,
-               groov::field<"reserved0", std::uint8_t, 1, 0, access::ro>>;
+               groov::field<"reserved0", std::uint8_t, 1, 0, common::access::ro>>;
 
 // lpdma_lpdma_c1sar_v1: LPDMA_C1SAR
 // Used by: LPDMA1, SEC_LPDMA1
@@ -305,7 +305,7 @@ using lpdma_lpdma_c1sar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"sa", std::uint32_t, 31, 0>>;
 
 // lpdma_lpdma_c1sr_v1: LPDMA_C1SR
@@ -317,17 +317,17 @@ using lpdma_lpdma_c1sr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint32_t, 31, 15, access::ro>,
-               groov::field<"tof", bool, 14, 14, access::ro>,
-               groov::field<"suspf", bool, 13, 13, access::ro>,
-               groov::field<"usef", bool, 12, 12, access::ro>,
-               groov::field<"ulef", bool, 11, 11, access::ro>,
-               groov::field<"dtef", bool, 10, 10, access::ro>,
-               groov::field<"htf", bool, 9, 9, access::ro>,
-               groov::field<"tcf", bool, 8, 8, access::ro>,
-               groov::field<"reserved0", std::uint8_t, 7, 1, access::ro>,
-               groov::field<"idlef", bool, 0, 0, access::ro>>;
+             common::access::rw,
+               groov::field<"reserved1", std::uint32_t, 31, 15, common::access::ro>,
+               groov::field<"tof", bool, 14, 14, common::access::ro>,
+               groov::field<"suspf", bool, 13, 13, common::access::ro>,
+               groov::field<"usef", bool, 12, 12, common::access::ro>,
+               groov::field<"ulef", bool, 11, 11, common::access::ro>,
+               groov::field<"dtef", bool, 10, 10, common::access::ro>,
+               groov::field<"htf", bool, 9, 9, common::access::ro>,
+               groov::field<"tcf", bool, 8, 8, common::access::ro>,
+               groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
+               groov::field<"idlef", bool, 0, 0, common::access::ro>>;
 
 // lpdma_lpdma_c1tr1_v1: LPDMA_C1TR1
 // Used by: LPDMA1, SEC_LPDMA1
@@ -338,18 +338,18 @@ using lpdma_lpdma_c1tr1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dsec", bool, 31, 31>,
-               groov::field<"reserved4", std::uint16_t, 30, 20, access::ro>,
+               groov::field<"reserved4", std::uint16_t, 30, 20, common::access::ro>,
                groov::field<"dinc", bool, 19, 19>,
-               groov::field<"reserved3", bool, 18, 18, access::ro>,
+               groov::field<"reserved3", bool, 18, 18, common::access::ro>,
                groov::field<"ddw_log2", std::uint8_t, 17, 16>,
                groov::field<"ssec", bool, 15, 15>,
-               groov::field<"reserved2", std::uint8_t, 14, 12, access::ro>,
+               groov::field<"reserved2", std::uint8_t, 14, 12, common::access::ro>,
                groov::field<"pam", bool, 11, 11>,
-               groov::field<"reserved1", std::uint8_t, 10, 4, access::ro>,
+               groov::field<"reserved1", std::uint8_t, 10, 4, common::access::ro>,
                groov::field<"sinc", bool, 3, 3>,
-               groov::field<"reserved0", bool, 2, 2, access::ro>,
+               groov::field<"reserved0", bool, 2, 2, common::access::ro>,
                groov::field<"sdw_log2", std::uint8_t, 1, 0>>;
 
 // lpdma_lpdma_c1tr2_v1: LPDMA_C1TR2
@@ -361,18 +361,18 @@ using lpdma_lpdma_c1tr2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"tcem", std::uint8_t, 31, 30>,
-               groov::field<"reserved4", std::uint8_t, 29, 26, access::ro>,
+               groov::field<"reserved4", std::uint8_t, 29, 26, common::access::ro>,
                groov::field<"trigpol", std::uint8_t, 25, 24>,
-               groov::field<"reserved3", std::uint8_t, 23, 21, access::ro>,
+               groov::field<"reserved3", std::uint8_t, 23, 21, common::access::ro>,
                groov::field<"trigsel", std::uint8_t, 20, 16>,
                groov::field<"trigm", std::uint8_t, 15, 14>,
-               groov::field<"reserved2", std::uint8_t, 13, 12, access::ro>,
+               groov::field<"reserved2", std::uint8_t, 13, 12, common::access::ro>,
                groov::field<"breq", bool, 11, 11>,
-               groov::field<"reserved1", bool, 10, 10, access::ro>,
+               groov::field<"reserved1", bool, 10, 10, common::access::ro>,
                groov::field<"swreq", bool, 9, 9>,
-               groov::field<"reserved0", std::uint8_t, 8, 5, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 8, 5, common::access::ro>,
                groov::field<"reqsel", std::uint8_t, 4, 0>>;
 
 // lpdma_lpdma_c2br1_v1: LPDMA_C2BR1
@@ -384,8 +384,8 @@ using lpdma_lpdma_c2br1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"bndt", std::uint16_t, 15, 0>>;
 
 // lpdma_lpdma_c2cr_v1: LPDMA_C2CR
@@ -397,23 +397,23 @@ using lpdma_lpdma_c2cr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved3", std::uint8_t, 31, 24, access::ro>,
+             common::access::rw,
+               groov::field<"reserved3", std::uint8_t, 31, 24, common::access::ro>,
                groov::field<"prio", std::uint8_t, 23, 22>,
-               groov::field<"reserved2", std::uint8_t, 21, 17, access::ro>,
+               groov::field<"reserved2", std::uint8_t, 21, 17, common::access::ro>,
                groov::field<"lsm", bool, 16, 16>,
-               groov::field<"reserved1", bool, 15, 15, access::ro>,
-               groov::field<"toie", bit_enable, 14, 14>,
-               groov::field<"suspie", bit_enable, 13, 13>,
-               groov::field<"useie", bit_enable, 12, 12>,
-               groov::field<"uleie", bit_enable, 11, 11>,
-               groov::field<"dteie", bit_enable, 10, 10>,
-               groov::field<"htie", bit_enable, 9, 9>,
-               groov::field<"tcie", bit_enable, 8, 8>,
-               groov::field<"reserved0", std::uint8_t, 7, 3, access::ro>,
+               groov::field<"reserved1", bool, 15, 15, common::access::ro>,
+               groov::field<"toie", common::bittypes::bit_enable, 14, 14>,
+               groov::field<"suspie", common::bittypes::bit_enable, 13, 13>,
+               groov::field<"useie", common::bittypes::bit_enable, 12, 12>,
+               groov::field<"uleie", common::bittypes::bit_enable, 11, 11>,
+               groov::field<"dteie", common::bittypes::bit_enable, 10, 10>,
+               groov::field<"htie", common::bittypes::bit_enable, 9, 9>,
+               groov::field<"tcie", common::bittypes::bit_enable, 8, 8>,
+               groov::field<"reserved0", std::uint8_t, 7, 3, common::access::ro>,
                groov::field<"susp", bool, 2, 2>,
-               groov::field<"reset", bool, 1, 1, access::wo>,
-               groov::field<"en", bit_enable, 0, 0>>;
+               groov::field<"reset", bool, 1, 1, common::access::wo>,
+               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
 
 // lpdma_lpdma_c2dar_v1: LPDMA_C2DAR
 // Used by: LPDMA1, SEC_LPDMA1
@@ -424,7 +424,7 @@ using lpdma_lpdma_c2dar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"da", std::uint32_t, 31, 0>>;
 
 // lpdma_lpdma_c2fcr_v1: LPDMA_C2FCR
@@ -436,16 +436,16 @@ using lpdma_lpdma_c2fcr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint32_t, 31, 15, access::ro>,
-               groov::field<"tof", bool, 14, 14, access::wo>,
-               groov::field<"suspf", bool, 13, 13, access::wo>,
-               groov::field<"usef", bool, 12, 12, access::wo>,
-               groov::field<"ulef", bool, 11, 11, access::wo>,
-               groov::field<"dtef", bool, 10, 10, access::wo>,
-               groov::field<"htf", bool, 9, 9, access::wo>,
-               groov::field<"tcf", bool, 8, 8, access::wo>,
-               groov::field<"reserved0", std::uint8_t, 7, 0, access::ro>>;
+             common::access::rw,
+               groov::field<"reserved1", std::uint32_t, 31, 15, common::access::ro>,
+               groov::field<"tof", bool, 14, 14, common::access::wo>,
+               groov::field<"suspf", bool, 13, 13, common::access::wo>,
+               groov::field<"usef", bool, 12, 12, common::access::wo>,
+               groov::field<"ulef", bool, 11, 11, common::access::wo>,
+               groov::field<"dtef", bool, 10, 10, common::access::wo>,
+               groov::field<"htf", bool, 9, 9, common::access::wo>,
+               groov::field<"tcf", bool, 8, 8, common::access::wo>,
+               groov::field<"reserved0", std::uint8_t, 7, 0, common::access::ro>>;
 
 // lpdma_lpdma_c2lbar_v1: LPDMA_C2LBAR
 // Used by: LPDMA1, SEC_LPDMA1
@@ -456,9 +456,9 @@ using lpdma_lpdma_c2lbar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"lba", std::uint16_t, 31, 16>,
-               groov::field<"reserved0", std::uint16_t, 15, 0, access::ro>>;
+               groov::field<"reserved0", std::uint16_t, 15, 0, common::access::ro>>;
 
 // lpdma_lpdma_c2llr_v1: LPDMA_C2LLR
 // Used by: LPDMA1, SEC_LPDMA1
@@ -469,16 +469,16 @@ using lpdma_lpdma_c2llr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"ut1", bool, 31, 31>,
                groov::field<"ut2", bool, 30, 30>,
                groov::field<"ub1", bool, 29, 29>,
                groov::field<"usa", bool, 28, 28>,
                groov::field<"uda", bool, 27, 27>,
-               groov::field<"reserved1", std::uint16_t, 26, 17, access::ro>,
+               groov::field<"reserved1", std::uint16_t, 26, 17, common::access::ro>,
                groov::field<"ull", bool, 16, 16>,
                groov::field<"la", std::uint16_t, 15, 2>,
-               groov::field<"reserved0", std::uint8_t, 1, 0, access::ro>>;
+               groov::field<"reserved0", std::uint8_t, 1, 0, common::access::ro>>;
 
 // lpdma_lpdma_c2sar_v1: LPDMA_C2SAR
 // Used by: LPDMA1, SEC_LPDMA1
@@ -489,7 +489,7 @@ using lpdma_lpdma_c2sar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"sa", std::uint32_t, 31, 0>>;
 
 // lpdma_lpdma_c2sr_v1: LPDMA_C2SR
@@ -501,17 +501,17 @@ using lpdma_lpdma_c2sr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint32_t, 31, 15, access::ro>,
-               groov::field<"tof", bool, 14, 14, access::ro>,
-               groov::field<"suspf", bool, 13, 13, access::ro>,
-               groov::field<"usef", bool, 12, 12, access::ro>,
-               groov::field<"ulef", bool, 11, 11, access::ro>,
-               groov::field<"dtef", bool, 10, 10, access::ro>,
-               groov::field<"htf", bool, 9, 9, access::ro>,
-               groov::field<"tcf", bool, 8, 8, access::ro>,
-               groov::field<"reserved0", std::uint8_t, 7, 1, access::ro>,
-               groov::field<"idlef", bool, 0, 0, access::ro>>;
+             common::access::rw,
+               groov::field<"reserved1", std::uint32_t, 31, 15, common::access::ro>,
+               groov::field<"tof", bool, 14, 14, common::access::ro>,
+               groov::field<"suspf", bool, 13, 13, common::access::ro>,
+               groov::field<"usef", bool, 12, 12, common::access::ro>,
+               groov::field<"ulef", bool, 11, 11, common::access::ro>,
+               groov::field<"dtef", bool, 10, 10, common::access::ro>,
+               groov::field<"htf", bool, 9, 9, common::access::ro>,
+               groov::field<"tcf", bool, 8, 8, common::access::ro>,
+               groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
+               groov::field<"idlef", bool, 0, 0, common::access::ro>>;
 
 // lpdma_lpdma_c2tr1_v1: LPDMA_C2TR1
 // Used by: LPDMA1, SEC_LPDMA1
@@ -522,18 +522,18 @@ using lpdma_lpdma_c2tr1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dsec", bool, 31, 31>,
-               groov::field<"reserved4", std::uint16_t, 30, 20, access::ro>,
+               groov::field<"reserved4", std::uint16_t, 30, 20, common::access::ro>,
                groov::field<"dinc", bool, 19, 19>,
-               groov::field<"reserved3", bool, 18, 18, access::ro>,
+               groov::field<"reserved3", bool, 18, 18, common::access::ro>,
                groov::field<"ddw_log2", std::uint8_t, 17, 16>,
                groov::field<"ssec", bool, 15, 15>,
-               groov::field<"reserved2", std::uint8_t, 14, 12, access::ro>,
+               groov::field<"reserved2", std::uint8_t, 14, 12, common::access::ro>,
                groov::field<"pam", bool, 11, 11>,
-               groov::field<"reserved1", std::uint8_t, 10, 4, access::ro>,
+               groov::field<"reserved1", std::uint8_t, 10, 4, common::access::ro>,
                groov::field<"sinc", bool, 3, 3>,
-               groov::field<"reserved0", bool, 2, 2, access::ro>,
+               groov::field<"reserved0", bool, 2, 2, common::access::ro>,
                groov::field<"sdw_log2", std::uint8_t, 1, 0>>;
 
 // lpdma_lpdma_c2tr2_v1: LPDMA_C2TR2
@@ -545,18 +545,18 @@ using lpdma_lpdma_c2tr2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"tcem", std::uint8_t, 31, 30>,
-               groov::field<"reserved4", std::uint8_t, 29, 26, access::ro>,
+               groov::field<"reserved4", std::uint8_t, 29, 26, common::access::ro>,
                groov::field<"trigpol", std::uint8_t, 25, 24>,
-               groov::field<"reserved3", std::uint8_t, 23, 21, access::ro>,
+               groov::field<"reserved3", std::uint8_t, 23, 21, common::access::ro>,
                groov::field<"trigsel", std::uint8_t, 20, 16>,
                groov::field<"trigm", std::uint8_t, 15, 14>,
-               groov::field<"reserved2", std::uint8_t, 13, 12, access::ro>,
+               groov::field<"reserved2", std::uint8_t, 13, 12, common::access::ro>,
                groov::field<"breq", bool, 11, 11>,
-               groov::field<"reserved1", bool, 10, 10, access::ro>,
+               groov::field<"reserved1", bool, 10, 10, common::access::ro>,
                groov::field<"swreq", bool, 9, 9>,
-               groov::field<"reserved0", std::uint8_t, 8, 5, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 8, 5, common::access::ro>,
                groov::field<"reqsel", std::uint8_t, 4, 0>>;
 
 // lpdma_lpdma_c3br1_v1: LPDMA_C3BR1
@@ -568,8 +568,8 @@ using lpdma_lpdma_c3br1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"bndt", std::uint16_t, 15, 0>>;
 
 // lpdma_lpdma_c3cr_v1: LPDMA_C3CR
@@ -581,23 +581,23 @@ using lpdma_lpdma_c3cr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved3", std::uint8_t, 31, 24, access::ro>,
+             common::access::rw,
+               groov::field<"reserved3", std::uint8_t, 31, 24, common::access::ro>,
                groov::field<"prio", std::uint8_t, 23, 22>,
-               groov::field<"reserved2", std::uint8_t, 21, 17, access::ro>,
+               groov::field<"reserved2", std::uint8_t, 21, 17, common::access::ro>,
                groov::field<"lsm", bool, 16, 16>,
-               groov::field<"reserved1", bool, 15, 15, access::ro>,
-               groov::field<"toie", bit_enable, 14, 14>,
-               groov::field<"suspie", bit_enable, 13, 13>,
-               groov::field<"useie", bit_enable, 12, 12>,
-               groov::field<"uleie", bit_enable, 11, 11>,
-               groov::field<"dteie", bit_enable, 10, 10>,
-               groov::field<"htie", bit_enable, 9, 9>,
-               groov::field<"tcie", bit_enable, 8, 8>,
-               groov::field<"reserved0", std::uint8_t, 7, 3, access::ro>,
+               groov::field<"reserved1", bool, 15, 15, common::access::ro>,
+               groov::field<"toie", common::bittypes::bit_enable, 14, 14>,
+               groov::field<"suspie", common::bittypes::bit_enable, 13, 13>,
+               groov::field<"useie", common::bittypes::bit_enable, 12, 12>,
+               groov::field<"uleie", common::bittypes::bit_enable, 11, 11>,
+               groov::field<"dteie", common::bittypes::bit_enable, 10, 10>,
+               groov::field<"htie", common::bittypes::bit_enable, 9, 9>,
+               groov::field<"tcie", common::bittypes::bit_enable, 8, 8>,
+               groov::field<"reserved0", std::uint8_t, 7, 3, common::access::ro>,
                groov::field<"susp", bool, 2, 2>,
-               groov::field<"reset", bool, 1, 1, access::wo>,
-               groov::field<"en", bit_enable, 0, 0>>;
+               groov::field<"reset", bool, 1, 1, common::access::wo>,
+               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
 
 // lpdma_lpdma_c3dar_v1: LPDMA_C3DAR
 // Used by: LPDMA1, SEC_LPDMA1
@@ -608,7 +608,7 @@ using lpdma_lpdma_c3dar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"da", std::uint32_t, 31, 0>>;
 
 // lpdma_lpdma_c3fcr_v1: LPDMA_C3FCR
@@ -620,16 +620,16 @@ using lpdma_lpdma_c3fcr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint32_t, 31, 15, access::ro>,
-               groov::field<"tof", bool, 14, 14, access::wo>,
-               groov::field<"suspf", bool, 13, 13, access::wo>,
-               groov::field<"usef", bool, 12, 12, access::wo>,
-               groov::field<"ulef", bool, 11, 11, access::wo>,
-               groov::field<"dtef", bool, 10, 10, access::wo>,
-               groov::field<"htf", bool, 9, 9, access::wo>,
-               groov::field<"tcf", bool, 8, 8, access::wo>,
-               groov::field<"reserved0", std::uint8_t, 7, 0, access::ro>>;
+             common::access::rw,
+               groov::field<"reserved1", std::uint32_t, 31, 15, common::access::ro>,
+               groov::field<"tof", bool, 14, 14, common::access::wo>,
+               groov::field<"suspf", bool, 13, 13, common::access::wo>,
+               groov::field<"usef", bool, 12, 12, common::access::wo>,
+               groov::field<"ulef", bool, 11, 11, common::access::wo>,
+               groov::field<"dtef", bool, 10, 10, common::access::wo>,
+               groov::field<"htf", bool, 9, 9, common::access::wo>,
+               groov::field<"tcf", bool, 8, 8, common::access::wo>,
+               groov::field<"reserved0", std::uint8_t, 7, 0, common::access::ro>>;
 
 // lpdma_lpdma_c3lbar_v1: LPDMA_C3LBAR
 // Used by: LPDMA1, SEC_LPDMA1
@@ -640,9 +640,9 @@ using lpdma_lpdma_c3lbar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"lba", std::uint16_t, 31, 16>,
-               groov::field<"reserved0", std::uint16_t, 15, 0, access::ro>>;
+               groov::field<"reserved0", std::uint16_t, 15, 0, common::access::ro>>;
 
 // lpdma_lpdma_c3llr_v1: LPDMA_C3LLR
 // Used by: LPDMA1, SEC_LPDMA1
@@ -653,16 +653,16 @@ using lpdma_lpdma_c3llr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"ut1", bool, 31, 31>,
                groov::field<"ut2", bool, 30, 30>,
                groov::field<"ub1", bool, 29, 29>,
                groov::field<"usa", bool, 28, 28>,
                groov::field<"uda", bool, 27, 27>,
-               groov::field<"reserved1", std::uint16_t, 26, 17, access::ro>,
+               groov::field<"reserved1", std::uint16_t, 26, 17, common::access::ro>,
                groov::field<"ull", bool, 16, 16>,
                groov::field<"la", std::uint16_t, 15, 2>,
-               groov::field<"reserved0", std::uint8_t, 1, 0, access::ro>>;
+               groov::field<"reserved0", std::uint8_t, 1, 0, common::access::ro>>;
 
 // lpdma_lpdma_c3sar_v1: LPDMA_C3SAR
 // Used by: LPDMA1, SEC_LPDMA1
@@ -673,7 +673,7 @@ using lpdma_lpdma_c3sar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"sa", std::uint32_t, 31, 0>>;
 
 // lpdma_lpdma_c3sr_v1: LPDMA_C3SR
@@ -685,17 +685,17 @@ using lpdma_lpdma_c3sr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint32_t, 31, 15, access::ro>,
-               groov::field<"tof", bool, 14, 14, access::ro>,
-               groov::field<"suspf", bool, 13, 13, access::ro>,
-               groov::field<"usef", bool, 12, 12, access::ro>,
-               groov::field<"ulef", bool, 11, 11, access::ro>,
-               groov::field<"dtef", bool, 10, 10, access::ro>,
-               groov::field<"htf", bool, 9, 9, access::ro>,
-               groov::field<"tcf", bool, 8, 8, access::ro>,
-               groov::field<"reserved0", std::uint8_t, 7, 1, access::ro>,
-               groov::field<"idlef", bool, 0, 0, access::ro>>;
+             common::access::rw,
+               groov::field<"reserved1", std::uint32_t, 31, 15, common::access::ro>,
+               groov::field<"tof", bool, 14, 14, common::access::ro>,
+               groov::field<"suspf", bool, 13, 13, common::access::ro>,
+               groov::field<"usef", bool, 12, 12, common::access::ro>,
+               groov::field<"ulef", bool, 11, 11, common::access::ro>,
+               groov::field<"dtef", bool, 10, 10, common::access::ro>,
+               groov::field<"htf", bool, 9, 9, common::access::ro>,
+               groov::field<"tcf", bool, 8, 8, common::access::ro>,
+               groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
+               groov::field<"idlef", bool, 0, 0, common::access::ro>>;
 
 // lpdma_lpdma_c3tr1_v1: LPDMA_C3TR1
 // Used by: LPDMA1, SEC_LPDMA1
@@ -706,18 +706,18 @@ using lpdma_lpdma_c3tr1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dsec", bool, 31, 31>,
-               groov::field<"reserved4", std::uint16_t, 30, 20, access::ro>,
+               groov::field<"reserved4", std::uint16_t, 30, 20, common::access::ro>,
                groov::field<"dinc", bool, 19, 19>,
-               groov::field<"reserved3", bool, 18, 18, access::ro>,
+               groov::field<"reserved3", bool, 18, 18, common::access::ro>,
                groov::field<"ddw_log2", std::uint8_t, 17, 16>,
                groov::field<"ssec", bool, 15, 15>,
-               groov::field<"reserved2", std::uint8_t, 14, 12, access::ro>,
+               groov::field<"reserved2", std::uint8_t, 14, 12, common::access::ro>,
                groov::field<"pam", bool, 11, 11>,
-               groov::field<"reserved1", std::uint8_t, 10, 4, access::ro>,
+               groov::field<"reserved1", std::uint8_t, 10, 4, common::access::ro>,
                groov::field<"sinc", bool, 3, 3>,
-               groov::field<"reserved0", bool, 2, 2, access::ro>,
+               groov::field<"reserved0", bool, 2, 2, common::access::ro>,
                groov::field<"sdw_log2", std::uint8_t, 1, 0>>;
 
 // lpdma_lpdma_c3tr2_v1: LPDMA_C3TR2
@@ -729,18 +729,18 @@ using lpdma_lpdma_c3tr2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"tcem", std::uint8_t, 31, 30>,
-               groov::field<"reserved4", std::uint8_t, 29, 26, access::ro>,
+               groov::field<"reserved4", std::uint8_t, 29, 26, common::access::ro>,
                groov::field<"trigpol", std::uint8_t, 25, 24>,
-               groov::field<"reserved3", std::uint8_t, 23, 21, access::ro>,
+               groov::field<"reserved3", std::uint8_t, 23, 21, common::access::ro>,
                groov::field<"trigsel", std::uint8_t, 20, 16>,
                groov::field<"trigm", std::uint8_t, 15, 14>,
-               groov::field<"reserved2", std::uint8_t, 13, 12, access::ro>,
+               groov::field<"reserved2", std::uint8_t, 13, 12, common::access::ro>,
                groov::field<"breq", bool, 11, 11>,
-               groov::field<"reserved1", bool, 10, 10, access::ro>,
+               groov::field<"reserved1", bool, 10, 10, common::access::ro>,
                groov::field<"swreq", bool, 9, 9>,
-               groov::field<"reserved0", std::uint8_t, 8, 5, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 8, 5, common::access::ro>,
                groov::field<"reqsel", std::uint8_t, 4, 0>>;
 
 // lpdma_lpdma_misr_v1: LPDMA_MISR
@@ -752,12 +752,12 @@ using lpdma_lpdma_misr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 4, access::ro>,
-               groov::field<"mis3", bool, 3, 3, access::ro>,
-               groov::field<"mis2", bool, 2, 2, access::ro>,
-               groov::field<"mis1", bool, 1, 1, access::ro>,
-               groov::field<"mis0", bool, 0, 0, access::ro>>;
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 4, common::access::ro>,
+               groov::field<"mis3", bool, 3, 3, common::access::ro>,
+               groov::field<"mis2", bool, 2, 2, common::access::ro>,
+               groov::field<"mis1", bool, 1, 1, common::access::ro>,
+               groov::field<"mis0", bool, 0, 0, common::access::ro>>;
 
 // lpdma_lpdma_privcfgr_v1: LPDMA_PRIVCFGR
 // Used by: LPDMA1, SEC_LPDMA1
@@ -768,8 +768,8 @@ using lpdma_lpdma_privcfgr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 4, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 4, common::access::ro>,
                groov::field<"priv3", bool, 3, 3>,
                groov::field<"priv2", bool, 2, 2>,
                groov::field<"priv1", bool, 1, 1>,
@@ -784,12 +784,12 @@ using lpdma_lpdma_rcfglockr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 4, access::ro>,
-               groov::field<"lock3", bit_locked, 3, 3>,
-               groov::field<"lock2", bit_locked, 2, 2>,
-               groov::field<"lock1", bit_locked, 1, 1>,
-               groov::field<"lock0", bit_locked, 0, 0>>;
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 4, common::access::ro>,
+               groov::field<"lock3", common::bittypes::bit_locked, 3, 3>,
+               groov::field<"lock2", common::bittypes::bit_locked, 2, 2>,
+               groov::field<"lock1", common::bittypes::bit_locked, 1, 1>,
+               groov::field<"lock0", common::bittypes::bit_locked, 0, 0>>;
 
 // lpdma_lpdma_seccfgr_v1: LPDMA_SECCFGR
 // Used by: LPDMA1, SEC_LPDMA1
@@ -800,8 +800,8 @@ using lpdma_lpdma_seccfgr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 4, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 4, common::access::ro>,
                groov::field<"sec3", bool, 3, 3>,
                groov::field<"sec2", bool, 2, 2>,
                groov::field<"sec1", bool, 1, 1>,
@@ -816,11 +816,11 @@ using lpdma_lpdma_smisr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 4, access::ro>,
-               groov::field<"mis3", bool, 3, 3, access::ro>,
-               groov::field<"mis2", bool, 2, 2, access::ro>,
-               groov::field<"mis1", bool, 1, 1, access::ro>,
-               groov::field<"mis0", bool, 0, 0, access::ro>>;
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 4, common::access::ro>,
+               groov::field<"mis3", bool, 3, 3, common::access::ro>,
+               groov::field<"mis2", bool, 2, 2, common::access::ro>,
+               groov::field<"mis1", bool, 1, 1, common::access::ro>,
+               groov::field<"mis0", bool, 0, 0, common::access::ro>>;
 
 } // namespace stm32::regs

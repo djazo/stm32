@@ -7,26 +7,86 @@
 namespace stm32::stm32h750x {
 
 namespace dmamux2 {
-  using dmamux2_c0cr_tt = regs::dmamux_dmamux2_c0cr_v1_tt;
-  using dmamux2_c1cr_tt = regs::dmamux_dmamux2_c1cr_v1_tt;
-  using dmamux2_c2cr_tt = regs::dmamux_dmamux2_c2cr_v1_tt;
-  using dmamux2_c3cr_tt = regs::dmamux_dmamux2_c3cr_v1_tt;
-  using dmamux2_c4cr_tt = regs::dmamux_dmamux2_c4cr_v1_tt;
-  using dmamux2_c5cr_tt = regs::dmamux_dmamux2_c5cr_v1_tt;
-  using dmamux2_c6cr_tt = regs::dmamux_dmamux2_c6cr_v1_tt;
-  using dmamux2_c7cr_tt = regs::dmamux_dmamux2_c7cr_v1_tt;
-  using dmamux2_rg0cr_tt = regs::dmamux_dmamux2_rg0cr_v1_tt;
-  using dmamux2_rg1cr_tt = regs::dmamux_dmamux2_rg1cr_v1_tt;
-  using dmamux2_rg2cr_tt = regs::dmamux_dmamux2_rg2cr_v1_tt;
-  using dmamux2_rg3cr_tt = regs::dmamux_dmamux2_rg3cr_v1_tt;
-  using dmamux2_rg4cr_tt = regs::dmamux_dmamux2_rg4cr_v1_tt;
-  using dmamux2_rg5cr_tt = regs::dmamux_dmamux2_rg5cr_v1_tt;
-  using dmamux2_rg6cr_tt = regs::dmamux_dmamux2_rg6cr_v1_tt;
-  using dmamux2_rg7cr_tt = regs::dmamux_dmamux2_rg7cr_v1_tt;
-  using dmamux2_rgsr_tt = regs::dmamux_dmamux2_rgsr_v1_tt;
-  using dmamux2_rgcfr_tt = regs::dmamux_dmamux2_rgcfr_v1_tt;
-  using dmamux2_csr_tt = regs::dmamux_dmamux2_csr_v1_tt;
-  using dmamux2_cfr_tt = regs::dmamux_dmamux2_cfr_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dmamux2_c0cr_tt = regs::dmamux_dmamux2_c0cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dmamux2_c1cr_tt = regs::dmamux_dmamux2_c1cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dmamux2_c2cr_tt = regs::dmamux_dmamux2_c2cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dmamux2_c3cr_tt = regs::dmamux_dmamux2_c3cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dmamux2_c4cr_tt = regs::dmamux_dmamux2_c4cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dmamux2_c5cr_tt = regs::dmamux_dmamux2_c5cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dmamux2_c6cr_tt = regs::dmamux_dmamux2_c6cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dmamux2_c7cr_tt = regs::dmamux_dmamux2_c7cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dmamux2_rg0cr_tt = regs::dmamux_dmamux2_rg0cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dmamux2_rg1cr_tt = regs::dmamux_dmamux2_rg1cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dmamux2_rg2cr_tt = regs::dmamux_dmamux2_rg2cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dmamux2_rg3cr_tt = regs::dmamux_dmamux2_rg3cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dmamux2_rg4cr_tt = regs::dmamux_dmamux2_rg4cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dmamux2_rg5cr_tt = regs::dmamux_dmamux2_rg5cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dmamux2_rg6cr_tt = regs::dmamux_dmamux2_rg6cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dmamux2_rg7cr_tt = regs::dmamux_dmamux2_rg7cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dmamux2_rgsr_tt = regs::dmamux_dmamux2_rgsr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dmamux2_rgcfr_tt = regs::dmamux_dmamux2_rgcfr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dmamux2_csr_tt = regs::dmamux_dmamux2_csr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dmamux2_cfr_tt = regs::dmamux_dmamux2_cfr_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using dmamux2_t =
@@ -56,34 +116,118 @@ namespace dmamux2 {
 } // namespace dmamux2
 
 namespace dmamux1 {
-  using dmamux1_c0cr_tt = regs::dmamux_dmamux1_c0cr_v1_tt;
-  using dmamux1_c1cr_tt = regs::dmamux_dmamux1_c1cr_v1_tt;
-  using dmamux1_c2cr_tt = regs::dmamux_dmamux1_c2cr_v1_tt;
-  using dmamux1_c3cr_tt = regs::dmamux_dmamux1_c3cr_v1_tt;
-  using dmamux1_c4cr_tt = regs::dmamux_dmamux1_c4cr_v1_tt;
-  using dmamux1_c5cr_tt = regs::dmamux_dmamux1_c5cr_v1_tt;
-  using dmamux1_c6cr_tt = regs::dmamux_dmamux1_c6cr_v1_tt;
-  using dmamux1_c7cr_tt = regs::dmamux_dmamux1_c7cr_v1_tt;
-  using dmamux1_c8cr_tt = regs::dmamux_dmamux1_c8cr_v1_tt;
-  using dmamux1_c9cr_tt = regs::dmamux_dmamux1_c9cr_v1_tt;
-  using dmamux1_c10cr_tt = regs::dmamux_dmamux1_c10cr_v1_tt;
-  using dmamux1_c11cr_tt = regs::dmamux_dmamux1_c11cr_v1_tt;
-  using dmamux1_c12cr_tt = regs::dmamux_dmamux1_c12cr_v1_tt;
-  using dmamux1_c13cr_tt = regs::dmamux_dmamux1_c13cr_v1_tt;
-  using dmamux1_c14cr_tt = regs::dmamux_dmamux1_c14cr_v1_tt;
-  using dmamux1_c15cr_tt = regs::dmamux_dmamux1_c15cr_v1_tt;
-  using dmamux1_rg0cr_tt = regs::dmamux_dmamux1_rg0cr_v1_tt;
-  using dmamux1_rg1cr_tt = regs::dmamux_dmamux1_rg1cr_v1_tt;
-  using dmamux1_rg2cr_tt = regs::dmamux_dmamux1_rg2cr_v1_tt;
-  using dmamux1_rg3cr_tt = regs::dmamux_dmamux1_rg3cr_v1_tt;
-  using dmamux1_rg4cr_tt = regs::dmamux_dmamux1_rg4cr_v1_tt;
-  using dmamux1_rg5cr_tt = regs::dmamux_dmamux1_rg5cr_v1_tt;
-  using dmamux1_rg6cr_tt = regs::dmamux_dmamux1_rg6cr_v1_tt;
-  using dmamux1_rg7cr_tt = regs::dmamux_dmamux1_rg7cr_v1_tt;
-  using dmamux1_rgsr_tt = regs::dmamux_dmamux1_rgsr_v1_tt;
-  using dmamux1_rgcfr_tt = regs::dmamux_dmamux1_rgcfr_v1_tt;
-  using dmamux1_csr_tt = regs::dmamux_dmamux1_csr_v1_tt;
-  using dmamux1_cfr_tt = regs::dmamux_dmamux1_cfr_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dmamux1_c0cr_tt = regs::dmamux_dmamux1_c0cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dmamux1_c1cr_tt = regs::dmamux_dmamux1_c1cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dmamux1_c2cr_tt = regs::dmamux_dmamux1_c2cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dmamux1_c3cr_tt = regs::dmamux_dmamux1_c3cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dmamux1_c4cr_tt = regs::dmamux_dmamux1_c4cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dmamux1_c5cr_tt = regs::dmamux_dmamux1_c5cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dmamux1_c6cr_tt = regs::dmamux_dmamux1_c6cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dmamux1_c7cr_tt = regs::dmamux_dmamux1_c7cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dmamux1_c8cr_tt = regs::dmamux_dmamux1_c8cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dmamux1_c9cr_tt = regs::dmamux_dmamux1_c9cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dmamux1_c10cr_tt = regs::dmamux_dmamux1_c10cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dmamux1_c11cr_tt = regs::dmamux_dmamux1_c11cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dmamux1_c12cr_tt = regs::dmamux_dmamux1_c12cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dmamux1_c13cr_tt = regs::dmamux_dmamux1_c13cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dmamux1_c14cr_tt = regs::dmamux_dmamux1_c14cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dmamux1_c15cr_tt = regs::dmamux_dmamux1_c15cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dmamux1_rg0cr_tt = regs::dmamux_dmamux1_rg0cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dmamux1_rg1cr_tt = regs::dmamux_dmamux1_rg1cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dmamux1_rg2cr_tt = regs::dmamux_dmamux1_rg2cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dmamux1_rg3cr_tt = regs::dmamux_dmamux1_rg3cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dmamux1_rg4cr_tt = regs::dmamux_dmamux1_rg4cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dmamux1_rg5cr_tt = regs::dmamux_dmamux1_rg5cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dmamux1_rg6cr_tt = regs::dmamux_dmamux1_rg6cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dmamux1_rg7cr_tt = regs::dmamux_dmamux1_rg7cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dmamux1_rgsr_tt = regs::dmamux_dmamux1_rgsr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dmamux1_rgcfr_tt = regs::dmamux_dmamux1_rgcfr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dmamux1_csr_tt = regs::dmamux_dmamux1_csr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dmamux1_cfr_tt = regs::dmamux_dmamux1_cfr_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using dmamux1_t =

@@ -7,9 +7,18 @@
 namespace stm32::stm32wl5x_cm4 {
 
 namespace tzic {
-  using ier1_tt = regs::tzsc_ier1_v1_tt;
-  using misr1_tt = regs::tzsc_misr1_v1_tt;
-  using icr1_tt = regs::tzsc_icr1_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ier1_tt = regs::tzsc_ier1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using misr1_tt = regs::tzsc_misr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using icr1_tt = regs::tzsc_icr1_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using tzic_t =
@@ -22,13 +31,34 @@ namespace tzic {
 } // namespace tzic
 
 namespace tzsc {
-  using tzsc_cr_tt = regs::tzsc_tzsc_cr_v1_tt;
-  using tzsc_seccfgr1_tt = regs::tzsc_tzsc_seccfgr1_v1_tt;
-  using tzsc_privcfgr1_tt = regs::tzsc_tzsc_privcfgr1_v1_tt;
-  using tzsc_mpcwm1_upwmr_tt = regs::tzsc_tzsc_mpcwm1_upwmr_v1_tt;
-  using tzsc_mpcwm1_upwwmr_tt = regs::tzsc_tzsc_mpcwm1_upwwmr_v1_tt;
-  using tzsc_mpcwm2_upwmr_tt = regs::tzsc_tzsc_mpcwm2_upwmr_v1_tt;
-  using tzsc_mpcwm3_upwmr_tt = regs::tzsc_tzsc_mpcwm3_upwmr_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using tzsc_cr_tt = regs::tzsc_tzsc_cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using tzsc_seccfgr1_tt = regs::tzsc_tzsc_seccfgr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using tzsc_privcfgr1_tt = regs::tzsc_tzsc_privcfgr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using tzsc_mpcwm1_upwmr_tt = regs::tzsc_tzsc_mpcwm1_upwmr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using tzsc_mpcwm1_upwwmr_tt = regs::tzsc_tzsc_mpcwm1_upwwmr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using tzsc_mpcwm2_upwmr_tt = regs::tzsc_tzsc_mpcwm2_upwmr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using tzsc_mpcwm3_upwmr_tt = regs::tzsc_tzsc_mpcwm3_upwmr_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using tzsc_t =

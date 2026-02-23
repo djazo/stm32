@@ -16,8 +16,8 @@ using lptim_arr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"arr", std::uint16_t, 15, 0>>;
 
 // lptim_cfgr_v1: CFGR
@@ -29,22 +29,22 @@ using lptim_cfgr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved4", std::uint8_t, 31, 25, access::ro>,
+             common::access::rw,
+               groov::field<"reserved4", std::uint8_t, 31, 25, common::access::ro>,
                groov::field<"enc", bool, 24, 24>,
-               groov::field<"countmode", bit_enable, 23, 23>,
+               groov::field<"countmode", common::bittypes::bit_enable, 23, 23>,
                groov::field<"preload", bool, 22, 22>,
                groov::field<"wavpol", bool, 21, 21>,
                groov::field<"wave", bool, 20, 20>,
                groov::field<"timout", bool, 19, 19>,
                groov::field<"trigen", std::uint8_t, 18, 17>,
-               groov::field<"reserved3", bool, 16, 16, access::ro>,
+               groov::field<"reserved3", bool, 16, 16, common::access::ro>,
                groov::field<"trigsel", std::uint8_t, 15, 13>,
-               groov::field<"reserved2", bool, 12, 12, access::ro>,
+               groov::field<"reserved2", bool, 12, 12, common::access::ro>,
                groov::field<"presc", std::uint8_t, 11, 9>,
-               groov::field<"reserved1", bool, 8, 8, access::ro>,
+               groov::field<"reserved1", bool, 8, 8, common::access::ro>,
                groov::field<"trgflt", std::uint8_t, 7, 6>,
-               groov::field<"reserved0", bool, 5, 5, access::ro>,
+               groov::field<"reserved0", bool, 5, 5, common::access::ro>,
                groov::field<"ckflt", std::uint8_t, 4, 3>,
                groov::field<"ckpol", std::uint8_t, 2, 1>,
                groov::field<"cksel", bool, 0, 0>>;
@@ -58,10 +58,10 @@ using lptim_cfgr2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint32_t, 31, 6, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint32_t, 31, 6, common::access::ro>,
                groov::field<"in2sel", std::uint8_t, 5, 4>,
-               groov::field<"reserved0", std::uint8_t, 3, 2, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 3, 2, common::access::ro>,
                groov::field<"in1sel", std::uint8_t, 1, 0>>;
 
 // lptim_cmp_v1: CMP
@@ -73,8 +73,8 @@ using lptim_cmp_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"cmp", std::uint16_t, 15, 0>>;
 
 // lptim_cnt_v1: CNT
@@ -86,7 +86,7 @@ using lptim_cnt_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint16_t, 31, 16>,
                groov::field<"cnt", std::uint16_t, 15, 0>>;
 
@@ -99,10 +99,10 @@ using lptim_cr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 5, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 5, common::access::ro>,
                groov::field<"rstare", bool, 4, 4>,
-               groov::field<"countrst", bit_reset, 3, 3>,
+               groov::field<"countrst", common::bittypes::bit_reset, 3, 3>,
                groov::field<"cntstrt", bool, 2, 2>,
                groov::field<"sngstrt", bool, 1, 1>,
                groov::field<"enable", bool, 0, 0>>;
@@ -116,8 +116,8 @@ using lptim_icr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::wo,
-               groov::field<"reserved0", std::uint32_t, 31, 9, access::ro>,
+             common::access::wo,
+               groov::field<"reserved0", std::uint32_t, 31, 9, common::access::ro>,
                groov::field<"repokcf", bool, 8, 8>,
                groov::field<"uecf", bool, 7, 7>,
                groov::field<"downcf", bool, 6, 6>,
@@ -137,17 +137,17 @@ using lptim_ier_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 9, access::ro>,
-               groov::field<"repokie", bit_enable, 8, 8>,
-               groov::field<"ueie", bit_enable, 7, 7>,
-               groov::field<"downie", bit_enable, 6, 6>,
-               groov::field<"upie", bit_enable, 5, 5>,
-               groov::field<"arrokie", bit_enable, 4, 4>,
-               groov::field<"cmpokie", bit_enable, 3, 3>,
-               groov::field<"exttrigie", bit_enable, 2, 2>,
-               groov::field<"arrmie", bit_enable, 1, 1>,
-               groov::field<"cmpmie", bit_enable, 0, 0>>;
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 9, common::access::ro>,
+               groov::field<"repokie", common::bittypes::bit_enable, 8, 8>,
+               groov::field<"ueie", common::bittypes::bit_enable, 7, 7>,
+               groov::field<"downie", common::bittypes::bit_enable, 6, 6>,
+               groov::field<"upie", common::bittypes::bit_enable, 5, 5>,
+               groov::field<"arrokie", common::bittypes::bit_enable, 4, 4>,
+               groov::field<"cmpokie", common::bittypes::bit_enable, 3, 3>,
+               groov::field<"exttrigie", common::bittypes::bit_enable, 2, 2>,
+               groov::field<"arrmie", common::bittypes::bit_enable, 1, 1>,
+               groov::field<"cmpmie", common::bittypes::bit_enable, 0, 0>>;
 
 // lptim_isr_v1: ISR
 // Used by: LPTIM1, LPTIM2
@@ -158,7 +158,7 @@ using lptim_isr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint32_t, 31, 9>,
                groov::field<"repok", bool, 8, 8>,
                groov::field<"ue", bool, 7, 7>,
@@ -179,8 +179,8 @@ using lptim_or_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 2, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 2, common::access::ro>,
                groov::field<"or_1", bool, 1, 1>,
                groov::field<"or_0", bool, 0, 0>>;
 
@@ -193,8 +193,8 @@ using lptim_rcr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 8, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 8, common::access::ro>,
                groov::field<"rep", std::uint8_t, 7, 0>>;
 
 } // namespace stm32::regs

@@ -16,8 +16,8 @@ using tzsc_icr1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 14, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 14, common::access::ro>,
                groov::field<"pkacf", bool, 13, 13>,
                groov::field<"sram2cf", bool, 12, 12>,
                groov::field<"sram1cf", bool, 11, 11>,
@@ -42,22 +42,22 @@ using tzsc_ier1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 14, access::ro>,
-               groov::field<"pkaie", bit_enable, 13, 13>,
-               groov::field<"sram2ie", bit_enable, 12, 12>,
-               groov::field<"sram1ie", bit_enable, 11, 11>,
-               groov::field<"flashie", bit_enable, 10, 10>,
-               groov::field<"dmamux1ie", bit_enable, 9, 9>,
-               groov::field<"dma2ie", bit_enable, 8, 8>,
-               groov::field<"dma1ie", bit_enable, 7, 7>,
-               groov::field<"flashifie", bit_enable, 6, 6>,
-               groov::field<"pwrie", bit_enable, 5, 5>,
-               groov::field<"subghzspiie", bit_enable, 4, 4>,
-               groov::field<"rngie", bit_enable, 3, 3>,
-               groov::field<"aesie", bit_enable, 2, 2>,
-               groov::field<"tzscie", bit_enable, 1, 1>,
-               groov::field<"tzicie", bit_enable, 0, 0>>;
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 14, common::access::ro>,
+               groov::field<"pkaie", common::bittypes::bit_enable, 13, 13>,
+               groov::field<"sram2ie", common::bittypes::bit_enable, 12, 12>,
+               groov::field<"sram1ie", common::bittypes::bit_enable, 11, 11>,
+               groov::field<"flashie", common::bittypes::bit_enable, 10, 10>,
+               groov::field<"dmamux1ie", common::bittypes::bit_enable, 9, 9>,
+               groov::field<"dma2ie", common::bittypes::bit_enable, 8, 8>,
+               groov::field<"dma1ie", common::bittypes::bit_enable, 7, 7>,
+               groov::field<"flashifie", common::bittypes::bit_enable, 6, 6>,
+               groov::field<"pwrie", common::bittypes::bit_enable, 5, 5>,
+               groov::field<"subghzspiie", common::bittypes::bit_enable, 4, 4>,
+               groov::field<"rngie", common::bittypes::bit_enable, 3, 3>,
+               groov::field<"aesie", common::bittypes::bit_enable, 2, 2>,
+               groov::field<"tzscie", common::bittypes::bit_enable, 1, 1>,
+               groov::field<"tzicie", common::bittypes::bit_enable, 0, 0>>;
 
 // tzsc_misr1_v1: MISR1
 // Used by: TZIC
@@ -68,7 +68,7 @@ using tzsc_misr1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint32_t, 31, 14>,
                groov::field<"pkamf", bool, 13, 13>,
                groov::field<"sram2mf", bool, 12, 12>,
@@ -94,9 +94,9 @@ using tzsc_tzsc_cr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 1, access::ro>,
-               groov::field<"lck", bit_locked, 0, 0>>;
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 1, common::access::ro>,
+               groov::field<"lck", common::bittypes::bit_locked, 0, 0>>;
 
 // tzsc_tzsc_mpcwm1_upwmr_v1: TZSC_MPCWM1_UPWMR
 // Used by: TZSC
@@ -107,10 +107,10 @@ using tzsc_tzsc_mpcwm1_upwmr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint8_t, 31, 28, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint8_t, 31, 28, common::access::ro>,
                groov::field<"lgth", std::uint16_t, 27, 16>,
-               groov::field<"reserved0", std::uint16_t, 15, 0, access::ro>>;
+               groov::field<"reserved0", std::uint16_t, 15, 0, common::access::ro>>;
 
 // tzsc_tzsc_mpcwm1_upwwmr_v1: TZSC_MPCWM1_UPWWMR
 // Used by: TZSC
@@ -121,10 +121,10 @@ using tzsc_tzsc_mpcwm1_upwwmr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint8_t, 31, 28, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint8_t, 31, 28, common::access::ro>,
                groov::field<"lgth", std::uint16_t, 27, 16>,
-               groov::field<"reserved0", std::uint16_t, 15, 0, access::ro>>;
+               groov::field<"reserved0", std::uint16_t, 15, 0, common::access::ro>>;
 
 // tzsc_tzsc_mpcwm2_upwmr_v1: TZSC_MPCWM2_UPWMR
 // Used by: TZSC
@@ -135,10 +135,10 @@ using tzsc_tzsc_mpcwm2_upwmr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint8_t, 31, 28, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint8_t, 31, 28, common::access::ro>,
                groov::field<"lgth", std::uint16_t, 27, 16>,
-               groov::field<"reserved0", std::uint16_t, 15, 0, access::ro>>;
+               groov::field<"reserved0", std::uint16_t, 15, 0, common::access::ro>>;
 
 // tzsc_tzsc_mpcwm3_upwmr_v1: TZSC_MPCWM3_UPWMR
 // Used by: TZSC
@@ -149,10 +149,10 @@ using tzsc_tzsc_mpcwm3_upwmr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint8_t, 31, 28, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint8_t, 31, 28, common::access::ro>,
                groov::field<"lgth", std::uint16_t, 27, 16>,
-               groov::field<"reserved0", std::uint16_t, 15, 0, access::ro>>;
+               groov::field<"reserved0", std::uint16_t, 15, 0, common::access::ro>>;
 
 // tzsc_tzsc_privcfgr1_v1: TZSC_PRIVCFGR1
 // Used by: TZSC
@@ -163,14 +163,14 @@ using tzsc_tzsc_privcfgr1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved2", std::uint32_t, 31, 14, access::ro>,
+             common::access::rw,
+               groov::field<"reserved2", std::uint32_t, 31, 14, common::access::ro>,
                groov::field<"pkapriv", bool, 13, 13>,
-               groov::field<"reserved1", std::uint8_t, 12, 5, access::ro>,
+               groov::field<"reserved1", std::uint8_t, 12, 5, common::access::ro>,
                groov::field<"subghzspipriv", bool, 4, 4>,
                groov::field<"rngpriv", bool, 3, 3>,
                groov::field<"aespriv", bool, 2, 2>,
-               groov::field<"reserved0", std::uint8_t, 1, 0, access::ro>>;
+               groov::field<"reserved0", std::uint8_t, 1, 0, common::access::ro>>;
 
 // tzsc_tzsc_seccfgr1_v1: TZSC_SECCFGR1
 // Used by: TZSC
@@ -181,12 +181,12 @@ using tzsc_tzsc_seccfgr1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved2", std::uint32_t, 31, 14, access::ro>,
+             common::access::rw,
+               groov::field<"reserved2", std::uint32_t, 31, 14, common::access::ro>,
                groov::field<"pkasec", bool, 13, 13>,
-               groov::field<"reserved1", std::uint16_t, 12, 4, access::ro>,
+               groov::field<"reserved1", std::uint16_t, 12, 4, common::access::ro>,
                groov::field<"rngsec", bool, 3, 3>,
                groov::field<"aessec", bool, 2, 2>,
-               groov::field<"reserved0", std::uint8_t, 1, 0, access::ro>>;
+               groov::field<"reserved0", std::uint8_t, 1, 0, common::access::ro>>;
 
 } // namespace stm32::regs

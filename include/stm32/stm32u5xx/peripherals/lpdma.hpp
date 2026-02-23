@@ -7,51 +7,186 @@
 namespace stm32::stm32u5xx {
 
 namespace lpdmax {
-  using lpdma_seccfgr_tt = regs::lpdma_lpdma_seccfgr_v1_tt;
-  using lpdma_privcfgr_tt = regs::lpdma_lpdma_privcfgr_v1_tt;
-  using lpdma_rcfglockr_tt = regs::lpdma_lpdma_rcfglockr_v1_tt;
-  using lpdma_misr_tt = regs::lpdma_lpdma_misr_v1_tt;
-  using lpdma_smisr_tt = regs::lpdma_lpdma_smisr_v1_tt;
-  using lpdma_c0lbar_tt = regs::lpdma_lpdma_c0lbar_v1_tt;
-  using lpdma_c0fcr_tt = regs::lpdma_lpdma_c0fcr_v1_tt;
-  using lpdma_c0sr_tt = regs::lpdma_lpdma_c0sr_v1_tt;
-  using lpdma_c0cr_tt = regs::lpdma_lpdma_c0cr_v1_tt;
-  using lpdma_c0tr1_tt = regs::lpdma_lpdma_c0tr1_v1_tt;
-  using lpdma_c0tr2_tt = regs::lpdma_lpdma_c0tr2_v1_tt;
-  using lpdma_c0br1_tt = regs::lpdma_lpdma_c0br1_v1_tt;
-  using lpdma_c0sar_tt = regs::lpdma_lpdma_c0sar_v1_tt;
-  using lpdma_c0dar_tt = regs::lpdma_lpdma_c0dar_v1_tt;
-  using lpdma_c0llr_tt = regs::lpdma_lpdma_c0llr_v1_tt;
-  using lpdma_c1lbar_tt = regs::lpdma_lpdma_c1lbar_v1_tt;
-  using lpdma_c1fcr_tt = regs::lpdma_lpdma_c1fcr_v1_tt;
-  using lpdma_c1sr_tt = regs::lpdma_lpdma_c1sr_v1_tt;
-  using lpdma_c1cr_tt = regs::lpdma_lpdma_c1cr_v1_tt;
-  using lpdma_c1tr1_tt = regs::lpdma_lpdma_c1tr1_v1_tt;
-  using lpdma_c1tr2_tt = regs::lpdma_lpdma_c1tr2_v1_tt;
-  using lpdma_c1br1_tt = regs::lpdma_lpdma_c1br1_v1_tt;
-  using lpdma_c1sar_tt = regs::lpdma_lpdma_c1sar_v1_tt;
-  using lpdma_c1dar_tt = regs::lpdma_lpdma_c1dar_v1_tt;
-  using lpdma_c1llr_tt = regs::lpdma_lpdma_c1llr_v1_tt;
-  using lpdma_c2lbar_tt = regs::lpdma_lpdma_c2lbar_v1_tt;
-  using lpdma_c2fcr_tt = regs::lpdma_lpdma_c2fcr_v1_tt;
-  using lpdma_c2sr_tt = regs::lpdma_lpdma_c2sr_v1_tt;
-  using lpdma_c2cr_tt = regs::lpdma_lpdma_c2cr_v1_tt;
-  using lpdma_c2tr1_tt = regs::lpdma_lpdma_c2tr1_v1_tt;
-  using lpdma_c2tr2_tt = regs::lpdma_lpdma_c2tr2_v1_tt;
-  using lpdma_c2br1_tt = regs::lpdma_lpdma_c2br1_v1_tt;
-  using lpdma_c2sar_tt = regs::lpdma_lpdma_c2sar_v1_tt;
-  using lpdma_c2dar_tt = regs::lpdma_lpdma_c2dar_v1_tt;
-  using lpdma_c2llr_tt = regs::lpdma_lpdma_c2llr_v1_tt;
-  using lpdma_c3lbar_tt = regs::lpdma_lpdma_c3lbar_v1_tt;
-  using lpdma_c3fcr_tt = regs::lpdma_lpdma_c3fcr_v1_tt;
-  using lpdma_c3sr_tt = regs::lpdma_lpdma_c3sr_v1_tt;
-  using lpdma_c3cr_tt = regs::lpdma_lpdma_c3cr_v1_tt;
-  using lpdma_c3tr1_tt = regs::lpdma_lpdma_c3tr1_v1_tt;
-  using lpdma_c3tr2_tt = regs::lpdma_lpdma_c3tr2_v1_tt;
-  using lpdma_c3br1_tt = regs::lpdma_lpdma_c3br1_v1_tt;
-  using lpdma_c3sar_tt = regs::lpdma_lpdma_c3sar_v1_tt;
-  using lpdma_c3dar_tt = regs::lpdma_lpdma_c3dar_v1_tt;
-  using lpdma_c3llr_tt = regs::lpdma_lpdma_c3llr_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using lpdma_seccfgr_tt = regs::lpdma_lpdma_seccfgr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using lpdma_privcfgr_tt = regs::lpdma_lpdma_privcfgr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using lpdma_rcfglockr_tt = regs::lpdma_lpdma_rcfglockr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using lpdma_misr_tt = regs::lpdma_lpdma_misr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using lpdma_smisr_tt = regs::lpdma_lpdma_smisr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using lpdma_c0lbar_tt = regs::lpdma_lpdma_c0lbar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using lpdma_c0fcr_tt = regs::lpdma_lpdma_c0fcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using lpdma_c0sr_tt = regs::lpdma_lpdma_c0sr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using lpdma_c0cr_tt = regs::lpdma_lpdma_c0cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using lpdma_c0tr1_tt = regs::lpdma_lpdma_c0tr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using lpdma_c0tr2_tt = regs::lpdma_lpdma_c0tr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using lpdma_c0br1_tt = regs::lpdma_lpdma_c0br1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using lpdma_c0sar_tt = regs::lpdma_lpdma_c0sar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using lpdma_c0dar_tt = regs::lpdma_lpdma_c0dar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using lpdma_c0llr_tt = regs::lpdma_lpdma_c0llr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using lpdma_c1lbar_tt = regs::lpdma_lpdma_c1lbar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using lpdma_c1fcr_tt = regs::lpdma_lpdma_c1fcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using lpdma_c1sr_tt = regs::lpdma_lpdma_c1sr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using lpdma_c1cr_tt = regs::lpdma_lpdma_c1cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using lpdma_c1tr1_tt = regs::lpdma_lpdma_c1tr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using lpdma_c1tr2_tt = regs::lpdma_lpdma_c1tr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using lpdma_c1br1_tt = regs::lpdma_lpdma_c1br1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using lpdma_c1sar_tt = regs::lpdma_lpdma_c1sar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using lpdma_c1dar_tt = regs::lpdma_lpdma_c1dar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using lpdma_c1llr_tt = regs::lpdma_lpdma_c1llr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using lpdma_c2lbar_tt = regs::lpdma_lpdma_c2lbar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using lpdma_c2fcr_tt = regs::lpdma_lpdma_c2fcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using lpdma_c2sr_tt = regs::lpdma_lpdma_c2sr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using lpdma_c2cr_tt = regs::lpdma_lpdma_c2cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using lpdma_c2tr1_tt = regs::lpdma_lpdma_c2tr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using lpdma_c2tr2_tt = regs::lpdma_lpdma_c2tr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using lpdma_c2br1_tt = regs::lpdma_lpdma_c2br1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using lpdma_c2sar_tt = regs::lpdma_lpdma_c2sar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using lpdma_c2dar_tt = regs::lpdma_lpdma_c2dar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using lpdma_c2llr_tt = regs::lpdma_lpdma_c2llr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using lpdma_c3lbar_tt = regs::lpdma_lpdma_c3lbar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using lpdma_c3fcr_tt = regs::lpdma_lpdma_c3fcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using lpdma_c3sr_tt = regs::lpdma_lpdma_c3sr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using lpdma_c3cr_tt = regs::lpdma_lpdma_c3cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using lpdma_c3tr1_tt = regs::lpdma_lpdma_c3tr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using lpdma_c3tr2_tt = regs::lpdma_lpdma_c3tr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using lpdma_c3br1_tt = regs::lpdma_lpdma_c3br1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using lpdma_c3sar_tt = regs::lpdma_lpdma_c3sar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using lpdma_c3dar_tt = regs::lpdma_lpdma_c3dar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using lpdma_c3llr_tt = regs::lpdma_lpdma_c3llr_v1_tt<name, baseaddress, offset>;
 
   template <stdx::ct_string name, std::uint32_t baseaddress>
   using lpdmax_t =

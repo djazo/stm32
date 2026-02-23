@@ -7,21 +7,66 @@
 namespace stm32::stm32u59x {
 
 namespace lptimx {
-  using isr_output_tt = regs::lptim_isr_output_v1_tt;
-  using isr_intput_tt = regs::lptim_isr_intput_v1_tt;
-  using icr_output_tt = regs::lptim_icr_output_v1_tt;
-  using icr_intput_tt = regs::lptim_icr_intput_v1_tt;
-  using dier_output_tt = regs::lptim_dier_output_v1_tt;
-  using dier_intput_tt = regs::lptim_dier_intput_v1_tt;
-  using cfgr_tt = regs::lptim_cfgr_v1_tt;
-  using cr_tt = regs::lptim_cr_v1_tt;
-  using ccr1_tt = regs::lptim_ccr1_v1_tt;
-  using arr_tt = regs::lptim_arr_v1_tt;
-  using cnt_tt = regs::lptim_cnt_v1_tt;
-  using cfgr2_tt = regs::lptim_cfgr2_v1_tt;
-  using rcr_tt = regs::lptim_rcr_v1_tt;
-  using ccmr1_tt = regs::lptim_ccmr1_v1_tt;
-  using ccr2_tt = regs::lptim_ccr2_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using isr_output_tt = regs::lptim_isr_output_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using isr_intput_tt = regs::lptim_isr_intput_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using icr_output_tt = regs::lptim_icr_output_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using icr_intput_tt = regs::lptim_icr_intput_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dier_output_tt = regs::lptim_dier_output_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dier_intput_tt = regs::lptim_dier_intput_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cfgr_tt = regs::lptim_cfgr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cr_tt = regs::lptim_cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ccr1_tt = regs::lptim_ccr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using arr_tt = regs::lptim_arr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cnt_tt = regs::lptim_cnt_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cfgr2_tt = regs::lptim_cfgr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rcr_tt = regs::lptim_rcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ccmr1_tt = regs::lptim_ccmr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ccr2_tt = regs::lptim_ccr2_v1_tt<name, baseaddress, offset>;
 
   template <stdx::ct_string name, std::uint32_t baseaddress>
   using lptimx_t =
@@ -46,18 +91,54 @@ namespace lptimx {
 } // namespace lptimx
 
 namespace lptimx_v2 {
-  using isr_tt = regs::lptim_isr_v1_tt;
-  using icr_tt = regs::lptim_icr_v1_tt;
-  using dier_tt = regs::lptim_dier_v1_tt;
-  using cfgr_tt = regs::lptim_cfgr_v1_tt;
-  using cr_tt = regs::lptim_cr_v1_tt;
-  using ccr1_tt = regs::lptim_ccr1_v1_tt;
-  using arr_tt = regs::lptim_arr_v1_tt;
-  using cnt_tt = regs::lptim_cnt_v1_tt;
-  using cfgr2_tt = regs::lptim_cfgr2_v1_tt;
-  using rcr_tt = regs::lptim_rcr_v1_tt;
-  using ccmr1_tt = regs::lptim_ccmr1_v1_tt;
-  using ccr2_tt = regs::lptim_ccr2_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using isr_tt = regs::lptim_isr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using icr_tt = regs::lptim_icr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dier_tt = regs::lptim_dier_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cfgr_tt = regs::lptim_cfgr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cr_tt = regs::lptim_cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ccr1_tt = regs::lptim_ccr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using arr_tt = regs::lptim_arr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cnt_tt = regs::lptim_cnt_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cfgr2_tt = regs::lptim_cfgr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rcr_tt = regs::lptim_rcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ccmr1_tt = regs::lptim_ccmr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ccr2_tt = regs::lptim_ccr2_v1_tt<name, baseaddress, offset>;
 
   template <stdx::ct_string name, std::uint32_t baseaddress>
   using lptimx_v2_t =

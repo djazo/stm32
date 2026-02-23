@@ -7,11 +7,26 @@
 namespace stm32::stm32h745_cm7 {
 
 namespace comp1 {
-  using sr_tt = regs::comp1_sr_v1_tt;
-  using icfr_tt = regs::comp1_icfr_v1_tt;
-  using or_tt = regs::comp1_or_v1_tt;
-  using cfgr1_tt = regs::comp1_cfgr1_v1_tt;
-  using cfgr2_tt = regs::comp1_cfgr2_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using sr_tt = regs::comp1_sr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using icfr_tt = regs::comp1_icfr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using or_tt = regs::comp1_or_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cfgr1_tt = regs::comp1_cfgr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cfgr2_tt = regs::comp1_cfgr2_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using comp1_t =

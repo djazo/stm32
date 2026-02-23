@@ -7,26 +7,86 @@
 namespace stm32::stm32l053 {
 
 namespace lcd {
-  using cr_tt = regs::lcd_cr_v1_tt;
-  using fcr_tt = regs::lcd_fcr_v1_tt;
-  using sr_tt = regs::lcd_sr_v1_tt;
-  using clr_tt = regs::lcd_clr_v1_tt;
-  using ram_com0_0_tt = regs::lcd_ram_com0_0_v1_tt;
-  using ram_com0_1_tt = regs::lcd_ram_com0_1_v1_tt;
-  using ram_com1_0_tt = regs::lcd_ram_com1_0_v1_tt;
-  using ram_com1_1_tt = regs::lcd_ram_com1_1_v1_tt;
-  using ram_com2_0_tt = regs::lcd_ram_com2_0_v1_tt;
-  using ram_com2_1_tt = regs::lcd_ram_com2_1_v1_tt;
-  using ram_com3_0_tt = regs::lcd_ram_com3_0_v1_tt;
-  using ram_com3_1_tt = regs::lcd_ram_com3_1_v1_tt;
-  using ram_com4_0_tt = regs::lcd_ram_com4_0_v1_tt;
-  using ram_com4_1_tt = regs::lcd_ram_com4_1_v1_tt;
-  using ram_com5_0_tt = regs::lcd_ram_com5_0_v1_tt;
-  using ram_com5_1_tt = regs::lcd_ram_com5_1_v1_tt;
-  using ram_com6_0_tt = regs::lcd_ram_com6_0_v1_tt;
-  using ram_com6_1_tt = regs::lcd_ram_com6_1_v1_tt;
-  using ram_com7_0_tt = regs::lcd_ram_com7_0_v1_tt;
-  using ram_com7_1_tt = regs::lcd_ram_com7_1_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cr_tt = regs::lcd_cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fcr_tt = regs::lcd_fcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using sr_tt = regs::lcd_sr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using clr_tt = regs::lcd_clr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ram_com0_0_tt = regs::lcd_ram_com0_0_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ram_com0_1_tt = regs::lcd_ram_com0_1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ram_com1_0_tt = regs::lcd_ram_com1_0_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ram_com1_1_tt = regs::lcd_ram_com1_1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ram_com2_0_tt = regs::lcd_ram_com2_0_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ram_com2_1_tt = regs::lcd_ram_com2_1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ram_com3_0_tt = regs::lcd_ram_com3_0_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ram_com3_1_tt = regs::lcd_ram_com3_1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ram_com4_0_tt = regs::lcd_ram_com4_0_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ram_com4_1_tt = regs::lcd_ram_com4_1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ram_com5_0_tt = regs::lcd_ram_com5_0_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ram_com5_1_tt = regs::lcd_ram_com5_1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ram_com6_0_tt = regs::lcd_ram_com6_0_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ram_com6_1_tt = regs::lcd_ram_com6_1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ram_com7_0_tt = regs::lcd_ram_com7_0_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ram_com7_1_tt = regs::lcd_ram_com7_1_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using lcd_t =

@@ -16,7 +16,7 @@ using tims_arr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"arrh", std::uint16_t, 31, 16>,
                groov::field<"arrl", std::uint16_t, 15, 0>>;
 
@@ -29,8 +29,8 @@ using tims_arr_v2_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"arr", std::uint16_t, 15, 0>>;
 
 // tims_bdtr_v1: BDTR
@@ -42,8 +42,8 @@ using tims_bdtr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 20, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 20, common::access::ro>,
                groov::field<"bkf", std::uint8_t, 19, 16>,
                groov::field<"moe", bool, 15, 15>,
                groov::field<"aoe", bool, 14, 14>,
@@ -63,10 +63,10 @@ using tims_bdtr_v2_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint8_t, 31, 26, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint8_t, 31, 26, common::access::ro>,
                groov::field<"bk2p", bool, 25, 25>,
-               groov::field<"bk2e", bit_enable, 24, 24>,
+               groov::field<"bk2e", common::bittypes::bit_enable, 24, 24>,
                groov::field<"bk2f", std::uint8_t, 23, 20>,
                groov::field<"bkf", std::uint8_t, 19, 16>,
                groov::field<"moe", bool, 15, 15>,
@@ -87,24 +87,24 @@ using tims_ccer_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved4", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved4", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"cc4np", bool, 15, 15>,
-               groov::field<"reserved3", bool, 14, 14, access::ro>,
+               groov::field<"reserved3", bool, 14, 14, common::access::ro>,
                groov::field<"cc4p", bool, 13, 13>,
-               groov::field<"cc4e", bit_enable, 12, 12>,
+               groov::field<"cc4e", common::bittypes::bit_enable, 12, 12>,
                groov::field<"cc3np", bool, 11, 11>,
-               groov::field<"reserved2", bool, 10, 10, access::ro>,
+               groov::field<"reserved2", bool, 10, 10, common::access::ro>,
                groov::field<"cc3p", bool, 9, 9>,
-               groov::field<"cc3e", bit_enable, 8, 8>,
+               groov::field<"cc3e", common::bittypes::bit_enable, 8, 8>,
                groov::field<"cc2np", bool, 7, 7>,
-               groov::field<"reserved1", bool, 6, 6, access::ro>,
+               groov::field<"reserved1", bool, 6, 6, common::access::ro>,
                groov::field<"cc2p", bool, 5, 5>,
-               groov::field<"cc2e", bit_enable, 4, 4>,
+               groov::field<"cc2e", common::bittypes::bit_enable, 4, 4>,
                groov::field<"cc1np", bool, 3, 3>,
-               groov::field<"reserved0", bool, 2, 2, access::ro>,
+               groov::field<"reserved0", bool, 2, 2, common::access::ro>,
                groov::field<"cc1p", bool, 1, 1>,
-               groov::field<"cc1e", bit_enable, 0, 0>>;
+               groov::field<"cc1e", common::bittypes::bit_enable, 0, 0>>;
 
 // tims_ccer_v2: CCER
 // Used by: TIM15
@@ -115,16 +115,16 @@ using tims_ccer_v2_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint32_t, 31, 8, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint32_t, 31, 8, common::access::ro>,
                groov::field<"cc2np", bool, 7, 7>,
-               groov::field<"reserved0", bool, 6, 6, access::ro>,
+               groov::field<"reserved0", bool, 6, 6, common::access::ro>,
                groov::field<"cc2p", bool, 5, 5>,
-               groov::field<"cc2e", bit_enable, 4, 4>,
+               groov::field<"cc2e", common::bittypes::bit_enable, 4, 4>,
                groov::field<"cc1np", bool, 3, 3>,
                groov::field<"cc1ne", bool, 2, 2>,
                groov::field<"cc1p", bool, 1, 1>,
-               groov::field<"cc1e", bit_enable, 0, 0>>;
+               groov::field<"cc1e", common::bittypes::bit_enable, 0, 0>>;
 
 // tims_ccer_v3: CCER
 // Used by: TIM16, TIM17
@@ -135,12 +135,12 @@ using tims_ccer_v3_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 4, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 4, common::access::ro>,
                groov::field<"cc1np", bool, 3, 3>,
                groov::field<"cc1ne", bool, 2, 2>,
                groov::field<"cc1p", bool, 1, 1>,
-               groov::field<"cc1e", bit_enable, 0, 0>>;
+               groov::field<"cc1e", common::bittypes::bit_enable, 0, 0>>;
 
 // tims_ccer_v4: CCER
 // Used by: TIM1
@@ -151,29 +151,29 @@ using tims_ccer_v4_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved2", std::uint16_t, 31, 22, access::ro>,
+             common::access::rw,
+               groov::field<"reserved2", std::uint16_t, 31, 22, common::access::ro>,
                groov::field<"cc6p", bool, 21, 21>,
-               groov::field<"cc6e", bit_enable, 20, 20>,
-               groov::field<"reserved1", std::uint8_t, 19, 18, access::ro>,
+               groov::field<"cc6e", common::bittypes::bit_enable, 20, 20>,
+               groov::field<"reserved1", std::uint8_t, 19, 18, common::access::ro>,
                groov::field<"cc5p", bool, 17, 17>,
-               groov::field<"cc5e", bit_enable, 16, 16>,
+               groov::field<"cc5e", common::bittypes::bit_enable, 16, 16>,
                groov::field<"cc4np", bool, 15, 15>,
-               groov::field<"reserved0", bool, 14, 14, access::ro>,
+               groov::field<"reserved0", bool, 14, 14, common::access::ro>,
                groov::field<"cc4p", bool, 13, 13>,
-               groov::field<"cc4e", bit_enable, 12, 12>,
+               groov::field<"cc4e", common::bittypes::bit_enable, 12, 12>,
                groov::field<"cc3np", bool, 11, 11>,
                groov::field<"cc3ne", bool, 10, 10>,
                groov::field<"cc3p", bool, 9, 9>,
-               groov::field<"cc3e", bit_enable, 8, 8>,
+               groov::field<"cc3e", common::bittypes::bit_enable, 8, 8>,
                groov::field<"cc2np", bool, 7, 7>,
                groov::field<"cc2ne", bool, 6, 6>,
                groov::field<"cc2p", bool, 5, 5>,
-               groov::field<"cc2e", bit_enable, 4, 4>,
+               groov::field<"cc2e", common::bittypes::bit_enable, 4, 4>,
                groov::field<"cc1np", bool, 3, 3>,
                groov::field<"cc1ne", bool, 2, 2>,
                groov::field<"cc1p", bool, 1, 1>,
-               groov::field<"cc1e", bit_enable, 0, 0>>;
+               groov::field<"cc1e", common::bittypes::bit_enable, 0, 0>>;
 
 // tims_ccmr1_input_v1: CCMR1_INPUT
 // Used by: TIM2, TIM15
@@ -184,8 +184,8 @@ using tims_ccmr1_input_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"ic2f", std::uint8_t, 15, 12>,
                groov::field<"ic2psc", std::uint8_t, 11, 10>,
                groov::field<"cc2s", std::uint8_t, 9, 8>,
@@ -202,8 +202,8 @@ using tims_ccmr1_input_v2_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 8, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 8, common::access::ro>,
                groov::field<"ic1f", std::uint8_t, 7, 4>,
                groov::field<"ic1psc", std::uint8_t, 3, 2>,
                groov::field<"cc1s", std::uint8_t, 1, 0>>;
@@ -217,8 +217,8 @@ using tims_ccmr1_input_v3_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"ic2f", std::uint8_t, 15, 12>,
                groov::field<"ic2pcs", std::uint8_t, 11, 10>,
                groov::field<"cc2s", std::uint8_t, 9, 8>,
@@ -235,20 +235,20 @@ using tims_ccmr1_output_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint8_t, 31, 25, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint8_t, 31, 25, common::access::ro>,
                groov::field<"oc2m_3", bool, 24, 24>,
-               groov::field<"reserved0", std::uint8_t, 23, 17, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 23, 17, common::access::ro>,
                groov::field<"oc1m_3", bool, 16, 16>,
                groov::field<"oc2ce", bool, 15, 15>,
                groov::field<"oc2m", std::uint8_t, 14, 12>,
-               groov::field<"oc2pe", bit_enable, 11, 11>,
-               groov::field<"oc2fe", bit_enable, 10, 10>,
+               groov::field<"oc2pe", common::bittypes::bit_enable, 11, 11>,
+               groov::field<"oc2fe", common::bittypes::bit_enable, 10, 10>,
                groov::field<"cc2s", std::uint8_t, 9, 8>,
                groov::field<"oc1ce", bool, 7, 7>,
                groov::field<"oc1m", std::uint8_t, 6, 4>,
-               groov::field<"oc1pe", bit_enable, 3, 3>,
-               groov::field<"oc1fe", bit_enable, 2, 2>,
+               groov::field<"oc1pe", common::bittypes::bit_enable, 3, 3>,
+               groov::field<"oc1fe", common::bittypes::bit_enable, 2, 2>,
                groov::field<"cc1s", std::uint8_t, 1, 0>>;
 
 // tims_ccmr1_output_v2: CCMR1_OUTPUT
@@ -260,20 +260,20 @@ using tims_ccmr1_output_v2_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved3", std::uint8_t, 31, 25, access::ro>,
+             common::access::rw,
+               groov::field<"reserved3", std::uint8_t, 31, 25, common::access::ro>,
                groov::field<"oc2m_3", bool, 24, 24>,
-               groov::field<"reserved2", std::uint8_t, 23, 17, access::ro>,
+               groov::field<"reserved2", std::uint8_t, 23, 17, common::access::ro>,
                groov::field<"oc1m_3", bool, 16, 16>,
-               groov::field<"reserved1", bool, 15, 15, access::ro>,
+               groov::field<"reserved1", bool, 15, 15, common::access::ro>,
                groov::field<"oc2m", std::uint8_t, 14, 12>,
-               groov::field<"oc2pe", bit_enable, 11, 11>,
-               groov::field<"oc2fe", bit_enable, 10, 10>,
+               groov::field<"oc2pe", common::bittypes::bit_enable, 11, 11>,
+               groov::field<"oc2fe", common::bittypes::bit_enable, 10, 10>,
                groov::field<"cc2s", std::uint8_t, 9, 8>,
-               groov::field<"reserved0", bool, 7, 7, access::ro>,
+               groov::field<"reserved0", bool, 7, 7, common::access::ro>,
                groov::field<"oc1m", std::uint8_t, 6, 4>,
-               groov::field<"oc1pe", bit_enable, 3, 3>,
-               groov::field<"oc1fe", bit_enable, 2, 2>,
+               groov::field<"oc1pe", common::bittypes::bit_enable, 3, 3>,
+               groov::field<"oc1fe", common::bittypes::bit_enable, 2, 2>,
                groov::field<"cc1s", std::uint8_t, 1, 0>>;
 
 // tims_ccmr1_output_v3: CCMR1_OUTPUT
@@ -285,13 +285,13 @@ using tims_ccmr1_output_v3_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint16_t, 31, 17, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint16_t, 31, 17, common::access::ro>,
                groov::field<"oc1m_3", bool, 16, 16>,
-               groov::field<"reserved0", std::uint16_t, 15, 7, access::ro>,
+               groov::field<"reserved0", std::uint16_t, 15, 7, common::access::ro>,
                groov::field<"oc1m", std::uint8_t, 6, 4>,
-               groov::field<"oc1pe", bit_enable, 3, 3>,
-               groov::field<"oc1fe", bit_enable, 2, 2>,
+               groov::field<"oc1pe", common::bittypes::bit_enable, 3, 3>,
+               groov::field<"oc1fe", common::bittypes::bit_enable, 2, 2>,
                groov::field<"cc1s", std::uint8_t, 1, 0>>;
 
 // tims_ccmr2_input_v1: CCMR2_INPUT
@@ -303,8 +303,8 @@ using tims_ccmr2_input_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"ic4f", std::uint8_t, 15, 12>,
                groov::field<"ic4psc", std::uint8_t, 11, 10>,
                groov::field<"cc4s", std::uint8_t, 9, 8>,
@@ -321,20 +321,20 @@ using tims_ccmr2_output_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint8_t, 31, 25, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint8_t, 31, 25, common::access::ro>,
                groov::field<"oc4m_3", bool, 24, 24>,
-               groov::field<"reserved0", std::uint8_t, 23, 17, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 23, 17, common::access::ro>,
                groov::field<"oc3m_3", bool, 16, 16>,
                groov::field<"oc4ce", bool, 15, 15>,
                groov::field<"oc4m", std::uint8_t, 14, 12>,
-               groov::field<"oc4pe", bit_enable, 11, 11>,
-               groov::field<"oc4fe", bit_enable, 10, 10>,
+               groov::field<"oc4pe", common::bittypes::bit_enable, 11, 11>,
+               groov::field<"oc4fe", common::bittypes::bit_enable, 10, 10>,
                groov::field<"cc4s", std::uint8_t, 9, 8>,
                groov::field<"oc3ce", bool, 7, 7>,
                groov::field<"oc3m", std::uint8_t, 6, 4>,
-               groov::field<"oc3pe", bit_enable, 3, 3>,
-               groov::field<"oc3fe", bit_enable, 2, 2>,
+               groov::field<"oc3pe", common::bittypes::bit_enable, 3, 3>,
+               groov::field<"oc3fe", common::bittypes::bit_enable, 2, 2>,
                groov::field<"cc3s", std::uint8_t, 1, 0>>;
 
 // tims_ccmr3_output_v1: CCMR3_OUTPUT
@@ -346,21 +346,21 @@ using tims_ccmr3_output_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved3", std::uint8_t, 31, 25, access::ro>,
+             common::access::rw,
+               groov::field<"reserved3", std::uint8_t, 31, 25, common::access::ro>,
                groov::field<"oc6m_3", bool, 24, 24>,
-               groov::field<"reserved2", std::uint8_t, 23, 17, access::ro>,
+               groov::field<"reserved2", std::uint8_t, 23, 17, common::access::ro>,
                groov::field<"oc5m_3", bool, 16, 16>,
                groov::field<"oc6ce", bool, 15, 15>,
                groov::field<"oc6m", std::uint8_t, 14, 12>,
-               groov::field<"oc6pe", bit_enable, 11, 11>,
-               groov::field<"oc6fe", bit_enable, 10, 10>,
-               groov::field<"reserved1", std::uint8_t, 9, 8, access::ro>,
+               groov::field<"oc6pe", common::bittypes::bit_enable, 11, 11>,
+               groov::field<"oc6fe", common::bittypes::bit_enable, 10, 10>,
+               groov::field<"reserved1", std::uint8_t, 9, 8, common::access::ro>,
                groov::field<"oc5ce", bool, 7, 7>,
                groov::field<"oc5m", std::uint8_t, 6, 4>,
-               groov::field<"oc5pe", bit_enable, 3, 3>,
-               groov::field<"oc5fe", bit_enable, 2, 2>,
-               groov::field<"reserved0", std::uint8_t, 1, 0, access::ro>>;
+               groov::field<"oc5pe", common::bittypes::bit_enable, 3, 3>,
+               groov::field<"oc5fe", common::bittypes::bit_enable, 2, 2>,
+               groov::field<"reserved0", std::uint8_t, 1, 0, common::access::ro>>;
 
 // tims_ccr1_v1: CCR1
 // Used by: TIM2
@@ -371,7 +371,7 @@ using tims_ccr1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"ccr1h", std::uint16_t, 31, 16>,
                groov::field<"ccr1l", std::uint16_t, 15, 0>>;
 
@@ -384,8 +384,8 @@ using tims_ccr1_v2_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"ccr1", std::uint16_t, 15, 0>>;
 
 // tims_ccr2_v1: CCR2
@@ -397,7 +397,7 @@ using tims_ccr2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"ccr2h", std::uint16_t, 31, 16>,
                groov::field<"ccr2l", std::uint16_t, 15, 0>>;
 
@@ -410,8 +410,8 @@ using tims_ccr2_v2_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"ccr2", std::uint16_t, 15, 0>>;
 
 // tims_ccr3_v1: CCR3
@@ -423,7 +423,7 @@ using tims_ccr3_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"ccr3h", std::uint16_t, 31, 16>,
                groov::field<"ccr3l", std::uint16_t, 15, 0>>;
 
@@ -436,8 +436,8 @@ using tims_ccr3_v2_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"ccr3", std::uint16_t, 15, 0>>;
 
 // tims_ccr4_v1: CCR4
@@ -449,7 +449,7 @@ using tims_ccr4_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"ccr4h", std::uint16_t, 31, 16>,
                groov::field<"ccr4l", std::uint16_t, 15, 0>>;
 
@@ -462,8 +462,8 @@ using tims_ccr4_v2_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"ccr4", std::uint16_t, 15, 0>>;
 
 // tims_ccr5_v1: CCR5
@@ -475,11 +475,11 @@ using tims_ccr5_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"gc5c3", bool, 31, 31>,
                groov::field<"gc5c2", bool, 30, 30>,
                groov::field<"gc5c1", bool, 29, 29>,
-               groov::field<"reserved0", std::uint16_t, 28, 16, access::ro>,
+               groov::field<"reserved0", std::uint16_t, 28, 16, common::access::ro>,
                groov::field<"ccr5", std::uint16_t, 15, 0>>;
 
 // tims_ccr6_v1: CCR6
@@ -491,8 +491,8 @@ using tims_ccr6_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"ccr6", std::uint16_t, 15, 0>>;
 
 // tims_cnt_v1: CNT
@@ -504,7 +504,7 @@ using tims_cnt_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"cnt_or_uifcpy", bool, 31, 31>,
                groov::field<"cnth", std::uint16_t, 30, 16>,
                groov::field<"cntl", std::uint16_t, 15, 0>>;
@@ -518,9 +518,9 @@ using tims_cnt_v2_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"uifcpy", bool, 31, 31, access::ro>,
-               groov::field<"reserved0", std::uint16_t, 30, 16, access::ro>,
+             common::access::rw,
+               groov::field<"uifcpy", bool, 31, 31, common::access::ro>,
+               groov::field<"reserved0", std::uint16_t, 30, 16, common::access::ro>,
                groov::field<"cnt", std::uint16_t, 15, 0>>;
 
 // tims_cr1_v1: CR1
@@ -532,18 +532,18 @@ using tims_cr1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint32_t, 31, 12, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint32_t, 31, 12, common::access::ro>,
                groov::field<"uifremap", bool, 11, 11>,
-               groov::field<"reserved0", bool, 10, 10, access::ro>,
+               groov::field<"reserved0", bool, 10, 10, common::access::ro>,
                groov::field<"ckd", std::uint8_t, 9, 8>,
-               groov::field<"arpe", bit_enable, 7, 7>,
+               groov::field<"arpe", common::bittypes::bit_enable, 7, 7>,
                groov::field<"cms", std::uint8_t, 6, 5>,
                groov::field<"dir", bool, 4, 4>,
                groov::field<"opm", bool, 3, 3>,
                groov::field<"urs", bool, 2, 2>,
-               groov::field<"udis", bit_enable_bar, 1, 1>,
-               groov::field<"cen", bit_enable, 0, 0>>;
+               groov::field<"udis", common::bittypes::bit_enable_bar, 1, 1>,
+               groov::field<"cen", common::bittypes::bit_enable, 0, 0>>;
 
 // tims_cr1_v2: CR1
 // Used by: TIM15, TIM16, TIM17
@@ -554,17 +554,17 @@ using tims_cr1_v2_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved2", std::uint32_t, 31, 12, access::ro>,
+             common::access::rw,
+               groov::field<"reserved2", std::uint32_t, 31, 12, common::access::ro>,
                groov::field<"uifremap", bool, 11, 11>,
-               groov::field<"reserved1", bool, 10, 10, access::ro>,
+               groov::field<"reserved1", bool, 10, 10, common::access::ro>,
                groov::field<"ckd", std::uint8_t, 9, 8>,
-               groov::field<"arpe", bit_enable, 7, 7>,
-               groov::field<"reserved0", std::uint8_t, 6, 4, access::ro>,
+               groov::field<"arpe", common::bittypes::bit_enable, 7, 7>,
+               groov::field<"reserved0", std::uint8_t, 6, 4, common::access::ro>,
                groov::field<"opm", bool, 3, 3>,
                groov::field<"urs", bool, 2, 2>,
-               groov::field<"udis", bit_enable_bar, 1, 1>,
-               groov::field<"cen", bit_enable, 0, 0>>;
+               groov::field<"udis", common::bittypes::bit_enable_bar, 1, 1>,
+               groov::field<"cen", common::bittypes::bit_enable, 0, 0>>;
 
 // tims_cr1_v3: CR1
 // Used by: TIM6, TIM7
@@ -575,16 +575,16 @@ using tims_cr1_v3_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved2", std::uint32_t, 31, 12, access::ro>,
+             common::access::rw,
+               groov::field<"reserved2", std::uint32_t, 31, 12, common::access::ro>,
                groov::field<"uifremap", bool, 11, 11>,
-               groov::field<"reserved1", std::uint8_t, 10, 8, access::ro>,
-               groov::field<"arpe", bit_enable, 7, 7>,
-               groov::field<"reserved0", std::uint8_t, 6, 4, access::ro>,
+               groov::field<"reserved1", std::uint8_t, 10, 8, common::access::ro>,
+               groov::field<"arpe", common::bittypes::bit_enable, 7, 7>,
+               groov::field<"reserved0", std::uint8_t, 6, 4, common::access::ro>,
                groov::field<"opm", bool, 3, 3>,
                groov::field<"urs", bool, 2, 2>,
-               groov::field<"udis", bit_enable_bar, 1, 1>,
-               groov::field<"cen", bit_enable, 0, 0>>;
+               groov::field<"udis", common::bittypes::bit_enable_bar, 1, 1>,
+               groov::field<"cen", common::bittypes::bit_enable, 0, 0>>;
 
 // tims_cr2_v1: CR2
 // Used by: TIM2
@@ -595,12 +595,12 @@ using tims_cr2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint32_t, 31, 8, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint32_t, 31, 8, common::access::ro>,
                groov::field<"ti1s", bool, 7, 7>,
                groov::field<"mms", std::uint8_t, 6, 4>,
                groov::field<"ccds", bool, 3, 3>,
-               groov::field<"reserved0", std::uint8_t, 2, 0, access::ro>>;
+               groov::field<"reserved0", std::uint8_t, 2, 0, common::access::ro>>;
 
 // tims_cr2_v2: CR2
 // Used by: TIM15
@@ -611,8 +611,8 @@ using tims_cr2_v2_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint32_t, 31, 11, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint32_t, 31, 11, common::access::ro>,
                groov::field<"ois2", bool, 10, 10>,
                groov::field<"ois1n", bool, 9, 9>,
                groov::field<"ois1", bool, 8, 8>,
@@ -620,7 +620,7 @@ using tims_cr2_v2_tt =
                groov::field<"mms", std::uint8_t, 6, 4>,
                groov::field<"ccds", bool, 3, 3>,
                groov::field<"ccus", bool, 2, 2>,
-               groov::field<"reserved0", bool, 1, 1, access::ro>,
+               groov::field<"reserved0", bool, 1, 1, common::access::ro>,
                groov::field<"ccpc", bool, 0, 0>>;
 
 // tims_cr2_v3: CR2
@@ -632,14 +632,14 @@ using tims_cr2_v3_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved2", std::uint32_t, 31, 10, access::ro>,
+             common::access::rw,
+               groov::field<"reserved2", std::uint32_t, 31, 10, common::access::ro>,
                groov::field<"ois1n", bool, 9, 9>,
                groov::field<"ois1", bool, 8, 8>,
-               groov::field<"reserved1", std::uint8_t, 7, 4, access::ro>,
+               groov::field<"reserved1", std::uint8_t, 7, 4, common::access::ro>,
                groov::field<"ccds", bool, 3, 3>,
                groov::field<"ccus", bool, 2, 2>,
-               groov::field<"reserved0", bool, 1, 1, access::ro>,
+               groov::field<"reserved0", bool, 1, 1, common::access::ro>,
                groov::field<"ccpc", bool, 0, 0>>;
 
 // tims_cr2_v4: CR2
@@ -651,10 +651,10 @@ using tims_cr2_v4_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint32_t, 31, 7, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint32_t, 31, 7, common::access::ro>,
                groov::field<"mms", std::uint8_t, 6, 4>,
-               groov::field<"reserved0", std::uint8_t, 3, 0, access::ro>>;
+               groov::field<"reserved0", std::uint8_t, 3, 0, common::access::ro>>;
 
 // tims_cr2_v5: CR2
 // Used by: TIM1
@@ -665,14 +665,14 @@ using tims_cr2_v5_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved4", std::uint8_t, 31, 24, access::ro>,
+             common::access::rw,
+               groov::field<"reserved4", std::uint8_t, 31, 24, common::access::ro>,
                groov::field<"mms2", std::uint8_t, 23, 20>,
-               groov::field<"reserved3", bool, 19, 19, access::ro>,
+               groov::field<"reserved3", bool, 19, 19, common::access::ro>,
                groov::field<"ois6", bool, 18, 18>,
-               groov::field<"reserved2", bool, 17, 17, access::ro>,
+               groov::field<"reserved2", bool, 17, 17, common::access::ro>,
                groov::field<"ois5", bool, 16, 16>,
-               groov::field<"reserved1", bool, 15, 15, access::ro>,
+               groov::field<"reserved1", bool, 15, 15, common::access::ro>,
                groov::field<"ois4", bool, 14, 14>,
                groov::field<"ois3n", bool, 13, 13>,
                groov::field<"ois3", bool, 12, 12>,
@@ -684,7 +684,7 @@ using tims_cr2_v5_tt =
                groov::field<"mms", std::uint8_t, 6, 4>,
                groov::field<"ccds", bool, 3, 3>,
                groov::field<"ccus", bool, 2, 2>,
-               groov::field<"reserved0", bool, 1, 1, access::ro>,
+               groov::field<"reserved0", bool, 1, 1, common::access::ro>,
                groov::field<"ccpc", bool, 0, 0>>;
 
 // tims_dcr_v1: DCR
@@ -696,10 +696,10 @@ using tims_dcr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint32_t, 31, 13, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint32_t, 31, 13, common::access::ro>,
                groov::field<"dbl", std::uint8_t, 12, 8>,
-               groov::field<"reserved0", std::uint8_t, 7, 5, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 7, 5, common::access::ro>,
                groov::field<"dba", std::uint8_t, 4, 0>>;
 
 // tims_dier_v1: DIER
@@ -711,23 +711,23 @@ using tims_dier_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved3", std::uint32_t, 31, 15, access::ro>,
-               groov::field<"tde", bit_enable, 14, 14>,
-               groov::field<"reserved2", bool, 13, 13, access::ro>,
-               groov::field<"cc4de", bit_enable, 12, 12>,
-               groov::field<"cc3de", bit_enable, 11, 11>,
-               groov::field<"cc2de", bit_enable, 10, 10>,
-               groov::field<"cc1de", bit_enable, 9, 9>,
-               groov::field<"ude", bit_enable, 8, 8>,
-               groov::field<"reserved1", bool, 7, 7, access::ro>,
-               groov::field<"tie", bit_enable, 6, 6>,
-               groov::field<"reserved0", bool, 5, 5, access::ro>,
-               groov::field<"cc4ie", bit_enable, 4, 4>,
-               groov::field<"cc3ie", bit_enable, 3, 3>,
-               groov::field<"cc2ie", bit_enable, 2, 2>,
-               groov::field<"cc1ie", bit_enable, 1, 1>,
-               groov::field<"uie", bit_enable, 0, 0>>;
+             common::access::rw,
+               groov::field<"reserved3", std::uint32_t, 31, 15, common::access::ro>,
+               groov::field<"tde", common::bittypes::bit_enable, 14, 14>,
+               groov::field<"reserved2", bool, 13, 13, common::access::ro>,
+               groov::field<"cc4de", common::bittypes::bit_enable, 12, 12>,
+               groov::field<"cc3de", common::bittypes::bit_enable, 11, 11>,
+               groov::field<"cc2de", common::bittypes::bit_enable, 10, 10>,
+               groov::field<"cc1de", common::bittypes::bit_enable, 9, 9>,
+               groov::field<"ude", common::bittypes::bit_enable, 8, 8>,
+               groov::field<"reserved1", bool, 7, 7, common::access::ro>,
+               groov::field<"tie", common::bittypes::bit_enable, 6, 6>,
+               groov::field<"reserved0", bool, 5, 5, common::access::ro>,
+               groov::field<"cc4ie", common::bittypes::bit_enable, 4, 4>,
+               groov::field<"cc3ie", common::bittypes::bit_enable, 3, 3>,
+               groov::field<"cc2ie", common::bittypes::bit_enable, 2, 2>,
+               groov::field<"cc1ie", common::bittypes::bit_enable, 1, 1>,
+               groov::field<"uie", common::bittypes::bit_enable, 0, 0>>;
 
 // tims_dier_v2: DIER
 // Used by: TIM15
@@ -738,21 +738,21 @@ using tims_dier_v2_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved2", std::uint32_t, 31, 15, access::ro>,
-               groov::field<"tde", bit_enable, 14, 14>,
-               groov::field<"comde", bit_enable, 13, 13>,
-               groov::field<"reserved1", std::uint8_t, 12, 11, access::ro>,
-               groov::field<"cc2de", bit_enable, 10, 10>,
-               groov::field<"cc1de", bit_enable, 9, 9>,
-               groov::field<"ude", bit_enable, 8, 8>,
-               groov::field<"bie", bit_enable, 7, 7>,
-               groov::field<"tie", bit_enable, 6, 6>,
-               groov::field<"comie", bit_enable, 5, 5>,
-               groov::field<"reserved0", std::uint8_t, 4, 3, access::ro>,
-               groov::field<"cc2ie", bit_enable, 2, 2>,
-               groov::field<"cc1ie", bit_enable, 1, 1>,
-               groov::field<"uie", bit_enable, 0, 0>>;
+             common::access::rw,
+               groov::field<"reserved2", std::uint32_t, 31, 15, common::access::ro>,
+               groov::field<"tde", common::bittypes::bit_enable, 14, 14>,
+               groov::field<"comde", common::bittypes::bit_enable, 13, 13>,
+               groov::field<"reserved1", std::uint8_t, 12, 11, common::access::ro>,
+               groov::field<"cc2de", common::bittypes::bit_enable, 10, 10>,
+               groov::field<"cc1de", common::bittypes::bit_enable, 9, 9>,
+               groov::field<"ude", common::bittypes::bit_enable, 8, 8>,
+               groov::field<"bie", common::bittypes::bit_enable, 7, 7>,
+               groov::field<"tie", common::bittypes::bit_enable, 6, 6>,
+               groov::field<"comie", common::bittypes::bit_enable, 5, 5>,
+               groov::field<"reserved0", std::uint8_t, 4, 3, common::access::ro>,
+               groov::field<"cc2ie", common::bittypes::bit_enable, 2, 2>,
+               groov::field<"cc1ie", common::bittypes::bit_enable, 1, 1>,
+               groov::field<"uie", common::bittypes::bit_enable, 0, 0>>;
 
 // tims_dier_v3: DIER
 // Used by: TIM16, TIM17
@@ -763,19 +763,19 @@ using tims_dier_v3_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved2", std::uint32_t, 31, 15, access::ro>,
-               groov::field<"tde", bit_enable, 14, 14>,
-               groov::field<"comde", bit_enable, 13, 13>,
-               groov::field<"reserved1", std::uint8_t, 12, 10, access::ro>,
-               groov::field<"cc1de", bit_enable, 9, 9>,
-               groov::field<"ude", bit_enable, 8, 8>,
-               groov::field<"bie", bit_enable, 7, 7>,
-               groov::field<"tie", bit_enable, 6, 6>,
-               groov::field<"comie", bit_enable, 5, 5>,
-               groov::field<"reserved0", std::uint8_t, 4, 2, access::ro>,
-               groov::field<"cc1ie", bit_enable, 1, 1>,
-               groov::field<"uie", bit_enable, 0, 0>>;
+             common::access::rw,
+               groov::field<"reserved2", std::uint32_t, 31, 15, common::access::ro>,
+               groov::field<"tde", common::bittypes::bit_enable, 14, 14>,
+               groov::field<"comde", common::bittypes::bit_enable, 13, 13>,
+               groov::field<"reserved1", std::uint8_t, 12, 10, common::access::ro>,
+               groov::field<"cc1de", common::bittypes::bit_enable, 9, 9>,
+               groov::field<"ude", common::bittypes::bit_enable, 8, 8>,
+               groov::field<"bie", common::bittypes::bit_enable, 7, 7>,
+               groov::field<"tie", common::bittypes::bit_enable, 6, 6>,
+               groov::field<"comie", common::bittypes::bit_enable, 5, 5>,
+               groov::field<"reserved0", std::uint8_t, 4, 2, common::access::ro>,
+               groov::field<"cc1ie", common::bittypes::bit_enable, 1, 1>,
+               groov::field<"uie", common::bittypes::bit_enable, 0, 0>>;
 
 // tims_dier_v4: DIER
 // Used by: TIM6, TIM7
@@ -786,11 +786,11 @@ using tims_dier_v4_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint32_t, 31, 9, access::ro>,
-               groov::field<"ude", bit_enable, 8, 8>,
-               groov::field<"reserved0", std::uint8_t, 7, 1, access::ro>,
-               groov::field<"uie", bit_enable, 0, 0>>;
+             common::access::rw,
+               groov::field<"reserved1", std::uint32_t, 31, 9, common::access::ro>,
+               groov::field<"ude", common::bittypes::bit_enable, 8, 8>,
+               groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
+               groov::field<"uie", common::bittypes::bit_enable, 0, 0>>;
 
 // tims_dier_v5: DIER
 // Used by: TIM1
@@ -801,23 +801,23 @@ using tims_dier_v5_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 15, access::ro>,
-               groov::field<"tde", bit_enable, 14, 14>,
-               groov::field<"comde", bit_enable, 13, 13>,
-               groov::field<"cc4de", bit_enable, 12, 12>,
-               groov::field<"cc3de", bit_enable, 11, 11>,
-               groov::field<"cc2de", bit_enable, 10, 10>,
-               groov::field<"cc1de", bit_enable, 9, 9>,
-               groov::field<"ude", bit_enable, 8, 8>,
-               groov::field<"bie", bit_enable, 7, 7>,
-               groov::field<"tie", bit_enable, 6, 6>,
-               groov::field<"comie", bit_enable, 5, 5>,
-               groov::field<"cc4ie", bit_enable, 4, 4>,
-               groov::field<"cc3ie", bit_enable, 3, 3>,
-               groov::field<"cc2ie", bit_enable, 2, 2>,
-               groov::field<"cc1ie", bit_enable, 1, 1>,
-               groov::field<"uie", bit_enable, 0, 0>>;
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 15, common::access::ro>,
+               groov::field<"tde", common::bittypes::bit_enable, 14, 14>,
+               groov::field<"comde", common::bittypes::bit_enable, 13, 13>,
+               groov::field<"cc4de", common::bittypes::bit_enable, 12, 12>,
+               groov::field<"cc3de", common::bittypes::bit_enable, 11, 11>,
+               groov::field<"cc2de", common::bittypes::bit_enable, 10, 10>,
+               groov::field<"cc1de", common::bittypes::bit_enable, 9, 9>,
+               groov::field<"ude", common::bittypes::bit_enable, 8, 8>,
+               groov::field<"bie", common::bittypes::bit_enable, 7, 7>,
+               groov::field<"tie", common::bittypes::bit_enable, 6, 6>,
+               groov::field<"comie", common::bittypes::bit_enable, 5, 5>,
+               groov::field<"cc4ie", common::bittypes::bit_enable, 4, 4>,
+               groov::field<"cc3ie", common::bittypes::bit_enable, 3, 3>,
+               groov::field<"cc2ie", common::bittypes::bit_enable, 2, 2>,
+               groov::field<"cc1ie", common::bittypes::bit_enable, 1, 1>,
+               groov::field<"uie", common::bittypes::bit_enable, 0, 0>>;
 
 // tims_dmar_v1: DMAR
 // Used by: TIM2, TIM15, TIM16, TIM17, TIM1
@@ -828,8 +828,8 @@ using tims_dmar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"dmab", std::uint16_t, 15, 0>>;
 
 // tims_egr_v1: EGR
@@ -841,10 +841,10 @@ using tims_egr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::wo,
-               groov::field<"reserved1", std::uint32_t, 31, 7, access::ro>,
+             common::access::wo,
+               groov::field<"reserved1", std::uint32_t, 31, 7, common::access::ro>,
                groov::field<"tg", bool, 6, 6>,
-               groov::field<"reserved0", bool, 5, 5, access::ro>,
+               groov::field<"reserved0", bool, 5, 5, common::access::ro>,
                groov::field<"cc4g", bool, 4, 4>,
                groov::field<"cc3g", bool, 3, 3>,
                groov::field<"cc2g", bool, 2, 2>,
@@ -860,12 +860,12 @@ using tims_egr_v2_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::wo,
-               groov::field<"reserved1", std::uint32_t, 31, 8, access::ro>,
+             common::access::wo,
+               groov::field<"reserved1", std::uint32_t, 31, 8, common::access::ro>,
                groov::field<"bg", bool, 7, 7>,
                groov::field<"tg", bool, 6, 6>,
                groov::field<"comg", bool, 5, 5>,
-               groov::field<"reserved0", std::uint8_t, 4, 3, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 4, 3, common::access::ro>,
                groov::field<"cc2g", bool, 2, 2>,
                groov::field<"cc1g", bool, 1, 1>,
                groov::field<"ug", bool, 0, 0>>;
@@ -879,12 +879,12 @@ using tims_egr_v3_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::wo,
-               groov::field<"reserved1", std::uint32_t, 31, 8, access::ro>,
+             common::access::wo,
+               groov::field<"reserved1", std::uint32_t, 31, 8, common::access::ro>,
                groov::field<"bg", bool, 7, 7>,
                groov::field<"tg", bool, 6, 6>,
                groov::field<"comg", bool, 5, 5>,
-               groov::field<"reserved0", std::uint8_t, 4, 2, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 4, 2, common::access::ro>,
                groov::field<"cc1g", bool, 1, 1>,
                groov::field<"ug", bool, 0, 0>>;
 
@@ -897,8 +897,8 @@ using tims_egr_v4_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::wo,
-               groov::field<"reserved0", std::uint32_t, 31, 1, access::ro>,
+             common::access::wo,
+               groov::field<"reserved0", std::uint32_t, 31, 1, common::access::ro>,
                groov::field<"ug", bool, 0, 0>>;
 
 // tims_egr_v5: EGR
@@ -910,8 +910,8 @@ using tims_egr_v5_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::wo,
-               groov::field<"reserved0", std::uint32_t, 31, 9, access::ro>,
+             common::access::wo,
+               groov::field<"reserved0", std::uint32_t, 31, 9, common::access::ro>,
                groov::field<"b2g", bool, 8, 8>,
                groov::field<"bg", bool, 7, 7>,
                groov::field<"tg", bool, 6, 6>,
@@ -931,8 +931,8 @@ using tims_or_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 0, access::ro>>;
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 0, common::access::ro>>;
 
 // tims_or_v2: OR
 // Used by: TIM1
@@ -943,8 +943,8 @@ using tims_or_v2_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 4, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 4, common::access::ro>,
                groov::field<"tim1_etr_adc4_rmp", std::uint8_t, 3, 2>,
                groov::field<"tim1_etr_adc1_rmp", std::uint8_t, 1, 0>>;
 
@@ -957,8 +957,8 @@ using tims_psc_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"psc", std::uint16_t, 15, 0>>;
 
 // tims_rcr_v1: RCR
@@ -970,8 +970,8 @@ using tims_rcr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 8, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 8, common::access::ro>,
                groov::field<"rep", std::uint8_t, 7, 0>>;
 
 // tims_rcr_v2: RCR
@@ -983,8 +983,8 @@ using tims_rcr_v2_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"rep", std::uint16_t, 15, 0>>;
 
 // tims_smcr_v1: SMCR
@@ -996,8 +996,8 @@ using tims_smcr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 17, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 17, common::access::ro>,
                groov::field<"sms_3", bool, 16, 16>,
                groov::field<"etp", bool, 15, 15>,
                groov::field<"ece", bool, 14, 14>,
@@ -1017,13 +1017,13 @@ using tims_smcr_v2_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved2", std::uint16_t, 31, 17, access::ro>,
+             common::access::rw,
+               groov::field<"reserved2", std::uint16_t, 31, 17, common::access::ro>,
                groov::field<"sms_3", bool, 16, 16>,
-               groov::field<"reserved1", std::uint8_t, 15, 8, access::ro>,
+               groov::field<"reserved1", std::uint8_t, 15, 8, common::access::ro>,
                groov::field<"msm", bool, 7, 7>,
                groov::field<"ts", std::uint8_t, 6, 4>,
-               groov::field<"reserved0", bool, 3, 3, access::ro>,
+               groov::field<"reserved0", bool, 3, 3, common::access::ro>,
                groov::field<"sms", std::uint8_t, 2, 0>>;
 
 // tims_smcr_v3: SMCR
@@ -1035,8 +1035,8 @@ using tims_smcr_v3_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 17, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 17, common::access::ro>,
                groov::field<"sms3", bool, 16, 16>,
                groov::field<"etp", bool, 15, 15>,
                groov::field<"ece", bool, 14, 14>,
@@ -1056,15 +1056,15 @@ using tims_sr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved2", std::uint32_t, 31, 13, access::ro>,
+             common::access::rw,
+               groov::field<"reserved2", std::uint32_t, 31, 13, common::access::ro>,
                groov::field<"cc4of", bool, 12, 12>,
                groov::field<"cc3of", bool, 11, 11>,
                groov::field<"cc2of", bool, 10, 10>,
                groov::field<"cc1of", bool, 9, 9>,
-               groov::field<"reserved1", std::uint8_t, 8, 7, access::ro>,
+               groov::field<"reserved1", std::uint8_t, 8, 7, common::access::ro>,
                groov::field<"tif", bool, 6, 6>,
-               groov::field<"reserved0", bool, 5, 5, access::ro>,
+               groov::field<"reserved0", bool, 5, 5, common::access::ro>,
                groov::field<"cc4if", bool, 4, 4>,
                groov::field<"cc3if", bool, 3, 3>,
                groov::field<"cc2if", bool, 2, 2>,
@@ -1080,15 +1080,15 @@ using tims_sr_v2_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved2", std::uint32_t, 31, 11, access::ro>,
+             common::access::rw,
+               groov::field<"reserved2", std::uint32_t, 31, 11, common::access::ro>,
                groov::field<"cc2of", bool, 10, 10>,
                groov::field<"cc1of", bool, 9, 9>,
-               groov::field<"reserved1", bool, 8, 8, access::ro>,
+               groov::field<"reserved1", bool, 8, 8, common::access::ro>,
                groov::field<"bif", bool, 7, 7>,
                groov::field<"tif", bool, 6, 6>,
                groov::field<"comif", bool, 5, 5>,
-               groov::field<"reserved0", std::uint8_t, 4, 3, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 4, 3, common::access::ro>,
                groov::field<"cc2if", bool, 2, 2>,
                groov::field<"cc1if", bool, 1, 1>,
                groov::field<"uif", bool, 0, 0>>;
@@ -1102,14 +1102,14 @@ using tims_sr_v3_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved2", std::uint32_t, 31, 10, access::ro>,
+             common::access::rw,
+               groov::field<"reserved2", std::uint32_t, 31, 10, common::access::ro>,
                groov::field<"cc1of", bool, 9, 9>,
-               groov::field<"reserved1", bool, 8, 8, access::ro>,
+               groov::field<"reserved1", bool, 8, 8, common::access::ro>,
                groov::field<"bif", bool, 7, 7>,
                groov::field<"tif", bool, 6, 6>,
                groov::field<"comif", bool, 5, 5>,
-               groov::field<"reserved0", std::uint8_t, 4, 2, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 4, 2, common::access::ro>,
                groov::field<"cc1if", bool, 1, 1>,
                groov::field<"uif", bool, 0, 0>>;
 
@@ -1122,8 +1122,8 @@ using tims_sr_v4_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 1, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 1, common::access::ro>,
                groov::field<"uif", bool, 0, 0>>;
 
 // tims_sr_v5: SR
@@ -1135,11 +1135,11 @@ using tims_sr_v5_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint16_t, 31, 18, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint16_t, 31, 18, common::access::ro>,
                groov::field<"c6if", bool, 17, 17>,
                groov::field<"c5if", bool, 16, 16>,
-               groov::field<"reserved0", std::uint8_t, 15, 13, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 15, 13, common::access::ro>,
                groov::field<"cc4of", bool, 12, 12>,
                groov::field<"cc3of", bool, 11, 11>,
                groov::field<"cc2of", bool, 10, 10>,

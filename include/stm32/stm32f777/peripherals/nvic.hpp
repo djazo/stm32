@@ -7,56 +7,206 @@
 namespace stm32::stm32f777 {
 
 namespace nvic {
-  using iser0_tt = regs::nvic_iser0_v1_tt;
-  using iser1_tt = regs::nvic_iser1_v1_tt;
-  using iser2_tt = regs::nvic_iser2_v1_tt;
-  using icer0_tt = regs::nvic_icer0_v1_tt;
-  using icer1_tt = regs::nvic_icer1_v1_tt;
-  using icer2_tt = regs::nvic_icer2_v1_tt;
-  using ispr0_tt = regs::nvic_ispr0_v1_tt;
-  using ispr1_tt = regs::nvic_ispr1_v1_tt;
-  using ispr2_tt = regs::nvic_ispr2_v1_tt;
-  using icpr0_tt = regs::nvic_icpr0_v1_tt;
-  using icpr1_tt = regs::nvic_icpr1_v1_tt;
-  using icpr2_tt = regs::nvic_icpr2_v1_tt;
-  using iabr0_tt = regs::nvic_iabr0_v1_tt;
-  using iabr1_tt = regs::nvic_iabr1_v1_tt;
-  using iabr2_tt = regs::nvic_iabr2_v1_tt;
-  using ipr0_tt = regs::nvic_ipr0_v1_tt;
-  using ipr1_tt = regs::nvic_ipr1_v1_tt;
-  using ipr2_tt = regs::nvic_ipr2_v1_tt;
-  using ipr3_tt = regs::nvic_ipr3_v1_tt;
-  using ipr4_tt = regs::nvic_ipr4_v1_tt;
-  using ipr5_tt = regs::nvic_ipr5_v1_tt;
-  using ipr6_tt = regs::nvic_ipr6_v1_tt;
-  using ipr7_tt = regs::nvic_ipr7_v1_tt;
-  using ipr8_tt = regs::nvic_ipr8_v1_tt;
-  using ipr9_tt = regs::nvic_ipr9_v1_tt;
-  using ipr10_tt = regs::nvic_ipr10_v1_tt;
-  using ipr11_tt = regs::nvic_ipr11_v1_tt;
-  using ipr12_tt = regs::nvic_ipr12_v1_tt;
-  using ipr13_tt = regs::nvic_ipr13_v1_tt;
-  using ipr14_tt = regs::nvic_ipr14_v1_tt;
-  using ipr15_tt = regs::nvic_ipr15_v1_tt;
-  using ipr16_tt = regs::nvic_ipr16_v1_tt;
-  using ipr17_tt = regs::nvic_ipr17_v1_tt;
-  using ipr18_tt = regs::nvic_ipr18_v1_tt;
-  using ipr19_tt = regs::nvic_ipr19_v1_tt;
-  using ipr20_tt = regs::nvic_ipr20_v1_tt;
-  using iser3_tt = regs::nvic_iser3_v1_tt;
-  using icer3_tt = regs::nvic_icer3_v1_tt;
-  using ispr3_tt = regs::nvic_ispr3_v1_tt;
-  using icpr3_tt = regs::nvic_icpr3_v1_tt;
-  using iabr3_tt = regs::nvic_iabr3_v1_tt;
-  using ipr21_tt = regs::nvic_ipr21_v1_tt;
-  using ipr22_tt = regs::nvic_ipr22_v1_tt;
-  using ipr23_tt = regs::nvic_ipr23_v1_tt;
-  using ipr24_tt = regs::nvic_ipr24_v1_tt;
-  using ipr25_tt = regs::nvic_ipr25_v1_tt;
-  using ipr26_tt = regs::nvic_ipr26_v1_tt;
-  using ipr27_tt = regs::nvic_ipr27_v1_tt;
-  using ipr28_tt = regs::nvic_ipr28_v1_tt;
-  using ipr29_tt = regs::nvic_ipr29_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using iser0_tt = regs::nvic_iser0_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using iser1_tt = regs::nvic_iser1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using iser2_tt = regs::nvic_iser2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using icer0_tt = regs::nvic_icer0_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using icer1_tt = regs::nvic_icer1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using icer2_tt = regs::nvic_icer2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ispr0_tt = regs::nvic_ispr0_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ispr1_tt = regs::nvic_ispr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ispr2_tt = regs::nvic_ispr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using icpr0_tt = regs::nvic_icpr0_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using icpr1_tt = regs::nvic_icpr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using icpr2_tt = regs::nvic_icpr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using iabr0_tt = regs::nvic_iabr0_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using iabr1_tt = regs::nvic_iabr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using iabr2_tt = regs::nvic_iabr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ipr0_tt = regs::nvic_ipr0_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ipr1_tt = regs::nvic_ipr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ipr2_tt = regs::nvic_ipr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ipr3_tt = regs::nvic_ipr3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ipr4_tt = regs::nvic_ipr4_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ipr5_tt = regs::nvic_ipr5_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ipr6_tt = regs::nvic_ipr6_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ipr7_tt = regs::nvic_ipr7_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ipr8_tt = regs::nvic_ipr8_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ipr9_tt = regs::nvic_ipr9_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ipr10_tt = regs::nvic_ipr10_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ipr11_tt = regs::nvic_ipr11_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ipr12_tt = regs::nvic_ipr12_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ipr13_tt = regs::nvic_ipr13_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ipr14_tt = regs::nvic_ipr14_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ipr15_tt = regs::nvic_ipr15_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ipr16_tt = regs::nvic_ipr16_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ipr17_tt = regs::nvic_ipr17_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ipr18_tt = regs::nvic_ipr18_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ipr19_tt = regs::nvic_ipr19_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ipr20_tt = regs::nvic_ipr20_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using iser3_tt = regs::nvic_iser3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using icer3_tt = regs::nvic_icer3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ispr3_tt = regs::nvic_ispr3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using icpr3_tt = regs::nvic_icpr3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using iabr3_tt = regs::nvic_iabr3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ipr21_tt = regs::nvic_ipr21_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ipr22_tt = regs::nvic_ipr22_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ipr23_tt = regs::nvic_ipr23_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ipr24_tt = regs::nvic_ipr24_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ipr25_tt = regs::nvic_ipr25_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ipr26_tt = regs::nvic_ipr26_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ipr27_tt = regs::nvic_ipr27_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ipr28_tt = regs::nvic_ipr28_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ipr29_tt = regs::nvic_ipr29_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using nvic_t =
@@ -116,7 +266,10 @@ namespace nvic {
 } // namespace nvic
 
 namespace nvic_stir {
-  using stir_tt = regs::nvic_stir_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using stir_tt = regs::nvic_stir_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using nvic_stir_t =

@@ -7,13 +7,34 @@
 namespace stm32::stm32f100 {
 
 namespace cec {
-  using cfgr_tt = regs::cec_cfgr_v1_tt;
-  using oar_tt = regs::cec_oar_v1_tt;
-  using pres_tt = regs::cec_pres_v1_tt;
-  using esr_tt = regs::cec_esr_v1_tt;
-  using csr_tt = regs::cec_csr_v1_tt;
-  using txd_tt = regs::cec_txd_v1_tt;
-  using rxd_tt = regs::cec_rxd_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cfgr_tt = regs::cec_cfgr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using oar_tt = regs::cec_oar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using pres_tt = regs::cec_pres_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using esr_tt = regs::cec_esr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using csr_tt = regs::cec_csr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using txd_tt = regs::cec_txd_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rxd_tt = regs::cec_rxd_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using cec_t =

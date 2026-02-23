@@ -7,12 +7,30 @@
 namespace stm32::stm32h750x {
 
 namespace dbgmcu {
-  using idc_tt = regs::dbgmcu_idc_v1_tt;
-  using cr_tt = regs::dbgmcu_cr_v1_tt;
-  using apb3fz1_tt = regs::dbgmcu_apb3fz1_v1_tt;
-  using apb1lfz1_tt = regs::dbgmcu_apb1lfz1_v1_tt;
-  using apb2fz1_tt = regs::dbgmcu_apb2fz1_v1_tt;
-  using apb4fz1_tt = regs::dbgmcu_apb4fz1_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using idc_tt = regs::dbgmcu_idc_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cr_tt = regs::dbgmcu_cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using apb3fz1_tt = regs::dbgmcu_apb3fz1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using apb1lfz1_tt = regs::dbgmcu_apb1lfz1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using apb2fz1_tt = regs::dbgmcu_apb2fz1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using apb4fz1_tt = regs::dbgmcu_apb4fz1_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using dbgmcu_t =

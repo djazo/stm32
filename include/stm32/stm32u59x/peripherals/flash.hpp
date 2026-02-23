@@ -7,68 +7,254 @@
 namespace stm32::stm32u59x {
 
 namespace flashx {
-  using flash_acr_tt = regs::flash_flash_acr_v1_tt;
-  using flash_nskeyr_tt = regs::flash_flash_nskeyr_v1_tt;
-  using flash_seckeyr_tt = regs::flash_flash_seckeyr_v1_tt;
-  using flash_optkeyr_tt = regs::flash_flash_optkeyr_v1_tt;
-  using flash_pdkey1r_tt = regs::flash_flash_pdkey1r_v1_tt;
-  using flash_pdkey2r_tt = regs::flash_flash_pdkey2r_v1_tt;
-  using flash_nssr_tt = regs::flash_flash_nssr_v1_tt;
-  using flash_secsr_tt = regs::flash_flash_secsr_v1_tt;
-  using flash_nscr_tt = regs::flash_flash_nscr_v1_tt;
-  using flash_seccr_tt = regs::flash_flash_seccr_v1_tt;
-  using flash_eccr_tt = regs::flash_flash_eccr_v1_tt;
-  using flash_opsr_tt = regs::flash_flash_opsr_v1_tt;
-  using flash_optr_tt = regs::flash_flash_optr_v1_tt;
-  using flash_nsbootadd0r_tt = regs::flash_flash_nsbootadd0r_v1_tt;
-  using flash_nsbootadd1r_tt = regs::flash_flash_nsbootadd1r_v1_tt;
-  using flash_secbootadd0r_tt = regs::flash_flash_secbootadd0r_v1_tt;
-  using flash_secwm1r1_tt = regs::flash_flash_secwm1r1_v1_tt;
-  using flash_secwm1r2_tt = regs::flash_flash_secwm1r2_v1_tt;
-  using flash_wrp1ar_tt = regs::flash_flash_wrp1ar_v1_tt;
-  using flash_wrp1br_tt = regs::flash_flash_wrp1br_v1_tt;
-  using flash_secwm2r1_tt = regs::flash_flash_secwm2r1_v1_tt;
-  using flash_secwm2r2_tt = regs::flash_flash_secwm2r2_v1_tt;
-  using flash_wrp2ar_tt = regs::flash_flash_wrp2ar_v1_tt;
-  using flash_wrp2br_tt = regs::flash_flash_wrp2br_v1_tt;
-  using flash_oem1keyr1_tt = regs::flash_flash_oem1keyr1_v1_tt;
-  using flash_oem1keyr2_tt = regs::flash_flash_oem1keyr2_v1_tt;
-  using flash_oem2keyr1_tt = regs::flash_flash_oem2keyr1_v1_tt;
-  using flash_oem2keyr2_tt = regs::flash_flash_oem2keyr2_v1_tt;
-  using flash_sec1bbr1_tt = regs::flash_flash_sec1bbr1_v1_tt;
-  using flash_sec1bbr2_tt = regs::flash_flash_sec1bbr2_v1_tt;
-  using flash_sec1bbr3_tt = regs::flash_flash_sec1bbr3_v1_tt;
-  using flash_sec1bbr4_tt = regs::flash_flash_sec1bbr4_v1_tt;
-  using flash_sec1bbr5_tt = regs::flash_flash_sec1bbr5_v1_tt;
-  using flash_sec1bbr6_tt = regs::flash_flash_sec1bbr6_v1_tt;
-  using flash_sec1bbr7_tt = regs::flash_flash_sec1bbr7_v1_tt;
-  using flash_sec1bbr8_tt = regs::flash_flash_sec1bbr8_v1_tt;
-  using flash_sec2bbr1_tt = regs::flash_flash_sec2bbr1_v1_tt;
-  using flash_sec2bbr2_tt = regs::flash_flash_sec2bbr2_v1_tt;
-  using flash_sec2bbr3_tt = regs::flash_flash_sec2bbr3_v1_tt;
-  using flash_sec2bbr4_tt = regs::flash_flash_sec2bbr4_v1_tt;
-  using flash_sec2bbr5_tt = regs::flash_flash_sec2bbr5_v1_tt;
-  using flash_sec2bbr6_tt = regs::flash_flash_sec2bbr6_v1_tt;
-  using flash_sec2bbr7_tt = regs::flash_flash_sec2bbr7_v1_tt;
-  using flash_sec2bbr8_tt = regs::flash_flash_sec2bbr8_v1_tt;
-  using flash_sechdpcr_tt = regs::flash_flash_sechdpcr_v1_tt;
-  using flash_privcfgr_tt = regs::flash_flash_privcfgr_v1_tt;
-  using flash_priv1bbr1_tt = regs::flash_flash_priv1bbr1_v1_tt;
-  using flash_priv1bbr2_tt = regs::flash_flash_priv1bbr2_v1_tt;
-  using flash_priv1bbr3_tt = regs::flash_flash_priv1bbr3_v1_tt;
-  using flash_priv1bbr4_tt = regs::flash_flash_priv1bbr4_v1_tt;
-  using flash_priv1bbr5_tt = regs::flash_flash_priv1bbr5_v1_tt;
-  using flash_priv1bbr6_tt = regs::flash_flash_priv1bbr6_v1_tt;
-  using flash_priv1bbr7_tt = regs::flash_flash_priv1bbr7_v1_tt;
-  using flash_priv1bbr8_tt = regs::flash_flash_priv1bbr8_v1_tt;
-  using flash_priv2bbr1_tt = regs::flash_flash_priv2bbr1_v1_tt;
-  using flash_priv2bbr2_tt = regs::flash_flash_priv2bbr2_v1_tt;
-  using flash_priv2bbr3_tt = regs::flash_flash_priv2bbr3_v1_tt;
-  using flash_priv2bbr4_tt = regs::flash_flash_priv2bbr4_v1_tt;
-  using flash_priv2bbr5_tt = regs::flash_flash_priv2bbr5_v1_tt;
-  using flash_priv2bbr6_tt = regs::flash_flash_priv2bbr6_v1_tt;
-  using flash_priv2bbr7_tt = regs::flash_flash_priv2bbr7_v1_tt;
-  using flash_priv2bbr8_tt = regs::flash_flash_priv2bbr8_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using flash_acr_tt = regs::flash_flash_acr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using flash_nskeyr_tt = regs::flash_flash_nskeyr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using flash_seckeyr_tt = regs::flash_flash_seckeyr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using flash_optkeyr_tt = regs::flash_flash_optkeyr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using flash_pdkey1r_tt = regs::flash_flash_pdkey1r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using flash_pdkey2r_tt = regs::flash_flash_pdkey2r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using flash_nssr_tt = regs::flash_flash_nssr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using flash_secsr_tt = regs::flash_flash_secsr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using flash_nscr_tt = regs::flash_flash_nscr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using flash_seccr_tt = regs::flash_flash_seccr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using flash_eccr_tt = regs::flash_flash_eccr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using flash_opsr_tt = regs::flash_flash_opsr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using flash_optr_tt = regs::flash_flash_optr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using flash_nsbootadd0r_tt = regs::flash_flash_nsbootadd0r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using flash_nsbootadd1r_tt = regs::flash_flash_nsbootadd1r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using flash_secbootadd0r_tt = regs::flash_flash_secbootadd0r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using flash_secwm1r1_tt = regs::flash_flash_secwm1r1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using flash_secwm1r2_tt = regs::flash_flash_secwm1r2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using flash_wrp1ar_tt = regs::flash_flash_wrp1ar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using flash_wrp1br_tt = regs::flash_flash_wrp1br_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using flash_secwm2r1_tt = regs::flash_flash_secwm2r1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using flash_secwm2r2_tt = regs::flash_flash_secwm2r2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using flash_wrp2ar_tt = regs::flash_flash_wrp2ar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using flash_wrp2br_tt = regs::flash_flash_wrp2br_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using flash_oem1keyr1_tt = regs::flash_flash_oem1keyr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using flash_oem1keyr2_tt = regs::flash_flash_oem1keyr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using flash_oem2keyr1_tt = regs::flash_flash_oem2keyr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using flash_oem2keyr2_tt = regs::flash_flash_oem2keyr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using flash_sec1bbr1_tt = regs::flash_flash_sec1bbr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using flash_sec1bbr2_tt = regs::flash_flash_sec1bbr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using flash_sec1bbr3_tt = regs::flash_flash_sec1bbr3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using flash_sec1bbr4_tt = regs::flash_flash_sec1bbr4_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using flash_sec1bbr5_tt = regs::flash_flash_sec1bbr5_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using flash_sec1bbr6_tt = regs::flash_flash_sec1bbr6_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using flash_sec1bbr7_tt = regs::flash_flash_sec1bbr7_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using flash_sec1bbr8_tt = regs::flash_flash_sec1bbr8_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using flash_sec2bbr1_tt = regs::flash_flash_sec2bbr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using flash_sec2bbr2_tt = regs::flash_flash_sec2bbr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using flash_sec2bbr3_tt = regs::flash_flash_sec2bbr3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using flash_sec2bbr4_tt = regs::flash_flash_sec2bbr4_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using flash_sec2bbr5_tt = regs::flash_flash_sec2bbr5_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using flash_sec2bbr6_tt = regs::flash_flash_sec2bbr6_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using flash_sec2bbr7_tt = regs::flash_flash_sec2bbr7_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using flash_sec2bbr8_tt = regs::flash_flash_sec2bbr8_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using flash_sechdpcr_tt = regs::flash_flash_sechdpcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using flash_privcfgr_tt = regs::flash_flash_privcfgr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using flash_priv1bbr1_tt = regs::flash_flash_priv1bbr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using flash_priv1bbr2_tt = regs::flash_flash_priv1bbr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using flash_priv1bbr3_tt = regs::flash_flash_priv1bbr3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using flash_priv1bbr4_tt = regs::flash_flash_priv1bbr4_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using flash_priv1bbr5_tt = regs::flash_flash_priv1bbr5_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using flash_priv1bbr6_tt = regs::flash_flash_priv1bbr6_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using flash_priv1bbr7_tt = regs::flash_flash_priv1bbr7_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using flash_priv1bbr8_tt = regs::flash_flash_priv1bbr8_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using flash_priv2bbr1_tt = regs::flash_flash_priv2bbr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using flash_priv2bbr2_tt = regs::flash_flash_priv2bbr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using flash_priv2bbr3_tt = regs::flash_flash_priv2bbr3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using flash_priv2bbr4_tt = regs::flash_flash_priv2bbr4_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using flash_priv2bbr5_tt = regs::flash_flash_priv2bbr5_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using flash_priv2bbr6_tt = regs::flash_flash_priv2bbr6_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using flash_priv2bbr7_tt = regs::flash_flash_priv2bbr7_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using flash_priv2bbr8_tt = regs::flash_flash_priv2bbr8_v1_tt<name, baseaddress, offset>;
 
   template <stdx::ct_string name, std::uint32_t baseaddress>
   using flashx_t =

@@ -7,11 +7,26 @@
 namespace stm32::stm32u5xx {
 
 namespace lpgpiox {
-  using lpgpio_moder_tt = regs::lpgpio_lpgpio_moder_v1_tt;
-  using lpgpio_idr_tt = regs::lpgpio_lpgpio_idr_v1_tt;
-  using lpgpio_odr_tt = regs::lpgpio_lpgpio_odr_v1_tt;
-  using lpgpio_bsrr_tt = regs::lpgpio_lpgpio_bsrr_v1_tt;
-  using lpgpio_brr_tt = regs::lpgpio_lpgpio_brr_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using lpgpio_moder_tt = regs::lpgpio_lpgpio_moder_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using lpgpio_idr_tt = regs::lpgpio_lpgpio_idr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using lpgpio_odr_tt = regs::lpgpio_lpgpio_odr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using lpgpio_bsrr_tt = regs::lpgpio_lpgpio_bsrr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using lpgpio_brr_tt = regs::lpgpio_lpgpio_brr_v1_tt<name, baseaddress, offset>;
 
   template <stdx::ct_string name, std::uint32_t baseaddress>
   using lpgpiox_t =

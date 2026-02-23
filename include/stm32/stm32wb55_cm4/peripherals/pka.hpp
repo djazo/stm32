@@ -7,12 +7,30 @@
 namespace stm32::stm32wb55_cm4 {
 
 namespace pka {
-  using cr_tt = regs::pka_cr_v1_tt;
-  using sr_tt = regs::pka_sr_v1_tt;
-  using clrfr_tt = regs::pka_clrfr_v1_tt;
-  using verr_tt = regs::pka_verr_v1_tt;
-  using ipidr_tt = regs::pka_ipidr_v1_tt;
-  using sidr_tt = regs::pka_sidr_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cr_tt = regs::pka_cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using sr_tt = regs::pka_sr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using clrfr_tt = regs::pka_clrfr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using verr_tt = regs::pka_verr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ipidr_tt = regs::pka_ipidr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using sidr_tt = regs::pka_sidr_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using pka_t =

@@ -7,21 +7,66 @@
 namespace stm32::stm32g0b1 {
 
 namespace ucpdx {
-  using ucpd_cfgr1_tt = regs::ucpd_ucpd_cfgr1_v1_tt;
-  using ucpd_cfgr2_tt = regs::ucpd_ucpd_cfgr2_v1_tt;
-  using ucpd_cfgr3_tt = regs::ucpd_ucpd_cfgr3_v1_tt;
-  using ucpd_cr_tt = regs::ucpd_ucpd_cr_v1_tt;
-  using ucpd_imr_tt = regs::ucpd_ucpd_imr_v1_tt;
-  using ucpd_sr_tt = regs::ucpd_ucpd_sr_v1_tt;
-  using ucpd_icr_tt = regs::ucpd_ucpd_icr_v1_tt;
-  using ucpd_tx_ordsetr_tt = regs::ucpd_ucpd_tx_ordsetr_v1_tt;
-  using ucpd_tx_payszr_tt = regs::ucpd_ucpd_tx_payszr_v1_tt;
-  using ucpd_txdr_tt = regs::ucpd_ucpd_txdr_v1_tt;
-  using ucpd_rx_ordsetr_tt = regs::ucpd_ucpd_rx_ordsetr_v1_tt;
-  using ucpd_rx_payszr_tt = regs::ucpd_ucpd_rx_payszr_v1_tt;
-  using ucpd_rxdr_tt = regs::ucpd_ucpd_rxdr_v1_tt;
-  using ucpd_rx_ordextr1_tt = regs::ucpd_ucpd_rx_ordextr1_v1_tt;
-  using ucpd_rx_ordextr2_tt = regs::ucpd_ucpd_rx_ordextr2_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ucpd_cfgr1_tt = regs::ucpd_ucpd_cfgr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ucpd_cfgr2_tt = regs::ucpd_ucpd_cfgr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ucpd_cfgr3_tt = regs::ucpd_ucpd_cfgr3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ucpd_cr_tt = regs::ucpd_ucpd_cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ucpd_imr_tt = regs::ucpd_ucpd_imr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ucpd_sr_tt = regs::ucpd_ucpd_sr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ucpd_icr_tt = regs::ucpd_ucpd_icr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ucpd_tx_ordsetr_tt = regs::ucpd_ucpd_tx_ordsetr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ucpd_tx_payszr_tt = regs::ucpd_ucpd_tx_payszr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ucpd_txdr_tt = regs::ucpd_ucpd_txdr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ucpd_rx_ordsetr_tt = regs::ucpd_ucpd_rx_ordsetr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ucpd_rx_payszr_tt = regs::ucpd_ucpd_rx_payszr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ucpd_rxdr_tt = regs::ucpd_ucpd_rxdr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ucpd_rx_ordextr1_tt = regs::ucpd_ucpd_rx_ordextr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ucpd_rx_ordextr2_tt = regs::ucpd_ucpd_rx_ordextr2_v1_tt<name, baseaddress, offset>;
 
   template <stdx::ct_string name, std::uint32_t baseaddress>
   using ucpdx_t =

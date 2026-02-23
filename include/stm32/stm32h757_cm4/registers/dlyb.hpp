@@ -16,13 +16,13 @@ using dlyb_cfgr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"lngf", bool, 31, 31>,
-               groov::field<"reserved2", std::uint8_t, 30, 28, access::ro>,
+               groov::field<"reserved2", std::uint8_t, 30, 28, common::access::ro>,
                groov::field<"lng", std::uint16_t, 27, 16>,
-               groov::field<"reserved1", bool, 15, 15, access::ro>,
+               groov::field<"reserved1", bool, 15, 15, common::access::ro>,
                groov::field<"unit", std::uint8_t, 14, 8>,
-               groov::field<"reserved0", std::uint8_t, 7, 4, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 7, 4, common::access::ro>,
                groov::field<"sel", std::uint8_t, 3, 0>>;
 
 // dlyb_cr_v1: CR
@@ -34,9 +34,9 @@ using dlyb_cr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 2, access::ro>,
-               groov::field<"sen", bit_enable, 1, 1>,
-               groov::field<"den", bit_enable, 0, 0>>;
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 2, common::access::ro>,
+               groov::field<"sen", common::bittypes::bit_enable, 1, 1>,
+               groov::field<"den", common::bittypes::bit_enable, 0, 0>>;
 
 } // namespace stm32::regs

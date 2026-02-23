@@ -7,30 +7,102 @@
 namespace stm32::stm32g061 {
 
 namespace aes {
-  using aes_cr_tt = regs::aes_aes_cr_v1_tt;
-  using aes_sr_tt = regs::aes_aes_sr_v1_tt;
-  using aes_dinr_tt = regs::aes_aes_dinr_v1_tt;
-  using aes_doutr_tt = regs::aes_aes_doutr_v1_tt;
-  using aes_keyr0_tt = regs::aes_aes_keyr0_v1_tt;
-  using aes_keyr1_tt = regs::aes_aes_keyr1_v1_tt;
-  using aes_keyr2_tt = regs::aes_aes_keyr2_v1_tt;
-  using aes_keyr3_tt = regs::aes_aes_keyr3_v1_tt;
-  using aes_ivr0_tt = regs::aes_aes_ivr0_v1_tt;
-  using aes_ivr1_tt = regs::aes_aes_ivr1_v1_tt;
-  using aes_ivr2_tt = regs::aes_aes_ivr2_v1_tt;
-  using aes_ivr3_tt = regs::aes_aes_ivr3_v1_tt;
-  using aes_keyr4_tt = regs::aes_aes_keyr4_v1_tt;
-  using aes_keyr5_tt = regs::aes_aes_keyr5_v1_tt;
-  using aes_keyr6_tt = regs::aes_aes_keyr6_v1_tt;
-  using aes_keyr7_tt = regs::aes_aes_keyr7_v1_tt;
-  using aes_susp0r_tt = regs::aes_aes_susp0r_v1_tt;
-  using aes_susp1r_tt = regs::aes_aes_susp1r_v1_tt;
-  using aes_susp2r_tt = regs::aes_aes_susp2r_v1_tt;
-  using aes_susp3r_tt = regs::aes_aes_susp3r_v1_tt;
-  using aes_susp4r_tt = regs::aes_aes_susp4r_v1_tt;
-  using aes_susp5r_tt = regs::aes_aes_susp5r_v1_tt;
-  using aes_susp6r_tt = regs::aes_aes_susp6r_v1_tt;
-  using aes_susp7r_tt = regs::aes_aes_susp7r_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using aes_cr_tt = regs::aes_aes_cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using aes_sr_tt = regs::aes_aes_sr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using aes_dinr_tt = regs::aes_aes_dinr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using aes_doutr_tt = regs::aes_aes_doutr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using aes_keyr0_tt = regs::aes_aes_keyr0_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using aes_keyr1_tt = regs::aes_aes_keyr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using aes_keyr2_tt = regs::aes_aes_keyr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using aes_keyr3_tt = regs::aes_aes_keyr3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using aes_ivr0_tt = regs::aes_aes_ivr0_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using aes_ivr1_tt = regs::aes_aes_ivr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using aes_ivr2_tt = regs::aes_aes_ivr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using aes_ivr3_tt = regs::aes_aes_ivr3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using aes_keyr4_tt = regs::aes_aes_keyr4_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using aes_keyr5_tt = regs::aes_aes_keyr5_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using aes_keyr6_tt = regs::aes_aes_keyr6_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using aes_keyr7_tt = regs::aes_aes_keyr7_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using aes_susp0r_tt = regs::aes_aes_susp0r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using aes_susp1r_tt = regs::aes_aes_susp1r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using aes_susp2r_tt = regs::aes_aes_susp2r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using aes_susp3r_tt = regs::aes_aes_susp3r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using aes_susp4r_tt = regs::aes_aes_susp4r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using aes_susp5r_tt = regs::aes_aes_susp5r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using aes_susp6r_tt = regs::aes_aes_susp6r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using aes_susp7r_tt = regs::aes_aes_susp7r_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using aes_t =

@@ -7,20 +7,62 @@
 namespace stm32::stm32u5xx {
 
 namespace spix {
-  using spi_cr1_tt = regs::spi_spi_cr1_v1_tt;
-  using spi_cr2_tt = regs::spi_spi_cr2_v1_tt;
-  using spi_cfg1_tt = regs::spi_spi_cfg1_v1_tt;
-  using spi_cfg2_tt = regs::spi_spi_cfg2_v1_tt;
-  using spi_ier_tt = regs::spi_spi_ier_v1_tt;
-  using spi_sr_tt = regs::spi_spi_sr_v1_tt;
-  using spi_ifcr_tt = regs::spi_spi_ifcr_v1_tt;
-  using spi_autocr_tt = regs::spi_spi_autocr_v1_tt;
-  using spi_txdr_tt = regs::spi_spi_txdr_v1_tt;
-  using spi_rxdr_tt = regs::spi_spi_rxdr_v1_tt;
-  using spi_crcpoly_tt = regs::spi_spi_crcpoly_v1_tt;
-  using spi_txcrc_tt = regs::spi_spi_txcrc_v1_tt;
-  using spi_rxcrc_tt = regs::spi_spi_rxcrc_v1_tt;
-  using spi_udrdr_tt = regs::spi_spi_udrdr_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using spi_cr1_tt = regs::spi_spi_cr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using spi_cr2_tt = regs::spi_spi_cr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using spi_cfg1_tt = regs::spi_spi_cfg1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using spi_cfg2_tt = regs::spi_spi_cfg2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using spi_ier_tt = regs::spi_spi_ier_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using spi_sr_tt = regs::spi_spi_sr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using spi_ifcr_tt = regs::spi_spi_ifcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using spi_autocr_tt = regs::spi_spi_autocr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using spi_txdr_tt = regs::spi_spi_txdr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using spi_rxdr_tt = regs::spi_spi_rxdr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using spi_crcpoly_tt = regs::spi_spi_crcpoly_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using spi_txcrc_tt = regs::spi_spi_txcrc_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using spi_rxcrc_tt = regs::spi_spi_rxcrc_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using spi_udrdr_tt = regs::spi_spi_udrdr_v1_tt<name, baseaddress, offset>;
 
   template <stdx::ct_string name, std::uint32_t baseaddress>
   using spix_t =

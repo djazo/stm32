@@ -16,16 +16,16 @@ using cryp_cr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved2", std::uint16_t, 31, 16, access::ro>,
-               groov::field<"crypen", bit_enable, 15, 15>,
-               groov::field<"fflush", bool, 14, 14, access::wo>,
-               groov::field<"reserved1", std::uint8_t, 13, 10, access::ro>,
+             common::access::rw,
+               groov::field<"reserved2", std::uint16_t, 31, 16, common::access::ro>,
+               groov::field<"crypen", common::bittypes::bit_enable, 15, 15>,
+               groov::field<"fflush", bool, 14, 14, common::access::wo>,
+               groov::field<"reserved1", std::uint8_t, 13, 10, common::access::ro>,
                groov::field<"keysize", std::uint8_t, 9, 8>,
                groov::field<"datatype", std::uint8_t, 7, 6>,
                groov::field<"algomode", std::uint8_t, 5, 3>,
                groov::field<"algodir", bool, 2, 2>,
-               groov::field<"reserved0", std::uint8_t, 1, 0, access::ro>>;
+               groov::field<"reserved0", std::uint8_t, 1, 0, common::access::ro>>;
 
 // cryp_din_v1: DIN
 // Used by: CRYP
@@ -36,7 +36,7 @@ using cryp_din_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"datain", std::uint32_t, 31, 0>>;
 
 // cryp_dmacr_v1: DMACR
@@ -48,10 +48,10 @@ using cryp_dmacr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 2, access::ro>,
-               groov::field<"doen", bit_enable, 1, 1>,
-               groov::field<"dien", bit_enable, 0, 0>>;
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 2, common::access::ro>,
+               groov::field<"doen", common::bittypes::bit_enable, 1, 1>,
+               groov::field<"dien", common::bittypes::bit_enable, 0, 0>>;
 
 // cryp_dout_v1: DOUT
 // Used by: CRYP
@@ -62,7 +62,7 @@ using cryp_dout_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"dataout", std::uint32_t, 31, 0>>;
 
 // cryp_imscr_v1: IMSCR
@@ -74,8 +74,8 @@ using cryp_imscr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 2, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 2, common::access::ro>,
                groov::field<"outim", bool, 1, 1>,
                groov::field<"inim", bool, 0, 0>>;
 
@@ -88,7 +88,7 @@ using cryp_iv0lr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"iv0", bool, 31, 31>,
                groov::field<"iv1", bool, 30, 30>,
                groov::field<"iv2", bool, 29, 29>,
@@ -131,7 +131,7 @@ using cryp_iv0rr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"iv32", bool, 31, 31>,
                groov::field<"iv33", bool, 30, 30>,
                groov::field<"iv34", bool, 29, 29>,
@@ -174,7 +174,7 @@ using cryp_iv1lr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"iv64", bool, 31, 31>,
                groov::field<"iv65", bool, 30, 30>,
                groov::field<"iv66", bool, 29, 29>,
@@ -217,7 +217,7 @@ using cryp_iv1rr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"iv96", bool, 31, 31>,
                groov::field<"iv97", bool, 30, 30>,
                groov::field<"iv98", bool, 29, 29>,
@@ -260,7 +260,7 @@ using cryp_k0lr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::wo,
+             common::access::wo,
                groov::field<"b255", bool, 31, 31>,
                groov::field<"b254", bool, 30, 30>,
                groov::field<"b253", bool, 29, 29>,
@@ -303,7 +303,7 @@ using cryp_k0rr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::wo,
+             common::access::wo,
                groov::field<"b223", bool, 31, 31>,
                groov::field<"b222", bool, 30, 30>,
                groov::field<"b221", bool, 29, 29>,
@@ -346,7 +346,7 @@ using cryp_k1lr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::wo,
+             common::access::wo,
                groov::field<"b191", bool, 31, 31>,
                groov::field<"b190", bool, 30, 30>,
                groov::field<"b189", bool, 29, 29>,
@@ -389,7 +389,7 @@ using cryp_k1rr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::wo,
+             common::access::wo,
                groov::field<"b159", bool, 31, 31>,
                groov::field<"b158", bool, 30, 30>,
                groov::field<"b157", bool, 29, 29>,
@@ -432,7 +432,7 @@ using cryp_k2lr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::wo,
+             common::access::wo,
                groov::field<"b127", bool, 31, 31>,
                groov::field<"b126", bool, 30, 30>,
                groov::field<"b125", bool, 29, 29>,
@@ -475,7 +475,7 @@ using cryp_k2rr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::wo,
+             common::access::wo,
                groov::field<"b95", bool, 31, 31>,
                groov::field<"b94", bool, 30, 30>,
                groov::field<"b93", bool, 29, 29>,
@@ -518,7 +518,7 @@ using cryp_k3lr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::wo,
+             common::access::wo,
                groov::field<"b63", bool, 31, 31>,
                groov::field<"b62", bool, 30, 30>,
                groov::field<"b61", bool, 29, 29>,
@@ -561,7 +561,7 @@ using cryp_k3rr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::wo,
+             common::access::wo,
                groov::field<"b31", bool, 31, 31>,
                groov::field<"b30", bool, 30, 30>,
                groov::field<"b29", bool, 29, 29>,
@@ -604,7 +604,7 @@ using cryp_misr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint32_t, 31, 2>,
                groov::field<"outmis", bool, 1, 1>,
                groov::field<"inmis", bool, 0, 0>>;
@@ -618,7 +618,7 @@ using cryp_risr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint32_t, 31, 2>,
                groov::field<"outris", bool, 1, 1>,
                groov::field<"inris", bool, 0, 0>>;
@@ -632,7 +632,7 @@ using cryp_sr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint32_t, 31, 5>,
                groov::field<"busy", bool, 4, 4>,
                groov::field<"offu", bool, 3, 3>,

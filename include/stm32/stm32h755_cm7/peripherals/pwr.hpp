@@ -7,15 +7,42 @@
 namespace stm32::stm32h755_cm7 {
 
 namespace pwr {
-  using cr1_tt = regs::pwr_cr1_v1_tt;
-  using csr1_tt = regs::pwr_csr1_v1_tt;
-  using cr2_tt = regs::pwr_cr2_v1_tt;
-  using cr3_tt = regs::pwr_cr3_v1_tt;
-  using cpucr_tt = regs::pwr_cpucr_v1_tt;
-  using d3cr_tt = regs::pwr_d3cr_v1_tt;
-  using wkupcr_tt = regs::pwr_wkupcr_v1_tt;
-  using wkupfr_tt = regs::pwr_wkupfr_v1_tt;
-  using wkupepr_tt = regs::pwr_wkupepr_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cr1_tt = regs::pwr_cr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using csr1_tt = regs::pwr_csr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cr2_tt = regs::pwr_cr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cr3_tt = regs::pwr_cr3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cpucr_tt = regs::pwr_cpucr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using d3cr_tt = regs::pwr_d3cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using wkupcr_tt = regs::pwr_wkupcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using wkupfr_tt = regs::pwr_wkupfr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using wkupepr_tt = regs::pwr_wkupepr_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using pwr_t =

@@ -7,18 +7,54 @@
 namespace stm32::stm32l4q5 {
 
 namespace exti {
-  using imr1_tt = regs::exti_imr1_v1_tt;
-  using emr1_tt = regs::exti_emr1_v1_tt;
-  using rtsr1_tt = regs::exti_rtsr1_v1_tt;
-  using ftsr1_tt = regs::exti_ftsr1_v1_tt;
-  using swier1_tt = regs::exti_swier1_v1_tt;
-  using pr1_tt = regs::exti_pr1_v1_tt;
-  using imr2_tt = regs::exti_imr2_v1_tt;
-  using emr2_tt = regs::exti_emr2_v1_tt;
-  using rtsr2_tt = regs::exti_rtsr2_v1_tt;
-  using ftsr2_tt = regs::exti_ftsr2_v1_tt;
-  using swier2_tt = regs::exti_swier2_v1_tt;
-  using pr2_tt = regs::exti_pr2_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using imr1_tt = regs::exti_imr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using emr1_tt = regs::exti_emr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rtsr1_tt = regs::exti_rtsr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ftsr1_tt = regs::exti_ftsr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using swier1_tt = regs::exti_swier1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using pr1_tt = regs::exti_pr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using imr2_tt = regs::exti_imr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using emr2_tt = regs::exti_emr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rtsr2_tt = regs::exti_rtsr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ftsr2_tt = regs::exti_ftsr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using swier2_tt = regs::exti_swier2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using pr2_tt = regs::exti_pr2_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using exti_t =

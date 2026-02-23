@@ -7,13 +7,34 @@
 namespace stm32::stm32h73x {
 
 namespace pssi {
-  using pssi_cr_tt = regs::pssi_pssi_cr_v1_tt;
-  using pssi_sr_tt = regs::pssi_pssi_sr_v1_tt;
-  using pssi_ris_tt = regs::pssi_pssi_ris_v1_tt;
-  using pssi_ier_tt = regs::pssi_pssi_ier_v1_tt;
-  using pssi_mis_tt = regs::pssi_pssi_mis_v1_tt;
-  using pssi_icr_tt = regs::pssi_pssi_icr_v1_tt;
-  using pssi_dr_tt = regs::pssi_pssi_dr_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using pssi_cr_tt = regs::pssi_pssi_cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using pssi_sr_tt = regs::pssi_pssi_sr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using pssi_ris_tt = regs::pssi_pssi_ris_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using pssi_ier_tt = regs::pssi_pssi_ier_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using pssi_mis_tt = regs::pssi_pssi_mis_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using pssi_icr_tt = regs::pssi_pssi_icr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using pssi_dr_tt = regs::pssi_pssi_dr_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using pssi_t =

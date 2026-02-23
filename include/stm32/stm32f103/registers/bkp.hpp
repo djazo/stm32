@@ -16,10 +16,10 @@ using bkp_cr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 2, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 2, common::access::ro>,
                groov::field<"tpal", bool, 1, 1>,
-               groov::field<"tpe", bit_enable, 0, 0>>;
+               groov::field<"tpe", common::bittypes::bit_enable, 0, 0>>;
 
 // bkp_csr_v1: CSR
 // Used by: BKP
@@ -30,14 +30,14 @@ using bkp_csr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint32_t, 31, 10, access::ro>,
-               groov::field<"tif", bool, 9, 9, access::ro>,
-               groov::field<"tef", bool, 8, 8, access::ro>,
-               groov::field<"reserved0", std::uint8_t, 7, 3, access::ro>,
-               groov::field<"tpie", bit_enable, 2, 2>,
-               groov::field<"cti", bool, 1, 1, access::wo>,
-               groov::field<"cte", bool, 0, 0, access::wo>>;
+             common::access::rw,
+               groov::field<"reserved1", std::uint32_t, 31, 10, common::access::ro>,
+               groov::field<"tif", bool, 9, 9, common::access::ro>,
+               groov::field<"tef", bool, 8, 8, common::access::ro>,
+               groov::field<"reserved0", std::uint8_t, 7, 3, common::access::ro>,
+               groov::field<"tpie", common::bittypes::bit_enable, 2, 2>,
+               groov::field<"cti", bool, 1, 1, common::access::wo>,
+               groov::field<"cte", bool, 0, 0, common::access::wo>>;
 
 // bkp_dr1_v1: DR1
 // Used by: BKP
@@ -48,8 +48,8 @@ using bkp_dr1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"d1", std::uint16_t, 15, 0>>;
 
 // bkp_dr10_v1: DR10
@@ -61,8 +61,8 @@ using bkp_dr10_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"d10", std::uint16_t, 15, 0>>;
 
 // bkp_dr11_v1: DR11
@@ -74,8 +74,8 @@ using bkp_dr11_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"dr11", std::uint16_t, 15, 0>>;
 
 // bkp_dr12_v1: DR12
@@ -87,8 +87,8 @@ using bkp_dr12_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"dr12", std::uint16_t, 15, 0>>;
 
 // bkp_dr13_v1: DR13
@@ -100,8 +100,8 @@ using bkp_dr13_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"dr13", std::uint16_t, 15, 0>>;
 
 // bkp_dr14_v1: DR14
@@ -113,8 +113,8 @@ using bkp_dr14_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"d14", std::uint16_t, 15, 0>>;
 
 // bkp_dr15_v1: DR15
@@ -126,8 +126,8 @@ using bkp_dr15_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"d15", std::uint16_t, 15, 0>>;
 
 // bkp_dr16_v1: DR16
@@ -139,8 +139,8 @@ using bkp_dr16_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"d16", std::uint16_t, 15, 0>>;
 
 // bkp_dr17_v1: DR17
@@ -152,8 +152,8 @@ using bkp_dr17_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"d17", std::uint16_t, 15, 0>>;
 
 // bkp_dr18_v1: DR18
@@ -165,8 +165,8 @@ using bkp_dr18_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"d18", std::uint16_t, 15, 0>>;
 
 // bkp_dr19_v1: DR19
@@ -178,8 +178,8 @@ using bkp_dr19_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"d19", std::uint16_t, 15, 0>>;
 
 // bkp_dr2_v1: DR2
@@ -191,8 +191,8 @@ using bkp_dr2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"d2", std::uint16_t, 15, 0>>;
 
 // bkp_dr20_v1: DR20
@@ -204,8 +204,8 @@ using bkp_dr20_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"d20", std::uint16_t, 15, 0>>;
 
 // bkp_dr21_v1: DR21
@@ -217,8 +217,8 @@ using bkp_dr21_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"d21", std::uint16_t, 15, 0>>;
 
 // bkp_dr22_v1: DR22
@@ -230,8 +230,8 @@ using bkp_dr22_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"d22", std::uint16_t, 15, 0>>;
 
 // bkp_dr23_v1: DR23
@@ -243,8 +243,8 @@ using bkp_dr23_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"d23", std::uint16_t, 15, 0>>;
 
 // bkp_dr24_v1: DR24
@@ -256,8 +256,8 @@ using bkp_dr24_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"d24", std::uint16_t, 15, 0>>;
 
 // bkp_dr25_v1: DR25
@@ -269,8 +269,8 @@ using bkp_dr25_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"d25", std::uint16_t, 15, 0>>;
 
 // bkp_dr26_v1: DR26
@@ -282,8 +282,8 @@ using bkp_dr26_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"d26", std::uint16_t, 15, 0>>;
 
 // bkp_dr27_v1: DR27
@@ -295,8 +295,8 @@ using bkp_dr27_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"d27", std::uint16_t, 15, 0>>;
 
 // bkp_dr28_v1: DR28
@@ -308,8 +308,8 @@ using bkp_dr28_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"d28", std::uint16_t, 15, 0>>;
 
 // bkp_dr29_v1: DR29
@@ -321,8 +321,8 @@ using bkp_dr29_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"d29", std::uint16_t, 15, 0>>;
 
 // bkp_dr3_v1: DR3
@@ -334,8 +334,8 @@ using bkp_dr3_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"d3", std::uint16_t, 15, 0>>;
 
 // bkp_dr30_v1: DR30
@@ -347,8 +347,8 @@ using bkp_dr30_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"d30", std::uint16_t, 15, 0>>;
 
 // bkp_dr31_v1: DR31
@@ -360,8 +360,8 @@ using bkp_dr31_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"d31", std::uint16_t, 15, 0>>;
 
 // bkp_dr32_v1: DR32
@@ -373,8 +373,8 @@ using bkp_dr32_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"d32", std::uint16_t, 15, 0>>;
 
 // bkp_dr33_v1: DR33
@@ -386,8 +386,8 @@ using bkp_dr33_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"d33", std::uint16_t, 15, 0>>;
 
 // bkp_dr34_v1: DR34
@@ -399,8 +399,8 @@ using bkp_dr34_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"d34", std::uint16_t, 15, 0>>;
 
 // bkp_dr35_v1: DR35
@@ -412,8 +412,8 @@ using bkp_dr35_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"d35", std::uint16_t, 15, 0>>;
 
 // bkp_dr36_v1: DR36
@@ -425,8 +425,8 @@ using bkp_dr36_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"d36", std::uint16_t, 15, 0>>;
 
 // bkp_dr37_v1: DR37
@@ -438,8 +438,8 @@ using bkp_dr37_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"d37", std::uint16_t, 15, 0>>;
 
 // bkp_dr38_v1: DR38
@@ -451,8 +451,8 @@ using bkp_dr38_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"d38", std::uint16_t, 15, 0>>;
 
 // bkp_dr39_v1: DR39
@@ -464,8 +464,8 @@ using bkp_dr39_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"d39", std::uint16_t, 15, 0>>;
 
 // bkp_dr4_v1: DR4
@@ -477,8 +477,8 @@ using bkp_dr4_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"d4", std::uint16_t, 15, 0>>;
 
 // bkp_dr40_v1: DR40
@@ -490,8 +490,8 @@ using bkp_dr40_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"d40", std::uint16_t, 15, 0>>;
 
 // bkp_dr41_v1: DR41
@@ -503,8 +503,8 @@ using bkp_dr41_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"d41", std::uint16_t, 15, 0>>;
 
 // bkp_dr42_v1: DR42
@@ -516,8 +516,8 @@ using bkp_dr42_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"d42", std::uint16_t, 15, 0>>;
 
 // bkp_dr5_v1: DR5
@@ -529,8 +529,8 @@ using bkp_dr5_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"d5", std::uint16_t, 15, 0>>;
 
 // bkp_dr6_v1: DR6
@@ -542,8 +542,8 @@ using bkp_dr6_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"d6", std::uint16_t, 15, 0>>;
 
 // bkp_dr7_v1: DR7
@@ -555,8 +555,8 @@ using bkp_dr7_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"d7", std::uint16_t, 15, 0>>;
 
 // bkp_dr8_v1: DR8
@@ -568,8 +568,8 @@ using bkp_dr8_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"d8", std::uint16_t, 15, 0>>;
 
 // bkp_dr9_v1: DR9
@@ -581,8 +581,8 @@ using bkp_dr9_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"d9", std::uint16_t, 15, 0>>;
 
 // bkp_rtccr_v1: RTCCR
@@ -594,8 +594,8 @@ using bkp_rtccr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 10, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 10, common::access::ro>,
                groov::field<"asos", bool, 9, 9>,
                groov::field<"asoe", bool, 8, 8>,
                groov::field<"cco", bool, 7, 7>,

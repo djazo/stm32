@@ -7,45 +7,162 @@
 namespace stm32::stm32wb35_cm4 {
 
 namespace usb {
-  using ep0r_tt = regs::usb_ep0r_v1_tt;
-  using ep1r_tt = regs::usb_ep1r_v1_tt;
-  using ep2r_tt = regs::usb_ep2r_v1_tt;
-  using ep3r_tt = regs::usb_ep3r_v1_tt;
-  using ep4r_tt = regs::usb_ep4r_v1_tt;
-  using ep5r_tt = regs::usb_ep5r_v1_tt;
-  using ep6r_tt = regs::usb_ep6r_v1_tt;
-  using ep7r_tt = regs::usb_ep7r_v1_tt;
-  using cntr_tt = regs::usb_cntr_v1_tt;
-  using istr_tt = regs::usb_istr_v1_tt;
-  using fnr_tt = regs::usb_fnr_v1_tt;
-  using daddr_tt = regs::usb_daddr_v1_tt;
-  using btable_tt = regs::usb_btable_v1_tt;
-  using count0_tx_tt = regs::usb_count0_tx_v1_tt;
-  using count1_tx_tt = regs::usb_count1_tx_v1_tt;
-  using count2_tx_tt = regs::usb_count2_tx_v1_tt;
-  using count3_tx_tt = regs::usb_count3_tx_v1_tt;
-  using count4_tx_tt = regs::usb_count4_tx_v1_tt;
-  using count5_tx_tt = regs::usb_count5_tx_v1_tt;
-  using count6_tx_tt = regs::usb_count6_tx_v1_tt;
-  using count7_tx_tt = regs::usb_count7_tx_v1_tt;
-  using addr0_rx_tt = regs::usb_addr0_rx_v1_tt;
-  using addr1_rx_tt = regs::usb_addr1_rx_v1_tt;
-  using addr2_rx_tt = regs::usb_addr2_rx_v1_tt;
-  using addr3_rx_tt = regs::usb_addr3_rx_v1_tt;
-  using addr4_rx_tt = regs::usb_addr4_rx_v1_tt;
-  using addr5_rx_tt = regs::usb_addr5_rx_v1_tt;
-  using addr6_rx_tt = regs::usb_addr6_rx_v1_tt;
-  using addr7_rx_tt = regs::usb_addr7_rx_v1_tt;
-  using count0_rx_tt = regs::usb_count0_rx_v1_tt;
-  using count1_rx_tt = regs::usb_count1_rx_v1_tt;
-  using count2_rx_tt = regs::usb_count2_rx_v1_tt;
-  using count3_rx_tt = regs::usb_count3_rx_v1_tt;
-  using count4_rx_tt = regs::usb_count4_rx_v1_tt;
-  using count5_rx_tt = regs::usb_count5_rx_v1_tt;
-  using count6_rx_tt = regs::usb_count6_rx_v1_tt;
-  using count7_rx_tt = regs::usb_count7_rx_v1_tt;
-  using lpmcsr_tt = regs::usb_lpmcsr_v1_tt;
-  using bcdr_tt = regs::usb_bcdr_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ep0r_tt = regs::usb_ep0r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ep1r_tt = regs::usb_ep1r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ep2r_tt = regs::usb_ep2r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ep3r_tt = regs::usb_ep3r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ep4r_tt = regs::usb_ep4r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ep5r_tt = regs::usb_ep5r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ep6r_tt = regs::usb_ep6r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ep7r_tt = regs::usb_ep7r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cntr_tt = regs::usb_cntr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using istr_tt = regs::usb_istr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fnr_tt = regs::usb_fnr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using daddr_tt = regs::usb_daddr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using btable_tt = regs::usb_btable_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using count0_tx_tt = regs::usb_count0_tx_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using count1_tx_tt = regs::usb_count1_tx_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using count2_tx_tt = regs::usb_count2_tx_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using count3_tx_tt = regs::usb_count3_tx_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using count4_tx_tt = regs::usb_count4_tx_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using count5_tx_tt = regs::usb_count5_tx_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using count6_tx_tt = regs::usb_count6_tx_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using count7_tx_tt = regs::usb_count7_tx_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using addr0_rx_tt = regs::usb_addr0_rx_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using addr1_rx_tt = regs::usb_addr1_rx_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using addr2_rx_tt = regs::usb_addr2_rx_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using addr3_rx_tt = regs::usb_addr3_rx_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using addr4_rx_tt = regs::usb_addr4_rx_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using addr5_rx_tt = regs::usb_addr5_rx_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using addr6_rx_tt = regs::usb_addr6_rx_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using addr7_rx_tt = regs::usb_addr7_rx_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using count0_rx_tt = regs::usb_count0_rx_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using count1_rx_tt = regs::usb_count1_rx_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using count2_rx_tt = regs::usb_count2_rx_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using count3_rx_tt = regs::usb_count3_rx_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using count4_rx_tt = regs::usb_count4_rx_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using count5_rx_tt = regs::usb_count5_rx_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using count6_rx_tt = regs::usb_count6_rx_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using count7_rx_tt = regs::usb_count7_rx_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using lpmcsr_tt = regs::usb_lpmcsr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using bcdr_tt = regs::usb_bcdr_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using usb_t =

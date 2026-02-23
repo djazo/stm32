@@ -16,19 +16,19 @@ using syscfg_c2imr1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved2", std::uint32_t, 31, 13, access::ro>,
+             common::access::rw,
+               groov::field<"reserved2", std::uint32_t, 31, 13, common::access::ro>,
                groov::field<"adc", bool, 12, 12>,
                groov::field<"comp", bool, 11, 11>,
                groov::field<"aes1", bool, 10, 10>,
                groov::field<"rng", bool, 9, 9>,
                groov::field<"pka", bool, 8, 8>,
-               groov::field<"reserved1", bool, 7, 7, access::ro>,
+               groov::field<"reserved1", bool, 7, 7, common::access::ro>,
                groov::field<"flash", bool, 6, 6>,
                groov::field<"rcc", bool, 5, 5>,
                groov::field<"rtcalarm", bool, 4, 4>,
                groov::field<"rtcwkup", bool, 3, 3>,
-               groov::field<"reserved0", std::uint8_t, 2, 1, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 2, 1, common::access::ro>,
                groov::field<"rtcstamp", bool, 0, 0>>;
 
 // syscfg_c2imr2_v1: C2IMR2
@@ -40,14 +40,14 @@ using syscfg_c2imr2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved3", std::uint16_t, 31, 23, access::ro>,
+             common::access::rw,
+               groov::field<"reserved3", std::uint16_t, 31, 23, common::access::ro>,
                groov::field<"lcdim", bool, 22, 22>,
                groov::field<"tscim", bool, 21, 21>,
                groov::field<"pvdim", bool, 20, 20>,
-               groov::field<"reserved2", bool, 19, 19, access::ro>,
+               groov::field<"reserved2", bool, 19, 19, common::access::ro>,
                groov::field<"pvm3im", bool, 18, 18>,
-               groov::field<"reserved1", bool, 17, 17, access::ro>,
+               groov::field<"reserved1", bool, 17, 17, common::access::ro>,
                groov::field<"pvm1im", bool, 16, 16>,
                groov::field<"dmam_ux1_im", bool, 15, 15>,
                groov::field<"dma2_ch7_im", bool, 14, 14>,
@@ -57,7 +57,7 @@ using syscfg_c2imr2_v1_tt =
                groov::field<"dma2_ch3_im", bool, 10, 10>,
                groov::field<"dma2_ch2_im", bool, 9, 9>,
                groov::field<"dma2_ch1_im", bool, 8, 8>,
-               groov::field<"reserved0", bool, 7, 7, access::ro>,
+               groov::field<"reserved0", bool, 7, 7, common::access::ro>,
                groov::field<"dma1_ch7_im", bool, 6, 6>,
                groov::field<"dma1_ch6_im", bool, 5, 5>,
                groov::field<"dma1_ch5_im", bool, 4, 4>,
@@ -75,19 +75,19 @@ using syscfg_cfgr1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"fpu_ie", std::uint8_t, 31, 26>,
-               groov::field<"reserved3", std::uint8_t, 25, 23, access::ro>,
+               groov::field<"reserved3", std::uint8_t, 25, 23, common::access::ro>,
                groov::field<"i2c3_fmp", bool, 22, 22>,
-               groov::field<"reserved2", bool, 21, 21, access::ro>,
+               groov::field<"reserved2", bool, 21, 21, common::access::ro>,
                groov::field<"i2c1_fmp", bool, 20, 20>,
                groov::field<"i2c_pb9_fmp", bool, 19, 19>,
                groov::field<"i2c_pb8_fmp", bool, 18, 18>,
                groov::field<"i2c_pb7_fmp", bool, 17, 17>,
                groov::field<"i2c_pb6_fmp", bool, 16, 16>,
-               groov::field<"reserved1", std::uint8_t, 15, 9, access::ro>,
-               groov::field<"boosten", bit_enable, 8, 8>,
-               groov::field<"reserved0", std::uint8_t, 7, 0, access::ro>>;
+               groov::field<"reserved1", std::uint8_t, 15, 9, common::access::ro>,
+               groov::field<"boosten", common::bittypes::bit_enable, 8, 8>,
+               groov::field<"reserved0", std::uint8_t, 7, 0, common::access::ro>>;
 
 // syscfg_cfgr2_v1: CFGR2
 // Used by: SYSCFG
@@ -98,14 +98,14 @@ using syscfg_cfgr2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint32_t, 31, 9, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint32_t, 31, 9, common::access::ro>,
                groov::field<"spf", bool, 8, 8>,
-               groov::field<"reserved0", std::uint8_t, 7, 4, access::ro>,
-               groov::field<"eccl", bool, 3, 3, access::wo>,
-               groov::field<"pvdl", bool, 2, 2, access::wo>,
-               groov::field<"spl", bool, 1, 1, access::wo>,
-               groov::field<"cll", bool, 0, 0, access::wo>>;
+               groov::field<"reserved0", std::uint8_t, 7, 4, common::access::ro>,
+               groov::field<"eccl", bool, 3, 3, common::access::wo>,
+               groov::field<"pvdl", bool, 2, 2, common::access::wo>,
+               groov::field<"spl", bool, 1, 1, common::access::wo>,
+               groov::field<"cll", bool, 0, 0, common::access::wo>>;
 
 // syscfg_exticr1_v1: EXTICR1
 // Used by: SYSCFG
@@ -116,14 +116,14 @@ using syscfg_exticr1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved3", std::uint32_t, 31, 15, access::ro>,
+             common::access::rw,
+               groov::field<"reserved3", std::uint32_t, 31, 15, common::access::ro>,
                groov::field<"exti3", std::uint8_t, 14, 12>,
-               groov::field<"reserved2", bool, 11, 11, access::ro>,
+               groov::field<"reserved2", bool, 11, 11, common::access::ro>,
                groov::field<"exti2", std::uint8_t, 10, 8>,
-               groov::field<"reserved1", bool, 7, 7, access::ro>,
+               groov::field<"reserved1", bool, 7, 7, common::access::ro>,
                groov::field<"exti1", std::uint8_t, 6, 4>,
-               groov::field<"reserved0", bool, 3, 3, access::ro>,
+               groov::field<"reserved0", bool, 3, 3, common::access::ro>,
                groov::field<"exti0", std::uint8_t, 2, 0>>;
 
 // syscfg_exticr2_v1: EXTICR2
@@ -135,14 +135,14 @@ using syscfg_exticr2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved3", std::uint32_t, 31, 15, access::ro>,
+             common::access::rw,
+               groov::field<"reserved3", std::uint32_t, 31, 15, common::access::ro>,
                groov::field<"exti7", std::uint8_t, 14, 12>,
-               groov::field<"reserved2", bool, 11, 11, access::ro>,
+               groov::field<"reserved2", bool, 11, 11, common::access::ro>,
                groov::field<"exti6", std::uint8_t, 10, 8>,
-               groov::field<"reserved1", bool, 7, 7, access::ro>,
+               groov::field<"reserved1", bool, 7, 7, common::access::ro>,
                groov::field<"exti5", std::uint8_t, 6, 4>,
-               groov::field<"reserved0", bool, 3, 3, access::ro>,
+               groov::field<"reserved0", bool, 3, 3, common::access::ro>,
                groov::field<"exti4", std::uint8_t, 2, 0>>;
 
 // syscfg_exticr3_v1: EXTICR3
@@ -154,14 +154,14 @@ using syscfg_exticr3_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved3", std::uint32_t, 31, 15, access::ro>,
+             common::access::rw,
+               groov::field<"reserved3", std::uint32_t, 31, 15, common::access::ro>,
                groov::field<"exti11", std::uint8_t, 14, 12>,
-               groov::field<"reserved2", bool, 11, 11, access::ro>,
+               groov::field<"reserved2", bool, 11, 11, common::access::ro>,
                groov::field<"exti10", std::uint8_t, 10, 8>,
-               groov::field<"reserved1", bool, 7, 7, access::ro>,
+               groov::field<"reserved1", bool, 7, 7, common::access::ro>,
                groov::field<"exti9", std::uint8_t, 6, 4>,
-               groov::field<"reserved0", bool, 3, 3, access::ro>,
+               groov::field<"reserved0", bool, 3, 3, common::access::ro>,
                groov::field<"exti8", std::uint8_t, 2, 0>>;
 
 // syscfg_exticr4_v1: EXTICR4
@@ -173,14 +173,14 @@ using syscfg_exticr4_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved3", std::uint32_t, 31, 15, access::ro>,
+             common::access::rw,
+               groov::field<"reserved3", std::uint32_t, 31, 15, common::access::ro>,
                groov::field<"exti15", std::uint8_t, 14, 12>,
-               groov::field<"reserved2", bool, 11, 11, access::ro>,
+               groov::field<"reserved2", bool, 11, 11, common::access::ro>,
                groov::field<"exti14", std::uint8_t, 10, 8>,
-               groov::field<"reserved1", bool, 7, 7, access::ro>,
+               groov::field<"reserved1", bool, 7, 7, common::access::ro>,
                groov::field<"exti13", std::uint8_t, 6, 4>,
-               groov::field<"reserved0", bool, 3, 3, access::ro>,
+               groov::field<"reserved0", bool, 3, 3, common::access::ro>,
                groov::field<"exti12", std::uint8_t, 2, 0>>;
 
 // syscfg_imr1_v1: IMR1
@@ -192,7 +192,7 @@ using syscfg_imr1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"exit15im", bool, 31, 31>,
                groov::field<"exit14im", bool, 30, 30>,
                groov::field<"exit13im", bool, 29, 29>,
@@ -204,11 +204,11 @@ using syscfg_imr1_v1_tt =
                groov::field<"exit7im", bool, 23, 23>,
                groov::field<"exit6im", bool, 22, 22>,
                groov::field<"exit5im", bool, 21, 21>,
-               groov::field<"reserved1", std::uint8_t, 20, 16, access::ro>,
+               groov::field<"reserved1", std::uint8_t, 20, 16, common::access::ro>,
                groov::field<"tim17im", bool, 15, 15>,
                groov::field<"tim16im", bool, 14, 14>,
                groov::field<"tim1im", bool, 13, 13>,
-               groov::field<"reserved0", std::uint16_t, 12, 0, access::ro>>;
+               groov::field<"reserved0", std::uint16_t, 12, 0, common::access::ro>>;
 
 // syscfg_imr2_v1: IMR2
 // Used by: SYSCFG
@@ -219,14 +219,14 @@ using syscfg_imr2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved3", std::uint16_t, 31, 21, access::ro>,
+             common::access::rw,
+               groov::field<"reserved3", std::uint16_t, 31, 21, common::access::ro>,
                groov::field<"pvdim", bool, 20, 20>,
-               groov::field<"reserved2", bool, 19, 19, access::ro>,
+               groov::field<"reserved2", bool, 19, 19, common::access::ro>,
                groov::field<"pvm3im", bool, 18, 18>,
-               groov::field<"reserved1", bool, 17, 17, access::ro>,
+               groov::field<"reserved1", bool, 17, 17, common::access::ro>,
                groov::field<"pvm1im", bool, 16, 16>,
-               groov::field<"reserved0", std::uint16_t, 15, 0, access::ro>>;
+               groov::field<"reserved0", std::uint16_t, 15, 0, common::access::ro>>;
 
 // syscfg_memrmp_v1: MEMRMP
 // Used by: SYSCFG
@@ -237,8 +237,8 @@ using syscfg_memrmp_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 3, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 3, common::access::ro>,
                groov::field<"mem_mode", std::uint8_t, 2, 0>>;
 
 // syscfg_scsr_v1: SCSR
@@ -250,10 +250,10 @@ using syscfg_scsr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"c2rfd", bool, 31, 31>,
-               groov::field<"reserved0", std::uint32_t, 30, 2, access::ro>,
-               groov::field<"sram2bsy", bit_ready_bar, 1, 1, access::ro>,
+               groov::field<"reserved0", std::uint32_t, 30, 2, common::access::ro>,
+               groov::field<"sram2bsy", common::bittypes::bit_ready_bar, 1, 1, common::access::ro>,
                groov::field<"sram2er", bool, 0, 0>>;
 
 // syscfg_sipcr_v1: SIPCR
@@ -265,8 +265,8 @@ using syscfg_sipcr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 4, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 4, common::access::ro>,
                groov::field<"srng", bool, 3, 3>,
                groov::field<"spka", bool, 2, 2>,
                groov::field<"saes2", bool, 1, 1>,
@@ -281,8 +281,8 @@ using syscfg_skr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::wo,
-               groov::field<"reserved0", std::uint32_t, 31, 8, access::ro>,
+             common::access::wo,
+               groov::field<"reserved0", std::uint32_t, 31, 8, common::access::ro>,
                groov::field<"key", std::uint8_t, 7, 0>>;
 
 // syscfg_swpr_v1: SWPR
@@ -294,7 +294,7 @@ using syscfg_swpr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::wo,
+             common::access::wo,
                groov::field<"p31wp", bool, 31, 31>,
                groov::field<"p30wp", bool, 30, 30>,
                groov::field<"p29wp", bool, 29, 29>,
@@ -337,7 +337,7 @@ using syscfg_swpr2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::wo,
+             common::access::wo,
                groov::field<"p63wp", bool, 31, 31>,
                groov::field<"p62wp", bool, 30, 30>,
                groov::field<"p61wp", bool, 29, 29>,

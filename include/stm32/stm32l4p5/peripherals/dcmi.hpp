@@ -7,17 +7,50 @@
 namespace stm32::stm32l4p5 {
 
 namespace dcmi {
-  using cr_tt = regs::dcmi_cr_v1_tt;
-  using sr_tt = regs::dcmi_sr_v1_tt;
-  using ris_tt = regs::dcmi_ris_v1_tt;
-  using ier_tt = regs::dcmi_ier_v1_tt;
-  using mis_tt = regs::dcmi_mis_v1_tt;
-  using icr_tt = regs::dcmi_icr_v1_tt;
-  using escr_tt = regs::dcmi_escr_v1_tt;
-  using esur_tt = regs::dcmi_esur_v1_tt;
-  using cwstrt_tt = regs::dcmi_cwstrt_v1_tt;
-  using cwsize_tt = regs::dcmi_cwsize_v1_tt;
-  using dr_tt = regs::dcmi_dr_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cr_tt = regs::dcmi_cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using sr_tt = regs::dcmi_sr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ris_tt = regs::dcmi_ris_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ier_tt = regs::dcmi_ier_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mis_tt = regs::dcmi_mis_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using icr_tt = regs::dcmi_icr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using escr_tt = regs::dcmi_escr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using esur_tt = regs::dcmi_esur_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cwstrt_tt = regs::dcmi_cwstrt_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cwsize_tt = regs::dcmi_cwsize_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dr_tt = regs::dcmi_dr_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using dcmi_t =

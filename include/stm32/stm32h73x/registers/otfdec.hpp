@@ -16,11 +16,11 @@ using otfdec_otfdec_icr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 3, access::ro>,
-               groov::field<"keif", bool, 2, 2, access::wo>,
-               groov::field<"xoneif", bool, 1, 1, access::wo>,
-               groov::field<"seif", bool, 0, 0, access::wo>>;
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 3, common::access::ro>,
+               groov::field<"keif", bool, 2, 2, common::access::wo>,
+               groov::field<"xoneif", bool, 1, 1, common::access::wo>,
+               groov::field<"seif", bool, 0, 0, common::access::wo>>;
 
 // otfdec_otfdec_ier_v1: OTFDEC_IER
 // Used by: OTFDEC1, OTFDEC2
@@ -31,11 +31,11 @@ using otfdec_otfdec_ier_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 3, access::ro>,
-               groov::field<"keie", bit_enable, 2, 2>,
-               groov::field<"xoneie", bit_enable, 1, 1>,
-               groov::field<"seie", bit_enable, 0, 0>>;
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 3, common::access::ro>,
+               groov::field<"keie", common::bittypes::bit_enable, 2, 2>,
+               groov::field<"xoneie", common::bittypes::bit_enable, 1, 1>,
+               groov::field<"seie", common::bittypes::bit_enable, 0, 0>>;
 
 // otfdec_otfdec_isr_v1: OTFDEC_ISR
 // Used by: OTFDEC1, OTFDEC2
@@ -46,11 +46,11 @@ using otfdec_otfdec_isr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 3, access::ro>,
-               groov::field<"keif", bool, 2, 2, access::ro>,
-               groov::field<"xoneif", bool, 1, 1, access::ro>,
-               groov::field<"seif", bool, 0, 0, access::ro>>;
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 3, common::access::ro>,
+               groov::field<"keif", bool, 2, 2, common::access::ro>,
+               groov::field<"xoneif", bool, 1, 1, common::access::ro>,
+               groov::field<"seif", bool, 0, 0, common::access::ro>>;
 
 // otfdec_otfdec_r1cfgr_v1: OTFDEC_R1CFGR
 // Used by: OTFDEC1, OTFDEC2
@@ -61,15 +61,15 @@ using otfdec_otfdec_r1cfgr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"regx_version", std::uint16_t, 31, 16>,
-               groov::field<"keycrc", std::uint8_t, 15, 8, access::ro>,
-               groov::field<"reserved1", std::uint8_t, 7, 6, access::ro>,
+               groov::field<"keycrc", std::uint8_t, 15, 8, common::access::ro>,
+               groov::field<"reserved1", std::uint8_t, 7, 6, common::access::ro>,
                groov::field<"mode", std::uint8_t, 5, 4>,
-               groov::field<"reserved0", bool, 3, 3, access::ro>,
-               groov::field<"keylock", bit_locked, 2, 2>,
-               groov::field<"configlock", bit_locked, 1, 1>,
-               groov::field<"reg_en", bit_enable, 0, 0>>;
+               groov::field<"reserved0", bool, 3, 3, common::access::ro>,
+               groov::field<"keylock", common::bittypes::bit_locked, 2, 2>,
+               groov::field<"configlock", common::bittypes::bit_locked, 1, 1>,
+               groov::field<"reg_en", common::bittypes::bit_enable, 0, 0>>;
 
 // otfdec_otfdec_r1endaddr_v1: OTFDEC_R1ENDADDR
 // Used by: OTFDEC1, OTFDEC2
@@ -80,7 +80,7 @@ using otfdec_otfdec_r1endaddr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"regx_end_addr", std::uint32_t, 31, 0>>;
 
 // otfdec_otfdec_r1keyr0_v1: OTFDEC_R1KEYR0
@@ -92,8 +92,8 @@ using otfdec_otfdec_r1keyr0_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"regx_key", std::uint32_t, 31, 0, access::wo>>;
+             common::access::rw,
+               groov::field<"regx_key", std::uint32_t, 31, 0, common::access::wo>>;
 
 // otfdec_otfdec_r1keyr1_v1: OTFDEC_R1KEYR1
 // Used by: OTFDEC1, OTFDEC2
@@ -104,8 +104,8 @@ using otfdec_otfdec_r1keyr1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"regx_key", std::uint32_t, 31, 0, access::wo>>;
+             common::access::rw,
+               groov::field<"regx_key", std::uint32_t, 31, 0, common::access::wo>>;
 
 // otfdec_otfdec_r1keyr2_v1: OTFDEC_R1KEYR2
 // Used by: OTFDEC1, OTFDEC2
@@ -116,8 +116,8 @@ using otfdec_otfdec_r1keyr2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"regx_key", std::uint32_t, 31, 0, access::wo>>;
+             common::access::rw,
+               groov::field<"regx_key", std::uint32_t, 31, 0, common::access::wo>>;
 
 // otfdec_otfdec_r1keyr3_v1: OTFDEC_R1KEYR3
 // Used by: OTFDEC1, OTFDEC2
@@ -128,8 +128,8 @@ using otfdec_otfdec_r1keyr3_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"regx_key", std::uint32_t, 31, 0, access::wo>>;
+             common::access::rw,
+               groov::field<"regx_key", std::uint32_t, 31, 0, common::access::wo>>;
 
 // otfdec_otfdec_r1noncer0_v1: OTFDEC_R1NONCER0
 // Used by: OTFDEC1, OTFDEC2
@@ -140,7 +140,7 @@ using otfdec_otfdec_r1noncer0_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"regx_nonce", std::uint32_t, 31, 0>>;
 
 // otfdec_otfdec_r1noncer1_v1: OTFDEC_R1NONCER1
@@ -152,7 +152,7 @@ using otfdec_otfdec_r1noncer1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"regx_nonce", std::uint32_t, 31, 0>>;
 
 // otfdec_otfdec_r1startaddr_v1: OTFDEC_R1STARTADDR
@@ -164,7 +164,7 @@ using otfdec_otfdec_r1startaddr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"regx_start_addr", std::uint32_t, 31, 0>>;
 
 // otfdec_otfdec_r2cfgr_v1: OTFDEC_R2CFGR
@@ -176,15 +176,15 @@ using otfdec_otfdec_r2cfgr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"regx_version", std::uint16_t, 31, 16>,
-               groov::field<"keycrc", std::uint8_t, 15, 8, access::ro>,
-               groov::field<"reserved1", std::uint8_t, 7, 6, access::ro>,
+               groov::field<"keycrc", std::uint8_t, 15, 8, common::access::ro>,
+               groov::field<"reserved1", std::uint8_t, 7, 6, common::access::ro>,
                groov::field<"mode", std::uint8_t, 5, 4>,
-               groov::field<"reserved0", bool, 3, 3, access::ro>,
-               groov::field<"keylock", bit_locked, 2, 2>,
-               groov::field<"configlock", bit_locked, 1, 1>,
-               groov::field<"reg_en", bit_enable, 0, 0>>;
+               groov::field<"reserved0", bool, 3, 3, common::access::ro>,
+               groov::field<"keylock", common::bittypes::bit_locked, 2, 2>,
+               groov::field<"configlock", common::bittypes::bit_locked, 1, 1>,
+               groov::field<"reg_en", common::bittypes::bit_enable, 0, 0>>;
 
 // otfdec_otfdec_r2endaddr_v1: OTFDEC_R2ENDADDR
 // Used by: OTFDEC1, OTFDEC2
@@ -195,7 +195,7 @@ using otfdec_otfdec_r2endaddr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"regx_end_addr", std::uint32_t, 31, 0>>;
 
 // otfdec_otfdec_r2keyr0_v1: OTFDEC_R2KEYR0
@@ -207,8 +207,8 @@ using otfdec_otfdec_r2keyr0_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"regx_key", std::uint32_t, 31, 0, access::wo>>;
+             common::access::rw,
+               groov::field<"regx_key", std::uint32_t, 31, 0, common::access::wo>>;
 
 // otfdec_otfdec_r2keyr1_v1: OTFDEC_R2KEYR1
 // Used by: OTFDEC1, OTFDEC2
@@ -219,8 +219,8 @@ using otfdec_otfdec_r2keyr1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"regx_key", std::uint32_t, 31, 0, access::wo>>;
+             common::access::rw,
+               groov::field<"regx_key", std::uint32_t, 31, 0, common::access::wo>>;
 
 // otfdec_otfdec_r2keyr2_v1: OTFDEC_R2KEYR2
 // Used by: OTFDEC1, OTFDEC2
@@ -231,8 +231,8 @@ using otfdec_otfdec_r2keyr2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"regx_key", std::uint32_t, 31, 0, access::wo>>;
+             common::access::rw,
+               groov::field<"regx_key", std::uint32_t, 31, 0, common::access::wo>>;
 
 // otfdec_otfdec_r2keyr3_v1: OTFDEC_R2KEYR3
 // Used by: OTFDEC1, OTFDEC2
@@ -243,8 +243,8 @@ using otfdec_otfdec_r2keyr3_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"regx_key", std::uint32_t, 31, 0, access::wo>>;
+             common::access::rw,
+               groov::field<"regx_key", std::uint32_t, 31, 0, common::access::wo>>;
 
 // otfdec_otfdec_r2noncer0_v1: OTFDEC_R2NONCER0
 // Used by: OTFDEC1, OTFDEC2
@@ -255,7 +255,7 @@ using otfdec_otfdec_r2noncer0_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"regx_nonce", std::uint32_t, 31, 0>>;
 
 // otfdec_otfdec_r2noncer1_v1: OTFDEC_R2NONCER1
@@ -267,7 +267,7 @@ using otfdec_otfdec_r2noncer1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"regx_nonce", std::uint32_t, 31, 0>>;
 
 // otfdec_otfdec_r2startaddr_v1: OTFDEC_R2STARTADDR
@@ -279,7 +279,7 @@ using otfdec_otfdec_r2startaddr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"regx_start_addr", std::uint32_t, 31, 0>>;
 
 // otfdec_otfdec_r3cfgr_v1: OTFDEC_R3CFGR
@@ -291,15 +291,15 @@ using otfdec_otfdec_r3cfgr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"regx_version", std::uint16_t, 31, 16>,
-               groov::field<"keycrc", std::uint8_t, 15, 8, access::ro>,
-               groov::field<"reserved1", std::uint8_t, 7, 6, access::ro>,
+               groov::field<"keycrc", std::uint8_t, 15, 8, common::access::ro>,
+               groov::field<"reserved1", std::uint8_t, 7, 6, common::access::ro>,
                groov::field<"mode", std::uint8_t, 5, 4>,
-               groov::field<"reserved0", bool, 3, 3, access::ro>,
-               groov::field<"keylock", bit_locked, 2, 2>,
-               groov::field<"configlock", bit_locked, 1, 1>,
-               groov::field<"reg_en", bit_enable, 0, 0>>;
+               groov::field<"reserved0", bool, 3, 3, common::access::ro>,
+               groov::field<"keylock", common::bittypes::bit_locked, 2, 2>,
+               groov::field<"configlock", common::bittypes::bit_locked, 1, 1>,
+               groov::field<"reg_en", common::bittypes::bit_enable, 0, 0>>;
 
 // otfdec_otfdec_r3endaddr_v1: OTFDEC_R3ENDADDR
 // Used by: OTFDEC1, OTFDEC2
@@ -310,7 +310,7 @@ using otfdec_otfdec_r3endaddr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"regx_end_addr", std::uint32_t, 31, 0>>;
 
 // otfdec_otfdec_r3keyr0_v1: OTFDEC_R3KEYR0
@@ -322,8 +322,8 @@ using otfdec_otfdec_r3keyr0_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"regx_key", std::uint32_t, 31, 0, access::wo>>;
+             common::access::rw,
+               groov::field<"regx_key", std::uint32_t, 31, 0, common::access::wo>>;
 
 // otfdec_otfdec_r3keyr1_v1: OTFDEC_R3KEYR1
 // Used by: OTFDEC1, OTFDEC2
@@ -334,8 +334,8 @@ using otfdec_otfdec_r3keyr1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"regx_key", std::uint32_t, 31, 0, access::wo>>;
+             common::access::rw,
+               groov::field<"regx_key", std::uint32_t, 31, 0, common::access::wo>>;
 
 // otfdec_otfdec_r3keyr2_v1: OTFDEC_R3KEYR2
 // Used by: OTFDEC1, OTFDEC2
@@ -346,8 +346,8 @@ using otfdec_otfdec_r3keyr2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"regx_key", std::uint32_t, 31, 0, access::wo>>;
+             common::access::rw,
+               groov::field<"regx_key", std::uint32_t, 31, 0, common::access::wo>>;
 
 // otfdec_otfdec_r3keyr3_v1: OTFDEC_R3KEYR3
 // Used by: OTFDEC1, OTFDEC2
@@ -358,8 +358,8 @@ using otfdec_otfdec_r3keyr3_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"regx_key", std::uint32_t, 31, 0, access::wo>>;
+             common::access::rw,
+               groov::field<"regx_key", std::uint32_t, 31, 0, common::access::wo>>;
 
 // otfdec_otfdec_r3noncer0_v1: OTFDEC_R3NONCER0
 // Used by: OTFDEC1, OTFDEC2
@@ -370,7 +370,7 @@ using otfdec_otfdec_r3noncer0_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"regx_nonce", std::uint32_t, 31, 0>>;
 
 // otfdec_otfdec_r3noncer1_v1: OTFDEC_R3NONCER1
@@ -382,7 +382,7 @@ using otfdec_otfdec_r3noncer1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"regx_nonce", std::uint32_t, 31, 0>>;
 
 // otfdec_otfdec_r3startaddr_v1: OTFDEC_R3STARTADDR
@@ -394,7 +394,7 @@ using otfdec_otfdec_r3startaddr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"regx_start_addr", std::uint32_t, 31, 0>>;
 
 // otfdec_otfdec_r4cfgr_v1: OTFDEC_R4CFGR
@@ -406,15 +406,15 @@ using otfdec_otfdec_r4cfgr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"regx_version", std::uint16_t, 31, 16>,
-               groov::field<"keycrc", std::uint8_t, 15, 8, access::ro>,
-               groov::field<"reserved1", std::uint8_t, 7, 6, access::ro>,
+               groov::field<"keycrc", std::uint8_t, 15, 8, common::access::ro>,
+               groov::field<"reserved1", std::uint8_t, 7, 6, common::access::ro>,
                groov::field<"mode", std::uint8_t, 5, 4>,
-               groov::field<"reserved0", bool, 3, 3, access::ro>,
-               groov::field<"keylock", bit_locked, 2, 2>,
-               groov::field<"configlock", bit_locked, 1, 1>,
-               groov::field<"reg_en", bit_enable, 0, 0>>;
+               groov::field<"reserved0", bool, 3, 3, common::access::ro>,
+               groov::field<"keylock", common::bittypes::bit_locked, 2, 2>,
+               groov::field<"configlock", common::bittypes::bit_locked, 1, 1>,
+               groov::field<"reg_en", common::bittypes::bit_enable, 0, 0>>;
 
 // otfdec_otfdec_r4endaddr_v1: OTFDEC_R4ENDADDR
 // Used by: OTFDEC1, OTFDEC2
@@ -425,7 +425,7 @@ using otfdec_otfdec_r4endaddr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"regx_end_addr", std::uint32_t, 31, 0>>;
 
 // otfdec_otfdec_r4keyr0_v1: OTFDEC_R4KEYR0
@@ -437,8 +437,8 @@ using otfdec_otfdec_r4keyr0_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"regx_key", std::uint32_t, 31, 0, access::wo>>;
+             common::access::rw,
+               groov::field<"regx_key", std::uint32_t, 31, 0, common::access::wo>>;
 
 // otfdec_otfdec_r4keyr1_v1: OTFDEC_R4KEYR1
 // Used by: OTFDEC1, OTFDEC2
@@ -449,8 +449,8 @@ using otfdec_otfdec_r4keyr1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"regx_key", std::uint32_t, 31, 0, access::wo>>;
+             common::access::rw,
+               groov::field<"regx_key", std::uint32_t, 31, 0, common::access::wo>>;
 
 // otfdec_otfdec_r4keyr2_v1: OTFDEC_R4KEYR2
 // Used by: OTFDEC1, OTFDEC2
@@ -461,8 +461,8 @@ using otfdec_otfdec_r4keyr2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"regx_key", std::uint32_t, 31, 0, access::wo>>;
+             common::access::rw,
+               groov::field<"regx_key", std::uint32_t, 31, 0, common::access::wo>>;
 
 // otfdec_otfdec_r4keyr3_v1: OTFDEC_R4KEYR3
 // Used by: OTFDEC1, OTFDEC2
@@ -473,8 +473,8 @@ using otfdec_otfdec_r4keyr3_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"regx_key", std::uint32_t, 31, 0, access::wo>>;
+             common::access::rw,
+               groov::field<"regx_key", std::uint32_t, 31, 0, common::access::wo>>;
 
 // otfdec_otfdec_r4noncer0_v1: OTFDEC_R4NONCER0
 // Used by: OTFDEC1, OTFDEC2
@@ -485,7 +485,7 @@ using otfdec_otfdec_r4noncer0_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"regx_nonce", std::uint32_t, 31, 0>>;
 
 // otfdec_otfdec_r4noncer1_v1: OTFDEC_R4NONCER1
@@ -497,7 +497,7 @@ using otfdec_otfdec_r4noncer1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"regx_nonce", std::uint32_t, 31, 0>>;
 
 // otfdec_otfdec_r4startaddr_v1: OTFDEC_R4STARTADDR
@@ -509,7 +509,7 @@ using otfdec_otfdec_r4startaddr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"regx_start_addr", std::uint32_t, 31, 0>>;
 
 } // namespace stm32::regs

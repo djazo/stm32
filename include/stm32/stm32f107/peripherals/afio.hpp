@@ -7,13 +7,34 @@
 namespace stm32::stm32f107 {
 
 namespace afio {
-  using evcr_tt = regs::afio_evcr_v1_tt;
-  using mapr_tt = regs::afio_mapr_v1_tt;
-  using exticr1_tt = regs::afio_exticr1_v1_tt;
-  using exticr2_tt = regs::afio_exticr2_v1_tt;
-  using exticr3_tt = regs::afio_exticr3_v1_tt;
-  using exticr4_tt = regs::afio_exticr4_v1_tt;
-  using mapr2_tt = regs::afio_mapr2_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using evcr_tt = regs::afio_evcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mapr_tt = regs::afio_mapr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using exticr1_tt = regs::afio_exticr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using exticr2_tt = regs::afio_exticr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using exticr3_tt = regs::afio_exticr3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using exticr4_tt = regs::afio_exticr4_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mapr2_tt = regs::afio_mapr2_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using afio_t =

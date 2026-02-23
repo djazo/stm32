@@ -7,24 +7,78 @@
 namespace stm32::stm32wb55_cm4 {
 
 namespace syscfg_vrefbuf {
-  using syscfg_memrmp_tt = regs::syscfg_vrefbuf_syscfg_memrmp_v1_tt;
-  using syscfg_cfgr1_tt = regs::syscfg_vrefbuf_syscfg_cfgr1_v1_tt;
-  using syscfg_exticr1_tt = regs::syscfg_vrefbuf_syscfg_exticr1_v1_tt;
-  using syscfg_exticr2_tt = regs::syscfg_vrefbuf_syscfg_exticr2_v1_tt;
-  using syscfg_exticr3_tt = regs::syscfg_vrefbuf_syscfg_exticr3_v1_tt;
-  using syscfg_exticr4_tt = regs::syscfg_vrefbuf_syscfg_exticr4_v1_tt;
-  using syscfg_scsr_tt = regs::syscfg_vrefbuf_syscfg_scsr_v1_tt;
-  using syscfg_cfgr2_tt = regs::syscfg_vrefbuf_syscfg_cfgr2_v1_tt;
-  using syscfg_swpr_tt = regs::syscfg_vrefbuf_syscfg_swpr_v1_tt;
-  using syscfg_skr_tt = regs::syscfg_vrefbuf_syscfg_skr_v1_tt;
-  using syscfg_swpr2_tt = regs::syscfg_vrefbuf_syscfg_swpr2_v1_tt;
-  using vrefbuf_csr_tt = regs::syscfg_vrefbuf_vrefbuf_csr_v1_tt;
-  using vrefbuf_ccr_tt = regs::syscfg_vrefbuf_vrefbuf_ccr_v1_tt;
-  using syscfg_imr1_tt = regs::syscfg_vrefbuf_syscfg_imr1_v1_tt;
-  using syscfg_imr2_tt = regs::syscfg_vrefbuf_syscfg_imr2_v1_tt;
-  using syscfg_c2imr1_tt = regs::syscfg_vrefbuf_syscfg_c2imr1_v1_tt;
-  using syscfg_c2imr2_tt = regs::syscfg_vrefbuf_syscfg_c2imr2_v1_tt;
-  using syscfg_sipcr_tt = regs::syscfg_vrefbuf_syscfg_sipcr_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using syscfg_memrmp_tt = regs::syscfg_vrefbuf_syscfg_memrmp_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using syscfg_cfgr1_tt = regs::syscfg_vrefbuf_syscfg_cfgr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using syscfg_exticr1_tt = regs::syscfg_vrefbuf_syscfg_exticr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using syscfg_exticr2_tt = regs::syscfg_vrefbuf_syscfg_exticr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using syscfg_exticr3_tt = regs::syscfg_vrefbuf_syscfg_exticr3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using syscfg_exticr4_tt = regs::syscfg_vrefbuf_syscfg_exticr4_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using syscfg_scsr_tt = regs::syscfg_vrefbuf_syscfg_scsr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using syscfg_cfgr2_tt = regs::syscfg_vrefbuf_syscfg_cfgr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using syscfg_swpr_tt = regs::syscfg_vrefbuf_syscfg_swpr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using syscfg_skr_tt = regs::syscfg_vrefbuf_syscfg_skr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using syscfg_swpr2_tt = regs::syscfg_vrefbuf_syscfg_swpr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using vrefbuf_csr_tt = regs::syscfg_vrefbuf_vrefbuf_csr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using vrefbuf_ccr_tt = regs::syscfg_vrefbuf_vrefbuf_ccr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using syscfg_imr1_tt = regs::syscfg_vrefbuf_syscfg_imr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using syscfg_imr2_tt = regs::syscfg_vrefbuf_syscfg_imr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using syscfg_c2imr1_tt = regs::syscfg_vrefbuf_syscfg_c2imr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using syscfg_c2imr2_tt = regs::syscfg_vrefbuf_syscfg_c2imr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using syscfg_sipcr_tt = regs::syscfg_vrefbuf_syscfg_sipcr_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using syscfg_vrefbuf_t =

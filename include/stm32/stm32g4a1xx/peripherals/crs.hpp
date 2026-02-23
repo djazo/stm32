@@ -7,10 +7,22 @@
 namespace stm32::stm32g4a1xx {
 
 namespace crs {
-  using cr_tt = regs::crs_cr_v1_tt;
-  using cfgr_tt = regs::crs_cfgr_v1_tt;
-  using isr_tt = regs::crs_isr_v1_tt;
-  using icr_tt = regs::crs_icr_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cr_tt = regs::crs_cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cfgr_tt = regs::crs_cfgr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using isr_tt = regs::crs_isr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using icr_tt = regs::crs_icr_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using crs_t =

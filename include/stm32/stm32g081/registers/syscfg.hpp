@@ -16,20 +16,20 @@ using syscfg_cfgr1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved2", std::uint8_t, 31, 24, access::ro>,
+             common::access::rw,
+               groov::field<"reserved2", std::uint8_t, 31, 24, common::access::ro>,
                groov::field<"i2c_pax_fmp", std::uint8_t, 23, 22>,
                groov::field<"i2c2_fmp", bool, 21, 21>,
                groov::field<"i2c1_fmp", bool, 20, 20>,
                groov::field<"i2c_pbx_fmp", std::uint8_t, 19, 16>,
-               groov::field<"reserved1", std::uint8_t, 15, 11, access::ro>,
+               groov::field<"reserved1", std::uint8_t, 15, 11, common::access::ro>,
                groov::field<"ucpd2_strobe", bool, 10, 10>,
                groov::field<"ucpd1_strobe", bool, 9, 9>,
-               groov::field<"boosten", bit_enable, 8, 8>,
+               groov::field<"boosten", common::bittypes::bit_enable, 8, 8>,
                groov::field<"ir_mod", std::uint8_t, 7, 6>,
                groov::field<"ir_pol", bool, 5, 5>,
                groov::field<"pa11_pa12_rmp", bool, 4, 4>,
-               groov::field<"reserved0", std::uint8_t, 3, 2, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 3, 2, common::access::ro>,
                groov::field<"mem_mode", std::uint8_t, 1, 0>>;
 
 // syscfg_cfgr2_v1: CFGR2
@@ -41,14 +41,14 @@ using syscfg_cfgr2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint32_t, 31, 9, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint32_t, 31, 9, common::access::ro>,
                groov::field<"sram_pef", bool, 8, 8>,
-               groov::field<"reserved0", std::uint8_t, 7, 4, access::ro>,
-               groov::field<"ecc_lock", bit_locked, 3, 3>,
-               groov::field<"pvd_lock", bit_locked, 2, 2>,
-               groov::field<"sram_parity_lock", bit_locked, 1, 1>,
-               groov::field<"lockup_lock", bit_locked, 0, 0>>;
+               groov::field<"reserved0", std::uint8_t, 7, 4, common::access::ro>,
+               groov::field<"ecc_lock", common::bittypes::bit_locked, 3, 3>,
+               groov::field<"pvd_lock", common::bittypes::bit_locked, 2, 2>,
+               groov::field<"sram_parity_lock", common::bittypes::bit_locked, 1, 1>,
+               groov::field<"lockup_lock", common::bittypes::bit_locked, 0, 0>>;
 
 // syscfg_itline0_v1: ITLINE0
 // Used by: SYSCFG_VREFBUF
@@ -59,7 +59,7 @@ using syscfg_itline0_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint32_t, 31, 1>,
                groov::field<"wwdg", bool, 0, 0>>;
 
@@ -72,7 +72,7 @@ using syscfg_itline1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint32_t, 31, 1>,
                groov::field<"pvdout", bool, 0, 0>>;
 
@@ -85,7 +85,7 @@ using syscfg_itline10_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint32_t, 31, 2>,
                groov::field<"dma1_ch3", bool, 1, 1>,
                groov::field<"dma1_ch2", bool, 0, 0>>;
@@ -99,7 +99,7 @@ using syscfg_itline11_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint32_t, 31, 5>,
                groov::field<"dma1_ch7", bool, 4, 4>,
                groov::field<"dma1_ch6", bool, 3, 3>,
@@ -116,7 +116,7 @@ using syscfg_itline12_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint32_t, 31, 3>,
                groov::field<"comp2", bool, 2, 2>,
                groov::field<"comp1", bool, 1, 1>,
@@ -131,7 +131,7 @@ using syscfg_itline13_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint32_t, 31, 4>,
                groov::field<"tim1_brk", bool, 3, 3>,
                groov::field<"tim1_upd", bool, 2, 2>,
@@ -147,7 +147,7 @@ using syscfg_itline14_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint32_t, 31, 1>,
                groov::field<"tim1_cc", bool, 0, 0>>;
 
@@ -160,7 +160,7 @@ using syscfg_itline15_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint32_t, 31, 1>,
                groov::field<"tim2", bool, 0, 0>>;
 
@@ -173,7 +173,7 @@ using syscfg_itline16_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint32_t, 31, 1>,
                groov::field<"tim3", bool, 0, 0>>;
 
@@ -186,7 +186,7 @@ using syscfg_itline17_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint32_t, 31, 3>,
                groov::field<"lptim1", bool, 2, 2>,
                groov::field<"dac", bool, 1, 1>,
@@ -201,7 +201,7 @@ using syscfg_itline18_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint32_t, 31, 2>,
                groov::field<"lptim2", bool, 1, 1>,
                groov::field<"tim7", bool, 0, 0>>;
@@ -215,7 +215,7 @@ using syscfg_itline19_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint32_t, 31, 1>,
                groov::field<"tim14", bool, 0, 0>>;
 
@@ -228,7 +228,7 @@ using syscfg_itline2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint32_t, 31, 2>,
                groov::field<"rtc", bool, 1, 1>,
                groov::field<"tamp", bool, 0, 0>>;
@@ -242,7 +242,7 @@ using syscfg_itline20_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint32_t, 31, 1>,
                groov::field<"tim15", bool, 0, 0>>;
 
@@ -255,7 +255,7 @@ using syscfg_itline21_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint32_t, 31, 1>,
                groov::field<"tim16", bool, 0, 0>>;
 
@@ -268,7 +268,7 @@ using syscfg_itline22_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint32_t, 31, 1>,
                groov::field<"tim17", bool, 0, 0>>;
 
@@ -281,7 +281,7 @@ using syscfg_itline23_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint32_t, 31, 1>,
                groov::field<"i2c1", bool, 0, 0>>;
 
@@ -294,7 +294,7 @@ using syscfg_itline24_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint32_t, 31, 1>,
                groov::field<"i2c2", bool, 0, 0>>;
 
@@ -307,7 +307,7 @@ using syscfg_itline25_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint32_t, 31, 1>,
                groov::field<"spi1", bool, 0, 0>>;
 
@@ -320,7 +320,7 @@ using syscfg_itline26_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint32_t, 31, 1>,
                groov::field<"spi2", bool, 0, 0>>;
 
@@ -333,7 +333,7 @@ using syscfg_itline27_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint32_t, 31, 1>,
                groov::field<"usart1", bool, 0, 0>>;
 
@@ -346,7 +346,7 @@ using syscfg_itline28_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint32_t, 31, 1>,
                groov::field<"usart2", bool, 0, 0>>;
 
@@ -359,7 +359,7 @@ using syscfg_itline29_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint32_t, 31, 3>,
                groov::field<"usart5", bool, 2, 2>,
                groov::field<"usart4", bool, 1, 1>,
@@ -374,7 +374,7 @@ using syscfg_itline3_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint32_t, 31, 2>,
                groov::field<"flash_ecc", bool, 1, 1>,
                groov::field<"flash_itf", bool, 0, 0>>;
@@ -388,7 +388,7 @@ using syscfg_itline30_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint32_t, 31, 1>,
                groov::field<"usart2", bool, 0, 0>>;
 
@@ -401,7 +401,7 @@ using syscfg_itline31_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint32_t, 31, 2>,
                groov::field<"aes", bool, 1, 1>,
                groov::field<"rng", bool, 0, 0>>;
@@ -415,7 +415,7 @@ using syscfg_itline4_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint32_t, 31, 1>,
                groov::field<"rcc", bool, 0, 0>>;
 
@@ -428,7 +428,7 @@ using syscfg_itline5_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint32_t, 31, 2>,
                groov::field<"exti1", bool, 1, 1>,
                groov::field<"exti0", bool, 0, 0>>;
@@ -442,7 +442,7 @@ using syscfg_itline6_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint32_t, 31, 2>,
                groov::field<"exti3", bool, 1, 1>,
                groov::field<"exti2", bool, 0, 0>>;
@@ -456,7 +456,7 @@ using syscfg_itline7_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint32_t, 31, 12>,
                groov::field<"exti15", bool, 11, 11>,
                groov::field<"exti14", bool, 10, 10>,
@@ -480,7 +480,7 @@ using syscfg_itline8_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint32_t, 31, 2>,
                groov::field<"ucpd2", bool, 1, 1>,
                groov::field<"ucpd1", bool, 0, 0>>;
@@ -494,7 +494,7 @@ using syscfg_itline9_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint32_t, 31, 1>,
                groov::field<"dma1_ch1", bool, 0, 0>>;
 
@@ -507,8 +507,8 @@ using syscfg_vrefbuf_ccr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 6, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 6, common::access::ro>,
                groov::field<"trim", std::uint8_t, 5, 0>>;
 
 // syscfg_vrefbuf_csr_v1: VREFBUF_CSR
@@ -520,11 +520,11 @@ using syscfg_vrefbuf_csr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint32_t, 31, 7, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint32_t, 31, 7, common::access::ro>,
                groov::field<"vrs", std::uint8_t, 6, 4>,
-               groov::field<"vrr", bool, 3, 3, access::ro>,
-               groov::field<"reserved0", bool, 2, 2, access::ro>,
+               groov::field<"vrr", bool, 3, 3, common::access::ro>,
+               groov::field<"reserved0", bool, 2, 2, common::access::ro>,
                groov::field<"hiz", bool, 1, 1>,
                groov::field<"envr", bool, 0, 0>>;
 

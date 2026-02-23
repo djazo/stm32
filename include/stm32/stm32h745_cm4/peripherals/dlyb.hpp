@@ -7,8 +7,14 @@
 namespace stm32::stm32h745_cm4 {
 
 namespace dlybx {
-  using cr_tt = regs::dlyb_cr_v1_tt;
-  using cfgr_tt = regs::dlyb_cfgr_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cr_tt = regs::dlyb_cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cfgr_tt = regs::dlyb_cfgr_v1_tt<name, baseaddress, offset>;
 
   template <stdx::ct_string name, std::uint32_t baseaddress>
   using dlybx_t =

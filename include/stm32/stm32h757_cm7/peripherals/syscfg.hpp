@@ -7,35 +7,122 @@
 namespace stm32::stm32h757_cm7 {
 
 namespace syscfg {
-  using pmcr_tt = regs::syscfg_pmcr_v1_tt;
-  using exticr1_tt = regs::syscfg_exticr1_v1_tt;
-  using exticr2_tt = regs::syscfg_exticr2_v1_tt;
-  using exticr3_tt = regs::syscfg_exticr3_v1_tt;
-  using exticr4_tt = regs::syscfg_exticr4_v1_tt;
-  using cfgr_tt = regs::syscfg_cfgr_v1_tt;
-  using cccsr_tt = regs::syscfg_cccsr_v1_tt;
-  using ccvr_tt = regs::syscfg_ccvr_v1_tt;
-  using cccr_tt = regs::syscfg_cccr_v1_tt;
-  using pwrcr_tt = regs::syscfg_pwrcr_v1_tt;
-  using pkgr_tt = regs::syscfg_pkgr_v1_tt;
-  using ur0_tt = regs::syscfg_ur0_v1_tt;
-  using ur1_tt = regs::syscfg_ur1_v1_tt;
-  using ur2_tt = regs::syscfg_ur2_v1_tt;
-  using ur3_tt = regs::syscfg_ur3_v1_tt;
-  using ur4_tt = regs::syscfg_ur4_v1_tt;
-  using ur5_tt = regs::syscfg_ur5_v1_tt;
-  using ur6_tt = regs::syscfg_ur6_v1_tt;
-  using ur7_tt = regs::syscfg_ur7_v1_tt;
-  using ur8_tt = regs::syscfg_ur8_v1_tt;
-  using ur9_tt = regs::syscfg_ur9_v1_tt;
-  using ur10_tt = regs::syscfg_ur10_v1_tt;
-  using ur11_tt = regs::syscfg_ur11_v1_tt;
-  using ur12_tt = regs::syscfg_ur12_v1_tt;
-  using ur13_tt = regs::syscfg_ur13_v1_tt;
-  using ur14_tt = regs::syscfg_ur14_v1_tt;
-  using ur15_tt = regs::syscfg_ur15_v1_tt;
-  using ur16_tt = regs::syscfg_ur16_v1_tt;
-  using ur17_tt = regs::syscfg_ur17_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using pmcr_tt = regs::syscfg_pmcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using exticr1_tt = regs::syscfg_exticr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using exticr2_tt = regs::syscfg_exticr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using exticr3_tt = regs::syscfg_exticr3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using exticr4_tt = regs::syscfg_exticr4_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cfgr_tt = regs::syscfg_cfgr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cccsr_tt = regs::syscfg_cccsr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ccvr_tt = regs::syscfg_ccvr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cccr_tt = regs::syscfg_cccr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using pwrcr_tt = regs::syscfg_pwrcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using pkgr_tt = regs::syscfg_pkgr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ur0_tt = regs::syscfg_ur0_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ur1_tt = regs::syscfg_ur1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ur2_tt = regs::syscfg_ur2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ur3_tt = regs::syscfg_ur3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ur4_tt = regs::syscfg_ur4_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ur5_tt = regs::syscfg_ur5_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ur6_tt = regs::syscfg_ur6_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ur7_tt = regs::syscfg_ur7_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ur8_tt = regs::syscfg_ur8_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ur9_tt = regs::syscfg_ur9_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ur10_tt = regs::syscfg_ur10_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ur11_tt = regs::syscfg_ur11_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ur12_tt = regs::syscfg_ur12_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ur13_tt = regs::syscfg_ur13_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ur14_tt = regs::syscfg_ur14_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ur15_tt = regs::syscfg_ur15_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ur16_tt = regs::syscfg_ur16_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ur17_tt = regs::syscfg_ur17_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using syscfg_t =

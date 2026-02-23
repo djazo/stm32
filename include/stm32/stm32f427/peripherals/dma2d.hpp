@@ -7,26 +7,86 @@
 namespace stm32::stm32f427 {
 
 namespace dma2d {
-  using dma2d_cr_tt = regs::dma2d_dma2d_cr_v1_tt;
-  using dma2d_isr_tt = regs::dma2d_dma2d_isr_v1_tt;
-  using dma2d_ifcr_tt = regs::dma2d_dma2d_ifcr_v1_tt;
-  using dma2d_fgmar_tt = regs::dma2d_dma2d_fgmar_v1_tt;
-  using dma2d_fgor_tt = regs::dma2d_dma2d_fgor_v1_tt;
-  using dma2d_bgmar_tt = regs::dma2d_dma2d_bgmar_v1_tt;
-  using dma2d_bgor_tt = regs::dma2d_dma2d_bgor_v1_tt;
-  using dma2d_fgpfccr_tt = regs::dma2d_dma2d_fgpfccr_v1_tt;
-  using dma2d_fgcolr_tt = regs::dma2d_dma2d_fgcolr_v1_tt;
-  using dma2d_bgpfccr_tt = regs::dma2d_dma2d_bgpfccr_v1_tt;
-  using dma2d_bgcolr_tt = regs::dma2d_dma2d_bgcolr_v1_tt;
-  using dma2d_fgcmar_tt = regs::dma2d_dma2d_fgcmar_v1_tt;
-  using dma2d_bgcmar_tt = regs::dma2d_dma2d_bgcmar_v1_tt;
-  using dma2d_opfccr_tt = regs::dma2d_dma2d_opfccr_v1_tt;
-  using dma2d_ocolr_tt = regs::dma2d_dma2d_ocolr_v1_tt;
-  using dma2d_omar_tt = regs::dma2d_dma2d_omar_v1_tt;
-  using dma2d_oor_tt = regs::dma2d_dma2d_oor_v1_tt;
-  using dma2d_nlr_tt = regs::dma2d_dma2d_nlr_v1_tt;
-  using dma2d_lwr_tt = regs::dma2d_dma2d_lwr_v1_tt;
-  using dma2d_amtcr_tt = regs::dma2d_dma2d_amtcr_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dma2d_cr_tt = regs::dma2d_dma2d_cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dma2d_isr_tt = regs::dma2d_dma2d_isr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dma2d_ifcr_tt = regs::dma2d_dma2d_ifcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dma2d_fgmar_tt = regs::dma2d_dma2d_fgmar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dma2d_fgor_tt = regs::dma2d_dma2d_fgor_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dma2d_bgmar_tt = regs::dma2d_dma2d_bgmar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dma2d_bgor_tt = regs::dma2d_dma2d_bgor_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dma2d_fgpfccr_tt = regs::dma2d_dma2d_fgpfccr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dma2d_fgcolr_tt = regs::dma2d_dma2d_fgcolr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dma2d_bgpfccr_tt = regs::dma2d_dma2d_bgpfccr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dma2d_bgcolr_tt = regs::dma2d_dma2d_bgcolr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dma2d_fgcmar_tt = regs::dma2d_dma2d_fgcmar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dma2d_bgcmar_tt = regs::dma2d_dma2d_bgcmar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dma2d_opfccr_tt = regs::dma2d_dma2d_opfccr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dma2d_ocolr_tt = regs::dma2d_dma2d_ocolr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dma2d_omar_tt = regs::dma2d_dma2d_omar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dma2d_oor_tt = regs::dma2d_dma2d_oor_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dma2d_nlr_tt = regs::dma2d_dma2d_nlr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dma2d_lwr_tt = regs::dma2d_dma2d_lwr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dma2d_amtcr_tt = regs::dma2d_dma2d_amtcr_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using dma2d_t =

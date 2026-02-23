@@ -16,7 +16,7 @@ using fdcan_can_ttgtp_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"ctp", std::uint16_t, 31, 16>,
                groov::field<"ncl", std::uint16_t, 15, 0>>;
 
@@ -29,14 +29,14 @@ using fdcan_ccfg_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"swr", bool, 31, 31>,
-               groov::field<"reserved1", std::uint16_t, 30, 20, access::ro>,
+               groov::field<"reserved1", std::uint16_t, 30, 20, common::access::ro>,
                groov::field<"cdiv", std::uint8_t, 19, 16>,
                groov::field<"ocpm", std::uint8_t, 15, 8>,
                groov::field<"cfl", bool, 7, 7>,
                groov::field<"bcc", bool, 6, 6>,
-               groov::field<"reserved0", bool, 5, 5, access::ro>,
+               groov::field<"reserved0", bool, 5, 5, common::access::ro>,
                groov::field<"tqbt", std::uint8_t, 4, 0>>;
 
 // fdcan_crel_v1: CREL
@@ -48,7 +48,7 @@ using fdcan_crel_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"rel", std::uint8_t, 31, 28>,
                groov::field<"step", std::uint8_t, 27, 24>,
                groov::field<"substep", std::uint8_t, 23, 20>,
@@ -65,9 +65,9 @@ using fdcan_cstat_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"cals", std::uint8_t, 31, 30>,
-               groov::field<"reserved0", bool, 29, 29, access::ro>,
+               groov::field<"reserved0", bool, 29, 29, common::access::ro>,
                groov::field<"tqc", std::uint16_t, 28, 18>,
                groov::field<"ocpc", std::uint32_t, 17, 0>>;
 
@@ -80,7 +80,7 @@ using fdcan_cwd_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"wdv", std::uint16_t, 31, 16>,
                groov::field<"wdc", std::uint16_t, 15, 0>>;
 
@@ -93,13 +93,13 @@ using fdcan_fdcan_cccr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"niso", bool, 15, 15>,
                groov::field<"txp", bool, 14, 14>,
                groov::field<"efbi", bool, 13, 13>,
                groov::field<"pxhd", bool, 12, 12>,
-               groov::field<"reserved0", std::uint8_t, 11, 10, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 11, 10, common::access::ro>,
                groov::field<"bse", bool, 9, 9>,
                groov::field<"fdoe", bool, 8, 8>,
                groov::field<"test", bool, 7, 7>,
@@ -120,7 +120,7 @@ using fdcan_fdcan_crel_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"rel", std::uint8_t, 31, 28>,
                groov::field<"step", std::uint8_t, 27, 24>,
                groov::field<"substep", std::uint8_t, 23, 20>,
@@ -137,7 +137,7 @@ using fdcan_fdcan_dbtp_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved2", std::uint8_t, 31, 24>,
                groov::field<"tdc", bool, 23, 23>,
                groov::field<"reserved1", std::uint8_t, 22, 21>,
@@ -156,8 +156,8 @@ using fdcan_fdcan_ecr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint8_t, 31, 24, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint8_t, 31, 24, common::access::ro>,
                groov::field<"cel", std::uint8_t, 23, 16>,
                groov::field<"rp", bool, 15, 15>,
                groov::field<"trec", std::uint8_t, 14, 8>,
@@ -172,7 +172,7 @@ using fdcan_fdcan_endn_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"etv", std::uint32_t, 31, 0>>;
 
 // fdcan_fdcan_gfc_v1: FDCAN_GFC
@@ -184,12 +184,12 @@ using fdcan_fdcan_gfc_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 6, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 6, common::access::ro>,
                groov::field<"anfs", std::uint8_t, 5, 4>,
                groov::field<"anfe", std::uint8_t, 3, 2>,
                groov::field<"rrfs", bool, 1, 1>,
-               groov::field<"rrfe", bit_enable, 0, 0>>;
+               groov::field<"rrfe", common::bittypes::bit_enable, 0, 0>>;
 
 // fdcan_fdcan_hpms_v1: FDCAN_HPMS
 // Used by: FDCAN1, FDCAN2, FDCAN3
@@ -200,7 +200,7 @@ using fdcan_fdcan_hpms_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint16_t, 31, 16>,
                groov::field<"flst", bool, 15, 15>,
                groov::field<"fidx", std::uint8_t, 14, 8>,
@@ -216,36 +216,36 @@ using fdcan_fdcan_ie_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint8_t, 31, 30>,
                groov::field<"arae", bool, 29, 29>,
-               groov::field<"pede", bit_enable, 28, 28>,
+               groov::field<"pede", common::bittypes::bit_enable, 28, 28>,
                groov::field<"peae", bool, 27, 27>,
-               groov::field<"wdie", bit_enable, 26, 26>,
+               groov::field<"wdie", common::bittypes::bit_enable, 26, 26>,
                groov::field<"boe", bool, 25, 25>,
                groov::field<"ewe", bool, 24, 24>,
-               groov::field<"epe", bit_enable, 23, 23>,
+               groov::field<"epe", common::bittypes::bit_enable, 23, 23>,
                groov::field<"eloe", bool, 22, 22>,
                groov::field<"beue", bool, 21, 21>,
                groov::field<"bece", bool, 20, 20>,
                groov::field<"drxe", bool, 19, 19>,
                groov::field<"tooe", bool, 18, 18>,
-               groov::field<"mrafe", bit_enable, 17, 17>,
+               groov::field<"mrafe", common::bittypes::bit_enable, 17, 17>,
                groov::field<"tswe", bool, 16, 16>,
                groov::field<"tefle", bool, 15, 15>,
-               groov::field<"teffe", bit_enable, 14, 14>,
+               groov::field<"teffe", common::bittypes::bit_enable, 14, 14>,
                groov::field<"tefwe", bool, 13, 13>,
                groov::field<"tefne", bool, 12, 12>,
-               groov::field<"tefe", bit_enable, 11, 11>,
-               groov::field<"tcfe", bit_enable, 10, 10>,
+               groov::field<"tefe", common::bittypes::bit_enable, 11, 11>,
+               groov::field<"tcfe", common::bittypes::bit_enable, 10, 10>,
                groov::field<"tce", bool, 9, 9>,
                groov::field<"hpme", bool, 8, 8>,
                groov::field<"rf1le", bool, 7, 7>,
-               groov::field<"rf1fe", bit_enable, 6, 6>,
+               groov::field<"rf1fe", common::bittypes::bit_enable, 6, 6>,
                groov::field<"rf1we", bool, 5, 5>,
                groov::field<"rf1ne", bool, 4, 4>,
                groov::field<"rf0le", bool, 3, 3>,
-               groov::field<"rf0fe", bit_enable, 2, 2>,
+               groov::field<"rf0fe", common::bittypes::bit_enable, 2, 2>,
                groov::field<"rf0we", bool, 1, 1>,
                groov::field<"rf0ne", bool, 0, 0>>;
 
@@ -258,8 +258,8 @@ using fdcan_fdcan_ile_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 2, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 2, common::access::ro>,
                groov::field<"eint1", bool, 1, 1>,
                groov::field<"eint0", bool, 0, 0>>;
 
@@ -272,7 +272,7 @@ using fdcan_fdcan_ils_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint8_t, 31, 30>,
                groov::field<"aral", bool, 29, 29>,
                groov::field<"pedl", bool, 28, 28>,
@@ -314,7 +314,7 @@ using fdcan_fdcan_ir_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved1", std::uint8_t, 31, 30>,
                groov::field<"ara", bool, 29, 29>,
                groov::field<"ped", bool, 28, 28>,
@@ -355,11 +355,11 @@ using fdcan_fdcan_nbtp_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"nsjw", std::uint8_t, 31, 25>,
                groov::field<"nbrp", std::uint16_t, 24, 16>,
                groov::field<"ntseg1", std::uint8_t, 15, 8>,
-               groov::field<"reserved0", bool, 7, 7, access::ro>,
+               groov::field<"reserved0", bool, 7, 7, common::access::ro>,
                groov::field<"tseg2", std::uint8_t, 6, 0>>;
 
 // fdcan_fdcan_ndat1_v1: FDCAN_NDAT1
@@ -371,7 +371,7 @@ using fdcan_fdcan_ndat1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"nd31", bool, 31, 31>,
                groov::field<"nd30", bool, 30, 30>,
                groov::field<"nd29", bool, 29, 29>,
@@ -414,7 +414,7 @@ using fdcan_fdcan_ndat2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"nd63", bool, 31, 31>,
                groov::field<"nd62", bool, 30, 30>,
                groov::field<"nd61", bool, 29, 29>,
@@ -457,10 +457,10 @@ using fdcan_fdcan_psr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint16_t, 31, 23, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint16_t, 31, 23, common::access::ro>,
                groov::field<"tdcv", std::uint8_t, 22, 16>,
-               groov::field<"reserved0", bool, 15, 15, access::ro>,
+               groov::field<"reserved0", bool, 15, 15, common::access::ro>,
                groov::field<"pxe", bool, 14, 14>,
                groov::field<"redl", bool, 13, 13>,
                groov::field<"rbrs", bool, 12, 12>,
@@ -481,7 +481,7 @@ using fdcan_fdcan_rwd_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint16_t, 31, 16>,
                groov::field<"wdv", std::uint8_t, 15, 8>,
                groov::field<"wdc", std::uint8_t, 7, 0>>;
@@ -495,10 +495,10 @@ using fdcan_fdcan_rxbc_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"rbsa", std::uint16_t, 15, 2>,
-               groov::field<"reserved0", std::uint8_t, 1, 0, access::ro>>;
+               groov::field<"reserved0", std::uint8_t, 1, 0, common::access::ro>>;
 
 // fdcan_fdcan_rxesc_v1: FDCAN_RXESC
 // Used by: FDCAN1, FDCAN2, FDCAN3
@@ -509,12 +509,12 @@ using fdcan_fdcan_rxesc_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved2", std::uint32_t, 31, 11, access::ro>,
+             common::access::rw,
+               groov::field<"reserved2", std::uint32_t, 31, 11, common::access::ro>,
                groov::field<"rbds", std::uint8_t, 10, 8>,
-               groov::field<"reserved1", bool, 7, 7, access::ro>,
+               groov::field<"reserved1", bool, 7, 7, common::access::ro>,
                groov::field<"f1ds", std::uint8_t, 6, 4>,
-               groov::field<"reserved0", bool, 3, 3, access::ro>,
+               groov::field<"reserved0", bool, 3, 3, common::access::ro>,
                groov::field<"f0ds", std::uint8_t, 2, 0>>;
 
 // fdcan_fdcan_rxf0a_v1: FDCAN_RXF0A
@@ -526,8 +526,8 @@ using fdcan_fdcan_rxf0a_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 6, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 6, common::access::ro>,
                groov::field<"fa01", std::uint8_t, 5, 0>>;
 
 // fdcan_fdcan_rxf0c_v1: FDCAN_RXF0C
@@ -539,11 +539,11 @@ using fdcan_fdcan_rxf0c_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"f0wm", std::uint8_t, 31, 24>,
                groov::field<"f0s", std::uint8_t, 23, 16>,
                groov::field<"f0sa", std::uint16_t, 15, 2>,
-               groov::field<"reserved0", std::uint8_t, 1, 0, access::ro>>;
+               groov::field<"reserved0", std::uint8_t, 1, 0, common::access::ro>>;
 
 // fdcan_fdcan_rxf0s_v1: FDCAN_RXF0S
 // Used by: FDCAN1, FDCAN2, FDCAN3
@@ -554,15 +554,15 @@ using fdcan_fdcan_rxf0s_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved3", std::uint8_t, 31, 26, access::ro>,
+             common::access::rw,
+               groov::field<"reserved3", std::uint8_t, 31, 26, common::access::ro>,
                groov::field<"rf0l", bool, 25, 25>,
                groov::field<"f0f", bool, 24, 24>,
-               groov::field<"reserved2", std::uint8_t, 23, 22, access::ro>,
+               groov::field<"reserved2", std::uint8_t, 23, 22, common::access::ro>,
                groov::field<"f0p", std::uint8_t, 21, 16>,
-               groov::field<"reserved1", std::uint8_t, 15, 14, access::ro>,
+               groov::field<"reserved1", std::uint8_t, 15, 14, common::access::ro>,
                groov::field<"f0g", std::uint8_t, 13, 8>,
-               groov::field<"reserved0", bool, 7, 7, access::ro>,
+               groov::field<"reserved0", bool, 7, 7, common::access::ro>,
                groov::field<"f0fl", std::uint8_t, 6, 0>>;
 
 // fdcan_fdcan_rxf1a_v1: FDCAN_RXF1A
@@ -574,8 +574,8 @@ using fdcan_fdcan_rxf1a_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 6, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 6, common::access::ro>,
                groov::field<"f1ai", std::uint8_t, 5, 0>>;
 
 // fdcan_fdcan_rxf1c_v1: FDCAN_RXF1C
@@ -587,13 +587,13 @@ using fdcan_fdcan_rxf1c_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved2", bool, 31, 31, access::ro>,
+             common::access::rw,
+               groov::field<"reserved2", bool, 31, 31, common::access::ro>,
                groov::field<"f1wm", std::uint8_t, 30, 24>,
-               groov::field<"reserved1", bool, 23, 23, access::ro>,
+               groov::field<"reserved1", bool, 23, 23, common::access::ro>,
                groov::field<"f1s", std::uint8_t, 22, 16>,
                groov::field<"f1sa", std::uint16_t, 15, 2>,
-               groov::field<"reserved0", std::uint8_t, 1, 0, access::ro>>;
+               groov::field<"reserved0", std::uint8_t, 1, 0, common::access::ro>>;
 
 // fdcan_fdcan_rxf1s_v1: FDCAN_RXF1S
 // Used by: FDCAN1, FDCAN2, FDCAN3
@@ -604,16 +604,16 @@ using fdcan_fdcan_rxf1s_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dms", std::uint8_t, 31, 30>,
-               groov::field<"reserved3", std::uint8_t, 29, 26, access::ro>,
+               groov::field<"reserved3", std::uint8_t, 29, 26, common::access::ro>,
                groov::field<"rf1l", bool, 25, 25>,
                groov::field<"f1f", bool, 24, 24>,
-               groov::field<"reserved2", bool, 23, 23, access::ro>,
+               groov::field<"reserved2", bool, 23, 23, common::access::ro>,
                groov::field<"f1pi", std::uint8_t, 22, 16>,
-               groov::field<"reserved1", bool, 15, 15, access::ro>,
+               groov::field<"reserved1", bool, 15, 15, common::access::ro>,
                groov::field<"f1gi", std::uint8_t, 14, 8>,
-               groov::field<"reserved0", bool, 7, 7, access::ro>,
+               groov::field<"reserved0", bool, 7, 7, common::access::ro>,
                groov::field<"f1fl", std::uint8_t, 6, 0>>;
 
 // fdcan_fdcan_sidfc_v1: FDCAN_SIDFC
@@ -625,11 +625,11 @@ using fdcan_fdcan_sidfc_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint8_t, 31, 24, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint8_t, 31, 24, common::access::ro>,
                groov::field<"lss", std::uint8_t, 23, 16>,
                groov::field<"flssa", std::uint16_t, 15, 2>,
-               groov::field<"reserved0", std::uint8_t, 1, 0, access::ro>>;
+               groov::field<"reserved0", std::uint8_t, 1, 0, common::access::ro>>;
 
 // fdcan_fdcan_tdcr_v1: FDCAN_TDCR
 // Used by: FDCAN1, FDCAN2, FDCAN3
@@ -640,7 +640,7 @@ using fdcan_fdcan_tdcr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved1", std::uint32_t, 31, 15>,
                groov::field<"tdco", std::uint8_t, 14, 8>,
                groov::field<"reserved0", bool, 7, 7>,
@@ -655,7 +655,7 @@ using fdcan_fdcan_test_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved1", std::uint32_t, 31, 8>,
                groov::field<"rx", bool, 7, 7>,
                groov::field<"tx", std::uint8_t, 6, 5>,
@@ -671,9 +671,9 @@ using fdcan_fdcan_tocc_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"top", std::uint16_t, 31, 16>,
-               groov::field<"reserved0", std::uint16_t, 15, 3, access::ro>,
+               groov::field<"reserved0", std::uint16_t, 15, 3, common::access::ro>,
                groov::field<"tos", std::uint8_t, 2, 1>,
                groov::field<"etoc", bool, 0, 0>>;
 
@@ -686,8 +686,8 @@ using fdcan_fdcan_tocv_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"toc", std::uint16_t, 15, 0>>;
 
 // fdcan_fdcan_tscc_v1: FDCAN_TSCC
@@ -699,10 +699,10 @@ using fdcan_fdcan_tscc_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint16_t, 31, 20, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint16_t, 31, 20, common::access::ro>,
                groov::field<"tcp", std::uint8_t, 19, 16>,
-               groov::field<"reserved0", std::uint16_t, 15, 2, access::ro>,
+               groov::field<"reserved0", std::uint16_t, 15, 2, common::access::ro>,
                groov::field<"tss", std::uint8_t, 1, 0>>;
 
 // fdcan_fdcan_tscv_v1: FDCAN_TSCV
@@ -714,8 +714,8 @@ using fdcan_fdcan_tscv_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"tsc", std::uint16_t, 15, 0>>;
 
 // fdcan_fdcan_ttcpt_v1: FDCAN_TTCPT
@@ -727,7 +727,7 @@ using fdcan_fdcan_ttcpt_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"swv", std::uint16_t, 31, 16>,
                groov::field<"reserved0", std::uint16_t, 15, 6>,
                groov::field<"ct", std::uint8_t, 5, 0>>;
@@ -741,7 +741,7 @@ using fdcan_fdcan_ttcsm_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint16_t, 31, 16>,
                groov::field<"csm", std::uint16_t, 15, 0>>;
 
@@ -754,7 +754,7 @@ using fdcan_fdcan_ttctc_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint16_t, 31, 22>,
                groov::field<"cc", std::uint8_t, 21, 16>,
                groov::field<"ct", std::uint16_t, 15, 0>>;
@@ -768,23 +768,23 @@ using fdcan_fdcan_ttie_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 19, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 19, common::access::ro>,
                groov::field<"cere", bool, 18, 18>,
                groov::field<"awe", bool, 17, 17>,
                groov::field<"wte", bool, 16, 16>,
                groov::field<"iwtge", bool, 15, 15>,
                groov::field<"elce", bool, 14, 14>,
-               groov::field<"se2e", bit_enable, 13, 13>,
-               groov::field<"se1e", bit_enable, 12, 12>,
+               groov::field<"se2e", common::bittypes::bit_enable, 13, 13>,
+               groov::field<"se1e", common::bittypes::bit_enable, 12, 12>,
                groov::field<"txoe", bool, 11, 11>,
                groov::field<"txue", bool, 10, 10>,
                groov::field<"gtee", bool, 9, 9>,
-               groov::field<"gtde", bit_enable, 8, 8>,
+               groov::field<"gtde", common::bittypes::bit_enable, 8, 8>,
                groov::field<"gtwe", bool, 7, 7>,
                groov::field<"swee", bool, 6, 6>,
-               groov::field<"ttmie", bit_enable, 5, 5>,
-               groov::field<"rtmie", bit_enable, 4, 4>,
+               groov::field<"ttmie", common::bittypes::bit_enable, 5, 5>,
+               groov::field<"rtmie", common::bittypes::bit_enable, 4, 4>,
                groov::field<"soge", bool, 3, 3>,
                groov::field<"csme", bool, 2, 2>,
                groov::field<"smce", bool, 1, 1>,
@@ -799,8 +799,8 @@ using fdcan_fdcan_ttils_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 19, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 19, common::access::ro>,
                groov::field<"cerl", bool, 18, 18>,
                groov::field<"awl", bool, 17, 17>,
                groov::field<"wtl", bool, 16, 16>,
@@ -830,8 +830,8 @@ using fdcan_fdcan_ttir_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 19, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 19, common::access::ro>,
                groov::field<"cer", bool, 18, 18>,
                groov::field<"aw", bool, 17, 17>,
                groov::field<"wt", bool, 16, 16>,
@@ -861,7 +861,7 @@ using fdcan_fdcan_ttlgt_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"gt", std::uint16_t, 31, 16>,
                groov::field<"lt", std::uint16_t, 15, 0>>;
 
@@ -874,10 +874,10 @@ using fdcan_fdcan_ttmlm_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint8_t, 31, 28, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint8_t, 31, 28, common::access::ro>,
                groov::field<"entt", std::uint16_t, 27, 16>,
-               groov::field<"reserved0", std::uint8_t, 15, 12, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 15, 12, common::access::ro>,
                groov::field<"txew", std::uint8_t, 11, 8>,
                groov::field<"css", std::uint8_t, 7, 6>,
                groov::field<"ccm", std::uint8_t, 5, 0>>;
@@ -891,8 +891,8 @@ using fdcan_fdcan_ttocf_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint8_t, 31, 27, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint8_t, 31, 27, common::access::ro>,
                groov::field<"evtp", bool, 26, 26>,
                groov::field<"ecc", bool, 25, 25>,
                groov::field<"egtf", bool, 24, 24>,
@@ -901,8 +901,8 @@ using fdcan_fdcan_ttocf_v1_tt =
                groov::field<"irto", std::uint8_t, 14, 8>,
                groov::field<"ldsdl", std::uint8_t, 7, 5>,
                groov::field<"tm", bool, 4, 4>,
-               groov::field<"gen", bit_enable, 3, 3>,
-               groov::field<"reserved0", bool, 2, 2, access::ro>,
+               groov::field<"gen", common::bittypes::bit_enable, 3, 3>,
+               groov::field<"reserved0", bool, 2, 2, common::access::ro>,
                groov::field<"om", std::uint8_t, 1, 0>>;
 
 // fdcan_fdcan_ttocn_v1: FDCAN_TTOCN
@@ -914,18 +914,18 @@ using fdcan_fdcan_ttocn_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"lckc", bool, 15, 15>,
-               groov::field<"reserved0", bool, 14, 14, access::ro>,
+               groov::field<"reserved0", bool, 14, 14, common::access::ro>,
                groov::field<"escn", bool, 13, 13>,
                groov::field<"nig", bool, 12, 12>,
                groov::field<"tmg", bool, 11, 11>,
                groov::field<"fgp", bool, 10, 10>,
                groov::field<"gcs", bool, 9, 9>,
-               groov::field<"ttie", bit_enable, 8, 8>,
+               groov::field<"ttie", common::bittypes::bit_enable, 8, 8>,
                groov::field<"tmc", std::uint8_t, 7, 6>,
-               groov::field<"rtie", bit_enable, 5, 5>,
+               groov::field<"rtie", common::bittypes::bit_enable, 5, 5>,
                groov::field<"sws", std::uint8_t, 4, 3>,
                groov::field<"swp", bool, 2, 2>,
                groov::field<"ecs", bool, 1, 1>,
@@ -940,16 +940,16 @@ using fdcan_fdcan_ttost_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"spl", bool, 31, 31>,
                groov::field<"wecs", bool, 30, 30>,
                groov::field<"awe", bool, 29, 29>,
-               groov::field<"wfe", bit_enable, 28, 28>,
+               groov::field<"wfe", common::bittypes::bit_enable, 28, 28>,
                groov::field<"gsi", bool, 27, 27>,
                groov::field<"tmp", std::uint8_t, 26, 24>,
                groov::field<"gfi", bool, 23, 23>,
                groov::field<"wgtd", bool, 22, 22>,
-               groov::field<"reserved0", std::uint8_t, 21, 16, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 21, 16, common::access::ro>,
                groov::field<"rto", std::uint8_t, 15, 8>,
                groov::field<"qcs", bool, 7, 7>,
                groov::field<"gtp", bool, 6, 6>,
@@ -966,10 +966,10 @@ using fdcan_fdcan_ttrmc_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"rmps", bool, 31, 31>,
                groov::field<"xtd", bool, 30, 30>,
-               groov::field<"reserved0", bool, 29, 29, access::ro>,
+               groov::field<"reserved0", bool, 29, 29, common::access::ro>,
                groov::field<"rid", std::uint32_t, 28, 0>>;
 
 // fdcan_fdcan_tttmc_v1: FDCAN_TTTMC
@@ -981,11 +981,11 @@ using fdcan_fdcan_tttmc_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint16_t, 31, 23, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint16_t, 31, 23, common::access::ro>,
                groov::field<"tme", std::uint8_t, 22, 16>,
                groov::field<"tmsa", std::uint16_t, 15, 2>,
-               groov::field<"reserved0", std::uint8_t, 1, 0, access::ro>>;
+               groov::field<"reserved0", std::uint8_t, 1, 0, common::access::ro>>;
 
 // fdcan_fdcan_tttmk_v1: FDCAN_TTTMK
 // Used by: FDCAN1, FDCAN2, FDCAN3
@@ -996,9 +996,9 @@ using fdcan_fdcan_tttmk_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"lckm", bool, 31, 31>,
-               groov::field<"reserved0", std::uint8_t, 30, 23, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 30, 23, common::access::ro>,
                groov::field<"ticc", std::uint8_t, 22, 16>,
                groov::field<"tm", std::uint16_t, 15, 0>>;
 
@@ -1011,10 +1011,10 @@ using fdcan_fdcan_ttts_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint32_t, 31, 6, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint32_t, 31, 6, common::access::ro>,
                groov::field<"evtsel", std::uint8_t, 5, 4>,
-               groov::field<"reserved0", std::uint8_t, 3, 2, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 3, 2, common::access::ro>,
                groov::field<"swtdel", std::uint8_t, 1, 0>>;
 
 // fdcan_fdcan_turcf_v1: FDCAN_TURCF
@@ -1026,9 +1026,9 @@ using fdcan_fdcan_turcf_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"elt", bool, 31, 31>,
-               groov::field<"reserved0", bool, 30, 30, access::ro>,
+               groov::field<"reserved0", bool, 30, 30, common::access::ro>,
                groov::field<"dc", std::uint16_t, 29, 16>,
                groov::field<"ncl", std::uint16_t, 15, 0>>;
 
@@ -1041,7 +1041,7 @@ using fdcan_fdcan_turna_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint16_t, 31, 18>,
                groov::field<"nav", std::uint32_t, 17, 0>>;
 
@@ -1054,7 +1054,7 @@ using fdcan_fdcan_txbar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"ar", std::uint32_t, 31, 0>>;
 
 // fdcan_fdcan_txbc_v1: FDCAN_TXBC
@@ -1066,14 +1066,14 @@ using fdcan_fdcan_txbc_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved2", bool, 31, 31, access::ro>,
+             common::access::rw,
+               groov::field<"reserved2", bool, 31, 31, common::access::ro>,
                groov::field<"tfqm", bool, 30, 30>,
                groov::field<"tfqs", std::uint8_t, 29, 24>,
-               groov::field<"reserved1", std::uint8_t, 23, 22, access::ro>,
+               groov::field<"reserved1", std::uint8_t, 23, 22, common::access::ro>,
                groov::field<"ndtb", std::uint8_t, 21, 16>,
                groov::field<"tbsa", std::uint16_t, 15, 2>,
-               groov::field<"reserved0", std::uint8_t, 1, 0, access::ro>>;
+               groov::field<"reserved0", std::uint8_t, 1, 0, common::access::ro>>;
 
 // fdcan_fdcan_txbcf_v1: FDCAN_TXBCF
 // Used by: FDCAN1, FDCAN2, FDCAN3
@@ -1084,7 +1084,7 @@ using fdcan_fdcan_txbcf_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"cf", std::uint32_t, 31, 0>>;
 
 // fdcan_fdcan_txbcie_v1: FDCAN_TXBCIE
@@ -1096,7 +1096,7 @@ using fdcan_fdcan_txbcie_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"cf", std::uint32_t, 31, 0>>;
 
 // fdcan_fdcan_txbcr_v1: FDCAN_TXBCR
@@ -1108,7 +1108,7 @@ using fdcan_fdcan_txbcr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"cr", std::uint32_t, 31, 0>>;
 
 // fdcan_fdcan_txbrp_v1: FDCAN_TXBRP
@@ -1120,7 +1120,7 @@ using fdcan_fdcan_txbrp_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"trp", std::uint32_t, 31, 0>>;
 
 // fdcan_fdcan_txbtie_v1: FDCAN_TXBTIE
@@ -1132,7 +1132,7 @@ using fdcan_fdcan_txbtie_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"tie", std::uint32_t, 31, 0>>;
 
 // fdcan_fdcan_txbto_v1: FDCAN_TXBTO
@@ -1144,7 +1144,7 @@ using fdcan_fdcan_txbto_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"to", std::uint32_t, 31, 0>>;
 
 // fdcan_fdcan_txefa_v1: FDCAN_TXEFA
@@ -1156,8 +1156,8 @@ using fdcan_fdcan_txefa_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 5, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 5, common::access::ro>,
                groov::field<"efai", std::uint8_t, 4, 0>>;
 
 // fdcan_fdcan_txefc_v1: FDCAN_TXEFC
@@ -1169,13 +1169,13 @@ using fdcan_fdcan_txefc_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved2", std::uint8_t, 31, 30, access::ro>,
+             common::access::rw,
+               groov::field<"reserved2", std::uint8_t, 31, 30, common::access::ro>,
                groov::field<"efwm", std::uint8_t, 29, 24>,
-               groov::field<"reserved1", std::uint8_t, 23, 22, access::ro>,
+               groov::field<"reserved1", std::uint8_t, 23, 22, common::access::ro>,
                groov::field<"efs", std::uint8_t, 21, 16>,
                groov::field<"efsa", std::uint16_t, 15, 2>,
-               groov::field<"reserved0", std::uint8_t, 1, 0, access::ro>>;
+               groov::field<"reserved0", std::uint8_t, 1, 0, common::access::ro>>;
 
 // fdcan_fdcan_txefs_v1: FDCAN_TXEFS
 // Used by: FDCAN1, FDCAN2, FDCAN3
@@ -1186,13 +1186,13 @@ using fdcan_fdcan_txefs_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved2", std::uint8_t, 31, 26, access::ro>,
+             common::access::rw,
+               groov::field<"reserved2", std::uint8_t, 31, 26, common::access::ro>,
                groov::field<"tefl", bool, 25, 25>,
                groov::field<"eff", bool, 24, 24>,
-               groov::field<"reserved1", std::uint16_t, 23, 13, access::ro>,
+               groov::field<"reserved1", std::uint16_t, 23, 13, common::access::ro>,
                groov::field<"efgi", std::uint8_t, 12, 8>,
-               groov::field<"reserved0", std::uint8_t, 7, 6, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 7, 6, common::access::ro>,
                groov::field<"effl", std::uint8_t, 5, 0>>;
 
 // fdcan_fdcan_txesc_v1: FDCAN_TXESC
@@ -1204,8 +1204,8 @@ using fdcan_fdcan_txesc_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 3, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 3, common::access::ro>,
                groov::field<"tbds", std::uint8_t, 2, 0>>;
 
 // fdcan_fdcan_txfqs_v1: FDCAN_TXFQS
@@ -1217,7 +1217,7 @@ using fdcan_fdcan_txfqs_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved2", std::uint16_t, 31, 22>,
                groov::field<"tfqf", bool, 21, 21>,
                groov::field<"tfqpi", std::uint8_t, 20, 16>,
@@ -1235,8 +1235,8 @@ using fdcan_fdcan_xidam_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint8_t, 31, 29, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint8_t, 31, 29, common::access::ro>,
                groov::field<"eidm", std::uint32_t, 28, 0>>;
 
 // fdcan_fdcan_xidfc_v1: FDCAN_XIDFC
@@ -1248,11 +1248,11 @@ using fdcan_fdcan_xidfc_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint8_t, 31, 24, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint8_t, 31, 24, common::access::ro>,
                groov::field<"lse", std::uint8_t, 23, 16>,
                groov::field<"flesa", std::uint16_t, 15, 2>,
-               groov::field<"reserved0", std::uint8_t, 1, 0, access::ro>>;
+               groov::field<"reserved0", std::uint8_t, 1, 0, common::access::ro>>;
 
 // fdcan_ie_v1: IE
 // Used by: CAN_CCU
@@ -1263,8 +1263,8 @@ using fdcan_ie_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 2, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 2, common::access::ro>,
                groov::field<"csce", bool, 1, 1>,
                groov::field<"cwee", bool, 0, 0>>;
 
@@ -1277,8 +1277,8 @@ using fdcan_ir_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 2, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 2, common::access::ro>,
                groov::field<"csc", bool, 1, 1>,
                groov::field<"cwe", bool, 0, 0>>;
 

@@ -7,10 +7,22 @@
 namespace stm32::stm32h750x {
 
 namespace crs {
-  using crs_cr_tt = regs::crs_crs_cr_v1_tt;
-  using crs_cfgr_tt = regs::crs_crs_cfgr_v1_tt;
-  using crs_isr_tt = regs::crs_crs_isr_v1_tt;
-  using crs_icr_tt = regs::crs_crs_icr_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using crs_cr_tt = regs::crs_crs_cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using crs_cfgr_tt = regs::crs_crs_cfgr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using crs_isr_tt = regs::crs_crs_isr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using crs_icr_tt = regs::crs_crs_icr_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using crs_t =

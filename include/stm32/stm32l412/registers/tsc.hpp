@@ -16,14 +16,14 @@ using tsc_cr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"ctph", std::uint8_t, 31, 28>,
                groov::field<"ctpl", std::uint8_t, 27, 24>,
                groov::field<"ssd", std::uint8_t, 23, 17>,
                groov::field<"sse", bool, 16, 16>,
                groov::field<"sspsc", bool, 15, 15>,
                groov::field<"pgpsc", std::uint8_t, 14, 12>,
-               groov::field<"reserved0", std::uint8_t, 11, 8, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 11, 8, common::access::ro>,
                groov::field<"mcv", std::uint8_t, 7, 5>,
                groov::field<"iodef", bool, 4, 4>,
                groov::field<"syncpol", bool, 3, 3>,
@@ -40,8 +40,8 @@ using tsc_icr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 2, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 2, common::access::ro>,
                groov::field<"mceic", bool, 1, 1>,
                groov::field<"eoaic", bool, 0, 0>>;
 
@@ -54,10 +54,10 @@ using tsc_ier_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 2, access::ro>,
-               groov::field<"mceie", bit_enable, 1, 1>,
-               groov::field<"eoaie", bit_enable, 0, 0>>;
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 2, common::access::ro>,
+               groov::field<"mceie", common::bittypes::bit_enable, 1, 1>,
+               groov::field<"eoaie", common::bittypes::bit_enable, 0, 0>>;
 
 // tsc_ioascr_v1: IOASCR
 // Used by: TSC
@@ -68,8 +68,8 @@ using tsc_ioascr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint8_t, 31, 28, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint8_t, 31, 28, common::access::ro>,
                groov::field<"g7_io4", bool, 27, 27>,
                groov::field<"g7_io3", bool, 26, 26>,
                groov::field<"g7_io2", bool, 25, 25>,
@@ -108,8 +108,8 @@ using tsc_ioccr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint8_t, 31, 28, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint8_t, 31, 28, common::access::ro>,
                groov::field<"g7_io4", bool, 27, 27>,
                groov::field<"g7_io3", bool, 26, 26>,
                groov::field<"g7_io2", bool, 25, 25>,
@@ -148,7 +148,7 @@ using tsc_iog1cr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint32_t, 31, 14>,
                groov::field<"cnt", std::uint16_t, 13, 0>>;
 
@@ -161,7 +161,7 @@ using tsc_iog2cr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint32_t, 31, 14>,
                groov::field<"cnt", std::uint16_t, 13, 0>>;
 
@@ -174,7 +174,7 @@ using tsc_iog3cr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint32_t, 31, 14>,
                groov::field<"cnt", std::uint16_t, 13, 0>>;
 
@@ -187,7 +187,7 @@ using tsc_iog4cr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint32_t, 31, 14>,
                groov::field<"cnt", std::uint16_t, 13, 0>>;
 
@@ -200,7 +200,7 @@ using tsc_iog5cr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint32_t, 31, 14>,
                groov::field<"cnt", std::uint16_t, 13, 0>>;
 
@@ -213,7 +213,7 @@ using tsc_iog6cr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint32_t, 31, 14>,
                groov::field<"cnt", std::uint16_t, 13, 0>>;
 
@@ -226,7 +226,7 @@ using tsc_iog7cr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint32_t, 31, 14>,
                groov::field<"cnt", std::uint16_t, 13, 0>>;
 
@@ -239,7 +239,7 @@ using tsc_iog8cr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint32_t, 31, 14>,
                groov::field<"cnt", std::uint16_t, 13, 0>>;
 
@@ -252,23 +252,23 @@ using tsc_iogcsr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint16_t, 31, 23, access::ro>,
-               groov::field<"g7s", bool, 22, 22, access::ro>,
-               groov::field<"g6s", bool, 21, 21, access::ro>,
-               groov::field<"g5s", bool, 20, 20, access::ro>,
-               groov::field<"g4s", bool, 19, 19, access::ro>,
-               groov::field<"g3s", bool, 18, 18, access::ro>,
-               groov::field<"g2s", bool, 17, 17, access::ro>,
-               groov::field<"g1s", bool, 16, 16, access::ro>,
-               groov::field<"reserved0", std::uint16_t, 15, 7, access::ro>,
-               groov::field<"g7e", bit_enable, 6, 6>,
-               groov::field<"g6e", bit_enable, 5, 5>,
-               groov::field<"g5e", bit_enable, 4, 4>,
-               groov::field<"g4e", bit_enable, 3, 3>,
-               groov::field<"g3e", bit_enable, 2, 2>,
-               groov::field<"g2e", bit_enable, 1, 1>,
-               groov::field<"g1e", bit_enable, 0, 0>>;
+             common::access::rw,
+               groov::field<"reserved1", std::uint16_t, 31, 23, common::access::ro>,
+               groov::field<"g7s", bool, 22, 22, common::access::ro>,
+               groov::field<"g6s", bool, 21, 21, common::access::ro>,
+               groov::field<"g5s", bool, 20, 20, common::access::ro>,
+               groov::field<"g4s", bool, 19, 19, common::access::ro>,
+               groov::field<"g3s", bool, 18, 18, common::access::ro>,
+               groov::field<"g2s", bool, 17, 17, common::access::ro>,
+               groov::field<"g1s", bool, 16, 16, common::access::ro>,
+               groov::field<"reserved0", std::uint16_t, 15, 7, common::access::ro>,
+               groov::field<"g7e", common::bittypes::bit_enable, 6, 6>,
+               groov::field<"g6e", common::bittypes::bit_enable, 5, 5>,
+               groov::field<"g5e", common::bittypes::bit_enable, 4, 4>,
+               groov::field<"g4e", common::bittypes::bit_enable, 3, 3>,
+               groov::field<"g3e", common::bittypes::bit_enable, 2, 2>,
+               groov::field<"g2e", common::bittypes::bit_enable, 1, 1>,
+               groov::field<"g1e", common::bittypes::bit_enable, 0, 0>>;
 
 // tsc_iohcr_v1: IOHCR
 // Used by: TSC
@@ -279,8 +279,8 @@ using tsc_iohcr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint8_t, 31, 28, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint8_t, 31, 28, common::access::ro>,
                groov::field<"g7_io4", bool, 27, 27>,
                groov::field<"g7_io3", bool, 26, 26>,
                groov::field<"g7_io2", bool, 25, 25>,
@@ -319,8 +319,8 @@ using tsc_ioscr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint8_t, 31, 28, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint8_t, 31, 28, common::access::ro>,
                groov::field<"g7_io4", bool, 27, 27>,
                groov::field<"g7_io3", bool, 26, 26>,
                groov::field<"g7_io2", bool, 25, 25>,
@@ -359,8 +359,8 @@ using tsc_isr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 2, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 2, common::access::ro>,
                groov::field<"mcef", bool, 1, 1>,
                groov::field<"eoaf", bool, 0, 0>>;
 

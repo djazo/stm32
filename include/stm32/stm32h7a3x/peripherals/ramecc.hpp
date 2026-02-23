@@ -7,37 +7,130 @@
 namespace stm32::stm32h7a3x {
 
 namespace ramecc {
-  using ier_tt = regs::ramecc_ier_v1_tt;
-  using m1cr_tt = regs::ramecc_m1cr_v1_tt;
-  using m1sr_tt = regs::ramecc_m1sr_v1_tt;
-  using m1far_tt = regs::ramecc_m1far_v1_tt;
-  using m1fdrl_tt = regs::ramecc_m1fdrl_v1_tt;
-  using m1fdrh_tt = regs::ramecc_m1fdrh_v1_tt;
-  using m1fecr_tt = regs::ramecc_m1fecr_v1_tt;
-  using m2cr_tt = regs::ramecc_m2cr_v1_tt;
-  using m2sr_tt = regs::ramecc_m2sr_v1_tt;
-  using m2far_tt = regs::ramecc_m2far_v1_tt;
-  using m2fdrl_tt = regs::ramecc_m2fdrl_v1_tt;
-  using m2fdrh_tt = regs::ramecc_m2fdrh_v1_tt;
-  using m2fecr_tt = regs::ramecc_m2fecr_v1_tt;
-  using m3cr_tt = regs::ramecc_m3cr_v1_tt;
-  using m3sr_tt = regs::ramecc_m3sr_v1_tt;
-  using m3far_tt = regs::ramecc_m3far_v1_tt;
-  using m3fdrl_tt = regs::ramecc_m3fdrl_v1_tt;
-  using m3fdrh_tt = regs::ramecc_m3fdrh_v1_tt;
-  using m3fecr_tt = regs::ramecc_m3fecr_v1_tt;
-  using m4cr_tt = regs::ramecc_m4cr_v1_tt;
-  using m4sr_tt = regs::ramecc_m4sr_v1_tt;
-  using m4far_tt = regs::ramecc_m4far_v1_tt;
-  using m4fdrl_tt = regs::ramecc_m4fdrl_v1_tt;
-  using m4fdrh_tt = regs::ramecc_m4fdrh_v1_tt;
-  using m4fecr_tt = regs::ramecc_m4fecr_v1_tt;
-  using m5cr_tt = regs::ramecc_m5cr_v1_tt;
-  using m5sr_tt = regs::ramecc_m5sr_v1_tt;
-  using m5far_tt = regs::ramecc_m5far_v1_tt;
-  using m5fdrl_tt = regs::ramecc_m5fdrl_v1_tt;
-  using m5fdrh_tt = regs::ramecc_m5fdrh_v1_tt;
-  using m5fecr_tt = regs::ramecc_m5fecr_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ier_tt = regs::ramecc_ier_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using m1cr_tt = regs::ramecc_m1cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using m1sr_tt = regs::ramecc_m1sr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using m1far_tt = regs::ramecc_m1far_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using m1fdrl_tt = regs::ramecc_m1fdrl_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using m1fdrh_tt = regs::ramecc_m1fdrh_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using m1fecr_tt = regs::ramecc_m1fecr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using m2cr_tt = regs::ramecc_m2cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using m2sr_tt = regs::ramecc_m2sr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using m2far_tt = regs::ramecc_m2far_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using m2fdrl_tt = regs::ramecc_m2fdrl_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using m2fdrh_tt = regs::ramecc_m2fdrh_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using m2fecr_tt = regs::ramecc_m2fecr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using m3cr_tt = regs::ramecc_m3cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using m3sr_tt = regs::ramecc_m3sr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using m3far_tt = regs::ramecc_m3far_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using m3fdrl_tt = regs::ramecc_m3fdrl_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using m3fdrh_tt = regs::ramecc_m3fdrh_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using m3fecr_tt = regs::ramecc_m3fecr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using m4cr_tt = regs::ramecc_m4cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using m4sr_tt = regs::ramecc_m4sr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using m4far_tt = regs::ramecc_m4far_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using m4fdrl_tt = regs::ramecc_m4fdrl_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using m4fdrh_tt = regs::ramecc_m4fdrh_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using m4fecr_tt = regs::ramecc_m4fecr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using m5cr_tt = regs::ramecc_m5cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using m5sr_tt = regs::ramecc_m5sr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using m5far_tt = regs::ramecc_m5far_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using m5fdrl_tt = regs::ramecc_m5fdrl_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using m5fdrh_tt = regs::ramecc_m5fdrh_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using m5fecr_tt = regs::ramecc_m5fecr_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using ramecc_t =

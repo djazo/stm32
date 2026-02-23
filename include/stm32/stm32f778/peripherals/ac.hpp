@@ -7,12 +7,30 @@
 namespace stm32::stm32f778 {
 
 namespace ac {
-  using itcmcr_tt = regs::ac_itcmcr_v1_tt;
-  using dtcmcr_tt = regs::ac_dtcmcr_v1_tt;
-  using ahbpcr_tt = regs::ac_ahbpcr_v1_tt;
-  using cacr_tt = regs::ac_cacr_v1_tt;
-  using ahbscr_tt = regs::ac_ahbscr_v1_tt;
-  using abfsr_tt = regs::ac_abfsr_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using itcmcr_tt = regs::ac_itcmcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dtcmcr_tt = regs::ac_dtcmcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ahbpcr_tt = regs::ac_ahbpcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cacr_tt = regs::ac_cacr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ahbscr_tt = regs::ac_ahbscr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using abfsr_tt = regs::ac_abfsr_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using ac_t =

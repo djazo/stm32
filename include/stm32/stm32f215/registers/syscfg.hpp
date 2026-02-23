@@ -16,10 +16,10 @@ using syscfg_cmpcr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint32_t, 31, 8, access::ro>,
-               groov::field<"ready", bool, 7, 7, access::ro>,
-               groov::field<"reserved0", std::uint8_t, 6, 1, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint32_t, 31, 8, common::access::ro>,
+               groov::field<"ready", bool, 7, 7, common::access::ro>,
+               groov::field<"reserved0", std::uint8_t, 6, 1, common::access::ro>,
                groov::field<"cmp_pd", bool, 0, 0>>;
 
 // syscfg_exticr1_v1: EXTICR1
@@ -31,8 +31,8 @@ using syscfg_exticr1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"exti3", std::uint8_t, 15, 12>,
                groov::field<"exti2", std::uint8_t, 11, 8>,
                groov::field<"exti1", std::uint8_t, 7, 4>,
@@ -47,8 +47,8 @@ using syscfg_exticr2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"exti7", std::uint8_t, 15, 12>,
                groov::field<"exti6", std::uint8_t, 11, 8>,
                groov::field<"exti5", std::uint8_t, 7, 4>,
@@ -63,8 +63,8 @@ using syscfg_exticr3_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"exti11", std::uint8_t, 15, 12>,
                groov::field<"exti10", std::uint8_t, 11, 8>,
                groov::field<"exti9", std::uint8_t, 7, 4>,
@@ -79,8 +79,8 @@ using syscfg_exticr4_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"exti15", std::uint8_t, 15, 12>,
                groov::field<"exti14", std::uint8_t, 11, 8>,
                groov::field<"exti13", std::uint8_t, 7, 4>,
@@ -95,8 +95,8 @@ using syscfg_memrm_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 2, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 2, common::access::ro>,
                groov::field<"mem_mode", std::uint8_t, 1, 0>>;
 
 // syscfg_pmc_v1: PMC
@@ -108,9 +108,9 @@ using syscfg_pmc_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint8_t, 31, 24, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint8_t, 31, 24, common::access::ro>,
                groov::field<"mii_rmii_sel", bool, 23, 23>,
-               groov::field<"reserved0", std::uint32_t, 22, 0, access::ro>>;
+               groov::field<"reserved0", std::uint32_t, 22, 0, common::access::ro>>;
 
 } // namespace stm32::regs

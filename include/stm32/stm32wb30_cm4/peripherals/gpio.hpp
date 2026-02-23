@@ -6,22 +6,55 @@
 
 namespace stm32::stm32wb30_cm4 {
 
-namespace gpiox {
-  using moder_tt = regs::gpio_moder_v1_tt;
-  using otyper_tt = regs::gpio_otyper_v1_tt;
-  using ospeedr_tt = regs::gpio_ospeedr_v1_tt;
-  using pupdr_tt = regs::gpio_pupdr_v1_tt;
-  using idr_tt = regs::gpio_idr_v1_tt;
-  using odr_tt = regs::gpio_odr_v1_tt;
-  using bsrr_tt = regs::gpio_bsrr_v1_tt;
-  using lckr_tt = regs::gpio_lckr_v1_tt;
-  using afrl_tt = regs::gpio_afrl_v1_tt;
-  using afrh_tt = regs::gpio_afrh_v1_tt;
-  using brr_tt = regs::gpio_brr_v1_tt;
+namespace gpioa {
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using moder_tt = regs::gpio_moder_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otyper_tt = regs::gpio_otyper_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ospeedr_tt = regs::gpio_ospeedr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using pupdr_tt = regs::gpio_pupdr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using idr_tt = regs::gpio_idr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using odr_tt = regs::gpio_odr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using bsrr_tt = regs::gpio_bsrr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using lckr_tt = regs::gpio_lckr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using afrl_tt = regs::gpio_afrl_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using afrh_tt = regs::gpio_afrh_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using brr_tt = regs::gpio_brr_v1_tt<name, baseaddress, offset>;
 
-  template <stdx::ct_string name, std::uint32_t baseaddress>
-  using gpiox_t =
-    groov::group<name,
+  template <std::uint32_t baseaddress>
+  using gpioa_t =
+    groov::group<"gpioa",
                  groov::mmio_bus<>,
                  moder_tt<"moder", baseaddress, 0x0>,
                  otyper_tt<"otyper", baseaddress, 0x4>,
@@ -35,20 +68,181 @@ namespace gpiox {
                  afrh_tt<"afrh", baseaddress, 0x24>,
                  brr_tt<"brr", baseaddress, 0x28>>;
 
-} // namespace gpiox
+} // namespace gpioa
+
+namespace gpiob {
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using moder_tt = regs::gpio_moder_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otyper_tt = regs::gpio_otyper_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ospeedr_tt = regs::gpio_ospeedr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using pupdr_tt = regs::gpio_pupdr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using idr_tt = regs::gpio_idr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using odr_tt = regs::gpio_odr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using bsrr_tt = regs::gpio_bsrr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using lckr_tt = regs::gpio_lckr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using afrl_tt = regs::gpio_afrl_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using afrh_tt = regs::gpio_afrh_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using brr_tt = regs::gpio_brr_v1_tt<name, baseaddress, offset>;
+
+  template <std::uint32_t baseaddress>
+  using gpiob_t =
+    groov::group<"gpiob",
+                 groov::mmio_bus<>,
+                 moder_tt<"moder", baseaddress, 0x0>,
+                 otyper_tt<"otyper", baseaddress, 0x4>,
+                 ospeedr_tt<"ospeedr", baseaddress, 0x8>,
+                 pupdr_tt<"pupdr", baseaddress, 0xc>,
+                 idr_tt<"idr", baseaddress, 0x10>,
+                 odr_tt<"odr", baseaddress, 0x14>,
+                 bsrr_tt<"bsrr", baseaddress, 0x18>,
+                 lckr_tt<"lckr", baseaddress, 0x1c>,
+                 afrl_tt<"afrl", baseaddress, 0x20>,
+                 afrh_tt<"afrh", baseaddress, 0x24>,
+                 brr_tt<"brr", baseaddress, 0x28>>;
+
+} // namespace gpiob
+
+namespace gpioc {
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using moder_tt = regs::gpio_moder_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otyper_tt = regs::gpio_otyper_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ospeedr_tt = regs::gpio_ospeedr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using pupdr_tt = regs::gpio_pupdr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using idr_tt = regs::gpio_idr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using odr_tt = regs::gpio_odr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using bsrr_tt = regs::gpio_bsrr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using lckr_tt = regs::gpio_lckr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using afrl_tt = regs::gpio_afrl_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using afrh_tt = regs::gpio_afrh_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using brr_tt = regs::gpio_brr_v1_tt<name, baseaddress, offset>;
+
+  template <std::uint32_t baseaddress>
+  using gpioc_t =
+    groov::group<"gpioc",
+                 groov::mmio_bus<>,
+                 moder_tt<"moder", baseaddress, 0x0>,
+                 otyper_tt<"otyper", baseaddress, 0x4>,
+                 ospeedr_tt<"ospeedr", baseaddress, 0x8>,
+                 pupdr_tt<"pupdr", baseaddress, 0xc>,
+                 idr_tt<"idr", baseaddress, 0x10>,
+                 odr_tt<"odr", baseaddress, 0x14>,
+                 bsrr_tt<"bsrr", baseaddress, 0x18>,
+                 lckr_tt<"lckr", baseaddress, 0x1c>,
+                 afrl_tt<"afrl", baseaddress, 0x20>,
+                 afrh_tt<"afrh", baseaddress, 0x24>,
+                 brr_tt<"brr", baseaddress, 0x28>>;
+
+} // namespace gpioc
 
 namespace gpioe {
-  using moder_tt = regs::gpio_moder_v2_tt;
-  using otyper_tt = regs::gpio_otyper_v2_tt;
-  using ospeedr_tt = regs::gpio_ospeedr_v2_tt;
-  using pupdr_tt = regs::gpio_pupdr_v2_tt;
-  using idr_tt = regs::gpio_idr_v2_tt;
-  using odr_tt = regs::gpio_odr_v2_tt;
-  using bsrr_tt = regs::gpio_bsrr_v2_tt;
-  using lckr_tt = regs::gpio_lckr_v2_tt;
-  using afrl_tt = regs::gpio_afrl_v2_tt;
-  using afrh_tt = regs::gpio_afrh_v1_tt;
-  using brr_tt = regs::gpio_brr_v2_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using moder_tt = regs::gpio_moder_v2_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otyper_tt = regs::gpio_otyper_v2_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ospeedr_tt = regs::gpio_ospeedr_v2_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using pupdr_tt = regs::gpio_pupdr_v2_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using idr_tt = regs::gpio_idr_v2_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using odr_tt = regs::gpio_odr_v2_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using bsrr_tt = regs::gpio_bsrr_v2_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using lckr_tt = regs::gpio_lckr_v2_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using afrl_tt = regs::gpio_afrl_v2_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using afrh_tt = regs::gpio_afrh_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using brr_tt = regs::gpio_brr_v2_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using gpioe_t =
@@ -69,17 +263,50 @@ namespace gpioe {
 } // namespace gpioe
 
 namespace gpioh {
-  using moder_tt = regs::gpio_moder_v3_tt;
-  using otyper_tt = regs::gpio_otyper_v3_tt;
-  using ospeedr_tt = regs::gpio_ospeedr_v3_tt;
-  using pupdr_tt = regs::gpio_pupdr_v3_tt;
-  using idr_tt = regs::gpio_idr_v3_tt;
-  using odr_tt = regs::gpio_odr_v3_tt;
-  using bsrr_tt = regs::gpio_bsrr_v3_tt;
-  using lckr_tt = regs::gpio_lckr_v3_tt;
-  using afrl_tt = regs::gpio_afrl_v3_tt;
-  using afrh_tt = regs::gpio_afrh_v1_tt;
-  using brr_tt = regs::gpio_brr_v3_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using moder_tt = regs::gpio_moder_v3_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otyper_tt = regs::gpio_otyper_v3_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ospeedr_tt = regs::gpio_ospeedr_v3_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using pupdr_tt = regs::gpio_pupdr_v3_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using idr_tt = regs::gpio_idr_v3_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using odr_tt = regs::gpio_odr_v3_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using bsrr_tt = regs::gpio_bsrr_v3_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using lckr_tt = regs::gpio_lckr_v3_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using afrl_tt = regs::gpio_afrl_v3_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using afrh_tt = regs::gpio_afrh_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using brr_tt = regs::gpio_brr_v3_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using gpioh_t =

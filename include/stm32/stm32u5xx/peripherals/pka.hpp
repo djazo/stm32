@@ -7,9 +7,18 @@
 namespace stm32::stm32u5xx {
 
 namespace pkax {
-  using cr_tt = regs::pka_cr_v1_tt;
-  using sr_tt = regs::pka_sr_v1_tt;
-  using clrfr_tt = regs::pka_clrfr_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cr_tt = regs::pka_cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using sr_tt = regs::pka_sr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using clrfr_tt = regs::pka_clrfr_v1_tt<name, baseaddress, offset>;
 
   template <stdx::ct_string name, std::uint32_t baseaddress>
   using pkax_t =

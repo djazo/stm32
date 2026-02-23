@@ -16,10 +16,10 @@ using dac_dac_autocr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint16_t, 31, 23, access::ro>,
-               groov::field<"automode", bit_enable, 22, 22>,
-               groov::field<"reserved0", std::uint32_t, 21, 0, access::ro>>;
+             common::access::rw,
+               groov::field<"reserved1", std::uint16_t, 31, 23, common::access::ro>,
+               groov::field<"automode", common::bittypes::bit_enable, 22, 22>,
+               groov::field<"reserved0", std::uint32_t, 21, 0, common::access::ro>>;
 
 // dac_dac_ccr_v1: DAC_CCR
 // Used by: DAC1, SEC_DAC1
@@ -30,10 +30,10 @@ using dac_dac_ccr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint16_t, 31, 21, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint16_t, 31, 21, common::access::ro>,
                groov::field<"otrim2", std::uint8_t, 20, 16>,
-               groov::field<"reserved0", std::uint16_t, 15, 5, access::ro>,
+               groov::field<"reserved0", std::uint16_t, 15, 5, common::access::ro>,
                groov::field<"otrim1", std::uint8_t, 4, 0>>;
 
 // dac_dac_cr_v1: DAC_CR
@@ -45,8 +45,8 @@ using dac_dac_cr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", bool, 31, 31, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", bool, 31, 31, common::access::ro>,
                groov::field<"cen2", bool, 30, 30>,
                groov::field<"dmaudrie2", bool, 29, 29>,
                groov::field<"dmaen2", bool, 28, 28>,
@@ -55,7 +55,7 @@ using dac_dac_cr_v1_tt =
                groov::field<"tsel2", std::uint8_t, 21, 18>,
                groov::field<"ten2", bool, 17, 17>,
                groov::field<"en2", bool, 16, 16>,
-               groov::field<"reserved0", bool, 15, 15, access::ro>,
+               groov::field<"reserved0", bool, 15, 15, common::access::ro>,
                groov::field<"cen1", bool, 14, 14>,
                groov::field<"dmaudrie1", bool, 13, 13>,
                groov::field<"dmaen1", bool, 12, 12>,
@@ -74,11 +74,11 @@ using dac_dac_dhr12l1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dacc1dhrb", std::uint16_t, 31, 20>,
-               groov::field<"reserved1", std::uint8_t, 19, 16, access::ro>,
+               groov::field<"reserved1", std::uint8_t, 19, 16, common::access::ro>,
                groov::field<"dacc1dhr", std::uint16_t, 15, 4>,
-               groov::field<"reserved0", std::uint8_t, 3, 0, access::ro>>;
+               groov::field<"reserved0", std::uint8_t, 3, 0, common::access::ro>>;
 
 // dac_dac_dhr12l2_v1: DAC_DHR12L2
 // Used by: DAC1, SEC_DAC1
@@ -89,11 +89,11 @@ using dac_dac_dhr12l2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dacc2dhrb", std::uint16_t, 31, 20>,
-               groov::field<"reserved1", std::uint8_t, 19, 16, access::ro>,
+               groov::field<"reserved1", std::uint8_t, 19, 16, common::access::ro>,
                groov::field<"dacc2dhr", std::uint16_t, 15, 4>,
-               groov::field<"reserved0", std::uint8_t, 3, 0, access::ro>>;
+               groov::field<"reserved0", std::uint8_t, 3, 0, common::access::ro>>;
 
 // dac_dac_dhr12ld_v1: DAC_DHR12LD
 // Used by: DAC1, SEC_DAC1
@@ -104,11 +104,11 @@ using dac_dac_dhr12ld_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dacc2dhr", std::uint16_t, 31, 20>,
-               groov::field<"reserved1", std::uint8_t, 19, 16, access::ro>,
+               groov::field<"reserved1", std::uint8_t, 19, 16, common::access::ro>,
                groov::field<"dacc1dhr", std::uint16_t, 15, 4>,
-               groov::field<"reserved0", std::uint8_t, 3, 0, access::ro>>;
+               groov::field<"reserved0", std::uint8_t, 3, 0, common::access::ro>>;
 
 // dac_dac_dhr12r1_v1: DAC_DHR12R1
 // Used by: DAC1, SEC_DAC1
@@ -119,10 +119,10 @@ using dac_dac_dhr12r1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint8_t, 31, 28, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint8_t, 31, 28, common::access::ro>,
                groov::field<"dacc1dhrb", std::uint16_t, 27, 16>,
-               groov::field<"reserved0", std::uint8_t, 15, 12, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 15, 12, common::access::ro>,
                groov::field<"dacc1dhr", std::uint16_t, 11, 0>>;
 
 // dac_dac_dhr12r2_v1: DAC_DHR12R2
@@ -134,10 +134,10 @@ using dac_dac_dhr12r2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint8_t, 31, 28, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint8_t, 31, 28, common::access::ro>,
                groov::field<"dacc2dhrb", std::uint16_t, 27, 16>,
-               groov::field<"reserved0", std::uint8_t, 15, 12, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 15, 12, common::access::ro>,
                groov::field<"dacc2dhr", std::uint16_t, 11, 0>>;
 
 // dac_dac_dhr12rd_v1: DAC_DHR12RD
@@ -149,10 +149,10 @@ using dac_dac_dhr12rd_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint8_t, 31, 28, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint8_t, 31, 28, common::access::ro>,
                groov::field<"dacc2dhr", std::uint16_t, 27, 16>,
-               groov::field<"reserved0", std::uint8_t, 15, 12, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 15, 12, common::access::ro>,
                groov::field<"dacc1dhr", std::uint16_t, 11, 0>>;
 
 // dac_dac_dhr8r1_v1: DAC_DHR8R1
@@ -164,8 +164,8 @@ using dac_dac_dhr8r1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"dacc1dhrb", std::uint8_t, 15, 8>,
                groov::field<"dacc1dhr", std::uint8_t, 7, 0>>;
 
@@ -178,8 +178,8 @@ using dac_dac_dhr8r2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"dacc2dhrb", std::uint8_t, 15, 8>,
                groov::field<"dacc2dhr", std::uint8_t, 7, 0>>;
 
@@ -192,8 +192,8 @@ using dac_dac_dhr8rd_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"dacc2dhr", std::uint8_t, 15, 8>,
                groov::field<"dacc1dhr", std::uint8_t, 7, 0>>;
 
@@ -206,7 +206,7 @@ using dac_dac_dor1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved1", std::uint8_t, 31, 28>,
                groov::field<"dacc1dorb", std::uint16_t, 27, 16>,
                groov::field<"reserved0", std::uint8_t, 15, 12>,
@@ -221,7 +221,7 @@ using dac_dac_dor2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved1", std::uint8_t, 31, 28>,
                groov::field<"dacc2dorb", std::uint16_t, 27, 16>,
                groov::field<"reserved0", std::uint8_t, 15, 12>,
@@ -236,17 +236,17 @@ using dac_dac_mcr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved3", std::uint8_t, 31, 26, access::ro>,
+             common::access::rw,
+               groov::field<"reserved3", std::uint8_t, 31, 26, common::access::ro>,
                groov::field<"sinformat2", bool, 25, 25>,
                groov::field<"dmadouble2", bool, 24, 24>,
-               groov::field<"reserved2", std::uint8_t, 23, 19, access::ro>,
+               groov::field<"reserved2", std::uint8_t, 23, 19, common::access::ro>,
                groov::field<"mode2", std::uint8_t, 18, 16>,
                groov::field<"hfsel", std::uint8_t, 15, 14>,
-               groov::field<"reserved1", std::uint8_t, 13, 10, access::ro>,
+               groov::field<"reserved1", std::uint8_t, 13, 10, common::access::ro>,
                groov::field<"sinformat1", bool, 9, 9>,
                groov::field<"dmadouble1", bool, 8, 8>,
-               groov::field<"reserved0", std::uint8_t, 7, 3, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 7, 3, common::access::ro>,
                groov::field<"mode1", std::uint8_t, 2, 0>>;
 
 // dac_dac_shhr_v1: DAC_SHHR
@@ -258,10 +258,10 @@ using dac_dac_shhr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint8_t, 31, 26, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint8_t, 31, 26, common::access::ro>,
                groov::field<"thold2", std::uint16_t, 25, 16>,
-               groov::field<"reserved0", std::uint8_t, 15, 10, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 15, 10, common::access::ro>,
                groov::field<"thold1", std::uint16_t, 9, 0>>;
 
 // dac_dac_shrr_v1: DAC_SHRR
@@ -273,10 +273,10 @@ using dac_dac_shrr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint8_t, 31, 24, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint8_t, 31, 24, common::access::ro>,
                groov::field<"trefresh2", std::uint8_t, 23, 16>,
-               groov::field<"reserved0", std::uint8_t, 15, 8, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 15, 8, common::access::ro>,
                groov::field<"trefresh1", std::uint8_t, 7, 0>>;
 
 // dac_dac_shsr1_v1: DAC_SHSR1
@@ -288,8 +288,8 @@ using dac_dac_shsr1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 10, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 10, common::access::ro>,
                groov::field<"tsample1", std::uint16_t, 9, 0>>;
 
 // dac_dac_shsr2_v1: DAC_SHSR2
@@ -301,8 +301,8 @@ using dac_dac_shsr2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 10, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 10, common::access::ro>,
                groov::field<"tsample2", std::uint16_t, 9, 0>>;
 
 // dac_dac_sr_v1: DAC_SR
@@ -314,19 +314,19 @@ using dac_dac_sr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"bwst2", bool, 31, 31, access::ro>,
-               groov::field<"cal_flag2", bool, 30, 30, access::ro>,
+             common::access::rw,
+               groov::field<"bwst2", bool, 31, 31, common::access::ro>,
+               groov::field<"cal_flag2", bool, 30, 30, common::access::ro>,
                groov::field<"dmaudr2", bool, 29, 29>,
-               groov::field<"dorstat2", bool, 28, 28, access::ro>,
-               groov::field<"dac2rdy", bit_ready, 27, 27, access::ro>,
-               groov::field<"reserved1", std::uint16_t, 26, 16, access::ro>,
-               groov::field<"bwst1", bool, 15, 15, access::ro>,
-               groov::field<"cal_flag1", bool, 14, 14, access::ro>,
+               groov::field<"dorstat2", bool, 28, 28, common::access::ro>,
+               groov::field<"dac2rdy", common::bittypes::bit_ready, 27, 27, common::access::ro>,
+               groov::field<"reserved1", std::uint16_t, 26, 16, common::access::ro>,
+               groov::field<"bwst1", bool, 15, 15, common::access::ro>,
+               groov::field<"cal_flag1", bool, 14, 14, common::access::ro>,
                groov::field<"dmaudr1", bool, 13, 13>,
-               groov::field<"dorstat1", bool, 12, 12, access::ro>,
-               groov::field<"dac1rdy", bit_ready, 11, 11, access::ro>,
-               groov::field<"reserved0", std::uint16_t, 10, 0, access::ro>>;
+               groov::field<"dorstat1", bool, 12, 12, common::access::ro>,
+               groov::field<"dac1rdy", common::bittypes::bit_ready, 11, 11, common::access::ro>,
+               groov::field<"reserved0", std::uint16_t, 10, 0, common::access::ro>>;
 
 // dac_dac_swtrgr_v1: DAC_SWTRGR
 // Used by: DAC1, SEC_DAC1
@@ -337,8 +337,8 @@ using dac_dac_swtrgr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::wo,
-               groov::field<"reserved0", std::uint32_t, 31, 2, access::ro>,
+             common::access::wo,
+               groov::field<"reserved0", std::uint32_t, 31, 2, common::access::ro>,
                groov::field<"swtrig2", bool, 1, 1>,
                groov::field<"swtrig1", bool, 0, 0>>;
 

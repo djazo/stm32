@@ -16,10 +16,10 @@ using pwr_pwr_cr1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint32_t, 31, 6, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint32_t, 31, 6, common::access::ro>,
                groov::field<"fpd_slp", bool, 5, 5>,
-               groov::field<"reserved0", bool, 4, 4, access::ro>,
+               groov::field<"reserved0", bool, 4, 4, common::access::ro>,
                groov::field<"fpd_stop", bool, 3, 3>,
                groov::field<"lpms", std::uint8_t, 2, 0>>;
 
@@ -32,14 +32,14 @@ using pwr_pwr_cr3_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved3", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved3", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"eiwul", bool, 15, 15>,
-               groov::field<"reserved2", std::uint8_t, 14, 11, access::ro>,
+               groov::field<"reserved2", std::uint8_t, 14, 11, common::access::ro>,
                groov::field<"apc", bool, 10, 10>,
-               groov::field<"reserved1", std::uint8_t, 9, 6, access::ro>,
+               groov::field<"reserved1", std::uint8_t, 9, 6, common::access::ro>,
                groov::field<"ewup6", bool, 5, 5>,
-               groov::field<"reserved0", bool, 4, 4, access::ro>,
+               groov::field<"reserved0", bool, 4, 4, common::access::ro>,
                groov::field<"ewup4", bool, 3, 3>,
                groov::field<"ewup3", bool, 2, 2>,
                groov::field<"ewup2", bool, 1, 1>,
@@ -54,10 +54,10 @@ using pwr_pwr_cr4_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint32_t, 31, 6, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint32_t, 31, 6, common::access::ro>,
                groov::field<"wp6", bool, 5, 5>,
-               groov::field<"reserved0", bool, 4, 4, access::ro>,
+               groov::field<"reserved0", bool, 4, 4, common::access::ro>,
                groov::field<"wp4", bool, 3, 3>,
                groov::field<"wp3", bool, 2, 2>,
                groov::field<"wp2", bool, 1, 1>,
@@ -72,8 +72,8 @@ using pwr_pwr_pdcra_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"pd15", bool, 15, 15>,
                groov::field<"pd14", bool, 14, 14>,
                groov::field<"pd13", bool, 13, 13>,
@@ -100,11 +100,11 @@ using pwr_pwr_pdcrb_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint32_t, 31, 8, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint32_t, 31, 8, common::access::ro>,
                groov::field<"pd7", bool, 7, 7>,
                groov::field<"pd6", bool, 6, 6>,
-               groov::field<"reserved0", std::uint8_t, 5, 0, access::ro>>;
+               groov::field<"reserved0", std::uint8_t, 5, 0, common::access::ro>>;
 
 // pwr_pwr_pdcrc_v1: PWR_PDCRC
 // Used by: PWR
@@ -115,11 +115,11 @@ using pwr_pwr_pdcrc_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"pd15", bool, 15, 15>,
                groov::field<"pd14", bool, 14, 14>,
-               groov::field<"reserved0", std::uint16_t, 13, 0, access::ro>>;
+               groov::field<"reserved0", std::uint16_t, 13, 0, common::access::ro>>;
 
 // pwr_pwr_pdcrd_v1: PWR_PDCRD
 // Used by: PWR
@@ -130,8 +130,8 @@ using pwr_pwr_pdcrd_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 4, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 4, common::access::ro>,
                groov::field<"pd3", bool, 3, 3>,
                groov::field<"pd2", bool, 2, 2>,
                groov::field<"pd1", bool, 1, 1>,
@@ -146,10 +146,10 @@ using pwr_pwr_pdcrf_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint32_t, 31, 3, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint32_t, 31, 3, common::access::ro>,
                groov::field<"pd2", bool, 2, 2>,
-               groov::field<"reserved0", std::uint8_t, 1, 0, access::ro>>;
+               groov::field<"reserved0", std::uint8_t, 1, 0, common::access::ro>>;
 
 // pwr_pwr_pucra_v1: PWR_PUCRA
 // Used by: PWR
@@ -160,8 +160,8 @@ using pwr_pwr_pucra_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"pu15", bool, 15, 15>,
                groov::field<"pu14", bool, 14, 14>,
                groov::field<"pu13", bool, 13, 13>,
@@ -188,11 +188,11 @@ using pwr_pwr_pucrb_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint32_t, 31, 8, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint32_t, 31, 8, common::access::ro>,
                groov::field<"pu7", bool, 7, 7>,
                groov::field<"pu6", bool, 6, 6>,
-               groov::field<"reserved0", std::uint8_t, 5, 0, access::ro>>;
+               groov::field<"reserved0", std::uint8_t, 5, 0, common::access::ro>>;
 
 // pwr_pwr_pucrc_v1: PWR_PUCRC
 // Used by: PWR
@@ -203,11 +203,11 @@ using pwr_pwr_pucrc_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"pu15", bool, 15, 15>,
                groov::field<"pu14", bool, 14, 14>,
-               groov::field<"reserved0", std::uint16_t, 13, 0, access::ro>>;
+               groov::field<"reserved0", std::uint16_t, 13, 0, common::access::ro>>;
 
 // pwr_pwr_pucrd_v1: PWR_PUCRD
 // Used by: PWR
@@ -218,8 +218,8 @@ using pwr_pwr_pucrd_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 4, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 4, common::access::ro>,
                groov::field<"pu3", bool, 3, 3>,
                groov::field<"pu2", bool, 2, 2>,
                groov::field<"pu1", bool, 1, 1>,
@@ -234,10 +234,10 @@ using pwr_pwr_pucrf_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint32_t, 31, 3, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint32_t, 31, 3, common::access::ro>,
                groov::field<"pu2", bool, 2, 2>,
-               groov::field<"reserved0", std::uint8_t, 1, 0, access::ro>>;
+               groov::field<"reserved0", std::uint8_t, 1, 0, common::access::ro>>;
 
 // pwr_pwr_scr_v1: PWR_SCR
 // Used by: PWR
@@ -248,16 +248,16 @@ using pwr_pwr_scr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved2", std::uint32_t, 31, 9, access::ro>,
-               groov::field<"csbf", bool, 8, 8, access::wo>,
-               groov::field<"reserved1", std::uint8_t, 7, 6, access::ro>,
-               groov::field<"cwuf6", bool, 5, 5, access::wo>,
-               groov::field<"reserved0", bool, 4, 4, access::ro>,
-               groov::field<"cwuf4", bool, 3, 3, access::wo>,
-               groov::field<"cwuf3", bool, 2, 2, access::wo>,
-               groov::field<"cwuf2", bool, 1, 1, access::wo>,
-               groov::field<"cwuf1", bool, 0, 0, access::wo>>;
+             common::access::rw,
+               groov::field<"reserved2", std::uint32_t, 31, 9, common::access::ro>,
+               groov::field<"csbf", bool, 8, 8, common::access::wo>,
+               groov::field<"reserved1", std::uint8_t, 7, 6, common::access::ro>,
+               groov::field<"cwuf6", bool, 5, 5, common::access::wo>,
+               groov::field<"reserved0", bool, 4, 4, common::access::ro>,
+               groov::field<"cwuf4", bool, 3, 3, common::access::wo>,
+               groov::field<"cwuf3", bool, 2, 2, common::access::wo>,
+               groov::field<"cwuf2", bool, 1, 1, common::access::wo>,
+               groov::field<"cwuf1", bool, 0, 0, common::access::wo>>;
 
 // pwr_pwr_sr1_v1: PWR_SR1
 // Used by: PWR
@@ -268,18 +268,18 @@ using pwr_pwr_sr1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved3", std::uint16_t, 31, 16, access::ro>,
-               groov::field<"wufi", bool, 15, 15, access::ro>,
-               groov::field<"reserved2", std::uint8_t, 14, 9, access::ro>,
-               groov::field<"sbf", bool, 8, 8, access::ro>,
-               groov::field<"reserved1", std::uint8_t, 7, 6, access::ro>,
-               groov::field<"wuf6", bool, 5, 5, access::ro>,
-               groov::field<"reserved0", bool, 4, 4, access::ro>,
-               groov::field<"wuf4", bool, 3, 3, access::ro>,
-               groov::field<"wuf3", bool, 2, 2, access::ro>,
-               groov::field<"wuf2", bool, 1, 1, access::ro>,
-               groov::field<"wuf1", bool, 0, 0, access::ro>>;
+             common::access::rw,
+               groov::field<"reserved3", std::uint16_t, 31, 16, common::access::ro>,
+               groov::field<"wufi", bool, 15, 15, common::access::ro>,
+               groov::field<"reserved2", std::uint8_t, 14, 9, common::access::ro>,
+               groov::field<"sbf", bool, 8, 8, common::access::ro>,
+               groov::field<"reserved1", std::uint8_t, 7, 6, common::access::ro>,
+               groov::field<"wuf6", bool, 5, 5, common::access::ro>,
+               groov::field<"reserved0", bool, 4, 4, common::access::ro>,
+               groov::field<"wuf4", bool, 3, 3, common::access::ro>,
+               groov::field<"wuf3", bool, 2, 2, common::access::ro>,
+               groov::field<"wuf2", bool, 1, 1, common::access::ro>,
+               groov::field<"wuf1", bool, 0, 0, common::access::ro>>;
 
 // pwr_pwr_sr2_v1: PWR_SR2
 // Used by: PWR
@@ -290,9 +290,9 @@ using pwr_pwr_sr2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint32_t, 31, 8, access::ro>,
-               groov::field<"flash_rdy", bit_ready, 7, 7, access::ro>,
-               groov::field<"reserved0", std::uint8_t, 6, 0, access::ro>>;
+             common::access::rw,
+               groov::field<"reserved1", std::uint32_t, 31, 8, common::access::ro>,
+               groov::field<"flash_rdy", common::bittypes::bit_ready, 7, 7, common::access::ro>,
+               groov::field<"reserved0", std::uint8_t, 6, 0, common::access::ro>>;
 
 } // namespace stm32::regs

@@ -16,12 +16,12 @@ using lcd_clr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::wo,
-               groov::field<"reserved2", std::uint32_t, 31, 4, access::ro>,
+             common::access::wo,
+               groov::field<"reserved2", std::uint32_t, 31, 4, common::access::ro>,
                groov::field<"uddc", bool, 3, 3>,
-               groov::field<"reserved1", bool, 2, 2, access::ro>,
+               groov::field<"reserved1", bool, 2, 2, common::access::ro>,
                groov::field<"sofc", bool, 1, 1>,
-               groov::field<"reserved0", bool, 0, 0, access::ro>>;
+               groov::field<"reserved0", bool, 0, 0, common::access::ro>>;
 
 // lcd_cr_v1: CR
 // Used by: LCD
@@ -32,13 +32,13 @@ using lcd_cr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 8, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 8, common::access::ro>,
                groov::field<"mux_seg", bool, 7, 7>,
                groov::field<"bias", std::uint8_t, 6, 5>,
                groov::field<"duty", std::uint8_t, 4, 2>,
                groov::field<"vsel", bool, 1, 1>,
-               groov::field<"lcden", bit_enable, 0, 0>>;
+               groov::field<"lcden", common::bittypes::bit_enable, 0, 0>>;
 
 // lcd_fcr_v1: FCR
 // Used by: LCD
@@ -49,8 +49,8 @@ using lcd_fcr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint8_t, 31, 26, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint8_t, 31, 26, common::access::ro>,
                groov::field<"ps", std::uint8_t, 25, 22>,
                groov::field<"div", std::uint8_t, 21, 18>,
                groov::field<"blink", std::uint8_t, 17, 16>,
@@ -58,9 +58,9 @@ using lcd_fcr_v1_tt =
                groov::field<"cc", std::uint8_t, 12, 10>,
                groov::field<"dead", std::uint8_t, 9, 7>,
                groov::field<"pon", std::uint8_t, 6, 4>,
-               groov::field<"uddie", bit_enable, 3, 3>,
-               groov::field<"reserved0", bool, 2, 2, access::ro>,
-               groov::field<"sofie", bit_enable, 1, 1>,
+               groov::field<"uddie", common::bittypes::bit_enable, 3, 3>,
+               groov::field<"reserved0", bool, 2, 2, common::access::ro>,
+               groov::field<"sofie", common::bittypes::bit_enable, 1, 1>,
                groov::field<"hd", bool, 0, 0>>;
 
 // lcd_ram_com0_v1: RAM_COM0
@@ -72,7 +72,7 @@ using lcd_ram_com0_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"s31", bool, 31, 31>,
                groov::field<"s30", bool, 30, 30>,
                groov::field<"s29", bool, 29, 29>,
@@ -115,7 +115,7 @@ using lcd_ram_com1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"s31", bool, 31, 31>,
                groov::field<"s30", bool, 30, 30>,
                groov::field<"s29", bool, 29, 29>,
@@ -158,7 +158,7 @@ using lcd_ram_com2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"s31", bool, 31, 31>,
                groov::field<"s30", bool, 30, 30>,
                groov::field<"s29", bool, 29, 29>,
@@ -201,7 +201,7 @@ using lcd_ram_com3_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"s31", bool, 31, 31>,
                groov::field<"s30", bool, 30, 30>,
                groov::field<"s29", bool, 29, 29>,
@@ -244,7 +244,7 @@ using lcd_ram_com4_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"s31", bool, 31, 31>,
                groov::field<"s30", bool, 30, 30>,
                groov::field<"s29", bool, 29, 29>,
@@ -287,7 +287,7 @@ using lcd_ram_com5_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"s31", bool, 31, 31>,
                groov::field<"s30", bool, 30, 30>,
                groov::field<"s29", bool, 29, 29>,
@@ -330,7 +330,7 @@ using lcd_ram_com6_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"s31", bool, 31, 31>,
                groov::field<"s30", bool, 30, 30>,
                groov::field<"s29", bool, 29, 29>,
@@ -373,7 +373,7 @@ using lcd_ram_com7_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"s31", bool, 31, 31>,
                groov::field<"s30", bool, 30, 30>,
                groov::field<"s29", bool, 29, 29>,
@@ -416,13 +416,13 @@ using lcd_sr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 6, access::ro>,
-               groov::field<"fcrsf", bool, 5, 5, access::ro>,
-               groov::field<"rdy", bit_ready, 4, 4, access::ro>,
-               groov::field<"udd", bool, 3, 3, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 6, common::access::ro>,
+               groov::field<"fcrsf", bool, 5, 5, common::access::ro>,
+               groov::field<"rdy", common::bittypes::bit_ready, 4, 4, common::access::ro>,
+               groov::field<"udd", bool, 3, 3, common::access::ro>,
                groov::field<"udr", bool, 2, 2>,
-               groov::field<"sof", bool, 1, 1, access::ro>,
-               groov::field<"ens", bool, 0, 0, access::ro>>;
+               groov::field<"sof", bool, 1, 1, common::access::ro>,
+               groov::field<"ens", bool, 0, 0, common::access::ro>>;
 
 } // namespace stm32::regs

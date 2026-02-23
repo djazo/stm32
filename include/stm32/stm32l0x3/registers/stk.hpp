@@ -16,10 +16,10 @@ using stk_calib_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"noref", bool, 31, 31>,
                groov::field<"skew", bool, 30, 30>,
-               groov::field<"reserved0", std::uint8_t, 29, 24, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 29, 24, common::access::ro>,
                groov::field<"tenms", std::uint32_t, 23, 0>>;
 
 // stk_csr_v1: CSR
@@ -31,10 +31,10 @@ using stk_csr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint16_t, 31, 17, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint16_t, 31, 17, common::access::ro>,
                groov::field<"countflag", bool, 16, 16>,
-               groov::field<"reserved0", std::uint16_t, 15, 3, access::ro>,
+               groov::field<"reserved0", std::uint16_t, 15, 3, common::access::ro>,
                groov::field<"clksource", bool, 2, 2>,
                groov::field<"tickint", bool, 1, 1>,
                groov::field<"enable", bool, 0, 0>>;
@@ -48,8 +48,8 @@ using stk_cvr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint8_t, 31, 24, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint8_t, 31, 24, common::access::ro>,
                groov::field<"current", std::uint32_t, 23, 0>>;
 
 // stk_rvr_v1: RVR
@@ -61,8 +61,8 @@ using stk_rvr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint8_t, 31, 24, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint8_t, 31, 24, common::access::ro>,
                groov::field<"reload", std::uint32_t, 23, 0>>;
 
 } // namespace stm32::regs

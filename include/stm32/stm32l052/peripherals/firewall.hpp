@@ -7,13 +7,34 @@
 namespace stm32::stm32l052 {
 
 namespace firewall {
-  using firewall_cssa_tt = regs::firewall_firewall_cssa_v1_tt;
-  using firewall_csl_tt = regs::firewall_firewall_csl_v1_tt;
-  using firewall_nvdssa_tt = regs::firewall_firewall_nvdssa_v1_tt;
-  using firewall_nvdsl_tt = regs::firewall_firewall_nvdsl_v1_tt;
-  using firewall_vdssa_tt = regs::firewall_firewall_vdssa_v1_tt;
-  using firewall_vdsl_tt = regs::firewall_firewall_vdsl_v1_tt;
-  using firewall_cr_tt = regs::firewall_firewall_cr_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using firewall_cssa_tt = regs::firewall_firewall_cssa_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using firewall_csl_tt = regs::firewall_firewall_csl_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using firewall_nvdssa_tt = regs::firewall_firewall_nvdssa_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using firewall_nvdsl_tt = regs::firewall_firewall_nvdsl_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using firewall_vdssa_tt = regs::firewall_firewall_vdssa_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using firewall_vdsl_tt = regs::firewall_firewall_vdsl_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using firewall_cr_tt = regs::firewall_firewall_cr_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using firewall_t =

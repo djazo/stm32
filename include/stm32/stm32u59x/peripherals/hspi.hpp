@@ -7,37 +7,130 @@
 namespace stm32::stm32u59x {
 
 namespace hspix {
-  using hspi_cr_tt = regs::hspi_hspi_cr_v1_tt;
-  using hspi_dcr1_tt = regs::hspi_hspi_dcr1_v1_tt;
-  using hspi_dcr2_tt = regs::hspi_hspi_dcr2_v1_tt;
-  using hspi_dcr3_tt = regs::hspi_hspi_dcr3_v1_tt;
-  using hspi_dcr4_tt = regs::hspi_hspi_dcr4_v1_tt;
-  using hspi_sr_tt = regs::hspi_hspi_sr_v1_tt;
-  using hspi_fcr_tt = regs::hspi_hspi_fcr_v1_tt;
-  using hspi_dlr_tt = regs::hspi_hspi_dlr_v1_tt;
-  using hspi_ar_tt = regs::hspi_hspi_ar_v1_tt;
-  using hspi_dr_tt = regs::hspi_hspi_dr_v1_tt;
-  using hspi_psmkr_tt = regs::hspi_hspi_psmkr_v1_tt;
-  using hspi_psmar_tt = regs::hspi_hspi_psmar_v1_tt;
-  using hspi_pir_tt = regs::hspi_hspi_pir_v1_tt;
-  using hspi_ccr_tt = regs::hspi_hspi_ccr_v1_tt;
-  using hspi_tcr_tt = regs::hspi_hspi_tcr_v1_tt;
-  using hspi_ir_tt = regs::hspi_hspi_ir_v1_tt;
-  using hspi_abr_tt = regs::hspi_hspi_abr_v1_tt;
-  using hspi_lptr_tt = regs::hspi_hspi_lptr_v1_tt;
-  using hspi_wpccr_tt = regs::hspi_hspi_wpccr_v1_tt;
-  using hspi_wptcr_tt = regs::hspi_hspi_wptcr_v1_tt;
-  using hspi_wpir_tt = regs::hspi_hspi_wpir_v1_tt;
-  using hspi_wpabr_tt = regs::hspi_hspi_wpabr_v1_tt;
-  using hspi_wccr_tt = regs::hspi_hspi_wccr_v1_tt;
-  using hspi_wtcr_tt = regs::hspi_hspi_wtcr_v1_tt;
-  using hspi_wir_tt = regs::hspi_hspi_wir_v1_tt;
-  using hspi_wabr_tt = regs::hspi_hspi_wabr_v1_tt;
-  using hspi_hlcr_tt = regs::hspi_hspi_hlcr_v1_tt;
-  using hspi_calfcr_tt = regs::hspi_hspi_calfcr_v1_tt;
-  using hspi_calmr_tt = regs::hspi_hspi_calmr_v1_tt;
-  using hspi_calsor_tt = regs::hspi_hspi_calsor_v1_tt;
-  using hspi_calsir_tt = regs::hspi_hspi_calsir_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hspi_cr_tt = regs::hspi_hspi_cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hspi_dcr1_tt = regs::hspi_hspi_dcr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hspi_dcr2_tt = regs::hspi_hspi_dcr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hspi_dcr3_tt = regs::hspi_hspi_dcr3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hspi_dcr4_tt = regs::hspi_hspi_dcr4_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hspi_sr_tt = regs::hspi_hspi_sr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hspi_fcr_tt = regs::hspi_hspi_fcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hspi_dlr_tt = regs::hspi_hspi_dlr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hspi_ar_tt = regs::hspi_hspi_ar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hspi_dr_tt = regs::hspi_hspi_dr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hspi_psmkr_tt = regs::hspi_hspi_psmkr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hspi_psmar_tt = regs::hspi_hspi_psmar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hspi_pir_tt = regs::hspi_hspi_pir_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hspi_ccr_tt = regs::hspi_hspi_ccr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hspi_tcr_tt = regs::hspi_hspi_tcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hspi_ir_tt = regs::hspi_hspi_ir_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hspi_abr_tt = regs::hspi_hspi_abr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hspi_lptr_tt = regs::hspi_hspi_lptr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hspi_wpccr_tt = regs::hspi_hspi_wpccr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hspi_wptcr_tt = regs::hspi_hspi_wptcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hspi_wpir_tt = regs::hspi_hspi_wpir_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hspi_wpabr_tt = regs::hspi_hspi_wpabr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hspi_wccr_tt = regs::hspi_hspi_wccr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hspi_wtcr_tt = regs::hspi_hspi_wtcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hspi_wir_tt = regs::hspi_hspi_wir_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hspi_wabr_tt = regs::hspi_hspi_wabr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hspi_hlcr_tt = regs::hspi_hspi_hlcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hspi_calfcr_tt = regs::hspi_hspi_calfcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hspi_calmr_tt = regs::hspi_hspi_calmr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hspi_calsor_tt = regs::hspi_hspi_calsor_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hspi_calsir_tt = regs::hspi_hspi_calsir_v1_tt<name, baseaddress, offset>;
 
   template <stdx::ct_string name, std::uint32_t baseaddress>
   using hspix_t =

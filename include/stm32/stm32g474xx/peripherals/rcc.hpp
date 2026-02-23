@@ -7,36 +7,126 @@
 namespace stm32::stm32g474xx {
 
 namespace rcc {
-  using rcc_cr_tt = regs::rcc_rcc_cr_v1_tt;
-  using rcc_icscr_tt = regs::rcc_rcc_icscr_v1_tt;
-  using rcc_cfgr_tt = regs::rcc_rcc_cfgr_v1_tt;
-  using rcc_pllcfgr_tt = regs::rcc_rcc_pllcfgr_v1_tt;
-  using rcc_cier_tt = regs::rcc_rcc_cier_v1_tt;
-  using rcc_cifr_tt = regs::rcc_rcc_cifr_v1_tt;
-  using rcc_cicr_tt = regs::rcc_rcc_cicr_v1_tt;
-  using rcc_ahb1rstr_tt = regs::rcc_rcc_ahb1rstr_v1_tt;
-  using rcc_ahb2rstr_tt = regs::rcc_rcc_ahb2rstr_v1_tt;
-  using rcc_ahb3rstr_tt = regs::rcc_rcc_ahb3rstr_v1_tt;
-  using rcc_apb1rstr1_tt = regs::rcc_rcc_apb1rstr1_v1_tt;
-  using rcc_apb1rstr2_tt = regs::rcc_rcc_apb1rstr2_v1_tt;
-  using rcc_apb2rstr_tt = regs::rcc_rcc_apb2rstr_v1_tt;
-  using rcc_ahb1enr_tt = regs::rcc_rcc_ahb1enr_v1_tt;
-  using rcc_ahb2enr_tt = regs::rcc_rcc_ahb2enr_v1_tt;
-  using rcc_ahb3enr_tt = regs::rcc_rcc_ahb3enr_v1_tt;
-  using rcc_apb1enr1_tt = regs::rcc_rcc_apb1enr1_v1_tt;
-  using rcc_apb1enr2_tt = regs::rcc_rcc_apb1enr2_v1_tt;
-  using rcc_apb2enr_tt = regs::rcc_rcc_apb2enr_v1_tt;
-  using rcc_ahb1smenr_tt = regs::rcc_rcc_ahb1smenr_v1_tt;
-  using rcc_ahb2smenr_tt = regs::rcc_rcc_ahb2smenr_v1_tt;
-  using rcc_ahb3smenr_tt = regs::rcc_rcc_ahb3smenr_v1_tt;
-  using rcc_apb1smenr1_tt = regs::rcc_rcc_apb1smenr1_v1_tt;
-  using rcc_apb1smenr2_tt = regs::rcc_rcc_apb1smenr2_v1_tt;
-  using rcc_apb2smenr_tt = regs::rcc_rcc_apb2smenr_v1_tt;
-  using rcc_ccipr_tt = regs::rcc_rcc_ccipr_v1_tt;
-  using rcc_bdcr_tt = regs::rcc_rcc_bdcr_v1_tt;
-  using rcc_csr_tt = regs::rcc_rcc_csr_v1_tt;
-  using rcc_crrcr_tt = regs::rcc_rcc_crrcr_v1_tt;
-  using rcc_ccipr2_tt = regs::rcc_rcc_ccipr2_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rcc_cr_tt = regs::rcc_rcc_cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rcc_icscr_tt = regs::rcc_rcc_icscr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rcc_cfgr_tt = regs::rcc_rcc_cfgr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rcc_pllcfgr_tt = regs::rcc_rcc_pllcfgr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rcc_cier_tt = regs::rcc_rcc_cier_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rcc_cifr_tt = regs::rcc_rcc_cifr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rcc_cicr_tt = regs::rcc_rcc_cicr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rcc_ahb1rstr_tt = regs::rcc_rcc_ahb1rstr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rcc_ahb2rstr_tt = regs::rcc_rcc_ahb2rstr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rcc_ahb3rstr_tt = regs::rcc_rcc_ahb3rstr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rcc_apb1rstr1_tt = regs::rcc_rcc_apb1rstr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rcc_apb1rstr2_tt = regs::rcc_rcc_apb1rstr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rcc_apb2rstr_tt = regs::rcc_rcc_apb2rstr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rcc_ahb1enr_tt = regs::rcc_rcc_ahb1enr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rcc_ahb2enr_tt = regs::rcc_rcc_ahb2enr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rcc_ahb3enr_tt = regs::rcc_rcc_ahb3enr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rcc_apb1enr1_tt = regs::rcc_rcc_apb1enr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rcc_apb1enr2_tt = regs::rcc_rcc_apb1enr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rcc_apb2enr_tt = regs::rcc_rcc_apb2enr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rcc_ahb1smenr_tt = regs::rcc_rcc_ahb1smenr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rcc_ahb2smenr_tt = regs::rcc_rcc_ahb2smenr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rcc_ahb3smenr_tt = regs::rcc_rcc_ahb3smenr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rcc_apb1smenr1_tt = regs::rcc_rcc_apb1smenr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rcc_apb1smenr2_tt = regs::rcc_rcc_apb1smenr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rcc_apb2smenr_tt = regs::rcc_rcc_apb2smenr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rcc_ccipr_tt = regs::rcc_rcc_ccipr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rcc_bdcr_tt = regs::rcc_rcc_bdcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rcc_csr_tt = regs::rcc_rcc_csr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rcc_crrcr_tt = regs::rcc_rcc_crrcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rcc_ccipr2_tt = regs::rcc_rcc_ccipr2_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using rcc_t =

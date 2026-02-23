@@ -7,15 +7,42 @@
 namespace stm32::stm32l062 {
 
 namespace syscfg_comp {
-  using cfgr1_tt = regs::syscfg_cfgr1_v1_tt;
-  using cfgr2_tt = regs::syscfg_cfgr2_v1_tt;
-  using exticr1_tt = regs::syscfg_exticr1_v1_tt;
-  using exticr2_tt = regs::syscfg_exticr2_v1_tt;
-  using exticr3_tt = regs::syscfg_exticr3_v1_tt;
-  using exticr4_tt = regs::syscfg_exticr4_v1_tt;
-  using cfgr3_tt = regs::syscfg_cfgr3_v1_tt;
-  using comp1_csr_tt = regs::syscfg_comp1_csr_v1_tt;
-  using comp2_csr_tt = regs::syscfg_comp2_csr_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cfgr1_tt = regs::syscfg_cfgr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cfgr2_tt = regs::syscfg_cfgr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using exticr1_tt = regs::syscfg_exticr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using exticr2_tt = regs::syscfg_exticr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using exticr3_tt = regs::syscfg_exticr3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using exticr4_tt = regs::syscfg_exticr4_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cfgr3_tt = regs::syscfg_cfgr3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using comp1_csr_tt = regs::syscfg_comp1_csr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using comp2_csr_tt = regs::syscfg_comp2_csr_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using syscfg_comp_t =

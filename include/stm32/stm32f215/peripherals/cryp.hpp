@@ -7,26 +7,86 @@
 namespace stm32::stm32f215 {
 
 namespace cryp {
-  using cr_tt = regs::cryp_cr_v1_tt;
-  using sr_tt = regs::cryp_sr_v1_tt;
-  using din_tt = regs::cryp_din_v1_tt;
-  using dout_tt = regs::cryp_dout_v1_tt;
-  using dmacr_tt = regs::cryp_dmacr_v1_tt;
-  using imscr_tt = regs::cryp_imscr_v1_tt;
-  using risr_tt = regs::cryp_risr_v1_tt;
-  using misr_tt = regs::cryp_misr_v1_tt;
-  using k0lr_tt = regs::cryp_k0lr_v1_tt;
-  using k0rr_tt = regs::cryp_k0rr_v1_tt;
-  using k1lr_tt = regs::cryp_k1lr_v1_tt;
-  using k1rr_tt = regs::cryp_k1rr_v1_tt;
-  using k2lr_tt = regs::cryp_k2lr_v1_tt;
-  using k2rr_tt = regs::cryp_k2rr_v1_tt;
-  using k3lr_tt = regs::cryp_k3lr_v1_tt;
-  using k3rr_tt = regs::cryp_k3rr_v1_tt;
-  using iv0lr_tt = regs::cryp_iv0lr_v1_tt;
-  using iv0rr_tt = regs::cryp_iv0rr_v1_tt;
-  using iv1lr_tt = regs::cryp_iv1lr_v1_tt;
-  using iv1rr_tt = regs::cryp_iv1rr_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cr_tt = regs::cryp_cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using sr_tt = regs::cryp_sr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using din_tt = regs::cryp_din_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dout_tt = regs::cryp_dout_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dmacr_tt = regs::cryp_dmacr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using imscr_tt = regs::cryp_imscr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using risr_tt = regs::cryp_risr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using misr_tt = regs::cryp_misr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using k0lr_tt = regs::cryp_k0lr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using k0rr_tt = regs::cryp_k0rr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using k1lr_tt = regs::cryp_k1lr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using k1rr_tt = regs::cryp_k1rr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using k2lr_tt = regs::cryp_k2lr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using k2rr_tt = regs::cryp_k2rr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using k3lr_tt = regs::cryp_k3lr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using k3rr_tt = regs::cryp_k3rr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using iv0lr_tt = regs::cryp_iv0lr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using iv0rr_tt = regs::cryp_iv0rr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using iv1lr_tt = regs::cryp_iv1lr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using iv1rr_tt = regs::cryp_iv1rr_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using cryp_t =

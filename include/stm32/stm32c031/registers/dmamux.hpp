@@ -16,16 +16,16 @@ using dmamux_dmamux_c0cr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved2", std::uint8_t, 31, 29, access::ro>,
+             common::access::rw,
+               groov::field<"reserved2", std::uint8_t, 31, 29, common::access::ro>,
                groov::field<"sync_id", std::uint8_t, 28, 24>,
                groov::field<"nbreq", std::uint8_t, 23, 19>,
                groov::field<"spol", std::uint8_t, 18, 17>,
                groov::field<"se", bool, 16, 16>,
-               groov::field<"reserved1", std::uint8_t, 15, 10, access::ro>,
+               groov::field<"reserved1", std::uint8_t, 15, 10, common::access::ro>,
                groov::field<"ege", bool, 9, 9>,
-               groov::field<"soie", bit_enable, 8, 8>,
-               groov::field<"reserved0", std::uint8_t, 7, 6, access::ro>,
+               groov::field<"soie", common::bittypes::bit_enable, 8, 8>,
+               groov::field<"reserved0", std::uint8_t, 7, 6, common::access::ro>,
                groov::field<"dmareq_id", std::uint8_t, 5, 0>>;
 
 // dmamux_dmamux_c1cr_v1: DMAMUX_C1CR
@@ -37,16 +37,16 @@ using dmamux_dmamux_c1cr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved2", std::uint8_t, 31, 29, access::ro>,
+             common::access::rw,
+               groov::field<"reserved2", std::uint8_t, 31, 29, common::access::ro>,
                groov::field<"sync_id", std::uint8_t, 28, 24>,
                groov::field<"nbreq", std::uint8_t, 23, 19>,
                groov::field<"spol", std::uint8_t, 18, 17>,
                groov::field<"se", bool, 16, 16>,
-               groov::field<"reserved1", std::uint8_t, 15, 10, access::ro>,
+               groov::field<"reserved1", std::uint8_t, 15, 10, common::access::ro>,
                groov::field<"ege", bool, 9, 9>,
-               groov::field<"soie", bit_enable, 8, 8>,
-               groov::field<"reserved0", std::uint8_t, 7, 6, access::ro>,
+               groov::field<"soie", common::bittypes::bit_enable, 8, 8>,
+               groov::field<"reserved0", std::uint8_t, 7, 6, common::access::ro>,
                groov::field<"dmareq_id", std::uint8_t, 5, 0>>;
 
 // dmamux_dmamux_c2cr_v1: DMAMUX_C2CR
@@ -58,16 +58,16 @@ using dmamux_dmamux_c2cr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved2", std::uint8_t, 31, 29, access::ro>,
+             common::access::rw,
+               groov::field<"reserved2", std::uint8_t, 31, 29, common::access::ro>,
                groov::field<"sync_id", std::uint8_t, 28, 24>,
                groov::field<"nbreq", std::uint8_t, 23, 19>,
                groov::field<"spol", std::uint8_t, 18, 17>,
                groov::field<"se", bool, 16, 16>,
-               groov::field<"reserved1", std::uint8_t, 15, 10, access::ro>,
+               groov::field<"reserved1", std::uint8_t, 15, 10, common::access::ro>,
                groov::field<"ege", bool, 9, 9>,
-               groov::field<"soie", bit_enable, 8, 8>,
-               groov::field<"reserved0", std::uint8_t, 7, 6, access::ro>,
+               groov::field<"soie", common::bittypes::bit_enable, 8, 8>,
+               groov::field<"reserved0", std::uint8_t, 7, 6, common::access::ro>,
                groov::field<"dmareq_id", std::uint8_t, 5, 0>>;
 
 // dmamux_dmamux_cfr_v1: DMAMUX_CFR
@@ -79,11 +79,11 @@ using dmamux_dmamux_cfr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 3, access::ro>,
-               groov::field<"csof2", bool, 2, 2, access::wo>,
-               groov::field<"csof1", bool, 1, 1, access::wo>,
-               groov::field<"csof0", bool, 0, 0, access::wo>>;
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 3, common::access::ro>,
+               groov::field<"csof2", bool, 2, 2, common::access::wo>,
+               groov::field<"csof1", bool, 1, 1, common::access::wo>,
+               groov::field<"csof0", bool, 0, 0, common::access::wo>>;
 
 // dmamux_dmamux_csr_v1: DMAMUX_CSR
 // Used by: DMAMUX
@@ -94,11 +94,11 @@ using dmamux_dmamux_csr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 3, access::ro>,
-               groov::field<"sof2", bool, 2, 2, access::ro>,
-               groov::field<"sof1", bool, 1, 1, access::ro>,
-               groov::field<"sof0", bool, 0, 0, access::ro>>;
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 3, common::access::ro>,
+               groov::field<"sof2", bool, 2, 2, common::access::ro>,
+               groov::field<"sof1", bool, 1, 1, common::access::ro>,
+               groov::field<"sof0", bool, 0, 0, common::access::ro>>;
 
 // dmamux_dmamux_rg0cr_v1: DMAMUX_RG0CR
 // Used by: DMAMUX
@@ -109,14 +109,14 @@ using dmamux_dmamux_rg0cr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved2", std::uint8_t, 31, 24, access::ro>,
+             common::access::rw,
+               groov::field<"reserved2", std::uint8_t, 31, 24, common::access::ro>,
                groov::field<"gnbreq", std::uint8_t, 23, 19>,
                groov::field<"gpol", std::uint8_t, 18, 17>,
                groov::field<"ge", bool, 16, 16>,
-               groov::field<"reserved1", std::uint8_t, 15, 9, access::ro>,
-               groov::field<"oie", bit_enable, 8, 8>,
-               groov::field<"reserved0", std::uint8_t, 7, 5, access::ro>,
+               groov::field<"reserved1", std::uint8_t, 15, 9, common::access::ro>,
+               groov::field<"oie", common::bittypes::bit_enable, 8, 8>,
+               groov::field<"reserved0", std::uint8_t, 7, 5, common::access::ro>,
                groov::field<"sig_id", std::uint8_t, 4, 0>>;
 
 // dmamux_dmamux_rg1cr_v1: DMAMUX_RG1CR
@@ -128,14 +128,14 @@ using dmamux_dmamux_rg1cr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved2", std::uint8_t, 31, 24, access::ro>,
+             common::access::rw,
+               groov::field<"reserved2", std::uint8_t, 31, 24, common::access::ro>,
                groov::field<"gnbreq", std::uint8_t, 23, 19>,
                groov::field<"gpol", std::uint8_t, 18, 17>,
                groov::field<"ge", bool, 16, 16>,
-               groov::field<"reserved1", std::uint8_t, 15, 9, access::ro>,
-               groov::field<"oie", bit_enable, 8, 8>,
-               groov::field<"reserved0", std::uint8_t, 7, 5, access::ro>,
+               groov::field<"reserved1", std::uint8_t, 15, 9, common::access::ro>,
+               groov::field<"oie", common::bittypes::bit_enable, 8, 8>,
+               groov::field<"reserved0", std::uint8_t, 7, 5, common::access::ro>,
                groov::field<"sig_id", std::uint8_t, 4, 0>>;
 
 // dmamux_dmamux_rg2cr_v1: DMAMUX_RG2CR
@@ -147,14 +147,14 @@ using dmamux_dmamux_rg2cr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved2", std::uint8_t, 31, 24, access::ro>,
+             common::access::rw,
+               groov::field<"reserved2", std::uint8_t, 31, 24, common::access::ro>,
                groov::field<"gnbreq", std::uint8_t, 23, 19>,
                groov::field<"gpol", std::uint8_t, 18, 17>,
                groov::field<"ge", bool, 16, 16>,
-               groov::field<"reserved1", std::uint8_t, 15, 9, access::ro>,
-               groov::field<"oie", bit_enable, 8, 8>,
-               groov::field<"reserved0", std::uint8_t, 7, 5, access::ro>,
+               groov::field<"reserved1", std::uint8_t, 15, 9, common::access::ro>,
+               groov::field<"oie", common::bittypes::bit_enable, 8, 8>,
+               groov::field<"reserved0", std::uint8_t, 7, 5, common::access::ro>,
                groov::field<"sig_id", std::uint8_t, 4, 0>>;
 
 // dmamux_dmamux_rg3cr_v1: DMAMUX_RG3CR
@@ -166,14 +166,14 @@ using dmamux_dmamux_rg3cr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved2", std::uint8_t, 31, 24, access::ro>,
+             common::access::rw,
+               groov::field<"reserved2", std::uint8_t, 31, 24, common::access::ro>,
                groov::field<"gnbreq", std::uint8_t, 23, 19>,
                groov::field<"gpol", std::uint8_t, 18, 17>,
                groov::field<"ge", bool, 16, 16>,
-               groov::field<"reserved1", std::uint8_t, 15, 9, access::ro>,
-               groov::field<"oie", bit_enable, 8, 8>,
-               groov::field<"reserved0", std::uint8_t, 7, 5, access::ro>,
+               groov::field<"reserved1", std::uint8_t, 15, 9, common::access::ro>,
+               groov::field<"oie", common::bittypes::bit_enable, 8, 8>,
+               groov::field<"reserved0", std::uint8_t, 7, 5, common::access::ro>,
                groov::field<"sig_id", std::uint8_t, 4, 0>>;
 
 // dmamux_dmamux_rgcfr_v1: DMAMUX_RGCFR
@@ -185,12 +185,12 @@ using dmamux_dmamux_rgcfr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 4, access::ro>,
-               groov::field<"cof3", bool, 3, 3, access::wo>,
-               groov::field<"cof2", bool, 2, 2, access::wo>,
-               groov::field<"cof1", bool, 1, 1, access::wo>,
-               groov::field<"cof0", bool, 0, 0, access::wo>>;
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 4, common::access::ro>,
+               groov::field<"cof3", bool, 3, 3, common::access::wo>,
+               groov::field<"cof2", bool, 2, 2, common::access::wo>,
+               groov::field<"cof1", bool, 1, 1, common::access::wo>,
+               groov::field<"cof0", bool, 0, 0, common::access::wo>>;
 
 // dmamux_dmamux_rgsr_v1: DMAMUX_RGSR
 // Used by: DMAMUX
@@ -201,11 +201,11 @@ using dmamux_dmamux_rgsr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 4, access::ro>,
-               groov::field<"of3", bool, 3, 3, access::ro>,
-               groov::field<"of2", bool, 2, 2, access::ro>,
-               groov::field<"of1", bool, 1, 1, access::ro>,
-               groov::field<"of0", bool, 0, 0, access::ro>>;
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 4, common::access::ro>,
+               groov::field<"of3", bool, 3, 3, common::access::ro>,
+               groov::field<"of2", bool, 2, 2, common::access::ro>,
+               groov::field<"of1", bool, 1, 1, common::access::ro>,
+               groov::field<"of0", bool, 0, 0, common::access::ro>>;
 
 } // namespace stm32::regs

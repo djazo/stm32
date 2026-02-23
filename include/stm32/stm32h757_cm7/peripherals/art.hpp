@@ -7,7 +7,10 @@
 namespace stm32::stm32h757_cm7 {
 
 namespace art {
-  using ctr_tt = regs::art_ctr_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ctr_tt = regs::art_ctr_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using art_t =

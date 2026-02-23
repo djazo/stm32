@@ -7,12 +7,30 @@
 namespace stm32::stm32f756 {
 
 namespace cec {
-  using cr_tt = regs::cec_cr_v1_tt;
-  using cfgr_tt = regs::cec_cfgr_v1_tt;
-  using txdr_tt = regs::cec_txdr_v1_tt;
-  using rxdr_tt = regs::cec_rxdr_v1_tt;
-  using isr_tt = regs::cec_isr_v1_tt;
-  using ier_tt = regs::cec_ier_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cr_tt = regs::cec_cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cfgr_tt = regs::cec_cfgr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using txdr_tt = regs::cec_txdr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rxdr_tt = regs::cec_rxdr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using isr_tt = regs::cec_isr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ier_tt = regs::cec_ier_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using cec_t =

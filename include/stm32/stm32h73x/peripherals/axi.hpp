@@ -7,52 +7,190 @@
 namespace stm32::stm32h73x {
 
 namespace axi {
-  using axi_periph_id_4_tt = regs::axi_axi_periph_id_4_v1_tt;
-  using axi_periph_id_0_tt = regs::axi_axi_periph_id_0_v1_tt;
-  using axi_periph_id_1_tt = regs::axi_axi_periph_id_1_v1_tt;
-  using axi_periph_id_2_tt = regs::axi_axi_periph_id_2_v1_tt;
-  using axi_periph_id_3_tt = regs::axi_axi_periph_id_3_v1_tt;
-  using axi_comp_id_0_tt = regs::axi_axi_comp_id_0_v1_tt;
-  using axi_comp_id_1_tt = regs::axi_axi_comp_id_1_v1_tt;
-  using axi_comp_id_2_tt = regs::axi_axi_comp_id_2_v1_tt;
-  using axi_comp_id_3_tt = regs::axi_axi_comp_id_3_v1_tt;
-  using axi_targ1_fn_mod_iss_bm_tt = regs::axi_axi_targ1_fn_mod_iss_bm_v1_tt;
-  using axi_targ2_fn_mod_iss_bm_tt = regs::axi_axi_targ2_fn_mod_iss_bm_v1_tt;
-  using axi_targ3_fn_mod_iss_bm_tt = regs::axi_axi_targ3_fn_mod_iss_bm_v1_tt;
-  using axi_targ4_fn_mod_iss_bm_tt = regs::axi_axi_targ4_fn_mod_iss_bm_v1_tt;
-  using axi_targ5_fn_mod_iss_bm_tt = regs::axi_axi_targ5_fn_mod_iss_bm_v1_tt;
-  using axi_targ6_fn_mod_iss_bm_tt = regs::axi_axi_targ6_fn_mod_iss_bm_v1_tt;
-  using axi_targ7_fn_mod_iss_bm_tt = regs::axi_axi_targ7_fn_mod_iss_bm_v1_tt;
-  using axi_targ1_fn_mod2_tt = regs::axi_axi_targ1_fn_mod2_v1_tt;
-  using axi_targ2_fn_mod2_tt = regs::axi_axi_targ2_fn_mod2_v1_tt;
-  using axi_targ7_fn_mod2_tt = regs::axi_axi_targ7_fn_mod2_v1_tt;
-  using axi_targ1_fn_mod_lb_tt = regs::axi_axi_targ1_fn_mod_lb_v1_tt;
-  using axi_targ2_fn_mod_lb_tt = regs::axi_axi_targ2_fn_mod_lb_v1_tt;
-  using axi_targ1_fn_mod_tt = regs::axi_axi_targ1_fn_mod_v1_tt;
-  using axi_targ2_fn_mod_tt = regs::axi_axi_targ2_fn_mod_v1_tt;
-  using axi_targ7_fn_mod_tt = regs::axi_axi_targ7_fn_mod_v1_tt;
-  using axi_ini1_fn_mod2_tt = regs::axi_axi_ini1_fn_mod2_v1_tt;
-  using axi_ini3_fn_mod2_tt = regs::axi_axi_ini3_fn_mod2_v1_tt;
-  using axi_ini1_fn_mod_ahb_tt = regs::axi_axi_ini1_fn_mod_ahb_v1_tt;
-  using axi_ini3_fn_mod_ahb_tt = regs::axi_axi_ini3_fn_mod_ahb_v1_tt;
-  using axi_ini1_read_qos_tt = regs::axi_axi_ini1_read_qos_v1_tt;
-  using axi_ini2_read_qos_tt = regs::axi_axi_ini2_read_qos_v1_tt;
-  using axi_ini3_read_qos_tt = regs::axi_axi_ini3_read_qos_v1_tt;
-  using axi_ini4_read_qos_tt = regs::axi_axi_ini4_read_qos_v1_tt;
-  using axi_ini5_read_qos_tt = regs::axi_axi_ini5_read_qos_v1_tt;
-  using axi_ini6_read_qos_tt = regs::axi_axi_ini6_read_qos_v1_tt;
-  using axi_ini1_write_qos_tt = regs::axi_axi_ini1_write_qos_v1_tt;
-  using axi_ini2_write_qos_tt = regs::axi_axi_ini2_write_qos_v1_tt;
-  using axi_ini3_write_qos_tt = regs::axi_axi_ini3_write_qos_v1_tt;
-  using axi_ini4_write_qos_tt = regs::axi_axi_ini4_write_qos_v1_tt;
-  using axi_ini5_write_qos_tt = regs::axi_axi_ini5_write_qos_v1_tt;
-  using axi_ini6_write_qos_tt = regs::axi_axi_ini6_write_qos_v1_tt;
-  using axi_ini1_fn_mod_tt = regs::axi_axi_ini1_fn_mod_v1_tt;
-  using axi_ini2_fn_mod_tt = regs::axi_axi_ini2_fn_mod_v1_tt;
-  using axi_ini3_fn_mod_tt = regs::axi_axi_ini3_fn_mod_v1_tt;
-  using axi_ini4_fn_mod_tt = regs::axi_axi_ini4_fn_mod_v1_tt;
-  using axi_ini5_fn_mod_tt = regs::axi_axi_ini5_fn_mod_v1_tt;
-  using axi_ini6_fn_mod_tt = regs::axi_axi_ini6_fn_mod_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using axi_periph_id_4_tt = regs::axi_axi_periph_id_4_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using axi_periph_id_0_tt = regs::axi_axi_periph_id_0_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using axi_periph_id_1_tt = regs::axi_axi_periph_id_1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using axi_periph_id_2_tt = regs::axi_axi_periph_id_2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using axi_periph_id_3_tt = regs::axi_axi_periph_id_3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using axi_comp_id_0_tt = regs::axi_axi_comp_id_0_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using axi_comp_id_1_tt = regs::axi_axi_comp_id_1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using axi_comp_id_2_tt = regs::axi_axi_comp_id_2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using axi_comp_id_3_tt = regs::axi_axi_comp_id_3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using axi_targ1_fn_mod_iss_bm_tt = regs::axi_axi_targ1_fn_mod_iss_bm_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using axi_targ2_fn_mod_iss_bm_tt = regs::axi_axi_targ2_fn_mod_iss_bm_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using axi_targ3_fn_mod_iss_bm_tt = regs::axi_axi_targ3_fn_mod_iss_bm_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using axi_targ4_fn_mod_iss_bm_tt = regs::axi_axi_targ4_fn_mod_iss_bm_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using axi_targ5_fn_mod_iss_bm_tt = regs::axi_axi_targ5_fn_mod_iss_bm_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using axi_targ6_fn_mod_iss_bm_tt = regs::axi_axi_targ6_fn_mod_iss_bm_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using axi_targ7_fn_mod_iss_bm_tt = regs::axi_axi_targ7_fn_mod_iss_bm_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using axi_targ1_fn_mod2_tt = regs::axi_axi_targ1_fn_mod2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using axi_targ2_fn_mod2_tt = regs::axi_axi_targ2_fn_mod2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using axi_targ7_fn_mod2_tt = regs::axi_axi_targ7_fn_mod2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using axi_targ1_fn_mod_lb_tt = regs::axi_axi_targ1_fn_mod_lb_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using axi_targ2_fn_mod_lb_tt = regs::axi_axi_targ2_fn_mod_lb_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using axi_targ1_fn_mod_tt = regs::axi_axi_targ1_fn_mod_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using axi_targ2_fn_mod_tt = regs::axi_axi_targ2_fn_mod_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using axi_targ7_fn_mod_tt = regs::axi_axi_targ7_fn_mod_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using axi_ini1_fn_mod2_tt = regs::axi_axi_ini1_fn_mod2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using axi_ini3_fn_mod2_tt = regs::axi_axi_ini3_fn_mod2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using axi_ini1_fn_mod_ahb_tt = regs::axi_axi_ini1_fn_mod_ahb_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using axi_ini3_fn_mod_ahb_tt = regs::axi_axi_ini3_fn_mod_ahb_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using axi_ini1_read_qos_tt = regs::axi_axi_ini1_read_qos_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using axi_ini2_read_qos_tt = regs::axi_axi_ini2_read_qos_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using axi_ini3_read_qos_tt = regs::axi_axi_ini3_read_qos_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using axi_ini4_read_qos_tt = regs::axi_axi_ini4_read_qos_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using axi_ini5_read_qos_tt = regs::axi_axi_ini5_read_qos_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using axi_ini6_read_qos_tt = regs::axi_axi_ini6_read_qos_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using axi_ini1_write_qos_tt = regs::axi_axi_ini1_write_qos_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using axi_ini2_write_qos_tt = regs::axi_axi_ini2_write_qos_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using axi_ini3_write_qos_tt = regs::axi_axi_ini3_write_qos_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using axi_ini4_write_qos_tt = regs::axi_axi_ini4_write_qos_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using axi_ini5_write_qos_tt = regs::axi_axi_ini5_write_qos_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using axi_ini6_write_qos_tt = regs::axi_axi_ini6_write_qos_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using axi_ini1_fn_mod_tt = regs::axi_axi_ini1_fn_mod_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using axi_ini2_fn_mod_tt = regs::axi_axi_ini2_fn_mod_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using axi_ini3_fn_mod_tt = regs::axi_axi_ini3_fn_mod_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using axi_ini4_fn_mod_tt = regs::axi_axi_ini4_fn_mod_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using axi_ini5_fn_mod_tt = regs::axi_axi_ini5_fn_mod_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using axi_ini6_fn_mod_tt = regs::axi_axi_ini6_fn_mod_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using axi_t =

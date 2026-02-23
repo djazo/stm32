@@ -16,7 +16,7 @@ using jpeg_dhtmem0_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_dhtmem10_v1: DHTMEM10
@@ -28,7 +28,7 @@ using jpeg_dhtmem10_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_dhtmem100_v1: DHTMEM100
@@ -40,7 +40,7 @@ using jpeg_dhtmem100_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_dhtmem101_v1: DHTMEM101
@@ -52,7 +52,7 @@ using jpeg_dhtmem101_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_dhtmem102_v1: DHTMEM102
@@ -64,7 +64,7 @@ using jpeg_dhtmem102_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_dhtmem103_v1: DHTMEM103
@@ -76,7 +76,7 @@ using jpeg_dhtmem103_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_dhtmem11_v1: DHTMEM11
@@ -88,7 +88,7 @@ using jpeg_dhtmem11_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_dhtmem12_v1: DHTMEM12
@@ -100,7 +100,7 @@ using jpeg_dhtmem12_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_dhtmem13_v1: DHTMEM13
@@ -112,7 +112,7 @@ using jpeg_dhtmem13_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_dhtmem14_v1: DHTMEM14
@@ -124,7 +124,7 @@ using jpeg_dhtmem14_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_dhtmem15_v1: DHTMEM15
@@ -136,7 +136,7 @@ using jpeg_dhtmem15_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_dhtmem16_v1: DHTMEM16
@@ -148,7 +148,7 @@ using jpeg_dhtmem16_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_dhtmem17_v1: DHTMEM17
@@ -160,7 +160,7 @@ using jpeg_dhtmem17_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_dhtmem18_v1: DHTMEM18
@@ -172,7 +172,7 @@ using jpeg_dhtmem18_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_dhtmem19_v1: DHTMEM19
@@ -184,7 +184,7 @@ using jpeg_dhtmem19_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_dhtmem2_v1: DHTMEM2
@@ -196,7 +196,7 @@ using jpeg_dhtmem2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_dhtmem20_v1: DHTMEM20
@@ -208,7 +208,7 @@ using jpeg_dhtmem20_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_dhtmem21_v1: DHTMEM21
@@ -220,7 +220,7 @@ using jpeg_dhtmem21_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_dhtmem22_v1: DHTMEM22
@@ -232,7 +232,7 @@ using jpeg_dhtmem22_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_dhtmem23_v1: DHTMEM23
@@ -244,7 +244,7 @@ using jpeg_dhtmem23_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_dhtmem24_v1: DHTMEM24
@@ -256,7 +256,7 @@ using jpeg_dhtmem24_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_dhtmem25_v1: DHTMEM25
@@ -268,7 +268,7 @@ using jpeg_dhtmem25_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_dhtmem26_v1: DHTMEM26
@@ -280,7 +280,7 @@ using jpeg_dhtmem26_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_dhtmem27_v1: DHTMEM27
@@ -292,7 +292,7 @@ using jpeg_dhtmem27_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_dhtmem28_v1: DHTMEM28
@@ -304,7 +304,7 @@ using jpeg_dhtmem28_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_dhtmem29_v1: DHTMEM29
@@ -316,7 +316,7 @@ using jpeg_dhtmem29_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_dhtmem3_v1: DHTMEM3
@@ -328,7 +328,7 @@ using jpeg_dhtmem3_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_dhtmem30_v1: DHTMEM30
@@ -340,7 +340,7 @@ using jpeg_dhtmem30_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_dhtmem31_v1: DHTMEM31
@@ -352,7 +352,7 @@ using jpeg_dhtmem31_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_dhtmem32_v1: DHTMEM32
@@ -364,7 +364,7 @@ using jpeg_dhtmem32_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_dhtmem33_v1: DHTMEM33
@@ -376,7 +376,7 @@ using jpeg_dhtmem33_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_dhtmem34_v1: DHTMEM34
@@ -388,7 +388,7 @@ using jpeg_dhtmem34_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_dhtmem35_v1: DHTMEM35
@@ -400,7 +400,7 @@ using jpeg_dhtmem35_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_dhtmem36_v1: DHTMEM36
@@ -412,7 +412,7 @@ using jpeg_dhtmem36_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_dhtmem37_v1: DHTMEM37
@@ -424,7 +424,7 @@ using jpeg_dhtmem37_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_dhtmem38_v1: DHTMEM38
@@ -436,7 +436,7 @@ using jpeg_dhtmem38_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_dhtmem39_v1: DHTMEM39
@@ -448,7 +448,7 @@ using jpeg_dhtmem39_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_dhtmem4_v1: DHTMEM4
@@ -460,7 +460,7 @@ using jpeg_dhtmem4_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_dhtmem40_v1: DHTMEM40
@@ -472,7 +472,7 @@ using jpeg_dhtmem40_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_dhtmem41_v1: DHTMEM41
@@ -484,7 +484,7 @@ using jpeg_dhtmem41_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_dhtmem42_v1: DHTMEM42
@@ -496,7 +496,7 @@ using jpeg_dhtmem42_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_dhtmem43_v1: DHTMEM43
@@ -508,7 +508,7 @@ using jpeg_dhtmem43_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_dhtmem44_v1: DHTMEM44
@@ -520,7 +520,7 @@ using jpeg_dhtmem44_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_dhtmem45_v1: DHTMEM45
@@ -532,7 +532,7 @@ using jpeg_dhtmem45_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_dhtmem46_v1: DHTMEM46
@@ -544,7 +544,7 @@ using jpeg_dhtmem46_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_dhtmem47_v1: DHTMEM47
@@ -556,7 +556,7 @@ using jpeg_dhtmem47_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_dhtmem48_v1: DHTMEM48
@@ -568,7 +568,7 @@ using jpeg_dhtmem48_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_dhtmem49_v1: DHTMEM49
@@ -580,7 +580,7 @@ using jpeg_dhtmem49_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_dhtmem5_v1: DHTMEM5
@@ -592,7 +592,7 @@ using jpeg_dhtmem5_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_dhtmem50_v1: DHTMEM50
@@ -604,7 +604,7 @@ using jpeg_dhtmem50_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_dhtmem51_v1: DHTMEM51
@@ -616,7 +616,7 @@ using jpeg_dhtmem51_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_dhtmem52_v1: DHTMEM52
@@ -628,7 +628,7 @@ using jpeg_dhtmem52_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_dhtmem53_v1: DHTMEM53
@@ -640,7 +640,7 @@ using jpeg_dhtmem53_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_dhtmem54_v1: DHTMEM54
@@ -652,7 +652,7 @@ using jpeg_dhtmem54_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_dhtmem55_v1: DHTMEM55
@@ -664,7 +664,7 @@ using jpeg_dhtmem55_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_dhtmem56_v1: DHTMEM56
@@ -676,7 +676,7 @@ using jpeg_dhtmem56_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_dhtmem57_v1: DHTMEM57
@@ -688,7 +688,7 @@ using jpeg_dhtmem57_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_dhtmem58_v1: DHTMEM58
@@ -700,7 +700,7 @@ using jpeg_dhtmem58_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_dhtmem59_v1: DHTMEM59
@@ -712,7 +712,7 @@ using jpeg_dhtmem59_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_dhtmem6_v1: DHTMEM6
@@ -724,7 +724,7 @@ using jpeg_dhtmem6_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_dhtmem60_v1: DHTMEM60
@@ -736,7 +736,7 @@ using jpeg_dhtmem60_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_dhtmem61_v1: DHTMEM61
@@ -748,7 +748,7 @@ using jpeg_dhtmem61_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_dhtmem62_v1: DHTMEM62
@@ -760,7 +760,7 @@ using jpeg_dhtmem62_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_dhtmem63_v1: DHTMEM63
@@ -772,7 +772,7 @@ using jpeg_dhtmem63_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_dhtmem64_v1: DHTMEM64
@@ -784,7 +784,7 @@ using jpeg_dhtmem64_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_dhtmem65_v1: DHTMEM65
@@ -796,7 +796,7 @@ using jpeg_dhtmem65_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_dhtmem66_v1: DHTMEM66
@@ -808,7 +808,7 @@ using jpeg_dhtmem66_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_dhtmem67_v1: DHTMEM67
@@ -820,7 +820,7 @@ using jpeg_dhtmem67_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_dhtmem68_v1: DHTMEM68
@@ -832,7 +832,7 @@ using jpeg_dhtmem68_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_dhtmem69_v1: DHTMEM69
@@ -844,7 +844,7 @@ using jpeg_dhtmem69_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_dhtmem7_v1: DHTMEM7
@@ -856,7 +856,7 @@ using jpeg_dhtmem7_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_dhtmem70_v1: DHTMEM70
@@ -868,7 +868,7 @@ using jpeg_dhtmem70_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_dhtmem71_v1: DHTMEM71
@@ -880,7 +880,7 @@ using jpeg_dhtmem71_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_dhtmem72_v1: DHTMEM72
@@ -892,7 +892,7 @@ using jpeg_dhtmem72_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_dhtmem73_v1: DHTMEM73
@@ -904,7 +904,7 @@ using jpeg_dhtmem73_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_dhtmem74_v1: DHTMEM74
@@ -916,7 +916,7 @@ using jpeg_dhtmem74_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_dhtmem75_v1: DHTMEM75
@@ -928,7 +928,7 @@ using jpeg_dhtmem75_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_dhtmem76_v1: DHTMEM76
@@ -940,7 +940,7 @@ using jpeg_dhtmem76_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_dhtmem77_v1: DHTMEM77
@@ -952,7 +952,7 @@ using jpeg_dhtmem77_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_dhtmem78_v1: DHTMEM78
@@ -964,7 +964,7 @@ using jpeg_dhtmem78_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_dhtmem79_v1: DHTMEM79
@@ -976,7 +976,7 @@ using jpeg_dhtmem79_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_dhtmem8_v1: DHTMEM8
@@ -988,7 +988,7 @@ using jpeg_dhtmem8_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_dhtmem80_v1: DHTMEM80
@@ -1000,7 +1000,7 @@ using jpeg_dhtmem80_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_dhtmem81_v1: DHTMEM81
@@ -1012,7 +1012,7 @@ using jpeg_dhtmem81_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_dhtmem82_v1: DHTMEM82
@@ -1024,7 +1024,7 @@ using jpeg_dhtmem82_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_dhtmem83_v1: DHTMEM83
@@ -1036,7 +1036,7 @@ using jpeg_dhtmem83_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_dhtmem84_v1: DHTMEM84
@@ -1048,7 +1048,7 @@ using jpeg_dhtmem84_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_dhtmem85_v1: DHTMEM85
@@ -1060,7 +1060,7 @@ using jpeg_dhtmem85_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_dhtmem86_v1: DHTMEM86
@@ -1072,7 +1072,7 @@ using jpeg_dhtmem86_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_dhtmem87_v1: DHTMEM87
@@ -1084,7 +1084,7 @@ using jpeg_dhtmem87_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_dhtmem88_v1: DHTMEM88
@@ -1096,7 +1096,7 @@ using jpeg_dhtmem88_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_dhtmem89_v1: DHTMEM89
@@ -1108,7 +1108,7 @@ using jpeg_dhtmem89_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_dhtmem9_v1: DHTMEM9
@@ -1120,7 +1120,7 @@ using jpeg_dhtmem9_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_dhtmem90_v1: DHTMEM90
@@ -1132,7 +1132,7 @@ using jpeg_dhtmem90_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_dhtmem91_v1: DHTMEM91
@@ -1144,7 +1144,7 @@ using jpeg_dhtmem91_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_dhtmem92_v1: DHTMEM92
@@ -1156,7 +1156,7 @@ using jpeg_dhtmem92_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_dhtmem93_v1: DHTMEM93
@@ -1168,7 +1168,7 @@ using jpeg_dhtmem93_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_dhtmem94_v1: DHTMEM94
@@ -1180,7 +1180,7 @@ using jpeg_dhtmem94_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_dhtmem95_v1: DHTMEM95
@@ -1192,7 +1192,7 @@ using jpeg_dhtmem95_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_dhtmem96_v1: DHTMEM96
@@ -1204,7 +1204,7 @@ using jpeg_dhtmem96_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_dhtmem97_v1: DHTMEM97
@@ -1216,7 +1216,7 @@ using jpeg_dhtmem97_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_dhtmem98_v1: DHTMEM98
@@ -1228,7 +1228,7 @@ using jpeg_dhtmem98_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_dhtmem99_v1: DHTMEM99
@@ -1240,7 +1240,7 @@ using jpeg_dhtmem99_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffbase0_v1: HUFFBASE0
@@ -1252,10 +1252,10 @@ using jpeg_huffbase0_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint8_t, 31, 25, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint8_t, 31, 25, common::access::ro>,
                groov::field<"huffbase_ram_1", std::uint16_t, 24, 16>,
-               groov::field<"reserved0", std::uint8_t, 15, 9, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 15, 9, common::access::ro>,
                groov::field<"huffbase_ram_0", std::uint16_t, 8, 0>>;
 
 // jpeg_huffbase1_v1: HUFFBASE1
@@ -1267,10 +1267,10 @@ using jpeg_huffbase1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint8_t, 31, 25, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint8_t, 31, 25, common::access::ro>,
                groov::field<"huffbase_ram_1", std::uint16_t, 24, 16>,
-               groov::field<"reserved0", std::uint8_t, 15, 9, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 15, 9, common::access::ro>,
                groov::field<"huffbase_ram_0", std::uint16_t, 8, 0>>;
 
 // jpeg_huffbase10_v1: HUFFBASE10
@@ -1282,10 +1282,10 @@ using jpeg_huffbase10_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint8_t, 31, 25, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint8_t, 31, 25, common::access::ro>,
                groov::field<"huffbase_ram_1", std::uint16_t, 24, 16>,
-               groov::field<"reserved0", std::uint8_t, 15, 9, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 15, 9, common::access::ro>,
                groov::field<"huffbase_ram_0", std::uint16_t, 8, 0>>;
 
 // jpeg_huffbase11_v1: HUFFBASE11
@@ -1297,10 +1297,10 @@ using jpeg_huffbase11_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint8_t, 31, 25, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint8_t, 31, 25, common::access::ro>,
                groov::field<"huffbase_ram_1", std::uint16_t, 24, 16>,
-               groov::field<"reserved0", std::uint8_t, 15, 9, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 15, 9, common::access::ro>,
                groov::field<"huffbase_ram_0", std::uint16_t, 8, 0>>;
 
 // jpeg_huffbase12_v1: HUFFBASE12
@@ -1312,10 +1312,10 @@ using jpeg_huffbase12_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint8_t, 31, 25, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint8_t, 31, 25, common::access::ro>,
                groov::field<"huffbase_ram_1", std::uint16_t, 24, 16>,
-               groov::field<"reserved0", std::uint8_t, 15, 9, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 15, 9, common::access::ro>,
                groov::field<"huffbase_ram_0", std::uint16_t, 8, 0>>;
 
 // jpeg_huffbase13_v1: HUFFBASE13
@@ -1327,10 +1327,10 @@ using jpeg_huffbase13_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint8_t, 31, 25, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint8_t, 31, 25, common::access::ro>,
                groov::field<"huffbase_ram_1", std::uint16_t, 24, 16>,
-               groov::field<"reserved0", std::uint8_t, 15, 9, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 15, 9, common::access::ro>,
                groov::field<"huffbase_ram_0", std::uint16_t, 8, 0>>;
 
 // jpeg_huffbase14_v1: HUFFBASE14
@@ -1342,10 +1342,10 @@ using jpeg_huffbase14_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint8_t, 31, 25, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint8_t, 31, 25, common::access::ro>,
                groov::field<"huffbase_ram_1", std::uint16_t, 24, 16>,
-               groov::field<"reserved0", std::uint8_t, 15, 9, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 15, 9, common::access::ro>,
                groov::field<"huffbase_ram_0", std::uint16_t, 8, 0>>;
 
 // jpeg_huffbase15_v1: HUFFBASE15
@@ -1357,10 +1357,10 @@ using jpeg_huffbase15_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint8_t, 31, 25, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint8_t, 31, 25, common::access::ro>,
                groov::field<"huffbase_ram_1", std::uint16_t, 24, 16>,
-               groov::field<"reserved0", std::uint8_t, 15, 9, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 15, 9, common::access::ro>,
                groov::field<"huffbase_ram_0", std::uint16_t, 8, 0>>;
 
 // jpeg_huffbase16_v1: HUFFBASE16
@@ -1372,10 +1372,10 @@ using jpeg_huffbase16_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint8_t, 31, 25, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint8_t, 31, 25, common::access::ro>,
                groov::field<"huffbase_ram_1", std::uint16_t, 24, 16>,
-               groov::field<"reserved0", std::uint8_t, 15, 9, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 15, 9, common::access::ro>,
                groov::field<"huffbase_ram_0", std::uint16_t, 8, 0>>;
 
 // jpeg_huffbase17_v1: HUFFBASE17
@@ -1387,10 +1387,10 @@ using jpeg_huffbase17_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint8_t, 31, 25, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint8_t, 31, 25, common::access::ro>,
                groov::field<"huffbase_ram_1", std::uint16_t, 24, 16>,
-               groov::field<"reserved0", std::uint8_t, 15, 9, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 15, 9, common::access::ro>,
                groov::field<"huffbase_ram_0", std::uint16_t, 8, 0>>;
 
 // jpeg_huffbase18_v1: HUFFBASE18
@@ -1402,10 +1402,10 @@ using jpeg_huffbase18_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint8_t, 31, 25, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint8_t, 31, 25, common::access::ro>,
                groov::field<"huffbase_ram_1", std::uint16_t, 24, 16>,
-               groov::field<"reserved0", std::uint8_t, 15, 9, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 15, 9, common::access::ro>,
                groov::field<"huffbase_ram_0", std::uint16_t, 8, 0>>;
 
 // jpeg_huffbase19_v1: HUFFBASE19
@@ -1417,10 +1417,10 @@ using jpeg_huffbase19_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint8_t, 31, 25, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint8_t, 31, 25, common::access::ro>,
                groov::field<"huffbase_ram_1", std::uint16_t, 24, 16>,
-               groov::field<"reserved0", std::uint8_t, 15, 9, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 15, 9, common::access::ro>,
                groov::field<"huffbase_ram_0", std::uint16_t, 8, 0>>;
 
 // jpeg_huffbase2_v1: HUFFBASE2
@@ -1432,10 +1432,10 @@ using jpeg_huffbase2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint8_t, 31, 25, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint8_t, 31, 25, common::access::ro>,
                groov::field<"huffbase_ram_1", std::uint16_t, 24, 16>,
-               groov::field<"reserved0", std::uint8_t, 15, 9, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 15, 9, common::access::ro>,
                groov::field<"huffbase_ram_0", std::uint16_t, 8, 0>>;
 
 // jpeg_huffbase20_v1: HUFFBASE20
@@ -1447,10 +1447,10 @@ using jpeg_huffbase20_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint8_t, 31, 25, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint8_t, 31, 25, common::access::ro>,
                groov::field<"huffbase_ram_1", std::uint16_t, 24, 16>,
-               groov::field<"reserved0", std::uint8_t, 15, 9, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 15, 9, common::access::ro>,
                groov::field<"huffbase_ram_0", std::uint16_t, 8, 0>>;
 
 // jpeg_huffbase21_v1: HUFFBASE21
@@ -1462,10 +1462,10 @@ using jpeg_huffbase21_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint8_t, 31, 25, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint8_t, 31, 25, common::access::ro>,
                groov::field<"huffbase_ram_1", std::uint16_t, 24, 16>,
-               groov::field<"reserved0", std::uint8_t, 15, 9, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 15, 9, common::access::ro>,
                groov::field<"huffbase_ram_0", std::uint16_t, 8, 0>>;
 
 // jpeg_huffbase22_v1: HUFFBASE22
@@ -1477,10 +1477,10 @@ using jpeg_huffbase22_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint8_t, 31, 25, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint8_t, 31, 25, common::access::ro>,
                groov::field<"huffbase_ram_1", std::uint16_t, 24, 16>,
-               groov::field<"reserved0", std::uint8_t, 15, 9, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 15, 9, common::access::ro>,
                groov::field<"huffbase_ram_0", std::uint16_t, 8, 0>>;
 
 // jpeg_huffbase23_v1: HUFFBASE23
@@ -1492,10 +1492,10 @@ using jpeg_huffbase23_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint8_t, 31, 25, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint8_t, 31, 25, common::access::ro>,
                groov::field<"huffbase_ram_1", std::uint16_t, 24, 16>,
-               groov::field<"reserved0", std::uint8_t, 15, 9, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 15, 9, common::access::ro>,
                groov::field<"huffbase_ram_0", std::uint16_t, 8, 0>>;
 
 // jpeg_huffbase24_v1: HUFFBASE24
@@ -1507,10 +1507,10 @@ using jpeg_huffbase24_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint8_t, 31, 25, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint8_t, 31, 25, common::access::ro>,
                groov::field<"huffbase_ram_1", std::uint16_t, 24, 16>,
-               groov::field<"reserved0", std::uint8_t, 15, 9, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 15, 9, common::access::ro>,
                groov::field<"huffbase_ram_0", std::uint16_t, 8, 0>>;
 
 // jpeg_huffbase25_v1: HUFFBASE25
@@ -1522,10 +1522,10 @@ using jpeg_huffbase25_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint8_t, 31, 25, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint8_t, 31, 25, common::access::ro>,
                groov::field<"huffbase_ram_1", std::uint16_t, 24, 16>,
-               groov::field<"reserved0", std::uint8_t, 15, 9, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 15, 9, common::access::ro>,
                groov::field<"huffbase_ram_0", std::uint16_t, 8, 0>>;
 
 // jpeg_huffbase26_v1: HUFFBASE26
@@ -1537,10 +1537,10 @@ using jpeg_huffbase26_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint8_t, 31, 25, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint8_t, 31, 25, common::access::ro>,
                groov::field<"huffbase_ram_1", std::uint16_t, 24, 16>,
-               groov::field<"reserved0", std::uint8_t, 15, 9, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 15, 9, common::access::ro>,
                groov::field<"huffbase_ram_0", std::uint16_t, 8, 0>>;
 
 // jpeg_huffbase27_v1: HUFFBASE27
@@ -1552,10 +1552,10 @@ using jpeg_huffbase27_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint8_t, 31, 25, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint8_t, 31, 25, common::access::ro>,
                groov::field<"huffbase_ram_1", std::uint16_t, 24, 16>,
-               groov::field<"reserved0", std::uint8_t, 15, 9, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 15, 9, common::access::ro>,
                groov::field<"huffbase_ram_0", std::uint16_t, 8, 0>>;
 
 // jpeg_huffbase28_v1: HUFFBASE28
@@ -1567,10 +1567,10 @@ using jpeg_huffbase28_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint8_t, 31, 25, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint8_t, 31, 25, common::access::ro>,
                groov::field<"huffbase_ram_1", std::uint16_t, 24, 16>,
-               groov::field<"reserved0", std::uint8_t, 15, 9, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 15, 9, common::access::ro>,
                groov::field<"huffbase_ram_0", std::uint16_t, 8, 0>>;
 
 // jpeg_huffbase29_v1: HUFFBASE29
@@ -1582,10 +1582,10 @@ using jpeg_huffbase29_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint8_t, 31, 25, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint8_t, 31, 25, common::access::ro>,
                groov::field<"huffbase_ram_1", std::uint16_t, 24, 16>,
-               groov::field<"reserved0", std::uint8_t, 15, 9, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 15, 9, common::access::ro>,
                groov::field<"huffbase_ram_0", std::uint16_t, 8, 0>>;
 
 // jpeg_huffbase3_v1: HUFFBASE3
@@ -1597,10 +1597,10 @@ using jpeg_huffbase3_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint8_t, 31, 25, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint8_t, 31, 25, common::access::ro>,
                groov::field<"huffbase_ram_1", std::uint16_t, 24, 16>,
-               groov::field<"reserved0", std::uint8_t, 15, 9, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 15, 9, common::access::ro>,
                groov::field<"huffbase_ram_0", std::uint16_t, 8, 0>>;
 
 // jpeg_huffbase30_v1: HUFFBASE30
@@ -1612,10 +1612,10 @@ using jpeg_huffbase30_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint8_t, 31, 25, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint8_t, 31, 25, common::access::ro>,
                groov::field<"huffbase_ram_1", std::uint16_t, 24, 16>,
-               groov::field<"reserved0", std::uint8_t, 15, 9, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 15, 9, common::access::ro>,
                groov::field<"huffbase_ram_0", std::uint16_t, 8, 0>>;
 
 // jpeg_huffbase31_v1: HUFFBASE31
@@ -1627,10 +1627,10 @@ using jpeg_huffbase31_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint8_t, 31, 25, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint8_t, 31, 25, common::access::ro>,
                groov::field<"huffbase_ram_1", std::uint16_t, 24, 16>,
-               groov::field<"reserved0", std::uint8_t, 15, 9, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 15, 9, common::access::ro>,
                groov::field<"huffbase_ram_0", std::uint16_t, 8, 0>>;
 
 // jpeg_huffbase4_v1: HUFFBASE4
@@ -1642,10 +1642,10 @@ using jpeg_huffbase4_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint8_t, 31, 25, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint8_t, 31, 25, common::access::ro>,
                groov::field<"huffbase_ram_1", std::uint16_t, 24, 16>,
-               groov::field<"reserved0", std::uint8_t, 15, 9, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 15, 9, common::access::ro>,
                groov::field<"huffbase_ram_0", std::uint16_t, 8, 0>>;
 
 // jpeg_huffbase5_v1: HUFFBASE5
@@ -1657,10 +1657,10 @@ using jpeg_huffbase5_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint8_t, 31, 25, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint8_t, 31, 25, common::access::ro>,
                groov::field<"huffbase_ram_1", std::uint16_t, 24, 16>,
-               groov::field<"reserved0", std::uint8_t, 15, 9, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 15, 9, common::access::ro>,
                groov::field<"huffbase_ram_0", std::uint16_t, 8, 0>>;
 
 // jpeg_huffbase6_v1: HUFFBASE6
@@ -1672,10 +1672,10 @@ using jpeg_huffbase6_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint8_t, 31, 25, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint8_t, 31, 25, common::access::ro>,
                groov::field<"huffbase_ram_1", std::uint16_t, 24, 16>,
-               groov::field<"reserved0", std::uint8_t, 15, 9, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 15, 9, common::access::ro>,
                groov::field<"huffbase_ram_0", std::uint16_t, 8, 0>>;
 
 // jpeg_huffbase7_v1: HUFFBASE7
@@ -1687,10 +1687,10 @@ using jpeg_huffbase7_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint8_t, 31, 25, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint8_t, 31, 25, common::access::ro>,
                groov::field<"huffbase_ram_1", std::uint16_t, 24, 16>,
-               groov::field<"reserved0", std::uint8_t, 15, 9, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 15, 9, common::access::ro>,
                groov::field<"huffbase_ram_0", std::uint16_t, 8, 0>>;
 
 // jpeg_huffbase8_v1: HUFFBASE8
@@ -1702,10 +1702,10 @@ using jpeg_huffbase8_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint8_t, 31, 25, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint8_t, 31, 25, common::access::ro>,
                groov::field<"huffbase_ram_1", std::uint16_t, 24, 16>,
-               groov::field<"reserved0", std::uint8_t, 15, 9, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 15, 9, common::access::ro>,
                groov::field<"huffbase_ram_0", std::uint16_t, 8, 0>>;
 
 // jpeg_huffbase9_v1: HUFFBASE9
@@ -1717,10 +1717,10 @@ using jpeg_huffbase9_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint8_t, 31, 25, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint8_t, 31, 25, common::access::ro>,
                groov::field<"huffbase_ram_1", std::uint16_t, 24, 16>,
-               groov::field<"reserved0", std::uint8_t, 15, 9, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 15, 9, common::access::ro>,
                groov::field<"huffbase_ram_0", std::uint16_t, 8, 0>>;
 
 // jpeg_huffenc_ac0_0_v1: HUFFENC_AC0_0
@@ -1732,7 +1732,7 @@ using jpeg_huffenc_ac0_0_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac0_1_v1: HUFFENC_AC0_1
@@ -1744,7 +1744,7 @@ using jpeg_huffenc_ac0_1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac0_10_v1: HUFFENC_AC0_10
@@ -1756,7 +1756,7 @@ using jpeg_huffenc_ac0_10_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac0_11_v1: HUFFENC_AC0_11
@@ -1768,7 +1768,7 @@ using jpeg_huffenc_ac0_11_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac0_12_v1: HUFFENC_AC0_12
@@ -1780,7 +1780,7 @@ using jpeg_huffenc_ac0_12_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac0_13_v1: HUFFENC_AC0_13
@@ -1792,7 +1792,7 @@ using jpeg_huffenc_ac0_13_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac0_14_v1: HUFFENC_AC0_14
@@ -1804,7 +1804,7 @@ using jpeg_huffenc_ac0_14_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac0_15_v1: HUFFENC_AC0_15
@@ -1816,7 +1816,7 @@ using jpeg_huffenc_ac0_15_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac0_16_v1: HUFFENC_AC0_16
@@ -1828,7 +1828,7 @@ using jpeg_huffenc_ac0_16_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac0_17_v1: HUFFENC_AC0_17
@@ -1840,7 +1840,7 @@ using jpeg_huffenc_ac0_17_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac0_18_v1: HUFFENC_AC0_18
@@ -1852,7 +1852,7 @@ using jpeg_huffenc_ac0_18_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac0_19_v1: HUFFENC_AC0_19
@@ -1864,7 +1864,7 @@ using jpeg_huffenc_ac0_19_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac0_2_v1: HUFFENC_AC0_2
@@ -1876,7 +1876,7 @@ using jpeg_huffenc_ac0_2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac0_20_v1: HUFFENC_AC0_20
@@ -1888,7 +1888,7 @@ using jpeg_huffenc_ac0_20_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac0_21_v1: HUFFENC_AC0_21
@@ -1900,7 +1900,7 @@ using jpeg_huffenc_ac0_21_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac0_22_v1: HUFFENC_AC0_22
@@ -1912,7 +1912,7 @@ using jpeg_huffenc_ac0_22_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac0_23_v1: HUFFENC_AC0_23
@@ -1924,7 +1924,7 @@ using jpeg_huffenc_ac0_23_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac0_24_v1: HUFFENC_AC0_24
@@ -1936,7 +1936,7 @@ using jpeg_huffenc_ac0_24_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac0_25_v1: HUFFENC_AC0_25
@@ -1948,7 +1948,7 @@ using jpeg_huffenc_ac0_25_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac0_26_v1: HUFFENC_AC0_26
@@ -1960,7 +1960,7 @@ using jpeg_huffenc_ac0_26_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac0_27_v1: HUFFENC_AC0_27
@@ -1972,7 +1972,7 @@ using jpeg_huffenc_ac0_27_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac0_28_v1: HUFFENC_AC0_28
@@ -1984,7 +1984,7 @@ using jpeg_huffenc_ac0_28_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac0_29_v1: HUFFENC_AC0_29
@@ -1996,7 +1996,7 @@ using jpeg_huffenc_ac0_29_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac0_3_v1: HUFFENC_AC0_3
@@ -2008,7 +2008,7 @@ using jpeg_huffenc_ac0_3_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac0_30_v1: HUFFENC_AC0_30
@@ -2020,7 +2020,7 @@ using jpeg_huffenc_ac0_30_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac0_31_v1: HUFFENC_AC0_31
@@ -2032,7 +2032,7 @@ using jpeg_huffenc_ac0_31_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac0_32_v1: HUFFENC_AC0_32
@@ -2044,7 +2044,7 @@ using jpeg_huffenc_ac0_32_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac0_33_v1: HUFFENC_AC0_33
@@ -2056,7 +2056,7 @@ using jpeg_huffenc_ac0_33_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac0_34_v1: HUFFENC_AC0_34
@@ -2068,7 +2068,7 @@ using jpeg_huffenc_ac0_34_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac0_35_v1: HUFFENC_AC0_35
@@ -2080,7 +2080,7 @@ using jpeg_huffenc_ac0_35_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac0_36_v1: HUFFENC_AC0_36
@@ -2092,7 +2092,7 @@ using jpeg_huffenc_ac0_36_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac0_37_v1: HUFFENC_AC0_37
@@ -2104,7 +2104,7 @@ using jpeg_huffenc_ac0_37_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac0_38_v1: HUFFENC_AC0_38
@@ -2116,7 +2116,7 @@ using jpeg_huffenc_ac0_38_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac0_39_v1: HUFFENC_AC0_39
@@ -2128,7 +2128,7 @@ using jpeg_huffenc_ac0_39_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac0_4_v1: HUFFENC_AC0_4
@@ -2140,7 +2140,7 @@ using jpeg_huffenc_ac0_4_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac0_40_v1: HUFFENC_AC0_40
@@ -2152,7 +2152,7 @@ using jpeg_huffenc_ac0_40_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac0_41_v1: HUFFENC_AC0_41
@@ -2164,7 +2164,7 @@ using jpeg_huffenc_ac0_41_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac0_42_v1: HUFFENC_AC0_42
@@ -2176,7 +2176,7 @@ using jpeg_huffenc_ac0_42_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac0_43_v1: HUFFENC_AC0_43
@@ -2188,7 +2188,7 @@ using jpeg_huffenc_ac0_43_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac0_44_v1: HUFFENC_AC0_44
@@ -2200,7 +2200,7 @@ using jpeg_huffenc_ac0_44_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac0_45_v1: HUFFENC_AC0_45
@@ -2212,7 +2212,7 @@ using jpeg_huffenc_ac0_45_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac0_46_v1: HUFFENC_AC0_46
@@ -2224,7 +2224,7 @@ using jpeg_huffenc_ac0_46_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac0_47_v1: HUFFENC_AC0_47
@@ -2236,7 +2236,7 @@ using jpeg_huffenc_ac0_47_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac0_48_v1: HUFFENC_AC0_48
@@ -2248,7 +2248,7 @@ using jpeg_huffenc_ac0_48_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac0_49_v1: HUFFENC_AC0_49
@@ -2260,7 +2260,7 @@ using jpeg_huffenc_ac0_49_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac0_5_v1: HUFFENC_AC0_5
@@ -2272,7 +2272,7 @@ using jpeg_huffenc_ac0_5_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac0_50_v1: HUFFENC_AC0_50
@@ -2284,7 +2284,7 @@ using jpeg_huffenc_ac0_50_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac0_51_v1: HUFFENC_AC0_51
@@ -2296,7 +2296,7 @@ using jpeg_huffenc_ac0_51_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac0_52_v1: HUFFENC_AC0_52
@@ -2308,7 +2308,7 @@ using jpeg_huffenc_ac0_52_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac0_53_v1: HUFFENC_AC0_53
@@ -2320,7 +2320,7 @@ using jpeg_huffenc_ac0_53_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac0_54_v1: HUFFENC_AC0_54
@@ -2332,7 +2332,7 @@ using jpeg_huffenc_ac0_54_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac0_55_v1: HUFFENC_AC0_55
@@ -2344,7 +2344,7 @@ using jpeg_huffenc_ac0_55_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac0_56_v1: HUFFENC_AC0_56
@@ -2356,7 +2356,7 @@ using jpeg_huffenc_ac0_56_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac0_57_v1: HUFFENC_AC0_57
@@ -2368,7 +2368,7 @@ using jpeg_huffenc_ac0_57_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac0_58_v1: HUFFENC_AC0_58
@@ -2380,7 +2380,7 @@ using jpeg_huffenc_ac0_58_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac0_59_v1: HUFFENC_AC0_59
@@ -2392,7 +2392,7 @@ using jpeg_huffenc_ac0_59_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac0_6_v1: HUFFENC_AC0_6
@@ -2404,7 +2404,7 @@ using jpeg_huffenc_ac0_6_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac0_60_v1: HUFFENC_AC0_60
@@ -2416,7 +2416,7 @@ using jpeg_huffenc_ac0_60_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac0_61_v1: HUFFENC_AC0_61
@@ -2428,7 +2428,7 @@ using jpeg_huffenc_ac0_61_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac0_62_v1: HUFFENC_AC0_62
@@ -2440,7 +2440,7 @@ using jpeg_huffenc_ac0_62_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac0_63_v1: HUFFENC_AC0_63
@@ -2452,7 +2452,7 @@ using jpeg_huffenc_ac0_63_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac0_64_v1: HUFFENC_AC0_64
@@ -2464,7 +2464,7 @@ using jpeg_huffenc_ac0_64_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac0_65_v1: HUFFENC_AC0_65
@@ -2476,7 +2476,7 @@ using jpeg_huffenc_ac0_65_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac0_66_v1: HUFFENC_AC0_66
@@ -2488,7 +2488,7 @@ using jpeg_huffenc_ac0_66_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac0_67_v1: HUFFENC_AC0_67
@@ -2500,7 +2500,7 @@ using jpeg_huffenc_ac0_67_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac0_68_v1: HUFFENC_AC0_68
@@ -2512,7 +2512,7 @@ using jpeg_huffenc_ac0_68_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac0_69_v1: HUFFENC_AC0_69
@@ -2524,7 +2524,7 @@ using jpeg_huffenc_ac0_69_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac0_7_v1: HUFFENC_AC0_7
@@ -2536,7 +2536,7 @@ using jpeg_huffenc_ac0_7_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac0_70_v1: HUFFENC_AC0_70
@@ -2548,7 +2548,7 @@ using jpeg_huffenc_ac0_70_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac0_71_v1: HUFFENC_AC0_71
@@ -2560,7 +2560,7 @@ using jpeg_huffenc_ac0_71_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac0_72_v1: HUFFENC_AC0_72
@@ -2572,7 +2572,7 @@ using jpeg_huffenc_ac0_72_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac0_73_v1: HUFFENC_AC0_73
@@ -2584,7 +2584,7 @@ using jpeg_huffenc_ac0_73_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac0_74_v1: HUFFENC_AC0_74
@@ -2596,7 +2596,7 @@ using jpeg_huffenc_ac0_74_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac0_75_v1: HUFFENC_AC0_75
@@ -2608,7 +2608,7 @@ using jpeg_huffenc_ac0_75_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac0_76_v1: HUFFENC_AC0_76
@@ -2620,7 +2620,7 @@ using jpeg_huffenc_ac0_76_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac0_77_v1: HUFFENC_AC0_77
@@ -2632,7 +2632,7 @@ using jpeg_huffenc_ac0_77_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac0_78_v1: HUFFENC_AC0_78
@@ -2644,7 +2644,7 @@ using jpeg_huffenc_ac0_78_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac0_79_v1: HUFFENC_AC0_79
@@ -2656,7 +2656,7 @@ using jpeg_huffenc_ac0_79_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac0_8_v1: HUFFENC_AC0_8
@@ -2668,7 +2668,7 @@ using jpeg_huffenc_ac0_8_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac0_80_v1: HUFFENC_AC0_80
@@ -2680,7 +2680,7 @@ using jpeg_huffenc_ac0_80_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac0_81_v1: HUFFENC_AC0_81
@@ -2692,7 +2692,7 @@ using jpeg_huffenc_ac0_81_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac0_82_v1: HUFFENC_AC0_82
@@ -2704,7 +2704,7 @@ using jpeg_huffenc_ac0_82_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac0_83_v1: HUFFENC_AC0_83
@@ -2716,7 +2716,7 @@ using jpeg_huffenc_ac0_83_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac0_84_v1: HUFFENC_AC0_84
@@ -2728,7 +2728,7 @@ using jpeg_huffenc_ac0_84_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac0_85_v1: HUFFENC_AC0_85
@@ -2740,7 +2740,7 @@ using jpeg_huffenc_ac0_85_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac0_86_v1: HUFFENC_AC0_86
@@ -2752,7 +2752,7 @@ using jpeg_huffenc_ac0_86_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac0_87_v1: HUFFENC_AC0_87
@@ -2764,7 +2764,7 @@ using jpeg_huffenc_ac0_87_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac0_9_v1: HUFFENC_AC0_9
@@ -2776,7 +2776,7 @@ using jpeg_huffenc_ac0_9_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac1_0_v1: HUFFENC_AC1_0
@@ -2788,7 +2788,7 @@ using jpeg_huffenc_ac1_0_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac1_1_v1: HUFFENC_AC1_1
@@ -2800,7 +2800,7 @@ using jpeg_huffenc_ac1_1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac1_10_v1: HUFFENC_AC1_10
@@ -2812,7 +2812,7 @@ using jpeg_huffenc_ac1_10_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac1_11_v1: HUFFENC_AC1_11
@@ -2824,7 +2824,7 @@ using jpeg_huffenc_ac1_11_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac1_12_v1: HUFFENC_AC1_12
@@ -2836,7 +2836,7 @@ using jpeg_huffenc_ac1_12_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac1_13_v1: HUFFENC_AC1_13
@@ -2848,7 +2848,7 @@ using jpeg_huffenc_ac1_13_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac1_14_v1: HUFFENC_AC1_14
@@ -2860,7 +2860,7 @@ using jpeg_huffenc_ac1_14_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac1_15_v1: HUFFENC_AC1_15
@@ -2872,7 +2872,7 @@ using jpeg_huffenc_ac1_15_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac1_16_v1: HUFFENC_AC1_16
@@ -2884,7 +2884,7 @@ using jpeg_huffenc_ac1_16_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac1_17_v1: HUFFENC_AC1_17
@@ -2896,7 +2896,7 @@ using jpeg_huffenc_ac1_17_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac1_18_v1: HUFFENC_AC1_18
@@ -2908,7 +2908,7 @@ using jpeg_huffenc_ac1_18_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac1_19_v1: HUFFENC_AC1_19
@@ -2920,7 +2920,7 @@ using jpeg_huffenc_ac1_19_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac1_2_v1: HUFFENC_AC1_2
@@ -2932,7 +2932,7 @@ using jpeg_huffenc_ac1_2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac1_20_v1: HUFFENC_AC1_20
@@ -2944,7 +2944,7 @@ using jpeg_huffenc_ac1_20_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac1_21_v1: HUFFENC_AC1_21
@@ -2956,7 +2956,7 @@ using jpeg_huffenc_ac1_21_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac1_22_v1: HUFFENC_AC1_22
@@ -2968,7 +2968,7 @@ using jpeg_huffenc_ac1_22_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac1_23_v1: HUFFENC_AC1_23
@@ -2980,7 +2980,7 @@ using jpeg_huffenc_ac1_23_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac1_24_v1: HUFFENC_AC1_24
@@ -2992,7 +2992,7 @@ using jpeg_huffenc_ac1_24_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac1_25_v1: HUFFENC_AC1_25
@@ -3004,7 +3004,7 @@ using jpeg_huffenc_ac1_25_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac1_26_v1: HUFFENC_AC1_26
@@ -3016,7 +3016,7 @@ using jpeg_huffenc_ac1_26_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac1_27_v1: HUFFENC_AC1_27
@@ -3028,7 +3028,7 @@ using jpeg_huffenc_ac1_27_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac1_28_v1: HUFFENC_AC1_28
@@ -3040,7 +3040,7 @@ using jpeg_huffenc_ac1_28_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac1_29_v1: HUFFENC_AC1_29
@@ -3052,7 +3052,7 @@ using jpeg_huffenc_ac1_29_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac1_3_v1: HUFFENC_AC1_3
@@ -3064,7 +3064,7 @@ using jpeg_huffenc_ac1_3_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac1_30_v1: HUFFENC_AC1_30
@@ -3076,7 +3076,7 @@ using jpeg_huffenc_ac1_30_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac1_31_v1: HUFFENC_AC1_31
@@ -3088,7 +3088,7 @@ using jpeg_huffenc_ac1_31_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac1_32_v1: HUFFENC_AC1_32
@@ -3100,7 +3100,7 @@ using jpeg_huffenc_ac1_32_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac1_33_v1: HUFFENC_AC1_33
@@ -3112,7 +3112,7 @@ using jpeg_huffenc_ac1_33_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac1_34_v1: HUFFENC_AC1_34
@@ -3124,7 +3124,7 @@ using jpeg_huffenc_ac1_34_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac1_35_v1: HUFFENC_AC1_35
@@ -3136,7 +3136,7 @@ using jpeg_huffenc_ac1_35_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac1_36_v1: HUFFENC_AC1_36
@@ -3148,7 +3148,7 @@ using jpeg_huffenc_ac1_36_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac1_37_v1: HUFFENC_AC1_37
@@ -3160,7 +3160,7 @@ using jpeg_huffenc_ac1_37_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac1_38_v1: HUFFENC_AC1_38
@@ -3172,7 +3172,7 @@ using jpeg_huffenc_ac1_38_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac1_39_v1: HUFFENC_AC1_39
@@ -3184,7 +3184,7 @@ using jpeg_huffenc_ac1_39_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac1_4_v1: HUFFENC_AC1_4
@@ -3196,7 +3196,7 @@ using jpeg_huffenc_ac1_4_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac1_40_v1: HUFFENC_AC1_40
@@ -3208,7 +3208,7 @@ using jpeg_huffenc_ac1_40_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac1_41_v1: HUFFENC_AC1_41
@@ -3220,7 +3220,7 @@ using jpeg_huffenc_ac1_41_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac1_42_v1: HUFFENC_AC1_42
@@ -3232,7 +3232,7 @@ using jpeg_huffenc_ac1_42_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac1_43_v1: HUFFENC_AC1_43
@@ -3244,7 +3244,7 @@ using jpeg_huffenc_ac1_43_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac1_44_v1: HUFFENC_AC1_44
@@ -3256,7 +3256,7 @@ using jpeg_huffenc_ac1_44_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac1_45_v1: HUFFENC_AC1_45
@@ -3268,7 +3268,7 @@ using jpeg_huffenc_ac1_45_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac1_46_v1: HUFFENC_AC1_46
@@ -3280,7 +3280,7 @@ using jpeg_huffenc_ac1_46_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac1_47_v1: HUFFENC_AC1_47
@@ -3292,7 +3292,7 @@ using jpeg_huffenc_ac1_47_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac1_48_v1: HUFFENC_AC1_48
@@ -3304,7 +3304,7 @@ using jpeg_huffenc_ac1_48_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac1_49_v1: HUFFENC_AC1_49
@@ -3316,7 +3316,7 @@ using jpeg_huffenc_ac1_49_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac1_5_v1: HUFFENC_AC1_5
@@ -3328,7 +3328,7 @@ using jpeg_huffenc_ac1_5_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac1_50_v1: HUFFENC_AC1_50
@@ -3340,7 +3340,7 @@ using jpeg_huffenc_ac1_50_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac1_51_v1: HUFFENC_AC1_51
@@ -3352,7 +3352,7 @@ using jpeg_huffenc_ac1_51_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac1_52_v1: HUFFENC_AC1_52
@@ -3364,7 +3364,7 @@ using jpeg_huffenc_ac1_52_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac1_53_v1: HUFFENC_AC1_53
@@ -3376,7 +3376,7 @@ using jpeg_huffenc_ac1_53_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac1_54_v1: HUFFENC_AC1_54
@@ -3388,7 +3388,7 @@ using jpeg_huffenc_ac1_54_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac1_55_v1: HUFFENC_AC1_55
@@ -3400,7 +3400,7 @@ using jpeg_huffenc_ac1_55_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac1_56_v1: HUFFENC_AC1_56
@@ -3412,7 +3412,7 @@ using jpeg_huffenc_ac1_56_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac1_57_v1: HUFFENC_AC1_57
@@ -3424,7 +3424,7 @@ using jpeg_huffenc_ac1_57_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac1_58_v1: HUFFENC_AC1_58
@@ -3436,7 +3436,7 @@ using jpeg_huffenc_ac1_58_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac1_59_v1: HUFFENC_AC1_59
@@ -3448,7 +3448,7 @@ using jpeg_huffenc_ac1_59_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac1_6_v1: HUFFENC_AC1_6
@@ -3460,7 +3460,7 @@ using jpeg_huffenc_ac1_6_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac1_60_v1: HUFFENC_AC1_60
@@ -3472,7 +3472,7 @@ using jpeg_huffenc_ac1_60_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac1_61_v1: HUFFENC_AC1_61
@@ -3484,7 +3484,7 @@ using jpeg_huffenc_ac1_61_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac1_62_v1: HUFFENC_AC1_62
@@ -3496,7 +3496,7 @@ using jpeg_huffenc_ac1_62_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac1_63_v1: HUFFENC_AC1_63
@@ -3508,7 +3508,7 @@ using jpeg_huffenc_ac1_63_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac1_64_v1: HUFFENC_AC1_64
@@ -3520,7 +3520,7 @@ using jpeg_huffenc_ac1_64_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac1_65_v1: HUFFENC_AC1_65
@@ -3532,7 +3532,7 @@ using jpeg_huffenc_ac1_65_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac1_66_v1: HUFFENC_AC1_66
@@ -3544,7 +3544,7 @@ using jpeg_huffenc_ac1_66_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac1_67_v1: HUFFENC_AC1_67
@@ -3556,7 +3556,7 @@ using jpeg_huffenc_ac1_67_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac1_68_v1: HUFFENC_AC1_68
@@ -3568,7 +3568,7 @@ using jpeg_huffenc_ac1_68_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac1_69_v1: HUFFENC_AC1_69
@@ -3580,7 +3580,7 @@ using jpeg_huffenc_ac1_69_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac1_7_v1: HUFFENC_AC1_7
@@ -3592,7 +3592,7 @@ using jpeg_huffenc_ac1_7_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac1_70_v1: HUFFENC_AC1_70
@@ -3604,7 +3604,7 @@ using jpeg_huffenc_ac1_70_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac1_71_v1: HUFFENC_AC1_71
@@ -3616,7 +3616,7 @@ using jpeg_huffenc_ac1_71_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac1_72_v1: HUFFENC_AC1_72
@@ -3628,7 +3628,7 @@ using jpeg_huffenc_ac1_72_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac1_73_v1: HUFFENC_AC1_73
@@ -3640,7 +3640,7 @@ using jpeg_huffenc_ac1_73_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac1_74_v1: HUFFENC_AC1_74
@@ -3652,7 +3652,7 @@ using jpeg_huffenc_ac1_74_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac1_75_v1: HUFFENC_AC1_75
@@ -3664,7 +3664,7 @@ using jpeg_huffenc_ac1_75_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac1_76_v1: HUFFENC_AC1_76
@@ -3676,7 +3676,7 @@ using jpeg_huffenc_ac1_76_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac1_77_v1: HUFFENC_AC1_77
@@ -3688,7 +3688,7 @@ using jpeg_huffenc_ac1_77_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac1_78_v1: HUFFENC_AC1_78
@@ -3700,7 +3700,7 @@ using jpeg_huffenc_ac1_78_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac1_79_v1: HUFFENC_AC1_79
@@ -3712,7 +3712,7 @@ using jpeg_huffenc_ac1_79_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac1_8_v1: HUFFENC_AC1_8
@@ -3724,7 +3724,7 @@ using jpeg_huffenc_ac1_8_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac1_80_v1: HUFFENC_AC1_80
@@ -3736,7 +3736,7 @@ using jpeg_huffenc_ac1_80_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac1_81_v1: HUFFENC_AC1_81
@@ -3748,7 +3748,7 @@ using jpeg_huffenc_ac1_81_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac1_82_v1: HUFFENC_AC1_82
@@ -3760,7 +3760,7 @@ using jpeg_huffenc_ac1_82_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac1_83_v1: HUFFENC_AC1_83
@@ -3772,7 +3772,7 @@ using jpeg_huffenc_ac1_83_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac1_84_v1: HUFFENC_AC1_84
@@ -3784,7 +3784,7 @@ using jpeg_huffenc_ac1_84_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac1_85_v1: HUFFENC_AC1_85
@@ -3796,7 +3796,7 @@ using jpeg_huffenc_ac1_85_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac1_86_v1: HUFFENC_AC1_86
@@ -3808,7 +3808,7 @@ using jpeg_huffenc_ac1_86_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac1_87_v1: HUFFENC_AC1_87
@@ -3820,7 +3820,7 @@ using jpeg_huffenc_ac1_87_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_ac1_9_v1: HUFFENC_AC1_9
@@ -3832,7 +3832,7 @@ using jpeg_huffenc_ac1_9_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_dc0_0_v1: HUFFENC_DC0_0
@@ -3844,7 +3844,7 @@ using jpeg_huffenc_dc0_0_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_dc0_1_v1: HUFFENC_DC0_1
@@ -3856,7 +3856,7 @@ using jpeg_huffenc_dc0_1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_dc0_2_v1: HUFFENC_DC0_2
@@ -3868,7 +3868,7 @@ using jpeg_huffenc_dc0_2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_dc0_3_v1: HUFFENC_DC0_3
@@ -3880,7 +3880,7 @@ using jpeg_huffenc_dc0_3_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_dc0_4_v1: HUFFENC_DC0_4
@@ -3892,7 +3892,7 @@ using jpeg_huffenc_dc0_4_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_dc0_5_v1: HUFFENC_DC0_5
@@ -3904,7 +3904,7 @@ using jpeg_huffenc_dc0_5_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_dc0_6_v1: HUFFENC_DC0_6
@@ -3916,7 +3916,7 @@ using jpeg_huffenc_dc0_6_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_dc0_7_v1: HUFFENC_DC0_7
@@ -3928,7 +3928,7 @@ using jpeg_huffenc_dc0_7_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_dc1_0_v1: HUFFENC_DC1_0
@@ -3940,7 +3940,7 @@ using jpeg_huffenc_dc1_0_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_dc1_1_v1: HUFFENC_DC1_1
@@ -3952,7 +3952,7 @@ using jpeg_huffenc_dc1_1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_dc1_2_v1: HUFFENC_DC1_2
@@ -3964,7 +3964,7 @@ using jpeg_huffenc_dc1_2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_dc1_3_v1: HUFFENC_DC1_3
@@ -3976,7 +3976,7 @@ using jpeg_huffenc_dc1_3_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_dc1_4_v1: HUFFENC_DC1_4
@@ -3988,7 +3988,7 @@ using jpeg_huffenc_dc1_4_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_dc1_5_v1: HUFFENC_DC1_5
@@ -4000,7 +4000,7 @@ using jpeg_huffenc_dc1_5_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_dc1_6_v1: HUFFENC_DC1_6
@@ -4012,7 +4012,7 @@ using jpeg_huffenc_dc1_6_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffenc_dc1_7_v1: HUFFENC_DC1_7
@@ -4024,7 +4024,7 @@ using jpeg_huffenc_dc1_7_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dhtmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffmin_0_v1: HUFFMIN_0
@@ -4036,7 +4036,7 @@ using jpeg_huffmin_0_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"huffmin_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffmin_1_v1: HUFFMIN_1
@@ -4048,7 +4048,7 @@ using jpeg_huffmin_1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"huffmin_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffmin_10_v1: HUFFMIN_10
@@ -4060,7 +4060,7 @@ using jpeg_huffmin_10_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"huffmin_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffmin_11_v1: HUFFMIN_11
@@ -4072,7 +4072,7 @@ using jpeg_huffmin_11_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"huffmin_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffmin_12_v1: HUFFMIN_12
@@ -4084,7 +4084,7 @@ using jpeg_huffmin_12_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"huffmin_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffmin_13_v1: HUFFMIN_13
@@ -4096,7 +4096,7 @@ using jpeg_huffmin_13_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"huffmin_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffmin_14_v1: HUFFMIN_14
@@ -4108,7 +4108,7 @@ using jpeg_huffmin_14_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"huffmin_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffmin_15_v1: HUFFMIN_15
@@ -4120,7 +4120,7 @@ using jpeg_huffmin_15_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"huffmin_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffmin_2_v1: HUFFMIN_2
@@ -4132,7 +4132,7 @@ using jpeg_huffmin_2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"huffmin_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffmin_3_v1: HUFFMIN_3
@@ -4144,7 +4144,7 @@ using jpeg_huffmin_3_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"huffmin_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffmin_4_v1: HUFFMIN_4
@@ -4156,7 +4156,7 @@ using jpeg_huffmin_4_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"huffmin_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffmin_5_v1: HUFFMIN_5
@@ -4168,7 +4168,7 @@ using jpeg_huffmin_5_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"huffmin_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffmin_6_v1: HUFFMIN_6
@@ -4180,7 +4180,7 @@ using jpeg_huffmin_6_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"huffmin_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffmin_7_v1: HUFFMIN_7
@@ -4192,7 +4192,7 @@ using jpeg_huffmin_7_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"huffmin_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffmin_8_v1: HUFFMIN_8
@@ -4204,7 +4204,7 @@ using jpeg_huffmin_8_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"huffmin_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffmin_9_v1: HUFFMIN_9
@@ -4216,7 +4216,7 @@ using jpeg_huffmin_9_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"huffmin_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffsymb0_v1: HUFFSYMB0
@@ -4228,7 +4228,7 @@ using jpeg_huffsymb0_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"huffsymb_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffsymb1_v1: HUFFSYMB1
@@ -4240,7 +4240,7 @@ using jpeg_huffsymb1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"huffsymb_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffsymb10_v1: HUFFSYMB10
@@ -4252,7 +4252,7 @@ using jpeg_huffsymb10_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"huffsymb_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffsymb11_v1: HUFFSYMB11
@@ -4264,7 +4264,7 @@ using jpeg_huffsymb11_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"huffsymb_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffsymb12_v1: HUFFSYMB12
@@ -4276,7 +4276,7 @@ using jpeg_huffsymb12_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"huffsymb_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffsymb13_v1: HUFFSYMB13
@@ -4288,7 +4288,7 @@ using jpeg_huffsymb13_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"huffsymb_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffsymb14_v1: HUFFSYMB14
@@ -4300,7 +4300,7 @@ using jpeg_huffsymb14_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"huffsymb_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffsymb15_v1: HUFFSYMB15
@@ -4312,7 +4312,7 @@ using jpeg_huffsymb15_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"huffsymb_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffsymb16_v1: HUFFSYMB16
@@ -4324,7 +4324,7 @@ using jpeg_huffsymb16_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"huffsymb_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffsymb17_v1: HUFFSYMB17
@@ -4336,7 +4336,7 @@ using jpeg_huffsymb17_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"huffsymb_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffsymb18_v1: HUFFSYMB18
@@ -4348,7 +4348,7 @@ using jpeg_huffsymb18_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"huffsymb_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffsymb19_v1: HUFFSYMB19
@@ -4360,7 +4360,7 @@ using jpeg_huffsymb19_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"huffsymb_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffsymb2_v1: HUFFSYMB2
@@ -4372,7 +4372,7 @@ using jpeg_huffsymb2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"huffsymb_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffsymb20_v1: HUFFSYMB20
@@ -4384,7 +4384,7 @@ using jpeg_huffsymb20_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"huffsymb_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffsymb21_v1: HUFFSYMB21
@@ -4396,7 +4396,7 @@ using jpeg_huffsymb21_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"huffsymb_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffsymb22_v1: HUFFSYMB22
@@ -4408,7 +4408,7 @@ using jpeg_huffsymb22_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"huffsymb_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffsymb23_v1: HUFFSYMB23
@@ -4420,7 +4420,7 @@ using jpeg_huffsymb23_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"huffsymb_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffsymb24_v1: HUFFSYMB24
@@ -4432,7 +4432,7 @@ using jpeg_huffsymb24_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"huffsymb_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffsymb25_v1: HUFFSYMB25
@@ -4444,7 +4444,7 @@ using jpeg_huffsymb25_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"huffsymb_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffsymb26_v1: HUFFSYMB26
@@ -4456,7 +4456,7 @@ using jpeg_huffsymb26_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"huffsymb_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffsymb27_v1: HUFFSYMB27
@@ -4468,7 +4468,7 @@ using jpeg_huffsymb27_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"huffsymb_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffsymb28_v1: HUFFSYMB28
@@ -4480,7 +4480,7 @@ using jpeg_huffsymb28_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"huffsymb_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffsymb29_v1: HUFFSYMB29
@@ -4492,7 +4492,7 @@ using jpeg_huffsymb29_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"huffsymb_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffsymb3_v1: HUFFSYMB3
@@ -4504,7 +4504,7 @@ using jpeg_huffsymb3_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"huffsymb_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffsymb30_v1: HUFFSYMB30
@@ -4516,7 +4516,7 @@ using jpeg_huffsymb30_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"huffsymb_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffsymb31_v1: HUFFSYMB31
@@ -4528,7 +4528,7 @@ using jpeg_huffsymb31_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"huffsymb_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffsymb32_v1: HUFFSYMB32
@@ -4540,7 +4540,7 @@ using jpeg_huffsymb32_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"huffsymb_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffsymb33_v1: HUFFSYMB33
@@ -4552,7 +4552,7 @@ using jpeg_huffsymb33_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"huffsymb_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffsymb34_v1: HUFFSYMB34
@@ -4564,7 +4564,7 @@ using jpeg_huffsymb34_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"huffsymb_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffsymb35_v1: HUFFSYMB35
@@ -4576,7 +4576,7 @@ using jpeg_huffsymb35_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"huffsymb_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffsymb36_v1: HUFFSYMB36
@@ -4588,7 +4588,7 @@ using jpeg_huffsymb36_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"huffsymb_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffsymb37_v1: HUFFSYMB37
@@ -4600,7 +4600,7 @@ using jpeg_huffsymb37_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"huffsymb_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffsymb38_v1: HUFFSYMB38
@@ -4612,7 +4612,7 @@ using jpeg_huffsymb38_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"huffsymb_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffsymb39_v1: HUFFSYMB39
@@ -4624,7 +4624,7 @@ using jpeg_huffsymb39_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"huffsymb_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffsymb4_v1: HUFFSYMB4
@@ -4636,7 +4636,7 @@ using jpeg_huffsymb4_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"huffsymb_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffsymb40_v1: HUFFSYMB40
@@ -4648,7 +4648,7 @@ using jpeg_huffsymb40_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"huffsymb_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffsymb41_v1: HUFFSYMB41
@@ -4660,7 +4660,7 @@ using jpeg_huffsymb41_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"huffsymb_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffsymb42_v1: HUFFSYMB42
@@ -4672,7 +4672,7 @@ using jpeg_huffsymb42_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"huffsymb_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffsymb43_v1: HUFFSYMB43
@@ -4684,7 +4684,7 @@ using jpeg_huffsymb43_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"huffsymb_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffsymb44_v1: HUFFSYMB44
@@ -4696,7 +4696,7 @@ using jpeg_huffsymb44_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"huffsymb_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffsymb45_v1: HUFFSYMB45
@@ -4708,7 +4708,7 @@ using jpeg_huffsymb45_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"huffsymb_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffsymb46_v1: HUFFSYMB46
@@ -4720,7 +4720,7 @@ using jpeg_huffsymb46_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"huffsymb_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffsymb47_v1: HUFFSYMB47
@@ -4732,7 +4732,7 @@ using jpeg_huffsymb47_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"huffsymb_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffsymb48_v1: HUFFSYMB48
@@ -4744,7 +4744,7 @@ using jpeg_huffsymb48_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"huffsymb_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffsymb49_v1: HUFFSYMB49
@@ -4756,7 +4756,7 @@ using jpeg_huffsymb49_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"huffsymb_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffsymb5_v1: HUFFSYMB5
@@ -4768,7 +4768,7 @@ using jpeg_huffsymb5_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"huffsymb_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffsymb50_v1: HUFFSYMB50
@@ -4780,7 +4780,7 @@ using jpeg_huffsymb50_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"huffsymb_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffsymb51_v1: HUFFSYMB51
@@ -4792,7 +4792,7 @@ using jpeg_huffsymb51_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"huffsymb_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffsymb52_v1: HUFFSYMB52
@@ -4804,7 +4804,7 @@ using jpeg_huffsymb52_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"huffsymb_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffsymb53_v1: HUFFSYMB53
@@ -4816,7 +4816,7 @@ using jpeg_huffsymb53_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"huffsymb_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffsymb54_v1: HUFFSYMB54
@@ -4828,7 +4828,7 @@ using jpeg_huffsymb54_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"huffsymb_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffsymb55_v1: HUFFSYMB55
@@ -4840,7 +4840,7 @@ using jpeg_huffsymb55_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"huffsymb_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffsymb56_v1: HUFFSYMB56
@@ -4852,7 +4852,7 @@ using jpeg_huffsymb56_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"huffsymb_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffsymb57_v1: HUFFSYMB57
@@ -4864,7 +4864,7 @@ using jpeg_huffsymb57_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"huffsymb_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffsymb58_v1: HUFFSYMB58
@@ -4876,7 +4876,7 @@ using jpeg_huffsymb58_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"huffsymb_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffsymb59_v1: HUFFSYMB59
@@ -4888,7 +4888,7 @@ using jpeg_huffsymb59_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"huffsymb_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffsymb6_v1: HUFFSYMB6
@@ -4900,7 +4900,7 @@ using jpeg_huffsymb6_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"huffsymb_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffsymb60_v1: HUFFSYMB60
@@ -4912,7 +4912,7 @@ using jpeg_huffsymb60_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"huffsymb_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffsymb61_v1: HUFFSYMB61
@@ -4924,7 +4924,7 @@ using jpeg_huffsymb61_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"huffsymb_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffsymb62_v1: HUFFSYMB62
@@ -4936,7 +4936,7 @@ using jpeg_huffsymb62_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"huffsymb_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffsymb63_v1: HUFFSYMB63
@@ -4948,7 +4948,7 @@ using jpeg_huffsymb63_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"huffsymb_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffsymb64_v1: HUFFSYMB64
@@ -4960,7 +4960,7 @@ using jpeg_huffsymb64_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"huffsymb_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffsymb65_v1: HUFFSYMB65
@@ -4972,7 +4972,7 @@ using jpeg_huffsymb65_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"huffsymb_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffsymb66_v1: HUFFSYMB66
@@ -4984,7 +4984,7 @@ using jpeg_huffsymb66_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"huffsymb_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffsymb67_v1: HUFFSYMB67
@@ -4996,7 +4996,7 @@ using jpeg_huffsymb67_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"huffsymb_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffsymb68_v1: HUFFSYMB68
@@ -5008,7 +5008,7 @@ using jpeg_huffsymb68_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"huffsymb_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffsymb69_v1: HUFFSYMB69
@@ -5020,7 +5020,7 @@ using jpeg_huffsymb69_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"huffsymb_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffsymb7_v1: HUFFSYMB7
@@ -5032,7 +5032,7 @@ using jpeg_huffsymb7_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"huffsymb_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffsymb70_v1: HUFFSYMB70
@@ -5044,7 +5044,7 @@ using jpeg_huffsymb70_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"huffsymb_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffsymb71_v1: HUFFSYMB71
@@ -5056,7 +5056,7 @@ using jpeg_huffsymb71_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"huffsymb_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffsymb72_v1: HUFFSYMB72
@@ -5068,7 +5068,7 @@ using jpeg_huffsymb72_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"huffsymb_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffsymb73_v1: HUFFSYMB73
@@ -5080,7 +5080,7 @@ using jpeg_huffsymb73_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"huffsymb_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffsymb74_v1: HUFFSYMB74
@@ -5092,7 +5092,7 @@ using jpeg_huffsymb74_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"huffsymb_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffsymb75_v1: HUFFSYMB75
@@ -5104,7 +5104,7 @@ using jpeg_huffsymb75_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"huffsymb_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffsymb76_v1: HUFFSYMB76
@@ -5116,7 +5116,7 @@ using jpeg_huffsymb76_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"huffsymb_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffsymb77_v1: HUFFSYMB77
@@ -5128,7 +5128,7 @@ using jpeg_huffsymb77_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"huffsymb_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffsymb78_v1: HUFFSYMB78
@@ -5140,7 +5140,7 @@ using jpeg_huffsymb78_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"huffsymb_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffsymb79_v1: HUFFSYMB79
@@ -5152,7 +5152,7 @@ using jpeg_huffsymb79_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"huffsymb_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffsymb8_v1: HUFFSYMB8
@@ -5164,7 +5164,7 @@ using jpeg_huffsymb8_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"huffsymb_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffsymb80_v1: HUFFSYMB80
@@ -5176,7 +5176,7 @@ using jpeg_huffsymb80_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"huffsymb_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffsymb81_v1: HUFFSYMB81
@@ -5188,7 +5188,7 @@ using jpeg_huffsymb81_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"huffsymb_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffsymb82_v1: HUFFSYMB82
@@ -5200,7 +5200,7 @@ using jpeg_huffsymb82_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"huffsymb_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffsymb83_v1: HUFFSYMB83
@@ -5212,7 +5212,7 @@ using jpeg_huffsymb83_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"huffsymb_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_huffsymb9_v1: HUFFSYMB9
@@ -5224,7 +5224,7 @@ using jpeg_huffsymb9_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"huffsymb_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_jpeg_cfr_v1: JPEG_CFR
@@ -5236,11 +5236,11 @@ using jpeg_jpeg_cfr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::wo,
-               groov::field<"reserved1", std::uint32_t, 31, 7, access::ro>,
+             common::access::wo,
+               groov::field<"reserved1", std::uint32_t, 31, 7, common::access::ro>,
                groov::field<"chpdf", bool, 6, 6>,
                groov::field<"ceocf", bool, 5, 5>,
-               groov::field<"reserved0", std::uint8_t, 4, 0, access::ro>>;
+               groov::field<"reserved0", std::uint8_t, 4, 0, common::access::ro>>;
 
 // jpeg_jpeg_confr0_v1: JPEG_CONFR0
 // Used by: JPEG
@@ -5251,8 +5251,8 @@ using jpeg_jpeg_confr0_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::wo,
-               groov::field<"reserved0", std::uint32_t, 31, 1, access::ro>,
+             common::access::wo,
+               groov::field<"reserved0", std::uint32_t, 31, 1, common::access::ro>,
                groov::field<"start", bool, 0, 0>>;
 
 // jpeg_jpeg_confr1_v1: JPEG_CONFR1
@@ -5264,14 +5264,14 @@ using jpeg_jpeg_confr1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"ysize", std::uint16_t, 31, 16>,
-               groov::field<"reserved1", std::uint8_t, 15, 9, access::ro>,
+               groov::field<"reserved1", std::uint8_t, 15, 9, common::access::ro>,
                groov::field<"hdr", bool, 8, 8>,
                groov::field<"ns", std::uint8_t, 7, 6>,
                groov::field<"colorspace", std::uint8_t, 5, 4>,
-               groov::field<"de", bit_enable, 3, 3>,
-               groov::field<"reserved0", bool, 2, 2, access::ro>,
+               groov::field<"de", common::bittypes::bit_enable, 3, 3>,
+               groov::field<"reserved0", bool, 2, 2, common::access::ro>,
                groov::field<"nf", std::uint8_t, 1, 0>>;
 
 // jpeg_jpeg_confr2_v1: JPEG_CONFR2
@@ -5283,8 +5283,8 @@ using jpeg_jpeg_confr2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint8_t, 31, 26, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint8_t, 31, 26, common::access::ro>,
                groov::field<"nmcu", std::uint32_t, 25, 0>>;
 
 // jpeg_jpeg_confr3_v1: JPEG_CONFR3
@@ -5296,9 +5296,9 @@ using jpeg_jpeg_confr3_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"xsize", std::uint16_t, 31, 16>,
-               groov::field<"reserved0", std::uint16_t, 15, 0, access::ro>>;
+               groov::field<"reserved0", std::uint16_t, 15, 0, common::access::ro>>;
 
 // jpeg_jpeg_confr4_v1: JPEG_CONFR4
 // Used by: JPEG
@@ -5309,8 +5309,8 @@ using jpeg_jpeg_confr4_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"hsf", std::uint8_t, 15, 12>,
                groov::field<"vsf", std::uint8_t, 11, 8>,
                groov::field<"nb", std::uint8_t, 7, 4>,
@@ -5327,8 +5327,8 @@ using jpeg_jpeg_confr5_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"hsf", std::uint8_t, 15, 12>,
                groov::field<"vsf", std::uint8_t, 11, 8>,
                groov::field<"nb", std::uint8_t, 7, 4>,
@@ -5345,8 +5345,8 @@ using jpeg_jpeg_confr6_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"hsf", std::uint8_t, 15, 12>,
                groov::field<"vsf", std::uint8_t, 11, 8>,
                groov::field<"nb", std::uint8_t, 7, 4>,
@@ -5363,8 +5363,8 @@ using jpeg_jpeg_confr7_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"hsf", std::uint8_t, 15, 12>,
                groov::field<"vsf", std::uint8_t, 11, 8>,
                groov::field<"nb", std::uint8_t, 7, 4>,
@@ -5381,20 +5381,20 @@ using jpeg_jpeg_cr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint32_t, 31, 15, access::ro>,
-               groov::field<"off", bool, 14, 14, access::ro>,
-               groov::field<"iff", bool, 13, 13, access::ro>,
-               groov::field<"odmaen", bit_enable, 12, 12>,
-               groov::field<"idmaen", bit_enable, 11, 11>,
-               groov::field<"reserved0", std::uint8_t, 10, 7, access::ro>,
-               groov::field<"hpdie", bit_enable, 6, 6>,
-               groov::field<"eocie", bit_enable, 5, 5>,
-               groov::field<"ofneie", bit_enable, 4, 4>,
-               groov::field<"oftie", bit_enable, 3, 3>,
-               groov::field<"ifnfie", bit_enable, 2, 2>,
-               groov::field<"iftie", bit_enable, 1, 1>,
-               groov::field<"jcen", bit_enable, 0, 0>>;
+             common::access::rw,
+               groov::field<"reserved1", std::uint32_t, 31, 15, common::access::ro>,
+               groov::field<"off", bool, 14, 14, common::access::ro>,
+               groov::field<"iff", bool, 13, 13, common::access::ro>,
+               groov::field<"odmaen", common::bittypes::bit_enable, 12, 12>,
+               groov::field<"idmaen", common::bittypes::bit_enable, 11, 11>,
+               groov::field<"reserved0", std::uint8_t, 10, 7, common::access::ro>,
+               groov::field<"hpdie", common::bittypes::bit_enable, 6, 6>,
+               groov::field<"eocie", common::bittypes::bit_enable, 5, 5>,
+               groov::field<"ofneie", common::bittypes::bit_enable, 4, 4>,
+               groov::field<"oftie", common::bittypes::bit_enable, 3, 3>,
+               groov::field<"ifnfie", common::bittypes::bit_enable, 2, 2>,
+               groov::field<"iftie", common::bittypes::bit_enable, 1, 1>,
+               groov::field<"jcen", common::bittypes::bit_enable, 0, 0>>;
 
 // jpeg_jpeg_dir_v1: JPEG_DIR
 // Used by: JPEG
@@ -5405,7 +5405,7 @@ using jpeg_jpeg_dir_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::wo,
+             common::access::wo,
                groov::field<"datain", std::uint32_t, 31, 0>>;
 
 // jpeg_jpeg_dor_v1: JPEG_DOR
@@ -5417,7 +5417,7 @@ using jpeg_jpeg_dor_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"dataout", std::uint32_t, 31, 0>>;
 
 // jpeg_jpeg_sr_v1: JPEG_SR
@@ -5429,7 +5429,7 @@ using jpeg_jpeg_sr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved1", std::uint32_t, 31, 8>,
                groov::field<"cof", bool, 7, 7>,
                groov::field<"hpdf", bool, 6, 6>,
@@ -5449,7 +5449,7 @@ using jpeg_qmem0_0_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"qmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_qmem0_1_v1: QMEM0_1
@@ -5461,7 +5461,7 @@ using jpeg_qmem0_1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"qmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_qmem0_10_v1: QMEM0_10
@@ -5473,7 +5473,7 @@ using jpeg_qmem0_10_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"qmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_qmem0_11_v1: QMEM0_11
@@ -5485,7 +5485,7 @@ using jpeg_qmem0_11_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"qmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_qmem0_12_v1: QMEM0_12
@@ -5497,7 +5497,7 @@ using jpeg_qmem0_12_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"qmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_qmem0_13_v1: QMEM0_13
@@ -5509,7 +5509,7 @@ using jpeg_qmem0_13_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"qmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_qmem0_14_v1: QMEM0_14
@@ -5521,7 +5521,7 @@ using jpeg_qmem0_14_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"qmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_qmem0_15_v1: QMEM0_15
@@ -5533,7 +5533,7 @@ using jpeg_qmem0_15_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"qmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_qmem0_2_v1: QMEM0_2
@@ -5545,7 +5545,7 @@ using jpeg_qmem0_2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"qmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_qmem0_3_v1: QMEM0_3
@@ -5557,7 +5557,7 @@ using jpeg_qmem0_3_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"qmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_qmem0_4_v1: QMEM0_4
@@ -5569,7 +5569,7 @@ using jpeg_qmem0_4_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"qmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_qmem0_5_v1: QMEM0_5
@@ -5581,7 +5581,7 @@ using jpeg_qmem0_5_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"qmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_qmem0_6_v1: QMEM0_6
@@ -5593,7 +5593,7 @@ using jpeg_qmem0_6_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"qmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_qmem0_7_v1: QMEM0_7
@@ -5605,7 +5605,7 @@ using jpeg_qmem0_7_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"qmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_qmem0_8_v1: QMEM0_8
@@ -5617,7 +5617,7 @@ using jpeg_qmem0_8_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"qmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_qmem0_9_v1: QMEM0_9
@@ -5629,7 +5629,7 @@ using jpeg_qmem0_9_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"qmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_qmem1_0_v1: QMEM1_0
@@ -5641,7 +5641,7 @@ using jpeg_qmem1_0_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"qmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_qmem1_1_v1: QMEM1_1
@@ -5653,7 +5653,7 @@ using jpeg_qmem1_1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"qmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_qmem1_10_v1: QMEM1_10
@@ -5665,7 +5665,7 @@ using jpeg_qmem1_10_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"qmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_qmem1_11_v1: QMEM1_11
@@ -5677,7 +5677,7 @@ using jpeg_qmem1_11_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"qmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_qmem1_12_v1: QMEM1_12
@@ -5689,7 +5689,7 @@ using jpeg_qmem1_12_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"qmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_qmem1_13_v1: QMEM1_13
@@ -5701,7 +5701,7 @@ using jpeg_qmem1_13_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"qmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_qmem1_14_v1: QMEM1_14
@@ -5713,7 +5713,7 @@ using jpeg_qmem1_14_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"qmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_qmem1_15_v1: QMEM1_15
@@ -5725,7 +5725,7 @@ using jpeg_qmem1_15_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"qmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_qmem1_2_v1: QMEM1_2
@@ -5737,7 +5737,7 @@ using jpeg_qmem1_2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"qmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_qmem1_3_v1: QMEM1_3
@@ -5749,7 +5749,7 @@ using jpeg_qmem1_3_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"qmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_qmem1_4_v1: QMEM1_4
@@ -5761,7 +5761,7 @@ using jpeg_qmem1_4_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"qmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_qmem1_5_v1: QMEM1_5
@@ -5773,7 +5773,7 @@ using jpeg_qmem1_5_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"qmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_qmem1_6_v1: QMEM1_6
@@ -5785,7 +5785,7 @@ using jpeg_qmem1_6_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"qmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_qmem1_7_v1: QMEM1_7
@@ -5797,7 +5797,7 @@ using jpeg_qmem1_7_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"qmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_qmem1_8_v1: QMEM1_8
@@ -5809,7 +5809,7 @@ using jpeg_qmem1_8_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"qmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_qmem1_9_v1: QMEM1_9
@@ -5821,7 +5821,7 @@ using jpeg_qmem1_9_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"qmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_qmem2_0_v1: QMEM2_0
@@ -5833,7 +5833,7 @@ using jpeg_qmem2_0_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"qmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_qmem2_1_v1: QMEM2_1
@@ -5845,7 +5845,7 @@ using jpeg_qmem2_1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"qmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_qmem2_10_v1: QMEM2_10
@@ -5857,7 +5857,7 @@ using jpeg_qmem2_10_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"qmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_qmem2_11_v1: QMEM2_11
@@ -5869,7 +5869,7 @@ using jpeg_qmem2_11_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"qmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_qmem2_12_v1: QMEM2_12
@@ -5881,7 +5881,7 @@ using jpeg_qmem2_12_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"qmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_qmem2_13_v1: QMEM2_13
@@ -5893,7 +5893,7 @@ using jpeg_qmem2_13_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"qmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_qmem2_14_v1: QMEM2_14
@@ -5905,7 +5905,7 @@ using jpeg_qmem2_14_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"qmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_qmem2_15_v1: QMEM2_15
@@ -5917,7 +5917,7 @@ using jpeg_qmem2_15_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"qmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_qmem2_2_v1: QMEM2_2
@@ -5929,7 +5929,7 @@ using jpeg_qmem2_2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"qmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_qmem2_3_v1: QMEM2_3
@@ -5941,7 +5941,7 @@ using jpeg_qmem2_3_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"qmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_qmem2_4_v1: QMEM2_4
@@ -5953,7 +5953,7 @@ using jpeg_qmem2_4_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"qmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_qmem2_5_v1: QMEM2_5
@@ -5965,7 +5965,7 @@ using jpeg_qmem2_5_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"qmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_qmem2_6_v1: QMEM2_6
@@ -5977,7 +5977,7 @@ using jpeg_qmem2_6_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"qmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_qmem2_7_v1: QMEM2_7
@@ -5989,7 +5989,7 @@ using jpeg_qmem2_7_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"qmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_qmem2_8_v1: QMEM2_8
@@ -6001,7 +6001,7 @@ using jpeg_qmem2_8_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"qmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_qmem2_9_v1: QMEM2_9
@@ -6013,7 +6013,7 @@ using jpeg_qmem2_9_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"qmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_qmem3_0_v1: QMEM3_0
@@ -6025,7 +6025,7 @@ using jpeg_qmem3_0_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"qmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_qmem3_1_v1: QMEM3_1
@@ -6037,7 +6037,7 @@ using jpeg_qmem3_1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"qmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_qmem3_10_v1: QMEM3_10
@@ -6049,7 +6049,7 @@ using jpeg_qmem3_10_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"qmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_qmem3_11_v1: QMEM3_11
@@ -6061,7 +6061,7 @@ using jpeg_qmem3_11_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"qmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_qmem3_12_v1: QMEM3_12
@@ -6073,7 +6073,7 @@ using jpeg_qmem3_12_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"qmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_qmem3_13_v1: QMEM3_13
@@ -6085,7 +6085,7 @@ using jpeg_qmem3_13_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"qmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_qmem3_14_v1: QMEM3_14
@@ -6097,7 +6097,7 @@ using jpeg_qmem3_14_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"qmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_qmem3_15_v1: QMEM3_15
@@ -6109,7 +6109,7 @@ using jpeg_qmem3_15_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"qmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_qmem3_2_v1: QMEM3_2
@@ -6121,7 +6121,7 @@ using jpeg_qmem3_2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"qmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_qmem3_3_v1: QMEM3_3
@@ -6133,7 +6133,7 @@ using jpeg_qmem3_3_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"qmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_qmem3_4_v1: QMEM3_4
@@ -6145,7 +6145,7 @@ using jpeg_qmem3_4_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"qmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_qmem3_5_v1: QMEM3_5
@@ -6157,7 +6157,7 @@ using jpeg_qmem3_5_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"qmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_qmem3_6_v1: QMEM3_6
@@ -6169,7 +6169,7 @@ using jpeg_qmem3_6_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"qmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_qmem3_7_v1: QMEM3_7
@@ -6181,7 +6181,7 @@ using jpeg_qmem3_7_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"qmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_qmem3_8_v1: QMEM3_8
@@ -6193,7 +6193,7 @@ using jpeg_qmem3_8_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"qmem_ram", std::uint32_t, 31, 0>>;
 
 // jpeg_qmem3_9_v1: QMEM3_9
@@ -6205,7 +6205,7 @@ using jpeg_qmem3_9_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"qmem_ram", std::uint32_t, 31, 0>>;
 
 } // namespace stm32::regs

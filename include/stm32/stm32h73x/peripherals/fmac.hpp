@@ -7,14 +7,38 @@
 namespace stm32::stm32h73x {
 
 namespace fmac {
-  using fmac_x1bufcfg_tt = regs::fmac_fmac_x1bufcfg_v1_tt;
-  using fmac_x2bufcfg_tt = regs::fmac_fmac_x2bufcfg_v1_tt;
-  using fmac_ybufcfg_tt = regs::fmac_fmac_ybufcfg_v1_tt;
-  using fmac_param_tt = regs::fmac_fmac_param_v1_tt;
-  using fmac_cr_tt = regs::fmac_fmac_cr_v1_tt;
-  using fmac_sr_tt = regs::fmac_fmac_sr_v1_tt;
-  using fmac_wdata_tt = regs::fmac_fmac_wdata_v1_tt;
-  using fmac_rdata_tt = regs::fmac_fmac_rdata_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fmac_x1bufcfg_tt = regs::fmac_fmac_x1bufcfg_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fmac_x2bufcfg_tt = regs::fmac_fmac_x2bufcfg_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fmac_ybufcfg_tt = regs::fmac_fmac_ybufcfg_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fmac_param_tt = regs::fmac_fmac_param_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fmac_cr_tt = regs::fmac_fmac_cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fmac_sr_tt = regs::fmac_fmac_sr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fmac_wdata_tt = regs::fmac_fmac_wdata_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fmac_rdata_tt = regs::fmac_fmac_rdata_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using fmac_t =

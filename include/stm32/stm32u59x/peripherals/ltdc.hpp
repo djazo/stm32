@@ -7,43 +7,154 @@
 namespace stm32::stm32u59x {
 
 namespace ltdcx {
-  using ltdc_sscr_tt = regs::ltdc_ltdc_sscr_v1_tt;
-  using ltdc_bpcr_tt = regs::ltdc_ltdc_bpcr_v1_tt;
-  using ltdc_awcr_tt = regs::ltdc_ltdc_awcr_v1_tt;
-  using ltdc_twcr_tt = regs::ltdc_ltdc_twcr_v1_tt;
-  using ltdc_gcr_tt = regs::ltdc_ltdc_gcr_v1_tt;
-  using ltdc_srcr_tt = regs::ltdc_ltdc_srcr_v1_tt;
-  using ltdc_bccr_tt = regs::ltdc_ltdc_bccr_v1_tt;
-  using ltdc_ier_tt = regs::ltdc_ltdc_ier_v1_tt;
-  using ltdc_isr_tt = regs::ltdc_ltdc_isr_v1_tt;
-  using ltdc_icr_tt = regs::ltdc_ltdc_icr_v1_tt;
-  using ltdc_lipcr_tt = regs::ltdc_ltdc_lipcr_v1_tt;
-  using ltdc_cpsr_tt = regs::ltdc_ltdc_cpsr_v1_tt;
-  using ltdc_cdsr_tt = regs::ltdc_ltdc_cdsr_v1_tt;
-  using ltdc_l1cr_tt = regs::ltdc_ltdc_l1cr_v1_tt;
-  using ltdc_l1whpcr_tt = regs::ltdc_ltdc_l1whpcr_v1_tt;
-  using ltdc_l1wvpcr_tt = regs::ltdc_ltdc_l1wvpcr_v1_tt;
-  using ltdc_l1ckcr_tt = regs::ltdc_ltdc_l1ckcr_v1_tt;
-  using ltdc_l1pfcr_tt = regs::ltdc_ltdc_l1pfcr_v1_tt;
-  using ltdc_l1cacr_tt = regs::ltdc_ltdc_l1cacr_v1_tt;
-  using ltdc_l1dccr_tt = regs::ltdc_ltdc_l1dccr_v1_tt;
-  using ltdc_l1bfcr_tt = regs::ltdc_ltdc_l1bfcr_v1_tt;
-  using ltdc_l1cfbar_tt = regs::ltdc_ltdc_l1cfbar_v1_tt;
-  using ltdc_l1cfblr_tt = regs::ltdc_ltdc_l1cfblr_v1_tt;
-  using ltdc_l1cfblnr_tt = regs::ltdc_ltdc_l1cfblnr_v1_tt;
-  using ltdc_l1clutwr_tt = regs::ltdc_ltdc_l1clutwr_v1_tt;
-  using ltdc_l2cr_tt = regs::ltdc_ltdc_l2cr_v1_tt;
-  using ltdc_l2whpcr_tt = regs::ltdc_ltdc_l2whpcr_v1_tt;
-  using ltdc_l2wvpcr_tt = regs::ltdc_ltdc_l2wvpcr_v1_tt;
-  using ltdc_l2ckcr_tt = regs::ltdc_ltdc_l2ckcr_v1_tt;
-  using ltdc_l2pfcr_tt = regs::ltdc_ltdc_l2pfcr_v1_tt;
-  using ltdc_l2cacr_tt = regs::ltdc_ltdc_l2cacr_v1_tt;
-  using ltdc_l2dccr_tt = regs::ltdc_ltdc_l2dccr_v1_tt;
-  using ltdc_l2bfcr_tt = regs::ltdc_ltdc_l2bfcr_v1_tt;
-  using ltdc_l2cfbar_tt = regs::ltdc_ltdc_l2cfbar_v1_tt;
-  using ltdc_l2cfblr_tt = regs::ltdc_ltdc_l2cfblr_v1_tt;
-  using ltdc_l2cfblnr_tt = regs::ltdc_ltdc_l2cfblnr_v1_tt;
-  using ltdc_l2clutwr_tt = regs::ltdc_ltdc_l2clutwr_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ltdc_sscr_tt = regs::ltdc_ltdc_sscr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ltdc_bpcr_tt = regs::ltdc_ltdc_bpcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ltdc_awcr_tt = regs::ltdc_ltdc_awcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ltdc_twcr_tt = regs::ltdc_ltdc_twcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ltdc_gcr_tt = regs::ltdc_ltdc_gcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ltdc_srcr_tt = regs::ltdc_ltdc_srcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ltdc_bccr_tt = regs::ltdc_ltdc_bccr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ltdc_ier_tt = regs::ltdc_ltdc_ier_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ltdc_isr_tt = regs::ltdc_ltdc_isr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ltdc_icr_tt = regs::ltdc_ltdc_icr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ltdc_lipcr_tt = regs::ltdc_ltdc_lipcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ltdc_cpsr_tt = regs::ltdc_ltdc_cpsr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ltdc_cdsr_tt = regs::ltdc_ltdc_cdsr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ltdc_l1cr_tt = regs::ltdc_ltdc_l1cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ltdc_l1whpcr_tt = regs::ltdc_ltdc_l1whpcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ltdc_l1wvpcr_tt = regs::ltdc_ltdc_l1wvpcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ltdc_l1ckcr_tt = regs::ltdc_ltdc_l1ckcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ltdc_l1pfcr_tt = regs::ltdc_ltdc_l1pfcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ltdc_l1cacr_tt = regs::ltdc_ltdc_l1cacr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ltdc_l1dccr_tt = regs::ltdc_ltdc_l1dccr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ltdc_l1bfcr_tt = regs::ltdc_ltdc_l1bfcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ltdc_l1cfbar_tt = regs::ltdc_ltdc_l1cfbar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ltdc_l1cfblr_tt = regs::ltdc_ltdc_l1cfblr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ltdc_l1cfblnr_tt = regs::ltdc_ltdc_l1cfblnr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ltdc_l1clutwr_tt = regs::ltdc_ltdc_l1clutwr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ltdc_l2cr_tt = regs::ltdc_ltdc_l2cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ltdc_l2whpcr_tt = regs::ltdc_ltdc_l2whpcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ltdc_l2wvpcr_tt = regs::ltdc_ltdc_l2wvpcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ltdc_l2ckcr_tt = regs::ltdc_ltdc_l2ckcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ltdc_l2pfcr_tt = regs::ltdc_ltdc_l2pfcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ltdc_l2cacr_tt = regs::ltdc_ltdc_l2cacr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ltdc_l2dccr_tt = regs::ltdc_ltdc_l2dccr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ltdc_l2bfcr_tt = regs::ltdc_ltdc_l2bfcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ltdc_l2cfbar_tt = regs::ltdc_ltdc_l2cfbar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ltdc_l2cfblr_tt = regs::ltdc_ltdc_l2cfblr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ltdc_l2cfblnr_tt = regs::ltdc_ltdc_l2cfblnr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ltdc_l2clutwr_tt = regs::ltdc_ltdc_l2clutwr_v1_tt<name, baseaddress, offset>;
 
   template <stdx::ct_string name, std::uint32_t baseaddress>
   using ltdcx_t =

@@ -7,9 +7,18 @@
 namespace stm32::stm32l162 {
 
 namespace opamp {
-  using csr_tt = regs::opamp_csr_v1_tt;
-  using otr_tt = regs::opamp_otr_v1_tt;
-  using lpotr_tt = regs::opamp_lpotr_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using csr_tt = regs::opamp_csr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otr_tt = regs::opamp_otr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using lpotr_tt = regs::opamp_lpotr_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using opamp_t =

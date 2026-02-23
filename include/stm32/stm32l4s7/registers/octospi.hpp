@@ -16,7 +16,7 @@ using octospi_abr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"alternate", std::uint32_t, 31, 0>>;
 
 // octospi_ar_v1: AR
@@ -28,7 +28,7 @@ using octospi_ar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"address", std::uint32_t, 31, 0>>;
 
 // octospi_ccr_v1: CCR
@@ -40,22 +40,22 @@ using octospi_ccr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"sioo", bool, 31, 31>,
-               groov::field<"reserved4", bool, 30, 30, access::ro>,
+               groov::field<"reserved4", bool, 30, 30, common::access::ro>,
                groov::field<"dqse", bool, 29, 29>,
-               groov::field<"reserved3", bool, 28, 28, access::ro>,
+               groov::field<"reserved3", bool, 28, 28, common::access::ro>,
                groov::field<"ddtr", bool, 27, 27>,
                groov::field<"dmode", std::uint8_t, 26, 24>,
-               groov::field<"reserved2", std::uint8_t, 23, 22, access::ro>,
+               groov::field<"reserved2", std::uint8_t, 23, 22, common::access::ro>,
                groov::field<"absize", std::uint8_t, 21, 20>,
                groov::field<"abdtr", bool, 19, 19>,
                groov::field<"abmode", std::uint8_t, 18, 16>,
-               groov::field<"reserved1", std::uint8_t, 15, 14, access::ro>,
+               groov::field<"reserved1", std::uint8_t, 15, 14, common::access::ro>,
                groov::field<"adsize", std::uint8_t, 13, 12>,
                groov::field<"addtr", bool, 11, 11>,
                groov::field<"admode", std::uint8_t, 10, 8>,
-               groov::field<"reserved0", std::uint8_t, 7, 6, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 7, 6, common::access::ro>,
                groov::field<"isize", std::uint8_t, 5, 4>,
                groov::field<"idtr", bool, 3, 3>,
                groov::field<"imode", std::uint8_t, 2, 0>>;
@@ -69,27 +69,27 @@ using octospi_cr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved4", std::uint8_t, 31, 30, access::ro>,
+             common::access::rw,
+               groov::field<"reserved4", std::uint8_t, 31, 30, common::access::ro>,
                groov::field<"fmode", std::uint8_t, 29, 28>,
-               groov::field<"reserved3", std::uint8_t, 27, 24, access::ro>,
+               groov::field<"reserved3", std::uint8_t, 27, 24, common::access::ro>,
                groov::field<"pmm", bool, 23, 23>,
                groov::field<"apms", bool, 22, 22>,
-               groov::field<"reserved2", bool, 21, 21, access::ro>,
-               groov::field<"toie", bit_enable, 20, 20>,
-               groov::field<"smie", bit_enable, 19, 19>,
-               groov::field<"ftie", bit_enable, 18, 18>,
-               groov::field<"tcie", bit_enable, 17, 17>,
-               groov::field<"teie", bit_enable, 16, 16>,
-               groov::field<"reserved1", std::uint8_t, 15, 13, access::ro>,
+               groov::field<"reserved2", bool, 21, 21, common::access::ro>,
+               groov::field<"toie", common::bittypes::bit_enable, 20, 20>,
+               groov::field<"smie", common::bittypes::bit_enable, 19, 19>,
+               groov::field<"ftie", common::bittypes::bit_enable, 18, 18>,
+               groov::field<"tcie", common::bittypes::bit_enable, 17, 17>,
+               groov::field<"teie", common::bittypes::bit_enable, 16, 16>,
+               groov::field<"reserved1", std::uint8_t, 15, 13, common::access::ro>,
                groov::field<"fthres", std::uint8_t, 12, 8>,
                groov::field<"fsel", bool, 7, 7>,
                groov::field<"dqm", bool, 6, 6>,
-               groov::field<"reserved0", std::uint8_t, 5, 4, access::ro>,
-               groov::field<"tcen", bit_enable, 3, 3>,
-               groov::field<"dmaen", bit_enable, 2, 2>,
+               groov::field<"reserved0", std::uint8_t, 5, 4, common::access::ro>,
+               groov::field<"tcen", common::bittypes::bit_enable, 3, 3>,
+               groov::field<"dmaen", common::bittypes::bit_enable, 2, 2>,
                groov::field<"abort", bool, 1, 1>,
-               groov::field<"en", bit_enable, 0, 0>>;
+               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
 
 // octospi_dcr1_v1: DCR1
 // Used by: OCTOSPI1, OCTOSPI2
@@ -100,16 +100,16 @@ using octospi_dcr1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved3", std::uint8_t, 31, 26, access::ro>,
+             common::access::rw,
+               groov::field<"reserved3", std::uint8_t, 31, 26, common::access::ro>,
                groov::field<"mtyp", std::uint8_t, 25, 24>,
-               groov::field<"reserved2", std::uint8_t, 23, 21, access::ro>,
+               groov::field<"reserved2", std::uint8_t, 23, 21, common::access::ro>,
                groov::field<"devsize", std::uint8_t, 20, 16>,
-               groov::field<"reserved1", std::uint8_t, 15, 11, access::ro>,
+               groov::field<"reserved1", std::uint8_t, 15, 11, common::access::ro>,
                groov::field<"csht", std::uint8_t, 10, 8>,
-               groov::field<"reserved0", std::uint8_t, 7, 2, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 7, 2, common::access::ro>,
                groov::field<"frck", bool, 1, 1>,
-               groov::field<"ckmode", bit_enable, 0, 0>>;
+               groov::field<"ckmode", common::bittypes::bit_enable, 0, 0>>;
 
 // octospi_dcr2_v1: DCR2
 // Used by: OCTOSPI1, OCTOSPI2
@@ -120,10 +120,10 @@ using octospi_dcr2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint16_t, 31, 19, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint16_t, 31, 19, common::access::ro>,
                groov::field<"wrapsize", std::uint8_t, 18, 16>,
-               groov::field<"reserved0", std::uint8_t, 15, 8, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 15, 8, common::access::ro>,
                groov::field<"prescaler", std::uint8_t, 7, 0>>;
 
 // octospi_dcr3_v1: DCR3
@@ -135,10 +135,10 @@ using octospi_dcr3_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint16_t, 31, 21, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint16_t, 31, 21, common::access::ro>,
                groov::field<"csbound", std::uint8_t, 20, 16>,
-               groov::field<"reserved0", std::uint16_t, 15, 0, access::ro>>;
+               groov::field<"reserved0", std::uint16_t, 15, 0, common::access::ro>>;
 
 // octospi_dlr_v1: DLR
 // Used by: OCTOSPI1, OCTOSPI2
@@ -149,7 +149,7 @@ using octospi_dlr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dl", std::uint32_t, 31, 0>>;
 
 // octospi_dr_v1: DR
@@ -161,7 +161,7 @@ using octospi_dr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"data", std::uint32_t, 31, 0>>;
 
 // octospi_fcr_v1: FCR
@@ -173,11 +173,11 @@ using octospi_fcr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::wo,
-               groov::field<"reserved1", std::uint32_t, 31, 5, access::ro>,
+             common::access::wo,
+               groov::field<"reserved1", std::uint32_t, 31, 5, common::access::ro>,
                groov::field<"ctof", bool, 4, 4>,
                groov::field<"csmf", bool, 3, 3>,
-               groov::field<"reserved0", bool, 2, 2, access::ro>,
+               groov::field<"reserved0", bool, 2, 2, common::access::ro>,
                groov::field<"ctcf", bool, 1, 1>,
                groov::field<"ctef", bool, 0, 0>>;
 
@@ -190,11 +190,11 @@ using octospi_hlcr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint8_t, 31, 24, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint8_t, 31, 24, common::access::ro>,
                groov::field<"trwr", std::uint8_t, 23, 16>,
                groov::field<"tacc", std::uint8_t, 15, 8>,
-               groov::field<"reserved0", std::uint8_t, 7, 2, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 7, 2, common::access::ro>,
                groov::field<"wzl", bool, 1, 1>,
                groov::field<"lm", bool, 0, 0>>;
 
@@ -207,7 +207,7 @@ using octospi_hwcfgr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"mst", std::uint8_t, 31, 28>,
                groov::field<"mmw", std::uint8_t, 27, 24>,
                groov::field<"idl", std::uint8_t, 23, 20>,
@@ -224,7 +224,7 @@ using octospi_id_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"id", std::uint32_t, 31, 0>>;
 
 // octospi_ir_v1: IR
@@ -236,7 +236,7 @@ using octospi_ir_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"instruction", std::uint32_t, 31, 0>>;
 
 // octospi_lptr_v1: LPTR
@@ -248,8 +248,8 @@ using octospi_lptr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"timeout", std::uint16_t, 15, 0>>;
 
 // octospi_mid_v1: MID
@@ -261,7 +261,7 @@ using octospi_mid_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"mid", std::uint32_t, 31, 0>>;
 
 // octospi_pir_v1: PIR
@@ -273,8 +273,8 @@ using octospi_pir_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"interval", std::uint16_t, 15, 0>>;
 
 // octospi_psmar_v1: PSMAR
@@ -286,7 +286,7 @@ using octospi_psmar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"match", std::uint32_t, 31, 0>>;
 
 // octospi_psmkr_v1: PSMKR
@@ -298,7 +298,7 @@ using octospi_psmkr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"mask", std::uint32_t, 31, 0>>;
 
 // octospi_sr_v1: SR
@@ -310,10 +310,10 @@ using octospi_sr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint32_t, 31, 14, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint32_t, 31, 14, common::access::ro>,
                groov::field<"flevel", std::uint8_t, 13, 8>,
-               groov::field<"reserved0", std::uint8_t, 7, 6, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 7, 6, common::access::ro>,
                groov::field<"busy", bool, 5, 5>,
                groov::field<"tof", bool, 4, 4>,
                groov::field<"smf", bool, 3, 3>,
@@ -330,12 +330,12 @@ using octospi_tcr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved2", bool, 31, 31, access::ro>,
+             common::access::rw,
+               groov::field<"reserved2", bool, 31, 31, common::access::ro>,
                groov::field<"sshift", bool, 30, 30>,
-               groov::field<"reserved1", bool, 29, 29, access::ro>,
+               groov::field<"reserved1", bool, 29, 29, common::access::ro>,
                groov::field<"dhqc", bool, 28, 28>,
-               groov::field<"reserved0", std::uint32_t, 27, 5, access::ro>,
+               groov::field<"reserved0", std::uint32_t, 27, 5, common::access::ro>,
                groov::field<"dcyc", std::uint8_t, 4, 0>>;
 
 // octospi_ver_v1: VER
@@ -347,7 +347,7 @@ using octospi_ver_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint32_t, 31, 8>,
                groov::field<"ver", std::uint8_t, 7, 0>>;
 
@@ -360,7 +360,7 @@ using octospi_wabr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"alternate", std::uint32_t, 31, 0>>;
 
 // octospi_wccr_v1: WCCR
@@ -372,22 +372,22 @@ using octospi_wccr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"sioo", bool, 31, 31>,
-               groov::field<"reserved4", bool, 30, 30, access::ro>,
+               groov::field<"reserved4", bool, 30, 30, common::access::ro>,
                groov::field<"dqse", bool, 29, 29>,
-               groov::field<"reserved3", bool, 28, 28, access::ro>,
+               groov::field<"reserved3", bool, 28, 28, common::access::ro>,
                groov::field<"ddtr", bool, 27, 27>,
                groov::field<"dmode", std::uint8_t, 26, 24>,
-               groov::field<"reserved2", std::uint8_t, 23, 22, access::ro>,
+               groov::field<"reserved2", std::uint8_t, 23, 22, common::access::ro>,
                groov::field<"absize", std::uint8_t, 21, 20>,
                groov::field<"abdtr", bool, 19, 19>,
                groov::field<"abmode", std::uint8_t, 18, 16>,
-               groov::field<"reserved1", std::uint8_t, 15, 14, access::ro>,
+               groov::field<"reserved1", std::uint8_t, 15, 14, common::access::ro>,
                groov::field<"adsize", std::uint8_t, 13, 12>,
                groov::field<"addtr", bool, 11, 11>,
                groov::field<"admode", std::uint8_t, 10, 8>,
-               groov::field<"reserved0", std::uint8_t, 7, 6, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 7, 6, common::access::ro>,
                groov::field<"isize", std::uint8_t, 5, 4>,
                groov::field<"idtr", bool, 3, 3>,
                groov::field<"imode", std::uint8_t, 2, 0>>;
@@ -401,7 +401,7 @@ using octospi_wir_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"instruction", std::uint32_t, 31, 0>>;
 
 // octospi_wtcr_v1: WTCR
@@ -413,8 +413,8 @@ using octospi_wtcr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 5, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 5, common::access::ro>,
                groov::field<"dcyc", std::uint8_t, 4, 0>>;
 
 } // namespace stm32::regs

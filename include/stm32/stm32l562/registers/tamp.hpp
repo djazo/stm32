@@ -16,12 +16,12 @@ using tamp_atcr1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"flten", bit_enable, 31, 31>,
+             common::access::rw,
+               groov::field<"flten", common::bittypes::bit_enable, 31, 31>,
                groov::field<"atoshare", bool, 30, 30>,
-               groov::field<"reserved1", std::uint8_t, 29, 26, access::ro>,
+               groov::field<"reserved1", std::uint8_t, 29, 26, common::access::ro>,
                groov::field<"atper", std::uint8_t, 25, 24>,
-               groov::field<"reserved0", std::uint8_t, 23, 18, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 23, 18, common::access::ro>,
                groov::field<"atcksel", std::uint8_t, 17, 16>,
                groov::field<"atosel4", std::uint8_t, 15, 14>,
                groov::field<"atosel3", std::uint8_t, 13, 12>,
@@ -45,7 +45,7 @@ using tamp_atcr2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"atosel8", std::uint8_t, 31, 29>,
                groov::field<"atosel7", std::uint8_t, 28, 26>,
                groov::field<"atosel6", std::uint8_t, 25, 23>,
@@ -54,7 +54,7 @@ using tamp_atcr2_v1_tt =
                groov::field<"atosel3", std::uint8_t, 16, 14>,
                groov::field<"atosel2", std::uint8_t, 13, 11>,
                groov::field<"atosel1", std::uint8_t, 10, 8>,
-               groov::field<"reserved0", std::uint8_t, 7, 0, access::ro>>;
+               groov::field<"reserved0", std::uint8_t, 7, 0, common::access::ro>>;
 
 // tamp_ator_v1: ATOR
 // Used by: TAMP, SEC_TAMP
@@ -65,7 +65,7 @@ using tamp_ator_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved1", std::uint16_t, 31, 16>,
                groov::field<"inits", bool, 15, 15>,
                groov::field<"seedf", bool, 14, 14>,
@@ -81,7 +81,7 @@ using tamp_atseedr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::wo,
+             common::access::wo,
                groov::field<"seed", std::uint32_t, 31, 0>>;
 
 // tamp_bkp0r_v1: BKP0R
@@ -93,7 +93,7 @@ using tamp_bkp0r_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"bkp", std::uint32_t, 31, 0>>;
 
 // tamp_bkp10r_v1: BKP10R
@@ -105,7 +105,7 @@ using tamp_bkp10r_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"bkp", std::uint32_t, 31, 0>>;
 
 // tamp_bkp11r_v1: BKP11R
@@ -117,7 +117,7 @@ using tamp_bkp11r_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"bkp", std::uint32_t, 31, 0>>;
 
 // tamp_bkp12r_v1: BKP12R
@@ -129,7 +129,7 @@ using tamp_bkp12r_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"bkp", std::uint32_t, 31, 0>>;
 
 // tamp_bkp13r_v1: BKP13R
@@ -141,7 +141,7 @@ using tamp_bkp13r_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"bkp", std::uint32_t, 31, 0>>;
 
 // tamp_bkp14r_v1: BKP14R
@@ -153,7 +153,7 @@ using tamp_bkp14r_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"bkp", std::uint32_t, 31, 0>>;
 
 // tamp_bkp15r_v1: BKP15R
@@ -165,7 +165,7 @@ using tamp_bkp15r_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"bkp", std::uint32_t, 31, 0>>;
 
 // tamp_bkp16r_v1: BKP16R
@@ -177,7 +177,7 @@ using tamp_bkp16r_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"bkp", std::uint32_t, 31, 0>>;
 
 // tamp_bkp17r_v1: BKP17R
@@ -189,7 +189,7 @@ using tamp_bkp17r_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"bkp", std::uint32_t, 31, 0>>;
 
 // tamp_bkp18r_v1: BKP18R
@@ -201,7 +201,7 @@ using tamp_bkp18r_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"bkp", std::uint32_t, 31, 0>>;
 
 // tamp_bkp19r_v1: BKP19R
@@ -213,7 +213,7 @@ using tamp_bkp19r_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"bkp", std::uint32_t, 31, 0>>;
 
 // tamp_bkp1r_v1: BKP1R
@@ -225,7 +225,7 @@ using tamp_bkp1r_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"bkp", std::uint32_t, 31, 0>>;
 
 // tamp_bkp20r_v1: BKP20R
@@ -237,7 +237,7 @@ using tamp_bkp20r_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"bkp", std::uint32_t, 31, 0>>;
 
 // tamp_bkp21r_v1: BKP21R
@@ -249,7 +249,7 @@ using tamp_bkp21r_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"bkp", std::uint32_t, 31, 0>>;
 
 // tamp_bkp22r_v1: BKP22R
@@ -261,7 +261,7 @@ using tamp_bkp22r_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"bkp", std::uint32_t, 31, 0>>;
 
 // tamp_bkp23r_v1: BKP23R
@@ -273,7 +273,7 @@ using tamp_bkp23r_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"bkp", std::uint32_t, 31, 0>>;
 
 // tamp_bkp24r_v1: BKP24R
@@ -285,7 +285,7 @@ using tamp_bkp24r_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"bkp", std::uint32_t, 31, 0>>;
 
 // tamp_bkp25r_v1: BKP25R
@@ -297,7 +297,7 @@ using tamp_bkp25r_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"bkp", std::uint32_t, 31, 0>>;
 
 // tamp_bkp26r_v1: BKP26R
@@ -309,7 +309,7 @@ using tamp_bkp26r_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"bkp", std::uint32_t, 31, 0>>;
 
 // tamp_bkp27r_v1: BKP27R
@@ -321,7 +321,7 @@ using tamp_bkp27r_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"bkp", std::uint32_t, 31, 0>>;
 
 // tamp_bkp28r_v1: BKP28R
@@ -333,7 +333,7 @@ using tamp_bkp28r_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"bkp", std::uint32_t, 31, 0>>;
 
 // tamp_bkp29r_v1: BKP29R
@@ -345,7 +345,7 @@ using tamp_bkp29r_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"bkp", std::uint32_t, 31, 0>>;
 
 // tamp_bkp2r_v1: BKP2R
@@ -357,7 +357,7 @@ using tamp_bkp2r_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"bkp", std::uint32_t, 31, 0>>;
 
 // tamp_bkp30r_v1: BKP30R
@@ -369,7 +369,7 @@ using tamp_bkp30r_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"bkp", std::uint32_t, 31, 0>>;
 
 // tamp_bkp31r_v1: BKP31R
@@ -381,7 +381,7 @@ using tamp_bkp31r_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"bkp", std::uint32_t, 31, 0>>;
 
 // tamp_bkp3r_v1: BKP3R
@@ -393,7 +393,7 @@ using tamp_bkp3r_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"bkp", std::uint32_t, 31, 0>>;
 
 // tamp_bkp4r_v1: BKP4R
@@ -405,7 +405,7 @@ using tamp_bkp4r_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"bkp", std::uint32_t, 31, 0>>;
 
 // tamp_bkp5r_v1: BKP5R
@@ -417,7 +417,7 @@ using tamp_bkp5r_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"bkp", std::uint32_t, 31, 0>>;
 
 // tamp_bkp6r_v1: BKP6R
@@ -429,7 +429,7 @@ using tamp_bkp6r_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"bkp", std::uint32_t, 31, 0>>;
 
 // tamp_bkp7r_v1: BKP7R
@@ -441,7 +441,7 @@ using tamp_bkp7r_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"bkp", std::uint32_t, 31, 0>>;
 
 // tamp_bkp8r_v1: BKP8R
@@ -453,7 +453,7 @@ using tamp_bkp8r_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"bkp", std::uint32_t, 31, 0>>;
 
 // tamp_bkp9r_v1: BKP9R
@@ -465,7 +465,7 @@ using tamp_bkp9r_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"bkp", std::uint32_t, 31, 0>>;
 
 // tamp_cfgr_v1: CFGR
@@ -477,12 +477,12 @@ using tamp_cfgr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint32_t, 31, 4, access::ro>,
-               groov::field<"wutmonen", bit_enable, 3, 3>,
-               groov::field<"vmonen", bit_enable, 2, 2>,
-               groov::field<"tmonen", bit_enable, 1, 1>,
-               groov::field<"reserved0", bool, 0, 0, access::ro>>;
+             common::access::rw,
+               groov::field<"reserved1", std::uint32_t, 31, 4, common::access::ro>,
+               groov::field<"wutmonen", common::bittypes::bit_enable, 3, 3>,
+               groov::field<"vmonen", common::bittypes::bit_enable, 2, 2>,
+               groov::field<"tmonen", common::bittypes::bit_enable, 1, 1>,
+               groov::field<"reserved0", bool, 0, 0, common::access::ro>>;
 
 // tamp_countr_v1: COUNTR
 // Used by: TAMP, SEC_TAMP
@@ -493,7 +493,7 @@ using tamp_countr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"count", std::uint32_t, 31, 0>>;
 
 // tamp_cr1_v1: CR1
@@ -505,24 +505,24 @@ using tamp_cr1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved3", std::uint8_t, 31, 24, access::ro>,
-               groov::field<"itamp8e", bit_enable, 23, 23>,
-               groov::field<"reserved2", std::uint8_t, 22, 21, access::ro>,
-               groov::field<"itamp5e", bit_enable, 20, 20>,
-               groov::field<"reserved1", bool, 19, 19, access::ro>,
-               groov::field<"itamp3e", bit_enable, 18, 18>,
-               groov::field<"itamp2e", bit_enable, 17, 17>,
-               groov::field<"itamp1e", bit_enable, 16, 16>,
-               groov::field<"reserved0", std::uint8_t, 15, 8, access::ro>,
-               groov::field<"tamp8e", bit_enable, 7, 7>,
-               groov::field<"tamp7e", bit_enable, 6, 6>,
-               groov::field<"tamp6e", bit_enable, 5, 5>,
-               groov::field<"tamp5e", bit_enable, 4, 4>,
-               groov::field<"tamp4e", bit_enable, 3, 3>,
-               groov::field<"tamp3e", bit_enable, 2, 2>,
-               groov::field<"tamp2e", bit_enable, 1, 1>,
-               groov::field<"tamp1e", bit_enable, 0, 0>>;
+             common::access::rw,
+               groov::field<"reserved3", std::uint8_t, 31, 24, common::access::ro>,
+               groov::field<"itamp8e", common::bittypes::bit_enable, 23, 23>,
+               groov::field<"reserved2", std::uint8_t, 22, 21, common::access::ro>,
+               groov::field<"itamp5e", common::bittypes::bit_enable, 20, 20>,
+               groov::field<"reserved1", bool, 19, 19, common::access::ro>,
+               groov::field<"itamp3e", common::bittypes::bit_enable, 18, 18>,
+               groov::field<"itamp2e", common::bittypes::bit_enable, 17, 17>,
+               groov::field<"itamp1e", common::bittypes::bit_enable, 16, 16>,
+               groov::field<"reserved0", std::uint8_t, 15, 8, common::access::ro>,
+               groov::field<"tamp8e", common::bittypes::bit_enable, 7, 7>,
+               groov::field<"tamp7e", common::bittypes::bit_enable, 6, 6>,
+               groov::field<"tamp6e", common::bittypes::bit_enable, 5, 5>,
+               groov::field<"tamp5e", common::bittypes::bit_enable, 4, 4>,
+               groov::field<"tamp4e", common::bittypes::bit_enable, 3, 3>,
+               groov::field<"tamp3e", common::bittypes::bit_enable, 2, 2>,
+               groov::field<"tamp2e", common::bittypes::bit_enable, 1, 1>,
+               groov::field<"tamp1e", common::bittypes::bit_enable, 0, 0>>;
 
 // tamp_cr2_v1: CR2
 // Used by: TAMP, SEC_TAMP
@@ -533,7 +533,7 @@ using tamp_cr2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"tamp8trg", bool, 31, 31>,
                groov::field<"tamp7trg", bool, 30, 30>,
                groov::field<"tamp6trg", bool, 29, 29>,
@@ -543,11 +543,11 @@ using tamp_cr2_v1_tt =
                groov::field<"tamp2trg", bool, 25, 25>,
                groov::field<"tamp1trg", bool, 24, 24>,
                groov::field<"bkerase", bool, 23, 23>,
-               groov::field<"reserved1", std::uint8_t, 22, 19, access::ro>,
+               groov::field<"reserved1", std::uint8_t, 22, 19, common::access::ro>,
                groov::field<"tamp3msk", bool, 18, 18>,
                groov::field<"tamp2msk", bool, 17, 17>,
                groov::field<"tamp1msk", bool, 16, 16>,
-               groov::field<"reserved0", std::uint8_t, 15, 8, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 15, 8, common::access::ro>,
                groov::field<"tamp8noer", bool, 7, 7>,
                groov::field<"tamp7noer", bool, 6, 6>,
                groov::field<"tamp6noer", bool, 5, 5>,
@@ -566,12 +566,12 @@ using tamp_cr3_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved2", std::uint32_t, 31, 8, access::ro>,
+             common::access::rw,
+               groov::field<"reserved2", std::uint32_t, 31, 8, common::access::ro>,
                groov::field<"itamp8noer", bool, 7, 7>,
-               groov::field<"reserved1", std::uint8_t, 6, 5, access::ro>,
+               groov::field<"reserved1", std::uint8_t, 6, 5, common::access::ro>,
                groov::field<"itamp5noer", bool, 4, 4>,
-               groov::field<"reserved0", bool, 3, 3, access::ro>,
+               groov::field<"reserved0", bool, 3, 3, common::access::ro>,
                groov::field<"itamp3noer", bool, 2, 2>,
                groov::field<"itamp2noer", bool, 1, 1>,
                groov::field<"itamp1noer", bool, 0, 0>>;
@@ -585,9 +585,9 @@ using tamp_fltcr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 8, access::ro>,
-               groov::field<"tamppudis", bit_enable_bar, 7, 7>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 8, common::access::ro>,
+               groov::field<"tamppudis", common::bittypes::bit_enable_bar, 7, 7>,
                groov::field<"tampprch", std::uint8_t, 6, 5>,
                groov::field<"tampflt", std::uint8_t, 4, 3>,
                groov::field<"tampfreq", std::uint8_t, 2, 0>>;
@@ -601,24 +601,24 @@ using tamp_ier_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved3", std::uint8_t, 31, 24, access::ro>,
-               groov::field<"itamp8ie", bit_enable, 23, 23>,
-               groov::field<"reserved2", std::uint8_t, 22, 21, access::ro>,
-               groov::field<"itamp5ie", bit_enable, 20, 20>,
-               groov::field<"reserved1", bool, 19, 19, access::ro>,
-               groov::field<"itamp3ie", bit_enable, 18, 18>,
-               groov::field<"itamp2ie", bit_enable, 17, 17>,
-               groov::field<"itamp1ie", bit_enable, 16, 16>,
-               groov::field<"reserved0", std::uint8_t, 15, 8, access::ro>,
-               groov::field<"tamp8ie", bit_enable, 7, 7>,
-               groov::field<"tamp7ie", bit_enable, 6, 6>,
-               groov::field<"tamp6ie", bit_enable, 5, 5>,
-               groov::field<"tamp5ie", bit_enable, 4, 4>,
-               groov::field<"tamp4ie", bit_enable, 3, 3>,
-               groov::field<"tamp3ie", bit_enable, 2, 2>,
-               groov::field<"tamp2ie", bit_enable, 1, 1>,
-               groov::field<"tamp1ie", bit_enable, 0, 0>>;
+             common::access::rw,
+               groov::field<"reserved3", std::uint8_t, 31, 24, common::access::ro>,
+               groov::field<"itamp8ie", common::bittypes::bit_enable, 23, 23>,
+               groov::field<"reserved2", std::uint8_t, 22, 21, common::access::ro>,
+               groov::field<"itamp5ie", common::bittypes::bit_enable, 20, 20>,
+               groov::field<"reserved1", bool, 19, 19, common::access::ro>,
+               groov::field<"itamp3ie", common::bittypes::bit_enable, 18, 18>,
+               groov::field<"itamp2ie", common::bittypes::bit_enable, 17, 17>,
+               groov::field<"itamp1ie", common::bittypes::bit_enable, 16, 16>,
+               groov::field<"reserved0", std::uint8_t, 15, 8, common::access::ro>,
+               groov::field<"tamp8ie", common::bittypes::bit_enable, 7, 7>,
+               groov::field<"tamp7ie", common::bittypes::bit_enable, 6, 6>,
+               groov::field<"tamp6ie", common::bittypes::bit_enable, 5, 5>,
+               groov::field<"tamp5ie", common::bittypes::bit_enable, 4, 4>,
+               groov::field<"tamp4ie", common::bittypes::bit_enable, 3, 3>,
+               groov::field<"tamp3ie", common::bittypes::bit_enable, 2, 2>,
+               groov::field<"tamp2ie", common::bittypes::bit_enable, 1, 1>,
+               groov::field<"tamp1ie", common::bittypes::bit_enable, 0, 0>>;
 
 // tamp_misr_v1: MISR
 // Used by: TAMP, SEC_TAMP
@@ -629,7 +629,7 @@ using tamp_misr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved3", std::uint8_t, 31, 24>,
                groov::field<"itamp8mf", bool, 23, 23>,
                groov::field<"reserved2", std::uint8_t, 22, 21>,
@@ -657,11 +657,11 @@ using tamp_privcr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"tamppriv", bool, 31, 31>,
                groov::field<"bkpwpriv", bool, 30, 30>,
                groov::field<"bkprwpriv", bool, 29, 29>,
-               groov::field<"reserved0", std::uint32_t, 28, 0, access::ro>>;
+               groov::field<"reserved0", std::uint32_t, 28, 0, common::access::ro>>;
 
 // tamp_scr_v1: SCR
 // Used by: TAMP, SEC_TAMP
@@ -672,16 +672,16 @@ using tamp_scr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::wo,
-               groov::field<"reserved3", std::uint8_t, 31, 24, access::ro>,
+             common::access::wo,
+               groov::field<"reserved3", std::uint8_t, 31, 24, common::access::ro>,
                groov::field<"citamp8f", bool, 23, 23>,
-               groov::field<"reserved2", std::uint8_t, 22, 21, access::ro>,
+               groov::field<"reserved2", std::uint8_t, 22, 21, common::access::ro>,
                groov::field<"citamp5f", bool, 20, 20>,
-               groov::field<"reserved1", bool, 19, 19, access::ro>,
+               groov::field<"reserved1", bool, 19, 19, common::access::ro>,
                groov::field<"citamp3f", bool, 18, 18>,
                groov::field<"citamp2f", bool, 17, 17>,
                groov::field<"citamp1f", bool, 16, 16>,
-               groov::field<"reserved0", std::uint8_t, 15, 8, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 15, 8, common::access::ro>,
                groov::field<"ctamp8f", bool, 7, 7>,
                groov::field<"ctamp7f", bool, 6, 6>,
                groov::field<"ctamp6f", bool, 5, 5>,
@@ -700,11 +700,11 @@ using tamp_smcr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"tampdprot", bool, 31, 31>,
-               groov::field<"reserved1", std::uint8_t, 30, 24, access::ro>,
+               groov::field<"reserved1", std::uint8_t, 30, 24, common::access::ro>,
                groov::field<"bkpwdprot", std::uint8_t, 23, 16>,
-               groov::field<"reserved0", std::uint8_t, 15, 8, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 15, 8, common::access::ro>,
                groov::field<"bkprwdprot", std::uint8_t, 7, 0>>;
 
 // tamp_smisr_v1: SMISR
@@ -716,7 +716,7 @@ using tamp_smisr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved3", std::uint8_t, 31, 24>,
                groov::field<"itamp8mf", bool, 23, 23>,
                groov::field<"reserved2", std::uint8_t, 22, 21>,
@@ -744,7 +744,7 @@ using tamp_sr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved3", std::uint8_t, 31, 24>,
                groov::field<"itamp8f", bool, 23, 23>,
                groov::field<"reserved2", std::uint8_t, 22, 21>,

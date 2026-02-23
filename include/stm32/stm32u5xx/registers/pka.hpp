@@ -16,14 +16,14 @@ using pka_clrfr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::wo,
-               groov::field<"reserved2", std::uint16_t, 31, 22, access::ro>,
+             common::access::wo,
+               groov::field<"reserved2", std::uint16_t, 31, 22, common::access::ro>,
                groov::field<"operrfc", bool, 21, 21>,
                groov::field<"addrerrfc", bool, 20, 20>,
                groov::field<"ramerrfc", bool, 19, 19>,
-               groov::field<"reserved1", bool, 18, 18, access::ro>,
+               groov::field<"reserved1", bool, 18, 18, common::access::ro>,
                groov::field<"procendfc", bool, 17, 17>,
-               groov::field<"reserved0", std::uint32_t, 16, 0, access::ro>>;
+               groov::field<"reserved0", std::uint32_t, 16, 0, common::access::ro>>;
 
 // pka_cr_v1: CR
 // Used by: PKA, SEC_PKA
@@ -34,18 +34,18 @@ using pka_cr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved3", std::uint16_t, 31, 22, access::ro>,
-               groov::field<"operrie", bit_enable, 21, 21>,
-               groov::field<"addrerrie", bit_enable, 20, 20>,
-               groov::field<"ramerrie", bit_enable, 19, 19>,
-               groov::field<"reserved2", bool, 18, 18, access::ro>,
-               groov::field<"procendie", bit_enable, 17, 17>,
-               groov::field<"reserved1", std::uint8_t, 16, 14, access::ro>,
+             common::access::rw,
+               groov::field<"reserved3", std::uint16_t, 31, 22, common::access::ro>,
+               groov::field<"operrie", common::bittypes::bit_enable, 21, 21>,
+               groov::field<"addrerrie", common::bittypes::bit_enable, 20, 20>,
+               groov::field<"ramerrie", common::bittypes::bit_enable, 19, 19>,
+               groov::field<"reserved2", bool, 18, 18, common::access::ro>,
+               groov::field<"procendie", common::bittypes::bit_enable, 17, 17>,
+               groov::field<"reserved1", std::uint8_t, 16, 14, common::access::ro>,
                groov::field<"mode", std::uint8_t, 13, 8>,
-               groov::field<"reserved0", std::uint8_t, 7, 2, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 7, 2, common::access::ro>,
                groov::field<"start", bool, 1, 1>,
-               groov::field<"en", bit_enable, 0, 0>>;
+               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
 
 // pka_sr_v1: SR
 // Used by: PKA, SEC_PKA
@@ -56,7 +56,7 @@ using pka_sr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved2", std::uint16_t, 31, 22>,
                groov::field<"operrf", bool, 21, 21>,
                groov::field<"addrerrf", bool, 20, 20>,

@@ -7,15 +7,42 @@
 namespace stm32::stm32g484xx {
 
 namespace spix {
-  using cr1_tt = regs::spi_cr1_v1_tt;
-  using cr2_tt = regs::spi_cr2_v1_tt;
-  using sr_tt = regs::spi_sr_v1_tt;
-  using dr_tt = regs::spi_dr_v1_tt;
-  using crcpr_tt = regs::spi_crcpr_v1_tt;
-  using rxcrcr_tt = regs::spi_rxcrcr_v1_tt;
-  using txcrcr_tt = regs::spi_txcrcr_v1_tt;
-  using i2scfgr_tt = regs::spi_i2scfgr_v1_tt;
-  using i2spr_tt = regs::spi_i2spr_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cr1_tt = regs::spi_cr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cr2_tt = regs::spi_cr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using sr_tt = regs::spi_sr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dr_tt = regs::spi_dr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using crcpr_tt = regs::spi_crcpr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rxcrcr_tt = regs::spi_rxcrcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using txcrcr_tt = regs::spi_txcrcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using i2scfgr_tt = regs::spi_i2scfgr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using i2spr_tt = regs::spi_i2spr_v1_tt<name, baseaddress, offset>;
 
   template <stdx::ct_string name, std::uint32_t baseaddress>
   using spix_t =
@@ -32,5 +59,59 @@ namespace spix {
                  i2spr_tt<"i2spr", baseaddress, 0x20>>;
 
 } // namespace spix
+
+namespace spi1 {
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cr1_tt = regs::spi_cr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cr2_tt = regs::spi_cr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using sr_tt = regs::spi_sr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dr_tt = regs::spi_dr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using crcpr_tt = regs::spi_crcpr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rxcrcr_tt = regs::spi_rxcrcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using txcrcr_tt = regs::spi_txcrcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using i2scfgr_tt = regs::spi_i2scfgr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using i2spr_tt = regs::spi_i2spr_v1_tt<name, baseaddress, offset>;
+
+  template <std::uint32_t baseaddress>
+  using spi1_t =
+    groov::group<"spi1",
+                 groov::mmio_bus<>,
+                 cr1_tt<"cr1", baseaddress, 0x0>,
+                 cr2_tt<"cr2", baseaddress, 0x4>,
+                 sr_tt<"sr", baseaddress, 0x8>,
+                 dr_tt<"dr", baseaddress, 0xc>,
+                 crcpr_tt<"crcpr", baseaddress, 0x10>,
+                 rxcrcr_tt<"rxcrcr", baseaddress, 0x14>,
+                 txcrcr_tt<"txcrcr", baseaddress, 0x18>,
+                 i2scfgr_tt<"i2scfgr", baseaddress, 0x1c>,
+                 i2spr_tt<"i2spr", baseaddress, 0x20>>;
+
+} // namespace spi1
 
 } // namespace stm32::stm32g484xx

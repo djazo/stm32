@@ -7,21 +7,66 @@
 namespace stm32::stm32l4s7 {
 
 namespace scb {
-  using cpuid_tt = regs::scb_cpuid_v1_tt;
-  using icsr_tt = regs::scb_icsr_v1_tt;
-  using vtor_tt = regs::scb_vtor_v1_tt;
-  using aircr_tt = regs::scb_aircr_v1_tt;
-  using scr_tt = regs::scb_scr_v1_tt;
-  using ccr_tt = regs::scb_ccr_v1_tt;
-  using shpr1_tt = regs::scb_shpr1_v1_tt;
-  using shpr2_tt = regs::scb_shpr2_v1_tt;
-  using shpr3_tt = regs::scb_shpr3_v1_tt;
-  using shcsr_tt = regs::scb_shcsr_v1_tt;
-  using cfsr_ufsr_bfsr_mmfsr_tt = regs::scb_cfsr_ufsr_bfsr_mmfsr_v1_tt;
-  using hfsr_tt = regs::scb_hfsr_v1_tt;
-  using mmfar_tt = regs::scb_mmfar_v1_tt;
-  using bfar_tt = regs::scb_bfar_v1_tt;
-  using afsr_tt = regs::scb_afsr_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cpuid_tt = regs::scb_cpuid_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using icsr_tt = regs::scb_icsr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using vtor_tt = regs::scb_vtor_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using aircr_tt = regs::scb_aircr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using scr_tt = regs::scb_scr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ccr_tt = regs::scb_ccr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using shpr1_tt = regs::scb_shpr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using shpr2_tt = regs::scb_shpr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using shpr3_tt = regs::scb_shpr3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using shcsr_tt = regs::scb_shcsr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cfsr_ufsr_bfsr_mmfsr_tt = regs::scb_cfsr_ufsr_bfsr_mmfsr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hfsr_tt = regs::scb_hfsr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mmfar_tt = regs::scb_mmfar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using bfar_tt = regs::scb_bfar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using afsr_tt = regs::scb_afsr_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using scb_t =
@@ -46,7 +91,10 @@ namespace scb {
 } // namespace scb
 
 namespace scb_actrl {
-  using actrl_tt = regs::scb_actrl_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using actrl_tt = regs::scb_actrl_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using scb_actrl_t =

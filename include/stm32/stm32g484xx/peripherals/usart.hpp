@@ -7,18 +7,54 @@
 namespace stm32::stm32g484xx {
 
 namespace usartx {
-  using cr1_tt = regs::usart_cr1_v1_tt;
-  using cr2_tt = regs::usart_cr2_v1_tt;
-  using cr3_tt = regs::usart_cr3_v1_tt;
-  using brr_tt = regs::usart_brr_v1_tt;
-  using gtpr_tt = regs::usart_gtpr_v1_tt;
-  using rtor_tt = regs::usart_rtor_v1_tt;
-  using rqr_tt = regs::usart_rqr_v1_tt;
-  using isr_tt = regs::usart_isr_v1_tt;
-  using icr_tt = regs::usart_icr_v1_tt;
-  using rdr_tt = regs::usart_rdr_v1_tt;
-  using tdr_tt = regs::usart_tdr_v1_tt;
-  using presc_tt = regs::usart_presc_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cr1_tt = regs::usart_cr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cr2_tt = regs::usart_cr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cr3_tt = regs::usart_cr3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using brr_tt = regs::usart_brr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gtpr_tt = regs::usart_gtpr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rtor_tt = regs::usart_rtor_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rqr_tt = regs::usart_rqr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using isr_tt = regs::usart_isr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using icr_tt = regs::usart_icr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rdr_tt = regs::usart_rdr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using tdr_tt = regs::usart_tdr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using presc_tt = regs::usart_presc_v1_tt<name, baseaddress, offset>;
 
   template <stdx::ct_string name, std::uint32_t baseaddress>
   using usartx_t =
@@ -39,17 +75,116 @@ namespace usartx {
 
 } // namespace usartx
 
+namespace usartx_v2 {
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cr1_tt = regs::usart_cr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cr2_tt = regs::usart_cr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cr3_tt = regs::usart_cr3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using brr_tt = regs::usart_brr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gtpr_tt = regs::usart_gtpr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rtor_tt = regs::usart_rtor_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rqr_tt = regs::usart_rqr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using isr_tt = regs::usart_isr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using icr_tt = regs::usart_icr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rdr_tt = regs::usart_rdr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using tdr_tt = regs::usart_tdr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using presc_tt = regs::usart_presc_v1_tt<name, baseaddress, offset>;
+
+  template <stdx::ct_string name, std::uint32_t baseaddress>
+  using usartx_v2_t =
+    groov::group<name,
+                 groov::mmio_bus<>,
+                 cr1_tt<"cr1", baseaddress, 0x0>,
+                 cr2_tt<"cr2", baseaddress, 0x4>,
+                 cr3_tt<"cr3", baseaddress, 0x8>,
+                 brr_tt<"brr", baseaddress, 0xc>,
+                 gtpr_tt<"gtpr", baseaddress, 0x10>,
+                 rtor_tt<"rtor", baseaddress, 0x14>,
+                 rqr_tt<"rqr", baseaddress, 0x18>,
+                 isr_tt<"isr", baseaddress, 0x1c>,
+                 icr_tt<"icr", baseaddress, 0x20>,
+                 rdr_tt<"rdr", baseaddress, 0x24>,
+                 tdr_tt<"tdr", baseaddress, 0x28>,
+                 presc_tt<"presc", baseaddress, 0x2c>>;
+
+} // namespace usartx_v2
+
 namespace lpuart1 {
-  using cr1_tt = regs::usart_cr1_v2_tt;
-  using cr2_tt = regs::usart_cr2_v2_tt;
-  using cr3_tt = regs::usart_cr3_v2_tt;
-  using brr_tt = regs::usart_brr_v2_tt;
-  using rqr_tt = regs::usart_rqr_v2_tt;
-  using isr_tt = regs::usart_isr_v2_tt;
-  using icr_tt = regs::usart_icr_v2_tt;
-  using rdr_tt = regs::usart_rdr_v1_tt;
-  using tdr_tt = regs::usart_tdr_v1_tt;
-  using presc_tt = regs::usart_presc_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cr1_tt = regs::usart_cr1_v2_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cr2_tt = regs::usart_cr2_v2_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cr3_tt = regs::usart_cr3_v2_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using brr_tt = regs::usart_brr_v2_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rqr_tt = regs::usart_rqr_v2_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using isr_tt = regs::usart_isr_v2_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using icr_tt = regs::usart_icr_v2_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rdr_tt = regs::usart_rdr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using tdr_tt = regs::usart_tdr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using presc_tt = regs::usart_presc_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using lpuart1_t =

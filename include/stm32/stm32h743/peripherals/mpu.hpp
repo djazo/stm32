@@ -7,11 +7,26 @@
 namespace stm32::stm32h743 {
 
 namespace mpu {
-  using mpu_typer_tt = regs::mpu_mpu_typer_v1_tt;
-  using mpu_ctrl_tt = regs::mpu_mpu_ctrl_v1_tt;
-  using mpu_rnr_tt = regs::mpu_mpu_rnr_v1_tt;
-  using mpu_rbar_tt = regs::mpu_mpu_rbar_v1_tt;
-  using mpu_rasr_tt = regs::mpu_mpu_rasr_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpu_typer_tt = regs::mpu_mpu_typer_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpu_ctrl_tt = regs::mpu_mpu_ctrl_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpu_rnr_tt = regs::mpu_mpu_rnr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpu_rbar_tt = regs::mpu_mpu_rbar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mpu_rasr_tt = regs::mpu_mpu_rasr_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using mpu_t =

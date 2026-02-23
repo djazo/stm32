@@ -16,8 +16,8 @@ using rtc_alrh_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::wo,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::wo,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"alrh", std::uint16_t, 15, 0>>;
 
 // rtc_alrl_v1: ALRL
@@ -29,8 +29,8 @@ using rtc_alrl_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::wo,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::wo,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"alrl", std::uint16_t, 15, 0>>;
 
 // rtc_cnth_v1: CNTH
@@ -42,8 +42,8 @@ using rtc_cnth_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"cnth", std::uint16_t, 15, 0>>;
 
 // rtc_cntl_v1: CNTL
@@ -55,8 +55,8 @@ using rtc_cntl_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"cntl", std::uint16_t, 15, 0>>;
 
 // rtc_crh_v1: CRH
@@ -68,11 +68,11 @@ using rtc_crh_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 3, access::ro>,
-               groov::field<"owie", bit_enable, 2, 2>,
-               groov::field<"alrie", bit_enable, 1, 1>,
-               groov::field<"secie", bit_enable, 0, 0>>;
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 3, common::access::ro>,
+               groov::field<"owie", common::bittypes::bit_enable, 2, 2>,
+               groov::field<"alrie", common::bittypes::bit_enable, 1, 1>,
+               groov::field<"secie", common::bittypes::bit_enable, 0, 0>>;
 
 // rtc_crl_v1: CRL
 // Used by: RTC
@@ -83,9 +83,9 @@ using rtc_crl_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 6, access::ro>,
-               groov::field<"rtoff", bool, 5, 5, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 6, common::access::ro>,
+               groov::field<"rtoff", bool, 5, 5, common::access::ro>,
                groov::field<"cnf", bool, 4, 4>,
                groov::field<"rsf", bool, 3, 3>,
                groov::field<"owf", bool, 2, 2>,
@@ -101,7 +101,7 @@ using rtc_divh_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint32_t, 31, 4>,
                groov::field<"divh", std::uint8_t, 3, 0>>;
 
@@ -114,7 +114,7 @@ using rtc_divl_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint16_t, 31, 16>,
                groov::field<"divl", std::uint16_t, 15, 0>>;
 
@@ -127,8 +127,8 @@ using rtc_prlh_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::wo,
-               groov::field<"reserved0", std::uint32_t, 31, 4, access::ro>,
+             common::access::wo,
+               groov::field<"reserved0", std::uint32_t, 31, 4, common::access::ro>,
                groov::field<"prlh", std::uint8_t, 3, 0>>;
 
 // rtc_prll_v1: PRLL
@@ -140,8 +140,8 @@ using rtc_prll_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::wo,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::wo,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"prll", std::uint16_t, 15, 0>>;
 
 } // namespace stm32::regs

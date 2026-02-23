@@ -7,23 +7,74 @@
 namespace stm32::stm32g071 {
 
 namespace pwr {
-  using cr1_tt = regs::pwr_cr1_v1_tt;
-  using cr2_tt = regs::pwr_cr2_v1_tt;
-  using cr3_tt = regs::pwr_cr3_v1_tt;
-  using cr4_tt = regs::pwr_cr4_v1_tt;
-  using sr1_tt = regs::pwr_sr1_v1_tt;
-  using sr2_tt = regs::pwr_sr2_v1_tt;
-  using scr_tt = regs::pwr_scr_v1_tt;
-  using pucra_tt = regs::pwr_pucra_v1_tt;
-  using pdcra_tt = regs::pwr_pdcra_v1_tt;
-  using pucrb_tt = regs::pwr_pucrb_v1_tt;
-  using pdcrb_tt = regs::pwr_pdcrb_v1_tt;
-  using pucrc_tt = regs::pwr_pucrc_v1_tt;
-  using pdcrc_tt = regs::pwr_pdcrc_v1_tt;
-  using pucrd_tt = regs::pwr_pucrd_v1_tt;
-  using pdcrd_tt = regs::pwr_pdcrd_v1_tt;
-  using pucrf_tt = regs::pwr_pucrf_v1_tt;
-  using pdcrf_tt = regs::pwr_pdcrf_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cr1_tt = regs::pwr_cr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cr2_tt = regs::pwr_cr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cr3_tt = regs::pwr_cr3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cr4_tt = regs::pwr_cr4_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using sr1_tt = regs::pwr_sr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using sr2_tt = regs::pwr_sr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using scr_tt = regs::pwr_scr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using pucra_tt = regs::pwr_pucra_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using pdcra_tt = regs::pwr_pdcra_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using pucrb_tt = regs::pwr_pucrb_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using pdcrb_tt = regs::pwr_pdcrb_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using pucrc_tt = regs::pwr_pucrc_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using pdcrc_tt = regs::pwr_pdcrc_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using pucrd_tt = regs::pwr_pucrd_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using pdcrd_tt = regs::pwr_pdcrd_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using pucrf_tt = regs::pwr_pucrf_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using pdcrf_tt = regs::pwr_pdcrf_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using pwr_t =

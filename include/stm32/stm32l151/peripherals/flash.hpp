@@ -7,17 +7,50 @@
 namespace stm32::stm32l151 {
 
 namespace flash {
-  using acr_tt = regs::flash_acr_v1_tt;
-  using pecr_tt = regs::flash_pecr_v1_tt;
-  using pdkeyr_tt = regs::flash_pdkeyr_v1_tt;
-  using pekeyr_tt = regs::flash_pekeyr_v1_tt;
-  using prgkeyr_tt = regs::flash_prgkeyr_v1_tt;
-  using optkeyr_tt = regs::flash_optkeyr_v1_tt;
-  using sr_tt = regs::flash_sr_v1_tt;
-  using obr_tt = regs::flash_obr_v1_tt;
-  using wrpr1_tt = regs::flash_wrpr1_v1_tt;
-  using wrpr2_tt = regs::flash_wrpr2_v1_tt;
-  using wrpr3_tt = regs::flash_wrpr3_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using acr_tt = regs::flash_acr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using pecr_tt = regs::flash_pecr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using pdkeyr_tt = regs::flash_pdkeyr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using pekeyr_tt = regs::flash_pekeyr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using prgkeyr_tt = regs::flash_prgkeyr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using optkeyr_tt = regs::flash_optkeyr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using sr_tt = regs::flash_sr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using obr_tt = regs::flash_obr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using wrpr1_tt = regs::flash_wrpr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using wrpr2_tt = regs::flash_wrpr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using wrpr3_tt = regs::flash_wrpr3_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using flash_t =

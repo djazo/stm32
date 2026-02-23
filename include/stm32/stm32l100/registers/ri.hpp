@@ -16,7 +16,7 @@ using ri_ascr1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"scm", bool, 31, 31>,
                groov::field<"ch30gr11_4", bool, 30, 30>,
                groov::field<"ch29gr11_3", bool, 29, 29>,
@@ -31,7 +31,7 @@ using ri_ascr1_v1_tt =
                groov::field<"ch20gr7_3", bool, 20, 20>,
                groov::field<"ch19gr7_2", bool, 19, 19>,
                groov::field<"ch18gr7_1", bool, 18, 18>,
-               groov::field<"reserved0", bool, 17, 17, access::ro>,
+               groov::field<"reserved0", bool, 17, 17, common::access::ro>,
                groov::field<"ch31gr7_1", bool, 16, 16>,
                groov::field<"ch15gr9_2", bool, 15, 15>,
                groov::field<"ch14gr9_1", bool, 14, 14>,
@@ -59,8 +59,8 @@ using ri_ascr2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint8_t, 31, 30, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint8_t, 31, 30, common::access::ro>,
                groov::field<"gr5_4", bool, 29, 29>,
                groov::field<"gr6_4", bool, 28, 28>,
                groov::field<"gr6_3", bool, 27, 27>,
@@ -75,7 +75,7 @@ using ri_ascr2_v1_tt =
                groov::field<"gr3_5", bool, 18, 18>,
                groov::field<"gr3_4", bool, 17, 17>,
                groov::field<"gr3_3", bool, 16, 16>,
-               groov::field<"reserved0", std::uint8_t, 15, 12, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 15, 12, common::access::ro>,
                groov::field<"gr4_3", bool, 11, 11>,
                groov::field<"gr4_2", bool, 10, 10>,
                groov::field<"gr4_1", bool, 9, 9>,
@@ -98,7 +98,7 @@ using ri_hyscr1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"pb", std::uint16_t, 31, 16>,
                groov::field<"pa", std::uint16_t, 15, 0>>;
 
@@ -111,7 +111,7 @@ using ri_hyscr2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"pd", std::uint16_t, 31, 16>,
                groov::field<"pc", std::uint16_t, 15, 0>>;
 
@@ -124,7 +124,7 @@ using ri_hyscr3_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"pf", std::uint16_t, 31, 16>,
                groov::field<"pe", std::uint16_t, 15, 0>>;
 
@@ -137,8 +137,8 @@ using ri_hyscr4_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"pg", std::uint16_t, 15, 0>>;
 
 // ri_icr_v1: ICR
@@ -150,8 +150,8 @@ using ri_icr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 22, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 22, common::access::ro>,
                groov::field<"ic4", bool, 21, 21>,
                groov::field<"ic3", bool, 20, 20>,
                groov::field<"ic2", bool, 19, 19>,

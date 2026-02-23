@@ -16,9 +16,9 @@ using dcb_dscsr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint16_t, 31, 17, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint16_t, 31, 17, common::access::ro>,
                groov::field<"cds", bool, 16, 16>,
-               groov::field<"reserved0", std::uint16_t, 15, 0, access::ro>>;
+               groov::field<"reserved0", std::uint16_t, 15, 0, common::access::ro>>;
 
 } // namespace stm32::regs

@@ -7,14 +7,38 @@
 namespace stm32::stm32g473xx {
 
 namespace fmac {
-  using x1bufcfg_tt = regs::fmac_x1bufcfg_v1_tt;
-  using x2bufcfg_tt = regs::fmac_x2bufcfg_v1_tt;
-  using ybufcfg_tt = regs::fmac_ybufcfg_v1_tt;
-  using param_tt = regs::fmac_param_v1_tt;
-  using cr_tt = regs::fmac_cr_v1_tt;
-  using sr_tt = regs::fmac_sr_v1_tt;
-  using wdata_tt = regs::fmac_wdata_v1_tt;
-  using rdata_tt = regs::fmac_rdata_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using x1bufcfg_tt = regs::fmac_x1bufcfg_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using x2bufcfg_tt = regs::fmac_x2bufcfg_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ybufcfg_tt = regs::fmac_ybufcfg_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using param_tt = regs::fmac_param_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cr_tt = regs::fmac_cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using sr_tt = regs::fmac_sr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using wdata_tt = regs::fmac_wdata_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rdata_tt = regs::fmac_rdata_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using fmac_t =

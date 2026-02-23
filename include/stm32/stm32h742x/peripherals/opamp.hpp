@@ -7,12 +7,30 @@
 namespace stm32::stm32h742x {
 
 namespace opamp {
-  using opamp1_csr_tt = regs::opamp_opamp1_csr_v1_tt;
-  using opamp1_otr_tt = regs::opamp_opamp1_otr_v1_tt;
-  using opamp1_hsotr_tt = regs::opamp_opamp1_hsotr_v1_tt;
-  using opamp2_csr_tt = regs::opamp_opamp2_csr_v1_tt;
-  using opamp2_otr_tt = regs::opamp_opamp2_otr_v1_tt;
-  using opamp2_hsotr_tt = regs::opamp_opamp2_hsotr_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using opamp1_csr_tt = regs::opamp_opamp1_csr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using opamp1_otr_tt = regs::opamp_opamp1_otr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using opamp1_hsotr_tt = regs::opamp_opamp1_hsotr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using opamp2_csr_tt = regs::opamp_opamp2_csr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using opamp2_otr_tt = regs::opamp_opamp2_otr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using opamp2_hsotr_tt = regs::opamp_opamp2_hsotr_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using opamp_t =

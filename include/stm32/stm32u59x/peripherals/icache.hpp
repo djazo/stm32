@@ -7,16 +7,46 @@
 namespace stm32::stm32u59x {
 
 namespace icachex {
-  using icache_cr_tt = regs::icache_icache_cr_v1_tt;
-  using icache_sr_tt = regs::icache_icache_sr_v1_tt;
-  using icache_ier_tt = regs::icache_icache_ier_v1_tt;
-  using icache_fcr_tt = regs::icache_icache_fcr_v1_tt;
-  using icache_hmonr_tt = regs::icache_icache_hmonr_v1_tt;
-  using icache_mmonr_tt = regs::icache_icache_mmonr_v1_tt;
-  using icache_crr0_tt = regs::icache_icache_crr0_v1_tt;
-  using icache_crr1_tt = regs::icache_icache_crr1_v1_tt;
-  using icache_crr2_tt = regs::icache_icache_crr2_v1_tt;
-  using icache_crr3_tt = regs::icache_icache_crr3_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using icache_cr_tt = regs::icache_icache_cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using icache_sr_tt = regs::icache_icache_sr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using icache_ier_tt = regs::icache_icache_ier_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using icache_fcr_tt = regs::icache_icache_fcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using icache_hmonr_tt = regs::icache_icache_hmonr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using icache_mmonr_tt = regs::icache_icache_mmonr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using icache_crr0_tt = regs::icache_icache_crr0_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using icache_crr1_tt = regs::icache_icache_crr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using icache_crr2_tt = regs::icache_icache_crr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using icache_crr3_tt = regs::icache_icache_crr3_v1_tt<name, baseaddress, offset>;
 
   template <stdx::ct_string name, std::uint32_t baseaddress>
   using icachex_t =

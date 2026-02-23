@@ -16,11 +16,11 @@ using octospii_o_manager_cr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint8_t, 31, 24, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint8_t, 31, 24, common::access::ro>,
                groov::field<"req2ack_time", std::uint8_t, 23, 16>,
-               groov::field<"reserved0", std::uint16_t, 15, 1, access::ro>,
-               groov::field<"muxen", bit_enable, 0, 0>>;
+               groov::field<"reserved0", std::uint16_t, 15, 1, common::access::ro>,
+               groov::field<"muxen", common::bittypes::bit_enable, 0, 0>>;
 
 // octospii_o_manager_p1cr_v1: P1CR
 // Used by: OctoSPII_O_Manager
@@ -31,22 +31,22 @@ using octospii_o_manager_p1cr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved4", std::uint8_t, 31, 27, access::ro>,
+             common::access::rw,
+               groov::field<"reserved4", std::uint8_t, 31, 27, common::access::ro>,
                groov::field<"iohsrc", std::uint8_t, 26, 25>,
-               groov::field<"iohen", bit_enable, 24, 24>,
-               groov::field<"reserved3", std::uint8_t, 23, 19, access::ro>,
+               groov::field<"iohen", common::bittypes::bit_enable, 24, 24>,
+               groov::field<"reserved3", std::uint8_t, 23, 19, common::access::ro>,
                groov::field<"iolsrc", std::uint8_t, 18, 17>,
-               groov::field<"iolen", bit_enable, 16, 16>,
-               groov::field<"reserved2", std::uint8_t, 15, 10, access::ro>,
+               groov::field<"iolen", common::bittypes::bit_enable, 16, 16>,
+               groov::field<"reserved2", std::uint8_t, 15, 10, common::access::ro>,
                groov::field<"ncssrc", bool, 9, 9>,
-               groov::field<"ncsen", bit_enable, 8, 8>,
-               groov::field<"reserved1", std::uint8_t, 7, 6, access::ro>,
+               groov::field<"ncsen", common::bittypes::bit_enable, 8, 8>,
+               groov::field<"reserved1", std::uint8_t, 7, 6, common::access::ro>,
                groov::field<"dqssrc", bool, 5, 5>,
-               groov::field<"dqsen", bit_enable, 4, 4>,
-               groov::field<"reserved0", std::uint8_t, 3, 2, access::ro>,
+               groov::field<"dqsen", common::bittypes::bit_enable, 4, 4>,
+               groov::field<"reserved0", std::uint8_t, 3, 2, common::access::ro>,
                groov::field<"clksrc", bool, 1, 1>,
-               groov::field<"clken", bit_enable, 0, 0>>;
+               groov::field<"clken", common::bittypes::bit_enable, 0, 0>>;
 
 // octospii_o_manager_p2cr_v1: P2CR
 // Used by: OctoSPII_O_Manager
@@ -57,21 +57,21 @@ using octospii_o_manager_p2cr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved4", std::uint8_t, 31, 27, access::ro>,
+             common::access::rw,
+               groov::field<"reserved4", std::uint8_t, 31, 27, common::access::ro>,
                groov::field<"iohsrc", std::uint8_t, 26, 25>,
-               groov::field<"iohen", bit_enable, 24, 24>,
-               groov::field<"reserved3", std::uint8_t, 23, 19, access::ro>,
+               groov::field<"iohen", common::bittypes::bit_enable, 24, 24>,
+               groov::field<"reserved3", std::uint8_t, 23, 19, common::access::ro>,
                groov::field<"iolsrc", std::uint8_t, 18, 17>,
-               groov::field<"iolen", bit_enable, 16, 16>,
-               groov::field<"reserved2", std::uint8_t, 15, 10, access::ro>,
+               groov::field<"iolen", common::bittypes::bit_enable, 16, 16>,
+               groov::field<"reserved2", std::uint8_t, 15, 10, common::access::ro>,
                groov::field<"ncssrc", bool, 9, 9>,
-               groov::field<"ncsen", bit_enable, 8, 8>,
-               groov::field<"reserved1", std::uint8_t, 7, 6, access::ro>,
+               groov::field<"ncsen", common::bittypes::bit_enable, 8, 8>,
+               groov::field<"reserved1", std::uint8_t, 7, 6, common::access::ro>,
                groov::field<"dqssrc", bool, 5, 5>,
-               groov::field<"dqsen", bit_enable, 4, 4>,
-               groov::field<"reserved0", std::uint8_t, 3, 2, access::ro>,
+               groov::field<"dqsen", common::bittypes::bit_enable, 4, 4>,
+               groov::field<"reserved0", std::uint8_t, 3, 2, common::access::ro>,
                groov::field<"clksrc", bool, 1, 1>,
-               groov::field<"clken", bit_enable, 0, 0>>;
+               groov::field<"clken", common::bittypes::bit_enable, 0, 0>>;
 
 } // namespace stm32::regs

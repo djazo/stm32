@@ -7,77 +7,290 @@
 namespace stm32::stm32f768 {
 
 namespace mdios {
-  using mdios_cr_tt = regs::mdios_mdios_cr_v1_tt;
-  using mdios_wrfr_tt = regs::mdios_mdios_wrfr_v1_tt;
-  using mdios_cwrfr_tt = regs::mdios_mdios_cwrfr_v1_tt;
-  using mdios_rdfr_tt = regs::mdios_mdios_rdfr_v1_tt;
-  using mdios_crdfr_tt = regs::mdios_mdios_crdfr_v1_tt;
-  using mdios_sr_tt = regs::mdios_mdios_sr_v1_tt;
-  using mdios_clrfr_tt = regs::mdios_mdios_clrfr_v1_tt;
-  using mdios_dinr0_tt = regs::mdios_mdios_dinr0_v1_tt;
-  using mdios_dinr1_tt = regs::mdios_mdios_dinr1_v1_tt;
-  using mdios_dinr2_tt = regs::mdios_mdios_dinr2_v1_tt;
-  using mdios_dinr3_tt = regs::mdios_mdios_dinr3_v1_tt;
-  using mdios_dinr4_tt = regs::mdios_mdios_dinr4_v1_tt;
-  using mdios_dinr5_tt = regs::mdios_mdios_dinr5_v1_tt;
-  using mdios_dinr6_tt = regs::mdios_mdios_dinr6_v1_tt;
-  using mdios_dinr7_tt = regs::mdios_mdios_dinr7_v1_tt;
-  using mdios_dinr8_tt = regs::mdios_mdios_dinr8_v1_tt;
-  using mdios_dinr9_tt = regs::mdios_mdios_dinr9_v1_tt;
-  using mdios_dinr10_tt = regs::mdios_mdios_dinr10_v1_tt;
-  using mdios_dinr11_tt = regs::mdios_mdios_dinr11_v1_tt;
-  using mdios_dinr12_tt = regs::mdios_mdios_dinr12_v1_tt;
-  using mdios_dinr13_tt = regs::mdios_mdios_dinr13_v1_tt;
-  using mdios_dinr14_tt = regs::mdios_mdios_dinr14_v1_tt;
-  using mdios_dinr15_tt = regs::mdios_mdios_dinr15_v1_tt;
-  using mdios_dinr16_tt = regs::mdios_mdios_dinr16_v1_tt;
-  using mdios_dinr17_tt = regs::mdios_mdios_dinr17_v1_tt;
-  using mdios_dinr18_tt = regs::mdios_mdios_dinr18_v1_tt;
-  using mdios_dinr19_tt = regs::mdios_mdios_dinr19_v1_tt;
-  using mdios_dinr20_tt = regs::mdios_mdios_dinr20_v1_tt;
-  using mdios_dinr21_tt = regs::mdios_mdios_dinr21_v1_tt;
-  using mdios_dinr22_tt = regs::mdios_mdios_dinr22_v1_tt;
-  using mdios_dinr23_tt = regs::mdios_mdios_dinr23_v1_tt;
-  using mdios_dinr24_tt = regs::mdios_mdios_dinr24_v1_tt;
-  using mdios_dinr25_tt = regs::mdios_mdios_dinr25_v1_tt;
-  using mdios_dinr26_tt = regs::mdios_mdios_dinr26_v1_tt;
-  using mdios_dinr27_tt = regs::mdios_mdios_dinr27_v1_tt;
-  using mdios_dinr28_tt = regs::mdios_mdios_dinr28_v1_tt;
-  using mdios_dinr29_tt = regs::mdios_mdios_dinr29_v1_tt;
-  using mdios_dinr30_tt = regs::mdios_mdios_dinr30_v1_tt;
-  using mdios_dinr31_tt = regs::mdios_mdios_dinr31_v1_tt;
-  using mdios_doutr0_tt = regs::mdios_mdios_doutr0_v1_tt;
-  using mdios_doutr1_tt = regs::mdios_mdios_doutr1_v1_tt;
-  using mdios_doutr2_tt = regs::mdios_mdios_doutr2_v1_tt;
-  using mdios_doutr3_tt = regs::mdios_mdios_doutr3_v1_tt;
-  using mdios_doutr4_tt = regs::mdios_mdios_doutr4_v1_tt;
-  using mdios_doutr5_tt = regs::mdios_mdios_doutr5_v1_tt;
-  using mdios_doutr6_tt = regs::mdios_mdios_doutr6_v1_tt;
-  using mdios_doutr7_tt = regs::mdios_mdios_doutr7_v1_tt;
-  using mdios_doutr8_tt = regs::mdios_mdios_doutr8_v1_tt;
-  using mdios_doutr9_tt = regs::mdios_mdios_doutr9_v1_tt;
-  using mdios_doutr10_tt = regs::mdios_mdios_doutr10_v1_tt;
-  using mdios_doutr11_tt = regs::mdios_mdios_doutr11_v1_tt;
-  using mdios_doutr12_tt = regs::mdios_mdios_doutr12_v1_tt;
-  using mdios_doutr13_tt = regs::mdios_mdios_doutr13_v1_tt;
-  using mdios_doutr14_tt = regs::mdios_mdios_doutr14_v1_tt;
-  using mdios_doutr15_tt = regs::mdios_mdios_doutr15_v1_tt;
-  using mdios_doutr16_tt = regs::mdios_mdios_doutr16_v1_tt;
-  using mdios_doutr17_tt = regs::mdios_mdios_doutr17_v1_tt;
-  using mdios_doutr18_tt = regs::mdios_mdios_doutr18_v1_tt;
-  using mdios_doutr19_tt = regs::mdios_mdios_doutr19_v1_tt;
-  using mdios_doutr20_tt = regs::mdios_mdios_doutr20_v1_tt;
-  using mdios_doutr21_tt = regs::mdios_mdios_doutr21_v1_tt;
-  using mdios_doutr22_tt = regs::mdios_mdios_doutr22_v1_tt;
-  using mdios_doutr23_tt = regs::mdios_mdios_doutr23_v1_tt;
-  using mdios_doutr24_tt = regs::mdios_mdios_doutr24_v1_tt;
-  using mdios_doutr25_tt = regs::mdios_mdios_doutr25_v1_tt;
-  using mdios_doutr26_tt = regs::mdios_mdios_doutr26_v1_tt;
-  using mdios_doutr27_tt = regs::mdios_mdios_doutr27_v1_tt;
-  using mdios_doutr28_tt = regs::mdios_mdios_doutr28_v1_tt;
-  using mdios_doutr29_tt = regs::mdios_mdios_doutr29_v1_tt;
-  using mdios_doutr30_tt = regs::mdios_mdios_doutr30_v1_tt;
-  using mdios_doutr31_tt = regs::mdios_mdios_doutr31_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdios_cr_tt = regs::mdios_mdios_cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdios_wrfr_tt = regs::mdios_mdios_wrfr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdios_cwrfr_tt = regs::mdios_mdios_cwrfr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdios_rdfr_tt = regs::mdios_mdios_rdfr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdios_crdfr_tt = regs::mdios_mdios_crdfr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdios_sr_tt = regs::mdios_mdios_sr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdios_clrfr_tt = regs::mdios_mdios_clrfr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdios_dinr0_tt = regs::mdios_mdios_dinr0_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdios_dinr1_tt = regs::mdios_mdios_dinr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdios_dinr2_tt = regs::mdios_mdios_dinr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdios_dinr3_tt = regs::mdios_mdios_dinr3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdios_dinr4_tt = regs::mdios_mdios_dinr4_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdios_dinr5_tt = regs::mdios_mdios_dinr5_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdios_dinr6_tt = regs::mdios_mdios_dinr6_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdios_dinr7_tt = regs::mdios_mdios_dinr7_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdios_dinr8_tt = regs::mdios_mdios_dinr8_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdios_dinr9_tt = regs::mdios_mdios_dinr9_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdios_dinr10_tt = regs::mdios_mdios_dinr10_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdios_dinr11_tt = regs::mdios_mdios_dinr11_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdios_dinr12_tt = regs::mdios_mdios_dinr12_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdios_dinr13_tt = regs::mdios_mdios_dinr13_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdios_dinr14_tt = regs::mdios_mdios_dinr14_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdios_dinr15_tt = regs::mdios_mdios_dinr15_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdios_dinr16_tt = regs::mdios_mdios_dinr16_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdios_dinr17_tt = regs::mdios_mdios_dinr17_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdios_dinr18_tt = regs::mdios_mdios_dinr18_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdios_dinr19_tt = regs::mdios_mdios_dinr19_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdios_dinr20_tt = regs::mdios_mdios_dinr20_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdios_dinr21_tt = regs::mdios_mdios_dinr21_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdios_dinr22_tt = regs::mdios_mdios_dinr22_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdios_dinr23_tt = regs::mdios_mdios_dinr23_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdios_dinr24_tt = regs::mdios_mdios_dinr24_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdios_dinr25_tt = regs::mdios_mdios_dinr25_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdios_dinr26_tt = regs::mdios_mdios_dinr26_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdios_dinr27_tt = regs::mdios_mdios_dinr27_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdios_dinr28_tt = regs::mdios_mdios_dinr28_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdios_dinr29_tt = regs::mdios_mdios_dinr29_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdios_dinr30_tt = regs::mdios_mdios_dinr30_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdios_dinr31_tt = regs::mdios_mdios_dinr31_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdios_doutr0_tt = regs::mdios_mdios_doutr0_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdios_doutr1_tt = regs::mdios_mdios_doutr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdios_doutr2_tt = regs::mdios_mdios_doutr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdios_doutr3_tt = regs::mdios_mdios_doutr3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdios_doutr4_tt = regs::mdios_mdios_doutr4_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdios_doutr5_tt = regs::mdios_mdios_doutr5_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdios_doutr6_tt = regs::mdios_mdios_doutr6_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdios_doutr7_tt = regs::mdios_mdios_doutr7_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdios_doutr8_tt = regs::mdios_mdios_doutr8_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdios_doutr9_tt = regs::mdios_mdios_doutr9_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdios_doutr10_tt = regs::mdios_mdios_doutr10_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdios_doutr11_tt = regs::mdios_mdios_doutr11_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdios_doutr12_tt = regs::mdios_mdios_doutr12_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdios_doutr13_tt = regs::mdios_mdios_doutr13_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdios_doutr14_tt = regs::mdios_mdios_doutr14_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdios_doutr15_tt = regs::mdios_mdios_doutr15_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdios_doutr16_tt = regs::mdios_mdios_doutr16_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdios_doutr17_tt = regs::mdios_mdios_doutr17_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdios_doutr18_tt = regs::mdios_mdios_doutr18_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdios_doutr19_tt = regs::mdios_mdios_doutr19_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdios_doutr20_tt = regs::mdios_mdios_doutr20_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdios_doutr21_tt = regs::mdios_mdios_doutr21_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdios_doutr22_tt = regs::mdios_mdios_doutr22_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdios_doutr23_tt = regs::mdios_mdios_doutr23_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdios_doutr24_tt = regs::mdios_mdios_doutr24_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdios_doutr25_tt = regs::mdios_mdios_doutr25_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdios_doutr26_tt = regs::mdios_mdios_doutr26_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdios_doutr27_tt = regs::mdios_mdios_doutr27_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdios_doutr28_tt = regs::mdios_mdios_doutr28_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdios_doutr29_tt = regs::mdios_mdios_doutr29_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdios_doutr30_tt = regs::mdios_mdios_doutr30_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdios_doutr31_tt = regs::mdios_mdios_doutr31_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using mdios_t =

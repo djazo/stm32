@@ -7,19 +7,58 @@
 namespace stm32::stm32h750x {
 
 namespace quadspi {
-  using quadspi_cr_tt = regs::quadspi_quadspi_cr_v1_tt;
-  using quadspi_dcr_tt = regs::quadspi_quadspi_dcr_v1_tt;
-  using quadspi_sr_tt = regs::quadspi_quadspi_sr_v1_tt;
-  using quadspi_fcr_tt = regs::quadspi_quadspi_fcr_v1_tt;
-  using quadspi_dlr_tt = regs::quadspi_quadspi_dlr_v1_tt;
-  using quadspi_ccr_tt = regs::quadspi_quadspi_ccr_v1_tt;
-  using quadspi_ar_tt = regs::quadspi_quadspi_ar_v1_tt;
-  using quadspi_abr_tt = regs::quadspi_quadspi_abr_v1_tt;
-  using quadspi_dr_tt = regs::quadspi_quadspi_dr_v1_tt;
-  using quadspi_psmkr_tt = regs::quadspi_quadspi_psmkr_v1_tt;
-  using quadspi_psmar_tt = regs::quadspi_quadspi_psmar_v1_tt;
-  using quadspi_pir_tt = regs::quadspi_quadspi_pir_v1_tt;
-  using quadspi_lptr_tt = regs::quadspi_quadspi_lptr_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using quadspi_cr_tt = regs::quadspi_quadspi_cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using quadspi_dcr_tt = regs::quadspi_quadspi_dcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using quadspi_sr_tt = regs::quadspi_quadspi_sr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using quadspi_fcr_tt = regs::quadspi_quadspi_fcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using quadspi_dlr_tt = regs::quadspi_quadspi_dlr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using quadspi_ccr_tt = regs::quadspi_quadspi_ccr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using quadspi_ar_tt = regs::quadspi_quadspi_ar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using quadspi_abr_tt = regs::quadspi_quadspi_abr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using quadspi_dr_tt = regs::quadspi_quadspi_dr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using quadspi_psmkr_tt = regs::quadspi_quadspi_psmkr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using quadspi_psmar_tt = regs::quadspi_quadspi_psmar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using quadspi_pir_tt = regs::quadspi_quadspi_pir_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using quadspi_lptr_tt = regs::quadspi_quadspi_lptr_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using quadspi_t =

@@ -16,8 +16,8 @@ using dac2_cr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 14, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 14, common::access::ro>,
                groov::field<"dmaudrie1", bool, 13, 13>,
                groov::field<"dmaen1", bool, 12, 12>,
                groov::field<"mamp13", bool, 11, 11>,
@@ -40,10 +40,10 @@ using dac2_dhr12l1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"dacc1dhr", std::uint16_t, 15, 4>,
-               groov::field<"reserved0", std::uint8_t, 3, 0, access::ro>>;
+               groov::field<"reserved0", std::uint8_t, 3, 0, common::access::ro>>;
 
 // dac2_dhr12r1_v1: DHR12R1
 // Used by: DAC2
@@ -54,8 +54,8 @@ using dac2_dhr12r1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 12, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 12, common::access::ro>,
                groov::field<"dacc1dhr", std::uint16_t, 11, 0>>;
 
 // dac2_dhr8r1_v1: DHR8R1
@@ -67,8 +67,8 @@ using dac2_dhr8r1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 8, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 8, common::access::ro>,
                groov::field<"dacc1dhr", std::uint8_t, 7, 0>>;
 
 // dac2_dor1_v1: DOR1
@@ -80,7 +80,7 @@ using dac2_dor1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint32_t, 31, 12>,
                groov::field<"dacc1dor", std::uint16_t, 11, 0>>;
 
@@ -93,10 +93,10 @@ using dac2_sr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint32_t, 31, 14, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint32_t, 31, 14, common::access::ro>,
                groov::field<"dmaudr1", bool, 13, 13>,
-               groov::field<"reserved0", std::uint16_t, 12, 0, access::ro>>;
+               groov::field<"reserved0", std::uint16_t, 12, 0, common::access::ro>>;
 
 // dac2_swtrigr_v1: SWTRIGR
 // Used by: DAC2
@@ -107,8 +107,8 @@ using dac2_swtrigr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::wo,
-               groov::field<"reserved0", std::uint32_t, 31, 1, access::ro>,
+             common::access::wo,
+               groov::field<"reserved0", std::uint32_t, 31, 1, common::access::ro>,
                groov::field<"swtrig1", bool, 0, 0>>;
 
 } // namespace stm32::regs

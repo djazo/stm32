@@ -16,11 +16,11 @@ using pwr_cr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 9, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 9, common::access::ro>,
                groov::field<"dbp", bool, 8, 8>,
                groov::field<"pls", std::uint8_t, 7, 5>,
-               groov::field<"pvde", bit_enable, 4, 4>,
+               groov::field<"pvde", common::bittypes::bit_enable, 4, 4>,
                groov::field<"csbf", bool, 3, 3>,
                groov::field<"cwuf", bool, 2, 2>,
                groov::field<"pdds", bool, 1, 1>,
@@ -35,12 +35,12 @@ using pwr_csr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint32_t, 31, 9, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint32_t, 31, 9, common::access::ro>,
                groov::field<"ewup", bool, 8, 8>,
-               groov::field<"reserved0", std::uint8_t, 7, 3, access::ro>,
-               groov::field<"pvdo", bool, 2, 2, access::ro>,
-               groov::field<"sbf", bool, 1, 1, access::ro>,
-               groov::field<"wuf", bool, 0, 0, access::ro>>;
+               groov::field<"reserved0", std::uint8_t, 7, 3, common::access::ro>,
+               groov::field<"pvdo", bool, 2, 2, common::access::ro>,
+               groov::field<"sbf", bool, 1, 1, common::access::ro>,
+               groov::field<"wuf", bool, 0, 0, common::access::ro>>;
 
 } // namespace stm32::regs

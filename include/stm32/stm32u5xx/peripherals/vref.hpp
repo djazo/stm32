@@ -7,8 +7,14 @@
 namespace stm32::stm32u5xx {
 
 namespace vrefx {
-  using vrefbuf_csr_tt = regs::vref_vrefbuf_csr_v1_tt;
-  using vrefbuf_ccr_tt = regs::vref_vrefbuf_ccr_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using vrefbuf_csr_tt = regs::vref_vrefbuf_csr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using vrefbuf_ccr_tt = regs::vref_vrefbuf_ccr_v1_tt<name, baseaddress, offset>;
 
   template <stdx::ct_string name, std::uint32_t baseaddress>
   using vrefx_t =

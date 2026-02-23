@@ -7,26 +7,86 @@
 namespace stm32::stm32u5xx {
 
 namespace saesx {
-  using cr_tt = regs::saes_cr_v1_tt;
-  using sr_tt = regs::saes_sr_v1_tt;
-  using dinr_tt = regs::saes_dinr_v1_tt;
-  using doutr_tt = regs::saes_doutr_v1_tt;
-  using keyr0_tt = regs::saes_keyr0_v1_tt;
-  using keyr1_tt = regs::saes_keyr1_v1_tt;
-  using keyr2_tt = regs::saes_keyr2_v1_tt;
-  using keyr3_tt = regs::saes_keyr3_v1_tt;
-  using ivr0_tt = regs::saes_ivr0_v1_tt;
-  using ivr1_tt = regs::saes_ivr1_v1_tt;
-  using ivr2_tt = regs::saes_ivr2_v1_tt;
-  using ivr3_tt = regs::saes_ivr3_v1_tt;
-  using keyr4_tt = regs::saes_keyr4_v1_tt;
-  using keyr5_tt = regs::saes_keyr5_v1_tt;
-  using keyr6_tt = regs::saes_keyr6_v1_tt;
-  using keyr7_tt = regs::saes_keyr7_v1_tt;
-  using dpacfgr_tt = regs::saes_dpacfgr_v1_tt;
-  using ier_tt = regs::saes_ier_v1_tt;
-  using isr_tt = regs::saes_isr_v1_tt;
-  using icr_tt = regs::saes_icr_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cr_tt = regs::saes_cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using sr_tt = regs::saes_sr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dinr_tt = regs::saes_dinr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using doutr_tt = regs::saes_doutr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using keyr0_tt = regs::saes_keyr0_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using keyr1_tt = regs::saes_keyr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using keyr2_tt = regs::saes_keyr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using keyr3_tt = regs::saes_keyr3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ivr0_tt = regs::saes_ivr0_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ivr1_tt = regs::saes_ivr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ivr2_tt = regs::saes_ivr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ivr3_tt = regs::saes_ivr3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using keyr4_tt = regs::saes_keyr4_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using keyr5_tt = regs::saes_keyr5_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using keyr6_tt = regs::saes_keyr6_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using keyr7_tt = regs::saes_keyr7_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dpacfgr_tt = regs::saes_dpacfgr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ier_tt = regs::saes_ier_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using isr_tt = regs::saes_isr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using icr_tt = regs::saes_icr_v1_tt<name, baseaddress, offset>;
 
   template <stdx::ct_string name, std::uint32_t baseaddress>
   using saesx_t =

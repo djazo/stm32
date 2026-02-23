@@ -16,21 +16,21 @@ using cryp_cr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint16_t, 31, 19, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint16_t, 31, 19, common::access::ro>,
                groov::field<"keysize", bool, 18, 18>,
-               groov::field<"reserved0", std::uint8_t, 17, 15, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 17, 15, common::access::ro>,
                groov::field<"gcmph", std::uint8_t, 14, 13>,
-               groov::field<"dmaouten", bit_enable, 12, 12>,
-               groov::field<"dmainen", bit_enable, 11, 11>,
-               groov::field<"errie", bit_enable, 10, 10>,
-               groov::field<"ccfie", bit_enable, 9, 9>,
+               groov::field<"dmaouten", common::bittypes::bit_enable, 12, 12>,
+               groov::field<"dmainen", common::bittypes::bit_enable, 11, 11>,
+               groov::field<"errie", common::bittypes::bit_enable, 10, 10>,
+               groov::field<"ccfie", common::bittypes::bit_enable, 9, 9>,
                groov::field<"errc", bool, 8, 8>,
                groov::field<"ccfc", bool, 7, 7>,
                groov::field<"chmod", std::uint8_t, 6, 5>,
                groov::field<"mode", std::uint8_t, 4, 3>,
                groov::field<"datatype", std::uint8_t, 2, 1>,
-               groov::field<"en", bit_enable, 0, 0>>;
+               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
 
 // cryp_dinr_v1: DINR
 // Used by: CRYP
@@ -41,7 +41,7 @@ using cryp_dinr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dinr", std::uint32_t, 31, 0>>;
 
 // cryp_doutr_v1: DOUTR
@@ -53,7 +53,7 @@ using cryp_doutr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"doutr", std::uint32_t, 31, 0>>;
 
 // cryp_ivr0_v1: IVR0
@@ -65,7 +65,7 @@ using cryp_ivr0_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"ivr0", std::uint32_t, 31, 0>>;
 
 // cryp_ivr1_v1: IVR1
@@ -77,7 +77,7 @@ using cryp_ivr1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"ivr1", std::uint32_t, 31, 0>>;
 
 // cryp_ivr2_v1: IVR2
@@ -89,7 +89,7 @@ using cryp_ivr2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"ivr2", std::uint32_t, 31, 0>>;
 
 // cryp_ivr3_v1: IVR3
@@ -101,7 +101,7 @@ using cryp_ivr3_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"ivr3", std::uint32_t, 31, 0>>;
 
 // cryp_keyr0_v1: KEYR0
@@ -113,8 +113,8 @@ using cryp_keyr0_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", bool, 31, 31, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", bool, 31, 31, common::access::ro>,
                groov::field<"keyr0", std::uint32_t, 30, 0>>;
 
 // cryp_keyr1_v1: KEYR1
@@ -126,7 +126,7 @@ using cryp_keyr1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"keyr1", std::uint32_t, 31, 0>>;
 
 // cryp_keyr2_v1: KEYR2
@@ -138,7 +138,7 @@ using cryp_keyr2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", bool, 31, 31>,
                groov::field<"keyr2", std::uint32_t, 30, 0>>;
 
@@ -151,7 +151,7 @@ using cryp_keyr3_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"keyr3", std::uint32_t, 31, 0>>;
 
 // cryp_keyr4_v1: KEYR4
@@ -163,7 +163,7 @@ using cryp_keyr4_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"keyr4", std::uint32_t, 31, 0>>;
 
 // cryp_keyr5_v1: KEYR5
@@ -175,7 +175,7 @@ using cryp_keyr5_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"keyr5", std::uint32_t, 31, 0>>;
 
 // cryp_keyr6_v1: KEYR6
@@ -187,7 +187,7 @@ using cryp_keyr6_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"keyr6", std::uint32_t, 31, 0>>;
 
 // cryp_keyr7_v1: KEYR7
@@ -199,7 +199,7 @@ using cryp_keyr7_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"keyr7", std::uint32_t, 31, 0>>;
 
 // cryp_sr_v1: SR
@@ -211,7 +211,7 @@ using cryp_sr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint32_t, 31, 4>,
                groov::field<"busy", bool, 3, 3>,
                groov::field<"wrerr", bool, 2, 2>,
@@ -227,7 +227,7 @@ using cryp_susp0r_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"susp0r", std::uint32_t, 31, 0>>;
 
 // cryp_susp1r_v1: SUSP1R
@@ -239,7 +239,7 @@ using cryp_susp1r_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"susp1r", std::uint32_t, 31, 0>>;
 
 // cryp_susp2r_v1: SUSP2R
@@ -251,7 +251,7 @@ using cryp_susp2r_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"susp2r", std::uint32_t, 31, 0>>;
 
 // cryp_susp3r_v1: SUSP3R
@@ -263,7 +263,7 @@ using cryp_susp3r_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"susp3r", std::uint32_t, 31, 0>>;
 
 // cryp_susp4r_v1: SUSP4R
@@ -275,7 +275,7 @@ using cryp_susp4r_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"susp4r", std::uint32_t, 31, 0>>;
 
 // cryp_susp5r_v1: SUSP5R
@@ -287,7 +287,7 @@ using cryp_susp5r_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"susp5r", std::uint32_t, 31, 0>>;
 
 // cryp_susp6r_v1: SUSP6R
@@ -299,7 +299,7 @@ using cryp_susp6r_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"susp6r", std::uint32_t, 31, 0>>;
 
 // cryp_susp7r_v1: SUSP7R
@@ -311,7 +311,7 @@ using cryp_susp7r_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"susp7r", std::uint32_t, 31, 0>>;
 
 } // namespace stm32::regs

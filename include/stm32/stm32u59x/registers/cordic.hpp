@@ -16,17 +16,17 @@ using cordic_csr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"rrdy", bit_ready, 31, 31, access::ro>,
-               groov::field<"reserved1", std::uint8_t, 30, 23, access::ro>,
+             common::access::rw,
+               groov::field<"rrdy", common::bittypes::bit_ready, 31, 31, common::access::ro>,
+               groov::field<"reserved1", std::uint8_t, 30, 23, common::access::ro>,
                groov::field<"argsize", bool, 22, 22>,
                groov::field<"ressize", bool, 21, 21>,
                groov::field<"nargs", bool, 20, 20>,
                groov::field<"nres", bool, 19, 19>,
-               groov::field<"dmawen", bit_enable, 18, 18>,
-               groov::field<"dmaren", bit_enable, 17, 17>,
-               groov::field<"ien", bit_enable, 16, 16>,
-               groov::field<"reserved0", std::uint8_t, 15, 11, access::ro>,
+               groov::field<"dmawen", common::bittypes::bit_enable, 18, 18>,
+               groov::field<"dmaren", common::bittypes::bit_enable, 17, 17>,
+               groov::field<"ien", common::bittypes::bit_enable, 16, 16>,
+               groov::field<"reserved0", std::uint8_t, 15, 11, common::access::ro>,
                groov::field<"scale", std::uint8_t, 10, 8>,
                groov::field<"precision", std::uint8_t, 7, 4>,
                groov::field<"func", std::uint8_t, 3, 0>>;
@@ -40,7 +40,7 @@ using cordic_rdata_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"res", std::uint32_t, 31, 0>>;
 
 // cordic_wdata_v1: WDATA
@@ -52,7 +52,7 @@ using cordic_wdata_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::wo,
+             common::access::wo,
                groov::field<"arg", std::uint32_t, 31, 0>>;
 
 } // namespace stm32::regs

@@ -16,12 +16,12 @@ using wwdg_cfr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved2", std::uint32_t, 31, 14, access::ro>,
+             common::access::rw,
+               groov::field<"reserved2", std::uint32_t, 31, 14, common::access::ro>,
                groov::field<"wdgtb", std::uint8_t, 13, 11>,
-               groov::field<"reserved1", bool, 10, 10, access::ro>,
+               groov::field<"reserved1", bool, 10, 10, common::access::ro>,
                groov::field<"ewi", bool, 9, 9>,
-               groov::field<"reserved0", std::uint8_t, 8, 7, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 8, 7, common::access::ro>,
                groov::field<"w", std::uint8_t, 6, 0>>;
 
 // wwdg_cr_v1: CR
@@ -33,8 +33,8 @@ using wwdg_cr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 8, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 8, common::access::ro>,
                groov::field<"wdga", bool, 7, 7>,
                groov::field<"t", std::uint8_t, 6, 0>>;
 
@@ -47,8 +47,8 @@ using wwdg_sr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 1, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 1, common::access::ro>,
                groov::field<"ewif", bool, 0, 0>>;
 
 } // namespace stm32::regs

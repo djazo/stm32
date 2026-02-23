@@ -16,8 +16,8 @@ using ethernet_dmabmr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint8_t, 31, 27, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint8_t, 31, 27, common::access::ro>,
                groov::field<"mb", bool, 26, 26>,
                groov::field<"aab", bool, 25, 25>,
                groov::field<"fpm", bool, 24, 24>,
@@ -26,7 +26,7 @@ using ethernet_dmabmr_v1_tt =
                groov::field<"fb", bool, 16, 16>,
                groov::field<"rtpr", std::uint8_t, 15, 14>,
                groov::field<"pbl", std::uint8_t, 13, 8>,
-               groov::field<"edfe", bit_enable, 7, 7>,
+               groov::field<"edfe", common::bittypes::bit_enable, 7, 7>,
                groov::field<"dsl", std::uint8_t, 6, 2>,
                groov::field<"da", bool, 1, 1>,
                groov::field<"sr", bool, 0, 0>>;
@@ -40,7 +40,7 @@ using ethernet_dmachrbar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"hrbap", std::uint32_t, 31, 0>>;
 
 // ethernet_dmachrdr_v1: DMACHRDR
@@ -52,7 +52,7 @@ using ethernet_dmachrdr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"hrdap", std::uint32_t, 31, 0>>;
 
 // ethernet_dmachtbar_v1: DMACHTBAR
@@ -64,7 +64,7 @@ using ethernet_dmachtbar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"htbap", std::uint32_t, 31, 0>>;
 
 // ethernet_dmachtdr_v1: DMACHTDR
@@ -76,7 +76,7 @@ using ethernet_dmachtdr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"htdap", std::uint32_t, 31, 0>>;
 
 // ethernet_dmaier_v1: DMAIER
@@ -88,24 +88,24 @@ using ethernet_dmaier_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint16_t, 31, 17, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint16_t, 31, 17, common::access::ro>,
                groov::field<"nise", bool, 16, 16>,
                groov::field<"aise", bool, 15, 15>,
-               groov::field<"erie", bit_enable, 14, 14>,
-               groov::field<"fbeie", bit_enable, 13, 13>,
-               groov::field<"reserved0", std::uint8_t, 12, 11, access::ro>,
-               groov::field<"etie", bit_enable, 10, 10>,
-               groov::field<"rwtie", bit_enable, 9, 9>,
-               groov::field<"rpsie", bit_enable, 8, 8>,
-               groov::field<"rbuie", bit_enable, 7, 7>,
-               groov::field<"rie", bit_enable, 6, 6>,
-               groov::field<"tuie", bit_enable, 5, 5>,
-               groov::field<"roie", bit_enable, 4, 4>,
-               groov::field<"tjtie", bit_enable, 3, 3>,
-               groov::field<"tbuie", bit_enable, 2, 2>,
-               groov::field<"tpsie", bit_enable, 1, 1>,
-               groov::field<"tie", bit_enable, 0, 0>>;
+               groov::field<"erie", common::bittypes::bit_enable, 14, 14>,
+               groov::field<"fbeie", common::bittypes::bit_enable, 13, 13>,
+               groov::field<"reserved0", std::uint8_t, 12, 11, common::access::ro>,
+               groov::field<"etie", common::bittypes::bit_enable, 10, 10>,
+               groov::field<"rwtie", common::bittypes::bit_enable, 9, 9>,
+               groov::field<"rpsie", common::bittypes::bit_enable, 8, 8>,
+               groov::field<"rbuie", common::bittypes::bit_enable, 7, 7>,
+               groov::field<"rie", common::bittypes::bit_enable, 6, 6>,
+               groov::field<"tuie", common::bittypes::bit_enable, 5, 5>,
+               groov::field<"roie", common::bittypes::bit_enable, 4, 4>,
+               groov::field<"tjtie", common::bittypes::bit_enable, 3, 3>,
+               groov::field<"tbuie", common::bittypes::bit_enable, 2, 2>,
+               groov::field<"tpsie", common::bittypes::bit_enable, 1, 1>,
+               groov::field<"tie", common::bittypes::bit_enable, 0, 0>>;
 
 // ethernet_dmamfbocr_v1: DMAMFBOCR
 // Used by: Ethernet_DMA
@@ -116,8 +116,8 @@ using ethernet_dmamfbocr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint8_t, 31, 29, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint8_t, 31, 29, common::access::ro>,
                groov::field<"ofoc", bool, 28, 28>,
                groov::field<"mfa", std::uint16_t, 27, 17>,
                groov::field<"omfc", bool, 16, 16>,
@@ -132,25 +132,25 @@ using ethernet_dmaomr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved5", std::uint8_t, 31, 27, access::ro>,
+             common::access::rw,
+               groov::field<"reserved5", std::uint8_t, 31, 27, common::access::ro>,
                groov::field<"dtcefd", bool, 26, 26>,
                groov::field<"rsf", bool, 25, 25>,
                groov::field<"dfrf", bool, 24, 24>,
-               groov::field<"reserved4", std::uint8_t, 23, 22, access::ro>,
+               groov::field<"reserved4", std::uint8_t, 23, 22, common::access::ro>,
                groov::field<"tsf", bool, 21, 21>,
                groov::field<"ftf", bool, 20, 20>,
-               groov::field<"reserved3", std::uint8_t, 19, 17, access::ro>,
+               groov::field<"reserved3", std::uint8_t, 19, 17, common::access::ro>,
                groov::field<"ttc", std::uint8_t, 16, 14>,
                groov::field<"st", bool, 13, 13>,
-               groov::field<"reserved2", std::uint8_t, 12, 8, access::ro>,
+               groov::field<"reserved2", std::uint8_t, 12, 8, common::access::ro>,
                groov::field<"fef", bool, 7, 7>,
                groov::field<"fugf", bool, 6, 6>,
-               groov::field<"reserved1", bool, 5, 5, access::ro>,
+               groov::field<"reserved1", bool, 5, 5, common::access::ro>,
                groov::field<"rtc", std::uint8_t, 4, 3>,
                groov::field<"osf", bool, 2, 2>,
                groov::field<"sr", bool, 1, 1>,
-               groov::field<"reserved0", bool, 0, 0, access::ro>>;
+               groov::field<"reserved0", bool, 0, 0, common::access::ro>>;
 
 // ethernet_dmardlar_v1: DMARDLAR
 // Used by: Ethernet_DMA
@@ -161,7 +161,7 @@ using ethernet_dmardlar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"srl", std::uint32_t, 31, 0>>;
 
 // ethernet_dmarpdr_v1: DMARPDR
@@ -173,7 +173,7 @@ using ethernet_dmarpdr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"rpd", std::uint32_t, 31, 0>>;
 
 // ethernet_dmarswtr_v1: DMARSWTR
@@ -185,8 +185,8 @@ using ethernet_dmarswtr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 8, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 8, common::access::ro>,
                groov::field<"rswtc", std::uint8_t, 7, 0>>;
 
 // ethernet_dmasr_v1: DMASR
@@ -198,20 +198,20 @@ using ethernet_dmasr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved2", std::uint8_t, 31, 30, access::ro>,
-               groov::field<"tsts", bool, 29, 29, access::ro>,
-               groov::field<"pmts", bool, 28, 28, access::ro>,
-               groov::field<"mmcs", bool, 27, 27, access::ro>,
-               groov::field<"reserved1", bool, 26, 26, access::ro>,
-               groov::field<"ebs", std::uint8_t, 25, 23, access::ro>,
-               groov::field<"tps", std::uint8_t, 22, 20, access::ro>,
-               groov::field<"rps", std::uint8_t, 19, 17, access::ro>,
+             common::access::rw,
+               groov::field<"reserved2", std::uint8_t, 31, 30, common::access::ro>,
+               groov::field<"tsts", bool, 29, 29, common::access::ro>,
+               groov::field<"pmts", bool, 28, 28, common::access::ro>,
+               groov::field<"mmcs", bool, 27, 27, common::access::ro>,
+               groov::field<"reserved1", bool, 26, 26, common::access::ro>,
+               groov::field<"ebs", std::uint8_t, 25, 23, common::access::ro>,
+               groov::field<"tps", std::uint8_t, 22, 20, common::access::ro>,
+               groov::field<"rps", std::uint8_t, 19, 17, common::access::ro>,
                groov::field<"nis", bool, 16, 16>,
                groov::field<"ais", bool, 15, 15>,
                groov::field<"ers", bool, 14, 14>,
                groov::field<"fbes", bool, 13, 13>,
-               groov::field<"reserved0", std::uint8_t, 12, 11, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 12, 11, common::access::ro>,
                groov::field<"ets", bool, 10, 10>,
                groov::field<"pwts", bool, 9, 9>,
                groov::field<"rpss", bool, 8, 8>,
@@ -233,7 +233,7 @@ using ethernet_dmatdlar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"stl", std::uint32_t, 31, 0>>;
 
 // ethernet_dmatpdr_v1: DMATPDR
@@ -245,7 +245,7 @@ using ethernet_dmatpdr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"tpd", std::uint32_t, 31, 0>>;
 
 // ethernet_maca0hr_v1: MACA0HR
@@ -257,9 +257,9 @@ using ethernet_maca0hr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"mo", bool, 31, 31, access::ro>,
-               groov::field<"reserved0", std::uint16_t, 30, 16, access::ro>,
+             common::access::rw,
+               groov::field<"mo", bool, 31, 31, common::access::ro>,
+               groov::field<"reserved0", std::uint16_t, 30, 16, common::access::ro>,
                groov::field<"maca0h", std::uint16_t, 15, 0>>;
 
 // ethernet_maca0lr_v1: MACA0LR
@@ -271,7 +271,7 @@ using ethernet_maca0lr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"maca0l", std::uint32_t, 31, 0>>;
 
 // ethernet_maca1hr_v1: MACA1HR
@@ -283,11 +283,11 @@ using ethernet_maca1hr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"ae", bool, 31, 31>,
                groov::field<"sa", bool, 30, 30>,
                groov::field<"mbc", std::uint8_t, 29, 24>,
-               groov::field<"reserved0", std::uint8_t, 23, 16, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 23, 16, common::access::ro>,
                groov::field<"maca1h", std::uint16_t, 15, 0>>;
 
 // ethernet_maca1lr_v1: MACA1LR
@@ -299,7 +299,7 @@ using ethernet_maca1lr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"maca1lr", std::uint32_t, 31, 0>>;
 
 // ethernet_maca2hr_v1: MACA2HR
@@ -311,11 +311,11 @@ using ethernet_maca2hr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"ae", bool, 31, 31>,
                groov::field<"sa", bool, 30, 30>,
                groov::field<"mbc", std::uint8_t, 29, 24>,
-               groov::field<"reserved0", std::uint8_t, 23, 16, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 23, 16, common::access::ro>,
                groov::field<"mac2ah", std::uint16_t, 15, 0>>;
 
 // ethernet_maca2lr_v1: MACA2LR
@@ -327,8 +327,8 @@ using ethernet_maca2lr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", bool, 31, 31, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", bool, 31, 31, common::access::ro>,
                groov::field<"maca2l", std::uint32_t, 30, 0>>;
 
 // ethernet_maca3hr_v1: MACA3HR
@@ -340,11 +340,11 @@ using ethernet_maca3hr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"ae", bool, 31, 31>,
                groov::field<"sa", bool, 30, 30>,
                groov::field<"mbc", std::uint8_t, 29, 24>,
-               groov::field<"reserved0", std::uint8_t, 23, 16, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 23, 16, common::access::ro>,
                groov::field<"maca3h", std::uint16_t, 15, 0>>;
 
 // ethernet_maca3lr_v1: MACA3LR
@@ -356,7 +356,7 @@ using ethernet_maca3lr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"mbca3l", std::uint32_t, 31, 0>>;
 
 // ethernet_maccr_v1: MACCR
@@ -368,29 +368,29 @@ using ethernet_maccr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved5", std::uint8_t, 31, 26, access::ro>,
+             common::access::rw,
+               groov::field<"reserved5", std::uint8_t, 31, 26, common::access::ro>,
                groov::field<"cstf", bool, 25, 25>,
-               groov::field<"reserved4", bool, 24, 24, access::ro>,
+               groov::field<"reserved4", bool, 24, 24, common::access::ro>,
                groov::field<"wd", bool, 23, 23>,
                groov::field<"jd", bool, 22, 22>,
-               groov::field<"reserved3", std::uint8_t, 21, 20, access::ro>,
+               groov::field<"reserved3", std::uint8_t, 21, 20, common::access::ro>,
                groov::field<"ifg", std::uint8_t, 19, 17>,
                groov::field<"csd", bool, 16, 16>,
-               groov::field<"reserved2", bool, 15, 15, access::ro>,
+               groov::field<"reserved2", bool, 15, 15, common::access::ro>,
                groov::field<"fes", bool, 14, 14>,
                groov::field<"rod", bool, 13, 13>,
                groov::field<"lm", bool, 12, 12>,
                groov::field<"dm", bool, 11, 11>,
                groov::field<"ipco", bool, 10, 10>,
                groov::field<"rd", bool, 9, 9>,
-               groov::field<"reserved1", bool, 8, 8, access::ro>,
+               groov::field<"reserved1", bool, 8, 8, common::access::ro>,
                groov::field<"apcs", bool, 7, 7>,
                groov::field<"bl", std::uint8_t, 6, 5>,
                groov::field<"dc", bool, 4, 4>,
                groov::field<"te", bool, 3, 3>,
                groov::field<"re", bool, 2, 2>,
-               groov::field<"reserved0", std::uint8_t, 1, 0, access::ro>>;
+               groov::field<"reserved0", std::uint8_t, 1, 0, common::access::ro>>;
 
 // ethernet_macdbgr_v1: MACDBGR
 // Used by: Ethernet_MAC
@@ -401,7 +401,7 @@ using ethernet_macdbgr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint32_t, 31, 6>,
                groov::field<"mcfhp", bool, 5, 5>,
                groov::field<"mcp", bool, 4, 4>,
@@ -419,11 +419,11 @@ using ethernet_macfcr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"pt", std::uint16_t, 31, 16>,
-               groov::field<"reserved1", std::uint8_t, 15, 8, access::ro>,
+               groov::field<"reserved1", std::uint8_t, 15, 8, common::access::ro>,
                groov::field<"zqpd", bool, 7, 7>,
-               groov::field<"reserved0", bool, 6, 6, access::ro>,
+               groov::field<"reserved0", bool, 6, 6, common::access::ro>,
                groov::field<"plt", std::uint8_t, 5, 4>,
                groov::field<"upfd", bool, 3, 3>,
                groov::field<"rfce", bool, 2, 2>,
@@ -439,9 +439,9 @@ using ethernet_macffr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"ra", bool, 31, 31>,
-               groov::field<"reserved0", std::uint32_t, 30, 10, access::ro>,
+               groov::field<"reserved0", std::uint32_t, 30, 10, common::access::ro>,
                groov::field<"hpf", bool, 9, 9>,
                groov::field<"saf", bool, 8, 8>,
                groov::field<"saif", bool, 7, 7>,
@@ -462,7 +462,7 @@ using ethernet_machthr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"hth", std::uint32_t, 31, 0>>;
 
 // ethernet_machtlr_v1: MACHTLR
@@ -474,7 +474,7 @@ using ethernet_machtlr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"htl", std::uint32_t, 31, 0>>;
 
 // ethernet_macimr_v1: MACIMR
@@ -486,12 +486,12 @@ using ethernet_macimr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved2", std::uint32_t, 31, 10, access::ro>,
+             common::access::rw,
+               groov::field<"reserved2", std::uint32_t, 31, 10, common::access::ro>,
                groov::field<"tstim", bool, 9, 9>,
-               groov::field<"reserved1", std::uint8_t, 8, 4, access::ro>,
+               groov::field<"reserved1", std::uint8_t, 8, 4, common::access::ro>,
                groov::field<"pmtim", bool, 3, 3>,
-               groov::field<"reserved0", std::uint8_t, 2, 0, access::ro>>;
+               groov::field<"reserved0", std::uint8_t, 2, 0, common::access::ro>>;
 
 // ethernet_macmiiar_v1: MACMIIAR
 // Used by: Ethernet_MAC
@@ -502,11 +502,11 @@ using ethernet_macmiiar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"pa", std::uint8_t, 15, 11>,
                groov::field<"mr", std::uint8_t, 10, 6>,
-               groov::field<"reserved0", bool, 5, 5, access::ro>,
+               groov::field<"reserved0", bool, 5, 5, common::access::ro>,
                groov::field<"cr", std::uint8_t, 4, 2>,
                groov::field<"mw", bool, 1, 1>,
                groov::field<"mb", bool, 0, 0>>;
@@ -520,8 +520,8 @@ using ethernet_macmiidr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"td", std::uint16_t, 15, 0>>;
 
 // ethernet_macpmtcsr_v1: MACPMTCSR
@@ -533,16 +533,16 @@ using ethernet_macpmtcsr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"wffrpr", bool, 31, 31>,
-               groov::field<"reserved2", std::uint32_t, 30, 10, access::ro>,
+               groov::field<"reserved2", std::uint32_t, 30, 10, common::access::ro>,
                groov::field<"gu", bool, 9, 9>,
-               groov::field<"reserved1", std::uint8_t, 8, 7, access::ro>,
+               groov::field<"reserved1", std::uint8_t, 8, 7, common::access::ro>,
                groov::field<"wfr", bool, 6, 6>,
                groov::field<"mpr", bool, 5, 5>,
-               groov::field<"reserved0", std::uint8_t, 4, 3, access::ro>,
-               groov::field<"wfe", bit_enable, 2, 2>,
-               groov::field<"mpe", bit_enable, 1, 1>,
+               groov::field<"reserved0", std::uint8_t, 4, 3, common::access::ro>,
+               groov::field<"wfe", common::bittypes::bit_enable, 2, 2>,
+               groov::field<"mpe", common::bittypes::bit_enable, 1, 1>,
                groov::field<"pd", bool, 0, 0>>;
 
 // ethernet_macrwuffer_v1: MACRWUFFER
@@ -554,8 +554,8 @@ using ethernet_macrwuffer_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 0, access::ro>>;
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 0, common::access::ro>>;
 
 // ethernet_macsr_v1: MACSR
 // Used by: Ethernet_MAC
@@ -566,15 +566,15 @@ using ethernet_macsr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved2", std::uint32_t, 31, 10, access::ro>,
+             common::access::rw,
+               groov::field<"reserved2", std::uint32_t, 31, 10, common::access::ro>,
                groov::field<"tsts", bool, 9, 9>,
-               groov::field<"reserved1", std::uint8_t, 8, 7, access::ro>,
-               groov::field<"mmcts", bool, 6, 6, access::ro>,
-               groov::field<"mmcrs", bool, 5, 5, access::ro>,
-               groov::field<"mmcs", bool, 4, 4, access::ro>,
-               groov::field<"pmts", bool, 3, 3, access::ro>,
-               groov::field<"reserved0", std::uint8_t, 2, 0, access::ro>>;
+               groov::field<"reserved1", std::uint8_t, 8, 7, common::access::ro>,
+               groov::field<"mmcts", bool, 6, 6, common::access::ro>,
+               groov::field<"mmcrs", bool, 5, 5, common::access::ro>,
+               groov::field<"mmcs", bool, 4, 4, common::access::ro>,
+               groov::field<"pmts", bool, 3, 3, common::access::ro>,
+               groov::field<"reserved0", std::uint8_t, 2, 0, common::access::ro>>;
 
 // ethernet_macvlantr_v1: MACVLANTR
 // Used by: Ethernet_MAC
@@ -585,8 +585,8 @@ using ethernet_macvlantr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 17, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 17, common::access::ro>,
                groov::field<"vlantc", bool, 16, 16>,
                groov::field<"vlanti", std::uint16_t, 15, 0>>;
 
@@ -599,8 +599,8 @@ using ethernet_mmccr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 6, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 6, common::access::ro>,
                groov::field<"mcfhp", bool, 5, 5>,
                groov::field<"mcp", bool, 4, 4>,
                groov::field<"mcf", bool, 3, 3>,
@@ -617,7 +617,7 @@ using ethernet_mmcrfaecr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"rfaec", std::uint32_t, 31, 0>>;
 
 // ethernet_mmcrfcecr_v1: MMCRFCECR
@@ -629,7 +629,7 @@ using ethernet_mmcrfcecr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"rfcfc", std::uint32_t, 31, 0>>;
 
 // ethernet_mmcrgufcr_v1: MMCRGUFCR
@@ -641,7 +641,7 @@ using ethernet_mmcrgufcr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"rgufc", std::uint32_t, 31, 0>>;
 
 // ethernet_mmcrimr_v1: MMCRIMR
@@ -653,13 +653,13 @@ using ethernet_mmcrimr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved2", std::uint16_t, 31, 18, access::ro>,
+             common::access::rw,
+               groov::field<"reserved2", std::uint16_t, 31, 18, common::access::ro>,
                groov::field<"rgufm", bool, 17, 17>,
-               groov::field<"reserved1", std::uint16_t, 16, 7, access::ro>,
+               groov::field<"reserved1", std::uint16_t, 16, 7, common::access::ro>,
                groov::field<"rfaem", bool, 6, 6>,
                groov::field<"rfcem", bool, 5, 5>,
-               groov::field<"reserved0", std::uint8_t, 4, 0, access::ro>>;
+               groov::field<"reserved0", std::uint8_t, 4, 0, common::access::ro>>;
 
 // ethernet_mmcrir_v1: MMCRIR
 // Used by: Ethernet_MMC
@@ -670,13 +670,13 @@ using ethernet_mmcrir_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved2", std::uint16_t, 31, 18, access::ro>,
+             common::access::rw,
+               groov::field<"reserved2", std::uint16_t, 31, 18, common::access::ro>,
                groov::field<"rgufs", bool, 17, 17>,
-               groov::field<"reserved1", std::uint16_t, 16, 7, access::ro>,
+               groov::field<"reserved1", std::uint16_t, 16, 7, common::access::ro>,
                groov::field<"rfaes", bool, 6, 6>,
                groov::field<"rfces", bool, 5, 5>,
-               groov::field<"reserved0", std::uint8_t, 4, 0, access::ro>>;
+               groov::field<"reserved0", std::uint8_t, 4, 0, common::access::ro>>;
 
 // ethernet_mmctgfcr_v1: MMCTGFCR
 // Used by: Ethernet_MMC
@@ -687,7 +687,7 @@ using ethernet_mmctgfcr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"tgfc", std::uint32_t, 31, 0>>;
 
 // ethernet_mmctgfmsccr_v1: MMCTGFMSCCR
@@ -699,7 +699,7 @@ using ethernet_mmctgfmsccr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"tgfmscc", std::uint32_t, 31, 0>>;
 
 // ethernet_mmctgfsccr_v1: MMCTGFSCCR
@@ -711,7 +711,7 @@ using ethernet_mmctgfsccr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"tgfscc", std::uint32_t, 31, 0>>;
 
 // ethernet_mmctimr_v1: MMCTIMR
@@ -723,12 +723,12 @@ using ethernet_mmctimr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint16_t, 31, 17, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint16_t, 31, 17, common::access::ro>,
                groov::field<"tgfm", bool, 16, 16>,
                groov::field<"tgfmscm", bool, 15, 15>,
                groov::field<"tgfscm", bool, 14, 14>,
-               groov::field<"reserved0", std::uint16_t, 13, 0, access::ro>>;
+               groov::field<"reserved0", std::uint16_t, 13, 0, common::access::ro>>;
 
 // ethernet_mmctir_v1: MMCTIR
 // Used by: Ethernet_MMC
@@ -739,7 +739,7 @@ using ethernet_mmctir_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved2", std::uint16_t, 31, 22>,
                groov::field<"tgfs", bool, 21, 21>,
                groov::field<"reserved1", std::uint8_t, 20, 16>,
@@ -756,7 +756,7 @@ using ethernet_ptpppscr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint32_t, 31, 2>,
                groov::field<"tsttr", bool, 1, 1>,
                groov::field<"tsso", bool, 0, 0>>;
@@ -770,8 +770,8 @@ using ethernet_ptpssir_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 8, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 8, common::access::ro>,
                groov::field<"stssi", std::uint8_t, 7, 0>>;
 
 // ethernet_ptptsar_v1: PTPTSAR
@@ -783,7 +783,7 @@ using ethernet_ptptsar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"tsa", std::uint32_t, 31, 0>>;
 
 // ethernet_ptptscr_v1: PTPTSCR
@@ -795,19 +795,19 @@ using ethernet_ptptscr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint16_t, 31, 19, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint16_t, 31, 19, common::access::ro>,
                groov::field<"tspffmae", bool, 18, 18>,
                groov::field<"tscnt", std::uint8_t, 17, 16>,
                groov::field<"tssmrme", bool, 15, 15>,
                groov::field<"tsseme", bool, 14, 14>,
-               groov::field<"tssipv4fe", bit_enable, 13, 13>,
-               groov::field<"tssipv6fe", bit_enable, 12, 12>,
-               groov::field<"tssptpoefe", bit_enable, 11, 11>,
-               groov::field<"tsptppsv2e", bit_enable, 10, 10>,
+               groov::field<"tssipv4fe", common::bittypes::bit_enable, 13, 13>,
+               groov::field<"tssipv6fe", common::bittypes::bit_enable, 12, 12>,
+               groov::field<"tssptpoefe", common::bittypes::bit_enable, 11, 11>,
+               groov::field<"tsptppsv2e", common::bittypes::bit_enable, 10, 10>,
                groov::field<"tsssr", bool, 9, 9>,
-               groov::field<"tssarfe", bit_enable, 8, 8>,
-               groov::field<"reserved0", std::uint8_t, 7, 6, access::ro>,
+               groov::field<"tssarfe", common::bittypes::bit_enable, 8, 8>,
+               groov::field<"reserved0", std::uint8_t, 7, 6, common::access::ro>,
                groov::field<"ttsaru", bool, 5, 5>,
                groov::field<"tsite", bool, 4, 4>,
                groov::field<"tsstu", bool, 3, 3>,
@@ -824,7 +824,7 @@ using ethernet_ptptshr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"sts", std::uint32_t, 31, 0>>;
 
 // ethernet_ptptshur_v1: PTPTSHUR
@@ -836,7 +836,7 @@ using ethernet_ptptshur_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"tsus", std::uint32_t, 31, 0>>;
 
 // ethernet_ptptslr_v1: PTPTSLR
@@ -848,7 +848,7 @@ using ethernet_ptptslr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"stpns", bool, 31, 31>,
                groov::field<"stss", std::uint32_t, 30, 0>>;
 
@@ -861,7 +861,7 @@ using ethernet_ptptslur_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"tsupns", bool, 31, 31>,
                groov::field<"tsuss", std::uint32_t, 30, 0>>;
 
@@ -874,7 +874,7 @@ using ethernet_ptptssr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint32_t, 31, 2>,
                groov::field<"tsttr", bool, 1, 1>,
                groov::field<"tsso", bool, 0, 0>>;
@@ -888,7 +888,7 @@ using ethernet_ptptthr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"ttsh", std::uint32_t, 31, 0>>;
 
 // ethernet_ptpttlr_v1: PTPTTLR
@@ -900,7 +900,7 @@ using ethernet_ptpttlr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"ttsl", std::uint32_t, 31, 0>>;
 
 } // namespace stm32::regs

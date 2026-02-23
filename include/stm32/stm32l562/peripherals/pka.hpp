@@ -7,9 +7,18 @@
 namespace stm32::stm32l562 {
 
 namespace pkax {
-  using pka_cr_tt = regs::pka_pka_cr_v1_tt;
-  using pka_sr_tt = regs::pka_pka_sr_v1_tt;
-  using pka_clrfr_tt = regs::pka_pka_clrfr_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using pka_cr_tt = regs::pka_pka_cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using pka_sr_tt = regs::pka_pka_sr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using pka_clrfr_tt = regs::pka_pka_clrfr_v1_tt<name, baseaddress, offset>;
 
   template <stdx::ct_string name, std::uint32_t baseaddress>
   using pkax_t =

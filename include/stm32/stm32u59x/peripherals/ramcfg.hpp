@@ -7,41 +7,146 @@
 namespace stm32::stm32u59x {
 
 namespace ramcfgx {
-  using m1cr_tt = regs::ramcfg_m1cr_v1_tt;
-  using m1isr_tt = regs::ramcfg_m1isr_v1_tt;
-  using ram1erkeyr_tt = regs::ramcfg_ram1erkeyr_v1_tt;
-  using m2cr_tt = regs::ramcfg_m2cr_v1_tt;
-  using m2ier_tt = regs::ramcfg_m2ier_v1_tt;
-  using m2isr_tt = regs::ramcfg_m2isr_v1_tt;
-  using m2sear_tt = regs::ramcfg_m2sear_v1_tt;
-  using m2dear_tt = regs::ramcfg_m2dear_v1_tt;
-  using m2icr_tt = regs::ramcfg_m2icr_v1_tt;
-  using m2wpr1_tt = regs::ramcfg_m2wpr1_v1_tt;
-  using m2wpr2_tt = regs::ramcfg_m2wpr2_v1_tt;
-  using m2ecckeyr_tt = regs::ramcfg_m2ecckeyr_v1_tt;
-  using m2erkeyr_tt = regs::ramcfg_m2erkeyr_v1_tt;
-  using m3cr_tt = regs::ramcfg_m3cr_v1_tt;
-  using m3ier_tt = regs::ramcfg_m3ier_v1_tt;
-  using m3isr_tt = regs::ramcfg_m3isr_v1_tt;
-  using m3sear_tt = regs::ramcfg_m3sear_v1_tt;
-  using m3dear_tt = regs::ramcfg_m3dear_v1_tt;
-  using m3icr_tt = regs::ramcfg_m3icr_v1_tt;
-  using m3ecckeyr_tt = regs::ramcfg_m3ecckeyr_v1_tt;
-  using m3erkeyr_tt = regs::ramcfg_m3erkeyr_v1_tt;
-  using m4cr_tt = regs::ramcfg_m4cr_v1_tt;
-  using m4isr_tt = regs::ramcfg_m4isr_v1_tt;
-  using m4erkeyr_tt = regs::ramcfg_m4erkeyr_v1_tt;
-  using m5cr_tt = regs::ramcfg_m5cr_v1_tt;
-  using m5ier_tt = regs::ramcfg_m5ier_v1_tt;
-  using m5isr_tt = regs::ramcfg_m5isr_v1_tt;
-  using m5sear_tt = regs::ramcfg_m5sear_v1_tt;
-  using m5dear_tt = regs::ramcfg_m5dear_v1_tt;
-  using m5icr_tt = regs::ramcfg_m5icr_v1_tt;
-  using m5ecckeyr_tt = regs::ramcfg_m5ecckeyr_v1_tt;
-  using m5erkeyr_tt = regs::ramcfg_m5erkeyr_v1_tt;
-  using m6cr_tt = regs::ramcfg_m6cr_v1_tt;
-  using m6isr_tt = regs::ramcfg_m6isr_v1_tt;
-  using m6erkeyr_tt = regs::ramcfg_m6erkeyr_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using m1cr_tt = regs::ramcfg_m1cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using m1isr_tt = regs::ramcfg_m1isr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ram1erkeyr_tt = regs::ramcfg_ram1erkeyr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using m2cr_tt = regs::ramcfg_m2cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using m2ier_tt = regs::ramcfg_m2ier_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using m2isr_tt = regs::ramcfg_m2isr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using m2sear_tt = regs::ramcfg_m2sear_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using m2dear_tt = regs::ramcfg_m2dear_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using m2icr_tt = regs::ramcfg_m2icr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using m2wpr1_tt = regs::ramcfg_m2wpr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using m2wpr2_tt = regs::ramcfg_m2wpr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using m2ecckeyr_tt = regs::ramcfg_m2ecckeyr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using m2erkeyr_tt = regs::ramcfg_m2erkeyr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using m3cr_tt = regs::ramcfg_m3cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using m3ier_tt = regs::ramcfg_m3ier_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using m3isr_tt = regs::ramcfg_m3isr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using m3sear_tt = regs::ramcfg_m3sear_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using m3dear_tt = regs::ramcfg_m3dear_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using m3icr_tt = regs::ramcfg_m3icr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using m3ecckeyr_tt = regs::ramcfg_m3ecckeyr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using m3erkeyr_tt = regs::ramcfg_m3erkeyr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using m4cr_tt = regs::ramcfg_m4cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using m4isr_tt = regs::ramcfg_m4isr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using m4erkeyr_tt = regs::ramcfg_m4erkeyr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using m5cr_tt = regs::ramcfg_m5cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using m5ier_tt = regs::ramcfg_m5ier_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using m5isr_tt = regs::ramcfg_m5isr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using m5sear_tt = regs::ramcfg_m5sear_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using m5dear_tt = regs::ramcfg_m5dear_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using m5icr_tt = regs::ramcfg_m5icr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using m5ecckeyr_tt = regs::ramcfg_m5ecckeyr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using m5erkeyr_tt = regs::ramcfg_m5erkeyr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using m6cr_tt = regs::ramcfg_m6cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using m6isr_tt = regs::ramcfg_m6isr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using m6erkeyr_tt = regs::ramcfg_m6erkeyr_v1_tt<name, baseaddress, offset>;
 
   template <stdx::ct_string name, std::uint32_t baseaddress>
   using ramcfgx_t =

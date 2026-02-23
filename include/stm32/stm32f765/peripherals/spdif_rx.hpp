@@ -7,13 +7,34 @@
 namespace stm32::stm32f765 {
 
 namespace spdif_rx {
-  using cr_tt = regs::spdif_rx_cr_v1_tt;
-  using imr_tt = regs::spdif_rx_imr_v1_tt;
-  using sr_tt = regs::spdif_rx_sr_v1_tt;
-  using ifcr_tt = regs::spdif_rx_ifcr_v1_tt;
-  using dr_tt = regs::spdif_rx_dr_v1_tt;
-  using csr_tt = regs::spdif_rx_csr_v1_tt;
-  using dir_tt = regs::spdif_rx_dir_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cr_tt = regs::spdif_rx_cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using imr_tt = regs::spdif_rx_imr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using sr_tt = regs::spdif_rx_sr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ifcr_tt = regs::spdif_rx_ifcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dr_tt = regs::spdif_rx_dr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using csr_tt = regs::spdif_rx_csr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dir_tt = regs::spdif_rx_dir_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using spdif_rx_t =

@@ -6,48 +6,159 @@
 
 namespace stm32::stm32l4p5 {
 
-namespace sdiox {
-  using power_tt = regs::sdio_power_v1_tt;
-  using clkcr_tt = regs::sdio_clkcr_v1_tt;
-  using argr_tt = regs::sdio_argr_v1_tt;
-  using cmdr_tt = regs::sdio_cmdr_v1_tt;
-  using respcmdr_tt = regs::sdio_respcmdr_v1_tt;
-  using resp1r_tt = regs::sdio_resp1r_v1_tt;
-  using resp2r_tt = regs::sdio_resp2r_v1_tt;
-  using resp3r_tt = regs::sdio_resp3r_v1_tt;
-  using resp4r_tt = regs::sdio_resp4r_v1_tt;
-  using dtimer_tt = regs::sdio_dtimer_v1_tt;
-  using dlenr_tt = regs::sdio_dlenr_v1_tt;
-  using dctrl_tt = regs::sdio_dctrl_v1_tt;
-  using dcntr_tt = regs::sdio_dcntr_v1_tt;
-  using star_tt = regs::sdio_star_v1_tt;
-  using icr_tt = regs::sdio_icr_v1_tt;
-  using maskr_tt = regs::sdio_maskr_v1_tt;
-  using acktimer_tt = regs::sdio_acktimer_v1_tt;
-  using fifor0_tt = regs::sdio_fifor0_v1_tt;
-  using fifor1_tt = regs::sdio_fifor1_v1_tt;
-  using fifor2_tt = regs::sdio_fifor2_v1_tt;
-  using fifor3_tt = regs::sdio_fifor3_v1_tt;
-  using fifor4_tt = regs::sdio_fifor4_v1_tt;
-  using fifor5_tt = regs::sdio_fifor5_v1_tt;
-  using fifor6_tt = regs::sdio_fifor6_v1_tt;
-  using fifor7_tt = regs::sdio_fifor7_v1_tt;
-  using fifor8_tt = regs::sdio_fifor8_v1_tt;
-  using fifor9_tt = regs::sdio_fifor9_v1_tt;
-  using fifor10_tt = regs::sdio_fifor10_v1_tt;
-  using fifor11_tt = regs::sdio_fifor11_v1_tt;
-  using fifor12_tt = regs::sdio_fifor12_v1_tt;
-  using fifor13_tt = regs::sdio_fifor13_v1_tt;
-  using fifor14_tt = regs::sdio_fifor14_v1_tt;
-  using fifor15_tt = regs::sdio_fifor15_v1_tt;
-  using idmactrlr_tt = regs::sdio_idmactrlr_v1_tt;
-  using idmabsizer_tt = regs::sdio_idmabsizer_v1_tt;
-  using idmabase0r_tt = regs::sdio_idmabase0r_v1_tt;
-  using idmabase1r_tt = regs::sdio_idmabase1r_v1_tt;
+namespace sdmmc1 {
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using power_tt = regs::sdio_power_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using clkcr_tt = regs::sdio_clkcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using argr_tt = regs::sdio_argr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cmdr_tt = regs::sdio_cmdr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using respcmdr_tt = regs::sdio_respcmdr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using resp1r_tt = regs::sdio_resp1r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using resp2r_tt = regs::sdio_resp2r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using resp3r_tt = regs::sdio_resp3r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using resp4r_tt = regs::sdio_resp4r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dtimer_tt = regs::sdio_dtimer_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dlenr_tt = regs::sdio_dlenr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dctrl_tt = regs::sdio_dctrl_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dcntr_tt = regs::sdio_dcntr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using star_tt = regs::sdio_star_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using icr_tt = regs::sdio_icr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using maskr_tt = regs::sdio_maskr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using acktimer_tt = regs::sdio_acktimer_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fifor0_tt = regs::sdio_fifor0_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fifor1_tt = regs::sdio_fifor1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fifor2_tt = regs::sdio_fifor2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fifor3_tt = regs::sdio_fifor3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fifor4_tt = regs::sdio_fifor4_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fifor5_tt = regs::sdio_fifor5_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fifor6_tt = regs::sdio_fifor6_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fifor7_tt = regs::sdio_fifor7_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fifor8_tt = regs::sdio_fifor8_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fifor9_tt = regs::sdio_fifor9_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fifor10_tt = regs::sdio_fifor10_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fifor11_tt = regs::sdio_fifor11_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fifor12_tt = regs::sdio_fifor12_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fifor13_tt = regs::sdio_fifor13_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fifor14_tt = regs::sdio_fifor14_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fifor15_tt = regs::sdio_fifor15_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using idmactrlr_tt = regs::sdio_idmactrlr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using idmabsizer_tt = regs::sdio_idmabsizer_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using idmabase0r_tt = regs::sdio_idmabase0r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using idmabase1r_tt = regs::sdio_idmabase1r_v1_tt<name, baseaddress, offset>;
 
-  template <stdx::ct_string name, std::uint32_t baseaddress>
-  using sdiox_t =
-    groov::group<name,
+  template <std::uint32_t baseaddress>
+  using sdmmc1_t =
+    groov::group<"sdmmc1",
                  groov::mmio_bus<>,
                  power_tt<"power", baseaddress, 0x0>,
                  clkcr_tt<"clkcr", baseaddress, 0x4>,
@@ -87,6 +198,200 @@ namespace sdiox {
                  idmabase0r_tt<"idmabase0r", baseaddress, 0x58>,
                  idmabase1r_tt<"idmabase1r", baseaddress, 0x5c>>;
 
-} // namespace sdiox
+} // namespace sdmmc1
+
+namespace sdmmc2 {
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using power_tt = regs::sdio_power_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using clkcr_tt = regs::sdio_clkcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using argr_tt = regs::sdio_argr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cmdr_tt = regs::sdio_cmdr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using respcmdr_tt = regs::sdio_respcmdr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using resp1r_tt = regs::sdio_resp1r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using resp2r_tt = regs::sdio_resp2r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using resp3r_tt = regs::sdio_resp3r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using resp4r_tt = regs::sdio_resp4r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dtimer_tt = regs::sdio_dtimer_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dlenr_tt = regs::sdio_dlenr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dctrl_tt = regs::sdio_dctrl_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dcntr_tt = regs::sdio_dcntr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using star_tt = regs::sdio_star_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using icr_tt = regs::sdio_icr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using maskr_tt = regs::sdio_maskr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using acktimer_tt = regs::sdio_acktimer_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fifor0_tt = regs::sdio_fifor0_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fifor1_tt = regs::sdio_fifor1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fifor2_tt = regs::sdio_fifor2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fifor3_tt = regs::sdio_fifor3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fifor4_tt = regs::sdio_fifor4_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fifor5_tt = regs::sdio_fifor5_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fifor6_tt = regs::sdio_fifor6_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fifor7_tt = regs::sdio_fifor7_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fifor8_tt = regs::sdio_fifor8_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fifor9_tt = regs::sdio_fifor9_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fifor10_tt = regs::sdio_fifor10_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fifor11_tt = regs::sdio_fifor11_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fifor12_tt = regs::sdio_fifor12_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fifor13_tt = regs::sdio_fifor13_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fifor14_tt = regs::sdio_fifor14_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fifor15_tt = regs::sdio_fifor15_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using idmactrlr_tt = regs::sdio_idmactrlr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using idmabsizer_tt = regs::sdio_idmabsizer_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using idmabase0r_tt = regs::sdio_idmabase0r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using idmabase1r_tt = regs::sdio_idmabase1r_v1_tt<name, baseaddress, offset>;
+
+  template <std::uint32_t baseaddress>
+  using sdmmc2_t =
+    groov::group<"sdmmc2",
+                 groov::mmio_bus<>,
+                 power_tt<"power", baseaddress, 0x0>,
+                 clkcr_tt<"clkcr", baseaddress, 0x4>,
+                 argr_tt<"argr", baseaddress, 0x8>,
+                 cmdr_tt<"cmdr", baseaddress, 0xc>,
+                 respcmdr_tt<"respcmdr", baseaddress, 0x10>,
+                 resp1r_tt<"resp1r", baseaddress, 0x14>,
+                 resp2r_tt<"resp2r", baseaddress, 0x18>,
+                 resp3r_tt<"resp3r", baseaddress, 0x1c>,
+                 resp4r_tt<"resp4r", baseaddress, 0x20>,
+                 dtimer_tt<"dtimer", baseaddress, 0x24>,
+                 dlenr_tt<"dlenr", baseaddress, 0x28>,
+                 dctrl_tt<"dctrl", baseaddress, 0x2c>,
+                 dcntr_tt<"dcntr", baseaddress, 0x30>,
+                 star_tt<"star", baseaddress, 0x34>,
+                 icr_tt<"icr", baseaddress, 0x38>,
+                 maskr_tt<"maskr", baseaddress, 0x3c>,
+                 acktimer_tt<"acktimer", baseaddress, 0x40>,
+                 fifor0_tt<"fifor0", baseaddress, 0x80>,
+                 fifor1_tt<"fifor1", baseaddress, 0x84>,
+                 fifor2_tt<"fifor2", baseaddress, 0x88>,
+                 fifor3_tt<"fifor3", baseaddress, 0x8c>,
+                 fifor4_tt<"fifor4", baseaddress, 0x90>,
+                 fifor5_tt<"fifor5", baseaddress, 0x94>,
+                 fifor6_tt<"fifor6", baseaddress, 0x98>,
+                 fifor7_tt<"fifor7", baseaddress, 0x9c>,
+                 fifor8_tt<"fifor8", baseaddress, 0xa0>,
+                 fifor9_tt<"fifor9", baseaddress, 0xa4>,
+                 fifor10_tt<"fifor10", baseaddress, 0xa8>,
+                 fifor11_tt<"fifor11", baseaddress, 0xac>,
+                 fifor12_tt<"fifor12", baseaddress, 0xb0>,
+                 fifor13_tt<"fifor13", baseaddress, 0xb4>,
+                 fifor14_tt<"fifor14", baseaddress, 0xb8>,
+                 fifor15_tt<"fifor15", baseaddress, 0xbc>,
+                 idmactrlr_tt<"idmactrlr", baseaddress, 0x50>,
+                 idmabsizer_tt<"idmabsizer", baseaddress, 0x54>,
+                 idmabase0r_tt<"idmabase0r", baseaddress, 0x58>,
+                 idmabase1r_tt<"idmabase1r", baseaddress, 0x5c>>;
+
+} // namespace sdmmc2
 
 } // namespace stm32::stm32l4p5

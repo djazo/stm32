@@ -16,32 +16,32 @@ using dma_hifcr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved5", std::uint8_t, 31, 28, access::ro>,
+             common::access::rw,
+               groov::field<"reserved5", std::uint8_t, 31, 28, common::access::ro>,
                groov::field<"ctcif7", bool, 27, 27>,
                groov::field<"chtif7", bool, 26, 26>,
                groov::field<"cteif7", bool, 25, 25>,
                groov::field<"cdmeif7", bool, 24, 24>,
-               groov::field<"reserved4", bool, 23, 23, access::ro>,
+               groov::field<"reserved4", bool, 23, 23, common::access::ro>,
                groov::field<"cfeif7", bool, 22, 22>,
                groov::field<"ctcif6", bool, 21, 21>,
                groov::field<"chtif6", bool, 20, 20>,
                groov::field<"cteif6", bool, 19, 19>,
                groov::field<"cdmeif6", bool, 18, 18>,
-               groov::field<"reserved3", bool, 17, 17, access::ro>,
+               groov::field<"reserved3", bool, 17, 17, common::access::ro>,
                groov::field<"cfeif6", bool, 16, 16>,
-               groov::field<"reserved2", std::uint8_t, 15, 12, access::ro>,
+               groov::field<"reserved2", std::uint8_t, 15, 12, common::access::ro>,
                groov::field<"ctcif5", bool, 11, 11>,
                groov::field<"chtif5", bool, 10, 10>,
                groov::field<"cteif5", bool, 9, 9>,
                groov::field<"cdmeif5", bool, 8, 8>,
-               groov::field<"reserved1", bool, 7, 7, access::ro>,
+               groov::field<"reserved1", bool, 7, 7, common::access::ro>,
                groov::field<"cfeif5", bool, 6, 6>,
                groov::field<"ctcif4", bool, 5, 5>,
                groov::field<"chtif4", bool, 4, 4>,
                groov::field<"cteif4", bool, 3, 3>,
                groov::field<"cdmeif4", bool, 2, 2>,
-               groov::field<"reserved0", bool, 1, 1, access::ro>,
+               groov::field<"reserved0", bool, 1, 1, common::access::ro>,
                groov::field<"cfeif4", bool, 0, 0>>;
 
 // dma_hisr_v1: HISR
@@ -53,7 +53,7 @@ using dma_hisr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved5", std::uint8_t, 31, 28>,
                groov::field<"tcif7", bool, 27, 27>,
                groov::field<"htif7", bool, 26, 26>,
@@ -90,32 +90,32 @@ using dma_lifcr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved5", std::uint8_t, 31, 28, access::ro>,
+             common::access::rw,
+               groov::field<"reserved5", std::uint8_t, 31, 28, common::access::ro>,
                groov::field<"ctcif3", bool, 27, 27>,
                groov::field<"chtif3", bool, 26, 26>,
                groov::field<"cteif3", bool, 25, 25>,
                groov::field<"cdmeif3", bool, 24, 24>,
-               groov::field<"reserved4", bool, 23, 23, access::ro>,
+               groov::field<"reserved4", bool, 23, 23, common::access::ro>,
                groov::field<"cfeif3", bool, 22, 22>,
                groov::field<"ctcif2", bool, 21, 21>,
                groov::field<"chtif2", bool, 20, 20>,
                groov::field<"cteif2", bool, 19, 19>,
                groov::field<"cdmeif2", bool, 18, 18>,
-               groov::field<"reserved3", bool, 17, 17, access::ro>,
+               groov::field<"reserved3", bool, 17, 17, common::access::ro>,
                groov::field<"cfeif2", bool, 16, 16>,
-               groov::field<"reserved2", std::uint8_t, 15, 12, access::ro>,
+               groov::field<"reserved2", std::uint8_t, 15, 12, common::access::ro>,
                groov::field<"ctcif1", bool, 11, 11>,
                groov::field<"chtif1", bool, 10, 10>,
                groov::field<"cteif1", bool, 9, 9>,
                groov::field<"cdmeif1", bool, 8, 8>,
-               groov::field<"reserved1", bool, 7, 7, access::ro>,
+               groov::field<"reserved1", bool, 7, 7, common::access::ro>,
                groov::field<"cfeif1", bool, 6, 6>,
                groov::field<"ctcif0", bool, 5, 5>,
                groov::field<"chtif0", bool, 4, 4>,
                groov::field<"cteif0", bool, 3, 3>,
                groov::field<"cdmeif0", bool, 2, 2>,
-               groov::field<"reserved0", bool, 1, 1, access::ro>,
+               groov::field<"reserved0", bool, 1, 1, common::access::ro>,
                groov::field<"cfeif0", bool, 0, 0>>;
 
 // dma_lisr_v1: LISR
@@ -127,7 +127,7 @@ using dma_lisr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved5", std::uint8_t, 31, 28>,
                groov::field<"tcif3", bool, 27, 27>,
                groov::field<"htif3", bool, 26, 26>,
@@ -164,12 +164,12 @@ using dma_s0cr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint8_t, 31, 28, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint8_t, 31, 28, common::access::ro>,
                groov::field<"chsel", std::uint8_t, 27, 25>,
                groov::field<"mburst", std::uint8_t, 24, 23>,
                groov::field<"pburst", std::uint8_t, 22, 21>,
-               groov::field<"reserved0", bool, 20, 20, access::ro>,
+               groov::field<"reserved0", bool, 20, 20, common::access::ro>,
                groov::field<"ct", bool, 19, 19>,
                groov::field<"dbm", bool, 18, 18>,
                groov::field<"pl", std::uint8_t, 17, 16>,
@@ -181,11 +181,11 @@ using dma_s0cr_v1_tt =
                groov::field<"circ", bool, 8, 8>,
                groov::field<"dir", std::uint8_t, 7, 6>,
                groov::field<"pfctrl", bool, 5, 5>,
-               groov::field<"tcie", bit_enable, 4, 4>,
-               groov::field<"htie", bit_enable, 3, 3>,
-               groov::field<"teie", bit_enable, 2, 2>,
-               groov::field<"dmeie", bit_enable, 1, 1>,
-               groov::field<"en", bit_enable, 0, 0>>;
+               groov::field<"tcie", common::bittypes::bit_enable, 4, 4>,
+               groov::field<"htie", common::bittypes::bit_enable, 3, 3>,
+               groov::field<"teie", common::bittypes::bit_enable, 2, 2>,
+               groov::field<"dmeie", common::bittypes::bit_enable, 1, 1>,
+               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
 
 // dma_s0fcr_v1: S0FCR
 // Used by: DMA2, DMA1
@@ -196,12 +196,12 @@ using dma_s0fcr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint32_t, 31, 8, access::ro>,
-               groov::field<"feie", bit_enable, 7, 7>,
-               groov::field<"reserved0", bool, 6, 6, access::ro>,
-               groov::field<"fs", std::uint8_t, 5, 3, access::ro>,
-               groov::field<"dmdis", bit_enable_bar, 2, 2>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint32_t, 31, 8, common::access::ro>,
+               groov::field<"feie", common::bittypes::bit_enable, 7, 7>,
+               groov::field<"reserved0", bool, 6, 6, common::access::ro>,
+               groov::field<"fs", std::uint8_t, 5, 3, common::access::ro>,
+               groov::field<"dmdis", common::bittypes::bit_enable_bar, 2, 2>,
                groov::field<"fth", std::uint8_t, 1, 0>>;
 
 // dma_s0m0ar_v1: S0M0AR
@@ -213,7 +213,7 @@ using dma_s0m0ar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"m0a", std::uint32_t, 31, 0>>;
 
 // dma_s0m1ar_v1: S0M1AR
@@ -225,7 +225,7 @@ using dma_s0m1ar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"m1a", std::uint32_t, 31, 0>>;
 
 // dma_s0ndtr_v1: S0NDTR
@@ -237,8 +237,8 @@ using dma_s0ndtr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"ndt", std::uint16_t, 15, 0>>;
 
 // dma_s0par_v1: S0PAR
@@ -250,7 +250,7 @@ using dma_s0par_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"pa", std::uint32_t, 31, 0>>;
 
 // dma_s1cr_v1: S1CR
@@ -262,12 +262,12 @@ using dma_s1cr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint8_t, 31, 28, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint8_t, 31, 28, common::access::ro>,
                groov::field<"chsel", std::uint8_t, 27, 25>,
                groov::field<"mburst", std::uint8_t, 24, 23>,
                groov::field<"pburst", std::uint8_t, 22, 21>,
-               groov::field<"reserved0", bool, 20, 20, access::ro>,
+               groov::field<"reserved0", bool, 20, 20, common::access::ro>,
                groov::field<"ct", bool, 19, 19>,
                groov::field<"dbm", bool, 18, 18>,
                groov::field<"pl", std::uint8_t, 17, 16>,
@@ -279,11 +279,11 @@ using dma_s1cr_v1_tt =
                groov::field<"circ", bool, 8, 8>,
                groov::field<"dir", std::uint8_t, 7, 6>,
                groov::field<"pfctrl", bool, 5, 5>,
-               groov::field<"tcie", bit_enable, 4, 4>,
-               groov::field<"htie", bit_enable, 3, 3>,
-               groov::field<"teie", bit_enable, 2, 2>,
-               groov::field<"dmeie", bit_enable, 1, 1>,
-               groov::field<"en", bit_enable, 0, 0>>;
+               groov::field<"tcie", common::bittypes::bit_enable, 4, 4>,
+               groov::field<"htie", common::bittypes::bit_enable, 3, 3>,
+               groov::field<"teie", common::bittypes::bit_enable, 2, 2>,
+               groov::field<"dmeie", common::bittypes::bit_enable, 1, 1>,
+               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
 
 // dma_s1fcr_v1: S1FCR
 // Used by: DMA2, DMA1
@@ -294,12 +294,12 @@ using dma_s1fcr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint32_t, 31, 8, access::ro>,
-               groov::field<"feie", bit_enable, 7, 7>,
-               groov::field<"reserved0", bool, 6, 6, access::ro>,
-               groov::field<"fs", std::uint8_t, 5, 3, access::ro>,
-               groov::field<"dmdis", bit_enable_bar, 2, 2>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint32_t, 31, 8, common::access::ro>,
+               groov::field<"feie", common::bittypes::bit_enable, 7, 7>,
+               groov::field<"reserved0", bool, 6, 6, common::access::ro>,
+               groov::field<"fs", std::uint8_t, 5, 3, common::access::ro>,
+               groov::field<"dmdis", common::bittypes::bit_enable_bar, 2, 2>,
                groov::field<"fth", std::uint8_t, 1, 0>>;
 
 // dma_s1m0ar_v1: S1M0AR
@@ -311,7 +311,7 @@ using dma_s1m0ar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"m0a", std::uint32_t, 31, 0>>;
 
 // dma_s1m1ar_v1: S1M1AR
@@ -323,7 +323,7 @@ using dma_s1m1ar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"m1a", std::uint32_t, 31, 0>>;
 
 // dma_s1ndtr_v1: S1NDTR
@@ -335,8 +335,8 @@ using dma_s1ndtr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"ndt", std::uint16_t, 15, 0>>;
 
 // dma_s1par_v1: S1PAR
@@ -348,7 +348,7 @@ using dma_s1par_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"pa", std::uint32_t, 31, 0>>;
 
 // dma_s2cr_v1: S2CR
@@ -360,12 +360,12 @@ using dma_s2cr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint8_t, 31, 28, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint8_t, 31, 28, common::access::ro>,
                groov::field<"chsel", std::uint8_t, 27, 25>,
                groov::field<"mburst", std::uint8_t, 24, 23>,
                groov::field<"pburst", std::uint8_t, 22, 21>,
-               groov::field<"reserved0", bool, 20, 20, access::ro>,
+               groov::field<"reserved0", bool, 20, 20, common::access::ro>,
                groov::field<"ct", bool, 19, 19>,
                groov::field<"dbm", bool, 18, 18>,
                groov::field<"pl", std::uint8_t, 17, 16>,
@@ -377,11 +377,11 @@ using dma_s2cr_v1_tt =
                groov::field<"circ", bool, 8, 8>,
                groov::field<"dir", std::uint8_t, 7, 6>,
                groov::field<"pfctrl", bool, 5, 5>,
-               groov::field<"tcie", bit_enable, 4, 4>,
-               groov::field<"htie", bit_enable, 3, 3>,
-               groov::field<"teie", bit_enable, 2, 2>,
-               groov::field<"dmeie", bit_enable, 1, 1>,
-               groov::field<"en", bit_enable, 0, 0>>;
+               groov::field<"tcie", common::bittypes::bit_enable, 4, 4>,
+               groov::field<"htie", common::bittypes::bit_enable, 3, 3>,
+               groov::field<"teie", common::bittypes::bit_enable, 2, 2>,
+               groov::field<"dmeie", common::bittypes::bit_enable, 1, 1>,
+               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
 
 // dma_s2fcr_v1: S2FCR
 // Used by: DMA2, DMA1
@@ -392,12 +392,12 @@ using dma_s2fcr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint32_t, 31, 8, access::ro>,
-               groov::field<"feie", bit_enable, 7, 7>,
-               groov::field<"reserved0", bool, 6, 6, access::ro>,
-               groov::field<"fs", std::uint8_t, 5, 3, access::ro>,
-               groov::field<"dmdis", bit_enable_bar, 2, 2>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint32_t, 31, 8, common::access::ro>,
+               groov::field<"feie", common::bittypes::bit_enable, 7, 7>,
+               groov::field<"reserved0", bool, 6, 6, common::access::ro>,
+               groov::field<"fs", std::uint8_t, 5, 3, common::access::ro>,
+               groov::field<"dmdis", common::bittypes::bit_enable_bar, 2, 2>,
                groov::field<"fth", std::uint8_t, 1, 0>>;
 
 // dma_s2m0ar_v1: S2M0AR
@@ -409,7 +409,7 @@ using dma_s2m0ar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"m0a", std::uint32_t, 31, 0>>;
 
 // dma_s2m1ar_v1: S2M1AR
@@ -421,7 +421,7 @@ using dma_s2m1ar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"m1a", std::uint32_t, 31, 0>>;
 
 // dma_s2ndtr_v1: S2NDTR
@@ -433,8 +433,8 @@ using dma_s2ndtr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"ndt", std::uint16_t, 15, 0>>;
 
 // dma_s2par_v1: S2PAR
@@ -446,7 +446,7 @@ using dma_s2par_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"pa", std::uint32_t, 31, 0>>;
 
 // dma_s3cr_v1: S3CR
@@ -458,12 +458,12 @@ using dma_s3cr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint8_t, 31, 28, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint8_t, 31, 28, common::access::ro>,
                groov::field<"chsel", std::uint8_t, 27, 25>,
                groov::field<"mburst", std::uint8_t, 24, 23>,
                groov::field<"pburst", std::uint8_t, 22, 21>,
-               groov::field<"reserved0", bool, 20, 20, access::ro>,
+               groov::field<"reserved0", bool, 20, 20, common::access::ro>,
                groov::field<"ct", bool, 19, 19>,
                groov::field<"dbm", bool, 18, 18>,
                groov::field<"pl", std::uint8_t, 17, 16>,
@@ -475,11 +475,11 @@ using dma_s3cr_v1_tt =
                groov::field<"circ", bool, 8, 8>,
                groov::field<"dir", std::uint8_t, 7, 6>,
                groov::field<"pfctrl", bool, 5, 5>,
-               groov::field<"tcie", bit_enable, 4, 4>,
-               groov::field<"htie", bit_enable, 3, 3>,
-               groov::field<"teie", bit_enable, 2, 2>,
-               groov::field<"dmeie", bit_enable, 1, 1>,
-               groov::field<"en", bit_enable, 0, 0>>;
+               groov::field<"tcie", common::bittypes::bit_enable, 4, 4>,
+               groov::field<"htie", common::bittypes::bit_enable, 3, 3>,
+               groov::field<"teie", common::bittypes::bit_enable, 2, 2>,
+               groov::field<"dmeie", common::bittypes::bit_enable, 1, 1>,
+               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
 
 // dma_s3fcr_v1: S3FCR
 // Used by: DMA2, DMA1
@@ -490,12 +490,12 @@ using dma_s3fcr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint32_t, 31, 8, access::ro>,
-               groov::field<"feie", bit_enable, 7, 7>,
-               groov::field<"reserved0", bool, 6, 6, access::ro>,
-               groov::field<"fs", std::uint8_t, 5, 3, access::ro>,
-               groov::field<"dmdis", bit_enable_bar, 2, 2>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint32_t, 31, 8, common::access::ro>,
+               groov::field<"feie", common::bittypes::bit_enable, 7, 7>,
+               groov::field<"reserved0", bool, 6, 6, common::access::ro>,
+               groov::field<"fs", std::uint8_t, 5, 3, common::access::ro>,
+               groov::field<"dmdis", common::bittypes::bit_enable_bar, 2, 2>,
                groov::field<"fth", std::uint8_t, 1, 0>>;
 
 // dma_s3m0ar_v1: S3M0AR
@@ -507,7 +507,7 @@ using dma_s3m0ar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"m0a", std::uint32_t, 31, 0>>;
 
 // dma_s3m1ar_v1: S3M1AR
@@ -519,7 +519,7 @@ using dma_s3m1ar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"m1a", std::uint32_t, 31, 0>>;
 
 // dma_s3ndtr_v1: S3NDTR
@@ -531,8 +531,8 @@ using dma_s3ndtr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"ndt", std::uint16_t, 15, 0>>;
 
 // dma_s3par_v1: S3PAR
@@ -544,7 +544,7 @@ using dma_s3par_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"pa", std::uint32_t, 31, 0>>;
 
 // dma_s4cr_v1: S4CR
@@ -556,12 +556,12 @@ using dma_s4cr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint8_t, 31, 28, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint8_t, 31, 28, common::access::ro>,
                groov::field<"chsel", std::uint8_t, 27, 25>,
                groov::field<"mburst", std::uint8_t, 24, 23>,
                groov::field<"pburst", std::uint8_t, 22, 21>,
-               groov::field<"reserved0", bool, 20, 20, access::ro>,
+               groov::field<"reserved0", bool, 20, 20, common::access::ro>,
                groov::field<"ct", bool, 19, 19>,
                groov::field<"dbm", bool, 18, 18>,
                groov::field<"pl", std::uint8_t, 17, 16>,
@@ -573,11 +573,11 @@ using dma_s4cr_v1_tt =
                groov::field<"circ", bool, 8, 8>,
                groov::field<"dir", std::uint8_t, 7, 6>,
                groov::field<"pfctrl", bool, 5, 5>,
-               groov::field<"tcie", bit_enable, 4, 4>,
-               groov::field<"htie", bit_enable, 3, 3>,
-               groov::field<"teie", bit_enable, 2, 2>,
-               groov::field<"dmeie", bit_enable, 1, 1>,
-               groov::field<"en", bit_enable, 0, 0>>;
+               groov::field<"tcie", common::bittypes::bit_enable, 4, 4>,
+               groov::field<"htie", common::bittypes::bit_enable, 3, 3>,
+               groov::field<"teie", common::bittypes::bit_enable, 2, 2>,
+               groov::field<"dmeie", common::bittypes::bit_enable, 1, 1>,
+               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
 
 // dma_s4fcr_v1: S4FCR
 // Used by: DMA2, DMA1
@@ -588,12 +588,12 @@ using dma_s4fcr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint32_t, 31, 8, access::ro>,
-               groov::field<"feie", bit_enable, 7, 7>,
-               groov::field<"reserved0", bool, 6, 6, access::ro>,
-               groov::field<"fs", std::uint8_t, 5, 3, access::ro>,
-               groov::field<"dmdis", bit_enable_bar, 2, 2>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint32_t, 31, 8, common::access::ro>,
+               groov::field<"feie", common::bittypes::bit_enable, 7, 7>,
+               groov::field<"reserved0", bool, 6, 6, common::access::ro>,
+               groov::field<"fs", std::uint8_t, 5, 3, common::access::ro>,
+               groov::field<"dmdis", common::bittypes::bit_enable_bar, 2, 2>,
                groov::field<"fth", std::uint8_t, 1, 0>>;
 
 // dma_s4m0ar_v1: S4M0AR
@@ -605,7 +605,7 @@ using dma_s4m0ar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"m0a", std::uint32_t, 31, 0>>;
 
 // dma_s4m1ar_v1: S4M1AR
@@ -617,7 +617,7 @@ using dma_s4m1ar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"m1a", std::uint32_t, 31, 0>>;
 
 // dma_s4ndtr_v1: S4NDTR
@@ -629,8 +629,8 @@ using dma_s4ndtr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"ndt", std::uint16_t, 15, 0>>;
 
 // dma_s4par_v1: S4PAR
@@ -642,7 +642,7 @@ using dma_s4par_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"pa", std::uint32_t, 31, 0>>;
 
 // dma_s5cr_v1: S5CR
@@ -654,12 +654,12 @@ using dma_s5cr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint8_t, 31, 28, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint8_t, 31, 28, common::access::ro>,
                groov::field<"chsel", std::uint8_t, 27, 25>,
                groov::field<"mburst", std::uint8_t, 24, 23>,
                groov::field<"pburst", std::uint8_t, 22, 21>,
-               groov::field<"reserved0", bool, 20, 20, access::ro>,
+               groov::field<"reserved0", bool, 20, 20, common::access::ro>,
                groov::field<"ct", bool, 19, 19>,
                groov::field<"dbm", bool, 18, 18>,
                groov::field<"pl", std::uint8_t, 17, 16>,
@@ -671,11 +671,11 @@ using dma_s5cr_v1_tt =
                groov::field<"circ", bool, 8, 8>,
                groov::field<"dir", std::uint8_t, 7, 6>,
                groov::field<"pfctrl", bool, 5, 5>,
-               groov::field<"tcie", bit_enable, 4, 4>,
-               groov::field<"htie", bit_enable, 3, 3>,
-               groov::field<"teie", bit_enable, 2, 2>,
-               groov::field<"dmeie", bit_enable, 1, 1>,
-               groov::field<"en", bit_enable, 0, 0>>;
+               groov::field<"tcie", common::bittypes::bit_enable, 4, 4>,
+               groov::field<"htie", common::bittypes::bit_enable, 3, 3>,
+               groov::field<"teie", common::bittypes::bit_enable, 2, 2>,
+               groov::field<"dmeie", common::bittypes::bit_enable, 1, 1>,
+               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
 
 // dma_s5fcr_v1: S5FCR
 // Used by: DMA2, DMA1
@@ -686,12 +686,12 @@ using dma_s5fcr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint32_t, 31, 8, access::ro>,
-               groov::field<"feie", bit_enable, 7, 7>,
-               groov::field<"reserved0", bool, 6, 6, access::ro>,
-               groov::field<"fs", std::uint8_t, 5, 3, access::ro>,
-               groov::field<"dmdis", bit_enable_bar, 2, 2>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint32_t, 31, 8, common::access::ro>,
+               groov::field<"feie", common::bittypes::bit_enable, 7, 7>,
+               groov::field<"reserved0", bool, 6, 6, common::access::ro>,
+               groov::field<"fs", std::uint8_t, 5, 3, common::access::ro>,
+               groov::field<"dmdis", common::bittypes::bit_enable_bar, 2, 2>,
                groov::field<"fth", std::uint8_t, 1, 0>>;
 
 // dma_s5m0ar_v1: S5M0AR
@@ -703,7 +703,7 @@ using dma_s5m0ar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"m0a", std::uint32_t, 31, 0>>;
 
 // dma_s5m1ar_v1: S5M1AR
@@ -715,7 +715,7 @@ using dma_s5m1ar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"m1a", std::uint32_t, 31, 0>>;
 
 // dma_s5ndtr_v1: S5NDTR
@@ -727,8 +727,8 @@ using dma_s5ndtr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"ndt", std::uint16_t, 15, 0>>;
 
 // dma_s5par_v1: S5PAR
@@ -740,7 +740,7 @@ using dma_s5par_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"pa", std::uint32_t, 31, 0>>;
 
 // dma_s6cr_v1: S6CR
@@ -752,12 +752,12 @@ using dma_s6cr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint8_t, 31, 28, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint8_t, 31, 28, common::access::ro>,
                groov::field<"chsel", std::uint8_t, 27, 25>,
                groov::field<"mburst", std::uint8_t, 24, 23>,
                groov::field<"pburst", std::uint8_t, 22, 21>,
-               groov::field<"reserved0", bool, 20, 20, access::ro>,
+               groov::field<"reserved0", bool, 20, 20, common::access::ro>,
                groov::field<"ct", bool, 19, 19>,
                groov::field<"dbm", bool, 18, 18>,
                groov::field<"pl", std::uint8_t, 17, 16>,
@@ -769,11 +769,11 @@ using dma_s6cr_v1_tt =
                groov::field<"circ", bool, 8, 8>,
                groov::field<"dir", std::uint8_t, 7, 6>,
                groov::field<"pfctrl", bool, 5, 5>,
-               groov::field<"tcie", bit_enable, 4, 4>,
-               groov::field<"htie", bit_enable, 3, 3>,
-               groov::field<"teie", bit_enable, 2, 2>,
-               groov::field<"dmeie", bit_enable, 1, 1>,
-               groov::field<"en", bit_enable, 0, 0>>;
+               groov::field<"tcie", common::bittypes::bit_enable, 4, 4>,
+               groov::field<"htie", common::bittypes::bit_enable, 3, 3>,
+               groov::field<"teie", common::bittypes::bit_enable, 2, 2>,
+               groov::field<"dmeie", common::bittypes::bit_enable, 1, 1>,
+               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
 
 // dma_s6fcr_v1: S6FCR
 // Used by: DMA2, DMA1
@@ -784,12 +784,12 @@ using dma_s6fcr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint32_t, 31, 8, access::ro>,
-               groov::field<"feie", bit_enable, 7, 7>,
-               groov::field<"reserved0", bool, 6, 6, access::ro>,
-               groov::field<"fs", std::uint8_t, 5, 3, access::ro>,
-               groov::field<"dmdis", bit_enable_bar, 2, 2>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint32_t, 31, 8, common::access::ro>,
+               groov::field<"feie", common::bittypes::bit_enable, 7, 7>,
+               groov::field<"reserved0", bool, 6, 6, common::access::ro>,
+               groov::field<"fs", std::uint8_t, 5, 3, common::access::ro>,
+               groov::field<"dmdis", common::bittypes::bit_enable_bar, 2, 2>,
                groov::field<"fth", std::uint8_t, 1, 0>>;
 
 // dma_s6m0ar_v1: S6M0AR
@@ -801,7 +801,7 @@ using dma_s6m0ar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"m0a", std::uint32_t, 31, 0>>;
 
 // dma_s6m1ar_v1: S6M1AR
@@ -813,7 +813,7 @@ using dma_s6m1ar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"m1a", std::uint32_t, 31, 0>>;
 
 // dma_s6ndtr_v1: S6NDTR
@@ -825,8 +825,8 @@ using dma_s6ndtr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"ndt", std::uint16_t, 15, 0>>;
 
 // dma_s6par_v1: S6PAR
@@ -838,7 +838,7 @@ using dma_s6par_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"pa", std::uint32_t, 31, 0>>;
 
 // dma_s7cr_v1: S7CR
@@ -850,12 +850,12 @@ using dma_s7cr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint8_t, 31, 28, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint8_t, 31, 28, common::access::ro>,
                groov::field<"chsel", std::uint8_t, 27, 25>,
                groov::field<"mburst", std::uint8_t, 24, 23>,
                groov::field<"pburst", std::uint8_t, 22, 21>,
-               groov::field<"reserved0", bool, 20, 20, access::ro>,
+               groov::field<"reserved0", bool, 20, 20, common::access::ro>,
                groov::field<"ct", bool, 19, 19>,
                groov::field<"dbm", bool, 18, 18>,
                groov::field<"pl", std::uint8_t, 17, 16>,
@@ -867,11 +867,11 @@ using dma_s7cr_v1_tt =
                groov::field<"circ", bool, 8, 8>,
                groov::field<"dir", std::uint8_t, 7, 6>,
                groov::field<"pfctrl", bool, 5, 5>,
-               groov::field<"tcie", bit_enable, 4, 4>,
-               groov::field<"htie", bit_enable, 3, 3>,
-               groov::field<"teie", bit_enable, 2, 2>,
-               groov::field<"dmeie", bit_enable, 1, 1>,
-               groov::field<"en", bit_enable, 0, 0>>;
+               groov::field<"tcie", common::bittypes::bit_enable, 4, 4>,
+               groov::field<"htie", common::bittypes::bit_enable, 3, 3>,
+               groov::field<"teie", common::bittypes::bit_enable, 2, 2>,
+               groov::field<"dmeie", common::bittypes::bit_enable, 1, 1>,
+               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
 
 // dma_s7fcr_v1: S7FCR
 // Used by: DMA2, DMA1
@@ -882,12 +882,12 @@ using dma_s7fcr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint32_t, 31, 8, access::ro>,
-               groov::field<"feie", bit_enable, 7, 7>,
-               groov::field<"reserved0", bool, 6, 6, access::ro>,
-               groov::field<"fs", std::uint8_t, 5, 3, access::ro>,
-               groov::field<"dmdis", bit_enable_bar, 2, 2>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint32_t, 31, 8, common::access::ro>,
+               groov::field<"feie", common::bittypes::bit_enable, 7, 7>,
+               groov::field<"reserved0", bool, 6, 6, common::access::ro>,
+               groov::field<"fs", std::uint8_t, 5, 3, common::access::ro>,
+               groov::field<"dmdis", common::bittypes::bit_enable_bar, 2, 2>,
                groov::field<"fth", std::uint8_t, 1, 0>>;
 
 // dma_s7m0ar_v1: S7M0AR
@@ -899,7 +899,7 @@ using dma_s7m0ar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"m0a", std::uint32_t, 31, 0>>;
 
 // dma_s7m1ar_v1: S7M1AR
@@ -911,7 +911,7 @@ using dma_s7m1ar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"m1a", std::uint32_t, 31, 0>>;
 
 // dma_s7ndtr_v1: S7NDTR
@@ -923,8 +923,8 @@ using dma_s7ndtr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"ndt", std::uint16_t, 15, 0>>;
 
 // dma_s7par_v1: S7PAR
@@ -936,7 +936,7 @@ using dma_s7par_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"pa", std::uint32_t, 31, 0>>;
 
 } // namespace stm32::regs

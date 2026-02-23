@@ -7,10 +7,22 @@
 namespace stm32::stm32l552 {
 
 namespace rngx {
-  using rng_cr_tt = regs::rng_rng_cr_v1_tt;
-  using rng_sr_tt = regs::rng_rng_sr_v1_tt;
-  using rng_dr_tt = regs::rng_rng_dr_v1_tt;
-  using rng_htcr_tt = regs::rng_rng_htcr_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rng_cr_tt = regs::rng_rng_cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rng_sr_tt = regs::rng_rng_sr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rng_dr_tt = regs::rng_rng_dr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rng_htcr_tt = regs::rng_rng_htcr_v1_tt<name, baseaddress, offset>;
 
   template <stdx::ct_string name, std::uint32_t baseaddress>
   using rngx_t =

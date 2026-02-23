@@ -7,21 +7,66 @@
 namespace stm32::stm32f0x2 {
 
 namespace tsc {
-  using cr_tt = regs::tsc_cr_v1_tt;
-  using ier_tt = regs::tsc_ier_v1_tt;
-  using icr_tt = regs::tsc_icr_v1_tt;
-  using isr_tt = regs::tsc_isr_v1_tt;
-  using iohcr_tt = regs::tsc_iohcr_v1_tt;
-  using ioascr_tt = regs::tsc_ioascr_v1_tt;
-  using ioscr_tt = regs::tsc_ioscr_v1_tt;
-  using ioccr_tt = regs::tsc_ioccr_v1_tt;
-  using iogcsr_tt = regs::tsc_iogcsr_v1_tt;
-  using iog1cr_tt = regs::tsc_iog1cr_v1_tt;
-  using iog2cr_tt = regs::tsc_iog2cr_v1_tt;
-  using iog3cr_tt = regs::tsc_iog3cr_v1_tt;
-  using iog4cr_tt = regs::tsc_iog4cr_v1_tt;
-  using iog5cr_tt = regs::tsc_iog5cr_v1_tt;
-  using iog6cr_tt = regs::tsc_iog6cr_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cr_tt = regs::tsc_cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ier_tt = regs::tsc_ier_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using icr_tt = regs::tsc_icr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using isr_tt = regs::tsc_isr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using iohcr_tt = regs::tsc_iohcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ioascr_tt = regs::tsc_ioascr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ioscr_tt = regs::tsc_ioscr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ioccr_tt = regs::tsc_ioccr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using iogcsr_tt = regs::tsc_iogcsr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using iog1cr_tt = regs::tsc_iog1cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using iog2cr_tt = regs::tsc_iog2cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using iog3cr_tt = regs::tsc_iog3cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using iog4cr_tt = regs::tsc_iog4cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using iog5cr_tt = regs::tsc_iog5cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using iog6cr_tt = regs::tsc_iog6cr_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using tsc_t =

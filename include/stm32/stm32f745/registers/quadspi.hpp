@@ -16,7 +16,7 @@ using quadspi_abr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"alternate", std::uint32_t, 31, 0>>;
 
 // quadspi_ar_v1: AR
@@ -28,7 +28,7 @@ using quadspi_ar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"address", std::uint32_t, 31, 0>>;
 
 // quadspi_ccr_v1: CCR
@@ -40,14 +40,14 @@ using quadspi_ccr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"ddrm", bool, 31, 31>,
                groov::field<"dhhc", bool, 30, 30>,
-               groov::field<"reserved1", bool, 29, 29, access::ro>,
+               groov::field<"reserved1", bool, 29, 29, common::access::ro>,
                groov::field<"sioo", bool, 28, 28>,
                groov::field<"fmode", std::uint8_t, 27, 26>,
                groov::field<"dmode", std::uint8_t, 25, 24>,
-               groov::field<"reserved0", bool, 23, 23, access::ro>,
+               groov::field<"reserved0", bool, 23, 23, common::access::ro>,
                groov::field<"dcyc", std::uint8_t, 22, 18>,
                groov::field<"absize", std::uint8_t, 17, 16>,
                groov::field<"abmode", std::uint8_t, 15, 14>,
@@ -65,26 +65,26 @@ using quadspi_cr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"prescaler", std::uint8_t, 31, 24>,
                groov::field<"pmm", bool, 23, 23>,
                groov::field<"apms", bool, 22, 22>,
-               groov::field<"reserved2", bool, 21, 21, access::ro>,
-               groov::field<"toie", bit_enable, 20, 20>,
-               groov::field<"smie", bit_enable, 19, 19>,
-               groov::field<"ftie", bit_enable, 18, 18>,
-               groov::field<"tcie", bit_enable, 17, 17>,
-               groov::field<"teie", bit_enable, 16, 16>,
-               groov::field<"reserved1", std::uint8_t, 15, 13, access::ro>,
+               groov::field<"reserved2", bool, 21, 21, common::access::ro>,
+               groov::field<"toie", common::bittypes::bit_enable, 20, 20>,
+               groov::field<"smie", common::bittypes::bit_enable, 19, 19>,
+               groov::field<"ftie", common::bittypes::bit_enable, 18, 18>,
+               groov::field<"tcie", common::bittypes::bit_enable, 17, 17>,
+               groov::field<"teie", common::bittypes::bit_enable, 16, 16>,
+               groov::field<"reserved1", std::uint8_t, 15, 13, common::access::ro>,
                groov::field<"fthres", std::uint8_t, 12, 8>,
                groov::field<"fsel", bool, 7, 7>,
                groov::field<"dfm", bool, 6, 6>,
-               groov::field<"reserved0", bool, 5, 5, access::ro>,
+               groov::field<"reserved0", bool, 5, 5, common::access::ro>,
                groov::field<"sshift", bool, 4, 4>,
-               groov::field<"tcen", bit_enable, 3, 3>,
-               groov::field<"dmaen", bit_enable, 2, 2>,
+               groov::field<"tcen", common::bittypes::bit_enable, 3, 3>,
+               groov::field<"dmaen", common::bittypes::bit_enable, 2, 2>,
                groov::field<"abort", bool, 1, 1>,
-               groov::field<"en", bit_enable, 0, 0>>;
+               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
 
 // quadspi_dcr_v1: DCR
 // Used by: QUADSPI
@@ -95,13 +95,13 @@ using quadspi_dcr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved2", std::uint16_t, 31, 21, access::ro>,
+             common::access::rw,
+               groov::field<"reserved2", std::uint16_t, 31, 21, common::access::ro>,
                groov::field<"fsize", std::uint8_t, 20, 16>,
-               groov::field<"reserved1", std::uint8_t, 15, 11, access::ro>,
+               groov::field<"reserved1", std::uint8_t, 15, 11, common::access::ro>,
                groov::field<"csht", std::uint8_t, 10, 8>,
-               groov::field<"reserved0", std::uint8_t, 7, 1, access::ro>,
-               groov::field<"ckmode", bit_enable, 0, 0>>;
+               groov::field<"reserved0", std::uint8_t, 7, 1, common::access::ro>,
+               groov::field<"ckmode", common::bittypes::bit_enable, 0, 0>>;
 
 // quadspi_dlr_v1: DLR
 // Used by: QUADSPI
@@ -112,7 +112,7 @@ using quadspi_dlr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dl", std::uint32_t, 31, 0>>;
 
 // quadspi_dr_v1: DR
@@ -124,7 +124,7 @@ using quadspi_dr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"data", std::uint32_t, 31, 0>>;
 
 // quadspi_fcr_v1: FCR
@@ -136,11 +136,11 @@ using quadspi_fcr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint32_t, 31, 5, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint32_t, 31, 5, common::access::ro>,
                groov::field<"ctof", bool, 4, 4>,
                groov::field<"csmf", bool, 3, 3>,
-               groov::field<"reserved0", bool, 2, 2, access::ro>,
+               groov::field<"reserved0", bool, 2, 2, common::access::ro>,
                groov::field<"ctcf", bool, 1, 1>,
                groov::field<"ctef", bool, 0, 0>>;
 
@@ -153,8 +153,8 @@ using quadspi_lptr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"timeout", std::uint16_t, 15, 0>>;
 
 // quadspi_pir_v1: PIR
@@ -166,8 +166,8 @@ using quadspi_pir_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"interval", std::uint16_t, 15, 0>>;
 
 // quadspi_psmar_v1: PSMAR
@@ -179,7 +179,7 @@ using quadspi_psmar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"match", std::uint32_t, 31, 0>>;
 
 // quadspi_psmkr_v1: PSMKR
@@ -191,7 +191,7 @@ using quadspi_psmkr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"mask", std::uint32_t, 31, 0>>;
 
 // quadspi_sr_v1: SR
@@ -203,7 +203,7 @@ using quadspi_sr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved1", std::uint32_t, 31, 15>,
                groov::field<"flevel", std::uint8_t, 14, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 6>,

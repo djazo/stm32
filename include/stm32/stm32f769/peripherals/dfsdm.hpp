@@ -7,106 +7,406 @@
 namespace stm32::stm32f769 {
 
 namespace dfsdm {
-  using dfsdm_chcfg0r1_tt = regs::dfsdm_dfsdm_chcfg0r1_v1_tt;
-  using dfsdm_chcfg1r1_tt = regs::dfsdm_dfsdm_chcfg1r1_v1_tt;
-  using dfsdm_chcfg2r1_tt = regs::dfsdm_dfsdm_chcfg2r1_v1_tt;
-  using dfsdm_chcfg3r1_tt = regs::dfsdm_dfsdm_chcfg3r1_v1_tt;
-  using dfsdm_chcfg4r1_tt = regs::dfsdm_dfsdm_chcfg4r1_v1_tt;
-  using dfsdm_chcfg5r1_tt = regs::dfsdm_dfsdm_chcfg5r1_v1_tt;
-  using dfsdm_chcfg6r1_tt = regs::dfsdm_dfsdm_chcfg6r1_v1_tt;
-  using dfsdm_chcfg7r1_tt = regs::dfsdm_dfsdm_chcfg7r1_v1_tt;
-  using dfsdm_chcfg0r2_tt = regs::dfsdm_dfsdm_chcfg0r2_v1_tt;
-  using dfsdm_chcfg1r2_tt = regs::dfsdm_dfsdm_chcfg1r2_v1_tt;
-  using dfsdm_chcfg2r2_tt = regs::dfsdm_dfsdm_chcfg2r2_v1_tt;
-  using dfsdm_chcfg3r2_tt = regs::dfsdm_dfsdm_chcfg3r2_v1_tt;
-  using dfsdm_chcfg4r2_tt = regs::dfsdm_dfsdm_chcfg4r2_v1_tt;
-  using dfsdm_chcfg5r2_tt = regs::dfsdm_dfsdm_chcfg5r2_v1_tt;
-  using dfsdm_chcfg6r2_tt = regs::dfsdm_dfsdm_chcfg6r2_v1_tt;
-  using dfsdm_chcfg7r2_tt = regs::dfsdm_dfsdm_chcfg7r2_v1_tt;
-  using dfsdm_awscd0r_tt = regs::dfsdm_dfsdm_awscd0r_v1_tt;
-  using dfsdm_awscd1r_tt = regs::dfsdm_dfsdm_awscd1r_v1_tt;
-  using dfsdm_awscd2r_tt = regs::dfsdm_dfsdm_awscd2r_v1_tt;
-  using dfsdm_awscd3r_tt = regs::dfsdm_dfsdm_awscd3r_v1_tt;
-  using dfsdm_awscd4r_tt = regs::dfsdm_dfsdm_awscd4r_v1_tt;
-  using dfsdm_awscd5r_tt = regs::dfsdm_dfsdm_awscd5r_v1_tt;
-  using dfsdm_awscd6r_tt = regs::dfsdm_dfsdm_awscd6r_v1_tt;
-  using dfsdm_awscd7r_tt = regs::dfsdm_dfsdm_awscd7r_v1_tt;
-  using dfsdm_chwdat0r_tt = regs::dfsdm_dfsdm_chwdat0r_v1_tt;
-  using dfsdm_chwdat1r_tt = regs::dfsdm_dfsdm_chwdat1r_v1_tt;
-  using dfsdm_chwdat2r_tt = regs::dfsdm_dfsdm_chwdat2r_v1_tt;
-  using dfsdm_chwdat3r_tt = regs::dfsdm_dfsdm_chwdat3r_v1_tt;
-  using dfsdm_chwdat4r_tt = regs::dfsdm_dfsdm_chwdat4r_v1_tt;
-  using dfsdm_chwdat5r_tt = regs::dfsdm_dfsdm_chwdat5r_v1_tt;
-  using dfsdm_chwdat6r_tt = regs::dfsdm_dfsdm_chwdat6r_v1_tt;
-  using dfsdm_chwdat7r_tt = regs::dfsdm_dfsdm_chwdat7r_v1_tt;
-  using dfsdm_chdatin0r_tt = regs::dfsdm_dfsdm_chdatin0r_v1_tt;
-  using dfsdm_chdatin1r_tt = regs::dfsdm_dfsdm_chdatin1r_v1_tt;
-  using dfsdm_chdatin2r_tt = regs::dfsdm_dfsdm_chdatin2r_v1_tt;
-  using dfsdm_chdatin3r_tt = regs::dfsdm_dfsdm_chdatin3r_v1_tt;
-  using dfsdm_chdatin4r_tt = regs::dfsdm_dfsdm_chdatin4r_v1_tt;
-  using dfsdm_chdatin5r_tt = regs::dfsdm_dfsdm_chdatin5r_v1_tt;
-  using dfsdm_chdatin6r_tt = regs::dfsdm_dfsdm_chdatin6r_v1_tt;
-  using dfsdm_chdatin7r_tt = regs::dfsdm_dfsdm_chdatin7r_v1_tt;
-  using dfsdm0_cr1_tt = regs::dfsdm_dfsdm0_cr1_v1_tt;
-  using dfsdm1_cr1_tt = regs::dfsdm_dfsdm1_cr1_v1_tt;
-  using dfsdm2_cr1_tt = regs::dfsdm_dfsdm2_cr1_v1_tt;
-  using dfsdm3_cr1_tt = regs::dfsdm_dfsdm3_cr1_v1_tt;
-  using dfsdm0_cr2_tt = regs::dfsdm_dfsdm0_cr2_v1_tt;
-  using dfsdm1_cr2_tt = regs::dfsdm_dfsdm1_cr2_v1_tt;
-  using dfsdm2_cr2_tt = regs::dfsdm_dfsdm2_cr2_v1_tt;
-  using dfsdm3_cr2_tt = regs::dfsdm_dfsdm3_cr2_v1_tt;
-  using dfsdm0_isr_tt = regs::dfsdm_dfsdm0_isr_v1_tt;
-  using dfsdm1_isr_tt = regs::dfsdm_dfsdm1_isr_v1_tt;
-  using dfsdm2_isr_tt = regs::dfsdm_dfsdm2_isr_v1_tt;
-  using dfsdm3_isr_tt = regs::dfsdm_dfsdm3_isr_v1_tt;
-  using dfsdm0_icr_tt = regs::dfsdm_dfsdm0_icr_v1_tt;
-  using dfsdm1_icr_tt = regs::dfsdm_dfsdm1_icr_v1_tt;
-  using dfsdm2_icr_tt = regs::dfsdm_dfsdm2_icr_v1_tt;
-  using dfsdm3_icr_tt = regs::dfsdm_dfsdm3_icr_v1_tt;
-  using dfsdm0_jchgr_tt = regs::dfsdm_dfsdm0_jchgr_v1_tt;
-  using dfsdm1_jchgr_tt = regs::dfsdm_dfsdm1_jchgr_v1_tt;
-  using dfsdm2_jchgr_tt = regs::dfsdm_dfsdm2_jchgr_v1_tt;
-  using dfsdm3_jchgr_tt = regs::dfsdm_dfsdm3_jchgr_v1_tt;
-  using dfsdm0_fcr_tt = regs::dfsdm_dfsdm0_fcr_v1_tt;
-  using dfsdm1_fcr_tt = regs::dfsdm_dfsdm1_fcr_v1_tt;
-  using dfsdm2_fcr_tt = regs::dfsdm_dfsdm2_fcr_v1_tt;
-  using dfsdm3_fcr_tt = regs::dfsdm_dfsdm3_fcr_v1_tt;
-  using dfsdm0_jdatar_tt = regs::dfsdm_dfsdm0_jdatar_v1_tt;
-  using dfsdm1_jdatar_tt = regs::dfsdm_dfsdm1_jdatar_v1_tt;
-  using dfsdm2_jdatar_tt = regs::dfsdm_dfsdm2_jdatar_v1_tt;
-  using dfsdm3_jdatar_tt = regs::dfsdm_dfsdm3_jdatar_v1_tt;
-  using dfsdm0_rdatar_tt = regs::dfsdm_dfsdm0_rdatar_v1_tt;
-  using dfsdm1_rdatar_tt = regs::dfsdm_dfsdm1_rdatar_v1_tt;
-  using dfsdm2_rdatar_tt = regs::dfsdm_dfsdm2_rdatar_v1_tt;
-  using dfsdm3_rdatar_tt = regs::dfsdm_dfsdm3_rdatar_v1_tt;
-  using dfsdm0_awhtr_tt = regs::dfsdm_dfsdm0_awhtr_v1_tt;
-  using dfsdm1_awhtr_tt = regs::dfsdm_dfsdm1_awhtr_v1_tt;
-  using dfsdm2_awhtr_tt = regs::dfsdm_dfsdm2_awhtr_v1_tt;
-  using dfsdm3_awhtr_tt = regs::dfsdm_dfsdm3_awhtr_v1_tt;
-  using dfsdm0_awltr_tt = regs::dfsdm_dfsdm0_awltr_v1_tt;
-  using dfsdm1_awltr_tt = regs::dfsdm_dfsdm1_awltr_v1_tt;
-  using dfsdm2_awltr_tt = regs::dfsdm_dfsdm2_awltr_v1_tt;
-  using dfsdm3_awltr_tt = regs::dfsdm_dfsdm3_awltr_v1_tt;
-  using dfsdm0_awsr_tt = regs::dfsdm_dfsdm0_awsr_v1_tt;
-  using dfsdm1_awsr_tt = regs::dfsdm_dfsdm1_awsr_v1_tt;
-  using dfsdm2_awsr_tt = regs::dfsdm_dfsdm2_awsr_v1_tt;
-  using dfsdm3_awsr_tt = regs::dfsdm_dfsdm3_awsr_v1_tt;
-  using dfsdm0_awcfr_tt = regs::dfsdm_dfsdm0_awcfr_v1_tt;
-  using dfsdm1_awcfr_tt = regs::dfsdm_dfsdm1_awcfr_v1_tt;
-  using dfsdm2_awcfr_tt = regs::dfsdm_dfsdm2_awcfr_v1_tt;
-  using dfsdm3_awcfr_tt = regs::dfsdm_dfsdm3_awcfr_v1_tt;
-  using dfsdm0_exmax_tt = regs::dfsdm_dfsdm0_exmax_v1_tt;
-  using dfsdm1_exmax_tt = regs::dfsdm_dfsdm1_exmax_v1_tt;
-  using dfsdm2_exmax_tt = regs::dfsdm_dfsdm2_exmax_v1_tt;
-  using dfsdm3_exmax_tt = regs::dfsdm_dfsdm3_exmax_v1_tt;
-  using dfsdm0_exmin_tt = regs::dfsdm_dfsdm0_exmin_v1_tt;
-  using dfsdm1_exmin_tt = regs::dfsdm_dfsdm1_exmin_v1_tt;
-  using dfsdm2_exmin_tt = regs::dfsdm_dfsdm2_exmin_v1_tt;
-  using dfsdm3_exmin_tt = regs::dfsdm_dfsdm3_exmin_v1_tt;
-  using dfsdm0_cnvtimr_tt = regs::dfsdm_dfsdm0_cnvtimr_v1_tt;
-  using dfsdm1_cnvtimr_tt = regs::dfsdm_dfsdm1_cnvtimr_v1_tt;
-  using dfsdm2_cnvtimr_tt = regs::dfsdm_dfsdm2_cnvtimr_v1_tt;
-  using dfsdm3_cnvtimr_tt = regs::dfsdm_dfsdm3_cnvtimr_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dfsdm_chcfg0r1_tt = regs::dfsdm_dfsdm_chcfg0r1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dfsdm_chcfg1r1_tt = regs::dfsdm_dfsdm_chcfg1r1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dfsdm_chcfg2r1_tt = regs::dfsdm_dfsdm_chcfg2r1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dfsdm_chcfg3r1_tt = regs::dfsdm_dfsdm_chcfg3r1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dfsdm_chcfg4r1_tt = regs::dfsdm_dfsdm_chcfg4r1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dfsdm_chcfg5r1_tt = regs::dfsdm_dfsdm_chcfg5r1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dfsdm_chcfg6r1_tt = regs::dfsdm_dfsdm_chcfg6r1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dfsdm_chcfg7r1_tt = regs::dfsdm_dfsdm_chcfg7r1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dfsdm_chcfg0r2_tt = regs::dfsdm_dfsdm_chcfg0r2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dfsdm_chcfg1r2_tt = regs::dfsdm_dfsdm_chcfg1r2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dfsdm_chcfg2r2_tt = regs::dfsdm_dfsdm_chcfg2r2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dfsdm_chcfg3r2_tt = regs::dfsdm_dfsdm_chcfg3r2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dfsdm_chcfg4r2_tt = regs::dfsdm_dfsdm_chcfg4r2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dfsdm_chcfg5r2_tt = regs::dfsdm_dfsdm_chcfg5r2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dfsdm_chcfg6r2_tt = regs::dfsdm_dfsdm_chcfg6r2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dfsdm_chcfg7r2_tt = regs::dfsdm_dfsdm_chcfg7r2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dfsdm_awscd0r_tt = regs::dfsdm_dfsdm_awscd0r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dfsdm_awscd1r_tt = regs::dfsdm_dfsdm_awscd1r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dfsdm_awscd2r_tt = regs::dfsdm_dfsdm_awscd2r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dfsdm_awscd3r_tt = regs::dfsdm_dfsdm_awscd3r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dfsdm_awscd4r_tt = regs::dfsdm_dfsdm_awscd4r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dfsdm_awscd5r_tt = regs::dfsdm_dfsdm_awscd5r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dfsdm_awscd6r_tt = regs::dfsdm_dfsdm_awscd6r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dfsdm_awscd7r_tt = regs::dfsdm_dfsdm_awscd7r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dfsdm_chwdat0r_tt = regs::dfsdm_dfsdm_chwdat0r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dfsdm_chwdat1r_tt = regs::dfsdm_dfsdm_chwdat1r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dfsdm_chwdat2r_tt = regs::dfsdm_dfsdm_chwdat2r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dfsdm_chwdat3r_tt = regs::dfsdm_dfsdm_chwdat3r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dfsdm_chwdat4r_tt = regs::dfsdm_dfsdm_chwdat4r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dfsdm_chwdat5r_tt = regs::dfsdm_dfsdm_chwdat5r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dfsdm_chwdat6r_tt = regs::dfsdm_dfsdm_chwdat6r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dfsdm_chwdat7r_tt = regs::dfsdm_dfsdm_chwdat7r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dfsdm_chdatin0r_tt = regs::dfsdm_dfsdm_chdatin0r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dfsdm_chdatin1r_tt = regs::dfsdm_dfsdm_chdatin1r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dfsdm_chdatin2r_tt = regs::dfsdm_dfsdm_chdatin2r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dfsdm_chdatin3r_tt = regs::dfsdm_dfsdm_chdatin3r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dfsdm_chdatin4r_tt = regs::dfsdm_dfsdm_chdatin4r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dfsdm_chdatin5r_tt = regs::dfsdm_dfsdm_chdatin5r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dfsdm_chdatin6r_tt = regs::dfsdm_dfsdm_chdatin6r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dfsdm_chdatin7r_tt = regs::dfsdm_dfsdm_chdatin7r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dfsdm0_cr1_tt = regs::dfsdm_dfsdm0_cr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dfsdm1_cr1_tt = regs::dfsdm_dfsdm1_cr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dfsdm2_cr1_tt = regs::dfsdm_dfsdm2_cr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dfsdm3_cr1_tt = regs::dfsdm_dfsdm3_cr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dfsdm0_cr2_tt = regs::dfsdm_dfsdm0_cr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dfsdm1_cr2_tt = regs::dfsdm_dfsdm1_cr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dfsdm2_cr2_tt = regs::dfsdm_dfsdm2_cr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dfsdm3_cr2_tt = regs::dfsdm_dfsdm3_cr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dfsdm0_isr_tt = regs::dfsdm_dfsdm0_isr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dfsdm1_isr_tt = regs::dfsdm_dfsdm1_isr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dfsdm2_isr_tt = regs::dfsdm_dfsdm2_isr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dfsdm3_isr_tt = regs::dfsdm_dfsdm3_isr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dfsdm0_icr_tt = regs::dfsdm_dfsdm0_icr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dfsdm1_icr_tt = regs::dfsdm_dfsdm1_icr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dfsdm2_icr_tt = regs::dfsdm_dfsdm2_icr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dfsdm3_icr_tt = regs::dfsdm_dfsdm3_icr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dfsdm0_jchgr_tt = regs::dfsdm_dfsdm0_jchgr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dfsdm1_jchgr_tt = regs::dfsdm_dfsdm1_jchgr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dfsdm2_jchgr_tt = regs::dfsdm_dfsdm2_jchgr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dfsdm3_jchgr_tt = regs::dfsdm_dfsdm3_jchgr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dfsdm0_fcr_tt = regs::dfsdm_dfsdm0_fcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dfsdm1_fcr_tt = regs::dfsdm_dfsdm1_fcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dfsdm2_fcr_tt = regs::dfsdm_dfsdm2_fcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dfsdm3_fcr_tt = regs::dfsdm_dfsdm3_fcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dfsdm0_jdatar_tt = regs::dfsdm_dfsdm0_jdatar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dfsdm1_jdatar_tt = regs::dfsdm_dfsdm1_jdatar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dfsdm2_jdatar_tt = regs::dfsdm_dfsdm2_jdatar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dfsdm3_jdatar_tt = regs::dfsdm_dfsdm3_jdatar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dfsdm0_rdatar_tt = regs::dfsdm_dfsdm0_rdatar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dfsdm1_rdatar_tt = regs::dfsdm_dfsdm1_rdatar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dfsdm2_rdatar_tt = regs::dfsdm_dfsdm2_rdatar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dfsdm3_rdatar_tt = regs::dfsdm_dfsdm3_rdatar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dfsdm0_awhtr_tt = regs::dfsdm_dfsdm0_awhtr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dfsdm1_awhtr_tt = regs::dfsdm_dfsdm1_awhtr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dfsdm2_awhtr_tt = regs::dfsdm_dfsdm2_awhtr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dfsdm3_awhtr_tt = regs::dfsdm_dfsdm3_awhtr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dfsdm0_awltr_tt = regs::dfsdm_dfsdm0_awltr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dfsdm1_awltr_tt = regs::dfsdm_dfsdm1_awltr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dfsdm2_awltr_tt = regs::dfsdm_dfsdm2_awltr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dfsdm3_awltr_tt = regs::dfsdm_dfsdm3_awltr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dfsdm0_awsr_tt = regs::dfsdm_dfsdm0_awsr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dfsdm1_awsr_tt = regs::dfsdm_dfsdm1_awsr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dfsdm2_awsr_tt = regs::dfsdm_dfsdm2_awsr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dfsdm3_awsr_tt = regs::dfsdm_dfsdm3_awsr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dfsdm0_awcfr_tt = regs::dfsdm_dfsdm0_awcfr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dfsdm1_awcfr_tt = regs::dfsdm_dfsdm1_awcfr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dfsdm2_awcfr_tt = regs::dfsdm_dfsdm2_awcfr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dfsdm3_awcfr_tt = regs::dfsdm_dfsdm3_awcfr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dfsdm0_exmax_tt = regs::dfsdm_dfsdm0_exmax_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dfsdm1_exmax_tt = regs::dfsdm_dfsdm1_exmax_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dfsdm2_exmax_tt = regs::dfsdm_dfsdm2_exmax_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dfsdm3_exmax_tt = regs::dfsdm_dfsdm3_exmax_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dfsdm0_exmin_tt = regs::dfsdm_dfsdm0_exmin_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dfsdm1_exmin_tt = regs::dfsdm_dfsdm1_exmin_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dfsdm2_exmin_tt = regs::dfsdm_dfsdm2_exmin_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dfsdm3_exmin_tt = regs::dfsdm_dfsdm3_exmin_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dfsdm0_cnvtimr_tt = regs::dfsdm_dfsdm0_cnvtimr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dfsdm1_cnvtimr_tt = regs::dfsdm_dfsdm1_cnvtimr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dfsdm2_cnvtimr_tt = regs::dfsdm_dfsdm2_cnvtimr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dfsdm3_cnvtimr_tt = regs::dfsdm_dfsdm3_cnvtimr_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using dfsdm_t =

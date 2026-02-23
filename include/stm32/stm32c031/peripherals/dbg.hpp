@@ -7,10 +7,22 @@
 namespace stm32::stm32c031 {
 
 namespace dbg {
-  using dbg_idcode_tt = regs::dbg_dbg_idcode_v1_tt;
-  using dbg_cr_tt = regs::dbg_dbg_cr_v1_tt;
-  using dbg_apb_fz1_tt = regs::dbg_dbg_apb_fz1_v1_tt;
-  using dbg_apb_fz2_tt = regs::dbg_dbg_apb_fz2_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dbg_idcode_tt = regs::dbg_dbg_idcode_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dbg_cr_tt = regs::dbg_dbg_cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dbg_apb_fz1_tt = regs::dbg_dbg_apb_fz1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dbg_apb_fz2_tt = regs::dbg_dbg_apb_fz2_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using dbg_t =

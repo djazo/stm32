@@ -16,7 +16,7 @@ using dbgmcu_idcode_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"rev_id", std::uint16_t, 31, 16>,
                groov::field<"reserved0", std::uint8_t, 15, 12>,
                groov::field<"dev_id", std::uint16_t, 11, 0>>;

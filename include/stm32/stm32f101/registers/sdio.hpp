@@ -16,7 +16,7 @@ using sdio_arg_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"cmdarg", std::uint32_t, 31, 0>>;
 
 // sdio_clkcr_v1: CLKCR
@@ -28,14 +28,14 @@ using sdio_clkcr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 15, access::ro>,
-               groov::field<"hwfc_en", bit_enable, 14, 14>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 15, common::access::ro>,
+               groov::field<"hwfc_en", common::bittypes::bit_enable, 14, 14>,
                groov::field<"negedge", bool, 13, 13>,
                groov::field<"widbus", std::uint8_t, 12, 11>,
                groov::field<"bypass", bool, 10, 10>,
                groov::field<"pwrsav", bool, 9, 9>,
-               groov::field<"clken", bit_enable, 8, 8>,
+               groov::field<"clken", common::bittypes::bit_enable, 8, 8>,
                groov::field<"clkdiv", std::uint8_t, 7, 0>>;
 
 // sdio_cmd_v1: CMD
@@ -47,13 +47,13 @@ using sdio_cmd_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 15, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 15, common::access::ro>,
                groov::field<"ce_atacmd", bool, 14, 14>,
-               groov::field<"nien", bit_enable, 13, 13>,
+               groov::field<"nien", common::bittypes::bit_enable, 13, 13>,
                groov::field<"encmdcompl", bool, 12, 12>,
                groov::field<"sdiosuspend", bool, 11, 11>,
-               groov::field<"cpsmen", bit_enable, 10, 10>,
+               groov::field<"cpsmen", common::bittypes::bit_enable, 10, 10>,
                groov::field<"waitpend", bool, 9, 9>,
                groov::field<"waitint", bool, 8, 8>,
                groov::field<"waitresp", std::uint8_t, 7, 6>,
@@ -68,7 +68,7 @@ using sdio_dcount_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint8_t, 31, 25>,
                groov::field<"datacount", std::uint32_t, 24, 0>>;
 
@@ -81,17 +81,17 @@ using sdio_dctrl_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 12, access::ro>,
-               groov::field<"sdioen", bit_enable, 11, 11>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 12, common::access::ro>,
+               groov::field<"sdioen", common::bittypes::bit_enable, 11, 11>,
                groov::field<"rwmod", bool, 10, 10>,
                groov::field<"pwstop", bool, 9, 9>,
                groov::field<"pwstart", bool, 8, 8>,
                groov::field<"dblocksize", std::uint8_t, 7, 4>,
-               groov::field<"dmaen", bit_enable, 3, 3>,
-               groov::field<"dtmode", bit_enable, 2, 2>,
+               groov::field<"dmaen", common::bittypes::bit_enable, 3, 3>,
+               groov::field<"dtmode", common::bittypes::bit_enable, 2, 2>,
                groov::field<"dtdir", bool, 1, 1>,
-               groov::field<"dten", bit_enable, 0, 0>>;
+               groov::field<"dten", common::bittypes::bit_enable, 0, 0>>;
 
 // sdio_dlen_v1: DLEN
 // Used by: SDIO
@@ -102,8 +102,8 @@ using sdio_dlen_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint8_t, 31, 25, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint8_t, 31, 25, common::access::ro>,
                groov::field<"datalength", std::uint32_t, 24, 0>>;
 
 // sdio_dtimer_v1: DTIMER
@@ -115,7 +115,7 @@ using sdio_dtimer_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"datatime", std::uint32_t, 31, 0>>;
 
 // sdio_fifo_v1: FIFO
@@ -127,7 +127,7 @@ using sdio_fifo_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"fifodata", std::uint32_t, 31, 0>>;
 
 // sdio_fifocnt_v1: FIFOCNT
@@ -139,7 +139,7 @@ using sdio_fifocnt_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint8_t, 31, 24>,
                groov::field<"fif0count", std::uint32_t, 23, 0>>;
 
@@ -152,11 +152,11 @@ using sdio_icr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint8_t, 31, 24, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint8_t, 31, 24, common::access::ro>,
                groov::field<"ceataendc", bool, 23, 23>,
                groov::field<"sdioitc", bool, 22, 22>,
-               groov::field<"reserved0", std::uint16_t, 21, 11, access::ro>,
+               groov::field<"reserved0", std::uint16_t, 21, 11, common::access::ro>,
                groov::field<"dbckendc", bool, 10, 10>,
                groov::field<"stbiterrc", bool, 9, 9>,
                groov::field<"dataendc", bool, 8, 8>,
@@ -178,32 +178,32 @@ using sdio_mask_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint8_t, 31, 24, access::ro>,
-               groov::field<"ceatendie", bit_enable, 23, 23>,
-               groov::field<"sdioitie", bit_enable, 22, 22>,
-               groov::field<"rxdavlie", bit_enable, 21, 21>,
-               groov::field<"txdavlie", bit_enable, 20, 20>,
-               groov::field<"rxfifoeie", bit_enable, 19, 19>,
-               groov::field<"txfifoeie", bit_enable, 18, 18>,
-               groov::field<"rxfifofie", bit_enable, 17, 17>,
-               groov::field<"txfifofie", bit_enable, 16, 16>,
-               groov::field<"rxfifohfie", bit_enable, 15, 15>,
-               groov::field<"txfifoheie", bit_enable, 14, 14>,
-               groov::field<"rxactie", bit_enable, 13, 13>,
-               groov::field<"txactie", bit_enable, 12, 12>,
-               groov::field<"cmdactie", bit_enable, 11, 11>,
-               groov::field<"dbackendie", bit_enable, 10, 10>,
-               groov::field<"stbiterrie", bit_enable, 9, 9>,
-               groov::field<"dataendie", bit_enable, 8, 8>,
-               groov::field<"cmdsentie", bit_enable, 7, 7>,
-               groov::field<"cmdrendie", bit_enable, 6, 6>,
-               groov::field<"rxoverrie", bit_enable, 5, 5>,
-               groov::field<"txunderrie", bit_enable, 4, 4>,
-               groov::field<"dtimeoutie", bit_enable, 3, 3>,
-               groov::field<"ctimeoutie", bit_enable, 2, 2>,
-               groov::field<"dcrcfailie", bit_enable, 1, 1>,
-               groov::field<"ccrcfailie", bit_enable, 0, 0>>;
+             common::access::rw,
+               groov::field<"reserved0", std::uint8_t, 31, 24, common::access::ro>,
+               groov::field<"ceatendie", common::bittypes::bit_enable, 23, 23>,
+               groov::field<"sdioitie", common::bittypes::bit_enable, 22, 22>,
+               groov::field<"rxdavlie", common::bittypes::bit_enable, 21, 21>,
+               groov::field<"txdavlie", common::bittypes::bit_enable, 20, 20>,
+               groov::field<"rxfifoeie", common::bittypes::bit_enable, 19, 19>,
+               groov::field<"txfifoeie", common::bittypes::bit_enable, 18, 18>,
+               groov::field<"rxfifofie", common::bittypes::bit_enable, 17, 17>,
+               groov::field<"txfifofie", common::bittypes::bit_enable, 16, 16>,
+               groov::field<"rxfifohfie", common::bittypes::bit_enable, 15, 15>,
+               groov::field<"txfifoheie", common::bittypes::bit_enable, 14, 14>,
+               groov::field<"rxactie", common::bittypes::bit_enable, 13, 13>,
+               groov::field<"txactie", common::bittypes::bit_enable, 12, 12>,
+               groov::field<"cmdactie", common::bittypes::bit_enable, 11, 11>,
+               groov::field<"dbackendie", common::bittypes::bit_enable, 10, 10>,
+               groov::field<"stbiterrie", common::bittypes::bit_enable, 9, 9>,
+               groov::field<"dataendie", common::bittypes::bit_enable, 8, 8>,
+               groov::field<"cmdsentie", common::bittypes::bit_enable, 7, 7>,
+               groov::field<"cmdrendie", common::bittypes::bit_enable, 6, 6>,
+               groov::field<"rxoverrie", common::bittypes::bit_enable, 5, 5>,
+               groov::field<"txunderrie", common::bittypes::bit_enable, 4, 4>,
+               groov::field<"dtimeoutie", common::bittypes::bit_enable, 3, 3>,
+               groov::field<"ctimeoutie", common::bittypes::bit_enable, 2, 2>,
+               groov::field<"dcrcfailie", common::bittypes::bit_enable, 1, 1>,
+               groov::field<"ccrcfailie", common::bittypes::bit_enable, 0, 0>>;
 
 // sdio_power_v1: POWER
 // Used by: SDIO
@@ -214,8 +214,8 @@ using sdio_power_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 2, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 2, common::access::ro>,
                groov::field<"pwrctrl", std::uint8_t, 1, 0>>;
 
 // sdio_resp2_v1: RESP2
@@ -227,7 +227,7 @@ using sdio_resp2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"cardstatus2", std::uint32_t, 31, 0>>;
 
 // sdio_resp3_v1: RESP3
@@ -239,7 +239,7 @@ using sdio_resp3_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"cardstatus3", std::uint32_t, 31, 0>>;
 
 // sdio_resp4_v1: RESP4
@@ -251,7 +251,7 @@ using sdio_resp4_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"cardstatus4", std::uint32_t, 31, 0>>;
 
 // sdio_respcmd_v1: RESPCMD
@@ -263,7 +263,7 @@ using sdio_respcmd_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint32_t, 31, 6>,
                groov::field<"respcmd", std::uint8_t, 5, 0>>;
 
@@ -276,7 +276,7 @@ using sdio_respi1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"cardstatus1", std::uint32_t, 31, 0>>;
 
 // sdio_sta_v1: STA
@@ -288,7 +288,7 @@ using sdio_sta_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint8_t, 31, 24>,
                groov::field<"ceataend", bool, 23, 23>,
                groov::field<"sdioit", bool, 22, 22>,

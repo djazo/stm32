@@ -16,9 +16,9 @@ using firewall_cr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 3, access::ro>,
-               groov::field<"vde", bit_enable, 2, 2>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 3, common::access::ro>,
+               groov::field<"vde", common::bittypes::bit_enable, 2, 2>,
                groov::field<"vds", bool, 1, 1>,
                groov::field<"fpa", bool, 0, 0>>;
 
@@ -31,10 +31,10 @@ using firewall_csl_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint16_t, 31, 22, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint16_t, 31, 22, common::access::ro>,
                groov::field<"leng", std::uint16_t, 21, 8>,
-               groov::field<"reserved0", std::uint8_t, 7, 0, access::ro>>;
+               groov::field<"reserved0", std::uint8_t, 7, 0, common::access::ro>>;
 
 // firewall_cssa_v1: CSSA
 // Used by: FIREWALL
@@ -45,10 +45,10 @@ using firewall_cssa_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint8_t, 31, 24, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint8_t, 31, 24, common::access::ro>,
                groov::field<"add", std::uint16_t, 23, 8>,
-               groov::field<"reserved0", std::uint8_t, 7, 0, access::ro>>;
+               groov::field<"reserved0", std::uint8_t, 7, 0, common::access::ro>>;
 
 // firewall_nvdsl_v1: NVDSL
 // Used by: FIREWALL
@@ -59,10 +59,10 @@ using firewall_nvdsl_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint16_t, 31, 22, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint16_t, 31, 22, common::access::ro>,
                groov::field<"leng", std::uint16_t, 21, 8>,
-               groov::field<"reserved0", std::uint8_t, 7, 0, access::ro>>;
+               groov::field<"reserved0", std::uint8_t, 7, 0, common::access::ro>>;
 
 // firewall_nvdssa_v1: NVDSSA
 // Used by: FIREWALL
@@ -73,10 +73,10 @@ using firewall_nvdssa_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint8_t, 31, 24, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint8_t, 31, 24, common::access::ro>,
                groov::field<"add", std::uint16_t, 23, 8>,
-               groov::field<"reserved0", std::uint8_t, 7, 0, access::ro>>;
+               groov::field<"reserved0", std::uint8_t, 7, 0, common::access::ro>>;
 
 // firewall_vdsl_v1: VDSL
 // Used by: FIREWALL
@@ -87,10 +87,10 @@ using firewall_vdsl_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"leng", std::uint16_t, 15, 6>,
-               groov::field<"reserved0", std::uint8_t, 5, 0, access::ro>>;
+               groov::field<"reserved0", std::uint8_t, 5, 0, common::access::ro>>;
 
 // firewall_vdssa_v1: VDSSA
 // Used by: FIREWALL
@@ -101,9 +101,9 @@ using firewall_vdssa_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"add", std::uint16_t, 15, 6>,
-               groov::field<"reserved0", std::uint8_t, 5, 0, access::ro>>;
+               groov::field<"reserved0", std::uint8_t, 5, 0, common::access::ro>>;
 
 } // namespace stm32::regs

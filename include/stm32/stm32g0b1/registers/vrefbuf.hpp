@@ -16,8 +16,8 @@ using vrefbuf_vrefbuf_ccr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 6, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 6, common::access::ro>,
                groov::field<"trim", std::uint8_t, 5, 0>>;
 
 // vrefbuf_vrefbuf_csr_v1: VREFBUF_CSR
@@ -29,9 +29,9 @@ using vrefbuf_vrefbuf_csr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 4, access::ro>,
-               groov::field<"vrr", bool, 3, 3, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 4, common::access::ro>,
+               groov::field<"vrr", bool, 3, 3, common::access::ro>,
                groov::field<"vrs", bool, 2, 2>,
                groov::field<"hiz", bool, 1, 1>,
                groov::field<"envr", bool, 0, 0>>;

@@ -7,10 +7,22 @@
 namespace stm32::stm32wl5x_cm4 {
 
 namespace rng {
-  using cr_tt = regs::rng_cr_v1_tt;
-  using sr_tt = regs::rng_sr_v1_tt;
-  using dr_tt = regs::rng_dr_v1_tt;
-  using htcr_tt = regs::rng_htcr_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cr_tt = regs::rng_cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using sr_tt = regs::rng_sr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dr_tt = regs::rng_dr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using htcr_tt = regs::rng_htcr_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using rng_t =

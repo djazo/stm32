@@ -16,12 +16,12 @@ using ramecc_ier_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 4, access::ro>,
-               groov::field<"geccdebwie", bit_enable, 3, 3>,
-               groov::field<"geccdeie", bit_enable, 2, 2>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 4, common::access::ro>,
+               groov::field<"geccdebwie", common::bittypes::bit_enable, 3, 3>,
+               groov::field<"geccdeie", common::bittypes::bit_enable, 2, 2>,
                groov::field<"geccseie_", bool, 1, 1>,
-               groov::field<"gie", bit_enable, 0, 0>>;
+               groov::field<"gie", common::bittypes::bit_enable, 0, 0>>;
 
 // ramecc_m1cr_v1: M1CR
 // Used by: RAMECC1, RAMECC2, RAMECC3
@@ -32,13 +32,13 @@ using ramecc_m1cr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint32_t, 31, 6, access::ro>,
-               groov::field<"eccelen", bit_enable, 5, 5>,
-               groov::field<"eccdebwie", bit_enable, 4, 4>,
-               groov::field<"eccdeie", bit_enable, 3, 3>,
-               groov::field<"eccseie", bit_enable, 2, 2>,
-               groov::field<"reserved0", std::uint8_t, 1, 0, access::ro>>;
+             common::access::rw,
+               groov::field<"reserved1", std::uint32_t, 31, 6, common::access::ro>,
+               groov::field<"eccelen", common::bittypes::bit_enable, 5, 5>,
+               groov::field<"eccdebwie", common::bittypes::bit_enable, 4, 4>,
+               groov::field<"eccdeie", common::bittypes::bit_enable, 3, 3>,
+               groov::field<"eccseie", common::bittypes::bit_enable, 2, 2>,
+               groov::field<"reserved0", std::uint8_t, 1, 0, common::access::ro>>;
 
 // ramecc_m1far_v1: M1FAR
 // Used by: RAMECC1
@@ -49,13 +49,13 @@ using ramecc_m1far_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint32_t, 31, 6, access::ro>,
-               groov::field<"eccelen", bit_enable, 5, 5>,
-               groov::field<"eccdebwie", bit_enable, 4, 4>,
-               groov::field<"eccdeie", bit_enable, 3, 3>,
-               groov::field<"eccseie", bit_enable, 2, 2>,
-               groov::field<"reserved0", std::uint8_t, 1, 0, access::ro>>;
+             common::access::rw,
+               groov::field<"reserved1", std::uint32_t, 31, 6, common::access::ro>,
+               groov::field<"eccelen", common::bittypes::bit_enable, 5, 5>,
+               groov::field<"eccdebwie", common::bittypes::bit_enable, 4, 4>,
+               groov::field<"eccdeie", common::bittypes::bit_enable, 3, 3>,
+               groov::field<"eccseie", common::bittypes::bit_enable, 2, 2>,
+               groov::field<"reserved0", std::uint8_t, 1, 0, common::access::ro>>;
 
 // ramecc_m1far_v2: M1FAR
 // Used by: RAMECC2, RAMECC3
@@ -66,7 +66,7 @@ using ramecc_m1far_v2_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"fadd", std::uint32_t, 31, 0>>;
 
 // ramecc_m1fdrh_v1: M1FDRH
@@ -78,13 +78,13 @@ using ramecc_m1fdrh_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint32_t, 31, 6, access::ro>,
-               groov::field<"eccelen", bit_enable, 5, 5>,
-               groov::field<"eccdebwie", bit_enable, 4, 4>,
-               groov::field<"eccdeie", bit_enable, 3, 3>,
-               groov::field<"eccseie", bit_enable, 2, 2>,
-               groov::field<"reserved0", std::uint8_t, 1, 0, access::ro>>;
+             common::access::rw,
+               groov::field<"reserved1", std::uint32_t, 31, 6, common::access::ro>,
+               groov::field<"eccelen", common::bittypes::bit_enable, 5, 5>,
+               groov::field<"eccdebwie", common::bittypes::bit_enable, 4, 4>,
+               groov::field<"eccdeie", common::bittypes::bit_enable, 3, 3>,
+               groov::field<"eccseie", common::bittypes::bit_enable, 2, 2>,
+               groov::field<"reserved0", std::uint8_t, 1, 0, common::access::ro>>;
 
 // ramecc_m1fdrh_v2: M1FDRH
 // Used by: RAMECC2, RAMECC3
@@ -95,7 +95,7 @@ using ramecc_m1fdrh_v2_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"fdatah", std::uint32_t, 31, 0>>;
 
 // ramecc_m1fdrl_v1: M1FDRL
@@ -107,13 +107,13 @@ using ramecc_m1fdrl_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint32_t, 31, 6, access::ro>,
-               groov::field<"eccelen", bit_enable, 5, 5>,
-               groov::field<"eccdebwie", bit_enable, 4, 4>,
-               groov::field<"eccdeie", bit_enable, 3, 3>,
-               groov::field<"eccseie", bit_enable, 2, 2>,
-               groov::field<"reserved0", std::uint8_t, 1, 0, access::ro>>;
+             common::access::rw,
+               groov::field<"reserved1", std::uint32_t, 31, 6, common::access::ro>,
+               groov::field<"eccelen", common::bittypes::bit_enable, 5, 5>,
+               groov::field<"eccdebwie", common::bittypes::bit_enable, 4, 4>,
+               groov::field<"eccdeie", common::bittypes::bit_enable, 3, 3>,
+               groov::field<"eccseie", common::bittypes::bit_enable, 2, 2>,
+               groov::field<"reserved0", std::uint8_t, 1, 0, common::access::ro>>;
 
 // ramecc_m1fdrl_v2: M1FDRL
 // Used by: RAMECC2, RAMECC3
@@ -124,7 +124,7 @@ using ramecc_m1fdrl_v2_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"fdatal", std::uint32_t, 31, 0>>;
 
 // ramecc_m1fecr_v1: M1FECR
@@ -136,8 +136,8 @@ using ramecc_m1fecr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 3, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 3, common::access::ro>,
                groov::field<"debwdf", bool, 2, 2>,
                groov::field<"dedf", bool, 1, 1>,
                groov::field<"sedcf", bool, 0, 0>>;
@@ -151,7 +151,7 @@ using ramecc_m1fecr_v2_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"fec", std::uint32_t, 31, 0>>;
 
 // ramecc_m1sr_v1: M1SR
@@ -163,13 +163,13 @@ using ramecc_m1sr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint32_t, 31, 6, access::ro>,
-               groov::field<"eccelen", bit_enable, 5, 5>,
-               groov::field<"eccdebwie", bit_enable, 4, 4>,
-               groov::field<"eccdeie", bit_enable, 3, 3>,
-               groov::field<"eccseie", bit_enable, 2, 2>,
-               groov::field<"reserved0", std::uint8_t, 1, 0, access::ro>>;
+             common::access::rw,
+               groov::field<"reserved1", std::uint32_t, 31, 6, common::access::ro>,
+               groov::field<"eccelen", common::bittypes::bit_enable, 5, 5>,
+               groov::field<"eccdebwie", common::bittypes::bit_enable, 4, 4>,
+               groov::field<"eccdeie", common::bittypes::bit_enable, 3, 3>,
+               groov::field<"eccseie", common::bittypes::bit_enable, 2, 2>,
+               groov::field<"reserved0", std::uint8_t, 1, 0, common::access::ro>>;
 
 // ramecc_m1sr_v2: M1SR
 // Used by: RAMECC2, RAMECC3
@@ -180,8 +180,8 @@ using ramecc_m1sr_v2_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 3, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 3, common::access::ro>,
                groov::field<"debwdf", bool, 2, 2>,
                groov::field<"dedf", bool, 1, 1>,
                groov::field<"sedcf", bool, 0, 0>>;
@@ -195,8 +195,8 @@ using ramecc_m2cr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 3, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 3, common::access::ro>,
                groov::field<"debwdf", bool, 2, 2>,
                groov::field<"dedf", bool, 1, 1>,
                groov::field<"sedcf", bool, 0, 0>>;
@@ -210,13 +210,13 @@ using ramecc_m2cr_v2_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint32_t, 31, 6, access::ro>,
-               groov::field<"eccelen", bit_enable, 5, 5>,
-               groov::field<"eccdebwie", bit_enable, 4, 4>,
-               groov::field<"eccdeie", bit_enable, 3, 3>,
-               groov::field<"eccseie", bit_enable, 2, 2>,
-               groov::field<"reserved0", std::uint8_t, 1, 0, access::ro>>;
+             common::access::rw,
+               groov::field<"reserved1", std::uint32_t, 31, 6, common::access::ro>,
+               groov::field<"eccelen", common::bittypes::bit_enable, 5, 5>,
+               groov::field<"eccdebwie", common::bittypes::bit_enable, 4, 4>,
+               groov::field<"eccdeie", common::bittypes::bit_enable, 3, 3>,
+               groov::field<"eccseie", common::bittypes::bit_enable, 2, 2>,
+               groov::field<"reserved0", std::uint8_t, 1, 0, common::access::ro>>;
 
 // ramecc_m2far_v1: M2FAR
 // Used by: RAMECC1
@@ -227,8 +227,8 @@ using ramecc_m2far_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 3, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 3, common::access::ro>,
                groov::field<"debwdf", bool, 2, 2>,
                groov::field<"dedf", bool, 1, 1>,
                groov::field<"sedcf", bool, 0, 0>>;
@@ -242,7 +242,7 @@ using ramecc_m2far_v2_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"fadd", std::uint32_t, 31, 0>>;
 
 // ramecc_m2fdrh_v1: M2FDRH
@@ -254,7 +254,7 @@ using ramecc_m2fdrh_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"fadd", std::uint32_t, 31, 0>>;
 
 // ramecc_m2fdrh_v2: M2FDRH
@@ -266,7 +266,7 @@ using ramecc_m2fdrh_v2_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"fdatah", std::uint32_t, 31, 0>>;
 
 // ramecc_m2fdrl_v1: M2FDRL
@@ -278,8 +278,8 @@ using ramecc_m2fdrl_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 3, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 3, common::access::ro>,
                groov::field<"debwdf", bool, 2, 2>,
                groov::field<"dedf", bool, 1, 1>,
                groov::field<"sedcf", bool, 0, 0>>;
@@ -293,7 +293,7 @@ using ramecc_m2fdrl_v2_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"fdatal", std::uint32_t, 31, 0>>;
 
 // ramecc_m2fecr_v1: M2FECR
@@ -305,7 +305,7 @@ using ramecc_m2fecr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"fadd", std::uint32_t, 31, 0>>;
 
 // ramecc_m2fecr_v2: M2FECR
@@ -317,7 +317,7 @@ using ramecc_m2fecr_v2_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"fec", std::uint32_t, 31, 0>>;
 
 // ramecc_m2sr_v1: M2SR
@@ -329,8 +329,8 @@ using ramecc_m2sr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 3, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 3, common::access::ro>,
                groov::field<"debwdf", bool, 2, 2>,
                groov::field<"dedf", bool, 1, 1>,
                groov::field<"sedcf", bool, 0, 0>>;
@@ -344,7 +344,7 @@ using ramecc_m3cr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"fadd", std::uint32_t, 31, 0>>;
 
 // ramecc_m3cr_v2: M3CR
@@ -356,13 +356,13 @@ using ramecc_m3cr_v2_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint32_t, 31, 6, access::ro>,
-               groov::field<"eccelen", bit_enable, 5, 5>,
-               groov::field<"eccdebwie", bit_enable, 4, 4>,
-               groov::field<"eccdeie", bit_enable, 3, 3>,
-               groov::field<"eccseie", bit_enable, 2, 2>,
-               groov::field<"reserved0", std::uint8_t, 1, 0, access::ro>>;
+             common::access::rw,
+               groov::field<"reserved1", std::uint32_t, 31, 6, common::access::ro>,
+               groov::field<"eccelen", common::bittypes::bit_enable, 5, 5>,
+               groov::field<"eccdebwie", common::bittypes::bit_enable, 4, 4>,
+               groov::field<"eccdeie", common::bittypes::bit_enable, 3, 3>,
+               groov::field<"eccseie", common::bittypes::bit_enable, 2, 2>,
+               groov::field<"reserved0", std::uint8_t, 1, 0, common::access::ro>>;
 
 // ramecc_m3far_v1: M3FAR
 // Used by: RAMECC1
@@ -373,7 +373,7 @@ using ramecc_m3far_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"fadd", std::uint32_t, 31, 0>>;
 
 // ramecc_m3far_v2: M3FAR
@@ -385,7 +385,7 @@ using ramecc_m3far_v2_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"fadd", std::uint32_t, 31, 0>>;
 
 // ramecc_m3fdrh_v1: M3FDRH
@@ -397,7 +397,7 @@ using ramecc_m3fdrh_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"fdatal", std::uint32_t, 31, 0>>;
 
 // ramecc_m3fdrh_v2: M3FDRH
@@ -409,7 +409,7 @@ using ramecc_m3fdrh_v2_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"fdatah", std::uint32_t, 31, 0>>;
 
 // ramecc_m3fdrl_v1: M3FDRL
@@ -421,7 +421,7 @@ using ramecc_m3fdrl_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"fdatal", std::uint32_t, 31, 0>>;
 
 // ramecc_m3fecr_v1: M3FECR
@@ -433,7 +433,7 @@ using ramecc_m3fecr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"fdatal", std::uint32_t, 31, 0>>;
 
 // ramecc_m3fecr_v2: M3FECR
@@ -445,7 +445,7 @@ using ramecc_m3fecr_v2_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"fec", std::uint32_t, 31, 0>>;
 
 // ramecc_m3sr_v1: M3SR
@@ -457,7 +457,7 @@ using ramecc_m3sr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"fadd", std::uint32_t, 31, 0>>;
 
 // ramecc_m3sr_v2: M3SR
@@ -469,8 +469,8 @@ using ramecc_m3sr_v2_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 3, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 3, common::access::ro>,
                groov::field<"debwdf", bool, 2, 2>,
                groov::field<"dedf", bool, 1, 1>,
                groov::field<"sedcf", bool, 0, 0>>;
@@ -484,7 +484,7 @@ using ramecc_m4cr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"fdatal", std::uint32_t, 31, 0>>;
 
 // ramecc_m4cr_v2: M4CR
@@ -496,13 +496,13 @@ using ramecc_m4cr_v2_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint32_t, 31, 6, access::ro>,
-               groov::field<"eccelen", bit_enable, 5, 5>,
-               groov::field<"eccdebwie", bit_enable, 4, 4>,
-               groov::field<"eccdeie", bit_enable, 3, 3>,
-               groov::field<"eccseie", bit_enable, 2, 2>,
-               groov::field<"reserved0", std::uint8_t, 1, 0, access::ro>>;
+             common::access::rw,
+               groov::field<"reserved1", std::uint32_t, 31, 6, common::access::ro>,
+               groov::field<"eccelen", common::bittypes::bit_enable, 5, 5>,
+               groov::field<"eccdebwie", common::bittypes::bit_enable, 4, 4>,
+               groov::field<"eccdeie", common::bittypes::bit_enable, 3, 3>,
+               groov::field<"eccseie", common::bittypes::bit_enable, 2, 2>,
+               groov::field<"reserved0", std::uint8_t, 1, 0, common::access::ro>>;
 
 // ramecc_m4far_v1: M4FAR
 // Used by: RAMECC1
@@ -513,7 +513,7 @@ using ramecc_m4far_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"fdatah", std::uint32_t, 31, 0>>;
 
 // ramecc_m4far_v2: M4FAR
@@ -525,7 +525,7 @@ using ramecc_m4far_v2_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"fadd", std::uint32_t, 31, 0>>;
 
 // ramecc_m4fdrh_v1: M4FDRH
@@ -537,7 +537,7 @@ using ramecc_m4fdrh_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"fdatah", std::uint32_t, 31, 0>>;
 
 // ramecc_m4fdrl_v1: M4FDRL
@@ -549,7 +549,7 @@ using ramecc_m4fdrl_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"fdatah", std::uint32_t, 31, 0>>;
 
 // ramecc_m4fdrl_v2: M4FDRL
@@ -561,7 +561,7 @@ using ramecc_m4fdrl_v2_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"fdatal", std::uint32_t, 31, 0>>;
 
 // ramecc_m4fecr_v1: M4FECR
@@ -573,7 +573,7 @@ using ramecc_m4fecr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"fdatah", std::uint32_t, 31, 0>>;
 
 // ramecc_m4fecr_v2: M4FECR
@@ -585,7 +585,7 @@ using ramecc_m4fecr_v2_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"fec", std::uint32_t, 31, 0>>;
 
 // ramecc_m4sr_v1: M4SR
@@ -597,7 +597,7 @@ using ramecc_m4sr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"fdatal", std::uint32_t, 31, 0>>;
 
 // ramecc_m4sr_v2: M4SR
@@ -609,8 +609,8 @@ using ramecc_m4sr_v2_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 3, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 3, common::access::ro>,
                groov::field<"debwdf", bool, 2, 2>,
                groov::field<"dedf", bool, 1, 1>,
                groov::field<"sedcf", bool, 0, 0>>;
@@ -624,7 +624,7 @@ using ramecc_m5cr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"fec", std::uint32_t, 31, 0>>;
 
 // ramecc_m5cr_v2: M5CR
@@ -636,13 +636,13 @@ using ramecc_m5cr_v2_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint32_t, 31, 6, access::ro>,
-               groov::field<"eccelen", bit_enable, 5, 5>,
-               groov::field<"eccdebwie", bit_enable, 4, 4>,
-               groov::field<"eccdeie", bit_enable, 3, 3>,
-               groov::field<"eccseie", bit_enable, 2, 2>,
-               groov::field<"reserved0", std::uint8_t, 1, 0, access::ro>>;
+             common::access::rw,
+               groov::field<"reserved1", std::uint32_t, 31, 6, common::access::ro>,
+               groov::field<"eccelen", common::bittypes::bit_enable, 5, 5>,
+               groov::field<"eccdebwie", common::bittypes::bit_enable, 4, 4>,
+               groov::field<"eccdeie", common::bittypes::bit_enable, 3, 3>,
+               groov::field<"eccseie", common::bittypes::bit_enable, 2, 2>,
+               groov::field<"reserved0", std::uint8_t, 1, 0, common::access::ro>>;
 
 // ramecc_m5far_v1: M5FAR
 // Used by: RAMECC1
@@ -653,7 +653,7 @@ using ramecc_m5far_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"fec", std::uint32_t, 31, 0>>;
 
 // ramecc_m5far_v2: M5FAR
@@ -665,7 +665,7 @@ using ramecc_m5far_v2_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"fadd", std::uint32_t, 31, 0>>;
 
 // ramecc_m5fdrh_v1: M5FDRH
@@ -677,7 +677,7 @@ using ramecc_m5fdrh_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"fec", std::uint32_t, 31, 0>>;
 
 // ramecc_m5fdrl_v1: M5FDRL
@@ -689,7 +689,7 @@ using ramecc_m5fdrl_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"fec", std::uint32_t, 31, 0>>;
 
 // ramecc_m5fdrl_v2: M5FDRL
@@ -701,7 +701,7 @@ using ramecc_m5fdrl_v2_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"fdatal", std::uint32_t, 31, 0>>;
 
 // ramecc_m5fecr_v1: M5FECR
@@ -713,7 +713,7 @@ using ramecc_m5fecr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"fec", std::uint32_t, 31, 0>>;
 
 // ramecc_m5sr_v1: M5SR
@@ -725,7 +725,7 @@ using ramecc_m5sr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"fec", std::uint32_t, 31, 0>>;
 
 // ramecc_m5sr_v2: M5SR
@@ -737,8 +737,8 @@ using ramecc_m5sr_v2_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 3, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 3, common::access::ro>,
                groov::field<"debwdf", bool, 2, 2>,
                groov::field<"dedf", bool, 1, 1>,
                groov::field<"sedcf", bool, 0, 0>>;

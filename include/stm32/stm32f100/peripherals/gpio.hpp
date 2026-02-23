@@ -7,13 +7,34 @@
 namespace stm32::stm32f100 {
 
 namespace gpiox {
-  using crl_tt = regs::gpio_crl_v1_tt;
-  using crh_tt = regs::gpio_crh_v1_tt;
-  using idr_tt = regs::gpio_idr_v1_tt;
-  using odr_tt = regs::gpio_odr_v1_tt;
-  using bsrr_tt = regs::gpio_bsrr_v1_tt;
-  using brr_tt = regs::gpio_brr_v1_tt;
-  using lckr_tt = regs::gpio_lckr_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using crl_tt = regs::gpio_crl_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using crh_tt = regs::gpio_crh_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using idr_tt = regs::gpio_idr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using odr_tt = regs::gpio_odr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using bsrr_tt = regs::gpio_bsrr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using brr_tt = regs::gpio_brr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using lckr_tt = regs::gpio_lckr_v1_tt<name, baseaddress, offset>;
 
   template <stdx::ct_string name, std::uint32_t baseaddress>
   using gpiox_t =

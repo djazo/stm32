@@ -16,8 +16,8 @@ using swpmi_brr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 6, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 6, common::access::ro>,
                groov::field<"br", std::uint8_t, 5, 0>>;
 
 // swpmi_cr_v1: CR
@@ -29,14 +29,14 @@ using swpmi_cr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint32_t, 31, 11, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint32_t, 31, 11, common::access::ro>,
                groov::field<"deact", bool, 10, 10>,
-               groov::field<"reserved0", std::uint8_t, 9, 6, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 9, 6, common::access::ro>,
                groov::field<"swpme", bool, 5, 5>,
                groov::field<"lpbk", bool, 4, 4>,
-               groov::field<"txmode", bit_enable, 3, 3>,
-               groov::field<"rxmode", bit_enable, 2, 2>,
+               groov::field<"txmode", common::bittypes::bit_enable, 3, 3>,
+               groov::field<"rxmode", common::bittypes::bit_enable, 2, 2>,
                groov::field<"txdma", bool, 1, 1>,
                groov::field<"rxdma", bool, 0, 0>>;
 
@@ -49,11 +49,11 @@ using swpmi_icr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::wo,
-               groov::field<"reserved1", std::uint32_t, 31, 9, access::ro>,
+             common::access::wo,
+               groov::field<"reserved1", std::uint32_t, 31, 9, common::access::ro>,
                groov::field<"csrf", bool, 8, 8>,
                groov::field<"ctcf", bool, 7, 7>,
-               groov::field<"reserved0", std::uint8_t, 6, 5, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 6, 5, common::access::ro>,
                groov::field<"ctxunrf", bool, 4, 4>,
                groov::field<"crxovrf", bool, 3, 3>,
                groov::field<"crxberf", bool, 2, 2>,
@@ -69,17 +69,17 @@ using swpmi_ier_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 9, access::ro>,
-               groov::field<"srie", bit_enable, 8, 8>,
-               groov::field<"tcie", bit_enable, 7, 7>,
-               groov::field<"tie", bit_enable, 6, 6>,
-               groov::field<"rie", bit_enable, 5, 5>,
-               groov::field<"txunrie", bit_enable, 4, 4>,
-               groov::field<"rxovrie", bit_enable, 3, 3>,
-               groov::field<"rxberie", bit_enable, 2, 2>,
-               groov::field<"txbeie", bit_enable, 1, 1>,
-               groov::field<"rxbfie", bit_enable, 0, 0>>;
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 9, common::access::ro>,
+               groov::field<"srie", common::bittypes::bit_enable, 8, 8>,
+               groov::field<"tcie", common::bittypes::bit_enable, 7, 7>,
+               groov::field<"tie", common::bittypes::bit_enable, 6, 6>,
+               groov::field<"rie", common::bittypes::bit_enable, 5, 5>,
+               groov::field<"txunrie", common::bittypes::bit_enable, 4, 4>,
+               groov::field<"rxovrie", common::bittypes::bit_enable, 3, 3>,
+               groov::field<"rxberie", common::bittypes::bit_enable, 2, 2>,
+               groov::field<"txbeie", common::bittypes::bit_enable, 1, 1>,
+               groov::field<"rxbfie", common::bittypes::bit_enable, 0, 0>>;
 
 // swpmi_isr_v1: ISR
 // Used by: SWPMI1
@@ -90,7 +90,7 @@ using swpmi_isr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint32_t, 31, 11>,
                groov::field<"deactf", bool, 10, 10>,
                groov::field<"susp", bool, 9, 9>,
@@ -113,7 +113,7 @@ using swpmi_rdr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"rd", std::uint32_t, 31, 0>>;
 
 // swpmi_rfl_v1: RFL
@@ -125,7 +125,7 @@ using swpmi_rfl_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint32_t, 31, 5>,
                groov::field<"rfl", std::uint8_t, 4, 0>>;
 
@@ -138,7 +138,7 @@ using swpmi_tdr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::wo,
+             common::access::wo,
                groov::field<"td", std::uint32_t, 31, 0>>;
 
 } // namespace stm32::regs

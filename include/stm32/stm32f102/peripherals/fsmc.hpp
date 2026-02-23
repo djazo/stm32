@@ -7,18 +7,54 @@
 namespace stm32::stm32f102 {
 
 namespace fsmc {
-  using bcr1_tt = regs::fsmc_bcr1_v1_tt;
-  using btr1_tt = regs::fsmc_btr1_v1_tt;
-  using bcr2_tt = regs::fsmc_bcr2_v1_tt;
-  using btr2_tt = regs::fsmc_btr2_v1_tt;
-  using bcr3_tt = regs::fsmc_bcr3_v1_tt;
-  using btr3_tt = regs::fsmc_btr3_v1_tt;
-  using bcr4_tt = regs::fsmc_bcr4_v1_tt;
-  using btr4_tt = regs::fsmc_btr4_v1_tt;
-  using bwtr1_tt = regs::fsmc_bwtr1_v1_tt;
-  using bwtr2_tt = regs::fsmc_bwtr2_v1_tt;
-  using bwtr3_tt = regs::fsmc_bwtr3_v1_tt;
-  using bwtr4_tt = regs::fsmc_bwtr4_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using bcr1_tt = regs::fsmc_bcr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using btr1_tt = regs::fsmc_btr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using bcr2_tt = regs::fsmc_bcr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using btr2_tt = regs::fsmc_btr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using bcr3_tt = regs::fsmc_bcr3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using btr3_tt = regs::fsmc_btr3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using bcr4_tt = regs::fsmc_bcr4_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using btr4_tt = regs::fsmc_btr4_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using bwtr1_tt = regs::fsmc_bwtr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using bwtr2_tt = regs::fsmc_bwtr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using bwtr3_tt = regs::fsmc_bwtr3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using bwtr4_tt = regs::fsmc_bwtr4_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using fsmc_t =

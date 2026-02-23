@@ -16,7 +16,7 @@ using nvic_iabr0_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"active", std::uint32_t, 31, 0>>;
 
 // nvic_iabr1_v1: IABR1
@@ -28,7 +28,7 @@ using nvic_iabr1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"active", std::uint32_t, 31, 0>>;
 
 // nvic_iabr2_v1: IABR2
@@ -40,7 +40,7 @@ using nvic_iabr2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"active", std::uint32_t, 31, 0>>;
 
 // nvic_icer0_v1: ICER0
@@ -52,7 +52,7 @@ using nvic_icer0_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"clrena", std::uint32_t, 31, 0>>;
 
 // nvic_icer1_v1: ICER1
@@ -64,7 +64,7 @@ using nvic_icer1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"clrena", std::uint32_t, 31, 0>>;
 
 // nvic_icer2_v1: ICER2
@@ -76,7 +76,7 @@ using nvic_icer2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"clrena", std::uint32_t, 31, 0>>;
 
 // nvic_icpr0_v1: ICPR0
@@ -88,7 +88,7 @@ using nvic_icpr0_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"clrpend", std::uint32_t, 31, 0>>;
 
 // nvic_icpr1_v1: ICPR1
@@ -100,7 +100,7 @@ using nvic_icpr1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"clrpend", std::uint32_t, 31, 0>>;
 
 // nvic_icpr2_v1: ICPR2
@@ -112,7 +112,7 @@ using nvic_icpr2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"clrpend", std::uint32_t, 31, 0>>;
 
 // nvic_ipr0_v1: IPR0
@@ -124,7 +124,7 @@ using nvic_ipr0_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"ipr_n3", std::uint8_t, 31, 24>,
                groov::field<"ipr_n2", std::uint8_t, 23, 16>,
                groov::field<"ipr_n1", std::uint8_t, 15, 8>,
@@ -139,7 +139,7 @@ using nvic_ipr1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"ipr_n3", std::uint8_t, 31, 24>,
                groov::field<"ipr_n2", std::uint8_t, 23, 16>,
                groov::field<"ipr_n1", std::uint8_t, 15, 8>,
@@ -154,7 +154,7 @@ using nvic_ipr10_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"ipr_n3", std::uint8_t, 31, 24>,
                groov::field<"ipr_n2", std::uint8_t, 23, 16>,
                groov::field<"ipr_n1", std::uint8_t, 15, 8>,
@@ -169,7 +169,7 @@ using nvic_ipr11_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"ipr_n3", std::uint8_t, 31, 24>,
                groov::field<"ipr_n2", std::uint8_t, 23, 16>,
                groov::field<"ipr_n1", std::uint8_t, 15, 8>,
@@ -184,7 +184,7 @@ using nvic_ipr12_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"ipr_n3", std::uint8_t, 31, 24>,
                groov::field<"ipr_n2", std::uint8_t, 23, 16>,
                groov::field<"ipr_n1", std::uint8_t, 15, 8>,
@@ -199,7 +199,7 @@ using nvic_ipr13_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"ipr_n3", std::uint8_t, 31, 24>,
                groov::field<"ipr_n2", std::uint8_t, 23, 16>,
                groov::field<"ipr_n1", std::uint8_t, 15, 8>,
@@ -214,7 +214,7 @@ using nvic_ipr14_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"ipr_n3", std::uint8_t, 31, 24>,
                groov::field<"ipr_n2", std::uint8_t, 23, 16>,
                groov::field<"ipr_n1", std::uint8_t, 15, 8>,
@@ -229,7 +229,7 @@ using nvic_ipr15_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"ipr_n3", std::uint8_t, 31, 24>,
                groov::field<"ipr_n2", std::uint8_t, 23, 16>,
                groov::field<"ipr_n1", std::uint8_t, 15, 8>,
@@ -244,7 +244,7 @@ using nvic_ipr16_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"ipr_n3", std::uint8_t, 31, 24>,
                groov::field<"ipr_n2", std::uint8_t, 23, 16>,
                groov::field<"ipr_n1", std::uint8_t, 15, 8>,
@@ -259,7 +259,7 @@ using nvic_ipr17_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"ipr_n3", std::uint8_t, 31, 24>,
                groov::field<"ipr_n2", std::uint8_t, 23, 16>,
                groov::field<"ipr_n1", std::uint8_t, 15, 8>,
@@ -274,7 +274,7 @@ using nvic_ipr18_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"ipr_n3", std::uint8_t, 31, 24>,
                groov::field<"ipr_n2", std::uint8_t, 23, 16>,
                groov::field<"ipr_n1", std::uint8_t, 15, 8>,
@@ -289,7 +289,7 @@ using nvic_ipr19_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"ipr_n3", std::uint8_t, 31, 24>,
                groov::field<"ipr_n2", std::uint8_t, 23, 16>,
                groov::field<"ipr_n1", std::uint8_t, 15, 8>,
@@ -304,7 +304,7 @@ using nvic_ipr2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"ipr_n3", std::uint8_t, 31, 24>,
                groov::field<"ipr_n2", std::uint8_t, 23, 16>,
                groov::field<"ipr_n1", std::uint8_t, 15, 8>,
@@ -319,7 +319,7 @@ using nvic_ipr20_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"ipr_n3", std::uint8_t, 31, 24>,
                groov::field<"ipr_n2", std::uint8_t, 23, 16>,
                groov::field<"ipr_n1", std::uint8_t, 15, 8>,
@@ -334,8 +334,8 @@ using nvic_ipr21_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 0, access::ro>>;
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 0, common::access::ro>>;
 
 // nvic_ipr22_v1: IPR22
 // Used by: NVIC
@@ -346,8 +346,8 @@ using nvic_ipr22_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 0, access::ro>>;
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 0, common::access::ro>>;
 
 // nvic_ipr3_v1: IPR3
 // Used by: NVIC
@@ -358,7 +358,7 @@ using nvic_ipr3_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"ipr_n3", std::uint8_t, 31, 24>,
                groov::field<"ipr_n2", std::uint8_t, 23, 16>,
                groov::field<"ipr_n1", std::uint8_t, 15, 8>,
@@ -373,7 +373,7 @@ using nvic_ipr4_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"ipr_n3", std::uint8_t, 31, 24>,
                groov::field<"ipr_n2", std::uint8_t, 23, 16>,
                groov::field<"ipr_n1", std::uint8_t, 15, 8>,
@@ -388,7 +388,7 @@ using nvic_ipr5_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"ipr_n3", std::uint8_t, 31, 24>,
                groov::field<"ipr_n2", std::uint8_t, 23, 16>,
                groov::field<"ipr_n1", std::uint8_t, 15, 8>,
@@ -403,7 +403,7 @@ using nvic_ipr6_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"ipr_n3", std::uint8_t, 31, 24>,
                groov::field<"ipr_n2", std::uint8_t, 23, 16>,
                groov::field<"ipr_n1", std::uint8_t, 15, 8>,
@@ -418,7 +418,7 @@ using nvic_ipr7_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"ipr_n3", std::uint8_t, 31, 24>,
                groov::field<"ipr_n2", std::uint8_t, 23, 16>,
                groov::field<"ipr_n1", std::uint8_t, 15, 8>,
@@ -433,7 +433,7 @@ using nvic_ipr8_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"ipr_n3", std::uint8_t, 31, 24>,
                groov::field<"ipr_n2", std::uint8_t, 23, 16>,
                groov::field<"ipr_n1", std::uint8_t, 15, 8>,
@@ -448,7 +448,7 @@ using nvic_ipr9_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"ipr_n3", std::uint8_t, 31, 24>,
                groov::field<"ipr_n2", std::uint8_t, 23, 16>,
                groov::field<"ipr_n1", std::uint8_t, 15, 8>,
@@ -463,7 +463,7 @@ using nvic_iser0_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"setena", std::uint32_t, 31, 0>>;
 
 // nvic_iser1_v1: ISER1
@@ -475,7 +475,7 @@ using nvic_iser1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"setena", std::uint32_t, 31, 0>>;
 
 // nvic_iser2_v1: ISER2
@@ -487,7 +487,7 @@ using nvic_iser2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"setena", std::uint32_t, 31, 0>>;
 
 // nvic_ispr0_v1: ISPR0
@@ -499,7 +499,7 @@ using nvic_ispr0_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"setpend", std::uint32_t, 31, 0>>;
 
 // nvic_ispr1_v1: ISPR1
@@ -511,7 +511,7 @@ using nvic_ispr1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"setpend", std::uint32_t, 31, 0>>;
 
 // nvic_ispr2_v1: ISPR2
@@ -523,7 +523,7 @@ using nvic_ispr2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"setpend", std::uint32_t, 31, 0>>;
 
 // nvic_stir_v1: STIR
@@ -535,8 +535,8 @@ using nvic_stir_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 9, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 9, common::access::ro>,
                groov::field<"intid", std::uint16_t, 8, 0>>;
 
 } // namespace stm32::regs

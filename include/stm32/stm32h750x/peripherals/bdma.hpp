@@ -7,40 +7,142 @@
 namespace stm32::stm32h750x {
 
 namespace bdma {
-  using bdma_isr_tt = regs::bdma_bdma_isr_v1_tt;
-  using bdma_ifcr_tt = regs::bdma_bdma_ifcr_v1_tt;
-  using bdma_ccr1_tt = regs::bdma_bdma_ccr1_v1_tt;
-  using bdma_cndtr1_tt = regs::bdma_bdma_cndtr1_v1_tt;
-  using bdma_cpar1_tt = regs::bdma_bdma_cpar1_v1_tt;
-  using bdma_cmar1_tt = regs::bdma_bdma_cmar1_v1_tt;
-  using bdma_ccr2_tt = regs::bdma_bdma_ccr2_v1_tt;
-  using bdma_cndtr2_tt = regs::bdma_bdma_cndtr2_v1_tt;
-  using bdma_cpar2_tt = regs::bdma_bdma_cpar2_v1_tt;
-  using bdma_cmar2_tt = regs::bdma_bdma_cmar2_v1_tt;
-  using bdma_ccr3_tt = regs::bdma_bdma_ccr3_v1_tt;
-  using bdma_cndtr3_tt = regs::bdma_bdma_cndtr3_v1_tt;
-  using bdma_cpar3_tt = regs::bdma_bdma_cpar3_v1_tt;
-  using bdma_cmar3_tt = regs::bdma_bdma_cmar3_v1_tt;
-  using bdma_ccr4_tt = regs::bdma_bdma_ccr4_v1_tt;
-  using bdma_cndtr4_tt = regs::bdma_bdma_cndtr4_v1_tt;
-  using bdma_cpar4_tt = regs::bdma_bdma_cpar4_v1_tt;
-  using bdma_cmar4_tt = regs::bdma_bdma_cmar4_v1_tt;
-  using bdma_ccr5_tt = regs::bdma_bdma_ccr5_v1_tt;
-  using bdma_cndtr5_tt = regs::bdma_bdma_cndtr5_v1_tt;
-  using bdma_cpar5_tt = regs::bdma_bdma_cpar5_v1_tt;
-  using bdma_cmar5_tt = regs::bdma_bdma_cmar5_v1_tt;
-  using bdma_ccr6_tt = regs::bdma_bdma_ccr6_v1_tt;
-  using bdma_cndtr6_tt = regs::bdma_bdma_cndtr6_v1_tt;
-  using bdma_cpar6_tt = regs::bdma_bdma_cpar6_v1_tt;
-  using bdma_cmar6_tt = regs::bdma_bdma_cmar6_v1_tt;
-  using bdma_ccr7_tt = regs::bdma_bdma_ccr7_v1_tt;
-  using bdma_cndtr7_tt = regs::bdma_bdma_cndtr7_v1_tt;
-  using bdma_cpar7_tt = regs::bdma_bdma_cpar7_v1_tt;
-  using bdma_cmar7_tt = regs::bdma_bdma_cmar7_v1_tt;
-  using bdma_ccr8_tt = regs::bdma_bdma_ccr8_v1_tt;
-  using bdma_cndtr8_tt = regs::bdma_bdma_cndtr8_v1_tt;
-  using bdma_cpar8_tt = regs::bdma_bdma_cpar8_v1_tt;
-  using bdma_cmar8_tt = regs::bdma_bdma_cmar8_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using bdma_isr_tt = regs::bdma_bdma_isr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using bdma_ifcr_tt = regs::bdma_bdma_ifcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using bdma_ccr1_tt = regs::bdma_bdma_ccr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using bdma_cndtr1_tt = regs::bdma_bdma_cndtr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using bdma_cpar1_tt = regs::bdma_bdma_cpar1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using bdma_cmar1_tt = regs::bdma_bdma_cmar1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using bdma_ccr2_tt = regs::bdma_bdma_ccr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using bdma_cndtr2_tt = regs::bdma_bdma_cndtr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using bdma_cpar2_tt = regs::bdma_bdma_cpar2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using bdma_cmar2_tt = regs::bdma_bdma_cmar2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using bdma_ccr3_tt = regs::bdma_bdma_ccr3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using bdma_cndtr3_tt = regs::bdma_bdma_cndtr3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using bdma_cpar3_tt = regs::bdma_bdma_cpar3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using bdma_cmar3_tt = regs::bdma_bdma_cmar3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using bdma_ccr4_tt = regs::bdma_bdma_ccr4_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using bdma_cndtr4_tt = regs::bdma_bdma_cndtr4_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using bdma_cpar4_tt = regs::bdma_bdma_cpar4_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using bdma_cmar4_tt = regs::bdma_bdma_cmar4_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using bdma_ccr5_tt = regs::bdma_bdma_ccr5_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using bdma_cndtr5_tt = regs::bdma_bdma_cndtr5_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using bdma_cpar5_tt = regs::bdma_bdma_cpar5_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using bdma_cmar5_tt = regs::bdma_bdma_cmar5_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using bdma_ccr6_tt = regs::bdma_bdma_ccr6_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using bdma_cndtr6_tt = regs::bdma_bdma_cndtr6_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using bdma_cpar6_tt = regs::bdma_bdma_cpar6_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using bdma_cmar6_tt = regs::bdma_bdma_cmar6_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using bdma_ccr7_tt = regs::bdma_bdma_ccr7_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using bdma_cndtr7_tt = regs::bdma_bdma_cndtr7_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using bdma_cpar7_tt = regs::bdma_bdma_cpar7_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using bdma_cmar7_tt = regs::bdma_bdma_cmar7_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using bdma_ccr8_tt = regs::bdma_bdma_ccr8_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using bdma_cndtr8_tt = regs::bdma_bdma_cndtr8_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using bdma_cpar8_tt = regs::bdma_bdma_cpar8_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using bdma_cmar8_tt = regs::bdma_bdma_cmar8_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using bdma_t =

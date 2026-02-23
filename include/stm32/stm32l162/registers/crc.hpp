@@ -16,8 +16,8 @@ using crc_cr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::wo,
-               groov::field<"reserved0", std::uint32_t, 31, 1, access::ro>,
+             common::access::wo,
+               groov::field<"reserved0", std::uint32_t, 31, 1, common::access::ro>,
                groov::field<"reset", bool, 0, 0>>;
 
 // crc_dr_v1: DR
@@ -29,7 +29,7 @@ using crc_dr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"data_register", std::uint32_t, 31, 0>>;
 
 // crc_idr_v1: IDR
@@ -41,8 +41,8 @@ using crc_idr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 7, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 7, common::access::ro>,
                groov::field<"independent_data_register", std::uint8_t, 6, 0>>;
 
 } // namespace stm32::regs

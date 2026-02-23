@@ -16,14 +16,14 @@ using ramcfg_ram1cr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved3", std::uint16_t, 31, 19, access::ro>,
+             common::access::rw,
+               groov::field<"reserved3", std::uint16_t, 31, 19, common::access::ro>,
                groov::field<"wsc", std::uint8_t, 18, 16>,
-               groov::field<"reserved2", std::uint8_t, 15, 9, access::ro>,
+               groov::field<"reserved2", std::uint8_t, 15, 9, common::access::ro>,
                groov::field<"sramer", bool, 8, 8>,
-               groov::field<"reserved1", std::uint8_t, 7, 5, access::ro>,
+               groov::field<"reserved1", std::uint8_t, 7, 5, common::access::ro>,
                groov::field<"ale", bool, 4, 4>,
-               groov::field<"reserved0", std::uint8_t, 3, 1, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 3, 1, common::access::ro>,
                groov::field<"ecce", bool, 0, 0>>;
 
 // ramcfg_ram1erkeyr_v1: RAM1ERKEYR
@@ -35,8 +35,8 @@ using ramcfg_ram1erkeyr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::wo,
-               groov::field<"reserved0", std::uint32_t, 31, 8, access::ro>,
+             common::access::wo,
+               groov::field<"reserved0", std::uint32_t, 31, 8, common::access::ro>,
                groov::field<"erasekey", std::uint8_t, 7, 0>>;
 
 // ramcfg_ram1isr_v1: RAM1ISR
@@ -48,7 +48,7 @@ using ramcfg_ram1isr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved1", std::uint32_t, 31, 9>,
                groov::field<"srambusy", bool, 8, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 2>,
@@ -64,14 +64,14 @@ using ramcfg_ram2cr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved3", std::uint16_t, 31, 19, access::ro>,
+             common::access::rw,
+               groov::field<"reserved3", std::uint16_t, 31, 19, common::access::ro>,
                groov::field<"wsc", std::uint8_t, 18, 16>,
-               groov::field<"reserved2", std::uint8_t, 15, 9, access::ro>,
+               groov::field<"reserved2", std::uint8_t, 15, 9, common::access::ro>,
                groov::field<"sramer", bool, 8, 8>,
-               groov::field<"reserved1", std::uint8_t, 7, 5, access::ro>,
+               groov::field<"reserved1", std::uint8_t, 7, 5, common::access::ro>,
                groov::field<"ale", bool, 4, 4>,
-               groov::field<"reserved0", std::uint8_t, 3, 1, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 3, 1, common::access::ro>,
                groov::field<"ecce", bool, 0, 0>>;
 
 // ramcfg_ram2dear_v1: RAM2DEAR
@@ -83,7 +83,7 @@ using ramcfg_ram2dear_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"edea", std::uint32_t, 31, 0>>;
 
 // ramcfg_ram2ecckeyr_v1: RAM2ECCKEYR
@@ -95,8 +95,8 @@ using ramcfg_ram2ecckeyr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::wo,
-               groov::field<"reserved0", std::uint32_t, 31, 8, access::ro>,
+             common::access::wo,
+               groov::field<"reserved0", std::uint32_t, 31, 8, common::access::ro>,
                groov::field<"ecckey", std::uint8_t, 7, 0>>;
 
 // ramcfg_ram2erkeyr_v1: RAM2ERKEYR
@@ -108,8 +108,8 @@ using ramcfg_ram2erkeyr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::wo,
-               groov::field<"reserved0", std::uint32_t, 31, 8, access::ro>,
+             common::access::wo,
+               groov::field<"reserved0", std::uint32_t, 31, 8, common::access::ro>,
                groov::field<"erasekey", std::uint8_t, 7, 0>>;
 
 // ramcfg_ram2icr_v1: RAM2ICR
@@ -121,8 +121,8 @@ using ramcfg_ram2icr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 2, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 2, common::access::ro>,
                groov::field<"cded", bool, 1, 1>,
                groov::field<"csedc", bool, 0, 0>>;
 
@@ -135,12 +135,12 @@ using ramcfg_ram2ier_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint32_t, 31, 4, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint32_t, 31, 4, common::access::ro>,
                groov::field<"eccnmi", bool, 3, 3>,
-               groov::field<"reserved0", bool, 2, 2, access::ro>,
-               groov::field<"deie", bit_enable, 1, 1>,
-               groov::field<"seie", bit_enable, 0, 0>>;
+               groov::field<"reserved0", bool, 2, 2, common::access::ro>,
+               groov::field<"deie", common::bittypes::bit_enable, 1, 1>,
+               groov::field<"seie", common::bittypes::bit_enable, 0, 0>>;
 
 // ramcfg_ram2isr_v1: RAM2ISR
 // Used by: RAMCFG, SEC_RAMCFG
@@ -151,7 +151,7 @@ using ramcfg_ram2isr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved1", std::uint32_t, 31, 9>,
                groov::field<"srambusy", bool, 8, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 2>,
@@ -167,7 +167,7 @@ using ramcfg_ram2sear_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"esea", std::uint32_t, 31, 0>>;
 
 // ramcfg_ram2wpr1_v1: RAM2WPR1
@@ -179,7 +179,7 @@ using ramcfg_ram2wpr1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"p31wp", bool, 31, 31>,
                groov::field<"p30wp", bool, 30, 30>,
                groov::field<"p29wp", bool, 29, 29>,
@@ -222,7 +222,7 @@ using ramcfg_ram2wpr2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"p63wp", bool, 31, 31>,
                groov::field<"p62wp", bool, 30, 30>,
                groov::field<"p61wp", bool, 29, 29>,
@@ -265,14 +265,14 @@ using ramcfg_ram3cr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved3", std::uint16_t, 31, 19, access::ro>,
+             common::access::rw,
+               groov::field<"reserved3", std::uint16_t, 31, 19, common::access::ro>,
                groov::field<"wsc", std::uint8_t, 18, 16>,
-               groov::field<"reserved2", std::uint8_t, 15, 9, access::ro>,
+               groov::field<"reserved2", std::uint8_t, 15, 9, common::access::ro>,
                groov::field<"sramer", bool, 8, 8>,
-               groov::field<"reserved1", std::uint8_t, 7, 5, access::ro>,
+               groov::field<"reserved1", std::uint8_t, 7, 5, common::access::ro>,
                groov::field<"ale", bool, 4, 4>,
-               groov::field<"reserved0", std::uint8_t, 3, 1, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 3, 1, common::access::ro>,
                groov::field<"ecce", bool, 0, 0>>;
 
 // ramcfg_ram3dear_v1: RAM3DEAR
@@ -284,7 +284,7 @@ using ramcfg_ram3dear_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"edea", std::uint32_t, 31, 0>>;
 
 // ramcfg_ram3ecckeyr_v1: RAM3ECCKEYR
@@ -296,8 +296,8 @@ using ramcfg_ram3ecckeyr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::wo,
-               groov::field<"reserved0", std::uint32_t, 31, 8, access::ro>,
+             common::access::wo,
+               groov::field<"reserved0", std::uint32_t, 31, 8, common::access::ro>,
                groov::field<"ecckey", std::uint8_t, 7, 0>>;
 
 // ramcfg_ram3erkeyr_v1: RAM3ERKEYR
@@ -309,8 +309,8 @@ using ramcfg_ram3erkeyr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::wo,
-               groov::field<"reserved0", std::uint32_t, 31, 8, access::ro>,
+             common::access::wo,
+               groov::field<"reserved0", std::uint32_t, 31, 8, common::access::ro>,
                groov::field<"erasekey", std::uint8_t, 7, 0>>;
 
 // ramcfg_ram3icr_v1: RAM3ICR
@@ -322,8 +322,8 @@ using ramcfg_ram3icr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 2, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 2, common::access::ro>,
                groov::field<"cded", bool, 1, 1>,
                groov::field<"csedc", bool, 0, 0>>;
 
@@ -336,12 +336,12 @@ using ramcfg_ram3ier_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint32_t, 31, 4, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint32_t, 31, 4, common::access::ro>,
                groov::field<"eccnmi", bool, 3, 3>,
-               groov::field<"reserved0", bool, 2, 2, access::ro>,
-               groov::field<"deie", bit_enable, 1, 1>,
-               groov::field<"seie", bit_enable, 0, 0>>;
+               groov::field<"reserved0", bool, 2, 2, common::access::ro>,
+               groov::field<"deie", common::bittypes::bit_enable, 1, 1>,
+               groov::field<"seie", common::bittypes::bit_enable, 0, 0>>;
 
 // ramcfg_ram3isr_v1: RAM3ISR
 // Used by: RAMCFG, SEC_RAMCFG
@@ -352,7 +352,7 @@ using ramcfg_ram3isr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved1", std::uint32_t, 31, 9>,
                groov::field<"srambusy", bool, 8, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 2>,
@@ -368,7 +368,7 @@ using ramcfg_ram3sear_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"esea", std::uint32_t, 31, 0>>;
 
 // ramcfg_ram4cr_v1: RAM4CR
@@ -380,14 +380,14 @@ using ramcfg_ram4cr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved3", std::uint16_t, 31, 19, access::ro>,
+             common::access::rw,
+               groov::field<"reserved3", std::uint16_t, 31, 19, common::access::ro>,
                groov::field<"wsc", std::uint8_t, 18, 16>,
-               groov::field<"reserved2", std::uint8_t, 15, 9, access::ro>,
+               groov::field<"reserved2", std::uint8_t, 15, 9, common::access::ro>,
                groov::field<"sramer", bool, 8, 8>,
-               groov::field<"reserved1", std::uint8_t, 7, 5, access::ro>,
+               groov::field<"reserved1", std::uint8_t, 7, 5, common::access::ro>,
                groov::field<"ale", bool, 4, 4>,
-               groov::field<"reserved0", std::uint8_t, 3, 1, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 3, 1, common::access::ro>,
                groov::field<"ecce", bool, 0, 0>>;
 
 // ramcfg_ram4erkeyr_v1: RAM4ERKEYR
@@ -399,8 +399,8 @@ using ramcfg_ram4erkeyr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::wo,
-               groov::field<"reserved0", std::uint32_t, 31, 8, access::ro>,
+             common::access::wo,
+               groov::field<"reserved0", std::uint32_t, 31, 8, common::access::ro>,
                groov::field<"erasekey", std::uint8_t, 7, 0>>;
 
 // ramcfg_ram4isr_v1: RAM4ISR
@@ -412,7 +412,7 @@ using ramcfg_ram4isr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved1", std::uint32_t, 31, 9>,
                groov::field<"srambusy", bool, 8, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 2>,
@@ -428,14 +428,14 @@ using ramcfg_ram5cr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved3", std::uint16_t, 31, 19, access::ro>,
+             common::access::rw,
+               groov::field<"reserved3", std::uint16_t, 31, 19, common::access::ro>,
                groov::field<"wsc", std::uint8_t, 18, 16>,
-               groov::field<"reserved2", std::uint8_t, 15, 9, access::ro>,
+               groov::field<"reserved2", std::uint8_t, 15, 9, common::access::ro>,
                groov::field<"sramer", bool, 8, 8>,
-               groov::field<"reserved1", std::uint8_t, 7, 5, access::ro>,
+               groov::field<"reserved1", std::uint8_t, 7, 5, common::access::ro>,
                groov::field<"ale", bool, 4, 4>,
-               groov::field<"reserved0", std::uint8_t, 3, 1, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 3, 1, common::access::ro>,
                groov::field<"ecce", bool, 0, 0>>;
 
 // ramcfg_ram5dear_v1: RAM5DEAR
@@ -447,7 +447,7 @@ using ramcfg_ram5dear_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"edea", std::uint32_t, 31, 0>>;
 
 // ramcfg_ram5icr_v1: RAM5ICR
@@ -459,8 +459,8 @@ using ramcfg_ram5icr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 2, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 2, common::access::ro>,
                groov::field<"cded", bool, 1, 1>,
                groov::field<"csedc", bool, 0, 0>>;
 
@@ -473,12 +473,12 @@ using ramcfg_ram5ier_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint32_t, 31, 4, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint32_t, 31, 4, common::access::ro>,
                groov::field<"eccnmi", bool, 3, 3>,
-               groov::field<"reserved0", bool, 2, 2, access::ro>,
-               groov::field<"deie", bit_enable, 1, 1>,
-               groov::field<"seie", bit_enable, 0, 0>>;
+               groov::field<"reserved0", bool, 2, 2, common::access::ro>,
+               groov::field<"deie", common::bittypes::bit_enable, 1, 1>,
+               groov::field<"seie", common::bittypes::bit_enable, 0, 0>>;
 
 // ramcfg_ram5isr_v1: RAM5ISR
 // Used by: RAMCFG, SEC_RAMCFG
@@ -489,7 +489,7 @@ using ramcfg_ram5isr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved1", std::uint32_t, 31, 9>,
                groov::field<"srambusy", bool, 8, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 2>,
@@ -505,7 +505,7 @@ using ramcfg_ram5sear_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"esea", std::uint32_t, 31, 0>>;
 
 } // namespace stm32::regs

@@ -7,30 +7,102 @@
 namespace stm32::stm32l562 {
 
 namespace sdmmcx {
-  using sdmmc_power_tt = regs::sdmmc_sdmmc_power_v1_tt;
-  using sdmmc_clkcr_tt = regs::sdmmc_sdmmc_clkcr_v1_tt;
-  using sdmmc_argr_tt = regs::sdmmc_sdmmc_argr_v1_tt;
-  using sdmmc_cmdr_tt = regs::sdmmc_sdmmc_cmdr_v1_tt;
-  using sdmmc_resp1r_tt = regs::sdmmc_sdmmc_resp1r_v1_tt;
-  using sdmmc_resp2r_tt = regs::sdmmc_sdmmc_resp2r_v1_tt;
-  using sdmmc_resp3r_tt = regs::sdmmc_sdmmc_resp3r_v1_tt;
-  using sdmmc_resp4r_tt = regs::sdmmc_sdmmc_resp4r_v1_tt;
-  using sdmmc_dtimer_tt = regs::sdmmc_sdmmc_dtimer_v1_tt;
-  using sdmmc_dlenr_tt = regs::sdmmc_sdmmc_dlenr_v1_tt;
-  using sdmmc_dctrl_tt = regs::sdmmc_sdmmc_dctrl_v1_tt;
-  using sdmmc_dcntr_tt = regs::sdmmc_sdmmc_dcntr_v1_tt;
-  using sdmmc_star_tt = regs::sdmmc_sdmmc_star_v1_tt;
-  using sdmmc_icr_tt = regs::sdmmc_sdmmc_icr_v1_tt;
-  using sdmmc_maskr_tt = regs::sdmmc_sdmmc_maskr_v1_tt;
-  using sdmmc_acktimer_tt = regs::sdmmc_sdmmc_acktimer_v1_tt;
-  using sdmmc_idmactrlr_tt = regs::sdmmc_sdmmc_idmactrlr_v1_tt;
-  using sdmmc_idmabsizer_tt = regs::sdmmc_sdmmc_idmabsizer_v1_tt;
-  using sdmmc_idmabase0r_tt = regs::sdmmc_sdmmc_idmabase0r_v1_tt;
-  using sdmmc_idmabase1r_tt = regs::sdmmc_sdmmc_idmabase1r_v1_tt;
-  using sdmmc_fifor_tt = regs::sdmmc_sdmmc_fifor_v1_tt;
-  using sdmmc_ver_tt = regs::sdmmc_sdmmc_ver_v1_tt;
-  using sdmmc_id_tt = regs::sdmmc_sdmmc_id_v1_tt;
-  using sdmmc_respcmdr_tt = regs::sdmmc_sdmmc_respcmdr_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using sdmmc_power_tt = regs::sdmmc_sdmmc_power_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using sdmmc_clkcr_tt = regs::sdmmc_sdmmc_clkcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using sdmmc_argr_tt = regs::sdmmc_sdmmc_argr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using sdmmc_cmdr_tt = regs::sdmmc_sdmmc_cmdr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using sdmmc_resp1r_tt = regs::sdmmc_sdmmc_resp1r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using sdmmc_resp2r_tt = regs::sdmmc_sdmmc_resp2r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using sdmmc_resp3r_tt = regs::sdmmc_sdmmc_resp3r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using sdmmc_resp4r_tt = regs::sdmmc_sdmmc_resp4r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using sdmmc_dtimer_tt = regs::sdmmc_sdmmc_dtimer_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using sdmmc_dlenr_tt = regs::sdmmc_sdmmc_dlenr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using sdmmc_dctrl_tt = regs::sdmmc_sdmmc_dctrl_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using sdmmc_dcntr_tt = regs::sdmmc_sdmmc_dcntr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using sdmmc_star_tt = regs::sdmmc_sdmmc_star_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using sdmmc_icr_tt = regs::sdmmc_sdmmc_icr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using sdmmc_maskr_tt = regs::sdmmc_sdmmc_maskr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using sdmmc_acktimer_tt = regs::sdmmc_sdmmc_acktimer_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using sdmmc_idmactrlr_tt = regs::sdmmc_sdmmc_idmactrlr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using sdmmc_idmabsizer_tt = regs::sdmmc_sdmmc_idmabsizer_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using sdmmc_idmabase0r_tt = regs::sdmmc_sdmmc_idmabase0r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using sdmmc_idmabase1r_tt = regs::sdmmc_sdmmc_idmabase1r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using sdmmc_fifor_tt = regs::sdmmc_sdmmc_fifor_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using sdmmc_ver_tt = regs::sdmmc_sdmmc_ver_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using sdmmc_id_tt = regs::sdmmc_sdmmc_id_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using sdmmc_respcmdr_tt = regs::sdmmc_sdmmc_respcmdr_v1_tt<name, baseaddress, offset>;
 
   template <stdx::ct_string name, std::uint32_t baseaddress>
   using sdmmcx_t =

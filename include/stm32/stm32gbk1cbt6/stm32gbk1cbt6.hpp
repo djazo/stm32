@@ -52,7 +52,7 @@ namespace detail {
 
 namespace stm32 {
 
-inline constexpr auto adc1 = [] consteval {
+constexpr auto adc1 = [] consteval {
   if constexpr (stm32gbk1cbt6::config::adc1) {
     return stm32gbk1cbt6::adcx::adcx_t<"adc1",stm32gbk1cbt6::adc1::ADC1_BASE>{};
   } else {
@@ -60,7 +60,7 @@ inline constexpr auto adc1 = [] consteval {
   }
 }();
 
-inline constexpr auto adc12_common = [] consteval {
+constexpr auto adc12_common = [] consteval {
   if constexpr (stm32gbk1cbt6::config::adc12_common) {
     return stm32gbk1cbt6::adcx_v2::adcx_v2_t<"adc12_common",stm32gbk1cbt6::adc12_common::ADC12_COMMON_BASE>{};
   } else {
@@ -68,7 +68,7 @@ inline constexpr auto adc12_common = [] consteval {
   }
 }();
 
-inline constexpr auto adc2 = [] consteval {
+constexpr auto adc2 = [] consteval {
   if constexpr (stm32gbk1cbt6::config::adc2) {
     return stm32gbk1cbt6::adcx::adcx_t<"adc2",stm32gbk1cbt6::adc2::ADC2_BASE>{};
   } else {
@@ -76,7 +76,7 @@ inline constexpr auto adc2 = [] consteval {
   }
 }();
 
-inline constexpr auto adc345_common = [] consteval {
+constexpr auto adc345_common = [] consteval {
   if constexpr (stm32gbk1cbt6::config::adc345_common) {
     return stm32gbk1cbt6::adcx_v2::adcx_v2_t<"adc345_common",stm32gbk1cbt6::adc345_common::ADC345_COMMON_BASE>{};
   } else {
@@ -84,7 +84,7 @@ inline constexpr auto adc345_common = [] consteval {
   }
 }();
 
-inline constexpr auto aes = [] consteval {
+constexpr auto aes = [] consteval {
   if constexpr (stm32gbk1cbt6::config::aes) {
     return stm32gbk1cbt6::aes::aes_t<stm32gbk1cbt6::aes::AES_BASE>{};
   } else {
@@ -92,7 +92,7 @@ inline constexpr auto aes = [] consteval {
   }
 }();
 
-inline constexpr auto comp = [] consteval {
+constexpr auto comp = [] consteval {
   if constexpr (stm32gbk1cbt6::config::comp) {
     return stm32gbk1cbt6::comp::comp_t<stm32gbk1cbt6::comp::COMP_BASE>{};
   } else {
@@ -100,7 +100,7 @@ inline constexpr auto comp = [] consteval {
   }
 }();
 
-inline constexpr auto cordic = [] consteval {
+constexpr auto cordic = [] consteval {
   if constexpr (stm32gbk1cbt6::config::cordic) {
     return stm32gbk1cbt6::cordic::cordic_t<stm32gbk1cbt6::cordic::CORDIC_BASE>{};
   } else {
@@ -108,7 +108,7 @@ inline constexpr auto cordic = [] consteval {
   }
 }();
 
-inline constexpr auto crc = [] consteval {
+constexpr auto crc = [] consteval {
   if constexpr (stm32gbk1cbt6::config::crc) {
     return stm32gbk1cbt6::crc::crc_t<stm32gbk1cbt6::crc::CRC_BASE>{};
   } else {
@@ -116,7 +116,7 @@ inline constexpr auto crc = [] consteval {
   }
 }();
 
-inline constexpr auto crs = [] consteval {
+constexpr auto crs = [] consteval {
   if constexpr (stm32gbk1cbt6::config::crs) {
     return stm32gbk1cbt6::crs::crs_t<stm32gbk1cbt6::crs::CRS_BASE>{};
   } else {
@@ -124,7 +124,7 @@ inline constexpr auto crs = [] consteval {
   }
 }();
 
-inline constexpr auto dac1 = [] consteval {
+constexpr auto dac1 = [] consteval {
   if constexpr (stm32gbk1cbt6::config::dac1) {
     return stm32gbk1cbt6::dacx::dacx_t<"dac1",stm32gbk1cbt6::dac1::DAC1_BASE>{};
   } else {
@@ -132,7 +132,7 @@ inline constexpr auto dac1 = [] consteval {
   }
 }();
 
-inline constexpr auto dac2 = [] consteval {
+constexpr auto dac2 = [] consteval {
   if constexpr (stm32gbk1cbt6::config::dac2) {
     return stm32gbk1cbt6::dacx::dacx_t<"dac2",stm32gbk1cbt6::dac2::DAC2_BASE>{};
   } else {
@@ -140,7 +140,7 @@ inline constexpr auto dac2 = [] consteval {
   }
 }();
 
-inline constexpr auto dac3 = [] consteval {
+constexpr auto dac3 = [] consteval {
   if constexpr (stm32gbk1cbt6::config::dac3) {
     return stm32gbk1cbt6::dacx::dacx_t<"dac3",stm32gbk1cbt6::dac3::DAC3_BASE>{};
   } else {
@@ -148,7 +148,7 @@ inline constexpr auto dac3 = [] consteval {
   }
 }();
 
-inline constexpr auto dac4 = [] consteval {
+constexpr auto dac4 = [] consteval {
   if constexpr (stm32gbk1cbt6::config::dac4) {
     return stm32gbk1cbt6::dacx::dacx_t<"dac4",stm32gbk1cbt6::dac4::DAC4_BASE>{};
   } else {
@@ -156,7 +156,7 @@ inline constexpr auto dac4 = [] consteval {
   }
 }();
 
-inline constexpr auto dbgmcu = [] consteval {
+constexpr auto dbgmcu = [] consteval {
   if constexpr (stm32gbk1cbt6::config::dbgmcu) {
     return stm32gbk1cbt6::dbgmcu::dbgmcu_t<stm32gbk1cbt6::dbgmcu::DBGMCU_BASE>{};
   } else {
@@ -164,7 +164,7 @@ inline constexpr auto dbgmcu = [] consteval {
   }
 }();
 
-inline constexpr auto dma1 = [] consteval {
+constexpr auto dma1 = [] consteval {
   if constexpr (stm32gbk1cbt6::config::dma1) {
     return stm32gbk1cbt6::dmax::dmax_t<"dma1",stm32gbk1cbt6::dma1::DMA1_BASE>{};
   } else {
@@ -172,7 +172,7 @@ inline constexpr auto dma1 = [] consteval {
   }
 }();
 
-inline constexpr auto dma2 = [] consteval {
+constexpr auto dma2 = [] consteval {
   if constexpr (stm32gbk1cbt6::config::dma2) {
     return stm32gbk1cbt6::dmax::dmax_t<"dma2",stm32gbk1cbt6::dma2::DMA2_BASE>{};
   } else {
@@ -180,7 +180,7 @@ inline constexpr auto dma2 = [] consteval {
   }
 }();
 
-inline constexpr auto dmamux = [] consteval {
+constexpr auto dmamux = [] consteval {
   if constexpr (stm32gbk1cbt6::config::dmamux) {
     return stm32gbk1cbt6::dmamux::dmamux_t<stm32gbk1cbt6::dmamux::DMAMUX_BASE>{};
   } else {
@@ -188,7 +188,7 @@ inline constexpr auto dmamux = [] consteval {
   }
 }();
 
-inline constexpr auto exti = [] consteval {
+constexpr auto exti = [] consteval {
   if constexpr (stm32gbk1cbt6::config::exti) {
     return stm32gbk1cbt6::exti::exti_t<stm32gbk1cbt6::exti::EXTI_BASE>{};
   } else {
@@ -196,7 +196,7 @@ inline constexpr auto exti = [] consteval {
   }
 }();
 
-inline constexpr auto fdcan = [] consteval {
+constexpr auto fdcan = [] consteval {
   if constexpr (stm32gbk1cbt6::config::fdcan) {
     return stm32gbk1cbt6::fdcanx::fdcanx_t<"fdcan",stm32gbk1cbt6::fdcan::FDCAN_BASE>{};
   } else {
@@ -204,7 +204,7 @@ inline constexpr auto fdcan = [] consteval {
   }
 }();
 
-inline constexpr auto fdcan1 = [] consteval {
+constexpr auto fdcan1 = [] consteval {
   if constexpr (stm32gbk1cbt6::config::fdcan1) {
     return stm32gbk1cbt6::fdcanx::fdcanx_t<"fdcan1",stm32gbk1cbt6::fdcan1::FDCAN1_BASE>{};
   } else {
@@ -212,7 +212,7 @@ inline constexpr auto fdcan1 = [] consteval {
   }
 }();
 
-inline constexpr auto flash = [] consteval {
+constexpr auto flash = [] consteval {
   if constexpr (stm32gbk1cbt6::config::flash) {
     return stm32gbk1cbt6::flash::flash_t<stm32gbk1cbt6::flash::FLASH_BASE>{};
   } else {
@@ -220,7 +220,7 @@ inline constexpr auto flash = [] consteval {
   }
 }();
 
-inline constexpr auto fmac = [] consteval {
+constexpr auto fmac = [] consteval {
   if constexpr (stm32gbk1cbt6::config::fmac) {
     return stm32gbk1cbt6::fmac::fmac_t<stm32gbk1cbt6::fmac::FMAC_BASE>{};
   } else {
@@ -228,7 +228,7 @@ inline constexpr auto fmac = [] consteval {
   }
 }();
 
-inline constexpr auto fpu = [] consteval {
+constexpr auto fpu = [] consteval {
   if constexpr (stm32gbk1cbt6::config::fpu) {
     return stm32gbk1cbt6::fpu::fpu_t<stm32gbk1cbt6::fpu::FPU_BASE>{};
   } else {
@@ -236,7 +236,7 @@ inline constexpr auto fpu = [] consteval {
   }
 }();
 
-inline constexpr auto fpu_cpacr = [] consteval {
+constexpr auto fpu_cpacr = [] consteval {
   if constexpr (stm32gbk1cbt6::config::fpu_cpacr) {
     return stm32gbk1cbt6::fpu_cpacr::fpu_cpacr_t<stm32gbk1cbt6::fpu_cpacr::FPU_CPACR_BASE>{};
   } else {
@@ -244,23 +244,23 @@ inline constexpr auto fpu_cpacr = [] consteval {
   }
 }();
 
-inline constexpr auto gpioa = [] consteval {
+constexpr auto gpioa = [] consteval {
   if constexpr (stm32gbk1cbt6::config::gpioa) {
-    return stm32gbk1cbt6::gpiox::gpiox_t<"gpioa",stm32gbk1cbt6::gpioa::GPIOA_BASE>{};
+    return stm32gbk1cbt6::gpioa::gpioa_t<stm32gbk1cbt6::gpioa::GPIOA_BASE>{};
   } else {
     return stm32gbk1cbt6::detail::peripheral_disabled{};
   }
 }();
 
-inline constexpr auto gpiob = [] consteval {
+constexpr auto gpiob = [] consteval {
   if constexpr (stm32gbk1cbt6::config::gpiob) {
-    return stm32gbk1cbt6::gpiox::gpiox_t<"gpiob",stm32gbk1cbt6::gpiob::GPIOB_BASE>{};
+    return stm32gbk1cbt6::gpiob::gpiob_t<stm32gbk1cbt6::gpiob::GPIOB_BASE>{};
   } else {
     return stm32gbk1cbt6::detail::peripheral_disabled{};
   }
 }();
 
-inline constexpr auto gpioc = [] consteval {
+constexpr auto gpioc = [] consteval {
   if constexpr (stm32gbk1cbt6::config::gpioc) {
     return stm32gbk1cbt6::gpiox::gpiox_t<"gpioc",stm32gbk1cbt6::gpioc::GPIOC_BASE>{};
   } else {
@@ -268,7 +268,7 @@ inline constexpr auto gpioc = [] consteval {
   }
 }();
 
-inline constexpr auto gpiod = [] consteval {
+constexpr auto gpiod = [] consteval {
   if constexpr (stm32gbk1cbt6::config::gpiod) {
     return stm32gbk1cbt6::gpiox::gpiox_t<"gpiod",stm32gbk1cbt6::gpiod::GPIOD_BASE>{};
   } else {
@@ -276,7 +276,7 @@ inline constexpr auto gpiod = [] consteval {
   }
 }();
 
-inline constexpr auto gpioe = [] consteval {
+constexpr auto gpioe = [] consteval {
   if constexpr (stm32gbk1cbt6::config::gpioe) {
     return stm32gbk1cbt6::gpiox::gpiox_t<"gpioe",stm32gbk1cbt6::gpioe::GPIOE_BASE>{};
   } else {
@@ -284,7 +284,7 @@ inline constexpr auto gpioe = [] consteval {
   }
 }();
 
-inline constexpr auto gpiof = [] consteval {
+constexpr auto gpiof = [] consteval {
   if constexpr (stm32gbk1cbt6::config::gpiof) {
     return stm32gbk1cbt6::gpiox::gpiox_t<"gpiof",stm32gbk1cbt6::gpiof::GPIOF_BASE>{};
   } else {
@@ -292,7 +292,7 @@ inline constexpr auto gpiof = [] consteval {
   }
 }();
 
-inline constexpr auto gpiog = [] consteval {
+constexpr auto gpiog = [] consteval {
   if constexpr (stm32gbk1cbt6::config::gpiog) {
     return stm32gbk1cbt6::gpiox::gpiox_t<"gpiog",stm32gbk1cbt6::gpiog::GPIOG_BASE>{};
   } else {
@@ -300,7 +300,7 @@ inline constexpr auto gpiog = [] consteval {
   }
 }();
 
-inline constexpr auto i2c1 = [] consteval {
+constexpr auto i2c1 = [] consteval {
   if constexpr (stm32gbk1cbt6::config::i2c1) {
     return stm32gbk1cbt6::i2cx::i2cx_t<"i2c1",stm32gbk1cbt6::i2c1::I2C1_BASE>{};
   } else {
@@ -308,7 +308,7 @@ inline constexpr auto i2c1 = [] consteval {
   }
 }();
 
-inline constexpr auto i2c2 = [] consteval {
+constexpr auto i2c2 = [] consteval {
   if constexpr (stm32gbk1cbt6::config::i2c2) {
     return stm32gbk1cbt6::i2cx::i2cx_t<"i2c2",stm32gbk1cbt6::i2c2::I2C2_BASE>{};
   } else {
@@ -316,7 +316,7 @@ inline constexpr auto i2c2 = [] consteval {
   }
 }();
 
-inline constexpr auto i2c3 = [] consteval {
+constexpr auto i2c3 = [] consteval {
   if constexpr (stm32gbk1cbt6::config::i2c3) {
     return stm32gbk1cbt6::i2cx::i2cx_t<"i2c3",stm32gbk1cbt6::i2c3::I2C3_BASE>{};
   } else {
@@ -324,7 +324,7 @@ inline constexpr auto i2c3 = [] consteval {
   }
 }();
 
-inline constexpr auto iwdg = [] consteval {
+constexpr auto iwdg = [] consteval {
   if constexpr (stm32gbk1cbt6::config::iwdg) {
     return stm32gbk1cbt6::iwdg::iwdg_t<stm32gbk1cbt6::iwdg::IWDG_BASE>{};
   } else {
@@ -332,7 +332,7 @@ inline constexpr auto iwdg = [] consteval {
   }
 }();
 
-inline constexpr auto lptimer1 = [] consteval {
+constexpr auto lptimer1 = [] consteval {
   if constexpr (stm32gbk1cbt6::config::lptimer1) {
     return stm32gbk1cbt6::lptimer1::lptimer1_t<stm32gbk1cbt6::lptimer1::LPTIMER1_BASE>{};
   } else {
@@ -340,7 +340,7 @@ inline constexpr auto lptimer1 = [] consteval {
   }
 }();
 
-inline constexpr auto lpuart1 = [] consteval {
+constexpr auto lpuart1 = [] consteval {
   if constexpr (stm32gbk1cbt6::config::lpuart1) {
     return stm32gbk1cbt6::lpuart1::lpuart1_t<stm32gbk1cbt6::lpuart1::LPUART1_BASE>{};
   } else {
@@ -348,7 +348,7 @@ inline constexpr auto lpuart1 = [] consteval {
   }
 }();
 
-inline constexpr auto mpu = [] consteval {
+constexpr auto mpu = [] consteval {
   if constexpr (stm32gbk1cbt6::config::mpu) {
     return stm32gbk1cbt6::mpu::mpu_t<stm32gbk1cbt6::mpu::MPU_BASE>{};
   } else {
@@ -356,7 +356,7 @@ inline constexpr auto mpu = [] consteval {
   }
 }();
 
-inline constexpr auto nvic = [] consteval {
+constexpr auto nvic = [] consteval {
   if constexpr (stm32gbk1cbt6::config::nvic) {
     return stm32gbk1cbt6::nvic::nvic_t<stm32gbk1cbt6::nvic::NVIC_BASE>{};
   } else {
@@ -364,7 +364,7 @@ inline constexpr auto nvic = [] consteval {
   }
 }();
 
-inline constexpr auto nvic_stir = [] consteval {
+constexpr auto nvic_stir = [] consteval {
   if constexpr (stm32gbk1cbt6::config::nvic_stir) {
     return stm32gbk1cbt6::nvic_stir::nvic_stir_t<stm32gbk1cbt6::nvic_stir::NVIC_STIR_BASE>{};
   } else {
@@ -372,7 +372,7 @@ inline constexpr auto nvic_stir = [] consteval {
   }
 }();
 
-inline constexpr auto opamp = [] consteval {
+constexpr auto opamp = [] consteval {
   if constexpr (stm32gbk1cbt6::config::opamp) {
     return stm32gbk1cbt6::opamp::opamp_t<stm32gbk1cbt6::opamp::OPAMP_BASE>{};
   } else {
@@ -380,7 +380,7 @@ inline constexpr auto opamp = [] consteval {
   }
 }();
 
-inline constexpr auto pwr = [] consteval {
+constexpr auto pwr = [] consteval {
   if constexpr (stm32gbk1cbt6::config::pwr) {
     return stm32gbk1cbt6::pwr::pwr_t<stm32gbk1cbt6::pwr::PWR_BASE>{};
   } else {
@@ -388,7 +388,7 @@ inline constexpr auto pwr = [] consteval {
   }
 }();
 
-inline constexpr auto rcc = [] consteval {
+constexpr auto rcc = [] consteval {
   if constexpr (stm32gbk1cbt6::config::rcc) {
     return stm32gbk1cbt6::rcc::rcc_t<stm32gbk1cbt6::rcc::RCC_BASE>{};
   } else {
@@ -396,7 +396,7 @@ inline constexpr auto rcc = [] consteval {
   }
 }();
 
-inline constexpr auto rng = [] consteval {
+constexpr auto rng = [] consteval {
   if constexpr (stm32gbk1cbt6::config::rng) {
     return stm32gbk1cbt6::rng::rng_t<stm32gbk1cbt6::rng::RNG_BASE>{};
   } else {
@@ -404,7 +404,7 @@ inline constexpr auto rng = [] consteval {
   }
 }();
 
-inline constexpr auto rtc = [] consteval {
+constexpr auto rtc = [] consteval {
   if constexpr (stm32gbk1cbt6::config::rtc) {
     return stm32gbk1cbt6::rtc::rtc_t<stm32gbk1cbt6::rtc::RTC_BASE>{};
   } else {
@@ -412,7 +412,7 @@ inline constexpr auto rtc = [] consteval {
   }
 }();
 
-inline constexpr auto sai = [] consteval {
+constexpr auto sai = [] consteval {
   if constexpr (stm32gbk1cbt6::config::sai) {
     return stm32gbk1cbt6::sai::sai_t<stm32gbk1cbt6::sai::SAI_BASE>{};
   } else {
@@ -420,7 +420,7 @@ inline constexpr auto sai = [] consteval {
   }
 }();
 
-inline constexpr auto scb = [] consteval {
+constexpr auto scb = [] consteval {
   if constexpr (stm32gbk1cbt6::config::scb) {
     return stm32gbk1cbt6::scb::scb_t<stm32gbk1cbt6::scb::SCB_BASE>{};
   } else {
@@ -428,7 +428,7 @@ inline constexpr auto scb = [] consteval {
   }
 }();
 
-inline constexpr auto scb_actlr = [] consteval {
+constexpr auto scb_actlr = [] consteval {
   if constexpr (stm32gbk1cbt6::config::scb_actlr) {
     return stm32gbk1cbt6::scb_actlr::scb_actlr_t<stm32gbk1cbt6::scb_actlr::SCB_ACTLR_BASE>{};
   } else {
@@ -436,7 +436,7 @@ inline constexpr auto scb_actlr = [] consteval {
   }
 }();
 
-inline constexpr auto spi1 = [] consteval {
+constexpr auto spi1 = [] consteval {
   if constexpr (stm32gbk1cbt6::config::spi1) {
     return stm32gbk1cbt6::spix::spix_t<"spi1",stm32gbk1cbt6::spi1::SPI1_BASE>{};
   } else {
@@ -444,7 +444,7 @@ inline constexpr auto spi1 = [] consteval {
   }
 }();
 
-inline constexpr auto spi2 = [] consteval {
+constexpr auto spi2 = [] consteval {
   if constexpr (stm32gbk1cbt6::config::spi2) {
     return stm32gbk1cbt6::spix::spix_t<"spi2",stm32gbk1cbt6::spi2::SPI2_BASE>{};
   } else {
@@ -452,7 +452,7 @@ inline constexpr auto spi2 = [] consteval {
   }
 }();
 
-inline constexpr auto spi3 = [] consteval {
+constexpr auto spi3 = [] consteval {
   if constexpr (stm32gbk1cbt6::config::spi3) {
     return stm32gbk1cbt6::spix::spix_t<"spi3",stm32gbk1cbt6::spi3::SPI3_BASE>{};
   } else {
@@ -460,7 +460,7 @@ inline constexpr auto spi3 = [] consteval {
   }
 }();
 
-inline constexpr auto stk = [] consteval {
+constexpr auto stk = [] consteval {
   if constexpr (stm32gbk1cbt6::config::stk) {
     return stm32gbk1cbt6::stk::stk_t<stm32gbk1cbt6::stk::STK_BASE>{};
   } else {
@@ -468,7 +468,7 @@ inline constexpr auto stk = [] consteval {
   }
 }();
 
-inline constexpr auto syscfg = [] consteval {
+constexpr auto syscfg = [] consteval {
   if constexpr (stm32gbk1cbt6::config::syscfg) {
     return stm32gbk1cbt6::syscfg::syscfg_t<stm32gbk1cbt6::syscfg::SYSCFG_BASE>{};
   } else {
@@ -476,7 +476,7 @@ inline constexpr auto syscfg = [] consteval {
   }
 }();
 
-inline constexpr auto tamp = [] consteval {
+constexpr auto tamp = [] consteval {
   if constexpr (stm32gbk1cbt6::config::tamp) {
     return stm32gbk1cbt6::tamp::tamp_t<stm32gbk1cbt6::tamp::TAMP_BASE>{};
   } else {
@@ -484,7 +484,7 @@ inline constexpr auto tamp = [] consteval {
   }
 }();
 
-inline constexpr auto tim1 = [] consteval {
+constexpr auto tim1 = [] consteval {
   if constexpr (stm32gbk1cbt6::config::tim1) {
     return stm32gbk1cbt6::timx_v2::timx_v2_t<"tim1",stm32gbk1cbt6::tim1::TIM1_BASE>{};
   } else {
@@ -492,7 +492,7 @@ inline constexpr auto tim1 = [] consteval {
   }
 }();
 
-inline constexpr auto tim15 = [] consteval {
+constexpr auto tim15 = [] consteval {
   if constexpr (stm32gbk1cbt6::config::tim15) {
     return stm32gbk1cbt6::tim15::tim15_t<stm32gbk1cbt6::tim15::TIM15_BASE>{};
   } else {
@@ -500,7 +500,7 @@ inline constexpr auto tim15 = [] consteval {
   }
 }();
 
-inline constexpr auto tim16 = [] consteval {
+constexpr auto tim16 = [] consteval {
   if constexpr (stm32gbk1cbt6::config::tim16) {
     return stm32gbk1cbt6::timx::timx_t<"tim16",stm32gbk1cbt6::tim16::TIM16_BASE>{};
   } else {
@@ -508,7 +508,7 @@ inline constexpr auto tim16 = [] consteval {
   }
 }();
 
-inline constexpr auto tim17 = [] consteval {
+constexpr auto tim17 = [] consteval {
   if constexpr (stm32gbk1cbt6::config::tim17) {
     return stm32gbk1cbt6::timx::timx_t<"tim17",stm32gbk1cbt6::tim17::TIM17_BASE>{};
   } else {
@@ -516,7 +516,7 @@ inline constexpr auto tim17 = [] consteval {
   }
 }();
 
-inline constexpr auto tim2 = [] consteval {
+constexpr auto tim2 = [] consteval {
   if constexpr (stm32gbk1cbt6::config::tim2) {
     return stm32gbk1cbt6::timx_v3::timx_v3_t<"tim2",stm32gbk1cbt6::tim2::TIM2_BASE>{};
   } else {
@@ -524,7 +524,7 @@ inline constexpr auto tim2 = [] consteval {
   }
 }();
 
-inline constexpr auto tim3 = [] consteval {
+constexpr auto tim3 = [] consteval {
   if constexpr (stm32gbk1cbt6::config::tim3) {
     return stm32gbk1cbt6::timx_v3::timx_v3_t<"tim3",stm32gbk1cbt6::tim3::TIM3_BASE>{};
   } else {
@@ -532,7 +532,7 @@ inline constexpr auto tim3 = [] consteval {
   }
 }();
 
-inline constexpr auto tim4 = [] consteval {
+constexpr auto tim4 = [] consteval {
   if constexpr (stm32gbk1cbt6::config::tim4) {
     return stm32gbk1cbt6::timx_v3::timx_v3_t<"tim4",stm32gbk1cbt6::tim4::TIM4_BASE>{};
   } else {
@@ -540,7 +540,7 @@ inline constexpr auto tim4 = [] consteval {
   }
 }();
 
-inline constexpr auto tim6 = [] consteval {
+constexpr auto tim6 = [] consteval {
   if constexpr (stm32gbk1cbt6::config::tim6) {
     return stm32gbk1cbt6::timx_v4::timx_v4_t<"tim6",stm32gbk1cbt6::tim6::TIM6_BASE>{};
   } else {
@@ -548,7 +548,7 @@ inline constexpr auto tim6 = [] consteval {
   }
 }();
 
-inline constexpr auto tim7 = [] consteval {
+constexpr auto tim7 = [] consteval {
   if constexpr (stm32gbk1cbt6::config::tim7) {
     return stm32gbk1cbt6::timx_v4::timx_v4_t<"tim7",stm32gbk1cbt6::tim7::TIM7_BASE>{};
   } else {
@@ -556,7 +556,7 @@ inline constexpr auto tim7 = [] consteval {
   }
 }();
 
-inline constexpr auto tim8 = [] consteval {
+constexpr auto tim8 = [] consteval {
   if constexpr (stm32gbk1cbt6::config::tim8) {
     return stm32gbk1cbt6::timx_v2::timx_v2_t<"tim8",stm32gbk1cbt6::tim8::TIM8_BASE>{};
   } else {
@@ -564,7 +564,7 @@ inline constexpr auto tim8 = [] consteval {
   }
 }();
 
-inline constexpr auto ucpd1 = [] consteval {
+constexpr auto ucpd1 = [] consteval {
   if constexpr (stm32gbk1cbt6::config::ucpd1) {
     return stm32gbk1cbt6::ucpd1::ucpd1_t<stm32gbk1cbt6::ucpd1::UCPD1_BASE>{};
   } else {
@@ -572,7 +572,7 @@ inline constexpr auto ucpd1 = [] consteval {
   }
 }();
 
-inline constexpr auto usart1 = [] consteval {
+constexpr auto usart1 = [] consteval {
   if constexpr (stm32gbk1cbt6::config::usart1) {
     return stm32gbk1cbt6::usartx::usartx_t<"usart1",stm32gbk1cbt6::usart1::USART1_BASE>{};
   } else {
@@ -580,7 +580,7 @@ inline constexpr auto usart1 = [] consteval {
   }
 }();
 
-inline constexpr auto usart2 = [] consteval {
+constexpr auto usart2 = [] consteval {
   if constexpr (stm32gbk1cbt6::config::usart2) {
     return stm32gbk1cbt6::usartx::usartx_t<"usart2",stm32gbk1cbt6::usart2::USART2_BASE>{};
   } else {
@@ -588,7 +588,7 @@ inline constexpr auto usart2 = [] consteval {
   }
 }();
 
-inline constexpr auto usart3 = [] consteval {
+constexpr auto usart3 = [] consteval {
   if constexpr (stm32gbk1cbt6::config::usart3) {
     return stm32gbk1cbt6::usartx::usartx_t<"usart3",stm32gbk1cbt6::usart3::USART3_BASE>{};
   } else {
@@ -596,7 +596,7 @@ inline constexpr auto usart3 = [] consteval {
   }
 }();
 
-inline constexpr auto usb_fs_device = [] consteval {
+constexpr auto usb_fs_device = [] consteval {
   if constexpr (stm32gbk1cbt6::config::usb_fs_device) {
     return stm32gbk1cbt6::usb_fs_device::usb_fs_device_t<stm32gbk1cbt6::usb_fs_device::USB_FS_DEVICE_BASE>{};
   } else {
@@ -604,7 +604,7 @@ inline constexpr auto usb_fs_device = [] consteval {
   }
 }();
 
-inline constexpr auto wwdg = [] consteval {
+constexpr auto wwdg = [] consteval {
   if constexpr (stm32gbk1cbt6::config::wwdg) {
     return stm32gbk1cbt6::wwdg::wwdg_t<stm32gbk1cbt6::wwdg::WWDG_BASE>{};
   } else {

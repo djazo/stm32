@@ -7,43 +7,154 @@
 namespace stm32::stm32g0c1 {
 
 namespace fdcanx {
-  using fdcan_crel_tt = regs::fdcan_fdcan_crel_v1_tt;
-  using fdcan_endn_tt = regs::fdcan_fdcan_endn_v1_tt;
-  using fdcan_dbtp_tt = regs::fdcan_fdcan_dbtp_v1_tt;
-  using fdcan_test_tt = regs::fdcan_fdcan_test_v1_tt;
-  using fdcan_rwd_tt = regs::fdcan_fdcan_rwd_v1_tt;
-  using fdcan_cccr_tt = regs::fdcan_fdcan_cccr_v1_tt;
-  using fdcan_nbtp_tt = regs::fdcan_fdcan_nbtp_v1_tt;
-  using fdcan_tscc_tt = regs::fdcan_fdcan_tscc_v1_tt;
-  using fdcan_tscv_tt = regs::fdcan_fdcan_tscv_v1_tt;
-  using fdcan_tocc_tt = regs::fdcan_fdcan_tocc_v1_tt;
-  using fdcan_tocv_tt = regs::fdcan_fdcan_tocv_v1_tt;
-  using fdcan_ecr_tt = regs::fdcan_fdcan_ecr_v1_tt;
-  using fdcan_psr_tt = regs::fdcan_fdcan_psr_v1_tt;
-  using fdcan_tdcr_tt = regs::fdcan_fdcan_tdcr_v1_tt;
-  using fdcan_ir_tt = regs::fdcan_fdcan_ir_v1_tt;
-  using fdcan_ie_tt = regs::fdcan_fdcan_ie_v1_tt;
-  using fdcan_ils_tt = regs::fdcan_fdcan_ils_v1_tt;
-  using fdcan_ile_tt = regs::fdcan_fdcan_ile_v1_tt;
-  using fdcan_rxgfc_tt = regs::fdcan_fdcan_rxgfc_v1_tt;
-  using fdcan_xidam_tt = regs::fdcan_fdcan_xidam_v1_tt;
-  using fdcan_hpms_tt = regs::fdcan_fdcan_hpms_v1_tt;
-  using fdcan_rxf0s_tt = regs::fdcan_fdcan_rxf0s_v1_tt;
-  using fdcan_rxf0a_tt = regs::fdcan_fdcan_rxf0a_v1_tt;
-  using fdcan_rxf1s_tt = regs::fdcan_fdcan_rxf1s_v1_tt;
-  using fdcan_rxf1a_tt = regs::fdcan_fdcan_rxf1a_v1_tt;
-  using fdcan_txbc_tt = regs::fdcan_fdcan_txbc_v1_tt;
-  using fdcan_txfqs_tt = regs::fdcan_fdcan_txfqs_v1_tt;
-  using fdcan_txbrp_tt = regs::fdcan_fdcan_txbrp_v1_tt;
-  using fdcan_txbar_tt = regs::fdcan_fdcan_txbar_v1_tt;
-  using fdcan_txbcr_tt = regs::fdcan_fdcan_txbcr_v1_tt;
-  using fdcan_txbto_tt = regs::fdcan_fdcan_txbto_v1_tt;
-  using fdcan_txbcf_tt = regs::fdcan_fdcan_txbcf_v1_tt;
-  using fdcan_txbtie_tt = regs::fdcan_fdcan_txbtie_v1_tt;
-  using fdcan_txbcie_tt = regs::fdcan_fdcan_txbcie_v1_tt;
-  using fdcan_txefs_tt = regs::fdcan_fdcan_txefs_v1_tt;
-  using fdcan_txefa_tt = regs::fdcan_fdcan_txefa_v1_tt;
-  using fdcan_ckdiv_tt = regs::fdcan_fdcan_ckdiv_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fdcan_crel_tt = regs::fdcan_fdcan_crel_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fdcan_endn_tt = regs::fdcan_fdcan_endn_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fdcan_dbtp_tt = regs::fdcan_fdcan_dbtp_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fdcan_test_tt = regs::fdcan_fdcan_test_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fdcan_rwd_tt = regs::fdcan_fdcan_rwd_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fdcan_cccr_tt = regs::fdcan_fdcan_cccr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fdcan_nbtp_tt = regs::fdcan_fdcan_nbtp_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fdcan_tscc_tt = regs::fdcan_fdcan_tscc_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fdcan_tscv_tt = regs::fdcan_fdcan_tscv_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fdcan_tocc_tt = regs::fdcan_fdcan_tocc_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fdcan_tocv_tt = regs::fdcan_fdcan_tocv_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fdcan_ecr_tt = regs::fdcan_fdcan_ecr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fdcan_psr_tt = regs::fdcan_fdcan_psr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fdcan_tdcr_tt = regs::fdcan_fdcan_tdcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fdcan_ir_tt = regs::fdcan_fdcan_ir_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fdcan_ie_tt = regs::fdcan_fdcan_ie_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fdcan_ils_tt = regs::fdcan_fdcan_ils_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fdcan_ile_tt = regs::fdcan_fdcan_ile_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fdcan_rxgfc_tt = regs::fdcan_fdcan_rxgfc_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fdcan_xidam_tt = regs::fdcan_fdcan_xidam_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fdcan_hpms_tt = regs::fdcan_fdcan_hpms_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fdcan_rxf0s_tt = regs::fdcan_fdcan_rxf0s_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fdcan_rxf0a_tt = regs::fdcan_fdcan_rxf0a_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fdcan_rxf1s_tt = regs::fdcan_fdcan_rxf1s_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fdcan_rxf1a_tt = regs::fdcan_fdcan_rxf1a_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fdcan_txbc_tt = regs::fdcan_fdcan_txbc_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fdcan_txfqs_tt = regs::fdcan_fdcan_txfqs_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fdcan_txbrp_tt = regs::fdcan_fdcan_txbrp_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fdcan_txbar_tt = regs::fdcan_fdcan_txbar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fdcan_txbcr_tt = regs::fdcan_fdcan_txbcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fdcan_txbto_tt = regs::fdcan_fdcan_txbto_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fdcan_txbcf_tt = regs::fdcan_fdcan_txbcf_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fdcan_txbtie_tt = regs::fdcan_fdcan_txbtie_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fdcan_txbcie_tt = regs::fdcan_fdcan_txbcie_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fdcan_txefs_tt = regs::fdcan_fdcan_txefs_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fdcan_txefa_tt = regs::fdcan_fdcan_txefa_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fdcan_ckdiv_tt = regs::fdcan_fdcan_ckdiv_v1_tt<name, baseaddress, offset>;
 
   template <stdx::ct_string name, std::uint32_t baseaddress>
   using fdcanx_t =

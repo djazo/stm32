@@ -16,7 +16,7 @@ using usb_otg_hs_otg_hs_cid_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"product_id", std::uint32_t, 31, 0>>;
 
 // usb_otg_hs_otg_hs_daint_v1: OTG_HS_DAINT
@@ -28,7 +28,7 @@ using usb_otg_hs_otg_hs_daint_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"oepint", std::uint16_t, 31, 16>,
                groov::field<"iepint", std::uint16_t, 15, 0>>;
 
@@ -41,7 +41,7 @@ using usb_otg_hs_otg_hs_daintmsk_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"oepm", std::uint16_t, 31, 16>,
                groov::field<"iepm", std::uint16_t, 15, 0>>;
 
@@ -54,13 +54,13 @@ using usb_otg_hs_otg_hs_dcfg_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved2", std::uint8_t, 31, 26, access::ro>,
+             common::access::rw,
+               groov::field<"reserved2", std::uint8_t, 31, 26, common::access::ro>,
                groov::field<"perschivl", std::uint8_t, 25, 24>,
-               groov::field<"reserved1", std::uint16_t, 23, 13, access::ro>,
+               groov::field<"reserved1", std::uint16_t, 23, 13, common::access::ro>,
                groov::field<"pfivl", std::uint8_t, 12, 11>,
                groov::field<"dad", std::uint8_t, 10, 4>,
-               groov::field<"reserved0", bool, 3, 3, access::ro>,
+               groov::field<"reserved0", bool, 3, 3, common::access::ro>,
                groov::field<"nzlsohsk", bool, 2, 2>,
                groov::field<"dspd", std::uint8_t, 1, 0>>;
 
@@ -73,17 +73,17 @@ using usb_otg_hs_otg_hs_dctl_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 12, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 12, common::access::ro>,
                groov::field<"poprgdne", bool, 11, 11>,
-               groov::field<"cgonak", bool, 10, 10, access::wo>,
-               groov::field<"sgonak", bool, 9, 9, access::wo>,
-               groov::field<"cginak", bool, 8, 8, access::wo>,
-               groov::field<"sginak", bool, 7, 7, access::wo>,
+               groov::field<"cgonak", bool, 10, 10, common::access::wo>,
+               groov::field<"sgonak", bool, 9, 9, common::access::wo>,
+               groov::field<"cginak", bool, 8, 8, common::access::wo>,
+               groov::field<"sginak", bool, 7, 7, common::access::wo>,
                groov::field<"tctl", std::uint8_t, 6, 4>,
-               groov::field<"gonsts", bool, 3, 3, access::ro>,
-               groov::field<"ginsts", bool, 2, 2, access::ro>,
-               groov::field<"sdis", bit_enable_bar, 1, 1>,
+               groov::field<"gonsts", bool, 3, 3, common::access::ro>,
+               groov::field<"ginsts", bool, 2, 2, common::access::ro>,
+               groov::field<"sdis", common::bittypes::bit_enable_bar, 1, 1>,
                groov::field<"rwusig", bool, 0, 0>>;
 
 // usb_otg_hs_otg_hs_deachint_v1: OTG_HS_DEACHINT
@@ -95,12 +95,12 @@ using usb_otg_hs_otg_hs_deachint_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved2", std::uint16_t, 31, 18, access::ro>,
+             common::access::rw,
+               groov::field<"reserved2", std::uint16_t, 31, 18, common::access::ro>,
                groov::field<"oep1int", bool, 17, 17>,
-               groov::field<"reserved1", std::uint16_t, 16, 2, access::ro>,
+               groov::field<"reserved1", std::uint16_t, 16, 2, common::access::ro>,
                groov::field<"iep1int", bool, 1, 1>,
-               groov::field<"reserved0", bool, 0, 0, access::ro>>;
+               groov::field<"reserved0", bool, 0, 0, common::access::ro>>;
 
 // usb_otg_hs_otg_hs_deachintmsk_v1: OTG_HS_DEACHINTMSK
 // Used by: OTG_HS_DEVICE
@@ -111,12 +111,12 @@ using usb_otg_hs_otg_hs_deachintmsk_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved2", std::uint16_t, 31, 18, access::ro>,
+             common::access::rw,
+               groov::field<"reserved2", std::uint16_t, 31, 18, common::access::ro>,
                groov::field<"oep1intm", bool, 17, 17>,
-               groov::field<"reserved1", std::uint16_t, 16, 2, access::ro>,
+               groov::field<"reserved1", std::uint16_t, 16, 2, common::access::ro>,
                groov::field<"iep1intm", bool, 1, 1>,
-               groov::field<"reserved0", bool, 0, 0, access::ro>>;
+               groov::field<"reserved0", bool, 0, 0, common::access::ro>>;
 
 // usb_otg_hs_otg_hs_diepctl0_v1: OTG_HS_DIEPCTL0
 // Used by: OTG_HS_DEVICE
@@ -127,21 +127,21 @@ using usb_otg_hs_otg_hs_diepctl0_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"epena", bool, 31, 31>,
-               groov::field<"epdis", bit_enable_bar, 30, 30>,
-               groov::field<"soddfrm", bool, 29, 29, access::wo>,
-               groov::field<"sd0pid_sevnfrm", bool, 28, 28, access::wo>,
-               groov::field<"snak", bool, 27, 27, access::wo>,
-               groov::field<"cnak", bool, 26, 26, access::wo>,
+               groov::field<"epdis", common::bittypes::bit_enable_bar, 30, 30>,
+               groov::field<"soddfrm", bool, 29, 29, common::access::wo>,
+               groov::field<"sd0pid_sevnfrm", bool, 28, 28, common::access::wo>,
+               groov::field<"snak", bool, 27, 27, common::access::wo>,
+               groov::field<"cnak", bool, 26, 26, common::access::wo>,
                groov::field<"txfnum", std::uint8_t, 25, 22>,
                groov::field<"stall", bool, 21, 21>,
-               groov::field<"reserved1", bool, 20, 20, access::ro>,
+               groov::field<"reserved1", bool, 20, 20, common::access::ro>,
                groov::field<"eptyp", std::uint8_t, 19, 18>,
-               groov::field<"naksts", bool, 17, 17, access::ro>,
-               groov::field<"eonum_dpid", bool, 16, 16, access::ro>,
+               groov::field<"naksts", bool, 17, 17, common::access::ro>,
+               groov::field<"eonum_dpid", bool, 16, 16, common::access::ro>,
                groov::field<"usbaep", bool, 15, 15>,
-               groov::field<"reserved0", std::uint8_t, 14, 11, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 14, 11, common::access::ro>,
                groov::field<"mpsiz", std::uint16_t, 10, 0>>;
 
 // usb_otg_hs_otg_hs_diepctl1_v1: OTG_HS_DIEPCTL1
@@ -153,21 +153,21 @@ using usb_otg_hs_otg_hs_diepctl1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"epena", bool, 31, 31>,
-               groov::field<"epdis", bit_enable_bar, 30, 30>,
-               groov::field<"soddfrm", bool, 29, 29, access::wo>,
-               groov::field<"sd0pid_sevnfrm", bool, 28, 28, access::wo>,
-               groov::field<"snak", bool, 27, 27, access::wo>,
-               groov::field<"cnak", bool, 26, 26, access::wo>,
+               groov::field<"epdis", common::bittypes::bit_enable_bar, 30, 30>,
+               groov::field<"soddfrm", bool, 29, 29, common::access::wo>,
+               groov::field<"sd0pid_sevnfrm", bool, 28, 28, common::access::wo>,
+               groov::field<"snak", bool, 27, 27, common::access::wo>,
+               groov::field<"cnak", bool, 26, 26, common::access::wo>,
                groov::field<"txfnum", std::uint8_t, 25, 22>,
                groov::field<"stall", bool, 21, 21>,
-               groov::field<"reserved1", bool, 20, 20, access::ro>,
+               groov::field<"reserved1", bool, 20, 20, common::access::ro>,
                groov::field<"eptyp", std::uint8_t, 19, 18>,
-               groov::field<"naksts", bool, 17, 17, access::ro>,
-               groov::field<"eonum_dpid", bool, 16, 16, access::ro>,
+               groov::field<"naksts", bool, 17, 17, common::access::ro>,
+               groov::field<"eonum_dpid", bool, 16, 16, common::access::ro>,
                groov::field<"usbaep", bool, 15, 15>,
-               groov::field<"reserved0", std::uint8_t, 14, 11, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 14, 11, common::access::ro>,
                groov::field<"mpsiz", std::uint16_t, 10, 0>>;
 
 // usb_otg_hs_otg_hs_diepctl2_v1: OTG_HS_DIEPCTL2
@@ -179,21 +179,21 @@ using usb_otg_hs_otg_hs_diepctl2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"epena", bool, 31, 31>,
-               groov::field<"epdis", bit_enable_bar, 30, 30>,
-               groov::field<"soddfrm", bool, 29, 29, access::wo>,
-               groov::field<"sd0pid_sevnfrm", bool, 28, 28, access::wo>,
-               groov::field<"snak", bool, 27, 27, access::wo>,
-               groov::field<"cnak", bool, 26, 26, access::wo>,
+               groov::field<"epdis", common::bittypes::bit_enable_bar, 30, 30>,
+               groov::field<"soddfrm", bool, 29, 29, common::access::wo>,
+               groov::field<"sd0pid_sevnfrm", bool, 28, 28, common::access::wo>,
+               groov::field<"snak", bool, 27, 27, common::access::wo>,
+               groov::field<"cnak", bool, 26, 26, common::access::wo>,
                groov::field<"txfnum", std::uint8_t, 25, 22>,
                groov::field<"stall", bool, 21, 21>,
-               groov::field<"reserved1", bool, 20, 20, access::ro>,
+               groov::field<"reserved1", bool, 20, 20, common::access::ro>,
                groov::field<"eptyp", std::uint8_t, 19, 18>,
-               groov::field<"naksts", bool, 17, 17, access::ro>,
-               groov::field<"eonum_dpid", bool, 16, 16, access::ro>,
+               groov::field<"naksts", bool, 17, 17, common::access::ro>,
+               groov::field<"eonum_dpid", bool, 16, 16, common::access::ro>,
                groov::field<"usbaep", bool, 15, 15>,
-               groov::field<"reserved0", std::uint8_t, 14, 11, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 14, 11, common::access::ro>,
                groov::field<"mpsiz", std::uint16_t, 10, 0>>;
 
 // usb_otg_hs_otg_hs_diepctl3_v1: OTG_HS_DIEPCTL3
@@ -205,21 +205,21 @@ using usb_otg_hs_otg_hs_diepctl3_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"epena", bool, 31, 31>,
-               groov::field<"epdis", bit_enable_bar, 30, 30>,
-               groov::field<"soddfrm", bool, 29, 29, access::wo>,
-               groov::field<"sd0pid_sevnfrm", bool, 28, 28, access::wo>,
-               groov::field<"snak", bool, 27, 27, access::wo>,
-               groov::field<"cnak", bool, 26, 26, access::wo>,
+               groov::field<"epdis", common::bittypes::bit_enable_bar, 30, 30>,
+               groov::field<"soddfrm", bool, 29, 29, common::access::wo>,
+               groov::field<"sd0pid_sevnfrm", bool, 28, 28, common::access::wo>,
+               groov::field<"snak", bool, 27, 27, common::access::wo>,
+               groov::field<"cnak", bool, 26, 26, common::access::wo>,
                groov::field<"txfnum", std::uint8_t, 25, 22>,
                groov::field<"stall", bool, 21, 21>,
-               groov::field<"reserved1", bool, 20, 20, access::ro>,
+               groov::field<"reserved1", bool, 20, 20, common::access::ro>,
                groov::field<"eptyp", std::uint8_t, 19, 18>,
-               groov::field<"naksts", bool, 17, 17, access::ro>,
-               groov::field<"eonum_dpid", bool, 16, 16, access::ro>,
+               groov::field<"naksts", bool, 17, 17, common::access::ro>,
+               groov::field<"eonum_dpid", bool, 16, 16, common::access::ro>,
                groov::field<"usbaep", bool, 15, 15>,
-               groov::field<"reserved0", std::uint8_t, 14, 11, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 14, 11, common::access::ro>,
                groov::field<"mpsiz", std::uint16_t, 10, 0>>;
 
 // usb_otg_hs_otg_hs_diepctl4_v1: OTG_HS_DIEPCTL4
@@ -231,21 +231,21 @@ using usb_otg_hs_otg_hs_diepctl4_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"epena", bool, 31, 31>,
-               groov::field<"epdis", bit_enable_bar, 30, 30>,
-               groov::field<"soddfrm", bool, 29, 29, access::wo>,
-               groov::field<"sd0pid_sevnfrm", bool, 28, 28, access::wo>,
-               groov::field<"snak", bool, 27, 27, access::wo>,
-               groov::field<"cnak", bool, 26, 26, access::wo>,
+               groov::field<"epdis", common::bittypes::bit_enable_bar, 30, 30>,
+               groov::field<"soddfrm", bool, 29, 29, common::access::wo>,
+               groov::field<"sd0pid_sevnfrm", bool, 28, 28, common::access::wo>,
+               groov::field<"snak", bool, 27, 27, common::access::wo>,
+               groov::field<"cnak", bool, 26, 26, common::access::wo>,
                groov::field<"txfnum", std::uint8_t, 25, 22>,
                groov::field<"stall", bool, 21, 21>,
-               groov::field<"reserved1", bool, 20, 20, access::ro>,
+               groov::field<"reserved1", bool, 20, 20, common::access::ro>,
                groov::field<"eptyp", std::uint8_t, 19, 18>,
-               groov::field<"naksts", bool, 17, 17, access::ro>,
-               groov::field<"eonum_dpid", bool, 16, 16, access::ro>,
+               groov::field<"naksts", bool, 17, 17, common::access::ro>,
+               groov::field<"eonum_dpid", bool, 16, 16, common::access::ro>,
                groov::field<"usbaep", bool, 15, 15>,
-               groov::field<"reserved0", std::uint8_t, 14, 11, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 14, 11, common::access::ro>,
                groov::field<"mpsiz", std::uint16_t, 10, 0>>;
 
 // usb_otg_hs_otg_hs_diepctl5_v1: OTG_HS_DIEPCTL5
@@ -257,21 +257,21 @@ using usb_otg_hs_otg_hs_diepctl5_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"epena", bool, 31, 31>,
-               groov::field<"epdis", bit_enable_bar, 30, 30>,
-               groov::field<"soddfrm", bool, 29, 29, access::wo>,
-               groov::field<"sd0pid_sevnfrm", bool, 28, 28, access::wo>,
-               groov::field<"snak", bool, 27, 27, access::wo>,
-               groov::field<"cnak", bool, 26, 26, access::wo>,
+               groov::field<"epdis", common::bittypes::bit_enable_bar, 30, 30>,
+               groov::field<"soddfrm", bool, 29, 29, common::access::wo>,
+               groov::field<"sd0pid_sevnfrm", bool, 28, 28, common::access::wo>,
+               groov::field<"snak", bool, 27, 27, common::access::wo>,
+               groov::field<"cnak", bool, 26, 26, common::access::wo>,
                groov::field<"txfnum", std::uint8_t, 25, 22>,
                groov::field<"stall", bool, 21, 21>,
-               groov::field<"reserved1", bool, 20, 20, access::ro>,
+               groov::field<"reserved1", bool, 20, 20, common::access::ro>,
                groov::field<"eptyp", std::uint8_t, 19, 18>,
-               groov::field<"naksts", bool, 17, 17, access::ro>,
-               groov::field<"eonum_dpid", bool, 16, 16, access::ro>,
+               groov::field<"naksts", bool, 17, 17, common::access::ro>,
+               groov::field<"eonum_dpid", bool, 16, 16, common::access::ro>,
                groov::field<"usbaep", bool, 15, 15>,
-               groov::field<"reserved0", std::uint8_t, 14, 11, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 14, 11, common::access::ro>,
                groov::field<"mpsiz", std::uint16_t, 10, 0>>;
 
 // usb_otg_hs_otg_hs_diepctl6_v1: OTG_HS_DIEPCTL6
@@ -283,21 +283,21 @@ using usb_otg_hs_otg_hs_diepctl6_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"epena", bool, 31, 31>,
-               groov::field<"epdis", bit_enable_bar, 30, 30>,
-               groov::field<"soddfrm", bool, 29, 29, access::wo>,
-               groov::field<"sd0pid_sevnfrm", bool, 28, 28, access::wo>,
-               groov::field<"snak", bool, 27, 27, access::wo>,
-               groov::field<"cnak", bool, 26, 26, access::wo>,
+               groov::field<"epdis", common::bittypes::bit_enable_bar, 30, 30>,
+               groov::field<"soddfrm", bool, 29, 29, common::access::wo>,
+               groov::field<"sd0pid_sevnfrm", bool, 28, 28, common::access::wo>,
+               groov::field<"snak", bool, 27, 27, common::access::wo>,
+               groov::field<"cnak", bool, 26, 26, common::access::wo>,
                groov::field<"txfnum", std::uint8_t, 25, 22>,
                groov::field<"stall", bool, 21, 21>,
-               groov::field<"reserved1", bool, 20, 20, access::ro>,
+               groov::field<"reserved1", bool, 20, 20, common::access::ro>,
                groov::field<"eptyp", std::uint8_t, 19, 18>,
-               groov::field<"naksts", bool, 17, 17, access::ro>,
-               groov::field<"eonum_dpid", bool, 16, 16, access::ro>,
+               groov::field<"naksts", bool, 17, 17, common::access::ro>,
+               groov::field<"eonum_dpid", bool, 16, 16, common::access::ro>,
                groov::field<"usbaep", bool, 15, 15>,
-               groov::field<"reserved0", std::uint8_t, 14, 11, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 14, 11, common::access::ro>,
                groov::field<"mpsiz", std::uint16_t, 10, 0>>;
 
 // usb_otg_hs_otg_hs_diepctl7_v1: OTG_HS_DIEPCTL7
@@ -309,21 +309,21 @@ using usb_otg_hs_otg_hs_diepctl7_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"epena", bool, 31, 31>,
-               groov::field<"epdis", bit_enable_bar, 30, 30>,
-               groov::field<"soddfrm", bool, 29, 29, access::wo>,
-               groov::field<"sd0pid_sevnfrm", bool, 28, 28, access::wo>,
-               groov::field<"snak", bool, 27, 27, access::wo>,
-               groov::field<"cnak", bool, 26, 26, access::wo>,
+               groov::field<"epdis", common::bittypes::bit_enable_bar, 30, 30>,
+               groov::field<"soddfrm", bool, 29, 29, common::access::wo>,
+               groov::field<"sd0pid_sevnfrm", bool, 28, 28, common::access::wo>,
+               groov::field<"snak", bool, 27, 27, common::access::wo>,
+               groov::field<"cnak", bool, 26, 26, common::access::wo>,
                groov::field<"txfnum", std::uint8_t, 25, 22>,
                groov::field<"stall", bool, 21, 21>,
-               groov::field<"reserved1", bool, 20, 20, access::ro>,
+               groov::field<"reserved1", bool, 20, 20, common::access::ro>,
                groov::field<"eptyp", std::uint8_t, 19, 18>,
-               groov::field<"naksts", bool, 17, 17, access::ro>,
-               groov::field<"eonum_dpid", bool, 16, 16, access::ro>,
+               groov::field<"naksts", bool, 17, 17, common::access::ro>,
+               groov::field<"eonum_dpid", bool, 16, 16, common::access::ro>,
                groov::field<"usbaep", bool, 15, 15>,
-               groov::field<"reserved0", std::uint8_t, 14, 11, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 14, 11, common::access::ro>,
                groov::field<"mpsiz", std::uint16_t, 10, 0>>;
 
 // usb_otg_hs_otg_hs_diepdma0_v1: OTG_HS_DIEPDMA0
@@ -335,7 +335,7 @@ using usb_otg_hs_otg_hs_diepdma0_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dmaaddr", std::uint32_t, 31, 0>>;
 
 // usb_otg_hs_otg_hs_diepdma1_v1: OTG_HS_DIEPDMA1
@@ -347,7 +347,7 @@ using usb_otg_hs_otg_hs_diepdma1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dmaaddr", std::uint32_t, 31, 0>>;
 
 // usb_otg_hs_otg_hs_diepdma10_v1: OTG_HS_DIEPDMA10
@@ -359,8 +359,8 @@ using usb_otg_hs_otg_hs_diepdma10_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 0, access::ro>>;
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 0, common::access::ro>>;
 
 // usb_otg_hs_otg_hs_diepdma11_v1: OTG_HS_DIEPDMA11
 // Used by: OTG_HS_DEVICE
@@ -371,8 +371,8 @@ using usb_otg_hs_otg_hs_diepdma11_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 0, access::ro>>;
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 0, common::access::ro>>;
 
 // usb_otg_hs_otg_hs_diepdma12_v1: OTG_HS_DIEPDMA12
 // Used by: OTG_HS_DEVICE
@@ -383,8 +383,8 @@ using usb_otg_hs_otg_hs_diepdma12_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 0, access::ro>>;
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 0, common::access::ro>>;
 
 // usb_otg_hs_otg_hs_diepdma13_v1: OTG_HS_DIEPDMA13
 // Used by: OTG_HS_DEVICE
@@ -395,8 +395,8 @@ using usb_otg_hs_otg_hs_diepdma13_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 0, access::ro>>;
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 0, common::access::ro>>;
 
 // usb_otg_hs_otg_hs_diepdma14_v1: OTG_HS_DIEPDMA14
 // Used by: OTG_HS_DEVICE
@@ -407,8 +407,8 @@ using usb_otg_hs_otg_hs_diepdma14_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 0, access::ro>>;
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 0, common::access::ro>>;
 
 // usb_otg_hs_otg_hs_diepdma15_v1: OTG_HS_DIEPDMA15
 // Used by: OTG_HS_DEVICE
@@ -419,8 +419,8 @@ using usb_otg_hs_otg_hs_diepdma15_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 0, access::ro>>;
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 0, common::access::ro>>;
 
 // usb_otg_hs_otg_hs_diepdma2_v1: OTG_HS_DIEPDMA2
 // Used by: OTG_HS_DEVICE
@@ -431,7 +431,7 @@ using usb_otg_hs_otg_hs_diepdma2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dmaaddr", std::uint32_t, 31, 0>>;
 
 // usb_otg_hs_otg_hs_diepdma3_v1: OTG_HS_DIEPDMA3
@@ -443,7 +443,7 @@ using usb_otg_hs_otg_hs_diepdma3_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dmaaddr", std::uint32_t, 31, 0>>;
 
 // usb_otg_hs_otg_hs_diepdma4_v1: OTG_HS_DIEPDMA4
@@ -455,7 +455,7 @@ using usb_otg_hs_otg_hs_diepdma4_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dmaaddr", std::uint32_t, 31, 0>>;
 
 // usb_otg_hs_otg_hs_diepdma5_v1: OTG_HS_DIEPDMA5
@@ -467,8 +467,8 @@ using usb_otg_hs_otg_hs_diepdma5_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 0, access::ro>>;
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 0, common::access::ro>>;
 
 // usb_otg_hs_otg_hs_diepdma6_v1: OTG_HS_DIEPDMA6
 // Used by: OTG_HS_DEVICE
@@ -479,8 +479,8 @@ using usb_otg_hs_otg_hs_diepdma6_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 0, access::ro>>;
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 0, common::access::ro>>;
 
 // usb_otg_hs_otg_hs_diepdma7_v1: OTG_HS_DIEPDMA7
 // Used by: OTG_HS_DEVICE
@@ -491,8 +491,8 @@ using usb_otg_hs_otg_hs_diepdma7_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 0, access::ro>>;
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 0, common::access::ro>>;
 
 // usb_otg_hs_otg_hs_diepdma8_v1: OTG_HS_DIEPDMA8
 // Used by: OTG_HS_DEVICE
@@ -503,8 +503,8 @@ using usb_otg_hs_otg_hs_diepdma8_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 0, access::ro>>;
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 0, common::access::ro>>;
 
 // usb_otg_hs_otg_hs_diepdma9_v1: OTG_HS_DIEPDMA9
 // Used by: OTG_HS_DEVICE
@@ -515,8 +515,8 @@ using usb_otg_hs_otg_hs_diepdma9_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 0, access::ro>>;
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 0, common::access::ro>>;
 
 // usb_otg_hs_otg_hs_diepempmsk_v1: OTG_HS_DIEPEMPMSK
 // Used by: OTG_HS_DEVICE
@@ -527,8 +527,8 @@ using usb_otg_hs_otg_hs_diepempmsk_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"ineptxfem", std::uint16_t, 15, 0>>;
 
 // usb_otg_hs_otg_hs_diepint0_v1: OTG_HS_DIEPINT0
@@ -540,20 +540,20 @@ using usb_otg_hs_otg_hs_diepint0_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved3", std::uint32_t, 31, 14, access::ro>,
+             common::access::rw,
+               groov::field<"reserved3", std::uint32_t, 31, 14, common::access::ro>,
                groov::field<"nak", bool, 13, 13>,
                groov::field<"berr", bool, 12, 12>,
                groov::field<"pktdrpsts", bool, 11, 11>,
-               groov::field<"reserved2", bool, 10, 10, access::ro>,
+               groov::field<"reserved2", bool, 10, 10, common::access::ro>,
                groov::field<"bna", bool, 9, 9>,
                groov::field<"txfifoudrn", bool, 8, 8>,
-               groov::field<"txfe", bit_enable, 7, 7, access::ro>,
+               groov::field<"txfe", common::bittypes::bit_enable, 7, 7, common::access::ro>,
                groov::field<"inepne", bool, 6, 6>,
-               groov::field<"reserved1", bool, 5, 5, access::ro>,
-               groov::field<"ittxfe", bit_enable, 4, 4>,
+               groov::field<"reserved1", bool, 5, 5, common::access::ro>,
+               groov::field<"ittxfe", common::bittypes::bit_enable, 4, 4>,
                groov::field<"toc", bool, 3, 3>,
-               groov::field<"reserved0", bool, 2, 2, access::ro>,
+               groov::field<"reserved0", bool, 2, 2, common::access::ro>,
                groov::field<"epdisd", bool, 1, 1>,
                groov::field<"xfrc", bool, 0, 0>>;
 
@@ -566,20 +566,20 @@ using usb_otg_hs_otg_hs_diepint1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved3", std::uint32_t, 31, 14, access::ro>,
+             common::access::rw,
+               groov::field<"reserved3", std::uint32_t, 31, 14, common::access::ro>,
                groov::field<"nak", bool, 13, 13>,
                groov::field<"berr", bool, 12, 12>,
                groov::field<"pktdrpsts", bool, 11, 11>,
-               groov::field<"reserved2", bool, 10, 10, access::ro>,
+               groov::field<"reserved2", bool, 10, 10, common::access::ro>,
                groov::field<"bna", bool, 9, 9>,
                groov::field<"txfifoudrn", bool, 8, 8>,
-               groov::field<"txfe", bit_enable, 7, 7, access::ro>,
+               groov::field<"txfe", common::bittypes::bit_enable, 7, 7, common::access::ro>,
                groov::field<"inepne", bool, 6, 6>,
-               groov::field<"reserved1", bool, 5, 5, access::ro>,
-               groov::field<"ittxfe", bit_enable, 4, 4>,
+               groov::field<"reserved1", bool, 5, 5, common::access::ro>,
+               groov::field<"ittxfe", common::bittypes::bit_enable, 4, 4>,
                groov::field<"toc", bool, 3, 3>,
-               groov::field<"reserved0", bool, 2, 2, access::ro>,
+               groov::field<"reserved0", bool, 2, 2, common::access::ro>,
                groov::field<"epdisd", bool, 1, 1>,
                groov::field<"xfrc", bool, 0, 0>>;
 
@@ -592,20 +592,20 @@ using usb_otg_hs_otg_hs_diepint2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved3", std::uint32_t, 31, 14, access::ro>,
+             common::access::rw,
+               groov::field<"reserved3", std::uint32_t, 31, 14, common::access::ro>,
                groov::field<"nak", bool, 13, 13>,
                groov::field<"berr", bool, 12, 12>,
                groov::field<"pktdrpsts", bool, 11, 11>,
-               groov::field<"reserved2", bool, 10, 10, access::ro>,
+               groov::field<"reserved2", bool, 10, 10, common::access::ro>,
                groov::field<"bna", bool, 9, 9>,
                groov::field<"txfifoudrn", bool, 8, 8>,
-               groov::field<"txfe", bit_enable, 7, 7, access::ro>,
+               groov::field<"txfe", common::bittypes::bit_enable, 7, 7, common::access::ro>,
                groov::field<"inepne", bool, 6, 6>,
-               groov::field<"reserved1", bool, 5, 5, access::ro>,
-               groov::field<"ittxfe", bit_enable, 4, 4>,
+               groov::field<"reserved1", bool, 5, 5, common::access::ro>,
+               groov::field<"ittxfe", common::bittypes::bit_enable, 4, 4>,
                groov::field<"toc", bool, 3, 3>,
-               groov::field<"reserved0", bool, 2, 2, access::ro>,
+               groov::field<"reserved0", bool, 2, 2, common::access::ro>,
                groov::field<"epdisd", bool, 1, 1>,
                groov::field<"xfrc", bool, 0, 0>>;
 
@@ -618,20 +618,20 @@ using usb_otg_hs_otg_hs_diepint3_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved3", std::uint32_t, 31, 14, access::ro>,
+             common::access::rw,
+               groov::field<"reserved3", std::uint32_t, 31, 14, common::access::ro>,
                groov::field<"nak", bool, 13, 13>,
                groov::field<"berr", bool, 12, 12>,
                groov::field<"pktdrpsts", bool, 11, 11>,
-               groov::field<"reserved2", bool, 10, 10, access::ro>,
+               groov::field<"reserved2", bool, 10, 10, common::access::ro>,
                groov::field<"bna", bool, 9, 9>,
                groov::field<"txfifoudrn", bool, 8, 8>,
-               groov::field<"txfe", bit_enable, 7, 7, access::ro>,
+               groov::field<"txfe", common::bittypes::bit_enable, 7, 7, common::access::ro>,
                groov::field<"inepne", bool, 6, 6>,
-               groov::field<"reserved1", bool, 5, 5, access::ro>,
-               groov::field<"ittxfe", bit_enable, 4, 4>,
+               groov::field<"reserved1", bool, 5, 5, common::access::ro>,
+               groov::field<"ittxfe", common::bittypes::bit_enable, 4, 4>,
                groov::field<"toc", bool, 3, 3>,
-               groov::field<"reserved0", bool, 2, 2, access::ro>,
+               groov::field<"reserved0", bool, 2, 2, common::access::ro>,
                groov::field<"epdisd", bool, 1, 1>,
                groov::field<"xfrc", bool, 0, 0>>;
 
@@ -644,20 +644,20 @@ using usb_otg_hs_otg_hs_diepint4_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved3", std::uint32_t, 31, 14, access::ro>,
+             common::access::rw,
+               groov::field<"reserved3", std::uint32_t, 31, 14, common::access::ro>,
                groov::field<"nak", bool, 13, 13>,
                groov::field<"berr", bool, 12, 12>,
                groov::field<"pktdrpsts", bool, 11, 11>,
-               groov::field<"reserved2", bool, 10, 10, access::ro>,
+               groov::field<"reserved2", bool, 10, 10, common::access::ro>,
                groov::field<"bna", bool, 9, 9>,
                groov::field<"txfifoudrn", bool, 8, 8>,
-               groov::field<"txfe", bit_enable, 7, 7, access::ro>,
+               groov::field<"txfe", common::bittypes::bit_enable, 7, 7, common::access::ro>,
                groov::field<"inepne", bool, 6, 6>,
-               groov::field<"reserved1", bool, 5, 5, access::ro>,
-               groov::field<"ittxfe", bit_enable, 4, 4>,
+               groov::field<"reserved1", bool, 5, 5, common::access::ro>,
+               groov::field<"ittxfe", common::bittypes::bit_enable, 4, 4>,
                groov::field<"toc", bool, 3, 3>,
-               groov::field<"reserved0", bool, 2, 2, access::ro>,
+               groov::field<"reserved0", bool, 2, 2, common::access::ro>,
                groov::field<"epdisd", bool, 1, 1>,
                groov::field<"xfrc", bool, 0, 0>>;
 
@@ -670,20 +670,20 @@ using usb_otg_hs_otg_hs_diepint5_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved3", std::uint32_t, 31, 14, access::ro>,
+             common::access::rw,
+               groov::field<"reserved3", std::uint32_t, 31, 14, common::access::ro>,
                groov::field<"nak", bool, 13, 13>,
                groov::field<"berr", bool, 12, 12>,
                groov::field<"pktdrpsts", bool, 11, 11>,
-               groov::field<"reserved2", bool, 10, 10, access::ro>,
+               groov::field<"reserved2", bool, 10, 10, common::access::ro>,
                groov::field<"bna", bool, 9, 9>,
                groov::field<"txfifoudrn", bool, 8, 8>,
-               groov::field<"txfe", bit_enable, 7, 7, access::ro>,
+               groov::field<"txfe", common::bittypes::bit_enable, 7, 7, common::access::ro>,
                groov::field<"inepne", bool, 6, 6>,
-               groov::field<"reserved1", bool, 5, 5, access::ro>,
-               groov::field<"ittxfe", bit_enable, 4, 4>,
+               groov::field<"reserved1", bool, 5, 5, common::access::ro>,
+               groov::field<"ittxfe", common::bittypes::bit_enable, 4, 4>,
                groov::field<"toc", bool, 3, 3>,
-               groov::field<"reserved0", bool, 2, 2, access::ro>,
+               groov::field<"reserved0", bool, 2, 2, common::access::ro>,
                groov::field<"epdisd", bool, 1, 1>,
                groov::field<"xfrc", bool, 0, 0>>;
 
@@ -696,20 +696,20 @@ using usb_otg_hs_otg_hs_diepint6_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved3", std::uint32_t, 31, 14, access::ro>,
+             common::access::rw,
+               groov::field<"reserved3", std::uint32_t, 31, 14, common::access::ro>,
                groov::field<"nak", bool, 13, 13>,
                groov::field<"berr", bool, 12, 12>,
                groov::field<"pktdrpsts", bool, 11, 11>,
-               groov::field<"reserved2", bool, 10, 10, access::ro>,
+               groov::field<"reserved2", bool, 10, 10, common::access::ro>,
                groov::field<"bna", bool, 9, 9>,
                groov::field<"txfifoudrn", bool, 8, 8>,
-               groov::field<"txfe", bit_enable, 7, 7, access::ro>,
+               groov::field<"txfe", common::bittypes::bit_enable, 7, 7, common::access::ro>,
                groov::field<"inepne", bool, 6, 6>,
-               groov::field<"reserved1", bool, 5, 5, access::ro>,
-               groov::field<"ittxfe", bit_enable, 4, 4>,
+               groov::field<"reserved1", bool, 5, 5, common::access::ro>,
+               groov::field<"ittxfe", common::bittypes::bit_enable, 4, 4>,
                groov::field<"toc", bool, 3, 3>,
-               groov::field<"reserved0", bool, 2, 2, access::ro>,
+               groov::field<"reserved0", bool, 2, 2, common::access::ro>,
                groov::field<"epdisd", bool, 1, 1>,
                groov::field<"xfrc", bool, 0, 0>>;
 
@@ -722,20 +722,20 @@ using usb_otg_hs_otg_hs_diepint7_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved3", std::uint32_t, 31, 14, access::ro>,
+             common::access::rw,
+               groov::field<"reserved3", std::uint32_t, 31, 14, common::access::ro>,
                groov::field<"nak", bool, 13, 13>,
                groov::field<"berr", bool, 12, 12>,
                groov::field<"pktdrpsts", bool, 11, 11>,
-               groov::field<"reserved2", bool, 10, 10, access::ro>,
+               groov::field<"reserved2", bool, 10, 10, common::access::ro>,
                groov::field<"bna", bool, 9, 9>,
                groov::field<"txfifoudrn", bool, 8, 8>,
-               groov::field<"txfe", bit_enable, 7, 7, access::ro>,
+               groov::field<"txfe", common::bittypes::bit_enable, 7, 7, common::access::ro>,
                groov::field<"inepne", bool, 6, 6>,
-               groov::field<"reserved1", bool, 5, 5, access::ro>,
-               groov::field<"ittxfe", bit_enable, 4, 4>,
+               groov::field<"reserved1", bool, 5, 5, common::access::ro>,
+               groov::field<"ittxfe", common::bittypes::bit_enable, 4, 4>,
                groov::field<"toc", bool, 3, 3>,
-               groov::field<"reserved0", bool, 2, 2, access::ro>,
+               groov::field<"reserved0", bool, 2, 2, common::access::ro>,
                groov::field<"epdisd", bool, 1, 1>,
                groov::field<"xfrc", bool, 0, 0>>;
 
@@ -748,16 +748,16 @@ using usb_otg_hs_otg_hs_diepmsk_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved2", std::uint32_t, 31, 10, access::ro>,
+             common::access::rw,
+               groov::field<"reserved2", std::uint32_t, 31, 10, common::access::ro>,
                groov::field<"bim", bool, 9, 9>,
                groov::field<"txfurm", bool, 8, 8>,
-               groov::field<"reserved1", bool, 7, 7, access::ro>,
+               groov::field<"reserved1", bool, 7, 7, common::access::ro>,
                groov::field<"inepnem", bool, 6, 6>,
                groov::field<"inepnmm", bool, 5, 5>,
                groov::field<"ittxfemsk", bool, 4, 4>,
                groov::field<"tom", bool, 3, 3>,
-               groov::field<"reserved0", bool, 2, 2, access::ro>,
+               groov::field<"reserved0", bool, 2, 2, common::access::ro>,
                groov::field<"epdm", bool, 1, 1>,
                groov::field<"xfrcm", bool, 0, 0>>;
 
@@ -770,10 +770,10 @@ using usb_otg_hs_otg_hs_dieptsiz0_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint16_t, 31, 21, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint16_t, 31, 21, common::access::ro>,
                groov::field<"pktcnt", std::uint8_t, 20, 19>,
-               groov::field<"reserved0", std::uint16_t, 18, 7, access::ro>,
+               groov::field<"reserved0", std::uint16_t, 18, 7, common::access::ro>,
                groov::field<"xfrsiz", std::uint8_t, 6, 0>>;
 
 // usb_otg_hs_otg_hs_dieptsiz1_v1: OTG_HS_DIEPTSIZ1
@@ -785,8 +785,8 @@ using usb_otg_hs_otg_hs_dieptsiz1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", bool, 31, 31, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", bool, 31, 31, common::access::ro>,
                groov::field<"mcnt", std::uint8_t, 30, 29>,
                groov::field<"pktcnt", std::uint16_t, 28, 19>,
                groov::field<"xfrsiz", std::uint32_t, 18, 0>>;
@@ -800,8 +800,8 @@ using usb_otg_hs_otg_hs_dieptsiz2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", bool, 31, 31, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", bool, 31, 31, common::access::ro>,
                groov::field<"mcnt", std::uint8_t, 30, 29>,
                groov::field<"pktcnt", std::uint16_t, 28, 19>,
                groov::field<"xfrsiz", std::uint32_t, 18, 0>>;
@@ -815,8 +815,8 @@ using usb_otg_hs_otg_hs_dieptsiz3_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", bool, 31, 31, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", bool, 31, 31, common::access::ro>,
                groov::field<"mcnt", std::uint8_t, 30, 29>,
                groov::field<"pktcnt", std::uint16_t, 28, 19>,
                groov::field<"xfrsiz", std::uint32_t, 18, 0>>;
@@ -830,8 +830,8 @@ using usb_otg_hs_otg_hs_dieptsiz4_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", bool, 31, 31, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", bool, 31, 31, common::access::ro>,
                groov::field<"mcnt", std::uint8_t, 30, 29>,
                groov::field<"pktcnt", std::uint16_t, 28, 19>,
                groov::field<"xfrsiz", std::uint32_t, 18, 0>>;
@@ -845,8 +845,8 @@ using usb_otg_hs_otg_hs_dieptsiz5_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", bool, 31, 31, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", bool, 31, 31, common::access::ro>,
                groov::field<"mcnt", std::uint8_t, 30, 29>,
                groov::field<"pktcnt", std::uint16_t, 28, 19>,
                groov::field<"xfrsiz", std::uint32_t, 18, 0>>;
@@ -860,8 +860,8 @@ using usb_otg_hs_otg_hs_dieptsiz6_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", bool, 31, 31, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", bool, 31, 31, common::access::ro>,
                groov::field<"mcnt", std::uint8_t, 30, 29>,
                groov::field<"pktcnt", std::uint16_t, 28, 19>,
                groov::field<"xfrsiz", std::uint32_t, 18, 0>>;
@@ -875,8 +875,8 @@ using usb_otg_hs_otg_hs_dieptsiz7_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", bool, 31, 31, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", bool, 31, 31, common::access::ro>,
                groov::field<"mcnt", std::uint8_t, 30, 29>,
                groov::field<"pktcnt", std::uint16_t, 28, 19>,
                groov::field<"xfrsiz", std::uint32_t, 18, 0>>;
@@ -890,7 +890,7 @@ using usb_otg_hs_otg_hs_dieptxf0_device_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"tx0fd", std::uint16_t, 31, 16>,
                groov::field<"tx0fsa", std::uint16_t, 15, 0>>;
 
@@ -903,7 +903,7 @@ using usb_otg_hs_otg_hs_dieptxf1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"ineptxfd", std::uint16_t, 31, 16>,
                groov::field<"ineptxsa", std::uint16_t, 15, 0>>;
 
@@ -916,7 +916,7 @@ using usb_otg_hs_otg_hs_dieptxf2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"ineptxfd", std::uint16_t, 31, 16>,
                groov::field<"ineptxsa", std::uint16_t, 15, 0>>;
 
@@ -929,7 +929,7 @@ using usb_otg_hs_otg_hs_dieptxf3_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"ineptxfd", std::uint16_t, 31, 16>,
                groov::field<"ineptxsa", std::uint16_t, 15, 0>>;
 
@@ -942,7 +942,7 @@ using usb_otg_hs_otg_hs_dieptxf4_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"ineptxfd", std::uint16_t, 31, 16>,
                groov::field<"ineptxsa", std::uint16_t, 15, 0>>;
 
@@ -955,7 +955,7 @@ using usb_otg_hs_otg_hs_dieptxf5_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"ineptxfd", std::uint16_t, 31, 16>,
                groov::field<"ineptxsa", std::uint16_t, 15, 0>>;
 
@@ -968,7 +968,7 @@ using usb_otg_hs_otg_hs_dieptxf6_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"ineptxfd", std::uint16_t, 31, 16>,
                groov::field<"ineptxsa", std::uint16_t, 15, 0>>;
 
@@ -981,7 +981,7 @@ using usb_otg_hs_otg_hs_dieptxf7_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"ineptxfd", std::uint16_t, 31, 16>,
                groov::field<"ineptxsa", std::uint16_t, 15, 0>>;
 
@@ -994,21 +994,21 @@ using usb_otg_hs_otg_hs_doepctl0_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"epena", bool, 31, 31, access::wo>,
-               groov::field<"epdis", bit_enable_bar, 30, 30, access::ro>,
-               groov::field<"reserved3", std::uint8_t, 29, 28, access::ro>,
-               groov::field<"snak", bool, 27, 27, access::wo>,
-               groov::field<"cnak", bool, 26, 26, access::wo>,
-               groov::field<"reserved2", std::uint8_t, 25, 22, access::ro>,
+             common::access::rw,
+               groov::field<"epena", bool, 31, 31, common::access::wo>,
+               groov::field<"epdis", common::bittypes::bit_enable_bar, 30, 30, common::access::ro>,
+               groov::field<"reserved3", std::uint8_t, 29, 28, common::access::ro>,
+               groov::field<"snak", bool, 27, 27, common::access::wo>,
+               groov::field<"cnak", bool, 26, 26, common::access::wo>,
+               groov::field<"reserved2", std::uint8_t, 25, 22, common::access::ro>,
                groov::field<"stall", bool, 21, 21>,
                groov::field<"snpm", bool, 20, 20>,
-               groov::field<"eptyp", std::uint8_t, 19, 18, access::ro>,
-               groov::field<"naksts", bool, 17, 17, access::ro>,
-               groov::field<"reserved1", bool, 16, 16, access::ro>,
-               groov::field<"usbaep", bool, 15, 15, access::ro>,
-               groov::field<"reserved0", std::uint16_t, 14, 2, access::ro>,
-               groov::field<"mpsiz", std::uint8_t, 1, 0, access::ro>>;
+               groov::field<"eptyp", std::uint8_t, 19, 18, common::access::ro>,
+               groov::field<"naksts", bool, 17, 17, common::access::ro>,
+               groov::field<"reserved1", bool, 16, 16, common::access::ro>,
+               groov::field<"usbaep", bool, 15, 15, common::access::ro>,
+               groov::field<"reserved0", std::uint16_t, 14, 2, common::access::ro>,
+               groov::field<"mpsiz", std::uint8_t, 1, 0, common::access::ro>>;
 
 // usb_otg_hs_otg_hs_doepctl1_v1: OTG_HS_DOEPCTL1
 // Used by: OTG_HS_DEVICE
@@ -1019,21 +1019,21 @@ using usb_otg_hs_otg_hs_doepctl1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"epena", bool, 31, 31>,
-               groov::field<"epdis", bit_enable_bar, 30, 30>,
-               groov::field<"soddfrm", bool, 29, 29, access::wo>,
-               groov::field<"sd0pid_sevnfrm", bool, 28, 28, access::wo>,
-               groov::field<"snak", bool, 27, 27, access::wo>,
-               groov::field<"cnak", bool, 26, 26, access::wo>,
-               groov::field<"reserved1", std::uint8_t, 25, 22, access::ro>,
+               groov::field<"epdis", common::bittypes::bit_enable_bar, 30, 30>,
+               groov::field<"soddfrm", bool, 29, 29, common::access::wo>,
+               groov::field<"sd0pid_sevnfrm", bool, 28, 28, common::access::wo>,
+               groov::field<"snak", bool, 27, 27, common::access::wo>,
+               groov::field<"cnak", bool, 26, 26, common::access::wo>,
+               groov::field<"reserved1", std::uint8_t, 25, 22, common::access::ro>,
                groov::field<"stall", bool, 21, 21>,
                groov::field<"snpm", bool, 20, 20>,
                groov::field<"eptyp", std::uint8_t, 19, 18>,
-               groov::field<"naksts", bool, 17, 17, access::ro>,
-               groov::field<"eonum_dpid", bool, 16, 16, access::ro>,
+               groov::field<"naksts", bool, 17, 17, common::access::ro>,
+               groov::field<"eonum_dpid", bool, 16, 16, common::access::ro>,
                groov::field<"usbaep", bool, 15, 15>,
-               groov::field<"reserved0", std::uint8_t, 14, 11, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 14, 11, common::access::ro>,
                groov::field<"mpsiz", std::uint16_t, 10, 0>>;
 
 // usb_otg_hs_otg_hs_doepctl2_v1: OTG_HS_DOEPCTL2
@@ -1045,21 +1045,21 @@ using usb_otg_hs_otg_hs_doepctl2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"epena", bool, 31, 31>,
-               groov::field<"epdis", bit_enable_bar, 30, 30>,
-               groov::field<"soddfrm", bool, 29, 29, access::wo>,
-               groov::field<"sd0pid_sevnfrm", bool, 28, 28, access::wo>,
-               groov::field<"snak", bool, 27, 27, access::wo>,
-               groov::field<"cnak", bool, 26, 26, access::wo>,
-               groov::field<"reserved1", std::uint8_t, 25, 22, access::ro>,
+               groov::field<"epdis", common::bittypes::bit_enable_bar, 30, 30>,
+               groov::field<"soddfrm", bool, 29, 29, common::access::wo>,
+               groov::field<"sd0pid_sevnfrm", bool, 28, 28, common::access::wo>,
+               groov::field<"snak", bool, 27, 27, common::access::wo>,
+               groov::field<"cnak", bool, 26, 26, common::access::wo>,
+               groov::field<"reserved1", std::uint8_t, 25, 22, common::access::ro>,
                groov::field<"stall", bool, 21, 21>,
                groov::field<"snpm", bool, 20, 20>,
                groov::field<"eptyp", std::uint8_t, 19, 18>,
-               groov::field<"naksts", bool, 17, 17, access::ro>,
-               groov::field<"eonum_dpid", bool, 16, 16, access::ro>,
+               groov::field<"naksts", bool, 17, 17, common::access::ro>,
+               groov::field<"eonum_dpid", bool, 16, 16, common::access::ro>,
                groov::field<"usbaep", bool, 15, 15>,
-               groov::field<"reserved0", std::uint8_t, 14, 11, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 14, 11, common::access::ro>,
                groov::field<"mpsiz", std::uint16_t, 10, 0>>;
 
 // usb_otg_hs_otg_hs_doepctl3_v1: OTG_HS_DOEPCTL3
@@ -1071,21 +1071,21 @@ using usb_otg_hs_otg_hs_doepctl3_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"epena", bool, 31, 31>,
-               groov::field<"epdis", bit_enable_bar, 30, 30>,
-               groov::field<"soddfrm", bool, 29, 29, access::wo>,
-               groov::field<"sd0pid_sevnfrm", bool, 28, 28, access::wo>,
-               groov::field<"snak", bool, 27, 27, access::wo>,
-               groov::field<"cnak", bool, 26, 26, access::wo>,
-               groov::field<"reserved1", std::uint8_t, 25, 22, access::ro>,
+               groov::field<"epdis", common::bittypes::bit_enable_bar, 30, 30>,
+               groov::field<"soddfrm", bool, 29, 29, common::access::wo>,
+               groov::field<"sd0pid_sevnfrm", bool, 28, 28, common::access::wo>,
+               groov::field<"snak", bool, 27, 27, common::access::wo>,
+               groov::field<"cnak", bool, 26, 26, common::access::wo>,
+               groov::field<"reserved1", std::uint8_t, 25, 22, common::access::ro>,
                groov::field<"stall", bool, 21, 21>,
                groov::field<"snpm", bool, 20, 20>,
                groov::field<"eptyp", std::uint8_t, 19, 18>,
-               groov::field<"naksts", bool, 17, 17, access::ro>,
-               groov::field<"eonum_dpid", bool, 16, 16, access::ro>,
+               groov::field<"naksts", bool, 17, 17, common::access::ro>,
+               groov::field<"eonum_dpid", bool, 16, 16, common::access::ro>,
                groov::field<"usbaep", bool, 15, 15>,
-               groov::field<"reserved0", std::uint8_t, 14, 11, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 14, 11, common::access::ro>,
                groov::field<"mpsiz", std::uint16_t, 10, 0>>;
 
 // usb_otg_hs_otg_hs_doepctl4_v1: OTG_HS_DOEPCTL4
@@ -1097,21 +1097,21 @@ using usb_otg_hs_otg_hs_doepctl4_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"epena", bool, 31, 31>,
-               groov::field<"epdis", bit_enable_bar, 30, 30>,
-               groov::field<"soddfrm", bool, 29, 29, access::wo>,
-               groov::field<"sd0pid_sevnfrm", bool, 28, 28, access::wo>,
-               groov::field<"snak", bool, 27, 27, access::wo>,
-               groov::field<"cnak", bool, 26, 26, access::wo>,
-               groov::field<"reserved1", std::uint8_t, 25, 22, access::ro>,
+               groov::field<"epdis", common::bittypes::bit_enable_bar, 30, 30>,
+               groov::field<"soddfrm", bool, 29, 29, common::access::wo>,
+               groov::field<"sd0pid_sevnfrm", bool, 28, 28, common::access::wo>,
+               groov::field<"snak", bool, 27, 27, common::access::wo>,
+               groov::field<"cnak", bool, 26, 26, common::access::wo>,
+               groov::field<"reserved1", std::uint8_t, 25, 22, common::access::ro>,
                groov::field<"stall", bool, 21, 21>,
                groov::field<"snpm", bool, 20, 20>,
                groov::field<"eptyp", std::uint8_t, 19, 18>,
-               groov::field<"naksts", bool, 17, 17, access::ro>,
-               groov::field<"eonum_dpid", bool, 16, 16, access::ro>,
+               groov::field<"naksts", bool, 17, 17, common::access::ro>,
+               groov::field<"eonum_dpid", bool, 16, 16, common::access::ro>,
                groov::field<"usbaep", bool, 15, 15>,
-               groov::field<"reserved0", std::uint8_t, 14, 11, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 14, 11, common::access::ro>,
                groov::field<"mpsiz", std::uint16_t, 10, 0>>;
 
 // usb_otg_hs_otg_hs_doepctl5_v1: OTG_HS_DOEPCTL5
@@ -1123,21 +1123,21 @@ using usb_otg_hs_otg_hs_doepctl5_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"epena", bool, 31, 31>,
-               groov::field<"epdis", bit_enable_bar, 30, 30>,
-               groov::field<"soddfrm", bool, 29, 29, access::wo>,
-               groov::field<"sd0pid_sevnfrm", bool, 28, 28, access::wo>,
-               groov::field<"snak", bool, 27, 27, access::wo>,
-               groov::field<"cnak", bool, 26, 26, access::wo>,
-               groov::field<"reserved1", std::uint8_t, 25, 22, access::ro>,
+               groov::field<"epdis", common::bittypes::bit_enable_bar, 30, 30>,
+               groov::field<"soddfrm", bool, 29, 29, common::access::wo>,
+               groov::field<"sd0pid_sevnfrm", bool, 28, 28, common::access::wo>,
+               groov::field<"snak", bool, 27, 27, common::access::wo>,
+               groov::field<"cnak", bool, 26, 26, common::access::wo>,
+               groov::field<"reserved1", std::uint8_t, 25, 22, common::access::ro>,
                groov::field<"stall", bool, 21, 21>,
                groov::field<"snpm", bool, 20, 20>,
                groov::field<"eptyp", std::uint8_t, 19, 18>,
-               groov::field<"naksts", bool, 17, 17, access::ro>,
-               groov::field<"eonum_dpid", bool, 16, 16, access::ro>,
+               groov::field<"naksts", bool, 17, 17, common::access::ro>,
+               groov::field<"eonum_dpid", bool, 16, 16, common::access::ro>,
                groov::field<"usbaep", bool, 15, 15>,
-               groov::field<"reserved0", std::uint8_t, 14, 11, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 14, 11, common::access::ro>,
                groov::field<"mpsiz", std::uint16_t, 10, 0>>;
 
 // usb_otg_hs_otg_hs_doepctl6_v1: OTG_HS_DOEPCTL6
@@ -1149,21 +1149,21 @@ using usb_otg_hs_otg_hs_doepctl6_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"epena", bool, 31, 31>,
-               groov::field<"epdis", bit_enable_bar, 30, 30>,
-               groov::field<"soddfrm", bool, 29, 29, access::wo>,
-               groov::field<"sd0pid_sevnfrm", bool, 28, 28, access::wo>,
-               groov::field<"snak", bool, 27, 27, access::wo>,
-               groov::field<"cnak", bool, 26, 26, access::wo>,
-               groov::field<"reserved1", std::uint8_t, 25, 22, access::ro>,
+               groov::field<"epdis", common::bittypes::bit_enable_bar, 30, 30>,
+               groov::field<"soddfrm", bool, 29, 29, common::access::wo>,
+               groov::field<"sd0pid_sevnfrm", bool, 28, 28, common::access::wo>,
+               groov::field<"snak", bool, 27, 27, common::access::wo>,
+               groov::field<"cnak", bool, 26, 26, common::access::wo>,
+               groov::field<"reserved1", std::uint8_t, 25, 22, common::access::ro>,
                groov::field<"stall", bool, 21, 21>,
                groov::field<"snpm", bool, 20, 20>,
                groov::field<"eptyp", std::uint8_t, 19, 18>,
-               groov::field<"naksts", bool, 17, 17, access::ro>,
-               groov::field<"eonum_dpid", bool, 16, 16, access::ro>,
+               groov::field<"naksts", bool, 17, 17, common::access::ro>,
+               groov::field<"eonum_dpid", bool, 16, 16, common::access::ro>,
                groov::field<"usbaep", bool, 15, 15>,
-               groov::field<"reserved0", std::uint8_t, 14, 11, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 14, 11, common::access::ro>,
                groov::field<"mpsiz", std::uint16_t, 10, 0>>;
 
 // usb_otg_hs_otg_hs_doepctl7_v1: OTG_HS_DOEPCTL7
@@ -1175,21 +1175,21 @@ using usb_otg_hs_otg_hs_doepctl7_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"epena", bool, 31, 31>,
-               groov::field<"epdis", bit_enable_bar, 30, 30>,
-               groov::field<"soddfrm", bool, 29, 29, access::wo>,
-               groov::field<"sd0pid_sevnfrm", bool, 28, 28, access::wo>,
-               groov::field<"snak", bool, 27, 27, access::wo>,
-               groov::field<"cnak", bool, 26, 26, access::wo>,
-               groov::field<"reserved1", std::uint8_t, 25, 22, access::ro>,
+               groov::field<"epdis", common::bittypes::bit_enable_bar, 30, 30>,
+               groov::field<"soddfrm", bool, 29, 29, common::access::wo>,
+               groov::field<"sd0pid_sevnfrm", bool, 28, 28, common::access::wo>,
+               groov::field<"snak", bool, 27, 27, common::access::wo>,
+               groov::field<"cnak", bool, 26, 26, common::access::wo>,
+               groov::field<"reserved1", std::uint8_t, 25, 22, common::access::ro>,
                groov::field<"stall", bool, 21, 21>,
                groov::field<"snpm", bool, 20, 20>,
                groov::field<"eptyp", std::uint8_t, 19, 18>,
-               groov::field<"naksts", bool, 17, 17, access::ro>,
-               groov::field<"eonum_dpid", bool, 16, 16, access::ro>,
+               groov::field<"naksts", bool, 17, 17, common::access::ro>,
+               groov::field<"eonum_dpid", bool, 16, 16, common::access::ro>,
                groov::field<"usbaep", bool, 15, 15>,
-               groov::field<"reserved0", std::uint8_t, 14, 11, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 14, 11, common::access::ro>,
                groov::field<"mpsiz", std::uint16_t, 10, 0>>;
 
 // usb_otg_hs_otg_hs_doepdma0_v1: OTG_HS_DOEPDMA0
@@ -1201,8 +1201,8 @@ using usb_otg_hs_otg_hs_doepdma0_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 0, access::ro>>;
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 0, common::access::ro>>;
 
 // usb_otg_hs_otg_hs_doepdma1_v1: OTG_HS_DOEPDMA1
 // Used by: OTG_HS_DEVICE
@@ -1213,8 +1213,8 @@ using usb_otg_hs_otg_hs_doepdma1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 0, access::ro>>;
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 0, common::access::ro>>;
 
 // usb_otg_hs_otg_hs_doepdma10_v1: OTG_HS_DOEPDMA10
 // Used by: OTG_HS_DEVICE
@@ -1225,8 +1225,8 @@ using usb_otg_hs_otg_hs_doepdma10_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 0, access::ro>>;
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 0, common::access::ro>>;
 
 // usb_otg_hs_otg_hs_doepdma11_v1: OTG_HS_DOEPDMA11
 // Used by: OTG_HS_DEVICE
@@ -1237,8 +1237,8 @@ using usb_otg_hs_otg_hs_doepdma11_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 0, access::ro>>;
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 0, common::access::ro>>;
 
 // usb_otg_hs_otg_hs_doepdma12_v1: OTG_HS_DOEPDMA12
 // Used by: OTG_HS_DEVICE
@@ -1249,8 +1249,8 @@ using usb_otg_hs_otg_hs_doepdma12_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 0, access::ro>>;
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 0, common::access::ro>>;
 
 // usb_otg_hs_otg_hs_doepdma13_v1: OTG_HS_DOEPDMA13
 // Used by: OTG_HS_DEVICE
@@ -1261,8 +1261,8 @@ using usb_otg_hs_otg_hs_doepdma13_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 0, access::ro>>;
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 0, common::access::ro>>;
 
 // usb_otg_hs_otg_hs_doepdma14_v1: OTG_HS_DOEPDMA14
 // Used by: OTG_HS_DEVICE
@@ -1273,8 +1273,8 @@ using usb_otg_hs_otg_hs_doepdma14_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 0, access::ro>>;
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 0, common::access::ro>>;
 
 // usb_otg_hs_otg_hs_doepdma15_v1: OTG_HS_DOEPDMA15
 // Used by: OTG_HS_DEVICE
@@ -1285,8 +1285,8 @@ using usb_otg_hs_otg_hs_doepdma15_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 0, access::ro>>;
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 0, common::access::ro>>;
 
 // usb_otg_hs_otg_hs_doepdma2_v1: OTG_HS_DOEPDMA2
 // Used by: OTG_HS_DEVICE
@@ -1297,8 +1297,8 @@ using usb_otg_hs_otg_hs_doepdma2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 0, access::ro>>;
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 0, common::access::ro>>;
 
 // usb_otg_hs_otg_hs_doepdma3_v1: OTG_HS_DOEPDMA3
 // Used by: OTG_HS_DEVICE
@@ -1309,8 +1309,8 @@ using usb_otg_hs_otg_hs_doepdma3_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 0, access::ro>>;
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 0, common::access::ro>>;
 
 // usb_otg_hs_otg_hs_doepdma4_v1: OTG_HS_DOEPDMA4
 // Used by: OTG_HS_DEVICE
@@ -1321,8 +1321,8 @@ using usb_otg_hs_otg_hs_doepdma4_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 0, access::ro>>;
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 0, common::access::ro>>;
 
 // usb_otg_hs_otg_hs_doepdma5_v1: OTG_HS_DOEPDMA5
 // Used by: OTG_HS_DEVICE
@@ -1333,8 +1333,8 @@ using usb_otg_hs_otg_hs_doepdma5_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 0, access::ro>>;
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 0, common::access::ro>>;
 
 // usb_otg_hs_otg_hs_doepdma6_v1: OTG_HS_DOEPDMA6
 // Used by: OTG_HS_DEVICE
@@ -1345,8 +1345,8 @@ using usb_otg_hs_otg_hs_doepdma6_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 0, access::ro>>;
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 0, common::access::ro>>;
 
 // usb_otg_hs_otg_hs_doepdma7_v1: OTG_HS_DOEPDMA7
 // Used by: OTG_HS_DEVICE
@@ -1357,8 +1357,8 @@ using usb_otg_hs_otg_hs_doepdma7_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 0, access::ro>>;
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 0, common::access::ro>>;
 
 // usb_otg_hs_otg_hs_doepdma8_v1: OTG_HS_DOEPDMA8
 // Used by: OTG_HS_DEVICE
@@ -1369,8 +1369,8 @@ using usb_otg_hs_otg_hs_doepdma8_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 0, access::ro>>;
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 0, common::access::ro>>;
 
 // usb_otg_hs_otg_hs_doepdma9_v1: OTG_HS_DOEPDMA9
 // Used by: OTG_HS_DEVICE
@@ -1381,8 +1381,8 @@ using usb_otg_hs_otg_hs_doepdma9_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 0, access::ro>>;
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 0, common::access::ro>>;
 
 // usb_otg_hs_otg_hs_doepint0_v1: OTG_HS_DOEPINT0
 // Used by: OTG_HS_DEVICE
@@ -1393,15 +1393,15 @@ using usb_otg_hs_otg_hs_doepint0_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved3", std::uint32_t, 31, 15, access::ro>,
+             common::access::rw,
+               groov::field<"reserved3", std::uint32_t, 31, 15, common::access::ro>,
                groov::field<"nyet", bool, 14, 14>,
-               groov::field<"reserved2", std::uint8_t, 13, 7, access::ro>,
+               groov::field<"reserved2", std::uint8_t, 13, 7, common::access::ro>,
                groov::field<"b2bstup", bool, 6, 6>,
-               groov::field<"reserved1", bool, 5, 5, access::ro>,
-               groov::field<"otepdis", bit_enable_bar, 4, 4>,
+               groov::field<"reserved1", bool, 5, 5, common::access::ro>,
+               groov::field<"otepdis", common::bittypes::bit_enable_bar, 4, 4>,
                groov::field<"stup", bool, 3, 3>,
-               groov::field<"reserved0", bool, 2, 2, access::ro>,
+               groov::field<"reserved0", bool, 2, 2, common::access::ro>,
                groov::field<"epdisd", bool, 1, 1>,
                groov::field<"xfrc", bool, 0, 0>>;
 
@@ -1414,15 +1414,15 @@ using usb_otg_hs_otg_hs_doepint1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved3", std::uint32_t, 31, 15, access::ro>,
+             common::access::rw,
+               groov::field<"reserved3", std::uint32_t, 31, 15, common::access::ro>,
                groov::field<"nyet", bool, 14, 14>,
-               groov::field<"reserved2", std::uint8_t, 13, 7, access::ro>,
+               groov::field<"reserved2", std::uint8_t, 13, 7, common::access::ro>,
                groov::field<"b2bstup", bool, 6, 6>,
-               groov::field<"reserved1", bool, 5, 5, access::ro>,
-               groov::field<"otepdis", bit_enable_bar, 4, 4>,
+               groov::field<"reserved1", bool, 5, 5, common::access::ro>,
+               groov::field<"otepdis", common::bittypes::bit_enable_bar, 4, 4>,
                groov::field<"stup", bool, 3, 3>,
-               groov::field<"reserved0", bool, 2, 2, access::ro>,
+               groov::field<"reserved0", bool, 2, 2, common::access::ro>,
                groov::field<"epdisd", bool, 1, 1>,
                groov::field<"xfrc", bool, 0, 0>>;
 
@@ -1435,15 +1435,15 @@ using usb_otg_hs_otg_hs_doepint2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved3", std::uint32_t, 31, 15, access::ro>,
+             common::access::rw,
+               groov::field<"reserved3", std::uint32_t, 31, 15, common::access::ro>,
                groov::field<"nyet", bool, 14, 14>,
-               groov::field<"reserved2", std::uint8_t, 13, 7, access::ro>,
+               groov::field<"reserved2", std::uint8_t, 13, 7, common::access::ro>,
                groov::field<"b2bstup", bool, 6, 6>,
-               groov::field<"reserved1", bool, 5, 5, access::ro>,
-               groov::field<"otepdis", bit_enable_bar, 4, 4>,
+               groov::field<"reserved1", bool, 5, 5, common::access::ro>,
+               groov::field<"otepdis", common::bittypes::bit_enable_bar, 4, 4>,
                groov::field<"stup", bool, 3, 3>,
-               groov::field<"reserved0", bool, 2, 2, access::ro>,
+               groov::field<"reserved0", bool, 2, 2, common::access::ro>,
                groov::field<"epdisd", bool, 1, 1>,
                groov::field<"xfrc", bool, 0, 0>>;
 
@@ -1456,15 +1456,15 @@ using usb_otg_hs_otg_hs_doepint3_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved3", std::uint32_t, 31, 15, access::ro>,
+             common::access::rw,
+               groov::field<"reserved3", std::uint32_t, 31, 15, common::access::ro>,
                groov::field<"nyet", bool, 14, 14>,
-               groov::field<"reserved2", std::uint8_t, 13, 7, access::ro>,
+               groov::field<"reserved2", std::uint8_t, 13, 7, common::access::ro>,
                groov::field<"b2bstup", bool, 6, 6>,
-               groov::field<"reserved1", bool, 5, 5, access::ro>,
-               groov::field<"otepdis", bit_enable_bar, 4, 4>,
+               groov::field<"reserved1", bool, 5, 5, common::access::ro>,
+               groov::field<"otepdis", common::bittypes::bit_enable_bar, 4, 4>,
                groov::field<"stup", bool, 3, 3>,
-               groov::field<"reserved0", bool, 2, 2, access::ro>,
+               groov::field<"reserved0", bool, 2, 2, common::access::ro>,
                groov::field<"epdisd", bool, 1, 1>,
                groov::field<"xfrc", bool, 0, 0>>;
 
@@ -1477,15 +1477,15 @@ using usb_otg_hs_otg_hs_doepint4_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved3", std::uint32_t, 31, 15, access::ro>,
+             common::access::rw,
+               groov::field<"reserved3", std::uint32_t, 31, 15, common::access::ro>,
                groov::field<"nyet", bool, 14, 14>,
-               groov::field<"reserved2", std::uint8_t, 13, 7, access::ro>,
+               groov::field<"reserved2", std::uint8_t, 13, 7, common::access::ro>,
                groov::field<"b2bstup", bool, 6, 6>,
-               groov::field<"reserved1", bool, 5, 5, access::ro>,
-               groov::field<"otepdis", bit_enable_bar, 4, 4>,
+               groov::field<"reserved1", bool, 5, 5, common::access::ro>,
+               groov::field<"otepdis", common::bittypes::bit_enable_bar, 4, 4>,
                groov::field<"stup", bool, 3, 3>,
-               groov::field<"reserved0", bool, 2, 2, access::ro>,
+               groov::field<"reserved0", bool, 2, 2, common::access::ro>,
                groov::field<"epdisd", bool, 1, 1>,
                groov::field<"xfrc", bool, 0, 0>>;
 
@@ -1498,15 +1498,15 @@ using usb_otg_hs_otg_hs_doepint5_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved3", std::uint32_t, 31, 15, access::ro>,
+             common::access::rw,
+               groov::field<"reserved3", std::uint32_t, 31, 15, common::access::ro>,
                groov::field<"nyet", bool, 14, 14>,
-               groov::field<"reserved2", std::uint8_t, 13, 7, access::ro>,
+               groov::field<"reserved2", std::uint8_t, 13, 7, common::access::ro>,
                groov::field<"b2bstup", bool, 6, 6>,
-               groov::field<"reserved1", bool, 5, 5, access::ro>,
-               groov::field<"otepdis", bit_enable_bar, 4, 4>,
+               groov::field<"reserved1", bool, 5, 5, common::access::ro>,
+               groov::field<"otepdis", common::bittypes::bit_enable_bar, 4, 4>,
                groov::field<"stup", bool, 3, 3>,
-               groov::field<"reserved0", bool, 2, 2, access::ro>,
+               groov::field<"reserved0", bool, 2, 2, common::access::ro>,
                groov::field<"epdisd", bool, 1, 1>,
                groov::field<"xfrc", bool, 0, 0>>;
 
@@ -1519,15 +1519,15 @@ using usb_otg_hs_otg_hs_doepint6_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved3", std::uint32_t, 31, 15, access::ro>,
+             common::access::rw,
+               groov::field<"reserved3", std::uint32_t, 31, 15, common::access::ro>,
                groov::field<"nyet", bool, 14, 14>,
-               groov::field<"reserved2", std::uint8_t, 13, 7, access::ro>,
+               groov::field<"reserved2", std::uint8_t, 13, 7, common::access::ro>,
                groov::field<"b2bstup", bool, 6, 6>,
-               groov::field<"reserved1", bool, 5, 5, access::ro>,
-               groov::field<"otepdis", bit_enable_bar, 4, 4>,
+               groov::field<"reserved1", bool, 5, 5, common::access::ro>,
+               groov::field<"otepdis", common::bittypes::bit_enable_bar, 4, 4>,
                groov::field<"stup", bool, 3, 3>,
-               groov::field<"reserved0", bool, 2, 2, access::ro>,
+               groov::field<"reserved0", bool, 2, 2, common::access::ro>,
                groov::field<"epdisd", bool, 1, 1>,
                groov::field<"xfrc", bool, 0, 0>>;
 
@@ -1540,15 +1540,15 @@ using usb_otg_hs_otg_hs_doepint7_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved3", std::uint32_t, 31, 15, access::ro>,
+             common::access::rw,
+               groov::field<"reserved3", std::uint32_t, 31, 15, common::access::ro>,
                groov::field<"nyet", bool, 14, 14>,
-               groov::field<"reserved2", std::uint8_t, 13, 7, access::ro>,
+               groov::field<"reserved2", std::uint8_t, 13, 7, common::access::ro>,
                groov::field<"b2bstup", bool, 6, 6>,
-               groov::field<"reserved1", bool, 5, 5, access::ro>,
-               groov::field<"otepdis", bit_enable_bar, 4, 4>,
+               groov::field<"reserved1", bool, 5, 5, common::access::ro>,
+               groov::field<"otepdis", common::bittypes::bit_enable_bar, 4, 4>,
                groov::field<"stup", bool, 3, 3>,
-               groov::field<"reserved0", bool, 2, 2, access::ro>,
+               groov::field<"reserved0", bool, 2, 2, common::access::ro>,
                groov::field<"epdisd", bool, 1, 1>,
                groov::field<"xfrc", bool, 0, 0>>;
 
@@ -1561,16 +1561,16 @@ using usb_otg_hs_otg_hs_doepmsk_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved3", std::uint32_t, 31, 10, access::ro>,
+             common::access::rw,
+               groov::field<"reserved3", std::uint32_t, 31, 10, common::access::ro>,
                groov::field<"boim", bool, 9, 9>,
                groov::field<"opem", bool, 8, 8>,
-               groov::field<"reserved2", bool, 7, 7, access::ro>,
+               groov::field<"reserved2", bool, 7, 7, common::access::ro>,
                groov::field<"b2bstup", bool, 6, 6>,
-               groov::field<"reserved1", bool, 5, 5, access::ro>,
+               groov::field<"reserved1", bool, 5, 5, common::access::ro>,
                groov::field<"otepdm", bool, 4, 4>,
                groov::field<"stupm", bool, 3, 3>,
-               groov::field<"reserved0", bool, 2, 2, access::ro>,
+               groov::field<"reserved0", bool, 2, 2, common::access::ro>,
                groov::field<"epdm", bool, 1, 1>,
                groov::field<"xfrcm", bool, 0, 0>>;
 
@@ -1583,12 +1583,12 @@ using usb_otg_hs_otg_hs_doeptsiz0_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved2", bool, 31, 31, access::ro>,
+             common::access::rw,
+               groov::field<"reserved2", bool, 31, 31, common::access::ro>,
                groov::field<"stupcnt", std::uint8_t, 30, 29>,
-               groov::field<"reserved1", std::uint16_t, 28, 20, access::ro>,
+               groov::field<"reserved1", std::uint16_t, 28, 20, common::access::ro>,
                groov::field<"pktcnt", bool, 19, 19>,
-               groov::field<"reserved0", std::uint16_t, 18, 7, access::ro>,
+               groov::field<"reserved0", std::uint16_t, 18, 7, common::access::ro>,
                groov::field<"xfrsiz", std::uint8_t, 6, 0>>;
 
 // usb_otg_hs_otg_hs_doeptsiz1_v1: OTG_HS_DOEPTSIZ1
@@ -1600,8 +1600,8 @@ using usb_otg_hs_otg_hs_doeptsiz1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", bool, 31, 31, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", bool, 31, 31, common::access::ro>,
                groov::field<"rxdpid_stupcnt", std::uint8_t, 30, 29>,
                groov::field<"pktcnt", std::uint16_t, 28, 19>,
                groov::field<"xfrsiz", std::uint32_t, 18, 0>>;
@@ -1615,8 +1615,8 @@ using usb_otg_hs_otg_hs_doeptsiz2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", bool, 31, 31, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", bool, 31, 31, common::access::ro>,
                groov::field<"rxdpid_stupcnt", std::uint8_t, 30, 29>,
                groov::field<"pktcnt", std::uint16_t, 28, 19>,
                groov::field<"xfrsiz", std::uint32_t, 18, 0>>;
@@ -1630,8 +1630,8 @@ using usb_otg_hs_otg_hs_doeptsiz3_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", bool, 31, 31, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", bool, 31, 31, common::access::ro>,
                groov::field<"rxdpid_stupcnt", std::uint8_t, 30, 29>,
                groov::field<"pktcnt", std::uint16_t, 28, 19>,
                groov::field<"xfrsiz", std::uint32_t, 18, 0>>;
@@ -1645,8 +1645,8 @@ using usb_otg_hs_otg_hs_doeptsiz4_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", bool, 31, 31, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", bool, 31, 31, common::access::ro>,
                groov::field<"rxdpid_stupcnt", std::uint8_t, 30, 29>,
                groov::field<"pktcnt", std::uint16_t, 28, 19>,
                groov::field<"xfrsiz", std::uint32_t, 18, 0>>;
@@ -1660,8 +1660,8 @@ using usb_otg_hs_otg_hs_doeptsiz5_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", bool, 31, 31, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", bool, 31, 31, common::access::ro>,
                groov::field<"rxdpid_stupcnt", std::uint8_t, 30, 29>,
                groov::field<"pktcnt", std::uint16_t, 28, 19>,
                groov::field<"xfrsiz", std::uint32_t, 18, 0>>;
@@ -1675,8 +1675,8 @@ using usb_otg_hs_otg_hs_doeptsiz6_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", bool, 31, 31, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", bool, 31, 31, common::access::ro>,
                groov::field<"rxdpid_stupcnt", std::uint8_t, 30, 29>,
                groov::field<"pktcnt", std::uint16_t, 28, 19>,
                groov::field<"xfrsiz", std::uint32_t, 18, 0>>;
@@ -1690,8 +1690,8 @@ using usb_otg_hs_otg_hs_doeptsiz7_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", bool, 31, 31, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", bool, 31, 31, common::access::ro>,
                groov::field<"rxdpid_stupcnt", std::uint8_t, 30, 29>,
                groov::field<"pktcnt", std::uint16_t, 28, 19>,
                groov::field<"xfrsiz", std::uint32_t, 18, 0>>;
@@ -1705,7 +1705,7 @@ using usb_otg_hs_otg_hs_dsts_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved1", std::uint16_t, 31, 22>,
                groov::field<"fnsof", std::uint16_t, 21, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 4>,
@@ -1722,16 +1722,16 @@ using usb_otg_hs_otg_hs_dthrctl_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved2", std::uint8_t, 31, 28, access::ro>,
-               groov::field<"arpen", bit_enable, 27, 27>,
-               groov::field<"reserved1", bool, 26, 26, access::ro>,
+             common::access::rw,
+               groov::field<"reserved2", std::uint8_t, 31, 28, common::access::ro>,
+               groov::field<"arpen", common::bittypes::bit_enable, 27, 27>,
+               groov::field<"reserved1", bool, 26, 26, common::access::ro>,
                groov::field<"rxthrlen", std::uint16_t, 25, 17>,
-               groov::field<"rxthren", bit_enable, 16, 16>,
-               groov::field<"reserved0", std::uint8_t, 15, 11, access::ro>,
+               groov::field<"rxthren", common::bittypes::bit_enable, 16, 16>,
+               groov::field<"reserved0", std::uint8_t, 15, 11, common::access::ro>,
                groov::field<"txthrlen", std::uint16_t, 10, 2>,
-               groov::field<"isothren", bit_enable, 1, 1>,
-               groov::field<"nonisothren", bit_enable, 0, 0>>;
+               groov::field<"isothren", common::bittypes::bit_enable, 1, 1>,
+               groov::field<"nonisothren", common::bittypes::bit_enable, 0, 0>>;
 
 // usb_otg_hs_otg_hs_dtxfsts0_v1: OTG_HS_DTXFSTS0
 // Used by: OTG_HS_DEVICE
@@ -1742,7 +1742,7 @@ using usb_otg_hs_otg_hs_dtxfsts0_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint16_t, 31, 16>,
                groov::field<"ineptfsav", std::uint16_t, 15, 0>>;
 
@@ -1755,7 +1755,7 @@ using usb_otg_hs_otg_hs_dtxfsts1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint16_t, 31, 16>,
                groov::field<"ineptfsav", std::uint16_t, 15, 0>>;
 
@@ -1768,7 +1768,7 @@ using usb_otg_hs_otg_hs_dtxfsts2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint16_t, 31, 16>,
                groov::field<"ineptfsav", std::uint16_t, 15, 0>>;
 
@@ -1781,7 +1781,7 @@ using usb_otg_hs_otg_hs_dtxfsts3_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint16_t, 31, 16>,
                groov::field<"ineptfsav", std::uint16_t, 15, 0>>;
 
@@ -1794,7 +1794,7 @@ using usb_otg_hs_otg_hs_dtxfsts4_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint16_t, 31, 16>,
                groov::field<"ineptfsav", std::uint16_t, 15, 0>>;
 
@@ -1807,7 +1807,7 @@ using usb_otg_hs_otg_hs_dtxfsts5_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint16_t, 31, 16>,
                groov::field<"ineptfsav", std::uint16_t, 15, 0>>;
 
@@ -1820,8 +1820,8 @@ using usb_otg_hs_otg_hs_dtxfsts6_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"ineptfsav", std::uint16_t, 15, 0>>;
 
 // usb_otg_hs_otg_hs_dtxfsts7_v1: OTG_HS_DTXFSTS7
@@ -1833,8 +1833,8 @@ using usb_otg_hs_otg_hs_dtxfsts7_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"ineptfsav", std::uint16_t, 15, 0>>;
 
 // usb_otg_hs_otg_hs_dvbusdis_v1: OTG_HS_DVBUSDIS
@@ -1846,8 +1846,8 @@ using usb_otg_hs_otg_hs_dvbusdis_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"vbusdt", std::uint16_t, 15, 0>>;
 
 // usb_otg_hs_otg_hs_dvbuspulse_v1: OTG_HS_DVBUSPULSE
@@ -1859,8 +1859,8 @@ using usb_otg_hs_otg_hs_dvbuspulse_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 12, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 12, common::access::ro>,
                groov::field<"dvbusp", std::uint16_t, 11, 0>>;
 
 // usb_otg_hs_otg_hs_gahbcfg_v1: OTG_HS_GAHBCFG
@@ -1872,12 +1872,12 @@ using usb_otg_hs_otg_hs_gahbcfg_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint32_t, 31, 9, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint32_t, 31, 9, common::access::ro>,
                groov::field<"ptxfelvl", bool, 8, 8>,
                groov::field<"txfelvl", bool, 7, 7>,
-               groov::field<"reserved0", bool, 6, 6, access::ro>,
-               groov::field<"dmaen", bit_enable, 5, 5>,
+               groov::field<"reserved0", bool, 6, 6, common::access::ro>,
+               groov::field<"dmaen", common::bittypes::bit_enable, 5, 5>,
                groov::field<"hbstlen", std::uint8_t, 4, 1>,
                groov::field<"gint", bool, 0, 0>>;
 
@@ -1890,15 +1890,15 @@ using usb_otg_hs_otg_hs_gccfg_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint16_t, 31, 22, access::ro>,
-               groov::field<"vbden", bit_enable, 21, 21>,
-               groov::field<"sden", bit_enable, 20, 20>,
-               groov::field<"pden", bit_enable, 19, 19>,
-               groov::field<"dcden", bit_enable, 18, 18>,
-               groov::field<"bcden", bit_enable, 17, 17>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint16_t, 31, 22, common::access::ro>,
+               groov::field<"vbden", common::bittypes::bit_enable, 21, 21>,
+               groov::field<"sden", common::bittypes::bit_enable, 20, 20>,
+               groov::field<"pden", common::bittypes::bit_enable, 19, 19>,
+               groov::field<"dcden", common::bittypes::bit_enable, 18, 18>,
+               groov::field<"bcden", common::bittypes::bit_enable, 17, 17>,
                groov::field<"pwrdwn", bool, 16, 16>,
-               groov::field<"reserved0", std::uint16_t, 15, 4, access::ro>,
+               groov::field<"reserved0", std::uint16_t, 15, 4, common::access::ro>,
                groov::field<"ps2det", bool, 3, 3>,
                groov::field<"sdet", bool, 2, 2>,
                groov::field<"pdet", bool, 1, 1>,
@@ -1913,15 +1913,15 @@ using usb_otg_hs_otg_hs_gi2cctl_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"bsydne", bit_ready_bar, 31, 31>,
+             common::access::rw,
+               groov::field<"bsydne", common::bittypes::bit_ready_bar, 31, 31>,
                groov::field<"rw", bool, 30, 30>,
-               groov::field<"reserved1", bool, 29, 29, access::ro>,
+               groov::field<"reserved1", bool, 29, 29, common::access::ro>,
                groov::field<"i2cdatse0", bool, 28, 28>,
                groov::field<"i2cdevadr", std::uint8_t, 27, 26>,
-               groov::field<"reserved0", bool, 25, 25, access::ro>,
+               groov::field<"reserved0", bool, 25, 25, common::access::ro>,
                groov::field<"ack", bool, 24, 24>,
-               groov::field<"i2cen", bit_enable, 23, 23>,
+               groov::field<"i2cen", common::bittypes::bit_enable, 23, 23>,
                groov::field<"addr", std::uint8_t, 22, 16>,
                groov::field<"regaddr", std::uint8_t, 15, 8>,
                groov::field<"rwdata", std::uint8_t, 7, 0>>;
@@ -1935,7 +1935,7 @@ using usb_otg_hs_otg_hs_gintmsk_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"wuim", bool, 31, 31>,
                groov::field<"srqim", bool, 30, 30>,
                groov::field<"discint", bool, 29, 29>,
@@ -1943,21 +1943,21 @@ using usb_otg_hs_otg_hs_gintmsk_v1_tt =
                groov::field<"lpmintm", bool, 27, 27>,
                groov::field<"ptxfem", bool, 26, 26>,
                groov::field<"hcim", bool, 25, 25>,
-               groov::field<"prtim", bool, 24, 24, access::ro>,
-               groov::field<"rstde", bit_enable, 23, 23>,
+               groov::field<"prtim", bool, 24, 24, common::access::ro>,
+               groov::field<"rstde", common::bittypes::bit_enable, 23, 23>,
                groov::field<"fsuspm", bool, 22, 22>,
                groov::field<"pxfrm_iisooxfrm", bool, 21, 21>,
                groov::field<"iisoixfrm", bool, 20, 20>,
                groov::field<"oepint", bool, 19, 19>,
                groov::field<"iepint", bool, 18, 18>,
-               groov::field<"reserved2", std::uint8_t, 17, 16, access::ro>,
+               groov::field<"reserved2", std::uint8_t, 17, 16, common::access::ro>,
                groov::field<"eopfm", bool, 15, 15>,
                groov::field<"isoodrpm", bool, 14, 14>,
                groov::field<"enumdnem", bool, 13, 13>,
-               groov::field<"usbrst", bit_reset, 12, 12>,
+               groov::field<"usbrst", common::bittypes::bit_reset, 12, 12>,
                groov::field<"usbsuspm", bool, 11, 11>,
                groov::field<"esuspm", bool, 10, 10>,
-               groov::field<"reserved1", std::uint8_t, 9, 8, access::ro>,
+               groov::field<"reserved1", std::uint8_t, 9, 8, common::access::ro>,
                groov::field<"gonakeffm", bool, 7, 7>,
                groov::field<"ginakeffm", bool, 6, 6>,
                groov::field<"nptxfem", bool, 5, 5>,
@@ -1965,7 +1965,7 @@ using usb_otg_hs_otg_hs_gintmsk_v1_tt =
                groov::field<"sofm", bool, 3, 3>,
                groov::field<"otgint", bool, 2, 2>,
                groov::field<"mmism", bool, 1, 1>,
-               groov::field<"reserved0", bool, 0, 0, access::ro>>;
+               groov::field<"reserved0", bool, 0, 0, common::access::ro>>;
 
 // usb_otg_hs_otg_hs_gintsts_v1: OTG_HS_GINTSTS
 // Used by: OTG_HS_GLOBAL
@@ -1976,37 +1976,37 @@ using usb_otg_hs_otg_hs_gintsts_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"wkuint", bool, 31, 31>,
                groov::field<"srqint", bool, 30, 30>,
                groov::field<"discint", bool, 29, 29>,
                groov::field<"cidschg", bool, 28, 28>,
-               groov::field<"reserved3", bool, 27, 27, access::ro>,
-               groov::field<"ptxfe", bit_enable, 26, 26, access::ro>,
-               groov::field<"hcint", bool, 25, 25, access::ro>,
-               groov::field<"hprtint", bool, 24, 24, access::ro>,
-               groov::field<"reserved2", bool, 23, 23, access::ro>,
+               groov::field<"reserved3", bool, 27, 27, common::access::ro>,
+               groov::field<"ptxfe", common::bittypes::bit_enable, 26, 26, common::access::ro>,
+               groov::field<"hcint", bool, 25, 25, common::access::ro>,
+               groov::field<"hprtint", bool, 24, 24, common::access::ro>,
+               groov::field<"reserved2", bool, 23, 23, common::access::ro>,
                groov::field<"datafsusp", bool, 22, 22>,
                groov::field<"pxfr_incompisoout", bool, 21, 21>,
                groov::field<"iisoixfr", bool, 20, 20>,
-               groov::field<"oepint", bool, 19, 19, access::ro>,
-               groov::field<"iepint", bool, 18, 18, access::ro>,
-               groov::field<"reserved1", std::uint8_t, 17, 16, access::ro>,
+               groov::field<"oepint", bool, 19, 19, common::access::ro>,
+               groov::field<"iepint", bool, 18, 18, common::access::ro>,
+               groov::field<"reserved1", std::uint8_t, 17, 16, common::access::ro>,
                groov::field<"eopf", bool, 15, 15>,
                groov::field<"isoodrp", bool, 14, 14>,
                groov::field<"enumdne", bool, 13, 13>,
-               groov::field<"usbrst", bit_reset, 12, 12>,
+               groov::field<"usbrst", common::bittypes::bit_reset, 12, 12>,
                groov::field<"usbsusp", bool, 11, 11>,
                groov::field<"esusp", bool, 10, 10>,
-               groov::field<"reserved0", std::uint8_t, 9, 8, access::ro>,
-               groov::field<"boutnakeff", bool, 7, 7, access::ro>,
-               groov::field<"ginakeff", bool, 6, 6, access::ro>,
-               groov::field<"nptxfe", bit_enable, 5, 5, access::ro>,
-               groov::field<"rxflvl", bool, 4, 4, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 9, 8, common::access::ro>,
+               groov::field<"boutnakeff", bool, 7, 7, common::access::ro>,
+               groov::field<"ginakeff", bool, 6, 6, common::access::ro>,
+               groov::field<"nptxfe", common::bittypes::bit_enable, 5, 5, common::access::ro>,
+               groov::field<"rxflvl", bool, 4, 4, common::access::ro>,
                groov::field<"sof", bool, 3, 3>,
-               groov::field<"otgint", bool, 2, 2, access::ro>,
+               groov::field<"otgint", bool, 2, 2, common::access::ro>,
                groov::field<"mmis", bool, 1, 1>,
-               groov::field<"cmod", bool, 0, 0, access::ro>>;
+               groov::field<"cmod", bool, 0, 0, common::access::ro>>;
 
 // usb_otg_hs_otg_hs_glpmcfg_v1: OTG_HS_GLPMCFG
 // Used by: OTG_HS_GLOBAL
@@ -2017,23 +2017,23 @@ using usb_otg_hs_otg_hs_glpmcfg_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint8_t, 31, 29, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint8_t, 31, 29, common::access::ro>,
                groov::field<"enbesl", bool, 28, 28>,
-               groov::field<"lpmrcntsts", std::uint8_t, 27, 25, access::ro>,
+               groov::field<"lpmrcntsts", std::uint8_t, 27, 25, common::access::ro>,
                groov::field<"sndlpm", bool, 24, 24>,
                groov::field<"lpmrcnt", std::uint8_t, 23, 21>,
                groov::field<"lpmchidx", std::uint8_t, 20, 17>,
-               groov::field<"l1rsmok", bool, 16, 16, access::ro>,
-               groov::field<"slpsts", bool, 15, 15, access::ro>,
-               groov::field<"lpmrst", std::uint8_t, 14, 13, access::ro>,
-               groov::field<"l1dsen", bit_enable, 12, 12>,
+               groov::field<"l1rsmok", bool, 16, 16, common::access::ro>,
+               groov::field<"slpsts", bool, 15, 15, common::access::ro>,
+               groov::field<"lpmrst", std::uint8_t, 14, 13, common::access::ro>,
+               groov::field<"l1dsen", common::bittypes::bit_enable, 12, 12>,
                groov::field<"beslthrs", std::uint8_t, 11, 8>,
-               groov::field<"l1ssen", bit_enable, 7, 7>,
-               groov::field<"remwake", bool, 6, 6, access::ro>,
-               groov::field<"besl", std::uint8_t, 5, 2, access::ro>,
+               groov::field<"l1ssen", common::bittypes::bit_enable, 7, 7>,
+               groov::field<"remwake", bool, 6, 6, common::access::ro>,
+               groov::field<"besl", std::uint8_t, 5, 2, common::access::ro>,
                groov::field<"lpmack", bool, 1, 1>,
-               groov::field<"lpmen", bit_enable, 0, 0>>;
+               groov::field<"lpmen", common::bittypes::bit_enable, 0, 0>>;
 
 // usb_otg_hs_otg_hs_gotgctl_v1: OTG_HS_GOTGCTL
 // Used by: OTG_HS_GLOBAL
@@ -2044,21 +2044,21 @@ using usb_otg_hs_otg_hs_gotgctl_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved2", std::uint16_t, 31, 20, access::ro>,
-               groov::field<"bsvld", bool, 19, 19, access::ro>,
-               groov::field<"asvld", bool, 18, 18, access::ro>,
-               groov::field<"dbct", bool, 17, 17, access::ro>,
-               groov::field<"cidsts", bool, 16, 16, access::ro>,
-               groov::field<"reserved1", std::uint8_t, 15, 13, access::ro>,
-               groov::field<"ehen", bit_enable, 12, 12>,
-               groov::field<"dhnpen", bit_enable, 11, 11>,
-               groov::field<"hshnpen", bit_enable, 10, 10>,
+             common::access::rw,
+               groov::field<"reserved2", std::uint16_t, 31, 20, common::access::ro>,
+               groov::field<"bsvld", bool, 19, 19, common::access::ro>,
+               groov::field<"asvld", bool, 18, 18, common::access::ro>,
+               groov::field<"dbct", bool, 17, 17, common::access::ro>,
+               groov::field<"cidsts", bool, 16, 16, common::access::ro>,
+               groov::field<"reserved1", std::uint8_t, 15, 13, common::access::ro>,
+               groov::field<"ehen", common::bittypes::bit_enable, 12, 12>,
+               groov::field<"dhnpen", common::bittypes::bit_enable, 11, 11>,
+               groov::field<"hshnpen", common::bittypes::bit_enable, 10, 10>,
                groov::field<"hnprq", bool, 9, 9>,
-               groov::field<"hngscs", bool, 8, 8, access::ro>,
-               groov::field<"reserved0", std::uint8_t, 7, 2, access::ro>,
+               groov::field<"hngscs", bool, 8, 8, common::access::ro>,
+               groov::field<"reserved0", std::uint8_t, 7, 2, common::access::ro>,
                groov::field<"srq", bool, 1, 1>,
-               groov::field<"srqscs", bool, 0, 0, access::ro>>;
+               groov::field<"srqscs", bool, 0, 0, common::access::ro>>;
 
 // usb_otg_hs_otg_hs_gotgint_v1: OTG_HS_GOTGINT
 // Used by: OTG_HS_GLOBAL
@@ -2069,18 +2069,18 @@ using usb_otg_hs_otg_hs_gotgint_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved3", std::uint16_t, 31, 21, access::ro>,
+             common::access::rw,
+               groov::field<"reserved3", std::uint16_t, 31, 21, common::access::ro>,
                groov::field<"idchng", bool, 20, 20>,
                groov::field<"dbcdne", bool, 19, 19>,
                groov::field<"adtochg", bool, 18, 18>,
                groov::field<"hngdet", bool, 17, 17>,
-               groov::field<"reserved2", std::uint8_t, 16, 10, access::ro>,
+               groov::field<"reserved2", std::uint8_t, 16, 10, common::access::ro>,
                groov::field<"hnsschg", bool, 9, 9>,
                groov::field<"srsschg", bool, 8, 8>,
-               groov::field<"reserved1", std::uint8_t, 7, 3, access::ro>,
+               groov::field<"reserved1", std::uint8_t, 7, 3, common::access::ro>,
                groov::field<"sedet", bool, 2, 2>,
-               groov::field<"reserved0", std::uint8_t, 1, 0, access::ro>>;
+               groov::field<"reserved0", std::uint8_t, 1, 0, common::access::ro>>;
 
 // usb_otg_hs_otg_hs_grstctl_v1: OTG_HS_GRSTCTL
 // Used by: OTG_HS_GLOBAL
@@ -2091,17 +2091,17 @@ using usb_otg_hs_otg_hs_grstctl_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"ahbidl", bool, 31, 31, access::ro>,
-               groov::field<"dmareq", bool, 30, 30, access::ro>,
-               groov::field<"reserved1", std::uint32_t, 29, 11, access::ro>,
+             common::access::rw,
+               groov::field<"ahbidl", bool, 31, 31, common::access::ro>,
+               groov::field<"dmareq", bool, 30, 30, common::access::ro>,
+               groov::field<"reserved1", std::uint32_t, 29, 11, common::access::ro>,
                groov::field<"txfnum", std::uint8_t, 10, 6>,
                groov::field<"txfflsh", bool, 5, 5>,
                groov::field<"rxfflsh", bool, 4, 4>,
-               groov::field<"reserved0", bool, 3, 3, access::ro>,
-               groov::field<"fcrst", bit_reset, 2, 2>,
-               groov::field<"hsrst", bit_reset, 1, 1>,
-               groov::field<"csrst", bit_reset, 0, 0>>;
+               groov::field<"reserved0", bool, 3, 3, common::access::ro>,
+               groov::field<"fcrst", common::bittypes::bit_reset, 2, 2>,
+               groov::field<"hsrst", common::bittypes::bit_reset, 1, 1>,
+               groov::field<"csrst", common::bittypes::bit_reset, 0, 0>>;
 
 // usb_otg_hs_otg_hs_grxfsiz_v1: OTG_HS_GRXFSIZ
 // Used by: OTG_HS_GLOBAL
@@ -2112,8 +2112,8 @@ using usb_otg_hs_otg_hs_grxfsiz_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"rxfd", std::uint16_t, 15, 0>>;
 
 // usb_otg_hs_otg_hs_grxstsp_device_v1: OTG_HS_GRXSTSP_DEVICE
@@ -2125,7 +2125,7 @@ using usb_otg_hs_otg_hs_grxstsp_device_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint8_t, 31, 25>,
                groov::field<"frmnum", std::uint8_t, 24, 21>,
                groov::field<"pktsts", std::uint8_t, 20, 17>,
@@ -2142,7 +2142,7 @@ using usb_otg_hs_otg_hs_grxstsp_host_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint16_t, 31, 21>,
                groov::field<"pktsts", std::uint8_t, 20, 17>,
                groov::field<"dpid", std::uint8_t, 16, 15>,
@@ -2158,7 +2158,7 @@ using usb_otg_hs_otg_hs_grxstsr_device_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint8_t, 31, 25>,
                groov::field<"frmnum", std::uint8_t, 24, 21>,
                groov::field<"pktsts", std::uint8_t, 20, 17>,
@@ -2175,7 +2175,7 @@ using usb_otg_hs_otg_hs_grxstsr_host_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint16_t, 31, 21>,
                groov::field<"pktsts", std::uint8_t, 20, 17>,
                groov::field<"dpid", std::uint8_t, 16, 15>,
@@ -2191,11 +2191,11 @@ using usb_otg_hs_otg_hs_gusbcfg_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved5", bool, 31, 31, access::ro>,
+             common::access::rw,
+               groov::field<"reserved5", bool, 31, 31, common::access::ro>,
                groov::field<"fdmod", bool, 30, 30>,
                groov::field<"fhmod", bool, 29, 29>,
-               groov::field<"reserved4", std::uint8_t, 28, 26, access::ro>,
+               groov::field<"reserved4", std::uint8_t, 28, 26, common::access::ro>,
                groov::field<"ulpiipd", bool, 25, 25>,
                groov::field<"ptci", bool, 24, 24>,
                groov::field<"pcci", bool, 23, 23>,
@@ -2205,15 +2205,15 @@ using usb_otg_hs_otg_hs_gusbcfg_v1_tt =
                groov::field<"ulpicsm", bool, 19, 19>,
                groov::field<"ulpiar", bool, 18, 18>,
                groov::field<"ulpifsls", bool, 17, 17>,
-               groov::field<"reserved3", bool, 16, 16, access::ro>,
+               groov::field<"reserved3", bool, 16, 16, common::access::ro>,
                groov::field<"phylpcs", bool, 15, 15>,
-               groov::field<"reserved2", bool, 14, 14, access::ro>,
+               groov::field<"reserved2", bool, 14, 14, common::access::ro>,
                groov::field<"trdt", std::uint8_t, 13, 10>,
                groov::field<"hnpcap", bool, 9, 9>,
                groov::field<"srpcap", bool, 8, 8>,
-               groov::field<"reserved1", bool, 7, 7, access::ro>,
-               groov::field<"physel", bool, 6, 6, access::wo>,
-               groov::field<"reserved0", std::uint8_t, 5, 3, access::ro>,
+               groov::field<"reserved1", bool, 7, 7, common::access::ro>,
+               groov::field<"physel", bool, 6, 6, common::access::wo>,
+               groov::field<"reserved0", std::uint8_t, 5, 3, common::access::ro>,
                groov::field<"tocal", std::uint8_t, 2, 0>>;
 
 // usb_otg_hs_otg_hs_haint_v1: OTG_HS_HAINT
@@ -2225,7 +2225,7 @@ using usb_otg_hs_otg_hs_haint_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint16_t, 31, 16>,
                groov::field<"haint", std::uint16_t, 15, 0>>;
 
@@ -2238,8 +2238,8 @@ using usb_otg_hs_otg_hs_haintmsk_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"haintm", std::uint16_t, 15, 0>>;
 
 // usb_otg_hs_otg_hs_hcchar0_v1: OTG_HS_HCCHAR0
@@ -2251,15 +2251,15 @@ using usb_otg_hs_otg_hs_hcchar0_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"chena", bool, 31, 31>,
-               groov::field<"chdis", bit_enable_bar, 30, 30>,
+               groov::field<"chdis", common::bittypes::bit_enable_bar, 30, 30>,
                groov::field<"oddfrm", bool, 29, 29>,
                groov::field<"dad", std::uint8_t, 28, 22>,
                groov::field<"mc", std::uint8_t, 21, 20>,
                groov::field<"eptyp", std::uint8_t, 19, 18>,
                groov::field<"lsdev", bool, 17, 17>,
-               groov::field<"reserved0", bool, 16, 16, access::ro>,
+               groov::field<"reserved0", bool, 16, 16, common::access::ro>,
                groov::field<"epdir", bool, 15, 15>,
                groov::field<"epnum", std::uint8_t, 14, 11>,
                groov::field<"mpsiz", std::uint16_t, 10, 0>>;
@@ -2273,15 +2273,15 @@ using usb_otg_hs_otg_hs_hcchar1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"chena", bool, 31, 31>,
-               groov::field<"chdis", bit_enable_bar, 30, 30>,
+               groov::field<"chdis", common::bittypes::bit_enable_bar, 30, 30>,
                groov::field<"oddfrm", bool, 29, 29>,
                groov::field<"dad", std::uint8_t, 28, 22>,
                groov::field<"mc", std::uint8_t, 21, 20>,
                groov::field<"eptyp", std::uint8_t, 19, 18>,
                groov::field<"lsdev", bool, 17, 17>,
-               groov::field<"reserved0", bool, 16, 16, access::ro>,
+               groov::field<"reserved0", bool, 16, 16, common::access::ro>,
                groov::field<"epdir", bool, 15, 15>,
                groov::field<"epnum", std::uint8_t, 14, 11>,
                groov::field<"mpsiz", std::uint16_t, 10, 0>>;
@@ -2295,15 +2295,15 @@ using usb_otg_hs_otg_hs_hcchar10_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"chena", bool, 31, 31>,
-               groov::field<"chdis", bit_enable_bar, 30, 30>,
+               groov::field<"chdis", common::bittypes::bit_enable_bar, 30, 30>,
                groov::field<"oddfrm", bool, 29, 29>,
                groov::field<"dad", std::uint8_t, 28, 22>,
                groov::field<"mc", std::uint8_t, 21, 20>,
                groov::field<"eptyp", std::uint8_t, 19, 18>,
                groov::field<"lsdev", bool, 17, 17>,
-               groov::field<"reserved0", bool, 16, 16, access::ro>,
+               groov::field<"reserved0", bool, 16, 16, common::access::ro>,
                groov::field<"epdir", bool, 15, 15>,
                groov::field<"epnum", std::uint8_t, 14, 11>,
                groov::field<"mpsiz", std::uint16_t, 10, 0>>;
@@ -2317,15 +2317,15 @@ using usb_otg_hs_otg_hs_hcchar11_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"chena", bool, 31, 31>,
-               groov::field<"chdis", bit_enable_bar, 30, 30>,
+               groov::field<"chdis", common::bittypes::bit_enable_bar, 30, 30>,
                groov::field<"oddfrm", bool, 29, 29>,
                groov::field<"dad", std::uint8_t, 28, 22>,
                groov::field<"mc", std::uint8_t, 21, 20>,
                groov::field<"eptyp", std::uint8_t, 19, 18>,
                groov::field<"lsdev", bool, 17, 17>,
-               groov::field<"reserved0", bool, 16, 16, access::ro>,
+               groov::field<"reserved0", bool, 16, 16, common::access::ro>,
                groov::field<"epdir", bool, 15, 15>,
                groov::field<"epnum", std::uint8_t, 14, 11>,
                groov::field<"mpsiz", std::uint16_t, 10, 0>>;
@@ -2339,15 +2339,15 @@ using usb_otg_hs_otg_hs_hcchar12_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"chena", bool, 31, 31>,
-               groov::field<"chdis", bit_enable_bar, 30, 30>,
+               groov::field<"chdis", common::bittypes::bit_enable_bar, 30, 30>,
                groov::field<"oddfrm", bool, 29, 29>,
                groov::field<"dad", std::uint8_t, 28, 22>,
                groov::field<"mc", std::uint8_t, 21, 20>,
                groov::field<"eptyp", std::uint8_t, 19, 18>,
                groov::field<"lsdev", bool, 17, 17>,
-               groov::field<"reserved0", bool, 16, 16, access::ro>,
+               groov::field<"reserved0", bool, 16, 16, common::access::ro>,
                groov::field<"epdir", bool, 15, 15>,
                groov::field<"epnum", std::uint8_t, 14, 11>,
                groov::field<"mpsiz", std::uint16_t, 10, 0>>;
@@ -2361,15 +2361,15 @@ using usb_otg_hs_otg_hs_hcchar13_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"chena", bool, 31, 31>,
-               groov::field<"chdis", bit_enable_bar, 30, 30>,
+               groov::field<"chdis", common::bittypes::bit_enable_bar, 30, 30>,
                groov::field<"oddfrm", bool, 29, 29>,
                groov::field<"dad", std::uint8_t, 28, 22>,
                groov::field<"mc", std::uint8_t, 21, 20>,
                groov::field<"eptyp", std::uint8_t, 19, 18>,
                groov::field<"lsdev", bool, 17, 17>,
-               groov::field<"reserved0", bool, 16, 16, access::ro>,
+               groov::field<"reserved0", bool, 16, 16, common::access::ro>,
                groov::field<"epdir", bool, 15, 15>,
                groov::field<"epnum", std::uint8_t, 14, 11>,
                groov::field<"mpsiz", std::uint16_t, 10, 0>>;
@@ -2383,15 +2383,15 @@ using usb_otg_hs_otg_hs_hcchar14_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"chena", bool, 31, 31>,
-               groov::field<"chdis", bit_enable_bar, 30, 30>,
+               groov::field<"chdis", common::bittypes::bit_enable_bar, 30, 30>,
                groov::field<"oddfrm", bool, 29, 29>,
                groov::field<"dad", std::uint8_t, 28, 22>,
                groov::field<"mc", std::uint8_t, 21, 20>,
                groov::field<"eptyp", std::uint8_t, 19, 18>,
                groov::field<"lsdev", bool, 17, 17>,
-               groov::field<"reserved0", bool, 16, 16, access::ro>,
+               groov::field<"reserved0", bool, 16, 16, common::access::ro>,
                groov::field<"epdir", bool, 15, 15>,
                groov::field<"epnum", std::uint8_t, 14, 11>,
                groov::field<"mpsiz", std::uint16_t, 10, 0>>;
@@ -2405,15 +2405,15 @@ using usb_otg_hs_otg_hs_hcchar15_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"chena", bool, 31, 31>,
-               groov::field<"chdis", bit_enable_bar, 30, 30>,
+               groov::field<"chdis", common::bittypes::bit_enable_bar, 30, 30>,
                groov::field<"oddfrm", bool, 29, 29>,
                groov::field<"dad", std::uint8_t, 28, 22>,
                groov::field<"mc", std::uint8_t, 21, 20>,
                groov::field<"eptyp", std::uint8_t, 19, 18>,
                groov::field<"lsdev", bool, 17, 17>,
-               groov::field<"reserved0", bool, 16, 16, access::ro>,
+               groov::field<"reserved0", bool, 16, 16, common::access::ro>,
                groov::field<"epdir", bool, 15, 15>,
                groov::field<"epnum", std::uint8_t, 14, 11>,
                groov::field<"mpsiz", std::uint16_t, 10, 0>>;
@@ -2427,15 +2427,15 @@ using usb_otg_hs_otg_hs_hcchar2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"chena", bool, 31, 31>,
-               groov::field<"chdis", bit_enable_bar, 30, 30>,
+               groov::field<"chdis", common::bittypes::bit_enable_bar, 30, 30>,
                groov::field<"oddfrm", bool, 29, 29>,
                groov::field<"dad", std::uint8_t, 28, 22>,
                groov::field<"mc", std::uint8_t, 21, 20>,
                groov::field<"eptyp", std::uint8_t, 19, 18>,
                groov::field<"lsdev", bool, 17, 17>,
-               groov::field<"reserved0", bool, 16, 16, access::ro>,
+               groov::field<"reserved0", bool, 16, 16, common::access::ro>,
                groov::field<"epdir", bool, 15, 15>,
                groov::field<"epnum", std::uint8_t, 14, 11>,
                groov::field<"mpsiz", std::uint16_t, 10, 0>>;
@@ -2449,15 +2449,15 @@ using usb_otg_hs_otg_hs_hcchar3_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"chena", bool, 31, 31>,
-               groov::field<"chdis", bit_enable_bar, 30, 30>,
+               groov::field<"chdis", common::bittypes::bit_enable_bar, 30, 30>,
                groov::field<"oddfrm", bool, 29, 29>,
                groov::field<"dad", std::uint8_t, 28, 22>,
                groov::field<"mc", std::uint8_t, 21, 20>,
                groov::field<"eptyp", std::uint8_t, 19, 18>,
                groov::field<"lsdev", bool, 17, 17>,
-               groov::field<"reserved0", bool, 16, 16, access::ro>,
+               groov::field<"reserved0", bool, 16, 16, common::access::ro>,
                groov::field<"epdir", bool, 15, 15>,
                groov::field<"epnum", std::uint8_t, 14, 11>,
                groov::field<"mpsiz", std::uint16_t, 10, 0>>;
@@ -2471,15 +2471,15 @@ using usb_otg_hs_otg_hs_hcchar4_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"chena", bool, 31, 31>,
-               groov::field<"chdis", bit_enable_bar, 30, 30>,
+               groov::field<"chdis", common::bittypes::bit_enable_bar, 30, 30>,
                groov::field<"oddfrm", bool, 29, 29>,
                groov::field<"dad", std::uint8_t, 28, 22>,
                groov::field<"mc", std::uint8_t, 21, 20>,
                groov::field<"eptyp", std::uint8_t, 19, 18>,
                groov::field<"lsdev", bool, 17, 17>,
-               groov::field<"reserved0", bool, 16, 16, access::ro>,
+               groov::field<"reserved0", bool, 16, 16, common::access::ro>,
                groov::field<"epdir", bool, 15, 15>,
                groov::field<"epnum", std::uint8_t, 14, 11>,
                groov::field<"mpsiz", std::uint16_t, 10, 0>>;
@@ -2493,15 +2493,15 @@ using usb_otg_hs_otg_hs_hcchar5_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"chena", bool, 31, 31>,
-               groov::field<"chdis", bit_enable_bar, 30, 30>,
+               groov::field<"chdis", common::bittypes::bit_enable_bar, 30, 30>,
                groov::field<"oddfrm", bool, 29, 29>,
                groov::field<"dad", std::uint8_t, 28, 22>,
                groov::field<"mc", std::uint8_t, 21, 20>,
                groov::field<"eptyp", std::uint8_t, 19, 18>,
                groov::field<"lsdev", bool, 17, 17>,
-               groov::field<"reserved0", bool, 16, 16, access::ro>,
+               groov::field<"reserved0", bool, 16, 16, common::access::ro>,
                groov::field<"epdir", bool, 15, 15>,
                groov::field<"epnum", std::uint8_t, 14, 11>,
                groov::field<"mpsiz", std::uint16_t, 10, 0>>;
@@ -2515,15 +2515,15 @@ using usb_otg_hs_otg_hs_hcchar6_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"chena", bool, 31, 31>,
-               groov::field<"chdis", bit_enable_bar, 30, 30>,
+               groov::field<"chdis", common::bittypes::bit_enable_bar, 30, 30>,
                groov::field<"oddfrm", bool, 29, 29>,
                groov::field<"dad", std::uint8_t, 28, 22>,
                groov::field<"mc", std::uint8_t, 21, 20>,
                groov::field<"eptyp", std::uint8_t, 19, 18>,
                groov::field<"lsdev", bool, 17, 17>,
-               groov::field<"reserved0", bool, 16, 16, access::ro>,
+               groov::field<"reserved0", bool, 16, 16, common::access::ro>,
                groov::field<"epdir", bool, 15, 15>,
                groov::field<"epnum", std::uint8_t, 14, 11>,
                groov::field<"mpsiz", std::uint16_t, 10, 0>>;
@@ -2537,15 +2537,15 @@ using usb_otg_hs_otg_hs_hcchar7_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"chena", bool, 31, 31>,
-               groov::field<"chdis", bit_enable_bar, 30, 30>,
+               groov::field<"chdis", common::bittypes::bit_enable_bar, 30, 30>,
                groov::field<"oddfrm", bool, 29, 29>,
                groov::field<"dad", std::uint8_t, 28, 22>,
                groov::field<"mc", std::uint8_t, 21, 20>,
                groov::field<"eptyp", std::uint8_t, 19, 18>,
                groov::field<"lsdev", bool, 17, 17>,
-               groov::field<"reserved0", bool, 16, 16, access::ro>,
+               groov::field<"reserved0", bool, 16, 16, common::access::ro>,
                groov::field<"epdir", bool, 15, 15>,
                groov::field<"epnum", std::uint8_t, 14, 11>,
                groov::field<"mpsiz", std::uint16_t, 10, 0>>;
@@ -2559,15 +2559,15 @@ using usb_otg_hs_otg_hs_hcchar8_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"chena", bool, 31, 31>,
-               groov::field<"chdis", bit_enable_bar, 30, 30>,
+               groov::field<"chdis", common::bittypes::bit_enable_bar, 30, 30>,
                groov::field<"oddfrm", bool, 29, 29>,
                groov::field<"dad", std::uint8_t, 28, 22>,
                groov::field<"mc", std::uint8_t, 21, 20>,
                groov::field<"eptyp", std::uint8_t, 19, 18>,
                groov::field<"lsdev", bool, 17, 17>,
-               groov::field<"reserved0", bool, 16, 16, access::ro>,
+               groov::field<"reserved0", bool, 16, 16, common::access::ro>,
                groov::field<"epdir", bool, 15, 15>,
                groov::field<"epnum", std::uint8_t, 14, 11>,
                groov::field<"mpsiz", std::uint16_t, 10, 0>>;
@@ -2581,15 +2581,15 @@ using usb_otg_hs_otg_hs_hcchar9_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"chena", bool, 31, 31>,
-               groov::field<"chdis", bit_enable_bar, 30, 30>,
+               groov::field<"chdis", common::bittypes::bit_enable_bar, 30, 30>,
                groov::field<"oddfrm", bool, 29, 29>,
                groov::field<"dad", std::uint8_t, 28, 22>,
                groov::field<"mc", std::uint8_t, 21, 20>,
                groov::field<"eptyp", std::uint8_t, 19, 18>,
                groov::field<"lsdev", bool, 17, 17>,
-               groov::field<"reserved0", bool, 16, 16, access::ro>,
+               groov::field<"reserved0", bool, 16, 16, common::access::ro>,
                groov::field<"epdir", bool, 15, 15>,
                groov::field<"epnum", std::uint8_t, 14, 11>,
                groov::field<"mpsiz", std::uint16_t, 10, 0>>;
@@ -2603,7 +2603,7 @@ using usb_otg_hs_otg_hs_hcdma0_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dmaaddr", std::uint32_t, 31, 0>>;
 
 // usb_otg_hs_otg_hs_hcdma1_v1: OTG_HS_HCDMA1
@@ -2615,7 +2615,7 @@ using usb_otg_hs_otg_hs_hcdma1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dmaaddr", std::uint32_t, 31, 0>>;
 
 // usb_otg_hs_otg_hs_hcdma10_v1: OTG_HS_HCDMA10
@@ -2627,7 +2627,7 @@ using usb_otg_hs_otg_hs_hcdma10_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dmaaddr", std::uint32_t, 31, 0>>;
 
 // usb_otg_hs_otg_hs_hcdma11_v1: OTG_HS_HCDMA11
@@ -2639,7 +2639,7 @@ using usb_otg_hs_otg_hs_hcdma11_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dmaaddr", std::uint32_t, 31, 0>>;
 
 // usb_otg_hs_otg_hs_hcdma12_v1: OTG_HS_HCDMA12
@@ -2651,7 +2651,7 @@ using usb_otg_hs_otg_hs_hcdma12_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dmaaddr", std::uint32_t, 31, 0>>;
 
 // usb_otg_hs_otg_hs_hcdma13_v1: OTG_HS_HCDMA13
@@ -2663,7 +2663,7 @@ using usb_otg_hs_otg_hs_hcdma13_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dmaaddr", std::uint32_t, 31, 0>>;
 
 // usb_otg_hs_otg_hs_hcdma14_v1: OTG_HS_HCDMA14
@@ -2675,7 +2675,7 @@ using usb_otg_hs_otg_hs_hcdma14_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dmaaddr", std::uint32_t, 31, 0>>;
 
 // usb_otg_hs_otg_hs_hcdma15_v1: OTG_HS_HCDMA15
@@ -2687,7 +2687,7 @@ using usb_otg_hs_otg_hs_hcdma15_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dmaaddr", std::uint32_t, 31, 0>>;
 
 // usb_otg_hs_otg_hs_hcdma2_v1: OTG_HS_HCDMA2
@@ -2699,7 +2699,7 @@ using usb_otg_hs_otg_hs_hcdma2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dmaaddr", std::uint32_t, 31, 0>>;
 
 // usb_otg_hs_otg_hs_hcdma3_v1: OTG_HS_HCDMA3
@@ -2711,7 +2711,7 @@ using usb_otg_hs_otg_hs_hcdma3_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dmaaddr", std::uint32_t, 31, 0>>;
 
 // usb_otg_hs_otg_hs_hcdma4_v1: OTG_HS_HCDMA4
@@ -2723,7 +2723,7 @@ using usb_otg_hs_otg_hs_hcdma4_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dmaaddr", std::uint32_t, 31, 0>>;
 
 // usb_otg_hs_otg_hs_hcdma5_v1: OTG_HS_HCDMA5
@@ -2735,7 +2735,7 @@ using usb_otg_hs_otg_hs_hcdma5_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dmaaddr", std::uint32_t, 31, 0>>;
 
 // usb_otg_hs_otg_hs_hcdma6_v1: OTG_HS_HCDMA6
@@ -2747,7 +2747,7 @@ using usb_otg_hs_otg_hs_hcdma6_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dmaaddr", std::uint32_t, 31, 0>>;
 
 // usb_otg_hs_otg_hs_hcdma7_v1: OTG_HS_HCDMA7
@@ -2759,7 +2759,7 @@ using usb_otg_hs_otg_hs_hcdma7_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dmaaddr", std::uint32_t, 31, 0>>;
 
 // usb_otg_hs_otg_hs_hcdma8_v1: OTG_HS_HCDMA8
@@ -2771,7 +2771,7 @@ using usb_otg_hs_otg_hs_hcdma8_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dmaaddr", std::uint32_t, 31, 0>>;
 
 // usb_otg_hs_otg_hs_hcdma9_v1: OTG_HS_HCDMA9
@@ -2783,7 +2783,7 @@ using usb_otg_hs_otg_hs_hcdma9_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dmaaddr", std::uint32_t, 31, 0>>;
 
 // usb_otg_hs_otg_hs_hcfg_v1: OTG_HS_HCFG
@@ -2795,9 +2795,9 @@ using usb_otg_hs_otg_hs_hcfg_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 3, access::ro>,
-               groov::field<"fslss", bool, 2, 2, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 3, common::access::ro>,
+               groov::field<"fslss", bool, 2, 2, common::access::ro>,
                groov::field<"fslspcs", std::uint8_t, 1, 0>>;
 
 // usb_otg_hs_otg_hs_hcint0_v1: OTG_HS_HCINT0
@@ -2809,8 +2809,8 @@ using usb_otg_hs_otg_hs_hcint0_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 11, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 11, common::access::ro>,
                groov::field<"dterr", bool, 10, 10>,
                groov::field<"frmor", bool, 9, 9>,
                groov::field<"bberr", bool, 8, 8>,
@@ -2832,8 +2832,8 @@ using usb_otg_hs_otg_hs_hcint1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 11, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 11, common::access::ro>,
                groov::field<"dterr", bool, 10, 10>,
                groov::field<"frmor", bool, 9, 9>,
                groov::field<"bberr", bool, 8, 8>,
@@ -2855,8 +2855,8 @@ using usb_otg_hs_otg_hs_hcint10_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 11, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 11, common::access::ro>,
                groov::field<"dterr", bool, 10, 10>,
                groov::field<"frmor", bool, 9, 9>,
                groov::field<"bberr", bool, 8, 8>,
@@ -2878,8 +2878,8 @@ using usb_otg_hs_otg_hs_hcint11_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 11, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 11, common::access::ro>,
                groov::field<"dterr", bool, 10, 10>,
                groov::field<"frmor", bool, 9, 9>,
                groov::field<"bberr", bool, 8, 8>,
@@ -2901,8 +2901,8 @@ using usb_otg_hs_otg_hs_hcint12_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 11, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 11, common::access::ro>,
                groov::field<"dterr", bool, 10, 10>,
                groov::field<"frmor", bool, 9, 9>,
                groov::field<"bberr", bool, 8, 8>,
@@ -2924,8 +2924,8 @@ using usb_otg_hs_otg_hs_hcint13_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 11, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 11, common::access::ro>,
                groov::field<"dterr", bool, 10, 10>,
                groov::field<"frmor", bool, 9, 9>,
                groov::field<"bberr", bool, 8, 8>,
@@ -2947,8 +2947,8 @@ using usb_otg_hs_otg_hs_hcint14_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 11, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 11, common::access::ro>,
                groov::field<"dterr", bool, 10, 10>,
                groov::field<"frmor", bool, 9, 9>,
                groov::field<"bberr", bool, 8, 8>,
@@ -2970,8 +2970,8 @@ using usb_otg_hs_otg_hs_hcint15_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 11, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 11, common::access::ro>,
                groov::field<"dterr", bool, 10, 10>,
                groov::field<"frmor", bool, 9, 9>,
                groov::field<"bberr", bool, 8, 8>,
@@ -2993,8 +2993,8 @@ using usb_otg_hs_otg_hs_hcint2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 11, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 11, common::access::ro>,
                groov::field<"dterr", bool, 10, 10>,
                groov::field<"frmor", bool, 9, 9>,
                groov::field<"bberr", bool, 8, 8>,
@@ -3016,8 +3016,8 @@ using usb_otg_hs_otg_hs_hcint3_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 11, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 11, common::access::ro>,
                groov::field<"dterr", bool, 10, 10>,
                groov::field<"frmor", bool, 9, 9>,
                groov::field<"bberr", bool, 8, 8>,
@@ -3039,8 +3039,8 @@ using usb_otg_hs_otg_hs_hcint4_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 11, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 11, common::access::ro>,
                groov::field<"dterr", bool, 10, 10>,
                groov::field<"frmor", bool, 9, 9>,
                groov::field<"bberr", bool, 8, 8>,
@@ -3062,8 +3062,8 @@ using usb_otg_hs_otg_hs_hcint5_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 11, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 11, common::access::ro>,
                groov::field<"dterr", bool, 10, 10>,
                groov::field<"frmor", bool, 9, 9>,
                groov::field<"bberr", bool, 8, 8>,
@@ -3085,8 +3085,8 @@ using usb_otg_hs_otg_hs_hcint6_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 11, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 11, common::access::ro>,
                groov::field<"dterr", bool, 10, 10>,
                groov::field<"frmor", bool, 9, 9>,
                groov::field<"bberr", bool, 8, 8>,
@@ -3108,8 +3108,8 @@ using usb_otg_hs_otg_hs_hcint7_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 11, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 11, common::access::ro>,
                groov::field<"dterr", bool, 10, 10>,
                groov::field<"frmor", bool, 9, 9>,
                groov::field<"bberr", bool, 8, 8>,
@@ -3131,8 +3131,8 @@ using usb_otg_hs_otg_hs_hcint8_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 11, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 11, common::access::ro>,
                groov::field<"dterr", bool, 10, 10>,
                groov::field<"frmor", bool, 9, 9>,
                groov::field<"bberr", bool, 8, 8>,
@@ -3154,8 +3154,8 @@ using usb_otg_hs_otg_hs_hcint9_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 11, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 11, common::access::ro>,
                groov::field<"dterr", bool, 10, 10>,
                groov::field<"frmor", bool, 9, 9>,
                groov::field<"bberr", bool, 8, 8>,
@@ -3177,8 +3177,8 @@ using usb_otg_hs_otg_hs_hcintmsk0_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 11, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 11, common::access::ro>,
                groov::field<"dterrm", bool, 10, 10>,
                groov::field<"frmorm", bool, 9, 9>,
                groov::field<"bberrm", bool, 8, 8>,
@@ -3200,8 +3200,8 @@ using usb_otg_hs_otg_hs_hcintmsk1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 11, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 11, common::access::ro>,
                groov::field<"dterrm", bool, 10, 10>,
                groov::field<"frmorm", bool, 9, 9>,
                groov::field<"bberrm", bool, 8, 8>,
@@ -3223,8 +3223,8 @@ using usb_otg_hs_otg_hs_hcintmsk10_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 11, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 11, common::access::ro>,
                groov::field<"dterrm", bool, 10, 10>,
                groov::field<"frmorm", bool, 9, 9>,
                groov::field<"bberrm", bool, 8, 8>,
@@ -3246,8 +3246,8 @@ using usb_otg_hs_otg_hs_hcintmsk11_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 11, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 11, common::access::ro>,
                groov::field<"dterrm", bool, 10, 10>,
                groov::field<"frmorm", bool, 9, 9>,
                groov::field<"bberrm", bool, 8, 8>,
@@ -3269,8 +3269,8 @@ using usb_otg_hs_otg_hs_hcintmsk12_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 11, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 11, common::access::ro>,
                groov::field<"dterrm", bool, 10, 10>,
                groov::field<"frmorm", bool, 9, 9>,
                groov::field<"bberrm", bool, 8, 8>,
@@ -3292,8 +3292,8 @@ using usb_otg_hs_otg_hs_hcintmsk13_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 11, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 11, common::access::ro>,
                groov::field<"dterrm", bool, 10, 10>,
                groov::field<"frmorm", bool, 9, 9>,
                groov::field<"bberrm", bool, 8, 8>,
@@ -3315,8 +3315,8 @@ using usb_otg_hs_otg_hs_hcintmsk14_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 11, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 11, common::access::ro>,
                groov::field<"dterrm", bool, 10, 10>,
                groov::field<"frmorm", bool, 9, 9>,
                groov::field<"bberrm", bool, 8, 8>,
@@ -3338,8 +3338,8 @@ using usb_otg_hs_otg_hs_hcintmsk15_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 11, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 11, common::access::ro>,
                groov::field<"dterrm", bool, 10, 10>,
                groov::field<"frmorm", bool, 9, 9>,
                groov::field<"bberrm", bool, 8, 8>,
@@ -3361,8 +3361,8 @@ using usb_otg_hs_otg_hs_hcintmsk2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 11, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 11, common::access::ro>,
                groov::field<"dterrm", bool, 10, 10>,
                groov::field<"frmorm", bool, 9, 9>,
                groov::field<"bberrm", bool, 8, 8>,
@@ -3384,8 +3384,8 @@ using usb_otg_hs_otg_hs_hcintmsk3_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 11, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 11, common::access::ro>,
                groov::field<"dterrm", bool, 10, 10>,
                groov::field<"frmorm", bool, 9, 9>,
                groov::field<"bberrm", bool, 8, 8>,
@@ -3407,8 +3407,8 @@ using usb_otg_hs_otg_hs_hcintmsk4_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 11, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 11, common::access::ro>,
                groov::field<"dterrm", bool, 10, 10>,
                groov::field<"frmorm", bool, 9, 9>,
                groov::field<"bberrm", bool, 8, 8>,
@@ -3430,8 +3430,8 @@ using usb_otg_hs_otg_hs_hcintmsk5_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 11, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 11, common::access::ro>,
                groov::field<"dterrm", bool, 10, 10>,
                groov::field<"frmorm", bool, 9, 9>,
                groov::field<"bberrm", bool, 8, 8>,
@@ -3453,8 +3453,8 @@ using usb_otg_hs_otg_hs_hcintmsk6_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 11, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 11, common::access::ro>,
                groov::field<"dterrm", bool, 10, 10>,
                groov::field<"frmorm", bool, 9, 9>,
                groov::field<"bberrm", bool, 8, 8>,
@@ -3476,8 +3476,8 @@ using usb_otg_hs_otg_hs_hcintmsk7_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 11, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 11, common::access::ro>,
                groov::field<"dterrm", bool, 10, 10>,
                groov::field<"frmorm", bool, 9, 9>,
                groov::field<"bberrm", bool, 8, 8>,
@@ -3499,8 +3499,8 @@ using usb_otg_hs_otg_hs_hcintmsk8_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 11, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 11, common::access::ro>,
                groov::field<"dterrm", bool, 10, 10>,
                groov::field<"frmorm", bool, 9, 9>,
                groov::field<"bberrm", bool, 8, 8>,
@@ -3522,8 +3522,8 @@ using usb_otg_hs_otg_hs_hcintmsk9_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 11, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 11, common::access::ro>,
                groov::field<"dterrm", bool, 10, 10>,
                groov::field<"frmorm", bool, 9, 9>,
                groov::field<"bberrm", bool, 8, 8>,
@@ -3545,9 +3545,9 @@ using usb_otg_hs_otg_hs_hcsplt0_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"spliten", bit_enable, 31, 31>,
-               groov::field<"reserved0", std::uint16_t, 30, 17, access::ro>,
+             common::access::rw,
+               groov::field<"spliten", common::bittypes::bit_enable, 31, 31>,
+               groov::field<"reserved0", std::uint16_t, 30, 17, common::access::ro>,
                groov::field<"complsplt", bool, 16, 16>,
                groov::field<"xactpos", std::uint8_t, 15, 14>,
                groov::field<"hubaddr", std::uint8_t, 13, 7>,
@@ -3562,9 +3562,9 @@ using usb_otg_hs_otg_hs_hcsplt1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"spliten", bit_enable, 31, 31>,
-               groov::field<"reserved0", std::uint16_t, 30, 17, access::ro>,
+             common::access::rw,
+               groov::field<"spliten", common::bittypes::bit_enable, 31, 31>,
+               groov::field<"reserved0", std::uint16_t, 30, 17, common::access::ro>,
                groov::field<"complsplt", bool, 16, 16>,
                groov::field<"xactpos", std::uint8_t, 15, 14>,
                groov::field<"hubaddr", std::uint8_t, 13, 7>,
@@ -3579,9 +3579,9 @@ using usb_otg_hs_otg_hs_hcsplt10_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"spliten", bit_enable, 31, 31>,
-               groov::field<"reserved0", std::uint16_t, 30, 17, access::ro>,
+             common::access::rw,
+               groov::field<"spliten", common::bittypes::bit_enable, 31, 31>,
+               groov::field<"reserved0", std::uint16_t, 30, 17, common::access::ro>,
                groov::field<"complsplt", bool, 16, 16>,
                groov::field<"xactpos", std::uint8_t, 15, 14>,
                groov::field<"hubaddr", std::uint8_t, 13, 7>,
@@ -3596,9 +3596,9 @@ using usb_otg_hs_otg_hs_hcsplt11_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"spliten", bit_enable, 31, 31>,
-               groov::field<"reserved0", std::uint16_t, 30, 17, access::ro>,
+             common::access::rw,
+               groov::field<"spliten", common::bittypes::bit_enable, 31, 31>,
+               groov::field<"reserved0", std::uint16_t, 30, 17, common::access::ro>,
                groov::field<"complsplt", bool, 16, 16>,
                groov::field<"xactpos", std::uint8_t, 15, 14>,
                groov::field<"hubaddr", std::uint8_t, 13, 7>,
@@ -3613,9 +3613,9 @@ using usb_otg_hs_otg_hs_hcsplt12_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"spliten", bit_enable, 31, 31>,
-               groov::field<"reserved0", std::uint16_t, 30, 17, access::ro>,
+             common::access::rw,
+               groov::field<"spliten", common::bittypes::bit_enable, 31, 31>,
+               groov::field<"reserved0", std::uint16_t, 30, 17, common::access::ro>,
                groov::field<"complsplt", bool, 16, 16>,
                groov::field<"xactpos", std::uint8_t, 15, 14>,
                groov::field<"hubaddr", std::uint8_t, 13, 7>,
@@ -3630,9 +3630,9 @@ using usb_otg_hs_otg_hs_hcsplt13_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"spliten", bit_enable, 31, 31>,
-               groov::field<"reserved0", std::uint16_t, 30, 17, access::ro>,
+             common::access::rw,
+               groov::field<"spliten", common::bittypes::bit_enable, 31, 31>,
+               groov::field<"reserved0", std::uint16_t, 30, 17, common::access::ro>,
                groov::field<"complsplt", bool, 16, 16>,
                groov::field<"xactpos", std::uint8_t, 15, 14>,
                groov::field<"hubaddr", std::uint8_t, 13, 7>,
@@ -3647,9 +3647,9 @@ using usb_otg_hs_otg_hs_hcsplt14_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"spliten", bit_enable, 31, 31>,
-               groov::field<"reserved0", std::uint16_t, 30, 17, access::ro>,
+             common::access::rw,
+               groov::field<"spliten", common::bittypes::bit_enable, 31, 31>,
+               groov::field<"reserved0", std::uint16_t, 30, 17, common::access::ro>,
                groov::field<"complsplt", bool, 16, 16>,
                groov::field<"xactpos", std::uint8_t, 15, 14>,
                groov::field<"hubaddr", std::uint8_t, 13, 7>,
@@ -3664,9 +3664,9 @@ using usb_otg_hs_otg_hs_hcsplt15_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"spliten", bit_enable, 31, 31>,
-               groov::field<"reserved0", std::uint16_t, 30, 17, access::ro>,
+             common::access::rw,
+               groov::field<"spliten", common::bittypes::bit_enable, 31, 31>,
+               groov::field<"reserved0", std::uint16_t, 30, 17, common::access::ro>,
                groov::field<"complsplt", bool, 16, 16>,
                groov::field<"xactpos", std::uint8_t, 15, 14>,
                groov::field<"hubaddr", std::uint8_t, 13, 7>,
@@ -3681,9 +3681,9 @@ using usb_otg_hs_otg_hs_hcsplt2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"spliten", bit_enable, 31, 31>,
-               groov::field<"reserved0", std::uint16_t, 30, 17, access::ro>,
+             common::access::rw,
+               groov::field<"spliten", common::bittypes::bit_enable, 31, 31>,
+               groov::field<"reserved0", std::uint16_t, 30, 17, common::access::ro>,
                groov::field<"complsplt", bool, 16, 16>,
                groov::field<"xactpos", std::uint8_t, 15, 14>,
                groov::field<"hubaddr", std::uint8_t, 13, 7>,
@@ -3698,9 +3698,9 @@ using usb_otg_hs_otg_hs_hcsplt3_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"spliten", bit_enable, 31, 31>,
-               groov::field<"reserved0", std::uint16_t, 30, 17, access::ro>,
+             common::access::rw,
+               groov::field<"spliten", common::bittypes::bit_enable, 31, 31>,
+               groov::field<"reserved0", std::uint16_t, 30, 17, common::access::ro>,
                groov::field<"complsplt", bool, 16, 16>,
                groov::field<"xactpos", std::uint8_t, 15, 14>,
                groov::field<"hubaddr", std::uint8_t, 13, 7>,
@@ -3715,9 +3715,9 @@ using usb_otg_hs_otg_hs_hcsplt4_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"spliten", bit_enable, 31, 31>,
-               groov::field<"reserved0", std::uint16_t, 30, 17, access::ro>,
+             common::access::rw,
+               groov::field<"spliten", common::bittypes::bit_enable, 31, 31>,
+               groov::field<"reserved0", std::uint16_t, 30, 17, common::access::ro>,
                groov::field<"complsplt", bool, 16, 16>,
                groov::field<"xactpos", std::uint8_t, 15, 14>,
                groov::field<"hubaddr", std::uint8_t, 13, 7>,
@@ -3732,9 +3732,9 @@ using usb_otg_hs_otg_hs_hcsplt5_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"spliten", bit_enable, 31, 31>,
-               groov::field<"reserved0", std::uint16_t, 30, 17, access::ro>,
+             common::access::rw,
+               groov::field<"spliten", common::bittypes::bit_enable, 31, 31>,
+               groov::field<"reserved0", std::uint16_t, 30, 17, common::access::ro>,
                groov::field<"complsplt", bool, 16, 16>,
                groov::field<"xactpos", std::uint8_t, 15, 14>,
                groov::field<"hubaddr", std::uint8_t, 13, 7>,
@@ -3749,9 +3749,9 @@ using usb_otg_hs_otg_hs_hcsplt6_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"spliten", bit_enable, 31, 31>,
-               groov::field<"reserved0", std::uint16_t, 30, 17, access::ro>,
+             common::access::rw,
+               groov::field<"spliten", common::bittypes::bit_enable, 31, 31>,
+               groov::field<"reserved0", std::uint16_t, 30, 17, common::access::ro>,
                groov::field<"complsplt", bool, 16, 16>,
                groov::field<"xactpos", std::uint8_t, 15, 14>,
                groov::field<"hubaddr", std::uint8_t, 13, 7>,
@@ -3766,9 +3766,9 @@ using usb_otg_hs_otg_hs_hcsplt7_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"spliten", bit_enable, 31, 31>,
-               groov::field<"reserved0", std::uint16_t, 30, 17, access::ro>,
+             common::access::rw,
+               groov::field<"spliten", common::bittypes::bit_enable, 31, 31>,
+               groov::field<"reserved0", std::uint16_t, 30, 17, common::access::ro>,
                groov::field<"complsplt", bool, 16, 16>,
                groov::field<"xactpos", std::uint8_t, 15, 14>,
                groov::field<"hubaddr", std::uint8_t, 13, 7>,
@@ -3783,9 +3783,9 @@ using usb_otg_hs_otg_hs_hcsplt8_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"spliten", bit_enable, 31, 31>,
-               groov::field<"reserved0", std::uint16_t, 30, 17, access::ro>,
+             common::access::rw,
+               groov::field<"spliten", common::bittypes::bit_enable, 31, 31>,
+               groov::field<"reserved0", std::uint16_t, 30, 17, common::access::ro>,
                groov::field<"complsplt", bool, 16, 16>,
                groov::field<"xactpos", std::uint8_t, 15, 14>,
                groov::field<"hubaddr", std::uint8_t, 13, 7>,
@@ -3800,9 +3800,9 @@ using usb_otg_hs_otg_hs_hcsplt9_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"spliten", bit_enable, 31, 31>,
-               groov::field<"reserved0", std::uint16_t, 30, 17, access::ro>,
+             common::access::rw,
+               groov::field<"spliten", common::bittypes::bit_enable, 31, 31>,
+               groov::field<"reserved0", std::uint16_t, 30, 17, common::access::ro>,
                groov::field<"complsplt", bool, 16, 16>,
                groov::field<"xactpos", std::uint8_t, 15, 14>,
                groov::field<"hubaddr", std::uint8_t, 13, 7>,
@@ -3817,8 +3817,8 @@ using usb_otg_hs_otg_hs_hctsiz0_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", bool, 31, 31, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", bool, 31, 31, common::access::ro>,
                groov::field<"dpid", std::uint8_t, 30, 29>,
                groov::field<"pktcnt", std::uint16_t, 28, 19>,
                groov::field<"xfrsiz", std::uint32_t, 18, 0>>;
@@ -3832,8 +3832,8 @@ using usb_otg_hs_otg_hs_hctsiz1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", bool, 31, 31, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", bool, 31, 31, common::access::ro>,
                groov::field<"dpid", std::uint8_t, 30, 29>,
                groov::field<"pktcnt", std::uint16_t, 28, 19>,
                groov::field<"xfrsiz", std::uint32_t, 18, 0>>;
@@ -3847,8 +3847,8 @@ using usb_otg_hs_otg_hs_hctsiz10_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", bool, 31, 31, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", bool, 31, 31, common::access::ro>,
                groov::field<"dpid", std::uint8_t, 30, 29>,
                groov::field<"pktcnt", std::uint16_t, 28, 19>,
                groov::field<"xfrsiz", std::uint32_t, 18, 0>>;
@@ -3862,8 +3862,8 @@ using usb_otg_hs_otg_hs_hctsiz11_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", bool, 31, 31, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", bool, 31, 31, common::access::ro>,
                groov::field<"dpid", std::uint8_t, 30, 29>,
                groov::field<"pktcnt", std::uint16_t, 28, 19>,
                groov::field<"xfrsiz", std::uint32_t, 18, 0>>;
@@ -3877,8 +3877,8 @@ using usb_otg_hs_otg_hs_hctsiz12_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", bool, 31, 31, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", bool, 31, 31, common::access::ro>,
                groov::field<"dpid", std::uint8_t, 30, 29>,
                groov::field<"pktcnt", std::uint16_t, 28, 19>,
                groov::field<"xfrsiz", std::uint32_t, 18, 0>>;
@@ -3892,8 +3892,8 @@ using usb_otg_hs_otg_hs_hctsiz13_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", bool, 31, 31, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", bool, 31, 31, common::access::ro>,
                groov::field<"dpid", std::uint8_t, 30, 29>,
                groov::field<"pktcnt", std::uint16_t, 28, 19>,
                groov::field<"xfrsiz", std::uint32_t, 18, 0>>;
@@ -3907,8 +3907,8 @@ using usb_otg_hs_otg_hs_hctsiz14_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", bool, 31, 31, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", bool, 31, 31, common::access::ro>,
                groov::field<"dpid", std::uint8_t, 30, 29>,
                groov::field<"pktcnt", std::uint16_t, 28, 19>,
                groov::field<"xfrsiz", std::uint32_t, 18, 0>>;
@@ -3922,8 +3922,8 @@ using usb_otg_hs_otg_hs_hctsiz15_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", bool, 31, 31, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", bool, 31, 31, common::access::ro>,
                groov::field<"dpid", std::uint8_t, 30, 29>,
                groov::field<"pktcnt", std::uint16_t, 28, 19>,
                groov::field<"xfrsiz", std::uint32_t, 18, 0>>;
@@ -3937,8 +3937,8 @@ using usb_otg_hs_otg_hs_hctsiz2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", bool, 31, 31, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", bool, 31, 31, common::access::ro>,
                groov::field<"dpid", std::uint8_t, 30, 29>,
                groov::field<"pktcnt", std::uint16_t, 28, 19>,
                groov::field<"xfrsiz", std::uint32_t, 18, 0>>;
@@ -3952,8 +3952,8 @@ using usb_otg_hs_otg_hs_hctsiz3_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", bool, 31, 31, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", bool, 31, 31, common::access::ro>,
                groov::field<"dpid", std::uint8_t, 30, 29>,
                groov::field<"pktcnt", std::uint16_t, 28, 19>,
                groov::field<"xfrsiz", std::uint32_t, 18, 0>>;
@@ -3967,8 +3967,8 @@ using usb_otg_hs_otg_hs_hctsiz4_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", bool, 31, 31, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", bool, 31, 31, common::access::ro>,
                groov::field<"dpid", std::uint8_t, 30, 29>,
                groov::field<"pktcnt", std::uint16_t, 28, 19>,
                groov::field<"xfrsiz", std::uint32_t, 18, 0>>;
@@ -3982,8 +3982,8 @@ using usb_otg_hs_otg_hs_hctsiz5_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", bool, 31, 31, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", bool, 31, 31, common::access::ro>,
                groov::field<"dpid", std::uint8_t, 30, 29>,
                groov::field<"pktcnt", std::uint16_t, 28, 19>,
                groov::field<"xfrsiz", std::uint32_t, 18, 0>>;
@@ -3997,8 +3997,8 @@ using usb_otg_hs_otg_hs_hctsiz6_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", bool, 31, 31, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", bool, 31, 31, common::access::ro>,
                groov::field<"dpid", std::uint8_t, 30, 29>,
                groov::field<"pktcnt", std::uint16_t, 28, 19>,
                groov::field<"xfrsiz", std::uint32_t, 18, 0>>;
@@ -4012,8 +4012,8 @@ using usb_otg_hs_otg_hs_hctsiz7_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", bool, 31, 31, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", bool, 31, 31, common::access::ro>,
                groov::field<"dpid", std::uint8_t, 30, 29>,
                groov::field<"pktcnt", std::uint16_t, 28, 19>,
                groov::field<"xfrsiz", std::uint32_t, 18, 0>>;
@@ -4027,8 +4027,8 @@ using usb_otg_hs_otg_hs_hctsiz8_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", bool, 31, 31, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", bool, 31, 31, common::access::ro>,
                groov::field<"dpid", std::uint8_t, 30, 29>,
                groov::field<"pktcnt", std::uint16_t, 28, 19>,
                groov::field<"xfrsiz", std::uint32_t, 18, 0>>;
@@ -4042,8 +4042,8 @@ using usb_otg_hs_otg_hs_hctsiz9_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", bool, 31, 31, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", bool, 31, 31, common::access::ro>,
                groov::field<"dpid", std::uint8_t, 30, 29>,
                groov::field<"pktcnt", std::uint16_t, 28, 19>,
                groov::field<"xfrsiz", std::uint32_t, 18, 0>>;
@@ -4057,8 +4057,8 @@ using usb_otg_hs_otg_hs_hfir_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"frivl", std::uint16_t, 15, 0>>;
 
 // usb_otg_hs_otg_hs_hfnum_v1: OTG_HS_HFNUM
@@ -4070,7 +4070,7 @@ using usb_otg_hs_otg_hs_hfnum_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"ftrem", std::uint16_t, 31, 16>,
                groov::field<"frnum", std::uint16_t, 15, 0>>;
 
@@ -4083,7 +4083,7 @@ using usb_otg_hs_otg_hs_hnptxfsiz_host_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"nptxfd", std::uint16_t, 31, 16>,
                groov::field<"nptxfsa", std::uint16_t, 15, 0>>;
 
@@ -4096,7 +4096,7 @@ using usb_otg_hs_otg_hs_hnptxsts_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", bool, 31, 31>,
                groov::field<"nptxqtop", std::uint8_t, 30, 24>,
                groov::field<"nptqxsav", std::uint8_t, 23, 16>,
@@ -4111,22 +4111,22 @@ using usb_otg_hs_otg_hs_hprt_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint16_t, 31, 19, access::ro>,
-               groov::field<"pspd", std::uint8_t, 18, 17, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint16_t, 31, 19, common::access::ro>,
+               groov::field<"pspd", std::uint8_t, 18, 17, common::access::ro>,
                groov::field<"ptctl", std::uint8_t, 16, 13>,
                groov::field<"ppwr", bool, 12, 12>,
-               groov::field<"plsts", std::uint8_t, 11, 10, access::ro>,
-               groov::field<"reserved0", bool, 9, 9, access::ro>,
-               groov::field<"prst", bit_reset, 8, 8>,
+               groov::field<"plsts", std::uint8_t, 11, 10, common::access::ro>,
+               groov::field<"reserved0", bool, 9, 9, common::access::ro>,
+               groov::field<"prst", common::bittypes::bit_reset, 8, 8>,
                groov::field<"psusp", bool, 7, 7>,
                groov::field<"pres", bool, 6, 6>,
                groov::field<"pocchng", bool, 5, 5>,
-               groov::field<"poca", bool, 4, 4, access::ro>,
+               groov::field<"poca", bool, 4, 4, common::access::ro>,
                groov::field<"penchng", bool, 3, 3>,
                groov::field<"pena", bool, 2, 2>,
                groov::field<"pcdet", bool, 1, 1>,
-               groov::field<"pcsts", bool, 0, 0, access::ro>>;
+               groov::field<"pcsts", bool, 0, 0, common::access::ro>>;
 
 // usb_otg_hs_otg_hs_hptxfsiz_v1: OTG_HS_HPTXFSIZ
 // Used by: OTG_HS_GLOBAL
@@ -4137,7 +4137,7 @@ using usb_otg_hs_otg_hs_hptxfsiz_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"ptxfd", std::uint16_t, 31, 16>,
                groov::field<"ptxsa", std::uint16_t, 15, 0>>;
 
@@ -4150,9 +4150,9 @@ using usb_otg_hs_otg_hs_hptxsts_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"ptxqtop", std::uint8_t, 31, 24, access::ro>,
-               groov::field<"ptxqsav", std::uint8_t, 23, 16, access::ro>,
+             common::access::rw,
+               groov::field<"ptxqtop", std::uint8_t, 31, 24, common::access::ro>,
+               groov::field<"ptxqsav", std::uint8_t, 23, 16, common::access::ro>,
                groov::field<"ptxfsavl", std::uint16_t, 15, 0>>;
 
 // usb_otg_hs_otg_hs_pcgcr_v1: OTG_HS_PCGCR
@@ -4164,10 +4164,10 @@ using usb_otg_hs_otg_hs_pcgcr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint32_t, 31, 5, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint32_t, 31, 5, common::access::ro>,
                groov::field<"physusp", bool, 4, 4>,
-               groov::field<"reserved0", std::uint8_t, 3, 2, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 3, 2, common::access::ro>,
                groov::field<"gatehclk", bool, 1, 1>,
                groov::field<"stppclk", bool, 0, 0>>;
 

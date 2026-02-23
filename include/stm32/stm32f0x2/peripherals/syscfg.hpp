@@ -7,13 +7,34 @@
 namespace stm32::stm32f0x2 {
 
 namespace syscfg_comp {
-  using syscfg_cfgr1_tt = regs::syscfg_syscfg_cfgr1_v1_tt;
-  using syscfg_exticr1_tt = regs::syscfg_syscfg_exticr1_v1_tt;
-  using syscfg_exticr2_tt = regs::syscfg_syscfg_exticr2_v1_tt;
-  using syscfg_exticr3_tt = regs::syscfg_syscfg_exticr3_v1_tt;
-  using syscfg_exticr4_tt = regs::syscfg_syscfg_exticr4_v1_tt;
-  using syscfg_cfgr2_tt = regs::syscfg_syscfg_cfgr2_v1_tt;
-  using comp_csr_tt = regs::syscfg_comp_csr_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using syscfg_cfgr1_tt = regs::syscfg_syscfg_cfgr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using syscfg_exticr1_tt = regs::syscfg_syscfg_exticr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using syscfg_exticr2_tt = regs::syscfg_syscfg_exticr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using syscfg_exticr3_tt = regs::syscfg_syscfg_exticr3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using syscfg_exticr4_tt = regs::syscfg_syscfg_exticr4_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using syscfg_cfgr2_tt = regs::syscfg_syscfg_cfgr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using comp_csr_tt = regs::syscfg_comp_csr_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using syscfg_comp_t =

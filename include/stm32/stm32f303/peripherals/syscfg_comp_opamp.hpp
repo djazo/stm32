@@ -7,26 +7,86 @@
 namespace stm32::stm32f303 {
 
 namespace syscfg_comp_opamp {
-  using syscfg_cfgr1_tt = regs::syscfg_comp_opamp_syscfg_cfgr1_v1_tt;
-  using syscfg_exticr1_tt = regs::syscfg_comp_opamp_syscfg_exticr1_v1_tt;
-  using syscfg_exticr2_tt = regs::syscfg_comp_opamp_syscfg_exticr2_v1_tt;
-  using syscfg_exticr3_tt = regs::syscfg_comp_opamp_syscfg_exticr3_v1_tt;
-  using syscfg_exticr4_tt = regs::syscfg_comp_opamp_syscfg_exticr4_v1_tt;
-  using syscfg_cfgr2_tt = regs::syscfg_comp_opamp_syscfg_cfgr2_v1_tt;
-  using syscfg_rcr_tt = regs::syscfg_comp_opamp_syscfg_rcr_v1_tt;
-  using comp1_csr_tt = regs::syscfg_comp_opamp_comp1_csr_v1_tt;
-  using comp2_csr_tt = regs::syscfg_comp_opamp_comp2_csr_v1_tt;
-  using comp3_csr_tt = regs::syscfg_comp_opamp_comp3_csr_v1_tt;
-  using comp4_csr_tt = regs::syscfg_comp_opamp_comp4_csr_v1_tt;
-  using comp5_csr_tt = regs::syscfg_comp_opamp_comp5_csr_v1_tt;
-  using comp6_csr_tt = regs::syscfg_comp_opamp_comp6_csr_v1_tt;
-  using comp7_csr_tt = regs::syscfg_comp_opamp_comp7_csr_v1_tt;
-  using opamp1_csr_tt = regs::syscfg_comp_opamp_opamp1_csr_v1_tt;
-  using opamp2_csr_tt = regs::syscfg_comp_opamp_opamp2_csr_v1_tt;
-  using opamp3_csr_tt = regs::syscfg_comp_opamp_opamp3_csr_v1_tt;
-  using opamp4_csr_tt = regs::syscfg_comp_opamp_opamp4_csr_v1_tt;
-  using syscfg_cfgr3_tt = regs::syscfg_comp_opamp_syscfg_cfgr3_v1_tt;
-  using syscfg_cfgr4_tt = regs::syscfg_comp_opamp_syscfg_cfgr4_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using syscfg_cfgr1_tt = regs::syscfg_comp_opamp_syscfg_cfgr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using syscfg_exticr1_tt = regs::syscfg_comp_opamp_syscfg_exticr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using syscfg_exticr2_tt = regs::syscfg_comp_opamp_syscfg_exticr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using syscfg_exticr3_tt = regs::syscfg_comp_opamp_syscfg_exticr3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using syscfg_exticr4_tt = regs::syscfg_comp_opamp_syscfg_exticr4_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using syscfg_cfgr2_tt = regs::syscfg_comp_opamp_syscfg_cfgr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using syscfg_rcr_tt = regs::syscfg_comp_opamp_syscfg_rcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using comp1_csr_tt = regs::syscfg_comp_opamp_comp1_csr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using comp2_csr_tt = regs::syscfg_comp_opamp_comp2_csr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using comp3_csr_tt = regs::syscfg_comp_opamp_comp3_csr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using comp4_csr_tt = regs::syscfg_comp_opamp_comp4_csr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using comp5_csr_tt = regs::syscfg_comp_opamp_comp5_csr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using comp6_csr_tt = regs::syscfg_comp_opamp_comp6_csr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using comp7_csr_tt = regs::syscfg_comp_opamp_comp7_csr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using opamp1_csr_tt = regs::syscfg_comp_opamp_opamp1_csr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using opamp2_csr_tt = regs::syscfg_comp_opamp_opamp2_csr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using opamp3_csr_tt = regs::syscfg_comp_opamp_opamp3_csr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using opamp4_csr_tt = regs::syscfg_comp_opamp_opamp4_csr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using syscfg_cfgr3_tt = regs::syscfg_comp_opamp_syscfg_cfgr3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using syscfg_cfgr4_tt = regs::syscfg_comp_opamp_syscfg_cfgr4_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using syscfg_comp_opamp_t =

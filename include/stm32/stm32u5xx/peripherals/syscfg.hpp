@@ -7,18 +7,54 @@
 namespace stm32::stm32u5xx {
 
 namespace syscfgx {
-  using seccfgr_tt = regs::syscfg_seccfgr_v1_tt;
-  using cfgr1_tt = regs::syscfg_cfgr1_v1_tt;
-  using fpuimr_tt = regs::syscfg_fpuimr_v1_tt;
-  using cnslckr_tt = regs::syscfg_cnslckr_v1_tt;
-  using cslockr_tt = regs::syscfg_cslockr_v1_tt;
-  using cfgr2_tt = regs::syscfg_cfgr2_v1_tt;
-  using mesr_tt = regs::syscfg_mesr_v1_tt;
-  using cccsr_tt = regs::syscfg_cccsr_v1_tt;
-  using ccvr_tt = regs::syscfg_ccvr_v1_tt;
-  using cccr_tt = regs::syscfg_cccr_v1_tt;
-  using rsscmdr_tt = regs::syscfg_rsscmdr_v1_tt;
-  using ucpdr_tt = regs::syscfg_ucpdr_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using seccfgr_tt = regs::syscfg_seccfgr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cfgr1_tt = regs::syscfg_cfgr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fpuimr_tt = regs::syscfg_fpuimr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cnslckr_tt = regs::syscfg_cnslckr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cslockr_tt = regs::syscfg_cslockr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cfgr2_tt = regs::syscfg_cfgr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mesr_tt = regs::syscfg_mesr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cccsr_tt = regs::syscfg_cccsr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ccvr_tt = regs::syscfg_ccvr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cccr_tt = regs::syscfg_cccr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rsscmdr_tt = regs::syscfg_rsscmdr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ucpdr_tt = regs::syscfg_ucpdr_v1_tt<name, baseaddress, offset>;
 
   template <stdx::ct_string name, std::uint32_t baseaddress>
   using syscfgx_t =

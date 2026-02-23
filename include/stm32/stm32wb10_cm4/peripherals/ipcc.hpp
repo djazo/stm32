@@ -7,14 +7,38 @@
 namespace stm32::stm32wb10_cm4 {
 
 namespace ipcc {
-  using c1cr_tt = regs::ipcc_c1cr_v1_tt;
-  using c1mr_tt = regs::ipcc_c1mr_v1_tt;
-  using c1scr_tt = regs::ipcc_c1scr_v1_tt;
-  using c1to2sr_tt = regs::ipcc_c1to2sr_v1_tt;
-  using c2cr_tt = regs::ipcc_c2cr_v1_tt;
-  using c2mr_tt = regs::ipcc_c2mr_v1_tt;
-  using c2scr_tt = regs::ipcc_c2scr_v1_tt;
-  using c2toc1sr_tt = regs::ipcc_c2toc1sr_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using c1cr_tt = regs::ipcc_c1cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using c1mr_tt = regs::ipcc_c1mr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using c1scr_tt = regs::ipcc_c1scr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using c1to2sr_tt = regs::ipcc_c1to2sr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using c2cr_tt = regs::ipcc_c2cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using c2mr_tt = regs::ipcc_c2mr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using c2scr_tt = regs::ipcc_c2scr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using c2toc1sr_tt = regs::ipcc_c2toc1sr_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using ipcc_t =

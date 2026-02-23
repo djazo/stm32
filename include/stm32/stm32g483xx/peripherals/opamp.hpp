@@ -7,18 +7,54 @@
 namespace stm32::stm32g483xx {
 
 namespace opamp {
-  using opamp1_csr_tt = regs::opamp_opamp1_csr_v1_tt;
-  using opamp2_csr_tt = regs::opamp_opamp2_csr_v1_tt;
-  using opamp3_csr_tt = regs::opamp_opamp3_csr_v1_tt;
-  using opamp4_csr_tt = regs::opamp_opamp4_csr_v1_tt;
-  using opamp5_csr_tt = regs::opamp_opamp5_csr_v1_tt;
-  using opamp6_csr_tt = regs::opamp_opamp6_csr_v1_tt;
-  using opamp1_tcmr_tt = regs::opamp_opamp1_tcmr_v1_tt;
-  using opamp2_tcmr_tt = regs::opamp_opamp2_tcmr_v1_tt;
-  using opamp3_tcmr_tt = regs::opamp_opamp3_tcmr_v1_tt;
-  using opamp4_tcmr_tt = regs::opamp_opamp4_tcmr_v1_tt;
-  using opamp5_tcmr_tt = regs::opamp_opamp5_tcmr_v1_tt;
-  using opamp6_tcmr_tt = regs::opamp_opamp6_tcmr_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using opamp1_csr_tt = regs::opamp_opamp1_csr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using opamp2_csr_tt = regs::opamp_opamp2_csr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using opamp3_csr_tt = regs::opamp_opamp3_csr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using opamp4_csr_tt = regs::opamp_opamp4_csr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using opamp5_csr_tt = regs::opamp_opamp5_csr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using opamp6_csr_tt = regs::opamp_opamp6_csr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using opamp1_tcmr_tt = regs::opamp_opamp1_tcmr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using opamp2_tcmr_tt = regs::opamp_opamp2_tcmr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using opamp3_tcmr_tt = regs::opamp_opamp3_tcmr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using opamp4_tcmr_tt = regs::opamp_opamp4_tcmr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using opamp5_tcmr_tt = regs::opamp_opamp5_tcmr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using opamp6_tcmr_tt = regs::opamp_opamp6_tcmr_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using opamp_t =

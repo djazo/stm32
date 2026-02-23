@@ -7,7 +7,10 @@
 namespace stm32::stm32f777 {
 
 namespace dbgmcu {
-  using idcode_tt = regs::dbgmcu_idcode_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using idcode_tt = regs::dbgmcu_idcode_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using dbgmcu_t =

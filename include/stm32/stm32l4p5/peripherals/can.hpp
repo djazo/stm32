@@ -7,95 +7,362 @@
 namespace stm32::stm32l4p5 {
 
 namespace can1 {
-  using mcr_tt = regs::can_mcr_v1_tt;
-  using msr_tt = regs::can_msr_v1_tt;
-  using tsr_tt = regs::can_tsr_v1_tt;
-  using rf0r_tt = regs::can_rf0r_v1_tt;
-  using rf1r_tt = regs::can_rf1r_v1_tt;
-  using ier_tt = regs::can_ier_v1_tt;
-  using esr_tt = regs::can_esr_v1_tt;
-  using btr_tt = regs::can_btr_v1_tt;
-  using ti0r_tt = regs::can_ti0r_v1_tt;
-  using tdt0r_tt = regs::can_tdt0r_v1_tt;
-  using tdl0r_tt = regs::can_tdl0r_v1_tt;
-  using tdh0r_tt = regs::can_tdh0r_v1_tt;
-  using ti1r_tt = regs::can_ti1r_v1_tt;
-  using tdt1r_tt = regs::can_tdt1r_v1_tt;
-  using tdl1r_tt = regs::can_tdl1r_v1_tt;
-  using tdh1r_tt = regs::can_tdh1r_v1_tt;
-  using ti2r_tt = regs::can_ti2r_v1_tt;
-  using tdt2r_tt = regs::can_tdt2r_v1_tt;
-  using tdl2r_tt = regs::can_tdl2r_v1_tt;
-  using tdh2r_tt = regs::can_tdh2r_v1_tt;
-  using ri0r_tt = regs::can_ri0r_v1_tt;
-  using rdt0r_tt = regs::can_rdt0r_v1_tt;
-  using rdl0r_tt = regs::can_rdl0r_v1_tt;
-  using rdh0r_tt = regs::can_rdh0r_v1_tt;
-  using ri1r_tt = regs::can_ri1r_v1_tt;
-  using rdt1r_tt = regs::can_rdt1r_v1_tt;
-  using rdl1r_tt = regs::can_rdl1r_v1_tt;
-  using rdh1r_tt = regs::can_rdh1r_v1_tt;
-  using fmr_tt = regs::can_fmr_v1_tt;
-  using fm1r_tt = regs::can_fm1r_v1_tt;
-  using fs1r_tt = regs::can_fs1r_v1_tt;
-  using ffa1r_tt = regs::can_ffa1r_v1_tt;
-  using fa1r_tt = regs::can_fa1r_v1_tt;
-  using f0r1_tt = regs::can_f0r1_v1_tt;
-  using f0r2_tt = regs::can_f0r2_v1_tt;
-  using f1r1_tt = regs::can_f1r1_v1_tt;
-  using f1r2_tt = regs::can_f1r2_v1_tt;
-  using f2r1_tt = regs::can_f2r1_v1_tt;
-  using f2r2_tt = regs::can_f2r2_v1_tt;
-  using f3r1_tt = regs::can_f3r1_v1_tt;
-  using f3r2_tt = regs::can_f3r2_v1_tt;
-  using f4r1_tt = regs::can_f4r1_v1_tt;
-  using f4r2_tt = regs::can_f4r2_v1_tt;
-  using f5r1_tt = regs::can_f5r1_v1_tt;
-  using f5r2_tt = regs::can_f5r2_v1_tt;
-  using f6r1_tt = regs::can_f6r1_v1_tt;
-  using f6r2_tt = regs::can_f6r2_v1_tt;
-  using f7r1_tt = regs::can_f7r1_v1_tt;
-  using f7r2_tt = regs::can_f7r2_v1_tt;
-  using f8r1_tt = regs::can_f8r1_v1_tt;
-  using f8r2_tt = regs::can_f8r2_v1_tt;
-  using f9r1_tt = regs::can_f9r1_v1_tt;
-  using f9r2_tt = regs::can_f9r2_v1_tt;
-  using f10r1_tt = regs::can_f10r1_v1_tt;
-  using f10r2_tt = regs::can_f10r2_v1_tt;
-  using f11r1_tt = regs::can_f11r1_v1_tt;
-  using f11r2_tt = regs::can_f11r2_v1_tt;
-  using f12r1_tt = regs::can_f12r1_v1_tt;
-  using f12r2_tt = regs::can_f12r2_v1_tt;
-  using f13r1_tt = regs::can_f13r1_v1_tt;
-  using f13r2_tt = regs::can_f13r2_v1_tt;
-  using f14r1_tt = regs::can_f14r1_v1_tt;
-  using f14r2_tt = regs::can_f14r2_v1_tt;
-  using f15r1_tt = regs::can_f15r1_v1_tt;
-  using f15r2_tt = regs::can_f15r2_v1_tt;
-  using f16r1_tt = regs::can_f16r1_v1_tt;
-  using f16r2_tt = regs::can_f16r2_v1_tt;
-  using f17r1_tt = regs::can_f17r1_v1_tt;
-  using f17r2_tt = regs::can_f17r2_v1_tt;
-  using f18r1_tt = regs::can_f18r1_v1_tt;
-  using f18r2_tt = regs::can_f18r2_v1_tt;
-  using f19r1_tt = regs::can_f19r1_v1_tt;
-  using f19r2_tt = regs::can_f19r2_v1_tt;
-  using f20r1_tt = regs::can_f20r1_v1_tt;
-  using f20r2_tt = regs::can_f20r2_v1_tt;
-  using f21r1_tt = regs::can_f21r1_v1_tt;
-  using f21r2_tt = regs::can_f21r2_v1_tt;
-  using f22r1_tt = regs::can_f22r1_v1_tt;
-  using f22r2_tt = regs::can_f22r2_v1_tt;
-  using f23r1_tt = regs::can_f23r1_v1_tt;
-  using f23r2_tt = regs::can_f23r2_v1_tt;
-  using f24r1_tt = regs::can_f24r1_v1_tt;
-  using f24r2_tt = regs::can_f24r2_v1_tt;
-  using f25r1_tt = regs::can_f25r1_v1_tt;
-  using f25r2_tt = regs::can_f25r2_v1_tt;
-  using f26r1_tt = regs::can_f26r1_v1_tt;
-  using f26r2_tt = regs::can_f26r2_v1_tt;
-  using f27r1_tt = regs::can_f27r1_v1_tt;
-  using f27r2_tt = regs::can_f27r2_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mcr_tt = regs::can_mcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using msr_tt = regs::can_msr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using tsr_tt = regs::can_tsr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rf0r_tt = regs::can_rf0r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rf1r_tt = regs::can_rf1r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ier_tt = regs::can_ier_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using esr_tt = regs::can_esr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using btr_tt = regs::can_btr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ti0r_tt = regs::can_ti0r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using tdt0r_tt = regs::can_tdt0r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using tdl0r_tt = regs::can_tdl0r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using tdh0r_tt = regs::can_tdh0r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ti1r_tt = regs::can_ti1r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using tdt1r_tt = regs::can_tdt1r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using tdl1r_tt = regs::can_tdl1r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using tdh1r_tt = regs::can_tdh1r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ti2r_tt = regs::can_ti2r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using tdt2r_tt = regs::can_tdt2r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using tdl2r_tt = regs::can_tdl2r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using tdh2r_tt = regs::can_tdh2r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ri0r_tt = regs::can_ri0r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rdt0r_tt = regs::can_rdt0r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rdl0r_tt = regs::can_rdl0r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rdh0r_tt = regs::can_rdh0r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ri1r_tt = regs::can_ri1r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rdt1r_tt = regs::can_rdt1r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rdl1r_tt = regs::can_rdl1r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rdh1r_tt = regs::can_rdh1r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fmr_tt = regs::can_fmr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fm1r_tt = regs::can_fm1r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fs1r_tt = regs::can_fs1r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ffa1r_tt = regs::can_ffa1r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fa1r_tt = regs::can_fa1r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using f0r1_tt = regs::can_f0r1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using f0r2_tt = regs::can_f0r2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using f1r1_tt = regs::can_f1r1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using f1r2_tt = regs::can_f1r2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using f2r1_tt = regs::can_f2r1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using f2r2_tt = regs::can_f2r2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using f3r1_tt = regs::can_f3r1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using f3r2_tt = regs::can_f3r2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using f4r1_tt = regs::can_f4r1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using f4r2_tt = regs::can_f4r2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using f5r1_tt = regs::can_f5r1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using f5r2_tt = regs::can_f5r2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using f6r1_tt = regs::can_f6r1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using f6r2_tt = regs::can_f6r2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using f7r1_tt = regs::can_f7r1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using f7r2_tt = regs::can_f7r2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using f8r1_tt = regs::can_f8r1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using f8r2_tt = regs::can_f8r2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using f9r1_tt = regs::can_f9r1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using f9r2_tt = regs::can_f9r2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using f10r1_tt = regs::can_f10r1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using f10r2_tt = regs::can_f10r2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using f11r1_tt = regs::can_f11r1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using f11r2_tt = regs::can_f11r2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using f12r1_tt = regs::can_f12r1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using f12r2_tt = regs::can_f12r2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using f13r1_tt = regs::can_f13r1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using f13r2_tt = regs::can_f13r2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using f14r1_tt = regs::can_f14r1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using f14r2_tt = regs::can_f14r2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using f15r1_tt = regs::can_f15r1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using f15r2_tt = regs::can_f15r2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using f16r1_tt = regs::can_f16r1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using f16r2_tt = regs::can_f16r2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using f17r1_tt = regs::can_f17r1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using f17r2_tt = regs::can_f17r2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using f18r1_tt = regs::can_f18r1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using f18r2_tt = regs::can_f18r2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using f19r1_tt = regs::can_f19r1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using f19r2_tt = regs::can_f19r2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using f20r1_tt = regs::can_f20r1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using f20r2_tt = regs::can_f20r2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using f21r1_tt = regs::can_f21r1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using f21r2_tt = regs::can_f21r2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using f22r1_tt = regs::can_f22r1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using f22r2_tt = regs::can_f22r2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using f23r1_tt = regs::can_f23r1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using f23r2_tt = regs::can_f23r2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using f24r1_tt = regs::can_f24r1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using f24r2_tt = regs::can_f24r2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using f25r1_tt = regs::can_f25r1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using f25r2_tt = regs::can_f25r2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using f26r1_tt = regs::can_f26r1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using f26r2_tt = regs::can_f26r2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using f27r1_tt = regs::can_f27r1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using f27r2_tt = regs::can_f27r2_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using can1_t =

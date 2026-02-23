@@ -16,13 +16,13 @@ using scb_aircr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"vectkeystat", std::uint16_t, 31, 16>,
                groov::field<"endianess", bool, 15, 15>,
-               groov::field<"reserved1", std::uint16_t, 14, 3, access::ro>,
+               groov::field<"reserved1", std::uint16_t, 14, 3, common::access::ro>,
                groov::field<"sysresetreq", bool, 2, 2>,
                groov::field<"vectclractive", bool, 1, 1>,
-               groov::field<"reserved0", bool, 0, 0, access::ro>>;
+               groov::field<"reserved0", bool, 0, 0, common::access::ro>>;
 
 // scb_ccr_v1: CCR
 // Used by: SCB
@@ -33,12 +33,12 @@ using scb_ccr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved2", std::uint32_t, 31, 10, access::ro>,
+             common::access::rw,
+               groov::field<"reserved2", std::uint32_t, 31, 10, common::access::ro>,
                groov::field<"stkalign", bool, 9, 9>,
-               groov::field<"reserved1", std::uint8_t, 8, 4, access::ro>,
+               groov::field<"reserved1", std::uint8_t, 8, 4, common::access::ro>,
                groov::field<"unalign__trp", bool, 3, 3>,
-               groov::field<"reserved0", std::uint8_t, 2, 0, access::ro>>;
+               groov::field<"reserved0", std::uint8_t, 2, 0, common::access::ro>>;
 
 // scb_cpuid_v1: CPUID
 // Used by: SCB
@@ -49,7 +49,7 @@ using scb_cpuid_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"implementer", std::uint8_t, 31, 24>,
                groov::field<"variant", std::uint8_t, 23, 20>,
                groov::field<"constant", std::uint8_t, 19, 16>,
@@ -65,18 +65,18 @@ using scb_icsr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"nmipendset", bool, 31, 31>,
-               groov::field<"reserved3", std::uint8_t, 30, 29, access::ro>,
+               groov::field<"reserved3", std::uint8_t, 30, 29, common::access::ro>,
                groov::field<"pendsvset", bool, 28, 28>,
                groov::field<"pendsvclr", bool, 27, 27>,
                groov::field<"pendstset", bool, 26, 26>,
                groov::field<"pendstclr", bool, 25, 25>,
-               groov::field<"reserved2", std::uint8_t, 24, 23, access::ro>,
+               groov::field<"reserved2", std::uint8_t, 24, 23, common::access::ro>,
                groov::field<"isrpending", bool, 22, 22>,
-               groov::field<"reserved1", std::uint8_t, 21, 18, access::ro>,
+               groov::field<"reserved1", std::uint8_t, 21, 18, common::access::ro>,
                groov::field<"vectpending", std::uint8_t, 17, 12>,
-               groov::field<"reserved0", std::uint8_t, 11, 6, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 11, 6, common::access::ro>,
                groov::field<"vectactive", std::uint8_t, 5, 0>>;
 
 // scb_scr_v1: SCR
@@ -88,13 +88,13 @@ using scb_scr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved2", std::uint32_t, 31, 5, access::ro>,
+             common::access::rw,
+               groov::field<"reserved2", std::uint32_t, 31, 5, common::access::ro>,
                groov::field<"seveonpend", bool, 4, 4>,
-               groov::field<"reserved1", bool, 3, 3, access::ro>,
+               groov::field<"reserved1", bool, 3, 3, common::access::ro>,
                groov::field<"sleepdeep", bool, 2, 2>,
                groov::field<"sleeponexit", bool, 1, 1>,
-               groov::field<"reserved0", bool, 0, 0, access::ro>>;
+               groov::field<"reserved0", bool, 0, 0, common::access::ro>>;
 
 // scb_shpr2_v1: SHPR2
 // Used by: SCB
@@ -105,9 +105,9 @@ using scb_shpr2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"pri_11", std::uint8_t, 31, 24>,
-               groov::field<"reserved0", std::uint32_t, 23, 0, access::ro>>;
+               groov::field<"reserved0", std::uint32_t, 23, 0, common::access::ro>>;
 
 // scb_shpr3_v1: SHPR3
 // Used by: SCB
@@ -118,9 +118,9 @@ using scb_shpr3_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"pri_15", std::uint8_t, 31, 24>,
                groov::field<"pri_14", std::uint8_t, 23, 16>,
-               groov::field<"reserved0", std::uint16_t, 15, 0, access::ro>>;
+               groov::field<"reserved0", std::uint16_t, 15, 0, common::access::ro>>;
 
 } // namespace stm32::regs

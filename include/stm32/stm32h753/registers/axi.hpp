@@ -16,7 +16,7 @@ using axi_axi_comp_id_0_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint32_t, 31, 8>,
                groov::field<"preamble", std::uint8_t, 7, 0>>;
 
@@ -29,7 +29,7 @@ using axi_axi_comp_id_1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint32_t, 31, 8>,
                groov::field<"class", std::uint8_t, 7, 4>,
                groov::field<"preamble", std::uint8_t, 3, 0>>;
@@ -43,7 +43,7 @@ using axi_axi_comp_id_2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint32_t, 31, 8>,
                groov::field<"preamble", std::uint8_t, 7, 0>>;
 
@@ -56,7 +56,7 @@ using axi_axi_comp_id_3_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint32_t, 31, 8>,
                groov::field<"preamble", std::uint8_t, 7, 0>>;
 
@@ -69,10 +69,10 @@ using axi_axi_ini1_fn_mod_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 2, access::ro>,
-               groov::field<"write_iss_override", bit_enable, 1, 1>,
-               groov::field<"read_iss_override", bit_enable, 0, 0>>;
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 2, common::access::ro>,
+               groov::field<"write_iss_override", common::bittypes::bit_enable, 1, 1>,
+               groov::field<"read_iss_override", common::bittypes::bit_enable, 0, 0>>;
 
 // axi_axi_ini1_fn_mod2_v1: AXI_INI1_FN_MOD2
 // Used by: AXI
@@ -83,8 +83,8 @@ using axi_axi_ini1_fn_mod2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 1, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 1, common::access::ro>,
                groov::field<"bypass_merge", bool, 0, 0>>;
 
 // axi_axi_ini1_fn_mod_ahb_v1: AXI_INI1_FN_MOD_AHB
@@ -96,10 +96,10 @@ using axi_axi_ini1_fn_mod_ahb_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 2, access::ro>,
-               groov::field<"wr_inc_override", bit_enable, 1, 1>,
-               groov::field<"rd_inc_override", bit_enable, 0, 0>>;
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 2, common::access::ro>,
+               groov::field<"wr_inc_override", common::bittypes::bit_enable, 1, 1>,
+               groov::field<"rd_inc_override", common::bittypes::bit_enable, 0, 0>>;
 
 // axi_axi_ini1_read_qos_v1: AXI_INI1_READ_QOS
 // Used by: AXI
@@ -110,8 +110,8 @@ using axi_axi_ini1_read_qos_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 4, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 4, common::access::ro>,
                groov::field<"ar_qos", std::uint8_t, 3, 0>>;
 
 // axi_axi_ini1_write_qos_v1: AXI_INI1_WRITE_QOS
@@ -123,8 +123,8 @@ using axi_axi_ini1_write_qos_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 4, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 4, common::access::ro>,
                groov::field<"aw_qos", std::uint8_t, 3, 0>>;
 
 // axi_axi_ini2_fn_mod_v1: AXI_INI2_FN_MOD
@@ -136,10 +136,10 @@ using axi_axi_ini2_fn_mod_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 2, access::ro>,
-               groov::field<"write_iss_override", bit_enable, 1, 1>,
-               groov::field<"read_iss_override", bit_enable, 0, 0>>;
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 2, common::access::ro>,
+               groov::field<"write_iss_override", common::bittypes::bit_enable, 1, 1>,
+               groov::field<"read_iss_override", common::bittypes::bit_enable, 0, 0>>;
 
 // axi_axi_ini2_read_qos_v1: AXI_INI2_READ_QOS
 // Used by: AXI
@@ -150,8 +150,8 @@ using axi_axi_ini2_read_qos_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 4, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 4, common::access::ro>,
                groov::field<"ar_qos", std::uint8_t, 3, 0>>;
 
 // axi_axi_ini2_write_qos_v1: AXI_INI2_WRITE_QOS
@@ -163,8 +163,8 @@ using axi_axi_ini2_write_qos_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 4, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 4, common::access::ro>,
                groov::field<"aw_qos", std::uint8_t, 3, 0>>;
 
 // axi_axi_ini3_fn_mod_v1: AXI_INI3_FN_MOD
@@ -176,10 +176,10 @@ using axi_axi_ini3_fn_mod_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 2, access::ro>,
-               groov::field<"write_iss_override", bit_enable, 1, 1>,
-               groov::field<"read_iss_override", bit_enable, 0, 0>>;
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 2, common::access::ro>,
+               groov::field<"write_iss_override", common::bittypes::bit_enable, 1, 1>,
+               groov::field<"read_iss_override", common::bittypes::bit_enable, 0, 0>>;
 
 // axi_axi_ini3_fn_mod2_v1: AXI_INI3_FN_MOD2
 // Used by: AXI
@@ -190,8 +190,8 @@ using axi_axi_ini3_fn_mod2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 1, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 1, common::access::ro>,
                groov::field<"bypass_merge", bool, 0, 0>>;
 
 // axi_axi_ini3_fn_mod_ahb_v1: AXI_INI3_FN_MOD_AHB
@@ -203,10 +203,10 @@ using axi_axi_ini3_fn_mod_ahb_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 2, access::ro>,
-               groov::field<"wr_inc_override", bit_enable, 1, 1>,
-               groov::field<"rd_inc_override", bit_enable, 0, 0>>;
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 2, common::access::ro>,
+               groov::field<"wr_inc_override", common::bittypes::bit_enable, 1, 1>,
+               groov::field<"rd_inc_override", common::bittypes::bit_enable, 0, 0>>;
 
 // axi_axi_ini3_read_qos_v1: AXI_INI3_READ_QOS
 // Used by: AXI
@@ -217,8 +217,8 @@ using axi_axi_ini3_read_qos_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 4, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 4, common::access::ro>,
                groov::field<"ar_qos", std::uint8_t, 3, 0>>;
 
 // axi_axi_ini3_write_qos_v1: AXI_INI3_WRITE_QOS
@@ -230,8 +230,8 @@ using axi_axi_ini3_write_qos_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 4, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 4, common::access::ro>,
                groov::field<"aw_qos", std::uint8_t, 3, 0>>;
 
 // axi_axi_ini4_fn_mod_v1: AXI_INI4_FN_MOD
@@ -243,10 +243,10 @@ using axi_axi_ini4_fn_mod_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 2, access::ro>,
-               groov::field<"write_iss_override", bit_enable, 1, 1>,
-               groov::field<"read_iss_override", bit_enable, 0, 0>>;
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 2, common::access::ro>,
+               groov::field<"write_iss_override", common::bittypes::bit_enable, 1, 1>,
+               groov::field<"read_iss_override", common::bittypes::bit_enable, 0, 0>>;
 
 // axi_axi_ini4_read_qos_v1: AXI_INI4_READ_QOS
 // Used by: AXI
@@ -257,8 +257,8 @@ using axi_axi_ini4_read_qos_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 4, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 4, common::access::ro>,
                groov::field<"ar_qos", std::uint8_t, 3, 0>>;
 
 // axi_axi_ini4_write_qos_v1: AXI_INI4_WRITE_QOS
@@ -270,8 +270,8 @@ using axi_axi_ini4_write_qos_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 4, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 4, common::access::ro>,
                groov::field<"aw_qos", std::uint8_t, 3, 0>>;
 
 // axi_axi_ini5_fn_mod_v1: AXI_INI5_FN_MOD
@@ -283,10 +283,10 @@ using axi_axi_ini5_fn_mod_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 2, access::ro>,
-               groov::field<"write_iss_override", bit_enable, 1, 1>,
-               groov::field<"read_iss_override", bit_enable, 0, 0>>;
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 2, common::access::ro>,
+               groov::field<"write_iss_override", common::bittypes::bit_enable, 1, 1>,
+               groov::field<"read_iss_override", common::bittypes::bit_enable, 0, 0>>;
 
 // axi_axi_ini5_read_qos_v1: AXI_INI5_READ_QOS
 // Used by: AXI
@@ -297,8 +297,8 @@ using axi_axi_ini5_read_qos_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 4, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 4, common::access::ro>,
                groov::field<"ar_qos", std::uint8_t, 3, 0>>;
 
 // axi_axi_ini5_write_qos_v1: AXI_INI5_WRITE_QOS
@@ -310,8 +310,8 @@ using axi_axi_ini5_write_qos_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 4, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 4, common::access::ro>,
                groov::field<"aw_qos", std::uint8_t, 3, 0>>;
 
 // axi_axi_ini6_fn_mod_v1: AXI_INI6_FN_MOD
@@ -323,10 +323,10 @@ using axi_axi_ini6_fn_mod_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 2, access::ro>,
-               groov::field<"write_iss_override", bit_enable, 1, 1>,
-               groov::field<"read_iss_override", bit_enable, 0, 0>>;
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 2, common::access::ro>,
+               groov::field<"write_iss_override", common::bittypes::bit_enable, 1, 1>,
+               groov::field<"read_iss_override", common::bittypes::bit_enable, 0, 0>>;
 
 // axi_axi_ini6_read_qos_v1: AXI_INI6_READ_QOS
 // Used by: AXI
@@ -337,8 +337,8 @@ using axi_axi_ini6_read_qos_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 4, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 4, common::access::ro>,
                groov::field<"ar_qos", std::uint8_t, 3, 0>>;
 
 // axi_axi_ini6_write_qos_v1: AXI_INI6_WRITE_QOS
@@ -350,8 +350,8 @@ using axi_axi_ini6_write_qos_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 4, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 4, common::access::ro>,
                groov::field<"aw_qos", std::uint8_t, 3, 0>>;
 
 // axi_axi_periph_id_0_v1: AXI_PERIPH_ID_0
@@ -363,7 +363,7 @@ using axi_axi_periph_id_0_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint32_t, 31, 8>,
                groov::field<"partnum", std::uint8_t, 7, 0>>;
 
@@ -376,7 +376,7 @@ using axi_axi_periph_id_1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint32_t, 31, 8>,
                groov::field<"jep106i", std::uint8_t, 7, 4>,
                groov::field<"partnum", std::uint8_t, 3, 0>>;
@@ -390,7 +390,7 @@ using axi_axi_periph_id_2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint32_t, 31, 8>,
                groov::field<"revision", std::uint8_t, 7, 4>,
                groov::field<"jedec", bool, 3, 3>,
@@ -405,7 +405,7 @@ using axi_axi_periph_id_3_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint32_t, 31, 8>,
                groov::field<"rev_and", std::uint8_t, 7, 4>,
                groov::field<"cust_mod_num", std::uint8_t, 3, 0>>;
@@ -419,7 +419,7 @@ using axi_axi_periph_id_4_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint32_t, 31, 8>,
                groov::field<"kcount4", std::uint8_t, 7, 4>,
                groov::field<"jep106con", std::uint8_t, 3, 0>>;
@@ -433,10 +433,10 @@ using axi_axi_targ1_fn_mod_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 2, access::ro>,
-               groov::field<"write_iss_override", bit_enable, 1, 1>,
-               groov::field<"read_iss_override", bit_enable, 0, 0>>;
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 2, common::access::ro>,
+               groov::field<"write_iss_override", common::bittypes::bit_enable, 1, 1>,
+               groov::field<"read_iss_override", common::bittypes::bit_enable, 0, 0>>;
 
 // axi_axi_targ1_fn_mod2_v1: AXI_TARG1_FN_MOD2
 // Used by: AXI
@@ -447,8 +447,8 @@ using axi_axi_targ1_fn_mod2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 1, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 1, common::access::ro>,
                groov::field<"bypass_merge", bool, 0, 0>>;
 
 // axi_axi_targ1_fn_mod_iss_bm_v1: AXI_TARG1_FN_MOD_ISS_BM
@@ -460,10 +460,10 @@ using axi_axi_targ1_fn_mod_iss_bm_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 2, access::ro>,
-               groov::field<"write_iss_override", bit_enable, 1, 1>,
-               groov::field<"read_iss_override", bit_enable, 0, 0>>;
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 2, common::access::ro>,
+               groov::field<"write_iss_override", common::bittypes::bit_enable, 1, 1>,
+               groov::field<"read_iss_override", common::bittypes::bit_enable, 0, 0>>;
 
 // axi_axi_targ1_fn_mod_lb_v1: AXI_TARG1_FN_MOD_LB
 // Used by: AXI
@@ -474,8 +474,8 @@ using axi_axi_targ1_fn_mod_lb_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 1, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 1, common::access::ro>,
                groov::field<"fn_mod_lb", bool, 0, 0>>;
 
 // axi_axi_targ2_fn_mod_v1: AXI_TARG2_FN_MOD
@@ -487,10 +487,10 @@ using axi_axi_targ2_fn_mod_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 2, access::ro>,
-               groov::field<"write_iss_override", bit_enable, 1, 1>,
-               groov::field<"read_iss_override", bit_enable, 0, 0>>;
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 2, common::access::ro>,
+               groov::field<"write_iss_override", common::bittypes::bit_enable, 1, 1>,
+               groov::field<"read_iss_override", common::bittypes::bit_enable, 0, 0>>;
 
 // axi_axi_targ2_fn_mod2_v1: AXI_TARG2_FN_MOD2
 // Used by: AXI
@@ -501,8 +501,8 @@ using axi_axi_targ2_fn_mod2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 1, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 1, common::access::ro>,
                groov::field<"bypass_merge", bool, 0, 0>>;
 
 // axi_axi_targ2_fn_mod_iss_bm_v1: AXI_TARG2_FN_MOD_ISS_BM
@@ -514,10 +514,10 @@ using axi_axi_targ2_fn_mod_iss_bm_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 2, access::ro>,
-               groov::field<"write_iss_override", bit_enable, 1, 1>,
-               groov::field<"read_iss_override", bit_enable, 0, 0>>;
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 2, common::access::ro>,
+               groov::field<"write_iss_override", common::bittypes::bit_enable, 1, 1>,
+               groov::field<"read_iss_override", common::bittypes::bit_enable, 0, 0>>;
 
 // axi_axi_targ2_fn_mod_lb_v1: AXI_TARG2_FN_MOD_LB
 // Used by: AXI
@@ -528,8 +528,8 @@ using axi_axi_targ2_fn_mod_lb_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 1, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 1, common::access::ro>,
                groov::field<"fn_mod_lb", bool, 0, 0>>;
 
 // axi_axi_targ3_fn_mod_iss_bm_v1: AXI_TARG3_FN_MOD_ISS_BM
@@ -541,10 +541,10 @@ using axi_axi_targ3_fn_mod_iss_bm_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 2, access::ro>,
-               groov::field<"write_iss_override", bit_enable, 1, 1>,
-               groov::field<"read_iss_override", bit_enable, 0, 0>>;
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 2, common::access::ro>,
+               groov::field<"write_iss_override", common::bittypes::bit_enable, 1, 1>,
+               groov::field<"read_iss_override", common::bittypes::bit_enable, 0, 0>>;
 
 // axi_axi_targ4_fn_mod_iss_bm_v1: AXI_TARG4_FN_MOD_ISS_BM
 // Used by: AXI
@@ -555,10 +555,10 @@ using axi_axi_targ4_fn_mod_iss_bm_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 2, access::ro>,
-               groov::field<"write_iss_override", bit_enable, 1, 1>,
-               groov::field<"read_iss_override", bit_enable, 0, 0>>;
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 2, common::access::ro>,
+               groov::field<"write_iss_override", common::bittypes::bit_enable, 1, 1>,
+               groov::field<"read_iss_override", common::bittypes::bit_enable, 0, 0>>;
 
 // axi_axi_targ5_fn_mod_iss_bm_v1: AXI_TARG5_FN_MOD_ISS_BM
 // Used by: AXI
@@ -569,10 +569,10 @@ using axi_axi_targ5_fn_mod_iss_bm_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 2, access::ro>,
-               groov::field<"write_iss_override", bit_enable, 1, 1>,
-               groov::field<"read_iss_override", bit_enable, 0, 0>>;
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 2, common::access::ro>,
+               groov::field<"write_iss_override", common::bittypes::bit_enable, 1, 1>,
+               groov::field<"read_iss_override", common::bittypes::bit_enable, 0, 0>>;
 
 // axi_axi_targ6_fn_mod_iss_bm_v1: AXI_TARG6_FN_MOD_ISS_BM
 // Used by: AXI
@@ -583,10 +583,10 @@ using axi_axi_targ6_fn_mod_iss_bm_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 2, access::ro>,
-               groov::field<"write_iss_override", bit_enable, 1, 1>,
-               groov::field<"read_iss_override", bit_enable, 0, 0>>;
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 2, common::access::ro>,
+               groov::field<"write_iss_override", common::bittypes::bit_enable, 1, 1>,
+               groov::field<"read_iss_override", common::bittypes::bit_enable, 0, 0>>;
 
 // axi_axi_targ7_fn_mod_v1: AXI_TARG7_FN_MOD
 // Used by: AXI
@@ -597,10 +597,10 @@ using axi_axi_targ7_fn_mod_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 2, access::ro>,
-               groov::field<"write_iss_override", bit_enable, 1, 1>,
-               groov::field<"read_iss_override", bit_enable, 0, 0>>;
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 2, common::access::ro>,
+               groov::field<"write_iss_override", common::bittypes::bit_enable, 1, 1>,
+               groov::field<"read_iss_override", common::bittypes::bit_enable, 0, 0>>;
 
 // axi_axi_targ7_fn_mod2_v1: AXI_TARG7_FN_MOD2
 // Used by: AXI
@@ -611,8 +611,8 @@ using axi_axi_targ7_fn_mod2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 1, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 1, common::access::ro>,
                groov::field<"bypass_merge", bool, 0, 0>>;
 
 // axi_axi_targ7_fn_mod_iss_bm_v1: AXI_TARG7_FN_MOD_ISS_BM
@@ -624,9 +624,9 @@ using axi_axi_targ7_fn_mod_iss_bm_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 2, access::ro>,
-               groov::field<"write_iss_override", bit_enable, 1, 1>,
-               groov::field<"read_iss_override", bit_enable, 0, 0>>;
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 2, common::access::ro>,
+               groov::field<"write_iss_override", common::bittypes::bit_enable, 1, 1>,
+               groov::field<"read_iss_override", common::bittypes::bit_enable, 0, 0>>;
 
 } // namespace stm32::regs

@@ -7,21 +7,66 @@
 namespace stm32::stm32f0x0 {
 
 namespace usb {
-  using ep0r_tt = regs::usb_ep0r_v1_tt;
-  using ep1r_tt = regs::usb_ep1r_v1_tt;
-  using ep2r_tt = regs::usb_ep2r_v1_tt;
-  using ep3r_tt = regs::usb_ep3r_v1_tt;
-  using ep4r_tt = regs::usb_ep4r_v1_tt;
-  using ep5r_tt = regs::usb_ep5r_v1_tt;
-  using ep6r_tt = regs::usb_ep6r_v1_tt;
-  using ep7r_tt = regs::usb_ep7r_v1_tt;
-  using cntr_tt = regs::usb_cntr_v1_tt;
-  using istr_tt = regs::usb_istr_v1_tt;
-  using fnr_tt = regs::usb_fnr_v1_tt;
-  using daddr_tt = regs::usb_daddr_v1_tt;
-  using btable_tt = regs::usb_btable_v1_tt;
-  using lpmcsr_tt = regs::usb_lpmcsr_v1_tt;
-  using bcdr_tt = regs::usb_bcdr_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ep0r_tt = regs::usb_ep0r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ep1r_tt = regs::usb_ep1r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ep2r_tt = regs::usb_ep2r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ep3r_tt = regs::usb_ep3r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ep4r_tt = regs::usb_ep4r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ep5r_tt = regs::usb_ep5r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ep6r_tt = regs::usb_ep6r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ep7r_tt = regs::usb_ep7r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cntr_tt = regs::usb_cntr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using istr_tt = regs::usb_istr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fnr_tt = regs::usb_fnr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using daddr_tt = regs::usb_daddr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using btable_tt = regs::usb_btable_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using lpmcsr_tt = regs::usb_lpmcsr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using bcdr_tt = regs::usb_bcdr_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using usb_t =

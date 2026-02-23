@@ -7,7 +7,10 @@
 namespace stm32::stm32l151 {
 
 namespace comp {
-  using csr_tt = regs::comp_csr_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using csr_tt = regs::comp_csr_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using comp_t =

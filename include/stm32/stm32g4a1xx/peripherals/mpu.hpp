@@ -7,11 +7,26 @@
 namespace stm32::stm32g4a1xx {
 
 namespace mpu {
-  using typer_tt = regs::mpu_typer_v1_tt;
-  using ctrl_tt = regs::mpu_ctrl_v1_tt;
-  using rnr_tt = regs::mpu_rnr_v1_tt;
-  using rbar_tt = regs::mpu_rbar_v1_tt;
-  using rasr_tt = regs::mpu_rasr_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using typer_tt = regs::mpu_typer_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ctrl_tt = regs::mpu_ctrl_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rnr_tt = regs::mpu_rnr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rbar_tt = regs::mpu_rbar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rasr_tt = regs::mpu_rasr_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using mpu_t =

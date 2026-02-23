@@ -7,30 +7,102 @@
 namespace stm32::stm32c011 {
 
 namespace syscfg {
-  using syscfg_cfgr1_tt = regs::syscfg_syscfg_cfgr1_v1_tt;
-  using syscfg_cfgr2_tt = regs::syscfg_syscfg_cfgr2_v1_tt;
-  using syscfg_cfgr3_tt = regs::syscfg_syscfg_cfgr3_v1_tt;
-  using syscfg_itline0_tt = regs::syscfg_syscfg_itline0_v1_tt;
-  using syscfg_itline2_tt = regs::syscfg_syscfg_itline2_v1_tt;
-  using syscfg_itline3_tt = regs::syscfg_syscfg_itline3_v1_tt;
-  using syscfg_itline4_tt = regs::syscfg_syscfg_itline4_v1_tt;
-  using syscfg_itline5_tt = regs::syscfg_syscfg_itline5_v1_tt;
-  using syscfg_itline6_tt = regs::syscfg_syscfg_itline6_v1_tt;
-  using syscfg_itline7_tt = regs::syscfg_syscfg_itline7_v1_tt;
-  using syscfg_itline9_tt = regs::syscfg_syscfg_itline9_v1_tt;
-  using syscfg_itline10_tt = regs::syscfg_syscfg_itline10_v1_tt;
-  using syscfg_itline11_tt = regs::syscfg_syscfg_itline11_v1_tt;
-  using syscfg_itline12_tt = regs::syscfg_syscfg_itline12_v1_tt;
-  using syscfg_itline13_tt = regs::syscfg_syscfg_itline13_v1_tt;
-  using syscfg_itline14_tt = regs::syscfg_syscfg_itline14_v1_tt;
-  using syscfg_itline16_tt = regs::syscfg_syscfg_itline16_v1_tt;
-  using syscfg_itline19_tt = regs::syscfg_syscfg_itline19_v1_tt;
-  using syscfg_itline21_tt = regs::syscfg_syscfg_itline21_v1_tt;
-  using syscfg_itline22_tt = regs::syscfg_syscfg_itline22_v1_tt;
-  using syscfg_itline23_tt = regs::syscfg_syscfg_itline23_v1_tt;
-  using syscfg_itline25_tt = regs::syscfg_syscfg_itline25_v1_tt;
-  using syscfg_itline27_tt = regs::syscfg_syscfg_itline27_v1_tt;
-  using syscfg_itline28_tt = regs::syscfg_syscfg_itline28_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using syscfg_cfgr1_tt = regs::syscfg_syscfg_cfgr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using syscfg_cfgr2_tt = regs::syscfg_syscfg_cfgr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using syscfg_cfgr3_tt = regs::syscfg_syscfg_cfgr3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using syscfg_itline0_tt = regs::syscfg_syscfg_itline0_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using syscfg_itline2_tt = regs::syscfg_syscfg_itline2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using syscfg_itline3_tt = regs::syscfg_syscfg_itline3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using syscfg_itline4_tt = regs::syscfg_syscfg_itline4_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using syscfg_itline5_tt = regs::syscfg_syscfg_itline5_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using syscfg_itline6_tt = regs::syscfg_syscfg_itline6_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using syscfg_itline7_tt = regs::syscfg_syscfg_itline7_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using syscfg_itline9_tt = regs::syscfg_syscfg_itline9_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using syscfg_itline10_tt = regs::syscfg_syscfg_itline10_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using syscfg_itline11_tt = regs::syscfg_syscfg_itline11_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using syscfg_itline12_tt = regs::syscfg_syscfg_itline12_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using syscfg_itline13_tt = regs::syscfg_syscfg_itline13_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using syscfg_itline14_tt = regs::syscfg_syscfg_itline14_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using syscfg_itline16_tt = regs::syscfg_syscfg_itline16_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using syscfg_itline19_tt = regs::syscfg_syscfg_itline19_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using syscfg_itline21_tt = regs::syscfg_syscfg_itline21_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using syscfg_itline22_tt = regs::syscfg_syscfg_itline22_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using syscfg_itline23_tt = regs::syscfg_syscfg_itline23_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using syscfg_itline25_tt = regs::syscfg_syscfg_itline25_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using syscfg_itline27_tt = regs::syscfg_syscfg_itline27_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using syscfg_itline28_tt = regs::syscfg_syscfg_itline28_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using syscfg_t =

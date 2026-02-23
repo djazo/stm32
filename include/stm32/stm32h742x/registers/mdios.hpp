@@ -16,8 +16,8 @@ using mdios_clrfr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 3, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 3, common::access::ro>,
                groov::field<"cterf", bool, 2, 2>,
                groov::field<"cserf", bool, 1, 1>,
                groov::field<"cperf", bool, 0, 0>>;
@@ -31,15 +31,15 @@ using mdios_cr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint32_t, 31, 13, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint32_t, 31, 13, common::access::ro>,
                groov::field<"port_address", std::uint8_t, 12, 8>,
                groov::field<"dpc", bool, 7, 7>,
-               groov::field<"reserved0", std::uint8_t, 6, 4, access::ro>,
-               groov::field<"eie", bit_enable, 3, 3>,
-               groov::field<"rdie", bit_enable, 2, 2>,
-               groov::field<"wrie", bit_enable, 1, 1>,
-               groov::field<"en", bit_enable, 0, 0>>;
+               groov::field<"reserved0", std::uint8_t, 6, 4, common::access::ro>,
+               groov::field<"eie", common::bittypes::bit_enable, 3, 3>,
+               groov::field<"rdie", common::bittypes::bit_enable, 2, 2>,
+               groov::field<"wrie", common::bittypes::bit_enable, 1, 1>,
+               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
 
 // mdios_crdfr_v1: CRDFR
 // Used by: MDIOS
@@ -50,7 +50,7 @@ using mdios_crdfr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"crdf", std::uint32_t, 31, 0>>;
 
 // mdios_cwrfr_v1: CWRFR
@@ -62,7 +62,7 @@ using mdios_cwrfr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"cwrf", std::uint32_t, 31, 0>>;
 
 // mdios_dinr0_v1: DINR0
@@ -74,7 +74,7 @@ using mdios_dinr0_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint16_t, 31, 16>,
                groov::field<"din0", std::uint16_t, 15, 0>>;
 
@@ -87,7 +87,7 @@ using mdios_dinr1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint16_t, 31, 16>,
                groov::field<"din1", std::uint16_t, 15, 0>>;
 
@@ -100,7 +100,7 @@ using mdios_dinr10_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint16_t, 31, 16>,
                groov::field<"din10", std::uint16_t, 15, 0>>;
 
@@ -113,7 +113,7 @@ using mdios_dinr11_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint16_t, 31, 16>,
                groov::field<"din11", std::uint16_t, 15, 0>>;
 
@@ -126,7 +126,7 @@ using mdios_dinr12_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint16_t, 31, 16>,
                groov::field<"din12", std::uint16_t, 15, 0>>;
 
@@ -139,7 +139,7 @@ using mdios_dinr13_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint16_t, 31, 16>,
                groov::field<"din13", std::uint16_t, 15, 0>>;
 
@@ -152,7 +152,7 @@ using mdios_dinr14_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint16_t, 31, 16>,
                groov::field<"din14", std::uint16_t, 15, 0>>;
 
@@ -165,7 +165,7 @@ using mdios_dinr15_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint16_t, 31, 16>,
                groov::field<"din15", std::uint16_t, 15, 0>>;
 
@@ -178,7 +178,7 @@ using mdios_dinr16_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint16_t, 31, 16>,
                groov::field<"din16", std::uint16_t, 15, 0>>;
 
@@ -191,7 +191,7 @@ using mdios_dinr17_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint16_t, 31, 16>,
                groov::field<"din17", std::uint16_t, 15, 0>>;
 
@@ -204,7 +204,7 @@ using mdios_dinr18_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint16_t, 31, 16>,
                groov::field<"din18", std::uint16_t, 15, 0>>;
 
@@ -217,7 +217,7 @@ using mdios_dinr19_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint16_t, 31, 16>,
                groov::field<"din19", std::uint16_t, 15, 0>>;
 
@@ -230,7 +230,7 @@ using mdios_dinr2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint16_t, 31, 16>,
                groov::field<"din2", std::uint16_t, 15, 0>>;
 
@@ -243,7 +243,7 @@ using mdios_dinr20_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint16_t, 31, 16>,
                groov::field<"din20", std::uint16_t, 15, 0>>;
 
@@ -256,7 +256,7 @@ using mdios_dinr21_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint16_t, 31, 16>,
                groov::field<"din21", std::uint16_t, 15, 0>>;
 
@@ -269,7 +269,7 @@ using mdios_dinr22_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint16_t, 31, 16>,
                groov::field<"din22", std::uint16_t, 15, 0>>;
 
@@ -282,7 +282,7 @@ using mdios_dinr23_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint16_t, 31, 16>,
                groov::field<"din23", std::uint16_t, 15, 0>>;
 
@@ -295,7 +295,7 @@ using mdios_dinr24_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint16_t, 31, 16>,
                groov::field<"din24", std::uint16_t, 15, 0>>;
 
@@ -308,7 +308,7 @@ using mdios_dinr25_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint16_t, 31, 16>,
                groov::field<"din25", std::uint16_t, 15, 0>>;
 
@@ -321,7 +321,7 @@ using mdios_dinr26_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint16_t, 31, 16>,
                groov::field<"din26", std::uint16_t, 15, 0>>;
 
@@ -334,7 +334,7 @@ using mdios_dinr27_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint16_t, 31, 16>,
                groov::field<"din27", std::uint16_t, 15, 0>>;
 
@@ -347,7 +347,7 @@ using mdios_dinr28_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint16_t, 31, 16>,
                groov::field<"din28", std::uint16_t, 15, 0>>;
 
@@ -360,7 +360,7 @@ using mdios_dinr29_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint16_t, 31, 16>,
                groov::field<"din29", std::uint16_t, 15, 0>>;
 
@@ -373,7 +373,7 @@ using mdios_dinr3_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint16_t, 31, 16>,
                groov::field<"din3", std::uint16_t, 15, 0>>;
 
@@ -386,7 +386,7 @@ using mdios_dinr30_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint16_t, 31, 16>,
                groov::field<"din30", std::uint16_t, 15, 0>>;
 
@@ -399,7 +399,7 @@ using mdios_dinr31_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint16_t, 31, 16>,
                groov::field<"din31", std::uint16_t, 15, 0>>;
 
@@ -412,7 +412,7 @@ using mdios_dinr4_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint16_t, 31, 16>,
                groov::field<"din4", std::uint16_t, 15, 0>>;
 
@@ -425,7 +425,7 @@ using mdios_dinr5_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint16_t, 31, 16>,
                groov::field<"din5", std::uint16_t, 15, 0>>;
 
@@ -438,7 +438,7 @@ using mdios_dinr6_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint16_t, 31, 16>,
                groov::field<"din6", std::uint16_t, 15, 0>>;
 
@@ -451,7 +451,7 @@ using mdios_dinr7_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint16_t, 31, 16>,
                groov::field<"din7", std::uint16_t, 15, 0>>;
 
@@ -464,7 +464,7 @@ using mdios_dinr8_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint16_t, 31, 16>,
                groov::field<"din8", std::uint16_t, 15, 0>>;
 
@@ -477,7 +477,7 @@ using mdios_dinr9_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint16_t, 31, 16>,
                groov::field<"din9", std::uint16_t, 15, 0>>;
 
@@ -490,8 +490,8 @@ using mdios_doutr0_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"dout0", std::uint16_t, 15, 0>>;
 
 // mdios_doutr1_v1: DOUTR1
@@ -503,8 +503,8 @@ using mdios_doutr1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"dout1", std::uint16_t, 15, 0>>;
 
 // mdios_doutr10_v1: DOUTR10
@@ -516,8 +516,8 @@ using mdios_doutr10_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"dout10", std::uint16_t, 15, 0>>;
 
 // mdios_doutr11_v1: DOUTR11
@@ -529,8 +529,8 @@ using mdios_doutr11_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"dout11", std::uint16_t, 15, 0>>;
 
 // mdios_doutr12_v1: DOUTR12
@@ -542,8 +542,8 @@ using mdios_doutr12_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"dout12", std::uint16_t, 15, 0>>;
 
 // mdios_doutr13_v1: DOUTR13
@@ -555,8 +555,8 @@ using mdios_doutr13_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"dout13", std::uint16_t, 15, 0>>;
 
 // mdios_doutr14_v1: DOUTR14
@@ -568,8 +568,8 @@ using mdios_doutr14_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"dout14", std::uint16_t, 15, 0>>;
 
 // mdios_doutr15_v1: DOUTR15
@@ -581,8 +581,8 @@ using mdios_doutr15_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"dout15", std::uint16_t, 15, 0>>;
 
 // mdios_doutr16_v1: DOUTR16
@@ -594,8 +594,8 @@ using mdios_doutr16_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"dout16", std::uint16_t, 15, 0>>;
 
 // mdios_doutr17_v1: DOUTR17
@@ -607,8 +607,8 @@ using mdios_doutr17_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"dout17", std::uint16_t, 15, 0>>;
 
 // mdios_doutr18_v1: DOUTR18
@@ -620,8 +620,8 @@ using mdios_doutr18_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"dout18", std::uint16_t, 15, 0>>;
 
 // mdios_doutr19_v1: DOUTR19
@@ -633,8 +633,8 @@ using mdios_doutr19_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"dout19", std::uint16_t, 15, 0>>;
 
 // mdios_doutr2_v1: DOUTR2
@@ -646,8 +646,8 @@ using mdios_doutr2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"dout2", std::uint16_t, 15, 0>>;
 
 // mdios_doutr20_v1: DOUTR20
@@ -659,8 +659,8 @@ using mdios_doutr20_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"dout20", std::uint16_t, 15, 0>>;
 
 // mdios_doutr21_v1: DOUTR21
@@ -672,8 +672,8 @@ using mdios_doutr21_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"dout21", std::uint16_t, 15, 0>>;
 
 // mdios_doutr22_v1: DOUTR22
@@ -685,8 +685,8 @@ using mdios_doutr22_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"dout22", std::uint16_t, 15, 0>>;
 
 // mdios_doutr23_v1: DOUTR23
@@ -698,8 +698,8 @@ using mdios_doutr23_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"dout23", std::uint16_t, 15, 0>>;
 
 // mdios_doutr24_v1: DOUTR24
@@ -711,8 +711,8 @@ using mdios_doutr24_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"dout24", std::uint16_t, 15, 0>>;
 
 // mdios_doutr25_v1: DOUTR25
@@ -724,8 +724,8 @@ using mdios_doutr25_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"dout25", std::uint16_t, 15, 0>>;
 
 // mdios_doutr26_v1: DOUTR26
@@ -737,8 +737,8 @@ using mdios_doutr26_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"dout26", std::uint16_t, 15, 0>>;
 
 // mdios_doutr27_v1: DOUTR27
@@ -750,8 +750,8 @@ using mdios_doutr27_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"dout27", std::uint16_t, 15, 0>>;
 
 // mdios_doutr28_v1: DOUTR28
@@ -763,8 +763,8 @@ using mdios_doutr28_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"dout28", std::uint16_t, 15, 0>>;
 
 // mdios_doutr29_v1: DOUTR29
@@ -776,8 +776,8 @@ using mdios_doutr29_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"dout29", std::uint16_t, 15, 0>>;
 
 // mdios_doutr3_v1: DOUTR3
@@ -789,8 +789,8 @@ using mdios_doutr3_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"dout3", std::uint16_t, 15, 0>>;
 
 // mdios_doutr30_v1: DOUTR30
@@ -802,8 +802,8 @@ using mdios_doutr30_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"dout30", std::uint16_t, 15, 0>>;
 
 // mdios_doutr31_v1: DOUTR31
@@ -815,8 +815,8 @@ using mdios_doutr31_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"dout31", std::uint16_t, 15, 0>>;
 
 // mdios_doutr4_v1: DOUTR4
@@ -828,8 +828,8 @@ using mdios_doutr4_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"dout4", std::uint16_t, 15, 0>>;
 
 // mdios_doutr5_v1: DOUTR5
@@ -841,8 +841,8 @@ using mdios_doutr5_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"dout5", std::uint16_t, 15, 0>>;
 
 // mdios_doutr6_v1: DOUTR6
@@ -854,8 +854,8 @@ using mdios_doutr6_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"dout6", std::uint16_t, 15, 0>>;
 
 // mdios_doutr7_v1: DOUTR7
@@ -867,8 +867,8 @@ using mdios_doutr7_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"dout7", std::uint16_t, 15, 0>>;
 
 // mdios_doutr8_v1: DOUTR8
@@ -880,8 +880,8 @@ using mdios_doutr8_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"dout8", std::uint16_t, 15, 0>>;
 
 // mdios_doutr9_v1: DOUTR9
@@ -893,8 +893,8 @@ using mdios_doutr9_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"dout9", std::uint16_t, 15, 0>>;
 
 // mdios_rdfr_v1: RDFR
@@ -906,7 +906,7 @@ using mdios_rdfr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"rdf", std::uint32_t, 31, 0>>;
 
 // mdios_sr_v1: SR
@@ -918,7 +918,7 @@ using mdios_sr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint32_t, 31, 3>,
                groov::field<"terf", bool, 2, 2>,
                groov::field<"serf", bool, 1, 1>,
@@ -933,7 +933,7 @@ using mdios_wrfr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"wrf", std::uint32_t, 31, 0>>;
 
 } // namespace stm32::regs

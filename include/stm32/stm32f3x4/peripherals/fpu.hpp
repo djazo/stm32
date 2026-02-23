@@ -7,9 +7,18 @@
 namespace stm32::stm32f3x4 {
 
 namespace fpu {
-  using fpccr_tt = regs::fpu_fpccr_v1_tt;
-  using fpcar_tt = regs::fpu_fpcar_v1_tt;
-  using fpscr_tt = regs::fpu_fpscr_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fpccr_tt = regs::fpu_fpccr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fpcar_tt = regs::fpu_fpcar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fpscr_tt = regs::fpu_fpscr_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using fpu_t =
@@ -22,7 +31,10 @@ namespace fpu {
 } // namespace fpu
 
 namespace fpu_cpacr {
-  using cpacr_tt = regs::fpu_cpacr_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cpacr_tt = regs::fpu_cpacr_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using fpu_cpacr_t =

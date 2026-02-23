@@ -7,11 +7,26 @@
 namespace stm32::stm32h725 {
 
 namespace crc {
-  using dr_tt = regs::crc_dr_v1_tt;
-  using idr_tt = regs::crc_idr_v1_tt;
-  using cr_tt = regs::crc_cr_v1_tt;
-  using init_tt = regs::crc_init_v1_tt;
-  using pol_tt = regs::crc_pol_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dr_tt = regs::crc_dr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using idr_tt = regs::crc_idr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cr_tt = regs::crc_cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using init_tt = regs::crc_init_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using pol_tt = regs::crc_pol_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using crc_t =

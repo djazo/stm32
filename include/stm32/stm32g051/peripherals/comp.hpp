@@ -7,9 +7,18 @@
 namespace stm32::stm32g051 {
 
 namespace comp {
-  using comp1_csr_tt = regs::comp_comp1_csr_v1_tt;
-  using comp2_csr_tt = regs::comp_comp2_csr_v1_tt;
-  using comp3_csr_tt = regs::comp_comp3_csr_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using comp1_csr_tt = regs::comp_comp1_csr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using comp2_csr_tt = regs::comp_comp2_csr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using comp3_csr_tt = regs::comp_comp3_csr_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using comp_t =

@@ -16,10 +16,10 @@ using ac_abfsr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint32_t, 31, 10, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint32_t, 31, 10, common::access::ro>,
                groov::field<"aximtype", std::uint8_t, 9, 8>,
-               groov::field<"reserved0", std::uint8_t, 7, 5, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 7, 5, common::access::ro>,
                groov::field<"eppb", bool, 4, 4>,
                groov::field<"axim", bool, 3, 3>,
                groov::field<"ahbp", bool, 2, 2>,
@@ -35,10 +35,10 @@ using ac_ahbpcr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 4, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 4, common::access::ro>,
                groov::field<"sz", std::uint8_t, 3, 1>,
-               groov::field<"en", bit_enable, 0, 0>>;
+               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
 
 // ac_ahbscr_v1: AHBSCR
 // Used by: AC
@@ -49,8 +49,8 @@ using ac_ahbscr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"initcount", std::uint8_t, 15, 11>,
                groov::field<"tpri", std::uint16_t, 10, 2>,
                groov::field<"ctl", std::uint8_t, 1, 0>>;
@@ -64,10 +64,10 @@ using ac_cacr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 3, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 3, common::access::ro>,
                groov::field<"forcewt", bool, 2, 2>,
-               groov::field<"eccen", bit_enable, 1, 1>,
+               groov::field<"eccen", common::bittypes::bit_enable, 1, 1>,
                groov::field<"siwt", bool, 0, 0>>;
 
 // ac_dtcmcr_v1: DTCMCR
@@ -79,12 +79,12 @@ using ac_dtcmcr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 7, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 7, common::access::ro>,
                groov::field<"sz", std::uint8_t, 6, 3>,
-               groov::field<"reten", bit_enable, 2, 2>,
+               groov::field<"reten", common::bittypes::bit_enable, 2, 2>,
                groov::field<"rmw", bool, 1, 1>,
-               groov::field<"en", bit_enable, 0, 0>>;
+               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
 
 // ac_itcmcr_v1: ITCMCR
 // Used by: AC
@@ -95,11 +95,11 @@ using ac_itcmcr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 7, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 7, common::access::ro>,
                groov::field<"sz", std::uint8_t, 6, 3>,
-               groov::field<"reten", bit_enable, 2, 2>,
+               groov::field<"reten", common::bittypes::bit_enable, 2, 2>,
                groov::field<"rmw", bool, 1, 1>,
-               groov::field<"en", bit_enable, 0, 0>>;
+               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
 
 } // namespace stm32::regs

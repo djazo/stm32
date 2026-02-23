@@ -16,13 +16,13 @@ using dfsdm_awscd0r_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved2", std::uint8_t, 31, 24, access::ro>,
+             common::access::rw,
+               groov::field<"reserved2", std::uint8_t, 31, 24, common::access::ro>,
                groov::field<"awford", std::uint8_t, 23, 22>,
-               groov::field<"reserved1", bool, 21, 21, access::ro>,
+               groov::field<"reserved1", bool, 21, 21, common::access::ro>,
                groov::field<"awfosr", std::uint8_t, 20, 16>,
                groov::field<"bkscd", std::uint8_t, 15, 12>,
-               groov::field<"reserved0", std::uint8_t, 11, 8, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 11, 8, common::access::ro>,
                groov::field<"scdt", std::uint8_t, 7, 0>>;
 
 // dfsdm_awscd1r_v1: AWSCD1R
@@ -34,13 +34,13 @@ using dfsdm_awscd1r_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved2", std::uint8_t, 31, 24, access::ro>,
+             common::access::rw,
+               groov::field<"reserved2", std::uint8_t, 31, 24, common::access::ro>,
                groov::field<"awford", std::uint8_t, 23, 22>,
-               groov::field<"reserved1", bool, 21, 21, access::ro>,
+               groov::field<"reserved1", bool, 21, 21, common::access::ro>,
                groov::field<"awfosr", std::uint8_t, 20, 16>,
                groov::field<"bkscd", std::uint8_t, 15, 12>,
-               groov::field<"reserved0", std::uint8_t, 11, 8, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 11, 8, common::access::ro>,
                groov::field<"scdt", std::uint8_t, 7, 0>>;
 
 // dfsdm_awscd2r_v1: AWSCD2R
@@ -52,13 +52,13 @@ using dfsdm_awscd2r_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved2", std::uint8_t, 31, 24, access::ro>,
+             common::access::rw,
+               groov::field<"reserved2", std::uint8_t, 31, 24, common::access::ro>,
                groov::field<"awford", std::uint8_t, 23, 22>,
-               groov::field<"reserved1", bool, 21, 21, access::ro>,
+               groov::field<"reserved1", bool, 21, 21, common::access::ro>,
                groov::field<"awfosr", std::uint8_t, 20, 16>,
                groov::field<"bkscd", std::uint8_t, 15, 12>,
-               groov::field<"reserved0", std::uint8_t, 11, 8, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 11, 8, common::access::ro>,
                groov::field<"scdt", std::uint8_t, 7, 0>>;
 
 // dfsdm_awscd3r_v1: AWSCD3R
@@ -70,13 +70,13 @@ using dfsdm_awscd3r_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved2", std::uint8_t, 31, 24, access::ro>,
+             common::access::rw,
+               groov::field<"reserved2", std::uint8_t, 31, 24, common::access::ro>,
                groov::field<"awford", std::uint8_t, 23, 22>,
-               groov::field<"reserved1", bool, 21, 21, access::ro>,
+               groov::field<"reserved1", bool, 21, 21, common::access::ro>,
                groov::field<"awfosr", std::uint8_t, 20, 16>,
                groov::field<"bkscd", std::uint8_t, 15, 12>,
-               groov::field<"reserved0", std::uint8_t, 11, 8, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 11, 8, common::access::ro>,
                groov::field<"scdt", std::uint8_t, 7, 0>>;
 
 // dfsdm_awscd4r_v1: AWSCD4R
@@ -88,13 +88,13 @@ using dfsdm_awscd4r_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved2", std::uint8_t, 31, 24, access::ro>,
+             common::access::rw,
+               groov::field<"reserved2", std::uint8_t, 31, 24, common::access::ro>,
                groov::field<"awford", std::uint8_t, 23, 22>,
-               groov::field<"reserved1", bool, 21, 21, access::ro>,
+               groov::field<"reserved1", bool, 21, 21, common::access::ro>,
                groov::field<"awfosr", std::uint8_t, 20, 16>,
                groov::field<"bkscd", std::uint8_t, 15, 12>,
-               groov::field<"reserved0", std::uint8_t, 11, 8, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 11, 8, common::access::ro>,
                groov::field<"scdt", std::uint8_t, 7, 0>>;
 
 // dfsdm_awscd5r_v1: AWSCD5R
@@ -106,13 +106,13 @@ using dfsdm_awscd5r_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved2", std::uint8_t, 31, 24, access::ro>,
+             common::access::rw,
+               groov::field<"reserved2", std::uint8_t, 31, 24, common::access::ro>,
                groov::field<"awford", std::uint8_t, 23, 22>,
-               groov::field<"reserved1", bool, 21, 21, access::ro>,
+               groov::field<"reserved1", bool, 21, 21, common::access::ro>,
                groov::field<"awfosr", std::uint8_t, 20, 16>,
                groov::field<"bkscd", std::uint8_t, 15, 12>,
-               groov::field<"reserved0", std::uint8_t, 11, 8, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 11, 8, common::access::ro>,
                groov::field<"scdt", std::uint8_t, 7, 0>>;
 
 // dfsdm_awscd6r_v1: AWSCD6R
@@ -124,13 +124,13 @@ using dfsdm_awscd6r_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved2", std::uint8_t, 31, 24, access::ro>,
+             common::access::rw,
+               groov::field<"reserved2", std::uint8_t, 31, 24, common::access::ro>,
                groov::field<"awford", std::uint8_t, 23, 22>,
-               groov::field<"reserved1", bool, 21, 21, access::ro>,
+               groov::field<"reserved1", bool, 21, 21, common::access::ro>,
                groov::field<"awfosr", std::uint8_t, 20, 16>,
                groov::field<"bkscd", std::uint8_t, 15, 12>,
-               groov::field<"reserved0", std::uint8_t, 11, 8, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 11, 8, common::access::ro>,
                groov::field<"scdt", std::uint8_t, 7, 0>>;
 
 // dfsdm_awscd7r_v1: AWSCD7R
@@ -142,13 +142,13 @@ using dfsdm_awscd7r_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved2", std::uint8_t, 31, 24, access::ro>,
+             common::access::rw,
+               groov::field<"reserved2", std::uint8_t, 31, 24, common::access::ro>,
                groov::field<"awford", std::uint8_t, 23, 22>,
-               groov::field<"reserved1", bool, 21, 21, access::ro>,
+               groov::field<"reserved1", bool, 21, 21, common::access::ro>,
                groov::field<"awfosr", std::uint8_t, 20, 16>,
                groov::field<"bkscd", std::uint8_t, 15, 12>,
-               groov::field<"reserved0", std::uint8_t, 11, 8, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 11, 8, common::access::ro>,
                groov::field<"scdt", std::uint8_t, 7, 0>>;
 
 // dfsdm_chcfg0r1_v1: CHCFG0R1
@@ -160,19 +160,19 @@ using dfsdm_chcfg0r1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"dfsdmen", bit_enable, 31, 31>,
+             common::access::rw,
+               groov::field<"dfsdmen", common::bittypes::bit_enable, 31, 31>,
                groov::field<"ckoutsrc", bool, 30, 30>,
-               groov::field<"reserved2", std::uint8_t, 29, 24, access::ro>,
+               groov::field<"reserved2", std::uint8_t, 29, 24, common::access::ro>,
                groov::field<"ckoutdiv", std::uint8_t, 23, 16>,
                groov::field<"datpack", std::uint8_t, 15, 14>,
                groov::field<"datmpx", std::uint8_t, 13, 12>,
-               groov::field<"reserved1", std::uint8_t, 11, 9, access::ro>,
+               groov::field<"reserved1", std::uint8_t, 11, 9, common::access::ro>,
                groov::field<"chinsel", bool, 8, 8>,
-               groov::field<"chen", bit_enable, 7, 7>,
-               groov::field<"ckaben", bit_enable, 6, 6>,
-               groov::field<"scden", bit_enable, 5, 5>,
-               groov::field<"reserved0", bool, 4, 4, access::ro>,
+               groov::field<"chen", common::bittypes::bit_enable, 7, 7>,
+               groov::field<"ckaben", common::bittypes::bit_enable, 6, 6>,
+               groov::field<"scden", common::bittypes::bit_enable, 5, 5>,
+               groov::field<"reserved0", bool, 4, 4, common::access::ro>,
                groov::field<"spicksel", std::uint8_t, 3, 2>,
                groov::field<"sitp", std::uint8_t, 1, 0>>;
 
@@ -185,10 +185,10 @@ using dfsdm_chcfg0r2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"offset", std::uint32_t, 31, 8>,
                groov::field<"dtrbs", std::uint8_t, 7, 3>,
-               groov::field<"reserved0", std::uint8_t, 2, 0, access::ro>>;
+               groov::field<"reserved0", std::uint8_t, 2, 0, common::access::ro>>;
 
 // dfsdm_chcfg1r1_v1: CHCFG1R1
 // Used by: DFSDM
@@ -199,16 +199,16 @@ using dfsdm_chcfg1r1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved2", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved2", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"datpack", std::uint8_t, 15, 14>,
                groov::field<"datmpx", std::uint8_t, 13, 12>,
-               groov::field<"reserved1", std::uint8_t, 11, 9, access::ro>,
+               groov::field<"reserved1", std::uint8_t, 11, 9, common::access::ro>,
                groov::field<"chinsel", bool, 8, 8>,
-               groov::field<"chen", bit_enable, 7, 7>,
-               groov::field<"ckaben", bit_enable, 6, 6>,
-               groov::field<"scden", bit_enable, 5, 5>,
-               groov::field<"reserved0", bool, 4, 4, access::ro>,
+               groov::field<"chen", common::bittypes::bit_enable, 7, 7>,
+               groov::field<"ckaben", common::bittypes::bit_enable, 6, 6>,
+               groov::field<"scden", common::bittypes::bit_enable, 5, 5>,
+               groov::field<"reserved0", bool, 4, 4, common::access::ro>,
                groov::field<"spicksel", std::uint8_t, 3, 2>,
                groov::field<"sitp", std::uint8_t, 1, 0>>;
 
@@ -221,10 +221,10 @@ using dfsdm_chcfg1r2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"offset", std::uint32_t, 31, 8>,
                groov::field<"dtrbs", std::uint8_t, 7, 3>,
-               groov::field<"reserved0", std::uint8_t, 2, 0, access::ro>>;
+               groov::field<"reserved0", std::uint8_t, 2, 0, common::access::ro>>;
 
 // dfsdm_chcfg2r1_v1: CHCFG2R1
 // Used by: DFSDM
@@ -235,16 +235,16 @@ using dfsdm_chcfg2r1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved2", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved2", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"datpack", std::uint8_t, 15, 14>,
                groov::field<"datmpx", std::uint8_t, 13, 12>,
-               groov::field<"reserved1", std::uint8_t, 11, 9, access::ro>,
+               groov::field<"reserved1", std::uint8_t, 11, 9, common::access::ro>,
                groov::field<"chinsel", bool, 8, 8>,
-               groov::field<"chen", bit_enable, 7, 7>,
-               groov::field<"ckaben", bit_enable, 6, 6>,
-               groov::field<"scden", bit_enable, 5, 5>,
-               groov::field<"reserved0", bool, 4, 4, access::ro>,
+               groov::field<"chen", common::bittypes::bit_enable, 7, 7>,
+               groov::field<"ckaben", common::bittypes::bit_enable, 6, 6>,
+               groov::field<"scden", common::bittypes::bit_enable, 5, 5>,
+               groov::field<"reserved0", bool, 4, 4, common::access::ro>,
                groov::field<"spicksel", std::uint8_t, 3, 2>,
                groov::field<"sitp", std::uint8_t, 1, 0>>;
 
@@ -257,10 +257,10 @@ using dfsdm_chcfg2r2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"offset", std::uint32_t, 31, 8>,
                groov::field<"dtrbs", std::uint8_t, 7, 3>,
-               groov::field<"reserved0", std::uint8_t, 2, 0, access::ro>>;
+               groov::field<"reserved0", std::uint8_t, 2, 0, common::access::ro>>;
 
 // dfsdm_chcfg3r1_v1: CHCFG3R1
 // Used by: DFSDM
@@ -271,16 +271,16 @@ using dfsdm_chcfg3r1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved2", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved2", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"datpack", std::uint8_t, 15, 14>,
                groov::field<"datmpx", std::uint8_t, 13, 12>,
-               groov::field<"reserved1", std::uint8_t, 11, 9, access::ro>,
+               groov::field<"reserved1", std::uint8_t, 11, 9, common::access::ro>,
                groov::field<"chinsel", bool, 8, 8>,
-               groov::field<"chen", bit_enable, 7, 7>,
-               groov::field<"ckaben", bit_enable, 6, 6>,
-               groov::field<"scden", bit_enable, 5, 5>,
-               groov::field<"reserved0", bool, 4, 4, access::ro>,
+               groov::field<"chen", common::bittypes::bit_enable, 7, 7>,
+               groov::field<"ckaben", common::bittypes::bit_enable, 6, 6>,
+               groov::field<"scden", common::bittypes::bit_enable, 5, 5>,
+               groov::field<"reserved0", bool, 4, 4, common::access::ro>,
                groov::field<"spicksel", std::uint8_t, 3, 2>,
                groov::field<"sitp", std::uint8_t, 1, 0>>;
 
@@ -293,10 +293,10 @@ using dfsdm_chcfg3r2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"offset", std::uint32_t, 31, 8>,
                groov::field<"dtrbs", std::uint8_t, 7, 3>,
-               groov::field<"reserved0", std::uint8_t, 2, 0, access::ro>>;
+               groov::field<"reserved0", std::uint8_t, 2, 0, common::access::ro>>;
 
 // dfsdm_chcfg4r1_v1: CHCFG4R1
 // Used by: DFSDM
@@ -307,16 +307,16 @@ using dfsdm_chcfg4r1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved2", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved2", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"datpack", std::uint8_t, 15, 14>,
                groov::field<"datmpx", std::uint8_t, 13, 12>,
-               groov::field<"reserved1", std::uint8_t, 11, 9, access::ro>,
+               groov::field<"reserved1", std::uint8_t, 11, 9, common::access::ro>,
                groov::field<"chinsel", bool, 8, 8>,
-               groov::field<"chen", bit_enable, 7, 7>,
-               groov::field<"ckaben", bit_enable, 6, 6>,
-               groov::field<"scden", bit_enable, 5, 5>,
-               groov::field<"reserved0", bool, 4, 4, access::ro>,
+               groov::field<"chen", common::bittypes::bit_enable, 7, 7>,
+               groov::field<"ckaben", common::bittypes::bit_enable, 6, 6>,
+               groov::field<"scden", common::bittypes::bit_enable, 5, 5>,
+               groov::field<"reserved0", bool, 4, 4, common::access::ro>,
                groov::field<"spicksel", std::uint8_t, 3, 2>,
                groov::field<"sitp", std::uint8_t, 1, 0>>;
 
@@ -329,10 +329,10 @@ using dfsdm_chcfg4r2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"offset", std::uint32_t, 31, 8>,
                groov::field<"dtrbs", std::uint8_t, 7, 3>,
-               groov::field<"reserved0", std::uint8_t, 2, 0, access::ro>>;
+               groov::field<"reserved0", std::uint8_t, 2, 0, common::access::ro>>;
 
 // dfsdm_chcfg5r1_v1: CHCFG5R1
 // Used by: DFSDM
@@ -343,16 +343,16 @@ using dfsdm_chcfg5r1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved2", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved2", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"datpack", std::uint8_t, 15, 14>,
                groov::field<"datmpx", std::uint8_t, 13, 12>,
-               groov::field<"reserved1", std::uint8_t, 11, 9, access::ro>,
+               groov::field<"reserved1", std::uint8_t, 11, 9, common::access::ro>,
                groov::field<"chinsel", bool, 8, 8>,
-               groov::field<"chen", bit_enable, 7, 7>,
-               groov::field<"ckaben", bit_enable, 6, 6>,
-               groov::field<"scden", bit_enable, 5, 5>,
-               groov::field<"reserved0", bool, 4, 4, access::ro>,
+               groov::field<"chen", common::bittypes::bit_enable, 7, 7>,
+               groov::field<"ckaben", common::bittypes::bit_enable, 6, 6>,
+               groov::field<"scden", common::bittypes::bit_enable, 5, 5>,
+               groov::field<"reserved0", bool, 4, 4, common::access::ro>,
                groov::field<"spicksel", std::uint8_t, 3, 2>,
                groov::field<"sitp", std::uint8_t, 1, 0>>;
 
@@ -365,10 +365,10 @@ using dfsdm_chcfg5r2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"offset", std::uint32_t, 31, 8>,
                groov::field<"dtrbs", std::uint8_t, 7, 3>,
-               groov::field<"reserved0", std::uint8_t, 2, 0, access::ro>>;
+               groov::field<"reserved0", std::uint8_t, 2, 0, common::access::ro>>;
 
 // dfsdm_chcfg6r1_v1: CHCFG6R1
 // Used by: DFSDM
@@ -379,16 +379,16 @@ using dfsdm_chcfg6r1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved2", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved2", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"datpack", std::uint8_t, 15, 14>,
                groov::field<"datmpx", std::uint8_t, 13, 12>,
-               groov::field<"reserved1", std::uint8_t, 11, 9, access::ro>,
+               groov::field<"reserved1", std::uint8_t, 11, 9, common::access::ro>,
                groov::field<"chinsel", bool, 8, 8>,
-               groov::field<"chen", bit_enable, 7, 7>,
-               groov::field<"ckaben", bit_enable, 6, 6>,
-               groov::field<"scden", bit_enable, 5, 5>,
-               groov::field<"reserved0", bool, 4, 4, access::ro>,
+               groov::field<"chen", common::bittypes::bit_enable, 7, 7>,
+               groov::field<"ckaben", common::bittypes::bit_enable, 6, 6>,
+               groov::field<"scden", common::bittypes::bit_enable, 5, 5>,
+               groov::field<"reserved0", bool, 4, 4, common::access::ro>,
                groov::field<"spicksel", std::uint8_t, 3, 2>,
                groov::field<"sitp", std::uint8_t, 1, 0>>;
 
@@ -401,10 +401,10 @@ using dfsdm_chcfg6r2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"offset", std::uint32_t, 31, 8>,
                groov::field<"dtrbs", std::uint8_t, 7, 3>,
-               groov::field<"reserved0", std::uint8_t, 2, 0, access::ro>>;
+               groov::field<"reserved0", std::uint8_t, 2, 0, common::access::ro>>;
 
 // dfsdm_chcfg7r1_v1: CHCFG7R1
 // Used by: DFSDM
@@ -415,16 +415,16 @@ using dfsdm_chcfg7r1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved2", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved2", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"datpack", std::uint8_t, 15, 14>,
                groov::field<"datmpx", std::uint8_t, 13, 12>,
-               groov::field<"reserved1", std::uint8_t, 11, 9, access::ro>,
+               groov::field<"reserved1", std::uint8_t, 11, 9, common::access::ro>,
                groov::field<"chinsel", bool, 8, 8>,
-               groov::field<"chen", bit_enable, 7, 7>,
-               groov::field<"ckaben", bit_enable, 6, 6>,
-               groov::field<"scden", bit_enable, 5, 5>,
-               groov::field<"reserved0", bool, 4, 4, access::ro>,
+               groov::field<"chen", common::bittypes::bit_enable, 7, 7>,
+               groov::field<"ckaben", common::bittypes::bit_enable, 6, 6>,
+               groov::field<"scden", common::bittypes::bit_enable, 5, 5>,
+               groov::field<"reserved0", bool, 4, 4, common::access::ro>,
                groov::field<"spicksel", std::uint8_t, 3, 2>,
                groov::field<"sitp", std::uint8_t, 1, 0>>;
 
@@ -437,10 +437,10 @@ using dfsdm_chcfg7r2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"offset", std::uint32_t, 31, 8>,
                groov::field<"dtrbs", std::uint8_t, 7, 3>,
-               groov::field<"reserved0", std::uint8_t, 2, 0, access::ro>>;
+               groov::field<"reserved0", std::uint8_t, 2, 0, common::access::ro>>;
 
 // dfsdm_chdatin0r_v1: CHDATIN0R
 // Used by: DFSDM
@@ -451,7 +451,7 @@ using dfsdm_chdatin0r_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"indat1", std::uint16_t, 31, 16>,
                groov::field<"indat0", std::uint16_t, 15, 0>>;
 
@@ -464,7 +464,7 @@ using dfsdm_chdatin1r_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"indat1", std::uint16_t, 31, 16>,
                groov::field<"indat0", std::uint16_t, 15, 0>>;
 
@@ -477,7 +477,7 @@ using dfsdm_chdatin2r_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"indat1", std::uint16_t, 31, 16>,
                groov::field<"indat0", std::uint16_t, 15, 0>>;
 
@@ -490,7 +490,7 @@ using dfsdm_chdatin3r_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"indat1", std::uint16_t, 31, 16>,
                groov::field<"indat0", std::uint16_t, 15, 0>>;
 
@@ -503,7 +503,7 @@ using dfsdm_chdatin4r_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"indat1", std::uint16_t, 31, 16>,
                groov::field<"indat0", std::uint16_t, 15, 0>>;
 
@@ -516,7 +516,7 @@ using dfsdm_chdatin5r_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"indat1", std::uint16_t, 31, 16>,
                groov::field<"indat0", std::uint16_t, 15, 0>>;
 
@@ -529,7 +529,7 @@ using dfsdm_chdatin6r_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"indat1", std::uint16_t, 31, 16>,
                groov::field<"indat0", std::uint16_t, 15, 0>>;
 
@@ -542,7 +542,7 @@ using dfsdm_chdatin7r_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"indat1", std::uint16_t, 31, 16>,
                groov::field<"indat0", std::uint16_t, 15, 0>>;
 
@@ -555,8 +555,8 @@ using dfsdm_chwdat0r_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"wdata", std::uint16_t, 15, 0>>;
 
 // dfsdm_chwdat1r_v1: CHWDAT1R
@@ -568,8 +568,8 @@ using dfsdm_chwdat1r_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"wdata", std::uint16_t, 15, 0>>;
 
 // dfsdm_chwdat2r_v1: CHWDAT2R
@@ -581,8 +581,8 @@ using dfsdm_chwdat2r_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"wdata", std::uint16_t, 15, 0>>;
 
 // dfsdm_chwdat3r_v1: CHWDAT3R
@@ -594,8 +594,8 @@ using dfsdm_chwdat3r_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"wdata", std::uint16_t, 15, 0>>;
 
 // dfsdm_chwdat4r_v1: CHWDAT4R
@@ -607,8 +607,8 @@ using dfsdm_chwdat4r_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"wdata", std::uint16_t, 15, 0>>;
 
 // dfsdm_chwdat5r_v1: CHWDAT5R
@@ -620,8 +620,8 @@ using dfsdm_chwdat5r_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"wdata", std::uint16_t, 15, 0>>;
 
 // dfsdm_chwdat6r_v1: CHWDAT6R
@@ -633,8 +633,8 @@ using dfsdm_chwdat6r_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"wdata", std::uint16_t, 15, 0>>;
 
 // dfsdm_chwdat7r_v1: CHWDAT7R
@@ -646,8 +646,8 @@ using dfsdm_chwdat7r_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"wdata", std::uint16_t, 15, 0>>;
 
 // dfsdm_dfsdm0_awcfr_v1: DFSDM0_AWCFR
@@ -659,8 +659,8 @@ using dfsdm_dfsdm0_awcfr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"clrawhtf", std::uint8_t, 15, 8>,
                groov::field<"clrawltf", std::uint8_t, 7, 0>>;
 
@@ -673,9 +673,9 @@ using dfsdm_dfsdm0_awhtr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"awht", std::uint32_t, 31, 8>,
-               groov::field<"reserved0", std::uint8_t, 7, 4, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 7, 4, common::access::ro>,
                groov::field<"bkawh", std::uint8_t, 3, 0>>;
 
 // dfsdm_dfsdm0_awltr_v1: DFSDM0_AWLTR
@@ -687,9 +687,9 @@ using dfsdm_dfsdm0_awltr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"awlt", std::uint32_t, 31, 8>,
-               groov::field<"reserved0", std::uint8_t, 7, 4, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 7, 4, common::access::ro>,
                groov::field<"bkawl", std::uint8_t, 3, 0>>;
 
 // dfsdm_dfsdm0_awsr_v1: DFSDM0_AWSR
@@ -701,7 +701,7 @@ using dfsdm_dfsdm0_awsr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint16_t, 31, 16>,
                groov::field<"awhtf", std::uint8_t, 15, 8>,
                groov::field<"awltf", std::uint8_t, 7, 0>>;
@@ -715,7 +715,7 @@ using dfsdm_dfsdm0_cnvtimr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"cnvcnt", std::uint32_t, 31, 4>,
                groov::field<"reserved0", std::uint8_t, 3, 0>>;
 
@@ -728,29 +728,29 @@ using dfsdm_dfsdm0_cr1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved7", bool, 31, 31, access::ro>,
+             common::access::rw,
+               groov::field<"reserved7", bool, 31, 31, common::access::ro>,
                groov::field<"awfsel", bool, 30, 30>,
                groov::field<"fast", bool, 29, 29>,
-               groov::field<"reserved6", std::uint8_t, 28, 27, access::ro>,
+               groov::field<"reserved6", std::uint8_t, 28, 27, common::access::ro>,
                groov::field<"rch", std::uint8_t, 26, 24>,
-               groov::field<"reserved5", std::uint8_t, 23, 22, access::ro>,
-               groov::field<"rdmaen", bit_enable, 21, 21>,
-               groov::field<"reserved4", bool, 20, 20, access::ro>,
+               groov::field<"reserved5", std::uint8_t, 23, 22, common::access::ro>,
+               groov::field<"rdmaen", common::bittypes::bit_enable, 21, 21>,
+               groov::field<"reserved4", bool, 20, 20, common::access::ro>,
                groov::field<"rsync", bool, 19, 19>,
                groov::field<"rcont", bool, 18, 18>,
                groov::field<"rswstart", bool, 17, 17>,
-               groov::field<"reserved3", std::uint8_t, 16, 15, access::ro>,
+               groov::field<"reserved3", std::uint8_t, 16, 15, common::access::ro>,
                groov::field<"jexten", std::uint8_t, 14, 13>,
-               groov::field<"reserved2", std::uint8_t, 12, 11, access::ro>,
+               groov::field<"reserved2", std::uint8_t, 12, 11, common::access::ro>,
                groov::field<"jextsel", std::uint8_t, 10, 8>,
-               groov::field<"reserved1", std::uint8_t, 7, 6, access::ro>,
-               groov::field<"jdmaen", bit_enable, 5, 5>,
+               groov::field<"reserved1", std::uint8_t, 7, 6, common::access::ro>,
+               groov::field<"jdmaen", common::bittypes::bit_enable, 5, 5>,
                groov::field<"jscan", bool, 4, 4>,
                groov::field<"jsync", bool, 3, 3>,
-               groov::field<"reserved0", bool, 2, 2, access::ro>,
+               groov::field<"reserved0", bool, 2, 2, common::access::ro>,
                groov::field<"jswstart", bool, 1, 1>,
-               groov::field<"dfen", bit_enable, 0, 0>>;
+               groov::field<"dfen", common::bittypes::bit_enable, 0, 0>>;
 
 // dfsdm_dfsdm0_cr2_v1: DFSDM0_CR2
 // Used by: DFSDM
@@ -761,18 +761,18 @@ using dfsdm_dfsdm0_cr2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint8_t, 31, 24, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint8_t, 31, 24, common::access::ro>,
                groov::field<"awdch", std::uint8_t, 23, 16>,
                groov::field<"exch", std::uint8_t, 15, 8>,
-               groov::field<"reserved0", bool, 7, 7, access::ro>,
-               groov::field<"ckabie", bit_enable, 6, 6>,
-               groov::field<"scdie", bit_enable, 5, 5>,
-               groov::field<"awdie", bit_enable, 4, 4>,
-               groov::field<"rovrie", bit_enable, 3, 3>,
-               groov::field<"jovrie", bit_enable, 2, 2>,
-               groov::field<"reocie", bit_enable, 1, 1>,
-               groov::field<"jeocie", bit_enable, 0, 0>>;
+               groov::field<"reserved0", bool, 7, 7, common::access::ro>,
+               groov::field<"ckabie", common::bittypes::bit_enable, 6, 6>,
+               groov::field<"scdie", common::bittypes::bit_enable, 5, 5>,
+               groov::field<"awdie", common::bittypes::bit_enable, 4, 4>,
+               groov::field<"rovrie", common::bittypes::bit_enable, 3, 3>,
+               groov::field<"jovrie", common::bittypes::bit_enable, 2, 2>,
+               groov::field<"reocie", common::bittypes::bit_enable, 1, 1>,
+               groov::field<"jeocie", common::bittypes::bit_enable, 0, 0>>;
 
 // dfsdm_dfsdm0_exmax_v1: DFSDM0_EXMAX
 // Used by: DFSDM
@@ -783,7 +783,7 @@ using dfsdm_dfsdm0_exmax_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"exmax", std::uint32_t, 31, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 3>,
                groov::field<"exmaxch", std::uint8_t, 2, 0>>;
@@ -797,7 +797,7 @@ using dfsdm_dfsdm0_exmin_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"exmin", std::uint32_t, 31, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 3>,
                groov::field<"exminch", std::uint8_t, 2, 0>>;
@@ -811,11 +811,11 @@ using dfsdm_dfsdm0_fcr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"ford", std::uint8_t, 31, 29>,
-               groov::field<"reserved1", std::uint8_t, 28, 26, access::ro>,
+               groov::field<"reserved1", std::uint8_t, 28, 26, common::access::ro>,
                groov::field<"fosr", std::uint16_t, 25, 16>,
-               groov::field<"reserved0", std::uint8_t, 15, 8, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 15, 8, common::access::ro>,
                groov::field<"iosr", std::uint8_t, 7, 0>>;
 
 // dfsdm_dfsdm0_icr_v1: DFSDM0_ICR
@@ -827,13 +827,13 @@ using dfsdm_dfsdm0_icr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"clrscdf", std::uint8_t, 31, 24>,
                groov::field<"clrckabf", std::uint8_t, 23, 16>,
-               groov::field<"reserved1", std::uint16_t, 15, 4, access::ro>,
+               groov::field<"reserved1", std::uint16_t, 15, 4, common::access::ro>,
                groov::field<"clrrovrf", bool, 3, 3>,
                groov::field<"clrjovrf", bool, 2, 2>,
-               groov::field<"reserved0", std::uint8_t, 1, 0, access::ro>>;
+               groov::field<"reserved0", std::uint8_t, 1, 0, common::access::ro>>;
 
 // dfsdm_dfsdm0_isr_v1: DFSDM0_ISR
 // Used by: DFSDM
@@ -844,7 +844,7 @@ using dfsdm_dfsdm0_isr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"scdf", std::uint8_t, 31, 24>,
                groov::field<"ckabf", std::uint8_t, 23, 16>,
                groov::field<"reserved1", bool, 15, 15>,
@@ -866,8 +866,8 @@ using dfsdm_dfsdm0_jchgr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 8, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 8, common::access::ro>,
                groov::field<"jchg", std::uint8_t, 7, 0>>;
 
 // dfsdm_dfsdm0_jdatar_v1: DFSDM0_JDATAR
@@ -879,7 +879,7 @@ using dfsdm_dfsdm0_jdatar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"jdata", std::uint32_t, 31, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 3>,
                groov::field<"jdatach", std::uint8_t, 2, 0>>;
@@ -893,7 +893,7 @@ using dfsdm_dfsdm0_rdatar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"rdata", std::uint32_t, 31, 8>,
                groov::field<"reserved1", std::uint8_t, 7, 5>,
                groov::field<"rpend", bool, 4, 4>,
@@ -909,8 +909,8 @@ using dfsdm_dfsdm1_awcfr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"clrawhtf", std::uint8_t, 15, 8>,
                groov::field<"clrawltf", std::uint8_t, 7, 0>>;
 
@@ -923,9 +923,9 @@ using dfsdm_dfsdm1_awhtr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"awht", std::uint32_t, 31, 8>,
-               groov::field<"reserved0", std::uint8_t, 7, 4, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 7, 4, common::access::ro>,
                groov::field<"bkawh", std::uint8_t, 3, 0>>;
 
 // dfsdm_dfsdm1_awltr_v1: DFSDM1_AWLTR
@@ -937,9 +937,9 @@ using dfsdm_dfsdm1_awltr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"awlt", std::uint32_t, 31, 8>,
-               groov::field<"reserved0", std::uint8_t, 7, 4, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 7, 4, common::access::ro>,
                groov::field<"bkawl", std::uint8_t, 3, 0>>;
 
 // dfsdm_dfsdm1_awsr_v1: DFSDM1_AWSR
@@ -951,7 +951,7 @@ using dfsdm_dfsdm1_awsr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint16_t, 31, 16>,
                groov::field<"awhtf", std::uint8_t, 15, 8>,
                groov::field<"awltf", std::uint8_t, 7, 0>>;
@@ -965,7 +965,7 @@ using dfsdm_dfsdm1_cnvtimr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"cnvcnt", std::uint32_t, 31, 4>,
                groov::field<"reserved0", std::uint8_t, 3, 0>>;
 
@@ -978,29 +978,29 @@ using dfsdm_dfsdm1_cr1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved7", bool, 31, 31, access::ro>,
+             common::access::rw,
+               groov::field<"reserved7", bool, 31, 31, common::access::ro>,
                groov::field<"awfsel", bool, 30, 30>,
                groov::field<"fast", bool, 29, 29>,
-               groov::field<"reserved6", std::uint8_t, 28, 27, access::ro>,
+               groov::field<"reserved6", std::uint8_t, 28, 27, common::access::ro>,
                groov::field<"rch", std::uint8_t, 26, 24>,
-               groov::field<"reserved5", std::uint8_t, 23, 22, access::ro>,
-               groov::field<"rdmaen", bit_enable, 21, 21>,
-               groov::field<"reserved4", bool, 20, 20, access::ro>,
+               groov::field<"reserved5", std::uint8_t, 23, 22, common::access::ro>,
+               groov::field<"rdmaen", common::bittypes::bit_enable, 21, 21>,
+               groov::field<"reserved4", bool, 20, 20, common::access::ro>,
                groov::field<"rsync", bool, 19, 19>,
                groov::field<"rcont", bool, 18, 18>,
                groov::field<"rswstart", bool, 17, 17>,
-               groov::field<"reserved3", std::uint8_t, 16, 15, access::ro>,
+               groov::field<"reserved3", std::uint8_t, 16, 15, common::access::ro>,
                groov::field<"jexten", std::uint8_t, 14, 13>,
-               groov::field<"reserved2", std::uint8_t, 12, 11, access::ro>,
+               groov::field<"reserved2", std::uint8_t, 12, 11, common::access::ro>,
                groov::field<"jextsel", std::uint8_t, 10, 8>,
-               groov::field<"reserved1", std::uint8_t, 7, 6, access::ro>,
-               groov::field<"jdmaen", bit_enable, 5, 5>,
+               groov::field<"reserved1", std::uint8_t, 7, 6, common::access::ro>,
+               groov::field<"jdmaen", common::bittypes::bit_enable, 5, 5>,
                groov::field<"jscan", bool, 4, 4>,
                groov::field<"jsync", bool, 3, 3>,
-               groov::field<"reserved0", bool, 2, 2, access::ro>,
+               groov::field<"reserved0", bool, 2, 2, common::access::ro>,
                groov::field<"jswstart", bool, 1, 1>,
-               groov::field<"dfen", bit_enable, 0, 0>>;
+               groov::field<"dfen", common::bittypes::bit_enable, 0, 0>>;
 
 // dfsdm_dfsdm1_cr2_v1: DFSDM1_CR2
 // Used by: DFSDM
@@ -1011,18 +1011,18 @@ using dfsdm_dfsdm1_cr2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint8_t, 31, 24, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint8_t, 31, 24, common::access::ro>,
                groov::field<"awdch", std::uint8_t, 23, 16>,
                groov::field<"exch", std::uint8_t, 15, 8>,
-               groov::field<"reserved0", bool, 7, 7, access::ro>,
-               groov::field<"ckabie", bit_enable, 6, 6>,
-               groov::field<"scdie", bit_enable, 5, 5>,
-               groov::field<"awdie", bit_enable, 4, 4>,
-               groov::field<"rovrie", bit_enable, 3, 3>,
-               groov::field<"jovrie", bit_enable, 2, 2>,
-               groov::field<"reocie", bit_enable, 1, 1>,
-               groov::field<"jeocie", bit_enable, 0, 0>>;
+               groov::field<"reserved0", bool, 7, 7, common::access::ro>,
+               groov::field<"ckabie", common::bittypes::bit_enable, 6, 6>,
+               groov::field<"scdie", common::bittypes::bit_enable, 5, 5>,
+               groov::field<"awdie", common::bittypes::bit_enable, 4, 4>,
+               groov::field<"rovrie", common::bittypes::bit_enable, 3, 3>,
+               groov::field<"jovrie", common::bittypes::bit_enable, 2, 2>,
+               groov::field<"reocie", common::bittypes::bit_enable, 1, 1>,
+               groov::field<"jeocie", common::bittypes::bit_enable, 0, 0>>;
 
 // dfsdm_dfsdm1_exmax_v1: DFSDM1_EXMAX
 // Used by: DFSDM
@@ -1033,7 +1033,7 @@ using dfsdm_dfsdm1_exmax_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"exmax", std::uint32_t, 31, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 3>,
                groov::field<"exmaxch", std::uint8_t, 2, 0>>;
@@ -1047,7 +1047,7 @@ using dfsdm_dfsdm1_exmin_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"exmin", std::uint32_t, 31, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 3>,
                groov::field<"exminch", std::uint8_t, 2, 0>>;
@@ -1061,11 +1061,11 @@ using dfsdm_dfsdm1_fcr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"ford", std::uint8_t, 31, 29>,
-               groov::field<"reserved1", std::uint8_t, 28, 26, access::ro>,
+               groov::field<"reserved1", std::uint8_t, 28, 26, common::access::ro>,
                groov::field<"fosr", std::uint16_t, 25, 16>,
-               groov::field<"reserved0", std::uint8_t, 15, 8, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 15, 8, common::access::ro>,
                groov::field<"iosr", std::uint8_t, 7, 0>>;
 
 // dfsdm_dfsdm1_icr_v1: DFSDM1_ICR
@@ -1077,13 +1077,13 @@ using dfsdm_dfsdm1_icr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"clrscdf", std::uint8_t, 31, 24>,
                groov::field<"clrckabf", std::uint8_t, 23, 16>,
-               groov::field<"reserved1", std::uint16_t, 15, 4, access::ro>,
+               groov::field<"reserved1", std::uint16_t, 15, 4, common::access::ro>,
                groov::field<"clrrovrf", bool, 3, 3>,
                groov::field<"clrjovrf", bool, 2, 2>,
-               groov::field<"reserved0", std::uint8_t, 1, 0, access::ro>>;
+               groov::field<"reserved0", std::uint8_t, 1, 0, common::access::ro>>;
 
 // dfsdm_dfsdm1_isr_v1: DFSDM1_ISR
 // Used by: DFSDM
@@ -1094,7 +1094,7 @@ using dfsdm_dfsdm1_isr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"scdf", std::uint8_t, 31, 24>,
                groov::field<"ckabf", std::uint8_t, 23, 16>,
                groov::field<"reserved1", bool, 15, 15>,
@@ -1116,8 +1116,8 @@ using dfsdm_dfsdm1_jchgr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 8, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 8, common::access::ro>,
                groov::field<"jchg", std::uint8_t, 7, 0>>;
 
 // dfsdm_dfsdm1_jdatar_v1: DFSDM1_JDATAR
@@ -1129,7 +1129,7 @@ using dfsdm_dfsdm1_jdatar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"jdata", std::uint32_t, 31, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 3>,
                groov::field<"jdatach", std::uint8_t, 2, 0>>;
@@ -1143,7 +1143,7 @@ using dfsdm_dfsdm1_rdatar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"rdata", std::uint32_t, 31, 8>,
                groov::field<"reserved1", std::uint8_t, 7, 5>,
                groov::field<"rpend", bool, 4, 4>,
@@ -1159,8 +1159,8 @@ using dfsdm_dfsdm2_awcfr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"clrawhtf", std::uint8_t, 15, 8>,
                groov::field<"clrawltf", std::uint8_t, 7, 0>>;
 
@@ -1173,9 +1173,9 @@ using dfsdm_dfsdm2_awhtr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"awht", std::uint32_t, 31, 8>,
-               groov::field<"reserved0", std::uint8_t, 7, 4, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 7, 4, common::access::ro>,
                groov::field<"bkawh", std::uint8_t, 3, 0>>;
 
 // dfsdm_dfsdm2_awltr_v1: DFSDM2_AWLTR
@@ -1187,9 +1187,9 @@ using dfsdm_dfsdm2_awltr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"awlt", std::uint32_t, 31, 8>,
-               groov::field<"reserved0", std::uint8_t, 7, 4, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 7, 4, common::access::ro>,
                groov::field<"bkawl", std::uint8_t, 3, 0>>;
 
 // dfsdm_dfsdm2_awsr_v1: DFSDM2_AWSR
@@ -1201,7 +1201,7 @@ using dfsdm_dfsdm2_awsr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint16_t, 31, 16>,
                groov::field<"awhtf", std::uint8_t, 15, 8>,
                groov::field<"awltf", std::uint8_t, 7, 0>>;
@@ -1215,7 +1215,7 @@ using dfsdm_dfsdm2_cnvtimr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"cnvcnt", std::uint32_t, 31, 4>,
                groov::field<"reserved0", std::uint8_t, 3, 0>>;
 
@@ -1228,29 +1228,29 @@ using dfsdm_dfsdm2_cr1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved7", bool, 31, 31, access::ro>,
+             common::access::rw,
+               groov::field<"reserved7", bool, 31, 31, common::access::ro>,
                groov::field<"awfsel", bool, 30, 30>,
                groov::field<"fast", bool, 29, 29>,
-               groov::field<"reserved6", std::uint8_t, 28, 27, access::ro>,
+               groov::field<"reserved6", std::uint8_t, 28, 27, common::access::ro>,
                groov::field<"rch", std::uint8_t, 26, 24>,
-               groov::field<"reserved5", std::uint8_t, 23, 22, access::ro>,
-               groov::field<"rdmaen", bit_enable, 21, 21>,
-               groov::field<"reserved4", bool, 20, 20, access::ro>,
+               groov::field<"reserved5", std::uint8_t, 23, 22, common::access::ro>,
+               groov::field<"rdmaen", common::bittypes::bit_enable, 21, 21>,
+               groov::field<"reserved4", bool, 20, 20, common::access::ro>,
                groov::field<"rsync", bool, 19, 19>,
                groov::field<"rcont", bool, 18, 18>,
                groov::field<"rswstart", bool, 17, 17>,
-               groov::field<"reserved3", std::uint8_t, 16, 15, access::ro>,
+               groov::field<"reserved3", std::uint8_t, 16, 15, common::access::ro>,
                groov::field<"jexten", std::uint8_t, 14, 13>,
-               groov::field<"reserved2", std::uint8_t, 12, 11, access::ro>,
+               groov::field<"reserved2", std::uint8_t, 12, 11, common::access::ro>,
                groov::field<"jextsel", std::uint8_t, 10, 8>,
-               groov::field<"reserved1", std::uint8_t, 7, 6, access::ro>,
-               groov::field<"jdmaen", bit_enable, 5, 5>,
+               groov::field<"reserved1", std::uint8_t, 7, 6, common::access::ro>,
+               groov::field<"jdmaen", common::bittypes::bit_enable, 5, 5>,
                groov::field<"jscan", bool, 4, 4>,
                groov::field<"jsync", bool, 3, 3>,
-               groov::field<"reserved0", bool, 2, 2, access::ro>,
+               groov::field<"reserved0", bool, 2, 2, common::access::ro>,
                groov::field<"jswstart", bool, 1, 1>,
-               groov::field<"dfen", bit_enable, 0, 0>>;
+               groov::field<"dfen", common::bittypes::bit_enable, 0, 0>>;
 
 // dfsdm_dfsdm2_cr2_v1: DFSDM2_CR2
 // Used by: DFSDM
@@ -1261,18 +1261,18 @@ using dfsdm_dfsdm2_cr2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint8_t, 31, 24, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint8_t, 31, 24, common::access::ro>,
                groov::field<"awdch", std::uint8_t, 23, 16>,
                groov::field<"exch", std::uint8_t, 15, 8>,
-               groov::field<"reserved0", bool, 7, 7, access::ro>,
-               groov::field<"ckabie", bit_enable, 6, 6>,
-               groov::field<"scdie", bit_enable, 5, 5>,
-               groov::field<"awdie", bit_enable, 4, 4>,
-               groov::field<"rovrie", bit_enable, 3, 3>,
-               groov::field<"jovrie", bit_enable, 2, 2>,
-               groov::field<"reocie", bit_enable, 1, 1>,
-               groov::field<"jeocie", bit_enable, 0, 0>>;
+               groov::field<"reserved0", bool, 7, 7, common::access::ro>,
+               groov::field<"ckabie", common::bittypes::bit_enable, 6, 6>,
+               groov::field<"scdie", common::bittypes::bit_enable, 5, 5>,
+               groov::field<"awdie", common::bittypes::bit_enable, 4, 4>,
+               groov::field<"rovrie", common::bittypes::bit_enable, 3, 3>,
+               groov::field<"jovrie", common::bittypes::bit_enable, 2, 2>,
+               groov::field<"reocie", common::bittypes::bit_enable, 1, 1>,
+               groov::field<"jeocie", common::bittypes::bit_enable, 0, 0>>;
 
 // dfsdm_dfsdm2_exmax_v1: DFSDM2_EXMAX
 // Used by: DFSDM
@@ -1283,7 +1283,7 @@ using dfsdm_dfsdm2_exmax_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"exmax", std::uint32_t, 31, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 3>,
                groov::field<"exmaxch", std::uint8_t, 2, 0>>;
@@ -1297,7 +1297,7 @@ using dfsdm_dfsdm2_exmin_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"exmin", std::uint32_t, 31, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 3>,
                groov::field<"exminch", std::uint8_t, 2, 0>>;
@@ -1311,11 +1311,11 @@ using dfsdm_dfsdm2_fcr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"ford", std::uint8_t, 31, 29>,
-               groov::field<"reserved1", std::uint8_t, 28, 26, access::ro>,
+               groov::field<"reserved1", std::uint8_t, 28, 26, common::access::ro>,
                groov::field<"fosr", std::uint16_t, 25, 16>,
-               groov::field<"reserved0", std::uint8_t, 15, 8, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 15, 8, common::access::ro>,
                groov::field<"iosr", std::uint8_t, 7, 0>>;
 
 // dfsdm_dfsdm2_icr_v1: DFSDM2_ICR
@@ -1327,13 +1327,13 @@ using dfsdm_dfsdm2_icr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"clrscdf", std::uint8_t, 31, 24>,
                groov::field<"clrckabf", std::uint8_t, 23, 16>,
-               groov::field<"reserved1", std::uint16_t, 15, 4, access::ro>,
+               groov::field<"reserved1", std::uint16_t, 15, 4, common::access::ro>,
                groov::field<"clrrovrf", bool, 3, 3>,
                groov::field<"clrjovrf", bool, 2, 2>,
-               groov::field<"reserved0", std::uint8_t, 1, 0, access::ro>>;
+               groov::field<"reserved0", std::uint8_t, 1, 0, common::access::ro>>;
 
 // dfsdm_dfsdm2_isr_v1: DFSDM2_ISR
 // Used by: DFSDM
@@ -1344,7 +1344,7 @@ using dfsdm_dfsdm2_isr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"scdf", std::uint8_t, 31, 24>,
                groov::field<"ckabf", std::uint8_t, 23, 16>,
                groov::field<"reserved1", bool, 15, 15>,
@@ -1366,8 +1366,8 @@ using dfsdm_dfsdm2_jchgr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 8, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 8, common::access::ro>,
                groov::field<"jchg", std::uint8_t, 7, 0>>;
 
 // dfsdm_dfsdm2_jdatar_v1: DFSDM2_JDATAR
@@ -1379,7 +1379,7 @@ using dfsdm_dfsdm2_jdatar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"jdata", std::uint32_t, 31, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 3>,
                groov::field<"jdatach", std::uint8_t, 2, 0>>;
@@ -1393,7 +1393,7 @@ using dfsdm_dfsdm2_rdatar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"rdata", std::uint32_t, 31, 8>,
                groov::field<"reserved1", std::uint8_t, 7, 5>,
                groov::field<"rpend", bool, 4, 4>,
@@ -1409,8 +1409,8 @@ using dfsdm_dfsdm3_awcfr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"clrawhtf", std::uint8_t, 15, 8>,
                groov::field<"clrawltf", std::uint8_t, 7, 0>>;
 
@@ -1423,9 +1423,9 @@ using dfsdm_dfsdm3_awhtr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"awht", std::uint32_t, 31, 8>,
-               groov::field<"reserved0", std::uint8_t, 7, 4, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 7, 4, common::access::ro>,
                groov::field<"bkawh", std::uint8_t, 3, 0>>;
 
 // dfsdm_dfsdm3_awltr_v1: DFSDM3_AWLTR
@@ -1437,9 +1437,9 @@ using dfsdm_dfsdm3_awltr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"awlt", std::uint32_t, 31, 8>,
-               groov::field<"reserved0", std::uint8_t, 7, 4, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 7, 4, common::access::ro>,
                groov::field<"bkawl", std::uint8_t, 3, 0>>;
 
 // dfsdm_dfsdm3_awsr_v1: DFSDM3_AWSR
@@ -1451,7 +1451,7 @@ using dfsdm_dfsdm3_awsr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint16_t, 31, 16>,
                groov::field<"awhtf", std::uint8_t, 15, 8>,
                groov::field<"awltf", std::uint8_t, 7, 0>>;
@@ -1465,7 +1465,7 @@ using dfsdm_dfsdm3_cnvtimr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"cnvcnt", std::uint32_t, 31, 4>,
                groov::field<"reserved0", std::uint8_t, 3, 0>>;
 
@@ -1478,29 +1478,29 @@ using dfsdm_dfsdm3_cr1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved7", bool, 31, 31, access::ro>,
+             common::access::rw,
+               groov::field<"reserved7", bool, 31, 31, common::access::ro>,
                groov::field<"awfsel", bool, 30, 30>,
                groov::field<"fast", bool, 29, 29>,
-               groov::field<"reserved6", std::uint8_t, 28, 27, access::ro>,
+               groov::field<"reserved6", std::uint8_t, 28, 27, common::access::ro>,
                groov::field<"rch", std::uint8_t, 26, 24>,
-               groov::field<"reserved5", std::uint8_t, 23, 22, access::ro>,
-               groov::field<"rdmaen", bit_enable, 21, 21>,
-               groov::field<"reserved4", bool, 20, 20, access::ro>,
+               groov::field<"reserved5", std::uint8_t, 23, 22, common::access::ro>,
+               groov::field<"rdmaen", common::bittypes::bit_enable, 21, 21>,
+               groov::field<"reserved4", bool, 20, 20, common::access::ro>,
                groov::field<"rsync", bool, 19, 19>,
                groov::field<"rcont", bool, 18, 18>,
                groov::field<"rswstart", bool, 17, 17>,
-               groov::field<"reserved3", std::uint8_t, 16, 15, access::ro>,
+               groov::field<"reserved3", std::uint8_t, 16, 15, common::access::ro>,
                groov::field<"jexten", std::uint8_t, 14, 13>,
-               groov::field<"reserved2", std::uint8_t, 12, 11, access::ro>,
+               groov::field<"reserved2", std::uint8_t, 12, 11, common::access::ro>,
                groov::field<"jextsel", std::uint8_t, 10, 8>,
-               groov::field<"reserved1", std::uint8_t, 7, 6, access::ro>,
-               groov::field<"jdmaen", bit_enable, 5, 5>,
+               groov::field<"reserved1", std::uint8_t, 7, 6, common::access::ro>,
+               groov::field<"jdmaen", common::bittypes::bit_enable, 5, 5>,
                groov::field<"jscan", bool, 4, 4>,
                groov::field<"jsync", bool, 3, 3>,
-               groov::field<"reserved0", bool, 2, 2, access::ro>,
+               groov::field<"reserved0", bool, 2, 2, common::access::ro>,
                groov::field<"jswstart", bool, 1, 1>,
-               groov::field<"dfen", bit_enable, 0, 0>>;
+               groov::field<"dfen", common::bittypes::bit_enable, 0, 0>>;
 
 // dfsdm_dfsdm3_cr2_v1: DFSDM3_CR2
 // Used by: DFSDM
@@ -1511,18 +1511,18 @@ using dfsdm_dfsdm3_cr2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint8_t, 31, 24, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint8_t, 31, 24, common::access::ro>,
                groov::field<"awdch", std::uint8_t, 23, 16>,
                groov::field<"exch", std::uint8_t, 15, 8>,
-               groov::field<"reserved0", bool, 7, 7, access::ro>,
-               groov::field<"ckabie", bit_enable, 6, 6>,
-               groov::field<"scdie", bit_enable, 5, 5>,
-               groov::field<"awdie", bit_enable, 4, 4>,
-               groov::field<"rovrie", bit_enable, 3, 3>,
-               groov::field<"jovrie", bit_enable, 2, 2>,
-               groov::field<"reocie", bit_enable, 1, 1>,
-               groov::field<"jeocie", bit_enable, 0, 0>>;
+               groov::field<"reserved0", bool, 7, 7, common::access::ro>,
+               groov::field<"ckabie", common::bittypes::bit_enable, 6, 6>,
+               groov::field<"scdie", common::bittypes::bit_enable, 5, 5>,
+               groov::field<"awdie", common::bittypes::bit_enable, 4, 4>,
+               groov::field<"rovrie", common::bittypes::bit_enable, 3, 3>,
+               groov::field<"jovrie", common::bittypes::bit_enable, 2, 2>,
+               groov::field<"reocie", common::bittypes::bit_enable, 1, 1>,
+               groov::field<"jeocie", common::bittypes::bit_enable, 0, 0>>;
 
 // dfsdm_dfsdm3_exmax_v1: DFSDM3_EXMAX
 // Used by: DFSDM
@@ -1533,7 +1533,7 @@ using dfsdm_dfsdm3_exmax_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"exmax", std::uint32_t, 31, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 3>,
                groov::field<"exmaxch", std::uint8_t, 2, 0>>;
@@ -1547,7 +1547,7 @@ using dfsdm_dfsdm3_exmin_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"exmin", std::uint32_t, 31, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 3>,
                groov::field<"exminch", std::uint8_t, 2, 0>>;
@@ -1561,11 +1561,11 @@ using dfsdm_dfsdm3_fcr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"ford", std::uint8_t, 31, 29>,
-               groov::field<"reserved1", std::uint8_t, 28, 26, access::ro>,
+               groov::field<"reserved1", std::uint8_t, 28, 26, common::access::ro>,
                groov::field<"fosr", std::uint16_t, 25, 16>,
-               groov::field<"reserved0", std::uint8_t, 15, 8, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 15, 8, common::access::ro>,
                groov::field<"iosr", std::uint8_t, 7, 0>>;
 
 // dfsdm_dfsdm3_icr_v1: DFSDM3_ICR
@@ -1577,13 +1577,13 @@ using dfsdm_dfsdm3_icr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"clrscdf", std::uint8_t, 31, 24>,
                groov::field<"clrckabf", std::uint8_t, 23, 16>,
-               groov::field<"reserved1", std::uint16_t, 15, 4, access::ro>,
+               groov::field<"reserved1", std::uint16_t, 15, 4, common::access::ro>,
                groov::field<"clrrovrf", bool, 3, 3>,
                groov::field<"clrjovrf", bool, 2, 2>,
-               groov::field<"reserved0", std::uint8_t, 1, 0, access::ro>>;
+               groov::field<"reserved0", std::uint8_t, 1, 0, common::access::ro>>;
 
 // dfsdm_dfsdm3_isr_v1: DFSDM3_ISR
 // Used by: DFSDM
@@ -1594,7 +1594,7 @@ using dfsdm_dfsdm3_isr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"scdf", std::uint8_t, 31, 24>,
                groov::field<"ckabf", std::uint8_t, 23, 16>,
                groov::field<"reserved1", bool, 15, 15>,
@@ -1616,8 +1616,8 @@ using dfsdm_dfsdm3_jchgr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 8, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 8, common::access::ro>,
                groov::field<"jchg", std::uint8_t, 7, 0>>;
 
 // dfsdm_dfsdm3_jdatar_v1: DFSDM3_JDATAR
@@ -1629,7 +1629,7 @@ using dfsdm_dfsdm3_jdatar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"jdata", std::uint32_t, 31, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 3>,
                groov::field<"jdatach", std::uint8_t, 2, 0>>;
@@ -1643,7 +1643,7 @@ using dfsdm_dfsdm3_rdatar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"rdata", std::uint32_t, 31, 8>,
                groov::field<"reserved1", std::uint8_t, 7, 5>,
                groov::field<"rpend", bool, 4, 4>,

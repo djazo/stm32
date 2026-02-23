@@ -16,7 +16,7 @@ using rtc_alrabinr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"ss", std::uint32_t, 31, 0>>;
 
 // rtc_alrbbinr_v1: ALRBBINR
@@ -28,7 +28,7 @@ using rtc_alrbbinr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"ss", std::uint32_t, 31, 0>>;
 
 // rtc_alrmar_v1: ALRMAR
@@ -40,7 +40,7 @@ using rtc_alrmar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"msk4", bool, 31, 31>,
                groov::field<"wdsel", bool, 30, 30>,
                groov::field<"dt", std::uint8_t, 29, 28>,
@@ -65,11 +65,11 @@ using rtc_alrmassr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"ssclr", bool, 31, 31>,
-               groov::field<"reserved1", std::uint8_t, 30, 28, access::ro>,
+               groov::field<"reserved1", std::uint8_t, 30, 28, common::access::ro>,
                groov::field<"maskss", std::uint8_t, 27, 24>,
-               groov::field<"reserved0", std::uint16_t, 23, 15, access::ro>,
+               groov::field<"reserved0", std::uint16_t, 23, 15, common::access::ro>,
                groov::field<"ss", std::uint16_t, 14, 0>>;
 
 // rtc_alrmbr_v1: ALRMBR
@@ -81,7 +81,7 @@ using rtc_alrmbr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"msk4", bool, 31, 31>,
                groov::field<"wdsel", bool, 30, 30>,
                groov::field<"dt", std::uint8_t, 29, 28>,
@@ -106,11 +106,11 @@ using rtc_alrmbssr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"ssclr", bool, 31, 31>,
-               groov::field<"reserved1", bool, 30, 30, access::ro>,
+               groov::field<"reserved1", bool, 30, 30, common::access::ro>,
                groov::field<"maskss", std::uint8_t, 29, 24>,
-               groov::field<"reserved0", std::uint16_t, 23, 15, access::ro>,
+               groov::field<"reserved0", std::uint16_t, 23, 15, common::access::ro>,
                groov::field<"ss", std::uint16_t, 14, 0>>;
 
 // rtc_calr_v1: CALR
@@ -122,13 +122,13 @@ using rtc_calr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"calp", bool, 15, 15>,
                groov::field<"calw8", bool, 14, 14>,
                groov::field<"calw16", bool, 13, 13>,
                groov::field<"lpcal", bool, 12, 12>,
-               groov::field<"reserved0", std::uint8_t, 11, 9, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 11, 9, common::access::ro>,
                groov::field<"calm", std::uint16_t, 8, 0>>;
 
 // rtc_cr_v1: CR
@@ -140,11 +140,11 @@ using rtc_cr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"out2en", bit_enable, 31, 31>,
-               groov::field<"tampalrm_type", bit_enable, 30, 30>,
+             common::access::rw,
+               groov::field<"out2en", common::bittypes::bit_enable, 31, 31>,
+               groov::field<"tampalrm_type", common::bittypes::bit_enable, 30, 30>,
                groov::field<"tampalrm_pu", bool, 29, 29>,
-               groov::field<"reserved0", std::uint8_t, 28, 27, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 28, 27, common::access::ro>,
                groov::field<"tampoe", bool, 26, 26>,
                groov::field<"tampts", bool, 25, 25>,
                groov::field<"itse", bool, 24, 24>,
@@ -155,15 +155,15 @@ using rtc_cr_v1_tt =
                groov::field<"bkp", bool, 18, 18>,
                groov::field<"sub1h", bool, 17, 17>,
                groov::field<"add1h", bool, 16, 16>,
-               groov::field<"tsie", bit_enable, 15, 15>,
-               groov::field<"wutie", bit_enable, 14, 14>,
-               groov::field<"alrbie", bit_enable, 13, 13>,
-               groov::field<"alraie", bit_enable, 12, 12>,
+               groov::field<"tsie", common::bittypes::bit_enable, 15, 15>,
+               groov::field<"wutie", common::bittypes::bit_enable, 14, 14>,
+               groov::field<"alrbie", common::bittypes::bit_enable, 13, 13>,
+               groov::field<"alraie", common::bittypes::bit_enable, 12, 12>,
                groov::field<"tse", bool, 11, 11>,
                groov::field<"wute", bool, 10, 10>,
                groov::field<"alrbe", bool, 9, 9>,
                groov::field<"alrae", bool, 8, 8>,
-               groov::field<"ssruie", bit_enable, 7, 7>,
+               groov::field<"ssruie", common::bittypes::bit_enable, 7, 7>,
                groov::field<"fmt", bool, 6, 6>,
                groov::field<"bypshad", bool, 5, 5>,
                groov::field<"refckon", bool, 4, 4>,
@@ -179,14 +179,14 @@ using rtc_dr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint8_t, 31, 24, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint8_t, 31, 24, common::access::ro>,
                groov::field<"yt", std::uint8_t, 23, 20>,
                groov::field<"yu", std::uint8_t, 19, 16>,
                groov::field<"wdu", std::uint8_t, 15, 13>,
                groov::field<"mt", bool, 12, 12>,
                groov::field<"mu", std::uint8_t, 11, 8>,
-               groov::field<"reserved0", std::uint8_t, 7, 6, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 7, 6, common::access::ro>,
                groov::field<"dt", std::uint8_t, 5, 4>,
                groov::field<"du", std::uint8_t, 3, 0>>;
 
@@ -199,19 +199,19 @@ using rtc_icsr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved2", std::uint16_t, 31, 17, access::ro>,
-               groov::field<"recalpf", bool, 16, 16, access::ro>,
-               groov::field<"reserved1", std::uint8_t, 15, 13, access::ro>,
+             common::access::rw,
+               groov::field<"reserved2", std::uint16_t, 31, 17, common::access::ro>,
+               groov::field<"recalpf", bool, 16, 16, common::access::ro>,
+               groov::field<"reserved1", std::uint8_t, 15, 13, common::access::ro>,
                groov::field<"bcdu", std::uint8_t, 12, 10>,
                groov::field<"bin", std::uint8_t, 9, 8>,
                groov::field<"init", bool, 7, 7>,
-               groov::field<"initf", bool, 6, 6, access::ro>,
+               groov::field<"initf", bool, 6, 6, common::access::ro>,
                groov::field<"rsf", bool, 5, 5>,
-               groov::field<"inits", bool, 4, 4, access::ro>,
-               groov::field<"shpf", bool, 3, 3, access::ro>,
-               groov::field<"wutwf", bool, 2, 2, access::ro>,
-               groov::field<"reserved0", std::uint8_t, 1, 0, access::ro>>;
+               groov::field<"inits", bool, 4, 4, common::access::ro>,
+               groov::field<"shpf", bool, 3, 3, common::access::ro>,
+               groov::field<"wutwf", bool, 2, 2, common::access::ro>,
+               groov::field<"reserved0", std::uint8_t, 1, 0, common::access::ro>>;
 
 // rtc_misr_v1: MISR
 // Used by: RTC
@@ -222,7 +222,7 @@ using rtc_misr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint32_t, 31, 7>,
                groov::field<"ssrumf", bool, 6, 6>,
                groov::field<"itsmf", bool, 5, 5>,
@@ -241,10 +241,10 @@ using rtc_prer_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint16_t, 31, 23, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint16_t, 31, 23, common::access::ro>,
                groov::field<"prediv_a", std::uint8_t, 22, 16>,
-               groov::field<"reserved0", bool, 15, 15, access::ro>,
+               groov::field<"reserved0", bool, 15, 15, common::access::ro>,
                groov::field<"prediv_s", std::uint16_t, 14, 0>>;
 
 // rtc_scr_v1: SCR
@@ -256,7 +256,7 @@ using rtc_scr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint32_t, 31, 7>,
                groov::field<"cssruf", bool, 6, 6>,
                groov::field<"citsf", bool, 5, 5>,
@@ -275,9 +275,9 @@ using rtc_shiftr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::wo,
+             common::access::wo,
                groov::field<"add1s", bool, 31, 31>,
-               groov::field<"reserved0", std::uint16_t, 30, 15, access::ro>,
+               groov::field<"reserved0", std::uint16_t, 30, 15, common::access::ro>,
                groov::field<"subfs", std::uint16_t, 14, 0>>;
 
 // rtc_sr_v1: SR
@@ -289,7 +289,7 @@ using rtc_sr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint32_t, 31, 7>,
                groov::field<"ssruf", bool, 6, 6>,
                groov::field<"itsf", bool, 5, 5>,
@@ -308,7 +308,7 @@ using rtc_ssr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"ss", std::uint32_t, 31, 0>>;
 
 // rtc_tr_v1: TR
@@ -320,15 +320,15 @@ using rtc_tr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved2", std::uint16_t, 31, 23, access::ro>,
+             common::access::rw,
+               groov::field<"reserved2", std::uint16_t, 31, 23, common::access::ro>,
                groov::field<"pm", bool, 22, 22>,
                groov::field<"ht", std::uint8_t, 21, 20>,
                groov::field<"hu", std::uint8_t, 19, 16>,
-               groov::field<"reserved1", bool, 15, 15, access::ro>,
+               groov::field<"reserved1", bool, 15, 15, common::access::ro>,
                groov::field<"mnt", std::uint8_t, 14, 12>,
                groov::field<"mnu", std::uint8_t, 11, 8>,
-               groov::field<"reserved0", bool, 7, 7, access::ro>,
+               groov::field<"reserved0", bool, 7, 7, common::access::ro>,
                groov::field<"st", std::uint8_t, 6, 4>,
                groov::field<"su", std::uint8_t, 3, 0>>;
 
@@ -341,7 +341,7 @@ using rtc_tsdr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved1", std::uint16_t, 31, 16>,
                groov::field<"wdu", std::uint8_t, 15, 13>,
                groov::field<"mt", bool, 12, 12>,
@@ -359,7 +359,7 @@ using rtc_tsssr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"ss", std::uint32_t, 31, 0>>;
 
 // rtc_tstr_v1: TSTR
@@ -371,7 +371,7 @@ using rtc_tstr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved2", std::uint16_t, 31, 23>,
                groov::field<"pm", bool, 22, 22>,
                groov::field<"ht", std::uint8_t, 21, 20>,
@@ -392,8 +392,8 @@ using rtc_wpr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::wo,
-               groov::field<"reserved0", std::uint32_t, 31, 8, access::ro>,
+             common::access::wo,
+               groov::field<"reserved0", std::uint32_t, 31, 8, common::access::ro>,
                groov::field<"key", std::uint8_t, 7, 0>>;
 
 // rtc_wutr_v1: WUTR
@@ -405,7 +405,7 @@ using rtc_wutr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"wutoclr", std::uint32_t, 47, 16>,
                groov::field<"wut", std::uint16_t, 15, 0>>;
 

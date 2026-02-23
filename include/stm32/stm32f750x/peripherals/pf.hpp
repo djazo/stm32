@@ -7,9 +7,18 @@
 namespace stm32::stm32f750x {
 
 namespace pf {
-  using clidr_tt = regs::pf_clidr_v1_tt;
-  using ctr_tt = regs::pf_ctr_v1_tt;
-  using ccsidr_tt = regs::pf_ccsidr_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using clidr_tt = regs::pf_clidr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ctr_tt = regs::pf_ctr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ccsidr_tt = regs::pf_ccsidr_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using pf_t =

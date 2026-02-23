@@ -7,18 +7,54 @@
 namespace stm32::stm32h755_cm4 {
 
 namespace spdifrx {
-  using cr_tt = regs::spdifrx_cr_v1_tt;
-  using imr_tt = regs::spdifrx_imr_v1_tt;
-  using sr_tt = regs::spdifrx_sr_v1_tt;
-  using ifcr_tt = regs::spdifrx_ifcr_v1_tt;
-  using dr_00_tt = regs::spdifrx_dr_00_v1_tt;
-  using csr_tt = regs::spdifrx_csr_v1_tt;
-  using dir_tt = regs::spdifrx_dir_v1_tt;
-  using verr_tt = regs::spdifrx_verr_v1_tt;
-  using idr_tt = regs::spdifrx_idr_v1_tt;
-  using sidr_tt = regs::spdifrx_sidr_v1_tt;
-  using dr_01_tt = regs::spdifrx_dr_01_v1_tt;
-  using dr_10_tt = regs::spdifrx_dr_10_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cr_tt = regs::spdifrx_cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using imr_tt = regs::spdifrx_imr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using sr_tt = regs::spdifrx_sr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ifcr_tt = regs::spdifrx_ifcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dr_00_tt = regs::spdifrx_dr_00_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using csr_tt = regs::spdifrx_csr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dir_tt = regs::spdifrx_dir_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using verr_tt = regs::spdifrx_verr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using idr_tt = regs::spdifrx_idr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using sidr_tt = regs::spdifrx_sidr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dr_01_tt = regs::spdifrx_dr_01_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dr_10_tt = regs::spdifrx_dr_10_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using spdifrx_t =

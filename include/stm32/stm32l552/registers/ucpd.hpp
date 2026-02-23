@@ -16,13 +16,13 @@ using ucpd_cfg1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"ucpden", bit_enable, 31, 31>,
-               groov::field<"rxdmaen", bit_enable, 30, 30>,
-               groov::field<"txdmaen", bit_enable, 29, 29>,
+             common::access::rw,
+               groov::field<"ucpden", common::bittypes::bit_enable, 31, 31>,
+               groov::field<"rxdmaen", common::bittypes::bit_enable, 30, 30>,
+               groov::field<"txdmaen", common::bittypes::bit_enable, 29, 29>,
                groov::field<"rxordseten", std::uint16_t, 28, 20>,
                groov::field<"psc_usbpdclk", std::uint8_t, 19, 17>,
-               groov::field<"reserved0", bool, 16, 16, access::ro>,
+               groov::field<"reserved0", bool, 16, 16, common::access::ro>,
                groov::field<"transwin", std::uint8_t, 15, 11>,
                groov::field<"ifrgap", std::uint8_t, 10, 6>,
                groov::field<"hbitclkdiv", std::uint8_t, 5, 0>>;
@@ -36,12 +36,12 @@ using ucpd_cfg2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 4, access::ro>,
-               groov::field<"wupen", bit_enable, 3, 3>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 4, common::access::ro>,
+               groov::field<"wupen", common::bittypes::bit_enable, 3, 3>,
                groov::field<"forceclk", bool, 2, 2>,
                groov::field<"rxfilt2n3", bool, 1, 1>,
-               groov::field<"rxfiltdis", bit_enable_bar, 0, 0>>;
+               groov::field<"rxfiltdis", common::bittypes::bit_enable_bar, 0, 0>>;
 
 // ucpd_cfg3_v1: CFG3
 // Used by: UCPD1, SEC_UCPD1
@@ -52,12 +52,12 @@ using ucpd_cfg3_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint8_t, 31, 29, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint8_t, 31, 29, common::access::ro>,
                groov::field<"trim2_ng_cc3a0", std::uint8_t, 28, 25>,
                groov::field<"trim2_ng_cc1a5", std::uint8_t, 24, 20>,
                groov::field<"trim2_ng_ccrpd", std::uint8_t, 19, 16>,
-               groov::field<"reserved0", std::uint8_t, 15, 13, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 15, 13, common::access::ro>,
                groov::field<"trim1_ng_cc3a0", std::uint8_t, 12, 9>,
                groov::field<"trim1_ng_cc1a5", std::uint8_t, 8, 4>,
                groov::field<"trim1_ng_ccrpd", std::uint8_t, 3, 0>>;
@@ -71,22 +71,22 @@ using ucpd_cr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved2", std::uint16_t, 31, 22, access::ro>,
-               groov::field<"cc2tcdis", bit_enable_bar, 21, 21>,
-               groov::field<"cc1tcdis", bit_enable_bar, 20, 20>,
-               groov::field<"reserved1", bool, 19, 19, access::ro>,
+             common::access::rw,
+               groov::field<"reserved2", std::uint16_t, 31, 22, common::access::ro>,
+               groov::field<"cc2tcdis", common::bittypes::bit_enable_bar, 21, 21>,
+               groov::field<"cc1tcdis", common::bittypes::bit_enable_bar, 20, 20>,
+               groov::field<"reserved1", bool, 19, 19, common::access::ro>,
                groov::field<"rdch", bool, 18, 18>,
                groov::field<"frstx", bool, 17, 17>,
-               groov::field<"frsrxen", bit_enable, 16, 16>,
-               groov::field<"reserved0", std::uint8_t, 15, 12, access::ro>,
+               groov::field<"frsrxen", common::bittypes::bit_enable, 16, 16>,
+               groov::field<"reserved0", std::uint8_t, 15, 12, common::access::ro>,
                groov::field<"ccenable", std::uint8_t, 11, 10>,
-               groov::field<"anamode", bit_enable, 9, 9>,
+               groov::field<"anamode", common::bittypes::bit_enable, 9, 9>,
                groov::field<"anasubmode", std::uint8_t, 8, 7>,
                groov::field<"phyccsel", bool, 6, 6>,
-               groov::field<"phyrxen", bit_enable, 5, 5>,
-               groov::field<"rxmode", bit_enable, 4, 4>,
-               groov::field<"txhrst", bit_reset, 3, 3>,
+               groov::field<"phyrxen", common::bittypes::bit_enable, 5, 5>,
+               groov::field<"rxmode", common::bittypes::bit_enable, 4, 4>,
+               groov::field<"txhrst", common::bittypes::bit_reset, 3, 3>,
                groov::field<"txsend", bool, 2, 2>,
                groov::field<"txmode", std::uint8_t, 1, 0>>;
 
@@ -99,25 +99,25 @@ using ucpd_icr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved4", std::uint16_t, 31, 21, access::ro>,
+             common::access::rw,
+               groov::field<"reserved4", std::uint16_t, 31, 21, common::access::ro>,
                groov::field<"frsevtcf", bool, 20, 20>,
-               groov::field<"reserved3", std::uint8_t, 19, 16, access::ro>,
+               groov::field<"reserved3", std::uint8_t, 19, 16, common::access::ro>,
                groov::field<"typecevt2cf", bool, 15, 15>,
                groov::field<"typecevt1cf", bool, 14, 14>,
-               groov::field<"reserved2", bool, 13, 13, access::ro>,
+               groov::field<"reserved2", bool, 13, 13, common::access::ro>,
                groov::field<"rxmsgendcf", bool, 12, 12>,
                groov::field<"rxovrcf", bool, 11, 11>,
                groov::field<"rxhrstdetcf", bool, 10, 10>,
                groov::field<"rxorddetcf", bool, 9, 9>,
-               groov::field<"reserved1", std::uint8_t, 8, 7, access::ro>,
+               groov::field<"reserved1", std::uint8_t, 8, 7, common::access::ro>,
                groov::field<"txundcf", bool, 6, 6>,
                groov::field<"hrstsentcf", bool, 5, 5>,
                groov::field<"hrstdisccf", bool, 4, 4>,
                groov::field<"txmsgabtcf", bool, 3, 3>,
                groov::field<"txmsgsentcf", bool, 2, 2>,
                groov::field<"txmsgdisccf", bool, 1, 1>,
-               groov::field<"reserved0", bool, 0, 0, access::ro>>;
+               groov::field<"reserved0", bool, 0, 0, common::access::ro>>;
 
 // ucpd_imr_v1: IMR
 // Used by: UCPD1, SEC_UCPD1
@@ -128,26 +128,26 @@ using ucpd_imr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved3", std::uint16_t, 31, 21, access::ro>,
-               groov::field<"frsevtie", bit_enable, 20, 20>,
-               groov::field<"reserved2", std::uint8_t, 19, 16, access::ro>,
-               groov::field<"typecevt2ie", bit_enable, 15, 15>,
-               groov::field<"typecevt1ie", bit_enable, 14, 14>,
-               groov::field<"reserved1", bool, 13, 13, access::ro>,
-               groov::field<"rxmsgendie", bit_enable, 12, 12>,
-               groov::field<"rxovrie", bit_enable, 11, 11>,
-               groov::field<"rxhrstdetie", bit_enable, 10, 10>,
-               groov::field<"rxorddetie", bit_enable, 9, 9>,
-               groov::field<"rxneie", bit_enable, 8, 8>,
-               groov::field<"reserved0", bool, 7, 7, access::ro>,
-               groov::field<"txundie", bit_enable, 6, 6>,
-               groov::field<"hrstsentie", bit_enable, 5, 5>,
-               groov::field<"hrstdiscie", bit_enable, 4, 4>,
-               groov::field<"txmsgabtie", bit_enable, 3, 3>,
-               groov::field<"txmsgsentie", bit_enable, 2, 2>,
-               groov::field<"txmsgdiscie", bit_enable, 1, 1>,
-               groov::field<"txisie", bit_enable, 0, 0>>;
+             common::access::rw,
+               groov::field<"reserved3", std::uint16_t, 31, 21, common::access::ro>,
+               groov::field<"frsevtie", common::bittypes::bit_enable, 20, 20>,
+               groov::field<"reserved2", std::uint8_t, 19, 16, common::access::ro>,
+               groov::field<"typecevt2ie", common::bittypes::bit_enable, 15, 15>,
+               groov::field<"typecevt1ie", common::bittypes::bit_enable, 14, 14>,
+               groov::field<"reserved1", bool, 13, 13, common::access::ro>,
+               groov::field<"rxmsgendie", common::bittypes::bit_enable, 12, 12>,
+               groov::field<"rxovrie", common::bittypes::bit_enable, 11, 11>,
+               groov::field<"rxhrstdetie", common::bittypes::bit_enable, 10, 10>,
+               groov::field<"rxorddetie", common::bittypes::bit_enable, 9, 9>,
+               groov::field<"rxneie", common::bittypes::bit_enable, 8, 8>,
+               groov::field<"reserved0", bool, 7, 7, common::access::ro>,
+               groov::field<"txundie", common::bittypes::bit_enable, 6, 6>,
+               groov::field<"hrstsentie", common::bittypes::bit_enable, 5, 5>,
+               groov::field<"hrstdiscie", common::bittypes::bit_enable, 4, 4>,
+               groov::field<"txmsgabtie", common::bittypes::bit_enable, 3, 3>,
+               groov::field<"txmsgsentie", common::bittypes::bit_enable, 2, 2>,
+               groov::field<"txmsgdiscie", common::bittypes::bit_enable, 1, 1>,
+               groov::field<"txisie", common::bittypes::bit_enable, 0, 0>>;
 
 // ucpd_rx_ordext1_v1: RX_ORDEXT1
 // Used by: UCPD1, SEC_UCPD1
@@ -158,8 +158,8 @@ using ucpd_rx_ordext1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 20, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 20, common::access::ro>,
                groov::field<"rxsopx1", std::uint32_t, 19, 0>>;
 
 // ucpd_rx_ordext2_v1: RX_ORDEXT2
@@ -171,8 +171,8 @@ using ucpd_rx_ordext2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 20, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 20, common::access::ro>,
                groov::field<"rxsopx2", std::uint32_t, 19, 0>>;
 
 // ucpd_rx_ordset_v1: RX_ORDSET
@@ -184,7 +184,7 @@ using ucpd_rx_ordset_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint32_t, 31, 7>,
                groov::field<"rxsopkinvalid", std::uint8_t, 6, 4>,
                groov::field<"rxsop3of4", bool, 3, 3>,
@@ -199,7 +199,7 @@ using ucpd_rx_paysz_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint32_t, 31, 10>,
                groov::field<"rxpaysz", std::uint16_t, 9, 0>>;
 
@@ -212,7 +212,7 @@ using ucpd_rxdr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint32_t, 31, 8>,
                groov::field<"rxdata", std::uint8_t, 7, 0>>;
 
@@ -225,7 +225,7 @@ using ucpd_sr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved1", std::uint16_t, 31, 21>,
                groov::field<"frsevt", bool, 20, 20>,
                groov::field<"typec_vstate_cc2", std::uint8_t, 19, 18>,
@@ -256,8 +256,8 @@ using ucpd_tx_ordset_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 20, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 20, common::access::ro>,
                groov::field<"txordset", std::uint32_t, 19, 0>>;
 
 // ucpd_tx_paysz_v1: TX_PAYSZ
@@ -269,8 +269,8 @@ using ucpd_tx_paysz_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 10, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 10, common::access::ro>,
                groov::field<"txpaysz", std::uint16_t, 9, 0>>;
 
 // ucpd_txdr_v1: TXDR
@@ -282,8 +282,8 @@ using ucpd_txdr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 8, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 8, common::access::ro>,
                groov::field<"txdata", std::uint8_t, 7, 0>>;
 
 } // namespace stm32::regs

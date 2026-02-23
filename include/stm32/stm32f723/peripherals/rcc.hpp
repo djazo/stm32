@@ -7,32 +7,110 @@
 namespace stm32::stm32f723 {
 
 namespace rcc {
-  using cr_tt = regs::rcc_cr_v1_tt;
-  using pllcfgr_tt = regs::rcc_pllcfgr_v1_tt;
-  using cfgr_tt = regs::rcc_cfgr_v1_tt;
-  using cir_tt = regs::rcc_cir_v1_tt;
-  using ahb1rstr_tt = regs::rcc_ahb1rstr_v1_tt;
-  using ahb2rstr_tt = regs::rcc_ahb2rstr_v1_tt;
-  using ahb3rstr_tt = regs::rcc_ahb3rstr_v1_tt;
-  using apb1rstr_tt = regs::rcc_apb1rstr_v1_tt;
-  using apb2rstr_tt = regs::rcc_apb2rstr_v1_tt;
-  using ahb1enr_tt = regs::rcc_ahb1enr_v1_tt;
-  using ahb2enr_tt = regs::rcc_ahb2enr_v1_tt;
-  using ahb3enr_tt = regs::rcc_ahb3enr_v1_tt;
-  using apb1enr_tt = regs::rcc_apb1enr_v1_tt;
-  using apb2enr_tt = regs::rcc_apb2enr_v1_tt;
-  using ahb1lpenr_tt = regs::rcc_ahb1lpenr_v1_tt;
-  using ahb2lpenr_tt = regs::rcc_ahb2lpenr_v1_tt;
-  using ahb3lpenr_tt = regs::rcc_ahb3lpenr_v1_tt;
-  using apb1lpenr_tt = regs::rcc_apb1lpenr_v1_tt;
-  using apb2lpenr_tt = regs::rcc_apb2lpenr_v1_tt;
-  using bdcr_tt = regs::rcc_bdcr_v1_tt;
-  using csr_tt = regs::rcc_csr_v1_tt;
-  using sscgr_tt = regs::rcc_sscgr_v1_tt;
-  using plli2scfgr_tt = regs::rcc_plli2scfgr_v1_tt;
-  using pllsaicfgr_tt = regs::rcc_pllsaicfgr_v1_tt;
-  using dckcfgr1_tt = regs::rcc_dckcfgr1_v1_tt;
-  using dckcfgr2_tt = regs::rcc_dckcfgr2_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cr_tt = regs::rcc_cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using pllcfgr_tt = regs::rcc_pllcfgr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cfgr_tt = regs::rcc_cfgr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cir_tt = regs::rcc_cir_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ahb1rstr_tt = regs::rcc_ahb1rstr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ahb2rstr_tt = regs::rcc_ahb2rstr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ahb3rstr_tt = regs::rcc_ahb3rstr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using apb1rstr_tt = regs::rcc_apb1rstr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using apb2rstr_tt = regs::rcc_apb2rstr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ahb1enr_tt = regs::rcc_ahb1enr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ahb2enr_tt = regs::rcc_ahb2enr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ahb3enr_tt = regs::rcc_ahb3enr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using apb1enr_tt = regs::rcc_apb1enr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using apb2enr_tt = regs::rcc_apb2enr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ahb1lpenr_tt = regs::rcc_ahb1lpenr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ahb2lpenr_tt = regs::rcc_ahb2lpenr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ahb3lpenr_tt = regs::rcc_ahb3lpenr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using apb1lpenr_tt = regs::rcc_apb1lpenr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using apb2lpenr_tt = regs::rcc_apb2lpenr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using bdcr_tt = regs::rcc_bdcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using csr_tt = regs::rcc_csr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using sscgr_tt = regs::rcc_sscgr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using plli2scfgr_tt = regs::rcc_plli2scfgr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using pllsaicfgr_tt = regs::rcc_pllsaicfgr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dckcfgr1_tt = regs::rcc_dckcfgr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dckcfgr2_tt = regs::rcc_dckcfgr2_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using rcc_t =

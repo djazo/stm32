@@ -7,11 +7,26 @@
 namespace stm32::stm32g050 {
 
 namespace crc {
-  using crc_dr_tt = regs::crc_crc_dr_v1_tt;
-  using crc_idr_tt = regs::crc_crc_idr_v1_tt;
-  using crc_cr_tt = regs::crc_crc_cr_v1_tt;
-  using crc_init_tt = regs::crc_crc_init_v1_tt;
-  using crc_pol_tt = regs::crc_crc_pol_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using crc_dr_tt = regs::crc_crc_dr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using crc_idr_tt = regs::crc_crc_idr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using crc_cr_tt = regs::crc_crc_cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using crc_init_tt = regs::crc_crc_init_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using crc_pol_tt = regs::crc_crc_pol_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using crc_t =

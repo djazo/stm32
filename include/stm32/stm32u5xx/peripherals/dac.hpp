@@ -7,27 +7,90 @@
 namespace stm32::stm32u5xx {
 
 namespace dacx {
-  using dac_cr_tt = regs::dac_dac_cr_v1_tt;
-  using dac_swtrgr_tt = regs::dac_dac_swtrgr_v1_tt;
-  using dac_dhr12r1_tt = regs::dac_dac_dhr12r1_v1_tt;
-  using dac_dhr12l1_tt = regs::dac_dac_dhr12l1_v1_tt;
-  using dac_dhr8r1_tt = regs::dac_dac_dhr8r1_v1_tt;
-  using dac_dhr12r2_tt = regs::dac_dac_dhr12r2_v1_tt;
-  using dac_dhr12l2_tt = regs::dac_dac_dhr12l2_v1_tt;
-  using dac_dhr8r2_tt = regs::dac_dac_dhr8r2_v1_tt;
-  using dac_dhr12rd_tt = regs::dac_dac_dhr12rd_v1_tt;
-  using dac_dhr12ld_tt = regs::dac_dac_dhr12ld_v1_tt;
-  using dac_dhr8rd_tt = regs::dac_dac_dhr8rd_v1_tt;
-  using dac_dor1_tt = regs::dac_dac_dor1_v1_tt;
-  using dac_dor2_tt = regs::dac_dac_dor2_v1_tt;
-  using dac_sr_tt = regs::dac_dac_sr_v1_tt;
-  using dac_ccr_tt = regs::dac_dac_ccr_v1_tt;
-  using dac_mcr_tt = regs::dac_dac_mcr_v1_tt;
-  using dac_shsr1_tt = regs::dac_dac_shsr1_v1_tt;
-  using dac_shsr2_tt = regs::dac_dac_shsr2_v1_tt;
-  using dac_shhr_tt = regs::dac_dac_shhr_v1_tt;
-  using dac_shrr_tt = regs::dac_dac_shrr_v1_tt;
-  using dac_autocr_tt = regs::dac_dac_autocr_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dac_cr_tt = regs::dac_dac_cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dac_swtrgr_tt = regs::dac_dac_swtrgr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dac_dhr12r1_tt = regs::dac_dac_dhr12r1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dac_dhr12l1_tt = regs::dac_dac_dhr12l1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dac_dhr8r1_tt = regs::dac_dac_dhr8r1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dac_dhr12r2_tt = regs::dac_dac_dhr12r2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dac_dhr12l2_tt = regs::dac_dac_dhr12l2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dac_dhr8r2_tt = regs::dac_dac_dhr8r2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dac_dhr12rd_tt = regs::dac_dac_dhr12rd_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dac_dhr12ld_tt = regs::dac_dac_dhr12ld_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dac_dhr8rd_tt = regs::dac_dac_dhr8rd_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dac_dor1_tt = regs::dac_dac_dor1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dac_dor2_tt = regs::dac_dac_dor2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dac_sr_tt = regs::dac_dac_sr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dac_ccr_tt = regs::dac_dac_ccr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dac_mcr_tt = regs::dac_dac_mcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dac_shsr1_tt = regs::dac_dac_shsr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dac_shsr2_tt = regs::dac_dac_shsr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dac_shhr_tt = regs::dac_dac_shhr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dac_shrr_tt = regs::dac_dac_shrr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dac_autocr_tt = regs::dac_dac_autocr_v1_tt<name, baseaddress, offset>;
 
   template <stdx::ct_string name, std::uint32_t baseaddress>
   using dacx_t =

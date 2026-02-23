@@ -7,32 +7,110 @@
 namespace stm32::stm32l4r9 {
 
 namespace octospix {
-  using cr_tt = regs::octospi_cr_v1_tt;
-  using dcr1_tt = regs::octospi_dcr1_v1_tt;
-  using dcr2_tt = regs::octospi_dcr2_v1_tt;
-  using dcr3_tt = regs::octospi_dcr3_v1_tt;
-  using sr_tt = regs::octospi_sr_v1_tt;
-  using fcr_tt = regs::octospi_fcr_v1_tt;
-  using dlr_tt = regs::octospi_dlr_v1_tt;
-  using ar_tt = regs::octospi_ar_v1_tt;
-  using dr_tt = regs::octospi_dr_v1_tt;
-  using psmkr_tt = regs::octospi_psmkr_v1_tt;
-  using psmar_tt = regs::octospi_psmar_v1_tt;
-  using pir_tt = regs::octospi_pir_v1_tt;
-  using ccr_tt = regs::octospi_ccr_v1_tt;
-  using tcr_tt = regs::octospi_tcr_v1_tt;
-  using ir_tt = regs::octospi_ir_v1_tt;
-  using abr_tt = regs::octospi_abr_v1_tt;
-  using lptr_tt = regs::octospi_lptr_v1_tt;
-  using wccr_tt = regs::octospi_wccr_v1_tt;
-  using wtcr_tt = regs::octospi_wtcr_v1_tt;
-  using wir_tt = regs::octospi_wir_v1_tt;
-  using wabr_tt = regs::octospi_wabr_v1_tt;
-  using hlcr_tt = regs::octospi_hlcr_v1_tt;
-  using hwcfgr_tt = regs::octospi_hwcfgr_v1_tt;
-  using ver_tt = regs::octospi_ver_v1_tt;
-  using id_tt = regs::octospi_id_v1_tt;
-  using mid_tt = regs::octospi_mid_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cr_tt = regs::octospi_cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dcr1_tt = regs::octospi_dcr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dcr2_tt = regs::octospi_dcr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dcr3_tt = regs::octospi_dcr3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using sr_tt = regs::octospi_sr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fcr_tt = regs::octospi_fcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dlr_tt = regs::octospi_dlr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ar_tt = regs::octospi_ar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dr_tt = regs::octospi_dr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using psmkr_tt = regs::octospi_psmkr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using psmar_tt = regs::octospi_psmar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using pir_tt = regs::octospi_pir_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ccr_tt = regs::octospi_ccr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using tcr_tt = regs::octospi_tcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ir_tt = regs::octospi_ir_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using abr_tt = regs::octospi_abr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using lptr_tt = regs::octospi_lptr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using wccr_tt = regs::octospi_wccr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using wtcr_tt = regs::octospi_wtcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using wir_tt = regs::octospi_wir_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using wabr_tt = regs::octospi_wabr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hlcr_tt = regs::octospi_hlcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hwcfgr_tt = regs::octospi_hwcfgr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ver_tt = regs::octospi_ver_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using id_tt = regs::octospi_id_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mid_tt = regs::octospi_mid_v1_tt<name, baseaddress, offset>;
 
   template <stdx::ct_string name, std::uint32_t baseaddress>
   using octospix_t =

@@ -16,21 +16,21 @@ using pssi_pssi_cr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"outen", bit_enable, 31, 31>,
-               groov::field<"dmaen", bit_enable, 30, 30>,
-               groov::field<"reserved5", std::uint16_t, 29, 21, access::ro>,
+             common::access::rw,
+               groov::field<"outen", common::bittypes::bit_enable, 31, 31>,
+               groov::field<"dmaen", common::bittypes::bit_enable, 30, 30>,
+               groov::field<"reserved5", std::uint16_t, 29, 21, common::access::ro>,
                groov::field<"derdycfg", std::uint8_t, 20, 18>,
-               groov::field<"reserved4", std::uint8_t, 17, 15, access::ro>,
+               groov::field<"reserved4", std::uint8_t, 17, 15, common::access::ro>,
                groov::field<"enable", bool, 14, 14>,
-               groov::field<"reserved3", std::uint8_t, 13, 12, access::ro>,
+               groov::field<"reserved3", std::uint8_t, 13, 12, common::access::ro>,
                groov::field<"edm", std::uint8_t, 11, 10>,
-               groov::field<"reserved2", bool, 9, 9, access::ro>,
-               groov::field<"rdypol", bit_ready, 8, 8>,
-               groov::field<"reserved1", bool, 7, 7, access::ro>,
+               groov::field<"reserved2", bool, 9, 9, common::access::ro>,
+               groov::field<"rdypol", common::bittypes::bit_ready, 8, 8>,
+               groov::field<"reserved1", bool, 7, 7, common::access::ro>,
                groov::field<"depol", bool, 6, 6>,
                groov::field<"ckpol", bool, 5, 5>,
-               groov::field<"reserved0", std::uint8_t, 4, 0, access::ro>>;
+               groov::field<"reserved0", std::uint8_t, 4, 0, common::access::ro>>;
 
 // pssi_pssi_dr_v1: PSSI_DR
 // Used by: PSSI
@@ -41,7 +41,7 @@ using pssi_pssi_dr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"byte3", std::uint8_t, 31, 24>,
                groov::field<"byte2", std::uint8_t, 23, 16>,
                groov::field<"byte1", std::uint8_t, 15, 8>,
@@ -56,10 +56,10 @@ using pssi_pssi_icr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint32_t, 31, 2, access::ro>,
-               groov::field<"ovr_isc", bool, 1, 1, access::wo>,
-               groov::field<"reserved0", bool, 0, 0, access::ro>>;
+             common::access::rw,
+               groov::field<"reserved1", std::uint32_t, 31, 2, common::access::ro>,
+               groov::field<"ovr_isc", bool, 1, 1, common::access::wo>,
+               groov::field<"reserved0", bool, 0, 0, common::access::ro>>;
 
 // pssi_pssi_ier_v1: PSSI_IER
 // Used by: PSSI
@@ -70,10 +70,10 @@ using pssi_pssi_ier_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint32_t, 31, 2, access::ro>,
-               groov::field<"ovr_ie", bit_enable, 1, 1>,
-               groov::field<"reserved0", bool, 0, 0, access::ro>>;
+             common::access::rw,
+               groov::field<"reserved1", std::uint32_t, 31, 2, common::access::ro>,
+               groov::field<"ovr_ie", common::bittypes::bit_enable, 1, 1>,
+               groov::field<"reserved0", bool, 0, 0, common::access::ro>>;
 
 // pssi_pssi_mis_v1: PSSI_MIS
 // Used by: PSSI
@@ -84,10 +84,10 @@ using pssi_pssi_mis_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint32_t, 31, 2, access::ro>,
-               groov::field<"ovr_mis", bool, 1, 1, access::ro>,
-               groov::field<"reserved0", bool, 0, 0, access::ro>>;
+             common::access::rw,
+               groov::field<"reserved1", std::uint32_t, 31, 2, common::access::ro>,
+               groov::field<"ovr_mis", bool, 1, 1, common::access::ro>,
+               groov::field<"reserved0", bool, 0, 0, common::access::ro>>;
 
 // pssi_pssi_ris_v1: PSSI_RIS
 // Used by: PSSI
@@ -98,10 +98,10 @@ using pssi_pssi_ris_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint32_t, 31, 2, access::ro>,
-               groov::field<"ovr_ris", bool, 1, 1, access::ro>,
-               groov::field<"reserved0", bool, 0, 0, access::ro>>;
+             common::access::rw,
+               groov::field<"reserved1", std::uint32_t, 31, 2, common::access::ro>,
+               groov::field<"ovr_ris", bool, 1, 1, common::access::ro>,
+               groov::field<"reserved0", bool, 0, 0, common::access::ro>>;
 
 // pssi_pssi_sr_v1: PSSI_SR
 // Used by: PSSI
@@ -112,10 +112,10 @@ using pssi_pssi_sr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint32_t, 31, 4, access::ro>,
-               groov::field<"rtt1b", bool, 3, 3, access::ro>,
-               groov::field<"rtt4b", bool, 2, 2, access::ro>,
-               groov::field<"reserved0", std::uint8_t, 1, 0, access::ro>>;
+             common::access::rw,
+               groov::field<"reserved1", std::uint32_t, 31, 4, common::access::ro>,
+               groov::field<"rtt1b", bool, 3, 3, common::access::ro>,
+               groov::field<"rtt4b", bool, 2, 2, common::access::ro>,
+               groov::field<"reserved0", std::uint8_t, 1, 0, common::access::ro>>;
 
 } // namespace stm32::regs

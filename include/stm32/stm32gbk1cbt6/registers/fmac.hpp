@@ -16,19 +16,19 @@ using fmac_cr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved2", std::uint16_t, 31, 17, access::ro>,
+             common::access::rw,
+               groov::field<"reserved2", std::uint16_t, 31, 17, common::access::ro>,
                groov::field<"reset", bool, 16, 16>,
-               groov::field<"clipen", bit_enable, 15, 15>,
-               groov::field<"reserved1", std::uint8_t, 14, 10, access::ro>,
-               groov::field<"dmawen", bit_enable, 9, 9>,
-               groov::field<"dmaren", bit_enable, 8, 8>,
-               groov::field<"reserved0", std::uint8_t, 7, 5, access::ro>,
-               groov::field<"satien", bit_enable, 4, 4>,
-               groov::field<"unflien", bit_enable, 3, 3>,
-               groov::field<"ovflien", bit_enable, 2, 2>,
-               groov::field<"wien", bit_enable, 1, 1>,
-               groov::field<"rien", bit_enable, 0, 0>>;
+               groov::field<"clipen", common::bittypes::bit_enable, 15, 15>,
+               groov::field<"reserved1", std::uint8_t, 14, 10, common::access::ro>,
+               groov::field<"dmawen", common::bittypes::bit_enable, 9, 9>,
+               groov::field<"dmaren", common::bittypes::bit_enable, 8, 8>,
+               groov::field<"reserved0", std::uint8_t, 7, 5, common::access::ro>,
+               groov::field<"satien", common::bittypes::bit_enable, 4, 4>,
+               groov::field<"unflien", common::bittypes::bit_enable, 3, 3>,
+               groov::field<"ovflien", common::bittypes::bit_enable, 2, 2>,
+               groov::field<"wien", common::bittypes::bit_enable, 1, 1>,
+               groov::field<"rien", common::bittypes::bit_enable, 0, 0>>;
 
 // fmac_param_v1: PARAM
 // Used by: FMAC
@@ -39,7 +39,7 @@ using fmac_param_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"start", bool, 31, 31>,
                groov::field<"func", std::uint8_t, 30, 24>,
                groov::field<"r", std::uint8_t, 23, 16>,
@@ -55,7 +55,7 @@ using fmac_rdata_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint16_t, 31, 16>,
                groov::field<"rdata", std::uint16_t, 15, 0>>;
 
@@ -68,7 +68,7 @@ using fmac_sr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved1", std::uint32_t, 31, 11>,
                groov::field<"sat", bool, 10, 10>,
                groov::field<"unfl", bool, 9, 9>,
@@ -86,8 +86,8 @@ using fmac_wdata_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::wo,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::wo,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"wdata", std::uint16_t, 15, 0>>;
 
 // fmac_x1bufcfg_v1: X1BUFCFG
@@ -99,10 +99,10 @@ using fmac_x1bufcfg_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint8_t, 31, 26, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint8_t, 31, 26, common::access::ro>,
                groov::field<"full_wm", std::uint8_t, 25, 24>,
-               groov::field<"reserved0", std::uint8_t, 23, 16, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 23, 16, common::access::ro>,
                groov::field<"x1_buf_size", std::uint8_t, 15, 8>,
                groov::field<"x1_base", std::uint8_t, 7, 0>>;
 
@@ -115,8 +115,8 @@ using fmac_x2bufcfg_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"x2_buf_size", std::uint8_t, 15, 8>,
                groov::field<"x2_base", std::uint8_t, 7, 0>>;
 
@@ -129,10 +129,10 @@ using fmac_ybufcfg_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint8_t, 31, 26, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint8_t, 31, 26, common::access::ro>,
                groov::field<"empty_wm", std::uint8_t, 25, 24>,
-               groov::field<"reserved0", std::uint8_t, 23, 16, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 23, 16, common::access::ro>,
                groov::field<"y_buf_size", std::uint8_t, 15, 8>,
                groov::field<"y_base", std::uint8_t, 7, 0>>;
 

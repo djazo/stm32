@@ -7,9 +7,18 @@
 namespace stm32::stm32f410 {
 
 namespace crc {
-  using dr_tt = regs::crc_dr_v1_tt;
-  using idr_tt = regs::crc_idr_v1_tt;
-  using cr_tt = regs::crc_cr_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dr_tt = regs::crc_dr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using idr_tt = regs::crc_idr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cr_tt = regs::crc_cr_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using crc_t =

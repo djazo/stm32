@@ -16,22 +16,22 @@ using saes_cr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"iprst", bit_reset, 31, 31>,
+             common::access::rw,
+               groov::field<"iprst", common::bittypes::bit_reset, 31, 31>,
                groov::field<"keysel", std::uint8_t, 30, 28>,
                groov::field<"kshareid", std::uint8_t, 27, 26>,
                groov::field<"kmod", std::uint8_t, 25, 24>,
-               groov::field<"reserved2", std::uint8_t, 23, 20, access::ro>,
+               groov::field<"reserved2", std::uint8_t, 23, 20, common::access::ro>,
                groov::field<"keyprot", bool, 19, 19>,
                groov::field<"keysize", bool, 18, 18>,
-               groov::field<"reserved1", std::uint8_t, 17, 13, access::ro>,
-               groov::field<"dmaouten", bit_enable, 12, 12>,
-               groov::field<"dmainen", bit_enable, 11, 11>,
-               groov::field<"reserved0", std::uint8_t, 10, 7, access::ro>,
+               groov::field<"reserved1", std::uint8_t, 17, 13, common::access::ro>,
+               groov::field<"dmaouten", common::bittypes::bit_enable, 12, 12>,
+               groov::field<"dmainen", common::bittypes::bit_enable, 11, 11>,
+               groov::field<"reserved0", std::uint8_t, 10, 7, common::access::ro>,
                groov::field<"chmod", std::uint8_t, 6, 5>,
                groov::field<"mode", std::uint8_t, 4, 3>,
                groov::field<"datatype", std::uint8_t, 2, 1>,
-               groov::field<"en", bit_enable, 0, 0>>;
+               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
 
 // saes_dinr_v1: DINR
 // Used by: SAES, SEC_SAES
@@ -42,7 +42,7 @@ using saes_dinr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::wo,
+             common::access::wo,
                groov::field<"din", std::uint32_t, 31, 0>>;
 
 // saes_doutr_v1: DOUTR
@@ -54,7 +54,7 @@ using saes_doutr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"dout", std::uint32_t, 31, 0>>;
 
 // saes_dpacfgr_v1: DPACFGR
@@ -66,13 +66,13 @@ using saes_dpacfgr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"configlock", bit_locked, 31, 31, access::ro>,
-               groov::field<"reserved1", std::uint32_t, 30, 5, access::ro>,
+             common::access::rw,
+               groov::field<"configlock", common::bittypes::bit_locked, 31, 31, common::access::ro>,
+               groov::field<"reserved1", std::uint32_t, 30, 5, common::access::ro>,
                groov::field<"trimcfg", std::uint8_t, 4, 3>,
                groov::field<"reseed", bool, 2, 2>,
                groov::field<"redcfg", bool, 1, 1>,
-               groov::field<"reserved0", bool, 0, 0, access::ro>>;
+               groov::field<"reserved0", bool, 0, 0, common::access::ro>>;
 
 // saes_icr_v1: ICR
 // Used by: SAES, SEC_SAES
@@ -83,8 +83,8 @@ using saes_icr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::wo,
-               groov::field<"reserved0", std::uint32_t, 31, 4, access::ro>,
+             common::access::wo,
+               groov::field<"reserved0", std::uint32_t, 31, 4, common::access::ro>,
                groov::field<"rngeif", bool, 3, 3>,
                groov::field<"keif", bool, 2, 2>,
                groov::field<"rweif", bool, 1, 1>,
@@ -99,12 +99,12 @@ using saes_ier_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 4, access::ro>,
-               groov::field<"rngeie", bit_enable, 3, 3>,
-               groov::field<"keie", bit_enable, 2, 2>,
-               groov::field<"rweie", bit_enable, 1, 1>,
-               groov::field<"ccfie", bit_enable, 0, 0>>;
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 4, common::access::ro>,
+               groov::field<"rngeie", common::bittypes::bit_enable, 3, 3>,
+               groov::field<"keie", common::bittypes::bit_enable, 2, 2>,
+               groov::field<"rweie", common::bittypes::bit_enable, 1, 1>,
+               groov::field<"ccfie", common::bittypes::bit_enable, 0, 0>>;
 
 // saes_isr_v1: ISR
 // Used by: SAES, SEC_SAES
@@ -115,7 +115,7 @@ using saes_isr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint32_t, 31, 4>,
                groov::field<"rngeif", bool, 3, 3>,
                groov::field<"keif", bool, 2, 2>,
@@ -131,7 +131,7 @@ using saes_ivr0_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"ivi", std::uint32_t, 31, 0>>;
 
 // saes_ivr1_v1: IVR1
@@ -143,7 +143,7 @@ using saes_ivr1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"ivi", std::uint32_t, 31, 0>>;
 
 // saes_ivr2_v1: IVR2
@@ -155,7 +155,7 @@ using saes_ivr2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"ivi", std::uint32_t, 31, 0>>;
 
 // saes_ivr3_v1: IVR3
@@ -167,7 +167,7 @@ using saes_ivr3_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"ivi", std::uint32_t, 31, 0>>;
 
 // saes_keyr0_v1: KEYR0
@@ -179,7 +179,7 @@ using saes_keyr0_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::wo,
+             common::access::wo,
                groov::field<"key", std::uint32_t, 31, 0>>;
 
 // saes_keyr1_v1: KEYR1
@@ -191,7 +191,7 @@ using saes_keyr1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::wo,
+             common::access::wo,
                groov::field<"key", std::uint32_t, 31, 0>>;
 
 // saes_keyr2_v1: KEYR2
@@ -203,7 +203,7 @@ using saes_keyr2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::wo,
+             common::access::wo,
                groov::field<"keyr", std::uint32_t, 31, 0>>;
 
 // saes_keyr3_v1: KEYR3
@@ -215,7 +215,7 @@ using saes_keyr3_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::wo,
+             common::access::wo,
                groov::field<"saes_keyr3", std::uint32_t, 31, 0>>;
 
 // saes_keyr4_v1: KEYR4
@@ -227,7 +227,7 @@ using saes_keyr4_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::wo,
+             common::access::wo,
                groov::field<"key", std::uint32_t, 31, 0>>;
 
 // saes_keyr5_v1: KEYR5
@@ -239,7 +239,7 @@ using saes_keyr5_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::wo,
+             common::access::wo,
                groov::field<"key", std::uint32_t, 31, 0>>;
 
 // saes_keyr6_v1: KEYR6
@@ -251,7 +251,7 @@ using saes_keyr6_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::wo,
+             common::access::wo,
                groov::field<"key", std::uint32_t, 31, 0>>;
 
 // saes_keyr7_v1: KEYR7
@@ -263,7 +263,7 @@ using saes_keyr7_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::wo,
+             common::access::wo,
                groov::field<"key", std::uint32_t, 31, 0>>;
 
 // saes_sr_v1: SR
@@ -275,7 +275,7 @@ using saes_sr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved1", std::uint32_t, 31, 8>,
                groov::field<"keyvalid", bool, 7, 7>,
                groov::field<"reserved0", std::uint8_t, 6, 4>,

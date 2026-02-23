@@ -7,14 +7,38 @@
 namespace stm32::stm32f730 {
 
 namespace flash {
-  using acr_tt = regs::flash_acr_v1_tt;
-  using keyr_tt = regs::flash_keyr_v1_tt;
-  using optkeyr_tt = regs::flash_optkeyr_v1_tt;
-  using sr_tt = regs::flash_sr_v1_tt;
-  using cr_tt = regs::flash_cr_v1_tt;
-  using optcr_tt = regs::flash_optcr_v1_tt;
-  using optcr1_tt = regs::flash_optcr1_v1_tt;
-  using optcr2_tt = regs::flash_optcr2_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using acr_tt = regs::flash_acr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using keyr_tt = regs::flash_keyr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using optkeyr_tt = regs::flash_optkeyr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using sr_tt = regs::flash_sr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cr_tt = regs::flash_cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using optcr_tt = regs::flash_optcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using optcr1_tt = regs::flash_optcr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using optcr2_tt = regs::flash_optcr2_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using flash_t =

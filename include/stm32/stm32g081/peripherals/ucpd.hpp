@@ -7,24 +7,78 @@
 namespace stm32::stm32g081 {
 
 namespace ucpdx {
-  using cfg1_tt = regs::ucpd_cfg1_v1_tt;
-  using cfg2_tt = regs::ucpd_cfg2_v1_tt;
-  using cfg3_tt = regs::ucpd_cfg3_v1_tt;
-  using cr_tt = regs::ucpd_cr_v1_tt;
-  using imr_tt = regs::ucpd_imr_v1_tt;
-  using sr_tt = regs::ucpd_sr_v1_tt;
-  using icr_tt = regs::ucpd_icr_v1_tt;
-  using tx_ordset_tt = regs::ucpd_tx_ordset_v1_tt;
-  using tx_paysz_tt = regs::ucpd_tx_paysz_v1_tt;
-  using txdr_tt = regs::ucpd_txdr_v1_tt;
-  using rx_ordset_tt = regs::ucpd_rx_ordset_v1_tt;
-  using rx_paysz_tt = regs::ucpd_rx_paysz_v1_tt;
-  using rxdr_tt = regs::ucpd_rxdr_v1_tt;
-  using rx_ordext1_tt = regs::ucpd_rx_ordext1_v1_tt;
-  using rx_ordext2_tt = regs::ucpd_rx_ordext2_v1_tt;
-  using ipver_tt = regs::ucpd_ipver_v1_tt;
-  using ipid_tt = regs::ucpd_ipid_v1_tt;
-  using mid_tt = regs::ucpd_mid_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cfg1_tt = regs::ucpd_cfg1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cfg2_tt = regs::ucpd_cfg2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cfg3_tt = regs::ucpd_cfg3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cr_tt = regs::ucpd_cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using imr_tt = regs::ucpd_imr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using sr_tt = regs::ucpd_sr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using icr_tt = regs::ucpd_icr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using tx_ordset_tt = regs::ucpd_tx_ordset_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using tx_paysz_tt = regs::ucpd_tx_paysz_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using txdr_tt = regs::ucpd_txdr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rx_ordset_tt = regs::ucpd_rx_ordset_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rx_paysz_tt = regs::ucpd_rx_paysz_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rxdr_tt = regs::ucpd_rxdr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rx_ordext1_tt = regs::ucpd_rx_ordext1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rx_ordext2_tt = regs::ucpd_rx_ordext2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ipver_tt = regs::ucpd_ipver_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ipid_tt = regs::ucpd_ipid_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mid_tt = regs::ucpd_mid_v1_tt<name, baseaddress, offset>;
 
   template <stdx::ct_string name, std::uint32_t baseaddress>
   using ucpdx_t =

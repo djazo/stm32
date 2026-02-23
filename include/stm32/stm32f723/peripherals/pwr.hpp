@@ -7,10 +7,22 @@
 namespace stm32::stm32f723 {
 
 namespace pwr {
-  using cr1_tt = regs::pwr_cr1_v1_tt;
-  using csr1_tt = regs::pwr_csr1_v1_tt;
-  using cr2_tt = regs::pwr_cr2_v1_tt;
-  using csr2_tt = regs::pwr_csr2_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cr1_tt = regs::pwr_cr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using csr1_tt = regs::pwr_csr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cr2_tt = regs::pwr_cr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using csr2_tt = regs::pwr_csr2_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using pwr_t =

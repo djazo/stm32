@@ -7,8 +7,14 @@
 namespace stm32::stm32u59x {
 
 namespace dlybx {
-  using dlyb_cr_tt = regs::dlyb_dlyb_cr_v1_tt;
-  using dlyb_cfgr_tt = regs::dlyb_dlyb_cfgr_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dlyb_cr_tt = regs::dlyb_dlyb_cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dlyb_cfgr_tt = regs::dlyb_dlyb_cfgr_v1_tt<name, baseaddress, offset>;
 
   template <stdx::ct_string name, std::uint32_t baseaddress>
   using dlybx_t =

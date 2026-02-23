@@ -7,13 +7,34 @@
 namespace stm32::stm32l151 {
 
 namespace ri {
-  using icr_tt = regs::ri_icr_v1_tt;
-  using ascr1_tt = regs::ri_ascr1_v1_tt;
-  using ascr2_tt = regs::ri_ascr2_v1_tt;
-  using hyscr1_tt = regs::ri_hyscr1_v1_tt;
-  using hyscr2_tt = regs::ri_hyscr2_v1_tt;
-  using hyscr3_tt = regs::ri_hyscr3_v1_tt;
-  using hyscr4_tt = regs::ri_hyscr4_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using icr_tt = regs::ri_icr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ascr1_tt = regs::ri_ascr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ascr2_tt = regs::ri_ascr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hyscr1_tt = regs::ri_hyscr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hyscr2_tt = regs::ri_hyscr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hyscr3_tt = regs::ri_hyscr3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hyscr4_tt = regs::ri_hyscr4_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using ri_t =

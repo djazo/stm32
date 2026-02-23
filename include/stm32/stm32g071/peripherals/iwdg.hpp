@@ -7,15 +7,42 @@
 namespace stm32::stm32g071 {
 
 namespace iwdg {
-  using kr_tt = regs::iwdg_kr_v1_tt;
-  using pr_tt = regs::iwdg_pr_v1_tt;
-  using rlr_tt = regs::iwdg_rlr_v1_tt;
-  using sr_tt = regs::iwdg_sr_v1_tt;
-  using winr_tt = regs::iwdg_winr_v1_tt;
-  using hwcfgr_tt = regs::iwdg_hwcfgr_v1_tt;
-  using verr_tt = regs::iwdg_verr_v1_tt;
-  using ipidr_tt = regs::iwdg_ipidr_v1_tt;
-  using sidr_tt = regs::iwdg_sidr_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using kr_tt = regs::iwdg_kr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using pr_tt = regs::iwdg_pr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rlr_tt = regs::iwdg_rlr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using sr_tt = regs::iwdg_sr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using winr_tt = regs::iwdg_winr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hwcfgr_tt = regs::iwdg_hwcfgr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using verr_tt = regs::iwdg_verr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ipidr_tt = regs::iwdg_ipidr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using sidr_tt = regs::iwdg_sidr_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using iwdg_t =

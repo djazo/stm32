@@ -16,9 +16,9 @@ using iwdg_iwdg_kr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
-               groov::field<"key", std::uint16_t, 15, 0, access::wo>>;
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
+               groov::field<"key", std::uint16_t, 15, 0, common::access::wo>>;
 
 // iwdg_iwdg_pr_v1: IWDG_PR
 // Used by: IWDG
@@ -29,8 +29,8 @@ using iwdg_iwdg_pr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 3, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 3, common::access::ro>,
                groov::field<"pr", std::uint8_t, 2, 0>>;
 
 // iwdg_iwdg_rlr_v1: IWDG_RLR
@@ -42,8 +42,8 @@ using iwdg_iwdg_rlr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 12, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 12, common::access::ro>,
                groov::field<"rl", std::uint16_t, 11, 0>>;
 
 // iwdg_iwdg_sr_v1: IWDG_SR
@@ -55,11 +55,11 @@ using iwdg_iwdg_sr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 3, access::ro>,
-               groov::field<"wvu", bool, 2, 2, access::ro>,
-               groov::field<"rvu", bool, 1, 1, access::ro>,
-               groov::field<"pvu", bool, 0, 0, access::ro>>;
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 3, common::access::ro>,
+               groov::field<"wvu", bool, 2, 2, common::access::ro>,
+               groov::field<"rvu", bool, 1, 1, common::access::ro>,
+               groov::field<"pvu", bool, 0, 0, common::access::ro>>;
 
 // iwdg_iwdg_winr_v1: IWDG_WINR
 // Used by: IWDG
@@ -70,8 +70,8 @@ using iwdg_iwdg_winr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 12, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 12, common::access::ro>,
                groov::field<"win", std::uint16_t, 11, 0>>;
 
 } // namespace stm32::regs

@@ -7,2063 +7,8234 @@
 namespace stm32::stm32u59x {
 
 namespace gfxmmux {
-  using gfxmmu_cr_tt = regs::gfxmmu_gfxmmu_cr_v1_tt;
-  using gfxmmu_sr_tt = regs::gfxmmu_gfxmmu_sr_v1_tt;
-  using gfxmmu_fcr_tt = regs::gfxmmu_gfxmmu_fcr_v1_tt;
-  using gfxmmu_ccr_tt = regs::gfxmmu_gfxmmu_ccr_v1_tt;
-  using gfxmmu_dvr_tt = regs::gfxmmu_gfxmmu_dvr_v1_tt;
-  using gfxmmu_b0cr_tt = regs::gfxmmu_gfxmmu_b0cr_v1_tt;
-  using gfxmmu_b1cr_tt = regs::gfxmmu_gfxmmu_b1cr_v1_tt;
-  using gfxmmu_b2cr_tt = regs::gfxmmu_gfxmmu_b2cr_v1_tt;
-  using gfxmmu_b3cr_tt = regs::gfxmmu_gfxmmu_b3cr_v1_tt;
-  using gfxmmu_lut0l_tt = regs::gfxmmu_gfxmmu_lut0l_v1_tt;
-  using gfxmmu_lut0h_tt = regs::gfxmmu_gfxmmu_lut0h_v1_tt;
-  using gfxmmu_lut1l_tt = regs::gfxmmu_gfxmmu_lut1l_v1_tt;
-  using gfxmmu_lut1h_tt = regs::gfxmmu_gfxmmu_lut1h_v1_tt;
-  using gfxmmu_lut2l_tt = regs::gfxmmu_gfxmmu_lut2l_v1_tt;
-  using gfxmmu_lut2h_tt = regs::gfxmmu_gfxmmu_lut2h_v1_tt;
-  using gfxmmu_lut3l_tt = regs::gfxmmu_gfxmmu_lut3l_v1_tt;
-  using gfxmmu_lut3h_tt = regs::gfxmmu_gfxmmu_lut3h_v1_tt;
-  using gfxmmu_lut4l_tt = regs::gfxmmu_gfxmmu_lut4l_v1_tt;
-  using gfxmmu_lut4h_tt = regs::gfxmmu_gfxmmu_lut4h_v1_tt;
-  using gfxmmu_lut5l_tt = regs::gfxmmu_gfxmmu_lut5l_v1_tt;
-  using gfxmmu_lut5h_tt = regs::gfxmmu_gfxmmu_lut5h_v1_tt;
-  using gfxmmu_lut6l_tt = regs::gfxmmu_gfxmmu_lut6l_v1_tt;
-  using gfxmmu_lut6h_tt = regs::gfxmmu_gfxmmu_lut6h_v1_tt;
-  using gfxmmu_lut7l_tt = regs::gfxmmu_gfxmmu_lut7l_v1_tt;
-  using gfxmmu_lut7h_tt = regs::gfxmmu_gfxmmu_lut7h_v1_tt;
-  using gfxmmu_lut8l_tt = regs::gfxmmu_gfxmmu_lut8l_v1_tt;
-  using gfxmmu_lut8h_tt = regs::gfxmmu_gfxmmu_lut8h_v1_tt;
-  using gfxmmu_lut9l_tt = regs::gfxmmu_gfxmmu_lut9l_v1_tt;
-  using gfxmmu_lut9h_tt = regs::gfxmmu_gfxmmu_lut9h_v1_tt;
-  using gfxmmu_lut10l_tt = regs::gfxmmu_gfxmmu_lut10l_v1_tt;
-  using gfxmmu_lut10h_tt = regs::gfxmmu_gfxmmu_lut10h_v1_tt;
-  using gfxmmu_lut11l_tt = regs::gfxmmu_gfxmmu_lut11l_v1_tt;
-  using gfxmmu_lut11h_tt = regs::gfxmmu_gfxmmu_lut11h_v1_tt;
-  using gfxmmu_lut12l_tt = regs::gfxmmu_gfxmmu_lut12l_v1_tt;
-  using gfxmmu_lut12h_tt = regs::gfxmmu_gfxmmu_lut12h_v1_tt;
-  using gfxmmu_lut13l_tt = regs::gfxmmu_gfxmmu_lut13l_v1_tt;
-  using gfxmmu_lut13h_tt = regs::gfxmmu_gfxmmu_lut13h_v1_tt;
-  using gfxmmu_lut14l_tt = regs::gfxmmu_gfxmmu_lut14l_v1_tt;
-  using gfxmmu_lut14h_tt = regs::gfxmmu_gfxmmu_lut14h_v1_tt;
-  using gfxmmu_lut15l_tt = regs::gfxmmu_gfxmmu_lut15l_v1_tt;
-  using gfxmmu_lut15h_tt = regs::gfxmmu_gfxmmu_lut15h_v1_tt;
-  using gfxmmu_lut16l_tt = regs::gfxmmu_gfxmmu_lut16l_v1_tt;
-  using gfxmmu_lut16h_tt = regs::gfxmmu_gfxmmu_lut16h_v1_tt;
-  using gfxmmu_lut17l_tt = regs::gfxmmu_gfxmmu_lut17l_v1_tt;
-  using gfxmmu_lut17h_tt = regs::gfxmmu_gfxmmu_lut17h_v1_tt;
-  using gfxmmu_lut18l_tt = regs::gfxmmu_gfxmmu_lut18l_v1_tt;
-  using gfxmmu_lut18h_tt = regs::gfxmmu_gfxmmu_lut18h_v1_tt;
-  using gfxmmu_lut19l_tt = regs::gfxmmu_gfxmmu_lut19l_v1_tt;
-  using gfxmmu_lut19h_tt = regs::gfxmmu_gfxmmu_lut19h_v1_tt;
-  using gfxmmu_lut20l_tt = regs::gfxmmu_gfxmmu_lut20l_v1_tt;
-  using gfxmmu_lut20h_tt = regs::gfxmmu_gfxmmu_lut20h_v1_tt;
-  using gfxmmu_lut21l_tt = regs::gfxmmu_gfxmmu_lut21l_v1_tt;
-  using gfxmmu_lut21h_tt = regs::gfxmmu_gfxmmu_lut21h_v1_tt;
-  using gfxmmu_lut22l_tt = regs::gfxmmu_gfxmmu_lut22l_v1_tt;
-  using gfxmmu_lut22h_tt = regs::gfxmmu_gfxmmu_lut22h_v1_tt;
-  using gfxmmu_lut23l_tt = regs::gfxmmu_gfxmmu_lut23l_v1_tt;
-  using gfxmmu_lut23h_tt = regs::gfxmmu_gfxmmu_lut23h_v1_tt;
-  using gfxmmu_lut24l_tt = regs::gfxmmu_gfxmmu_lut24l_v1_tt;
-  using gfxmmu_lut24h_tt = regs::gfxmmu_gfxmmu_lut24h_v1_tt;
-  using gfxmmu_lut25l_tt = regs::gfxmmu_gfxmmu_lut25l_v1_tt;
-  using gfxmmu_lut25h_tt = regs::gfxmmu_gfxmmu_lut25h_v1_tt;
-  using gfxmmu_lut26l_tt = regs::gfxmmu_gfxmmu_lut26l_v1_tt;
-  using gfxmmu_lut26h_tt = regs::gfxmmu_gfxmmu_lut26h_v1_tt;
-  using gfxmmu_lut27l_tt = regs::gfxmmu_gfxmmu_lut27l_v1_tt;
-  using gfxmmu_lut27h_tt = regs::gfxmmu_gfxmmu_lut27h_v1_tt;
-  using gfxmmu_lut28l_tt = regs::gfxmmu_gfxmmu_lut28l_v1_tt;
-  using gfxmmu_lut28h_tt = regs::gfxmmu_gfxmmu_lut28h_v1_tt;
-  using gfxmmu_lut29l_tt = regs::gfxmmu_gfxmmu_lut29l_v1_tt;
-  using gfxmmu_lut29h_tt = regs::gfxmmu_gfxmmu_lut29h_v1_tt;
-  using gfxmmu_lut30l_tt = regs::gfxmmu_gfxmmu_lut30l_v1_tt;
-  using gfxmmu_lut30h_tt = regs::gfxmmu_gfxmmu_lut30h_v1_tt;
-  using gfxmmu_lut31l_tt = regs::gfxmmu_gfxmmu_lut31l_v1_tt;
-  using gfxmmu_lut31h_tt = regs::gfxmmu_gfxmmu_lut31h_v1_tt;
-  using gfxmmu_lut32l_tt = regs::gfxmmu_gfxmmu_lut32l_v1_tt;
-  using gfxmmu_lut32h_tt = regs::gfxmmu_gfxmmu_lut32h_v1_tt;
-  using gfxmmu_lut33l_tt = regs::gfxmmu_gfxmmu_lut33l_v1_tt;
-  using gfxmmu_lut33h_tt = regs::gfxmmu_gfxmmu_lut33h_v1_tt;
-  using gfxmmu_lut34l_tt = regs::gfxmmu_gfxmmu_lut34l_v1_tt;
-  using gfxmmu_lut34h_tt = regs::gfxmmu_gfxmmu_lut34h_v1_tt;
-  using gfxmmu_lut35l_tt = regs::gfxmmu_gfxmmu_lut35l_v1_tt;
-  using gfxmmu_lut35h_tt = regs::gfxmmu_gfxmmu_lut35h_v1_tt;
-  using gfxmmu_lut36l_tt = regs::gfxmmu_gfxmmu_lut36l_v1_tt;
-  using gfxmmu_lut36h_tt = regs::gfxmmu_gfxmmu_lut36h_v1_tt;
-  using gfxmmu_lut37l_tt = regs::gfxmmu_gfxmmu_lut37l_v1_tt;
-  using gfxmmu_lut37h_tt = regs::gfxmmu_gfxmmu_lut37h_v1_tt;
-  using gfxmmu_lut38l_tt = regs::gfxmmu_gfxmmu_lut38l_v1_tt;
-  using gfxmmu_lut38h_tt = regs::gfxmmu_gfxmmu_lut38h_v1_tt;
-  using gfxmmu_lut39l_tt = regs::gfxmmu_gfxmmu_lut39l_v1_tt;
-  using gfxmmu_lut39h_tt = regs::gfxmmu_gfxmmu_lut39h_v1_tt;
-  using gfxmmu_lut40l_tt = regs::gfxmmu_gfxmmu_lut40l_v1_tt;
-  using gfxmmu_lut40h_tt = regs::gfxmmu_gfxmmu_lut40h_v1_tt;
-  using gfxmmu_lut41l_tt = regs::gfxmmu_gfxmmu_lut41l_v1_tt;
-  using gfxmmu_lut41h_tt = regs::gfxmmu_gfxmmu_lut41h_v1_tt;
-  using gfxmmu_lut42l_tt = regs::gfxmmu_gfxmmu_lut42l_v1_tt;
-  using gfxmmu_lut42h_tt = regs::gfxmmu_gfxmmu_lut42h_v1_tt;
-  using gfxmmu_lut43l_tt = regs::gfxmmu_gfxmmu_lut43l_v1_tt;
-  using gfxmmu_lut43h_tt = regs::gfxmmu_gfxmmu_lut43h_v1_tt;
-  using gfxmmu_lut44l_tt = regs::gfxmmu_gfxmmu_lut44l_v1_tt;
-  using gfxmmu_lut44h_tt = regs::gfxmmu_gfxmmu_lut44h_v1_tt;
-  using gfxmmu_lut45l_tt = regs::gfxmmu_gfxmmu_lut45l_v1_tt;
-  using gfxmmu_lut45h_tt = regs::gfxmmu_gfxmmu_lut45h_v1_tt;
-  using gfxmmu_lut46l_tt = regs::gfxmmu_gfxmmu_lut46l_v1_tt;
-  using gfxmmu_lut46h_tt = regs::gfxmmu_gfxmmu_lut46h_v1_tt;
-  using gfxmmu_lut47l_tt = regs::gfxmmu_gfxmmu_lut47l_v1_tt;
-  using gfxmmu_lut47h_tt = regs::gfxmmu_gfxmmu_lut47h_v1_tt;
-  using gfxmmu_lut48l_tt = regs::gfxmmu_gfxmmu_lut48l_v1_tt;
-  using gfxmmu_lut48h_tt = regs::gfxmmu_gfxmmu_lut48h_v1_tt;
-  using gfxmmu_lut49l_tt = regs::gfxmmu_gfxmmu_lut49l_v1_tt;
-  using gfxmmu_lut49h_tt = regs::gfxmmu_gfxmmu_lut49h_v1_tt;
-  using gfxmmu_lut50l_tt = regs::gfxmmu_gfxmmu_lut50l_v1_tt;
-  using gfxmmu_lut50h_tt = regs::gfxmmu_gfxmmu_lut50h_v1_tt;
-  using gfxmmu_lut51l_tt = regs::gfxmmu_gfxmmu_lut51l_v1_tt;
-  using gfxmmu_lut51h_tt = regs::gfxmmu_gfxmmu_lut51h_v1_tt;
-  using gfxmmu_lut52l_tt = regs::gfxmmu_gfxmmu_lut52l_v1_tt;
-  using gfxmmu_lut52h_tt = regs::gfxmmu_gfxmmu_lut52h_v1_tt;
-  using gfxmmu_lut53l_tt = regs::gfxmmu_gfxmmu_lut53l_v1_tt;
-  using gfxmmu_lut53h_tt = regs::gfxmmu_gfxmmu_lut53h_v1_tt;
-  using gfxmmu_lut54l_tt = regs::gfxmmu_gfxmmu_lut54l_v1_tt;
-  using gfxmmu_lut54h_tt = regs::gfxmmu_gfxmmu_lut54h_v1_tt;
-  using gfxmmu_lut55l_tt = regs::gfxmmu_gfxmmu_lut55l_v1_tt;
-  using gfxmmu_lut55h_tt = regs::gfxmmu_gfxmmu_lut55h_v1_tt;
-  using gfxmmu_lut56l_tt = regs::gfxmmu_gfxmmu_lut56l_v1_tt;
-  using gfxmmu_lut56h_tt = regs::gfxmmu_gfxmmu_lut56h_v1_tt;
-  using gfxmmu_lut57l_tt = regs::gfxmmu_gfxmmu_lut57l_v1_tt;
-  using gfxmmu_lut57h_tt = regs::gfxmmu_gfxmmu_lut57h_v1_tt;
-  using gfxmmu_lut58l_tt = regs::gfxmmu_gfxmmu_lut58l_v1_tt;
-  using gfxmmu_lut58h_tt = regs::gfxmmu_gfxmmu_lut58h_v1_tt;
-  using gfxmmu_lut59l_tt = regs::gfxmmu_gfxmmu_lut59l_v1_tt;
-  using gfxmmu_lut59h_tt = regs::gfxmmu_gfxmmu_lut59h_v1_tt;
-  using gfxmmu_lut60l_tt = regs::gfxmmu_gfxmmu_lut60l_v1_tt;
-  using gfxmmu_lut60h_tt = regs::gfxmmu_gfxmmu_lut60h_v1_tt;
-  using gfxmmu_lut61l_tt = regs::gfxmmu_gfxmmu_lut61l_v1_tt;
-  using gfxmmu_lut61h_tt = regs::gfxmmu_gfxmmu_lut61h_v1_tt;
-  using gfxmmu_lut62l_tt = regs::gfxmmu_gfxmmu_lut62l_v1_tt;
-  using gfxmmu_lut62h_tt = regs::gfxmmu_gfxmmu_lut62h_v1_tt;
-  using gfxmmu_lut63l_tt = regs::gfxmmu_gfxmmu_lut63l_v1_tt;
-  using gfxmmu_lut63h_tt = regs::gfxmmu_gfxmmu_lut63h_v1_tt;
-  using gfxmmu_lut64l_tt = regs::gfxmmu_gfxmmu_lut64l_v1_tt;
-  using gfxmmu_lut64h_tt = regs::gfxmmu_gfxmmu_lut64h_v1_tt;
-  using gfxmmu_lut65l_tt = regs::gfxmmu_gfxmmu_lut65l_v1_tt;
-  using gfxmmu_lut65h_tt = regs::gfxmmu_gfxmmu_lut65h_v1_tt;
-  using gfxmmu_lut66l_tt = regs::gfxmmu_gfxmmu_lut66l_v1_tt;
-  using gfxmmu_lut66h_tt = regs::gfxmmu_gfxmmu_lut66h_v1_tt;
-  using gfxmmu_lut67l_tt = regs::gfxmmu_gfxmmu_lut67l_v1_tt;
-  using gfxmmu_lut67h_tt = regs::gfxmmu_gfxmmu_lut67h_v1_tt;
-  using gfxmmu_lut68l_tt = regs::gfxmmu_gfxmmu_lut68l_v1_tt;
-  using gfxmmu_lut68h_tt = regs::gfxmmu_gfxmmu_lut68h_v1_tt;
-  using gfxmmu_lut69l_tt = regs::gfxmmu_gfxmmu_lut69l_v1_tt;
-  using gfxmmu_lut69h_tt = regs::gfxmmu_gfxmmu_lut69h_v1_tt;
-  using gfxmmu_lut70l_tt = regs::gfxmmu_gfxmmu_lut70l_v1_tt;
-  using gfxmmu_lut70h_tt = regs::gfxmmu_gfxmmu_lut70h_v1_tt;
-  using gfxmmu_lut71l_tt = regs::gfxmmu_gfxmmu_lut71l_v1_tt;
-  using gfxmmu_lut71h_tt = regs::gfxmmu_gfxmmu_lut71h_v1_tt;
-  using gfxmmu_lut72l_tt = regs::gfxmmu_gfxmmu_lut72l_v1_tt;
-  using gfxmmu_lut72h_tt = regs::gfxmmu_gfxmmu_lut72h_v1_tt;
-  using gfxmmu_lut73l_tt = regs::gfxmmu_gfxmmu_lut73l_v1_tt;
-  using gfxmmu_lut73h_tt = regs::gfxmmu_gfxmmu_lut73h_v1_tt;
-  using gfxmmu_lut74l_tt = regs::gfxmmu_gfxmmu_lut74l_v1_tt;
-  using gfxmmu_lut74h_tt = regs::gfxmmu_gfxmmu_lut74h_v1_tt;
-  using gfxmmu_lut75l_tt = regs::gfxmmu_gfxmmu_lut75l_v1_tt;
-  using gfxmmu_lut75h_tt = regs::gfxmmu_gfxmmu_lut75h_v1_tt;
-  using gfxmmu_lut76l_tt = regs::gfxmmu_gfxmmu_lut76l_v1_tt;
-  using gfxmmu_lut76h_tt = regs::gfxmmu_gfxmmu_lut76h_v1_tt;
-  using gfxmmu_lut77l_tt = regs::gfxmmu_gfxmmu_lut77l_v1_tt;
-  using gfxmmu_lut77h_tt = regs::gfxmmu_gfxmmu_lut77h_v1_tt;
-  using gfxmmu_lut78l_tt = regs::gfxmmu_gfxmmu_lut78l_v1_tt;
-  using gfxmmu_lut78h_tt = regs::gfxmmu_gfxmmu_lut78h_v1_tt;
-  using gfxmmu_lut79l_tt = regs::gfxmmu_gfxmmu_lut79l_v1_tt;
-  using gfxmmu_lut79h_tt = regs::gfxmmu_gfxmmu_lut79h_v1_tt;
-  using gfxmmu_lut80l_tt = regs::gfxmmu_gfxmmu_lut80l_v1_tt;
-  using gfxmmu_lut80h_tt = regs::gfxmmu_gfxmmu_lut80h_v1_tt;
-  using gfxmmu_lut81l_tt = regs::gfxmmu_gfxmmu_lut81l_v1_tt;
-  using gfxmmu_lut81h_tt = regs::gfxmmu_gfxmmu_lut81h_v1_tt;
-  using gfxmmu_lut82l_tt = regs::gfxmmu_gfxmmu_lut82l_v1_tt;
-  using gfxmmu_lut82h_tt = regs::gfxmmu_gfxmmu_lut82h_v1_tt;
-  using gfxmmu_lut83l_tt = regs::gfxmmu_gfxmmu_lut83l_v1_tt;
-  using gfxmmu_lut83h_tt = regs::gfxmmu_gfxmmu_lut83h_v1_tt;
-  using gfxmmu_lut84l_tt = regs::gfxmmu_gfxmmu_lut84l_v1_tt;
-  using gfxmmu_lut84h_tt = regs::gfxmmu_gfxmmu_lut84h_v1_tt;
-  using gfxmmu_lut85l_tt = regs::gfxmmu_gfxmmu_lut85l_v1_tt;
-  using gfxmmu_lut85h_tt = regs::gfxmmu_gfxmmu_lut85h_v1_tt;
-  using gfxmmu_lut86l_tt = regs::gfxmmu_gfxmmu_lut86l_v1_tt;
-  using gfxmmu_lut86h_tt = regs::gfxmmu_gfxmmu_lut86h_v1_tt;
-  using gfxmmu_lut87l_tt = regs::gfxmmu_gfxmmu_lut87l_v1_tt;
-  using gfxmmu_lut87h_tt = regs::gfxmmu_gfxmmu_lut87h_v1_tt;
-  using gfxmmu_lut88l_tt = regs::gfxmmu_gfxmmu_lut88l_v1_tt;
-  using gfxmmu_lut88h_tt = regs::gfxmmu_gfxmmu_lut88h_v1_tt;
-  using gfxmmu_lut89l_tt = regs::gfxmmu_gfxmmu_lut89l_v1_tt;
-  using gfxmmu_lut89h_tt = regs::gfxmmu_gfxmmu_lut89h_v1_tt;
-  using gfxmmu_lut90l_tt = regs::gfxmmu_gfxmmu_lut90l_v1_tt;
-  using gfxmmu_lut90h_tt = regs::gfxmmu_gfxmmu_lut90h_v1_tt;
-  using gfxmmu_lut91l_tt = regs::gfxmmu_gfxmmu_lut91l_v1_tt;
-  using gfxmmu_lut91h_tt = regs::gfxmmu_gfxmmu_lut91h_v1_tt;
-  using gfxmmu_lut92l_tt = regs::gfxmmu_gfxmmu_lut92l_v1_tt;
-  using gfxmmu_lut92h_tt = regs::gfxmmu_gfxmmu_lut92h_v1_tt;
-  using gfxmmu_lut93l_tt = regs::gfxmmu_gfxmmu_lut93l_v1_tt;
-  using gfxmmu_lut93h_tt = regs::gfxmmu_gfxmmu_lut93h_v1_tt;
-  using gfxmmu_lut94l_tt = regs::gfxmmu_gfxmmu_lut94l_v1_tt;
-  using gfxmmu_lut94h_tt = regs::gfxmmu_gfxmmu_lut94h_v1_tt;
-  using gfxmmu_lut95l_tt = regs::gfxmmu_gfxmmu_lut95l_v1_tt;
-  using gfxmmu_lut95h_tt = regs::gfxmmu_gfxmmu_lut95h_v1_tt;
-  using gfxmmu_lut96l_tt = regs::gfxmmu_gfxmmu_lut96l_v1_tt;
-  using gfxmmu_lut96h_tt = regs::gfxmmu_gfxmmu_lut96h_v1_tt;
-  using gfxmmu_lut97l_tt = regs::gfxmmu_gfxmmu_lut97l_v1_tt;
-  using gfxmmu_lut97h_tt = regs::gfxmmu_gfxmmu_lut97h_v1_tt;
-  using gfxmmu_lut98l_tt = regs::gfxmmu_gfxmmu_lut98l_v1_tt;
-  using gfxmmu_lut98h_tt = regs::gfxmmu_gfxmmu_lut98h_v1_tt;
-  using gfxmmu_lut99l_tt = regs::gfxmmu_gfxmmu_lut99l_v1_tt;
-  using gfxmmu_lut99h_tt = regs::gfxmmu_gfxmmu_lut99h_v1_tt;
-  using gfxmmu_lut100l_tt = regs::gfxmmu_gfxmmu_lut100l_v1_tt;
-  using gfxmmu_lut100h_tt = regs::gfxmmu_gfxmmu_lut100h_v1_tt;
-  using gfxmmu_lut101l_tt = regs::gfxmmu_gfxmmu_lut101l_v1_tt;
-  using gfxmmu_lut101h_tt = regs::gfxmmu_gfxmmu_lut101h_v1_tt;
-  using gfxmmu_lut102l_tt = regs::gfxmmu_gfxmmu_lut102l_v1_tt;
-  using gfxmmu_lut102h_tt = regs::gfxmmu_gfxmmu_lut102h_v1_tt;
-  using gfxmmu_lut103l_tt = regs::gfxmmu_gfxmmu_lut103l_v1_tt;
-  using gfxmmu_lut103h_tt = regs::gfxmmu_gfxmmu_lut103h_v1_tt;
-  using gfxmmu_lut104l_tt = regs::gfxmmu_gfxmmu_lut104l_v1_tt;
-  using gfxmmu_lut104h_tt = regs::gfxmmu_gfxmmu_lut104h_v1_tt;
-  using gfxmmu_lut105l_tt = regs::gfxmmu_gfxmmu_lut105l_v1_tt;
-  using gfxmmu_lut105h_tt = regs::gfxmmu_gfxmmu_lut105h_v1_tt;
-  using gfxmmu_lut106l_tt = regs::gfxmmu_gfxmmu_lut106l_v1_tt;
-  using gfxmmu_lut106h_tt = regs::gfxmmu_gfxmmu_lut106h_v1_tt;
-  using gfxmmu_lut107l_tt = regs::gfxmmu_gfxmmu_lut107l_v1_tt;
-  using gfxmmu_lut107h_tt = regs::gfxmmu_gfxmmu_lut107h_v1_tt;
-  using gfxmmu_lut108l_tt = regs::gfxmmu_gfxmmu_lut108l_v1_tt;
-  using gfxmmu_lut108h_tt = regs::gfxmmu_gfxmmu_lut108h_v1_tt;
-  using gfxmmu_lut109l_tt = regs::gfxmmu_gfxmmu_lut109l_v1_tt;
-  using gfxmmu_lut109h_tt = regs::gfxmmu_gfxmmu_lut109h_v1_tt;
-  using gfxmmu_lut110l_tt = regs::gfxmmu_gfxmmu_lut110l_v1_tt;
-  using gfxmmu_lut110h_tt = regs::gfxmmu_gfxmmu_lut110h_v1_tt;
-  using gfxmmu_lut111l_tt = regs::gfxmmu_gfxmmu_lut111l_v1_tt;
-  using gfxmmu_lut111h_tt = regs::gfxmmu_gfxmmu_lut111h_v1_tt;
-  using gfxmmu_lut112l_tt = regs::gfxmmu_gfxmmu_lut112l_v1_tt;
-  using gfxmmu_lut112h_tt = regs::gfxmmu_gfxmmu_lut112h_v1_tt;
-  using gfxmmu_lut113l_tt = regs::gfxmmu_gfxmmu_lut113l_v1_tt;
-  using gfxmmu_lut113h_tt = regs::gfxmmu_gfxmmu_lut113h_v1_tt;
-  using gfxmmu_lut114l_tt = regs::gfxmmu_gfxmmu_lut114l_v1_tt;
-  using gfxmmu_lut114h_tt = regs::gfxmmu_gfxmmu_lut114h_v1_tt;
-  using gfxmmu_lut115l_tt = regs::gfxmmu_gfxmmu_lut115l_v1_tt;
-  using gfxmmu_lut115h_tt = regs::gfxmmu_gfxmmu_lut115h_v1_tt;
-  using gfxmmu_lut116l_tt = regs::gfxmmu_gfxmmu_lut116l_v1_tt;
-  using gfxmmu_lut116h_tt = regs::gfxmmu_gfxmmu_lut116h_v1_tt;
-  using gfxmmu_lut117l_tt = regs::gfxmmu_gfxmmu_lut117l_v1_tt;
-  using gfxmmu_lut117h_tt = regs::gfxmmu_gfxmmu_lut117h_v1_tt;
-  using gfxmmu_lut118l_tt = regs::gfxmmu_gfxmmu_lut118l_v1_tt;
-  using gfxmmu_lut118h_tt = regs::gfxmmu_gfxmmu_lut118h_v1_tt;
-  using gfxmmu_lut119l_tt = regs::gfxmmu_gfxmmu_lut119l_v1_tt;
-  using gfxmmu_lut119h_tt = regs::gfxmmu_gfxmmu_lut119h_v1_tt;
-  using gfxmmu_lut120l_tt = regs::gfxmmu_gfxmmu_lut120l_v1_tt;
-  using gfxmmu_lut120h_tt = regs::gfxmmu_gfxmmu_lut120h_v1_tt;
-  using gfxmmu_lut121l_tt = regs::gfxmmu_gfxmmu_lut121l_v1_tt;
-  using gfxmmu_lut121h_tt = regs::gfxmmu_gfxmmu_lut121h_v1_tt;
-  using gfxmmu_lut122l_tt = regs::gfxmmu_gfxmmu_lut122l_v1_tt;
-  using gfxmmu_lut122h_tt = regs::gfxmmu_gfxmmu_lut122h_v1_tt;
-  using gfxmmu_lut123l_tt = regs::gfxmmu_gfxmmu_lut123l_v1_tt;
-  using gfxmmu_lut123h_tt = regs::gfxmmu_gfxmmu_lut123h_v1_tt;
-  using gfxmmu_lut124l_tt = regs::gfxmmu_gfxmmu_lut124l_v1_tt;
-  using gfxmmu_lut124h_tt = regs::gfxmmu_gfxmmu_lut124h_v1_tt;
-  using gfxmmu_lut125l_tt = regs::gfxmmu_gfxmmu_lut125l_v1_tt;
-  using gfxmmu_lut125h_tt = regs::gfxmmu_gfxmmu_lut125h_v1_tt;
-  using gfxmmu_lut126l_tt = regs::gfxmmu_gfxmmu_lut126l_v1_tt;
-  using gfxmmu_lut126h_tt = regs::gfxmmu_gfxmmu_lut126h_v1_tt;
-  using gfxmmu_lut127l_tt = regs::gfxmmu_gfxmmu_lut127l_v1_tt;
-  using gfxmmu_lut127h_tt = regs::gfxmmu_gfxmmu_lut127h_v1_tt;
-  using gfxmmu_lut128l_tt = regs::gfxmmu_gfxmmu_lut128l_v1_tt;
-  using gfxmmu_lut128h_tt = regs::gfxmmu_gfxmmu_lut128h_v1_tt;
-  using gfxmmu_lut129l_tt = regs::gfxmmu_gfxmmu_lut129l_v1_tt;
-  using gfxmmu_lut129h_tt = regs::gfxmmu_gfxmmu_lut129h_v1_tt;
-  using gfxmmu_lut130l_tt = regs::gfxmmu_gfxmmu_lut130l_v1_tt;
-  using gfxmmu_lut130h_tt = regs::gfxmmu_gfxmmu_lut130h_v1_tt;
-  using gfxmmu_lut131l_tt = regs::gfxmmu_gfxmmu_lut131l_v1_tt;
-  using gfxmmu_lut131h_tt = regs::gfxmmu_gfxmmu_lut131h_v1_tt;
-  using gfxmmu_lut132l_tt = regs::gfxmmu_gfxmmu_lut132l_v1_tt;
-  using gfxmmu_lut132h_tt = regs::gfxmmu_gfxmmu_lut132h_v1_tt;
-  using gfxmmu_lut133l_tt = regs::gfxmmu_gfxmmu_lut133l_v1_tt;
-  using gfxmmu_lut133h_tt = regs::gfxmmu_gfxmmu_lut133h_v1_tt;
-  using gfxmmu_lut134l_tt = regs::gfxmmu_gfxmmu_lut134l_v1_tt;
-  using gfxmmu_lut134h_tt = regs::gfxmmu_gfxmmu_lut134h_v1_tt;
-  using gfxmmu_lut135l_tt = regs::gfxmmu_gfxmmu_lut135l_v1_tt;
-  using gfxmmu_lut135h_tt = regs::gfxmmu_gfxmmu_lut135h_v1_tt;
-  using gfxmmu_lut136l_tt = regs::gfxmmu_gfxmmu_lut136l_v1_tt;
-  using gfxmmu_lut136h_tt = regs::gfxmmu_gfxmmu_lut136h_v1_tt;
-  using gfxmmu_lut137l_tt = regs::gfxmmu_gfxmmu_lut137l_v1_tt;
-  using gfxmmu_lut137h_tt = regs::gfxmmu_gfxmmu_lut137h_v1_tt;
-  using gfxmmu_lut138l_tt = regs::gfxmmu_gfxmmu_lut138l_v1_tt;
-  using gfxmmu_lut138h_tt = regs::gfxmmu_gfxmmu_lut138h_v1_tt;
-  using gfxmmu_lut139l_tt = regs::gfxmmu_gfxmmu_lut139l_v1_tt;
-  using gfxmmu_lut139h_tt = regs::gfxmmu_gfxmmu_lut139h_v1_tt;
-  using gfxmmu_lut140l_tt = regs::gfxmmu_gfxmmu_lut140l_v1_tt;
-  using gfxmmu_lut140h_tt = regs::gfxmmu_gfxmmu_lut140h_v1_tt;
-  using gfxmmu_lut141l_tt = regs::gfxmmu_gfxmmu_lut141l_v1_tt;
-  using gfxmmu_lut141h_tt = regs::gfxmmu_gfxmmu_lut141h_v1_tt;
-  using gfxmmu_lut142l_tt = regs::gfxmmu_gfxmmu_lut142l_v1_tt;
-  using gfxmmu_lut142h_tt = regs::gfxmmu_gfxmmu_lut142h_v1_tt;
-  using gfxmmu_lut143l_tt = regs::gfxmmu_gfxmmu_lut143l_v1_tt;
-  using gfxmmu_lut143h_tt = regs::gfxmmu_gfxmmu_lut143h_v1_tt;
-  using gfxmmu_lut144l_tt = regs::gfxmmu_gfxmmu_lut144l_v1_tt;
-  using gfxmmu_lut144h_tt = regs::gfxmmu_gfxmmu_lut144h_v1_tt;
-  using gfxmmu_lut145l_tt = regs::gfxmmu_gfxmmu_lut145l_v1_tt;
-  using gfxmmu_lut145h_tt = regs::gfxmmu_gfxmmu_lut145h_v1_tt;
-  using gfxmmu_lut146l_tt = regs::gfxmmu_gfxmmu_lut146l_v1_tt;
-  using gfxmmu_lut146h_tt = regs::gfxmmu_gfxmmu_lut146h_v1_tt;
-  using gfxmmu_lut147l_tt = regs::gfxmmu_gfxmmu_lut147l_v1_tt;
-  using gfxmmu_lut147h_tt = regs::gfxmmu_gfxmmu_lut147h_v1_tt;
-  using gfxmmu_lut148l_tt = regs::gfxmmu_gfxmmu_lut148l_v1_tt;
-  using gfxmmu_lut148h_tt = regs::gfxmmu_gfxmmu_lut148h_v1_tt;
-  using gfxmmu_lut149l_tt = regs::gfxmmu_gfxmmu_lut149l_v1_tt;
-  using gfxmmu_lut149h_tt = regs::gfxmmu_gfxmmu_lut149h_v1_tt;
-  using gfxmmu_lut150l_tt = regs::gfxmmu_gfxmmu_lut150l_v1_tt;
-  using gfxmmu_lut150h_tt = regs::gfxmmu_gfxmmu_lut150h_v1_tt;
-  using gfxmmu_lut151l_tt = regs::gfxmmu_gfxmmu_lut151l_v1_tt;
-  using gfxmmu_lut151h_tt = regs::gfxmmu_gfxmmu_lut151h_v1_tt;
-  using gfxmmu_lut152l_tt = regs::gfxmmu_gfxmmu_lut152l_v1_tt;
-  using gfxmmu_lut152h_tt = regs::gfxmmu_gfxmmu_lut152h_v1_tt;
-  using gfxmmu_lut153l_tt = regs::gfxmmu_gfxmmu_lut153l_v1_tt;
-  using gfxmmu_lut153h_tt = regs::gfxmmu_gfxmmu_lut153h_v1_tt;
-  using gfxmmu_lut154l_tt = regs::gfxmmu_gfxmmu_lut154l_v1_tt;
-  using gfxmmu_lut154h_tt = regs::gfxmmu_gfxmmu_lut154h_v1_tt;
-  using gfxmmu_lut155l_tt = regs::gfxmmu_gfxmmu_lut155l_v1_tt;
-  using gfxmmu_lut155h_tt = regs::gfxmmu_gfxmmu_lut155h_v1_tt;
-  using gfxmmu_lut156l_tt = regs::gfxmmu_gfxmmu_lut156l_v1_tt;
-  using gfxmmu_lut156h_tt = regs::gfxmmu_gfxmmu_lut156h_v1_tt;
-  using gfxmmu_lut157l_tt = regs::gfxmmu_gfxmmu_lut157l_v1_tt;
-  using gfxmmu_lut157h_tt = regs::gfxmmu_gfxmmu_lut157h_v1_tt;
-  using gfxmmu_lut158l_tt = regs::gfxmmu_gfxmmu_lut158l_v1_tt;
-  using gfxmmu_lut158h_tt = regs::gfxmmu_gfxmmu_lut158h_v1_tt;
-  using gfxmmu_lut159l_tt = regs::gfxmmu_gfxmmu_lut159l_v1_tt;
-  using gfxmmu_lut159h_tt = regs::gfxmmu_gfxmmu_lut159h_v1_tt;
-  using gfxmmu_lut160l_tt = regs::gfxmmu_gfxmmu_lut160l_v1_tt;
-  using gfxmmu_lut160h_tt = regs::gfxmmu_gfxmmu_lut160h_v1_tt;
-  using gfxmmu_lut161l_tt = regs::gfxmmu_gfxmmu_lut161l_v1_tt;
-  using gfxmmu_lut161h_tt = regs::gfxmmu_gfxmmu_lut161h_v1_tt;
-  using gfxmmu_lut162l_tt = regs::gfxmmu_gfxmmu_lut162l_v1_tt;
-  using gfxmmu_lut162h_tt = regs::gfxmmu_gfxmmu_lut162h_v1_tt;
-  using gfxmmu_lut163l_tt = regs::gfxmmu_gfxmmu_lut163l_v1_tt;
-  using gfxmmu_lut163h_tt = regs::gfxmmu_gfxmmu_lut163h_v1_tt;
-  using gfxmmu_lut164l_tt = regs::gfxmmu_gfxmmu_lut164l_v1_tt;
-  using gfxmmu_lut164h_tt = regs::gfxmmu_gfxmmu_lut164h_v1_tt;
-  using gfxmmu_lut165l_tt = regs::gfxmmu_gfxmmu_lut165l_v1_tt;
-  using gfxmmu_lut165h_tt = regs::gfxmmu_gfxmmu_lut165h_v1_tt;
-  using gfxmmu_lut166l_tt = regs::gfxmmu_gfxmmu_lut166l_v1_tt;
-  using gfxmmu_lut166h_tt = regs::gfxmmu_gfxmmu_lut166h_v1_tt;
-  using gfxmmu_lut167l_tt = regs::gfxmmu_gfxmmu_lut167l_v1_tt;
-  using gfxmmu_lut167h_tt = regs::gfxmmu_gfxmmu_lut167h_v1_tt;
-  using gfxmmu_lut168l_tt = regs::gfxmmu_gfxmmu_lut168l_v1_tt;
-  using gfxmmu_lut168h_tt = regs::gfxmmu_gfxmmu_lut168h_v1_tt;
-  using gfxmmu_lut169l_tt = regs::gfxmmu_gfxmmu_lut169l_v1_tt;
-  using gfxmmu_lut169h_tt = regs::gfxmmu_gfxmmu_lut169h_v1_tt;
-  using gfxmmu_lut170l_tt = regs::gfxmmu_gfxmmu_lut170l_v1_tt;
-  using gfxmmu_lut170h_tt = regs::gfxmmu_gfxmmu_lut170h_v1_tt;
-  using gfxmmu_lut171l_tt = regs::gfxmmu_gfxmmu_lut171l_v1_tt;
-  using gfxmmu_lut171h_tt = regs::gfxmmu_gfxmmu_lut171h_v1_tt;
-  using gfxmmu_lut172l_tt = regs::gfxmmu_gfxmmu_lut172l_v1_tt;
-  using gfxmmu_lut172h_tt = regs::gfxmmu_gfxmmu_lut172h_v1_tt;
-  using gfxmmu_lut173l_tt = regs::gfxmmu_gfxmmu_lut173l_v1_tt;
-  using gfxmmu_lut173h_tt = regs::gfxmmu_gfxmmu_lut173h_v1_tt;
-  using gfxmmu_lut174l_tt = regs::gfxmmu_gfxmmu_lut174l_v1_tt;
-  using gfxmmu_lut174h_tt = regs::gfxmmu_gfxmmu_lut174h_v1_tt;
-  using gfxmmu_lut175l_tt = regs::gfxmmu_gfxmmu_lut175l_v1_tt;
-  using gfxmmu_lut175h_tt = regs::gfxmmu_gfxmmu_lut175h_v1_tt;
-  using gfxmmu_lut176l_tt = regs::gfxmmu_gfxmmu_lut176l_v1_tt;
-  using gfxmmu_lut176h_tt = regs::gfxmmu_gfxmmu_lut176h_v1_tt;
-  using gfxmmu_lut177l_tt = regs::gfxmmu_gfxmmu_lut177l_v1_tt;
-  using gfxmmu_lut177h_tt = regs::gfxmmu_gfxmmu_lut177h_v1_tt;
-  using gfxmmu_lut178l_tt = regs::gfxmmu_gfxmmu_lut178l_v1_tt;
-  using gfxmmu_lut178h_tt = regs::gfxmmu_gfxmmu_lut178h_v1_tt;
-  using gfxmmu_lut179l_tt = regs::gfxmmu_gfxmmu_lut179l_v1_tt;
-  using gfxmmu_lut179h_tt = regs::gfxmmu_gfxmmu_lut179h_v1_tt;
-  using gfxmmu_lut180l_tt = regs::gfxmmu_gfxmmu_lut180l_v1_tt;
-  using gfxmmu_lut180h_tt = regs::gfxmmu_gfxmmu_lut180h_v1_tt;
-  using gfxmmu_lut181l_tt = regs::gfxmmu_gfxmmu_lut181l_v1_tt;
-  using gfxmmu_lut181h_tt = regs::gfxmmu_gfxmmu_lut181h_v1_tt;
-  using gfxmmu_lut182l_tt = regs::gfxmmu_gfxmmu_lut182l_v1_tt;
-  using gfxmmu_lut182h_tt = regs::gfxmmu_gfxmmu_lut182h_v1_tt;
-  using gfxmmu_lut183l_tt = regs::gfxmmu_gfxmmu_lut183l_v1_tt;
-  using gfxmmu_lut183h_tt = regs::gfxmmu_gfxmmu_lut183h_v1_tt;
-  using gfxmmu_lut184l_tt = regs::gfxmmu_gfxmmu_lut184l_v1_tt;
-  using gfxmmu_lut184h_tt = regs::gfxmmu_gfxmmu_lut184h_v1_tt;
-  using gfxmmu_lut185l_tt = regs::gfxmmu_gfxmmu_lut185l_v1_tt;
-  using gfxmmu_lut185h_tt = regs::gfxmmu_gfxmmu_lut185h_v1_tt;
-  using gfxmmu_lut186l_tt = regs::gfxmmu_gfxmmu_lut186l_v1_tt;
-  using gfxmmu_lut186h_tt = regs::gfxmmu_gfxmmu_lut186h_v1_tt;
-  using gfxmmu_lut187l_tt = regs::gfxmmu_gfxmmu_lut187l_v1_tt;
-  using gfxmmu_lut187h_tt = regs::gfxmmu_gfxmmu_lut187h_v1_tt;
-  using gfxmmu_lut188l_tt = regs::gfxmmu_gfxmmu_lut188l_v1_tt;
-  using gfxmmu_lut188h_tt = regs::gfxmmu_gfxmmu_lut188h_v1_tt;
-  using gfxmmu_lut189l_tt = regs::gfxmmu_gfxmmu_lut189l_v1_tt;
-  using gfxmmu_lut189h_tt = regs::gfxmmu_gfxmmu_lut189h_v1_tt;
-  using gfxmmu_lut190l_tt = regs::gfxmmu_gfxmmu_lut190l_v1_tt;
-  using gfxmmu_lut190h_tt = regs::gfxmmu_gfxmmu_lut190h_v1_tt;
-  using gfxmmu_lut191l_tt = regs::gfxmmu_gfxmmu_lut191l_v1_tt;
-  using gfxmmu_lut191h_tt = regs::gfxmmu_gfxmmu_lut191h_v1_tt;
-  using gfxmmu_lut192l_tt = regs::gfxmmu_gfxmmu_lut192l_v1_tt;
-  using gfxmmu_lut192h_tt = regs::gfxmmu_gfxmmu_lut192h_v1_tt;
-  using gfxmmu_lut193l_tt = regs::gfxmmu_gfxmmu_lut193l_v1_tt;
-  using gfxmmu_lut193h_tt = regs::gfxmmu_gfxmmu_lut193h_v1_tt;
-  using gfxmmu_lut194l_tt = regs::gfxmmu_gfxmmu_lut194l_v1_tt;
-  using gfxmmu_lut194h_tt = regs::gfxmmu_gfxmmu_lut194h_v1_tt;
-  using gfxmmu_lut195l_tt = regs::gfxmmu_gfxmmu_lut195l_v1_tt;
-  using gfxmmu_lut195h_tt = regs::gfxmmu_gfxmmu_lut195h_v1_tt;
-  using gfxmmu_lut196l_tt = regs::gfxmmu_gfxmmu_lut196l_v1_tt;
-  using gfxmmu_lut196h_tt = regs::gfxmmu_gfxmmu_lut196h_v1_tt;
-  using gfxmmu_lut197l_tt = regs::gfxmmu_gfxmmu_lut197l_v1_tt;
-  using gfxmmu_lut197h_tt = regs::gfxmmu_gfxmmu_lut197h_v1_tt;
-  using gfxmmu_lut198l_tt = regs::gfxmmu_gfxmmu_lut198l_v1_tt;
-  using gfxmmu_lut198h_tt = regs::gfxmmu_gfxmmu_lut198h_v1_tt;
-  using gfxmmu_lut199l_tt = regs::gfxmmu_gfxmmu_lut199l_v1_tt;
-  using gfxmmu_lut199h_tt = regs::gfxmmu_gfxmmu_lut199h_v1_tt;
-  using gfxmmu_lut200l_tt = regs::gfxmmu_gfxmmu_lut200l_v1_tt;
-  using gfxmmu_lut200h_tt = regs::gfxmmu_gfxmmu_lut200h_v1_tt;
-  using gfxmmu_lut201l_tt = regs::gfxmmu_gfxmmu_lut201l_v1_tt;
-  using gfxmmu_lut201h_tt = regs::gfxmmu_gfxmmu_lut201h_v1_tt;
-  using gfxmmu_lut202l_tt = regs::gfxmmu_gfxmmu_lut202l_v1_tt;
-  using gfxmmu_lut202h_tt = regs::gfxmmu_gfxmmu_lut202h_v1_tt;
-  using gfxmmu_lut203l_tt = regs::gfxmmu_gfxmmu_lut203l_v1_tt;
-  using gfxmmu_lut203h_tt = regs::gfxmmu_gfxmmu_lut203h_v1_tt;
-  using gfxmmu_lut204l_tt = regs::gfxmmu_gfxmmu_lut204l_v1_tt;
-  using gfxmmu_lut204h_tt = regs::gfxmmu_gfxmmu_lut204h_v1_tt;
-  using gfxmmu_lut205l_tt = regs::gfxmmu_gfxmmu_lut205l_v1_tt;
-  using gfxmmu_lut205h_tt = regs::gfxmmu_gfxmmu_lut205h_v1_tt;
-  using gfxmmu_lut206l_tt = regs::gfxmmu_gfxmmu_lut206l_v1_tt;
-  using gfxmmu_lut206h_tt = regs::gfxmmu_gfxmmu_lut206h_v1_tt;
-  using gfxmmu_lut207l_tt = regs::gfxmmu_gfxmmu_lut207l_v1_tt;
-  using gfxmmu_lut207h_tt = regs::gfxmmu_gfxmmu_lut207h_v1_tt;
-  using gfxmmu_lut208l_tt = regs::gfxmmu_gfxmmu_lut208l_v1_tt;
-  using gfxmmu_lut208h_tt = regs::gfxmmu_gfxmmu_lut208h_v1_tt;
-  using gfxmmu_lut209l_tt = regs::gfxmmu_gfxmmu_lut209l_v1_tt;
-  using gfxmmu_lut209h_tt = regs::gfxmmu_gfxmmu_lut209h_v1_tt;
-  using gfxmmu_lut210l_tt = regs::gfxmmu_gfxmmu_lut210l_v1_tt;
-  using gfxmmu_lut210h_tt = regs::gfxmmu_gfxmmu_lut210h_v1_tt;
-  using gfxmmu_lut211l_tt = regs::gfxmmu_gfxmmu_lut211l_v1_tt;
-  using gfxmmu_lut211h_tt = regs::gfxmmu_gfxmmu_lut211h_v1_tt;
-  using gfxmmu_lut212l_tt = regs::gfxmmu_gfxmmu_lut212l_v1_tt;
-  using gfxmmu_lut212h_tt = regs::gfxmmu_gfxmmu_lut212h_v1_tt;
-  using gfxmmu_lut213l_tt = regs::gfxmmu_gfxmmu_lut213l_v1_tt;
-  using gfxmmu_lut213h_tt = regs::gfxmmu_gfxmmu_lut213h_v1_tt;
-  using gfxmmu_lut214l_tt = regs::gfxmmu_gfxmmu_lut214l_v1_tt;
-  using gfxmmu_lut214h_tt = regs::gfxmmu_gfxmmu_lut214h_v1_tt;
-  using gfxmmu_lut215l_tt = regs::gfxmmu_gfxmmu_lut215l_v1_tt;
-  using gfxmmu_lut215h_tt = regs::gfxmmu_gfxmmu_lut215h_v1_tt;
-  using gfxmmu_lut216l_tt = regs::gfxmmu_gfxmmu_lut216l_v1_tt;
-  using gfxmmu_lut216h_tt = regs::gfxmmu_gfxmmu_lut216h_v1_tt;
-  using gfxmmu_lut217l_tt = regs::gfxmmu_gfxmmu_lut217l_v1_tt;
-  using gfxmmu_lut217h_tt = regs::gfxmmu_gfxmmu_lut217h_v1_tt;
-  using gfxmmu_lut218l_tt = regs::gfxmmu_gfxmmu_lut218l_v1_tt;
-  using gfxmmu_lut218h_tt = regs::gfxmmu_gfxmmu_lut218h_v1_tt;
-  using gfxmmu_lut219l_tt = regs::gfxmmu_gfxmmu_lut219l_v1_tt;
-  using gfxmmu_lut219h_tt = regs::gfxmmu_gfxmmu_lut219h_v1_tt;
-  using gfxmmu_lut220l_tt = regs::gfxmmu_gfxmmu_lut220l_v1_tt;
-  using gfxmmu_lut220h_tt = regs::gfxmmu_gfxmmu_lut220h_v1_tt;
-  using gfxmmu_lut221l_tt = regs::gfxmmu_gfxmmu_lut221l_v1_tt;
-  using gfxmmu_lut221h_tt = regs::gfxmmu_gfxmmu_lut221h_v1_tt;
-  using gfxmmu_lut222l_tt = regs::gfxmmu_gfxmmu_lut222l_v1_tt;
-  using gfxmmu_lut222h_tt = regs::gfxmmu_gfxmmu_lut222h_v1_tt;
-  using gfxmmu_lut223l_tt = regs::gfxmmu_gfxmmu_lut223l_v1_tt;
-  using gfxmmu_lut223h_tt = regs::gfxmmu_gfxmmu_lut223h_v1_tt;
-  using gfxmmu_lut224l_tt = regs::gfxmmu_gfxmmu_lut224l_v1_tt;
-  using gfxmmu_lut224h_tt = regs::gfxmmu_gfxmmu_lut224h_v1_tt;
-  using gfxmmu_lut225l_tt = regs::gfxmmu_gfxmmu_lut225l_v1_tt;
-  using gfxmmu_lut225h_tt = regs::gfxmmu_gfxmmu_lut225h_v1_tt;
-  using gfxmmu_lut226l_tt = regs::gfxmmu_gfxmmu_lut226l_v1_tt;
-  using gfxmmu_lut226h_tt = regs::gfxmmu_gfxmmu_lut226h_v1_tt;
-  using gfxmmu_lut227l_tt = regs::gfxmmu_gfxmmu_lut227l_v1_tt;
-  using gfxmmu_lut227h_tt = regs::gfxmmu_gfxmmu_lut227h_v1_tt;
-  using gfxmmu_lut228l_tt = regs::gfxmmu_gfxmmu_lut228l_v1_tt;
-  using gfxmmu_lut228h_tt = regs::gfxmmu_gfxmmu_lut228h_v1_tt;
-  using gfxmmu_lut229l_tt = regs::gfxmmu_gfxmmu_lut229l_v1_tt;
-  using gfxmmu_lut229h_tt = regs::gfxmmu_gfxmmu_lut229h_v1_tt;
-  using gfxmmu_lut230l_tt = regs::gfxmmu_gfxmmu_lut230l_v1_tt;
-  using gfxmmu_lut230h_tt = regs::gfxmmu_gfxmmu_lut230h_v1_tt;
-  using gfxmmu_lut231l_tt = regs::gfxmmu_gfxmmu_lut231l_v1_tt;
-  using gfxmmu_lut231h_tt = regs::gfxmmu_gfxmmu_lut231h_v1_tt;
-  using gfxmmu_lut232l_tt = regs::gfxmmu_gfxmmu_lut232l_v1_tt;
-  using gfxmmu_lut232h_tt = regs::gfxmmu_gfxmmu_lut232h_v1_tt;
-  using gfxmmu_lut233l_tt = regs::gfxmmu_gfxmmu_lut233l_v1_tt;
-  using gfxmmu_lut233h_tt = regs::gfxmmu_gfxmmu_lut233h_v1_tt;
-  using gfxmmu_lut234l_tt = regs::gfxmmu_gfxmmu_lut234l_v1_tt;
-  using gfxmmu_lut234h_tt = regs::gfxmmu_gfxmmu_lut234h_v1_tt;
-  using gfxmmu_lut235l_tt = regs::gfxmmu_gfxmmu_lut235l_v1_tt;
-  using gfxmmu_lut235h_tt = regs::gfxmmu_gfxmmu_lut235h_v1_tt;
-  using gfxmmu_lut236l_tt = regs::gfxmmu_gfxmmu_lut236l_v1_tt;
-  using gfxmmu_lut236h_tt = regs::gfxmmu_gfxmmu_lut236h_v1_tt;
-  using gfxmmu_lut237l_tt = regs::gfxmmu_gfxmmu_lut237l_v1_tt;
-  using gfxmmu_lut237h_tt = regs::gfxmmu_gfxmmu_lut237h_v1_tt;
-  using gfxmmu_lut238l_tt = regs::gfxmmu_gfxmmu_lut238l_v1_tt;
-  using gfxmmu_lut238h_tt = regs::gfxmmu_gfxmmu_lut238h_v1_tt;
-  using gfxmmu_lut239l_tt = regs::gfxmmu_gfxmmu_lut239l_v1_tt;
-  using gfxmmu_lut239h_tt = regs::gfxmmu_gfxmmu_lut239h_v1_tt;
-  using gfxmmu_lut240l_tt = regs::gfxmmu_gfxmmu_lut240l_v1_tt;
-  using gfxmmu_lut240h_tt = regs::gfxmmu_gfxmmu_lut240h_v1_tt;
-  using gfxmmu_lut241l_tt = regs::gfxmmu_gfxmmu_lut241l_v1_tt;
-  using gfxmmu_lut241h_tt = regs::gfxmmu_gfxmmu_lut241h_v1_tt;
-  using gfxmmu_lut242l_tt = regs::gfxmmu_gfxmmu_lut242l_v1_tt;
-  using gfxmmu_lut242h_tt = regs::gfxmmu_gfxmmu_lut242h_v1_tt;
-  using gfxmmu_lut243l_tt = regs::gfxmmu_gfxmmu_lut243l_v1_tt;
-  using gfxmmu_lut243h_tt = regs::gfxmmu_gfxmmu_lut243h_v1_tt;
-  using gfxmmu_lut244l_tt = regs::gfxmmu_gfxmmu_lut244l_v1_tt;
-  using gfxmmu_lut244h_tt = regs::gfxmmu_gfxmmu_lut244h_v1_tt;
-  using gfxmmu_lut245l_tt = regs::gfxmmu_gfxmmu_lut245l_v1_tt;
-  using gfxmmu_lut245h_tt = regs::gfxmmu_gfxmmu_lut245h_v1_tt;
-  using gfxmmu_lut246l_tt = regs::gfxmmu_gfxmmu_lut246l_v1_tt;
-  using gfxmmu_lut246h_tt = regs::gfxmmu_gfxmmu_lut246h_v1_tt;
-  using gfxmmu_lut247l_tt = regs::gfxmmu_gfxmmu_lut247l_v1_tt;
-  using gfxmmu_lut247h_tt = regs::gfxmmu_gfxmmu_lut247h_v1_tt;
-  using gfxmmu_lut248l_tt = regs::gfxmmu_gfxmmu_lut248l_v1_tt;
-  using gfxmmu_lut248h_tt = regs::gfxmmu_gfxmmu_lut248h_v1_tt;
-  using gfxmmu_lut249l_tt = regs::gfxmmu_gfxmmu_lut249l_v1_tt;
-  using gfxmmu_lut249h_tt = regs::gfxmmu_gfxmmu_lut249h_v1_tt;
-  using gfxmmu_lut250l_tt = regs::gfxmmu_gfxmmu_lut250l_v1_tt;
-  using gfxmmu_lut250h_tt = regs::gfxmmu_gfxmmu_lut250h_v1_tt;
-  using gfxmmu_lut251l_tt = regs::gfxmmu_gfxmmu_lut251l_v1_tt;
-  using gfxmmu_lut251h_tt = regs::gfxmmu_gfxmmu_lut251h_v1_tt;
-  using gfxmmu_lut252l_tt = regs::gfxmmu_gfxmmu_lut252l_v1_tt;
-  using gfxmmu_lut252h_tt = regs::gfxmmu_gfxmmu_lut252h_v1_tt;
-  using gfxmmu_lut253l_tt = regs::gfxmmu_gfxmmu_lut253l_v1_tt;
-  using gfxmmu_lut253h_tt = regs::gfxmmu_gfxmmu_lut253h_v1_tt;
-  using gfxmmu_lut254l_tt = regs::gfxmmu_gfxmmu_lut254l_v1_tt;
-  using gfxmmu_lut254h_tt = regs::gfxmmu_gfxmmu_lut254h_v1_tt;
-  using gfxmmu_lut255l_tt = regs::gfxmmu_gfxmmu_lut255l_v1_tt;
-  using gfxmmu_lut255h_tt = regs::gfxmmu_gfxmmu_lut255h_v1_tt;
-  using gfxmmu_lut256l_tt = regs::gfxmmu_gfxmmu_lut256l_v1_tt;
-  using gfxmmu_lut256h_tt = regs::gfxmmu_gfxmmu_lut256h_v1_tt;
-  using gfxmmu_lut257l_tt = regs::gfxmmu_gfxmmu_lut257l_v1_tt;
-  using gfxmmu_lut257h_tt = regs::gfxmmu_gfxmmu_lut257h_v1_tt;
-  using gfxmmu_lut258l_tt = regs::gfxmmu_gfxmmu_lut258l_v1_tt;
-  using gfxmmu_lut258h_tt = regs::gfxmmu_gfxmmu_lut258h_v1_tt;
-  using gfxmmu_lut259l_tt = regs::gfxmmu_gfxmmu_lut259l_v1_tt;
-  using gfxmmu_lut259h_tt = regs::gfxmmu_gfxmmu_lut259h_v1_tt;
-  using gfxmmu_lut260l_tt = regs::gfxmmu_gfxmmu_lut260l_v1_tt;
-  using gfxmmu_lut260h_tt = regs::gfxmmu_gfxmmu_lut260h_v1_tt;
-  using gfxmmu_lut261l_tt = regs::gfxmmu_gfxmmu_lut261l_v1_tt;
-  using gfxmmu_lut261h_tt = regs::gfxmmu_gfxmmu_lut261h_v1_tt;
-  using gfxmmu_lut262l_tt = regs::gfxmmu_gfxmmu_lut262l_v1_tt;
-  using gfxmmu_lut262h_tt = regs::gfxmmu_gfxmmu_lut262h_v1_tt;
-  using gfxmmu_lut263l_tt = regs::gfxmmu_gfxmmu_lut263l_v1_tt;
-  using gfxmmu_lut263h_tt = regs::gfxmmu_gfxmmu_lut263h_v1_tt;
-  using gfxmmu_lut264l_tt = regs::gfxmmu_gfxmmu_lut264l_v1_tt;
-  using gfxmmu_lut264h_tt = regs::gfxmmu_gfxmmu_lut264h_v1_tt;
-  using gfxmmu_lut265l_tt = regs::gfxmmu_gfxmmu_lut265l_v1_tt;
-  using gfxmmu_lut265h_tt = regs::gfxmmu_gfxmmu_lut265h_v1_tt;
-  using gfxmmu_lut266l_tt = regs::gfxmmu_gfxmmu_lut266l_v1_tt;
-  using gfxmmu_lut266h_tt = regs::gfxmmu_gfxmmu_lut266h_v1_tt;
-  using gfxmmu_lut267l_tt = regs::gfxmmu_gfxmmu_lut267l_v1_tt;
-  using gfxmmu_lut267h_tt = regs::gfxmmu_gfxmmu_lut267h_v1_tt;
-  using gfxmmu_lut268l_tt = regs::gfxmmu_gfxmmu_lut268l_v1_tt;
-  using gfxmmu_lut268h_tt = regs::gfxmmu_gfxmmu_lut268h_v1_tt;
-  using gfxmmu_lut269l_tt = regs::gfxmmu_gfxmmu_lut269l_v1_tt;
-  using gfxmmu_lut269h_tt = regs::gfxmmu_gfxmmu_lut269h_v1_tt;
-  using gfxmmu_lut270l_tt = regs::gfxmmu_gfxmmu_lut270l_v1_tt;
-  using gfxmmu_lut270h_tt = regs::gfxmmu_gfxmmu_lut270h_v1_tt;
-  using gfxmmu_lut271l_tt = regs::gfxmmu_gfxmmu_lut271l_v1_tt;
-  using gfxmmu_lut271h_tt = regs::gfxmmu_gfxmmu_lut271h_v1_tt;
-  using gfxmmu_lut272l_tt = regs::gfxmmu_gfxmmu_lut272l_v1_tt;
-  using gfxmmu_lut272h_tt = regs::gfxmmu_gfxmmu_lut272h_v1_tt;
-  using gfxmmu_lut273l_tt = regs::gfxmmu_gfxmmu_lut273l_v1_tt;
-  using gfxmmu_lut273h_tt = regs::gfxmmu_gfxmmu_lut273h_v1_tt;
-  using gfxmmu_lut274l_tt = regs::gfxmmu_gfxmmu_lut274l_v1_tt;
-  using gfxmmu_lut274h_tt = regs::gfxmmu_gfxmmu_lut274h_v1_tt;
-  using gfxmmu_lut275l_tt = regs::gfxmmu_gfxmmu_lut275l_v1_tt;
-  using gfxmmu_lut275h_tt = regs::gfxmmu_gfxmmu_lut275h_v1_tt;
-  using gfxmmu_lut276l_tt = regs::gfxmmu_gfxmmu_lut276l_v1_tt;
-  using gfxmmu_lut276h_tt = regs::gfxmmu_gfxmmu_lut276h_v1_tt;
-  using gfxmmu_lut277l_tt = regs::gfxmmu_gfxmmu_lut277l_v1_tt;
-  using gfxmmu_lut277h_tt = regs::gfxmmu_gfxmmu_lut277h_v1_tt;
-  using gfxmmu_lut278l_tt = regs::gfxmmu_gfxmmu_lut278l_v1_tt;
-  using gfxmmu_lut278h_tt = regs::gfxmmu_gfxmmu_lut278h_v1_tt;
-  using gfxmmu_lut279l_tt = regs::gfxmmu_gfxmmu_lut279l_v1_tt;
-  using gfxmmu_lut279h_tt = regs::gfxmmu_gfxmmu_lut279h_v1_tt;
-  using gfxmmu_lut280l_tt = regs::gfxmmu_gfxmmu_lut280l_v1_tt;
-  using gfxmmu_lut280h_tt = regs::gfxmmu_gfxmmu_lut280h_v1_tt;
-  using gfxmmu_lut281l_tt = regs::gfxmmu_gfxmmu_lut281l_v1_tt;
-  using gfxmmu_lut281h_tt = regs::gfxmmu_gfxmmu_lut281h_v1_tt;
-  using gfxmmu_lut282l_tt = regs::gfxmmu_gfxmmu_lut282l_v1_tt;
-  using gfxmmu_lut282h_tt = regs::gfxmmu_gfxmmu_lut282h_v1_tt;
-  using gfxmmu_lut283l_tt = regs::gfxmmu_gfxmmu_lut283l_v1_tt;
-  using gfxmmu_lut283h_tt = regs::gfxmmu_gfxmmu_lut283h_v1_tt;
-  using gfxmmu_lut284l_tt = regs::gfxmmu_gfxmmu_lut284l_v1_tt;
-  using gfxmmu_lut284h_tt = regs::gfxmmu_gfxmmu_lut284h_v1_tt;
-  using gfxmmu_lut285l_tt = regs::gfxmmu_gfxmmu_lut285l_v1_tt;
-  using gfxmmu_lut285h_tt = regs::gfxmmu_gfxmmu_lut285h_v1_tt;
-  using gfxmmu_lut286l_tt = regs::gfxmmu_gfxmmu_lut286l_v1_tt;
-  using gfxmmu_lut286h_tt = regs::gfxmmu_gfxmmu_lut286h_v1_tt;
-  using gfxmmu_lut287l_tt = regs::gfxmmu_gfxmmu_lut287l_v1_tt;
-  using gfxmmu_lut287h_tt = regs::gfxmmu_gfxmmu_lut287h_v1_tt;
-  using gfxmmu_lut288l_tt = regs::gfxmmu_gfxmmu_lut288l_v1_tt;
-  using gfxmmu_lut288h_tt = regs::gfxmmu_gfxmmu_lut288h_v1_tt;
-  using gfxmmu_lut289l_tt = regs::gfxmmu_gfxmmu_lut289l_v1_tt;
-  using gfxmmu_lut289h_tt = regs::gfxmmu_gfxmmu_lut289h_v1_tt;
-  using gfxmmu_lut290l_tt = regs::gfxmmu_gfxmmu_lut290l_v1_tt;
-  using gfxmmu_lut290h_tt = regs::gfxmmu_gfxmmu_lut290h_v1_tt;
-  using gfxmmu_lut291l_tt = regs::gfxmmu_gfxmmu_lut291l_v1_tt;
-  using gfxmmu_lut291h_tt = regs::gfxmmu_gfxmmu_lut291h_v1_tt;
-  using gfxmmu_lut292l_tt = regs::gfxmmu_gfxmmu_lut292l_v1_tt;
-  using gfxmmu_lut292h_tt = regs::gfxmmu_gfxmmu_lut292h_v1_tt;
-  using gfxmmu_lut293l_tt = regs::gfxmmu_gfxmmu_lut293l_v1_tt;
-  using gfxmmu_lut293h_tt = regs::gfxmmu_gfxmmu_lut293h_v1_tt;
-  using gfxmmu_lut294l_tt = regs::gfxmmu_gfxmmu_lut294l_v1_tt;
-  using gfxmmu_lut294h_tt = regs::gfxmmu_gfxmmu_lut294h_v1_tt;
-  using gfxmmu_lut295l_tt = regs::gfxmmu_gfxmmu_lut295l_v1_tt;
-  using gfxmmu_lut295h_tt = regs::gfxmmu_gfxmmu_lut295h_v1_tt;
-  using gfxmmu_lut296l_tt = regs::gfxmmu_gfxmmu_lut296l_v1_tt;
-  using gfxmmu_lut296h_tt = regs::gfxmmu_gfxmmu_lut296h_v1_tt;
-  using gfxmmu_lut297l_tt = regs::gfxmmu_gfxmmu_lut297l_v1_tt;
-  using gfxmmu_lut297h_tt = regs::gfxmmu_gfxmmu_lut297h_v1_tt;
-  using gfxmmu_lut298l_tt = regs::gfxmmu_gfxmmu_lut298l_v1_tt;
-  using gfxmmu_lut298h_tt = regs::gfxmmu_gfxmmu_lut298h_v1_tt;
-  using gfxmmu_lut299l_tt = regs::gfxmmu_gfxmmu_lut299l_v1_tt;
-  using gfxmmu_lut299h_tt = regs::gfxmmu_gfxmmu_lut299h_v1_tt;
-  using gfxmmu_lut300l_tt = regs::gfxmmu_gfxmmu_lut300l_v1_tt;
-  using gfxmmu_lut300h_tt = regs::gfxmmu_gfxmmu_lut300h_v1_tt;
-  using gfxmmu_lut301l_tt = regs::gfxmmu_gfxmmu_lut301l_v1_tt;
-  using gfxmmu_lut301h_tt = regs::gfxmmu_gfxmmu_lut301h_v1_tt;
-  using gfxmmu_lut302l_tt = regs::gfxmmu_gfxmmu_lut302l_v1_tt;
-  using gfxmmu_lut302h_tt = regs::gfxmmu_gfxmmu_lut302h_v1_tt;
-  using gfxmmu_lut303l_tt = regs::gfxmmu_gfxmmu_lut303l_v1_tt;
-  using gfxmmu_lut303h_tt = regs::gfxmmu_gfxmmu_lut303h_v1_tt;
-  using gfxmmu_lut304l_tt = regs::gfxmmu_gfxmmu_lut304l_v1_tt;
-  using gfxmmu_lut304h_tt = regs::gfxmmu_gfxmmu_lut304h_v1_tt;
-  using gfxmmu_lut305l_tt = regs::gfxmmu_gfxmmu_lut305l_v1_tt;
-  using gfxmmu_lut305h_tt = regs::gfxmmu_gfxmmu_lut305h_v1_tt;
-  using gfxmmu_lut306l_tt = regs::gfxmmu_gfxmmu_lut306l_v1_tt;
-  using gfxmmu_lut306h_tt = regs::gfxmmu_gfxmmu_lut306h_v1_tt;
-  using gfxmmu_lut307l_tt = regs::gfxmmu_gfxmmu_lut307l_v1_tt;
-  using gfxmmu_lut307h_tt = regs::gfxmmu_gfxmmu_lut307h_v1_tt;
-  using gfxmmu_lut308l_tt = regs::gfxmmu_gfxmmu_lut308l_v1_tt;
-  using gfxmmu_lut308h_tt = regs::gfxmmu_gfxmmu_lut308h_v1_tt;
-  using gfxmmu_lut309l_tt = regs::gfxmmu_gfxmmu_lut309l_v1_tt;
-  using gfxmmu_lut309h_tt = regs::gfxmmu_gfxmmu_lut309h_v1_tt;
-  using gfxmmu_lut310l_tt = regs::gfxmmu_gfxmmu_lut310l_v1_tt;
-  using gfxmmu_lut310h_tt = regs::gfxmmu_gfxmmu_lut310h_v1_tt;
-  using gfxmmu_lut311l_tt = regs::gfxmmu_gfxmmu_lut311l_v1_tt;
-  using gfxmmu_lut311h_tt = regs::gfxmmu_gfxmmu_lut311h_v1_tt;
-  using gfxmmu_lut312l_tt = regs::gfxmmu_gfxmmu_lut312l_v1_tt;
-  using gfxmmu_lut312h_tt = regs::gfxmmu_gfxmmu_lut312h_v1_tt;
-  using gfxmmu_lut313l_tt = regs::gfxmmu_gfxmmu_lut313l_v1_tt;
-  using gfxmmu_lut313h_tt = regs::gfxmmu_gfxmmu_lut313h_v1_tt;
-  using gfxmmu_lut314l_tt = regs::gfxmmu_gfxmmu_lut314l_v1_tt;
-  using gfxmmu_lut314h_tt = regs::gfxmmu_gfxmmu_lut314h_v1_tt;
-  using gfxmmu_lut315l_tt = regs::gfxmmu_gfxmmu_lut315l_v1_tt;
-  using gfxmmu_lut315h_tt = regs::gfxmmu_gfxmmu_lut315h_v1_tt;
-  using gfxmmu_lut316l_tt = regs::gfxmmu_gfxmmu_lut316l_v1_tt;
-  using gfxmmu_lut316h_tt = regs::gfxmmu_gfxmmu_lut316h_v1_tt;
-  using gfxmmu_lut317l_tt = regs::gfxmmu_gfxmmu_lut317l_v1_tt;
-  using gfxmmu_lut317h_tt = regs::gfxmmu_gfxmmu_lut317h_v1_tt;
-  using gfxmmu_lut318l_tt = regs::gfxmmu_gfxmmu_lut318l_v1_tt;
-  using gfxmmu_lut318h_tt = regs::gfxmmu_gfxmmu_lut318h_v1_tt;
-  using gfxmmu_lut319l_tt = regs::gfxmmu_gfxmmu_lut319l_v1_tt;
-  using gfxmmu_lut319h_tt = regs::gfxmmu_gfxmmu_lut319h_v1_tt;
-  using gfxmmu_lut320l_tt = regs::gfxmmu_gfxmmu_lut320l_v1_tt;
-  using gfxmmu_lut320h_tt = regs::gfxmmu_gfxmmu_lut320h_v1_tt;
-  using gfxmmu_lut321l_tt = regs::gfxmmu_gfxmmu_lut321l_v1_tt;
-  using gfxmmu_lut321h_tt = regs::gfxmmu_gfxmmu_lut321h_v1_tt;
-  using gfxmmu_lut322l_tt = regs::gfxmmu_gfxmmu_lut322l_v1_tt;
-  using gfxmmu_lut322h_tt = regs::gfxmmu_gfxmmu_lut322h_v1_tt;
-  using gfxmmu_lut323l_tt = regs::gfxmmu_gfxmmu_lut323l_v1_tt;
-  using gfxmmu_lut323h_tt = regs::gfxmmu_gfxmmu_lut323h_v1_tt;
-  using gfxmmu_lut324l_tt = regs::gfxmmu_gfxmmu_lut324l_v1_tt;
-  using gfxmmu_lut324h_tt = regs::gfxmmu_gfxmmu_lut324h_v1_tt;
-  using gfxmmu_lut325l_tt = regs::gfxmmu_gfxmmu_lut325l_v1_tt;
-  using gfxmmu_lut325h_tt = regs::gfxmmu_gfxmmu_lut325h_v1_tt;
-  using gfxmmu_lut326l_tt = regs::gfxmmu_gfxmmu_lut326l_v1_tt;
-  using gfxmmu_lut326h_tt = regs::gfxmmu_gfxmmu_lut326h_v1_tt;
-  using gfxmmu_lut327l_tt = regs::gfxmmu_gfxmmu_lut327l_v1_tt;
-  using gfxmmu_lut327h_tt = regs::gfxmmu_gfxmmu_lut327h_v1_tt;
-  using gfxmmu_lut328l_tt = regs::gfxmmu_gfxmmu_lut328l_v1_tt;
-  using gfxmmu_lut328h_tt = regs::gfxmmu_gfxmmu_lut328h_v1_tt;
-  using gfxmmu_lut329l_tt = regs::gfxmmu_gfxmmu_lut329l_v1_tt;
-  using gfxmmu_lut329h_tt = regs::gfxmmu_gfxmmu_lut329h_v1_tt;
-  using gfxmmu_lut330l_tt = regs::gfxmmu_gfxmmu_lut330l_v1_tt;
-  using gfxmmu_lut330h_tt = regs::gfxmmu_gfxmmu_lut330h_v1_tt;
-  using gfxmmu_lut331l_tt = regs::gfxmmu_gfxmmu_lut331l_v1_tt;
-  using gfxmmu_lut331h_tt = regs::gfxmmu_gfxmmu_lut331h_v1_tt;
-  using gfxmmu_lut332l_tt = regs::gfxmmu_gfxmmu_lut332l_v1_tt;
-  using gfxmmu_lut332h_tt = regs::gfxmmu_gfxmmu_lut332h_v1_tt;
-  using gfxmmu_lut333l_tt = regs::gfxmmu_gfxmmu_lut333l_v1_tt;
-  using gfxmmu_lut333h_tt = regs::gfxmmu_gfxmmu_lut333h_v1_tt;
-  using gfxmmu_lut334l_tt = regs::gfxmmu_gfxmmu_lut334l_v1_tt;
-  using gfxmmu_lut334h_tt = regs::gfxmmu_gfxmmu_lut334h_v1_tt;
-  using gfxmmu_lut335l_tt = regs::gfxmmu_gfxmmu_lut335l_v1_tt;
-  using gfxmmu_lut335h_tt = regs::gfxmmu_gfxmmu_lut335h_v1_tt;
-  using gfxmmu_lut336l_tt = regs::gfxmmu_gfxmmu_lut336l_v1_tt;
-  using gfxmmu_lut336h_tt = regs::gfxmmu_gfxmmu_lut336h_v1_tt;
-  using gfxmmu_lut337l_tt = regs::gfxmmu_gfxmmu_lut337l_v1_tt;
-  using gfxmmu_lut337h_tt = regs::gfxmmu_gfxmmu_lut337h_v1_tt;
-  using gfxmmu_lut338l_tt = regs::gfxmmu_gfxmmu_lut338l_v1_tt;
-  using gfxmmu_lut338h_tt = regs::gfxmmu_gfxmmu_lut338h_v1_tt;
-  using gfxmmu_lut339l_tt = regs::gfxmmu_gfxmmu_lut339l_v1_tt;
-  using gfxmmu_lut339h_tt = regs::gfxmmu_gfxmmu_lut339h_v1_tt;
-  using gfxmmu_lut340l_tt = regs::gfxmmu_gfxmmu_lut340l_v1_tt;
-  using gfxmmu_lut340h_tt = regs::gfxmmu_gfxmmu_lut340h_v1_tt;
-  using gfxmmu_lut341l_tt = regs::gfxmmu_gfxmmu_lut341l_v1_tt;
-  using gfxmmu_lut341h_tt = regs::gfxmmu_gfxmmu_lut341h_v1_tt;
-  using gfxmmu_lut342l_tt = regs::gfxmmu_gfxmmu_lut342l_v1_tt;
-  using gfxmmu_lut342h_tt = regs::gfxmmu_gfxmmu_lut342h_v1_tt;
-  using gfxmmu_lut343l_tt = regs::gfxmmu_gfxmmu_lut343l_v1_tt;
-  using gfxmmu_lut343h_tt = regs::gfxmmu_gfxmmu_lut343h_v1_tt;
-  using gfxmmu_lut344l_tt = regs::gfxmmu_gfxmmu_lut344l_v1_tt;
-  using gfxmmu_lut344h_tt = regs::gfxmmu_gfxmmu_lut344h_v1_tt;
-  using gfxmmu_lut345l_tt = regs::gfxmmu_gfxmmu_lut345l_v1_tt;
-  using gfxmmu_lut345h_tt = regs::gfxmmu_gfxmmu_lut345h_v1_tt;
-  using gfxmmu_lut346l_tt = regs::gfxmmu_gfxmmu_lut346l_v1_tt;
-  using gfxmmu_lut346h_tt = regs::gfxmmu_gfxmmu_lut346h_v1_tt;
-  using gfxmmu_lut347l_tt = regs::gfxmmu_gfxmmu_lut347l_v1_tt;
-  using gfxmmu_lut347h_tt = regs::gfxmmu_gfxmmu_lut347h_v1_tt;
-  using gfxmmu_lut348l_tt = regs::gfxmmu_gfxmmu_lut348l_v1_tt;
-  using gfxmmu_lut348h_tt = regs::gfxmmu_gfxmmu_lut348h_v1_tt;
-  using gfxmmu_lut349l_tt = regs::gfxmmu_gfxmmu_lut349l_v1_tt;
-  using gfxmmu_lut349h_tt = regs::gfxmmu_gfxmmu_lut349h_v1_tt;
-  using gfxmmu_lut350l_tt = regs::gfxmmu_gfxmmu_lut350l_v1_tt;
-  using gfxmmu_lut350h_tt = regs::gfxmmu_gfxmmu_lut350h_v1_tt;
-  using gfxmmu_lut351l_tt = regs::gfxmmu_gfxmmu_lut351l_v1_tt;
-  using gfxmmu_lut351h_tt = regs::gfxmmu_gfxmmu_lut351h_v1_tt;
-  using gfxmmu_lut352l_tt = regs::gfxmmu_gfxmmu_lut352l_v1_tt;
-  using gfxmmu_lut352h_tt = regs::gfxmmu_gfxmmu_lut352h_v1_tt;
-  using gfxmmu_lut353l_tt = regs::gfxmmu_gfxmmu_lut353l_v1_tt;
-  using gfxmmu_lut353h_tt = regs::gfxmmu_gfxmmu_lut353h_v1_tt;
-  using gfxmmu_lut354l_tt = regs::gfxmmu_gfxmmu_lut354l_v1_tt;
-  using gfxmmu_lut354h_tt = regs::gfxmmu_gfxmmu_lut354h_v1_tt;
-  using gfxmmu_lut355l_tt = regs::gfxmmu_gfxmmu_lut355l_v1_tt;
-  using gfxmmu_lut355h_tt = regs::gfxmmu_gfxmmu_lut355h_v1_tt;
-  using gfxmmu_lut356l_tt = regs::gfxmmu_gfxmmu_lut356l_v1_tt;
-  using gfxmmu_lut356h_tt = regs::gfxmmu_gfxmmu_lut356h_v1_tt;
-  using gfxmmu_lut357l_tt = regs::gfxmmu_gfxmmu_lut357l_v1_tt;
-  using gfxmmu_lut357h_tt = regs::gfxmmu_gfxmmu_lut357h_v1_tt;
-  using gfxmmu_lut358l_tt = regs::gfxmmu_gfxmmu_lut358l_v1_tt;
-  using gfxmmu_lut358h_tt = regs::gfxmmu_gfxmmu_lut358h_v1_tt;
-  using gfxmmu_lut359l_tt = regs::gfxmmu_gfxmmu_lut359l_v1_tt;
-  using gfxmmu_lut359h_tt = regs::gfxmmu_gfxmmu_lut359h_v1_tt;
-  using gfxmmu_lut360l_tt = regs::gfxmmu_gfxmmu_lut360l_v1_tt;
-  using gfxmmu_lut360h_tt = regs::gfxmmu_gfxmmu_lut360h_v1_tt;
-  using gfxmmu_lut361l_tt = regs::gfxmmu_gfxmmu_lut361l_v1_tt;
-  using gfxmmu_lut361h_tt = regs::gfxmmu_gfxmmu_lut361h_v1_tt;
-  using gfxmmu_lut362l_tt = regs::gfxmmu_gfxmmu_lut362l_v1_tt;
-  using gfxmmu_lut362h_tt = regs::gfxmmu_gfxmmu_lut362h_v1_tt;
-  using gfxmmu_lut363l_tt = regs::gfxmmu_gfxmmu_lut363l_v1_tt;
-  using gfxmmu_lut363h_tt = regs::gfxmmu_gfxmmu_lut363h_v1_tt;
-  using gfxmmu_lut364l_tt = regs::gfxmmu_gfxmmu_lut364l_v1_tt;
-  using gfxmmu_lut364h_tt = regs::gfxmmu_gfxmmu_lut364h_v1_tt;
-  using gfxmmu_lut365l_tt = regs::gfxmmu_gfxmmu_lut365l_v1_tt;
-  using gfxmmu_lut365h_tt = regs::gfxmmu_gfxmmu_lut365h_v1_tt;
-  using gfxmmu_lut366l_tt = regs::gfxmmu_gfxmmu_lut366l_v1_tt;
-  using gfxmmu_lut366h_tt = regs::gfxmmu_gfxmmu_lut366h_v1_tt;
-  using gfxmmu_lut367l_tt = regs::gfxmmu_gfxmmu_lut367l_v1_tt;
-  using gfxmmu_lut367h_tt = regs::gfxmmu_gfxmmu_lut367h_v1_tt;
-  using gfxmmu_lut368l_tt = regs::gfxmmu_gfxmmu_lut368l_v1_tt;
-  using gfxmmu_lut368h_tt = regs::gfxmmu_gfxmmu_lut368h_v1_tt;
-  using gfxmmu_lut369l_tt = regs::gfxmmu_gfxmmu_lut369l_v1_tt;
-  using gfxmmu_lut369h_tt = regs::gfxmmu_gfxmmu_lut369h_v1_tt;
-  using gfxmmu_lut370l_tt = regs::gfxmmu_gfxmmu_lut370l_v1_tt;
-  using gfxmmu_lut370h_tt = regs::gfxmmu_gfxmmu_lut370h_v1_tt;
-  using gfxmmu_lut371l_tt = regs::gfxmmu_gfxmmu_lut371l_v1_tt;
-  using gfxmmu_lut371h_tt = regs::gfxmmu_gfxmmu_lut371h_v1_tt;
-  using gfxmmu_lut372l_tt = regs::gfxmmu_gfxmmu_lut372l_v1_tt;
-  using gfxmmu_lut372h_tt = regs::gfxmmu_gfxmmu_lut372h_v1_tt;
-  using gfxmmu_lut373l_tt = regs::gfxmmu_gfxmmu_lut373l_v1_tt;
-  using gfxmmu_lut373h_tt = regs::gfxmmu_gfxmmu_lut373h_v1_tt;
-  using gfxmmu_lut374l_tt = regs::gfxmmu_gfxmmu_lut374l_v1_tt;
-  using gfxmmu_lut374h_tt = regs::gfxmmu_gfxmmu_lut374h_v1_tt;
-  using gfxmmu_lut375l_tt = regs::gfxmmu_gfxmmu_lut375l_v1_tt;
-  using gfxmmu_lut375h_tt = regs::gfxmmu_gfxmmu_lut375h_v1_tt;
-  using gfxmmu_lut376l_tt = regs::gfxmmu_gfxmmu_lut376l_v1_tt;
-  using gfxmmu_lut376h_tt = regs::gfxmmu_gfxmmu_lut376h_v1_tt;
-  using gfxmmu_lut377l_tt = regs::gfxmmu_gfxmmu_lut377l_v1_tt;
-  using gfxmmu_lut377h_tt = regs::gfxmmu_gfxmmu_lut377h_v1_tt;
-  using gfxmmu_lut378l_tt = regs::gfxmmu_gfxmmu_lut378l_v1_tt;
-  using gfxmmu_lut378h_tt = regs::gfxmmu_gfxmmu_lut378h_v1_tt;
-  using gfxmmu_lut379l_tt = regs::gfxmmu_gfxmmu_lut379l_v1_tt;
-  using gfxmmu_lut379h_tt = regs::gfxmmu_gfxmmu_lut379h_v1_tt;
-  using gfxmmu_lut380l_tt = regs::gfxmmu_gfxmmu_lut380l_v1_tt;
-  using gfxmmu_lut380h_tt = regs::gfxmmu_gfxmmu_lut380h_v1_tt;
-  using gfxmmu_lut381l_tt = regs::gfxmmu_gfxmmu_lut381l_v1_tt;
-  using gfxmmu_lut381h_tt = regs::gfxmmu_gfxmmu_lut381h_v1_tt;
-  using gfxmmu_lut382l_tt = regs::gfxmmu_gfxmmu_lut382l_v1_tt;
-  using gfxmmu_lut382h_tt = regs::gfxmmu_gfxmmu_lut382h_v1_tt;
-  using gfxmmu_lut383l_tt = regs::gfxmmu_gfxmmu_lut383l_v1_tt;
-  using gfxmmu_lut383h_tt = regs::gfxmmu_gfxmmu_lut383h_v1_tt;
-  using gfxmmu_lut384l_tt = regs::gfxmmu_gfxmmu_lut384l_v1_tt;
-  using gfxmmu_lut384h_tt = regs::gfxmmu_gfxmmu_lut384h_v1_tt;
-  using gfxmmu_lut385l_tt = regs::gfxmmu_gfxmmu_lut385l_v1_tt;
-  using gfxmmu_lut385h_tt = regs::gfxmmu_gfxmmu_lut385h_v1_tt;
-  using gfxmmu_lut386l_tt = regs::gfxmmu_gfxmmu_lut386l_v1_tt;
-  using gfxmmu_lut386h_tt = regs::gfxmmu_gfxmmu_lut386h_v1_tt;
-  using gfxmmu_lut387l_tt = regs::gfxmmu_gfxmmu_lut387l_v1_tt;
-  using gfxmmu_lut387h_tt = regs::gfxmmu_gfxmmu_lut387h_v1_tt;
-  using gfxmmu_lut388l_tt = regs::gfxmmu_gfxmmu_lut388l_v1_tt;
-  using gfxmmu_lut388h_tt = regs::gfxmmu_gfxmmu_lut388h_v1_tt;
-  using gfxmmu_lut389l_tt = regs::gfxmmu_gfxmmu_lut389l_v1_tt;
-  using gfxmmu_lut389h_tt = regs::gfxmmu_gfxmmu_lut389h_v1_tt;
-  using gfxmmu_lut390l_tt = regs::gfxmmu_gfxmmu_lut390l_v1_tt;
-  using gfxmmu_lut390h_tt = regs::gfxmmu_gfxmmu_lut390h_v1_tt;
-  using gfxmmu_lut391l_tt = regs::gfxmmu_gfxmmu_lut391l_v1_tt;
-  using gfxmmu_lut391h_tt = regs::gfxmmu_gfxmmu_lut391h_v1_tt;
-  using gfxmmu_lut392l_tt = regs::gfxmmu_gfxmmu_lut392l_v1_tt;
-  using gfxmmu_lut392h_tt = regs::gfxmmu_gfxmmu_lut392h_v1_tt;
-  using gfxmmu_lut393l_tt = regs::gfxmmu_gfxmmu_lut393l_v1_tt;
-  using gfxmmu_lut393h_tt = regs::gfxmmu_gfxmmu_lut393h_v1_tt;
-  using gfxmmu_lut394l_tt = regs::gfxmmu_gfxmmu_lut394l_v1_tt;
-  using gfxmmu_lut394h_tt = regs::gfxmmu_gfxmmu_lut394h_v1_tt;
-  using gfxmmu_lut395l_tt = regs::gfxmmu_gfxmmu_lut395l_v1_tt;
-  using gfxmmu_lut395h_tt = regs::gfxmmu_gfxmmu_lut395h_v1_tt;
-  using gfxmmu_lut396l_tt = regs::gfxmmu_gfxmmu_lut396l_v1_tt;
-  using gfxmmu_lut396h_tt = regs::gfxmmu_gfxmmu_lut396h_v1_tt;
-  using gfxmmu_lut397l_tt = regs::gfxmmu_gfxmmu_lut397l_v1_tt;
-  using gfxmmu_lut397h_tt = regs::gfxmmu_gfxmmu_lut397h_v1_tt;
-  using gfxmmu_lut398l_tt = regs::gfxmmu_gfxmmu_lut398l_v1_tt;
-  using gfxmmu_lut398h_tt = regs::gfxmmu_gfxmmu_lut398h_v1_tt;
-  using gfxmmu_lut399l_tt = regs::gfxmmu_gfxmmu_lut399l_v1_tt;
-  using gfxmmu_lut399h_tt = regs::gfxmmu_gfxmmu_lut399h_v1_tt;
-  using gfxmmu_lut400l_tt = regs::gfxmmu_gfxmmu_lut400l_v1_tt;
-  using gfxmmu_lut400h_tt = regs::gfxmmu_gfxmmu_lut400h_v1_tt;
-  using gfxmmu_lut401l_tt = regs::gfxmmu_gfxmmu_lut401l_v1_tt;
-  using gfxmmu_lut401h_tt = regs::gfxmmu_gfxmmu_lut401h_v1_tt;
-  using gfxmmu_lut402l_tt = regs::gfxmmu_gfxmmu_lut402l_v1_tt;
-  using gfxmmu_lut402h_tt = regs::gfxmmu_gfxmmu_lut402h_v1_tt;
-  using gfxmmu_lut403l_tt = regs::gfxmmu_gfxmmu_lut403l_v1_tt;
-  using gfxmmu_lut403h_tt = regs::gfxmmu_gfxmmu_lut403h_v1_tt;
-  using gfxmmu_lut404l_tt = regs::gfxmmu_gfxmmu_lut404l_v1_tt;
-  using gfxmmu_lut404h_tt = regs::gfxmmu_gfxmmu_lut404h_v1_tt;
-  using gfxmmu_lut405l_tt = regs::gfxmmu_gfxmmu_lut405l_v1_tt;
-  using gfxmmu_lut405h_tt = regs::gfxmmu_gfxmmu_lut405h_v1_tt;
-  using gfxmmu_lut406l_tt = regs::gfxmmu_gfxmmu_lut406l_v1_tt;
-  using gfxmmu_lut406h_tt = regs::gfxmmu_gfxmmu_lut406h_v1_tt;
-  using gfxmmu_lut407l_tt = regs::gfxmmu_gfxmmu_lut407l_v1_tt;
-  using gfxmmu_lut407h_tt = regs::gfxmmu_gfxmmu_lut407h_v1_tt;
-  using gfxmmu_lut408l_tt = regs::gfxmmu_gfxmmu_lut408l_v1_tt;
-  using gfxmmu_lut408h_tt = regs::gfxmmu_gfxmmu_lut408h_v1_tt;
-  using gfxmmu_lut409l_tt = regs::gfxmmu_gfxmmu_lut409l_v1_tt;
-  using gfxmmu_lut409h_tt = regs::gfxmmu_gfxmmu_lut409h_v1_tt;
-  using gfxmmu_lut410l_tt = regs::gfxmmu_gfxmmu_lut410l_v1_tt;
-  using gfxmmu_lut410h_tt = regs::gfxmmu_gfxmmu_lut410h_v1_tt;
-  using gfxmmu_lut411l_tt = regs::gfxmmu_gfxmmu_lut411l_v1_tt;
-  using gfxmmu_lut411h_tt = regs::gfxmmu_gfxmmu_lut411h_v1_tt;
-  using gfxmmu_lut412l_tt = regs::gfxmmu_gfxmmu_lut412l_v1_tt;
-  using gfxmmu_lut412h_tt = regs::gfxmmu_gfxmmu_lut412h_v1_tt;
-  using gfxmmu_lut413l_tt = regs::gfxmmu_gfxmmu_lut413l_v1_tt;
-  using gfxmmu_lut413h_tt = regs::gfxmmu_gfxmmu_lut413h_v1_tt;
-  using gfxmmu_lut414l_tt = regs::gfxmmu_gfxmmu_lut414l_v1_tt;
-  using gfxmmu_lut414h_tt = regs::gfxmmu_gfxmmu_lut414h_v1_tt;
-  using gfxmmu_lut415l_tt = regs::gfxmmu_gfxmmu_lut415l_v1_tt;
-  using gfxmmu_lut415h_tt = regs::gfxmmu_gfxmmu_lut415h_v1_tt;
-  using gfxmmu_lut416l_tt = regs::gfxmmu_gfxmmu_lut416l_v1_tt;
-  using gfxmmu_lut416h_tt = regs::gfxmmu_gfxmmu_lut416h_v1_tt;
-  using gfxmmu_lut417l_tt = regs::gfxmmu_gfxmmu_lut417l_v1_tt;
-  using gfxmmu_lut417h_tt = regs::gfxmmu_gfxmmu_lut417h_v1_tt;
-  using gfxmmu_lut418l_tt = regs::gfxmmu_gfxmmu_lut418l_v1_tt;
-  using gfxmmu_lut418h_tt = regs::gfxmmu_gfxmmu_lut418h_v1_tt;
-  using gfxmmu_lut419l_tt = regs::gfxmmu_gfxmmu_lut419l_v1_tt;
-  using gfxmmu_lut419h_tt = regs::gfxmmu_gfxmmu_lut419h_v1_tt;
-  using gfxmmu_lut420l_tt = regs::gfxmmu_gfxmmu_lut420l_v1_tt;
-  using gfxmmu_lut420h_tt = regs::gfxmmu_gfxmmu_lut420h_v1_tt;
-  using gfxmmu_lut421l_tt = regs::gfxmmu_gfxmmu_lut421l_v1_tt;
-  using gfxmmu_lut421h_tt = regs::gfxmmu_gfxmmu_lut421h_v1_tt;
-  using gfxmmu_lut422l_tt = regs::gfxmmu_gfxmmu_lut422l_v1_tt;
-  using gfxmmu_lut422h_tt = regs::gfxmmu_gfxmmu_lut422h_v1_tt;
-  using gfxmmu_lut423l_tt = regs::gfxmmu_gfxmmu_lut423l_v1_tt;
-  using gfxmmu_lut423h_tt = regs::gfxmmu_gfxmmu_lut423h_v1_tt;
-  using gfxmmu_lut424l_tt = regs::gfxmmu_gfxmmu_lut424l_v1_tt;
-  using gfxmmu_lut424h_tt = regs::gfxmmu_gfxmmu_lut424h_v1_tt;
-  using gfxmmu_lut425l_tt = regs::gfxmmu_gfxmmu_lut425l_v1_tt;
-  using gfxmmu_lut425h_tt = regs::gfxmmu_gfxmmu_lut425h_v1_tt;
-  using gfxmmu_lut426l_tt = regs::gfxmmu_gfxmmu_lut426l_v1_tt;
-  using gfxmmu_lut426h_tt = regs::gfxmmu_gfxmmu_lut426h_v1_tt;
-  using gfxmmu_lut427l_tt = regs::gfxmmu_gfxmmu_lut427l_v1_tt;
-  using gfxmmu_lut427h_tt = regs::gfxmmu_gfxmmu_lut427h_v1_tt;
-  using gfxmmu_lut428l_tt = regs::gfxmmu_gfxmmu_lut428l_v1_tt;
-  using gfxmmu_lut428h_tt = regs::gfxmmu_gfxmmu_lut428h_v1_tt;
-  using gfxmmu_lut429l_tt = regs::gfxmmu_gfxmmu_lut429l_v1_tt;
-  using gfxmmu_lut429h_tt = regs::gfxmmu_gfxmmu_lut429h_v1_tt;
-  using gfxmmu_lut430l_tt = regs::gfxmmu_gfxmmu_lut430l_v1_tt;
-  using gfxmmu_lut430h_tt = regs::gfxmmu_gfxmmu_lut430h_v1_tt;
-  using gfxmmu_lut431l_tt = regs::gfxmmu_gfxmmu_lut431l_v1_tt;
-  using gfxmmu_lut431h_tt = regs::gfxmmu_gfxmmu_lut431h_v1_tt;
-  using gfxmmu_lut432l_tt = regs::gfxmmu_gfxmmu_lut432l_v1_tt;
-  using gfxmmu_lut432h_tt = regs::gfxmmu_gfxmmu_lut432h_v1_tt;
-  using gfxmmu_lut433l_tt = regs::gfxmmu_gfxmmu_lut433l_v1_tt;
-  using gfxmmu_lut433h_tt = regs::gfxmmu_gfxmmu_lut433h_v1_tt;
-  using gfxmmu_lut434l_tt = regs::gfxmmu_gfxmmu_lut434l_v1_tt;
-  using gfxmmu_lut434h_tt = regs::gfxmmu_gfxmmu_lut434h_v1_tt;
-  using gfxmmu_lut435l_tt = regs::gfxmmu_gfxmmu_lut435l_v1_tt;
-  using gfxmmu_lut435h_tt = regs::gfxmmu_gfxmmu_lut435h_v1_tt;
-  using gfxmmu_lut436l_tt = regs::gfxmmu_gfxmmu_lut436l_v1_tt;
-  using gfxmmu_lut436h_tt = regs::gfxmmu_gfxmmu_lut436h_v1_tt;
-  using gfxmmu_lut437l_tt = regs::gfxmmu_gfxmmu_lut437l_v1_tt;
-  using gfxmmu_lut437h_tt = regs::gfxmmu_gfxmmu_lut437h_v1_tt;
-  using gfxmmu_lut438l_tt = regs::gfxmmu_gfxmmu_lut438l_v1_tt;
-  using gfxmmu_lut438h_tt = regs::gfxmmu_gfxmmu_lut438h_v1_tt;
-  using gfxmmu_lut439l_tt = regs::gfxmmu_gfxmmu_lut439l_v1_tt;
-  using gfxmmu_lut439h_tt = regs::gfxmmu_gfxmmu_lut439h_v1_tt;
-  using gfxmmu_lut440l_tt = regs::gfxmmu_gfxmmu_lut440l_v1_tt;
-  using gfxmmu_lut440h_tt = regs::gfxmmu_gfxmmu_lut440h_v1_tt;
-  using gfxmmu_lut441l_tt = regs::gfxmmu_gfxmmu_lut441l_v1_tt;
-  using gfxmmu_lut441h_tt = regs::gfxmmu_gfxmmu_lut441h_v1_tt;
-  using gfxmmu_lut442l_tt = regs::gfxmmu_gfxmmu_lut442l_v1_tt;
-  using gfxmmu_lut442h_tt = regs::gfxmmu_gfxmmu_lut442h_v1_tt;
-  using gfxmmu_lut443l_tt = regs::gfxmmu_gfxmmu_lut443l_v1_tt;
-  using gfxmmu_lut443h_tt = regs::gfxmmu_gfxmmu_lut443h_v1_tt;
-  using gfxmmu_lut444l_tt = regs::gfxmmu_gfxmmu_lut444l_v1_tt;
-  using gfxmmu_lut444h_tt = regs::gfxmmu_gfxmmu_lut444h_v1_tt;
-  using gfxmmu_lut445l_tt = regs::gfxmmu_gfxmmu_lut445l_v1_tt;
-  using gfxmmu_lut445h_tt = regs::gfxmmu_gfxmmu_lut445h_v1_tt;
-  using gfxmmu_lut446l_tt = regs::gfxmmu_gfxmmu_lut446l_v1_tt;
-  using gfxmmu_lut446h_tt = regs::gfxmmu_gfxmmu_lut446h_v1_tt;
-  using gfxmmu_lut447l_tt = regs::gfxmmu_gfxmmu_lut447l_v1_tt;
-  using gfxmmu_lut447h_tt = regs::gfxmmu_gfxmmu_lut447h_v1_tt;
-  using gfxmmu_lut448l_tt = regs::gfxmmu_gfxmmu_lut448l_v1_tt;
-  using gfxmmu_lut448h_tt = regs::gfxmmu_gfxmmu_lut448h_v1_tt;
-  using gfxmmu_lut449l_tt = regs::gfxmmu_gfxmmu_lut449l_v1_tt;
-  using gfxmmu_lut449h_tt = regs::gfxmmu_gfxmmu_lut449h_v1_tt;
-  using gfxmmu_lut450l_tt = regs::gfxmmu_gfxmmu_lut450l_v1_tt;
-  using gfxmmu_lut450h_tt = regs::gfxmmu_gfxmmu_lut450h_v1_tt;
-  using gfxmmu_lut451l_tt = regs::gfxmmu_gfxmmu_lut451l_v1_tt;
-  using gfxmmu_lut451h_tt = regs::gfxmmu_gfxmmu_lut451h_v1_tt;
-  using gfxmmu_lut452l_tt = regs::gfxmmu_gfxmmu_lut452l_v1_tt;
-  using gfxmmu_lut452h_tt = regs::gfxmmu_gfxmmu_lut452h_v1_tt;
-  using gfxmmu_lut453l_tt = regs::gfxmmu_gfxmmu_lut453l_v1_tt;
-  using gfxmmu_lut453h_tt = regs::gfxmmu_gfxmmu_lut453h_v1_tt;
-  using gfxmmu_lut454l_tt = regs::gfxmmu_gfxmmu_lut454l_v1_tt;
-  using gfxmmu_lut454h_tt = regs::gfxmmu_gfxmmu_lut454h_v1_tt;
-  using gfxmmu_lut455l_tt = regs::gfxmmu_gfxmmu_lut455l_v1_tt;
-  using gfxmmu_lut455h_tt = regs::gfxmmu_gfxmmu_lut455h_v1_tt;
-  using gfxmmu_lut456l_tt = regs::gfxmmu_gfxmmu_lut456l_v1_tt;
-  using gfxmmu_lut456h_tt = regs::gfxmmu_gfxmmu_lut456h_v1_tt;
-  using gfxmmu_lut457l_tt = regs::gfxmmu_gfxmmu_lut457l_v1_tt;
-  using gfxmmu_lut457h_tt = regs::gfxmmu_gfxmmu_lut457h_v1_tt;
-  using gfxmmu_lut458l_tt = regs::gfxmmu_gfxmmu_lut458l_v1_tt;
-  using gfxmmu_lut458h_tt = regs::gfxmmu_gfxmmu_lut458h_v1_tt;
-  using gfxmmu_lut459l_tt = regs::gfxmmu_gfxmmu_lut459l_v1_tt;
-  using gfxmmu_lut459h_tt = regs::gfxmmu_gfxmmu_lut459h_v1_tt;
-  using gfxmmu_lut460l_tt = regs::gfxmmu_gfxmmu_lut460l_v1_tt;
-  using gfxmmu_lut460h_tt = regs::gfxmmu_gfxmmu_lut460h_v1_tt;
-  using gfxmmu_lut461l_tt = regs::gfxmmu_gfxmmu_lut461l_v1_tt;
-  using gfxmmu_lut461h_tt = regs::gfxmmu_gfxmmu_lut461h_v1_tt;
-  using gfxmmu_lut462l_tt = regs::gfxmmu_gfxmmu_lut462l_v1_tt;
-  using gfxmmu_lut462h_tt = regs::gfxmmu_gfxmmu_lut462h_v1_tt;
-  using gfxmmu_lut463l_tt = regs::gfxmmu_gfxmmu_lut463l_v1_tt;
-  using gfxmmu_lut463h_tt = regs::gfxmmu_gfxmmu_lut463h_v1_tt;
-  using gfxmmu_lut464l_tt = regs::gfxmmu_gfxmmu_lut464l_v1_tt;
-  using gfxmmu_lut464h_tt = regs::gfxmmu_gfxmmu_lut464h_v1_tt;
-  using gfxmmu_lut465l_tt = regs::gfxmmu_gfxmmu_lut465l_v1_tt;
-  using gfxmmu_lut465h_tt = regs::gfxmmu_gfxmmu_lut465h_v1_tt;
-  using gfxmmu_lut466l_tt = regs::gfxmmu_gfxmmu_lut466l_v1_tt;
-  using gfxmmu_lut466h_tt = regs::gfxmmu_gfxmmu_lut466h_v1_tt;
-  using gfxmmu_lut467l_tt = regs::gfxmmu_gfxmmu_lut467l_v1_tt;
-  using gfxmmu_lut467h_tt = regs::gfxmmu_gfxmmu_lut467h_v1_tt;
-  using gfxmmu_lut468l_tt = regs::gfxmmu_gfxmmu_lut468l_v1_tt;
-  using gfxmmu_lut468h_tt = regs::gfxmmu_gfxmmu_lut468h_v1_tt;
-  using gfxmmu_lut469l_tt = regs::gfxmmu_gfxmmu_lut469l_v1_tt;
-  using gfxmmu_lut469h_tt = regs::gfxmmu_gfxmmu_lut469h_v1_tt;
-  using gfxmmu_lut470l_tt = regs::gfxmmu_gfxmmu_lut470l_v1_tt;
-  using gfxmmu_lut470h_tt = regs::gfxmmu_gfxmmu_lut470h_v1_tt;
-  using gfxmmu_lut471l_tt = regs::gfxmmu_gfxmmu_lut471l_v1_tt;
-  using gfxmmu_lut471h_tt = regs::gfxmmu_gfxmmu_lut471h_v1_tt;
-  using gfxmmu_lut472l_tt = regs::gfxmmu_gfxmmu_lut472l_v1_tt;
-  using gfxmmu_lut472h_tt = regs::gfxmmu_gfxmmu_lut472h_v1_tt;
-  using gfxmmu_lut473l_tt = regs::gfxmmu_gfxmmu_lut473l_v1_tt;
-  using gfxmmu_lut473h_tt = regs::gfxmmu_gfxmmu_lut473h_v1_tt;
-  using gfxmmu_lut474l_tt = regs::gfxmmu_gfxmmu_lut474l_v1_tt;
-  using gfxmmu_lut474h_tt = regs::gfxmmu_gfxmmu_lut474h_v1_tt;
-  using gfxmmu_lut475l_tt = regs::gfxmmu_gfxmmu_lut475l_v1_tt;
-  using gfxmmu_lut475h_tt = regs::gfxmmu_gfxmmu_lut475h_v1_tt;
-  using gfxmmu_lut476l_tt = regs::gfxmmu_gfxmmu_lut476l_v1_tt;
-  using gfxmmu_lut476h_tt = regs::gfxmmu_gfxmmu_lut476h_v1_tt;
-  using gfxmmu_lut477l_tt = regs::gfxmmu_gfxmmu_lut477l_v1_tt;
-  using gfxmmu_lut477h_tt = regs::gfxmmu_gfxmmu_lut477h_v1_tt;
-  using gfxmmu_lut478l_tt = regs::gfxmmu_gfxmmu_lut478l_v1_tt;
-  using gfxmmu_lut478h_tt = regs::gfxmmu_gfxmmu_lut478h_v1_tt;
-  using gfxmmu_lut479l_tt = regs::gfxmmu_gfxmmu_lut479l_v1_tt;
-  using gfxmmu_lut479h_tt = regs::gfxmmu_gfxmmu_lut479h_v1_tt;
-  using gfxmmu_lut480l_tt = regs::gfxmmu_gfxmmu_lut480l_v1_tt;
-  using gfxmmu_lut480h_tt = regs::gfxmmu_gfxmmu_lut480h_v1_tt;
-  using gfxmmu_lut481l_tt = regs::gfxmmu_gfxmmu_lut481l_v1_tt;
-  using gfxmmu_lut481h_tt = regs::gfxmmu_gfxmmu_lut481h_v1_tt;
-  using gfxmmu_lut482l_tt = regs::gfxmmu_gfxmmu_lut482l_v1_tt;
-  using gfxmmu_lut482h_tt = regs::gfxmmu_gfxmmu_lut482h_v1_tt;
-  using gfxmmu_lut483l_tt = regs::gfxmmu_gfxmmu_lut483l_v1_tt;
-  using gfxmmu_lut483h_tt = regs::gfxmmu_gfxmmu_lut483h_v1_tt;
-  using gfxmmu_lut484l_tt = regs::gfxmmu_gfxmmu_lut484l_v1_tt;
-  using gfxmmu_lut484h_tt = regs::gfxmmu_gfxmmu_lut484h_v1_tt;
-  using gfxmmu_lut485l_tt = regs::gfxmmu_gfxmmu_lut485l_v1_tt;
-  using gfxmmu_lut485h_tt = regs::gfxmmu_gfxmmu_lut485h_v1_tt;
-  using gfxmmu_lut486l_tt = regs::gfxmmu_gfxmmu_lut486l_v1_tt;
-  using gfxmmu_lut486h_tt = regs::gfxmmu_gfxmmu_lut486h_v1_tt;
-  using gfxmmu_lut487l_tt = regs::gfxmmu_gfxmmu_lut487l_v1_tt;
-  using gfxmmu_lut487h_tt = regs::gfxmmu_gfxmmu_lut487h_v1_tt;
-  using gfxmmu_lut488l_tt = regs::gfxmmu_gfxmmu_lut488l_v1_tt;
-  using gfxmmu_lut488h_tt = regs::gfxmmu_gfxmmu_lut488h_v1_tt;
-  using gfxmmu_lut489l_tt = regs::gfxmmu_gfxmmu_lut489l_v1_tt;
-  using gfxmmu_lut489h_tt = regs::gfxmmu_gfxmmu_lut489h_v1_tt;
-  using gfxmmu_lut490l_tt = regs::gfxmmu_gfxmmu_lut490l_v1_tt;
-  using gfxmmu_lut490h_tt = regs::gfxmmu_gfxmmu_lut490h_v1_tt;
-  using gfxmmu_lut491l_tt = regs::gfxmmu_gfxmmu_lut491l_v1_tt;
-  using gfxmmu_lut491h_tt = regs::gfxmmu_gfxmmu_lut491h_v1_tt;
-  using gfxmmu_lut492l_tt = regs::gfxmmu_gfxmmu_lut492l_v1_tt;
-  using gfxmmu_lut492h_tt = regs::gfxmmu_gfxmmu_lut492h_v1_tt;
-  using gfxmmu_lut493l_tt = regs::gfxmmu_gfxmmu_lut493l_v1_tt;
-  using gfxmmu_lut493h_tt = regs::gfxmmu_gfxmmu_lut493h_v1_tt;
-  using gfxmmu_lut494l_tt = regs::gfxmmu_gfxmmu_lut494l_v1_tt;
-  using gfxmmu_lut494h_tt = regs::gfxmmu_gfxmmu_lut494h_v1_tt;
-  using gfxmmu_lut495l_tt = regs::gfxmmu_gfxmmu_lut495l_v1_tt;
-  using gfxmmu_lut495h_tt = regs::gfxmmu_gfxmmu_lut495h_v1_tt;
-  using gfxmmu_lut496l_tt = regs::gfxmmu_gfxmmu_lut496l_v1_tt;
-  using gfxmmu_lut496h_tt = regs::gfxmmu_gfxmmu_lut496h_v1_tt;
-  using gfxmmu_lut497l_tt = regs::gfxmmu_gfxmmu_lut497l_v1_tt;
-  using gfxmmu_lut497h_tt = regs::gfxmmu_gfxmmu_lut497h_v1_tt;
-  using gfxmmu_lut498l_tt = regs::gfxmmu_gfxmmu_lut498l_v1_tt;
-  using gfxmmu_lut498h_tt = regs::gfxmmu_gfxmmu_lut498h_v1_tt;
-  using gfxmmu_lut499l_tt = regs::gfxmmu_gfxmmu_lut499l_v1_tt;
-  using gfxmmu_lut499h_tt = regs::gfxmmu_gfxmmu_lut499h_v1_tt;
-  using gfxmmu_lut500l_tt = regs::gfxmmu_gfxmmu_lut500l_v1_tt;
-  using gfxmmu_lut500h_tt = regs::gfxmmu_gfxmmu_lut500h_v1_tt;
-  using gfxmmu_lut501l_tt = regs::gfxmmu_gfxmmu_lut501l_v1_tt;
-  using gfxmmu_lut501h_tt = regs::gfxmmu_gfxmmu_lut501h_v1_tt;
-  using gfxmmu_lut502l_tt = regs::gfxmmu_gfxmmu_lut502l_v1_tt;
-  using gfxmmu_lut502h_tt = regs::gfxmmu_gfxmmu_lut502h_v1_tt;
-  using gfxmmu_lut503l_tt = regs::gfxmmu_gfxmmu_lut503l_v1_tt;
-  using gfxmmu_lut503h_tt = regs::gfxmmu_gfxmmu_lut503h_v1_tt;
-  using gfxmmu_lut504l_tt = regs::gfxmmu_gfxmmu_lut504l_v1_tt;
-  using gfxmmu_lut504h_tt = regs::gfxmmu_gfxmmu_lut504h_v1_tt;
-  using gfxmmu_lut505l_tt = regs::gfxmmu_gfxmmu_lut505l_v1_tt;
-  using gfxmmu_lut505h_tt = regs::gfxmmu_gfxmmu_lut505h_v1_tt;
-  using gfxmmu_lut506l_tt = regs::gfxmmu_gfxmmu_lut506l_v1_tt;
-  using gfxmmu_lut506h_tt = regs::gfxmmu_gfxmmu_lut506h_v1_tt;
-  using gfxmmu_lut507l_tt = regs::gfxmmu_gfxmmu_lut507l_v1_tt;
-  using gfxmmu_lut507h_tt = regs::gfxmmu_gfxmmu_lut507h_v1_tt;
-  using gfxmmu_lut508l_tt = regs::gfxmmu_gfxmmu_lut508l_v1_tt;
-  using gfxmmu_lut508h_tt = regs::gfxmmu_gfxmmu_lut508h_v1_tt;
-  using gfxmmu_lut509l_tt = regs::gfxmmu_gfxmmu_lut509l_v1_tt;
-  using gfxmmu_lut509h_tt = regs::gfxmmu_gfxmmu_lut509h_v1_tt;
-  using gfxmmu_lut510l_tt = regs::gfxmmu_gfxmmu_lut510l_v1_tt;
-  using gfxmmu_lut510h_tt = regs::gfxmmu_gfxmmu_lut510h_v1_tt;
-  using gfxmmu_lut511l_tt = regs::gfxmmu_gfxmmu_lut511l_v1_tt;
-  using gfxmmu_lut511h_tt = regs::gfxmmu_gfxmmu_lut511h_v1_tt;
-  using gfxmmu_lut512l_tt = regs::gfxmmu_gfxmmu_lut512l_v1_tt;
-  using gfxmmu_lut512h_tt = regs::gfxmmu_gfxmmu_lut512h_v1_tt;
-  using gfxmmu_lut513l_tt = regs::gfxmmu_gfxmmu_lut513l_v1_tt;
-  using gfxmmu_lut513h_tt = regs::gfxmmu_gfxmmu_lut513h_v1_tt;
-  using gfxmmu_lut514l_tt = regs::gfxmmu_gfxmmu_lut514l_v1_tt;
-  using gfxmmu_lut514h_tt = regs::gfxmmu_gfxmmu_lut514h_v1_tt;
-  using gfxmmu_lut515l_tt = regs::gfxmmu_gfxmmu_lut515l_v1_tt;
-  using gfxmmu_lut515h_tt = regs::gfxmmu_gfxmmu_lut515h_v1_tt;
-  using gfxmmu_lut516l_tt = regs::gfxmmu_gfxmmu_lut516l_v1_tt;
-  using gfxmmu_lut516h_tt = regs::gfxmmu_gfxmmu_lut516h_v1_tt;
-  using gfxmmu_lut517l_tt = regs::gfxmmu_gfxmmu_lut517l_v1_tt;
-  using gfxmmu_lut517h_tt = regs::gfxmmu_gfxmmu_lut517h_v1_tt;
-  using gfxmmu_lut518l_tt = regs::gfxmmu_gfxmmu_lut518l_v1_tt;
-  using gfxmmu_lut518h_tt = regs::gfxmmu_gfxmmu_lut518h_v1_tt;
-  using gfxmmu_lut519l_tt = regs::gfxmmu_gfxmmu_lut519l_v1_tt;
-  using gfxmmu_lut519h_tt = regs::gfxmmu_gfxmmu_lut519h_v1_tt;
-  using gfxmmu_lut520l_tt = regs::gfxmmu_gfxmmu_lut520l_v1_tt;
-  using gfxmmu_lut520h_tt = regs::gfxmmu_gfxmmu_lut520h_v1_tt;
-  using gfxmmu_lut521l_tt = regs::gfxmmu_gfxmmu_lut521l_v1_tt;
-  using gfxmmu_lut521h_tt = regs::gfxmmu_gfxmmu_lut521h_v1_tt;
-  using gfxmmu_lut522l_tt = regs::gfxmmu_gfxmmu_lut522l_v1_tt;
-  using gfxmmu_lut522h_tt = regs::gfxmmu_gfxmmu_lut522h_v1_tt;
-  using gfxmmu_lut523l_tt = regs::gfxmmu_gfxmmu_lut523l_v1_tt;
-  using gfxmmu_lut523h_tt = regs::gfxmmu_gfxmmu_lut523h_v1_tt;
-  using gfxmmu_lut524l_tt = regs::gfxmmu_gfxmmu_lut524l_v1_tt;
-  using gfxmmu_lut524h_tt = regs::gfxmmu_gfxmmu_lut524h_v1_tt;
-  using gfxmmu_lut525l_tt = regs::gfxmmu_gfxmmu_lut525l_v1_tt;
-  using gfxmmu_lut525h_tt = regs::gfxmmu_gfxmmu_lut525h_v1_tt;
-  using gfxmmu_lut526l_tt = regs::gfxmmu_gfxmmu_lut526l_v1_tt;
-  using gfxmmu_lut526h_tt = regs::gfxmmu_gfxmmu_lut526h_v1_tt;
-  using gfxmmu_lut527l_tt = regs::gfxmmu_gfxmmu_lut527l_v1_tt;
-  using gfxmmu_lut527h_tt = regs::gfxmmu_gfxmmu_lut527h_v1_tt;
-  using gfxmmu_lut528l_tt = regs::gfxmmu_gfxmmu_lut528l_v1_tt;
-  using gfxmmu_lut528h_tt = regs::gfxmmu_gfxmmu_lut528h_v1_tt;
-  using gfxmmu_lut529l_tt = regs::gfxmmu_gfxmmu_lut529l_v1_tt;
-  using gfxmmu_lut529h_tt = regs::gfxmmu_gfxmmu_lut529h_v1_tt;
-  using gfxmmu_lut530l_tt = regs::gfxmmu_gfxmmu_lut530l_v1_tt;
-  using gfxmmu_lut530h_tt = regs::gfxmmu_gfxmmu_lut530h_v1_tt;
-  using gfxmmu_lut531l_tt = regs::gfxmmu_gfxmmu_lut531l_v1_tt;
-  using gfxmmu_lut531h_tt = regs::gfxmmu_gfxmmu_lut531h_v1_tt;
-  using gfxmmu_lut532l_tt = regs::gfxmmu_gfxmmu_lut532l_v1_tt;
-  using gfxmmu_lut532h_tt = regs::gfxmmu_gfxmmu_lut532h_v1_tt;
-  using gfxmmu_lut533l_tt = regs::gfxmmu_gfxmmu_lut533l_v1_tt;
-  using gfxmmu_lut533h_tt = regs::gfxmmu_gfxmmu_lut533h_v1_tt;
-  using gfxmmu_lut534l_tt = regs::gfxmmu_gfxmmu_lut534l_v1_tt;
-  using gfxmmu_lut534h_tt = regs::gfxmmu_gfxmmu_lut534h_v1_tt;
-  using gfxmmu_lut535l_tt = regs::gfxmmu_gfxmmu_lut535l_v1_tt;
-  using gfxmmu_lut535h_tt = regs::gfxmmu_gfxmmu_lut535h_v1_tt;
-  using gfxmmu_lut536l_tt = regs::gfxmmu_gfxmmu_lut536l_v1_tt;
-  using gfxmmu_lut536h_tt = regs::gfxmmu_gfxmmu_lut536h_v1_tt;
-  using gfxmmu_lut537l_tt = regs::gfxmmu_gfxmmu_lut537l_v1_tt;
-  using gfxmmu_lut537h_tt = regs::gfxmmu_gfxmmu_lut537h_v1_tt;
-  using gfxmmu_lut538l_tt = regs::gfxmmu_gfxmmu_lut538l_v1_tt;
-  using gfxmmu_lut538h_tt = regs::gfxmmu_gfxmmu_lut538h_v1_tt;
-  using gfxmmu_lut539l_tt = regs::gfxmmu_gfxmmu_lut539l_v1_tt;
-  using gfxmmu_lut539h_tt = regs::gfxmmu_gfxmmu_lut539h_v1_tt;
-  using gfxmmu_lut540l_tt = regs::gfxmmu_gfxmmu_lut540l_v1_tt;
-  using gfxmmu_lut540h_tt = regs::gfxmmu_gfxmmu_lut540h_v1_tt;
-  using gfxmmu_lut541l_tt = regs::gfxmmu_gfxmmu_lut541l_v1_tt;
-  using gfxmmu_lut541h_tt = regs::gfxmmu_gfxmmu_lut541h_v1_tt;
-  using gfxmmu_lut542l_tt = regs::gfxmmu_gfxmmu_lut542l_v1_tt;
-  using gfxmmu_lut542h_tt = regs::gfxmmu_gfxmmu_lut542h_v1_tt;
-  using gfxmmu_lut543l_tt = regs::gfxmmu_gfxmmu_lut543l_v1_tt;
-  using gfxmmu_lut543h_tt = regs::gfxmmu_gfxmmu_lut543h_v1_tt;
-  using gfxmmu_lut544l_tt = regs::gfxmmu_gfxmmu_lut544l_v1_tt;
-  using gfxmmu_lut544h_tt = regs::gfxmmu_gfxmmu_lut544h_v1_tt;
-  using gfxmmu_lut545l_tt = regs::gfxmmu_gfxmmu_lut545l_v1_tt;
-  using gfxmmu_lut545h_tt = regs::gfxmmu_gfxmmu_lut545h_v1_tt;
-  using gfxmmu_lut546l_tt = regs::gfxmmu_gfxmmu_lut546l_v1_tt;
-  using gfxmmu_lut546h_tt = regs::gfxmmu_gfxmmu_lut546h_v1_tt;
-  using gfxmmu_lut547l_tt = regs::gfxmmu_gfxmmu_lut547l_v1_tt;
-  using gfxmmu_lut547h_tt = regs::gfxmmu_gfxmmu_lut547h_v1_tt;
-  using gfxmmu_lut548l_tt = regs::gfxmmu_gfxmmu_lut548l_v1_tt;
-  using gfxmmu_lut548h_tt = regs::gfxmmu_gfxmmu_lut548h_v1_tt;
-  using gfxmmu_lut549l_tt = regs::gfxmmu_gfxmmu_lut549l_v1_tt;
-  using gfxmmu_lut549h_tt = regs::gfxmmu_gfxmmu_lut549h_v1_tt;
-  using gfxmmu_lut550l_tt = regs::gfxmmu_gfxmmu_lut550l_v1_tt;
-  using gfxmmu_lut550h_tt = regs::gfxmmu_gfxmmu_lut550h_v1_tt;
-  using gfxmmu_lut551l_tt = regs::gfxmmu_gfxmmu_lut551l_v1_tt;
-  using gfxmmu_lut551h_tt = regs::gfxmmu_gfxmmu_lut551h_v1_tt;
-  using gfxmmu_lut552l_tt = regs::gfxmmu_gfxmmu_lut552l_v1_tt;
-  using gfxmmu_lut552h_tt = regs::gfxmmu_gfxmmu_lut552h_v1_tt;
-  using gfxmmu_lut553l_tt = regs::gfxmmu_gfxmmu_lut553l_v1_tt;
-  using gfxmmu_lut553h_tt = regs::gfxmmu_gfxmmu_lut553h_v1_tt;
-  using gfxmmu_lut554l_tt = regs::gfxmmu_gfxmmu_lut554l_v1_tt;
-  using gfxmmu_lut554h_tt = regs::gfxmmu_gfxmmu_lut554h_v1_tt;
-  using gfxmmu_lut555l_tt = regs::gfxmmu_gfxmmu_lut555l_v1_tt;
-  using gfxmmu_lut555h_tt = regs::gfxmmu_gfxmmu_lut555h_v1_tt;
-  using gfxmmu_lut556l_tt = regs::gfxmmu_gfxmmu_lut556l_v1_tt;
-  using gfxmmu_lut556h_tt = regs::gfxmmu_gfxmmu_lut556h_v1_tt;
-  using gfxmmu_lut557l_tt = regs::gfxmmu_gfxmmu_lut557l_v1_tt;
-  using gfxmmu_lut557h_tt = regs::gfxmmu_gfxmmu_lut557h_v1_tt;
-  using gfxmmu_lut558l_tt = regs::gfxmmu_gfxmmu_lut558l_v1_tt;
-  using gfxmmu_lut558h_tt = regs::gfxmmu_gfxmmu_lut558h_v1_tt;
-  using gfxmmu_lut559l_tt = regs::gfxmmu_gfxmmu_lut559l_v1_tt;
-  using gfxmmu_lut559h_tt = regs::gfxmmu_gfxmmu_lut559h_v1_tt;
-  using gfxmmu_lut560l_tt = regs::gfxmmu_gfxmmu_lut560l_v1_tt;
-  using gfxmmu_lut560h_tt = regs::gfxmmu_gfxmmu_lut560h_v1_tt;
-  using gfxmmu_lut561l_tt = regs::gfxmmu_gfxmmu_lut561l_v1_tt;
-  using gfxmmu_lut561h_tt = regs::gfxmmu_gfxmmu_lut561h_v1_tt;
-  using gfxmmu_lut562l_tt = regs::gfxmmu_gfxmmu_lut562l_v1_tt;
-  using gfxmmu_lut562h_tt = regs::gfxmmu_gfxmmu_lut562h_v1_tt;
-  using gfxmmu_lut563l_tt = regs::gfxmmu_gfxmmu_lut563l_v1_tt;
-  using gfxmmu_lut563h_tt = regs::gfxmmu_gfxmmu_lut563h_v1_tt;
-  using gfxmmu_lut564l_tt = regs::gfxmmu_gfxmmu_lut564l_v1_tt;
-  using gfxmmu_lut564h_tt = regs::gfxmmu_gfxmmu_lut564h_v1_tt;
-  using gfxmmu_lut565l_tt = regs::gfxmmu_gfxmmu_lut565l_v1_tt;
-  using gfxmmu_lut565h_tt = regs::gfxmmu_gfxmmu_lut565h_v1_tt;
-  using gfxmmu_lut566l_tt = regs::gfxmmu_gfxmmu_lut566l_v1_tt;
-  using gfxmmu_lut566h_tt = regs::gfxmmu_gfxmmu_lut566h_v1_tt;
-  using gfxmmu_lut567l_tt = regs::gfxmmu_gfxmmu_lut567l_v1_tt;
-  using gfxmmu_lut567h_tt = regs::gfxmmu_gfxmmu_lut567h_v1_tt;
-  using gfxmmu_lut568l_tt = regs::gfxmmu_gfxmmu_lut568l_v1_tt;
-  using gfxmmu_lut568h_tt = regs::gfxmmu_gfxmmu_lut568h_v1_tt;
-  using gfxmmu_lut569l_tt = regs::gfxmmu_gfxmmu_lut569l_v1_tt;
-  using gfxmmu_lut569h_tt = regs::gfxmmu_gfxmmu_lut569h_v1_tt;
-  using gfxmmu_lut570l_tt = regs::gfxmmu_gfxmmu_lut570l_v1_tt;
-  using gfxmmu_lut570h_tt = regs::gfxmmu_gfxmmu_lut570h_v1_tt;
-  using gfxmmu_lut571l_tt = regs::gfxmmu_gfxmmu_lut571l_v1_tt;
-  using gfxmmu_lut571h_tt = regs::gfxmmu_gfxmmu_lut571h_v1_tt;
-  using gfxmmu_lut572l_tt = regs::gfxmmu_gfxmmu_lut572l_v1_tt;
-  using gfxmmu_lut572h_tt = regs::gfxmmu_gfxmmu_lut572h_v1_tt;
-  using gfxmmu_lut573l_tt = regs::gfxmmu_gfxmmu_lut573l_v1_tt;
-  using gfxmmu_lut573h_tt = regs::gfxmmu_gfxmmu_lut573h_v1_tt;
-  using gfxmmu_lut574l_tt = regs::gfxmmu_gfxmmu_lut574l_v1_tt;
-  using gfxmmu_lut574h_tt = regs::gfxmmu_gfxmmu_lut574h_v1_tt;
-  using gfxmmu_lut575l_tt = regs::gfxmmu_gfxmmu_lut575l_v1_tt;
-  using gfxmmu_lut575h_tt = regs::gfxmmu_gfxmmu_lut575h_v1_tt;
-  using gfxmmu_lut576l_tt = regs::gfxmmu_gfxmmu_lut576l_v1_tt;
-  using gfxmmu_lut576h_tt = regs::gfxmmu_gfxmmu_lut576h_v1_tt;
-  using gfxmmu_lut577l_tt = regs::gfxmmu_gfxmmu_lut577l_v1_tt;
-  using gfxmmu_lut577h_tt = regs::gfxmmu_gfxmmu_lut577h_v1_tt;
-  using gfxmmu_lut578l_tt = regs::gfxmmu_gfxmmu_lut578l_v1_tt;
-  using gfxmmu_lut578h_tt = regs::gfxmmu_gfxmmu_lut578h_v1_tt;
-  using gfxmmu_lut579l_tt = regs::gfxmmu_gfxmmu_lut579l_v1_tt;
-  using gfxmmu_lut579h_tt = regs::gfxmmu_gfxmmu_lut579h_v1_tt;
-  using gfxmmu_lut580l_tt = regs::gfxmmu_gfxmmu_lut580l_v1_tt;
-  using gfxmmu_lut580h_tt = regs::gfxmmu_gfxmmu_lut580h_v1_tt;
-  using gfxmmu_lut581l_tt = regs::gfxmmu_gfxmmu_lut581l_v1_tt;
-  using gfxmmu_lut581h_tt = regs::gfxmmu_gfxmmu_lut581h_v1_tt;
-  using gfxmmu_lut582l_tt = regs::gfxmmu_gfxmmu_lut582l_v1_tt;
-  using gfxmmu_lut582h_tt = regs::gfxmmu_gfxmmu_lut582h_v1_tt;
-  using gfxmmu_lut583l_tt = regs::gfxmmu_gfxmmu_lut583l_v1_tt;
-  using gfxmmu_lut583h_tt = regs::gfxmmu_gfxmmu_lut583h_v1_tt;
-  using gfxmmu_lut584l_tt = regs::gfxmmu_gfxmmu_lut584l_v1_tt;
-  using gfxmmu_lut584h_tt = regs::gfxmmu_gfxmmu_lut584h_v1_tt;
-  using gfxmmu_lut585l_tt = regs::gfxmmu_gfxmmu_lut585l_v1_tt;
-  using gfxmmu_lut585h_tt = regs::gfxmmu_gfxmmu_lut585h_v1_tt;
-  using gfxmmu_lut586l_tt = regs::gfxmmu_gfxmmu_lut586l_v1_tt;
-  using gfxmmu_lut586h_tt = regs::gfxmmu_gfxmmu_lut586h_v1_tt;
-  using gfxmmu_lut587l_tt = regs::gfxmmu_gfxmmu_lut587l_v1_tt;
-  using gfxmmu_lut587h_tt = regs::gfxmmu_gfxmmu_lut587h_v1_tt;
-  using gfxmmu_lut588l_tt = regs::gfxmmu_gfxmmu_lut588l_v1_tt;
-  using gfxmmu_lut588h_tt = regs::gfxmmu_gfxmmu_lut588h_v1_tt;
-  using gfxmmu_lut589l_tt = regs::gfxmmu_gfxmmu_lut589l_v1_tt;
-  using gfxmmu_lut589h_tt = regs::gfxmmu_gfxmmu_lut589h_v1_tt;
-  using gfxmmu_lut590l_tt = regs::gfxmmu_gfxmmu_lut590l_v1_tt;
-  using gfxmmu_lut590h_tt = regs::gfxmmu_gfxmmu_lut590h_v1_tt;
-  using gfxmmu_lut591l_tt = regs::gfxmmu_gfxmmu_lut591l_v1_tt;
-  using gfxmmu_lut591h_tt = regs::gfxmmu_gfxmmu_lut591h_v1_tt;
-  using gfxmmu_lut592l_tt = regs::gfxmmu_gfxmmu_lut592l_v1_tt;
-  using gfxmmu_lut592h_tt = regs::gfxmmu_gfxmmu_lut592h_v1_tt;
-  using gfxmmu_lut593l_tt = regs::gfxmmu_gfxmmu_lut593l_v1_tt;
-  using gfxmmu_lut593h_tt = regs::gfxmmu_gfxmmu_lut593h_v1_tt;
-  using gfxmmu_lut594l_tt = regs::gfxmmu_gfxmmu_lut594l_v1_tt;
-  using gfxmmu_lut594h_tt = regs::gfxmmu_gfxmmu_lut594h_v1_tt;
-  using gfxmmu_lut595l_tt = regs::gfxmmu_gfxmmu_lut595l_v1_tt;
-  using gfxmmu_lut595h_tt = regs::gfxmmu_gfxmmu_lut595h_v1_tt;
-  using gfxmmu_lut596l_tt = regs::gfxmmu_gfxmmu_lut596l_v1_tt;
-  using gfxmmu_lut596h_tt = regs::gfxmmu_gfxmmu_lut596h_v1_tt;
-  using gfxmmu_lut597l_tt = regs::gfxmmu_gfxmmu_lut597l_v1_tt;
-  using gfxmmu_lut597h_tt = regs::gfxmmu_gfxmmu_lut597h_v1_tt;
-  using gfxmmu_lut598l_tt = regs::gfxmmu_gfxmmu_lut598l_v1_tt;
-  using gfxmmu_lut598h_tt = regs::gfxmmu_gfxmmu_lut598h_v1_tt;
-  using gfxmmu_lut599l_tt = regs::gfxmmu_gfxmmu_lut599l_v1_tt;
-  using gfxmmu_lut599h_tt = regs::gfxmmu_gfxmmu_lut599h_v1_tt;
-  using gfxmmu_lut600l_tt = regs::gfxmmu_gfxmmu_lut600l_v1_tt;
-  using gfxmmu_lut600h_tt = regs::gfxmmu_gfxmmu_lut600h_v1_tt;
-  using gfxmmu_lut601l_tt = regs::gfxmmu_gfxmmu_lut601l_v1_tt;
-  using gfxmmu_lut601h_tt = regs::gfxmmu_gfxmmu_lut601h_v1_tt;
-  using gfxmmu_lut602l_tt = regs::gfxmmu_gfxmmu_lut602l_v1_tt;
-  using gfxmmu_lut602h_tt = regs::gfxmmu_gfxmmu_lut602h_v1_tt;
-  using gfxmmu_lut603l_tt = regs::gfxmmu_gfxmmu_lut603l_v1_tt;
-  using gfxmmu_lut603h_tt = regs::gfxmmu_gfxmmu_lut603h_v1_tt;
-  using gfxmmu_lut604l_tt = regs::gfxmmu_gfxmmu_lut604l_v1_tt;
-  using gfxmmu_lut604h_tt = regs::gfxmmu_gfxmmu_lut604h_v1_tt;
-  using gfxmmu_lut605l_tt = regs::gfxmmu_gfxmmu_lut605l_v1_tt;
-  using gfxmmu_lut605h_tt = regs::gfxmmu_gfxmmu_lut605h_v1_tt;
-  using gfxmmu_lut606l_tt = regs::gfxmmu_gfxmmu_lut606l_v1_tt;
-  using gfxmmu_lut606h_tt = regs::gfxmmu_gfxmmu_lut606h_v1_tt;
-  using gfxmmu_lut607l_tt = regs::gfxmmu_gfxmmu_lut607l_v1_tt;
-  using gfxmmu_lut607h_tt = regs::gfxmmu_gfxmmu_lut607h_v1_tt;
-  using gfxmmu_lut608l_tt = regs::gfxmmu_gfxmmu_lut608l_v1_tt;
-  using gfxmmu_lut608h_tt = regs::gfxmmu_gfxmmu_lut608h_v1_tt;
-  using gfxmmu_lut609l_tt = regs::gfxmmu_gfxmmu_lut609l_v1_tt;
-  using gfxmmu_lut609h_tt = regs::gfxmmu_gfxmmu_lut609h_v1_tt;
-  using gfxmmu_lut610l_tt = regs::gfxmmu_gfxmmu_lut610l_v1_tt;
-  using gfxmmu_lut610h_tt = regs::gfxmmu_gfxmmu_lut610h_v1_tt;
-  using gfxmmu_lut611l_tt = regs::gfxmmu_gfxmmu_lut611l_v1_tt;
-  using gfxmmu_lut611h_tt = regs::gfxmmu_gfxmmu_lut611h_v1_tt;
-  using gfxmmu_lut612l_tt = regs::gfxmmu_gfxmmu_lut612l_v1_tt;
-  using gfxmmu_lut612h_tt = regs::gfxmmu_gfxmmu_lut612h_v1_tt;
-  using gfxmmu_lut613l_tt = regs::gfxmmu_gfxmmu_lut613l_v1_tt;
-  using gfxmmu_lut613h_tt = regs::gfxmmu_gfxmmu_lut613h_v1_tt;
-  using gfxmmu_lut614l_tt = regs::gfxmmu_gfxmmu_lut614l_v1_tt;
-  using gfxmmu_lut614h_tt = regs::gfxmmu_gfxmmu_lut614h_v1_tt;
-  using gfxmmu_lut615l_tt = regs::gfxmmu_gfxmmu_lut615l_v1_tt;
-  using gfxmmu_lut615h_tt = regs::gfxmmu_gfxmmu_lut615h_v1_tt;
-  using gfxmmu_lut616l_tt = regs::gfxmmu_gfxmmu_lut616l_v1_tt;
-  using gfxmmu_lut616h_tt = regs::gfxmmu_gfxmmu_lut616h_v1_tt;
-  using gfxmmu_lut617l_tt = regs::gfxmmu_gfxmmu_lut617l_v1_tt;
-  using gfxmmu_lut617h_tt = regs::gfxmmu_gfxmmu_lut617h_v1_tt;
-  using gfxmmu_lut618l_tt = regs::gfxmmu_gfxmmu_lut618l_v1_tt;
-  using gfxmmu_lut618h_tt = regs::gfxmmu_gfxmmu_lut618h_v1_tt;
-  using gfxmmu_lut619l_tt = regs::gfxmmu_gfxmmu_lut619l_v1_tt;
-  using gfxmmu_lut619h_tt = regs::gfxmmu_gfxmmu_lut619h_v1_tt;
-  using gfxmmu_lut620l_tt = regs::gfxmmu_gfxmmu_lut620l_v1_tt;
-  using gfxmmu_lut620h_tt = regs::gfxmmu_gfxmmu_lut620h_v1_tt;
-  using gfxmmu_lut621l_tt = regs::gfxmmu_gfxmmu_lut621l_v1_tt;
-  using gfxmmu_lut621h_tt = regs::gfxmmu_gfxmmu_lut621h_v1_tt;
-  using gfxmmu_lut622l_tt = regs::gfxmmu_gfxmmu_lut622l_v1_tt;
-  using gfxmmu_lut622h_tt = regs::gfxmmu_gfxmmu_lut622h_v1_tt;
-  using gfxmmu_lut623l_tt = regs::gfxmmu_gfxmmu_lut623l_v1_tt;
-  using gfxmmu_lut623h_tt = regs::gfxmmu_gfxmmu_lut623h_v1_tt;
-  using gfxmmu_lut624l_tt = regs::gfxmmu_gfxmmu_lut624l_v1_tt;
-  using gfxmmu_lut624h_tt = regs::gfxmmu_gfxmmu_lut624h_v1_tt;
-  using gfxmmu_lut625l_tt = regs::gfxmmu_gfxmmu_lut625l_v1_tt;
-  using gfxmmu_lut625h_tt = regs::gfxmmu_gfxmmu_lut625h_v1_tt;
-  using gfxmmu_lut626l_tt = regs::gfxmmu_gfxmmu_lut626l_v1_tt;
-  using gfxmmu_lut626h_tt = regs::gfxmmu_gfxmmu_lut626h_v1_tt;
-  using gfxmmu_lut627l_tt = regs::gfxmmu_gfxmmu_lut627l_v1_tt;
-  using gfxmmu_lut627h_tt = regs::gfxmmu_gfxmmu_lut627h_v1_tt;
-  using gfxmmu_lut628l_tt = regs::gfxmmu_gfxmmu_lut628l_v1_tt;
-  using gfxmmu_lut628h_tt = regs::gfxmmu_gfxmmu_lut628h_v1_tt;
-  using gfxmmu_lut629l_tt = regs::gfxmmu_gfxmmu_lut629l_v1_tt;
-  using gfxmmu_lut629h_tt = regs::gfxmmu_gfxmmu_lut629h_v1_tt;
-  using gfxmmu_lut630l_tt = regs::gfxmmu_gfxmmu_lut630l_v1_tt;
-  using gfxmmu_lut630h_tt = regs::gfxmmu_gfxmmu_lut630h_v1_tt;
-  using gfxmmu_lut631l_tt = regs::gfxmmu_gfxmmu_lut631l_v1_tt;
-  using gfxmmu_lut631h_tt = regs::gfxmmu_gfxmmu_lut631h_v1_tt;
-  using gfxmmu_lut632l_tt = regs::gfxmmu_gfxmmu_lut632l_v1_tt;
-  using gfxmmu_lut632h_tt = regs::gfxmmu_gfxmmu_lut632h_v1_tt;
-  using gfxmmu_lut633l_tt = regs::gfxmmu_gfxmmu_lut633l_v1_tt;
-  using gfxmmu_lut633h_tt = regs::gfxmmu_gfxmmu_lut633h_v1_tt;
-  using gfxmmu_lut634l_tt = regs::gfxmmu_gfxmmu_lut634l_v1_tt;
-  using gfxmmu_lut634h_tt = regs::gfxmmu_gfxmmu_lut634h_v1_tt;
-  using gfxmmu_lut635l_tt = regs::gfxmmu_gfxmmu_lut635l_v1_tt;
-  using gfxmmu_lut635h_tt = regs::gfxmmu_gfxmmu_lut635h_v1_tt;
-  using gfxmmu_lut636l_tt = regs::gfxmmu_gfxmmu_lut636l_v1_tt;
-  using gfxmmu_lut636h_tt = regs::gfxmmu_gfxmmu_lut636h_v1_tt;
-  using gfxmmu_lut637l_tt = regs::gfxmmu_gfxmmu_lut637l_v1_tt;
-  using gfxmmu_lut637h_tt = regs::gfxmmu_gfxmmu_lut637h_v1_tt;
-  using gfxmmu_lut638l_tt = regs::gfxmmu_gfxmmu_lut638l_v1_tt;
-  using gfxmmu_lut638h_tt = regs::gfxmmu_gfxmmu_lut638h_v1_tt;
-  using gfxmmu_lut639l_tt = regs::gfxmmu_gfxmmu_lut639l_v1_tt;
-  using gfxmmu_lut639h_tt = regs::gfxmmu_gfxmmu_lut639h_v1_tt;
-  using gfxmmu_lut640l_tt = regs::gfxmmu_gfxmmu_lut640l_v1_tt;
-  using gfxmmu_lut640h_tt = regs::gfxmmu_gfxmmu_lut640h_v1_tt;
-  using gfxmmu_lut641l_tt = regs::gfxmmu_gfxmmu_lut641l_v1_tt;
-  using gfxmmu_lut641h_tt = regs::gfxmmu_gfxmmu_lut641h_v1_tt;
-  using gfxmmu_lut642l_tt = regs::gfxmmu_gfxmmu_lut642l_v1_tt;
-  using gfxmmu_lut642h_tt = regs::gfxmmu_gfxmmu_lut642h_v1_tt;
-  using gfxmmu_lut643l_tt = regs::gfxmmu_gfxmmu_lut643l_v1_tt;
-  using gfxmmu_lut643h_tt = regs::gfxmmu_gfxmmu_lut643h_v1_tt;
-  using gfxmmu_lut644l_tt = regs::gfxmmu_gfxmmu_lut644l_v1_tt;
-  using gfxmmu_lut644h_tt = regs::gfxmmu_gfxmmu_lut644h_v1_tt;
-  using gfxmmu_lut645l_tt = regs::gfxmmu_gfxmmu_lut645l_v1_tt;
-  using gfxmmu_lut645h_tt = regs::gfxmmu_gfxmmu_lut645h_v1_tt;
-  using gfxmmu_lut646l_tt = regs::gfxmmu_gfxmmu_lut646l_v1_tt;
-  using gfxmmu_lut646h_tt = regs::gfxmmu_gfxmmu_lut646h_v1_tt;
-  using gfxmmu_lut647l_tt = regs::gfxmmu_gfxmmu_lut647l_v1_tt;
-  using gfxmmu_lut647h_tt = regs::gfxmmu_gfxmmu_lut647h_v1_tt;
-  using gfxmmu_lut648l_tt = regs::gfxmmu_gfxmmu_lut648l_v1_tt;
-  using gfxmmu_lut648h_tt = regs::gfxmmu_gfxmmu_lut648h_v1_tt;
-  using gfxmmu_lut649l_tt = regs::gfxmmu_gfxmmu_lut649l_v1_tt;
-  using gfxmmu_lut649h_tt = regs::gfxmmu_gfxmmu_lut649h_v1_tt;
-  using gfxmmu_lut650l_tt = regs::gfxmmu_gfxmmu_lut650l_v1_tt;
-  using gfxmmu_lut650h_tt = regs::gfxmmu_gfxmmu_lut650h_v1_tt;
-  using gfxmmu_lut651l_tt = regs::gfxmmu_gfxmmu_lut651l_v1_tt;
-  using gfxmmu_lut651h_tt = regs::gfxmmu_gfxmmu_lut651h_v1_tt;
-  using gfxmmu_lut652l_tt = regs::gfxmmu_gfxmmu_lut652l_v1_tt;
-  using gfxmmu_lut652h_tt = regs::gfxmmu_gfxmmu_lut652h_v1_tt;
-  using gfxmmu_lut653l_tt = regs::gfxmmu_gfxmmu_lut653l_v1_tt;
-  using gfxmmu_lut653h_tt = regs::gfxmmu_gfxmmu_lut653h_v1_tt;
-  using gfxmmu_lut654l_tt = regs::gfxmmu_gfxmmu_lut654l_v1_tt;
-  using gfxmmu_lut654h_tt = regs::gfxmmu_gfxmmu_lut654h_v1_tt;
-  using gfxmmu_lut655l_tt = regs::gfxmmu_gfxmmu_lut655l_v1_tt;
-  using gfxmmu_lut655h_tt = regs::gfxmmu_gfxmmu_lut655h_v1_tt;
-  using gfxmmu_lut656l_tt = regs::gfxmmu_gfxmmu_lut656l_v1_tt;
-  using gfxmmu_lut656h_tt = regs::gfxmmu_gfxmmu_lut656h_v1_tt;
-  using gfxmmu_lut657l_tt = regs::gfxmmu_gfxmmu_lut657l_v1_tt;
-  using gfxmmu_lut657h_tt = regs::gfxmmu_gfxmmu_lut657h_v1_tt;
-  using gfxmmu_lut658l_tt = regs::gfxmmu_gfxmmu_lut658l_v1_tt;
-  using gfxmmu_lut658h_tt = regs::gfxmmu_gfxmmu_lut658h_v1_tt;
-  using gfxmmu_lut659l_tt = regs::gfxmmu_gfxmmu_lut659l_v1_tt;
-  using gfxmmu_lut659h_tt = regs::gfxmmu_gfxmmu_lut659h_v1_tt;
-  using gfxmmu_lut660l_tt = regs::gfxmmu_gfxmmu_lut660l_v1_tt;
-  using gfxmmu_lut660h_tt = regs::gfxmmu_gfxmmu_lut660h_v1_tt;
-  using gfxmmu_lut661l_tt = regs::gfxmmu_gfxmmu_lut661l_v1_tt;
-  using gfxmmu_lut661h_tt = regs::gfxmmu_gfxmmu_lut661h_v1_tt;
-  using gfxmmu_lut662l_tt = regs::gfxmmu_gfxmmu_lut662l_v1_tt;
-  using gfxmmu_lut662h_tt = regs::gfxmmu_gfxmmu_lut662h_v1_tt;
-  using gfxmmu_lut663l_tt = regs::gfxmmu_gfxmmu_lut663l_v1_tt;
-  using gfxmmu_lut663h_tt = regs::gfxmmu_gfxmmu_lut663h_v1_tt;
-  using gfxmmu_lut664l_tt = regs::gfxmmu_gfxmmu_lut664l_v1_tt;
-  using gfxmmu_lut664h_tt = regs::gfxmmu_gfxmmu_lut664h_v1_tt;
-  using gfxmmu_lut665l_tt = regs::gfxmmu_gfxmmu_lut665l_v1_tt;
-  using gfxmmu_lut665h_tt = regs::gfxmmu_gfxmmu_lut665h_v1_tt;
-  using gfxmmu_lut666l_tt = regs::gfxmmu_gfxmmu_lut666l_v1_tt;
-  using gfxmmu_lut666h_tt = regs::gfxmmu_gfxmmu_lut666h_v1_tt;
-  using gfxmmu_lut667l_tt = regs::gfxmmu_gfxmmu_lut667l_v1_tt;
-  using gfxmmu_lut667h_tt = regs::gfxmmu_gfxmmu_lut667h_v1_tt;
-  using gfxmmu_lut668l_tt = regs::gfxmmu_gfxmmu_lut668l_v1_tt;
-  using gfxmmu_lut668h_tt = regs::gfxmmu_gfxmmu_lut668h_v1_tt;
-  using gfxmmu_lut669l_tt = regs::gfxmmu_gfxmmu_lut669l_v1_tt;
-  using gfxmmu_lut669h_tt = regs::gfxmmu_gfxmmu_lut669h_v1_tt;
-  using gfxmmu_lut670l_tt = regs::gfxmmu_gfxmmu_lut670l_v1_tt;
-  using gfxmmu_lut670h_tt = regs::gfxmmu_gfxmmu_lut670h_v1_tt;
-  using gfxmmu_lut671l_tt = regs::gfxmmu_gfxmmu_lut671l_v1_tt;
-  using gfxmmu_lut671h_tt = regs::gfxmmu_gfxmmu_lut671h_v1_tt;
-  using gfxmmu_lut672l_tt = regs::gfxmmu_gfxmmu_lut672l_v1_tt;
-  using gfxmmu_lut672h_tt = regs::gfxmmu_gfxmmu_lut672h_v1_tt;
-  using gfxmmu_lut673l_tt = regs::gfxmmu_gfxmmu_lut673l_v1_tt;
-  using gfxmmu_lut673h_tt = regs::gfxmmu_gfxmmu_lut673h_v1_tt;
-  using gfxmmu_lut674l_tt = regs::gfxmmu_gfxmmu_lut674l_v1_tt;
-  using gfxmmu_lut674h_tt = regs::gfxmmu_gfxmmu_lut674h_v1_tt;
-  using gfxmmu_lut675l_tt = regs::gfxmmu_gfxmmu_lut675l_v1_tt;
-  using gfxmmu_lut675h_tt = regs::gfxmmu_gfxmmu_lut675h_v1_tt;
-  using gfxmmu_lut676l_tt = regs::gfxmmu_gfxmmu_lut676l_v1_tt;
-  using gfxmmu_lut676h_tt = regs::gfxmmu_gfxmmu_lut676h_v1_tt;
-  using gfxmmu_lut677l_tt = regs::gfxmmu_gfxmmu_lut677l_v1_tt;
-  using gfxmmu_lut677h_tt = regs::gfxmmu_gfxmmu_lut677h_v1_tt;
-  using gfxmmu_lut678l_tt = regs::gfxmmu_gfxmmu_lut678l_v1_tt;
-  using gfxmmu_lut678h_tt = regs::gfxmmu_gfxmmu_lut678h_v1_tt;
-  using gfxmmu_lut679l_tt = regs::gfxmmu_gfxmmu_lut679l_v1_tt;
-  using gfxmmu_lut679h_tt = regs::gfxmmu_gfxmmu_lut679h_v1_tt;
-  using gfxmmu_lut680l_tt = regs::gfxmmu_gfxmmu_lut680l_v1_tt;
-  using gfxmmu_lut680h_tt = regs::gfxmmu_gfxmmu_lut680h_v1_tt;
-  using gfxmmu_lut681l_tt = regs::gfxmmu_gfxmmu_lut681l_v1_tt;
-  using gfxmmu_lut681h_tt = regs::gfxmmu_gfxmmu_lut681h_v1_tt;
-  using gfxmmu_lut682l_tt = regs::gfxmmu_gfxmmu_lut682l_v1_tt;
-  using gfxmmu_lut682h_tt = regs::gfxmmu_gfxmmu_lut682h_v1_tt;
-  using gfxmmu_lut683l_tt = regs::gfxmmu_gfxmmu_lut683l_v1_tt;
-  using gfxmmu_lut683h_tt = regs::gfxmmu_gfxmmu_lut683h_v1_tt;
-  using gfxmmu_lut684l_tt = regs::gfxmmu_gfxmmu_lut684l_v1_tt;
-  using gfxmmu_lut684h_tt = regs::gfxmmu_gfxmmu_lut684h_v1_tt;
-  using gfxmmu_lut685l_tt = regs::gfxmmu_gfxmmu_lut685l_v1_tt;
-  using gfxmmu_lut685h_tt = regs::gfxmmu_gfxmmu_lut685h_v1_tt;
-  using gfxmmu_lut686l_tt = regs::gfxmmu_gfxmmu_lut686l_v1_tt;
-  using gfxmmu_lut686h_tt = regs::gfxmmu_gfxmmu_lut686h_v1_tt;
-  using gfxmmu_lut687l_tt = regs::gfxmmu_gfxmmu_lut687l_v1_tt;
-  using gfxmmu_lut687h_tt = regs::gfxmmu_gfxmmu_lut687h_v1_tt;
-  using gfxmmu_lut688l_tt = regs::gfxmmu_gfxmmu_lut688l_v1_tt;
-  using gfxmmu_lut688h_tt = regs::gfxmmu_gfxmmu_lut688h_v1_tt;
-  using gfxmmu_lut689l_tt = regs::gfxmmu_gfxmmu_lut689l_v1_tt;
-  using gfxmmu_lut689h_tt = regs::gfxmmu_gfxmmu_lut689h_v1_tt;
-  using gfxmmu_lut690l_tt = regs::gfxmmu_gfxmmu_lut690l_v1_tt;
-  using gfxmmu_lut690h_tt = regs::gfxmmu_gfxmmu_lut690h_v1_tt;
-  using gfxmmu_lut691l_tt = regs::gfxmmu_gfxmmu_lut691l_v1_tt;
-  using gfxmmu_lut691h_tt = regs::gfxmmu_gfxmmu_lut691h_v1_tt;
-  using gfxmmu_lut692l_tt = regs::gfxmmu_gfxmmu_lut692l_v1_tt;
-  using gfxmmu_lut692h_tt = regs::gfxmmu_gfxmmu_lut692h_v1_tt;
-  using gfxmmu_lut693l_tt = regs::gfxmmu_gfxmmu_lut693l_v1_tt;
-  using gfxmmu_lut693h_tt = regs::gfxmmu_gfxmmu_lut693h_v1_tt;
-  using gfxmmu_lut694l_tt = regs::gfxmmu_gfxmmu_lut694l_v1_tt;
-  using gfxmmu_lut694h_tt = regs::gfxmmu_gfxmmu_lut694h_v1_tt;
-  using gfxmmu_lut695l_tt = regs::gfxmmu_gfxmmu_lut695l_v1_tt;
-  using gfxmmu_lut695h_tt = regs::gfxmmu_gfxmmu_lut695h_v1_tt;
-  using gfxmmu_lut696l_tt = regs::gfxmmu_gfxmmu_lut696l_v1_tt;
-  using gfxmmu_lut696h_tt = regs::gfxmmu_gfxmmu_lut696h_v1_tt;
-  using gfxmmu_lut697l_tt = regs::gfxmmu_gfxmmu_lut697l_v1_tt;
-  using gfxmmu_lut697h_tt = regs::gfxmmu_gfxmmu_lut697h_v1_tt;
-  using gfxmmu_lut698l_tt = regs::gfxmmu_gfxmmu_lut698l_v1_tt;
-  using gfxmmu_lut698h_tt = regs::gfxmmu_gfxmmu_lut698h_v1_tt;
-  using gfxmmu_lut699l_tt = regs::gfxmmu_gfxmmu_lut699l_v1_tt;
-  using gfxmmu_lut699h_tt = regs::gfxmmu_gfxmmu_lut699h_v1_tt;
-  using gfxmmu_lut700l_tt = regs::gfxmmu_gfxmmu_lut700l_v1_tt;
-  using gfxmmu_lut700h_tt = regs::gfxmmu_gfxmmu_lut700h_v1_tt;
-  using gfxmmu_lut701l_tt = regs::gfxmmu_gfxmmu_lut701l_v1_tt;
-  using gfxmmu_lut701h_tt = regs::gfxmmu_gfxmmu_lut701h_v1_tt;
-  using gfxmmu_lut702l_tt = regs::gfxmmu_gfxmmu_lut702l_v1_tt;
-  using gfxmmu_lut702h_tt = regs::gfxmmu_gfxmmu_lut702h_v1_tt;
-  using gfxmmu_lut703l_tt = regs::gfxmmu_gfxmmu_lut703l_v1_tt;
-  using gfxmmu_lut703h_tt = regs::gfxmmu_gfxmmu_lut703h_v1_tt;
-  using gfxmmu_lut704l_tt = regs::gfxmmu_gfxmmu_lut704l_v1_tt;
-  using gfxmmu_lut704h_tt = regs::gfxmmu_gfxmmu_lut704h_v1_tt;
-  using gfxmmu_lut705l_tt = regs::gfxmmu_gfxmmu_lut705l_v1_tt;
-  using gfxmmu_lut705h_tt = regs::gfxmmu_gfxmmu_lut705h_v1_tt;
-  using gfxmmu_lut706l_tt = regs::gfxmmu_gfxmmu_lut706l_v1_tt;
-  using gfxmmu_lut706h_tt = regs::gfxmmu_gfxmmu_lut706h_v1_tt;
-  using gfxmmu_lut707l_tt = regs::gfxmmu_gfxmmu_lut707l_v1_tt;
-  using gfxmmu_lut707h_tt = regs::gfxmmu_gfxmmu_lut707h_v1_tt;
-  using gfxmmu_lut708l_tt = regs::gfxmmu_gfxmmu_lut708l_v1_tt;
-  using gfxmmu_lut708h_tt = regs::gfxmmu_gfxmmu_lut708h_v1_tt;
-  using gfxmmu_lut709l_tt = regs::gfxmmu_gfxmmu_lut709l_v1_tt;
-  using gfxmmu_lut709h_tt = regs::gfxmmu_gfxmmu_lut709h_v1_tt;
-  using gfxmmu_lut710l_tt = regs::gfxmmu_gfxmmu_lut710l_v1_tt;
-  using gfxmmu_lut710h_tt = regs::gfxmmu_gfxmmu_lut710h_v1_tt;
-  using gfxmmu_lut711l_tt = regs::gfxmmu_gfxmmu_lut711l_v1_tt;
-  using gfxmmu_lut711h_tt = regs::gfxmmu_gfxmmu_lut711h_v1_tt;
-  using gfxmmu_lut712l_tt = regs::gfxmmu_gfxmmu_lut712l_v1_tt;
-  using gfxmmu_lut712h_tt = regs::gfxmmu_gfxmmu_lut712h_v1_tt;
-  using gfxmmu_lut713l_tt = regs::gfxmmu_gfxmmu_lut713l_v1_tt;
-  using gfxmmu_lut713h_tt = regs::gfxmmu_gfxmmu_lut713h_v1_tt;
-  using gfxmmu_lut714l_tt = regs::gfxmmu_gfxmmu_lut714l_v1_tt;
-  using gfxmmu_lut714h_tt = regs::gfxmmu_gfxmmu_lut714h_v1_tt;
-  using gfxmmu_lut715l_tt = regs::gfxmmu_gfxmmu_lut715l_v1_tt;
-  using gfxmmu_lut715h_tt = regs::gfxmmu_gfxmmu_lut715h_v1_tt;
-  using gfxmmu_lut716l_tt = regs::gfxmmu_gfxmmu_lut716l_v1_tt;
-  using gfxmmu_lut716h_tt = regs::gfxmmu_gfxmmu_lut716h_v1_tt;
-  using gfxmmu_lut717l_tt = regs::gfxmmu_gfxmmu_lut717l_v1_tt;
-  using gfxmmu_lut717h_tt = regs::gfxmmu_gfxmmu_lut717h_v1_tt;
-  using gfxmmu_lut718l_tt = regs::gfxmmu_gfxmmu_lut718l_v1_tt;
-  using gfxmmu_lut718h_tt = regs::gfxmmu_gfxmmu_lut718h_v1_tt;
-  using gfxmmu_lut719l_tt = regs::gfxmmu_gfxmmu_lut719l_v1_tt;
-  using gfxmmu_lut719h_tt = regs::gfxmmu_gfxmmu_lut719h_v1_tt;
-  using gfxmmu_lut720l_tt = regs::gfxmmu_gfxmmu_lut720l_v1_tt;
-  using gfxmmu_lut720h_tt = regs::gfxmmu_gfxmmu_lut720h_v1_tt;
-  using gfxmmu_lut721l_tt = regs::gfxmmu_gfxmmu_lut721l_v1_tt;
-  using gfxmmu_lut721h_tt = regs::gfxmmu_gfxmmu_lut721h_v1_tt;
-  using gfxmmu_lut722l_tt = regs::gfxmmu_gfxmmu_lut722l_v1_tt;
-  using gfxmmu_lut722h_tt = regs::gfxmmu_gfxmmu_lut722h_v1_tt;
-  using gfxmmu_lut723l_tt = regs::gfxmmu_gfxmmu_lut723l_v1_tt;
-  using gfxmmu_lut723h_tt = regs::gfxmmu_gfxmmu_lut723h_v1_tt;
-  using gfxmmu_lut724l_tt = regs::gfxmmu_gfxmmu_lut724l_v1_tt;
-  using gfxmmu_lut724h_tt = regs::gfxmmu_gfxmmu_lut724h_v1_tt;
-  using gfxmmu_lut725l_tt = regs::gfxmmu_gfxmmu_lut725l_v1_tt;
-  using gfxmmu_lut725h_tt = regs::gfxmmu_gfxmmu_lut725h_v1_tt;
-  using gfxmmu_lut726l_tt = regs::gfxmmu_gfxmmu_lut726l_v1_tt;
-  using gfxmmu_lut726h_tt = regs::gfxmmu_gfxmmu_lut726h_v1_tt;
-  using gfxmmu_lut727l_tt = regs::gfxmmu_gfxmmu_lut727l_v1_tt;
-  using gfxmmu_lut727h_tt = regs::gfxmmu_gfxmmu_lut727h_v1_tt;
-  using gfxmmu_lut728l_tt = regs::gfxmmu_gfxmmu_lut728l_v1_tt;
-  using gfxmmu_lut728h_tt = regs::gfxmmu_gfxmmu_lut728h_v1_tt;
-  using gfxmmu_lut729l_tt = regs::gfxmmu_gfxmmu_lut729l_v1_tt;
-  using gfxmmu_lut729h_tt = regs::gfxmmu_gfxmmu_lut729h_v1_tt;
-  using gfxmmu_lut730l_tt = regs::gfxmmu_gfxmmu_lut730l_v1_tt;
-  using gfxmmu_lut730h_tt = regs::gfxmmu_gfxmmu_lut730h_v1_tt;
-  using gfxmmu_lut731l_tt = regs::gfxmmu_gfxmmu_lut731l_v1_tt;
-  using gfxmmu_lut731h_tt = regs::gfxmmu_gfxmmu_lut731h_v1_tt;
-  using gfxmmu_lut732l_tt = regs::gfxmmu_gfxmmu_lut732l_v1_tt;
-  using gfxmmu_lut732h_tt = regs::gfxmmu_gfxmmu_lut732h_v1_tt;
-  using gfxmmu_lut733l_tt = regs::gfxmmu_gfxmmu_lut733l_v1_tt;
-  using gfxmmu_lut733h_tt = regs::gfxmmu_gfxmmu_lut733h_v1_tt;
-  using gfxmmu_lut734l_tt = regs::gfxmmu_gfxmmu_lut734l_v1_tt;
-  using gfxmmu_lut734h_tt = regs::gfxmmu_gfxmmu_lut734h_v1_tt;
-  using gfxmmu_lut735l_tt = regs::gfxmmu_gfxmmu_lut735l_v1_tt;
-  using gfxmmu_lut735h_tt = regs::gfxmmu_gfxmmu_lut735h_v1_tt;
-  using gfxmmu_lut736l_tt = regs::gfxmmu_gfxmmu_lut736l_v1_tt;
-  using gfxmmu_lut736h_tt = regs::gfxmmu_gfxmmu_lut736h_v1_tt;
-  using gfxmmu_lut737l_tt = regs::gfxmmu_gfxmmu_lut737l_v1_tt;
-  using gfxmmu_lut737h_tt = regs::gfxmmu_gfxmmu_lut737h_v1_tt;
-  using gfxmmu_lut738l_tt = regs::gfxmmu_gfxmmu_lut738l_v1_tt;
-  using gfxmmu_lut738h_tt = regs::gfxmmu_gfxmmu_lut738h_v1_tt;
-  using gfxmmu_lut739l_tt = regs::gfxmmu_gfxmmu_lut739l_v1_tt;
-  using gfxmmu_lut739h_tt = regs::gfxmmu_gfxmmu_lut739h_v1_tt;
-  using gfxmmu_lut740l_tt = regs::gfxmmu_gfxmmu_lut740l_v1_tt;
-  using gfxmmu_lut740h_tt = regs::gfxmmu_gfxmmu_lut740h_v1_tt;
-  using gfxmmu_lut741l_tt = regs::gfxmmu_gfxmmu_lut741l_v1_tt;
-  using gfxmmu_lut741h_tt = regs::gfxmmu_gfxmmu_lut741h_v1_tt;
-  using gfxmmu_lut742l_tt = regs::gfxmmu_gfxmmu_lut742l_v1_tt;
-  using gfxmmu_lut742h_tt = regs::gfxmmu_gfxmmu_lut742h_v1_tt;
-  using gfxmmu_lut743l_tt = regs::gfxmmu_gfxmmu_lut743l_v1_tt;
-  using gfxmmu_lut743h_tt = regs::gfxmmu_gfxmmu_lut743h_v1_tt;
-  using gfxmmu_lut744l_tt = regs::gfxmmu_gfxmmu_lut744l_v1_tt;
-  using gfxmmu_lut744h_tt = regs::gfxmmu_gfxmmu_lut744h_v1_tt;
-  using gfxmmu_lut745l_tt = regs::gfxmmu_gfxmmu_lut745l_v1_tt;
-  using gfxmmu_lut745h_tt = regs::gfxmmu_gfxmmu_lut745h_v1_tt;
-  using gfxmmu_lut746l_tt = regs::gfxmmu_gfxmmu_lut746l_v1_tt;
-  using gfxmmu_lut746h_tt = regs::gfxmmu_gfxmmu_lut746h_v1_tt;
-  using gfxmmu_lut747l_tt = regs::gfxmmu_gfxmmu_lut747l_v1_tt;
-  using gfxmmu_lut747h_tt = regs::gfxmmu_gfxmmu_lut747h_v1_tt;
-  using gfxmmu_lut748l_tt = regs::gfxmmu_gfxmmu_lut748l_v1_tt;
-  using gfxmmu_lut748h_tt = regs::gfxmmu_gfxmmu_lut748h_v1_tt;
-  using gfxmmu_lut749l_tt = regs::gfxmmu_gfxmmu_lut749l_v1_tt;
-  using gfxmmu_lut749h_tt = regs::gfxmmu_gfxmmu_lut749h_v1_tt;
-  using gfxmmu_lut750l_tt = regs::gfxmmu_gfxmmu_lut750l_v1_tt;
-  using gfxmmu_lut750h_tt = regs::gfxmmu_gfxmmu_lut750h_v1_tt;
-  using gfxmmu_lut751l_tt = regs::gfxmmu_gfxmmu_lut751l_v1_tt;
-  using gfxmmu_lut751h_tt = regs::gfxmmu_gfxmmu_lut751h_v1_tt;
-  using gfxmmu_lut752l_tt = regs::gfxmmu_gfxmmu_lut752l_v1_tt;
-  using gfxmmu_lut752h_tt = regs::gfxmmu_gfxmmu_lut752h_v1_tt;
-  using gfxmmu_lut753l_tt = regs::gfxmmu_gfxmmu_lut753l_v1_tt;
-  using gfxmmu_lut753h_tt = regs::gfxmmu_gfxmmu_lut753h_v1_tt;
-  using gfxmmu_lut754l_tt = regs::gfxmmu_gfxmmu_lut754l_v1_tt;
-  using gfxmmu_lut754h_tt = regs::gfxmmu_gfxmmu_lut754h_v1_tt;
-  using gfxmmu_lut755l_tt = regs::gfxmmu_gfxmmu_lut755l_v1_tt;
-  using gfxmmu_lut755h_tt = regs::gfxmmu_gfxmmu_lut755h_v1_tt;
-  using gfxmmu_lut756l_tt = regs::gfxmmu_gfxmmu_lut756l_v1_tt;
-  using gfxmmu_lut756h_tt = regs::gfxmmu_gfxmmu_lut756h_v1_tt;
-  using gfxmmu_lut757l_tt = regs::gfxmmu_gfxmmu_lut757l_v1_tt;
-  using gfxmmu_lut757h_tt = regs::gfxmmu_gfxmmu_lut757h_v1_tt;
-  using gfxmmu_lut758l_tt = regs::gfxmmu_gfxmmu_lut758l_v1_tt;
-  using gfxmmu_lut758h_tt = regs::gfxmmu_gfxmmu_lut758h_v1_tt;
-  using gfxmmu_lut759l_tt = regs::gfxmmu_gfxmmu_lut759l_v1_tt;
-  using gfxmmu_lut759h_tt = regs::gfxmmu_gfxmmu_lut759h_v1_tt;
-  using gfxmmu_lut760l_tt = regs::gfxmmu_gfxmmu_lut760l_v1_tt;
-  using gfxmmu_lut760h_tt = regs::gfxmmu_gfxmmu_lut760h_v1_tt;
-  using gfxmmu_lut761l_tt = regs::gfxmmu_gfxmmu_lut761l_v1_tt;
-  using gfxmmu_lut761h_tt = regs::gfxmmu_gfxmmu_lut761h_v1_tt;
-  using gfxmmu_lut762l_tt = regs::gfxmmu_gfxmmu_lut762l_v1_tt;
-  using gfxmmu_lut762h_tt = regs::gfxmmu_gfxmmu_lut762h_v1_tt;
-  using gfxmmu_lut763l_tt = regs::gfxmmu_gfxmmu_lut763l_v1_tt;
-  using gfxmmu_lut763h_tt = regs::gfxmmu_gfxmmu_lut763h_v1_tt;
-  using gfxmmu_lut764l_tt = regs::gfxmmu_gfxmmu_lut764l_v1_tt;
-  using gfxmmu_lut764h_tt = regs::gfxmmu_gfxmmu_lut764h_v1_tt;
-  using gfxmmu_lut765l_tt = regs::gfxmmu_gfxmmu_lut765l_v1_tt;
-  using gfxmmu_lut765h_tt = regs::gfxmmu_gfxmmu_lut765h_v1_tt;
-  using gfxmmu_lut766l_tt = regs::gfxmmu_gfxmmu_lut766l_v1_tt;
-  using gfxmmu_lut766h_tt = regs::gfxmmu_gfxmmu_lut766h_v1_tt;
-  using gfxmmu_lut767l_tt = regs::gfxmmu_gfxmmu_lut767l_v1_tt;
-  using gfxmmu_lut767h_tt = regs::gfxmmu_gfxmmu_lut767h_v1_tt;
-  using gfxmmu_lut768l_tt = regs::gfxmmu_gfxmmu_lut768l_v1_tt;
-  using gfxmmu_lut768h_tt = regs::gfxmmu_gfxmmu_lut768h_v1_tt;
-  using gfxmmu_lut769l_tt = regs::gfxmmu_gfxmmu_lut769l_v1_tt;
-  using gfxmmu_lut769h_tt = regs::gfxmmu_gfxmmu_lut769h_v1_tt;
-  using gfxmmu_lut770l_tt = regs::gfxmmu_gfxmmu_lut770l_v1_tt;
-  using gfxmmu_lut770h_tt = regs::gfxmmu_gfxmmu_lut770h_v1_tt;
-  using gfxmmu_lut771l_tt = regs::gfxmmu_gfxmmu_lut771l_v1_tt;
-  using gfxmmu_lut771h_tt = regs::gfxmmu_gfxmmu_lut771h_v1_tt;
-  using gfxmmu_lut772l_tt = regs::gfxmmu_gfxmmu_lut772l_v1_tt;
-  using gfxmmu_lut772h_tt = regs::gfxmmu_gfxmmu_lut772h_v1_tt;
-  using gfxmmu_lut773l_tt = regs::gfxmmu_gfxmmu_lut773l_v1_tt;
-  using gfxmmu_lut773h_tt = regs::gfxmmu_gfxmmu_lut773h_v1_tt;
-  using gfxmmu_lut774l_tt = regs::gfxmmu_gfxmmu_lut774l_v1_tt;
-  using gfxmmu_lut774h_tt = regs::gfxmmu_gfxmmu_lut774h_v1_tt;
-  using gfxmmu_lut775l_tt = regs::gfxmmu_gfxmmu_lut775l_v1_tt;
-  using gfxmmu_lut775h_tt = regs::gfxmmu_gfxmmu_lut775h_v1_tt;
-  using gfxmmu_lut776l_tt = regs::gfxmmu_gfxmmu_lut776l_v1_tt;
-  using gfxmmu_lut776h_tt = regs::gfxmmu_gfxmmu_lut776h_v1_tt;
-  using gfxmmu_lut777l_tt = regs::gfxmmu_gfxmmu_lut777l_v1_tt;
-  using gfxmmu_lut777h_tt = regs::gfxmmu_gfxmmu_lut777h_v1_tt;
-  using gfxmmu_lut778l_tt = regs::gfxmmu_gfxmmu_lut778l_v1_tt;
-  using gfxmmu_lut778h_tt = regs::gfxmmu_gfxmmu_lut778h_v1_tt;
-  using gfxmmu_lut779l_tt = regs::gfxmmu_gfxmmu_lut779l_v1_tt;
-  using gfxmmu_lut779h_tt = regs::gfxmmu_gfxmmu_lut779h_v1_tt;
-  using gfxmmu_lut780l_tt = regs::gfxmmu_gfxmmu_lut780l_v1_tt;
-  using gfxmmu_lut780h_tt = regs::gfxmmu_gfxmmu_lut780h_v1_tt;
-  using gfxmmu_lut781l_tt = regs::gfxmmu_gfxmmu_lut781l_v1_tt;
-  using gfxmmu_lut781h_tt = regs::gfxmmu_gfxmmu_lut781h_v1_tt;
-  using gfxmmu_lut782l_tt = regs::gfxmmu_gfxmmu_lut782l_v1_tt;
-  using gfxmmu_lut782h_tt = regs::gfxmmu_gfxmmu_lut782h_v1_tt;
-  using gfxmmu_lut783l_tt = regs::gfxmmu_gfxmmu_lut783l_v1_tt;
-  using gfxmmu_lut783h_tt = regs::gfxmmu_gfxmmu_lut783h_v1_tt;
-  using gfxmmu_lut784l_tt = regs::gfxmmu_gfxmmu_lut784l_v1_tt;
-  using gfxmmu_lut784h_tt = regs::gfxmmu_gfxmmu_lut784h_v1_tt;
-  using gfxmmu_lut785l_tt = regs::gfxmmu_gfxmmu_lut785l_v1_tt;
-  using gfxmmu_lut785h_tt = regs::gfxmmu_gfxmmu_lut785h_v1_tt;
-  using gfxmmu_lut786l_tt = regs::gfxmmu_gfxmmu_lut786l_v1_tt;
-  using gfxmmu_lut786h_tt = regs::gfxmmu_gfxmmu_lut786h_v1_tt;
-  using gfxmmu_lut787l_tt = regs::gfxmmu_gfxmmu_lut787l_v1_tt;
-  using gfxmmu_lut787h_tt = regs::gfxmmu_gfxmmu_lut787h_v1_tt;
-  using gfxmmu_lut788l_tt = regs::gfxmmu_gfxmmu_lut788l_v1_tt;
-  using gfxmmu_lut788h_tt = regs::gfxmmu_gfxmmu_lut788h_v1_tt;
-  using gfxmmu_lut789l_tt = regs::gfxmmu_gfxmmu_lut789l_v1_tt;
-  using gfxmmu_lut789h_tt = regs::gfxmmu_gfxmmu_lut789h_v1_tt;
-  using gfxmmu_lut790l_tt = regs::gfxmmu_gfxmmu_lut790l_v1_tt;
-  using gfxmmu_lut790h_tt = regs::gfxmmu_gfxmmu_lut790h_v1_tt;
-  using gfxmmu_lut791l_tt = regs::gfxmmu_gfxmmu_lut791l_v1_tt;
-  using gfxmmu_lut791h_tt = regs::gfxmmu_gfxmmu_lut791h_v1_tt;
-  using gfxmmu_lut792l_tt = regs::gfxmmu_gfxmmu_lut792l_v1_tt;
-  using gfxmmu_lut792h_tt = regs::gfxmmu_gfxmmu_lut792h_v1_tt;
-  using gfxmmu_lut793l_tt = regs::gfxmmu_gfxmmu_lut793l_v1_tt;
-  using gfxmmu_lut793h_tt = regs::gfxmmu_gfxmmu_lut793h_v1_tt;
-  using gfxmmu_lut794l_tt = regs::gfxmmu_gfxmmu_lut794l_v1_tt;
-  using gfxmmu_lut794h_tt = regs::gfxmmu_gfxmmu_lut794h_v1_tt;
-  using gfxmmu_lut795l_tt = regs::gfxmmu_gfxmmu_lut795l_v1_tt;
-  using gfxmmu_lut795h_tt = regs::gfxmmu_gfxmmu_lut795h_v1_tt;
-  using gfxmmu_lut796l_tt = regs::gfxmmu_gfxmmu_lut796l_v1_tt;
-  using gfxmmu_lut796h_tt = regs::gfxmmu_gfxmmu_lut796h_v1_tt;
-  using gfxmmu_lut797l_tt = regs::gfxmmu_gfxmmu_lut797l_v1_tt;
-  using gfxmmu_lut797h_tt = regs::gfxmmu_gfxmmu_lut797h_v1_tt;
-  using gfxmmu_lut798l_tt = regs::gfxmmu_gfxmmu_lut798l_v1_tt;
-  using gfxmmu_lut798h_tt = regs::gfxmmu_gfxmmu_lut798h_v1_tt;
-  using gfxmmu_lut799l_tt = regs::gfxmmu_gfxmmu_lut799l_v1_tt;
-  using gfxmmu_lut799h_tt = regs::gfxmmu_gfxmmu_lut799h_v1_tt;
-  using gfxmmu_lut800l_tt = regs::gfxmmu_gfxmmu_lut800l_v1_tt;
-  using gfxmmu_lut800h_tt = regs::gfxmmu_gfxmmu_lut800h_v1_tt;
-  using gfxmmu_lut801l_tt = regs::gfxmmu_gfxmmu_lut801l_v1_tt;
-  using gfxmmu_lut801h_tt = regs::gfxmmu_gfxmmu_lut801h_v1_tt;
-  using gfxmmu_lut802l_tt = regs::gfxmmu_gfxmmu_lut802l_v1_tt;
-  using gfxmmu_lut802h_tt = regs::gfxmmu_gfxmmu_lut802h_v1_tt;
-  using gfxmmu_lut803l_tt = regs::gfxmmu_gfxmmu_lut803l_v1_tt;
-  using gfxmmu_lut803h_tt = regs::gfxmmu_gfxmmu_lut803h_v1_tt;
-  using gfxmmu_lut804l_tt = regs::gfxmmu_gfxmmu_lut804l_v1_tt;
-  using gfxmmu_lut804h_tt = regs::gfxmmu_gfxmmu_lut804h_v1_tt;
-  using gfxmmu_lut805l_tt = regs::gfxmmu_gfxmmu_lut805l_v1_tt;
-  using gfxmmu_lut805h_tt = regs::gfxmmu_gfxmmu_lut805h_v1_tt;
-  using gfxmmu_lut806l_tt = regs::gfxmmu_gfxmmu_lut806l_v1_tt;
-  using gfxmmu_lut806h_tt = regs::gfxmmu_gfxmmu_lut806h_v1_tt;
-  using gfxmmu_lut807l_tt = regs::gfxmmu_gfxmmu_lut807l_v1_tt;
-  using gfxmmu_lut807h_tt = regs::gfxmmu_gfxmmu_lut807h_v1_tt;
-  using gfxmmu_lut808l_tt = regs::gfxmmu_gfxmmu_lut808l_v1_tt;
-  using gfxmmu_lut808h_tt = regs::gfxmmu_gfxmmu_lut808h_v1_tt;
-  using gfxmmu_lut809l_tt = regs::gfxmmu_gfxmmu_lut809l_v1_tt;
-  using gfxmmu_lut809h_tt = regs::gfxmmu_gfxmmu_lut809h_v1_tt;
-  using gfxmmu_lut810l_tt = regs::gfxmmu_gfxmmu_lut810l_v1_tt;
-  using gfxmmu_lut810h_tt = regs::gfxmmu_gfxmmu_lut810h_v1_tt;
-  using gfxmmu_lut811l_tt = regs::gfxmmu_gfxmmu_lut811l_v1_tt;
-  using gfxmmu_lut811h_tt = regs::gfxmmu_gfxmmu_lut811h_v1_tt;
-  using gfxmmu_lut812l_tt = regs::gfxmmu_gfxmmu_lut812l_v1_tt;
-  using gfxmmu_lut812h_tt = regs::gfxmmu_gfxmmu_lut812h_v1_tt;
-  using gfxmmu_lut813l_tt = regs::gfxmmu_gfxmmu_lut813l_v1_tt;
-  using gfxmmu_lut813h_tt = regs::gfxmmu_gfxmmu_lut813h_v1_tt;
-  using gfxmmu_lut814l_tt = regs::gfxmmu_gfxmmu_lut814l_v1_tt;
-  using gfxmmu_lut814h_tt = regs::gfxmmu_gfxmmu_lut814h_v1_tt;
-  using gfxmmu_lut815l_tt = regs::gfxmmu_gfxmmu_lut815l_v1_tt;
-  using gfxmmu_lut815h_tt = regs::gfxmmu_gfxmmu_lut815h_v1_tt;
-  using gfxmmu_lut816l_tt = regs::gfxmmu_gfxmmu_lut816l_v1_tt;
-  using gfxmmu_lut816h_tt = regs::gfxmmu_gfxmmu_lut816h_v1_tt;
-  using gfxmmu_lut817l_tt = regs::gfxmmu_gfxmmu_lut817l_v1_tt;
-  using gfxmmu_lut817h_tt = regs::gfxmmu_gfxmmu_lut817h_v1_tt;
-  using gfxmmu_lut818l_tt = regs::gfxmmu_gfxmmu_lut818l_v1_tt;
-  using gfxmmu_lut818h_tt = regs::gfxmmu_gfxmmu_lut818h_v1_tt;
-  using gfxmmu_lut819l_tt = regs::gfxmmu_gfxmmu_lut819l_v1_tt;
-  using gfxmmu_lut819h_tt = regs::gfxmmu_gfxmmu_lut819h_v1_tt;
-  using gfxmmu_lut820l_tt = regs::gfxmmu_gfxmmu_lut820l_v1_tt;
-  using gfxmmu_lut820h_tt = regs::gfxmmu_gfxmmu_lut820h_v1_tt;
-  using gfxmmu_lut821l_tt = regs::gfxmmu_gfxmmu_lut821l_v1_tt;
-  using gfxmmu_lut821h_tt = regs::gfxmmu_gfxmmu_lut821h_v1_tt;
-  using gfxmmu_lut822l_tt = regs::gfxmmu_gfxmmu_lut822l_v1_tt;
-  using gfxmmu_lut822h_tt = regs::gfxmmu_gfxmmu_lut822h_v1_tt;
-  using gfxmmu_lut823l_tt = regs::gfxmmu_gfxmmu_lut823l_v1_tt;
-  using gfxmmu_lut823h_tt = regs::gfxmmu_gfxmmu_lut823h_v1_tt;
-  using gfxmmu_lut824l_tt = regs::gfxmmu_gfxmmu_lut824l_v1_tt;
-  using gfxmmu_lut824h_tt = regs::gfxmmu_gfxmmu_lut824h_v1_tt;
-  using gfxmmu_lut825l_tt = regs::gfxmmu_gfxmmu_lut825l_v1_tt;
-  using gfxmmu_lut825h_tt = regs::gfxmmu_gfxmmu_lut825h_v1_tt;
-  using gfxmmu_lut826l_tt = regs::gfxmmu_gfxmmu_lut826l_v1_tt;
-  using gfxmmu_lut826h_tt = regs::gfxmmu_gfxmmu_lut826h_v1_tt;
-  using gfxmmu_lut827l_tt = regs::gfxmmu_gfxmmu_lut827l_v1_tt;
-  using gfxmmu_lut827h_tt = regs::gfxmmu_gfxmmu_lut827h_v1_tt;
-  using gfxmmu_lut828l_tt = regs::gfxmmu_gfxmmu_lut828l_v1_tt;
-  using gfxmmu_lut828h_tt = regs::gfxmmu_gfxmmu_lut828h_v1_tt;
-  using gfxmmu_lut829l_tt = regs::gfxmmu_gfxmmu_lut829l_v1_tt;
-  using gfxmmu_lut829h_tt = regs::gfxmmu_gfxmmu_lut829h_v1_tt;
-  using gfxmmu_lut830l_tt = regs::gfxmmu_gfxmmu_lut830l_v1_tt;
-  using gfxmmu_lut830h_tt = regs::gfxmmu_gfxmmu_lut830h_v1_tt;
-  using gfxmmu_lut831l_tt = regs::gfxmmu_gfxmmu_lut831l_v1_tt;
-  using gfxmmu_lut831h_tt = regs::gfxmmu_gfxmmu_lut831h_v1_tt;
-  using gfxmmu_lut832l_tt = regs::gfxmmu_gfxmmu_lut832l_v1_tt;
-  using gfxmmu_lut832h_tt = regs::gfxmmu_gfxmmu_lut832h_v1_tt;
-  using gfxmmu_lut833l_tt = regs::gfxmmu_gfxmmu_lut833l_v1_tt;
-  using gfxmmu_lut833h_tt = regs::gfxmmu_gfxmmu_lut833h_v1_tt;
-  using gfxmmu_lut834l_tt = regs::gfxmmu_gfxmmu_lut834l_v1_tt;
-  using gfxmmu_lut834h_tt = regs::gfxmmu_gfxmmu_lut834h_v1_tt;
-  using gfxmmu_lut835l_tt = regs::gfxmmu_gfxmmu_lut835l_v1_tt;
-  using gfxmmu_lut835h_tt = regs::gfxmmu_gfxmmu_lut835h_v1_tt;
-  using gfxmmu_lut836l_tt = regs::gfxmmu_gfxmmu_lut836l_v1_tt;
-  using gfxmmu_lut836h_tt = regs::gfxmmu_gfxmmu_lut836h_v1_tt;
-  using gfxmmu_lut837l_tt = regs::gfxmmu_gfxmmu_lut837l_v1_tt;
-  using gfxmmu_lut837h_tt = regs::gfxmmu_gfxmmu_lut837h_v1_tt;
-  using gfxmmu_lut838l_tt = regs::gfxmmu_gfxmmu_lut838l_v1_tt;
-  using gfxmmu_lut838h_tt = regs::gfxmmu_gfxmmu_lut838h_v1_tt;
-  using gfxmmu_lut839l_tt = regs::gfxmmu_gfxmmu_lut839l_v1_tt;
-  using gfxmmu_lut839h_tt = regs::gfxmmu_gfxmmu_lut839h_v1_tt;
-  using gfxmmu_lut840l_tt = regs::gfxmmu_gfxmmu_lut840l_v1_tt;
-  using gfxmmu_lut840h_tt = regs::gfxmmu_gfxmmu_lut840h_v1_tt;
-  using gfxmmu_lut841l_tt = regs::gfxmmu_gfxmmu_lut841l_v1_tt;
-  using gfxmmu_lut841h_tt = regs::gfxmmu_gfxmmu_lut841h_v1_tt;
-  using gfxmmu_lut842l_tt = regs::gfxmmu_gfxmmu_lut842l_v1_tt;
-  using gfxmmu_lut842h_tt = regs::gfxmmu_gfxmmu_lut842h_v1_tt;
-  using gfxmmu_lut843l_tt = regs::gfxmmu_gfxmmu_lut843l_v1_tt;
-  using gfxmmu_lut843h_tt = regs::gfxmmu_gfxmmu_lut843h_v1_tt;
-  using gfxmmu_lut844l_tt = regs::gfxmmu_gfxmmu_lut844l_v1_tt;
-  using gfxmmu_lut844h_tt = regs::gfxmmu_gfxmmu_lut844h_v1_tt;
-  using gfxmmu_lut845l_tt = regs::gfxmmu_gfxmmu_lut845l_v1_tt;
-  using gfxmmu_lut845h_tt = regs::gfxmmu_gfxmmu_lut845h_v1_tt;
-  using gfxmmu_lut846l_tt = regs::gfxmmu_gfxmmu_lut846l_v1_tt;
-  using gfxmmu_lut846h_tt = regs::gfxmmu_gfxmmu_lut846h_v1_tt;
-  using gfxmmu_lut847l_tt = regs::gfxmmu_gfxmmu_lut847l_v1_tt;
-  using gfxmmu_lut847h_tt = regs::gfxmmu_gfxmmu_lut847h_v1_tt;
-  using gfxmmu_lut848l_tt = regs::gfxmmu_gfxmmu_lut848l_v1_tt;
-  using gfxmmu_lut848h_tt = regs::gfxmmu_gfxmmu_lut848h_v1_tt;
-  using gfxmmu_lut849l_tt = regs::gfxmmu_gfxmmu_lut849l_v1_tt;
-  using gfxmmu_lut849h_tt = regs::gfxmmu_gfxmmu_lut849h_v1_tt;
-  using gfxmmu_lut850l_tt = regs::gfxmmu_gfxmmu_lut850l_v1_tt;
-  using gfxmmu_lut850h_tt = regs::gfxmmu_gfxmmu_lut850h_v1_tt;
-  using gfxmmu_lut851l_tt = regs::gfxmmu_gfxmmu_lut851l_v1_tt;
-  using gfxmmu_lut851h_tt = regs::gfxmmu_gfxmmu_lut851h_v1_tt;
-  using gfxmmu_lut852l_tt = regs::gfxmmu_gfxmmu_lut852l_v1_tt;
-  using gfxmmu_lut852h_tt = regs::gfxmmu_gfxmmu_lut852h_v1_tt;
-  using gfxmmu_lut853l_tt = regs::gfxmmu_gfxmmu_lut853l_v1_tt;
-  using gfxmmu_lut853h_tt = regs::gfxmmu_gfxmmu_lut853h_v1_tt;
-  using gfxmmu_lut854l_tt = regs::gfxmmu_gfxmmu_lut854l_v1_tt;
-  using gfxmmu_lut854h_tt = regs::gfxmmu_gfxmmu_lut854h_v1_tt;
-  using gfxmmu_lut855l_tt = regs::gfxmmu_gfxmmu_lut855l_v1_tt;
-  using gfxmmu_lut855h_tt = regs::gfxmmu_gfxmmu_lut855h_v1_tt;
-  using gfxmmu_lut856l_tt = regs::gfxmmu_gfxmmu_lut856l_v1_tt;
-  using gfxmmu_lut856h_tt = regs::gfxmmu_gfxmmu_lut856h_v1_tt;
-  using gfxmmu_lut857l_tt = regs::gfxmmu_gfxmmu_lut857l_v1_tt;
-  using gfxmmu_lut857h_tt = regs::gfxmmu_gfxmmu_lut857h_v1_tt;
-  using gfxmmu_lut858l_tt = regs::gfxmmu_gfxmmu_lut858l_v1_tt;
-  using gfxmmu_lut858h_tt = regs::gfxmmu_gfxmmu_lut858h_v1_tt;
-  using gfxmmu_lut859l_tt = regs::gfxmmu_gfxmmu_lut859l_v1_tt;
-  using gfxmmu_lut859h_tt = regs::gfxmmu_gfxmmu_lut859h_v1_tt;
-  using gfxmmu_lut860l_tt = regs::gfxmmu_gfxmmu_lut860l_v1_tt;
-  using gfxmmu_lut860h_tt = regs::gfxmmu_gfxmmu_lut860h_v1_tt;
-  using gfxmmu_lut861l_tt = regs::gfxmmu_gfxmmu_lut861l_v1_tt;
-  using gfxmmu_lut861h_tt = regs::gfxmmu_gfxmmu_lut861h_v1_tt;
-  using gfxmmu_lut862l_tt = regs::gfxmmu_gfxmmu_lut862l_v1_tt;
-  using gfxmmu_lut862h_tt = regs::gfxmmu_gfxmmu_lut862h_v1_tt;
-  using gfxmmu_lut863l_tt = regs::gfxmmu_gfxmmu_lut863l_v1_tt;
-  using gfxmmu_lut863h_tt = regs::gfxmmu_gfxmmu_lut863h_v1_tt;
-  using gfxmmu_lut864l_tt = regs::gfxmmu_gfxmmu_lut864l_v1_tt;
-  using gfxmmu_lut864h_tt = regs::gfxmmu_gfxmmu_lut864h_v1_tt;
-  using gfxmmu_lut865l_tt = regs::gfxmmu_gfxmmu_lut865l_v1_tt;
-  using gfxmmu_lut865h_tt = regs::gfxmmu_gfxmmu_lut865h_v1_tt;
-  using gfxmmu_lut866l_tt = regs::gfxmmu_gfxmmu_lut866l_v1_tt;
-  using gfxmmu_lut866h_tt = regs::gfxmmu_gfxmmu_lut866h_v1_tt;
-  using gfxmmu_lut867l_tt = regs::gfxmmu_gfxmmu_lut867l_v1_tt;
-  using gfxmmu_lut867h_tt = regs::gfxmmu_gfxmmu_lut867h_v1_tt;
-  using gfxmmu_lut868l_tt = regs::gfxmmu_gfxmmu_lut868l_v1_tt;
-  using gfxmmu_lut868h_tt = regs::gfxmmu_gfxmmu_lut868h_v1_tt;
-  using gfxmmu_lut869l_tt = regs::gfxmmu_gfxmmu_lut869l_v1_tt;
-  using gfxmmu_lut869h_tt = regs::gfxmmu_gfxmmu_lut869h_v1_tt;
-  using gfxmmu_lut870l_tt = regs::gfxmmu_gfxmmu_lut870l_v1_tt;
-  using gfxmmu_lut870h_tt = regs::gfxmmu_gfxmmu_lut870h_v1_tt;
-  using gfxmmu_lut871l_tt = regs::gfxmmu_gfxmmu_lut871l_v1_tt;
-  using gfxmmu_lut871h_tt = regs::gfxmmu_gfxmmu_lut871h_v1_tt;
-  using gfxmmu_lut872l_tt = regs::gfxmmu_gfxmmu_lut872l_v1_tt;
-  using gfxmmu_lut872h_tt = regs::gfxmmu_gfxmmu_lut872h_v1_tt;
-  using gfxmmu_lut873l_tt = regs::gfxmmu_gfxmmu_lut873l_v1_tt;
-  using gfxmmu_lut873h_tt = regs::gfxmmu_gfxmmu_lut873h_v1_tt;
-  using gfxmmu_lut874l_tt = regs::gfxmmu_gfxmmu_lut874l_v1_tt;
-  using gfxmmu_lut874h_tt = regs::gfxmmu_gfxmmu_lut874h_v1_tt;
-  using gfxmmu_lut875l_tt = regs::gfxmmu_gfxmmu_lut875l_v1_tt;
-  using gfxmmu_lut875h_tt = regs::gfxmmu_gfxmmu_lut875h_v1_tt;
-  using gfxmmu_lut876l_tt = regs::gfxmmu_gfxmmu_lut876l_v1_tt;
-  using gfxmmu_lut876h_tt = regs::gfxmmu_gfxmmu_lut876h_v1_tt;
-  using gfxmmu_lut877l_tt = regs::gfxmmu_gfxmmu_lut877l_v1_tt;
-  using gfxmmu_lut877h_tt = regs::gfxmmu_gfxmmu_lut877h_v1_tt;
-  using gfxmmu_lut878l_tt = regs::gfxmmu_gfxmmu_lut878l_v1_tt;
-  using gfxmmu_lut878h_tt = regs::gfxmmu_gfxmmu_lut878h_v1_tt;
-  using gfxmmu_lut879l_tt = regs::gfxmmu_gfxmmu_lut879l_v1_tt;
-  using gfxmmu_lut879h_tt = regs::gfxmmu_gfxmmu_lut879h_v1_tt;
-  using gfxmmu_lut880l_tt = regs::gfxmmu_gfxmmu_lut880l_v1_tt;
-  using gfxmmu_lut880h_tt = regs::gfxmmu_gfxmmu_lut880h_v1_tt;
-  using gfxmmu_lut881l_tt = regs::gfxmmu_gfxmmu_lut881l_v1_tt;
-  using gfxmmu_lut881h_tt = regs::gfxmmu_gfxmmu_lut881h_v1_tt;
-  using gfxmmu_lut882l_tt = regs::gfxmmu_gfxmmu_lut882l_v1_tt;
-  using gfxmmu_lut882h_tt = regs::gfxmmu_gfxmmu_lut882h_v1_tt;
-  using gfxmmu_lut883l_tt = regs::gfxmmu_gfxmmu_lut883l_v1_tt;
-  using gfxmmu_lut883h_tt = regs::gfxmmu_gfxmmu_lut883h_v1_tt;
-  using gfxmmu_lut884l_tt = regs::gfxmmu_gfxmmu_lut884l_v1_tt;
-  using gfxmmu_lut884h_tt = regs::gfxmmu_gfxmmu_lut884h_v1_tt;
-  using gfxmmu_lut885l_tt = regs::gfxmmu_gfxmmu_lut885l_v1_tt;
-  using gfxmmu_lut885h_tt = regs::gfxmmu_gfxmmu_lut885h_v1_tt;
-  using gfxmmu_lut886l_tt = regs::gfxmmu_gfxmmu_lut886l_v1_tt;
-  using gfxmmu_lut886h_tt = regs::gfxmmu_gfxmmu_lut886h_v1_tt;
-  using gfxmmu_lut887l_tt = regs::gfxmmu_gfxmmu_lut887l_v1_tt;
-  using gfxmmu_lut887h_tt = regs::gfxmmu_gfxmmu_lut887h_v1_tt;
-  using gfxmmu_lut888l_tt = regs::gfxmmu_gfxmmu_lut888l_v1_tt;
-  using gfxmmu_lut888h_tt = regs::gfxmmu_gfxmmu_lut888h_v1_tt;
-  using gfxmmu_lut889l_tt = regs::gfxmmu_gfxmmu_lut889l_v1_tt;
-  using gfxmmu_lut889h_tt = regs::gfxmmu_gfxmmu_lut889h_v1_tt;
-  using gfxmmu_lut890l_tt = regs::gfxmmu_gfxmmu_lut890l_v1_tt;
-  using gfxmmu_lut890h_tt = regs::gfxmmu_gfxmmu_lut890h_v1_tt;
-  using gfxmmu_lut891l_tt = regs::gfxmmu_gfxmmu_lut891l_v1_tt;
-  using gfxmmu_lut891h_tt = regs::gfxmmu_gfxmmu_lut891h_v1_tt;
-  using gfxmmu_lut892l_tt = regs::gfxmmu_gfxmmu_lut892l_v1_tt;
-  using gfxmmu_lut892h_tt = regs::gfxmmu_gfxmmu_lut892h_v1_tt;
-  using gfxmmu_lut893l_tt = regs::gfxmmu_gfxmmu_lut893l_v1_tt;
-  using gfxmmu_lut893h_tt = regs::gfxmmu_gfxmmu_lut893h_v1_tt;
-  using gfxmmu_lut894l_tt = regs::gfxmmu_gfxmmu_lut894l_v1_tt;
-  using gfxmmu_lut894h_tt = regs::gfxmmu_gfxmmu_lut894h_v1_tt;
-  using gfxmmu_lut895l_tt = regs::gfxmmu_gfxmmu_lut895l_v1_tt;
-  using gfxmmu_lut895h_tt = regs::gfxmmu_gfxmmu_lut895h_v1_tt;
-  using gfxmmu_lut896l_tt = regs::gfxmmu_gfxmmu_lut896l_v1_tt;
-  using gfxmmu_lut896h_tt = regs::gfxmmu_gfxmmu_lut896h_v1_tt;
-  using gfxmmu_lut897l_tt = regs::gfxmmu_gfxmmu_lut897l_v1_tt;
-  using gfxmmu_lut897h_tt = regs::gfxmmu_gfxmmu_lut897h_v1_tt;
-  using gfxmmu_lut898l_tt = regs::gfxmmu_gfxmmu_lut898l_v1_tt;
-  using gfxmmu_lut898h_tt = regs::gfxmmu_gfxmmu_lut898h_v1_tt;
-  using gfxmmu_lut899l_tt = regs::gfxmmu_gfxmmu_lut899l_v1_tt;
-  using gfxmmu_lut899h_tt = regs::gfxmmu_gfxmmu_lut899h_v1_tt;
-  using gfxmmu_lut900l_tt = regs::gfxmmu_gfxmmu_lut900l_v1_tt;
-  using gfxmmu_lut900h_tt = regs::gfxmmu_gfxmmu_lut900h_v1_tt;
-  using gfxmmu_lut901l_tt = regs::gfxmmu_gfxmmu_lut901l_v1_tt;
-  using gfxmmu_lut901h_tt = regs::gfxmmu_gfxmmu_lut901h_v1_tt;
-  using gfxmmu_lut902l_tt = regs::gfxmmu_gfxmmu_lut902l_v1_tt;
-  using gfxmmu_lut902h_tt = regs::gfxmmu_gfxmmu_lut902h_v1_tt;
-  using gfxmmu_lut903l_tt = regs::gfxmmu_gfxmmu_lut903l_v1_tt;
-  using gfxmmu_lut903h_tt = regs::gfxmmu_gfxmmu_lut903h_v1_tt;
-  using gfxmmu_lut904l_tt = regs::gfxmmu_gfxmmu_lut904l_v1_tt;
-  using gfxmmu_lut904h_tt = regs::gfxmmu_gfxmmu_lut904h_v1_tt;
-  using gfxmmu_lut905l_tt = regs::gfxmmu_gfxmmu_lut905l_v1_tt;
-  using gfxmmu_lut905h_tt = regs::gfxmmu_gfxmmu_lut905h_v1_tt;
-  using gfxmmu_lut906l_tt = regs::gfxmmu_gfxmmu_lut906l_v1_tt;
-  using gfxmmu_lut906h_tt = regs::gfxmmu_gfxmmu_lut906h_v1_tt;
-  using gfxmmu_lut907l_tt = regs::gfxmmu_gfxmmu_lut907l_v1_tt;
-  using gfxmmu_lut907h_tt = regs::gfxmmu_gfxmmu_lut907h_v1_tt;
-  using gfxmmu_lut908l_tt = regs::gfxmmu_gfxmmu_lut908l_v1_tt;
-  using gfxmmu_lut908h_tt = regs::gfxmmu_gfxmmu_lut908h_v1_tt;
-  using gfxmmu_lut909l_tt = regs::gfxmmu_gfxmmu_lut909l_v1_tt;
-  using gfxmmu_lut909h_tt = regs::gfxmmu_gfxmmu_lut909h_v1_tt;
-  using gfxmmu_lut910l_tt = regs::gfxmmu_gfxmmu_lut910l_v1_tt;
-  using gfxmmu_lut910h_tt = regs::gfxmmu_gfxmmu_lut910h_v1_tt;
-  using gfxmmu_lut911l_tt = regs::gfxmmu_gfxmmu_lut911l_v1_tt;
-  using gfxmmu_lut911h_tt = regs::gfxmmu_gfxmmu_lut911h_v1_tt;
-  using gfxmmu_lut912l_tt = regs::gfxmmu_gfxmmu_lut912l_v1_tt;
-  using gfxmmu_lut912h_tt = regs::gfxmmu_gfxmmu_lut912h_v1_tt;
-  using gfxmmu_lut913l_tt = regs::gfxmmu_gfxmmu_lut913l_v1_tt;
-  using gfxmmu_lut913h_tt = regs::gfxmmu_gfxmmu_lut913h_v1_tt;
-  using gfxmmu_lut914l_tt = regs::gfxmmu_gfxmmu_lut914l_v1_tt;
-  using gfxmmu_lut914h_tt = regs::gfxmmu_gfxmmu_lut914h_v1_tt;
-  using gfxmmu_lut915l_tt = regs::gfxmmu_gfxmmu_lut915l_v1_tt;
-  using gfxmmu_lut915h_tt = regs::gfxmmu_gfxmmu_lut915h_v1_tt;
-  using gfxmmu_lut916l_tt = regs::gfxmmu_gfxmmu_lut916l_v1_tt;
-  using gfxmmu_lut916h_tt = regs::gfxmmu_gfxmmu_lut916h_v1_tt;
-  using gfxmmu_lut917l_tt = regs::gfxmmu_gfxmmu_lut917l_v1_tt;
-  using gfxmmu_lut917h_tt = regs::gfxmmu_gfxmmu_lut917h_v1_tt;
-  using gfxmmu_lut918l_tt = regs::gfxmmu_gfxmmu_lut918l_v1_tt;
-  using gfxmmu_lut918h_tt = regs::gfxmmu_gfxmmu_lut918h_v1_tt;
-  using gfxmmu_lut919l_tt = regs::gfxmmu_gfxmmu_lut919l_v1_tt;
-  using gfxmmu_lut919h_tt = regs::gfxmmu_gfxmmu_lut919h_v1_tt;
-  using gfxmmu_lut920l_tt = regs::gfxmmu_gfxmmu_lut920l_v1_tt;
-  using gfxmmu_lut920h_tt = regs::gfxmmu_gfxmmu_lut920h_v1_tt;
-  using gfxmmu_lut921l_tt = regs::gfxmmu_gfxmmu_lut921l_v1_tt;
-  using gfxmmu_lut921h_tt = regs::gfxmmu_gfxmmu_lut921h_v1_tt;
-  using gfxmmu_lut922l_tt = regs::gfxmmu_gfxmmu_lut922l_v1_tt;
-  using gfxmmu_lut922h_tt = regs::gfxmmu_gfxmmu_lut922h_v1_tt;
-  using gfxmmu_lut923l_tt = regs::gfxmmu_gfxmmu_lut923l_v1_tt;
-  using gfxmmu_lut923h_tt = regs::gfxmmu_gfxmmu_lut923h_v1_tt;
-  using gfxmmu_lut924l_tt = regs::gfxmmu_gfxmmu_lut924l_v1_tt;
-  using gfxmmu_lut924h_tt = regs::gfxmmu_gfxmmu_lut924h_v1_tt;
-  using gfxmmu_lut925l_tt = regs::gfxmmu_gfxmmu_lut925l_v1_tt;
-  using gfxmmu_lut925h_tt = regs::gfxmmu_gfxmmu_lut925h_v1_tt;
-  using gfxmmu_lut926l_tt = regs::gfxmmu_gfxmmu_lut926l_v1_tt;
-  using gfxmmu_lut926h_tt = regs::gfxmmu_gfxmmu_lut926h_v1_tt;
-  using gfxmmu_lut927l_tt = regs::gfxmmu_gfxmmu_lut927l_v1_tt;
-  using gfxmmu_lut927h_tt = regs::gfxmmu_gfxmmu_lut927h_v1_tt;
-  using gfxmmu_lut928l_tt = regs::gfxmmu_gfxmmu_lut928l_v1_tt;
-  using gfxmmu_lut928h_tt = regs::gfxmmu_gfxmmu_lut928h_v1_tt;
-  using gfxmmu_lut929l_tt = regs::gfxmmu_gfxmmu_lut929l_v1_tt;
-  using gfxmmu_lut929h_tt = regs::gfxmmu_gfxmmu_lut929h_v1_tt;
-  using gfxmmu_lut930l_tt = regs::gfxmmu_gfxmmu_lut930l_v1_tt;
-  using gfxmmu_lut930h_tt = regs::gfxmmu_gfxmmu_lut930h_v1_tt;
-  using gfxmmu_lut931l_tt = regs::gfxmmu_gfxmmu_lut931l_v1_tt;
-  using gfxmmu_lut931h_tt = regs::gfxmmu_gfxmmu_lut931h_v1_tt;
-  using gfxmmu_lut932l_tt = regs::gfxmmu_gfxmmu_lut932l_v1_tt;
-  using gfxmmu_lut932h_tt = regs::gfxmmu_gfxmmu_lut932h_v1_tt;
-  using gfxmmu_lut933l_tt = regs::gfxmmu_gfxmmu_lut933l_v1_tt;
-  using gfxmmu_lut933h_tt = regs::gfxmmu_gfxmmu_lut933h_v1_tt;
-  using gfxmmu_lut934l_tt = regs::gfxmmu_gfxmmu_lut934l_v1_tt;
-  using gfxmmu_lut934h_tt = regs::gfxmmu_gfxmmu_lut934h_v1_tt;
-  using gfxmmu_lut935l_tt = regs::gfxmmu_gfxmmu_lut935l_v1_tt;
-  using gfxmmu_lut935h_tt = regs::gfxmmu_gfxmmu_lut935h_v1_tt;
-  using gfxmmu_lut936l_tt = regs::gfxmmu_gfxmmu_lut936l_v1_tt;
-  using gfxmmu_lut936h_tt = regs::gfxmmu_gfxmmu_lut936h_v1_tt;
-  using gfxmmu_lut937l_tt = regs::gfxmmu_gfxmmu_lut937l_v1_tt;
-  using gfxmmu_lut937h_tt = regs::gfxmmu_gfxmmu_lut937h_v1_tt;
-  using gfxmmu_lut938l_tt = regs::gfxmmu_gfxmmu_lut938l_v1_tt;
-  using gfxmmu_lut938h_tt = regs::gfxmmu_gfxmmu_lut938h_v1_tt;
-  using gfxmmu_lut939l_tt = regs::gfxmmu_gfxmmu_lut939l_v1_tt;
-  using gfxmmu_lut939h_tt = regs::gfxmmu_gfxmmu_lut939h_v1_tt;
-  using gfxmmu_lut940l_tt = regs::gfxmmu_gfxmmu_lut940l_v1_tt;
-  using gfxmmu_lut940h_tt = regs::gfxmmu_gfxmmu_lut940h_v1_tt;
-  using gfxmmu_lut941l_tt = regs::gfxmmu_gfxmmu_lut941l_v1_tt;
-  using gfxmmu_lut941h_tt = regs::gfxmmu_gfxmmu_lut941h_v1_tt;
-  using gfxmmu_lut942l_tt = regs::gfxmmu_gfxmmu_lut942l_v1_tt;
-  using gfxmmu_lut942h_tt = regs::gfxmmu_gfxmmu_lut942h_v1_tt;
-  using gfxmmu_lut943l_tt = regs::gfxmmu_gfxmmu_lut943l_v1_tt;
-  using gfxmmu_lut943h_tt = regs::gfxmmu_gfxmmu_lut943h_v1_tt;
-  using gfxmmu_lut944l_tt = regs::gfxmmu_gfxmmu_lut944l_v1_tt;
-  using gfxmmu_lut944h_tt = regs::gfxmmu_gfxmmu_lut944h_v1_tt;
-  using gfxmmu_lut945l_tt = regs::gfxmmu_gfxmmu_lut945l_v1_tt;
-  using gfxmmu_lut945h_tt = regs::gfxmmu_gfxmmu_lut945h_v1_tt;
-  using gfxmmu_lut946l_tt = regs::gfxmmu_gfxmmu_lut946l_v1_tt;
-  using gfxmmu_lut946h_tt = regs::gfxmmu_gfxmmu_lut946h_v1_tt;
-  using gfxmmu_lut947l_tt = regs::gfxmmu_gfxmmu_lut947l_v1_tt;
-  using gfxmmu_lut947h_tt = regs::gfxmmu_gfxmmu_lut947h_v1_tt;
-  using gfxmmu_lut948l_tt = regs::gfxmmu_gfxmmu_lut948l_v1_tt;
-  using gfxmmu_lut948h_tt = regs::gfxmmu_gfxmmu_lut948h_v1_tt;
-  using gfxmmu_lut949l_tt = regs::gfxmmu_gfxmmu_lut949l_v1_tt;
-  using gfxmmu_lut949h_tt = regs::gfxmmu_gfxmmu_lut949h_v1_tt;
-  using gfxmmu_lut950l_tt = regs::gfxmmu_gfxmmu_lut950l_v1_tt;
-  using gfxmmu_lut950h_tt = regs::gfxmmu_gfxmmu_lut950h_v1_tt;
-  using gfxmmu_lut951l_tt = regs::gfxmmu_gfxmmu_lut951l_v1_tt;
-  using gfxmmu_lut951h_tt = regs::gfxmmu_gfxmmu_lut951h_v1_tt;
-  using gfxmmu_lut952l_tt = regs::gfxmmu_gfxmmu_lut952l_v1_tt;
-  using gfxmmu_lut952h_tt = regs::gfxmmu_gfxmmu_lut952h_v1_tt;
-  using gfxmmu_lut953l_tt = regs::gfxmmu_gfxmmu_lut953l_v1_tt;
-  using gfxmmu_lut953h_tt = regs::gfxmmu_gfxmmu_lut953h_v1_tt;
-  using gfxmmu_lut954l_tt = regs::gfxmmu_gfxmmu_lut954l_v1_tt;
-  using gfxmmu_lut954h_tt = regs::gfxmmu_gfxmmu_lut954h_v1_tt;
-  using gfxmmu_lut955l_tt = regs::gfxmmu_gfxmmu_lut955l_v1_tt;
-  using gfxmmu_lut955h_tt = regs::gfxmmu_gfxmmu_lut955h_v1_tt;
-  using gfxmmu_lut956l_tt = regs::gfxmmu_gfxmmu_lut956l_v1_tt;
-  using gfxmmu_lut956h_tt = regs::gfxmmu_gfxmmu_lut956h_v1_tt;
-  using gfxmmu_lut957l_tt = regs::gfxmmu_gfxmmu_lut957l_v1_tt;
-  using gfxmmu_lut957h_tt = regs::gfxmmu_gfxmmu_lut957h_v1_tt;
-  using gfxmmu_lut958l_tt = regs::gfxmmu_gfxmmu_lut958l_v1_tt;
-  using gfxmmu_lut958h_tt = regs::gfxmmu_gfxmmu_lut958h_v1_tt;
-  using gfxmmu_lut959l_tt = regs::gfxmmu_gfxmmu_lut959l_v1_tt;
-  using gfxmmu_lut959h_tt = regs::gfxmmu_gfxmmu_lut959h_v1_tt;
-  using gfxmmu_lut960l_tt = regs::gfxmmu_gfxmmu_lut960l_v1_tt;
-  using gfxmmu_lut960h_tt = regs::gfxmmu_gfxmmu_lut960h_v1_tt;
-  using gfxmmu_lut961l_tt = regs::gfxmmu_gfxmmu_lut961l_v1_tt;
-  using gfxmmu_lut961h_tt = regs::gfxmmu_gfxmmu_lut961h_v1_tt;
-  using gfxmmu_lut962l_tt = regs::gfxmmu_gfxmmu_lut962l_v1_tt;
-  using gfxmmu_lut962h_tt = regs::gfxmmu_gfxmmu_lut962h_v1_tt;
-  using gfxmmu_lut963l_tt = regs::gfxmmu_gfxmmu_lut963l_v1_tt;
-  using gfxmmu_lut963h_tt = regs::gfxmmu_gfxmmu_lut963h_v1_tt;
-  using gfxmmu_lut964l_tt = regs::gfxmmu_gfxmmu_lut964l_v1_tt;
-  using gfxmmu_lut964h_tt = regs::gfxmmu_gfxmmu_lut964h_v1_tt;
-  using gfxmmu_lut965l_tt = regs::gfxmmu_gfxmmu_lut965l_v1_tt;
-  using gfxmmu_lut965h_tt = regs::gfxmmu_gfxmmu_lut965h_v1_tt;
-  using gfxmmu_lut966l_tt = regs::gfxmmu_gfxmmu_lut966l_v1_tt;
-  using gfxmmu_lut966h_tt = regs::gfxmmu_gfxmmu_lut966h_v1_tt;
-  using gfxmmu_lut967l_tt = regs::gfxmmu_gfxmmu_lut967l_v1_tt;
-  using gfxmmu_lut967h_tt = regs::gfxmmu_gfxmmu_lut967h_v1_tt;
-  using gfxmmu_lut968l_tt = regs::gfxmmu_gfxmmu_lut968l_v1_tt;
-  using gfxmmu_lut968h_tt = regs::gfxmmu_gfxmmu_lut968h_v1_tt;
-  using gfxmmu_lut969l_tt = regs::gfxmmu_gfxmmu_lut969l_v1_tt;
-  using gfxmmu_lut969h_tt = regs::gfxmmu_gfxmmu_lut969h_v1_tt;
-  using gfxmmu_lut970l_tt = regs::gfxmmu_gfxmmu_lut970l_v1_tt;
-  using gfxmmu_lut970h_tt = regs::gfxmmu_gfxmmu_lut970h_v1_tt;
-  using gfxmmu_lut971l_tt = regs::gfxmmu_gfxmmu_lut971l_v1_tt;
-  using gfxmmu_lut971h_tt = regs::gfxmmu_gfxmmu_lut971h_v1_tt;
-  using gfxmmu_lut972l_tt = regs::gfxmmu_gfxmmu_lut972l_v1_tt;
-  using gfxmmu_lut972h_tt = regs::gfxmmu_gfxmmu_lut972h_v1_tt;
-  using gfxmmu_lut973l_tt = regs::gfxmmu_gfxmmu_lut973l_v1_tt;
-  using gfxmmu_lut973h_tt = regs::gfxmmu_gfxmmu_lut973h_v1_tt;
-  using gfxmmu_lut974l_tt = regs::gfxmmu_gfxmmu_lut974l_v1_tt;
-  using gfxmmu_lut974h_tt = regs::gfxmmu_gfxmmu_lut974h_v1_tt;
-  using gfxmmu_lut975l_tt = regs::gfxmmu_gfxmmu_lut975l_v1_tt;
-  using gfxmmu_lut975h_tt = regs::gfxmmu_gfxmmu_lut975h_v1_tt;
-  using gfxmmu_lut976l_tt = regs::gfxmmu_gfxmmu_lut976l_v1_tt;
-  using gfxmmu_lut976h_tt = regs::gfxmmu_gfxmmu_lut976h_v1_tt;
-  using gfxmmu_lut977l_tt = regs::gfxmmu_gfxmmu_lut977l_v1_tt;
-  using gfxmmu_lut977h_tt = regs::gfxmmu_gfxmmu_lut977h_v1_tt;
-  using gfxmmu_lut978l_tt = regs::gfxmmu_gfxmmu_lut978l_v1_tt;
-  using gfxmmu_lut978h_tt = regs::gfxmmu_gfxmmu_lut978h_v1_tt;
-  using gfxmmu_lut979l_tt = regs::gfxmmu_gfxmmu_lut979l_v1_tt;
-  using gfxmmu_lut979h_tt = regs::gfxmmu_gfxmmu_lut979h_v1_tt;
-  using gfxmmu_lut980l_tt = regs::gfxmmu_gfxmmu_lut980l_v1_tt;
-  using gfxmmu_lut980h_tt = regs::gfxmmu_gfxmmu_lut980h_v1_tt;
-  using gfxmmu_lut981l_tt = regs::gfxmmu_gfxmmu_lut981l_v1_tt;
-  using gfxmmu_lut981h_tt = regs::gfxmmu_gfxmmu_lut981h_v1_tt;
-  using gfxmmu_lut982l_tt = regs::gfxmmu_gfxmmu_lut982l_v1_tt;
-  using gfxmmu_lut982h_tt = regs::gfxmmu_gfxmmu_lut982h_v1_tt;
-  using gfxmmu_lut983l_tt = regs::gfxmmu_gfxmmu_lut983l_v1_tt;
-  using gfxmmu_lut983h_tt = regs::gfxmmu_gfxmmu_lut983h_v1_tt;
-  using gfxmmu_lut984l_tt = regs::gfxmmu_gfxmmu_lut984l_v1_tt;
-  using gfxmmu_lut984h_tt = regs::gfxmmu_gfxmmu_lut984h_v1_tt;
-  using gfxmmu_lut985l_tt = regs::gfxmmu_gfxmmu_lut985l_v1_tt;
-  using gfxmmu_lut985h_tt = regs::gfxmmu_gfxmmu_lut985h_v1_tt;
-  using gfxmmu_lut986l_tt = regs::gfxmmu_gfxmmu_lut986l_v1_tt;
-  using gfxmmu_lut986h_tt = regs::gfxmmu_gfxmmu_lut986h_v1_tt;
-  using gfxmmu_lut987l_tt = regs::gfxmmu_gfxmmu_lut987l_v1_tt;
-  using gfxmmu_lut987h_tt = regs::gfxmmu_gfxmmu_lut987h_v1_tt;
-  using gfxmmu_lut988l_tt = regs::gfxmmu_gfxmmu_lut988l_v1_tt;
-  using gfxmmu_lut988h_tt = regs::gfxmmu_gfxmmu_lut988h_v1_tt;
-  using gfxmmu_lut989l_tt = regs::gfxmmu_gfxmmu_lut989l_v1_tt;
-  using gfxmmu_lut989h_tt = regs::gfxmmu_gfxmmu_lut989h_v1_tt;
-  using gfxmmu_lut990l_tt = regs::gfxmmu_gfxmmu_lut990l_v1_tt;
-  using gfxmmu_lut990h_tt = regs::gfxmmu_gfxmmu_lut990h_v1_tt;
-  using gfxmmu_lut991l_tt = regs::gfxmmu_gfxmmu_lut991l_v1_tt;
-  using gfxmmu_lut991h_tt = regs::gfxmmu_gfxmmu_lut991h_v1_tt;
-  using gfxmmu_lut992l_tt = regs::gfxmmu_gfxmmu_lut992l_v1_tt;
-  using gfxmmu_lut992h_tt = regs::gfxmmu_gfxmmu_lut992h_v1_tt;
-  using gfxmmu_lut993l_tt = regs::gfxmmu_gfxmmu_lut993l_v1_tt;
-  using gfxmmu_lut993h_tt = regs::gfxmmu_gfxmmu_lut993h_v1_tt;
-  using gfxmmu_lut994l_tt = regs::gfxmmu_gfxmmu_lut994l_v1_tt;
-  using gfxmmu_lut994h_tt = regs::gfxmmu_gfxmmu_lut994h_v1_tt;
-  using gfxmmu_lut995l_tt = regs::gfxmmu_gfxmmu_lut995l_v1_tt;
-  using gfxmmu_lut995h_tt = regs::gfxmmu_gfxmmu_lut995h_v1_tt;
-  using gfxmmu_lut996l_tt = regs::gfxmmu_gfxmmu_lut996l_v1_tt;
-  using gfxmmu_lut996h_tt = regs::gfxmmu_gfxmmu_lut996h_v1_tt;
-  using gfxmmu_lut997l_tt = regs::gfxmmu_gfxmmu_lut997l_v1_tt;
-  using gfxmmu_lut997h_tt = regs::gfxmmu_gfxmmu_lut997h_v1_tt;
-  using gfxmmu_lut998l_tt = regs::gfxmmu_gfxmmu_lut998l_v1_tt;
-  using gfxmmu_lut998h_tt = regs::gfxmmu_gfxmmu_lut998h_v1_tt;
-  using gfxmmu_lut999l_tt = regs::gfxmmu_gfxmmu_lut999l_v1_tt;
-  using gfxmmu_lut999h_tt = regs::gfxmmu_gfxmmu_lut999h_v1_tt;
-  using gfxmmu_lut1000l_tt = regs::gfxmmu_gfxmmu_lut1000l_v1_tt;
-  using gfxmmu_lut1000h_tt = regs::gfxmmu_gfxmmu_lut1000h_v1_tt;
-  using gfxmmu_lut1001l_tt = regs::gfxmmu_gfxmmu_lut1001l_v1_tt;
-  using gfxmmu_lut1001h_tt = regs::gfxmmu_gfxmmu_lut1001h_v1_tt;
-  using gfxmmu_lut1002l_tt = regs::gfxmmu_gfxmmu_lut1002l_v1_tt;
-  using gfxmmu_lut1002h_tt = regs::gfxmmu_gfxmmu_lut1002h_v1_tt;
-  using gfxmmu_lut1003l_tt = regs::gfxmmu_gfxmmu_lut1003l_v1_tt;
-  using gfxmmu_lut1003h_tt = regs::gfxmmu_gfxmmu_lut1003h_v1_tt;
-  using gfxmmu_lut1004l_tt = regs::gfxmmu_gfxmmu_lut1004l_v1_tt;
-  using gfxmmu_lut1004h_tt = regs::gfxmmu_gfxmmu_lut1004h_v1_tt;
-  using gfxmmu_lut1005l_tt = regs::gfxmmu_gfxmmu_lut1005l_v1_tt;
-  using gfxmmu_lut1005h_tt = regs::gfxmmu_gfxmmu_lut1005h_v1_tt;
-  using gfxmmu_lut1006l_tt = regs::gfxmmu_gfxmmu_lut1006l_v1_tt;
-  using gfxmmu_lut1006h_tt = regs::gfxmmu_gfxmmu_lut1006h_v1_tt;
-  using gfxmmu_lut1007l_tt = regs::gfxmmu_gfxmmu_lut1007l_v1_tt;
-  using gfxmmu_lut1007h_tt = regs::gfxmmu_gfxmmu_lut1007h_v1_tt;
-  using gfxmmu_lut1008l_tt = regs::gfxmmu_gfxmmu_lut1008l_v1_tt;
-  using gfxmmu_lut1008h_tt = regs::gfxmmu_gfxmmu_lut1008h_v1_tt;
-  using gfxmmu_lut1009l_tt = regs::gfxmmu_gfxmmu_lut1009l_v1_tt;
-  using gfxmmu_lut1009h_tt = regs::gfxmmu_gfxmmu_lut1009h_v1_tt;
-  using gfxmmu_lut1010l_tt = regs::gfxmmu_gfxmmu_lut1010l_v1_tt;
-  using gfxmmu_lut1010h_tt = regs::gfxmmu_gfxmmu_lut1010h_v1_tt;
-  using gfxmmu_lut1011l_tt = regs::gfxmmu_gfxmmu_lut1011l_v1_tt;
-  using gfxmmu_lut1011h_tt = regs::gfxmmu_gfxmmu_lut1011h_v1_tt;
-  using gfxmmu_lut1012l_tt = regs::gfxmmu_gfxmmu_lut1012l_v1_tt;
-  using gfxmmu_lut1012h_tt = regs::gfxmmu_gfxmmu_lut1012h_v1_tt;
-  using gfxmmu_lut1013l_tt = regs::gfxmmu_gfxmmu_lut1013l_v1_tt;
-  using gfxmmu_lut1013h_tt = regs::gfxmmu_gfxmmu_lut1013h_v1_tt;
-  using gfxmmu_lut1014l_tt = regs::gfxmmu_gfxmmu_lut1014l_v1_tt;
-  using gfxmmu_lut1014h_tt = regs::gfxmmu_gfxmmu_lut1014h_v1_tt;
-  using gfxmmu_lut1015l_tt = regs::gfxmmu_gfxmmu_lut1015l_v1_tt;
-  using gfxmmu_lut1015h_tt = regs::gfxmmu_gfxmmu_lut1015h_v1_tt;
-  using gfxmmu_lut1016l_tt = regs::gfxmmu_gfxmmu_lut1016l_v1_tt;
-  using gfxmmu_lut1016h_tt = regs::gfxmmu_gfxmmu_lut1016h_v1_tt;
-  using gfxmmu_lut1017l_tt = regs::gfxmmu_gfxmmu_lut1017l_v1_tt;
-  using gfxmmu_lut1017h_tt = regs::gfxmmu_gfxmmu_lut1017h_v1_tt;
-  using gfxmmu_lut1018l_tt = regs::gfxmmu_gfxmmu_lut1018l_v1_tt;
-  using gfxmmu_lut1018h_tt = regs::gfxmmu_gfxmmu_lut1018h_v1_tt;
-  using gfxmmu_lut1019l_tt = regs::gfxmmu_gfxmmu_lut1019l_v1_tt;
-  using gfxmmu_lut1019h_tt = regs::gfxmmu_gfxmmu_lut1019h_v1_tt;
-  using gfxmmu_lut1020l_tt = regs::gfxmmu_gfxmmu_lut1020l_v1_tt;
-  using gfxmmu_lut1020h_tt = regs::gfxmmu_gfxmmu_lut1020h_v1_tt;
-  using gfxmmu_lut1021l_tt = regs::gfxmmu_gfxmmu_lut1021l_v1_tt;
-  using gfxmmu_lut1021h_tt = regs::gfxmmu_gfxmmu_lut1021h_v1_tt;
-  using gfxmmu_lut1022l_tt = regs::gfxmmu_gfxmmu_lut1022l_v1_tt;
-  using gfxmmu_lut1022h_tt = regs::gfxmmu_gfxmmu_lut1022h_v1_tt;
-  using gfxmmu_lut1023l_tt = regs::gfxmmu_gfxmmu_lut1023l_v1_tt;
-  using gfxmmu_lut1023h_tt = regs::gfxmmu_gfxmmu_lut1023h_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_cr_tt = regs::gfxmmu_gfxmmu_cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_sr_tt = regs::gfxmmu_gfxmmu_sr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_fcr_tt = regs::gfxmmu_gfxmmu_fcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_ccr_tt = regs::gfxmmu_gfxmmu_ccr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_dvr_tt = regs::gfxmmu_gfxmmu_dvr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_b0cr_tt = regs::gfxmmu_gfxmmu_b0cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_b1cr_tt = regs::gfxmmu_gfxmmu_b1cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_b2cr_tt = regs::gfxmmu_gfxmmu_b2cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_b3cr_tt = regs::gfxmmu_gfxmmu_b3cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut0l_tt = regs::gfxmmu_gfxmmu_lut0l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut0h_tt = regs::gfxmmu_gfxmmu_lut0h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut1l_tt = regs::gfxmmu_gfxmmu_lut1l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut1h_tt = regs::gfxmmu_gfxmmu_lut1h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut2l_tt = regs::gfxmmu_gfxmmu_lut2l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut2h_tt = regs::gfxmmu_gfxmmu_lut2h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut3l_tt = regs::gfxmmu_gfxmmu_lut3l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut3h_tt = regs::gfxmmu_gfxmmu_lut3h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut4l_tt = regs::gfxmmu_gfxmmu_lut4l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut4h_tt = regs::gfxmmu_gfxmmu_lut4h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut5l_tt = regs::gfxmmu_gfxmmu_lut5l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut5h_tt = regs::gfxmmu_gfxmmu_lut5h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut6l_tt = regs::gfxmmu_gfxmmu_lut6l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut6h_tt = regs::gfxmmu_gfxmmu_lut6h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut7l_tt = regs::gfxmmu_gfxmmu_lut7l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut7h_tt = regs::gfxmmu_gfxmmu_lut7h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut8l_tt = regs::gfxmmu_gfxmmu_lut8l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut8h_tt = regs::gfxmmu_gfxmmu_lut8h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut9l_tt = regs::gfxmmu_gfxmmu_lut9l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut9h_tt = regs::gfxmmu_gfxmmu_lut9h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut10l_tt = regs::gfxmmu_gfxmmu_lut10l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut10h_tt = regs::gfxmmu_gfxmmu_lut10h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut11l_tt = regs::gfxmmu_gfxmmu_lut11l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut11h_tt = regs::gfxmmu_gfxmmu_lut11h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut12l_tt = regs::gfxmmu_gfxmmu_lut12l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut12h_tt = regs::gfxmmu_gfxmmu_lut12h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut13l_tt = regs::gfxmmu_gfxmmu_lut13l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut13h_tt = regs::gfxmmu_gfxmmu_lut13h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut14l_tt = regs::gfxmmu_gfxmmu_lut14l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut14h_tt = regs::gfxmmu_gfxmmu_lut14h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut15l_tt = regs::gfxmmu_gfxmmu_lut15l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut15h_tt = regs::gfxmmu_gfxmmu_lut15h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut16l_tt = regs::gfxmmu_gfxmmu_lut16l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut16h_tt = regs::gfxmmu_gfxmmu_lut16h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut17l_tt = regs::gfxmmu_gfxmmu_lut17l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut17h_tt = regs::gfxmmu_gfxmmu_lut17h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut18l_tt = regs::gfxmmu_gfxmmu_lut18l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut18h_tt = regs::gfxmmu_gfxmmu_lut18h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut19l_tt = regs::gfxmmu_gfxmmu_lut19l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut19h_tt = regs::gfxmmu_gfxmmu_lut19h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut20l_tt = regs::gfxmmu_gfxmmu_lut20l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut20h_tt = regs::gfxmmu_gfxmmu_lut20h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut21l_tt = regs::gfxmmu_gfxmmu_lut21l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut21h_tt = regs::gfxmmu_gfxmmu_lut21h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut22l_tt = regs::gfxmmu_gfxmmu_lut22l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut22h_tt = regs::gfxmmu_gfxmmu_lut22h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut23l_tt = regs::gfxmmu_gfxmmu_lut23l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut23h_tt = regs::gfxmmu_gfxmmu_lut23h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut24l_tt = regs::gfxmmu_gfxmmu_lut24l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut24h_tt = regs::gfxmmu_gfxmmu_lut24h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut25l_tt = regs::gfxmmu_gfxmmu_lut25l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut25h_tt = regs::gfxmmu_gfxmmu_lut25h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut26l_tt = regs::gfxmmu_gfxmmu_lut26l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut26h_tt = regs::gfxmmu_gfxmmu_lut26h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut27l_tt = regs::gfxmmu_gfxmmu_lut27l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut27h_tt = regs::gfxmmu_gfxmmu_lut27h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut28l_tt = regs::gfxmmu_gfxmmu_lut28l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut28h_tt = regs::gfxmmu_gfxmmu_lut28h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut29l_tt = regs::gfxmmu_gfxmmu_lut29l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut29h_tt = regs::gfxmmu_gfxmmu_lut29h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut30l_tt = regs::gfxmmu_gfxmmu_lut30l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut30h_tt = regs::gfxmmu_gfxmmu_lut30h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut31l_tt = regs::gfxmmu_gfxmmu_lut31l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut31h_tt = regs::gfxmmu_gfxmmu_lut31h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut32l_tt = regs::gfxmmu_gfxmmu_lut32l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut32h_tt = regs::gfxmmu_gfxmmu_lut32h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut33l_tt = regs::gfxmmu_gfxmmu_lut33l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut33h_tt = regs::gfxmmu_gfxmmu_lut33h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut34l_tt = regs::gfxmmu_gfxmmu_lut34l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut34h_tt = regs::gfxmmu_gfxmmu_lut34h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut35l_tt = regs::gfxmmu_gfxmmu_lut35l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut35h_tt = regs::gfxmmu_gfxmmu_lut35h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut36l_tt = regs::gfxmmu_gfxmmu_lut36l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut36h_tt = regs::gfxmmu_gfxmmu_lut36h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut37l_tt = regs::gfxmmu_gfxmmu_lut37l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut37h_tt = regs::gfxmmu_gfxmmu_lut37h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut38l_tt = regs::gfxmmu_gfxmmu_lut38l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut38h_tt = regs::gfxmmu_gfxmmu_lut38h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut39l_tt = regs::gfxmmu_gfxmmu_lut39l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut39h_tt = regs::gfxmmu_gfxmmu_lut39h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut40l_tt = regs::gfxmmu_gfxmmu_lut40l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut40h_tt = regs::gfxmmu_gfxmmu_lut40h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut41l_tt = regs::gfxmmu_gfxmmu_lut41l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut41h_tt = regs::gfxmmu_gfxmmu_lut41h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut42l_tt = regs::gfxmmu_gfxmmu_lut42l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut42h_tt = regs::gfxmmu_gfxmmu_lut42h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut43l_tt = regs::gfxmmu_gfxmmu_lut43l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut43h_tt = regs::gfxmmu_gfxmmu_lut43h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut44l_tt = regs::gfxmmu_gfxmmu_lut44l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut44h_tt = regs::gfxmmu_gfxmmu_lut44h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut45l_tt = regs::gfxmmu_gfxmmu_lut45l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut45h_tt = regs::gfxmmu_gfxmmu_lut45h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut46l_tt = regs::gfxmmu_gfxmmu_lut46l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut46h_tt = regs::gfxmmu_gfxmmu_lut46h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut47l_tt = regs::gfxmmu_gfxmmu_lut47l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut47h_tt = regs::gfxmmu_gfxmmu_lut47h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut48l_tt = regs::gfxmmu_gfxmmu_lut48l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut48h_tt = regs::gfxmmu_gfxmmu_lut48h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut49l_tt = regs::gfxmmu_gfxmmu_lut49l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut49h_tt = regs::gfxmmu_gfxmmu_lut49h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut50l_tt = regs::gfxmmu_gfxmmu_lut50l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut50h_tt = regs::gfxmmu_gfxmmu_lut50h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut51l_tt = regs::gfxmmu_gfxmmu_lut51l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut51h_tt = regs::gfxmmu_gfxmmu_lut51h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut52l_tt = regs::gfxmmu_gfxmmu_lut52l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut52h_tt = regs::gfxmmu_gfxmmu_lut52h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut53l_tt = regs::gfxmmu_gfxmmu_lut53l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut53h_tt = regs::gfxmmu_gfxmmu_lut53h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut54l_tt = regs::gfxmmu_gfxmmu_lut54l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut54h_tt = regs::gfxmmu_gfxmmu_lut54h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut55l_tt = regs::gfxmmu_gfxmmu_lut55l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut55h_tt = regs::gfxmmu_gfxmmu_lut55h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut56l_tt = regs::gfxmmu_gfxmmu_lut56l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut56h_tt = regs::gfxmmu_gfxmmu_lut56h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut57l_tt = regs::gfxmmu_gfxmmu_lut57l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut57h_tt = regs::gfxmmu_gfxmmu_lut57h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut58l_tt = regs::gfxmmu_gfxmmu_lut58l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut58h_tt = regs::gfxmmu_gfxmmu_lut58h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut59l_tt = regs::gfxmmu_gfxmmu_lut59l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut59h_tt = regs::gfxmmu_gfxmmu_lut59h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut60l_tt = regs::gfxmmu_gfxmmu_lut60l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut60h_tt = regs::gfxmmu_gfxmmu_lut60h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut61l_tt = regs::gfxmmu_gfxmmu_lut61l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut61h_tt = regs::gfxmmu_gfxmmu_lut61h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut62l_tt = regs::gfxmmu_gfxmmu_lut62l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut62h_tt = regs::gfxmmu_gfxmmu_lut62h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut63l_tt = regs::gfxmmu_gfxmmu_lut63l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut63h_tt = regs::gfxmmu_gfxmmu_lut63h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut64l_tt = regs::gfxmmu_gfxmmu_lut64l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut64h_tt = regs::gfxmmu_gfxmmu_lut64h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut65l_tt = regs::gfxmmu_gfxmmu_lut65l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut65h_tt = regs::gfxmmu_gfxmmu_lut65h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut66l_tt = regs::gfxmmu_gfxmmu_lut66l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut66h_tt = regs::gfxmmu_gfxmmu_lut66h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut67l_tt = regs::gfxmmu_gfxmmu_lut67l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut67h_tt = regs::gfxmmu_gfxmmu_lut67h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut68l_tt = regs::gfxmmu_gfxmmu_lut68l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut68h_tt = regs::gfxmmu_gfxmmu_lut68h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut69l_tt = regs::gfxmmu_gfxmmu_lut69l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut69h_tt = regs::gfxmmu_gfxmmu_lut69h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut70l_tt = regs::gfxmmu_gfxmmu_lut70l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut70h_tt = regs::gfxmmu_gfxmmu_lut70h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut71l_tt = regs::gfxmmu_gfxmmu_lut71l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut71h_tt = regs::gfxmmu_gfxmmu_lut71h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut72l_tt = regs::gfxmmu_gfxmmu_lut72l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut72h_tt = regs::gfxmmu_gfxmmu_lut72h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut73l_tt = regs::gfxmmu_gfxmmu_lut73l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut73h_tt = regs::gfxmmu_gfxmmu_lut73h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut74l_tt = regs::gfxmmu_gfxmmu_lut74l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut74h_tt = regs::gfxmmu_gfxmmu_lut74h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut75l_tt = regs::gfxmmu_gfxmmu_lut75l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut75h_tt = regs::gfxmmu_gfxmmu_lut75h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut76l_tt = regs::gfxmmu_gfxmmu_lut76l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut76h_tt = regs::gfxmmu_gfxmmu_lut76h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut77l_tt = regs::gfxmmu_gfxmmu_lut77l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut77h_tt = regs::gfxmmu_gfxmmu_lut77h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut78l_tt = regs::gfxmmu_gfxmmu_lut78l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut78h_tt = regs::gfxmmu_gfxmmu_lut78h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut79l_tt = regs::gfxmmu_gfxmmu_lut79l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut79h_tt = regs::gfxmmu_gfxmmu_lut79h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut80l_tt = regs::gfxmmu_gfxmmu_lut80l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut80h_tt = regs::gfxmmu_gfxmmu_lut80h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut81l_tt = regs::gfxmmu_gfxmmu_lut81l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut81h_tt = regs::gfxmmu_gfxmmu_lut81h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut82l_tt = regs::gfxmmu_gfxmmu_lut82l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut82h_tt = regs::gfxmmu_gfxmmu_lut82h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut83l_tt = regs::gfxmmu_gfxmmu_lut83l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut83h_tt = regs::gfxmmu_gfxmmu_lut83h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut84l_tt = regs::gfxmmu_gfxmmu_lut84l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut84h_tt = regs::gfxmmu_gfxmmu_lut84h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut85l_tt = regs::gfxmmu_gfxmmu_lut85l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut85h_tt = regs::gfxmmu_gfxmmu_lut85h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut86l_tt = regs::gfxmmu_gfxmmu_lut86l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut86h_tt = regs::gfxmmu_gfxmmu_lut86h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut87l_tt = regs::gfxmmu_gfxmmu_lut87l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut87h_tt = regs::gfxmmu_gfxmmu_lut87h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut88l_tt = regs::gfxmmu_gfxmmu_lut88l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut88h_tt = regs::gfxmmu_gfxmmu_lut88h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut89l_tt = regs::gfxmmu_gfxmmu_lut89l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut89h_tt = regs::gfxmmu_gfxmmu_lut89h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut90l_tt = regs::gfxmmu_gfxmmu_lut90l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut90h_tt = regs::gfxmmu_gfxmmu_lut90h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut91l_tt = regs::gfxmmu_gfxmmu_lut91l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut91h_tt = regs::gfxmmu_gfxmmu_lut91h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut92l_tt = regs::gfxmmu_gfxmmu_lut92l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut92h_tt = regs::gfxmmu_gfxmmu_lut92h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut93l_tt = regs::gfxmmu_gfxmmu_lut93l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut93h_tt = regs::gfxmmu_gfxmmu_lut93h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut94l_tt = regs::gfxmmu_gfxmmu_lut94l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut94h_tt = regs::gfxmmu_gfxmmu_lut94h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut95l_tt = regs::gfxmmu_gfxmmu_lut95l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut95h_tt = regs::gfxmmu_gfxmmu_lut95h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut96l_tt = regs::gfxmmu_gfxmmu_lut96l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut96h_tt = regs::gfxmmu_gfxmmu_lut96h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut97l_tt = regs::gfxmmu_gfxmmu_lut97l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut97h_tt = regs::gfxmmu_gfxmmu_lut97h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut98l_tt = regs::gfxmmu_gfxmmu_lut98l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut98h_tt = regs::gfxmmu_gfxmmu_lut98h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut99l_tt = regs::gfxmmu_gfxmmu_lut99l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut99h_tt = regs::gfxmmu_gfxmmu_lut99h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut100l_tt = regs::gfxmmu_gfxmmu_lut100l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut100h_tt = regs::gfxmmu_gfxmmu_lut100h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut101l_tt = regs::gfxmmu_gfxmmu_lut101l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut101h_tt = regs::gfxmmu_gfxmmu_lut101h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut102l_tt = regs::gfxmmu_gfxmmu_lut102l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut102h_tt = regs::gfxmmu_gfxmmu_lut102h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut103l_tt = regs::gfxmmu_gfxmmu_lut103l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut103h_tt = regs::gfxmmu_gfxmmu_lut103h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut104l_tt = regs::gfxmmu_gfxmmu_lut104l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut104h_tt = regs::gfxmmu_gfxmmu_lut104h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut105l_tt = regs::gfxmmu_gfxmmu_lut105l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut105h_tt = regs::gfxmmu_gfxmmu_lut105h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut106l_tt = regs::gfxmmu_gfxmmu_lut106l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut106h_tt = regs::gfxmmu_gfxmmu_lut106h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut107l_tt = regs::gfxmmu_gfxmmu_lut107l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut107h_tt = regs::gfxmmu_gfxmmu_lut107h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut108l_tt = regs::gfxmmu_gfxmmu_lut108l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut108h_tt = regs::gfxmmu_gfxmmu_lut108h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut109l_tt = regs::gfxmmu_gfxmmu_lut109l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut109h_tt = regs::gfxmmu_gfxmmu_lut109h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut110l_tt = regs::gfxmmu_gfxmmu_lut110l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut110h_tt = regs::gfxmmu_gfxmmu_lut110h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut111l_tt = regs::gfxmmu_gfxmmu_lut111l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut111h_tt = regs::gfxmmu_gfxmmu_lut111h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut112l_tt = regs::gfxmmu_gfxmmu_lut112l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut112h_tt = regs::gfxmmu_gfxmmu_lut112h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut113l_tt = regs::gfxmmu_gfxmmu_lut113l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut113h_tt = regs::gfxmmu_gfxmmu_lut113h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut114l_tt = regs::gfxmmu_gfxmmu_lut114l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut114h_tt = regs::gfxmmu_gfxmmu_lut114h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut115l_tt = regs::gfxmmu_gfxmmu_lut115l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut115h_tt = regs::gfxmmu_gfxmmu_lut115h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut116l_tt = regs::gfxmmu_gfxmmu_lut116l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut116h_tt = regs::gfxmmu_gfxmmu_lut116h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut117l_tt = regs::gfxmmu_gfxmmu_lut117l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut117h_tt = regs::gfxmmu_gfxmmu_lut117h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut118l_tt = regs::gfxmmu_gfxmmu_lut118l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut118h_tt = regs::gfxmmu_gfxmmu_lut118h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut119l_tt = regs::gfxmmu_gfxmmu_lut119l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut119h_tt = regs::gfxmmu_gfxmmu_lut119h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut120l_tt = regs::gfxmmu_gfxmmu_lut120l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut120h_tt = regs::gfxmmu_gfxmmu_lut120h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut121l_tt = regs::gfxmmu_gfxmmu_lut121l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut121h_tt = regs::gfxmmu_gfxmmu_lut121h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut122l_tt = regs::gfxmmu_gfxmmu_lut122l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut122h_tt = regs::gfxmmu_gfxmmu_lut122h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut123l_tt = regs::gfxmmu_gfxmmu_lut123l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut123h_tt = regs::gfxmmu_gfxmmu_lut123h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut124l_tt = regs::gfxmmu_gfxmmu_lut124l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut124h_tt = regs::gfxmmu_gfxmmu_lut124h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut125l_tt = regs::gfxmmu_gfxmmu_lut125l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut125h_tt = regs::gfxmmu_gfxmmu_lut125h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut126l_tt = regs::gfxmmu_gfxmmu_lut126l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut126h_tt = regs::gfxmmu_gfxmmu_lut126h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut127l_tt = regs::gfxmmu_gfxmmu_lut127l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut127h_tt = regs::gfxmmu_gfxmmu_lut127h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut128l_tt = regs::gfxmmu_gfxmmu_lut128l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut128h_tt = regs::gfxmmu_gfxmmu_lut128h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut129l_tt = regs::gfxmmu_gfxmmu_lut129l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut129h_tt = regs::gfxmmu_gfxmmu_lut129h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut130l_tt = regs::gfxmmu_gfxmmu_lut130l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut130h_tt = regs::gfxmmu_gfxmmu_lut130h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut131l_tt = regs::gfxmmu_gfxmmu_lut131l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut131h_tt = regs::gfxmmu_gfxmmu_lut131h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut132l_tt = regs::gfxmmu_gfxmmu_lut132l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut132h_tt = regs::gfxmmu_gfxmmu_lut132h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut133l_tt = regs::gfxmmu_gfxmmu_lut133l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut133h_tt = regs::gfxmmu_gfxmmu_lut133h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut134l_tt = regs::gfxmmu_gfxmmu_lut134l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut134h_tt = regs::gfxmmu_gfxmmu_lut134h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut135l_tt = regs::gfxmmu_gfxmmu_lut135l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut135h_tt = regs::gfxmmu_gfxmmu_lut135h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut136l_tt = regs::gfxmmu_gfxmmu_lut136l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut136h_tt = regs::gfxmmu_gfxmmu_lut136h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut137l_tt = regs::gfxmmu_gfxmmu_lut137l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut137h_tt = regs::gfxmmu_gfxmmu_lut137h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut138l_tt = regs::gfxmmu_gfxmmu_lut138l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut138h_tt = regs::gfxmmu_gfxmmu_lut138h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut139l_tt = regs::gfxmmu_gfxmmu_lut139l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut139h_tt = regs::gfxmmu_gfxmmu_lut139h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut140l_tt = regs::gfxmmu_gfxmmu_lut140l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut140h_tt = regs::gfxmmu_gfxmmu_lut140h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut141l_tt = regs::gfxmmu_gfxmmu_lut141l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut141h_tt = regs::gfxmmu_gfxmmu_lut141h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut142l_tt = regs::gfxmmu_gfxmmu_lut142l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut142h_tt = regs::gfxmmu_gfxmmu_lut142h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut143l_tt = regs::gfxmmu_gfxmmu_lut143l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut143h_tt = regs::gfxmmu_gfxmmu_lut143h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut144l_tt = regs::gfxmmu_gfxmmu_lut144l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut144h_tt = regs::gfxmmu_gfxmmu_lut144h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut145l_tt = regs::gfxmmu_gfxmmu_lut145l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut145h_tt = regs::gfxmmu_gfxmmu_lut145h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut146l_tt = regs::gfxmmu_gfxmmu_lut146l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut146h_tt = regs::gfxmmu_gfxmmu_lut146h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut147l_tt = regs::gfxmmu_gfxmmu_lut147l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut147h_tt = regs::gfxmmu_gfxmmu_lut147h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut148l_tt = regs::gfxmmu_gfxmmu_lut148l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut148h_tt = regs::gfxmmu_gfxmmu_lut148h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut149l_tt = regs::gfxmmu_gfxmmu_lut149l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut149h_tt = regs::gfxmmu_gfxmmu_lut149h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut150l_tt = regs::gfxmmu_gfxmmu_lut150l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut150h_tt = regs::gfxmmu_gfxmmu_lut150h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut151l_tt = regs::gfxmmu_gfxmmu_lut151l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut151h_tt = regs::gfxmmu_gfxmmu_lut151h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut152l_tt = regs::gfxmmu_gfxmmu_lut152l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut152h_tt = regs::gfxmmu_gfxmmu_lut152h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut153l_tt = regs::gfxmmu_gfxmmu_lut153l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut153h_tt = regs::gfxmmu_gfxmmu_lut153h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut154l_tt = regs::gfxmmu_gfxmmu_lut154l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut154h_tt = regs::gfxmmu_gfxmmu_lut154h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut155l_tt = regs::gfxmmu_gfxmmu_lut155l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut155h_tt = regs::gfxmmu_gfxmmu_lut155h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut156l_tt = regs::gfxmmu_gfxmmu_lut156l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut156h_tt = regs::gfxmmu_gfxmmu_lut156h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut157l_tt = regs::gfxmmu_gfxmmu_lut157l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut157h_tt = regs::gfxmmu_gfxmmu_lut157h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut158l_tt = regs::gfxmmu_gfxmmu_lut158l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut158h_tt = regs::gfxmmu_gfxmmu_lut158h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut159l_tt = regs::gfxmmu_gfxmmu_lut159l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut159h_tt = regs::gfxmmu_gfxmmu_lut159h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut160l_tt = regs::gfxmmu_gfxmmu_lut160l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut160h_tt = regs::gfxmmu_gfxmmu_lut160h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut161l_tt = regs::gfxmmu_gfxmmu_lut161l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut161h_tt = regs::gfxmmu_gfxmmu_lut161h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut162l_tt = regs::gfxmmu_gfxmmu_lut162l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut162h_tt = regs::gfxmmu_gfxmmu_lut162h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut163l_tt = regs::gfxmmu_gfxmmu_lut163l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut163h_tt = regs::gfxmmu_gfxmmu_lut163h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut164l_tt = regs::gfxmmu_gfxmmu_lut164l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut164h_tt = regs::gfxmmu_gfxmmu_lut164h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut165l_tt = regs::gfxmmu_gfxmmu_lut165l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut165h_tt = regs::gfxmmu_gfxmmu_lut165h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut166l_tt = regs::gfxmmu_gfxmmu_lut166l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut166h_tt = regs::gfxmmu_gfxmmu_lut166h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut167l_tt = regs::gfxmmu_gfxmmu_lut167l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut167h_tt = regs::gfxmmu_gfxmmu_lut167h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut168l_tt = regs::gfxmmu_gfxmmu_lut168l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut168h_tt = regs::gfxmmu_gfxmmu_lut168h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut169l_tt = regs::gfxmmu_gfxmmu_lut169l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut169h_tt = regs::gfxmmu_gfxmmu_lut169h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut170l_tt = regs::gfxmmu_gfxmmu_lut170l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut170h_tt = regs::gfxmmu_gfxmmu_lut170h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut171l_tt = regs::gfxmmu_gfxmmu_lut171l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut171h_tt = regs::gfxmmu_gfxmmu_lut171h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut172l_tt = regs::gfxmmu_gfxmmu_lut172l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut172h_tt = regs::gfxmmu_gfxmmu_lut172h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut173l_tt = regs::gfxmmu_gfxmmu_lut173l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut173h_tt = regs::gfxmmu_gfxmmu_lut173h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut174l_tt = regs::gfxmmu_gfxmmu_lut174l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut174h_tt = regs::gfxmmu_gfxmmu_lut174h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut175l_tt = regs::gfxmmu_gfxmmu_lut175l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut175h_tt = regs::gfxmmu_gfxmmu_lut175h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut176l_tt = regs::gfxmmu_gfxmmu_lut176l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut176h_tt = regs::gfxmmu_gfxmmu_lut176h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut177l_tt = regs::gfxmmu_gfxmmu_lut177l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut177h_tt = regs::gfxmmu_gfxmmu_lut177h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut178l_tt = regs::gfxmmu_gfxmmu_lut178l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut178h_tt = regs::gfxmmu_gfxmmu_lut178h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut179l_tt = regs::gfxmmu_gfxmmu_lut179l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut179h_tt = regs::gfxmmu_gfxmmu_lut179h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut180l_tt = regs::gfxmmu_gfxmmu_lut180l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut180h_tt = regs::gfxmmu_gfxmmu_lut180h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut181l_tt = regs::gfxmmu_gfxmmu_lut181l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut181h_tt = regs::gfxmmu_gfxmmu_lut181h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut182l_tt = regs::gfxmmu_gfxmmu_lut182l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut182h_tt = regs::gfxmmu_gfxmmu_lut182h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut183l_tt = regs::gfxmmu_gfxmmu_lut183l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut183h_tt = regs::gfxmmu_gfxmmu_lut183h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut184l_tt = regs::gfxmmu_gfxmmu_lut184l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut184h_tt = regs::gfxmmu_gfxmmu_lut184h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut185l_tt = regs::gfxmmu_gfxmmu_lut185l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut185h_tt = regs::gfxmmu_gfxmmu_lut185h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut186l_tt = regs::gfxmmu_gfxmmu_lut186l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut186h_tt = regs::gfxmmu_gfxmmu_lut186h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut187l_tt = regs::gfxmmu_gfxmmu_lut187l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut187h_tt = regs::gfxmmu_gfxmmu_lut187h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut188l_tt = regs::gfxmmu_gfxmmu_lut188l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut188h_tt = regs::gfxmmu_gfxmmu_lut188h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut189l_tt = regs::gfxmmu_gfxmmu_lut189l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut189h_tt = regs::gfxmmu_gfxmmu_lut189h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut190l_tt = regs::gfxmmu_gfxmmu_lut190l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut190h_tt = regs::gfxmmu_gfxmmu_lut190h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut191l_tt = regs::gfxmmu_gfxmmu_lut191l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut191h_tt = regs::gfxmmu_gfxmmu_lut191h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut192l_tt = regs::gfxmmu_gfxmmu_lut192l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut192h_tt = regs::gfxmmu_gfxmmu_lut192h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut193l_tt = regs::gfxmmu_gfxmmu_lut193l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut193h_tt = regs::gfxmmu_gfxmmu_lut193h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut194l_tt = regs::gfxmmu_gfxmmu_lut194l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut194h_tt = regs::gfxmmu_gfxmmu_lut194h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut195l_tt = regs::gfxmmu_gfxmmu_lut195l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut195h_tt = regs::gfxmmu_gfxmmu_lut195h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut196l_tt = regs::gfxmmu_gfxmmu_lut196l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut196h_tt = regs::gfxmmu_gfxmmu_lut196h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut197l_tt = regs::gfxmmu_gfxmmu_lut197l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut197h_tt = regs::gfxmmu_gfxmmu_lut197h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut198l_tt = regs::gfxmmu_gfxmmu_lut198l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut198h_tt = regs::gfxmmu_gfxmmu_lut198h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut199l_tt = regs::gfxmmu_gfxmmu_lut199l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut199h_tt = regs::gfxmmu_gfxmmu_lut199h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut200l_tt = regs::gfxmmu_gfxmmu_lut200l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut200h_tt = regs::gfxmmu_gfxmmu_lut200h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut201l_tt = regs::gfxmmu_gfxmmu_lut201l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut201h_tt = regs::gfxmmu_gfxmmu_lut201h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut202l_tt = regs::gfxmmu_gfxmmu_lut202l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut202h_tt = regs::gfxmmu_gfxmmu_lut202h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut203l_tt = regs::gfxmmu_gfxmmu_lut203l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut203h_tt = regs::gfxmmu_gfxmmu_lut203h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut204l_tt = regs::gfxmmu_gfxmmu_lut204l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut204h_tt = regs::gfxmmu_gfxmmu_lut204h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut205l_tt = regs::gfxmmu_gfxmmu_lut205l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut205h_tt = regs::gfxmmu_gfxmmu_lut205h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut206l_tt = regs::gfxmmu_gfxmmu_lut206l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut206h_tt = regs::gfxmmu_gfxmmu_lut206h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut207l_tt = regs::gfxmmu_gfxmmu_lut207l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut207h_tt = regs::gfxmmu_gfxmmu_lut207h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut208l_tt = regs::gfxmmu_gfxmmu_lut208l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut208h_tt = regs::gfxmmu_gfxmmu_lut208h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut209l_tt = regs::gfxmmu_gfxmmu_lut209l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut209h_tt = regs::gfxmmu_gfxmmu_lut209h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut210l_tt = regs::gfxmmu_gfxmmu_lut210l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut210h_tt = regs::gfxmmu_gfxmmu_lut210h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut211l_tt = regs::gfxmmu_gfxmmu_lut211l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut211h_tt = regs::gfxmmu_gfxmmu_lut211h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut212l_tt = regs::gfxmmu_gfxmmu_lut212l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut212h_tt = regs::gfxmmu_gfxmmu_lut212h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut213l_tt = regs::gfxmmu_gfxmmu_lut213l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut213h_tt = regs::gfxmmu_gfxmmu_lut213h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut214l_tt = regs::gfxmmu_gfxmmu_lut214l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut214h_tt = regs::gfxmmu_gfxmmu_lut214h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut215l_tt = regs::gfxmmu_gfxmmu_lut215l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut215h_tt = regs::gfxmmu_gfxmmu_lut215h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut216l_tt = regs::gfxmmu_gfxmmu_lut216l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut216h_tt = regs::gfxmmu_gfxmmu_lut216h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut217l_tt = regs::gfxmmu_gfxmmu_lut217l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut217h_tt = regs::gfxmmu_gfxmmu_lut217h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut218l_tt = regs::gfxmmu_gfxmmu_lut218l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut218h_tt = regs::gfxmmu_gfxmmu_lut218h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut219l_tt = regs::gfxmmu_gfxmmu_lut219l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut219h_tt = regs::gfxmmu_gfxmmu_lut219h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut220l_tt = regs::gfxmmu_gfxmmu_lut220l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut220h_tt = regs::gfxmmu_gfxmmu_lut220h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut221l_tt = regs::gfxmmu_gfxmmu_lut221l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut221h_tt = regs::gfxmmu_gfxmmu_lut221h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut222l_tt = regs::gfxmmu_gfxmmu_lut222l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut222h_tt = regs::gfxmmu_gfxmmu_lut222h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut223l_tt = regs::gfxmmu_gfxmmu_lut223l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut223h_tt = regs::gfxmmu_gfxmmu_lut223h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut224l_tt = regs::gfxmmu_gfxmmu_lut224l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut224h_tt = regs::gfxmmu_gfxmmu_lut224h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut225l_tt = regs::gfxmmu_gfxmmu_lut225l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut225h_tt = regs::gfxmmu_gfxmmu_lut225h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut226l_tt = regs::gfxmmu_gfxmmu_lut226l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut226h_tt = regs::gfxmmu_gfxmmu_lut226h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut227l_tt = regs::gfxmmu_gfxmmu_lut227l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut227h_tt = regs::gfxmmu_gfxmmu_lut227h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut228l_tt = regs::gfxmmu_gfxmmu_lut228l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut228h_tt = regs::gfxmmu_gfxmmu_lut228h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut229l_tt = regs::gfxmmu_gfxmmu_lut229l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut229h_tt = regs::gfxmmu_gfxmmu_lut229h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut230l_tt = regs::gfxmmu_gfxmmu_lut230l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut230h_tt = regs::gfxmmu_gfxmmu_lut230h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut231l_tt = regs::gfxmmu_gfxmmu_lut231l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut231h_tt = regs::gfxmmu_gfxmmu_lut231h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut232l_tt = regs::gfxmmu_gfxmmu_lut232l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut232h_tt = regs::gfxmmu_gfxmmu_lut232h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut233l_tt = regs::gfxmmu_gfxmmu_lut233l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut233h_tt = regs::gfxmmu_gfxmmu_lut233h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut234l_tt = regs::gfxmmu_gfxmmu_lut234l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut234h_tt = regs::gfxmmu_gfxmmu_lut234h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut235l_tt = regs::gfxmmu_gfxmmu_lut235l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut235h_tt = regs::gfxmmu_gfxmmu_lut235h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut236l_tt = regs::gfxmmu_gfxmmu_lut236l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut236h_tt = regs::gfxmmu_gfxmmu_lut236h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut237l_tt = regs::gfxmmu_gfxmmu_lut237l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut237h_tt = regs::gfxmmu_gfxmmu_lut237h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut238l_tt = regs::gfxmmu_gfxmmu_lut238l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut238h_tt = regs::gfxmmu_gfxmmu_lut238h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut239l_tt = regs::gfxmmu_gfxmmu_lut239l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut239h_tt = regs::gfxmmu_gfxmmu_lut239h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut240l_tt = regs::gfxmmu_gfxmmu_lut240l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut240h_tt = regs::gfxmmu_gfxmmu_lut240h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut241l_tt = regs::gfxmmu_gfxmmu_lut241l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut241h_tt = regs::gfxmmu_gfxmmu_lut241h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut242l_tt = regs::gfxmmu_gfxmmu_lut242l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut242h_tt = regs::gfxmmu_gfxmmu_lut242h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut243l_tt = regs::gfxmmu_gfxmmu_lut243l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut243h_tt = regs::gfxmmu_gfxmmu_lut243h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut244l_tt = regs::gfxmmu_gfxmmu_lut244l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut244h_tt = regs::gfxmmu_gfxmmu_lut244h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut245l_tt = regs::gfxmmu_gfxmmu_lut245l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut245h_tt = regs::gfxmmu_gfxmmu_lut245h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut246l_tt = regs::gfxmmu_gfxmmu_lut246l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut246h_tt = regs::gfxmmu_gfxmmu_lut246h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut247l_tt = regs::gfxmmu_gfxmmu_lut247l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut247h_tt = regs::gfxmmu_gfxmmu_lut247h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut248l_tt = regs::gfxmmu_gfxmmu_lut248l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut248h_tt = regs::gfxmmu_gfxmmu_lut248h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut249l_tt = regs::gfxmmu_gfxmmu_lut249l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut249h_tt = regs::gfxmmu_gfxmmu_lut249h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut250l_tt = regs::gfxmmu_gfxmmu_lut250l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut250h_tt = regs::gfxmmu_gfxmmu_lut250h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut251l_tt = regs::gfxmmu_gfxmmu_lut251l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut251h_tt = regs::gfxmmu_gfxmmu_lut251h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut252l_tt = regs::gfxmmu_gfxmmu_lut252l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut252h_tt = regs::gfxmmu_gfxmmu_lut252h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut253l_tt = regs::gfxmmu_gfxmmu_lut253l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut253h_tt = regs::gfxmmu_gfxmmu_lut253h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut254l_tt = regs::gfxmmu_gfxmmu_lut254l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut254h_tt = regs::gfxmmu_gfxmmu_lut254h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut255l_tt = regs::gfxmmu_gfxmmu_lut255l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut255h_tt = regs::gfxmmu_gfxmmu_lut255h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut256l_tt = regs::gfxmmu_gfxmmu_lut256l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut256h_tt = regs::gfxmmu_gfxmmu_lut256h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut257l_tt = regs::gfxmmu_gfxmmu_lut257l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut257h_tt = regs::gfxmmu_gfxmmu_lut257h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut258l_tt = regs::gfxmmu_gfxmmu_lut258l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut258h_tt = regs::gfxmmu_gfxmmu_lut258h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut259l_tt = regs::gfxmmu_gfxmmu_lut259l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut259h_tt = regs::gfxmmu_gfxmmu_lut259h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut260l_tt = regs::gfxmmu_gfxmmu_lut260l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut260h_tt = regs::gfxmmu_gfxmmu_lut260h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut261l_tt = regs::gfxmmu_gfxmmu_lut261l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut261h_tt = regs::gfxmmu_gfxmmu_lut261h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut262l_tt = regs::gfxmmu_gfxmmu_lut262l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut262h_tt = regs::gfxmmu_gfxmmu_lut262h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut263l_tt = regs::gfxmmu_gfxmmu_lut263l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut263h_tt = regs::gfxmmu_gfxmmu_lut263h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut264l_tt = regs::gfxmmu_gfxmmu_lut264l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut264h_tt = regs::gfxmmu_gfxmmu_lut264h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut265l_tt = regs::gfxmmu_gfxmmu_lut265l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut265h_tt = regs::gfxmmu_gfxmmu_lut265h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut266l_tt = regs::gfxmmu_gfxmmu_lut266l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut266h_tt = regs::gfxmmu_gfxmmu_lut266h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut267l_tt = regs::gfxmmu_gfxmmu_lut267l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut267h_tt = regs::gfxmmu_gfxmmu_lut267h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut268l_tt = regs::gfxmmu_gfxmmu_lut268l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut268h_tt = regs::gfxmmu_gfxmmu_lut268h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut269l_tt = regs::gfxmmu_gfxmmu_lut269l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut269h_tt = regs::gfxmmu_gfxmmu_lut269h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut270l_tt = regs::gfxmmu_gfxmmu_lut270l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut270h_tt = regs::gfxmmu_gfxmmu_lut270h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut271l_tt = regs::gfxmmu_gfxmmu_lut271l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut271h_tt = regs::gfxmmu_gfxmmu_lut271h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut272l_tt = regs::gfxmmu_gfxmmu_lut272l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut272h_tt = regs::gfxmmu_gfxmmu_lut272h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut273l_tt = regs::gfxmmu_gfxmmu_lut273l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut273h_tt = regs::gfxmmu_gfxmmu_lut273h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut274l_tt = regs::gfxmmu_gfxmmu_lut274l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut274h_tt = regs::gfxmmu_gfxmmu_lut274h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut275l_tt = regs::gfxmmu_gfxmmu_lut275l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut275h_tt = regs::gfxmmu_gfxmmu_lut275h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut276l_tt = regs::gfxmmu_gfxmmu_lut276l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut276h_tt = regs::gfxmmu_gfxmmu_lut276h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut277l_tt = regs::gfxmmu_gfxmmu_lut277l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut277h_tt = regs::gfxmmu_gfxmmu_lut277h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut278l_tt = regs::gfxmmu_gfxmmu_lut278l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut278h_tt = regs::gfxmmu_gfxmmu_lut278h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut279l_tt = regs::gfxmmu_gfxmmu_lut279l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut279h_tt = regs::gfxmmu_gfxmmu_lut279h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut280l_tt = regs::gfxmmu_gfxmmu_lut280l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut280h_tt = regs::gfxmmu_gfxmmu_lut280h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut281l_tt = regs::gfxmmu_gfxmmu_lut281l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut281h_tt = regs::gfxmmu_gfxmmu_lut281h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut282l_tt = regs::gfxmmu_gfxmmu_lut282l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut282h_tt = regs::gfxmmu_gfxmmu_lut282h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut283l_tt = regs::gfxmmu_gfxmmu_lut283l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut283h_tt = regs::gfxmmu_gfxmmu_lut283h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut284l_tt = regs::gfxmmu_gfxmmu_lut284l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut284h_tt = regs::gfxmmu_gfxmmu_lut284h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut285l_tt = regs::gfxmmu_gfxmmu_lut285l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut285h_tt = regs::gfxmmu_gfxmmu_lut285h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut286l_tt = regs::gfxmmu_gfxmmu_lut286l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut286h_tt = regs::gfxmmu_gfxmmu_lut286h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut287l_tt = regs::gfxmmu_gfxmmu_lut287l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut287h_tt = regs::gfxmmu_gfxmmu_lut287h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut288l_tt = regs::gfxmmu_gfxmmu_lut288l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut288h_tt = regs::gfxmmu_gfxmmu_lut288h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut289l_tt = regs::gfxmmu_gfxmmu_lut289l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut289h_tt = regs::gfxmmu_gfxmmu_lut289h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut290l_tt = regs::gfxmmu_gfxmmu_lut290l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut290h_tt = regs::gfxmmu_gfxmmu_lut290h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut291l_tt = regs::gfxmmu_gfxmmu_lut291l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut291h_tt = regs::gfxmmu_gfxmmu_lut291h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut292l_tt = regs::gfxmmu_gfxmmu_lut292l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut292h_tt = regs::gfxmmu_gfxmmu_lut292h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut293l_tt = regs::gfxmmu_gfxmmu_lut293l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut293h_tt = regs::gfxmmu_gfxmmu_lut293h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut294l_tt = regs::gfxmmu_gfxmmu_lut294l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut294h_tt = regs::gfxmmu_gfxmmu_lut294h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut295l_tt = regs::gfxmmu_gfxmmu_lut295l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut295h_tt = regs::gfxmmu_gfxmmu_lut295h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut296l_tt = regs::gfxmmu_gfxmmu_lut296l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut296h_tt = regs::gfxmmu_gfxmmu_lut296h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut297l_tt = regs::gfxmmu_gfxmmu_lut297l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut297h_tt = regs::gfxmmu_gfxmmu_lut297h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut298l_tt = regs::gfxmmu_gfxmmu_lut298l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut298h_tt = regs::gfxmmu_gfxmmu_lut298h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut299l_tt = regs::gfxmmu_gfxmmu_lut299l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut299h_tt = regs::gfxmmu_gfxmmu_lut299h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut300l_tt = regs::gfxmmu_gfxmmu_lut300l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut300h_tt = regs::gfxmmu_gfxmmu_lut300h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut301l_tt = regs::gfxmmu_gfxmmu_lut301l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut301h_tt = regs::gfxmmu_gfxmmu_lut301h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut302l_tt = regs::gfxmmu_gfxmmu_lut302l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut302h_tt = regs::gfxmmu_gfxmmu_lut302h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut303l_tt = regs::gfxmmu_gfxmmu_lut303l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut303h_tt = regs::gfxmmu_gfxmmu_lut303h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut304l_tt = regs::gfxmmu_gfxmmu_lut304l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut304h_tt = regs::gfxmmu_gfxmmu_lut304h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut305l_tt = regs::gfxmmu_gfxmmu_lut305l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut305h_tt = regs::gfxmmu_gfxmmu_lut305h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut306l_tt = regs::gfxmmu_gfxmmu_lut306l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut306h_tt = regs::gfxmmu_gfxmmu_lut306h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut307l_tt = regs::gfxmmu_gfxmmu_lut307l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut307h_tt = regs::gfxmmu_gfxmmu_lut307h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut308l_tt = regs::gfxmmu_gfxmmu_lut308l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut308h_tt = regs::gfxmmu_gfxmmu_lut308h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut309l_tt = regs::gfxmmu_gfxmmu_lut309l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut309h_tt = regs::gfxmmu_gfxmmu_lut309h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut310l_tt = regs::gfxmmu_gfxmmu_lut310l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut310h_tt = regs::gfxmmu_gfxmmu_lut310h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut311l_tt = regs::gfxmmu_gfxmmu_lut311l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut311h_tt = regs::gfxmmu_gfxmmu_lut311h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut312l_tt = regs::gfxmmu_gfxmmu_lut312l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut312h_tt = regs::gfxmmu_gfxmmu_lut312h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut313l_tt = regs::gfxmmu_gfxmmu_lut313l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut313h_tt = regs::gfxmmu_gfxmmu_lut313h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut314l_tt = regs::gfxmmu_gfxmmu_lut314l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut314h_tt = regs::gfxmmu_gfxmmu_lut314h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut315l_tt = regs::gfxmmu_gfxmmu_lut315l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut315h_tt = regs::gfxmmu_gfxmmu_lut315h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut316l_tt = regs::gfxmmu_gfxmmu_lut316l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut316h_tt = regs::gfxmmu_gfxmmu_lut316h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut317l_tt = regs::gfxmmu_gfxmmu_lut317l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut317h_tt = regs::gfxmmu_gfxmmu_lut317h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut318l_tt = regs::gfxmmu_gfxmmu_lut318l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut318h_tt = regs::gfxmmu_gfxmmu_lut318h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut319l_tt = regs::gfxmmu_gfxmmu_lut319l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut319h_tt = regs::gfxmmu_gfxmmu_lut319h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut320l_tt = regs::gfxmmu_gfxmmu_lut320l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut320h_tt = regs::gfxmmu_gfxmmu_lut320h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut321l_tt = regs::gfxmmu_gfxmmu_lut321l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut321h_tt = regs::gfxmmu_gfxmmu_lut321h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut322l_tt = regs::gfxmmu_gfxmmu_lut322l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut322h_tt = regs::gfxmmu_gfxmmu_lut322h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut323l_tt = regs::gfxmmu_gfxmmu_lut323l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut323h_tt = regs::gfxmmu_gfxmmu_lut323h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut324l_tt = regs::gfxmmu_gfxmmu_lut324l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut324h_tt = regs::gfxmmu_gfxmmu_lut324h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut325l_tt = regs::gfxmmu_gfxmmu_lut325l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut325h_tt = regs::gfxmmu_gfxmmu_lut325h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut326l_tt = regs::gfxmmu_gfxmmu_lut326l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut326h_tt = regs::gfxmmu_gfxmmu_lut326h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut327l_tt = regs::gfxmmu_gfxmmu_lut327l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut327h_tt = regs::gfxmmu_gfxmmu_lut327h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut328l_tt = regs::gfxmmu_gfxmmu_lut328l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut328h_tt = regs::gfxmmu_gfxmmu_lut328h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut329l_tt = regs::gfxmmu_gfxmmu_lut329l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut329h_tt = regs::gfxmmu_gfxmmu_lut329h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut330l_tt = regs::gfxmmu_gfxmmu_lut330l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut330h_tt = regs::gfxmmu_gfxmmu_lut330h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut331l_tt = regs::gfxmmu_gfxmmu_lut331l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut331h_tt = regs::gfxmmu_gfxmmu_lut331h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut332l_tt = regs::gfxmmu_gfxmmu_lut332l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut332h_tt = regs::gfxmmu_gfxmmu_lut332h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut333l_tt = regs::gfxmmu_gfxmmu_lut333l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut333h_tt = regs::gfxmmu_gfxmmu_lut333h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut334l_tt = regs::gfxmmu_gfxmmu_lut334l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut334h_tt = regs::gfxmmu_gfxmmu_lut334h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut335l_tt = regs::gfxmmu_gfxmmu_lut335l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut335h_tt = regs::gfxmmu_gfxmmu_lut335h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut336l_tt = regs::gfxmmu_gfxmmu_lut336l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut336h_tt = regs::gfxmmu_gfxmmu_lut336h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut337l_tt = regs::gfxmmu_gfxmmu_lut337l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut337h_tt = regs::gfxmmu_gfxmmu_lut337h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut338l_tt = regs::gfxmmu_gfxmmu_lut338l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut338h_tt = regs::gfxmmu_gfxmmu_lut338h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut339l_tt = regs::gfxmmu_gfxmmu_lut339l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut339h_tt = regs::gfxmmu_gfxmmu_lut339h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut340l_tt = regs::gfxmmu_gfxmmu_lut340l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut340h_tt = regs::gfxmmu_gfxmmu_lut340h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut341l_tt = regs::gfxmmu_gfxmmu_lut341l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut341h_tt = regs::gfxmmu_gfxmmu_lut341h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut342l_tt = regs::gfxmmu_gfxmmu_lut342l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut342h_tt = regs::gfxmmu_gfxmmu_lut342h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut343l_tt = regs::gfxmmu_gfxmmu_lut343l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut343h_tt = regs::gfxmmu_gfxmmu_lut343h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut344l_tt = regs::gfxmmu_gfxmmu_lut344l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut344h_tt = regs::gfxmmu_gfxmmu_lut344h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut345l_tt = regs::gfxmmu_gfxmmu_lut345l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut345h_tt = regs::gfxmmu_gfxmmu_lut345h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut346l_tt = regs::gfxmmu_gfxmmu_lut346l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut346h_tt = regs::gfxmmu_gfxmmu_lut346h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut347l_tt = regs::gfxmmu_gfxmmu_lut347l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut347h_tt = regs::gfxmmu_gfxmmu_lut347h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut348l_tt = regs::gfxmmu_gfxmmu_lut348l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut348h_tt = regs::gfxmmu_gfxmmu_lut348h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut349l_tt = regs::gfxmmu_gfxmmu_lut349l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut349h_tt = regs::gfxmmu_gfxmmu_lut349h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut350l_tt = regs::gfxmmu_gfxmmu_lut350l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut350h_tt = regs::gfxmmu_gfxmmu_lut350h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut351l_tt = regs::gfxmmu_gfxmmu_lut351l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut351h_tt = regs::gfxmmu_gfxmmu_lut351h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut352l_tt = regs::gfxmmu_gfxmmu_lut352l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut352h_tt = regs::gfxmmu_gfxmmu_lut352h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut353l_tt = regs::gfxmmu_gfxmmu_lut353l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut353h_tt = regs::gfxmmu_gfxmmu_lut353h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut354l_tt = regs::gfxmmu_gfxmmu_lut354l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut354h_tt = regs::gfxmmu_gfxmmu_lut354h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut355l_tt = regs::gfxmmu_gfxmmu_lut355l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut355h_tt = regs::gfxmmu_gfxmmu_lut355h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut356l_tt = regs::gfxmmu_gfxmmu_lut356l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut356h_tt = regs::gfxmmu_gfxmmu_lut356h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut357l_tt = regs::gfxmmu_gfxmmu_lut357l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut357h_tt = regs::gfxmmu_gfxmmu_lut357h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut358l_tt = regs::gfxmmu_gfxmmu_lut358l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut358h_tt = regs::gfxmmu_gfxmmu_lut358h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut359l_tt = regs::gfxmmu_gfxmmu_lut359l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut359h_tt = regs::gfxmmu_gfxmmu_lut359h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut360l_tt = regs::gfxmmu_gfxmmu_lut360l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut360h_tt = regs::gfxmmu_gfxmmu_lut360h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut361l_tt = regs::gfxmmu_gfxmmu_lut361l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut361h_tt = regs::gfxmmu_gfxmmu_lut361h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut362l_tt = regs::gfxmmu_gfxmmu_lut362l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut362h_tt = regs::gfxmmu_gfxmmu_lut362h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut363l_tt = regs::gfxmmu_gfxmmu_lut363l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut363h_tt = regs::gfxmmu_gfxmmu_lut363h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut364l_tt = regs::gfxmmu_gfxmmu_lut364l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut364h_tt = regs::gfxmmu_gfxmmu_lut364h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut365l_tt = regs::gfxmmu_gfxmmu_lut365l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut365h_tt = regs::gfxmmu_gfxmmu_lut365h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut366l_tt = regs::gfxmmu_gfxmmu_lut366l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut366h_tt = regs::gfxmmu_gfxmmu_lut366h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut367l_tt = regs::gfxmmu_gfxmmu_lut367l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut367h_tt = regs::gfxmmu_gfxmmu_lut367h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut368l_tt = regs::gfxmmu_gfxmmu_lut368l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut368h_tt = regs::gfxmmu_gfxmmu_lut368h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut369l_tt = regs::gfxmmu_gfxmmu_lut369l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut369h_tt = regs::gfxmmu_gfxmmu_lut369h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut370l_tt = regs::gfxmmu_gfxmmu_lut370l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut370h_tt = regs::gfxmmu_gfxmmu_lut370h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut371l_tt = regs::gfxmmu_gfxmmu_lut371l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut371h_tt = regs::gfxmmu_gfxmmu_lut371h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut372l_tt = regs::gfxmmu_gfxmmu_lut372l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut372h_tt = regs::gfxmmu_gfxmmu_lut372h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut373l_tt = regs::gfxmmu_gfxmmu_lut373l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut373h_tt = regs::gfxmmu_gfxmmu_lut373h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut374l_tt = regs::gfxmmu_gfxmmu_lut374l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut374h_tt = regs::gfxmmu_gfxmmu_lut374h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut375l_tt = regs::gfxmmu_gfxmmu_lut375l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut375h_tt = regs::gfxmmu_gfxmmu_lut375h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut376l_tt = regs::gfxmmu_gfxmmu_lut376l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut376h_tt = regs::gfxmmu_gfxmmu_lut376h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut377l_tt = regs::gfxmmu_gfxmmu_lut377l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut377h_tt = regs::gfxmmu_gfxmmu_lut377h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut378l_tt = regs::gfxmmu_gfxmmu_lut378l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut378h_tt = regs::gfxmmu_gfxmmu_lut378h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut379l_tt = regs::gfxmmu_gfxmmu_lut379l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut379h_tt = regs::gfxmmu_gfxmmu_lut379h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut380l_tt = regs::gfxmmu_gfxmmu_lut380l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut380h_tt = regs::gfxmmu_gfxmmu_lut380h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut381l_tt = regs::gfxmmu_gfxmmu_lut381l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut381h_tt = regs::gfxmmu_gfxmmu_lut381h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut382l_tt = regs::gfxmmu_gfxmmu_lut382l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut382h_tt = regs::gfxmmu_gfxmmu_lut382h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut383l_tt = regs::gfxmmu_gfxmmu_lut383l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut383h_tt = regs::gfxmmu_gfxmmu_lut383h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut384l_tt = regs::gfxmmu_gfxmmu_lut384l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut384h_tt = regs::gfxmmu_gfxmmu_lut384h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut385l_tt = regs::gfxmmu_gfxmmu_lut385l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut385h_tt = regs::gfxmmu_gfxmmu_lut385h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut386l_tt = regs::gfxmmu_gfxmmu_lut386l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut386h_tt = regs::gfxmmu_gfxmmu_lut386h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut387l_tt = regs::gfxmmu_gfxmmu_lut387l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut387h_tt = regs::gfxmmu_gfxmmu_lut387h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut388l_tt = regs::gfxmmu_gfxmmu_lut388l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut388h_tt = regs::gfxmmu_gfxmmu_lut388h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut389l_tt = regs::gfxmmu_gfxmmu_lut389l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut389h_tt = regs::gfxmmu_gfxmmu_lut389h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut390l_tt = regs::gfxmmu_gfxmmu_lut390l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut390h_tt = regs::gfxmmu_gfxmmu_lut390h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut391l_tt = regs::gfxmmu_gfxmmu_lut391l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut391h_tt = regs::gfxmmu_gfxmmu_lut391h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut392l_tt = regs::gfxmmu_gfxmmu_lut392l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut392h_tt = regs::gfxmmu_gfxmmu_lut392h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut393l_tt = regs::gfxmmu_gfxmmu_lut393l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut393h_tt = regs::gfxmmu_gfxmmu_lut393h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut394l_tt = regs::gfxmmu_gfxmmu_lut394l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut394h_tt = regs::gfxmmu_gfxmmu_lut394h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut395l_tt = regs::gfxmmu_gfxmmu_lut395l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut395h_tt = regs::gfxmmu_gfxmmu_lut395h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut396l_tt = regs::gfxmmu_gfxmmu_lut396l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut396h_tt = regs::gfxmmu_gfxmmu_lut396h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut397l_tt = regs::gfxmmu_gfxmmu_lut397l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut397h_tt = regs::gfxmmu_gfxmmu_lut397h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut398l_tt = regs::gfxmmu_gfxmmu_lut398l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut398h_tt = regs::gfxmmu_gfxmmu_lut398h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut399l_tt = regs::gfxmmu_gfxmmu_lut399l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut399h_tt = regs::gfxmmu_gfxmmu_lut399h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut400l_tt = regs::gfxmmu_gfxmmu_lut400l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut400h_tt = regs::gfxmmu_gfxmmu_lut400h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut401l_tt = regs::gfxmmu_gfxmmu_lut401l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut401h_tt = regs::gfxmmu_gfxmmu_lut401h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut402l_tt = regs::gfxmmu_gfxmmu_lut402l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut402h_tt = regs::gfxmmu_gfxmmu_lut402h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut403l_tt = regs::gfxmmu_gfxmmu_lut403l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut403h_tt = regs::gfxmmu_gfxmmu_lut403h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut404l_tt = regs::gfxmmu_gfxmmu_lut404l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut404h_tt = regs::gfxmmu_gfxmmu_lut404h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut405l_tt = regs::gfxmmu_gfxmmu_lut405l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut405h_tt = regs::gfxmmu_gfxmmu_lut405h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut406l_tt = regs::gfxmmu_gfxmmu_lut406l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut406h_tt = regs::gfxmmu_gfxmmu_lut406h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut407l_tt = regs::gfxmmu_gfxmmu_lut407l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut407h_tt = regs::gfxmmu_gfxmmu_lut407h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut408l_tt = regs::gfxmmu_gfxmmu_lut408l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut408h_tt = regs::gfxmmu_gfxmmu_lut408h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut409l_tt = regs::gfxmmu_gfxmmu_lut409l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut409h_tt = regs::gfxmmu_gfxmmu_lut409h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut410l_tt = regs::gfxmmu_gfxmmu_lut410l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut410h_tt = regs::gfxmmu_gfxmmu_lut410h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut411l_tt = regs::gfxmmu_gfxmmu_lut411l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut411h_tt = regs::gfxmmu_gfxmmu_lut411h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut412l_tt = regs::gfxmmu_gfxmmu_lut412l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut412h_tt = regs::gfxmmu_gfxmmu_lut412h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut413l_tt = regs::gfxmmu_gfxmmu_lut413l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut413h_tt = regs::gfxmmu_gfxmmu_lut413h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut414l_tt = regs::gfxmmu_gfxmmu_lut414l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut414h_tt = regs::gfxmmu_gfxmmu_lut414h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut415l_tt = regs::gfxmmu_gfxmmu_lut415l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut415h_tt = regs::gfxmmu_gfxmmu_lut415h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut416l_tt = regs::gfxmmu_gfxmmu_lut416l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut416h_tt = regs::gfxmmu_gfxmmu_lut416h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut417l_tt = regs::gfxmmu_gfxmmu_lut417l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut417h_tt = regs::gfxmmu_gfxmmu_lut417h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut418l_tt = regs::gfxmmu_gfxmmu_lut418l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut418h_tt = regs::gfxmmu_gfxmmu_lut418h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut419l_tt = regs::gfxmmu_gfxmmu_lut419l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut419h_tt = regs::gfxmmu_gfxmmu_lut419h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut420l_tt = regs::gfxmmu_gfxmmu_lut420l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut420h_tt = regs::gfxmmu_gfxmmu_lut420h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut421l_tt = regs::gfxmmu_gfxmmu_lut421l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut421h_tt = regs::gfxmmu_gfxmmu_lut421h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut422l_tt = regs::gfxmmu_gfxmmu_lut422l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut422h_tt = regs::gfxmmu_gfxmmu_lut422h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut423l_tt = regs::gfxmmu_gfxmmu_lut423l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut423h_tt = regs::gfxmmu_gfxmmu_lut423h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut424l_tt = regs::gfxmmu_gfxmmu_lut424l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut424h_tt = regs::gfxmmu_gfxmmu_lut424h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut425l_tt = regs::gfxmmu_gfxmmu_lut425l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut425h_tt = regs::gfxmmu_gfxmmu_lut425h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut426l_tt = regs::gfxmmu_gfxmmu_lut426l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut426h_tt = regs::gfxmmu_gfxmmu_lut426h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut427l_tt = regs::gfxmmu_gfxmmu_lut427l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut427h_tt = regs::gfxmmu_gfxmmu_lut427h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut428l_tt = regs::gfxmmu_gfxmmu_lut428l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut428h_tt = regs::gfxmmu_gfxmmu_lut428h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut429l_tt = regs::gfxmmu_gfxmmu_lut429l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut429h_tt = regs::gfxmmu_gfxmmu_lut429h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut430l_tt = regs::gfxmmu_gfxmmu_lut430l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut430h_tt = regs::gfxmmu_gfxmmu_lut430h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut431l_tt = regs::gfxmmu_gfxmmu_lut431l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut431h_tt = regs::gfxmmu_gfxmmu_lut431h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut432l_tt = regs::gfxmmu_gfxmmu_lut432l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut432h_tt = regs::gfxmmu_gfxmmu_lut432h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut433l_tt = regs::gfxmmu_gfxmmu_lut433l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut433h_tt = regs::gfxmmu_gfxmmu_lut433h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut434l_tt = regs::gfxmmu_gfxmmu_lut434l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut434h_tt = regs::gfxmmu_gfxmmu_lut434h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut435l_tt = regs::gfxmmu_gfxmmu_lut435l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut435h_tt = regs::gfxmmu_gfxmmu_lut435h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut436l_tt = regs::gfxmmu_gfxmmu_lut436l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut436h_tt = regs::gfxmmu_gfxmmu_lut436h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut437l_tt = regs::gfxmmu_gfxmmu_lut437l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut437h_tt = regs::gfxmmu_gfxmmu_lut437h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut438l_tt = regs::gfxmmu_gfxmmu_lut438l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut438h_tt = regs::gfxmmu_gfxmmu_lut438h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut439l_tt = regs::gfxmmu_gfxmmu_lut439l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut439h_tt = regs::gfxmmu_gfxmmu_lut439h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut440l_tt = regs::gfxmmu_gfxmmu_lut440l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut440h_tt = regs::gfxmmu_gfxmmu_lut440h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut441l_tt = regs::gfxmmu_gfxmmu_lut441l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut441h_tt = regs::gfxmmu_gfxmmu_lut441h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut442l_tt = regs::gfxmmu_gfxmmu_lut442l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut442h_tt = regs::gfxmmu_gfxmmu_lut442h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut443l_tt = regs::gfxmmu_gfxmmu_lut443l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut443h_tt = regs::gfxmmu_gfxmmu_lut443h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut444l_tt = regs::gfxmmu_gfxmmu_lut444l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut444h_tt = regs::gfxmmu_gfxmmu_lut444h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut445l_tt = regs::gfxmmu_gfxmmu_lut445l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut445h_tt = regs::gfxmmu_gfxmmu_lut445h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut446l_tt = regs::gfxmmu_gfxmmu_lut446l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut446h_tt = regs::gfxmmu_gfxmmu_lut446h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut447l_tt = regs::gfxmmu_gfxmmu_lut447l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut447h_tt = regs::gfxmmu_gfxmmu_lut447h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut448l_tt = regs::gfxmmu_gfxmmu_lut448l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut448h_tt = regs::gfxmmu_gfxmmu_lut448h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut449l_tt = regs::gfxmmu_gfxmmu_lut449l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut449h_tt = regs::gfxmmu_gfxmmu_lut449h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut450l_tt = regs::gfxmmu_gfxmmu_lut450l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut450h_tt = regs::gfxmmu_gfxmmu_lut450h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut451l_tt = regs::gfxmmu_gfxmmu_lut451l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut451h_tt = regs::gfxmmu_gfxmmu_lut451h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut452l_tt = regs::gfxmmu_gfxmmu_lut452l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut452h_tt = regs::gfxmmu_gfxmmu_lut452h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut453l_tt = regs::gfxmmu_gfxmmu_lut453l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut453h_tt = regs::gfxmmu_gfxmmu_lut453h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut454l_tt = regs::gfxmmu_gfxmmu_lut454l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut454h_tt = regs::gfxmmu_gfxmmu_lut454h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut455l_tt = regs::gfxmmu_gfxmmu_lut455l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut455h_tt = regs::gfxmmu_gfxmmu_lut455h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut456l_tt = regs::gfxmmu_gfxmmu_lut456l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut456h_tt = regs::gfxmmu_gfxmmu_lut456h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut457l_tt = regs::gfxmmu_gfxmmu_lut457l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut457h_tt = regs::gfxmmu_gfxmmu_lut457h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut458l_tt = regs::gfxmmu_gfxmmu_lut458l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut458h_tt = regs::gfxmmu_gfxmmu_lut458h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut459l_tt = regs::gfxmmu_gfxmmu_lut459l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut459h_tt = regs::gfxmmu_gfxmmu_lut459h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut460l_tt = regs::gfxmmu_gfxmmu_lut460l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut460h_tt = regs::gfxmmu_gfxmmu_lut460h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut461l_tt = regs::gfxmmu_gfxmmu_lut461l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut461h_tt = regs::gfxmmu_gfxmmu_lut461h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut462l_tt = regs::gfxmmu_gfxmmu_lut462l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut462h_tt = regs::gfxmmu_gfxmmu_lut462h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut463l_tt = regs::gfxmmu_gfxmmu_lut463l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut463h_tt = regs::gfxmmu_gfxmmu_lut463h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut464l_tt = regs::gfxmmu_gfxmmu_lut464l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut464h_tt = regs::gfxmmu_gfxmmu_lut464h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut465l_tt = regs::gfxmmu_gfxmmu_lut465l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut465h_tt = regs::gfxmmu_gfxmmu_lut465h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut466l_tt = regs::gfxmmu_gfxmmu_lut466l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut466h_tt = regs::gfxmmu_gfxmmu_lut466h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut467l_tt = regs::gfxmmu_gfxmmu_lut467l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut467h_tt = regs::gfxmmu_gfxmmu_lut467h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut468l_tt = regs::gfxmmu_gfxmmu_lut468l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut468h_tt = regs::gfxmmu_gfxmmu_lut468h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut469l_tt = regs::gfxmmu_gfxmmu_lut469l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut469h_tt = regs::gfxmmu_gfxmmu_lut469h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut470l_tt = regs::gfxmmu_gfxmmu_lut470l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut470h_tt = regs::gfxmmu_gfxmmu_lut470h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut471l_tt = regs::gfxmmu_gfxmmu_lut471l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut471h_tt = regs::gfxmmu_gfxmmu_lut471h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut472l_tt = regs::gfxmmu_gfxmmu_lut472l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut472h_tt = regs::gfxmmu_gfxmmu_lut472h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut473l_tt = regs::gfxmmu_gfxmmu_lut473l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut473h_tt = regs::gfxmmu_gfxmmu_lut473h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut474l_tt = regs::gfxmmu_gfxmmu_lut474l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut474h_tt = regs::gfxmmu_gfxmmu_lut474h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut475l_tt = regs::gfxmmu_gfxmmu_lut475l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut475h_tt = regs::gfxmmu_gfxmmu_lut475h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut476l_tt = regs::gfxmmu_gfxmmu_lut476l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut476h_tt = regs::gfxmmu_gfxmmu_lut476h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut477l_tt = regs::gfxmmu_gfxmmu_lut477l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut477h_tt = regs::gfxmmu_gfxmmu_lut477h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut478l_tt = regs::gfxmmu_gfxmmu_lut478l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut478h_tt = regs::gfxmmu_gfxmmu_lut478h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut479l_tt = regs::gfxmmu_gfxmmu_lut479l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut479h_tt = regs::gfxmmu_gfxmmu_lut479h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut480l_tt = regs::gfxmmu_gfxmmu_lut480l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut480h_tt = regs::gfxmmu_gfxmmu_lut480h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut481l_tt = regs::gfxmmu_gfxmmu_lut481l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut481h_tt = regs::gfxmmu_gfxmmu_lut481h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut482l_tt = regs::gfxmmu_gfxmmu_lut482l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut482h_tt = regs::gfxmmu_gfxmmu_lut482h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut483l_tt = regs::gfxmmu_gfxmmu_lut483l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut483h_tt = regs::gfxmmu_gfxmmu_lut483h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut484l_tt = regs::gfxmmu_gfxmmu_lut484l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut484h_tt = regs::gfxmmu_gfxmmu_lut484h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut485l_tt = regs::gfxmmu_gfxmmu_lut485l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut485h_tt = regs::gfxmmu_gfxmmu_lut485h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut486l_tt = regs::gfxmmu_gfxmmu_lut486l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut486h_tt = regs::gfxmmu_gfxmmu_lut486h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut487l_tt = regs::gfxmmu_gfxmmu_lut487l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut487h_tt = regs::gfxmmu_gfxmmu_lut487h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut488l_tt = regs::gfxmmu_gfxmmu_lut488l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut488h_tt = regs::gfxmmu_gfxmmu_lut488h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut489l_tt = regs::gfxmmu_gfxmmu_lut489l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut489h_tt = regs::gfxmmu_gfxmmu_lut489h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut490l_tt = regs::gfxmmu_gfxmmu_lut490l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut490h_tt = regs::gfxmmu_gfxmmu_lut490h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut491l_tt = regs::gfxmmu_gfxmmu_lut491l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut491h_tt = regs::gfxmmu_gfxmmu_lut491h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut492l_tt = regs::gfxmmu_gfxmmu_lut492l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut492h_tt = regs::gfxmmu_gfxmmu_lut492h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut493l_tt = regs::gfxmmu_gfxmmu_lut493l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut493h_tt = regs::gfxmmu_gfxmmu_lut493h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut494l_tt = regs::gfxmmu_gfxmmu_lut494l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut494h_tt = regs::gfxmmu_gfxmmu_lut494h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut495l_tt = regs::gfxmmu_gfxmmu_lut495l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut495h_tt = regs::gfxmmu_gfxmmu_lut495h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut496l_tt = regs::gfxmmu_gfxmmu_lut496l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut496h_tt = regs::gfxmmu_gfxmmu_lut496h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut497l_tt = regs::gfxmmu_gfxmmu_lut497l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut497h_tt = regs::gfxmmu_gfxmmu_lut497h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut498l_tt = regs::gfxmmu_gfxmmu_lut498l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut498h_tt = regs::gfxmmu_gfxmmu_lut498h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut499l_tt = regs::gfxmmu_gfxmmu_lut499l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut499h_tt = regs::gfxmmu_gfxmmu_lut499h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut500l_tt = regs::gfxmmu_gfxmmu_lut500l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut500h_tt = regs::gfxmmu_gfxmmu_lut500h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut501l_tt = regs::gfxmmu_gfxmmu_lut501l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut501h_tt = regs::gfxmmu_gfxmmu_lut501h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut502l_tt = regs::gfxmmu_gfxmmu_lut502l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut502h_tt = regs::gfxmmu_gfxmmu_lut502h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut503l_tt = regs::gfxmmu_gfxmmu_lut503l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut503h_tt = regs::gfxmmu_gfxmmu_lut503h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut504l_tt = regs::gfxmmu_gfxmmu_lut504l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut504h_tt = regs::gfxmmu_gfxmmu_lut504h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut505l_tt = regs::gfxmmu_gfxmmu_lut505l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut505h_tt = regs::gfxmmu_gfxmmu_lut505h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut506l_tt = regs::gfxmmu_gfxmmu_lut506l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut506h_tt = regs::gfxmmu_gfxmmu_lut506h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut507l_tt = regs::gfxmmu_gfxmmu_lut507l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut507h_tt = regs::gfxmmu_gfxmmu_lut507h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut508l_tt = regs::gfxmmu_gfxmmu_lut508l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut508h_tt = regs::gfxmmu_gfxmmu_lut508h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut509l_tt = regs::gfxmmu_gfxmmu_lut509l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut509h_tt = regs::gfxmmu_gfxmmu_lut509h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut510l_tt = regs::gfxmmu_gfxmmu_lut510l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut510h_tt = regs::gfxmmu_gfxmmu_lut510h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut511l_tt = regs::gfxmmu_gfxmmu_lut511l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut511h_tt = regs::gfxmmu_gfxmmu_lut511h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut512l_tt = regs::gfxmmu_gfxmmu_lut512l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut512h_tt = regs::gfxmmu_gfxmmu_lut512h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut513l_tt = regs::gfxmmu_gfxmmu_lut513l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut513h_tt = regs::gfxmmu_gfxmmu_lut513h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut514l_tt = regs::gfxmmu_gfxmmu_lut514l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut514h_tt = regs::gfxmmu_gfxmmu_lut514h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut515l_tt = regs::gfxmmu_gfxmmu_lut515l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut515h_tt = regs::gfxmmu_gfxmmu_lut515h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut516l_tt = regs::gfxmmu_gfxmmu_lut516l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut516h_tt = regs::gfxmmu_gfxmmu_lut516h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut517l_tt = regs::gfxmmu_gfxmmu_lut517l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut517h_tt = regs::gfxmmu_gfxmmu_lut517h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut518l_tt = regs::gfxmmu_gfxmmu_lut518l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut518h_tt = regs::gfxmmu_gfxmmu_lut518h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut519l_tt = regs::gfxmmu_gfxmmu_lut519l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut519h_tt = regs::gfxmmu_gfxmmu_lut519h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut520l_tt = regs::gfxmmu_gfxmmu_lut520l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut520h_tt = regs::gfxmmu_gfxmmu_lut520h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut521l_tt = regs::gfxmmu_gfxmmu_lut521l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut521h_tt = regs::gfxmmu_gfxmmu_lut521h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut522l_tt = regs::gfxmmu_gfxmmu_lut522l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut522h_tt = regs::gfxmmu_gfxmmu_lut522h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut523l_tt = regs::gfxmmu_gfxmmu_lut523l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut523h_tt = regs::gfxmmu_gfxmmu_lut523h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut524l_tt = regs::gfxmmu_gfxmmu_lut524l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut524h_tt = regs::gfxmmu_gfxmmu_lut524h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut525l_tt = regs::gfxmmu_gfxmmu_lut525l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut525h_tt = regs::gfxmmu_gfxmmu_lut525h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut526l_tt = regs::gfxmmu_gfxmmu_lut526l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut526h_tt = regs::gfxmmu_gfxmmu_lut526h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut527l_tt = regs::gfxmmu_gfxmmu_lut527l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut527h_tt = regs::gfxmmu_gfxmmu_lut527h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut528l_tt = regs::gfxmmu_gfxmmu_lut528l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut528h_tt = regs::gfxmmu_gfxmmu_lut528h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut529l_tt = regs::gfxmmu_gfxmmu_lut529l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut529h_tt = regs::gfxmmu_gfxmmu_lut529h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut530l_tt = regs::gfxmmu_gfxmmu_lut530l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut530h_tt = regs::gfxmmu_gfxmmu_lut530h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut531l_tt = regs::gfxmmu_gfxmmu_lut531l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut531h_tt = regs::gfxmmu_gfxmmu_lut531h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut532l_tt = regs::gfxmmu_gfxmmu_lut532l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut532h_tt = regs::gfxmmu_gfxmmu_lut532h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut533l_tt = regs::gfxmmu_gfxmmu_lut533l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut533h_tt = regs::gfxmmu_gfxmmu_lut533h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut534l_tt = regs::gfxmmu_gfxmmu_lut534l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut534h_tt = regs::gfxmmu_gfxmmu_lut534h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut535l_tt = regs::gfxmmu_gfxmmu_lut535l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut535h_tt = regs::gfxmmu_gfxmmu_lut535h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut536l_tt = regs::gfxmmu_gfxmmu_lut536l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut536h_tt = regs::gfxmmu_gfxmmu_lut536h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut537l_tt = regs::gfxmmu_gfxmmu_lut537l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut537h_tt = regs::gfxmmu_gfxmmu_lut537h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut538l_tt = regs::gfxmmu_gfxmmu_lut538l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut538h_tt = regs::gfxmmu_gfxmmu_lut538h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut539l_tt = regs::gfxmmu_gfxmmu_lut539l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut539h_tt = regs::gfxmmu_gfxmmu_lut539h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut540l_tt = regs::gfxmmu_gfxmmu_lut540l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut540h_tt = regs::gfxmmu_gfxmmu_lut540h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut541l_tt = regs::gfxmmu_gfxmmu_lut541l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut541h_tt = regs::gfxmmu_gfxmmu_lut541h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut542l_tt = regs::gfxmmu_gfxmmu_lut542l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut542h_tt = regs::gfxmmu_gfxmmu_lut542h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut543l_tt = regs::gfxmmu_gfxmmu_lut543l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut543h_tt = regs::gfxmmu_gfxmmu_lut543h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut544l_tt = regs::gfxmmu_gfxmmu_lut544l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut544h_tt = regs::gfxmmu_gfxmmu_lut544h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut545l_tt = regs::gfxmmu_gfxmmu_lut545l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut545h_tt = regs::gfxmmu_gfxmmu_lut545h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut546l_tt = regs::gfxmmu_gfxmmu_lut546l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut546h_tt = regs::gfxmmu_gfxmmu_lut546h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut547l_tt = regs::gfxmmu_gfxmmu_lut547l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut547h_tt = regs::gfxmmu_gfxmmu_lut547h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut548l_tt = regs::gfxmmu_gfxmmu_lut548l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut548h_tt = regs::gfxmmu_gfxmmu_lut548h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut549l_tt = regs::gfxmmu_gfxmmu_lut549l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut549h_tt = regs::gfxmmu_gfxmmu_lut549h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut550l_tt = regs::gfxmmu_gfxmmu_lut550l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut550h_tt = regs::gfxmmu_gfxmmu_lut550h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut551l_tt = regs::gfxmmu_gfxmmu_lut551l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut551h_tt = regs::gfxmmu_gfxmmu_lut551h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut552l_tt = regs::gfxmmu_gfxmmu_lut552l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut552h_tt = regs::gfxmmu_gfxmmu_lut552h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut553l_tt = regs::gfxmmu_gfxmmu_lut553l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut553h_tt = regs::gfxmmu_gfxmmu_lut553h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut554l_tt = regs::gfxmmu_gfxmmu_lut554l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut554h_tt = regs::gfxmmu_gfxmmu_lut554h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut555l_tt = regs::gfxmmu_gfxmmu_lut555l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut555h_tt = regs::gfxmmu_gfxmmu_lut555h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut556l_tt = regs::gfxmmu_gfxmmu_lut556l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut556h_tt = regs::gfxmmu_gfxmmu_lut556h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut557l_tt = regs::gfxmmu_gfxmmu_lut557l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut557h_tt = regs::gfxmmu_gfxmmu_lut557h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut558l_tt = regs::gfxmmu_gfxmmu_lut558l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut558h_tt = regs::gfxmmu_gfxmmu_lut558h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut559l_tt = regs::gfxmmu_gfxmmu_lut559l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut559h_tt = regs::gfxmmu_gfxmmu_lut559h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut560l_tt = regs::gfxmmu_gfxmmu_lut560l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut560h_tt = regs::gfxmmu_gfxmmu_lut560h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut561l_tt = regs::gfxmmu_gfxmmu_lut561l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut561h_tt = regs::gfxmmu_gfxmmu_lut561h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut562l_tt = regs::gfxmmu_gfxmmu_lut562l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut562h_tt = regs::gfxmmu_gfxmmu_lut562h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut563l_tt = regs::gfxmmu_gfxmmu_lut563l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut563h_tt = regs::gfxmmu_gfxmmu_lut563h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut564l_tt = regs::gfxmmu_gfxmmu_lut564l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut564h_tt = regs::gfxmmu_gfxmmu_lut564h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut565l_tt = regs::gfxmmu_gfxmmu_lut565l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut565h_tt = regs::gfxmmu_gfxmmu_lut565h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut566l_tt = regs::gfxmmu_gfxmmu_lut566l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut566h_tt = regs::gfxmmu_gfxmmu_lut566h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut567l_tt = regs::gfxmmu_gfxmmu_lut567l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut567h_tt = regs::gfxmmu_gfxmmu_lut567h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut568l_tt = regs::gfxmmu_gfxmmu_lut568l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut568h_tt = regs::gfxmmu_gfxmmu_lut568h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut569l_tt = regs::gfxmmu_gfxmmu_lut569l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut569h_tt = regs::gfxmmu_gfxmmu_lut569h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut570l_tt = regs::gfxmmu_gfxmmu_lut570l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut570h_tt = regs::gfxmmu_gfxmmu_lut570h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut571l_tt = regs::gfxmmu_gfxmmu_lut571l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut571h_tt = regs::gfxmmu_gfxmmu_lut571h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut572l_tt = regs::gfxmmu_gfxmmu_lut572l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut572h_tt = regs::gfxmmu_gfxmmu_lut572h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut573l_tt = regs::gfxmmu_gfxmmu_lut573l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut573h_tt = regs::gfxmmu_gfxmmu_lut573h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut574l_tt = regs::gfxmmu_gfxmmu_lut574l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut574h_tt = regs::gfxmmu_gfxmmu_lut574h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut575l_tt = regs::gfxmmu_gfxmmu_lut575l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut575h_tt = regs::gfxmmu_gfxmmu_lut575h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut576l_tt = regs::gfxmmu_gfxmmu_lut576l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut576h_tt = regs::gfxmmu_gfxmmu_lut576h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut577l_tt = regs::gfxmmu_gfxmmu_lut577l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut577h_tt = regs::gfxmmu_gfxmmu_lut577h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut578l_tt = regs::gfxmmu_gfxmmu_lut578l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut578h_tt = regs::gfxmmu_gfxmmu_lut578h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut579l_tt = regs::gfxmmu_gfxmmu_lut579l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut579h_tt = regs::gfxmmu_gfxmmu_lut579h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut580l_tt = regs::gfxmmu_gfxmmu_lut580l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut580h_tt = regs::gfxmmu_gfxmmu_lut580h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut581l_tt = regs::gfxmmu_gfxmmu_lut581l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut581h_tt = regs::gfxmmu_gfxmmu_lut581h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut582l_tt = regs::gfxmmu_gfxmmu_lut582l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut582h_tt = regs::gfxmmu_gfxmmu_lut582h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut583l_tt = regs::gfxmmu_gfxmmu_lut583l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut583h_tt = regs::gfxmmu_gfxmmu_lut583h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut584l_tt = regs::gfxmmu_gfxmmu_lut584l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut584h_tt = regs::gfxmmu_gfxmmu_lut584h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut585l_tt = regs::gfxmmu_gfxmmu_lut585l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut585h_tt = regs::gfxmmu_gfxmmu_lut585h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut586l_tt = regs::gfxmmu_gfxmmu_lut586l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut586h_tt = regs::gfxmmu_gfxmmu_lut586h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut587l_tt = regs::gfxmmu_gfxmmu_lut587l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut587h_tt = regs::gfxmmu_gfxmmu_lut587h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut588l_tt = regs::gfxmmu_gfxmmu_lut588l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut588h_tt = regs::gfxmmu_gfxmmu_lut588h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut589l_tt = regs::gfxmmu_gfxmmu_lut589l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut589h_tt = regs::gfxmmu_gfxmmu_lut589h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut590l_tt = regs::gfxmmu_gfxmmu_lut590l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut590h_tt = regs::gfxmmu_gfxmmu_lut590h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut591l_tt = regs::gfxmmu_gfxmmu_lut591l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut591h_tt = regs::gfxmmu_gfxmmu_lut591h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut592l_tt = regs::gfxmmu_gfxmmu_lut592l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut592h_tt = regs::gfxmmu_gfxmmu_lut592h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut593l_tt = regs::gfxmmu_gfxmmu_lut593l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut593h_tt = regs::gfxmmu_gfxmmu_lut593h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut594l_tt = regs::gfxmmu_gfxmmu_lut594l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut594h_tt = regs::gfxmmu_gfxmmu_lut594h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut595l_tt = regs::gfxmmu_gfxmmu_lut595l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut595h_tt = regs::gfxmmu_gfxmmu_lut595h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut596l_tt = regs::gfxmmu_gfxmmu_lut596l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut596h_tt = regs::gfxmmu_gfxmmu_lut596h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut597l_tt = regs::gfxmmu_gfxmmu_lut597l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut597h_tt = regs::gfxmmu_gfxmmu_lut597h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut598l_tt = regs::gfxmmu_gfxmmu_lut598l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut598h_tt = regs::gfxmmu_gfxmmu_lut598h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut599l_tt = regs::gfxmmu_gfxmmu_lut599l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut599h_tt = regs::gfxmmu_gfxmmu_lut599h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut600l_tt = regs::gfxmmu_gfxmmu_lut600l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut600h_tt = regs::gfxmmu_gfxmmu_lut600h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut601l_tt = regs::gfxmmu_gfxmmu_lut601l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut601h_tt = regs::gfxmmu_gfxmmu_lut601h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut602l_tt = regs::gfxmmu_gfxmmu_lut602l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut602h_tt = regs::gfxmmu_gfxmmu_lut602h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut603l_tt = regs::gfxmmu_gfxmmu_lut603l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut603h_tt = regs::gfxmmu_gfxmmu_lut603h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut604l_tt = regs::gfxmmu_gfxmmu_lut604l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut604h_tt = regs::gfxmmu_gfxmmu_lut604h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut605l_tt = regs::gfxmmu_gfxmmu_lut605l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut605h_tt = regs::gfxmmu_gfxmmu_lut605h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut606l_tt = regs::gfxmmu_gfxmmu_lut606l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut606h_tt = regs::gfxmmu_gfxmmu_lut606h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut607l_tt = regs::gfxmmu_gfxmmu_lut607l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut607h_tt = regs::gfxmmu_gfxmmu_lut607h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut608l_tt = regs::gfxmmu_gfxmmu_lut608l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut608h_tt = regs::gfxmmu_gfxmmu_lut608h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut609l_tt = regs::gfxmmu_gfxmmu_lut609l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut609h_tt = regs::gfxmmu_gfxmmu_lut609h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut610l_tt = regs::gfxmmu_gfxmmu_lut610l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut610h_tt = regs::gfxmmu_gfxmmu_lut610h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut611l_tt = regs::gfxmmu_gfxmmu_lut611l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut611h_tt = regs::gfxmmu_gfxmmu_lut611h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut612l_tt = regs::gfxmmu_gfxmmu_lut612l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut612h_tt = regs::gfxmmu_gfxmmu_lut612h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut613l_tt = regs::gfxmmu_gfxmmu_lut613l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut613h_tt = regs::gfxmmu_gfxmmu_lut613h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut614l_tt = regs::gfxmmu_gfxmmu_lut614l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut614h_tt = regs::gfxmmu_gfxmmu_lut614h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut615l_tt = regs::gfxmmu_gfxmmu_lut615l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut615h_tt = regs::gfxmmu_gfxmmu_lut615h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut616l_tt = regs::gfxmmu_gfxmmu_lut616l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut616h_tt = regs::gfxmmu_gfxmmu_lut616h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut617l_tt = regs::gfxmmu_gfxmmu_lut617l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut617h_tt = regs::gfxmmu_gfxmmu_lut617h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut618l_tt = regs::gfxmmu_gfxmmu_lut618l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut618h_tt = regs::gfxmmu_gfxmmu_lut618h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut619l_tt = regs::gfxmmu_gfxmmu_lut619l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut619h_tt = regs::gfxmmu_gfxmmu_lut619h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut620l_tt = regs::gfxmmu_gfxmmu_lut620l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut620h_tt = regs::gfxmmu_gfxmmu_lut620h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut621l_tt = regs::gfxmmu_gfxmmu_lut621l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut621h_tt = regs::gfxmmu_gfxmmu_lut621h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut622l_tt = regs::gfxmmu_gfxmmu_lut622l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut622h_tt = regs::gfxmmu_gfxmmu_lut622h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut623l_tt = regs::gfxmmu_gfxmmu_lut623l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut623h_tt = regs::gfxmmu_gfxmmu_lut623h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut624l_tt = regs::gfxmmu_gfxmmu_lut624l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut624h_tt = regs::gfxmmu_gfxmmu_lut624h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut625l_tt = regs::gfxmmu_gfxmmu_lut625l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut625h_tt = regs::gfxmmu_gfxmmu_lut625h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut626l_tt = regs::gfxmmu_gfxmmu_lut626l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut626h_tt = regs::gfxmmu_gfxmmu_lut626h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut627l_tt = regs::gfxmmu_gfxmmu_lut627l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut627h_tt = regs::gfxmmu_gfxmmu_lut627h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut628l_tt = regs::gfxmmu_gfxmmu_lut628l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut628h_tt = regs::gfxmmu_gfxmmu_lut628h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut629l_tt = regs::gfxmmu_gfxmmu_lut629l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut629h_tt = regs::gfxmmu_gfxmmu_lut629h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut630l_tt = regs::gfxmmu_gfxmmu_lut630l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut630h_tt = regs::gfxmmu_gfxmmu_lut630h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut631l_tt = regs::gfxmmu_gfxmmu_lut631l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut631h_tt = regs::gfxmmu_gfxmmu_lut631h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut632l_tt = regs::gfxmmu_gfxmmu_lut632l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut632h_tt = regs::gfxmmu_gfxmmu_lut632h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut633l_tt = regs::gfxmmu_gfxmmu_lut633l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut633h_tt = regs::gfxmmu_gfxmmu_lut633h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut634l_tt = regs::gfxmmu_gfxmmu_lut634l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut634h_tt = regs::gfxmmu_gfxmmu_lut634h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut635l_tt = regs::gfxmmu_gfxmmu_lut635l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut635h_tt = regs::gfxmmu_gfxmmu_lut635h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut636l_tt = regs::gfxmmu_gfxmmu_lut636l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut636h_tt = regs::gfxmmu_gfxmmu_lut636h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut637l_tt = regs::gfxmmu_gfxmmu_lut637l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut637h_tt = regs::gfxmmu_gfxmmu_lut637h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut638l_tt = regs::gfxmmu_gfxmmu_lut638l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut638h_tt = regs::gfxmmu_gfxmmu_lut638h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut639l_tt = regs::gfxmmu_gfxmmu_lut639l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut639h_tt = regs::gfxmmu_gfxmmu_lut639h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut640l_tt = regs::gfxmmu_gfxmmu_lut640l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut640h_tt = regs::gfxmmu_gfxmmu_lut640h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut641l_tt = regs::gfxmmu_gfxmmu_lut641l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut641h_tt = regs::gfxmmu_gfxmmu_lut641h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut642l_tt = regs::gfxmmu_gfxmmu_lut642l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut642h_tt = regs::gfxmmu_gfxmmu_lut642h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut643l_tt = regs::gfxmmu_gfxmmu_lut643l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut643h_tt = regs::gfxmmu_gfxmmu_lut643h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut644l_tt = regs::gfxmmu_gfxmmu_lut644l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut644h_tt = regs::gfxmmu_gfxmmu_lut644h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut645l_tt = regs::gfxmmu_gfxmmu_lut645l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut645h_tt = regs::gfxmmu_gfxmmu_lut645h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut646l_tt = regs::gfxmmu_gfxmmu_lut646l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut646h_tt = regs::gfxmmu_gfxmmu_lut646h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut647l_tt = regs::gfxmmu_gfxmmu_lut647l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut647h_tt = regs::gfxmmu_gfxmmu_lut647h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut648l_tt = regs::gfxmmu_gfxmmu_lut648l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut648h_tt = regs::gfxmmu_gfxmmu_lut648h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut649l_tt = regs::gfxmmu_gfxmmu_lut649l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut649h_tt = regs::gfxmmu_gfxmmu_lut649h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut650l_tt = regs::gfxmmu_gfxmmu_lut650l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut650h_tt = regs::gfxmmu_gfxmmu_lut650h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut651l_tt = regs::gfxmmu_gfxmmu_lut651l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut651h_tt = regs::gfxmmu_gfxmmu_lut651h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut652l_tt = regs::gfxmmu_gfxmmu_lut652l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut652h_tt = regs::gfxmmu_gfxmmu_lut652h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut653l_tt = regs::gfxmmu_gfxmmu_lut653l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut653h_tt = regs::gfxmmu_gfxmmu_lut653h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut654l_tt = regs::gfxmmu_gfxmmu_lut654l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut654h_tt = regs::gfxmmu_gfxmmu_lut654h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut655l_tt = regs::gfxmmu_gfxmmu_lut655l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut655h_tt = regs::gfxmmu_gfxmmu_lut655h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut656l_tt = regs::gfxmmu_gfxmmu_lut656l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut656h_tt = regs::gfxmmu_gfxmmu_lut656h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut657l_tt = regs::gfxmmu_gfxmmu_lut657l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut657h_tt = regs::gfxmmu_gfxmmu_lut657h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut658l_tt = regs::gfxmmu_gfxmmu_lut658l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut658h_tt = regs::gfxmmu_gfxmmu_lut658h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut659l_tt = regs::gfxmmu_gfxmmu_lut659l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut659h_tt = regs::gfxmmu_gfxmmu_lut659h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut660l_tt = regs::gfxmmu_gfxmmu_lut660l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut660h_tt = regs::gfxmmu_gfxmmu_lut660h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut661l_tt = regs::gfxmmu_gfxmmu_lut661l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut661h_tt = regs::gfxmmu_gfxmmu_lut661h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut662l_tt = regs::gfxmmu_gfxmmu_lut662l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut662h_tt = regs::gfxmmu_gfxmmu_lut662h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut663l_tt = regs::gfxmmu_gfxmmu_lut663l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut663h_tt = regs::gfxmmu_gfxmmu_lut663h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut664l_tt = regs::gfxmmu_gfxmmu_lut664l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut664h_tt = regs::gfxmmu_gfxmmu_lut664h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut665l_tt = regs::gfxmmu_gfxmmu_lut665l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut665h_tt = regs::gfxmmu_gfxmmu_lut665h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut666l_tt = regs::gfxmmu_gfxmmu_lut666l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut666h_tt = regs::gfxmmu_gfxmmu_lut666h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut667l_tt = regs::gfxmmu_gfxmmu_lut667l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut667h_tt = regs::gfxmmu_gfxmmu_lut667h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut668l_tt = regs::gfxmmu_gfxmmu_lut668l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut668h_tt = regs::gfxmmu_gfxmmu_lut668h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut669l_tt = regs::gfxmmu_gfxmmu_lut669l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut669h_tt = regs::gfxmmu_gfxmmu_lut669h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut670l_tt = regs::gfxmmu_gfxmmu_lut670l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut670h_tt = regs::gfxmmu_gfxmmu_lut670h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut671l_tt = regs::gfxmmu_gfxmmu_lut671l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut671h_tt = regs::gfxmmu_gfxmmu_lut671h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut672l_tt = regs::gfxmmu_gfxmmu_lut672l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut672h_tt = regs::gfxmmu_gfxmmu_lut672h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut673l_tt = regs::gfxmmu_gfxmmu_lut673l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut673h_tt = regs::gfxmmu_gfxmmu_lut673h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut674l_tt = regs::gfxmmu_gfxmmu_lut674l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut674h_tt = regs::gfxmmu_gfxmmu_lut674h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut675l_tt = regs::gfxmmu_gfxmmu_lut675l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut675h_tt = regs::gfxmmu_gfxmmu_lut675h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut676l_tt = regs::gfxmmu_gfxmmu_lut676l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut676h_tt = regs::gfxmmu_gfxmmu_lut676h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut677l_tt = regs::gfxmmu_gfxmmu_lut677l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut677h_tt = regs::gfxmmu_gfxmmu_lut677h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut678l_tt = regs::gfxmmu_gfxmmu_lut678l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut678h_tt = regs::gfxmmu_gfxmmu_lut678h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut679l_tt = regs::gfxmmu_gfxmmu_lut679l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut679h_tt = regs::gfxmmu_gfxmmu_lut679h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut680l_tt = regs::gfxmmu_gfxmmu_lut680l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut680h_tt = regs::gfxmmu_gfxmmu_lut680h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut681l_tt = regs::gfxmmu_gfxmmu_lut681l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut681h_tt = regs::gfxmmu_gfxmmu_lut681h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut682l_tt = regs::gfxmmu_gfxmmu_lut682l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut682h_tt = regs::gfxmmu_gfxmmu_lut682h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut683l_tt = regs::gfxmmu_gfxmmu_lut683l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut683h_tt = regs::gfxmmu_gfxmmu_lut683h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut684l_tt = regs::gfxmmu_gfxmmu_lut684l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut684h_tt = regs::gfxmmu_gfxmmu_lut684h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut685l_tt = regs::gfxmmu_gfxmmu_lut685l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut685h_tt = regs::gfxmmu_gfxmmu_lut685h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut686l_tt = regs::gfxmmu_gfxmmu_lut686l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut686h_tt = regs::gfxmmu_gfxmmu_lut686h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut687l_tt = regs::gfxmmu_gfxmmu_lut687l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut687h_tt = regs::gfxmmu_gfxmmu_lut687h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut688l_tt = regs::gfxmmu_gfxmmu_lut688l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut688h_tt = regs::gfxmmu_gfxmmu_lut688h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut689l_tt = regs::gfxmmu_gfxmmu_lut689l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut689h_tt = regs::gfxmmu_gfxmmu_lut689h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut690l_tt = regs::gfxmmu_gfxmmu_lut690l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut690h_tt = regs::gfxmmu_gfxmmu_lut690h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut691l_tt = regs::gfxmmu_gfxmmu_lut691l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut691h_tt = regs::gfxmmu_gfxmmu_lut691h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut692l_tt = regs::gfxmmu_gfxmmu_lut692l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut692h_tt = regs::gfxmmu_gfxmmu_lut692h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut693l_tt = regs::gfxmmu_gfxmmu_lut693l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut693h_tt = regs::gfxmmu_gfxmmu_lut693h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut694l_tt = regs::gfxmmu_gfxmmu_lut694l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut694h_tt = regs::gfxmmu_gfxmmu_lut694h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut695l_tt = regs::gfxmmu_gfxmmu_lut695l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut695h_tt = regs::gfxmmu_gfxmmu_lut695h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut696l_tt = regs::gfxmmu_gfxmmu_lut696l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut696h_tt = regs::gfxmmu_gfxmmu_lut696h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut697l_tt = regs::gfxmmu_gfxmmu_lut697l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut697h_tt = regs::gfxmmu_gfxmmu_lut697h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut698l_tt = regs::gfxmmu_gfxmmu_lut698l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut698h_tt = regs::gfxmmu_gfxmmu_lut698h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut699l_tt = regs::gfxmmu_gfxmmu_lut699l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut699h_tt = regs::gfxmmu_gfxmmu_lut699h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut700l_tt = regs::gfxmmu_gfxmmu_lut700l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut700h_tt = regs::gfxmmu_gfxmmu_lut700h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut701l_tt = regs::gfxmmu_gfxmmu_lut701l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut701h_tt = regs::gfxmmu_gfxmmu_lut701h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut702l_tt = regs::gfxmmu_gfxmmu_lut702l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut702h_tt = regs::gfxmmu_gfxmmu_lut702h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut703l_tt = regs::gfxmmu_gfxmmu_lut703l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut703h_tt = regs::gfxmmu_gfxmmu_lut703h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut704l_tt = regs::gfxmmu_gfxmmu_lut704l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut704h_tt = regs::gfxmmu_gfxmmu_lut704h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut705l_tt = regs::gfxmmu_gfxmmu_lut705l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut705h_tt = regs::gfxmmu_gfxmmu_lut705h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut706l_tt = regs::gfxmmu_gfxmmu_lut706l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut706h_tt = regs::gfxmmu_gfxmmu_lut706h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut707l_tt = regs::gfxmmu_gfxmmu_lut707l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut707h_tt = regs::gfxmmu_gfxmmu_lut707h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut708l_tt = regs::gfxmmu_gfxmmu_lut708l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut708h_tt = regs::gfxmmu_gfxmmu_lut708h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut709l_tt = regs::gfxmmu_gfxmmu_lut709l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut709h_tt = regs::gfxmmu_gfxmmu_lut709h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut710l_tt = regs::gfxmmu_gfxmmu_lut710l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut710h_tt = regs::gfxmmu_gfxmmu_lut710h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut711l_tt = regs::gfxmmu_gfxmmu_lut711l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut711h_tt = regs::gfxmmu_gfxmmu_lut711h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut712l_tt = regs::gfxmmu_gfxmmu_lut712l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut712h_tt = regs::gfxmmu_gfxmmu_lut712h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut713l_tt = regs::gfxmmu_gfxmmu_lut713l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut713h_tt = regs::gfxmmu_gfxmmu_lut713h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut714l_tt = regs::gfxmmu_gfxmmu_lut714l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut714h_tt = regs::gfxmmu_gfxmmu_lut714h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut715l_tt = regs::gfxmmu_gfxmmu_lut715l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut715h_tt = regs::gfxmmu_gfxmmu_lut715h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut716l_tt = regs::gfxmmu_gfxmmu_lut716l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut716h_tt = regs::gfxmmu_gfxmmu_lut716h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut717l_tt = regs::gfxmmu_gfxmmu_lut717l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut717h_tt = regs::gfxmmu_gfxmmu_lut717h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut718l_tt = regs::gfxmmu_gfxmmu_lut718l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut718h_tt = regs::gfxmmu_gfxmmu_lut718h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut719l_tt = regs::gfxmmu_gfxmmu_lut719l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut719h_tt = regs::gfxmmu_gfxmmu_lut719h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut720l_tt = regs::gfxmmu_gfxmmu_lut720l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut720h_tt = regs::gfxmmu_gfxmmu_lut720h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut721l_tt = regs::gfxmmu_gfxmmu_lut721l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut721h_tt = regs::gfxmmu_gfxmmu_lut721h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut722l_tt = regs::gfxmmu_gfxmmu_lut722l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut722h_tt = regs::gfxmmu_gfxmmu_lut722h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut723l_tt = regs::gfxmmu_gfxmmu_lut723l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut723h_tt = regs::gfxmmu_gfxmmu_lut723h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut724l_tt = regs::gfxmmu_gfxmmu_lut724l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut724h_tt = regs::gfxmmu_gfxmmu_lut724h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut725l_tt = regs::gfxmmu_gfxmmu_lut725l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut725h_tt = regs::gfxmmu_gfxmmu_lut725h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut726l_tt = regs::gfxmmu_gfxmmu_lut726l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut726h_tt = regs::gfxmmu_gfxmmu_lut726h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut727l_tt = regs::gfxmmu_gfxmmu_lut727l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut727h_tt = regs::gfxmmu_gfxmmu_lut727h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut728l_tt = regs::gfxmmu_gfxmmu_lut728l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut728h_tt = regs::gfxmmu_gfxmmu_lut728h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut729l_tt = regs::gfxmmu_gfxmmu_lut729l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut729h_tt = regs::gfxmmu_gfxmmu_lut729h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut730l_tt = regs::gfxmmu_gfxmmu_lut730l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut730h_tt = regs::gfxmmu_gfxmmu_lut730h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut731l_tt = regs::gfxmmu_gfxmmu_lut731l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut731h_tt = regs::gfxmmu_gfxmmu_lut731h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut732l_tt = regs::gfxmmu_gfxmmu_lut732l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut732h_tt = regs::gfxmmu_gfxmmu_lut732h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut733l_tt = regs::gfxmmu_gfxmmu_lut733l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut733h_tt = regs::gfxmmu_gfxmmu_lut733h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut734l_tt = regs::gfxmmu_gfxmmu_lut734l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut734h_tt = regs::gfxmmu_gfxmmu_lut734h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut735l_tt = regs::gfxmmu_gfxmmu_lut735l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut735h_tt = regs::gfxmmu_gfxmmu_lut735h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut736l_tt = regs::gfxmmu_gfxmmu_lut736l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut736h_tt = regs::gfxmmu_gfxmmu_lut736h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut737l_tt = regs::gfxmmu_gfxmmu_lut737l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut737h_tt = regs::gfxmmu_gfxmmu_lut737h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut738l_tt = regs::gfxmmu_gfxmmu_lut738l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut738h_tt = regs::gfxmmu_gfxmmu_lut738h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut739l_tt = regs::gfxmmu_gfxmmu_lut739l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut739h_tt = regs::gfxmmu_gfxmmu_lut739h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut740l_tt = regs::gfxmmu_gfxmmu_lut740l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut740h_tt = regs::gfxmmu_gfxmmu_lut740h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut741l_tt = regs::gfxmmu_gfxmmu_lut741l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut741h_tt = regs::gfxmmu_gfxmmu_lut741h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut742l_tt = regs::gfxmmu_gfxmmu_lut742l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut742h_tt = regs::gfxmmu_gfxmmu_lut742h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut743l_tt = regs::gfxmmu_gfxmmu_lut743l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut743h_tt = regs::gfxmmu_gfxmmu_lut743h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut744l_tt = regs::gfxmmu_gfxmmu_lut744l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut744h_tt = regs::gfxmmu_gfxmmu_lut744h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut745l_tt = regs::gfxmmu_gfxmmu_lut745l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut745h_tt = regs::gfxmmu_gfxmmu_lut745h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut746l_tt = regs::gfxmmu_gfxmmu_lut746l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut746h_tt = regs::gfxmmu_gfxmmu_lut746h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut747l_tt = regs::gfxmmu_gfxmmu_lut747l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut747h_tt = regs::gfxmmu_gfxmmu_lut747h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut748l_tt = regs::gfxmmu_gfxmmu_lut748l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut748h_tt = regs::gfxmmu_gfxmmu_lut748h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut749l_tt = regs::gfxmmu_gfxmmu_lut749l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut749h_tt = regs::gfxmmu_gfxmmu_lut749h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut750l_tt = regs::gfxmmu_gfxmmu_lut750l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut750h_tt = regs::gfxmmu_gfxmmu_lut750h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut751l_tt = regs::gfxmmu_gfxmmu_lut751l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut751h_tt = regs::gfxmmu_gfxmmu_lut751h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut752l_tt = regs::gfxmmu_gfxmmu_lut752l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut752h_tt = regs::gfxmmu_gfxmmu_lut752h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut753l_tt = regs::gfxmmu_gfxmmu_lut753l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut753h_tt = regs::gfxmmu_gfxmmu_lut753h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut754l_tt = regs::gfxmmu_gfxmmu_lut754l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut754h_tt = regs::gfxmmu_gfxmmu_lut754h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut755l_tt = regs::gfxmmu_gfxmmu_lut755l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut755h_tt = regs::gfxmmu_gfxmmu_lut755h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut756l_tt = regs::gfxmmu_gfxmmu_lut756l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut756h_tt = regs::gfxmmu_gfxmmu_lut756h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut757l_tt = regs::gfxmmu_gfxmmu_lut757l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut757h_tt = regs::gfxmmu_gfxmmu_lut757h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut758l_tt = regs::gfxmmu_gfxmmu_lut758l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut758h_tt = regs::gfxmmu_gfxmmu_lut758h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut759l_tt = regs::gfxmmu_gfxmmu_lut759l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut759h_tt = regs::gfxmmu_gfxmmu_lut759h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut760l_tt = regs::gfxmmu_gfxmmu_lut760l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut760h_tt = regs::gfxmmu_gfxmmu_lut760h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut761l_tt = regs::gfxmmu_gfxmmu_lut761l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut761h_tt = regs::gfxmmu_gfxmmu_lut761h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut762l_tt = regs::gfxmmu_gfxmmu_lut762l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut762h_tt = regs::gfxmmu_gfxmmu_lut762h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut763l_tt = regs::gfxmmu_gfxmmu_lut763l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut763h_tt = regs::gfxmmu_gfxmmu_lut763h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut764l_tt = regs::gfxmmu_gfxmmu_lut764l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut764h_tt = regs::gfxmmu_gfxmmu_lut764h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut765l_tt = regs::gfxmmu_gfxmmu_lut765l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut765h_tt = regs::gfxmmu_gfxmmu_lut765h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut766l_tt = regs::gfxmmu_gfxmmu_lut766l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut766h_tt = regs::gfxmmu_gfxmmu_lut766h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut767l_tt = regs::gfxmmu_gfxmmu_lut767l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut767h_tt = regs::gfxmmu_gfxmmu_lut767h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut768l_tt = regs::gfxmmu_gfxmmu_lut768l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut768h_tt = regs::gfxmmu_gfxmmu_lut768h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut769l_tt = regs::gfxmmu_gfxmmu_lut769l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut769h_tt = regs::gfxmmu_gfxmmu_lut769h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut770l_tt = regs::gfxmmu_gfxmmu_lut770l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut770h_tt = regs::gfxmmu_gfxmmu_lut770h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut771l_tt = regs::gfxmmu_gfxmmu_lut771l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut771h_tt = regs::gfxmmu_gfxmmu_lut771h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut772l_tt = regs::gfxmmu_gfxmmu_lut772l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut772h_tt = regs::gfxmmu_gfxmmu_lut772h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut773l_tt = regs::gfxmmu_gfxmmu_lut773l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut773h_tt = regs::gfxmmu_gfxmmu_lut773h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut774l_tt = regs::gfxmmu_gfxmmu_lut774l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut774h_tt = regs::gfxmmu_gfxmmu_lut774h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut775l_tt = regs::gfxmmu_gfxmmu_lut775l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut775h_tt = regs::gfxmmu_gfxmmu_lut775h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut776l_tt = regs::gfxmmu_gfxmmu_lut776l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut776h_tt = regs::gfxmmu_gfxmmu_lut776h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut777l_tt = regs::gfxmmu_gfxmmu_lut777l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut777h_tt = regs::gfxmmu_gfxmmu_lut777h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut778l_tt = regs::gfxmmu_gfxmmu_lut778l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut778h_tt = regs::gfxmmu_gfxmmu_lut778h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut779l_tt = regs::gfxmmu_gfxmmu_lut779l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut779h_tt = regs::gfxmmu_gfxmmu_lut779h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut780l_tt = regs::gfxmmu_gfxmmu_lut780l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut780h_tt = regs::gfxmmu_gfxmmu_lut780h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut781l_tt = regs::gfxmmu_gfxmmu_lut781l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut781h_tt = regs::gfxmmu_gfxmmu_lut781h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut782l_tt = regs::gfxmmu_gfxmmu_lut782l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut782h_tt = regs::gfxmmu_gfxmmu_lut782h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut783l_tt = regs::gfxmmu_gfxmmu_lut783l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut783h_tt = regs::gfxmmu_gfxmmu_lut783h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut784l_tt = regs::gfxmmu_gfxmmu_lut784l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut784h_tt = regs::gfxmmu_gfxmmu_lut784h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut785l_tt = regs::gfxmmu_gfxmmu_lut785l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut785h_tt = regs::gfxmmu_gfxmmu_lut785h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut786l_tt = regs::gfxmmu_gfxmmu_lut786l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut786h_tt = regs::gfxmmu_gfxmmu_lut786h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut787l_tt = regs::gfxmmu_gfxmmu_lut787l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut787h_tt = regs::gfxmmu_gfxmmu_lut787h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut788l_tt = regs::gfxmmu_gfxmmu_lut788l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut788h_tt = regs::gfxmmu_gfxmmu_lut788h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut789l_tt = regs::gfxmmu_gfxmmu_lut789l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut789h_tt = regs::gfxmmu_gfxmmu_lut789h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut790l_tt = regs::gfxmmu_gfxmmu_lut790l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut790h_tt = regs::gfxmmu_gfxmmu_lut790h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut791l_tt = regs::gfxmmu_gfxmmu_lut791l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut791h_tt = regs::gfxmmu_gfxmmu_lut791h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut792l_tt = regs::gfxmmu_gfxmmu_lut792l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut792h_tt = regs::gfxmmu_gfxmmu_lut792h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut793l_tt = regs::gfxmmu_gfxmmu_lut793l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut793h_tt = regs::gfxmmu_gfxmmu_lut793h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut794l_tt = regs::gfxmmu_gfxmmu_lut794l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut794h_tt = regs::gfxmmu_gfxmmu_lut794h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut795l_tt = regs::gfxmmu_gfxmmu_lut795l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut795h_tt = regs::gfxmmu_gfxmmu_lut795h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut796l_tt = regs::gfxmmu_gfxmmu_lut796l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut796h_tt = regs::gfxmmu_gfxmmu_lut796h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut797l_tt = regs::gfxmmu_gfxmmu_lut797l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut797h_tt = regs::gfxmmu_gfxmmu_lut797h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut798l_tt = regs::gfxmmu_gfxmmu_lut798l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut798h_tt = regs::gfxmmu_gfxmmu_lut798h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut799l_tt = regs::gfxmmu_gfxmmu_lut799l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut799h_tt = regs::gfxmmu_gfxmmu_lut799h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut800l_tt = regs::gfxmmu_gfxmmu_lut800l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut800h_tt = regs::gfxmmu_gfxmmu_lut800h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut801l_tt = regs::gfxmmu_gfxmmu_lut801l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut801h_tt = regs::gfxmmu_gfxmmu_lut801h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut802l_tt = regs::gfxmmu_gfxmmu_lut802l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut802h_tt = regs::gfxmmu_gfxmmu_lut802h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut803l_tt = regs::gfxmmu_gfxmmu_lut803l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut803h_tt = regs::gfxmmu_gfxmmu_lut803h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut804l_tt = regs::gfxmmu_gfxmmu_lut804l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut804h_tt = regs::gfxmmu_gfxmmu_lut804h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut805l_tt = regs::gfxmmu_gfxmmu_lut805l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut805h_tt = regs::gfxmmu_gfxmmu_lut805h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut806l_tt = regs::gfxmmu_gfxmmu_lut806l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut806h_tt = regs::gfxmmu_gfxmmu_lut806h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut807l_tt = regs::gfxmmu_gfxmmu_lut807l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut807h_tt = regs::gfxmmu_gfxmmu_lut807h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut808l_tt = regs::gfxmmu_gfxmmu_lut808l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut808h_tt = regs::gfxmmu_gfxmmu_lut808h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut809l_tt = regs::gfxmmu_gfxmmu_lut809l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut809h_tt = regs::gfxmmu_gfxmmu_lut809h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut810l_tt = regs::gfxmmu_gfxmmu_lut810l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut810h_tt = regs::gfxmmu_gfxmmu_lut810h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut811l_tt = regs::gfxmmu_gfxmmu_lut811l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut811h_tt = regs::gfxmmu_gfxmmu_lut811h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut812l_tt = regs::gfxmmu_gfxmmu_lut812l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut812h_tt = regs::gfxmmu_gfxmmu_lut812h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut813l_tt = regs::gfxmmu_gfxmmu_lut813l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut813h_tt = regs::gfxmmu_gfxmmu_lut813h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut814l_tt = regs::gfxmmu_gfxmmu_lut814l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut814h_tt = regs::gfxmmu_gfxmmu_lut814h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut815l_tt = regs::gfxmmu_gfxmmu_lut815l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut815h_tt = regs::gfxmmu_gfxmmu_lut815h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut816l_tt = regs::gfxmmu_gfxmmu_lut816l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut816h_tt = regs::gfxmmu_gfxmmu_lut816h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut817l_tt = regs::gfxmmu_gfxmmu_lut817l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut817h_tt = regs::gfxmmu_gfxmmu_lut817h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut818l_tt = regs::gfxmmu_gfxmmu_lut818l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut818h_tt = regs::gfxmmu_gfxmmu_lut818h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut819l_tt = regs::gfxmmu_gfxmmu_lut819l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut819h_tt = regs::gfxmmu_gfxmmu_lut819h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut820l_tt = regs::gfxmmu_gfxmmu_lut820l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut820h_tt = regs::gfxmmu_gfxmmu_lut820h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut821l_tt = regs::gfxmmu_gfxmmu_lut821l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut821h_tt = regs::gfxmmu_gfxmmu_lut821h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut822l_tt = regs::gfxmmu_gfxmmu_lut822l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut822h_tt = regs::gfxmmu_gfxmmu_lut822h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut823l_tt = regs::gfxmmu_gfxmmu_lut823l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut823h_tt = regs::gfxmmu_gfxmmu_lut823h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut824l_tt = regs::gfxmmu_gfxmmu_lut824l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut824h_tt = regs::gfxmmu_gfxmmu_lut824h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut825l_tt = regs::gfxmmu_gfxmmu_lut825l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut825h_tt = regs::gfxmmu_gfxmmu_lut825h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut826l_tt = regs::gfxmmu_gfxmmu_lut826l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut826h_tt = regs::gfxmmu_gfxmmu_lut826h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut827l_tt = regs::gfxmmu_gfxmmu_lut827l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut827h_tt = regs::gfxmmu_gfxmmu_lut827h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut828l_tt = regs::gfxmmu_gfxmmu_lut828l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut828h_tt = regs::gfxmmu_gfxmmu_lut828h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut829l_tt = regs::gfxmmu_gfxmmu_lut829l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut829h_tt = regs::gfxmmu_gfxmmu_lut829h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut830l_tt = regs::gfxmmu_gfxmmu_lut830l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut830h_tt = regs::gfxmmu_gfxmmu_lut830h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut831l_tt = regs::gfxmmu_gfxmmu_lut831l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut831h_tt = regs::gfxmmu_gfxmmu_lut831h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut832l_tt = regs::gfxmmu_gfxmmu_lut832l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut832h_tt = regs::gfxmmu_gfxmmu_lut832h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut833l_tt = regs::gfxmmu_gfxmmu_lut833l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut833h_tt = regs::gfxmmu_gfxmmu_lut833h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut834l_tt = regs::gfxmmu_gfxmmu_lut834l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut834h_tt = regs::gfxmmu_gfxmmu_lut834h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut835l_tt = regs::gfxmmu_gfxmmu_lut835l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut835h_tt = regs::gfxmmu_gfxmmu_lut835h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut836l_tt = regs::gfxmmu_gfxmmu_lut836l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut836h_tt = regs::gfxmmu_gfxmmu_lut836h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut837l_tt = regs::gfxmmu_gfxmmu_lut837l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut837h_tt = regs::gfxmmu_gfxmmu_lut837h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut838l_tt = regs::gfxmmu_gfxmmu_lut838l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut838h_tt = regs::gfxmmu_gfxmmu_lut838h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut839l_tt = regs::gfxmmu_gfxmmu_lut839l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut839h_tt = regs::gfxmmu_gfxmmu_lut839h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut840l_tt = regs::gfxmmu_gfxmmu_lut840l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut840h_tt = regs::gfxmmu_gfxmmu_lut840h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut841l_tt = regs::gfxmmu_gfxmmu_lut841l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut841h_tt = regs::gfxmmu_gfxmmu_lut841h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut842l_tt = regs::gfxmmu_gfxmmu_lut842l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut842h_tt = regs::gfxmmu_gfxmmu_lut842h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut843l_tt = regs::gfxmmu_gfxmmu_lut843l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut843h_tt = regs::gfxmmu_gfxmmu_lut843h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut844l_tt = regs::gfxmmu_gfxmmu_lut844l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut844h_tt = regs::gfxmmu_gfxmmu_lut844h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut845l_tt = regs::gfxmmu_gfxmmu_lut845l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut845h_tt = regs::gfxmmu_gfxmmu_lut845h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut846l_tt = regs::gfxmmu_gfxmmu_lut846l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut846h_tt = regs::gfxmmu_gfxmmu_lut846h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut847l_tt = regs::gfxmmu_gfxmmu_lut847l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut847h_tt = regs::gfxmmu_gfxmmu_lut847h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut848l_tt = regs::gfxmmu_gfxmmu_lut848l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut848h_tt = regs::gfxmmu_gfxmmu_lut848h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut849l_tt = regs::gfxmmu_gfxmmu_lut849l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut849h_tt = regs::gfxmmu_gfxmmu_lut849h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut850l_tt = regs::gfxmmu_gfxmmu_lut850l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut850h_tt = regs::gfxmmu_gfxmmu_lut850h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut851l_tt = regs::gfxmmu_gfxmmu_lut851l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut851h_tt = regs::gfxmmu_gfxmmu_lut851h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut852l_tt = regs::gfxmmu_gfxmmu_lut852l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut852h_tt = regs::gfxmmu_gfxmmu_lut852h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut853l_tt = regs::gfxmmu_gfxmmu_lut853l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut853h_tt = regs::gfxmmu_gfxmmu_lut853h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut854l_tt = regs::gfxmmu_gfxmmu_lut854l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut854h_tt = regs::gfxmmu_gfxmmu_lut854h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut855l_tt = regs::gfxmmu_gfxmmu_lut855l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut855h_tt = regs::gfxmmu_gfxmmu_lut855h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut856l_tt = regs::gfxmmu_gfxmmu_lut856l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut856h_tt = regs::gfxmmu_gfxmmu_lut856h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut857l_tt = regs::gfxmmu_gfxmmu_lut857l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut857h_tt = regs::gfxmmu_gfxmmu_lut857h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut858l_tt = regs::gfxmmu_gfxmmu_lut858l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut858h_tt = regs::gfxmmu_gfxmmu_lut858h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut859l_tt = regs::gfxmmu_gfxmmu_lut859l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut859h_tt = regs::gfxmmu_gfxmmu_lut859h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut860l_tt = regs::gfxmmu_gfxmmu_lut860l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut860h_tt = regs::gfxmmu_gfxmmu_lut860h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut861l_tt = regs::gfxmmu_gfxmmu_lut861l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut861h_tt = regs::gfxmmu_gfxmmu_lut861h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut862l_tt = regs::gfxmmu_gfxmmu_lut862l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut862h_tt = regs::gfxmmu_gfxmmu_lut862h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut863l_tt = regs::gfxmmu_gfxmmu_lut863l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut863h_tt = regs::gfxmmu_gfxmmu_lut863h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut864l_tt = regs::gfxmmu_gfxmmu_lut864l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut864h_tt = regs::gfxmmu_gfxmmu_lut864h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut865l_tt = regs::gfxmmu_gfxmmu_lut865l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut865h_tt = regs::gfxmmu_gfxmmu_lut865h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut866l_tt = regs::gfxmmu_gfxmmu_lut866l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut866h_tt = regs::gfxmmu_gfxmmu_lut866h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut867l_tt = regs::gfxmmu_gfxmmu_lut867l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut867h_tt = regs::gfxmmu_gfxmmu_lut867h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut868l_tt = regs::gfxmmu_gfxmmu_lut868l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut868h_tt = regs::gfxmmu_gfxmmu_lut868h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut869l_tt = regs::gfxmmu_gfxmmu_lut869l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut869h_tt = regs::gfxmmu_gfxmmu_lut869h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut870l_tt = regs::gfxmmu_gfxmmu_lut870l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut870h_tt = regs::gfxmmu_gfxmmu_lut870h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut871l_tt = regs::gfxmmu_gfxmmu_lut871l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut871h_tt = regs::gfxmmu_gfxmmu_lut871h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut872l_tt = regs::gfxmmu_gfxmmu_lut872l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut872h_tt = regs::gfxmmu_gfxmmu_lut872h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut873l_tt = regs::gfxmmu_gfxmmu_lut873l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut873h_tt = regs::gfxmmu_gfxmmu_lut873h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut874l_tt = regs::gfxmmu_gfxmmu_lut874l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut874h_tt = regs::gfxmmu_gfxmmu_lut874h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut875l_tt = regs::gfxmmu_gfxmmu_lut875l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut875h_tt = regs::gfxmmu_gfxmmu_lut875h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut876l_tt = regs::gfxmmu_gfxmmu_lut876l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut876h_tt = regs::gfxmmu_gfxmmu_lut876h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut877l_tt = regs::gfxmmu_gfxmmu_lut877l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut877h_tt = regs::gfxmmu_gfxmmu_lut877h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut878l_tt = regs::gfxmmu_gfxmmu_lut878l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut878h_tt = regs::gfxmmu_gfxmmu_lut878h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut879l_tt = regs::gfxmmu_gfxmmu_lut879l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut879h_tt = regs::gfxmmu_gfxmmu_lut879h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut880l_tt = regs::gfxmmu_gfxmmu_lut880l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut880h_tt = regs::gfxmmu_gfxmmu_lut880h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut881l_tt = regs::gfxmmu_gfxmmu_lut881l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut881h_tt = regs::gfxmmu_gfxmmu_lut881h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut882l_tt = regs::gfxmmu_gfxmmu_lut882l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut882h_tt = regs::gfxmmu_gfxmmu_lut882h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut883l_tt = regs::gfxmmu_gfxmmu_lut883l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut883h_tt = regs::gfxmmu_gfxmmu_lut883h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut884l_tt = regs::gfxmmu_gfxmmu_lut884l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut884h_tt = regs::gfxmmu_gfxmmu_lut884h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut885l_tt = regs::gfxmmu_gfxmmu_lut885l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut885h_tt = regs::gfxmmu_gfxmmu_lut885h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut886l_tt = regs::gfxmmu_gfxmmu_lut886l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut886h_tt = regs::gfxmmu_gfxmmu_lut886h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut887l_tt = regs::gfxmmu_gfxmmu_lut887l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut887h_tt = regs::gfxmmu_gfxmmu_lut887h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut888l_tt = regs::gfxmmu_gfxmmu_lut888l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut888h_tt = regs::gfxmmu_gfxmmu_lut888h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut889l_tt = regs::gfxmmu_gfxmmu_lut889l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut889h_tt = regs::gfxmmu_gfxmmu_lut889h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut890l_tt = regs::gfxmmu_gfxmmu_lut890l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut890h_tt = regs::gfxmmu_gfxmmu_lut890h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut891l_tt = regs::gfxmmu_gfxmmu_lut891l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut891h_tt = regs::gfxmmu_gfxmmu_lut891h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut892l_tt = regs::gfxmmu_gfxmmu_lut892l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut892h_tt = regs::gfxmmu_gfxmmu_lut892h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut893l_tt = regs::gfxmmu_gfxmmu_lut893l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut893h_tt = regs::gfxmmu_gfxmmu_lut893h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut894l_tt = regs::gfxmmu_gfxmmu_lut894l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut894h_tt = regs::gfxmmu_gfxmmu_lut894h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut895l_tt = regs::gfxmmu_gfxmmu_lut895l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut895h_tt = regs::gfxmmu_gfxmmu_lut895h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut896l_tt = regs::gfxmmu_gfxmmu_lut896l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut896h_tt = regs::gfxmmu_gfxmmu_lut896h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut897l_tt = regs::gfxmmu_gfxmmu_lut897l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut897h_tt = regs::gfxmmu_gfxmmu_lut897h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut898l_tt = regs::gfxmmu_gfxmmu_lut898l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut898h_tt = regs::gfxmmu_gfxmmu_lut898h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut899l_tt = regs::gfxmmu_gfxmmu_lut899l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut899h_tt = regs::gfxmmu_gfxmmu_lut899h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut900l_tt = regs::gfxmmu_gfxmmu_lut900l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut900h_tt = regs::gfxmmu_gfxmmu_lut900h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut901l_tt = regs::gfxmmu_gfxmmu_lut901l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut901h_tt = regs::gfxmmu_gfxmmu_lut901h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut902l_tt = regs::gfxmmu_gfxmmu_lut902l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut902h_tt = regs::gfxmmu_gfxmmu_lut902h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut903l_tt = regs::gfxmmu_gfxmmu_lut903l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut903h_tt = regs::gfxmmu_gfxmmu_lut903h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut904l_tt = regs::gfxmmu_gfxmmu_lut904l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut904h_tt = regs::gfxmmu_gfxmmu_lut904h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut905l_tt = regs::gfxmmu_gfxmmu_lut905l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut905h_tt = regs::gfxmmu_gfxmmu_lut905h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut906l_tt = regs::gfxmmu_gfxmmu_lut906l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut906h_tt = regs::gfxmmu_gfxmmu_lut906h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut907l_tt = regs::gfxmmu_gfxmmu_lut907l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut907h_tt = regs::gfxmmu_gfxmmu_lut907h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut908l_tt = regs::gfxmmu_gfxmmu_lut908l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut908h_tt = regs::gfxmmu_gfxmmu_lut908h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut909l_tt = regs::gfxmmu_gfxmmu_lut909l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut909h_tt = regs::gfxmmu_gfxmmu_lut909h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut910l_tt = regs::gfxmmu_gfxmmu_lut910l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut910h_tt = regs::gfxmmu_gfxmmu_lut910h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut911l_tt = regs::gfxmmu_gfxmmu_lut911l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut911h_tt = regs::gfxmmu_gfxmmu_lut911h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut912l_tt = regs::gfxmmu_gfxmmu_lut912l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut912h_tt = regs::gfxmmu_gfxmmu_lut912h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut913l_tt = regs::gfxmmu_gfxmmu_lut913l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut913h_tt = regs::gfxmmu_gfxmmu_lut913h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut914l_tt = regs::gfxmmu_gfxmmu_lut914l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut914h_tt = regs::gfxmmu_gfxmmu_lut914h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut915l_tt = regs::gfxmmu_gfxmmu_lut915l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut915h_tt = regs::gfxmmu_gfxmmu_lut915h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut916l_tt = regs::gfxmmu_gfxmmu_lut916l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut916h_tt = regs::gfxmmu_gfxmmu_lut916h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut917l_tt = regs::gfxmmu_gfxmmu_lut917l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut917h_tt = regs::gfxmmu_gfxmmu_lut917h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut918l_tt = regs::gfxmmu_gfxmmu_lut918l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut918h_tt = regs::gfxmmu_gfxmmu_lut918h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut919l_tt = regs::gfxmmu_gfxmmu_lut919l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut919h_tt = regs::gfxmmu_gfxmmu_lut919h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut920l_tt = regs::gfxmmu_gfxmmu_lut920l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut920h_tt = regs::gfxmmu_gfxmmu_lut920h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut921l_tt = regs::gfxmmu_gfxmmu_lut921l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut921h_tt = regs::gfxmmu_gfxmmu_lut921h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut922l_tt = regs::gfxmmu_gfxmmu_lut922l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut922h_tt = regs::gfxmmu_gfxmmu_lut922h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut923l_tt = regs::gfxmmu_gfxmmu_lut923l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut923h_tt = regs::gfxmmu_gfxmmu_lut923h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut924l_tt = regs::gfxmmu_gfxmmu_lut924l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut924h_tt = regs::gfxmmu_gfxmmu_lut924h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut925l_tt = regs::gfxmmu_gfxmmu_lut925l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut925h_tt = regs::gfxmmu_gfxmmu_lut925h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut926l_tt = regs::gfxmmu_gfxmmu_lut926l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut926h_tt = regs::gfxmmu_gfxmmu_lut926h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut927l_tt = regs::gfxmmu_gfxmmu_lut927l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut927h_tt = regs::gfxmmu_gfxmmu_lut927h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut928l_tt = regs::gfxmmu_gfxmmu_lut928l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut928h_tt = regs::gfxmmu_gfxmmu_lut928h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut929l_tt = regs::gfxmmu_gfxmmu_lut929l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut929h_tt = regs::gfxmmu_gfxmmu_lut929h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut930l_tt = regs::gfxmmu_gfxmmu_lut930l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut930h_tt = regs::gfxmmu_gfxmmu_lut930h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut931l_tt = regs::gfxmmu_gfxmmu_lut931l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut931h_tt = regs::gfxmmu_gfxmmu_lut931h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut932l_tt = regs::gfxmmu_gfxmmu_lut932l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut932h_tt = regs::gfxmmu_gfxmmu_lut932h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut933l_tt = regs::gfxmmu_gfxmmu_lut933l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut933h_tt = regs::gfxmmu_gfxmmu_lut933h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut934l_tt = regs::gfxmmu_gfxmmu_lut934l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut934h_tt = regs::gfxmmu_gfxmmu_lut934h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut935l_tt = regs::gfxmmu_gfxmmu_lut935l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut935h_tt = regs::gfxmmu_gfxmmu_lut935h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut936l_tt = regs::gfxmmu_gfxmmu_lut936l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut936h_tt = regs::gfxmmu_gfxmmu_lut936h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut937l_tt = regs::gfxmmu_gfxmmu_lut937l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut937h_tt = regs::gfxmmu_gfxmmu_lut937h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut938l_tt = regs::gfxmmu_gfxmmu_lut938l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut938h_tt = regs::gfxmmu_gfxmmu_lut938h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut939l_tt = regs::gfxmmu_gfxmmu_lut939l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut939h_tt = regs::gfxmmu_gfxmmu_lut939h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut940l_tt = regs::gfxmmu_gfxmmu_lut940l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut940h_tt = regs::gfxmmu_gfxmmu_lut940h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut941l_tt = regs::gfxmmu_gfxmmu_lut941l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut941h_tt = regs::gfxmmu_gfxmmu_lut941h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut942l_tt = regs::gfxmmu_gfxmmu_lut942l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut942h_tt = regs::gfxmmu_gfxmmu_lut942h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut943l_tt = regs::gfxmmu_gfxmmu_lut943l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut943h_tt = regs::gfxmmu_gfxmmu_lut943h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut944l_tt = regs::gfxmmu_gfxmmu_lut944l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut944h_tt = regs::gfxmmu_gfxmmu_lut944h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut945l_tt = regs::gfxmmu_gfxmmu_lut945l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut945h_tt = regs::gfxmmu_gfxmmu_lut945h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut946l_tt = regs::gfxmmu_gfxmmu_lut946l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut946h_tt = regs::gfxmmu_gfxmmu_lut946h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut947l_tt = regs::gfxmmu_gfxmmu_lut947l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut947h_tt = regs::gfxmmu_gfxmmu_lut947h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut948l_tt = regs::gfxmmu_gfxmmu_lut948l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut948h_tt = regs::gfxmmu_gfxmmu_lut948h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut949l_tt = regs::gfxmmu_gfxmmu_lut949l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut949h_tt = regs::gfxmmu_gfxmmu_lut949h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut950l_tt = regs::gfxmmu_gfxmmu_lut950l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut950h_tt = regs::gfxmmu_gfxmmu_lut950h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut951l_tt = regs::gfxmmu_gfxmmu_lut951l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut951h_tt = regs::gfxmmu_gfxmmu_lut951h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut952l_tt = regs::gfxmmu_gfxmmu_lut952l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut952h_tt = regs::gfxmmu_gfxmmu_lut952h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut953l_tt = regs::gfxmmu_gfxmmu_lut953l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut953h_tt = regs::gfxmmu_gfxmmu_lut953h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut954l_tt = regs::gfxmmu_gfxmmu_lut954l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut954h_tt = regs::gfxmmu_gfxmmu_lut954h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut955l_tt = regs::gfxmmu_gfxmmu_lut955l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut955h_tt = regs::gfxmmu_gfxmmu_lut955h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut956l_tt = regs::gfxmmu_gfxmmu_lut956l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut956h_tt = regs::gfxmmu_gfxmmu_lut956h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut957l_tt = regs::gfxmmu_gfxmmu_lut957l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut957h_tt = regs::gfxmmu_gfxmmu_lut957h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut958l_tt = regs::gfxmmu_gfxmmu_lut958l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut958h_tt = regs::gfxmmu_gfxmmu_lut958h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut959l_tt = regs::gfxmmu_gfxmmu_lut959l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut959h_tt = regs::gfxmmu_gfxmmu_lut959h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut960l_tt = regs::gfxmmu_gfxmmu_lut960l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut960h_tt = regs::gfxmmu_gfxmmu_lut960h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut961l_tt = regs::gfxmmu_gfxmmu_lut961l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut961h_tt = regs::gfxmmu_gfxmmu_lut961h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut962l_tt = regs::gfxmmu_gfxmmu_lut962l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut962h_tt = regs::gfxmmu_gfxmmu_lut962h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut963l_tt = regs::gfxmmu_gfxmmu_lut963l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut963h_tt = regs::gfxmmu_gfxmmu_lut963h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut964l_tt = regs::gfxmmu_gfxmmu_lut964l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut964h_tt = regs::gfxmmu_gfxmmu_lut964h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut965l_tt = regs::gfxmmu_gfxmmu_lut965l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut965h_tt = regs::gfxmmu_gfxmmu_lut965h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut966l_tt = regs::gfxmmu_gfxmmu_lut966l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut966h_tt = regs::gfxmmu_gfxmmu_lut966h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut967l_tt = regs::gfxmmu_gfxmmu_lut967l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut967h_tt = regs::gfxmmu_gfxmmu_lut967h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut968l_tt = regs::gfxmmu_gfxmmu_lut968l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut968h_tt = regs::gfxmmu_gfxmmu_lut968h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut969l_tt = regs::gfxmmu_gfxmmu_lut969l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut969h_tt = regs::gfxmmu_gfxmmu_lut969h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut970l_tt = regs::gfxmmu_gfxmmu_lut970l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut970h_tt = regs::gfxmmu_gfxmmu_lut970h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut971l_tt = regs::gfxmmu_gfxmmu_lut971l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut971h_tt = regs::gfxmmu_gfxmmu_lut971h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut972l_tt = regs::gfxmmu_gfxmmu_lut972l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut972h_tt = regs::gfxmmu_gfxmmu_lut972h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut973l_tt = regs::gfxmmu_gfxmmu_lut973l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut973h_tt = regs::gfxmmu_gfxmmu_lut973h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut974l_tt = regs::gfxmmu_gfxmmu_lut974l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut974h_tt = regs::gfxmmu_gfxmmu_lut974h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut975l_tt = regs::gfxmmu_gfxmmu_lut975l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut975h_tt = regs::gfxmmu_gfxmmu_lut975h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut976l_tt = regs::gfxmmu_gfxmmu_lut976l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut976h_tt = regs::gfxmmu_gfxmmu_lut976h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut977l_tt = regs::gfxmmu_gfxmmu_lut977l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut977h_tt = regs::gfxmmu_gfxmmu_lut977h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut978l_tt = regs::gfxmmu_gfxmmu_lut978l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut978h_tt = regs::gfxmmu_gfxmmu_lut978h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut979l_tt = regs::gfxmmu_gfxmmu_lut979l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut979h_tt = regs::gfxmmu_gfxmmu_lut979h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut980l_tt = regs::gfxmmu_gfxmmu_lut980l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut980h_tt = regs::gfxmmu_gfxmmu_lut980h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut981l_tt = regs::gfxmmu_gfxmmu_lut981l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut981h_tt = regs::gfxmmu_gfxmmu_lut981h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut982l_tt = regs::gfxmmu_gfxmmu_lut982l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut982h_tt = regs::gfxmmu_gfxmmu_lut982h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut983l_tt = regs::gfxmmu_gfxmmu_lut983l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut983h_tt = regs::gfxmmu_gfxmmu_lut983h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut984l_tt = regs::gfxmmu_gfxmmu_lut984l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut984h_tt = regs::gfxmmu_gfxmmu_lut984h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut985l_tt = regs::gfxmmu_gfxmmu_lut985l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut985h_tt = regs::gfxmmu_gfxmmu_lut985h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut986l_tt = regs::gfxmmu_gfxmmu_lut986l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut986h_tt = regs::gfxmmu_gfxmmu_lut986h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut987l_tt = regs::gfxmmu_gfxmmu_lut987l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut987h_tt = regs::gfxmmu_gfxmmu_lut987h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut988l_tt = regs::gfxmmu_gfxmmu_lut988l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut988h_tt = regs::gfxmmu_gfxmmu_lut988h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut989l_tt = regs::gfxmmu_gfxmmu_lut989l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut989h_tt = regs::gfxmmu_gfxmmu_lut989h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut990l_tt = regs::gfxmmu_gfxmmu_lut990l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut990h_tt = regs::gfxmmu_gfxmmu_lut990h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut991l_tt = regs::gfxmmu_gfxmmu_lut991l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut991h_tt = regs::gfxmmu_gfxmmu_lut991h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut992l_tt = regs::gfxmmu_gfxmmu_lut992l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut992h_tt = regs::gfxmmu_gfxmmu_lut992h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut993l_tt = regs::gfxmmu_gfxmmu_lut993l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut993h_tt = regs::gfxmmu_gfxmmu_lut993h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut994l_tt = regs::gfxmmu_gfxmmu_lut994l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut994h_tt = regs::gfxmmu_gfxmmu_lut994h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut995l_tt = regs::gfxmmu_gfxmmu_lut995l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut995h_tt = regs::gfxmmu_gfxmmu_lut995h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut996l_tt = regs::gfxmmu_gfxmmu_lut996l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut996h_tt = regs::gfxmmu_gfxmmu_lut996h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut997l_tt = regs::gfxmmu_gfxmmu_lut997l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut997h_tt = regs::gfxmmu_gfxmmu_lut997h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut998l_tt = regs::gfxmmu_gfxmmu_lut998l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut998h_tt = regs::gfxmmu_gfxmmu_lut998h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut999l_tt = regs::gfxmmu_gfxmmu_lut999l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut999h_tt = regs::gfxmmu_gfxmmu_lut999h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut1000l_tt = regs::gfxmmu_gfxmmu_lut1000l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut1000h_tt = regs::gfxmmu_gfxmmu_lut1000h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut1001l_tt = regs::gfxmmu_gfxmmu_lut1001l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut1001h_tt = regs::gfxmmu_gfxmmu_lut1001h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut1002l_tt = regs::gfxmmu_gfxmmu_lut1002l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut1002h_tt = regs::gfxmmu_gfxmmu_lut1002h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut1003l_tt = regs::gfxmmu_gfxmmu_lut1003l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut1003h_tt = regs::gfxmmu_gfxmmu_lut1003h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut1004l_tt = regs::gfxmmu_gfxmmu_lut1004l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut1004h_tt = regs::gfxmmu_gfxmmu_lut1004h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut1005l_tt = regs::gfxmmu_gfxmmu_lut1005l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut1005h_tt = regs::gfxmmu_gfxmmu_lut1005h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut1006l_tt = regs::gfxmmu_gfxmmu_lut1006l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut1006h_tt = regs::gfxmmu_gfxmmu_lut1006h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut1007l_tt = regs::gfxmmu_gfxmmu_lut1007l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut1007h_tt = regs::gfxmmu_gfxmmu_lut1007h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut1008l_tt = regs::gfxmmu_gfxmmu_lut1008l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut1008h_tt = regs::gfxmmu_gfxmmu_lut1008h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut1009l_tt = regs::gfxmmu_gfxmmu_lut1009l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut1009h_tt = regs::gfxmmu_gfxmmu_lut1009h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut1010l_tt = regs::gfxmmu_gfxmmu_lut1010l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut1010h_tt = regs::gfxmmu_gfxmmu_lut1010h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut1011l_tt = regs::gfxmmu_gfxmmu_lut1011l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut1011h_tt = regs::gfxmmu_gfxmmu_lut1011h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut1012l_tt = regs::gfxmmu_gfxmmu_lut1012l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut1012h_tt = regs::gfxmmu_gfxmmu_lut1012h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut1013l_tt = regs::gfxmmu_gfxmmu_lut1013l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut1013h_tt = regs::gfxmmu_gfxmmu_lut1013h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut1014l_tt = regs::gfxmmu_gfxmmu_lut1014l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut1014h_tt = regs::gfxmmu_gfxmmu_lut1014h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut1015l_tt = regs::gfxmmu_gfxmmu_lut1015l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut1015h_tt = regs::gfxmmu_gfxmmu_lut1015h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut1016l_tt = regs::gfxmmu_gfxmmu_lut1016l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut1016h_tt = regs::gfxmmu_gfxmmu_lut1016h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut1017l_tt = regs::gfxmmu_gfxmmu_lut1017l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut1017h_tt = regs::gfxmmu_gfxmmu_lut1017h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut1018l_tt = regs::gfxmmu_gfxmmu_lut1018l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut1018h_tt = regs::gfxmmu_gfxmmu_lut1018h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut1019l_tt = regs::gfxmmu_gfxmmu_lut1019l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut1019h_tt = regs::gfxmmu_gfxmmu_lut1019h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut1020l_tt = regs::gfxmmu_gfxmmu_lut1020l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut1020h_tt = regs::gfxmmu_gfxmmu_lut1020h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut1021l_tt = regs::gfxmmu_gfxmmu_lut1021l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut1021h_tt = regs::gfxmmu_gfxmmu_lut1021h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut1022l_tt = regs::gfxmmu_gfxmmu_lut1022l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut1022h_tt = regs::gfxmmu_gfxmmu_lut1022h_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut1023l_tt = regs::gfxmmu_gfxmmu_lut1023l_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gfxmmu_lut1023h_tt = regs::gfxmmu_gfxmmu_lut1023h_v1_tt<name, baseaddress, offset>;
 
   template <stdx::ct_string name, std::uint32_t baseaddress>
   using gfxmmux_t =

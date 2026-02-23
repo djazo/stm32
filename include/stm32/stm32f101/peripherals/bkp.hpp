@@ -7,51 +7,186 @@
 namespace stm32::stm32f101 {
 
 namespace bkp {
-  using dr1_tt = regs::bkp_dr1_v1_tt;
-  using dr2_tt = regs::bkp_dr2_v1_tt;
-  using dr3_tt = regs::bkp_dr3_v1_tt;
-  using dr4_tt = regs::bkp_dr4_v1_tt;
-  using dr5_tt = regs::bkp_dr5_v1_tt;
-  using dr6_tt = regs::bkp_dr6_v1_tt;
-  using dr7_tt = regs::bkp_dr7_v1_tt;
-  using dr8_tt = regs::bkp_dr8_v1_tt;
-  using dr9_tt = regs::bkp_dr9_v1_tt;
-  using dr10_tt = regs::bkp_dr10_v1_tt;
-  using rtccr_tt = regs::bkp_rtccr_v1_tt;
-  using cr_tt = regs::bkp_cr_v1_tt;
-  using csr_tt = regs::bkp_csr_v1_tt;
-  using dr11_tt = regs::bkp_dr11_v1_tt;
-  using dr12_tt = regs::bkp_dr12_v1_tt;
-  using dr13_tt = regs::bkp_dr13_v1_tt;
-  using dr14_tt = regs::bkp_dr14_v1_tt;
-  using dr15_tt = regs::bkp_dr15_v1_tt;
-  using dr16_tt = regs::bkp_dr16_v1_tt;
-  using dr17_tt = regs::bkp_dr17_v1_tt;
-  using dr18_tt = regs::bkp_dr18_v1_tt;
-  using dr19_tt = regs::bkp_dr19_v1_tt;
-  using dr20_tt = regs::bkp_dr20_v1_tt;
-  using dr21_tt = regs::bkp_dr21_v1_tt;
-  using dr22_tt = regs::bkp_dr22_v1_tt;
-  using dr23_tt = regs::bkp_dr23_v1_tt;
-  using dr24_tt = regs::bkp_dr24_v1_tt;
-  using dr25_tt = regs::bkp_dr25_v1_tt;
-  using dr26_tt = regs::bkp_dr26_v1_tt;
-  using dr27_tt = regs::bkp_dr27_v1_tt;
-  using dr28_tt = regs::bkp_dr28_v1_tt;
-  using dr29_tt = regs::bkp_dr29_v1_tt;
-  using dr30_tt = regs::bkp_dr30_v1_tt;
-  using dr31_tt = regs::bkp_dr31_v1_tt;
-  using dr32_tt = regs::bkp_dr32_v1_tt;
-  using dr33_tt = regs::bkp_dr33_v1_tt;
-  using dr34_tt = regs::bkp_dr34_v1_tt;
-  using dr35_tt = regs::bkp_dr35_v1_tt;
-  using dr36_tt = regs::bkp_dr36_v1_tt;
-  using dr37_tt = regs::bkp_dr37_v1_tt;
-  using dr38_tt = regs::bkp_dr38_v1_tt;
-  using dr39_tt = regs::bkp_dr39_v1_tt;
-  using dr40_tt = regs::bkp_dr40_v1_tt;
-  using dr41_tt = regs::bkp_dr41_v1_tt;
-  using dr42_tt = regs::bkp_dr42_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dr1_tt = regs::bkp_dr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dr2_tt = regs::bkp_dr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dr3_tt = regs::bkp_dr3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dr4_tt = regs::bkp_dr4_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dr5_tt = regs::bkp_dr5_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dr6_tt = regs::bkp_dr6_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dr7_tt = regs::bkp_dr7_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dr8_tt = regs::bkp_dr8_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dr9_tt = regs::bkp_dr9_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dr10_tt = regs::bkp_dr10_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rtccr_tt = regs::bkp_rtccr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cr_tt = regs::bkp_cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using csr_tt = regs::bkp_csr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dr11_tt = regs::bkp_dr11_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dr12_tt = regs::bkp_dr12_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dr13_tt = regs::bkp_dr13_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dr14_tt = regs::bkp_dr14_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dr15_tt = regs::bkp_dr15_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dr16_tt = regs::bkp_dr16_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dr17_tt = regs::bkp_dr17_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dr18_tt = regs::bkp_dr18_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dr19_tt = regs::bkp_dr19_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dr20_tt = regs::bkp_dr20_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dr21_tt = regs::bkp_dr21_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dr22_tt = regs::bkp_dr22_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dr23_tt = regs::bkp_dr23_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dr24_tt = regs::bkp_dr24_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dr25_tt = regs::bkp_dr25_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dr26_tt = regs::bkp_dr26_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dr27_tt = regs::bkp_dr27_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dr28_tt = regs::bkp_dr28_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dr29_tt = regs::bkp_dr29_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dr30_tt = regs::bkp_dr30_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dr31_tt = regs::bkp_dr31_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dr32_tt = regs::bkp_dr32_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dr33_tt = regs::bkp_dr33_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dr34_tt = regs::bkp_dr34_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dr35_tt = regs::bkp_dr35_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dr36_tt = regs::bkp_dr36_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dr37_tt = regs::bkp_dr37_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dr38_tt = regs::bkp_dr38_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dr39_tt = regs::bkp_dr39_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dr40_tt = regs::bkp_dr40_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dr41_tt = regs::bkp_dr41_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dr42_tt = regs::bkp_dr42_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using bkp_t =

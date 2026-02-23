@@ -7,32 +7,110 @@
 namespace stm32::stm32h745_cm4 {
 
 namespace usb_otg_hsx {
-  using otg_hs_gotgctl_tt = regs::usb_otg_hs_otg_hs_gotgctl_v1_tt;
-  using otg_hs_gotgint_tt = regs::usb_otg_hs_otg_hs_gotgint_v1_tt;
-  using otg_hs_gahbcfg_tt = regs::usb_otg_hs_otg_hs_gahbcfg_v1_tt;
-  using otg_hs_gusbcfg_tt = regs::usb_otg_hs_otg_hs_gusbcfg_v1_tt;
-  using otg_hs_grstctl_tt = regs::usb_otg_hs_otg_hs_grstctl_v1_tt;
-  using otg_hs_gintsts_tt = regs::usb_otg_hs_otg_hs_gintsts_v1_tt;
-  using otg_hs_gintmsk_tt = regs::usb_otg_hs_otg_hs_gintmsk_v1_tt;
-  using otg_hs_grxstsr_host_tt = regs::usb_otg_hs_otg_hs_grxstsr_host_v1_tt;
-  using otg_hs_grxstsp_host_tt = regs::usb_otg_hs_otg_hs_grxstsp_host_v1_tt;
-  using otg_hs_grxfsiz_tt = regs::usb_otg_hs_otg_hs_grxfsiz_v1_tt;
-  using otg_hs_hnptxfsiz_host_tt = regs::usb_otg_hs_otg_hs_hnptxfsiz_host_v1_tt;
-  using otg_hs_dieptxf0_device_tt = regs::usb_otg_hs_otg_hs_dieptxf0_device_v1_tt;
-  using otg_hs_gnptxsts_tt = regs::usb_otg_hs_otg_hs_gnptxsts_v1_tt;
-  using otg_hs_gccfg_tt = regs::usb_otg_hs_otg_hs_gccfg_v1_tt;
-  using otg_hs_cid_tt = regs::usb_otg_hs_otg_hs_cid_v1_tt;
-  using otg_hs_hptxfsiz_tt = regs::usb_otg_hs_otg_hs_hptxfsiz_v1_tt;
-  using otg_hs_dieptxf1_tt = regs::usb_otg_hs_otg_hs_dieptxf1_v1_tt;
-  using otg_hs_dieptxf2_tt = regs::usb_otg_hs_otg_hs_dieptxf2_v1_tt;
-  using otg_hs_dieptxf3_tt = regs::usb_otg_hs_otg_hs_dieptxf3_v1_tt;
-  using otg_hs_dieptxf4_tt = regs::usb_otg_hs_otg_hs_dieptxf4_v1_tt;
-  using otg_hs_dieptxf5_tt = regs::usb_otg_hs_otg_hs_dieptxf5_v1_tt;
-  using otg_hs_dieptxf6_tt = regs::usb_otg_hs_otg_hs_dieptxf6_v1_tt;
-  using otg_hs_dieptxf7_tt = regs::usb_otg_hs_otg_hs_dieptxf7_v1_tt;
-  using otg_hs_grxstsr_device_tt = regs::usb_otg_hs_otg_hs_grxstsr_device_v1_tt;
-  using otg_hs_grxstsp_device_tt = regs::usb_otg_hs_otg_hs_grxstsp_device_v1_tt;
-  using otg_hs_glpmcfg_tt = regs::usb_otg_hs_otg_hs_glpmcfg_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_gotgctl_tt = regs::usb_otg_hs_otg_hs_gotgctl_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_gotgint_tt = regs::usb_otg_hs_otg_hs_gotgint_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_gahbcfg_tt = regs::usb_otg_hs_otg_hs_gahbcfg_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_gusbcfg_tt = regs::usb_otg_hs_otg_hs_gusbcfg_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_grstctl_tt = regs::usb_otg_hs_otg_hs_grstctl_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_gintsts_tt = regs::usb_otg_hs_otg_hs_gintsts_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_gintmsk_tt = regs::usb_otg_hs_otg_hs_gintmsk_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_grxstsr_host_tt = regs::usb_otg_hs_otg_hs_grxstsr_host_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_grxstsp_host_tt = regs::usb_otg_hs_otg_hs_grxstsp_host_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_grxfsiz_tt = regs::usb_otg_hs_otg_hs_grxfsiz_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_hnptxfsiz_host_tt = regs::usb_otg_hs_otg_hs_hnptxfsiz_host_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_dieptxf0_device_tt = regs::usb_otg_hs_otg_hs_dieptxf0_device_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_gnptxsts_tt = regs::usb_otg_hs_otg_hs_gnptxsts_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_gccfg_tt = regs::usb_otg_hs_otg_hs_gccfg_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_cid_tt = regs::usb_otg_hs_otg_hs_cid_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_hptxfsiz_tt = regs::usb_otg_hs_otg_hs_hptxfsiz_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_dieptxf1_tt = regs::usb_otg_hs_otg_hs_dieptxf1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_dieptxf2_tt = regs::usb_otg_hs_otg_hs_dieptxf2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_dieptxf3_tt = regs::usb_otg_hs_otg_hs_dieptxf3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_dieptxf4_tt = regs::usb_otg_hs_otg_hs_dieptxf4_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_dieptxf5_tt = regs::usb_otg_hs_otg_hs_dieptxf5_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_dieptxf6_tt = regs::usb_otg_hs_otg_hs_dieptxf6_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_dieptxf7_tt = regs::usb_otg_hs_otg_hs_dieptxf7_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_grxstsr_device_tt = regs::usb_otg_hs_otg_hs_grxstsr_device_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_grxstsp_device_tt = regs::usb_otg_hs_otg_hs_grxstsp_device_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_glpmcfg_tt = regs::usb_otg_hs_otg_hs_glpmcfg_v1_tt<name, baseaddress, offset>;
 
   template <stdx::ct_string name, std::uint32_t baseaddress>
   using usb_otg_hsx_t =
@@ -68,109 +146,418 @@ namespace usb_otg_hsx {
 } // namespace usb_otg_hsx
 
 namespace usb_otg_hsx_v2 {
-  using otg_hs_hcfg_tt = regs::usb_otg_hs_otg_hs_hcfg_v1_tt;
-  using otg_hs_hfir_tt = regs::usb_otg_hs_otg_hs_hfir_v1_tt;
-  using otg_hs_hfnum_tt = regs::usb_otg_hs_otg_hs_hfnum_v1_tt;
-  using otg_hs_hptxsts_tt = regs::usb_otg_hs_otg_hs_hptxsts_v1_tt;
-  using otg_hs_haint_tt = regs::usb_otg_hs_otg_hs_haint_v1_tt;
-  using otg_hs_haintmsk_tt = regs::usb_otg_hs_otg_hs_haintmsk_v1_tt;
-  using otg_hs_hprt_tt = regs::usb_otg_hs_otg_hs_hprt_v1_tt;
-  using otg_hs_hcchar0_tt = regs::usb_otg_hs_otg_hs_hcchar0_v1_tt;
-  using otg_hs_hcchar1_tt = regs::usb_otg_hs_otg_hs_hcchar1_v1_tt;
-  using otg_hs_hcchar2_tt = regs::usb_otg_hs_otg_hs_hcchar2_v1_tt;
-  using otg_hs_hcchar3_tt = regs::usb_otg_hs_otg_hs_hcchar3_v1_tt;
-  using otg_hs_hcchar4_tt = regs::usb_otg_hs_otg_hs_hcchar4_v1_tt;
-  using otg_hs_hcchar5_tt = regs::usb_otg_hs_otg_hs_hcchar5_v1_tt;
-  using otg_hs_hcchar6_tt = regs::usb_otg_hs_otg_hs_hcchar6_v1_tt;
-  using otg_hs_hcchar7_tt = regs::usb_otg_hs_otg_hs_hcchar7_v1_tt;
-  using otg_hs_hcchar8_tt = regs::usb_otg_hs_otg_hs_hcchar8_v1_tt;
-  using otg_hs_hcchar9_tt = regs::usb_otg_hs_otg_hs_hcchar9_v1_tt;
-  using otg_hs_hcchar10_tt = regs::usb_otg_hs_otg_hs_hcchar10_v1_tt;
-  using otg_hs_hcchar11_tt = regs::usb_otg_hs_otg_hs_hcchar11_v1_tt;
-  using otg_hs_hcsplt0_tt = regs::usb_otg_hs_otg_hs_hcsplt0_v1_tt;
-  using otg_hs_hcsplt1_tt = regs::usb_otg_hs_otg_hs_hcsplt1_v1_tt;
-  using otg_hs_hcsplt2_tt = regs::usb_otg_hs_otg_hs_hcsplt2_v1_tt;
-  using otg_hs_hcsplt3_tt = regs::usb_otg_hs_otg_hs_hcsplt3_v1_tt;
-  using otg_hs_hcsplt4_tt = regs::usb_otg_hs_otg_hs_hcsplt4_v1_tt;
-  using otg_hs_hcsplt5_tt = regs::usb_otg_hs_otg_hs_hcsplt5_v1_tt;
-  using otg_hs_hcsplt6_tt = regs::usb_otg_hs_otg_hs_hcsplt6_v1_tt;
-  using otg_hs_hcsplt7_tt = regs::usb_otg_hs_otg_hs_hcsplt7_v1_tt;
-  using otg_hs_hcsplt8_tt = regs::usb_otg_hs_otg_hs_hcsplt8_v1_tt;
-  using otg_hs_hcsplt9_tt = regs::usb_otg_hs_otg_hs_hcsplt9_v1_tt;
-  using otg_hs_hcsplt10_tt = regs::usb_otg_hs_otg_hs_hcsplt10_v1_tt;
-  using otg_hs_hcsplt11_tt = regs::usb_otg_hs_otg_hs_hcsplt11_v1_tt;
-  using otg_hs_hcint0_tt = regs::usb_otg_hs_otg_hs_hcint0_v1_tt;
-  using otg_hs_hcint1_tt = regs::usb_otg_hs_otg_hs_hcint1_v1_tt;
-  using otg_hs_hcint2_tt = regs::usb_otg_hs_otg_hs_hcint2_v1_tt;
-  using otg_hs_hcint3_tt = regs::usb_otg_hs_otg_hs_hcint3_v1_tt;
-  using otg_hs_hcint4_tt = regs::usb_otg_hs_otg_hs_hcint4_v1_tt;
-  using otg_hs_hcint5_tt = regs::usb_otg_hs_otg_hs_hcint5_v1_tt;
-  using otg_hs_hcint6_tt = regs::usb_otg_hs_otg_hs_hcint6_v1_tt;
-  using otg_hs_hcint7_tt = regs::usb_otg_hs_otg_hs_hcint7_v1_tt;
-  using otg_hs_hcint8_tt = regs::usb_otg_hs_otg_hs_hcint8_v1_tt;
-  using otg_hs_hcint9_tt = regs::usb_otg_hs_otg_hs_hcint9_v1_tt;
-  using otg_hs_hcint10_tt = regs::usb_otg_hs_otg_hs_hcint10_v1_tt;
-  using otg_hs_hcint11_tt = regs::usb_otg_hs_otg_hs_hcint11_v1_tt;
-  using otg_hs_hcintmsk0_tt = regs::usb_otg_hs_otg_hs_hcintmsk0_v1_tt;
-  using otg_hs_hcintmsk1_tt = regs::usb_otg_hs_otg_hs_hcintmsk1_v1_tt;
-  using otg_hs_hcintmsk2_tt = regs::usb_otg_hs_otg_hs_hcintmsk2_v1_tt;
-  using otg_hs_hcintmsk3_tt = regs::usb_otg_hs_otg_hs_hcintmsk3_v1_tt;
-  using otg_hs_hcintmsk4_tt = regs::usb_otg_hs_otg_hs_hcintmsk4_v1_tt;
-  using otg_hs_hcintmsk5_tt = regs::usb_otg_hs_otg_hs_hcintmsk5_v1_tt;
-  using otg_hs_hcintmsk6_tt = regs::usb_otg_hs_otg_hs_hcintmsk6_v1_tt;
-  using otg_hs_hcintmsk7_tt = regs::usb_otg_hs_otg_hs_hcintmsk7_v1_tt;
-  using otg_hs_hcintmsk8_tt = regs::usb_otg_hs_otg_hs_hcintmsk8_v1_tt;
-  using otg_hs_hcintmsk9_tt = regs::usb_otg_hs_otg_hs_hcintmsk9_v1_tt;
-  using otg_hs_hcintmsk10_tt = regs::usb_otg_hs_otg_hs_hcintmsk10_v1_tt;
-  using otg_hs_hcintmsk11_tt = regs::usb_otg_hs_otg_hs_hcintmsk11_v1_tt;
-  using otg_hs_hctsiz0_tt = regs::usb_otg_hs_otg_hs_hctsiz0_v1_tt;
-  using otg_hs_hctsiz1_tt = regs::usb_otg_hs_otg_hs_hctsiz1_v1_tt;
-  using otg_hs_hctsiz2_tt = regs::usb_otg_hs_otg_hs_hctsiz2_v1_tt;
-  using otg_hs_hctsiz3_tt = regs::usb_otg_hs_otg_hs_hctsiz3_v1_tt;
-  using otg_hs_hctsiz4_tt = regs::usb_otg_hs_otg_hs_hctsiz4_v1_tt;
-  using otg_hs_hctsiz5_tt = regs::usb_otg_hs_otg_hs_hctsiz5_v1_tt;
-  using otg_hs_hctsiz6_tt = regs::usb_otg_hs_otg_hs_hctsiz6_v1_tt;
-  using otg_hs_hctsiz7_tt = regs::usb_otg_hs_otg_hs_hctsiz7_v1_tt;
-  using otg_hs_hctsiz8_tt = regs::usb_otg_hs_otg_hs_hctsiz8_v1_tt;
-  using otg_hs_hctsiz9_tt = regs::usb_otg_hs_otg_hs_hctsiz9_v1_tt;
-  using otg_hs_hctsiz10_tt = regs::usb_otg_hs_otg_hs_hctsiz10_v1_tt;
-  using otg_hs_hctsiz11_tt = regs::usb_otg_hs_otg_hs_hctsiz11_v1_tt;
-  using otg_hs_hcdma0_tt = regs::usb_otg_hs_otg_hs_hcdma0_v1_tt;
-  using otg_hs_hcdma1_tt = regs::usb_otg_hs_otg_hs_hcdma1_v1_tt;
-  using otg_hs_hcdma2_tt = regs::usb_otg_hs_otg_hs_hcdma2_v1_tt;
-  using otg_hs_hcdma3_tt = regs::usb_otg_hs_otg_hs_hcdma3_v1_tt;
-  using otg_hs_hcdma4_tt = regs::usb_otg_hs_otg_hs_hcdma4_v1_tt;
-  using otg_hs_hcdma5_tt = regs::usb_otg_hs_otg_hs_hcdma5_v1_tt;
-  using otg_hs_hcdma6_tt = regs::usb_otg_hs_otg_hs_hcdma6_v1_tt;
-  using otg_hs_hcdma7_tt = regs::usb_otg_hs_otg_hs_hcdma7_v1_tt;
-  using otg_hs_hcdma8_tt = regs::usb_otg_hs_otg_hs_hcdma8_v1_tt;
-  using otg_hs_hcdma9_tt = regs::usb_otg_hs_otg_hs_hcdma9_v1_tt;
-  using otg_hs_hcdma10_tt = regs::usb_otg_hs_otg_hs_hcdma10_v1_tt;
-  using otg_hs_hcdma11_tt = regs::usb_otg_hs_otg_hs_hcdma11_v1_tt;
-  using otg_hs_hcchar12_tt = regs::usb_otg_hs_otg_hs_hcchar12_v1_tt;
-  using otg_hs_hcsplt12_tt = regs::usb_otg_hs_otg_hs_hcsplt12_v1_tt;
-  using otg_hs_hcint12_tt = regs::usb_otg_hs_otg_hs_hcint12_v1_tt;
-  using otg_hs_hcintmsk12_tt = regs::usb_otg_hs_otg_hs_hcintmsk12_v1_tt;
-  using otg_hs_hctsiz12_tt = regs::usb_otg_hs_otg_hs_hctsiz12_v1_tt;
-  using otg_hs_hcdma12_tt = regs::usb_otg_hs_otg_hs_hcdma12_v1_tt;
-  using otg_hs_hcchar13_tt = regs::usb_otg_hs_otg_hs_hcchar13_v1_tt;
-  using otg_hs_hcsplt13_tt = regs::usb_otg_hs_otg_hs_hcsplt13_v1_tt;
-  using otg_hs_hcint13_tt = regs::usb_otg_hs_otg_hs_hcint13_v1_tt;
-  using otg_hs_hcintmsk13_tt = regs::usb_otg_hs_otg_hs_hcintmsk13_v1_tt;
-  using otg_hs_hctsiz13_tt = regs::usb_otg_hs_otg_hs_hctsiz13_v1_tt;
-  using otg_hs_hcdma13_tt = regs::usb_otg_hs_otg_hs_hcdma13_v1_tt;
-  using otg_hs_hcchar14_tt = regs::usb_otg_hs_otg_hs_hcchar14_v1_tt;
-  using otg_hs_hcsplt14_tt = regs::usb_otg_hs_otg_hs_hcsplt14_v1_tt;
-  using otg_hs_hcint14_tt = regs::usb_otg_hs_otg_hs_hcint14_v1_tt;
-  using otg_hs_hcintmsk14_tt = regs::usb_otg_hs_otg_hs_hcintmsk14_v1_tt;
-  using otg_hs_hctsiz14_tt = regs::usb_otg_hs_otg_hs_hctsiz14_v1_tt;
-  using otg_hs_hcdma14_tt = regs::usb_otg_hs_otg_hs_hcdma14_v1_tt;
-  using otg_hs_hcchar15_tt = regs::usb_otg_hs_otg_hs_hcchar15_v1_tt;
-  using otg_hs_hcsplt15_tt = regs::usb_otg_hs_otg_hs_hcsplt15_v1_tt;
-  using otg_hs_hcint15_tt = regs::usb_otg_hs_otg_hs_hcint15_v1_tt;
-  using otg_hs_hcintmsk15_tt = regs::usb_otg_hs_otg_hs_hcintmsk15_v1_tt;
-  using otg_hs_hctsiz15_tt = regs::usb_otg_hs_otg_hs_hctsiz15_v1_tt;
-  using otg_hs_hcdma15_tt = regs::usb_otg_hs_otg_hs_hcdma15_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_hcfg_tt = regs::usb_otg_hs_otg_hs_hcfg_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_hfir_tt = regs::usb_otg_hs_otg_hs_hfir_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_hfnum_tt = regs::usb_otg_hs_otg_hs_hfnum_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_hptxsts_tt = regs::usb_otg_hs_otg_hs_hptxsts_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_haint_tt = regs::usb_otg_hs_otg_hs_haint_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_haintmsk_tt = regs::usb_otg_hs_otg_hs_haintmsk_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_hprt_tt = regs::usb_otg_hs_otg_hs_hprt_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_hcchar0_tt = regs::usb_otg_hs_otg_hs_hcchar0_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_hcchar1_tt = regs::usb_otg_hs_otg_hs_hcchar1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_hcchar2_tt = regs::usb_otg_hs_otg_hs_hcchar2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_hcchar3_tt = regs::usb_otg_hs_otg_hs_hcchar3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_hcchar4_tt = regs::usb_otg_hs_otg_hs_hcchar4_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_hcchar5_tt = regs::usb_otg_hs_otg_hs_hcchar5_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_hcchar6_tt = regs::usb_otg_hs_otg_hs_hcchar6_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_hcchar7_tt = regs::usb_otg_hs_otg_hs_hcchar7_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_hcchar8_tt = regs::usb_otg_hs_otg_hs_hcchar8_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_hcchar9_tt = regs::usb_otg_hs_otg_hs_hcchar9_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_hcchar10_tt = regs::usb_otg_hs_otg_hs_hcchar10_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_hcchar11_tt = regs::usb_otg_hs_otg_hs_hcchar11_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_hcsplt0_tt = regs::usb_otg_hs_otg_hs_hcsplt0_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_hcsplt1_tt = regs::usb_otg_hs_otg_hs_hcsplt1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_hcsplt2_tt = regs::usb_otg_hs_otg_hs_hcsplt2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_hcsplt3_tt = regs::usb_otg_hs_otg_hs_hcsplt3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_hcsplt4_tt = regs::usb_otg_hs_otg_hs_hcsplt4_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_hcsplt5_tt = regs::usb_otg_hs_otg_hs_hcsplt5_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_hcsplt6_tt = regs::usb_otg_hs_otg_hs_hcsplt6_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_hcsplt7_tt = regs::usb_otg_hs_otg_hs_hcsplt7_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_hcsplt8_tt = regs::usb_otg_hs_otg_hs_hcsplt8_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_hcsplt9_tt = regs::usb_otg_hs_otg_hs_hcsplt9_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_hcsplt10_tt = regs::usb_otg_hs_otg_hs_hcsplt10_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_hcsplt11_tt = regs::usb_otg_hs_otg_hs_hcsplt11_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_hcint0_tt = regs::usb_otg_hs_otg_hs_hcint0_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_hcint1_tt = regs::usb_otg_hs_otg_hs_hcint1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_hcint2_tt = regs::usb_otg_hs_otg_hs_hcint2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_hcint3_tt = regs::usb_otg_hs_otg_hs_hcint3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_hcint4_tt = regs::usb_otg_hs_otg_hs_hcint4_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_hcint5_tt = regs::usb_otg_hs_otg_hs_hcint5_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_hcint6_tt = regs::usb_otg_hs_otg_hs_hcint6_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_hcint7_tt = regs::usb_otg_hs_otg_hs_hcint7_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_hcint8_tt = regs::usb_otg_hs_otg_hs_hcint8_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_hcint9_tt = regs::usb_otg_hs_otg_hs_hcint9_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_hcint10_tt = regs::usb_otg_hs_otg_hs_hcint10_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_hcint11_tt = regs::usb_otg_hs_otg_hs_hcint11_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_hcintmsk0_tt = regs::usb_otg_hs_otg_hs_hcintmsk0_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_hcintmsk1_tt = regs::usb_otg_hs_otg_hs_hcintmsk1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_hcintmsk2_tt = regs::usb_otg_hs_otg_hs_hcintmsk2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_hcintmsk3_tt = regs::usb_otg_hs_otg_hs_hcintmsk3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_hcintmsk4_tt = regs::usb_otg_hs_otg_hs_hcintmsk4_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_hcintmsk5_tt = regs::usb_otg_hs_otg_hs_hcintmsk5_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_hcintmsk6_tt = regs::usb_otg_hs_otg_hs_hcintmsk6_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_hcintmsk7_tt = regs::usb_otg_hs_otg_hs_hcintmsk7_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_hcintmsk8_tt = regs::usb_otg_hs_otg_hs_hcintmsk8_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_hcintmsk9_tt = regs::usb_otg_hs_otg_hs_hcintmsk9_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_hcintmsk10_tt = regs::usb_otg_hs_otg_hs_hcintmsk10_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_hcintmsk11_tt = regs::usb_otg_hs_otg_hs_hcintmsk11_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_hctsiz0_tt = regs::usb_otg_hs_otg_hs_hctsiz0_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_hctsiz1_tt = regs::usb_otg_hs_otg_hs_hctsiz1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_hctsiz2_tt = regs::usb_otg_hs_otg_hs_hctsiz2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_hctsiz3_tt = regs::usb_otg_hs_otg_hs_hctsiz3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_hctsiz4_tt = regs::usb_otg_hs_otg_hs_hctsiz4_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_hctsiz5_tt = regs::usb_otg_hs_otg_hs_hctsiz5_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_hctsiz6_tt = regs::usb_otg_hs_otg_hs_hctsiz6_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_hctsiz7_tt = regs::usb_otg_hs_otg_hs_hctsiz7_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_hctsiz8_tt = regs::usb_otg_hs_otg_hs_hctsiz8_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_hctsiz9_tt = regs::usb_otg_hs_otg_hs_hctsiz9_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_hctsiz10_tt = regs::usb_otg_hs_otg_hs_hctsiz10_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_hctsiz11_tt = regs::usb_otg_hs_otg_hs_hctsiz11_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_hcdma0_tt = regs::usb_otg_hs_otg_hs_hcdma0_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_hcdma1_tt = regs::usb_otg_hs_otg_hs_hcdma1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_hcdma2_tt = regs::usb_otg_hs_otg_hs_hcdma2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_hcdma3_tt = regs::usb_otg_hs_otg_hs_hcdma3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_hcdma4_tt = regs::usb_otg_hs_otg_hs_hcdma4_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_hcdma5_tt = regs::usb_otg_hs_otg_hs_hcdma5_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_hcdma6_tt = regs::usb_otg_hs_otg_hs_hcdma6_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_hcdma7_tt = regs::usb_otg_hs_otg_hs_hcdma7_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_hcdma8_tt = regs::usb_otg_hs_otg_hs_hcdma8_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_hcdma9_tt = regs::usb_otg_hs_otg_hs_hcdma9_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_hcdma10_tt = regs::usb_otg_hs_otg_hs_hcdma10_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_hcdma11_tt = regs::usb_otg_hs_otg_hs_hcdma11_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_hcchar12_tt = regs::usb_otg_hs_otg_hs_hcchar12_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_hcsplt12_tt = regs::usb_otg_hs_otg_hs_hcsplt12_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_hcint12_tt = regs::usb_otg_hs_otg_hs_hcint12_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_hcintmsk12_tt = regs::usb_otg_hs_otg_hs_hcintmsk12_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_hctsiz12_tt = regs::usb_otg_hs_otg_hs_hctsiz12_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_hcdma12_tt = regs::usb_otg_hs_otg_hs_hcdma12_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_hcchar13_tt = regs::usb_otg_hs_otg_hs_hcchar13_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_hcsplt13_tt = regs::usb_otg_hs_otg_hs_hcsplt13_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_hcint13_tt = regs::usb_otg_hs_otg_hs_hcint13_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_hcintmsk13_tt = regs::usb_otg_hs_otg_hs_hcintmsk13_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_hctsiz13_tt = regs::usb_otg_hs_otg_hs_hctsiz13_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_hcdma13_tt = regs::usb_otg_hs_otg_hs_hcdma13_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_hcchar14_tt = regs::usb_otg_hs_otg_hs_hcchar14_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_hcsplt14_tt = regs::usb_otg_hs_otg_hs_hcsplt14_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_hcint14_tt = regs::usb_otg_hs_otg_hs_hcint14_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_hcintmsk14_tt = regs::usb_otg_hs_otg_hs_hcintmsk14_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_hctsiz14_tt = regs::usb_otg_hs_otg_hs_hctsiz14_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_hcdma14_tt = regs::usb_otg_hs_otg_hs_hcdma14_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_hcchar15_tt = regs::usb_otg_hs_otg_hs_hcchar15_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_hcsplt15_tt = regs::usb_otg_hs_otg_hs_hcsplt15_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_hcint15_tt = regs::usb_otg_hs_otg_hs_hcint15_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_hcintmsk15_tt = regs::usb_otg_hs_otg_hs_hcintmsk15_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_hctsiz15_tt = regs::usb_otg_hs_otg_hs_hctsiz15_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_hcdma15_tt = regs::usb_otg_hs_otg_hs_hcdma15_v1_tt<name, baseaddress, offset>;
 
   template <stdx::ct_string name, std::uint32_t baseaddress>
   using usb_otg_hsx_v2_t =
@@ -283,80 +670,302 @@ namespace usb_otg_hsx_v2 {
 } // namespace usb_otg_hsx_v2
 
 namespace usb_otg_hsx_v3 {
-  using otg_hs_dcfg_tt = regs::usb_otg_hs_otg_hs_dcfg_v1_tt;
-  using otg_hs_dctl_tt = regs::usb_otg_hs_otg_hs_dctl_v1_tt;
-  using otg_hs_dsts_tt = regs::usb_otg_hs_otg_hs_dsts_v1_tt;
-  using otg_hs_diepmsk_tt = regs::usb_otg_hs_otg_hs_diepmsk_v1_tt;
-  using otg_hs_doepmsk_tt = regs::usb_otg_hs_otg_hs_doepmsk_v1_tt;
-  using otg_hs_daint_tt = regs::usb_otg_hs_otg_hs_daint_v1_tt;
-  using otg_hs_daintmsk_tt = regs::usb_otg_hs_otg_hs_daintmsk_v1_tt;
-  using otg_hs_dvbusdis_tt = regs::usb_otg_hs_otg_hs_dvbusdis_v1_tt;
-  using otg_hs_dvbuspulse_tt = regs::usb_otg_hs_otg_hs_dvbuspulse_v1_tt;
-  using otg_hs_dthrctl_tt = regs::usb_otg_hs_otg_hs_dthrctl_v1_tt;
-  using otg_hs_diepempmsk_tt = regs::usb_otg_hs_otg_hs_diepempmsk_v1_tt;
-  using otg_hs_deachint_tt = regs::usb_otg_hs_otg_hs_deachint_v1_tt;
-  using otg_hs_deachintmsk_tt = regs::usb_otg_hs_otg_hs_deachintmsk_v1_tt;
-  using otg_hs_diepctl0_tt = regs::usb_otg_hs_otg_hs_diepctl0_v1_tt;
-  using otg_hs_diepctl1_tt = regs::usb_otg_hs_otg_hs_diepctl1_v1_tt;
-  using otg_hs_diepctl2_tt = regs::usb_otg_hs_otg_hs_diepctl2_v1_tt;
-  using otg_hs_diepctl3_tt = regs::usb_otg_hs_otg_hs_diepctl3_v1_tt;
-  using otg_hs_diepctl4_tt = regs::usb_otg_hs_otg_hs_diepctl4_v1_tt;
-  using otg_hs_diepctl5_tt = regs::usb_otg_hs_otg_hs_diepctl5_v1_tt;
-  using otg_hs_diepctl6_tt = regs::usb_otg_hs_otg_hs_diepctl6_v1_tt;
-  using otg_hs_diepctl7_tt = regs::usb_otg_hs_otg_hs_diepctl7_v1_tt;
-  using otg_hs_diepint0_tt = regs::usb_otg_hs_otg_hs_diepint0_v1_tt;
-  using otg_hs_diepint1_tt = regs::usb_otg_hs_otg_hs_diepint1_v1_tt;
-  using otg_hs_diepint2_tt = regs::usb_otg_hs_otg_hs_diepint2_v1_tt;
-  using otg_hs_diepint3_tt = regs::usb_otg_hs_otg_hs_diepint3_v1_tt;
-  using otg_hs_diepint4_tt = regs::usb_otg_hs_otg_hs_diepint4_v1_tt;
-  using otg_hs_diepint5_tt = regs::usb_otg_hs_otg_hs_diepint5_v1_tt;
-  using otg_hs_diepint6_tt = regs::usb_otg_hs_otg_hs_diepint6_v1_tt;
-  using otg_hs_diepint7_tt = regs::usb_otg_hs_otg_hs_diepint7_v1_tt;
-  using otg_hs_dieptsiz0_tt = regs::usb_otg_hs_otg_hs_dieptsiz0_v1_tt;
-  using otg_hs_diepdma1_tt = regs::usb_otg_hs_otg_hs_diepdma1_v1_tt;
-  using otg_hs_diepdma2_tt = regs::usb_otg_hs_otg_hs_diepdma2_v1_tt;
-  using otg_hs_diepdma3_tt = regs::usb_otg_hs_otg_hs_diepdma3_v1_tt;
-  using otg_hs_diepdma4_tt = regs::usb_otg_hs_otg_hs_diepdma4_v1_tt;
-  using otg_hs_diepdma5_tt = regs::usb_otg_hs_otg_hs_diepdma5_v1_tt;
-  using otg_hs_dtxfsts0_tt = regs::usb_otg_hs_otg_hs_dtxfsts0_v1_tt;
-  using otg_hs_dtxfsts1_tt = regs::usb_otg_hs_otg_hs_dtxfsts1_v1_tt;
-  using otg_hs_dtxfsts2_tt = regs::usb_otg_hs_otg_hs_dtxfsts2_v1_tt;
-  using otg_hs_dtxfsts3_tt = regs::usb_otg_hs_otg_hs_dtxfsts3_v1_tt;
-  using otg_hs_dtxfsts4_tt = regs::usb_otg_hs_otg_hs_dtxfsts4_v1_tt;
-  using otg_hs_dtxfsts5_tt = regs::usb_otg_hs_otg_hs_dtxfsts5_v1_tt;
-  using otg_hs_dieptsiz1_tt = regs::usb_otg_hs_otg_hs_dieptsiz1_v1_tt;
-  using otg_hs_dieptsiz2_tt = regs::usb_otg_hs_otg_hs_dieptsiz2_v1_tt;
-  using otg_hs_dieptsiz3_tt = regs::usb_otg_hs_otg_hs_dieptsiz3_v1_tt;
-  using otg_hs_dieptsiz4_tt = regs::usb_otg_hs_otg_hs_dieptsiz4_v1_tt;
-  using otg_hs_dieptsiz5_tt = regs::usb_otg_hs_otg_hs_dieptsiz5_v1_tt;
-  using otg_hs_doepctl0_tt = regs::usb_otg_hs_otg_hs_doepctl0_v1_tt;
-  using otg_hs_doepctl1_tt = regs::usb_otg_hs_otg_hs_doepctl1_v1_tt;
-  using otg_hs_doepctl2_tt = regs::usb_otg_hs_otg_hs_doepctl2_v1_tt;
-  using otg_hs_doepctl3_tt = regs::usb_otg_hs_otg_hs_doepctl3_v1_tt;
-  using otg_hs_doepint0_tt = regs::usb_otg_hs_otg_hs_doepint0_v1_tt;
-  using otg_hs_doepint1_tt = regs::usb_otg_hs_otg_hs_doepint1_v1_tt;
-  using otg_hs_doepint2_tt = regs::usb_otg_hs_otg_hs_doepint2_v1_tt;
-  using otg_hs_doepint3_tt = regs::usb_otg_hs_otg_hs_doepint3_v1_tt;
-  using otg_hs_doepint4_tt = regs::usb_otg_hs_otg_hs_doepint4_v1_tt;
-  using otg_hs_doepint5_tt = regs::usb_otg_hs_otg_hs_doepint5_v1_tt;
-  using otg_hs_doepint6_tt = regs::usb_otg_hs_otg_hs_doepint6_v1_tt;
-  using otg_hs_doepint7_tt = regs::usb_otg_hs_otg_hs_doepint7_v1_tt;
-  using otg_hs_doeptsiz0_tt = regs::usb_otg_hs_otg_hs_doeptsiz0_v1_tt;
-  using otg_hs_doeptsiz1_tt = regs::usb_otg_hs_otg_hs_doeptsiz1_v1_tt;
-  using otg_hs_doeptsiz2_tt = regs::usb_otg_hs_otg_hs_doeptsiz2_v1_tt;
-  using otg_hs_doeptsiz3_tt = regs::usb_otg_hs_otg_hs_doeptsiz3_v1_tt;
-  using otg_hs_doeptsiz4_tt = regs::usb_otg_hs_otg_hs_doeptsiz4_v1_tt;
-  using otg_hs_dieptsiz6_tt = regs::usb_otg_hs_otg_hs_dieptsiz6_v1_tt;
-  using otg_hs_dtxfsts6_tt = regs::usb_otg_hs_otg_hs_dtxfsts6_v1_tt;
-  using otg_hs_dieptsiz7_tt = regs::usb_otg_hs_otg_hs_dieptsiz7_v1_tt;
-  using otg_hs_dtxfsts7_tt = regs::usb_otg_hs_otg_hs_dtxfsts7_v1_tt;
-  using otg_hs_doepctl4_tt = regs::usb_otg_hs_otg_hs_doepctl4_v1_tt;
-  using otg_hs_doepctl5_tt = regs::usb_otg_hs_otg_hs_doepctl5_v1_tt;
-  using otg_hs_doepctl6_tt = regs::usb_otg_hs_otg_hs_doepctl6_v1_tt;
-  using otg_hs_doepctl7_tt = regs::usb_otg_hs_otg_hs_doepctl7_v1_tt;
-  using otg_hs_doeptsiz5_tt = regs::usb_otg_hs_otg_hs_doeptsiz5_v1_tt;
-  using otg_hs_doeptsiz6_tt = regs::usb_otg_hs_otg_hs_doeptsiz6_v1_tt;
-  using otg_hs_doeptsiz7_tt = regs::usb_otg_hs_otg_hs_doeptsiz7_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_dcfg_tt = regs::usb_otg_hs_otg_hs_dcfg_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_dctl_tt = regs::usb_otg_hs_otg_hs_dctl_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_dsts_tt = regs::usb_otg_hs_otg_hs_dsts_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_diepmsk_tt = regs::usb_otg_hs_otg_hs_diepmsk_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_doepmsk_tt = regs::usb_otg_hs_otg_hs_doepmsk_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_daint_tt = regs::usb_otg_hs_otg_hs_daint_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_daintmsk_tt = regs::usb_otg_hs_otg_hs_daintmsk_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_dvbusdis_tt = regs::usb_otg_hs_otg_hs_dvbusdis_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_dvbuspulse_tt = regs::usb_otg_hs_otg_hs_dvbuspulse_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_dthrctl_tt = regs::usb_otg_hs_otg_hs_dthrctl_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_diepempmsk_tt = regs::usb_otg_hs_otg_hs_diepempmsk_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_deachint_tt = regs::usb_otg_hs_otg_hs_deachint_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_deachintmsk_tt = regs::usb_otg_hs_otg_hs_deachintmsk_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_diepctl0_tt = regs::usb_otg_hs_otg_hs_diepctl0_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_diepctl1_tt = regs::usb_otg_hs_otg_hs_diepctl1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_diepctl2_tt = regs::usb_otg_hs_otg_hs_diepctl2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_diepctl3_tt = regs::usb_otg_hs_otg_hs_diepctl3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_diepctl4_tt = regs::usb_otg_hs_otg_hs_diepctl4_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_diepctl5_tt = regs::usb_otg_hs_otg_hs_diepctl5_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_diepctl6_tt = regs::usb_otg_hs_otg_hs_diepctl6_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_diepctl7_tt = regs::usb_otg_hs_otg_hs_diepctl7_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_diepint0_tt = regs::usb_otg_hs_otg_hs_diepint0_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_diepint1_tt = regs::usb_otg_hs_otg_hs_diepint1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_diepint2_tt = regs::usb_otg_hs_otg_hs_diepint2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_diepint3_tt = regs::usb_otg_hs_otg_hs_diepint3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_diepint4_tt = regs::usb_otg_hs_otg_hs_diepint4_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_diepint5_tt = regs::usb_otg_hs_otg_hs_diepint5_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_diepint6_tt = regs::usb_otg_hs_otg_hs_diepint6_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_diepint7_tt = regs::usb_otg_hs_otg_hs_diepint7_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_dieptsiz0_tt = regs::usb_otg_hs_otg_hs_dieptsiz0_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_diepdma1_tt = regs::usb_otg_hs_otg_hs_diepdma1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_diepdma2_tt = regs::usb_otg_hs_otg_hs_diepdma2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_diepdma3_tt = regs::usb_otg_hs_otg_hs_diepdma3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_diepdma4_tt = regs::usb_otg_hs_otg_hs_diepdma4_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_diepdma5_tt = regs::usb_otg_hs_otg_hs_diepdma5_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_dtxfsts0_tt = regs::usb_otg_hs_otg_hs_dtxfsts0_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_dtxfsts1_tt = regs::usb_otg_hs_otg_hs_dtxfsts1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_dtxfsts2_tt = regs::usb_otg_hs_otg_hs_dtxfsts2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_dtxfsts3_tt = regs::usb_otg_hs_otg_hs_dtxfsts3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_dtxfsts4_tt = regs::usb_otg_hs_otg_hs_dtxfsts4_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_dtxfsts5_tt = regs::usb_otg_hs_otg_hs_dtxfsts5_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_dieptsiz1_tt = regs::usb_otg_hs_otg_hs_dieptsiz1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_dieptsiz2_tt = regs::usb_otg_hs_otg_hs_dieptsiz2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_dieptsiz3_tt = regs::usb_otg_hs_otg_hs_dieptsiz3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_dieptsiz4_tt = regs::usb_otg_hs_otg_hs_dieptsiz4_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_dieptsiz5_tt = regs::usb_otg_hs_otg_hs_dieptsiz5_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_doepctl0_tt = regs::usb_otg_hs_otg_hs_doepctl0_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_doepctl1_tt = regs::usb_otg_hs_otg_hs_doepctl1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_doepctl2_tt = regs::usb_otg_hs_otg_hs_doepctl2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_doepctl3_tt = regs::usb_otg_hs_otg_hs_doepctl3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_doepint0_tt = regs::usb_otg_hs_otg_hs_doepint0_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_doepint1_tt = regs::usb_otg_hs_otg_hs_doepint1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_doepint2_tt = regs::usb_otg_hs_otg_hs_doepint2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_doepint3_tt = regs::usb_otg_hs_otg_hs_doepint3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_doepint4_tt = regs::usb_otg_hs_otg_hs_doepint4_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_doepint5_tt = regs::usb_otg_hs_otg_hs_doepint5_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_doepint6_tt = regs::usb_otg_hs_otg_hs_doepint6_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_doepint7_tt = regs::usb_otg_hs_otg_hs_doepint7_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_doeptsiz0_tt = regs::usb_otg_hs_otg_hs_doeptsiz0_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_doeptsiz1_tt = regs::usb_otg_hs_otg_hs_doeptsiz1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_doeptsiz2_tt = regs::usb_otg_hs_otg_hs_doeptsiz2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_doeptsiz3_tt = regs::usb_otg_hs_otg_hs_doeptsiz3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_doeptsiz4_tt = regs::usb_otg_hs_otg_hs_doeptsiz4_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_dieptsiz6_tt = regs::usb_otg_hs_otg_hs_dieptsiz6_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_dtxfsts6_tt = regs::usb_otg_hs_otg_hs_dtxfsts6_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_dieptsiz7_tt = regs::usb_otg_hs_otg_hs_dieptsiz7_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_dtxfsts7_tt = regs::usb_otg_hs_otg_hs_dtxfsts7_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_doepctl4_tt = regs::usb_otg_hs_otg_hs_doepctl4_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_doepctl5_tt = regs::usb_otg_hs_otg_hs_doepctl5_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_doepctl6_tt = regs::usb_otg_hs_otg_hs_doepctl6_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_doepctl7_tt = regs::usb_otg_hs_otg_hs_doepctl7_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_doeptsiz5_tt = regs::usb_otg_hs_otg_hs_doeptsiz5_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_doeptsiz6_tt = regs::usb_otg_hs_otg_hs_doeptsiz6_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_doeptsiz7_tt = regs::usb_otg_hs_otg_hs_doeptsiz7_v1_tt<name, baseaddress, offset>;
 
   template <stdx::ct_string name, std::uint32_t baseaddress>
   using usb_otg_hsx_v3_t =
@@ -440,7 +1049,10 @@ namespace usb_otg_hsx_v3 {
 } // namespace usb_otg_hsx_v3
 
 namespace usb_otg_hsx_v4 {
-  using otg_hs_pcgcr_tt = regs::usb_otg_hs_otg_hs_pcgcr_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using otg_hs_pcgcr_tt = regs::usb_otg_hs_otg_hs_pcgcr_v1_tt<name, baseaddress, offset>;
 
   template <stdx::ct_string name, std::uint32_t baseaddress>
   using usb_otg_hsx_v4_t =

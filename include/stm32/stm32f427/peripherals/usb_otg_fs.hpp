@@ -7,25 +7,82 @@
 namespace stm32::stm32f427 {
 
 namespace otg_fs_global {
-  using fs_gotgctl_tt = regs::usb_otg_fs_fs_gotgctl_v1_tt;
-  using fs_gotgint_tt = regs::usb_otg_fs_fs_gotgint_v1_tt;
-  using fs_gahbcfg_tt = regs::usb_otg_fs_fs_gahbcfg_v1_tt;
-  using fs_gusbcfg_tt = regs::usb_otg_fs_fs_gusbcfg_v1_tt;
-  using fs_grstctl_tt = regs::usb_otg_fs_fs_grstctl_v1_tt;
-  using fs_gintsts_tt = regs::usb_otg_fs_fs_gintsts_v1_tt;
-  using fs_gintmsk_tt = regs::usb_otg_fs_fs_gintmsk_v1_tt;
-  using fs_grxstsr_device_tt = regs::usb_otg_fs_fs_grxstsr_device_v1_tt;
-  using fs_grxstsr_host_tt = regs::usb_otg_fs_fs_grxstsr_host_v1_tt;
-  using fs_grxfsiz_tt = regs::usb_otg_fs_fs_grxfsiz_v1_tt;
-  using fs_gnptxfsiz_device_tt = regs::usb_otg_fs_fs_gnptxfsiz_device_v1_tt;
-  using fs_gnptxfsiz_host_tt = regs::usb_otg_fs_fs_gnptxfsiz_host_v1_tt;
-  using fs_gnptxsts_tt = regs::usb_otg_fs_fs_gnptxsts_v1_tt;
-  using fs_gccfg_tt = regs::usb_otg_fs_fs_gccfg_v1_tt;
-  using fs_cid_tt = regs::usb_otg_fs_fs_cid_v1_tt;
-  using fs_hptxfsiz_tt = regs::usb_otg_fs_fs_hptxfsiz_v1_tt;
-  using fs_dieptxf1_tt = regs::usb_otg_fs_fs_dieptxf1_v1_tt;
-  using fs_dieptxf2_tt = regs::usb_otg_fs_fs_dieptxf2_v1_tt;
-  using fs_dieptxf3_tt = regs::usb_otg_fs_fs_dieptxf3_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fs_gotgctl_tt = regs::usb_otg_fs_fs_gotgctl_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fs_gotgint_tt = regs::usb_otg_fs_fs_gotgint_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fs_gahbcfg_tt = regs::usb_otg_fs_fs_gahbcfg_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fs_gusbcfg_tt = regs::usb_otg_fs_fs_gusbcfg_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fs_grstctl_tt = regs::usb_otg_fs_fs_grstctl_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fs_gintsts_tt = regs::usb_otg_fs_fs_gintsts_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fs_gintmsk_tt = regs::usb_otg_fs_fs_gintmsk_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fs_grxstsr_device_tt = regs::usb_otg_fs_fs_grxstsr_device_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fs_grxstsr_host_tt = regs::usb_otg_fs_fs_grxstsr_host_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fs_grxfsiz_tt = regs::usb_otg_fs_fs_grxfsiz_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fs_gnptxfsiz_device_tt = regs::usb_otg_fs_fs_gnptxfsiz_device_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fs_gnptxfsiz_host_tt = regs::usb_otg_fs_fs_gnptxfsiz_host_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fs_gnptxsts_tt = regs::usb_otg_fs_fs_gnptxsts_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fs_gccfg_tt = regs::usb_otg_fs_fs_gccfg_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fs_cid_tt = regs::usb_otg_fs_fs_cid_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fs_hptxfsiz_tt = regs::usb_otg_fs_fs_hptxfsiz_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fs_dieptxf1_tt = regs::usb_otg_fs_fs_dieptxf1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fs_dieptxf2_tt = regs::usb_otg_fs_fs_dieptxf2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fs_dieptxf3_tt = regs::usb_otg_fs_fs_dieptxf3_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using otg_fs_global_t =
@@ -54,45 +111,162 @@ namespace otg_fs_global {
 } // namespace otg_fs_global
 
 namespace otg_fs_host {
-  using fs_hcfg_tt = regs::usb_otg_fs_fs_hcfg_v1_tt;
-  using hfir_tt = regs::usb_otg_fs_hfir_v1_tt;
-  using fs_hfnum_tt = regs::usb_otg_fs_fs_hfnum_v1_tt;
-  using fs_hptxsts_tt = regs::usb_otg_fs_fs_hptxsts_v1_tt;
-  using haint_tt = regs::usb_otg_fs_haint_v1_tt;
-  using haintmsk_tt = regs::usb_otg_fs_haintmsk_v1_tt;
-  using fs_hprt_tt = regs::usb_otg_fs_fs_hprt_v1_tt;
-  using fs_hcchar0_tt = regs::usb_otg_fs_fs_hcchar0_v1_tt;
-  using fs_hcchar1_tt = regs::usb_otg_fs_fs_hcchar1_v1_tt;
-  using fs_hcchar2_tt = regs::usb_otg_fs_fs_hcchar2_v1_tt;
-  using fs_hcchar3_tt = regs::usb_otg_fs_fs_hcchar3_v1_tt;
-  using fs_hcchar4_tt = regs::usb_otg_fs_fs_hcchar4_v1_tt;
-  using fs_hcchar5_tt = regs::usb_otg_fs_fs_hcchar5_v1_tt;
-  using fs_hcchar6_tt = regs::usb_otg_fs_fs_hcchar6_v1_tt;
-  using fs_hcchar7_tt = regs::usb_otg_fs_fs_hcchar7_v1_tt;
-  using fs_hcint0_tt = regs::usb_otg_fs_fs_hcint0_v1_tt;
-  using fs_hcint1_tt = regs::usb_otg_fs_fs_hcint1_v1_tt;
-  using fs_hcint2_tt = regs::usb_otg_fs_fs_hcint2_v1_tt;
-  using fs_hcint3_tt = regs::usb_otg_fs_fs_hcint3_v1_tt;
-  using fs_hcint4_tt = regs::usb_otg_fs_fs_hcint4_v1_tt;
-  using fs_hcint5_tt = regs::usb_otg_fs_fs_hcint5_v1_tt;
-  using fs_hcint6_tt = regs::usb_otg_fs_fs_hcint6_v1_tt;
-  using fs_hcint7_tt = regs::usb_otg_fs_fs_hcint7_v1_tt;
-  using fs_hcintmsk0_tt = regs::usb_otg_fs_fs_hcintmsk0_v1_tt;
-  using fs_hcintmsk1_tt = regs::usb_otg_fs_fs_hcintmsk1_v1_tt;
-  using fs_hcintmsk2_tt = regs::usb_otg_fs_fs_hcintmsk2_v1_tt;
-  using fs_hcintmsk3_tt = regs::usb_otg_fs_fs_hcintmsk3_v1_tt;
-  using fs_hcintmsk4_tt = regs::usb_otg_fs_fs_hcintmsk4_v1_tt;
-  using fs_hcintmsk5_tt = regs::usb_otg_fs_fs_hcintmsk5_v1_tt;
-  using fs_hcintmsk6_tt = regs::usb_otg_fs_fs_hcintmsk6_v1_tt;
-  using fs_hcintmsk7_tt = regs::usb_otg_fs_fs_hcintmsk7_v1_tt;
-  using fs_hctsiz0_tt = regs::usb_otg_fs_fs_hctsiz0_v1_tt;
-  using fs_hctsiz1_tt = regs::usb_otg_fs_fs_hctsiz1_v1_tt;
-  using fs_hctsiz2_tt = regs::usb_otg_fs_fs_hctsiz2_v1_tt;
-  using fs_hctsiz3_tt = regs::usb_otg_fs_fs_hctsiz3_v1_tt;
-  using fs_hctsiz4_tt = regs::usb_otg_fs_fs_hctsiz4_v1_tt;
-  using fs_hctsiz5_tt = regs::usb_otg_fs_fs_hctsiz5_v1_tt;
-  using fs_hctsiz6_tt = regs::usb_otg_fs_fs_hctsiz6_v1_tt;
-  using fs_hctsiz7_tt = regs::usb_otg_fs_fs_hctsiz7_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fs_hcfg_tt = regs::usb_otg_fs_fs_hcfg_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hfir_tt = regs::usb_otg_fs_hfir_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fs_hfnum_tt = regs::usb_otg_fs_fs_hfnum_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fs_hptxsts_tt = regs::usb_otg_fs_fs_hptxsts_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using haint_tt = regs::usb_otg_fs_haint_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using haintmsk_tt = regs::usb_otg_fs_haintmsk_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fs_hprt_tt = regs::usb_otg_fs_fs_hprt_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fs_hcchar0_tt = regs::usb_otg_fs_fs_hcchar0_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fs_hcchar1_tt = regs::usb_otg_fs_fs_hcchar1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fs_hcchar2_tt = regs::usb_otg_fs_fs_hcchar2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fs_hcchar3_tt = regs::usb_otg_fs_fs_hcchar3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fs_hcchar4_tt = regs::usb_otg_fs_fs_hcchar4_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fs_hcchar5_tt = regs::usb_otg_fs_fs_hcchar5_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fs_hcchar6_tt = regs::usb_otg_fs_fs_hcchar6_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fs_hcchar7_tt = regs::usb_otg_fs_fs_hcchar7_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fs_hcint0_tt = regs::usb_otg_fs_fs_hcint0_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fs_hcint1_tt = regs::usb_otg_fs_fs_hcint1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fs_hcint2_tt = regs::usb_otg_fs_fs_hcint2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fs_hcint3_tt = regs::usb_otg_fs_fs_hcint3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fs_hcint4_tt = regs::usb_otg_fs_fs_hcint4_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fs_hcint5_tt = regs::usb_otg_fs_fs_hcint5_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fs_hcint6_tt = regs::usb_otg_fs_fs_hcint6_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fs_hcint7_tt = regs::usb_otg_fs_fs_hcint7_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fs_hcintmsk0_tt = regs::usb_otg_fs_fs_hcintmsk0_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fs_hcintmsk1_tt = regs::usb_otg_fs_fs_hcintmsk1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fs_hcintmsk2_tt = regs::usb_otg_fs_fs_hcintmsk2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fs_hcintmsk3_tt = regs::usb_otg_fs_fs_hcintmsk3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fs_hcintmsk4_tt = regs::usb_otg_fs_fs_hcintmsk4_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fs_hcintmsk5_tt = regs::usb_otg_fs_fs_hcintmsk5_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fs_hcintmsk6_tt = regs::usb_otg_fs_fs_hcintmsk6_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fs_hcintmsk7_tt = regs::usb_otg_fs_fs_hcintmsk7_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fs_hctsiz0_tt = regs::usb_otg_fs_fs_hctsiz0_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fs_hctsiz1_tt = regs::usb_otg_fs_fs_hctsiz1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fs_hctsiz2_tt = regs::usb_otg_fs_fs_hctsiz2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fs_hctsiz3_tt = regs::usb_otg_fs_fs_hctsiz3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fs_hctsiz4_tt = regs::usb_otg_fs_fs_hctsiz4_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fs_hctsiz5_tt = regs::usb_otg_fs_fs_hctsiz5_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fs_hctsiz6_tt = regs::usb_otg_fs_fs_hctsiz6_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fs_hctsiz7_tt = regs::usb_otg_fs_fs_hctsiz7_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using otg_fs_host_t =
@@ -141,44 +315,158 @@ namespace otg_fs_host {
 } // namespace otg_fs_host
 
 namespace otg_fs_device {
-  using fs_dcfg_tt = regs::usb_otg_fs_fs_dcfg_v1_tt;
-  using fs_dctl_tt = regs::usb_otg_fs_fs_dctl_v1_tt;
-  using fs_dsts_tt = regs::usb_otg_fs_fs_dsts_v1_tt;
-  using fs_diepmsk_tt = regs::usb_otg_fs_fs_diepmsk_v1_tt;
-  using fs_doepmsk_tt = regs::usb_otg_fs_fs_doepmsk_v1_tt;
-  using fs_daint_tt = regs::usb_otg_fs_fs_daint_v1_tt;
-  using fs_daintmsk_tt = regs::usb_otg_fs_fs_daintmsk_v1_tt;
-  using dvbusdis_tt = regs::usb_otg_fs_dvbusdis_v1_tt;
-  using dvbuspulse_tt = regs::usb_otg_fs_dvbuspulse_v1_tt;
-  using diepempmsk_tt = regs::usb_otg_fs_diepempmsk_v1_tt;
-  using fs_diepctl0_tt = regs::usb_otg_fs_fs_diepctl0_v1_tt;
-  using diepctl1_tt = regs::usb_otg_fs_diepctl1_v1_tt;
-  using diepctl2_tt = regs::usb_otg_fs_diepctl2_v1_tt;
-  using diepctl3_tt = regs::usb_otg_fs_diepctl3_v1_tt;
-  using doepctl0_tt = regs::usb_otg_fs_doepctl0_v1_tt;
-  using doepctl1_tt = regs::usb_otg_fs_doepctl1_v1_tt;
-  using doepctl2_tt = regs::usb_otg_fs_doepctl2_v1_tt;
-  using doepctl3_tt = regs::usb_otg_fs_doepctl3_v1_tt;
-  using diepint0_tt = regs::usb_otg_fs_diepint0_v1_tt;
-  using diepint1_tt = regs::usb_otg_fs_diepint1_v1_tt;
-  using diepint2_tt = regs::usb_otg_fs_diepint2_v1_tt;
-  using diepint3_tt = regs::usb_otg_fs_diepint3_v1_tt;
-  using doepint0_tt = regs::usb_otg_fs_doepint0_v1_tt;
-  using doepint1_tt = regs::usb_otg_fs_doepint1_v1_tt;
-  using doepint2_tt = regs::usb_otg_fs_doepint2_v1_tt;
-  using doepint3_tt = regs::usb_otg_fs_doepint3_v1_tt;
-  using dieptsiz0_tt = regs::usb_otg_fs_dieptsiz0_v1_tt;
-  using doeptsiz0_tt = regs::usb_otg_fs_doeptsiz0_v1_tt;
-  using dieptsiz1_tt = regs::usb_otg_fs_dieptsiz1_v1_tt;
-  using dieptsiz2_tt = regs::usb_otg_fs_dieptsiz2_v1_tt;
-  using dieptsiz3_tt = regs::usb_otg_fs_dieptsiz3_v1_tt;
-  using dtxfsts0_tt = regs::usb_otg_fs_dtxfsts0_v1_tt;
-  using dtxfsts1_tt = regs::usb_otg_fs_dtxfsts1_v1_tt;
-  using dtxfsts2_tt = regs::usb_otg_fs_dtxfsts2_v1_tt;
-  using dtxfsts3_tt = regs::usb_otg_fs_dtxfsts3_v1_tt;
-  using doeptsiz1_tt = regs::usb_otg_fs_doeptsiz1_v1_tt;
-  using doeptsiz2_tt = regs::usb_otg_fs_doeptsiz2_v1_tt;
-  using doeptsiz3_tt = regs::usb_otg_fs_doeptsiz3_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fs_dcfg_tt = regs::usb_otg_fs_fs_dcfg_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fs_dctl_tt = regs::usb_otg_fs_fs_dctl_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fs_dsts_tt = regs::usb_otg_fs_fs_dsts_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fs_diepmsk_tt = regs::usb_otg_fs_fs_diepmsk_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fs_doepmsk_tt = regs::usb_otg_fs_fs_doepmsk_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fs_daint_tt = regs::usb_otg_fs_fs_daint_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fs_daintmsk_tt = regs::usb_otg_fs_fs_daintmsk_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dvbusdis_tt = regs::usb_otg_fs_dvbusdis_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dvbuspulse_tt = regs::usb_otg_fs_dvbuspulse_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using diepempmsk_tt = regs::usb_otg_fs_diepempmsk_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fs_diepctl0_tt = regs::usb_otg_fs_fs_diepctl0_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using diepctl1_tt = regs::usb_otg_fs_diepctl1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using diepctl2_tt = regs::usb_otg_fs_diepctl2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using diepctl3_tt = regs::usb_otg_fs_diepctl3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using doepctl0_tt = regs::usb_otg_fs_doepctl0_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using doepctl1_tt = regs::usb_otg_fs_doepctl1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using doepctl2_tt = regs::usb_otg_fs_doepctl2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using doepctl3_tt = regs::usb_otg_fs_doepctl3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using diepint0_tt = regs::usb_otg_fs_diepint0_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using diepint1_tt = regs::usb_otg_fs_diepint1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using diepint2_tt = regs::usb_otg_fs_diepint2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using diepint3_tt = regs::usb_otg_fs_diepint3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using doepint0_tt = regs::usb_otg_fs_doepint0_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using doepint1_tt = regs::usb_otg_fs_doepint1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using doepint2_tt = regs::usb_otg_fs_doepint2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using doepint3_tt = regs::usb_otg_fs_doepint3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dieptsiz0_tt = regs::usb_otg_fs_dieptsiz0_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using doeptsiz0_tt = regs::usb_otg_fs_doeptsiz0_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dieptsiz1_tt = regs::usb_otg_fs_dieptsiz1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dieptsiz2_tt = regs::usb_otg_fs_dieptsiz2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dieptsiz3_tt = regs::usb_otg_fs_dieptsiz3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dtxfsts0_tt = regs::usb_otg_fs_dtxfsts0_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dtxfsts1_tt = regs::usb_otg_fs_dtxfsts1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dtxfsts2_tt = regs::usb_otg_fs_dtxfsts2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dtxfsts3_tt = regs::usb_otg_fs_dtxfsts3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using doeptsiz1_tt = regs::usb_otg_fs_doeptsiz1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using doeptsiz2_tt = regs::usb_otg_fs_doeptsiz2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using doeptsiz3_tt = regs::usb_otg_fs_doeptsiz3_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using otg_fs_device_t =
@@ -226,7 +514,10 @@ namespace otg_fs_device {
 } // namespace otg_fs_device
 
 namespace otg_fs_pwrclk {
-  using fs_pcgcctl_tt = regs::usb_otg_fs_fs_pcgcctl_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fs_pcgcctl_tt = regs::usb_otg_fs_fs_pcgcctl_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using otg_fs_pwrclk_t =

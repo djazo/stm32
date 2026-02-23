@@ -16,11 +16,11 @@ using jpeg_jpeg_cfr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint32_t, 31, 7, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint32_t, 31, 7, common::access::ro>,
                groov::field<"chpdf", bool, 6, 6>,
                groov::field<"ceocf", bool, 5, 5>,
-               groov::field<"reserved0", std::uint8_t, 4, 0, access::ro>>;
+               groov::field<"reserved0", std::uint8_t, 4, 0, common::access::ro>>;
 
 // jpeg_jpeg_confr0_v1: JPEG_CONFR0
 // Used by: JPEG
@@ -31,8 +31,8 @@ using jpeg_jpeg_confr0_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::wo,
-               groov::field<"reserved0", std::uint32_t, 31, 1, access::ro>,
+             common::access::wo,
+               groov::field<"reserved0", std::uint32_t, 31, 1, common::access::ro>,
                groov::field<"start", bool, 0, 0>>;
 
 // jpeg_jpeg_confr1_v1: JPEG_CONFR1
@@ -44,14 +44,14 @@ using jpeg_jpeg_confr1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"ysize", std::uint16_t, 31, 16>,
-               groov::field<"reserved1", std::uint8_t, 15, 9, access::ro>,
+               groov::field<"reserved1", std::uint8_t, 15, 9, common::access::ro>,
                groov::field<"hdr", bool, 8, 8>,
                groov::field<"ns", std::uint8_t, 7, 6>,
                groov::field<"colorspace", std::uint8_t, 5, 4>,
-               groov::field<"de", bit_enable, 3, 3>,
-               groov::field<"reserved0", bool, 2, 2, access::ro>,
+               groov::field<"de", common::bittypes::bit_enable, 3, 3>,
+               groov::field<"reserved0", bool, 2, 2, common::access::ro>,
                groov::field<"nf", std::uint8_t, 1, 0>>;
 
 // jpeg_jpeg_confr2_v1: JPEG_CONFR2
@@ -63,8 +63,8 @@ using jpeg_jpeg_confr2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint8_t, 31, 26, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint8_t, 31, 26, common::access::ro>,
                groov::field<"nmcu", std::uint32_t, 25, 0>>;
 
 // jpeg_jpeg_confr3_v1: JPEG_CONFR3
@@ -76,9 +76,9 @@ using jpeg_jpeg_confr3_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"xsize", std::uint16_t, 31, 16>,
-               groov::field<"reserved0", std::uint16_t, 15, 0, access::ro>>;
+               groov::field<"reserved0", std::uint16_t, 15, 0, common::access::ro>>;
 
 // jpeg_jpeg_confrn1_v1: JPEG_CONFRN1
 // Used by: JPEG
@@ -89,8 +89,8 @@ using jpeg_jpeg_confrn1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"hsf", std::uint8_t, 15, 12>,
                groov::field<"vsf", std::uint8_t, 11, 8>,
                groov::field<"nb", std::uint8_t, 7, 4>,
@@ -107,8 +107,8 @@ using jpeg_jpeg_confrn2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"hsf", std::uint8_t, 15, 12>,
                groov::field<"vsf", std::uint8_t, 11, 8>,
                groov::field<"nb", std::uint8_t, 7, 4>,
@@ -125,8 +125,8 @@ using jpeg_jpeg_confrn3_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"hsf", std::uint8_t, 15, 12>,
                groov::field<"vsf", std::uint8_t, 11, 8>,
                groov::field<"nb", std::uint8_t, 7, 4>,
@@ -143,8 +143,8 @@ using jpeg_jpeg_confrn4_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"hsf", std::uint8_t, 15, 12>,
                groov::field<"vsf", std::uint8_t, 11, 8>,
                groov::field<"nb", std::uint8_t, 7, 4>,
@@ -161,20 +161,20 @@ using jpeg_jpeg_cr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint32_t, 31, 15, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint32_t, 31, 15, common::access::ro>,
                groov::field<"off", bool, 14, 14>,
                groov::field<"iff", bool, 13, 13>,
-               groov::field<"odmaen", bit_enable, 12, 12>,
-               groov::field<"idmaen", bit_enable, 11, 11>,
-               groov::field<"reserved0", std::uint8_t, 10, 7, access::ro>,
-               groov::field<"hpdie", bit_enable, 6, 6>,
-               groov::field<"eocie", bit_enable, 5, 5>,
-               groov::field<"ofneie", bit_enable, 4, 4>,
-               groov::field<"oftie", bit_enable, 3, 3>,
-               groov::field<"ifnfie", bit_enable, 2, 2>,
-               groov::field<"iftie", bit_enable, 1, 1>,
-               groov::field<"jcen", bit_enable, 0, 0>>;
+               groov::field<"odmaen", common::bittypes::bit_enable, 12, 12>,
+               groov::field<"idmaen", common::bittypes::bit_enable, 11, 11>,
+               groov::field<"reserved0", std::uint8_t, 10, 7, common::access::ro>,
+               groov::field<"hpdie", common::bittypes::bit_enable, 6, 6>,
+               groov::field<"eocie", common::bittypes::bit_enable, 5, 5>,
+               groov::field<"ofneie", common::bittypes::bit_enable, 4, 4>,
+               groov::field<"oftie", common::bittypes::bit_enable, 3, 3>,
+               groov::field<"ifnfie", common::bittypes::bit_enable, 2, 2>,
+               groov::field<"iftie", common::bittypes::bit_enable, 1, 1>,
+               groov::field<"jcen", common::bittypes::bit_enable, 0, 0>>;
 
 // jpeg_jpeg_dir_v1: JPEG_DIR
 // Used by: JPEG
@@ -185,7 +185,7 @@ using jpeg_jpeg_dir_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::wo,
+             common::access::wo,
                groov::field<"datain", std::uint32_t, 31, 0>>;
 
 // jpeg_jpeg_dor_v1: JPEG_DOR
@@ -197,7 +197,7 @@ using jpeg_jpeg_dor_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"dataout", std::uint32_t, 31, 0>>;
 
 // jpeg_jpeg_sr_v1: JPEG_SR
@@ -209,7 +209,7 @@ using jpeg_jpeg_sr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved1", std::uint32_t, 31, 8>,
                groov::field<"cof", bool, 7, 7>,
                groov::field<"hpdf", bool, 6, 6>,

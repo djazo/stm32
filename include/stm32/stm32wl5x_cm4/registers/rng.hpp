@@ -16,21 +16,21 @@ using rng_cr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"configlock", bit_locked, 31, 31>,
-               groov::field<"condrst", bit_reset, 30, 30>,
-               groov::field<"reserved3", std::uint8_t, 29, 26, access::ro>,
+             common::access::rw,
+               groov::field<"configlock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"condrst", common::bittypes::bit_reset, 30, 30>,
+               groov::field<"reserved3", std::uint8_t, 29, 26, common::access::ro>,
                groov::field<"rng_config1", std::uint8_t, 25, 20>,
                groov::field<"clkdiv", std::uint8_t, 19, 16>,
                groov::field<"rng_config2", std::uint8_t, 15, 13>,
                groov::field<"nistc", bool, 12, 12>,
                groov::field<"rng_config3", std::uint8_t, 11, 8>,
-               groov::field<"reserved2", std::uint8_t, 7, 6, access::ro>,
+               groov::field<"reserved2", std::uint8_t, 7, 6, common::access::ro>,
                groov::field<"ced", bool, 5, 5>,
-               groov::field<"reserved1", bool, 4, 4, access::ro>,
-               groov::field<"ie", bit_enable, 3, 3>,
-               groov::field<"rngen", bit_enable, 2, 2>,
-               groov::field<"reserved0", std::uint8_t, 1, 0, access::ro>>;
+               groov::field<"reserved1", bool, 4, 4, common::access::ro>,
+               groov::field<"ie", common::bittypes::bit_enable, 3, 3>,
+               groov::field<"rngen", common::bittypes::bit_enable, 2, 2>,
+               groov::field<"reserved0", std::uint8_t, 1, 0, common::access::ro>>;
 
 // rng_dr_v1: DR
 // Used by: RNG
@@ -41,7 +41,7 @@ using rng_dr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"rndata", std::uint32_t, 31, 0>>;
 
 // rng_htcr_v1: HTCR
@@ -53,7 +53,7 @@ using rng_htcr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"htcfg", std::uint32_t, 31, 0>>;
 
 // rng_sr_v1: SR
@@ -65,13 +65,13 @@ using rng_sr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint32_t, 31, 7, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint32_t, 31, 7, common::access::ro>,
                groov::field<"seis", bool, 6, 6>,
                groov::field<"ceis", bool, 5, 5>,
-               groov::field<"reserved0", std::uint8_t, 4, 3, access::ro>,
-               groov::field<"secs", bool, 2, 2, access::ro>,
-               groov::field<"cecs", bool, 1, 1, access::ro>,
-               groov::field<"drdy", bit_ready, 0, 0, access::ro>>;
+               groov::field<"reserved0", std::uint8_t, 4, 3, common::access::ro>,
+               groov::field<"secs", bool, 2, 2, common::access::ro>,
+               groov::field<"cecs", bool, 1, 1, common::access::ro>,
+               groov::field<"drdy", common::bittypes::bit_ready, 0, 0, common::access::ro>>;
 
 } // namespace stm32::regs

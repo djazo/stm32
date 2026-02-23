@@ -16,14 +16,14 @@ using flash_acr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint32_t, 31, 13, access::ro>,
-               groov::field<"dcrst", bit_reset, 12, 12>,
-               groov::field<"icrst", bit_reset, 11, 11, access::wo>,
-               groov::field<"dcen", bit_enable, 10, 10>,
-               groov::field<"icen", bit_enable, 9, 9>,
-               groov::field<"prften", bit_enable, 8, 8>,
-               groov::field<"reserved0", std::uint8_t, 7, 3, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint32_t, 31, 13, common::access::ro>,
+               groov::field<"dcrst", common::bittypes::bit_reset, 12, 12>,
+               groov::field<"icrst", common::bittypes::bit_reset, 11, 11, common::access::wo>,
+               groov::field<"dcen", common::bittypes::bit_enable, 10, 10>,
+               groov::field<"icen", common::bittypes::bit_enable, 9, 9>,
+               groov::field<"prften", common::bittypes::bit_enable, 8, 8>,
+               groov::field<"reserved0", std::uint8_t, 7, 3, common::access::ro>,
                groov::field<"latency", std::uint8_t, 2, 0>>;
 
 // flash_cr_v1: CR
@@ -35,16 +35,16 @@ using flash_cr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"lock", bit_locked, 31, 31>,
-               groov::field<"reserved3", std::uint8_t, 30, 26, access::ro>,
-               groov::field<"errie", bit_enable, 25, 25>,
-               groov::field<"eopie", bit_enable, 24, 24>,
-               groov::field<"reserved2", std::uint8_t, 23, 17, access::ro>,
+             common::access::rw,
+               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"reserved3", std::uint8_t, 30, 26, common::access::ro>,
+               groov::field<"errie", common::bittypes::bit_enable, 25, 25>,
+               groov::field<"eopie", common::bittypes::bit_enable, 24, 24>,
+               groov::field<"reserved2", std::uint8_t, 23, 17, common::access::ro>,
                groov::field<"strt", bool, 16, 16>,
-               groov::field<"reserved1", std::uint8_t, 15, 10, access::ro>,
+               groov::field<"reserved1", std::uint8_t, 15, 10, common::access::ro>,
                groov::field<"psize", std::uint8_t, 9, 8>,
-               groov::field<"reserved0", bool, 7, 7, access::ro>,
+               groov::field<"reserved0", bool, 7, 7, common::access::ro>,
                groov::field<"snb", std::uint8_t, 6, 3>,
                groov::field<"mer", bool, 2, 2>,
                groov::field<"ser", bool, 1, 1>,
@@ -59,7 +59,7 @@ using flash_keyr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::wo,
+             common::access::wo,
                groov::field<"key", std::uint32_t, 31, 0>>;
 
 // flash_optcr_v1: OPTCR
@@ -71,18 +71,18 @@ using flash_optcr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"sprmod", bool, 31, 31>,
-               groov::field<"reserved1", std::uint8_t, 30, 24, access::ro>,
+               groov::field<"reserved1", std::uint8_t, 30, 24, common::access::ro>,
                groov::field<"nwrp", std::uint8_t, 23, 16>,
                groov::field<"rdp", std::uint8_t, 15, 8>,
                groov::field<"nrst_stdby", bool, 7, 7>,
                groov::field<"nrst_stop", bool, 6, 6>,
                groov::field<"wdg_sw", bool, 5, 5>,
-               groov::field<"reserved0", bool, 4, 4, access::ro>,
+               groov::field<"reserved0", bool, 4, 4, common::access::ro>,
                groov::field<"bor_lev", std::uint8_t, 3, 2>,
                groov::field<"optstrt", bool, 1, 1>,
-               groov::field<"optlock", bit_locked, 0, 0>>;
+               groov::field<"optlock", common::bittypes::bit_locked, 0, 0>>;
 
 // flash_optkeyr_v1: OPTKEYR
 // Used by: FLASH
@@ -93,7 +93,7 @@ using flash_optkeyr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::wo,
+             common::access::wo,
                groov::field<"optkey", std::uint32_t, 31, 0>>;
 
 // flash_sr_v1: SR
@@ -105,16 +105,16 @@ using flash_sr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved2", std::uint16_t, 31, 17, access::ro>,
-               groov::field<"bsy", bit_ready_bar, 16, 16, access::ro>,
-               groov::field<"reserved1", std::uint8_t, 15, 9, access::ro>,
+             common::access::rw,
+               groov::field<"reserved2", std::uint16_t, 31, 17, common::access::ro>,
+               groov::field<"bsy", common::bittypes::bit_ready_bar, 16, 16, common::access::ro>,
+               groov::field<"reserved1", std::uint8_t, 15, 9, common::access::ro>,
                groov::field<"rderr", bool, 8, 8>,
                groov::field<"pgserr", bool, 7, 7>,
                groov::field<"pgperr", bool, 6, 6>,
                groov::field<"pgaerr", bool, 5, 5>,
                groov::field<"wrperr", bool, 4, 4>,
-               groov::field<"reserved0", std::uint8_t, 3, 2, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 3, 2, common::access::ro>,
                groov::field<"operr", bool, 1, 1>,
                groov::field<"eop", bool, 0, 0>>;
 

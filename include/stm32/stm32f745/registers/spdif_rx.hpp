@@ -16,21 +16,21 @@ using spdif_rx_cr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint16_t, 31, 19, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint16_t, 31, 19, common::access::ro>,
                groov::field<"insel", std::uint8_t, 18, 16>,
-               groov::field<"reserved0", bool, 15, 15, access::ro>,
+               groov::field<"reserved0", bool, 15, 15, common::access::ro>,
                groov::field<"wfa", bool, 14, 14>,
                groov::field<"nbtr", std::uint8_t, 13, 12>,
                groov::field<"chsel", bool, 11, 11>,
-               groov::field<"cbdmaen", bit_enable, 10, 10>,
+               groov::field<"cbdmaen", common::bittypes::bit_enable, 10, 10>,
                groov::field<"ptmsk", bool, 9, 9>,
                groov::field<"cumsk", bool, 8, 8>,
                groov::field<"vmsk", bool, 7, 7>,
                groov::field<"pmsk", bool, 6, 6>,
                groov::field<"drfmt", std::uint8_t, 5, 4>,
                groov::field<"rxsteo", bool, 3, 3>,
-               groov::field<"rxdmaen", bit_enable, 2, 2>,
+               groov::field<"rxdmaen", common::bittypes::bit_enable, 2, 2>,
                groov::field<"spdifen", std::uint8_t, 1, 0>>;
 
 // spdif_rx_csr_v1: CSR
@@ -42,7 +42,7 @@ using spdif_rx_csr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint8_t, 31, 25>,
                groov::field<"sob", bool, 24, 24>,
                groov::field<"cs", std::uint8_t, 23, 16>,
@@ -57,7 +57,7 @@ using spdif_rx_dir_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved1", std::uint8_t, 31, 29>,
                groov::field<"tlo", std::uint16_t, 28, 16>,
                groov::field<"reserved0", std::uint8_t, 15, 13>,
@@ -72,13 +72,13 @@ using spdif_rx_dr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint8_t, 31, 30>,
                groov::field<"pt", std::uint8_t, 29, 28>,
                groov::field<"c", bool, 27, 27>,
                groov::field<"u", bool, 26, 26>,
                groov::field<"v", bool, 25, 25>,
-               groov::field<"pe", bit_enable, 24, 24>,
+               groov::field<"pe", common::bittypes::bit_enable, 24, 24>,
                groov::field<"dr", std::uint32_t, 23, 0>>;
 
 // spdif_rx_ifcr_v1: IFCR
@@ -90,13 +90,13 @@ using spdif_rx_ifcr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::wo,
-               groov::field<"reserved1", std::uint32_t, 31, 6, access::ro>,
+             common::access::wo,
+               groov::field<"reserved1", std::uint32_t, 31, 6, common::access::ro>,
                groov::field<"syncdcf", bool, 5, 5>,
                groov::field<"sbdcf", bool, 4, 4>,
                groov::field<"ovrcf", bool, 3, 3>,
                groov::field<"perrcf", bool, 2, 2>,
-               groov::field<"reserved0", std::uint8_t, 1, 0, access::ro>>;
+               groov::field<"reserved0", std::uint8_t, 1, 0, common::access::ro>>;
 
 // spdif_rx_imr_v1: IMR
 // Used by: SPDIF_RX
@@ -107,15 +107,15 @@ using spdif_rx_imr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 7, access::ro>,
-               groov::field<"ifeie", bit_enable, 6, 6>,
-               groov::field<"syncdie", bit_enable, 5, 5>,
-               groov::field<"sblkie", bit_enable, 4, 4>,
-               groov::field<"ovrie", bit_enable, 3, 3>,
-               groov::field<"perrie", bit_enable, 2, 2>,
-               groov::field<"csrneie", bit_enable, 1, 1>,
-               groov::field<"rxneie", bit_enable, 0, 0>>;
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 7, common::access::ro>,
+               groov::field<"ifeie", common::bittypes::bit_enable, 6, 6>,
+               groov::field<"syncdie", common::bittypes::bit_enable, 5, 5>,
+               groov::field<"sblkie", common::bittypes::bit_enable, 4, 4>,
+               groov::field<"ovrie", common::bittypes::bit_enable, 3, 3>,
+               groov::field<"perrie", common::bittypes::bit_enable, 2, 2>,
+               groov::field<"csrneie", common::bittypes::bit_enable, 1, 1>,
+               groov::field<"rxneie", common::bittypes::bit_enable, 0, 0>>;
 
 // spdif_rx_sr_v1: SR
 // Used by: SPDIF_RX
@@ -126,7 +126,7 @@ using spdif_rx_sr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved1", bool, 31, 31>,
                groov::field<"width5", std::uint16_t, 30, 16>,
                groov::field<"reserved0", std::uint8_t, 15, 9>,

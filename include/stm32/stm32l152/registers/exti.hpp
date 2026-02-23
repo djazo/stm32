@@ -16,8 +16,8 @@ using exti_emr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 23, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 23, common::access::ro>,
                groov::field<"mr", std::uint32_t, 22, 0>>;
 
 // exti_ftsr_v1: FTSR
@@ -29,8 +29,8 @@ using exti_ftsr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 23, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 23, common::access::ro>,
                groov::field<"tr", std::uint32_t, 22, 0>>;
 
 // exti_imr_v1: IMR
@@ -42,8 +42,8 @@ using exti_imr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 23, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 23, common::access::ro>,
                groov::field<"mr", std::uint32_t, 22, 0>>;
 
 // exti_pr_v1: PR
@@ -55,8 +55,8 @@ using exti_pr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 23, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 23, common::access::ro>,
                groov::field<"pr", std::uint32_t, 22, 0>>;
 
 // exti_rtsr_v1: RTSR
@@ -68,8 +68,8 @@ using exti_rtsr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 23, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 23, common::access::ro>,
                groov::field<"tr", std::uint32_t, 22, 0>>;
 
 // exti_swier_v1: SWIER
@@ -81,8 +81,8 @@ using exti_swier_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 23, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 23, common::access::ro>,
                groov::field<"swier", std::uint32_t, 22, 0>>;
 
 } // namespace stm32::regs

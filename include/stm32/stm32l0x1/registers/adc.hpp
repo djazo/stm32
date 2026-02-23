@@ -16,8 +16,8 @@ using adc_calfact_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 7, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 7, common::access::ro>,
                groov::field<"calfact", std::uint8_t, 6, 0>>;
 
 // adc_ccr_v1: CCR
@@ -29,14 +29,14 @@ using adc_ccr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint8_t, 31, 26, access::ro>,
-               groov::field<"lfmen", bit_enable, 25, 25>,
-               groov::field<"vlcden", bit_enable, 24, 24>,
-               groov::field<"tsen", bit_enable, 23, 23>,
-               groov::field<"vrefen", bit_enable, 22, 22>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint8_t, 31, 26, common::access::ro>,
+               groov::field<"lfmen", common::bittypes::bit_enable, 25, 25>,
+               groov::field<"vlcden", common::bittypes::bit_enable, 24, 24>,
+               groov::field<"tsen", common::bittypes::bit_enable, 23, 23>,
+               groov::field<"vrefen", common::bittypes::bit_enable, 22, 22>,
                groov::field<"presc", std::uint8_t, 21, 18>,
-               groov::field<"reserved0", std::uint32_t, 17, 0, access::ro>>;
+               groov::field<"reserved0", std::uint32_t, 17, 0, common::access::ro>>;
 
 // adc_cfgr1_v1: CFGR1
 // Used by: ADC
@@ -47,26 +47,26 @@ using adc_cfgr1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved3", bool, 31, 31, access::ro>,
+             common::access::rw,
+               groov::field<"reserved3", bool, 31, 31, common::access::ro>,
                groov::field<"awdch", std::uint8_t, 30, 26>,
-               groov::field<"reserved2", std::uint8_t, 25, 24, access::ro>,
-               groov::field<"awden", bit_enable, 23, 23>,
+               groov::field<"reserved2", std::uint8_t, 25, 24, common::access::ro>,
+               groov::field<"awden", common::bittypes::bit_enable, 23, 23>,
                groov::field<"awdsgl", bool, 22, 22>,
-               groov::field<"reserved1", std::uint8_t, 21, 17, access::ro>,
-               groov::field<"discen", bit_enable, 16, 16>,
+               groov::field<"reserved1", std::uint8_t, 21, 17, common::access::ro>,
+               groov::field<"discen", common::bittypes::bit_enable, 16, 16>,
                groov::field<"autoff", bool, 15, 15>,
                groov::field<"autdly", bool, 14, 14>,
                groov::field<"cont", bool, 13, 13>,
                groov::field<"ovrmod", bool, 12, 12>,
                groov::field<"exten", std::uint8_t, 11, 10>,
-               groov::field<"reserved0", bool, 9, 9, access::ro>,
+               groov::field<"reserved0", bool, 9, 9, common::access::ro>,
                groov::field<"extsel", std::uint8_t, 8, 6>,
                groov::field<"align", bool, 5, 5>,
                groov::field<"res", std::uint8_t, 4, 3>,
                groov::field<"scandir", bool, 2, 2>,
                groov::field<"dmacfg", bool, 1, 1>,
-               groov::field<"dmaen", bit_enable, 0, 0>>;
+               groov::field<"dmaen", common::bittypes::bit_enable, 0, 0>>;
 
 // adc_cfgr2_v1: CFGR2
 // Used by: ADC
@@ -77,13 +77,13 @@ using adc_cfgr2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"ckmode", std::uint8_t, 31, 30>,
-               groov::field<"reserved1", std::uint32_t, 29, 10, access::ro>,
+               groov::field<"reserved1", std::uint32_t, 29, 10, common::access::ro>,
                groov::field<"tovs", bool, 9, 9>,
                groov::field<"ovss", std::uint8_t, 8, 5>,
                groov::field<"ovsr", std::uint8_t, 4, 2>,
-               groov::field<"reserved0", bool, 1, 1, access::ro>,
+               groov::field<"reserved0", bool, 1, 1, common::access::ro>,
                groov::field<"ovse", bool, 0, 0>>;
 
 // adc_chselr_v1: CHSELR
@@ -95,8 +95,8 @@ using adc_chselr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 19, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 19, common::access::ro>,
                groov::field<"chsel18", bool, 18, 18>,
                groov::field<"chsel17", bool, 17, 17>,
                groov::field<"chsel16", bool, 16, 16>,
@@ -126,16 +126,16 @@ using adc_cr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"adcal", bool, 31, 31>,
-               groov::field<"reserved2", std::uint8_t, 30, 29, access::ro>,
-               groov::field<"advregen", bit_enable, 28, 28>,
-               groov::field<"reserved1", std::uint32_t, 27, 5, access::ro>,
+               groov::field<"reserved2", std::uint8_t, 30, 29, common::access::ro>,
+               groov::field<"advregen", common::bittypes::bit_enable, 28, 28>,
+               groov::field<"reserved1", std::uint32_t, 27, 5, common::access::ro>,
                groov::field<"adstp", bool, 4, 4>,
-               groov::field<"reserved0", bool, 3, 3, access::ro>,
+               groov::field<"reserved0", bool, 3, 3, common::access::ro>,
                groov::field<"adstart", bool, 2, 2>,
-               groov::field<"addis", bit_enable_bar, 1, 1>,
-               groov::field<"aden", bit_enable, 0, 0>>;
+               groov::field<"addis", common::bittypes::bit_enable_bar, 1, 1>,
+               groov::field<"aden", common::bittypes::bit_enable, 0, 0>>;
 
 // adc_dr_v1: DR
 // Used by: ADC
@@ -146,7 +146,7 @@ using adc_dr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint16_t, 31, 16>,
                groov::field<"data", std::uint16_t, 15, 0>>;
 
@@ -159,17 +159,17 @@ using adc_ier_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved2", std::uint32_t, 31, 12, access::ro>,
-               groov::field<"eocalie", bit_enable, 11, 11>,
-               groov::field<"reserved1", std::uint8_t, 10, 8, access::ro>,
-               groov::field<"awdie", bit_enable, 7, 7>,
-               groov::field<"reserved0", std::uint8_t, 6, 5, access::ro>,
-               groov::field<"ovrie", bit_enable, 4, 4>,
-               groov::field<"eosie", bit_enable, 3, 3>,
-               groov::field<"eocie", bit_enable, 2, 2>,
-               groov::field<"eosmpie", bit_enable, 1, 1>,
-               groov::field<"adrdyie", bit_ready, 0, 0>>;
+             common::access::rw,
+               groov::field<"reserved2", std::uint32_t, 31, 12, common::access::ro>,
+               groov::field<"eocalie", common::bittypes::bit_enable, 11, 11>,
+               groov::field<"reserved1", std::uint8_t, 10, 8, common::access::ro>,
+               groov::field<"awdie", common::bittypes::bit_enable, 7, 7>,
+               groov::field<"reserved0", std::uint8_t, 6, 5, common::access::ro>,
+               groov::field<"ovrie", common::bittypes::bit_enable, 4, 4>,
+               groov::field<"eosie", common::bittypes::bit_enable, 3, 3>,
+               groov::field<"eocie", common::bittypes::bit_enable, 2, 2>,
+               groov::field<"eosmpie", common::bittypes::bit_enable, 1, 1>,
+               groov::field<"adrdyie", common::bittypes::bit_ready, 0, 0>>;
 
 // adc_isr_v1: ISR
 // Used by: ADC
@@ -180,17 +180,17 @@ using adc_isr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved2", std::uint32_t, 31, 12, access::ro>,
+             common::access::rw,
+               groov::field<"reserved2", std::uint32_t, 31, 12, common::access::ro>,
                groov::field<"eocal", bool, 11, 11>,
-               groov::field<"reserved1", std::uint8_t, 10, 8, access::ro>,
+               groov::field<"reserved1", std::uint8_t, 10, 8, common::access::ro>,
                groov::field<"awd", bool, 7, 7>,
-               groov::field<"reserved0", std::uint8_t, 6, 5, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 6, 5, common::access::ro>,
                groov::field<"ovr", bool, 4, 4>,
                groov::field<"eos", bool, 3, 3>,
                groov::field<"eoc", bool, 2, 2>,
                groov::field<"eosmp", bool, 1, 1>,
-               groov::field<"adrdy", bit_ready, 0, 0>>;
+               groov::field<"adrdy", common::bittypes::bit_ready, 0, 0>>;
 
 // adc_smpr_v1: SMPR
 // Used by: ADC
@@ -201,8 +201,8 @@ using adc_smpr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 3, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 3, common::access::ro>,
                groov::field<"smpr", std::uint8_t, 2, 0>>;
 
 // adc_tr_v1: TR
@@ -214,10 +214,10 @@ using adc_tr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint8_t, 31, 28, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint8_t, 31, 28, common::access::ro>,
                groov::field<"ht", std::uint16_t, 27, 16>,
-               groov::field<"reserved0", std::uint8_t, 15, 12, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 15, 12, common::access::ro>,
                groov::field<"lt", std::uint16_t, 11, 0>>;
 
 } // namespace stm32::regs

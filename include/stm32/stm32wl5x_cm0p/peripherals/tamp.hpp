@@ -7,35 +7,122 @@
 namespace stm32::stm32wl5x_cm0p {
 
 namespace tamp {
-  using cr1_tt = regs::tamp_cr1_v1_tt;
-  using cr2_tt = regs::tamp_cr2_v1_tt;
-  using cr3_tt = regs::tamp_cr3_v1_tt;
-  using fltcr_tt = regs::tamp_fltcr_v1_tt;
-  using ier_tt = regs::tamp_ier_v1_tt;
-  using sr_tt = regs::tamp_sr_v1_tt;
-  using misr_tt = regs::tamp_misr_v1_tt;
-  using scr_tt = regs::tamp_scr_v1_tt;
-  using countr_tt = regs::tamp_countr_v1_tt;
-  using bkp0r_tt = regs::tamp_bkp0r_v1_tt;
-  using bkp1r_tt = regs::tamp_bkp1r_v1_tt;
-  using bkp2r_tt = regs::tamp_bkp2r_v1_tt;
-  using bkp3r_tt = regs::tamp_bkp3r_v1_tt;
-  using bkp4r_tt = regs::tamp_bkp4r_v1_tt;
-  using bkp5r_tt = regs::tamp_bkp5r_v1_tt;
-  using bkp6r_tt = regs::tamp_bkp6r_v1_tt;
-  using bkp7r_tt = regs::tamp_bkp7r_v1_tt;
-  using bkp8r_tt = regs::tamp_bkp8r_v1_tt;
-  using bkp9r_tt = regs::tamp_bkp9r_v1_tt;
-  using bkp10r_tt = regs::tamp_bkp10r_v1_tt;
-  using bkp11r_tt = regs::tamp_bkp11r_v1_tt;
-  using bkp12r_tt = regs::tamp_bkp12r_v1_tt;
-  using bkp13r_tt = regs::tamp_bkp13r_v1_tt;
-  using bkp14r_tt = regs::tamp_bkp14r_v1_tt;
-  using bkp15r_tt = regs::tamp_bkp15r_v1_tt;
-  using bkp16r_tt = regs::tamp_bkp16r_v1_tt;
-  using bkp17r_tt = regs::tamp_bkp17r_v1_tt;
-  using bkp18r_tt = regs::tamp_bkp18r_v1_tt;
-  using bkp19r_tt = regs::tamp_bkp19r_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cr1_tt = regs::tamp_cr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cr2_tt = regs::tamp_cr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cr3_tt = regs::tamp_cr3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fltcr_tt = regs::tamp_fltcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ier_tt = regs::tamp_ier_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using sr_tt = regs::tamp_sr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using misr_tt = regs::tamp_misr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using scr_tt = regs::tamp_scr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using countr_tt = regs::tamp_countr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using bkp0r_tt = regs::tamp_bkp0r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using bkp1r_tt = regs::tamp_bkp1r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using bkp2r_tt = regs::tamp_bkp2r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using bkp3r_tt = regs::tamp_bkp3r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using bkp4r_tt = regs::tamp_bkp4r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using bkp5r_tt = regs::tamp_bkp5r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using bkp6r_tt = regs::tamp_bkp6r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using bkp7r_tt = regs::tamp_bkp7r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using bkp8r_tt = regs::tamp_bkp8r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using bkp9r_tt = regs::tamp_bkp9r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using bkp10r_tt = regs::tamp_bkp10r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using bkp11r_tt = regs::tamp_bkp11r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using bkp12r_tt = regs::tamp_bkp12r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using bkp13r_tt = regs::tamp_bkp13r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using bkp14r_tt = regs::tamp_bkp14r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using bkp15r_tt = regs::tamp_bkp15r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using bkp16r_tt = regs::tamp_bkp16r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using bkp17r_tt = regs::tamp_bkp17r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using bkp18r_tt = regs::tamp_bkp18r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using bkp19r_tt = regs::tamp_bkp19r_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using tamp_t =

@@ -7,27 +7,90 @@
 namespace stm32::stm32f778 {
 
 namespace ethernet_mac {
-  using maccr_tt = regs::ethernet_maccr_v1_tt;
-  using macffr_tt = regs::ethernet_macffr_v1_tt;
-  using machthr_tt = regs::ethernet_machthr_v1_tt;
-  using machtlr_tt = regs::ethernet_machtlr_v1_tt;
-  using macmiiar_tt = regs::ethernet_macmiiar_v1_tt;
-  using macmiidr_tt = regs::ethernet_macmiidr_v1_tt;
-  using macfcr_tt = regs::ethernet_macfcr_v1_tt;
-  using macvlantr_tt = regs::ethernet_macvlantr_v1_tt;
-  using macpmtcsr_tt = regs::ethernet_macpmtcsr_v1_tt;
-  using macdbgr_tt = regs::ethernet_macdbgr_v1_tt;
-  using macsr_tt = regs::ethernet_macsr_v1_tt;
-  using macimr_tt = regs::ethernet_macimr_v1_tt;
-  using maca0hr_tt = regs::ethernet_maca0hr_v1_tt;
-  using maca0lr_tt = regs::ethernet_maca0lr_v1_tt;
-  using maca1hr_tt = regs::ethernet_maca1hr_v1_tt;
-  using maca1lr_tt = regs::ethernet_maca1lr_v1_tt;
-  using maca2hr_tt = regs::ethernet_maca2hr_v1_tt;
-  using maca2lr_tt = regs::ethernet_maca2lr_v1_tt;
-  using maca3hr_tt = regs::ethernet_maca3hr_v1_tt;
-  using maca3lr_tt = regs::ethernet_maca3lr_v1_tt;
-  using macrwuffer_tt = regs::ethernet_macrwuffer_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using maccr_tt = regs::ethernet_maccr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using macffr_tt = regs::ethernet_macffr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using machthr_tt = regs::ethernet_machthr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using machtlr_tt = regs::ethernet_machtlr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using macmiiar_tt = regs::ethernet_macmiiar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using macmiidr_tt = regs::ethernet_macmiidr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using macfcr_tt = regs::ethernet_macfcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using macvlantr_tt = regs::ethernet_macvlantr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using macpmtcsr_tt = regs::ethernet_macpmtcsr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using macdbgr_tt = regs::ethernet_macdbgr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using macsr_tt = regs::ethernet_macsr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using macimr_tt = regs::ethernet_macimr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using maca0hr_tt = regs::ethernet_maca0hr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using maca0lr_tt = regs::ethernet_maca0lr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using maca1hr_tt = regs::ethernet_maca1hr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using maca1lr_tt = regs::ethernet_maca1lr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using maca2hr_tt = regs::ethernet_maca2hr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using maca2lr_tt = regs::ethernet_maca2lr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using maca3hr_tt = regs::ethernet_maca3hr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using maca3lr_tt = regs::ethernet_maca3lr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using macrwuffer_tt = regs::ethernet_macrwuffer_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using ethernet_mac_t =
@@ -58,17 +121,50 @@ namespace ethernet_mac {
 } // namespace ethernet_mac
 
 namespace ethernet_mmc {
-  using mmccr_tt = regs::ethernet_mmccr_v1_tt;
-  using mmcrir_tt = regs::ethernet_mmcrir_v1_tt;
-  using mmctir_tt = regs::ethernet_mmctir_v1_tt;
-  using mmcrimr_tt = regs::ethernet_mmcrimr_v1_tt;
-  using mmctimr_tt = regs::ethernet_mmctimr_v1_tt;
-  using mmctgfsccr_tt = regs::ethernet_mmctgfsccr_v1_tt;
-  using mmctgfmsccr_tt = regs::ethernet_mmctgfmsccr_v1_tt;
-  using mmctgfcr_tt = regs::ethernet_mmctgfcr_v1_tt;
-  using mmcrfcecr_tt = regs::ethernet_mmcrfcecr_v1_tt;
-  using mmcrfaecr_tt = regs::ethernet_mmcrfaecr_v1_tt;
-  using mmcrgufcr_tt = regs::ethernet_mmcrgufcr_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mmccr_tt = regs::ethernet_mmccr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mmcrir_tt = regs::ethernet_mmcrir_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mmctir_tt = regs::ethernet_mmctir_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mmcrimr_tt = regs::ethernet_mmcrimr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mmctimr_tt = regs::ethernet_mmctimr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mmctgfsccr_tt = regs::ethernet_mmctgfsccr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mmctgfmsccr_tt = regs::ethernet_mmctgfmsccr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mmctgfcr_tt = regs::ethernet_mmctgfcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mmcrfcecr_tt = regs::ethernet_mmcrfcecr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mmcrfaecr_tt = regs::ethernet_mmcrfaecr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mmcrgufcr_tt = regs::ethernet_mmcrgufcr_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using ethernet_mmc_t =
@@ -89,17 +185,50 @@ namespace ethernet_mmc {
 } // namespace ethernet_mmc
 
 namespace ethernet_ptp {
-  using ptptscr_tt = regs::ethernet_ptptscr_v1_tt;
-  using ptpssir_tt = regs::ethernet_ptpssir_v1_tt;
-  using ptptshr_tt = regs::ethernet_ptptshr_v1_tt;
-  using ptptslr_tt = regs::ethernet_ptptslr_v1_tt;
-  using ptptshur_tt = regs::ethernet_ptptshur_v1_tt;
-  using ptptslur_tt = regs::ethernet_ptptslur_v1_tt;
-  using ptptsar_tt = regs::ethernet_ptptsar_v1_tt;
-  using ptptthr_tt = regs::ethernet_ptptthr_v1_tt;
-  using ptpttlr_tt = regs::ethernet_ptpttlr_v1_tt;
-  using ptptssr_tt = regs::ethernet_ptptssr_v1_tt;
-  using ptpppscr_tt = regs::ethernet_ptpppscr_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ptptscr_tt = regs::ethernet_ptptscr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ptpssir_tt = regs::ethernet_ptpssir_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ptptshr_tt = regs::ethernet_ptptshr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ptptslr_tt = regs::ethernet_ptptslr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ptptshur_tt = regs::ethernet_ptptshur_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ptptslur_tt = regs::ethernet_ptptslur_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ptptsar_tt = regs::ethernet_ptptsar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ptptthr_tt = regs::ethernet_ptptthr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ptpttlr_tt = regs::ethernet_ptpttlr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ptptssr_tt = regs::ethernet_ptptssr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ptpppscr_tt = regs::ethernet_ptpppscr_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using ethernet_ptp_t =
@@ -120,20 +249,62 @@ namespace ethernet_ptp {
 } // namespace ethernet_ptp
 
 namespace ethernet_dma {
-  using dmabmr_tt = regs::ethernet_dmabmr_v1_tt;
-  using dmatpdr_tt = regs::ethernet_dmatpdr_v1_tt;
-  using dmarpdr_tt = regs::ethernet_dmarpdr_v1_tt;
-  using dmardlar_tt = regs::ethernet_dmardlar_v1_tt;
-  using dmatdlar_tt = regs::ethernet_dmatdlar_v1_tt;
-  using dmasr_tt = regs::ethernet_dmasr_v1_tt;
-  using dmaomr_tt = regs::ethernet_dmaomr_v1_tt;
-  using dmaier_tt = regs::ethernet_dmaier_v1_tt;
-  using dmamfbocr_tt = regs::ethernet_dmamfbocr_v1_tt;
-  using dmarswtr_tt = regs::ethernet_dmarswtr_v1_tt;
-  using dmachtdr_tt = regs::ethernet_dmachtdr_v1_tt;
-  using dmachrdr_tt = regs::ethernet_dmachrdr_v1_tt;
-  using dmachtbar_tt = regs::ethernet_dmachtbar_v1_tt;
-  using dmachrbar_tt = regs::ethernet_dmachrbar_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dmabmr_tt = regs::ethernet_dmabmr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dmatpdr_tt = regs::ethernet_dmatpdr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dmarpdr_tt = regs::ethernet_dmarpdr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dmardlar_tt = regs::ethernet_dmardlar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dmatdlar_tt = regs::ethernet_dmatdlar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dmasr_tt = regs::ethernet_dmasr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dmaomr_tt = regs::ethernet_dmaomr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dmaier_tt = regs::ethernet_dmaier_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dmamfbocr_tt = regs::ethernet_dmamfbocr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dmarswtr_tt = regs::ethernet_dmarswtr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dmachtdr_tt = regs::ethernet_dmachtdr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dmachrdr_tt = regs::ethernet_dmachrdr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dmachtbar_tt = regs::ethernet_dmachtbar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dmachrbar_tt = regs::ethernet_dmachrbar_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using ethernet_dma_t =

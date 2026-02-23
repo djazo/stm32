@@ -7,26 +7,86 @@
 namespace stm32::stm32u5xx {
 
 namespace dbgmcu {
-  using idcode_tt = regs::dbgmcu_idcode_v1_tt;
-  using cr_tt = regs::dbgmcu_cr_v1_tt;
-  using apb1lfzr_tt = regs::dbgmcu_apb1lfzr_v1_tt;
-  using apb1hfzr_tt = regs::dbgmcu_apb1hfzr_v1_tt;
-  using apb2fzr_tt = regs::dbgmcu_apb2fzr_v1_tt;
-  using apb3fzr_tt = regs::dbgmcu_apb3fzr_v1_tt;
-  using ahb1fzr_tt = regs::dbgmcu_ahb1fzr_v1_tt;
-  using ahb3fzr_tt = regs::dbgmcu_ahb3fzr_v1_tt;
-  using dbgmcu_sr_tt = regs::dbgmcu_dbgmcu_sr_v1_tt;
-  using dbgmcu_dbg_auth_host_tt = regs::dbgmcu_dbgmcu_dbg_auth_host_v1_tt;
-  using dbgmcu_dbg_auth_device_tt = regs::dbgmcu_dbgmcu_dbg_auth_device_v1_tt;
-  using pidr4_tt = regs::dbgmcu_pidr4_v1_tt;
-  using pidr0_tt = regs::dbgmcu_pidr0_v1_tt;
-  using pidr1_tt = regs::dbgmcu_pidr1_v1_tt;
-  using pidr2_tt = regs::dbgmcu_pidr2_v1_tt;
-  using pidr3_tt = regs::dbgmcu_pidr3_v1_tt;
-  using cidr0_tt = regs::dbgmcu_cidr0_v1_tt;
-  using cidr1_tt = regs::dbgmcu_cidr1_v1_tt;
-  using cidr2_tt = regs::dbgmcu_cidr2_v1_tt;
-  using cidr3_tt = regs::dbgmcu_cidr3_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using idcode_tt = regs::dbgmcu_idcode_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cr_tt = regs::dbgmcu_cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using apb1lfzr_tt = regs::dbgmcu_apb1lfzr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using apb1hfzr_tt = regs::dbgmcu_apb1hfzr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using apb2fzr_tt = regs::dbgmcu_apb2fzr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using apb3fzr_tt = regs::dbgmcu_apb3fzr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ahb1fzr_tt = regs::dbgmcu_ahb1fzr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ahb3fzr_tt = regs::dbgmcu_ahb3fzr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dbgmcu_sr_tt = regs::dbgmcu_dbgmcu_sr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dbgmcu_dbg_auth_host_tt = regs::dbgmcu_dbgmcu_dbg_auth_host_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dbgmcu_dbg_auth_device_tt = regs::dbgmcu_dbgmcu_dbg_auth_device_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using pidr4_tt = regs::dbgmcu_pidr4_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using pidr0_tt = regs::dbgmcu_pidr0_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using pidr1_tt = regs::dbgmcu_pidr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using pidr2_tt = regs::dbgmcu_pidr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using pidr3_tt = regs::dbgmcu_pidr3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cidr0_tt = regs::dbgmcu_cidr0_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cidr1_tt = regs::dbgmcu_cidr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cidr2_tt = regs::dbgmcu_cidr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cidr3_tt = regs::dbgmcu_cidr3_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using dbgmcu_t =

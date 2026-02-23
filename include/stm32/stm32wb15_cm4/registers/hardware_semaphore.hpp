@@ -16,7 +16,7 @@ using hardware_semaphore_c1icr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"iscm", std::uint32_t, 31, 0>>;
 
 // hardware_semaphore_c1ier0_v1: C1IER0
@@ -28,7 +28,7 @@ using hardware_semaphore_c1ier0_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"isem", std::uint32_t, 31, 0>>;
 
 // hardware_semaphore_c1isr_v1: C1ISR
@@ -40,7 +40,7 @@ using hardware_semaphore_c1isr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"isfm", std::uint32_t, 31, 0>>;
 
 // hardware_semaphore_c1misr_v1: C1MISR
@@ -52,7 +52,7 @@ using hardware_semaphore_c1misr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"misfm", std::uint32_t, 31, 0>>;
 
 // hardware_semaphore_c2icr_v1: C2ICR
@@ -64,7 +64,7 @@ using hardware_semaphore_c2icr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"iscm", std::uint32_t, 31, 0>>;
 
 // hardware_semaphore_c2ier0_v1: C2IER0
@@ -76,7 +76,7 @@ using hardware_semaphore_c2ier0_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"isem", std::uint32_t, 31, 0>>;
 
 // hardware_semaphore_c2isr_v1: C2ISR
@@ -88,7 +88,7 @@ using hardware_semaphore_c2isr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"isfm", std::uint32_t, 31, 0>>;
 
 // hardware_semaphore_c2misr_v1: C2MISR
@@ -100,7 +100,7 @@ using hardware_semaphore_c2misr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"misfm", std::uint32_t, 31, 0>>;
 
 // hardware_semaphore_cr_v1: CR
@@ -112,11 +112,11 @@ using hardware_semaphore_cr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"key", std::uint16_t, 31, 16>,
-               groov::field<"reserved1", std::uint8_t, 15, 12, access::ro>,
+               groov::field<"reserved1", std::uint8_t, 15, 12, common::access::ro>,
                groov::field<"coreid", std::uint8_t, 11, 8>,
-               groov::field<"reserved0", std::uint8_t, 7, 0, access::ro>>;
+               groov::field<"reserved0", std::uint8_t, 7, 0, common::access::ro>>;
 
 // hardware_semaphore_hwcfgr1_v1: HWCFGR1
 // Used by: HSEM
@@ -127,7 +127,7 @@ using hardware_semaphore_hwcfgr1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint32_t, 31, 12>,
                groov::field<"nbint", std::uint8_t, 11, 8>,
                groov::field<"nbsem", std::uint8_t, 7, 0>>;
@@ -141,7 +141,7 @@ using hardware_semaphore_hwcfgr2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint16_t, 31, 16>,
                groov::field<"masterid4", std::uint8_t, 15, 12>,
                groov::field<"masterid3", std::uint8_t, 11, 8>,
@@ -157,7 +157,7 @@ using hardware_semaphore_ipidr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"id", std::uint32_t, 31, 0>>;
 
 // hardware_semaphore_keyr_v1: KEYR
@@ -169,9 +169,9 @@ using hardware_semaphore_keyr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"key", std::uint16_t, 31, 16>,
-               groov::field<"reserved0", std::uint16_t, 15, 0, access::ro>>;
+               groov::field<"reserved0", std::uint16_t, 15, 0, common::access::ro>>;
 
 // hardware_semaphore_r0_v1: R0
 // Used by: HSEM
@@ -182,9 +182,9 @@ using hardware_semaphore_r0_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"lock", bit_locked, 31, 31>,
-               groov::field<"reserved0", std::uint32_t, 30, 12, access::ro>,
+             common::access::rw,
+               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"reserved0", std::uint32_t, 30, 12, common::access::ro>,
                groov::field<"coreid", std::uint8_t, 11, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
 
@@ -197,9 +197,9 @@ using hardware_semaphore_r1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"lock", bit_locked, 31, 31>,
-               groov::field<"reserved0", std::uint32_t, 30, 12, access::ro>,
+             common::access::rw,
+               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"reserved0", std::uint32_t, 30, 12, common::access::ro>,
                groov::field<"coreid", std::uint8_t, 11, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
 
@@ -212,9 +212,9 @@ using hardware_semaphore_r10_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"lock", bit_locked, 31, 31>,
-               groov::field<"reserved0", std::uint32_t, 30, 12, access::ro>,
+             common::access::rw,
+               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"reserved0", std::uint32_t, 30, 12, common::access::ro>,
                groov::field<"coreid", std::uint8_t, 11, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
 
@@ -227,9 +227,9 @@ using hardware_semaphore_r11_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"lock", bit_locked, 31, 31>,
-               groov::field<"reserved0", std::uint32_t, 30, 12, access::ro>,
+             common::access::rw,
+               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"reserved0", std::uint32_t, 30, 12, common::access::ro>,
                groov::field<"coreid", std::uint8_t, 11, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
 
@@ -242,9 +242,9 @@ using hardware_semaphore_r12_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"lock", bit_locked, 31, 31>,
-               groov::field<"reserved0", std::uint32_t, 30, 12, access::ro>,
+             common::access::rw,
+               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"reserved0", std::uint32_t, 30, 12, common::access::ro>,
                groov::field<"coreid", std::uint8_t, 11, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
 
@@ -257,9 +257,9 @@ using hardware_semaphore_r13_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"lock", bit_locked, 31, 31>,
-               groov::field<"reserved0", std::uint32_t, 30, 12, access::ro>,
+             common::access::rw,
+               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"reserved0", std::uint32_t, 30, 12, common::access::ro>,
                groov::field<"coreid", std::uint8_t, 11, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
 
@@ -272,9 +272,9 @@ using hardware_semaphore_r14_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"lock", bit_locked, 31, 31>,
-               groov::field<"reserved0", std::uint32_t, 30, 12, access::ro>,
+             common::access::rw,
+               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"reserved0", std::uint32_t, 30, 12, common::access::ro>,
                groov::field<"coreid", std::uint8_t, 11, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
 
@@ -287,9 +287,9 @@ using hardware_semaphore_r15_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"lock", bit_locked, 31, 31>,
-               groov::field<"reserved0", std::uint32_t, 30, 12, access::ro>,
+             common::access::rw,
+               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"reserved0", std::uint32_t, 30, 12, common::access::ro>,
                groov::field<"coreid", std::uint8_t, 11, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
 
@@ -302,9 +302,9 @@ using hardware_semaphore_r16_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"lock", bit_locked, 31, 31>,
-               groov::field<"reserved0", std::uint32_t, 30, 12, access::ro>,
+             common::access::rw,
+               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"reserved0", std::uint32_t, 30, 12, common::access::ro>,
                groov::field<"coreid", std::uint8_t, 11, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
 
@@ -317,9 +317,9 @@ using hardware_semaphore_r17_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"lock", bit_locked, 31, 31>,
-               groov::field<"reserved0", std::uint32_t, 30, 12, access::ro>,
+             common::access::rw,
+               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"reserved0", std::uint32_t, 30, 12, common::access::ro>,
                groov::field<"coreid", std::uint8_t, 11, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
 
@@ -332,9 +332,9 @@ using hardware_semaphore_r18_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"lock", bit_locked, 31, 31>,
-               groov::field<"reserved0", std::uint32_t, 30, 12, access::ro>,
+             common::access::rw,
+               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"reserved0", std::uint32_t, 30, 12, common::access::ro>,
                groov::field<"coreid", std::uint8_t, 11, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
 
@@ -347,9 +347,9 @@ using hardware_semaphore_r19_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"lock", bit_locked, 31, 31>,
-               groov::field<"reserved0", std::uint32_t, 30, 12, access::ro>,
+             common::access::rw,
+               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"reserved0", std::uint32_t, 30, 12, common::access::ro>,
                groov::field<"coreid", std::uint8_t, 11, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
 
@@ -362,9 +362,9 @@ using hardware_semaphore_r2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"lock", bit_locked, 31, 31>,
-               groov::field<"reserved0", std::uint32_t, 30, 12, access::ro>,
+             common::access::rw,
+               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"reserved0", std::uint32_t, 30, 12, common::access::ro>,
                groov::field<"coreid", std::uint8_t, 11, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
 
@@ -377,9 +377,9 @@ using hardware_semaphore_r20_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"lock", bit_locked, 31, 31>,
-               groov::field<"reserved0", std::uint32_t, 30, 12, access::ro>,
+             common::access::rw,
+               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"reserved0", std::uint32_t, 30, 12, common::access::ro>,
                groov::field<"coreid", std::uint8_t, 11, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
 
@@ -392,9 +392,9 @@ using hardware_semaphore_r21_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"lock", bit_locked, 31, 31>,
-               groov::field<"reserved0", std::uint32_t, 30, 12, access::ro>,
+             common::access::rw,
+               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"reserved0", std::uint32_t, 30, 12, common::access::ro>,
                groov::field<"coreid", std::uint8_t, 11, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
 
@@ -407,9 +407,9 @@ using hardware_semaphore_r22_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"lock", bit_locked, 31, 31>,
-               groov::field<"reserved0", std::uint32_t, 30, 12, access::ro>,
+             common::access::rw,
+               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"reserved0", std::uint32_t, 30, 12, common::access::ro>,
                groov::field<"coreid", std::uint8_t, 11, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
 
@@ -422,9 +422,9 @@ using hardware_semaphore_r23_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"lock", bit_locked, 31, 31>,
-               groov::field<"reserved0", std::uint32_t, 30, 12, access::ro>,
+             common::access::rw,
+               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"reserved0", std::uint32_t, 30, 12, common::access::ro>,
                groov::field<"coreid", std::uint8_t, 11, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
 
@@ -437,9 +437,9 @@ using hardware_semaphore_r24_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"lock", bit_locked, 31, 31>,
-               groov::field<"reserved0", std::uint32_t, 30, 12, access::ro>,
+             common::access::rw,
+               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"reserved0", std::uint32_t, 30, 12, common::access::ro>,
                groov::field<"coreid", std::uint8_t, 11, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
 
@@ -452,9 +452,9 @@ using hardware_semaphore_r25_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"lock", bit_locked, 31, 31>,
-               groov::field<"reserved0", std::uint32_t, 30, 12, access::ro>,
+             common::access::rw,
+               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"reserved0", std::uint32_t, 30, 12, common::access::ro>,
                groov::field<"coreid", std::uint8_t, 11, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
 
@@ -467,9 +467,9 @@ using hardware_semaphore_r26_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"lock", bit_locked, 31, 31>,
-               groov::field<"reserved0", std::uint32_t, 30, 12, access::ro>,
+             common::access::rw,
+               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"reserved0", std::uint32_t, 30, 12, common::access::ro>,
                groov::field<"coreid", std::uint8_t, 11, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
 
@@ -482,9 +482,9 @@ using hardware_semaphore_r27_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"lock", bit_locked, 31, 31>,
-               groov::field<"reserved0", std::uint32_t, 30, 12, access::ro>,
+             common::access::rw,
+               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"reserved0", std::uint32_t, 30, 12, common::access::ro>,
                groov::field<"coreid", std::uint8_t, 11, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
 
@@ -497,9 +497,9 @@ using hardware_semaphore_r28_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"lock", bit_locked, 31, 31>,
-               groov::field<"reserved0", std::uint32_t, 30, 12, access::ro>,
+             common::access::rw,
+               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"reserved0", std::uint32_t, 30, 12, common::access::ro>,
                groov::field<"coreid", std::uint8_t, 11, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
 
@@ -512,9 +512,9 @@ using hardware_semaphore_r29_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"lock", bit_locked, 31, 31>,
-               groov::field<"reserved0", std::uint32_t, 30, 12, access::ro>,
+             common::access::rw,
+               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"reserved0", std::uint32_t, 30, 12, common::access::ro>,
                groov::field<"coreid", std::uint8_t, 11, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
 
@@ -527,9 +527,9 @@ using hardware_semaphore_r3_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"lock", bit_locked, 31, 31>,
-               groov::field<"reserved0", std::uint32_t, 30, 12, access::ro>,
+             common::access::rw,
+               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"reserved0", std::uint32_t, 30, 12, common::access::ro>,
                groov::field<"coreid", std::uint8_t, 11, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
 
@@ -542,9 +542,9 @@ using hardware_semaphore_r30_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"lock", bit_locked, 31, 31>,
-               groov::field<"reserved0", std::uint32_t, 30, 12, access::ro>,
+             common::access::rw,
+               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"reserved0", std::uint32_t, 30, 12, common::access::ro>,
                groov::field<"coreid", std::uint8_t, 11, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
 
@@ -557,9 +557,9 @@ using hardware_semaphore_r31_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"lock", bit_locked, 31, 31>,
-               groov::field<"reserved0", std::uint32_t, 30, 12, access::ro>,
+             common::access::rw,
+               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"reserved0", std::uint32_t, 30, 12, common::access::ro>,
                groov::field<"coreid", std::uint8_t, 11, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
 
@@ -572,9 +572,9 @@ using hardware_semaphore_r4_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"lock", bit_locked, 31, 31>,
-               groov::field<"reserved0", std::uint32_t, 30, 12, access::ro>,
+             common::access::rw,
+               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"reserved0", std::uint32_t, 30, 12, common::access::ro>,
                groov::field<"coreid", std::uint8_t, 11, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
 
@@ -587,9 +587,9 @@ using hardware_semaphore_r5_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"lock", bit_locked, 31, 31>,
-               groov::field<"reserved0", std::uint32_t, 30, 12, access::ro>,
+             common::access::rw,
+               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"reserved0", std::uint32_t, 30, 12, common::access::ro>,
                groov::field<"coreid", std::uint8_t, 11, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
 
@@ -602,9 +602,9 @@ using hardware_semaphore_r6_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"lock", bit_locked, 31, 31>,
-               groov::field<"reserved0", std::uint32_t, 30, 12, access::ro>,
+             common::access::rw,
+               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"reserved0", std::uint32_t, 30, 12, common::access::ro>,
                groov::field<"coreid", std::uint8_t, 11, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
 
@@ -617,9 +617,9 @@ using hardware_semaphore_r7_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"lock", bit_locked, 31, 31>,
-               groov::field<"reserved0", std::uint32_t, 30, 12, access::ro>,
+             common::access::rw,
+               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"reserved0", std::uint32_t, 30, 12, common::access::ro>,
                groov::field<"coreid", std::uint8_t, 11, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
 
@@ -632,9 +632,9 @@ using hardware_semaphore_r8_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"lock", bit_locked, 31, 31>,
-               groov::field<"reserved0", std::uint32_t, 30, 12, access::ro>,
+             common::access::rw,
+               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"reserved0", std::uint32_t, 30, 12, common::access::ro>,
                groov::field<"coreid", std::uint8_t, 11, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
 
@@ -647,9 +647,9 @@ using hardware_semaphore_r9_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"lock", bit_locked, 31, 31>,
-               groov::field<"reserved0", std::uint32_t, 30, 12, access::ro>,
+             common::access::rw,
+               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
+               groov::field<"reserved0", std::uint32_t, 30, 12, common::access::ro>,
                groov::field<"coreid", std::uint8_t, 11, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
 
@@ -662,8 +662,8 @@ using hardware_semaphore_rlr0_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
-               groov::field<"lock", bit_locked, 31, 31>,
+             common::access::ro,
+               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
                groov::field<"reserved0", std::uint32_t, 30, 12>,
                groov::field<"coreid", std::uint8_t, 11, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
@@ -677,8 +677,8 @@ using hardware_semaphore_rlr1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
-               groov::field<"lock", bit_locked, 31, 31>,
+             common::access::ro,
+               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
                groov::field<"reserved0", std::uint32_t, 30, 12>,
                groov::field<"coreid", std::uint8_t, 11, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
@@ -692,8 +692,8 @@ using hardware_semaphore_rlr10_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
-               groov::field<"lock", bit_locked, 31, 31>,
+             common::access::ro,
+               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
                groov::field<"reserved0", std::uint32_t, 30, 12>,
                groov::field<"coreid", std::uint8_t, 11, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
@@ -707,8 +707,8 @@ using hardware_semaphore_rlr11_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
-               groov::field<"lock", bit_locked, 31, 31>,
+             common::access::ro,
+               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
                groov::field<"reserved0", std::uint32_t, 30, 12>,
                groov::field<"coreid", std::uint8_t, 11, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
@@ -722,8 +722,8 @@ using hardware_semaphore_rlr12_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
-               groov::field<"lock", bit_locked, 31, 31>,
+             common::access::ro,
+               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
                groov::field<"reserved0", std::uint32_t, 30, 12>,
                groov::field<"coreid", std::uint8_t, 11, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
@@ -737,8 +737,8 @@ using hardware_semaphore_rlr13_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
-               groov::field<"lock", bit_locked, 31, 31>,
+             common::access::ro,
+               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
                groov::field<"reserved0", std::uint32_t, 30, 12>,
                groov::field<"coreid", std::uint8_t, 11, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
@@ -752,8 +752,8 @@ using hardware_semaphore_rlr14_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
-               groov::field<"lock", bit_locked, 31, 31>,
+             common::access::ro,
+               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
                groov::field<"reserved0", std::uint32_t, 30, 12>,
                groov::field<"coreid", std::uint8_t, 11, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
@@ -767,8 +767,8 @@ using hardware_semaphore_rlr15_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
-               groov::field<"lock", bit_locked, 31, 31>,
+             common::access::ro,
+               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
                groov::field<"reserved0", std::uint32_t, 30, 12>,
                groov::field<"coreid", std::uint8_t, 11, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
@@ -782,8 +782,8 @@ using hardware_semaphore_rlr16_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
-               groov::field<"lock", bit_locked, 31, 31>,
+             common::access::ro,
+               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
                groov::field<"reserved0", std::uint32_t, 30, 12>,
                groov::field<"coreid", std::uint8_t, 11, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
@@ -797,8 +797,8 @@ using hardware_semaphore_rlr17_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
-               groov::field<"lock", bit_locked, 31, 31>,
+             common::access::ro,
+               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
                groov::field<"reserved0", std::uint32_t, 30, 12>,
                groov::field<"coreid", std::uint8_t, 11, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
@@ -812,8 +812,8 @@ using hardware_semaphore_rlr18_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
-               groov::field<"lock", bit_locked, 31, 31>,
+             common::access::ro,
+               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
                groov::field<"reserved0", std::uint32_t, 30, 12>,
                groov::field<"coreid", std::uint8_t, 11, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
@@ -827,8 +827,8 @@ using hardware_semaphore_rlr19_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
-               groov::field<"lock", bit_locked, 31, 31>,
+             common::access::ro,
+               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
                groov::field<"reserved0", std::uint32_t, 30, 12>,
                groov::field<"coreid", std::uint8_t, 11, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
@@ -842,8 +842,8 @@ using hardware_semaphore_rlr2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
-               groov::field<"lock", bit_locked, 31, 31>,
+             common::access::ro,
+               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
                groov::field<"reserved0", std::uint32_t, 30, 12>,
                groov::field<"coreid", std::uint8_t, 11, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
@@ -857,8 +857,8 @@ using hardware_semaphore_rlr20_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
-               groov::field<"lock", bit_locked, 31, 31>,
+             common::access::ro,
+               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
                groov::field<"reserved0", std::uint32_t, 30, 12>,
                groov::field<"coreid", std::uint8_t, 11, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
@@ -872,8 +872,8 @@ using hardware_semaphore_rlr21_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
-               groov::field<"lock", bit_locked, 31, 31>,
+             common::access::ro,
+               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
                groov::field<"reserved0", std::uint32_t, 30, 12>,
                groov::field<"coreid", std::uint8_t, 11, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
@@ -887,8 +887,8 @@ using hardware_semaphore_rlr22_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
-               groov::field<"lock", bit_locked, 31, 31>,
+             common::access::ro,
+               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
                groov::field<"reserved0", std::uint32_t, 30, 12>,
                groov::field<"coreid", std::uint8_t, 11, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
@@ -902,8 +902,8 @@ using hardware_semaphore_rlr23_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
-               groov::field<"lock", bit_locked, 31, 31>,
+             common::access::ro,
+               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
                groov::field<"reserved0", std::uint32_t, 30, 12>,
                groov::field<"coreid", std::uint8_t, 11, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
@@ -917,8 +917,8 @@ using hardware_semaphore_rlr24_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
-               groov::field<"lock", bit_locked, 31, 31>,
+             common::access::ro,
+               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
                groov::field<"reserved0", std::uint32_t, 30, 12>,
                groov::field<"coreid", std::uint8_t, 11, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
@@ -932,8 +932,8 @@ using hardware_semaphore_rlr25_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
-               groov::field<"lock", bit_locked, 31, 31>,
+             common::access::ro,
+               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
                groov::field<"reserved0", std::uint32_t, 30, 12>,
                groov::field<"coreid", std::uint8_t, 11, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
@@ -947,8 +947,8 @@ using hardware_semaphore_rlr26_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
-               groov::field<"lock", bit_locked, 31, 31>,
+             common::access::ro,
+               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
                groov::field<"reserved0", std::uint32_t, 30, 12>,
                groov::field<"coreid", std::uint8_t, 11, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
@@ -962,8 +962,8 @@ using hardware_semaphore_rlr27_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
-               groov::field<"lock", bit_locked, 31, 31>,
+             common::access::ro,
+               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
                groov::field<"reserved0", std::uint32_t, 30, 12>,
                groov::field<"coreid", std::uint8_t, 11, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
@@ -977,8 +977,8 @@ using hardware_semaphore_rlr28_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
-               groov::field<"lock", bit_locked, 31, 31>,
+             common::access::ro,
+               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
                groov::field<"reserved0", std::uint32_t, 30, 12>,
                groov::field<"coreid", std::uint8_t, 11, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
@@ -992,8 +992,8 @@ using hardware_semaphore_rlr29_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
-               groov::field<"lock", bit_locked, 31, 31>,
+             common::access::ro,
+               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
                groov::field<"reserved0", std::uint32_t, 30, 12>,
                groov::field<"coreid", std::uint8_t, 11, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
@@ -1007,8 +1007,8 @@ using hardware_semaphore_rlr3_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
-               groov::field<"lock", bit_locked, 31, 31>,
+             common::access::ro,
+               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
                groov::field<"reserved0", std::uint32_t, 30, 12>,
                groov::field<"coreid", std::uint8_t, 11, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
@@ -1022,8 +1022,8 @@ using hardware_semaphore_rlr30_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
-               groov::field<"lock", bit_locked, 31, 31>,
+             common::access::ro,
+               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
                groov::field<"reserved0", std::uint32_t, 30, 12>,
                groov::field<"coreid", std::uint8_t, 11, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
@@ -1037,8 +1037,8 @@ using hardware_semaphore_rlr31_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
-               groov::field<"lock", bit_locked, 31, 31>,
+             common::access::ro,
+               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
                groov::field<"reserved0", std::uint32_t, 30, 12>,
                groov::field<"coreid", std::uint8_t, 11, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
@@ -1052,8 +1052,8 @@ using hardware_semaphore_rlr4_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
-               groov::field<"lock", bit_locked, 31, 31>,
+             common::access::ro,
+               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
                groov::field<"reserved0", std::uint32_t, 30, 12>,
                groov::field<"coreid", std::uint8_t, 11, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
@@ -1067,8 +1067,8 @@ using hardware_semaphore_rlr5_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
-               groov::field<"lock", bit_locked, 31, 31>,
+             common::access::ro,
+               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
                groov::field<"reserved0", std::uint32_t, 30, 12>,
                groov::field<"coreid", std::uint8_t, 11, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
@@ -1082,8 +1082,8 @@ using hardware_semaphore_rlr6_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
-               groov::field<"lock", bit_locked, 31, 31>,
+             common::access::ro,
+               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
                groov::field<"reserved0", std::uint32_t, 30, 12>,
                groov::field<"coreid", std::uint8_t, 11, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
@@ -1097,8 +1097,8 @@ using hardware_semaphore_rlr7_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
-               groov::field<"lock", bit_locked, 31, 31>,
+             common::access::ro,
+               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
                groov::field<"reserved0", std::uint32_t, 30, 12>,
                groov::field<"coreid", std::uint8_t, 11, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
@@ -1112,8 +1112,8 @@ using hardware_semaphore_rlr8_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
-               groov::field<"lock", bit_locked, 31, 31>,
+             common::access::ro,
+               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
                groov::field<"reserved0", std::uint32_t, 30, 12>,
                groov::field<"coreid", std::uint8_t, 11, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
@@ -1127,8 +1127,8 @@ using hardware_semaphore_rlr9_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
-               groov::field<"lock", bit_locked, 31, 31>,
+             common::access::ro,
+               groov::field<"lock", common::bittypes::bit_locked, 31, 31>,
                groov::field<"reserved0", std::uint32_t, 30, 12>,
                groov::field<"coreid", std::uint8_t, 11, 8>,
                groov::field<"procid", std::uint8_t, 7, 0>>;
@@ -1142,7 +1142,7 @@ using hardware_semaphore_sidr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"sid", std::uint32_t, 31, 0>>;
 
 // hardware_semaphore_verr_v1: VERR
@@ -1154,7 +1154,7 @@ using hardware_semaphore_verr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint32_t, 31, 8>,
                groov::field<"majrev", std::uint8_t, 7, 4>,
                groov::field<"minrev", std::uint8_t, 3, 0>>;

@@ -16,9 +16,9 @@ using dcache_dcache_cmdreaddrr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"cmdendaddr", std::uint32_t, 31, 4>,
-               groov::field<"reserved0", std::uint8_t, 3, 0, access::ro>>;
+               groov::field<"reserved0", std::uint8_t, 3, 0, common::access::ro>>;
 
 // dcache_dcache_cmdrsaddrr_v1: DCACHE_CMDRSADDRR
 // Used by: DCACHE1, SEC_DCACHE1, DCACHE2, SEC_DCACHE2
@@ -29,9 +29,9 @@ using dcache_dcache_cmdrsaddrr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"cmdstartaddr", std::uint32_t, 31, 4>,
-               groov::field<"reserved0", std::uint8_t, 3, 0, access::ro>>;
+               groov::field<"reserved0", std::uint8_t, 3, 0, common::access::ro>>;
 
 // dcache_dcache_cr_v1: DCACHE_CR
 // Used by: DCACHE1, SEC_DCACHE1, DCACHE2, SEC_DCACHE2
@@ -42,23 +42,23 @@ using dcache_dcache_cr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"hburst", bit_reset, 31, 31>,
-               groov::field<"reserved2", std::uint8_t, 30, 24, access::ro>,
-               groov::field<"wmissmrst", bit_reset, 23, 23>,
-               groov::field<"whitmrst", bit_reset, 22, 22>,
-               groov::field<"wmissmen", bit_enable, 21, 21>,
-               groov::field<"whitmen", bit_enable, 20, 20>,
-               groov::field<"rmissmrst", bit_reset, 19, 19>,
-               groov::field<"rhitmrst", bit_reset, 18, 18>,
-               groov::field<"rmissmen", bit_enable, 17, 17>,
-               groov::field<"rhitmen", bit_enable, 16, 16>,
-               groov::field<"reserved1", std::uint8_t, 15, 12, access::ro>,
-               groov::field<"startcmd", bool, 11, 11, access::wo>,
+             common::access::rw,
+               groov::field<"hburst", common::bittypes::bit_reset, 31, 31>,
+               groov::field<"reserved2", std::uint8_t, 30, 24, common::access::ro>,
+               groov::field<"wmissmrst", common::bittypes::bit_reset, 23, 23>,
+               groov::field<"whitmrst", common::bittypes::bit_reset, 22, 22>,
+               groov::field<"wmissmen", common::bittypes::bit_enable, 21, 21>,
+               groov::field<"whitmen", common::bittypes::bit_enable, 20, 20>,
+               groov::field<"rmissmrst", common::bittypes::bit_reset, 19, 19>,
+               groov::field<"rhitmrst", common::bittypes::bit_reset, 18, 18>,
+               groov::field<"rmissmen", common::bittypes::bit_enable, 17, 17>,
+               groov::field<"rhitmen", common::bittypes::bit_enable, 16, 16>,
+               groov::field<"reserved1", std::uint8_t, 15, 12, common::access::ro>,
+               groov::field<"startcmd", bool, 11, 11, common::access::wo>,
                groov::field<"cachecmd", std::uint8_t, 10, 8>,
-               groov::field<"reserved0", std::uint8_t, 7, 2, access::ro>,
-               groov::field<"cacheinv", bool, 1, 1, access::wo>,
-               groov::field<"en", bit_enable, 0, 0>>;
+               groov::field<"reserved0", std::uint8_t, 7, 2, common::access::ro>,
+               groov::field<"cacheinv", bool, 1, 1, common::access::wo>,
+               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
 
 // dcache_dcache_fcr_v1: DCACHE_FCR
 // Used by: DCACHE1, SEC_DCACHE1, DCACHE2, SEC_DCACHE2
@@ -69,13 +69,13 @@ using dcache_dcache_fcr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::wo,
-               groov::field<"reserved2", std::uint32_t, 31, 5, access::ro>,
+             common::access::wo,
+               groov::field<"reserved2", std::uint32_t, 31, 5, common::access::ro>,
                groov::field<"ccmdendf", bool, 4, 4>,
-               groov::field<"reserved1", bool, 3, 3, access::ro>,
+               groov::field<"reserved1", bool, 3, 3, common::access::ro>,
                groov::field<"cerrf", bool, 2, 2>,
-               groov::field<"cbsyendf", bit_ready_bar, 1, 1>,
-               groov::field<"reserved0", bool, 0, 0, access::ro>>;
+               groov::field<"cbsyendf", common::bittypes::bit_ready_bar, 1, 1>,
+               groov::field<"reserved0", bool, 0, 0, common::access::ro>>;
 
 // dcache_dcache_ier_v1: DCACHE_IER
 // Used by: DCACHE1, SEC_DCACHE1, DCACHE2, SEC_DCACHE2
@@ -86,13 +86,13 @@ using dcache_dcache_ier_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved2", std::uint32_t, 31, 5, access::ro>,
-               groov::field<"cmdendie", bit_enable, 4, 4>,
-               groov::field<"reserved1", bool, 3, 3, access::ro>,
-               groov::field<"errie", bit_enable, 2, 2>,
-               groov::field<"bsyendie", bit_ready_bar, 1, 1>,
-               groov::field<"reserved0", bool, 0, 0, access::ro>>;
+             common::access::rw,
+               groov::field<"reserved2", std::uint32_t, 31, 5, common::access::ro>,
+               groov::field<"cmdendie", common::bittypes::bit_enable, 4, 4>,
+               groov::field<"reserved1", bool, 3, 3, common::access::ro>,
+               groov::field<"errie", common::bittypes::bit_enable, 2, 2>,
+               groov::field<"bsyendie", common::bittypes::bit_ready_bar, 1, 1>,
+               groov::field<"reserved0", bool, 0, 0, common::access::ro>>;
 
 // dcache_dcache_rhmonr_v1: DCACHE_RHMONR
 // Used by: DCACHE1, SEC_DCACHE1, DCACHE2, SEC_DCACHE2
@@ -103,7 +103,7 @@ using dcache_dcache_rhmonr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"rhitmon", std::uint32_t, 31, 0>>;
 
 // dcache_dcache_rmmonr_v1: DCACHE_RMMONR
@@ -115,7 +115,7 @@ using dcache_dcache_rmmonr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint16_t, 31, 16>,
                groov::field<"mrissmon", std::uint16_t, 15, 0>>;
 
@@ -128,12 +128,12 @@ using dcache_dcache_sr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint32_t, 31, 5>,
                groov::field<"cmdendf", bool, 4, 4>,
                groov::field<"busycmdf", bool, 3, 3>,
                groov::field<"errf", bool, 2, 2>,
-               groov::field<"bsyendf", bit_ready_bar, 1, 1>,
+               groov::field<"bsyendf", common::bittypes::bit_ready_bar, 1, 1>,
                groov::field<"busyf", bool, 0, 0>>;
 
 // dcache_dcache_whmonr_v1: DCACHE_WHMONR
@@ -145,7 +145,7 @@ using dcache_dcache_whmonr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"whitmon", std::uint32_t, 31, 0>>;
 
 // dcache_dcache_wmmonr_v1: DCACHE_WMMONR
@@ -157,7 +157,7 @@ using dcache_dcache_wmmonr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint16_t, 31, 16>,
                groov::field<"wmissmon", std::uint16_t, 15, 0>>;
 

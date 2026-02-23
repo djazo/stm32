@@ -7,80 +7,302 @@
 namespace stm32::stm32h747_cm4 {
 
 namespace hsem {
-  using hsem_r0_tt = regs::hsem_hsem_r0_v1_tt;
-  using hsem_r1_tt = regs::hsem_hsem_r1_v1_tt;
-  using hsem_r2_tt = regs::hsem_hsem_r2_v1_tt;
-  using hsem_r3_tt = regs::hsem_hsem_r3_v1_tt;
-  using hsem_r4_tt = regs::hsem_hsem_r4_v1_tt;
-  using hsem_r5_tt = regs::hsem_hsem_r5_v1_tt;
-  using hsem_r6_tt = regs::hsem_hsem_r6_v1_tt;
-  using hsem_r7_tt = regs::hsem_hsem_r7_v1_tt;
-  using hsem_r8_tt = regs::hsem_hsem_r8_v1_tt;
-  using hsem_r9_tt = regs::hsem_hsem_r9_v1_tt;
-  using hsem_r10_tt = regs::hsem_hsem_r10_v1_tt;
-  using hsem_r11_tt = regs::hsem_hsem_r11_v1_tt;
-  using hsem_r12_tt = regs::hsem_hsem_r12_v1_tt;
-  using hsem_r13_tt = regs::hsem_hsem_r13_v1_tt;
-  using hsem_r14_tt = regs::hsem_hsem_r14_v1_tt;
-  using hsem_r15_tt = regs::hsem_hsem_r15_v1_tt;
-  using hsem_r16_tt = regs::hsem_hsem_r16_v1_tt;
-  using hsem_r17_tt = regs::hsem_hsem_r17_v1_tt;
-  using hsem_r18_tt = regs::hsem_hsem_r18_v1_tt;
-  using hsem_r19_tt = regs::hsem_hsem_r19_v1_tt;
-  using hsem_r20_tt = regs::hsem_hsem_r20_v1_tt;
-  using hsem_r21_tt = regs::hsem_hsem_r21_v1_tt;
-  using hsem_r22_tt = regs::hsem_hsem_r22_v1_tt;
-  using hsem_r23_tt = regs::hsem_hsem_r23_v1_tt;
-  using hsem_r24_tt = regs::hsem_hsem_r24_v1_tt;
-  using hsem_r25_tt = regs::hsem_hsem_r25_v1_tt;
-  using hsem_r26_tt = regs::hsem_hsem_r26_v1_tt;
-  using hsem_r27_tt = regs::hsem_hsem_r27_v1_tt;
-  using hsem_r28_tt = regs::hsem_hsem_r28_v1_tt;
-  using hsem_r29_tt = regs::hsem_hsem_r29_v1_tt;
-  using hsem_r30_tt = regs::hsem_hsem_r30_v1_tt;
-  using hsem_r31_tt = regs::hsem_hsem_r31_v1_tt;
-  using hsem_rlr0_tt = regs::hsem_hsem_rlr0_v1_tt;
-  using hsem_rlr1_tt = regs::hsem_hsem_rlr1_v1_tt;
-  using hsem_rlr2_tt = regs::hsem_hsem_rlr2_v1_tt;
-  using hsem_rlr3_tt = regs::hsem_hsem_rlr3_v1_tt;
-  using hsem_rlr4_tt = regs::hsem_hsem_rlr4_v1_tt;
-  using hsem_rlr5_tt = regs::hsem_hsem_rlr5_v1_tt;
-  using hsem_rlr6_tt = regs::hsem_hsem_rlr6_v1_tt;
-  using hsem_rlr7_tt = regs::hsem_hsem_rlr7_v1_tt;
-  using hsem_rlr8_tt = regs::hsem_hsem_rlr8_v1_tt;
-  using hsem_rlr9_tt = regs::hsem_hsem_rlr9_v1_tt;
-  using hsem_rlr10_tt = regs::hsem_hsem_rlr10_v1_tt;
-  using hsem_rlr11_tt = regs::hsem_hsem_rlr11_v1_tt;
-  using hsem_rlr12_tt = regs::hsem_hsem_rlr12_v1_tt;
-  using hsem_rlr13_tt = regs::hsem_hsem_rlr13_v1_tt;
-  using hsem_rlr14_tt = regs::hsem_hsem_rlr14_v1_tt;
-  using hsem_rlr15_tt = regs::hsem_hsem_rlr15_v1_tt;
-  using hsem_rlr16_tt = regs::hsem_hsem_rlr16_v1_tt;
-  using hsem_rlr17_tt = regs::hsem_hsem_rlr17_v1_tt;
-  using hsem_rlr18_tt = regs::hsem_hsem_rlr18_v1_tt;
-  using hsem_rlr19_tt = regs::hsem_hsem_rlr19_v1_tt;
-  using hsem_rlr20_tt = regs::hsem_hsem_rlr20_v1_tt;
-  using hsem_rlr21_tt = regs::hsem_hsem_rlr21_v1_tt;
-  using hsem_rlr22_tt = regs::hsem_hsem_rlr22_v1_tt;
-  using hsem_rlr23_tt = regs::hsem_hsem_rlr23_v1_tt;
-  using hsem_rlr24_tt = regs::hsem_hsem_rlr24_v1_tt;
-  using hsem_rlr25_tt = regs::hsem_hsem_rlr25_v1_tt;
-  using hsem_rlr26_tt = regs::hsem_hsem_rlr26_v1_tt;
-  using hsem_rlr27_tt = regs::hsem_hsem_rlr27_v1_tt;
-  using hsem_rlr28_tt = regs::hsem_hsem_rlr28_v1_tt;
-  using hsem_rlr29_tt = regs::hsem_hsem_rlr29_v1_tt;
-  using hsem_rlr30_tt = regs::hsem_hsem_rlr30_v1_tt;
-  using hsem_rlr31_tt = regs::hsem_hsem_rlr31_v1_tt;
-  using hsem_c1ier_tt = regs::hsem_hsem_c1ier_v1_tt;
-  using hsem_c1icr_tt = regs::hsem_hsem_c1icr_v1_tt;
-  using hsem_c1isr_tt = regs::hsem_hsem_c1isr_v1_tt;
-  using hsem_c1misr_tt = regs::hsem_hsem_c1misr_v1_tt;
-  using hsem_c2ier_tt = regs::hsem_hsem_c2ier_v1_tt;
-  using hsem_c2icr_tt = regs::hsem_hsem_c2icr_v1_tt;
-  using hsem_c2isr_tt = regs::hsem_hsem_c2isr_v1_tt;
-  using hsem_c2misr_tt = regs::hsem_hsem_c2misr_v1_tt;
-  using hsem_cr_tt = regs::hsem_hsem_cr_v1_tt;
-  using hsem_keyr_tt = regs::hsem_hsem_keyr_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hsem_r0_tt = regs::hsem_hsem_r0_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hsem_r1_tt = regs::hsem_hsem_r1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hsem_r2_tt = regs::hsem_hsem_r2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hsem_r3_tt = regs::hsem_hsem_r3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hsem_r4_tt = regs::hsem_hsem_r4_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hsem_r5_tt = regs::hsem_hsem_r5_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hsem_r6_tt = regs::hsem_hsem_r6_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hsem_r7_tt = regs::hsem_hsem_r7_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hsem_r8_tt = regs::hsem_hsem_r8_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hsem_r9_tt = regs::hsem_hsem_r9_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hsem_r10_tt = regs::hsem_hsem_r10_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hsem_r11_tt = regs::hsem_hsem_r11_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hsem_r12_tt = regs::hsem_hsem_r12_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hsem_r13_tt = regs::hsem_hsem_r13_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hsem_r14_tt = regs::hsem_hsem_r14_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hsem_r15_tt = regs::hsem_hsem_r15_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hsem_r16_tt = regs::hsem_hsem_r16_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hsem_r17_tt = regs::hsem_hsem_r17_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hsem_r18_tt = regs::hsem_hsem_r18_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hsem_r19_tt = regs::hsem_hsem_r19_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hsem_r20_tt = regs::hsem_hsem_r20_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hsem_r21_tt = regs::hsem_hsem_r21_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hsem_r22_tt = regs::hsem_hsem_r22_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hsem_r23_tt = regs::hsem_hsem_r23_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hsem_r24_tt = regs::hsem_hsem_r24_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hsem_r25_tt = regs::hsem_hsem_r25_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hsem_r26_tt = regs::hsem_hsem_r26_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hsem_r27_tt = regs::hsem_hsem_r27_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hsem_r28_tt = regs::hsem_hsem_r28_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hsem_r29_tt = regs::hsem_hsem_r29_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hsem_r30_tt = regs::hsem_hsem_r30_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hsem_r31_tt = regs::hsem_hsem_r31_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hsem_rlr0_tt = regs::hsem_hsem_rlr0_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hsem_rlr1_tt = regs::hsem_hsem_rlr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hsem_rlr2_tt = regs::hsem_hsem_rlr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hsem_rlr3_tt = regs::hsem_hsem_rlr3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hsem_rlr4_tt = regs::hsem_hsem_rlr4_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hsem_rlr5_tt = regs::hsem_hsem_rlr5_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hsem_rlr6_tt = regs::hsem_hsem_rlr6_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hsem_rlr7_tt = regs::hsem_hsem_rlr7_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hsem_rlr8_tt = regs::hsem_hsem_rlr8_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hsem_rlr9_tt = regs::hsem_hsem_rlr9_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hsem_rlr10_tt = regs::hsem_hsem_rlr10_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hsem_rlr11_tt = regs::hsem_hsem_rlr11_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hsem_rlr12_tt = regs::hsem_hsem_rlr12_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hsem_rlr13_tt = regs::hsem_hsem_rlr13_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hsem_rlr14_tt = regs::hsem_hsem_rlr14_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hsem_rlr15_tt = regs::hsem_hsem_rlr15_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hsem_rlr16_tt = regs::hsem_hsem_rlr16_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hsem_rlr17_tt = regs::hsem_hsem_rlr17_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hsem_rlr18_tt = regs::hsem_hsem_rlr18_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hsem_rlr19_tt = regs::hsem_hsem_rlr19_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hsem_rlr20_tt = regs::hsem_hsem_rlr20_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hsem_rlr21_tt = regs::hsem_hsem_rlr21_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hsem_rlr22_tt = regs::hsem_hsem_rlr22_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hsem_rlr23_tt = regs::hsem_hsem_rlr23_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hsem_rlr24_tt = regs::hsem_hsem_rlr24_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hsem_rlr25_tt = regs::hsem_hsem_rlr25_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hsem_rlr26_tt = regs::hsem_hsem_rlr26_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hsem_rlr27_tt = regs::hsem_hsem_rlr27_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hsem_rlr28_tt = regs::hsem_hsem_rlr28_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hsem_rlr29_tt = regs::hsem_hsem_rlr29_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hsem_rlr30_tt = regs::hsem_hsem_rlr30_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hsem_rlr31_tt = regs::hsem_hsem_rlr31_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hsem_c1ier_tt = regs::hsem_hsem_c1ier_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hsem_c1icr_tt = regs::hsem_hsem_c1icr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hsem_c1isr_tt = regs::hsem_hsem_c1isr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hsem_c1misr_tt = regs::hsem_hsem_c1misr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hsem_c2ier_tt = regs::hsem_hsem_c2ier_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hsem_c2icr_tt = regs::hsem_hsem_c2icr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hsem_c2isr_tt = regs::hsem_hsem_c2isr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hsem_c2misr_tt = regs::hsem_hsem_c2misr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hsem_cr_tt = regs::hsem_hsem_cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hsem_keyr_tt = regs::hsem_hsem_keyr_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using hsem_t =

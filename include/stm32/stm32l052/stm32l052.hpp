@@ -43,7 +43,7 @@ namespace detail {
 
 namespace stm32 {
 
-inline constexpr auto adc = [] consteval {
+constexpr auto adc = [] consteval {
   if constexpr (stm32l052::config::adc) {
     return stm32l052::adc::adc_t<stm32l052::adc::ADC_BASE>{};
   } else {
@@ -51,7 +51,7 @@ inline constexpr auto adc = [] consteval {
   }
 }();
 
-inline constexpr auto crc = [] consteval {
+constexpr auto crc = [] consteval {
   if constexpr (stm32l052::config::crc) {
     return stm32l052::crc::crc_t<stm32l052::crc::CRC_BASE>{};
   } else {
@@ -59,7 +59,7 @@ inline constexpr auto crc = [] consteval {
   }
 }();
 
-inline constexpr auto crs = [] consteval {
+constexpr auto crs = [] consteval {
   if constexpr (stm32l052::config::crs) {
     return stm32l052::crs::crs_t<stm32l052::crs::CRS_BASE>{};
   } else {
@@ -67,7 +67,7 @@ inline constexpr auto crs = [] consteval {
   }
 }();
 
-inline constexpr auto dac = [] consteval {
+constexpr auto dac = [] consteval {
   if constexpr (stm32l052::config::dac) {
     return stm32l052::dac::dac_t<stm32l052::dac::DAC_BASE>{};
   } else {
@@ -75,7 +75,7 @@ inline constexpr auto dac = [] consteval {
   }
 }();
 
-inline constexpr auto dbgmcu = [] consteval {
+constexpr auto dbgmcu = [] consteval {
   if constexpr (stm32l052::config::dbgmcu) {
     return stm32l052::dbgmcu::dbgmcu_t<stm32l052::dbgmcu::DBGMCU_BASE>{};
   } else {
@@ -83,7 +83,7 @@ inline constexpr auto dbgmcu = [] consteval {
   }
 }();
 
-inline constexpr auto dma1 = [] consteval {
+constexpr auto dma1 = [] consteval {
   if constexpr (stm32l052::config::dma1) {
     return stm32l052::dma1::dma1_t<stm32l052::dma1::DMA1_BASE>{};
   } else {
@@ -91,7 +91,7 @@ inline constexpr auto dma1 = [] consteval {
   }
 }();
 
-inline constexpr auto exti = [] consteval {
+constexpr auto exti = [] consteval {
   if constexpr (stm32l052::config::exti) {
     return stm32l052::exti::exti_t<stm32l052::exti::EXTI_BASE>{};
   } else {
@@ -99,7 +99,7 @@ inline constexpr auto exti = [] consteval {
   }
 }();
 
-inline constexpr auto firewall = [] consteval {
+constexpr auto firewall = [] consteval {
   if constexpr (stm32l052::config::firewall) {
     return stm32l052::firewall::firewall_t<stm32l052::firewall::FIREWALL_BASE>{};
   } else {
@@ -107,7 +107,7 @@ inline constexpr auto firewall = [] consteval {
   }
 }();
 
-inline constexpr auto flash = [] consteval {
+constexpr auto flash = [] consteval {
   if constexpr (stm32l052::config::flash) {
     return stm32l052::flash::flash_t<stm32l052::flash::FLASH_BASE>{};
   } else {
@@ -115,15 +115,15 @@ inline constexpr auto flash = [] consteval {
   }
 }();
 
-inline constexpr auto gpioa = [] consteval {
+constexpr auto gpioa = [] consteval {
   if constexpr (stm32l052::config::gpioa) {
-    return stm32l052::gpiox::gpiox_t<"gpioa",stm32l052::gpioa::GPIOA_BASE>{};
+    return stm32l052::gpioa::gpioa_t<stm32l052::gpioa::GPIOA_BASE>{};
   } else {
     return stm32l052::detail::peripheral_disabled{};
   }
 }();
 
-inline constexpr auto gpiob = [] consteval {
+constexpr auto gpiob = [] consteval {
   if constexpr (stm32l052::config::gpiob) {
     return stm32l052::gpiox::gpiox_t<"gpiob",stm32l052::gpiob::GPIOB_BASE>{};
   } else {
@@ -131,7 +131,7 @@ inline constexpr auto gpiob = [] consteval {
   }
 }();
 
-inline constexpr auto gpioc = [] consteval {
+constexpr auto gpioc = [] consteval {
   if constexpr (stm32l052::config::gpioc) {
     return stm32l052::gpiox::gpiox_t<"gpioc",stm32l052::gpioc::GPIOC_BASE>{};
   } else {
@@ -139,7 +139,7 @@ inline constexpr auto gpioc = [] consteval {
   }
 }();
 
-inline constexpr auto gpiod = [] consteval {
+constexpr auto gpiod = [] consteval {
   if constexpr (stm32l052::config::gpiod) {
     return stm32l052::gpiox::gpiox_t<"gpiod",stm32l052::gpiod::GPIOD_BASE>{};
   } else {
@@ -147,7 +147,7 @@ inline constexpr auto gpiod = [] consteval {
   }
 }();
 
-inline constexpr auto gpioe = [] consteval {
+constexpr auto gpioe = [] consteval {
   if constexpr (stm32l052::config::gpioe) {
     return stm32l052::gpiox::gpiox_t<"gpioe",stm32l052::gpioe::GPIOE_BASE>{};
   } else {
@@ -155,7 +155,7 @@ inline constexpr auto gpioe = [] consteval {
   }
 }();
 
-inline constexpr auto gpioh = [] consteval {
+constexpr auto gpioh = [] consteval {
   if constexpr (stm32l052::config::gpioh) {
     return stm32l052::gpiox::gpiox_t<"gpioh",stm32l052::gpioh::GPIOH_BASE>{};
   } else {
@@ -163,7 +163,7 @@ inline constexpr auto gpioh = [] consteval {
   }
 }();
 
-inline constexpr auto i2c1 = [] consteval {
+constexpr auto i2c1 = [] consteval {
   if constexpr (stm32l052::config::i2c1) {
     return stm32l052::i2cx::i2cx_t<"i2c1",stm32l052::i2c1::I2C1_BASE>{};
   } else {
@@ -171,7 +171,7 @@ inline constexpr auto i2c1 = [] consteval {
   }
 }();
 
-inline constexpr auto i2c2 = [] consteval {
+constexpr auto i2c2 = [] consteval {
   if constexpr (stm32l052::config::i2c2) {
     return stm32l052::i2cx::i2cx_t<"i2c2",stm32l052::i2c2::I2C2_BASE>{};
   } else {
@@ -179,7 +179,7 @@ inline constexpr auto i2c2 = [] consteval {
   }
 }();
 
-inline constexpr auto i2c3 = [] consteval {
+constexpr auto i2c3 = [] consteval {
   if constexpr (stm32l052::config::i2c3) {
     return stm32l052::i2cx::i2cx_t<"i2c3",stm32l052::i2c3::I2C3_BASE>{};
   } else {
@@ -187,7 +187,7 @@ inline constexpr auto i2c3 = [] consteval {
   }
 }();
 
-inline constexpr auto iwdg = [] consteval {
+constexpr auto iwdg = [] consteval {
   if constexpr (stm32l052::config::iwdg) {
     return stm32l052::iwdg::iwdg_t<stm32l052::iwdg::IWDG_BASE>{};
   } else {
@@ -195,7 +195,7 @@ inline constexpr auto iwdg = [] consteval {
   }
 }();
 
-inline constexpr auto lptim = [] consteval {
+constexpr auto lptim = [] consteval {
   if constexpr (stm32l052::config::lptim) {
     return stm32l052::lptim::lptim_t<stm32l052::lptim::LPTIM_BASE>{};
   } else {
@@ -203,7 +203,7 @@ inline constexpr auto lptim = [] consteval {
   }
 }();
 
-inline constexpr auto lpusart1 = [] consteval {
+constexpr auto lpusart1 = [] consteval {
   if constexpr (stm32l052::config::lpusart1) {
     return stm32l052::lpusart1::lpusart1_t<stm32l052::lpusart1::LPUSART1_BASE>{};
   } else {
@@ -211,7 +211,7 @@ inline constexpr auto lpusart1 = [] consteval {
   }
 }();
 
-inline constexpr auto mpu = [] consteval {
+constexpr auto mpu = [] consteval {
   if constexpr (stm32l052::config::mpu) {
     return stm32l052::mpu::mpu_t<stm32l052::mpu::MPU_BASE>{};
   } else {
@@ -219,7 +219,7 @@ inline constexpr auto mpu = [] consteval {
   }
 }();
 
-inline constexpr auto nvic = [] consteval {
+constexpr auto nvic = [] consteval {
   if constexpr (stm32l052::config::nvic) {
     return stm32l052::nvic::nvic_t<stm32l052::nvic::NVIC_BASE>{};
   } else {
@@ -227,7 +227,7 @@ inline constexpr auto nvic = [] consteval {
   }
 }();
 
-inline constexpr auto pwr = [] consteval {
+constexpr auto pwr = [] consteval {
   if constexpr (stm32l052::config::pwr) {
     return stm32l052::pwr::pwr_t<stm32l052::pwr::PWR_BASE>{};
   } else {
@@ -235,7 +235,7 @@ inline constexpr auto pwr = [] consteval {
   }
 }();
 
-inline constexpr auto rcc = [] consteval {
+constexpr auto rcc = [] consteval {
   if constexpr (stm32l052::config::rcc) {
     return stm32l052::rcc::rcc_t<stm32l052::rcc::RCC_BASE>{};
   } else {
@@ -243,7 +243,7 @@ inline constexpr auto rcc = [] consteval {
   }
 }();
 
-inline constexpr auto rng = [] consteval {
+constexpr auto rng = [] consteval {
   if constexpr (stm32l052::config::rng) {
     return stm32l052::rng::rng_t<stm32l052::rng::RNG_BASE>{};
   } else {
@@ -251,7 +251,7 @@ inline constexpr auto rng = [] consteval {
   }
 }();
 
-inline constexpr auto rtc = [] consteval {
+constexpr auto rtc = [] consteval {
   if constexpr (stm32l052::config::rtc) {
     return stm32l052::rtc::rtc_t<stm32l052::rtc::RTC_BASE>{};
   } else {
@@ -259,7 +259,7 @@ inline constexpr auto rtc = [] consteval {
   }
 }();
 
-inline constexpr auto scb = [] consteval {
+constexpr auto scb = [] consteval {
   if constexpr (stm32l052::config::scb) {
     return stm32l052::scb::scb_t<stm32l052::scb::SCB_BASE>{};
   } else {
@@ -267,7 +267,7 @@ inline constexpr auto scb = [] consteval {
   }
 }();
 
-inline constexpr auto spi1 = [] consteval {
+constexpr auto spi1 = [] consteval {
   if constexpr (stm32l052::config::spi1) {
     return stm32l052::spix::spix_t<"spi1",stm32l052::spi1::SPI1_BASE>{};
   } else {
@@ -275,7 +275,7 @@ inline constexpr auto spi1 = [] consteval {
   }
 }();
 
-inline constexpr auto spi2 = [] consteval {
+constexpr auto spi2 = [] consteval {
   if constexpr (stm32l052::config::spi2) {
     return stm32l052::spix::spix_t<"spi2",stm32l052::spi2::SPI2_BASE>{};
   } else {
@@ -283,7 +283,7 @@ inline constexpr auto spi2 = [] consteval {
   }
 }();
 
-inline constexpr auto stk = [] consteval {
+constexpr auto stk = [] consteval {
   if constexpr (stm32l052::config::stk) {
     return stm32l052::stk::stk_t<stm32l052::stk::STK_BASE>{};
   } else {
@@ -291,7 +291,7 @@ inline constexpr auto stk = [] consteval {
   }
 }();
 
-inline constexpr auto syscfg_comp = [] consteval {
+constexpr auto syscfg_comp = [] consteval {
   if constexpr (stm32l052::config::syscfg_comp) {
     return stm32l052::syscfg_comp::syscfg_comp_t<stm32l052::syscfg_comp::SYSCFG_COMP_BASE>{};
   } else {
@@ -299,7 +299,7 @@ inline constexpr auto syscfg_comp = [] consteval {
   }
 }();
 
-inline constexpr auto tim2 = [] consteval {
+constexpr auto tim2 = [] consteval {
   if constexpr (stm32l052::config::tim2) {
     return stm32l052::timx::timx_t<"tim2",stm32l052::tim2::TIM2_BASE>{};
   } else {
@@ -307,7 +307,7 @@ inline constexpr auto tim2 = [] consteval {
   }
 }();
 
-inline constexpr auto tim21 = [] consteval {
+constexpr auto tim21 = [] consteval {
   if constexpr (stm32l052::config::tim21) {
     return stm32l052::tim21::tim21_t<stm32l052::tim21::TIM21_BASE>{};
   } else {
@@ -315,7 +315,7 @@ inline constexpr auto tim21 = [] consteval {
   }
 }();
 
-inline constexpr auto tim22 = [] consteval {
+constexpr auto tim22 = [] consteval {
   if constexpr (stm32l052::config::tim22) {
     return stm32l052::tim22::tim22_t<stm32l052::tim22::TIM22_BASE>{};
   } else {
@@ -323,7 +323,7 @@ inline constexpr auto tim22 = [] consteval {
   }
 }();
 
-inline constexpr auto tim3 = [] consteval {
+constexpr auto tim3 = [] consteval {
   if constexpr (stm32l052::config::tim3) {
     return stm32l052::timx::timx_t<"tim3",stm32l052::tim3::TIM3_BASE>{};
   } else {
@@ -331,7 +331,7 @@ inline constexpr auto tim3 = [] consteval {
   }
 }();
 
-inline constexpr auto tim6 = [] consteval {
+constexpr auto tim6 = [] consteval {
   if constexpr (stm32l052::config::tim6) {
     return stm32l052::timx_v2::timx_v2_t<"tim6",stm32l052::tim6::TIM6_BASE>{};
   } else {
@@ -339,7 +339,7 @@ inline constexpr auto tim6 = [] consteval {
   }
 }();
 
-inline constexpr auto tim7 = [] consteval {
+constexpr auto tim7 = [] consteval {
   if constexpr (stm32l052::config::tim7) {
     return stm32l052::timx_v2::timx_v2_t<"tim7",stm32l052::tim7::TIM7_BASE>{};
   } else {
@@ -347,7 +347,7 @@ inline constexpr auto tim7 = [] consteval {
   }
 }();
 
-inline constexpr auto tsc = [] consteval {
+constexpr auto tsc = [] consteval {
   if constexpr (stm32l052::config::tsc) {
     return stm32l052::tsc::tsc_t<stm32l052::tsc::TSC_BASE>{};
   } else {
@@ -355,7 +355,7 @@ inline constexpr auto tsc = [] consteval {
   }
 }();
 
-inline constexpr auto usart1 = [] consteval {
+constexpr auto usart1 = [] consteval {
   if constexpr (stm32l052::config::usart1) {
     return stm32l052::usartx::usartx_t<"usart1",stm32l052::usart1::USART1_BASE>{};
   } else {
@@ -363,7 +363,7 @@ inline constexpr auto usart1 = [] consteval {
   }
 }();
 
-inline constexpr auto usart2 = [] consteval {
+constexpr auto usart2 = [] consteval {
   if constexpr (stm32l052::config::usart2) {
     return stm32l052::usartx::usartx_t<"usart2",stm32l052::usart2::USART2_BASE>{};
   } else {
@@ -371,7 +371,7 @@ inline constexpr auto usart2 = [] consteval {
   }
 }();
 
-inline constexpr auto usart4 = [] consteval {
+constexpr auto usart4 = [] consteval {
   if constexpr (stm32l052::config::usart4) {
     return stm32l052::usartx::usartx_t<"usart4",stm32l052::usart4::USART4_BASE>{};
   } else {
@@ -379,7 +379,7 @@ inline constexpr auto usart4 = [] consteval {
   }
 }();
 
-inline constexpr auto usart5 = [] consteval {
+constexpr auto usart5 = [] consteval {
   if constexpr (stm32l052::config::usart5) {
     return stm32l052::usartx::usartx_t<"usart5",stm32l052::usart5::USART5_BASE>{};
   } else {
@@ -387,7 +387,7 @@ inline constexpr auto usart5 = [] consteval {
   }
 }();
 
-inline constexpr auto usb_fs = [] consteval {
+constexpr auto usb_fs = [] consteval {
   if constexpr (stm32l052::config::usb_fs) {
     return stm32l052::usb_fs::usb_fs_t<stm32l052::usb_fs::USB_FS_BASE>{};
   } else {
@@ -395,7 +395,7 @@ inline constexpr auto usb_fs = [] consteval {
   }
 }();
 
-inline constexpr auto usb_sram = [] consteval {
+constexpr auto usb_sram = [] consteval {
   if constexpr (stm32l052::config::usb_sram) {
     return stm32l052::usb_sram::usb_sram_t<stm32l052::usb_sram::USB_SRAM_BASE>{};
   } else {
@@ -403,7 +403,7 @@ inline constexpr auto usb_sram = [] consteval {
   }
 }();
 
-inline constexpr auto wwdg = [] consteval {
+constexpr auto wwdg = [] consteval {
   if constexpr (stm32l052::config::wwdg) {
     return stm32l052::wwdg::wwdg_t<stm32l052::wwdg::WWDG_BASE>{};
   } else {

@@ -7,510 +7,2022 @@
 namespace stm32::stm32f768 {
 
 namespace jpeg {
-  using jpeg_confr0_tt = regs::jpeg_jpeg_confr0_v1_tt;
-  using jpeg_confr1_tt = regs::jpeg_jpeg_confr1_v1_tt;
-  using jpeg_confr2_tt = regs::jpeg_jpeg_confr2_v1_tt;
-  using jpeg_confr3_tt = regs::jpeg_jpeg_confr3_v1_tt;
-  using jpeg_confr4_tt = regs::jpeg_jpeg_confr4_v1_tt;
-  using jpeg_confr5_tt = regs::jpeg_jpeg_confr5_v1_tt;
-  using jpeg_confr6_tt = regs::jpeg_jpeg_confr6_v1_tt;
-  using jpeg_confr7_tt = regs::jpeg_jpeg_confr7_v1_tt;
-  using jpeg_cr_tt = regs::jpeg_jpeg_cr_v1_tt;
-  using jpeg_sr_tt = regs::jpeg_jpeg_sr_v1_tt;
-  using jpeg_cfr_tt = regs::jpeg_jpeg_cfr_v1_tt;
-  using jpeg_dir_tt = regs::jpeg_jpeg_dir_v1_tt;
-  using jpeg_dor_tt = regs::jpeg_jpeg_dor_v1_tt;
-  using qmem0_0_tt = regs::jpeg_qmem0_0_v1_tt;
-  using qmem0_1_tt = regs::jpeg_qmem0_1_v1_tt;
-  using qmem0_2_tt = regs::jpeg_qmem0_2_v1_tt;
-  using qmem0_3_tt = regs::jpeg_qmem0_3_v1_tt;
-  using qmem0_4_tt = regs::jpeg_qmem0_4_v1_tt;
-  using qmem0_5_tt = regs::jpeg_qmem0_5_v1_tt;
-  using qmem0_6_tt = regs::jpeg_qmem0_6_v1_tt;
-  using qmem0_7_tt = regs::jpeg_qmem0_7_v1_tt;
-  using qmem0_8_tt = regs::jpeg_qmem0_8_v1_tt;
-  using qmem0_9_tt = regs::jpeg_qmem0_9_v1_tt;
-  using qmem0_10_tt = regs::jpeg_qmem0_10_v1_tt;
-  using qmem0_11_tt = regs::jpeg_qmem0_11_v1_tt;
-  using qmem0_12_tt = regs::jpeg_qmem0_12_v1_tt;
-  using qmem0_13_tt = regs::jpeg_qmem0_13_v1_tt;
-  using qmem0_14_tt = regs::jpeg_qmem0_14_v1_tt;
-  using qmem0_15_tt = regs::jpeg_qmem0_15_v1_tt;
-  using qmem1_0_tt = regs::jpeg_qmem1_0_v1_tt;
-  using qmem1_1_tt = regs::jpeg_qmem1_1_v1_tt;
-  using qmem1_2_tt = regs::jpeg_qmem1_2_v1_tt;
-  using qmem1_3_tt = regs::jpeg_qmem1_3_v1_tt;
-  using qmem1_4_tt = regs::jpeg_qmem1_4_v1_tt;
-  using qmem1_5_tt = regs::jpeg_qmem1_5_v1_tt;
-  using qmem1_6_tt = regs::jpeg_qmem1_6_v1_tt;
-  using qmem1_7_tt = regs::jpeg_qmem1_7_v1_tt;
-  using qmem1_8_tt = regs::jpeg_qmem1_8_v1_tt;
-  using qmem1_9_tt = regs::jpeg_qmem1_9_v1_tt;
-  using qmem1_10_tt = regs::jpeg_qmem1_10_v1_tt;
-  using qmem1_11_tt = regs::jpeg_qmem1_11_v1_tt;
-  using qmem1_12_tt = regs::jpeg_qmem1_12_v1_tt;
-  using qmem1_13_tt = regs::jpeg_qmem1_13_v1_tt;
-  using qmem1_14_tt = regs::jpeg_qmem1_14_v1_tt;
-  using qmem1_15_tt = regs::jpeg_qmem1_15_v1_tt;
-  using qmem2_0_tt = regs::jpeg_qmem2_0_v1_tt;
-  using qmem2_1_tt = regs::jpeg_qmem2_1_v1_tt;
-  using qmem2_2_tt = regs::jpeg_qmem2_2_v1_tt;
-  using qmem2_3_tt = regs::jpeg_qmem2_3_v1_tt;
-  using qmem2_4_tt = regs::jpeg_qmem2_4_v1_tt;
-  using qmem2_5_tt = regs::jpeg_qmem2_5_v1_tt;
-  using qmem2_6_tt = regs::jpeg_qmem2_6_v1_tt;
-  using qmem2_7_tt = regs::jpeg_qmem2_7_v1_tt;
-  using qmem2_8_tt = regs::jpeg_qmem2_8_v1_tt;
-  using qmem2_9_tt = regs::jpeg_qmem2_9_v1_tt;
-  using qmem2_10_tt = regs::jpeg_qmem2_10_v1_tt;
-  using qmem2_11_tt = regs::jpeg_qmem2_11_v1_tt;
-  using qmem2_12_tt = regs::jpeg_qmem2_12_v1_tt;
-  using qmem2_13_tt = regs::jpeg_qmem2_13_v1_tt;
-  using qmem2_14_tt = regs::jpeg_qmem2_14_v1_tt;
-  using qmem2_15_tt = regs::jpeg_qmem2_15_v1_tt;
-  using qmem3_0_tt = regs::jpeg_qmem3_0_v1_tt;
-  using qmem3_1_tt = regs::jpeg_qmem3_1_v1_tt;
-  using qmem3_2_tt = regs::jpeg_qmem3_2_v1_tt;
-  using qmem3_3_tt = regs::jpeg_qmem3_3_v1_tt;
-  using qmem3_4_tt = regs::jpeg_qmem3_4_v1_tt;
-  using qmem3_5_tt = regs::jpeg_qmem3_5_v1_tt;
-  using qmem3_6_tt = regs::jpeg_qmem3_6_v1_tt;
-  using qmem3_7_tt = regs::jpeg_qmem3_7_v1_tt;
-  using qmem3_8_tt = regs::jpeg_qmem3_8_v1_tt;
-  using qmem3_9_tt = regs::jpeg_qmem3_9_v1_tt;
-  using qmem3_10_tt = regs::jpeg_qmem3_10_v1_tt;
-  using qmem3_11_tt = regs::jpeg_qmem3_11_v1_tt;
-  using qmem3_12_tt = regs::jpeg_qmem3_12_v1_tt;
-  using qmem3_13_tt = regs::jpeg_qmem3_13_v1_tt;
-  using qmem3_14_tt = regs::jpeg_qmem3_14_v1_tt;
-  using qmem3_15_tt = regs::jpeg_qmem3_15_v1_tt;
-  using huffmin_0_tt = regs::jpeg_huffmin_0_v1_tt;
-  using huffmin_1_tt = regs::jpeg_huffmin_1_v1_tt;
-  using huffmin_2_tt = regs::jpeg_huffmin_2_v1_tt;
-  using huffmin_3_tt = regs::jpeg_huffmin_3_v1_tt;
-  using huffmin_4_tt = regs::jpeg_huffmin_4_v1_tt;
-  using huffmin_5_tt = regs::jpeg_huffmin_5_v1_tt;
-  using huffmin_6_tt = regs::jpeg_huffmin_6_v1_tt;
-  using huffmin_7_tt = regs::jpeg_huffmin_7_v1_tt;
-  using huffmin_8_tt = regs::jpeg_huffmin_8_v1_tt;
-  using huffmin_9_tt = regs::jpeg_huffmin_9_v1_tt;
-  using huffmin_10_tt = regs::jpeg_huffmin_10_v1_tt;
-  using huffmin_11_tt = regs::jpeg_huffmin_11_v1_tt;
-  using huffmin_12_tt = regs::jpeg_huffmin_12_v1_tt;
-  using huffmin_13_tt = regs::jpeg_huffmin_13_v1_tt;
-  using huffmin_14_tt = regs::jpeg_huffmin_14_v1_tt;
-  using huffmin_15_tt = regs::jpeg_huffmin_15_v1_tt;
-  using huffbase0_tt = regs::jpeg_huffbase0_v1_tt;
-  using huffbase1_tt = regs::jpeg_huffbase1_v1_tt;
-  using huffbase2_tt = regs::jpeg_huffbase2_v1_tt;
-  using huffbase3_tt = regs::jpeg_huffbase3_v1_tt;
-  using huffbase4_tt = regs::jpeg_huffbase4_v1_tt;
-  using huffbase5_tt = regs::jpeg_huffbase5_v1_tt;
-  using huffbase6_tt = regs::jpeg_huffbase6_v1_tt;
-  using huffbase7_tt = regs::jpeg_huffbase7_v1_tt;
-  using huffbase8_tt = regs::jpeg_huffbase8_v1_tt;
-  using huffbase9_tt = regs::jpeg_huffbase9_v1_tt;
-  using huffbase10_tt = regs::jpeg_huffbase10_v1_tt;
-  using huffbase11_tt = regs::jpeg_huffbase11_v1_tt;
-  using huffbase12_tt = regs::jpeg_huffbase12_v1_tt;
-  using huffbase13_tt = regs::jpeg_huffbase13_v1_tt;
-  using huffbase14_tt = regs::jpeg_huffbase14_v1_tt;
-  using huffbase15_tt = regs::jpeg_huffbase15_v1_tt;
-  using huffbase16_tt = regs::jpeg_huffbase16_v1_tt;
-  using huffbase17_tt = regs::jpeg_huffbase17_v1_tt;
-  using huffbase18_tt = regs::jpeg_huffbase18_v1_tt;
-  using huffbase19_tt = regs::jpeg_huffbase19_v1_tt;
-  using huffbase20_tt = regs::jpeg_huffbase20_v1_tt;
-  using huffbase21_tt = regs::jpeg_huffbase21_v1_tt;
-  using huffbase22_tt = regs::jpeg_huffbase22_v1_tt;
-  using huffbase23_tt = regs::jpeg_huffbase23_v1_tt;
-  using huffbase24_tt = regs::jpeg_huffbase24_v1_tt;
-  using huffbase25_tt = regs::jpeg_huffbase25_v1_tt;
-  using huffbase26_tt = regs::jpeg_huffbase26_v1_tt;
-  using huffbase27_tt = regs::jpeg_huffbase27_v1_tt;
-  using huffbase28_tt = regs::jpeg_huffbase28_v1_tt;
-  using huffbase29_tt = regs::jpeg_huffbase29_v1_tt;
-  using huffbase30_tt = regs::jpeg_huffbase30_v1_tt;
-  using huffbase31_tt = regs::jpeg_huffbase31_v1_tt;
-  using huffsymb0_tt = regs::jpeg_huffsymb0_v1_tt;
-  using huffsymb1_tt = regs::jpeg_huffsymb1_v1_tt;
-  using huffsymb2_tt = regs::jpeg_huffsymb2_v1_tt;
-  using huffsymb3_tt = regs::jpeg_huffsymb3_v1_tt;
-  using huffsymb4_tt = regs::jpeg_huffsymb4_v1_tt;
-  using huffsymb5_tt = regs::jpeg_huffsymb5_v1_tt;
-  using huffsymb6_tt = regs::jpeg_huffsymb6_v1_tt;
-  using huffsymb7_tt = regs::jpeg_huffsymb7_v1_tt;
-  using huffsymb8_tt = regs::jpeg_huffsymb8_v1_tt;
-  using huffsymb9_tt = regs::jpeg_huffsymb9_v1_tt;
-  using huffsymb10_tt = regs::jpeg_huffsymb10_v1_tt;
-  using huffsymb11_tt = regs::jpeg_huffsymb11_v1_tt;
-  using huffsymb12_tt = regs::jpeg_huffsymb12_v1_tt;
-  using huffsymb13_tt = regs::jpeg_huffsymb13_v1_tt;
-  using huffsymb14_tt = regs::jpeg_huffsymb14_v1_tt;
-  using huffsymb15_tt = regs::jpeg_huffsymb15_v1_tt;
-  using huffsymb16_tt = regs::jpeg_huffsymb16_v1_tt;
-  using huffsymb17_tt = regs::jpeg_huffsymb17_v1_tt;
-  using huffsymb18_tt = regs::jpeg_huffsymb18_v1_tt;
-  using huffsymb19_tt = regs::jpeg_huffsymb19_v1_tt;
-  using huffsymb20_tt = regs::jpeg_huffsymb20_v1_tt;
-  using huffsymb21_tt = regs::jpeg_huffsymb21_v1_tt;
-  using huffsymb22_tt = regs::jpeg_huffsymb22_v1_tt;
-  using huffsymb23_tt = regs::jpeg_huffsymb23_v1_tt;
-  using huffsymb24_tt = regs::jpeg_huffsymb24_v1_tt;
-  using huffsymb25_tt = regs::jpeg_huffsymb25_v1_tt;
-  using huffsymb26_tt = regs::jpeg_huffsymb26_v1_tt;
-  using huffsymb27_tt = regs::jpeg_huffsymb27_v1_tt;
-  using huffsymb28_tt = regs::jpeg_huffsymb28_v1_tt;
-  using huffsymb29_tt = regs::jpeg_huffsymb29_v1_tt;
-  using huffsymb30_tt = regs::jpeg_huffsymb30_v1_tt;
-  using huffsymb31_tt = regs::jpeg_huffsymb31_v1_tt;
-  using huffsymb32_tt = regs::jpeg_huffsymb32_v1_tt;
-  using huffsymb33_tt = regs::jpeg_huffsymb33_v1_tt;
-  using huffsymb34_tt = regs::jpeg_huffsymb34_v1_tt;
-  using huffsymb35_tt = regs::jpeg_huffsymb35_v1_tt;
-  using huffsymb36_tt = regs::jpeg_huffsymb36_v1_tt;
-  using huffsymb37_tt = regs::jpeg_huffsymb37_v1_tt;
-  using huffsymb38_tt = regs::jpeg_huffsymb38_v1_tt;
-  using huffsymb39_tt = regs::jpeg_huffsymb39_v1_tt;
-  using huffsymb40_tt = regs::jpeg_huffsymb40_v1_tt;
-  using huffsymb41_tt = regs::jpeg_huffsymb41_v1_tt;
-  using huffsymb42_tt = regs::jpeg_huffsymb42_v1_tt;
-  using huffsymb43_tt = regs::jpeg_huffsymb43_v1_tt;
-  using huffsymb44_tt = regs::jpeg_huffsymb44_v1_tt;
-  using huffsymb45_tt = regs::jpeg_huffsymb45_v1_tt;
-  using huffsymb46_tt = regs::jpeg_huffsymb46_v1_tt;
-  using huffsymb47_tt = regs::jpeg_huffsymb47_v1_tt;
-  using huffsymb48_tt = regs::jpeg_huffsymb48_v1_tt;
-  using huffsymb49_tt = regs::jpeg_huffsymb49_v1_tt;
-  using huffsymb50_tt = regs::jpeg_huffsymb50_v1_tt;
-  using huffsymb51_tt = regs::jpeg_huffsymb51_v1_tt;
-  using huffsymb52_tt = regs::jpeg_huffsymb52_v1_tt;
-  using huffsymb53_tt = regs::jpeg_huffsymb53_v1_tt;
-  using huffsymb54_tt = regs::jpeg_huffsymb54_v1_tt;
-  using huffsymb55_tt = regs::jpeg_huffsymb55_v1_tt;
-  using huffsymb56_tt = regs::jpeg_huffsymb56_v1_tt;
-  using huffsymb57_tt = regs::jpeg_huffsymb57_v1_tt;
-  using huffsymb58_tt = regs::jpeg_huffsymb58_v1_tt;
-  using huffsymb59_tt = regs::jpeg_huffsymb59_v1_tt;
-  using huffsymb60_tt = regs::jpeg_huffsymb60_v1_tt;
-  using huffsymb61_tt = regs::jpeg_huffsymb61_v1_tt;
-  using huffsymb62_tt = regs::jpeg_huffsymb62_v1_tt;
-  using huffsymb63_tt = regs::jpeg_huffsymb63_v1_tt;
-  using huffsymb64_tt = regs::jpeg_huffsymb64_v1_tt;
-  using huffsymb65_tt = regs::jpeg_huffsymb65_v1_tt;
-  using huffsymb66_tt = regs::jpeg_huffsymb66_v1_tt;
-  using huffsymb67_tt = regs::jpeg_huffsymb67_v1_tt;
-  using huffsymb68_tt = regs::jpeg_huffsymb68_v1_tt;
-  using huffsymb69_tt = regs::jpeg_huffsymb69_v1_tt;
-  using huffsymb70_tt = regs::jpeg_huffsymb70_v1_tt;
-  using huffsymb71_tt = regs::jpeg_huffsymb71_v1_tt;
-  using huffsymb72_tt = regs::jpeg_huffsymb72_v1_tt;
-  using huffsymb73_tt = regs::jpeg_huffsymb73_v1_tt;
-  using huffsymb74_tt = regs::jpeg_huffsymb74_v1_tt;
-  using huffsymb75_tt = regs::jpeg_huffsymb75_v1_tt;
-  using huffsymb76_tt = regs::jpeg_huffsymb76_v1_tt;
-  using huffsymb77_tt = regs::jpeg_huffsymb77_v1_tt;
-  using huffsymb78_tt = regs::jpeg_huffsymb78_v1_tt;
-  using huffsymb79_tt = regs::jpeg_huffsymb79_v1_tt;
-  using huffsymb80_tt = regs::jpeg_huffsymb80_v1_tt;
-  using huffsymb81_tt = regs::jpeg_huffsymb81_v1_tt;
-  using huffsymb82_tt = regs::jpeg_huffsymb82_v1_tt;
-  using huffsymb83_tt = regs::jpeg_huffsymb83_v1_tt;
-  using dhtmem0_tt = regs::jpeg_dhtmem0_v1_tt;
-  using dhtmem2_tt = regs::jpeg_dhtmem2_v1_tt;
-  using dhtmem3_tt = regs::jpeg_dhtmem3_v1_tt;
-  using dhtmem4_tt = regs::jpeg_dhtmem4_v1_tt;
-  using dhtmem5_tt = regs::jpeg_dhtmem5_v1_tt;
-  using dhtmem6_tt = regs::jpeg_dhtmem6_v1_tt;
-  using dhtmem7_tt = regs::jpeg_dhtmem7_v1_tt;
-  using dhtmem8_tt = regs::jpeg_dhtmem8_v1_tt;
-  using dhtmem9_tt = regs::jpeg_dhtmem9_v1_tt;
-  using dhtmem10_tt = regs::jpeg_dhtmem10_v1_tt;
-  using dhtmem11_tt = regs::jpeg_dhtmem11_v1_tt;
-  using dhtmem12_tt = regs::jpeg_dhtmem12_v1_tt;
-  using dhtmem13_tt = regs::jpeg_dhtmem13_v1_tt;
-  using dhtmem14_tt = regs::jpeg_dhtmem14_v1_tt;
-  using dhtmem15_tt = regs::jpeg_dhtmem15_v1_tt;
-  using dhtmem16_tt = regs::jpeg_dhtmem16_v1_tt;
-  using dhtmem17_tt = regs::jpeg_dhtmem17_v1_tt;
-  using dhtmem18_tt = regs::jpeg_dhtmem18_v1_tt;
-  using dhtmem19_tt = regs::jpeg_dhtmem19_v1_tt;
-  using dhtmem20_tt = regs::jpeg_dhtmem20_v1_tt;
-  using dhtmem21_tt = regs::jpeg_dhtmem21_v1_tt;
-  using dhtmem22_tt = regs::jpeg_dhtmem22_v1_tt;
-  using dhtmem23_tt = regs::jpeg_dhtmem23_v1_tt;
-  using dhtmem24_tt = regs::jpeg_dhtmem24_v1_tt;
-  using dhtmem25_tt = regs::jpeg_dhtmem25_v1_tt;
-  using dhtmem26_tt = regs::jpeg_dhtmem26_v1_tt;
-  using dhtmem27_tt = regs::jpeg_dhtmem27_v1_tt;
-  using dhtmem28_tt = regs::jpeg_dhtmem28_v1_tt;
-  using dhtmem29_tt = regs::jpeg_dhtmem29_v1_tt;
-  using dhtmem30_tt = regs::jpeg_dhtmem30_v1_tt;
-  using dhtmem31_tt = regs::jpeg_dhtmem31_v1_tt;
-  using dhtmem32_tt = regs::jpeg_dhtmem32_v1_tt;
-  using dhtmem33_tt = regs::jpeg_dhtmem33_v1_tt;
-  using dhtmem34_tt = regs::jpeg_dhtmem34_v1_tt;
-  using dhtmem35_tt = regs::jpeg_dhtmem35_v1_tt;
-  using dhtmem36_tt = regs::jpeg_dhtmem36_v1_tt;
-  using dhtmem37_tt = regs::jpeg_dhtmem37_v1_tt;
-  using dhtmem38_tt = regs::jpeg_dhtmem38_v1_tt;
-  using dhtmem39_tt = regs::jpeg_dhtmem39_v1_tt;
-  using dhtmem40_tt = regs::jpeg_dhtmem40_v1_tt;
-  using dhtmem41_tt = regs::jpeg_dhtmem41_v1_tt;
-  using dhtmem42_tt = regs::jpeg_dhtmem42_v1_tt;
-  using dhtmem43_tt = regs::jpeg_dhtmem43_v1_tt;
-  using dhtmem44_tt = regs::jpeg_dhtmem44_v1_tt;
-  using dhtmem45_tt = regs::jpeg_dhtmem45_v1_tt;
-  using dhtmem46_tt = regs::jpeg_dhtmem46_v1_tt;
-  using dhtmem47_tt = regs::jpeg_dhtmem47_v1_tt;
-  using dhtmem48_tt = regs::jpeg_dhtmem48_v1_tt;
-  using dhtmem49_tt = regs::jpeg_dhtmem49_v1_tt;
-  using dhtmem50_tt = regs::jpeg_dhtmem50_v1_tt;
-  using dhtmem51_tt = regs::jpeg_dhtmem51_v1_tt;
-  using dhtmem52_tt = regs::jpeg_dhtmem52_v1_tt;
-  using dhtmem53_tt = regs::jpeg_dhtmem53_v1_tt;
-  using dhtmem54_tt = regs::jpeg_dhtmem54_v1_tt;
-  using dhtmem55_tt = regs::jpeg_dhtmem55_v1_tt;
-  using dhtmem56_tt = regs::jpeg_dhtmem56_v1_tt;
-  using dhtmem57_tt = regs::jpeg_dhtmem57_v1_tt;
-  using dhtmem58_tt = regs::jpeg_dhtmem58_v1_tt;
-  using dhtmem59_tt = regs::jpeg_dhtmem59_v1_tt;
-  using dhtmem60_tt = regs::jpeg_dhtmem60_v1_tt;
-  using dhtmem61_tt = regs::jpeg_dhtmem61_v1_tt;
-  using dhtmem62_tt = regs::jpeg_dhtmem62_v1_tt;
-  using dhtmem63_tt = regs::jpeg_dhtmem63_v1_tt;
-  using dhtmem64_tt = regs::jpeg_dhtmem64_v1_tt;
-  using dhtmem65_tt = regs::jpeg_dhtmem65_v1_tt;
-  using dhtmem66_tt = regs::jpeg_dhtmem66_v1_tt;
-  using dhtmem67_tt = regs::jpeg_dhtmem67_v1_tt;
-  using dhtmem68_tt = regs::jpeg_dhtmem68_v1_tt;
-  using dhtmem69_tt = regs::jpeg_dhtmem69_v1_tt;
-  using dhtmem70_tt = regs::jpeg_dhtmem70_v1_tt;
-  using dhtmem71_tt = regs::jpeg_dhtmem71_v1_tt;
-  using dhtmem72_tt = regs::jpeg_dhtmem72_v1_tt;
-  using dhtmem73_tt = regs::jpeg_dhtmem73_v1_tt;
-  using dhtmem74_tt = regs::jpeg_dhtmem74_v1_tt;
-  using dhtmem75_tt = regs::jpeg_dhtmem75_v1_tt;
-  using dhtmem76_tt = regs::jpeg_dhtmem76_v1_tt;
-  using dhtmem77_tt = regs::jpeg_dhtmem77_v1_tt;
-  using dhtmem78_tt = regs::jpeg_dhtmem78_v1_tt;
-  using dhtmem79_tt = regs::jpeg_dhtmem79_v1_tt;
-  using dhtmem80_tt = regs::jpeg_dhtmem80_v1_tt;
-  using dhtmem81_tt = regs::jpeg_dhtmem81_v1_tt;
-  using dhtmem82_tt = regs::jpeg_dhtmem82_v1_tt;
-  using dhtmem83_tt = regs::jpeg_dhtmem83_v1_tt;
-  using dhtmem84_tt = regs::jpeg_dhtmem84_v1_tt;
-  using dhtmem85_tt = regs::jpeg_dhtmem85_v1_tt;
-  using dhtmem86_tt = regs::jpeg_dhtmem86_v1_tt;
-  using dhtmem87_tt = regs::jpeg_dhtmem87_v1_tt;
-  using dhtmem88_tt = regs::jpeg_dhtmem88_v1_tt;
-  using dhtmem89_tt = regs::jpeg_dhtmem89_v1_tt;
-  using dhtmem90_tt = regs::jpeg_dhtmem90_v1_tt;
-  using dhtmem91_tt = regs::jpeg_dhtmem91_v1_tt;
-  using dhtmem92_tt = regs::jpeg_dhtmem92_v1_tt;
-  using dhtmem93_tt = regs::jpeg_dhtmem93_v1_tt;
-  using dhtmem94_tt = regs::jpeg_dhtmem94_v1_tt;
-  using dhtmem95_tt = regs::jpeg_dhtmem95_v1_tt;
-  using dhtmem96_tt = regs::jpeg_dhtmem96_v1_tt;
-  using dhtmem97_tt = regs::jpeg_dhtmem97_v1_tt;
-  using dhtmem98_tt = regs::jpeg_dhtmem98_v1_tt;
-  using dhtmem99_tt = regs::jpeg_dhtmem99_v1_tt;
-  using dhtmem100_tt = regs::jpeg_dhtmem100_v1_tt;
-  using dhtmem101_tt = regs::jpeg_dhtmem101_v1_tt;
-  using dhtmem102_tt = regs::jpeg_dhtmem102_v1_tt;
-  using dhtmem103_tt = regs::jpeg_dhtmem103_v1_tt;
-  using huffenc_ac0_0_tt = regs::jpeg_huffenc_ac0_0_v1_tt;
-  using huffenc_ac0_1_tt = regs::jpeg_huffenc_ac0_1_v1_tt;
-  using huffenc_ac0_2_tt = regs::jpeg_huffenc_ac0_2_v1_tt;
-  using huffenc_ac0_3_tt = regs::jpeg_huffenc_ac0_3_v1_tt;
-  using huffenc_ac0_4_tt = regs::jpeg_huffenc_ac0_4_v1_tt;
-  using huffenc_ac0_5_tt = regs::jpeg_huffenc_ac0_5_v1_tt;
-  using huffenc_ac0_6_tt = regs::jpeg_huffenc_ac0_6_v1_tt;
-  using huffenc_ac0_7_tt = regs::jpeg_huffenc_ac0_7_v1_tt;
-  using huffenc_ac0_8_tt = regs::jpeg_huffenc_ac0_8_v1_tt;
-  using huffenc_ac0_9_tt = regs::jpeg_huffenc_ac0_9_v1_tt;
-  using huffenc_ac0_10_tt = regs::jpeg_huffenc_ac0_10_v1_tt;
-  using huffenc_ac0_11_tt = regs::jpeg_huffenc_ac0_11_v1_tt;
-  using huffenc_ac0_12_tt = regs::jpeg_huffenc_ac0_12_v1_tt;
-  using huffenc_ac0_13_tt = regs::jpeg_huffenc_ac0_13_v1_tt;
-  using huffenc_ac0_14_tt = regs::jpeg_huffenc_ac0_14_v1_tt;
-  using huffenc_ac0_15_tt = regs::jpeg_huffenc_ac0_15_v1_tt;
-  using huffenc_ac0_16_tt = regs::jpeg_huffenc_ac0_16_v1_tt;
-  using huffenc_ac0_17_tt = regs::jpeg_huffenc_ac0_17_v1_tt;
-  using huffenc_ac0_18_tt = regs::jpeg_huffenc_ac0_18_v1_tt;
-  using huffenc_ac0_19_tt = regs::jpeg_huffenc_ac0_19_v1_tt;
-  using huffenc_ac0_20_tt = regs::jpeg_huffenc_ac0_20_v1_tt;
-  using huffenc_ac0_21_tt = regs::jpeg_huffenc_ac0_21_v1_tt;
-  using huffenc_ac0_22_tt = regs::jpeg_huffenc_ac0_22_v1_tt;
-  using huffenc_ac0_23_tt = regs::jpeg_huffenc_ac0_23_v1_tt;
-  using huffenc_ac0_24_tt = regs::jpeg_huffenc_ac0_24_v1_tt;
-  using huffenc_ac0_25_tt = regs::jpeg_huffenc_ac0_25_v1_tt;
-  using huffenc_ac0_26_tt = regs::jpeg_huffenc_ac0_26_v1_tt;
-  using huffenc_ac0_27_tt = regs::jpeg_huffenc_ac0_27_v1_tt;
-  using huffenc_ac0_28_tt = regs::jpeg_huffenc_ac0_28_v1_tt;
-  using huffenc_ac0_29_tt = regs::jpeg_huffenc_ac0_29_v1_tt;
-  using huffenc_ac0_30_tt = regs::jpeg_huffenc_ac0_30_v1_tt;
-  using huffenc_ac0_31_tt = regs::jpeg_huffenc_ac0_31_v1_tt;
-  using huffenc_ac0_32_tt = regs::jpeg_huffenc_ac0_32_v1_tt;
-  using huffenc_ac0_33_tt = regs::jpeg_huffenc_ac0_33_v1_tt;
-  using huffenc_ac0_34_tt = regs::jpeg_huffenc_ac0_34_v1_tt;
-  using huffenc_ac0_35_tt = regs::jpeg_huffenc_ac0_35_v1_tt;
-  using huffenc_ac0_36_tt = regs::jpeg_huffenc_ac0_36_v1_tt;
-  using huffenc_ac0_37_tt = regs::jpeg_huffenc_ac0_37_v1_tt;
-  using huffenc_ac0_38_tt = regs::jpeg_huffenc_ac0_38_v1_tt;
-  using huffenc_ac0_39_tt = regs::jpeg_huffenc_ac0_39_v1_tt;
-  using huffenc_ac0_40_tt = regs::jpeg_huffenc_ac0_40_v1_tt;
-  using huffenc_ac0_41_tt = regs::jpeg_huffenc_ac0_41_v1_tt;
-  using huffenc_ac0_42_tt = regs::jpeg_huffenc_ac0_42_v1_tt;
-  using huffenc_ac0_43_tt = regs::jpeg_huffenc_ac0_43_v1_tt;
-  using huffenc_ac0_44_tt = regs::jpeg_huffenc_ac0_44_v1_tt;
-  using huffenc_ac0_45_tt = regs::jpeg_huffenc_ac0_45_v1_tt;
-  using huffenc_ac0_46_tt = regs::jpeg_huffenc_ac0_46_v1_tt;
-  using huffenc_ac0_47_tt = regs::jpeg_huffenc_ac0_47_v1_tt;
-  using huffenc_ac0_48_tt = regs::jpeg_huffenc_ac0_48_v1_tt;
-  using huffenc_ac0_49_tt = regs::jpeg_huffenc_ac0_49_v1_tt;
-  using huffenc_ac0_50_tt = regs::jpeg_huffenc_ac0_50_v1_tt;
-  using huffenc_ac0_51_tt = regs::jpeg_huffenc_ac0_51_v1_tt;
-  using huffenc_ac0_52_tt = regs::jpeg_huffenc_ac0_52_v1_tt;
-  using huffenc_ac0_53_tt = regs::jpeg_huffenc_ac0_53_v1_tt;
-  using huffenc_ac0_54_tt = regs::jpeg_huffenc_ac0_54_v1_tt;
-  using huffenc_ac0_55_tt = regs::jpeg_huffenc_ac0_55_v1_tt;
-  using huffenc_ac0_56_tt = regs::jpeg_huffenc_ac0_56_v1_tt;
-  using huffenc_ac0_57_tt = regs::jpeg_huffenc_ac0_57_v1_tt;
-  using huffenc_ac0_58_tt = regs::jpeg_huffenc_ac0_58_v1_tt;
-  using huffenc_ac0_59_tt = regs::jpeg_huffenc_ac0_59_v1_tt;
-  using huffenc_ac0_60_tt = regs::jpeg_huffenc_ac0_60_v1_tt;
-  using huffenc_ac0_61_tt = regs::jpeg_huffenc_ac0_61_v1_tt;
-  using huffenc_ac0_62_tt = regs::jpeg_huffenc_ac0_62_v1_tt;
-  using huffenc_ac0_63_tt = regs::jpeg_huffenc_ac0_63_v1_tt;
-  using huffenc_ac0_64_tt = regs::jpeg_huffenc_ac0_64_v1_tt;
-  using huffenc_ac0_65_tt = regs::jpeg_huffenc_ac0_65_v1_tt;
-  using huffenc_ac0_66_tt = regs::jpeg_huffenc_ac0_66_v1_tt;
-  using huffenc_ac0_67_tt = regs::jpeg_huffenc_ac0_67_v1_tt;
-  using huffenc_ac0_68_tt = regs::jpeg_huffenc_ac0_68_v1_tt;
-  using huffenc_ac0_69_tt = regs::jpeg_huffenc_ac0_69_v1_tt;
-  using huffenc_ac0_70_tt = regs::jpeg_huffenc_ac0_70_v1_tt;
-  using huffenc_ac0_71_tt = regs::jpeg_huffenc_ac0_71_v1_tt;
-  using huffenc_ac0_72_tt = regs::jpeg_huffenc_ac0_72_v1_tt;
-  using huffenc_ac0_73_tt = regs::jpeg_huffenc_ac0_73_v1_tt;
-  using huffenc_ac0_74_tt = regs::jpeg_huffenc_ac0_74_v1_tt;
-  using huffenc_ac0_75_tt = regs::jpeg_huffenc_ac0_75_v1_tt;
-  using huffenc_ac0_76_tt = regs::jpeg_huffenc_ac0_76_v1_tt;
-  using huffenc_ac0_77_tt = regs::jpeg_huffenc_ac0_77_v1_tt;
-  using huffenc_ac0_78_tt = regs::jpeg_huffenc_ac0_78_v1_tt;
-  using huffenc_ac0_79_tt = regs::jpeg_huffenc_ac0_79_v1_tt;
-  using huffenc_ac0_80_tt = regs::jpeg_huffenc_ac0_80_v1_tt;
-  using huffenc_ac0_81_tt = regs::jpeg_huffenc_ac0_81_v1_tt;
-  using huffenc_ac0_82_tt = regs::jpeg_huffenc_ac0_82_v1_tt;
-  using huffenc_ac0_83_tt = regs::jpeg_huffenc_ac0_83_v1_tt;
-  using huffenc_ac0_84_tt = regs::jpeg_huffenc_ac0_84_v1_tt;
-  using huffenc_ac0_85_tt = regs::jpeg_huffenc_ac0_85_v1_tt;
-  using huffenc_ac0_86_tt = regs::jpeg_huffenc_ac0_86_v1_tt;
-  using huffenc_ac0_87_tt = regs::jpeg_huffenc_ac0_87_v1_tt;
-  using huffenc_ac1_0_tt = regs::jpeg_huffenc_ac1_0_v1_tt;
-  using huffenc_ac1_1_tt = regs::jpeg_huffenc_ac1_1_v1_tt;
-  using huffenc_ac1_2_tt = regs::jpeg_huffenc_ac1_2_v1_tt;
-  using huffenc_ac1_3_tt = regs::jpeg_huffenc_ac1_3_v1_tt;
-  using huffenc_ac1_4_tt = regs::jpeg_huffenc_ac1_4_v1_tt;
-  using huffenc_ac1_5_tt = regs::jpeg_huffenc_ac1_5_v1_tt;
-  using huffenc_ac1_6_tt = regs::jpeg_huffenc_ac1_6_v1_tt;
-  using huffenc_ac1_7_tt = regs::jpeg_huffenc_ac1_7_v1_tt;
-  using huffenc_ac1_8_tt = regs::jpeg_huffenc_ac1_8_v1_tt;
-  using huffenc_ac1_9_tt = regs::jpeg_huffenc_ac1_9_v1_tt;
-  using huffenc_ac1_10_tt = regs::jpeg_huffenc_ac1_10_v1_tt;
-  using huffenc_ac1_11_tt = regs::jpeg_huffenc_ac1_11_v1_tt;
-  using huffenc_ac1_12_tt = regs::jpeg_huffenc_ac1_12_v1_tt;
-  using huffenc_ac1_13_tt = regs::jpeg_huffenc_ac1_13_v1_tt;
-  using huffenc_ac1_14_tt = regs::jpeg_huffenc_ac1_14_v1_tt;
-  using huffenc_ac1_15_tt = regs::jpeg_huffenc_ac1_15_v1_tt;
-  using huffenc_ac1_16_tt = regs::jpeg_huffenc_ac1_16_v1_tt;
-  using huffenc_ac1_17_tt = regs::jpeg_huffenc_ac1_17_v1_tt;
-  using huffenc_ac1_18_tt = regs::jpeg_huffenc_ac1_18_v1_tt;
-  using huffenc_ac1_19_tt = regs::jpeg_huffenc_ac1_19_v1_tt;
-  using huffenc_ac1_20_tt = regs::jpeg_huffenc_ac1_20_v1_tt;
-  using huffenc_ac1_21_tt = regs::jpeg_huffenc_ac1_21_v1_tt;
-  using huffenc_ac1_22_tt = regs::jpeg_huffenc_ac1_22_v1_tt;
-  using huffenc_ac1_23_tt = regs::jpeg_huffenc_ac1_23_v1_tt;
-  using huffenc_ac1_24_tt = regs::jpeg_huffenc_ac1_24_v1_tt;
-  using huffenc_ac1_25_tt = regs::jpeg_huffenc_ac1_25_v1_tt;
-  using huffenc_ac1_26_tt = regs::jpeg_huffenc_ac1_26_v1_tt;
-  using huffenc_ac1_27_tt = regs::jpeg_huffenc_ac1_27_v1_tt;
-  using huffenc_ac1_28_tt = regs::jpeg_huffenc_ac1_28_v1_tt;
-  using huffenc_ac1_29_tt = regs::jpeg_huffenc_ac1_29_v1_tt;
-  using huffenc_ac1_30_tt = regs::jpeg_huffenc_ac1_30_v1_tt;
-  using huffenc_ac1_31_tt = regs::jpeg_huffenc_ac1_31_v1_tt;
-  using huffenc_ac1_32_tt = regs::jpeg_huffenc_ac1_32_v1_tt;
-  using huffenc_ac1_33_tt = regs::jpeg_huffenc_ac1_33_v1_tt;
-  using huffenc_ac1_34_tt = regs::jpeg_huffenc_ac1_34_v1_tt;
-  using huffenc_ac1_35_tt = regs::jpeg_huffenc_ac1_35_v1_tt;
-  using huffenc_ac1_36_tt = regs::jpeg_huffenc_ac1_36_v1_tt;
-  using huffenc_ac1_37_tt = regs::jpeg_huffenc_ac1_37_v1_tt;
-  using huffenc_ac1_38_tt = regs::jpeg_huffenc_ac1_38_v1_tt;
-  using huffenc_ac1_39_tt = regs::jpeg_huffenc_ac1_39_v1_tt;
-  using huffenc_ac1_40_tt = regs::jpeg_huffenc_ac1_40_v1_tt;
-  using huffenc_ac1_41_tt = regs::jpeg_huffenc_ac1_41_v1_tt;
-  using huffenc_ac1_42_tt = regs::jpeg_huffenc_ac1_42_v1_tt;
-  using huffenc_ac1_43_tt = regs::jpeg_huffenc_ac1_43_v1_tt;
-  using huffenc_ac1_44_tt = regs::jpeg_huffenc_ac1_44_v1_tt;
-  using huffenc_ac1_45_tt = regs::jpeg_huffenc_ac1_45_v1_tt;
-  using huffenc_ac1_46_tt = regs::jpeg_huffenc_ac1_46_v1_tt;
-  using huffenc_ac1_47_tt = regs::jpeg_huffenc_ac1_47_v1_tt;
-  using huffenc_ac1_48_tt = regs::jpeg_huffenc_ac1_48_v1_tt;
-  using huffenc_ac1_49_tt = regs::jpeg_huffenc_ac1_49_v1_tt;
-  using huffenc_ac1_50_tt = regs::jpeg_huffenc_ac1_50_v1_tt;
-  using huffenc_ac1_51_tt = regs::jpeg_huffenc_ac1_51_v1_tt;
-  using huffenc_ac1_52_tt = regs::jpeg_huffenc_ac1_52_v1_tt;
-  using huffenc_ac1_53_tt = regs::jpeg_huffenc_ac1_53_v1_tt;
-  using huffenc_ac1_54_tt = regs::jpeg_huffenc_ac1_54_v1_tt;
-  using huffenc_ac1_55_tt = regs::jpeg_huffenc_ac1_55_v1_tt;
-  using huffenc_ac1_56_tt = regs::jpeg_huffenc_ac1_56_v1_tt;
-  using huffenc_ac1_57_tt = regs::jpeg_huffenc_ac1_57_v1_tt;
-  using huffenc_ac1_58_tt = regs::jpeg_huffenc_ac1_58_v1_tt;
-  using huffenc_ac1_59_tt = regs::jpeg_huffenc_ac1_59_v1_tt;
-  using huffenc_ac1_60_tt = regs::jpeg_huffenc_ac1_60_v1_tt;
-  using huffenc_ac1_61_tt = regs::jpeg_huffenc_ac1_61_v1_tt;
-  using huffenc_ac1_62_tt = regs::jpeg_huffenc_ac1_62_v1_tt;
-  using huffenc_ac1_63_tt = regs::jpeg_huffenc_ac1_63_v1_tt;
-  using huffenc_ac1_64_tt = regs::jpeg_huffenc_ac1_64_v1_tt;
-  using huffenc_ac1_65_tt = regs::jpeg_huffenc_ac1_65_v1_tt;
-  using huffenc_ac1_66_tt = regs::jpeg_huffenc_ac1_66_v1_tt;
-  using huffenc_ac1_67_tt = regs::jpeg_huffenc_ac1_67_v1_tt;
-  using huffenc_ac1_68_tt = regs::jpeg_huffenc_ac1_68_v1_tt;
-  using huffenc_ac1_69_tt = regs::jpeg_huffenc_ac1_69_v1_tt;
-  using huffenc_ac1_70_tt = regs::jpeg_huffenc_ac1_70_v1_tt;
-  using huffenc_ac1_71_tt = regs::jpeg_huffenc_ac1_71_v1_tt;
-  using huffenc_ac1_72_tt = regs::jpeg_huffenc_ac1_72_v1_tt;
-  using huffenc_ac1_73_tt = regs::jpeg_huffenc_ac1_73_v1_tt;
-  using huffenc_ac1_74_tt = regs::jpeg_huffenc_ac1_74_v1_tt;
-  using huffenc_ac1_75_tt = regs::jpeg_huffenc_ac1_75_v1_tt;
-  using huffenc_ac1_76_tt = regs::jpeg_huffenc_ac1_76_v1_tt;
-  using huffenc_ac1_77_tt = regs::jpeg_huffenc_ac1_77_v1_tt;
-  using huffenc_ac1_78_tt = regs::jpeg_huffenc_ac1_78_v1_tt;
-  using huffenc_ac1_79_tt = regs::jpeg_huffenc_ac1_79_v1_tt;
-  using huffenc_ac1_80_tt = regs::jpeg_huffenc_ac1_80_v1_tt;
-  using huffenc_ac1_81_tt = regs::jpeg_huffenc_ac1_81_v1_tt;
-  using huffenc_ac1_82_tt = regs::jpeg_huffenc_ac1_82_v1_tt;
-  using huffenc_ac1_83_tt = regs::jpeg_huffenc_ac1_83_v1_tt;
-  using huffenc_ac1_84_tt = regs::jpeg_huffenc_ac1_84_v1_tt;
-  using huffenc_ac1_85_tt = regs::jpeg_huffenc_ac1_85_v1_tt;
-  using huffenc_ac1_86_tt = regs::jpeg_huffenc_ac1_86_v1_tt;
-  using huffenc_ac1_87_tt = regs::jpeg_huffenc_ac1_87_v1_tt;
-  using huffenc_dc0_0_tt = regs::jpeg_huffenc_dc0_0_v1_tt;
-  using huffenc_dc0_1_tt = regs::jpeg_huffenc_dc0_1_v1_tt;
-  using huffenc_dc0_2_tt = regs::jpeg_huffenc_dc0_2_v1_tt;
-  using huffenc_dc0_3_tt = regs::jpeg_huffenc_dc0_3_v1_tt;
-  using huffenc_dc0_4_tt = regs::jpeg_huffenc_dc0_4_v1_tt;
-  using huffenc_dc0_5_tt = regs::jpeg_huffenc_dc0_5_v1_tt;
-  using huffenc_dc0_6_tt = regs::jpeg_huffenc_dc0_6_v1_tt;
-  using huffenc_dc0_7_tt = regs::jpeg_huffenc_dc0_7_v1_tt;
-  using huffenc_dc1_0_tt = regs::jpeg_huffenc_dc1_0_v1_tt;
-  using huffenc_dc1_1_tt = regs::jpeg_huffenc_dc1_1_v1_tt;
-  using huffenc_dc1_2_tt = regs::jpeg_huffenc_dc1_2_v1_tt;
-  using huffenc_dc1_3_tt = regs::jpeg_huffenc_dc1_3_v1_tt;
-  using huffenc_dc1_4_tt = regs::jpeg_huffenc_dc1_4_v1_tt;
-  using huffenc_dc1_5_tt = regs::jpeg_huffenc_dc1_5_v1_tt;
-  using huffenc_dc1_6_tt = regs::jpeg_huffenc_dc1_6_v1_tt;
-  using huffenc_dc1_7_tt = regs::jpeg_huffenc_dc1_7_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using jpeg_confr0_tt = regs::jpeg_jpeg_confr0_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using jpeg_confr1_tt = regs::jpeg_jpeg_confr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using jpeg_confr2_tt = regs::jpeg_jpeg_confr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using jpeg_confr3_tt = regs::jpeg_jpeg_confr3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using jpeg_confr4_tt = regs::jpeg_jpeg_confr4_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using jpeg_confr5_tt = regs::jpeg_jpeg_confr5_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using jpeg_confr6_tt = regs::jpeg_jpeg_confr6_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using jpeg_confr7_tt = regs::jpeg_jpeg_confr7_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using jpeg_cr_tt = regs::jpeg_jpeg_cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using jpeg_sr_tt = regs::jpeg_jpeg_sr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using jpeg_cfr_tt = regs::jpeg_jpeg_cfr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using jpeg_dir_tt = regs::jpeg_jpeg_dir_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using jpeg_dor_tt = regs::jpeg_jpeg_dor_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using qmem0_0_tt = regs::jpeg_qmem0_0_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using qmem0_1_tt = regs::jpeg_qmem0_1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using qmem0_2_tt = regs::jpeg_qmem0_2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using qmem0_3_tt = regs::jpeg_qmem0_3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using qmem0_4_tt = regs::jpeg_qmem0_4_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using qmem0_5_tt = regs::jpeg_qmem0_5_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using qmem0_6_tt = regs::jpeg_qmem0_6_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using qmem0_7_tt = regs::jpeg_qmem0_7_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using qmem0_8_tt = regs::jpeg_qmem0_8_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using qmem0_9_tt = regs::jpeg_qmem0_9_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using qmem0_10_tt = regs::jpeg_qmem0_10_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using qmem0_11_tt = regs::jpeg_qmem0_11_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using qmem0_12_tt = regs::jpeg_qmem0_12_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using qmem0_13_tt = regs::jpeg_qmem0_13_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using qmem0_14_tt = regs::jpeg_qmem0_14_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using qmem0_15_tt = regs::jpeg_qmem0_15_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using qmem1_0_tt = regs::jpeg_qmem1_0_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using qmem1_1_tt = regs::jpeg_qmem1_1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using qmem1_2_tt = regs::jpeg_qmem1_2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using qmem1_3_tt = regs::jpeg_qmem1_3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using qmem1_4_tt = regs::jpeg_qmem1_4_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using qmem1_5_tt = regs::jpeg_qmem1_5_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using qmem1_6_tt = regs::jpeg_qmem1_6_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using qmem1_7_tt = regs::jpeg_qmem1_7_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using qmem1_8_tt = regs::jpeg_qmem1_8_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using qmem1_9_tt = regs::jpeg_qmem1_9_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using qmem1_10_tt = regs::jpeg_qmem1_10_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using qmem1_11_tt = regs::jpeg_qmem1_11_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using qmem1_12_tt = regs::jpeg_qmem1_12_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using qmem1_13_tt = regs::jpeg_qmem1_13_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using qmem1_14_tt = regs::jpeg_qmem1_14_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using qmem1_15_tt = regs::jpeg_qmem1_15_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using qmem2_0_tt = regs::jpeg_qmem2_0_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using qmem2_1_tt = regs::jpeg_qmem2_1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using qmem2_2_tt = regs::jpeg_qmem2_2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using qmem2_3_tt = regs::jpeg_qmem2_3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using qmem2_4_tt = regs::jpeg_qmem2_4_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using qmem2_5_tt = regs::jpeg_qmem2_5_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using qmem2_6_tt = regs::jpeg_qmem2_6_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using qmem2_7_tt = regs::jpeg_qmem2_7_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using qmem2_8_tt = regs::jpeg_qmem2_8_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using qmem2_9_tt = regs::jpeg_qmem2_9_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using qmem2_10_tt = regs::jpeg_qmem2_10_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using qmem2_11_tt = regs::jpeg_qmem2_11_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using qmem2_12_tt = regs::jpeg_qmem2_12_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using qmem2_13_tt = regs::jpeg_qmem2_13_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using qmem2_14_tt = regs::jpeg_qmem2_14_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using qmem2_15_tt = regs::jpeg_qmem2_15_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using qmem3_0_tt = regs::jpeg_qmem3_0_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using qmem3_1_tt = regs::jpeg_qmem3_1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using qmem3_2_tt = regs::jpeg_qmem3_2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using qmem3_3_tt = regs::jpeg_qmem3_3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using qmem3_4_tt = regs::jpeg_qmem3_4_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using qmem3_5_tt = regs::jpeg_qmem3_5_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using qmem3_6_tt = regs::jpeg_qmem3_6_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using qmem3_7_tt = regs::jpeg_qmem3_7_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using qmem3_8_tt = regs::jpeg_qmem3_8_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using qmem3_9_tt = regs::jpeg_qmem3_9_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using qmem3_10_tt = regs::jpeg_qmem3_10_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using qmem3_11_tt = regs::jpeg_qmem3_11_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using qmem3_12_tt = regs::jpeg_qmem3_12_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using qmem3_13_tt = regs::jpeg_qmem3_13_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using qmem3_14_tt = regs::jpeg_qmem3_14_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using qmem3_15_tt = regs::jpeg_qmem3_15_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffmin_0_tt = regs::jpeg_huffmin_0_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffmin_1_tt = regs::jpeg_huffmin_1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffmin_2_tt = regs::jpeg_huffmin_2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffmin_3_tt = regs::jpeg_huffmin_3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffmin_4_tt = regs::jpeg_huffmin_4_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffmin_5_tt = regs::jpeg_huffmin_5_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffmin_6_tt = regs::jpeg_huffmin_6_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffmin_7_tt = regs::jpeg_huffmin_7_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffmin_8_tt = regs::jpeg_huffmin_8_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffmin_9_tt = regs::jpeg_huffmin_9_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffmin_10_tt = regs::jpeg_huffmin_10_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffmin_11_tt = regs::jpeg_huffmin_11_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffmin_12_tt = regs::jpeg_huffmin_12_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffmin_13_tt = regs::jpeg_huffmin_13_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffmin_14_tt = regs::jpeg_huffmin_14_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffmin_15_tt = regs::jpeg_huffmin_15_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffbase0_tt = regs::jpeg_huffbase0_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffbase1_tt = regs::jpeg_huffbase1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffbase2_tt = regs::jpeg_huffbase2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffbase3_tt = regs::jpeg_huffbase3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffbase4_tt = regs::jpeg_huffbase4_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffbase5_tt = regs::jpeg_huffbase5_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffbase6_tt = regs::jpeg_huffbase6_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffbase7_tt = regs::jpeg_huffbase7_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffbase8_tt = regs::jpeg_huffbase8_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffbase9_tt = regs::jpeg_huffbase9_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffbase10_tt = regs::jpeg_huffbase10_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffbase11_tt = regs::jpeg_huffbase11_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffbase12_tt = regs::jpeg_huffbase12_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffbase13_tt = regs::jpeg_huffbase13_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffbase14_tt = regs::jpeg_huffbase14_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffbase15_tt = regs::jpeg_huffbase15_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffbase16_tt = regs::jpeg_huffbase16_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffbase17_tt = regs::jpeg_huffbase17_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffbase18_tt = regs::jpeg_huffbase18_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffbase19_tt = regs::jpeg_huffbase19_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffbase20_tt = regs::jpeg_huffbase20_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffbase21_tt = regs::jpeg_huffbase21_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffbase22_tt = regs::jpeg_huffbase22_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffbase23_tt = regs::jpeg_huffbase23_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffbase24_tt = regs::jpeg_huffbase24_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffbase25_tt = regs::jpeg_huffbase25_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffbase26_tt = regs::jpeg_huffbase26_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffbase27_tt = regs::jpeg_huffbase27_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffbase28_tt = regs::jpeg_huffbase28_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffbase29_tt = regs::jpeg_huffbase29_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffbase30_tt = regs::jpeg_huffbase30_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffbase31_tt = regs::jpeg_huffbase31_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffsymb0_tt = regs::jpeg_huffsymb0_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffsymb1_tt = regs::jpeg_huffsymb1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffsymb2_tt = regs::jpeg_huffsymb2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffsymb3_tt = regs::jpeg_huffsymb3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffsymb4_tt = regs::jpeg_huffsymb4_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffsymb5_tt = regs::jpeg_huffsymb5_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffsymb6_tt = regs::jpeg_huffsymb6_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffsymb7_tt = regs::jpeg_huffsymb7_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffsymb8_tt = regs::jpeg_huffsymb8_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffsymb9_tt = regs::jpeg_huffsymb9_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffsymb10_tt = regs::jpeg_huffsymb10_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffsymb11_tt = regs::jpeg_huffsymb11_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffsymb12_tt = regs::jpeg_huffsymb12_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffsymb13_tt = regs::jpeg_huffsymb13_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffsymb14_tt = regs::jpeg_huffsymb14_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffsymb15_tt = regs::jpeg_huffsymb15_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffsymb16_tt = regs::jpeg_huffsymb16_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffsymb17_tt = regs::jpeg_huffsymb17_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffsymb18_tt = regs::jpeg_huffsymb18_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffsymb19_tt = regs::jpeg_huffsymb19_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffsymb20_tt = regs::jpeg_huffsymb20_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffsymb21_tt = regs::jpeg_huffsymb21_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffsymb22_tt = regs::jpeg_huffsymb22_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffsymb23_tt = regs::jpeg_huffsymb23_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffsymb24_tt = regs::jpeg_huffsymb24_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffsymb25_tt = regs::jpeg_huffsymb25_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffsymb26_tt = regs::jpeg_huffsymb26_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffsymb27_tt = regs::jpeg_huffsymb27_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffsymb28_tt = regs::jpeg_huffsymb28_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffsymb29_tt = regs::jpeg_huffsymb29_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffsymb30_tt = regs::jpeg_huffsymb30_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffsymb31_tt = regs::jpeg_huffsymb31_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffsymb32_tt = regs::jpeg_huffsymb32_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffsymb33_tt = regs::jpeg_huffsymb33_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffsymb34_tt = regs::jpeg_huffsymb34_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffsymb35_tt = regs::jpeg_huffsymb35_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffsymb36_tt = regs::jpeg_huffsymb36_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffsymb37_tt = regs::jpeg_huffsymb37_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffsymb38_tt = regs::jpeg_huffsymb38_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffsymb39_tt = regs::jpeg_huffsymb39_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffsymb40_tt = regs::jpeg_huffsymb40_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffsymb41_tt = regs::jpeg_huffsymb41_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffsymb42_tt = regs::jpeg_huffsymb42_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffsymb43_tt = regs::jpeg_huffsymb43_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffsymb44_tt = regs::jpeg_huffsymb44_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffsymb45_tt = regs::jpeg_huffsymb45_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffsymb46_tt = regs::jpeg_huffsymb46_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffsymb47_tt = regs::jpeg_huffsymb47_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffsymb48_tt = regs::jpeg_huffsymb48_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffsymb49_tt = regs::jpeg_huffsymb49_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffsymb50_tt = regs::jpeg_huffsymb50_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffsymb51_tt = regs::jpeg_huffsymb51_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffsymb52_tt = regs::jpeg_huffsymb52_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffsymb53_tt = regs::jpeg_huffsymb53_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffsymb54_tt = regs::jpeg_huffsymb54_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffsymb55_tt = regs::jpeg_huffsymb55_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffsymb56_tt = regs::jpeg_huffsymb56_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffsymb57_tt = regs::jpeg_huffsymb57_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffsymb58_tt = regs::jpeg_huffsymb58_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffsymb59_tt = regs::jpeg_huffsymb59_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffsymb60_tt = regs::jpeg_huffsymb60_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffsymb61_tt = regs::jpeg_huffsymb61_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffsymb62_tt = regs::jpeg_huffsymb62_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffsymb63_tt = regs::jpeg_huffsymb63_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffsymb64_tt = regs::jpeg_huffsymb64_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffsymb65_tt = regs::jpeg_huffsymb65_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffsymb66_tt = regs::jpeg_huffsymb66_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffsymb67_tt = regs::jpeg_huffsymb67_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffsymb68_tt = regs::jpeg_huffsymb68_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffsymb69_tt = regs::jpeg_huffsymb69_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffsymb70_tt = regs::jpeg_huffsymb70_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffsymb71_tt = regs::jpeg_huffsymb71_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffsymb72_tt = regs::jpeg_huffsymb72_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffsymb73_tt = regs::jpeg_huffsymb73_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffsymb74_tt = regs::jpeg_huffsymb74_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffsymb75_tt = regs::jpeg_huffsymb75_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffsymb76_tt = regs::jpeg_huffsymb76_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffsymb77_tt = regs::jpeg_huffsymb77_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffsymb78_tt = regs::jpeg_huffsymb78_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffsymb79_tt = regs::jpeg_huffsymb79_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffsymb80_tt = regs::jpeg_huffsymb80_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffsymb81_tt = regs::jpeg_huffsymb81_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffsymb82_tt = regs::jpeg_huffsymb82_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffsymb83_tt = regs::jpeg_huffsymb83_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dhtmem0_tt = regs::jpeg_dhtmem0_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dhtmem2_tt = regs::jpeg_dhtmem2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dhtmem3_tt = regs::jpeg_dhtmem3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dhtmem4_tt = regs::jpeg_dhtmem4_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dhtmem5_tt = regs::jpeg_dhtmem5_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dhtmem6_tt = regs::jpeg_dhtmem6_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dhtmem7_tt = regs::jpeg_dhtmem7_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dhtmem8_tt = regs::jpeg_dhtmem8_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dhtmem9_tt = regs::jpeg_dhtmem9_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dhtmem10_tt = regs::jpeg_dhtmem10_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dhtmem11_tt = regs::jpeg_dhtmem11_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dhtmem12_tt = regs::jpeg_dhtmem12_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dhtmem13_tt = regs::jpeg_dhtmem13_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dhtmem14_tt = regs::jpeg_dhtmem14_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dhtmem15_tt = regs::jpeg_dhtmem15_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dhtmem16_tt = regs::jpeg_dhtmem16_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dhtmem17_tt = regs::jpeg_dhtmem17_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dhtmem18_tt = regs::jpeg_dhtmem18_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dhtmem19_tt = regs::jpeg_dhtmem19_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dhtmem20_tt = regs::jpeg_dhtmem20_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dhtmem21_tt = regs::jpeg_dhtmem21_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dhtmem22_tt = regs::jpeg_dhtmem22_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dhtmem23_tt = regs::jpeg_dhtmem23_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dhtmem24_tt = regs::jpeg_dhtmem24_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dhtmem25_tt = regs::jpeg_dhtmem25_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dhtmem26_tt = regs::jpeg_dhtmem26_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dhtmem27_tt = regs::jpeg_dhtmem27_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dhtmem28_tt = regs::jpeg_dhtmem28_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dhtmem29_tt = regs::jpeg_dhtmem29_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dhtmem30_tt = regs::jpeg_dhtmem30_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dhtmem31_tt = regs::jpeg_dhtmem31_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dhtmem32_tt = regs::jpeg_dhtmem32_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dhtmem33_tt = regs::jpeg_dhtmem33_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dhtmem34_tt = regs::jpeg_dhtmem34_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dhtmem35_tt = regs::jpeg_dhtmem35_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dhtmem36_tt = regs::jpeg_dhtmem36_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dhtmem37_tt = regs::jpeg_dhtmem37_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dhtmem38_tt = regs::jpeg_dhtmem38_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dhtmem39_tt = regs::jpeg_dhtmem39_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dhtmem40_tt = regs::jpeg_dhtmem40_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dhtmem41_tt = regs::jpeg_dhtmem41_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dhtmem42_tt = regs::jpeg_dhtmem42_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dhtmem43_tt = regs::jpeg_dhtmem43_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dhtmem44_tt = regs::jpeg_dhtmem44_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dhtmem45_tt = regs::jpeg_dhtmem45_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dhtmem46_tt = regs::jpeg_dhtmem46_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dhtmem47_tt = regs::jpeg_dhtmem47_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dhtmem48_tt = regs::jpeg_dhtmem48_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dhtmem49_tt = regs::jpeg_dhtmem49_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dhtmem50_tt = regs::jpeg_dhtmem50_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dhtmem51_tt = regs::jpeg_dhtmem51_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dhtmem52_tt = regs::jpeg_dhtmem52_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dhtmem53_tt = regs::jpeg_dhtmem53_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dhtmem54_tt = regs::jpeg_dhtmem54_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dhtmem55_tt = regs::jpeg_dhtmem55_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dhtmem56_tt = regs::jpeg_dhtmem56_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dhtmem57_tt = regs::jpeg_dhtmem57_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dhtmem58_tt = regs::jpeg_dhtmem58_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dhtmem59_tt = regs::jpeg_dhtmem59_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dhtmem60_tt = regs::jpeg_dhtmem60_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dhtmem61_tt = regs::jpeg_dhtmem61_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dhtmem62_tt = regs::jpeg_dhtmem62_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dhtmem63_tt = regs::jpeg_dhtmem63_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dhtmem64_tt = regs::jpeg_dhtmem64_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dhtmem65_tt = regs::jpeg_dhtmem65_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dhtmem66_tt = regs::jpeg_dhtmem66_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dhtmem67_tt = regs::jpeg_dhtmem67_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dhtmem68_tt = regs::jpeg_dhtmem68_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dhtmem69_tt = regs::jpeg_dhtmem69_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dhtmem70_tt = regs::jpeg_dhtmem70_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dhtmem71_tt = regs::jpeg_dhtmem71_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dhtmem72_tt = regs::jpeg_dhtmem72_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dhtmem73_tt = regs::jpeg_dhtmem73_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dhtmem74_tt = regs::jpeg_dhtmem74_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dhtmem75_tt = regs::jpeg_dhtmem75_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dhtmem76_tt = regs::jpeg_dhtmem76_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dhtmem77_tt = regs::jpeg_dhtmem77_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dhtmem78_tt = regs::jpeg_dhtmem78_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dhtmem79_tt = regs::jpeg_dhtmem79_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dhtmem80_tt = regs::jpeg_dhtmem80_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dhtmem81_tt = regs::jpeg_dhtmem81_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dhtmem82_tt = regs::jpeg_dhtmem82_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dhtmem83_tt = regs::jpeg_dhtmem83_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dhtmem84_tt = regs::jpeg_dhtmem84_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dhtmem85_tt = regs::jpeg_dhtmem85_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dhtmem86_tt = regs::jpeg_dhtmem86_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dhtmem87_tt = regs::jpeg_dhtmem87_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dhtmem88_tt = regs::jpeg_dhtmem88_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dhtmem89_tt = regs::jpeg_dhtmem89_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dhtmem90_tt = regs::jpeg_dhtmem90_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dhtmem91_tt = regs::jpeg_dhtmem91_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dhtmem92_tt = regs::jpeg_dhtmem92_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dhtmem93_tt = regs::jpeg_dhtmem93_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dhtmem94_tt = regs::jpeg_dhtmem94_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dhtmem95_tt = regs::jpeg_dhtmem95_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dhtmem96_tt = regs::jpeg_dhtmem96_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dhtmem97_tt = regs::jpeg_dhtmem97_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dhtmem98_tt = regs::jpeg_dhtmem98_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dhtmem99_tt = regs::jpeg_dhtmem99_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dhtmem100_tt = regs::jpeg_dhtmem100_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dhtmem101_tt = regs::jpeg_dhtmem101_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dhtmem102_tt = regs::jpeg_dhtmem102_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dhtmem103_tt = regs::jpeg_dhtmem103_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac0_0_tt = regs::jpeg_huffenc_ac0_0_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac0_1_tt = regs::jpeg_huffenc_ac0_1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac0_2_tt = regs::jpeg_huffenc_ac0_2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac0_3_tt = regs::jpeg_huffenc_ac0_3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac0_4_tt = regs::jpeg_huffenc_ac0_4_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac0_5_tt = regs::jpeg_huffenc_ac0_5_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac0_6_tt = regs::jpeg_huffenc_ac0_6_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac0_7_tt = regs::jpeg_huffenc_ac0_7_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac0_8_tt = regs::jpeg_huffenc_ac0_8_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac0_9_tt = regs::jpeg_huffenc_ac0_9_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac0_10_tt = regs::jpeg_huffenc_ac0_10_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac0_11_tt = regs::jpeg_huffenc_ac0_11_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac0_12_tt = regs::jpeg_huffenc_ac0_12_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac0_13_tt = regs::jpeg_huffenc_ac0_13_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac0_14_tt = regs::jpeg_huffenc_ac0_14_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac0_15_tt = regs::jpeg_huffenc_ac0_15_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac0_16_tt = regs::jpeg_huffenc_ac0_16_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac0_17_tt = regs::jpeg_huffenc_ac0_17_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac0_18_tt = regs::jpeg_huffenc_ac0_18_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac0_19_tt = regs::jpeg_huffenc_ac0_19_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac0_20_tt = regs::jpeg_huffenc_ac0_20_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac0_21_tt = regs::jpeg_huffenc_ac0_21_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac0_22_tt = regs::jpeg_huffenc_ac0_22_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac0_23_tt = regs::jpeg_huffenc_ac0_23_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac0_24_tt = regs::jpeg_huffenc_ac0_24_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac0_25_tt = regs::jpeg_huffenc_ac0_25_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac0_26_tt = regs::jpeg_huffenc_ac0_26_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac0_27_tt = regs::jpeg_huffenc_ac0_27_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac0_28_tt = regs::jpeg_huffenc_ac0_28_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac0_29_tt = regs::jpeg_huffenc_ac0_29_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac0_30_tt = regs::jpeg_huffenc_ac0_30_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac0_31_tt = regs::jpeg_huffenc_ac0_31_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac0_32_tt = regs::jpeg_huffenc_ac0_32_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac0_33_tt = regs::jpeg_huffenc_ac0_33_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac0_34_tt = regs::jpeg_huffenc_ac0_34_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac0_35_tt = regs::jpeg_huffenc_ac0_35_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac0_36_tt = regs::jpeg_huffenc_ac0_36_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac0_37_tt = regs::jpeg_huffenc_ac0_37_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac0_38_tt = regs::jpeg_huffenc_ac0_38_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac0_39_tt = regs::jpeg_huffenc_ac0_39_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac0_40_tt = regs::jpeg_huffenc_ac0_40_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac0_41_tt = regs::jpeg_huffenc_ac0_41_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac0_42_tt = regs::jpeg_huffenc_ac0_42_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac0_43_tt = regs::jpeg_huffenc_ac0_43_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac0_44_tt = regs::jpeg_huffenc_ac0_44_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac0_45_tt = regs::jpeg_huffenc_ac0_45_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac0_46_tt = regs::jpeg_huffenc_ac0_46_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac0_47_tt = regs::jpeg_huffenc_ac0_47_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac0_48_tt = regs::jpeg_huffenc_ac0_48_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac0_49_tt = regs::jpeg_huffenc_ac0_49_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac0_50_tt = regs::jpeg_huffenc_ac0_50_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac0_51_tt = regs::jpeg_huffenc_ac0_51_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac0_52_tt = regs::jpeg_huffenc_ac0_52_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac0_53_tt = regs::jpeg_huffenc_ac0_53_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac0_54_tt = regs::jpeg_huffenc_ac0_54_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac0_55_tt = regs::jpeg_huffenc_ac0_55_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac0_56_tt = regs::jpeg_huffenc_ac0_56_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac0_57_tt = regs::jpeg_huffenc_ac0_57_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac0_58_tt = regs::jpeg_huffenc_ac0_58_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac0_59_tt = regs::jpeg_huffenc_ac0_59_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac0_60_tt = regs::jpeg_huffenc_ac0_60_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac0_61_tt = regs::jpeg_huffenc_ac0_61_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac0_62_tt = regs::jpeg_huffenc_ac0_62_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac0_63_tt = regs::jpeg_huffenc_ac0_63_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac0_64_tt = regs::jpeg_huffenc_ac0_64_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac0_65_tt = regs::jpeg_huffenc_ac0_65_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac0_66_tt = regs::jpeg_huffenc_ac0_66_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac0_67_tt = regs::jpeg_huffenc_ac0_67_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac0_68_tt = regs::jpeg_huffenc_ac0_68_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac0_69_tt = regs::jpeg_huffenc_ac0_69_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac0_70_tt = regs::jpeg_huffenc_ac0_70_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac0_71_tt = regs::jpeg_huffenc_ac0_71_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac0_72_tt = regs::jpeg_huffenc_ac0_72_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac0_73_tt = regs::jpeg_huffenc_ac0_73_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac0_74_tt = regs::jpeg_huffenc_ac0_74_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac0_75_tt = regs::jpeg_huffenc_ac0_75_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac0_76_tt = regs::jpeg_huffenc_ac0_76_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac0_77_tt = regs::jpeg_huffenc_ac0_77_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac0_78_tt = regs::jpeg_huffenc_ac0_78_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac0_79_tt = regs::jpeg_huffenc_ac0_79_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac0_80_tt = regs::jpeg_huffenc_ac0_80_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac0_81_tt = regs::jpeg_huffenc_ac0_81_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac0_82_tt = regs::jpeg_huffenc_ac0_82_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac0_83_tt = regs::jpeg_huffenc_ac0_83_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac0_84_tt = regs::jpeg_huffenc_ac0_84_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac0_85_tt = regs::jpeg_huffenc_ac0_85_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac0_86_tt = regs::jpeg_huffenc_ac0_86_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac0_87_tt = regs::jpeg_huffenc_ac0_87_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac1_0_tt = regs::jpeg_huffenc_ac1_0_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac1_1_tt = regs::jpeg_huffenc_ac1_1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac1_2_tt = regs::jpeg_huffenc_ac1_2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac1_3_tt = regs::jpeg_huffenc_ac1_3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac1_4_tt = regs::jpeg_huffenc_ac1_4_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac1_5_tt = regs::jpeg_huffenc_ac1_5_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac1_6_tt = regs::jpeg_huffenc_ac1_6_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac1_7_tt = regs::jpeg_huffenc_ac1_7_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac1_8_tt = regs::jpeg_huffenc_ac1_8_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac1_9_tt = regs::jpeg_huffenc_ac1_9_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac1_10_tt = regs::jpeg_huffenc_ac1_10_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac1_11_tt = regs::jpeg_huffenc_ac1_11_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac1_12_tt = regs::jpeg_huffenc_ac1_12_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac1_13_tt = regs::jpeg_huffenc_ac1_13_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac1_14_tt = regs::jpeg_huffenc_ac1_14_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac1_15_tt = regs::jpeg_huffenc_ac1_15_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac1_16_tt = regs::jpeg_huffenc_ac1_16_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac1_17_tt = regs::jpeg_huffenc_ac1_17_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac1_18_tt = regs::jpeg_huffenc_ac1_18_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac1_19_tt = regs::jpeg_huffenc_ac1_19_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac1_20_tt = regs::jpeg_huffenc_ac1_20_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac1_21_tt = regs::jpeg_huffenc_ac1_21_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac1_22_tt = regs::jpeg_huffenc_ac1_22_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac1_23_tt = regs::jpeg_huffenc_ac1_23_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac1_24_tt = regs::jpeg_huffenc_ac1_24_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac1_25_tt = regs::jpeg_huffenc_ac1_25_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac1_26_tt = regs::jpeg_huffenc_ac1_26_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac1_27_tt = regs::jpeg_huffenc_ac1_27_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac1_28_tt = regs::jpeg_huffenc_ac1_28_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac1_29_tt = regs::jpeg_huffenc_ac1_29_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac1_30_tt = regs::jpeg_huffenc_ac1_30_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac1_31_tt = regs::jpeg_huffenc_ac1_31_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac1_32_tt = regs::jpeg_huffenc_ac1_32_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac1_33_tt = regs::jpeg_huffenc_ac1_33_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac1_34_tt = regs::jpeg_huffenc_ac1_34_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac1_35_tt = regs::jpeg_huffenc_ac1_35_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac1_36_tt = regs::jpeg_huffenc_ac1_36_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac1_37_tt = regs::jpeg_huffenc_ac1_37_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac1_38_tt = regs::jpeg_huffenc_ac1_38_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac1_39_tt = regs::jpeg_huffenc_ac1_39_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac1_40_tt = regs::jpeg_huffenc_ac1_40_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac1_41_tt = regs::jpeg_huffenc_ac1_41_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac1_42_tt = regs::jpeg_huffenc_ac1_42_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac1_43_tt = regs::jpeg_huffenc_ac1_43_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac1_44_tt = regs::jpeg_huffenc_ac1_44_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac1_45_tt = regs::jpeg_huffenc_ac1_45_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac1_46_tt = regs::jpeg_huffenc_ac1_46_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac1_47_tt = regs::jpeg_huffenc_ac1_47_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac1_48_tt = regs::jpeg_huffenc_ac1_48_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac1_49_tt = regs::jpeg_huffenc_ac1_49_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac1_50_tt = regs::jpeg_huffenc_ac1_50_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac1_51_tt = regs::jpeg_huffenc_ac1_51_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac1_52_tt = regs::jpeg_huffenc_ac1_52_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac1_53_tt = regs::jpeg_huffenc_ac1_53_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac1_54_tt = regs::jpeg_huffenc_ac1_54_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac1_55_tt = regs::jpeg_huffenc_ac1_55_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac1_56_tt = regs::jpeg_huffenc_ac1_56_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac1_57_tt = regs::jpeg_huffenc_ac1_57_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac1_58_tt = regs::jpeg_huffenc_ac1_58_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac1_59_tt = regs::jpeg_huffenc_ac1_59_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac1_60_tt = regs::jpeg_huffenc_ac1_60_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac1_61_tt = regs::jpeg_huffenc_ac1_61_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac1_62_tt = regs::jpeg_huffenc_ac1_62_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac1_63_tt = regs::jpeg_huffenc_ac1_63_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac1_64_tt = regs::jpeg_huffenc_ac1_64_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac1_65_tt = regs::jpeg_huffenc_ac1_65_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac1_66_tt = regs::jpeg_huffenc_ac1_66_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac1_67_tt = regs::jpeg_huffenc_ac1_67_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac1_68_tt = regs::jpeg_huffenc_ac1_68_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac1_69_tt = regs::jpeg_huffenc_ac1_69_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac1_70_tt = regs::jpeg_huffenc_ac1_70_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac1_71_tt = regs::jpeg_huffenc_ac1_71_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac1_72_tt = regs::jpeg_huffenc_ac1_72_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac1_73_tt = regs::jpeg_huffenc_ac1_73_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac1_74_tt = regs::jpeg_huffenc_ac1_74_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac1_75_tt = regs::jpeg_huffenc_ac1_75_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac1_76_tt = regs::jpeg_huffenc_ac1_76_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac1_77_tt = regs::jpeg_huffenc_ac1_77_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac1_78_tt = regs::jpeg_huffenc_ac1_78_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac1_79_tt = regs::jpeg_huffenc_ac1_79_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac1_80_tt = regs::jpeg_huffenc_ac1_80_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac1_81_tt = regs::jpeg_huffenc_ac1_81_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac1_82_tt = regs::jpeg_huffenc_ac1_82_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac1_83_tt = regs::jpeg_huffenc_ac1_83_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac1_84_tt = regs::jpeg_huffenc_ac1_84_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac1_85_tt = regs::jpeg_huffenc_ac1_85_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac1_86_tt = regs::jpeg_huffenc_ac1_86_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_ac1_87_tt = regs::jpeg_huffenc_ac1_87_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_dc0_0_tt = regs::jpeg_huffenc_dc0_0_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_dc0_1_tt = regs::jpeg_huffenc_dc0_1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_dc0_2_tt = regs::jpeg_huffenc_dc0_2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_dc0_3_tt = regs::jpeg_huffenc_dc0_3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_dc0_4_tt = regs::jpeg_huffenc_dc0_4_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_dc0_5_tt = regs::jpeg_huffenc_dc0_5_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_dc0_6_tt = regs::jpeg_huffenc_dc0_6_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_dc0_7_tt = regs::jpeg_huffenc_dc0_7_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_dc1_0_tt = regs::jpeg_huffenc_dc1_0_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_dc1_1_tt = regs::jpeg_huffenc_dc1_1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_dc1_2_tt = regs::jpeg_huffenc_dc1_2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_dc1_3_tt = regs::jpeg_huffenc_dc1_3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_dc1_4_tt = regs::jpeg_huffenc_dc1_4_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_dc1_5_tt = regs::jpeg_huffenc_dc1_5_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_dc1_6_tt = regs::jpeg_huffenc_dc1_6_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using huffenc_dc1_7_tt = regs::jpeg_huffenc_dc1_7_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using jpeg_t =

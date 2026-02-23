@@ -7,13 +7,34 @@
 namespace stm32::stm32g473xx {
 
 namespace comp {
-  using comp_c1csr_tt = regs::comp_comp_c1csr_v1_tt;
-  using comp_c2csr_tt = regs::comp_comp_c2csr_v1_tt;
-  using comp_c3csr_tt = regs::comp_comp_c3csr_v1_tt;
-  using comp_c4csr_tt = regs::comp_comp_c4csr_v1_tt;
-  using comp_c5csr_tt = regs::comp_comp_c5csr_v1_tt;
-  using comp_c6csr_tt = regs::comp_comp_c6csr_v1_tt;
-  using comp_c7csr_tt = regs::comp_comp_c7csr_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using comp_c1csr_tt = regs::comp_comp_c1csr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using comp_c2csr_tt = regs::comp_comp_c2csr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using comp_c3csr_tt = regs::comp_comp_c3csr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using comp_c4csr_tt = regs::comp_comp_c4csr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using comp_c5csr_tt = regs::comp_comp_c5csr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using comp_c6csr_tt = regs::comp_comp_c6csr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using comp_c7csr_tt = regs::comp_comp_c7csr_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using comp_t =

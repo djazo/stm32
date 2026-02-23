@@ -16,12 +16,12 @@ using cec_cfgr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 4, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 4, common::access::ro>,
                groov::field<"bpem", bool, 3, 3>,
                groov::field<"btem", bool, 2, 2>,
-               groov::field<"ie", bit_enable, 1, 1>,
-               groov::field<"pe", bit_enable, 0, 0>>;
+               groov::field<"ie", common::bittypes::bit_enable, 1, 1>,
+               groov::field<"pe", common::bittypes::bit_enable, 0, 0>>;
 
 // cec_csr_v1: CSR
 // Used by: CEC
@@ -32,8 +32,8 @@ using cec_csr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 8, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 8, common::access::ro>,
                groov::field<"rbtf", bool, 7, 7>,
                groov::field<"rerr", bool, 6, 6>,
                groov::field<"reom", bool, 5, 5>,
@@ -52,14 +52,14 @@ using cec_esr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint32_t, 31, 7>,
-               groov::field<"tbtfe", bit_enable, 6, 6>,
+               groov::field<"tbtfe", common::bittypes::bit_enable, 6, 6>,
                groov::field<"line", bool, 5, 5>,
                groov::field<"acke", bool, 4, 4>,
                groov::field<"sbe", bool, 3, 3>,
-               groov::field<"rbtfe", bit_enable, 2, 2>,
-               groov::field<"bpe", bit_enable, 1, 1>,
+               groov::field<"rbtfe", common::bittypes::bit_enable, 2, 2>,
+               groov::field<"bpe", common::bittypes::bit_enable, 1, 1>,
                groov::field<"bte", bool, 0, 0>>;
 
 // cec_oar_v1: OAR
@@ -71,8 +71,8 @@ using cec_oar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 4, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 4, common::access::ro>,
                groov::field<"oa", std::uint8_t, 3, 0>>;
 
 // cec_pres_v1: PRES
@@ -84,8 +84,8 @@ using cec_pres_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 14, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 14, common::access::ro>,
                groov::field<"presc", std::uint16_t, 13, 0>>;
 
 // cec_rxd_v1: RXD
@@ -97,7 +97,7 @@ using cec_rxd_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint32_t, 31, 8>,
                groov::field<"rxd", std::uint8_t, 7, 0>>;
 
@@ -110,8 +110,8 @@ using cec_txd_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 8, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 8, common::access::ro>,
                groov::field<"txd", std::uint8_t, 7, 0>>;
 
 } // namespace stm32::regs

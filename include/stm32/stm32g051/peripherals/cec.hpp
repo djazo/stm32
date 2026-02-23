@@ -7,12 +7,30 @@
 namespace stm32::stm32g051 {
 
 namespace hdmi_cec {
-  using cec_cr_tt = regs::cec_cec_cr_v1_tt;
-  using cec_cfgr_tt = regs::cec_cec_cfgr_v1_tt;
-  using cec_txdr_tt = regs::cec_cec_txdr_v1_tt;
-  using cec_rxdr_tt = regs::cec_cec_rxdr_v1_tt;
-  using cec_isr_tt = regs::cec_cec_isr_v1_tt;
-  using cec_ier_tt = regs::cec_cec_ier_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cec_cr_tt = regs::cec_cec_cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cec_cfgr_tt = regs::cec_cec_cfgr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cec_txdr_tt = regs::cec_cec_txdr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cec_rxdr_tt = regs::cec_cec_rxdr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cec_isr_tt = regs::cec_cec_isr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cec_ier_tt = regs::cec_cec_ier_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using hdmi_cec_t =

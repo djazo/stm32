@@ -7,74 +7,278 @@
 namespace stm32::stm32l4p5 {
 
 namespace hash {
-  using cr_tt = regs::hash_cr_v1_tt;
-  using din_tt = regs::hash_din_v1_tt;
-  using str_tt = regs::hash_str_v1_tt;
-  using hr0_tt = regs::hash_hr0_v1_tt;
-  using imr_tt = regs::hash_imr_v1_tt;
-  using sr_tt = regs::hash_sr_v1_tt;
-  using csr0_tt = regs::hash_csr0_v1_tt;
-  using csr1_tt = regs::hash_csr1_v1_tt;
-  using csr2_tt = regs::hash_csr2_v1_tt;
-  using csr3_tt = regs::hash_csr3_v1_tt;
-  using csr4_tt = regs::hash_csr4_v1_tt;
-  using csr5_tt = regs::hash_csr5_v1_tt;
-  using csr6_tt = regs::hash_csr6_v1_tt;
-  using csr7_tt = regs::hash_csr7_v1_tt;
-  using csr8_tt = regs::hash_csr8_v1_tt;
-  using csr9_tt = regs::hash_csr9_v1_tt;
-  using csr10_tt = regs::hash_csr10_v1_tt;
-  using csr11_tt = regs::hash_csr11_v1_tt;
-  using csr12_tt = regs::hash_csr12_v1_tt;
-  using csr13_tt = regs::hash_csr13_v1_tt;
-  using csr14_tt = regs::hash_csr14_v1_tt;
-  using csr15_tt = regs::hash_csr15_v1_tt;
-  using csr16_tt = regs::hash_csr16_v1_tt;
-  using csr17_tt = regs::hash_csr17_v1_tt;
-  using csr18_tt = regs::hash_csr18_v1_tt;
-  using csr19_tt = regs::hash_csr19_v1_tt;
-  using csr20_tt = regs::hash_csr20_v1_tt;
-  using csr21_tt = regs::hash_csr21_v1_tt;
-  using csr22_tt = regs::hash_csr22_v1_tt;
-  using csr23_tt = regs::hash_csr23_v1_tt;
-  using csr24_tt = regs::hash_csr24_v1_tt;
-  using csr25_tt = regs::hash_csr25_v1_tt;
-  using csr26_tt = regs::hash_csr26_v1_tt;
-  using csr27_tt = regs::hash_csr27_v1_tt;
-  using csr28_tt = regs::hash_csr28_v1_tt;
-  using csr29_tt = regs::hash_csr29_v1_tt;
-  using csr30_tt = regs::hash_csr30_v1_tt;
-  using csr31_tt = regs::hash_csr31_v1_tt;
-  using csr32_tt = regs::hash_csr32_v1_tt;
-  using csr33_tt = regs::hash_csr33_v1_tt;
-  using csr34_tt = regs::hash_csr34_v1_tt;
-  using csr35_tt = regs::hash_csr35_v1_tt;
-  using csr36_tt = regs::hash_csr36_v1_tt;
-  using csr37_tt = regs::hash_csr37_v1_tt;
-  using csr38_tt = regs::hash_csr38_v1_tt;
-  using csr39_tt = regs::hash_csr39_v1_tt;
-  using csr40_tt = regs::hash_csr40_v1_tt;
-  using csr41_tt = regs::hash_csr41_v1_tt;
-  using csr42_tt = regs::hash_csr42_v1_tt;
-  using csr43_tt = regs::hash_csr43_v1_tt;
-  using csr44_tt = regs::hash_csr44_v1_tt;
-  using csr45_tt = regs::hash_csr45_v1_tt;
-  using csr46_tt = regs::hash_csr46_v1_tt;
-  using csr47_tt = regs::hash_csr47_v1_tt;
-  using csr48_tt = regs::hash_csr48_v1_tt;
-  using csr49_tt = regs::hash_csr49_v1_tt;
-  using csr50_tt = regs::hash_csr50_v1_tt;
-  using csr51_tt = regs::hash_csr51_v1_tt;
-  using csr52_tt = regs::hash_csr52_v1_tt;
-  using csr53_tt = regs::hash_csr53_v1_tt;
-  using hash_hr0_tt = regs::hash_hash_hr0_v1_tt;
-  using hash_hr1_tt = regs::hash_hash_hr1_v1_tt;
-  using hash_hr2_tt = regs::hash_hash_hr2_v1_tt;
-  using hash_hr3_tt = regs::hash_hash_hr3_v1_tt;
-  using hash_hr4_tt = regs::hash_hash_hr4_v1_tt;
-  using hash_hr5_tt = regs::hash_hash_hr5_v1_tt;
-  using hash_hr6_tt = regs::hash_hash_hr6_v1_tt;
-  using hash_hr7_tt = regs::hash_hash_hr7_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cr_tt = regs::hash_cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using din_tt = regs::hash_din_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using str_tt = regs::hash_str_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hr0_tt = regs::hash_hr0_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using imr_tt = regs::hash_imr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using sr_tt = regs::hash_sr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using csr0_tt = regs::hash_csr0_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using csr1_tt = regs::hash_csr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using csr2_tt = regs::hash_csr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using csr3_tt = regs::hash_csr3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using csr4_tt = regs::hash_csr4_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using csr5_tt = regs::hash_csr5_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using csr6_tt = regs::hash_csr6_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using csr7_tt = regs::hash_csr7_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using csr8_tt = regs::hash_csr8_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using csr9_tt = regs::hash_csr9_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using csr10_tt = regs::hash_csr10_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using csr11_tt = regs::hash_csr11_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using csr12_tt = regs::hash_csr12_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using csr13_tt = regs::hash_csr13_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using csr14_tt = regs::hash_csr14_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using csr15_tt = regs::hash_csr15_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using csr16_tt = regs::hash_csr16_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using csr17_tt = regs::hash_csr17_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using csr18_tt = regs::hash_csr18_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using csr19_tt = regs::hash_csr19_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using csr20_tt = regs::hash_csr20_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using csr21_tt = regs::hash_csr21_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using csr22_tt = regs::hash_csr22_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using csr23_tt = regs::hash_csr23_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using csr24_tt = regs::hash_csr24_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using csr25_tt = regs::hash_csr25_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using csr26_tt = regs::hash_csr26_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using csr27_tt = regs::hash_csr27_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using csr28_tt = regs::hash_csr28_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using csr29_tt = regs::hash_csr29_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using csr30_tt = regs::hash_csr30_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using csr31_tt = regs::hash_csr31_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using csr32_tt = regs::hash_csr32_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using csr33_tt = regs::hash_csr33_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using csr34_tt = regs::hash_csr34_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using csr35_tt = regs::hash_csr35_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using csr36_tt = regs::hash_csr36_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using csr37_tt = regs::hash_csr37_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using csr38_tt = regs::hash_csr38_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using csr39_tt = regs::hash_csr39_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using csr40_tt = regs::hash_csr40_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using csr41_tt = regs::hash_csr41_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using csr42_tt = regs::hash_csr42_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using csr43_tt = regs::hash_csr43_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using csr44_tt = regs::hash_csr44_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using csr45_tt = regs::hash_csr45_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using csr46_tt = regs::hash_csr46_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using csr47_tt = regs::hash_csr47_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using csr48_tt = regs::hash_csr48_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using csr49_tt = regs::hash_csr49_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using csr50_tt = regs::hash_csr50_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using csr51_tt = regs::hash_csr51_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using csr52_tt = regs::hash_csr52_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using csr53_tt = regs::hash_csr53_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hash_hr0_tt = regs::hash_hash_hr0_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hash_hr1_tt = regs::hash_hash_hr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hash_hr2_tt = regs::hash_hash_hr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hash_hr3_tt = regs::hash_hash_hr3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hash_hr4_tt = regs::hash_hash_hr4_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hash_hr5_tt = regs::hash_hash_hr5_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hash_hr6_tt = regs::hash_hash_hr6_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using hash_hr7_tt = regs::hash_hash_hr7_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using hash_t =

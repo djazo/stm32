@@ -16,15 +16,15 @@ using dbgmcu_apb1fzr1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dbg_lptim1_stop", bool, 31, 31>,
-               groov::field<"reserved2", std::uint16_t, 30, 22, access::ro>,
+               groov::field<"reserved2", std::uint16_t, 30, 22, common::access::ro>,
                groov::field<"dbg_i2c1_stop", bool, 21, 21>,
-               groov::field<"reserved1", std::uint8_t, 20, 13, access::ro>,
+               groov::field<"reserved1", std::uint8_t, 20, 13, common::access::ro>,
                groov::field<"dbg_iwdg_stop", bool, 12, 12>,
                groov::field<"dbg_wwdg_stop", bool, 11, 11>,
                groov::field<"dbg_rtc_stop", bool, 10, 10>,
-               groov::field<"reserved0", std::uint16_t, 9, 1, access::ro>,
+               groov::field<"reserved0", std::uint16_t, 9, 1, common::access::ro>,
                groov::field<"dbg_tim2_stop", bool, 0, 0>>;
 
 // dbgmcu_apb1fzr2_v1: APB1FZR2
@@ -36,10 +36,10 @@ using dbgmcu_apb1fzr2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint32_t, 31, 6, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint32_t, 31, 6, common::access::ro>,
                groov::field<"dbg_lptim2_stop", bool, 5, 5>,
-               groov::field<"reserved0", std::uint8_t, 4, 0, access::ro>>;
+               groov::field<"reserved0", std::uint8_t, 4, 0, common::access::ro>>;
 
 // dbgmcu_apb2fzr_v1: APB2FZR
 // Used by: DBGMCU
@@ -50,10 +50,10 @@ using dbgmcu_apb2fzr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint32_t, 31, 12, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint32_t, 31, 12, common::access::ro>,
                groov::field<"dbg_tim1_stop", bool, 11, 11>,
-               groov::field<"reserved0", std::uint16_t, 10, 0, access::ro>>;
+               groov::field<"reserved0", std::uint16_t, 10, 0, common::access::ro>>;
 
 // dbgmcu_c2apb1fzr1_v1: C2APB1FZR1
 // Used by: DBGMCU
@@ -64,15 +64,15 @@ using dbgmcu_c2apb1fzr1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dbg_lptim1_stop", bool, 31, 31>,
-               groov::field<"reserved3", std::uint16_t, 30, 22, access::ro>,
+               groov::field<"reserved3", std::uint16_t, 30, 22, common::access::ro>,
                groov::field<"dbg_i2c1_stop", bool, 21, 21>,
-               groov::field<"reserved2", std::uint8_t, 20, 13, access::ro>,
+               groov::field<"reserved2", std::uint8_t, 20, 13, common::access::ro>,
                groov::field<"dbg_iwdg_stop", bool, 12, 12>,
-               groov::field<"reserved1", bool, 11, 11, access::ro>,
+               groov::field<"reserved1", bool, 11, 11, common::access::ro>,
                groov::field<"dbg_rtc_stop", bool, 10, 10>,
-               groov::field<"reserved0", std::uint16_t, 9, 1, access::ro>,
+               groov::field<"reserved0", std::uint16_t, 9, 1, common::access::ro>,
                groov::field<"dbg_tim2_stop", bool, 0, 0>>;
 
 // dbgmcu_c2apb1fzr2_v1: C2APB1FZR2
@@ -84,10 +84,10 @@ using dbgmcu_c2apb1fzr2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint32_t, 31, 6, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint32_t, 31, 6, common::access::ro>,
                groov::field<"dbg_lptim2_stop", bool, 5, 5>,
-               groov::field<"reserved0", std::uint8_t, 4, 0, access::ro>>;
+               groov::field<"reserved0", std::uint8_t, 4, 0, common::access::ro>>;
 
 // dbgmcu_c2apb2fzr_v1: C2APB2FZR
 // Used by: DBGMCU
@@ -98,10 +98,10 @@ using dbgmcu_c2apb2fzr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint32_t, 31, 12, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint32_t, 31, 12, common::access::ro>,
                groov::field<"dbg_tim1_stop", bool, 11, 11>,
-               groov::field<"reserved0", std::uint16_t, 10, 0, access::ro>>;
+               groov::field<"reserved0", std::uint16_t, 10, 0, common::access::ro>>;
 
 // dbgmcu_cr_v1: CR
 // Used by: DBGMCU
@@ -112,12 +112,12 @@ using dbgmcu_cr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved2", std::uint8_t, 31, 29, access::ro>,
-               groov::field<"trgoen", bit_enable, 28, 28>,
-               groov::field<"reserved1", std::uint32_t, 27, 6, access::ro>,
-               groov::field<"trace_ioen", bit_enable, 5, 5>,
-               groov::field<"reserved0", std::uint8_t, 4, 3, access::ro>,
+             common::access::rw,
+               groov::field<"reserved2", std::uint8_t, 31, 29, common::access::ro>,
+               groov::field<"trgoen", common::bittypes::bit_enable, 28, 28>,
+               groov::field<"reserved1", std::uint32_t, 27, 6, common::access::ro>,
+               groov::field<"trace_ioen", common::bittypes::bit_enable, 5, 5>,
+               groov::field<"reserved0", std::uint8_t, 4, 3, common::access::ro>,
                groov::field<"dbg_standby", bool, 2, 2>,
                groov::field<"dbg_stop", bool, 1, 1>,
                groov::field<"dbg_sleep", bool, 0, 0>>;
@@ -131,7 +131,7 @@ using dbgmcu_idcode_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"rev_id", std::uint16_t, 31, 16>,
                groov::field<"reserved0", std::uint8_t, 15, 12>,
                groov::field<"dev_id", std::uint16_t, 11, 0>>;

@@ -7,8 +7,14 @@
 namespace stm32::stm32l0x2 {
 
 namespace pwr {
-  using cr_tt = regs::pwr_cr_v1_tt;
-  using csr_tt = regs::pwr_csr_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cr_tt = regs::pwr_cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using csr_tt = regs::pwr_csr_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using pwr_t =

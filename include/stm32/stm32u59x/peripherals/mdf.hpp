@@ -7,104 +7,398 @@
 namespace stm32::stm32u59x {
 
 namespace mdfx {
-  using gcr_tt = regs::mdf_gcr_v1_tt;
-  using ckgcr_tt = regs::mdf_ckgcr_v1_tt;
-  using mdf_sitf0cr_tt = regs::mdf_mdf_sitf0cr_v1_tt;
-  using mdf_sitf1cr_tt = regs::mdf_mdf_sitf1cr_v1_tt;
-  using mdf_sitf2cr_tt = regs::mdf_mdf_sitf2cr_v1_tt;
-  using mdf_sitf3cr_tt = regs::mdf_mdf_sitf3cr_v1_tt;
-  using mdf_sitf4cr_tt = regs::mdf_mdf_sitf4cr_v1_tt;
-  using mdf_sitf5cr_tt = regs::mdf_mdf_sitf5cr_v1_tt;
-  using mdf_bsmx0cr_tt = regs::mdf_mdf_bsmx0cr_v1_tt;
-  using mdf_bsmx1cr_tt = regs::mdf_mdf_bsmx1cr_v1_tt;
-  using mdf_bsmx2cr_tt = regs::mdf_mdf_bsmx2cr_v1_tt;
-  using mdf_bsmx3cr_tt = regs::mdf_mdf_bsmx3cr_v1_tt;
-  using mdf_bsmx4cr_tt = regs::mdf_mdf_bsmx4cr_v1_tt;
-  using mdf_bsmx5cr_tt = regs::mdf_mdf_bsmx5cr_v1_tt;
-  using mdf_dflt0cr_tt = regs::mdf_mdf_dflt0cr_v1_tt;
-  using mdf_dflt1cr_tt = regs::mdf_mdf_dflt1cr_v1_tt;
-  using mdf_dflt2cr_tt = regs::mdf_mdf_dflt2cr_v1_tt;
-  using mdf_dflt3cr_tt = regs::mdf_mdf_dflt3cr_v1_tt;
-  using mdf_dflt4cr_tt = regs::mdf_mdf_dflt4cr_v1_tt;
-  using mdf_dflt5cr_tt = regs::mdf_mdf_dflt5cr_v1_tt;
-  using mdf_dflt0cicr_tt = regs::mdf_mdf_dflt0cicr_v1_tt;
-  using mdf_dflt1cicr_tt = regs::mdf_mdf_dflt1cicr_v1_tt;
-  using mdf_dflt2cicr_tt = regs::mdf_mdf_dflt2cicr_v1_tt;
-  using mdf_dflt3cicr_tt = regs::mdf_mdf_dflt3cicr_v1_tt;
-  using mdf_dflt4cicr_tt = regs::mdf_mdf_dflt4cicr_v1_tt;
-  using mdf_dflt5cicr_tt = regs::mdf_mdf_dflt5cicr_v1_tt;
-  using mdf_dflt0rsfr_tt = regs::mdf_mdf_dflt0rsfr_v1_tt;
-  using mdf_dflt1rsfr_tt = regs::mdf_mdf_dflt1rsfr_v1_tt;
-  using mdf_dflt2rsfr_tt = regs::mdf_mdf_dflt2rsfr_v1_tt;
-  using mdf_dflt3rsfr_tt = regs::mdf_mdf_dflt3rsfr_v1_tt;
-  using mdf_dflt4rsfr_tt = regs::mdf_mdf_dflt4rsfr_v1_tt;
-  using mdf_dflt5rsfr_tt = regs::mdf_mdf_dflt5rsfr_v1_tt;
-  using mdf_dflt0intr_tt = regs::mdf_mdf_dflt0intr_v1_tt;
-  using mdf_dflt1intr_tt = regs::mdf_mdf_dflt1intr_v1_tt;
-  using mdf_dflt2intr_tt = regs::mdf_mdf_dflt2intr_v1_tt;
-  using mdf_dflt3intr_tt = regs::mdf_mdf_dflt3intr_v1_tt;
-  using mdf_dflt4intr_tt = regs::mdf_mdf_dflt4intr_v1_tt;
-  using mdf_dflt5intr_tt = regs::mdf_mdf_dflt5intr_v1_tt;
-  using mdf_old0cr_tt = regs::mdf_mdf_old0cr_v1_tt;
-  using mdf_old1cr_tt = regs::mdf_mdf_old1cr_v1_tt;
-  using mdf_old2cr_tt = regs::mdf_mdf_old2cr_v1_tt;
-  using mdf_old3cr_tt = regs::mdf_mdf_old3cr_v1_tt;
-  using mdf_old4cr_tt = regs::mdf_mdf_old4cr_v1_tt;
-  using mdf_old5cr_tt = regs::mdf_mdf_old5cr_v1_tt;
-  using mdf_old0thlr_tt = regs::mdf_mdf_old0thlr_v1_tt;
-  using mdf_old1thlr_tt = regs::mdf_mdf_old1thlr_v1_tt;
-  using mdf_old2thlr_tt = regs::mdf_mdf_old2thlr_v1_tt;
-  using mdf_old3thlr_tt = regs::mdf_mdf_old3thlr_v1_tt;
-  using mdf_old4thlr_tt = regs::mdf_mdf_old4thlr_v1_tt;
-  using mdf_old5thlr_tt = regs::mdf_mdf_old5thlr_v1_tt;
-  using mdf_old0thhr_tt = regs::mdf_mdf_old0thhr_v1_tt;
-  using mdf_old1thhr_tt = regs::mdf_mdf_old1thhr_v1_tt;
-  using mdf_old2thhr_tt = regs::mdf_mdf_old2thhr_v1_tt;
-  using mdf_old3thhr_tt = regs::mdf_mdf_old3thhr_v1_tt;
-  using mdf_old4thhr_tt = regs::mdf_mdf_old4thhr_v1_tt;
-  using mdf_old5thhr_tt = regs::mdf_mdf_old5thhr_v1_tt;
-  using mdf_dly0cr_tt = regs::mdf_mdf_dly0cr_v1_tt;
-  using mdf_dly1cr_tt = regs::mdf_mdf_dly1cr_v1_tt;
-  using mdf_dly2cr_tt = regs::mdf_mdf_dly2cr_v1_tt;
-  using mdf_dly3cr_tt = regs::mdf_mdf_dly3cr_v1_tt;
-  using mdf_dly4cr_tt = regs::mdf_mdf_dly4cr_v1_tt;
-  using mdf_dly5cr_tt = regs::mdf_mdf_dly5cr_v1_tt;
-  using mdf_scd0cr_tt = regs::mdf_mdf_scd0cr_v1_tt;
-  using mdf_scd1cr_tt = regs::mdf_mdf_scd1cr_v1_tt;
-  using mdf_scd2cr_tt = regs::mdf_mdf_scd2cr_v1_tt;
-  using mdf_scd3cr_tt = regs::mdf_mdf_scd3cr_v1_tt;
-  using mdf_scd4cr_tt = regs::mdf_mdf_scd4cr_v1_tt;
-  using mdf_scd5cr_tt = regs::mdf_mdf_scd5cr_v1_tt;
-  using mdf_dflt0ier_tt = regs::mdf_mdf_dflt0ier_v1_tt;
-  using mdf_dflt0isr_tt = regs::mdf_mdf_dflt0isr_v1_tt;
-  using mdf_dflt1ier_tt = regs::mdf_mdf_dflt1ier_v1_tt;
-  using mdf_dflt2ier_tt = regs::mdf_mdf_dflt2ier_v1_tt;
-  using mdf_dflt3ier_tt = regs::mdf_mdf_dflt3ier_v1_tt;
-  using mdf_dflt4ier_tt = regs::mdf_mdf_dflt4ier_v1_tt;
-  using mdf_dflt5ier_tt = regs::mdf_mdf_dflt5ier_v1_tt;
-  using mdf_dflt1isr_tt = regs::mdf_mdf_dflt1isr_v1_tt;
-  using mdf_dflt2isr_tt = regs::mdf_mdf_dflt2isr_v1_tt;
-  using mdf_dflt3isr_tt = regs::mdf_mdf_dflt3isr_v1_tt;
-  using mdf_dflt4isr_tt = regs::mdf_mdf_dflt4isr_v1_tt;
-  using mdf_dflt5isr_tt = regs::mdf_mdf_dflt5isr_v1_tt;
-  using mdf_oec0cr_tt = regs::mdf_mdf_oec0cr_v1_tt;
-  using mdf_oec1cr_tt = regs::mdf_mdf_oec1cr_v1_tt;
-  using mdf_oec2cr_tt = regs::mdf_mdf_oec2cr_v1_tt;
-  using mdf_oec3cr_tt = regs::mdf_mdf_oec3cr_v1_tt;
-  using mdf_oec4cr_tt = regs::mdf_mdf_oec4cr_v1_tt;
-  using mdf_oec5cr_tt = regs::mdf_mdf_oec5cr_v1_tt;
-  using mdf_snps0dr_tt = regs::mdf_mdf_snps0dr_v1_tt;
-  using mdf_snps1dr_tt = regs::mdf_mdf_snps1dr_v1_tt;
-  using mdf_snps2dr_tt = regs::mdf_mdf_snps2dr_v1_tt;
-  using mdf_snps3dr_tt = regs::mdf_mdf_snps3dr_v1_tt;
-  using mdf_snps4dr_tt = regs::mdf_mdf_snps4dr_v1_tt;
-  using mdf_snps5dr_tt = regs::mdf_mdf_snps5dr_v1_tt;
-  using mdf_dflt0dr_tt = regs::mdf_mdf_dflt0dr_v1_tt;
-  using mdf_dflt1dr_tt = regs::mdf_mdf_dflt1dr_v1_tt;
-  using mdf_dflt2dr_tt = regs::mdf_mdf_dflt2dr_v1_tt;
-  using mdf_dflt3dr_tt = regs::mdf_mdf_dflt3dr_v1_tt;
-  using mdf_dflt4dr_tt = regs::mdf_mdf_dflt4dr_v1_tt;
-  using mdf_dflt5dr_tt = regs::mdf_mdf_dflt5dr_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gcr_tt = regs::mdf_gcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ckgcr_tt = regs::mdf_ckgcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdf_sitf0cr_tt = regs::mdf_mdf_sitf0cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdf_sitf1cr_tt = regs::mdf_mdf_sitf1cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdf_sitf2cr_tt = regs::mdf_mdf_sitf2cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdf_sitf3cr_tt = regs::mdf_mdf_sitf3cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdf_sitf4cr_tt = regs::mdf_mdf_sitf4cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdf_sitf5cr_tt = regs::mdf_mdf_sitf5cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdf_bsmx0cr_tt = regs::mdf_mdf_bsmx0cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdf_bsmx1cr_tt = regs::mdf_mdf_bsmx1cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdf_bsmx2cr_tt = regs::mdf_mdf_bsmx2cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdf_bsmx3cr_tt = regs::mdf_mdf_bsmx3cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdf_bsmx4cr_tt = regs::mdf_mdf_bsmx4cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdf_bsmx5cr_tt = regs::mdf_mdf_bsmx5cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdf_dflt0cr_tt = regs::mdf_mdf_dflt0cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdf_dflt1cr_tt = regs::mdf_mdf_dflt1cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdf_dflt2cr_tt = regs::mdf_mdf_dflt2cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdf_dflt3cr_tt = regs::mdf_mdf_dflt3cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdf_dflt4cr_tt = regs::mdf_mdf_dflt4cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdf_dflt5cr_tt = regs::mdf_mdf_dflt5cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdf_dflt0cicr_tt = regs::mdf_mdf_dflt0cicr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdf_dflt1cicr_tt = regs::mdf_mdf_dflt1cicr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdf_dflt2cicr_tt = regs::mdf_mdf_dflt2cicr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdf_dflt3cicr_tt = regs::mdf_mdf_dflt3cicr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdf_dflt4cicr_tt = regs::mdf_mdf_dflt4cicr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdf_dflt5cicr_tt = regs::mdf_mdf_dflt5cicr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdf_dflt0rsfr_tt = regs::mdf_mdf_dflt0rsfr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdf_dflt1rsfr_tt = regs::mdf_mdf_dflt1rsfr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdf_dflt2rsfr_tt = regs::mdf_mdf_dflt2rsfr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdf_dflt3rsfr_tt = regs::mdf_mdf_dflt3rsfr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdf_dflt4rsfr_tt = regs::mdf_mdf_dflt4rsfr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdf_dflt5rsfr_tt = regs::mdf_mdf_dflt5rsfr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdf_dflt0intr_tt = regs::mdf_mdf_dflt0intr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdf_dflt1intr_tt = regs::mdf_mdf_dflt1intr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdf_dflt2intr_tt = regs::mdf_mdf_dflt2intr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdf_dflt3intr_tt = regs::mdf_mdf_dflt3intr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdf_dflt4intr_tt = regs::mdf_mdf_dflt4intr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdf_dflt5intr_tt = regs::mdf_mdf_dflt5intr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdf_old0cr_tt = regs::mdf_mdf_old0cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdf_old1cr_tt = regs::mdf_mdf_old1cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdf_old2cr_tt = regs::mdf_mdf_old2cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdf_old3cr_tt = regs::mdf_mdf_old3cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdf_old4cr_tt = regs::mdf_mdf_old4cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdf_old5cr_tt = regs::mdf_mdf_old5cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdf_old0thlr_tt = regs::mdf_mdf_old0thlr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdf_old1thlr_tt = regs::mdf_mdf_old1thlr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdf_old2thlr_tt = regs::mdf_mdf_old2thlr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdf_old3thlr_tt = regs::mdf_mdf_old3thlr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdf_old4thlr_tt = regs::mdf_mdf_old4thlr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdf_old5thlr_tt = regs::mdf_mdf_old5thlr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdf_old0thhr_tt = regs::mdf_mdf_old0thhr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdf_old1thhr_tt = regs::mdf_mdf_old1thhr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdf_old2thhr_tt = regs::mdf_mdf_old2thhr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdf_old3thhr_tt = regs::mdf_mdf_old3thhr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdf_old4thhr_tt = regs::mdf_mdf_old4thhr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdf_old5thhr_tt = regs::mdf_mdf_old5thhr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdf_dly0cr_tt = regs::mdf_mdf_dly0cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdf_dly1cr_tt = regs::mdf_mdf_dly1cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdf_dly2cr_tt = regs::mdf_mdf_dly2cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdf_dly3cr_tt = regs::mdf_mdf_dly3cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdf_dly4cr_tt = regs::mdf_mdf_dly4cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdf_dly5cr_tt = regs::mdf_mdf_dly5cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdf_scd0cr_tt = regs::mdf_mdf_scd0cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdf_scd1cr_tt = regs::mdf_mdf_scd1cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdf_scd2cr_tt = regs::mdf_mdf_scd2cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdf_scd3cr_tt = regs::mdf_mdf_scd3cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdf_scd4cr_tt = regs::mdf_mdf_scd4cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdf_scd5cr_tt = regs::mdf_mdf_scd5cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdf_dflt0ier_tt = regs::mdf_mdf_dflt0ier_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdf_dflt0isr_tt = regs::mdf_mdf_dflt0isr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdf_dflt1ier_tt = regs::mdf_mdf_dflt1ier_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdf_dflt2ier_tt = regs::mdf_mdf_dflt2ier_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdf_dflt3ier_tt = regs::mdf_mdf_dflt3ier_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdf_dflt4ier_tt = regs::mdf_mdf_dflt4ier_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdf_dflt5ier_tt = regs::mdf_mdf_dflt5ier_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdf_dflt1isr_tt = regs::mdf_mdf_dflt1isr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdf_dflt2isr_tt = regs::mdf_mdf_dflt2isr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdf_dflt3isr_tt = regs::mdf_mdf_dflt3isr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdf_dflt4isr_tt = regs::mdf_mdf_dflt4isr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdf_dflt5isr_tt = regs::mdf_mdf_dflt5isr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdf_oec0cr_tt = regs::mdf_mdf_oec0cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdf_oec1cr_tt = regs::mdf_mdf_oec1cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdf_oec2cr_tt = regs::mdf_mdf_oec2cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdf_oec3cr_tt = regs::mdf_mdf_oec3cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdf_oec4cr_tt = regs::mdf_mdf_oec4cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdf_oec5cr_tt = regs::mdf_mdf_oec5cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdf_snps0dr_tt = regs::mdf_mdf_snps0dr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdf_snps1dr_tt = regs::mdf_mdf_snps1dr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdf_snps2dr_tt = regs::mdf_mdf_snps2dr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdf_snps3dr_tt = regs::mdf_mdf_snps3dr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdf_snps4dr_tt = regs::mdf_mdf_snps4dr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdf_snps5dr_tt = regs::mdf_mdf_snps5dr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdf_dflt0dr_tt = regs::mdf_mdf_dflt0dr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdf_dflt1dr_tt = regs::mdf_mdf_dflt1dr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdf_dflt2dr_tt = regs::mdf_mdf_dflt2dr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdf_dflt3dr_tt = regs::mdf_mdf_dflt3dr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdf_dflt4dr_tt = regs::mdf_mdf_dflt4dr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdf_dflt5dr_tt = regs::mdf_mdf_dflt5dr_v1_tt<name, baseaddress, offset>;
 
   template <stdx::ct_string name, std::uint32_t baseaddress>
   using mdfx_t =

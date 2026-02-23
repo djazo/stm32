@@ -7,10 +7,22 @@
 namespace stm32::stm32f217 {
 
 namespace stk {
-  using ctrl_tt = regs::stk_ctrl_v1_tt;
-  using load__tt = regs::stk_load__v1_tt;
-  using val_tt = regs::stk_val_v1_tt;
-  using calib_tt = regs::stk_calib_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ctrl_tt = regs::stk_ctrl_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using load__tt = regs::stk_load__v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using val_tt = regs::stk_val_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using calib_tt = regs::stk_calib_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using stk_t =

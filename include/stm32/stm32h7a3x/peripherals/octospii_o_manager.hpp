@@ -7,9 +7,18 @@
 namespace stm32::stm32h7a3x {
 
 namespace octospii_o_manager {
-  using cr_tt = regs::octospii_o_manager_cr_v1_tt;
-  using p1cr_tt = regs::octospii_o_manager_p1cr_v1_tt;
-  using p2cr_tt = regs::octospii_o_manager_p2cr_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cr_tt = regs::octospii_o_manager_cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using p1cr_tt = regs::octospii_o_manager_p1cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using p2cr_tt = regs::octospii_o_manager_p2cr_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using octospii_o_manager_t =

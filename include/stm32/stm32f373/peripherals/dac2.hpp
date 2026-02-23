@@ -7,13 +7,34 @@
 namespace stm32::stm32f373 {
 
 namespace dac2 {
-  using cr_tt = regs::dac2_cr_v1_tt;
-  using swtrigr_tt = regs::dac2_swtrigr_v1_tt;
-  using dhr12r1_tt = regs::dac2_dhr12r1_v1_tt;
-  using dhr12l1_tt = regs::dac2_dhr12l1_v1_tt;
-  using dhr8r1_tt = regs::dac2_dhr8r1_v1_tt;
-  using dor1_tt = regs::dac2_dor1_v1_tt;
-  using sr_tt = regs::dac2_sr_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cr_tt = regs::dac2_cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using swtrigr_tt = regs::dac2_swtrigr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dhr12r1_tt = regs::dac2_dhr12r1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dhr12l1_tt = regs::dac2_dhr12l1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dhr8r1_tt = regs::dac2_dhr8r1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dor1_tt = regs::dac2_dor1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using sr_tt = regs::dac2_sr_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using dac2_t =

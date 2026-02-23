@@ -7,78 +7,294 @@
 namespace stm32::stm32f768 {
 
 namespace dsi {
-  using dsi_vr_tt = regs::dsi_dsi_vr_v1_tt;
-  using dsi_cr_tt = regs::dsi_dsi_cr_v1_tt;
-  using dsi_ccr_tt = regs::dsi_dsi_ccr_v1_tt;
-  using dsi_lvcidr_tt = regs::dsi_dsi_lvcidr_v1_tt;
-  using dsi_lcolcr_tt = regs::dsi_dsi_lcolcr_v1_tt;
-  using dsi_lpcr_tt = regs::dsi_dsi_lpcr_v1_tt;
-  using dsi_lpmcr_tt = regs::dsi_dsi_lpmcr_v1_tt;
-  using dsi_pcr_tt = regs::dsi_dsi_pcr_v1_tt;
-  using dsi_gvcidr_tt = regs::dsi_dsi_gvcidr_v1_tt;
-  using dsi_mcr_tt = regs::dsi_dsi_mcr_v1_tt;
-  using dsi_vmcr_tt = regs::dsi_dsi_vmcr_v1_tt;
-  using dsi_vpcr_tt = regs::dsi_dsi_vpcr_v1_tt;
-  using dsi_vccr_tt = regs::dsi_dsi_vccr_v1_tt;
-  using dsi_vnpcr_tt = regs::dsi_dsi_vnpcr_v1_tt;
-  using dsi_vhsacr_tt = regs::dsi_dsi_vhsacr_v1_tt;
-  using dsi_vhbpcr_tt = regs::dsi_dsi_vhbpcr_v1_tt;
-  using dsi_vlcr_tt = regs::dsi_dsi_vlcr_v1_tt;
-  using dsi_vvsacr_tt = regs::dsi_dsi_vvsacr_v1_tt;
-  using dsi_vvbpcr_tt = regs::dsi_dsi_vvbpcr_v1_tt;
-  using dsi_vvfpcr_tt = regs::dsi_dsi_vvfpcr_v1_tt;
-  using dsi_vvacr_tt = regs::dsi_dsi_vvacr_v1_tt;
-  using dsi_lccr_tt = regs::dsi_dsi_lccr_v1_tt;
-  using dsi_cmcr_tt = regs::dsi_dsi_cmcr_v1_tt;
-  using dsi_ghcr_tt = regs::dsi_dsi_ghcr_v1_tt;
-  using dsi_gpdr_tt = regs::dsi_dsi_gpdr_v1_tt;
-  using dsi_gpsr_tt = regs::dsi_dsi_gpsr_v1_tt;
-  using dsi_tccr0_tt = regs::dsi_dsi_tccr0_v1_tt;
-  using dsi_tccr1_tt = regs::dsi_dsi_tccr1_v1_tt;
-  using dsi_tccr2_tt = regs::dsi_dsi_tccr2_v1_tt;
-  using dsi_tccr3_tt = regs::dsi_dsi_tccr3_v1_tt;
-  using dsi_tccr4_tt = regs::dsi_dsi_tccr4_v1_tt;
-  using dsi_tccr5_tt = regs::dsi_dsi_tccr5_v1_tt;
-  using dsi_clcr_tt = regs::dsi_dsi_clcr_v1_tt;
-  using dsi_cltcr_tt = regs::dsi_dsi_cltcr_v1_tt;
-  using dsi_dltcr_tt = regs::dsi_dsi_dltcr_v1_tt;
-  using dsi_pctlr_tt = regs::dsi_dsi_pctlr_v1_tt;
-  using dsi_pconfr_tt = regs::dsi_dsi_pconfr_v1_tt;
-  using dsi_pucr_tt = regs::dsi_dsi_pucr_v1_tt;
-  using dsi_pttcr_tt = regs::dsi_dsi_pttcr_v1_tt;
-  using dsi_psr_tt = regs::dsi_dsi_psr_v1_tt;
-  using dsi_isr0_tt = regs::dsi_dsi_isr0_v1_tt;
-  using dsi_isr1_tt = regs::dsi_dsi_isr1_v1_tt;
-  using dsi_ier0_tt = regs::dsi_dsi_ier0_v1_tt;
-  using dsi_ier1_tt = regs::dsi_dsi_ier1_v1_tt;
-  using dsi_fir0_tt = regs::dsi_dsi_fir0_v1_tt;
-  using dsi_fir1_tt = regs::dsi_dsi_fir1_v1_tt;
-  using dsi_vscr_tt = regs::dsi_dsi_vscr_v1_tt;
-  using dsi_lcvcidr_tt = regs::dsi_dsi_lcvcidr_v1_tt;
-  using dsi_lcccr_tt = regs::dsi_dsi_lcccr_v1_tt;
-  using dsi_lpmccr_tt = regs::dsi_dsi_lpmccr_v1_tt;
-  using dsi_vmccr_tt = regs::dsi_dsi_vmccr_v1_tt;
-  using dsi_vpccr_tt = regs::dsi_dsi_vpccr_v1_tt;
-  using dsi_vcccr_tt = regs::dsi_dsi_vcccr_v1_tt;
-  using dsi_vnpccr_tt = regs::dsi_dsi_vnpccr_v1_tt;
-  using dsi_vhsaccr_tt = regs::dsi_dsi_vhsaccr_v1_tt;
-  using dsi_vhbpccr_tt = regs::dsi_dsi_vhbpccr_v1_tt;
-  using dsi_vlccr_tt = regs::dsi_dsi_vlccr_v1_tt;
-  using dsi_vvsaccr_tt = regs::dsi_dsi_vvsaccr_v1_tt;
-  using dsi_vvbpccr_tt = regs::dsi_dsi_vvbpccr_v1_tt;
-  using dsi_vvfpccr_tt = regs::dsi_dsi_vvfpccr_v1_tt;
-  using dsi_vvaccr_tt = regs::dsi_dsi_vvaccr_v1_tt;
-  using dsi_wcfgr_tt = regs::dsi_dsi_wcfgr_v1_tt;
-  using dsi_wcr_tt = regs::dsi_dsi_wcr_v1_tt;
-  using dsi_wier_tt = regs::dsi_dsi_wier_v1_tt;
-  using dsi_wisr_tt = regs::dsi_dsi_wisr_v1_tt;
-  using dsi_wifcr_tt = regs::dsi_dsi_wifcr_v1_tt;
-  using dsi_wpcr1_tt = regs::dsi_dsi_wpcr1_v1_tt;
-  using dsi_wpcr2_tt = regs::dsi_dsi_wpcr2_v1_tt;
-  using dsi_wpcr3_tt = regs::dsi_dsi_wpcr3_v1_tt;
-  using dsi_wpcr4_tt = regs::dsi_dsi_wpcr4_v1_tt;
-  using dsi_wpcr5_tt = regs::dsi_dsi_wpcr5_v1_tt;
-  using dsi_wrpcr_tt = regs::dsi_dsi_wrpcr_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dsi_vr_tt = regs::dsi_dsi_vr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dsi_cr_tt = regs::dsi_dsi_cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dsi_ccr_tt = regs::dsi_dsi_ccr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dsi_lvcidr_tt = regs::dsi_dsi_lvcidr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dsi_lcolcr_tt = regs::dsi_dsi_lcolcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dsi_lpcr_tt = regs::dsi_dsi_lpcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dsi_lpmcr_tt = regs::dsi_dsi_lpmcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dsi_pcr_tt = regs::dsi_dsi_pcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dsi_gvcidr_tt = regs::dsi_dsi_gvcidr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dsi_mcr_tt = regs::dsi_dsi_mcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dsi_vmcr_tt = regs::dsi_dsi_vmcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dsi_vpcr_tt = regs::dsi_dsi_vpcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dsi_vccr_tt = regs::dsi_dsi_vccr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dsi_vnpcr_tt = regs::dsi_dsi_vnpcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dsi_vhsacr_tt = regs::dsi_dsi_vhsacr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dsi_vhbpcr_tt = regs::dsi_dsi_vhbpcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dsi_vlcr_tt = regs::dsi_dsi_vlcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dsi_vvsacr_tt = regs::dsi_dsi_vvsacr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dsi_vvbpcr_tt = regs::dsi_dsi_vvbpcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dsi_vvfpcr_tt = regs::dsi_dsi_vvfpcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dsi_vvacr_tt = regs::dsi_dsi_vvacr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dsi_lccr_tt = regs::dsi_dsi_lccr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dsi_cmcr_tt = regs::dsi_dsi_cmcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dsi_ghcr_tt = regs::dsi_dsi_ghcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dsi_gpdr_tt = regs::dsi_dsi_gpdr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dsi_gpsr_tt = regs::dsi_dsi_gpsr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dsi_tccr0_tt = regs::dsi_dsi_tccr0_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dsi_tccr1_tt = regs::dsi_dsi_tccr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dsi_tccr2_tt = regs::dsi_dsi_tccr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dsi_tccr3_tt = regs::dsi_dsi_tccr3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dsi_tccr4_tt = regs::dsi_dsi_tccr4_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dsi_tccr5_tt = regs::dsi_dsi_tccr5_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dsi_clcr_tt = regs::dsi_dsi_clcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dsi_cltcr_tt = regs::dsi_dsi_cltcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dsi_dltcr_tt = regs::dsi_dsi_dltcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dsi_pctlr_tt = regs::dsi_dsi_pctlr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dsi_pconfr_tt = regs::dsi_dsi_pconfr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dsi_pucr_tt = regs::dsi_dsi_pucr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dsi_pttcr_tt = regs::dsi_dsi_pttcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dsi_psr_tt = regs::dsi_dsi_psr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dsi_isr0_tt = regs::dsi_dsi_isr0_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dsi_isr1_tt = regs::dsi_dsi_isr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dsi_ier0_tt = regs::dsi_dsi_ier0_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dsi_ier1_tt = regs::dsi_dsi_ier1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dsi_fir0_tt = regs::dsi_dsi_fir0_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dsi_fir1_tt = regs::dsi_dsi_fir1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dsi_vscr_tt = regs::dsi_dsi_vscr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dsi_lcvcidr_tt = regs::dsi_dsi_lcvcidr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dsi_lcccr_tt = regs::dsi_dsi_lcccr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dsi_lpmccr_tt = regs::dsi_dsi_lpmccr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dsi_vmccr_tt = regs::dsi_dsi_vmccr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dsi_vpccr_tt = regs::dsi_dsi_vpccr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dsi_vcccr_tt = regs::dsi_dsi_vcccr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dsi_vnpccr_tt = regs::dsi_dsi_vnpccr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dsi_vhsaccr_tt = regs::dsi_dsi_vhsaccr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dsi_vhbpccr_tt = regs::dsi_dsi_vhbpccr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dsi_vlccr_tt = regs::dsi_dsi_vlccr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dsi_vvsaccr_tt = regs::dsi_dsi_vvsaccr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dsi_vvbpccr_tt = regs::dsi_dsi_vvbpccr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dsi_vvfpccr_tt = regs::dsi_dsi_vvfpccr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dsi_vvaccr_tt = regs::dsi_dsi_vvaccr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dsi_wcfgr_tt = regs::dsi_dsi_wcfgr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dsi_wcr_tt = regs::dsi_dsi_wcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dsi_wier_tt = regs::dsi_dsi_wier_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dsi_wisr_tt = regs::dsi_dsi_wisr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dsi_wifcr_tt = regs::dsi_dsi_wifcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dsi_wpcr1_tt = regs::dsi_dsi_wpcr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dsi_wpcr2_tt = regs::dsi_dsi_wpcr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dsi_wpcr3_tt = regs::dsi_dsi_wpcr3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dsi_wpcr4_tt = regs::dsi_dsi_wpcr4_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dsi_wpcr5_tt = regs::dsi_dsi_wpcr5_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dsi_wrpcr_tt = regs::dsi_dsi_wrpcr_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using dsi_t =

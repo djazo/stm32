@@ -7,8 +7,14 @@
 namespace stm32::stm32f412 {
 
 namespace adc_common {
-  using csr_tt = regs::adc_csr_v1_tt;
-  using ccr_tt = regs::adc_ccr_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using csr_tt = regs::adc_csr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ccr_tt = regs::adc_ccr_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using adc_common_t =
@@ -20,26 +26,86 @@ namespace adc_common {
 } // namespace adc_common
 
 namespace adc1 {
-  using sr_tt = regs::adc_sr_v1_tt;
-  using cr1_tt = regs::adc_cr1_v1_tt;
-  using cr2_tt = regs::adc_cr2_v1_tt;
-  using smpr1_tt = regs::adc_smpr1_v1_tt;
-  using smpr2_tt = regs::adc_smpr2_v1_tt;
-  using jofr1_tt = regs::adc_jofr1_v1_tt;
-  using jofr2_tt = regs::adc_jofr2_v1_tt;
-  using jofr3_tt = regs::adc_jofr3_v1_tt;
-  using jofr4_tt = regs::adc_jofr4_v1_tt;
-  using htr_tt = regs::adc_htr_v1_tt;
-  using ltr_tt = regs::adc_ltr_v1_tt;
-  using sqr1_tt = regs::adc_sqr1_v1_tt;
-  using sqr2_tt = regs::adc_sqr2_v1_tt;
-  using sqr3_tt = regs::adc_sqr3_v1_tt;
-  using jsqr_tt = regs::adc_jsqr_v1_tt;
-  using jdr1_tt = regs::adc_jdr1_v1_tt;
-  using jdr2_tt = regs::adc_jdr2_v1_tt;
-  using jdr3_tt = regs::adc_jdr3_v1_tt;
-  using jdr4_tt = regs::adc_jdr4_v1_tt;
-  using dr_tt = regs::adc_dr_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using sr_tt = regs::adc_sr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cr1_tt = regs::adc_cr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cr2_tt = regs::adc_cr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using smpr1_tt = regs::adc_smpr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using smpr2_tt = regs::adc_smpr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using jofr1_tt = regs::adc_jofr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using jofr2_tt = regs::adc_jofr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using jofr3_tt = regs::adc_jofr3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using jofr4_tt = regs::adc_jofr4_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using htr_tt = regs::adc_htr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ltr_tt = regs::adc_ltr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using sqr1_tt = regs::adc_sqr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using sqr2_tt = regs::adc_sqr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using sqr3_tt = regs::adc_sqr3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using jsqr_tt = regs::adc_jsqr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using jdr1_tt = regs::adc_jdr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using jdr2_tt = regs::adc_jdr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using jdr3_tt = regs::adc_jdr3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using jdr4_tt = regs::adc_jdr4_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dr_tt = regs::adc_dr_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using adc1_t =

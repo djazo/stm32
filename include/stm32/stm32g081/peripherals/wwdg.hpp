@@ -7,9 +7,18 @@
 namespace stm32::stm32g081 {
 
 namespace wwdg {
-  using cr_tt = regs::wwdg_cr_v1_tt;
-  using cfr_tt = regs::wwdg_cfr_v1_tt;
-  using sr_tt = regs::wwdg_sr_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cr_tt = regs::wwdg_cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cfr_tt = regs::wwdg_cfr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using sr_tt = regs::wwdg_sr_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using wwdg_t =

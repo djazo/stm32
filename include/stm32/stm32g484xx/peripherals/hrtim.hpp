@@ -7,17 +7,50 @@
 namespace stm32::stm32g484xx {
 
 namespace hrtim_master {
-  using mcr_tt = regs::hrtim_mcr_v1_tt;
-  using misr_tt = regs::hrtim_misr_v1_tt;
-  using micr_tt = regs::hrtim_micr_v1_tt;
-  using mdier_tt = regs::hrtim_mdier_v1_tt;
-  using mcntr_tt = regs::hrtim_mcntr_v1_tt;
-  using mper_tt = regs::hrtim_mper_v1_tt;
-  using mrep_tt = regs::hrtim_mrep_v1_tt;
-  using mcmp1r_tt = regs::hrtim_mcmp1r_v1_tt;
-  using mcmp2r_tt = regs::hrtim_mcmp2r_v1_tt;
-  using mcmp3r_tt = regs::hrtim_mcmp3r_v1_tt;
-  using mcmp4r_tt = regs::hrtim_mcmp4r_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mcr_tt = regs::hrtim_mcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using misr_tt = regs::hrtim_misr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using micr_tt = regs::hrtim_micr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mdier_tt = regs::hrtim_mdier_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mcntr_tt = regs::hrtim_mcntr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mper_tt = regs::hrtim_mper_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mrep_tt = regs::hrtim_mrep_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mcmp1r_tt = regs::hrtim_mcmp1r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mcmp2r_tt = regs::hrtim_mcmp2r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mcmp3r_tt = regs::hrtim_mcmp3r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using mcmp4r_tt = regs::hrtim_mcmp4r_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using hrtim_master_t =
@@ -38,35 +71,122 @@ namespace hrtim_master {
 } // namespace hrtim_master
 
 namespace hrtim_tima {
-  using timacr_tt = regs::hrtim_timacr_v1_tt;
-  using timaisr_tt = regs::hrtim_timaisr_v1_tt;
-  using timaicr_tt = regs::hrtim_timaicr_v1_tt;
-  using timadier_tt = regs::hrtim_timadier_v1_tt;
-  using cntar_tt = regs::hrtim_cntar_v1_tt;
-  using perar_tt = regs::hrtim_perar_v1_tt;
-  using repar_tt = regs::hrtim_repar_v1_tt;
-  using cmp1ar_tt = regs::hrtim_cmp1ar_v1_tt;
-  using cmp1car_tt = regs::hrtim_cmp1car_v1_tt;
-  using cmp2ar_tt = regs::hrtim_cmp2ar_v1_tt;
-  using cmp3ar_tt = regs::hrtim_cmp3ar_v1_tt;
-  using cmp4ar_tt = regs::hrtim_cmp4ar_v1_tt;
-  using cpt1ar_tt = regs::hrtim_cpt1ar_v1_tt;
-  using cpt2ar_tt = regs::hrtim_cpt2ar_v1_tt;
-  using dtar_tt = regs::hrtim_dtar_v1_tt;
-  using seta1r_tt = regs::hrtim_seta1r_v1_tt;
-  using rsta1r_tt = regs::hrtim_rsta1r_v1_tt;
-  using seta2r_tt = regs::hrtim_seta2r_v1_tt;
-  using rsta2r_tt = regs::hrtim_rsta2r_v1_tt;
-  using eefar1_tt = regs::hrtim_eefar1_v1_tt;
-  using eefar2_tt = regs::hrtim_eefar2_v1_tt;
-  using rstar_tt = regs::hrtim_rstar_v1_tt;
-  using chpar_tt = regs::hrtim_chpar_v1_tt;
-  using cpt1acr_tt = regs::hrtim_cpt1acr_v1_tt;
-  using cpt2acr_tt = regs::hrtim_cpt2acr_v1_tt;
-  using outar_tt = regs::hrtim_outar_v1_tt;
-  using fltar_tt = regs::hrtim_fltar_v1_tt;
-  using timacr2_tt = regs::hrtim_timacr2_v1_tt;
-  using aeefr3_tt = regs::hrtim_aeefr3_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using timacr_tt = regs::hrtim_timacr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using timaisr_tt = regs::hrtim_timaisr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using timaicr_tt = regs::hrtim_timaicr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using timadier_tt = regs::hrtim_timadier_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cntar_tt = regs::hrtim_cntar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using perar_tt = regs::hrtim_perar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using repar_tt = regs::hrtim_repar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cmp1ar_tt = regs::hrtim_cmp1ar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cmp1car_tt = regs::hrtim_cmp1car_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cmp2ar_tt = regs::hrtim_cmp2ar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cmp3ar_tt = regs::hrtim_cmp3ar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cmp4ar_tt = regs::hrtim_cmp4ar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cpt1ar_tt = regs::hrtim_cpt1ar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cpt2ar_tt = regs::hrtim_cpt2ar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dtar_tt = regs::hrtim_dtar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using seta1r_tt = regs::hrtim_seta1r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rsta1r_tt = regs::hrtim_rsta1r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using seta2r_tt = regs::hrtim_seta2r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rsta2r_tt = regs::hrtim_rsta2r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using eefar1_tt = regs::hrtim_eefar1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using eefar2_tt = regs::hrtim_eefar2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rstar_tt = regs::hrtim_rstar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using chpar_tt = regs::hrtim_chpar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cpt1acr_tt = regs::hrtim_cpt1acr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cpt2acr_tt = regs::hrtim_cpt2acr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using outar_tt = regs::hrtim_outar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fltar_tt = regs::hrtim_fltar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using timacr2_tt = regs::hrtim_timacr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using aeefr3_tt = regs::hrtim_aeefr3_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using hrtim_tima_t =
@@ -105,35 +225,122 @@ namespace hrtim_tima {
 } // namespace hrtim_tima
 
 namespace hrtim_timb {
-  using timbcr_tt = regs::hrtim_timbcr_v1_tt;
-  using timbisr_tt = regs::hrtim_timbisr_v1_tt;
-  using timbicr_tt = regs::hrtim_timbicr_v1_tt;
-  using timbdier_tt = regs::hrtim_timbdier_v1_tt;
-  using cntr_tt = regs::hrtim_cntr_v1_tt;
-  using perbr_tt = regs::hrtim_perbr_v1_tt;
-  using repbr_tt = regs::hrtim_repbr_v1_tt;
-  using cmp1br_tt = regs::hrtim_cmp1br_v1_tt;
-  using cmp1cbr_tt = regs::hrtim_cmp1cbr_v1_tt;
-  using cmp2br_tt = regs::hrtim_cmp2br_v1_tt;
-  using cmp3br_tt = regs::hrtim_cmp3br_v1_tt;
-  using cmp4br_tt = regs::hrtim_cmp4br_v1_tt;
-  using cpt1br_tt = regs::hrtim_cpt1br_v1_tt;
-  using cpt2br_tt = regs::hrtim_cpt2br_v1_tt;
-  using dtbr_tt = regs::hrtim_dtbr_v1_tt;
-  using setb1r_tt = regs::hrtim_setb1r_v1_tt;
-  using rstb1r_tt = regs::hrtim_rstb1r_v1_tt;
-  using setb2r_tt = regs::hrtim_setb2r_v1_tt;
-  using rstb2r_tt = regs::hrtim_rstb2r_v1_tt;
-  using eefbr1_tt = regs::hrtim_eefbr1_v1_tt;
-  using eefbr2_tt = regs::hrtim_eefbr2_v1_tt;
-  using rstbr_tt = regs::hrtim_rstbr_v1_tt;
-  using chpbr_tt = regs::hrtim_chpbr_v1_tt;
-  using cpt1bcr_tt = regs::hrtim_cpt1bcr_v1_tt;
-  using cpt2bcr_tt = regs::hrtim_cpt2bcr_v1_tt;
-  using outbr_tt = regs::hrtim_outbr_v1_tt;
-  using fltbr_tt = regs::hrtim_fltbr_v1_tt;
-  using timbcr2_tt = regs::hrtim_timbcr2_v1_tt;
-  using beefr3_tt = regs::hrtim_beefr3_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using timbcr_tt = regs::hrtim_timbcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using timbisr_tt = regs::hrtim_timbisr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using timbicr_tt = regs::hrtim_timbicr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using timbdier_tt = regs::hrtim_timbdier_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cntr_tt = regs::hrtim_cntr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using perbr_tt = regs::hrtim_perbr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using repbr_tt = regs::hrtim_repbr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cmp1br_tt = regs::hrtim_cmp1br_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cmp1cbr_tt = regs::hrtim_cmp1cbr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cmp2br_tt = regs::hrtim_cmp2br_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cmp3br_tt = regs::hrtim_cmp3br_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cmp4br_tt = regs::hrtim_cmp4br_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cpt1br_tt = regs::hrtim_cpt1br_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cpt2br_tt = regs::hrtim_cpt2br_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dtbr_tt = regs::hrtim_dtbr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using setb1r_tt = regs::hrtim_setb1r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rstb1r_tt = regs::hrtim_rstb1r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using setb2r_tt = regs::hrtim_setb2r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rstb2r_tt = regs::hrtim_rstb2r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using eefbr1_tt = regs::hrtim_eefbr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using eefbr2_tt = regs::hrtim_eefbr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rstbr_tt = regs::hrtim_rstbr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using chpbr_tt = regs::hrtim_chpbr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cpt1bcr_tt = regs::hrtim_cpt1bcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cpt2bcr_tt = regs::hrtim_cpt2bcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using outbr_tt = regs::hrtim_outbr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fltbr_tt = regs::hrtim_fltbr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using timbcr2_tt = regs::hrtim_timbcr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using beefr3_tt = regs::hrtim_beefr3_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using hrtim_timb_t =
@@ -172,35 +379,122 @@ namespace hrtim_timb {
 } // namespace hrtim_timb
 
 namespace hrtim_timc {
-  using timccr_tt = regs::hrtim_timccr_v1_tt;
-  using timcisr_tt = regs::hrtim_timcisr_v1_tt;
-  using timcicr_tt = regs::hrtim_timcicr_v1_tt;
-  using timcdier_tt = regs::hrtim_timcdier_v1_tt;
-  using cntcr_tt = regs::hrtim_cntcr_v1_tt;
-  using percr_tt = regs::hrtim_percr_v1_tt;
-  using repcr_tt = regs::hrtim_repcr_v1_tt;
-  using cmp1cr_tt = regs::hrtim_cmp1cr_v1_tt;
-  using cmp1ccr_tt = regs::hrtim_cmp1ccr_v1_tt;
-  using cmp2cr_tt = regs::hrtim_cmp2cr_v1_tt;
-  using cmp3cr_tt = regs::hrtim_cmp3cr_v1_tt;
-  using cmp4cr_tt = regs::hrtim_cmp4cr_v1_tt;
-  using cpt1cr_tt = regs::hrtim_cpt1cr_v1_tt;
-  using cpt2cr_tt = regs::hrtim_cpt2cr_v1_tt;
-  using dtcr_tt = regs::hrtim_dtcr_v1_tt;
-  using setc1r_tt = regs::hrtim_setc1r_v1_tt;
-  using rstc1r_tt = regs::hrtim_rstc1r_v1_tt;
-  using setc2r_tt = regs::hrtim_setc2r_v1_tt;
-  using rstc2r_tt = regs::hrtim_rstc2r_v1_tt;
-  using eefcr1_tt = regs::hrtim_eefcr1_v1_tt;
-  using eefcr2_tt = regs::hrtim_eefcr2_v1_tt;
-  using rstcr_tt = regs::hrtim_rstcr_v1_tt;
-  using chpcr_tt = regs::hrtim_chpcr_v1_tt;
-  using cpt1ccr_tt = regs::hrtim_cpt1ccr_v1_tt;
-  using cpt2ccr_tt = regs::hrtim_cpt2ccr_v1_tt;
-  using outcr_tt = regs::hrtim_outcr_v1_tt;
-  using fltcr_tt = regs::hrtim_fltcr_v1_tt;
-  using timccr2_tt = regs::hrtim_timccr2_v1_tt;
-  using ceefr3_tt = regs::hrtim_ceefr3_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using timccr_tt = regs::hrtim_timccr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using timcisr_tt = regs::hrtim_timcisr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using timcicr_tt = regs::hrtim_timcicr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using timcdier_tt = regs::hrtim_timcdier_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cntcr_tt = regs::hrtim_cntcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using percr_tt = regs::hrtim_percr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using repcr_tt = regs::hrtim_repcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cmp1cr_tt = regs::hrtim_cmp1cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cmp1ccr_tt = regs::hrtim_cmp1ccr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cmp2cr_tt = regs::hrtim_cmp2cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cmp3cr_tt = regs::hrtim_cmp3cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cmp4cr_tt = regs::hrtim_cmp4cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cpt1cr_tt = regs::hrtim_cpt1cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cpt2cr_tt = regs::hrtim_cpt2cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dtcr_tt = regs::hrtim_dtcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using setc1r_tt = regs::hrtim_setc1r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rstc1r_tt = regs::hrtim_rstc1r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using setc2r_tt = regs::hrtim_setc2r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rstc2r_tt = regs::hrtim_rstc2r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using eefcr1_tt = regs::hrtim_eefcr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using eefcr2_tt = regs::hrtim_eefcr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rstcr_tt = regs::hrtim_rstcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using chpcr_tt = regs::hrtim_chpcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cpt1ccr_tt = regs::hrtim_cpt1ccr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cpt2ccr_tt = regs::hrtim_cpt2ccr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using outcr_tt = regs::hrtim_outcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fltcr_tt = regs::hrtim_fltcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using timccr2_tt = regs::hrtim_timccr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ceefr3_tt = regs::hrtim_ceefr3_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using hrtim_timc_t =
@@ -239,35 +533,122 @@ namespace hrtim_timc {
 } // namespace hrtim_timc
 
 namespace hrtim_timd {
-  using timdcr_tt = regs::hrtim_timdcr_v1_tt;
-  using timdisr_tt = regs::hrtim_timdisr_v1_tt;
-  using timdicr_tt = regs::hrtim_timdicr_v1_tt;
-  using timddier_tt = regs::hrtim_timddier_v1_tt;
-  using cntdr_tt = regs::hrtim_cntdr_v1_tt;
-  using perdr_tt = regs::hrtim_perdr_v1_tt;
-  using repdr_tt = regs::hrtim_repdr_v1_tt;
-  using cmp1dr_tt = regs::hrtim_cmp1dr_v1_tt;
-  using cmp1cdr_tt = regs::hrtim_cmp1cdr_v1_tt;
-  using cmp2dr_tt = regs::hrtim_cmp2dr_v1_tt;
-  using cmp3dr_tt = regs::hrtim_cmp3dr_v1_tt;
-  using cmp4dr_tt = regs::hrtim_cmp4dr_v1_tt;
-  using cpt1dr_tt = regs::hrtim_cpt1dr_v1_tt;
-  using cpt2dr_tt = regs::hrtim_cpt2dr_v1_tt;
-  using dtdr_tt = regs::hrtim_dtdr_v1_tt;
-  using setd1r_tt = regs::hrtim_setd1r_v1_tt;
-  using rstd1r_tt = regs::hrtim_rstd1r_v1_tt;
-  using setd2r_tt = regs::hrtim_setd2r_v1_tt;
-  using rstd2r_tt = regs::hrtim_rstd2r_v1_tt;
-  using eefdr1_tt = regs::hrtim_eefdr1_v1_tt;
-  using eefdr2_tt = regs::hrtim_eefdr2_v1_tt;
-  using rstdr_tt = regs::hrtim_rstdr_v1_tt;
-  using chpdr_tt = regs::hrtim_chpdr_v1_tt;
-  using cpt1dcr_tt = regs::hrtim_cpt1dcr_v1_tt;
-  using cpt2dcr_tt = regs::hrtim_cpt2dcr_v1_tt;
-  using outdr_tt = regs::hrtim_outdr_v1_tt;
-  using fltdr_tt = regs::hrtim_fltdr_v1_tt;
-  using timdcr2_tt = regs::hrtim_timdcr2_v1_tt;
-  using deefr3_tt = regs::hrtim_deefr3_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using timdcr_tt = regs::hrtim_timdcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using timdisr_tt = regs::hrtim_timdisr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using timdicr_tt = regs::hrtim_timdicr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using timddier_tt = regs::hrtim_timddier_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cntdr_tt = regs::hrtim_cntdr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using perdr_tt = regs::hrtim_perdr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using repdr_tt = regs::hrtim_repdr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cmp1dr_tt = regs::hrtim_cmp1dr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cmp1cdr_tt = regs::hrtim_cmp1cdr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cmp2dr_tt = regs::hrtim_cmp2dr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cmp3dr_tt = regs::hrtim_cmp3dr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cmp4dr_tt = regs::hrtim_cmp4dr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cpt1dr_tt = regs::hrtim_cpt1dr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cpt2dr_tt = regs::hrtim_cpt2dr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dtdr_tt = regs::hrtim_dtdr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using setd1r_tt = regs::hrtim_setd1r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rstd1r_tt = regs::hrtim_rstd1r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using setd2r_tt = regs::hrtim_setd2r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rstd2r_tt = regs::hrtim_rstd2r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using eefdr1_tt = regs::hrtim_eefdr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using eefdr2_tt = regs::hrtim_eefdr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rstdr_tt = regs::hrtim_rstdr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using chpdr_tt = regs::hrtim_chpdr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cpt1dcr_tt = regs::hrtim_cpt1dcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cpt2dcr_tt = regs::hrtim_cpt2dcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using outdr_tt = regs::hrtim_outdr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fltdr_tt = regs::hrtim_fltdr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using timdcr2_tt = regs::hrtim_timdcr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using deefr3_tt = regs::hrtim_deefr3_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using hrtim_timd_t =
@@ -306,35 +687,122 @@ namespace hrtim_timd {
 } // namespace hrtim_timd
 
 namespace hrtim_time {
-  using timecr_tt = regs::hrtim_timecr_v1_tt;
-  using timeisr_tt = regs::hrtim_timeisr_v1_tt;
-  using timeicr_tt = regs::hrtim_timeicr_v1_tt;
-  using timedier_tt = regs::hrtim_timedier_v1_tt;
-  using cnter_tt = regs::hrtim_cnter_v1_tt;
-  using perer_tt = regs::hrtim_perer_v1_tt;
-  using reper_tt = regs::hrtim_reper_v1_tt;
-  using cmp1er_tt = regs::hrtim_cmp1er_v1_tt;
-  using cmp1cer_tt = regs::hrtim_cmp1cer_v1_tt;
-  using cmp2er_tt = regs::hrtim_cmp2er_v1_tt;
-  using cmp3er_tt = regs::hrtim_cmp3er_v1_tt;
-  using cmp4er_tt = regs::hrtim_cmp4er_v1_tt;
-  using cpt1er_tt = regs::hrtim_cpt1er_v1_tt;
-  using cpt2er_tt = regs::hrtim_cpt2er_v1_tt;
-  using dter_tt = regs::hrtim_dter_v1_tt;
-  using sete1r_tt = regs::hrtim_sete1r_v1_tt;
-  using rste1r_tt = regs::hrtim_rste1r_v1_tt;
-  using sete2r_tt = regs::hrtim_sete2r_v1_tt;
-  using rste2r_tt = regs::hrtim_rste2r_v1_tt;
-  using eefer1_tt = regs::hrtim_eefer1_v1_tt;
-  using eefer2_tt = regs::hrtim_eefer2_v1_tt;
-  using rster_tt = regs::hrtim_rster_v1_tt;
-  using chper_tt = regs::hrtim_chper_v1_tt;
-  using cpt1ecr_tt = regs::hrtim_cpt1ecr_v1_tt;
-  using cpt2ecr_tt = regs::hrtim_cpt2ecr_v1_tt;
-  using outer_tt = regs::hrtim_outer_v1_tt;
-  using flter_tt = regs::hrtim_flter_v1_tt;
-  using timecr2_tt = regs::hrtim_timecr2_v1_tt;
-  using eeefr3_tt = regs::hrtim_eeefr3_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using timecr_tt = regs::hrtim_timecr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using timeisr_tt = regs::hrtim_timeisr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using timeicr_tt = regs::hrtim_timeicr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using timedier_tt = regs::hrtim_timedier_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cnter_tt = regs::hrtim_cnter_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using perer_tt = regs::hrtim_perer_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using reper_tt = regs::hrtim_reper_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cmp1er_tt = regs::hrtim_cmp1er_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cmp1cer_tt = regs::hrtim_cmp1cer_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cmp2er_tt = regs::hrtim_cmp2er_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cmp3er_tt = regs::hrtim_cmp3er_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cmp4er_tt = regs::hrtim_cmp4er_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cpt1er_tt = regs::hrtim_cpt1er_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cpt2er_tt = regs::hrtim_cpt2er_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dter_tt = regs::hrtim_dter_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using sete1r_tt = regs::hrtim_sete1r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rste1r_tt = regs::hrtim_rste1r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using sete2r_tt = regs::hrtim_sete2r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rste2r_tt = regs::hrtim_rste2r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using eefer1_tt = regs::hrtim_eefer1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using eefer2_tt = regs::hrtim_eefer2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rster_tt = regs::hrtim_rster_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using chper_tt = regs::hrtim_chper_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cpt1ecr_tt = regs::hrtim_cpt1ecr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cpt2ecr_tt = regs::hrtim_cpt2ecr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using outer_tt = regs::hrtim_outer_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using flter_tt = regs::hrtim_flter_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using timecr2_tt = regs::hrtim_timecr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using eeefr3_tt = regs::hrtim_eeefr3_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using hrtim_time_t =
@@ -373,35 +841,122 @@ namespace hrtim_time {
 } // namespace hrtim_time
 
 namespace hrtim_timf {
-  using timfcr_tt = regs::hrtim_timfcr_v1_tt;
-  using timfisr_tt = regs::hrtim_timfisr_v1_tt;
-  using timficr_tt = regs::hrtim_timficr_v1_tt;
-  using timfdier_tt = regs::hrtim_timfdier_v1_tt;
-  using cntfr_tt = regs::hrtim_cntfr_v1_tt;
-  using perfr_tt = regs::hrtim_perfr_v1_tt;
-  using repfr_tt = regs::hrtim_repfr_v1_tt;
-  using cmp1fr_tt = regs::hrtim_cmp1fr_v1_tt;
-  using cmp1cfr_tt = regs::hrtim_cmp1cfr_v1_tt;
-  using cmp2fr_tt = regs::hrtim_cmp2fr_v1_tt;
-  using cmp3fr_tt = regs::hrtim_cmp3fr_v1_tt;
-  using cmp4fr_tt = regs::hrtim_cmp4fr_v1_tt;
-  using cpt1fr_tt = regs::hrtim_cpt1fr_v1_tt;
-  using cpt2fr_tt = regs::hrtim_cpt2fr_v1_tt;
-  using dtfr_tt = regs::hrtim_dtfr_v1_tt;
-  using setf1r_tt = regs::hrtim_setf1r_v1_tt;
-  using rste1r_tt = regs::hrtim_rste1r_v1_tt;
-  using setf2r_tt = regs::hrtim_setf2r_v1_tt;
-  using rstf2r_tt = regs::hrtim_rstf2r_v1_tt;
-  using eeffr1_tt = regs::hrtim_eeffr1_v1_tt;
-  using eeffr2_tt = regs::hrtim_eeffr2_v1_tt;
-  using rstfr_tt = regs::hrtim_rstfr_v1_tt;
-  using chpfr_tt = regs::hrtim_chpfr_v1_tt;
-  using cpt1fcr_tt = regs::hrtim_cpt1fcr_v1_tt;
-  using cpt2fcr_tt = regs::hrtim_cpt2fcr_v1_tt;
-  using outfr_tt = regs::hrtim_outfr_v1_tt;
-  using fltfr_tt = regs::hrtim_fltfr_v1_tt;
-  using timfcr2_tt = regs::hrtim_timfcr2_v1_tt;
-  using feefr3_tt = regs::hrtim_feefr3_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using timfcr_tt = regs::hrtim_timfcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using timfisr_tt = regs::hrtim_timfisr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using timficr_tt = regs::hrtim_timficr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using timfdier_tt = regs::hrtim_timfdier_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cntfr_tt = regs::hrtim_cntfr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using perfr_tt = regs::hrtim_perfr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using repfr_tt = regs::hrtim_repfr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cmp1fr_tt = regs::hrtim_cmp1fr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cmp1cfr_tt = regs::hrtim_cmp1cfr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cmp2fr_tt = regs::hrtim_cmp2fr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cmp3fr_tt = regs::hrtim_cmp3fr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cmp4fr_tt = regs::hrtim_cmp4fr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cpt1fr_tt = regs::hrtim_cpt1fr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cpt2fr_tt = regs::hrtim_cpt2fr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dtfr_tt = regs::hrtim_dtfr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using setf1r_tt = regs::hrtim_setf1r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rste1r_tt = regs::hrtim_rste1r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using setf2r_tt = regs::hrtim_setf2r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rstf2r_tt = regs::hrtim_rstf2r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using eeffr1_tt = regs::hrtim_eeffr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using eeffr2_tt = regs::hrtim_eeffr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rstfr_tt = regs::hrtim_rstfr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using chpfr_tt = regs::hrtim_chpfr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cpt1fcr_tt = regs::hrtim_cpt1fcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cpt2fcr_tt = regs::hrtim_cpt2fcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using outfr_tt = regs::hrtim_outfr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fltfr_tt = regs::hrtim_fltfr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using timfcr2_tt = regs::hrtim_timfcr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using feefr3_tt = regs::hrtim_feefr3_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using hrtim_timf_t =
@@ -440,42 +995,150 @@ namespace hrtim_timf {
 } // namespace hrtim_timf
 
 namespace hrtim_common {
-  using cr1_tt = regs::hrtim_cr1_v1_tt;
-  using cr2_tt = regs::hrtim_cr2_v1_tt;
-  using isr_tt = regs::hrtim_isr_v1_tt;
-  using icr_tt = regs::hrtim_icr_v1_tt;
-  using ier_tt = regs::hrtim_ier_v1_tt;
-  using oenr_tt = regs::hrtim_oenr_v1_tt;
-  using odisr_tt = regs::hrtim_odisr_v1_tt;
-  using odsr_tt = regs::hrtim_odsr_v1_tt;
-  using bmcr_tt = regs::hrtim_bmcr_v1_tt;
-  using bmtrg_tt = regs::hrtim_bmtrg_v1_tt;
-  using bmcmpr_tt = regs::hrtim_bmcmpr_v1_tt;
-  using bmper_tt = regs::hrtim_bmper_v1_tt;
-  using eecr1_tt = regs::hrtim_eecr1_v1_tt;
-  using eecr2_tt = regs::hrtim_eecr2_v1_tt;
-  using eecr3_tt = regs::hrtim_eecr3_v1_tt;
-  using adc1r_tt = regs::hrtim_adc1r_v1_tt;
-  using adc2r_tt = regs::hrtim_adc2r_v1_tt;
-  using adc3r_tt = regs::hrtim_adc3r_v1_tt;
-  using adc4r_tt = regs::hrtim_adc4r_v1_tt;
-  using dllcr_tt = regs::hrtim_dllcr_v1_tt;
-  using fltinr1_tt = regs::hrtim_fltinr1_v1_tt;
-  using fltinr2_tt = regs::hrtim_fltinr2_v1_tt;
-  using bdmupdr_tt = regs::hrtim_bdmupdr_v1_tt;
-  using bdtaupr_tt = regs::hrtim_bdtaupr_v1_tt;
-  using bdtbupr_tt = regs::hrtim_bdtbupr_v1_tt;
-  using bdtcupr_tt = regs::hrtim_bdtcupr_v1_tt;
-  using bdtdupr_tt = regs::hrtim_bdtdupr_v1_tt;
-  using bdteupr_tt = regs::hrtim_bdteupr_v1_tt;
-  using bdtfupr_tt = regs::hrtim_bdtfupr_v1_tt;
-  using bdmadr_tt = regs::hrtim_bdmadr_v1_tt;
-  using adcer_tt = regs::hrtim_adcer_v1_tt;
-  using adcur_tt = regs::hrtim_adcur_v1_tt;
-  using adcps1_tt = regs::hrtim_adcps1_v1_tt;
-  using adcps2_tt = regs::hrtim_adcps2_v1_tt;
-  using fltinr3_tt = regs::hrtim_fltinr3_v1_tt;
-  using fltinr4_tt = regs::hrtim_fltinr4_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cr1_tt = regs::hrtim_cr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cr2_tt = regs::hrtim_cr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using isr_tt = regs::hrtim_isr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using icr_tt = regs::hrtim_icr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ier_tt = regs::hrtim_ier_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using oenr_tt = regs::hrtim_oenr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using odisr_tt = regs::hrtim_odisr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using odsr_tt = regs::hrtim_odsr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using bmcr_tt = regs::hrtim_bmcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using bmtrg_tt = regs::hrtim_bmtrg_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using bmcmpr_tt = regs::hrtim_bmcmpr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using bmper_tt = regs::hrtim_bmper_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using eecr1_tt = regs::hrtim_eecr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using eecr2_tt = regs::hrtim_eecr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using eecr3_tt = regs::hrtim_eecr3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using adc1r_tt = regs::hrtim_adc1r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using adc2r_tt = regs::hrtim_adc2r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using adc3r_tt = regs::hrtim_adc3r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using adc4r_tt = regs::hrtim_adc4r_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dllcr_tt = regs::hrtim_dllcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fltinr1_tt = regs::hrtim_fltinr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fltinr2_tt = regs::hrtim_fltinr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using bdmupdr_tt = regs::hrtim_bdmupdr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using bdtaupr_tt = regs::hrtim_bdtaupr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using bdtbupr_tt = regs::hrtim_bdtbupr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using bdtcupr_tt = regs::hrtim_bdtcupr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using bdtdupr_tt = regs::hrtim_bdtdupr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using bdteupr_tt = regs::hrtim_bdteupr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using bdtfupr_tt = regs::hrtim_bdtfupr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using bdmadr_tt = regs::hrtim_bdmadr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using adcer_tt = regs::hrtim_adcer_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using adcur_tt = regs::hrtim_adcur_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using adcps1_tt = regs::hrtim_adcps1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using adcps2_tt = regs::hrtim_adcps2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fltinr3_tt = regs::hrtim_fltinr3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using fltinr4_tt = regs::hrtim_fltinr4_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using hrtim_common_t =

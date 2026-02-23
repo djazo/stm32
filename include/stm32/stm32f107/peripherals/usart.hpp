@@ -7,13 +7,34 @@
 namespace stm32::stm32f107 {
 
 namespace usartx {
-  using sr_tt = regs::usart_sr_v1_tt;
-  using dr_tt = regs::usart_dr_v1_tt;
-  using brr_tt = regs::usart_brr_v1_tt;
-  using cr1_tt = regs::usart_cr1_v1_tt;
-  using cr2_tt = regs::usart_cr2_v1_tt;
-  using cr3_tt = regs::usart_cr3_v1_tt;
-  using gtpr_tt = regs::usart_gtpr_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using sr_tt = regs::usart_sr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dr_tt = regs::usart_dr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using brr_tt = regs::usart_brr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cr1_tt = regs::usart_cr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cr2_tt = regs::usart_cr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cr3_tt = regs::usart_cr3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gtpr_tt = regs::usart_gtpr_v1_tt<name, baseaddress, offset>;
 
   template <stdx::ct_string name, std::uint32_t baseaddress>
   using usartx_t =
@@ -30,12 +51,30 @@ namespace usartx {
 } // namespace usartx
 
 namespace uart4 {
-  using sr_tt = regs::usart_sr_v2_tt;
-  using dr_tt = regs::usart_dr_v1_tt;
-  using brr_tt = regs::usart_brr_v1_tt;
-  using cr1_tt = regs::usart_cr1_v1_tt;
-  using cr2_tt = regs::usart_cr2_v2_tt;
-  using cr3_tt = regs::usart_cr3_v2_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using sr_tt = regs::usart_sr_v2_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dr_tt = regs::usart_dr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using brr_tt = regs::usart_brr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cr1_tt = regs::usart_cr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cr2_tt = regs::usart_cr2_v2_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cr3_tt = regs::usart_cr3_v2_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using uart4_t =
@@ -51,12 +90,30 @@ namespace uart4 {
 } // namespace uart4
 
 namespace uart5 {
-  using sr_tt = regs::usart_sr_v2_tt;
-  using dr_tt = regs::usart_dr_v1_tt;
-  using brr_tt = regs::usart_brr_v1_tt;
-  using cr1_tt = regs::usart_cr1_v1_tt;
-  using cr2_tt = regs::usart_cr2_v2_tt;
-  using cr3_tt = regs::usart_cr3_v3_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using sr_tt = regs::usart_sr_v2_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dr_tt = regs::usart_dr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using brr_tt = regs::usart_brr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cr1_tt = regs::usart_cr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cr2_tt = regs::usart_cr2_v2_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cr3_tt = regs::usart_cr3_v3_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using uart5_t =

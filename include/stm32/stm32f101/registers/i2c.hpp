@@ -16,11 +16,11 @@ using i2c_ccr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"f_s", bool, 15, 15>,
                groov::field<"duty", bool, 14, 14>,
-               groov::field<"reserved0", std::uint8_t, 13, 12, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 13, 12, common::access::ro>,
                groov::field<"ccr", std::uint16_t, 11, 0>>;
 
 // i2c_cr1_v1: CR1
@@ -32,10 +32,10 @@ using i2c_cr1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved2", std::uint16_t, 31, 16, access::ro>,
-               groov::field<"swrst", bit_reset, 15, 15>,
-               groov::field<"reserved1", bool, 14, 14, access::ro>,
+             common::access::rw,
+               groov::field<"reserved2", std::uint16_t, 31, 16, common::access::ro>,
+               groov::field<"swrst", common::bittypes::bit_reset, 15, 15>,
+               groov::field<"reserved1", bool, 14, 14, common::access::ro>,
                groov::field<"alert", bool, 13, 13>,
                groov::field<"pec", bool, 12, 12>,
                groov::field<"pos", bool, 11, 11>,
@@ -46,10 +46,10 @@ using i2c_cr1_v1_tt =
                groov::field<"engc", bool, 6, 6>,
                groov::field<"enpec", bool, 5, 5>,
                groov::field<"enarp", bool, 4, 4>,
-               groov::field<"smbtype", bit_enable, 3, 3>,
-               groov::field<"reserved0", bool, 2, 2, access::ro>,
+               groov::field<"smbtype", common::bittypes::bit_enable, 3, 3>,
+               groov::field<"reserved0", bool, 2, 2, common::access::ro>,
                groov::field<"smbus", bool, 1, 1>,
-               groov::field<"pe", bit_enable, 0, 0>>;
+               groov::field<"pe", common::bittypes::bit_enable, 0, 0>>;
 
 // i2c_cr2_v1: CR2
 // Used by: I2C1, I2C2
@@ -60,14 +60,14 @@ using i2c_cr2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint32_t, 31, 13, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint32_t, 31, 13, common::access::ro>,
                groov::field<"last", bool, 12, 12>,
-               groov::field<"dmaen", bit_enable, 11, 11>,
-               groov::field<"itbufen", bit_enable, 10, 10>,
-               groov::field<"itevten", bit_enable, 9, 9>,
-               groov::field<"iterren", bit_enable, 8, 8>,
-               groov::field<"reserved0", std::uint8_t, 7, 6, access::ro>,
+               groov::field<"dmaen", common::bittypes::bit_enable, 11, 11>,
+               groov::field<"itbufen", common::bittypes::bit_enable, 10, 10>,
+               groov::field<"itevten", common::bittypes::bit_enable, 9, 9>,
+               groov::field<"iterren", common::bittypes::bit_enable, 8, 8>,
+               groov::field<"reserved0", std::uint8_t, 7, 6, common::access::ro>,
                groov::field<"freq", std::uint8_t, 5, 0>>;
 
 // i2c_dr_v1: DR
@@ -79,8 +79,8 @@ using i2c_dr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 8, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 8, common::access::ro>,
                groov::field<"dr", std::uint8_t, 7, 0>>;
 
 // i2c_oar1_v1: OAR1
@@ -92,10 +92,10 @@ using i2c_oar1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint16_t, 31, 16, access::ro>,
-               groov::field<"addmode", bit_enable, 15, 15>,
-               groov::field<"reserved0", std::uint8_t, 14, 10, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint16_t, 31, 16, common::access::ro>,
+               groov::field<"addmode", common::bittypes::bit_enable, 15, 15>,
+               groov::field<"reserved0", std::uint8_t, 14, 10, common::access::ro>,
                groov::field<"add10", std::uint8_t, 9, 8>,
                groov::field<"add7", std::uint8_t, 7, 1>,
                groov::field<"add0", bool, 0, 0>>;
@@ -109,8 +109,8 @@ using i2c_oar2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 8, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 8, common::access::ro>,
                groov::field<"add2", std::uint8_t, 7, 1>,
                groov::field<"endual", bool, 0, 0>>;
 
@@ -123,24 +123,24 @@ using i2c_sr1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved2", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved2", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"smbalert", bool, 15, 15>,
                groov::field<"timeout", bool, 14, 14>,
-               groov::field<"reserved1", bool, 13, 13, access::ro>,
+               groov::field<"reserved1", bool, 13, 13, common::access::ro>,
                groov::field<"pecerr", bool, 12, 12>,
                groov::field<"ovr", bool, 11, 11>,
                groov::field<"af", bool, 10, 10>,
                groov::field<"arlo", bool, 9, 9>,
                groov::field<"berr", bool, 8, 8>,
-               groov::field<"txe", bool, 7, 7, access::ro>,
-               groov::field<"rxne", bool, 6, 6, access::ro>,
-               groov::field<"reserved0", bool, 5, 5, access::ro>,
-               groov::field<"stopf", bool, 4, 4, access::ro>,
-               groov::field<"add10", bool, 3, 3, access::ro>,
-               groov::field<"btf", bool, 2, 2, access::ro>,
-               groov::field<"addr", bool, 1, 1, access::ro>,
-               groov::field<"sb", bool, 0, 0, access::ro>>;
+               groov::field<"txe", bool, 7, 7, common::access::ro>,
+               groov::field<"rxne", bool, 6, 6, common::access::ro>,
+               groov::field<"reserved0", bool, 5, 5, common::access::ro>,
+               groov::field<"stopf", bool, 4, 4, common::access::ro>,
+               groov::field<"add10", bool, 3, 3, common::access::ro>,
+               groov::field<"btf", bool, 2, 2, common::access::ro>,
+               groov::field<"addr", bool, 1, 1, common::access::ro>,
+               groov::field<"sb", bool, 0, 0, common::access::ro>>;
 
 // i2c_sr2_v1: SR2
 // Used by: I2C1, I2C2
@@ -151,7 +151,7 @@ using i2c_sr2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved1", std::uint16_t, 31, 16>,
                groov::field<"pec", std::uint8_t, 15, 8>,
                groov::field<"dualf", bool, 7, 7>,
@@ -172,8 +172,8 @@ using i2c_trise_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 6, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 6, common::access::ro>,
                groov::field<"trise", std::uint8_t, 5, 0>>;
 
 } // namespace stm32::regs

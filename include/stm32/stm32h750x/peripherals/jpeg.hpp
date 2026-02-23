@@ -7,19 +7,58 @@
 namespace stm32::stm32h750x {
 
 namespace jpeg {
-  using jpeg_confr0_tt = regs::jpeg_jpeg_confr0_v1_tt;
-  using jpeg_confr1_tt = regs::jpeg_jpeg_confr1_v1_tt;
-  using jpeg_confr2_tt = regs::jpeg_jpeg_confr2_v1_tt;
-  using jpeg_confr3_tt = regs::jpeg_jpeg_confr3_v1_tt;
-  using jpeg_confrn1_tt = regs::jpeg_jpeg_confrn1_v1_tt;
-  using jpeg_confrn2_tt = regs::jpeg_jpeg_confrn2_v1_tt;
-  using jpeg_confrn3_tt = regs::jpeg_jpeg_confrn3_v1_tt;
-  using jpeg_confrn4_tt = regs::jpeg_jpeg_confrn4_v1_tt;
-  using jpeg_cr_tt = regs::jpeg_jpeg_cr_v1_tt;
-  using jpeg_sr_tt = regs::jpeg_jpeg_sr_v1_tt;
-  using jpeg_cfr_tt = regs::jpeg_jpeg_cfr_v1_tt;
-  using jpeg_dir_tt = regs::jpeg_jpeg_dir_v1_tt;
-  using jpeg_dor_tt = regs::jpeg_jpeg_dor_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using jpeg_confr0_tt = regs::jpeg_jpeg_confr0_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using jpeg_confr1_tt = regs::jpeg_jpeg_confr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using jpeg_confr2_tt = regs::jpeg_jpeg_confr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using jpeg_confr3_tt = regs::jpeg_jpeg_confr3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using jpeg_confrn1_tt = regs::jpeg_jpeg_confrn1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using jpeg_confrn2_tt = regs::jpeg_jpeg_confrn2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using jpeg_confrn3_tt = regs::jpeg_jpeg_confrn3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using jpeg_confrn4_tt = regs::jpeg_jpeg_confrn4_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using jpeg_cr_tt = regs::jpeg_jpeg_cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using jpeg_sr_tt = regs::jpeg_jpeg_sr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using jpeg_cfr_tt = regs::jpeg_jpeg_cfr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using jpeg_dir_tt = regs::jpeg_jpeg_dir_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using jpeg_dor_tt = regs::jpeg_jpeg_dor_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using jpeg_t =

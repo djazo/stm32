@@ -16,20 +16,20 @@ using hash_cr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved3", std::uint16_t, 31, 19, access::ro>,
+             common::access::rw,
+               groov::field<"reserved3", std::uint16_t, 31, 19, common::access::ro>,
                groov::field<"algo", std::uint8_t, 18, 17>,
                groov::field<"lkey", bool, 16, 16>,
-               groov::field<"reserved2", std::uint8_t, 15, 14, access::ro>,
+               groov::field<"reserved2", std::uint8_t, 15, 14, common::access::ro>,
                groov::field<"mdmat", bool, 13, 13>,
-               groov::field<"dinne", bool, 12, 12, access::ro>,
-               groov::field<"nbw", std::uint8_t, 11, 8, access::ro>,
-               groov::field<"reserved1", bool, 7, 7, access::ro>,
-               groov::field<"mode", bit_enable, 6, 6>,
+               groov::field<"dinne", bool, 12, 12, common::access::ro>,
+               groov::field<"nbw", std::uint8_t, 11, 8, common::access::ro>,
+               groov::field<"reserved1", bool, 7, 7, common::access::ro>,
+               groov::field<"mode", common::bittypes::bit_enable, 6, 6>,
                groov::field<"datatype", std::uint8_t, 5, 4>,
                groov::field<"dmae", bool, 3, 3>,
-               groov::field<"init", bool, 2, 2, access::wo>,
-               groov::field<"reserved0", std::uint8_t, 1, 0, access::ro>>;
+               groov::field<"init", bool, 2, 2, common::access::wo>,
+               groov::field<"reserved0", std::uint8_t, 1, 0, common::access::ro>>;
 
 // hash_csr0_v1: CSR0
 // Used by: HASH, SEC_HASH
@@ -40,7 +40,7 @@ using hash_csr0_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"cs0", std::uint32_t, 31, 0>>;
 
 // hash_csr1_v1: CSR1
@@ -52,7 +52,7 @@ using hash_csr1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"cs1", std::uint32_t, 31, 0>>;
 
 // hash_csr10_v1: CSR10
@@ -64,7 +64,7 @@ using hash_csr10_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"cs10", std::uint32_t, 31, 0>>;
 
 // hash_csr11_v1: CSR11
@@ -76,7 +76,7 @@ using hash_csr11_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"cs11", std::uint32_t, 31, 0>>;
 
 // hash_csr12_v1: CSR12
@@ -88,7 +88,7 @@ using hash_csr12_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"cs12", std::uint32_t, 31, 0>>;
 
 // hash_csr13_v1: CSR13
@@ -100,7 +100,7 @@ using hash_csr13_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"cs13", std::uint32_t, 31, 0>>;
 
 // hash_csr14_v1: CSR14
@@ -112,7 +112,7 @@ using hash_csr14_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"cs14", std::uint32_t, 31, 0>>;
 
 // hash_csr15_v1: CSR15
@@ -124,7 +124,7 @@ using hash_csr15_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"cs15", std::uint32_t, 31, 0>>;
 
 // hash_csr16_v1: CSR16
@@ -136,7 +136,7 @@ using hash_csr16_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"cs16", std::uint32_t, 31, 0>>;
 
 // hash_csr17_v1: CSR17
@@ -148,7 +148,7 @@ using hash_csr17_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"cs17", std::uint32_t, 31, 0>>;
 
 // hash_csr18_v1: CSR18
@@ -160,7 +160,7 @@ using hash_csr18_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"cs18", std::uint32_t, 31, 0>>;
 
 // hash_csr19_v1: CSR19
@@ -172,7 +172,7 @@ using hash_csr19_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"cs19", std::uint32_t, 31, 0>>;
 
 // hash_csr2_v1: CSR2
@@ -184,7 +184,7 @@ using hash_csr2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"cs2", std::uint32_t, 31, 0>>;
 
 // hash_csr20_v1: CSR20
@@ -196,7 +196,7 @@ using hash_csr20_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"cs20", std::uint32_t, 31, 0>>;
 
 // hash_csr21_v1: CSR21
@@ -208,7 +208,7 @@ using hash_csr21_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"cs21", std::uint32_t, 31, 0>>;
 
 // hash_csr22_v1: CSR22
@@ -220,7 +220,7 @@ using hash_csr22_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"cs22", std::uint32_t, 31, 0>>;
 
 // hash_csr23_v1: CSR23
@@ -232,7 +232,7 @@ using hash_csr23_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"cs23", std::uint32_t, 31, 0>>;
 
 // hash_csr24_v1: CSR24
@@ -244,7 +244,7 @@ using hash_csr24_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"cs24", std::uint32_t, 31, 0>>;
 
 // hash_csr25_v1: CSR25
@@ -256,7 +256,7 @@ using hash_csr25_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"cs25", std::uint32_t, 31, 0>>;
 
 // hash_csr26_v1: CSR26
@@ -268,7 +268,7 @@ using hash_csr26_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"cs26", std::uint32_t, 31, 0>>;
 
 // hash_csr27_v1: CSR27
@@ -280,7 +280,7 @@ using hash_csr27_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"cs27", std::uint32_t, 31, 0>>;
 
 // hash_csr28_v1: CSR28
@@ -292,7 +292,7 @@ using hash_csr28_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"cs28", std::uint32_t, 31, 0>>;
 
 // hash_csr29_v1: CSR29
@@ -304,7 +304,7 @@ using hash_csr29_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"cs29", std::uint32_t, 31, 0>>;
 
 // hash_csr3_v1: CSR3
@@ -316,7 +316,7 @@ using hash_csr3_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"cs3", std::uint32_t, 31, 0>>;
 
 // hash_csr30_v1: CSR30
@@ -328,7 +328,7 @@ using hash_csr30_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"cs30", std::uint32_t, 31, 0>>;
 
 // hash_csr31_v1: CSR31
@@ -340,7 +340,7 @@ using hash_csr31_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"cs31", std::uint32_t, 31, 0>>;
 
 // hash_csr32_v1: CSR32
@@ -352,7 +352,7 @@ using hash_csr32_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"cs32", std::uint32_t, 31, 0>>;
 
 // hash_csr33_v1: CSR33
@@ -364,7 +364,7 @@ using hash_csr33_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"cs33", std::uint32_t, 31, 0>>;
 
 // hash_csr34_v1: CSR34
@@ -376,7 +376,7 @@ using hash_csr34_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"cs34", std::uint32_t, 31, 0>>;
 
 // hash_csr35_v1: CSR35
@@ -388,7 +388,7 @@ using hash_csr35_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"cs35", std::uint32_t, 31, 0>>;
 
 // hash_csr36_v1: CSR36
@@ -400,7 +400,7 @@ using hash_csr36_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"cs36", std::uint32_t, 31, 0>>;
 
 // hash_csr37_v1: CSR37
@@ -412,7 +412,7 @@ using hash_csr37_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"cs37", std::uint32_t, 31, 0>>;
 
 // hash_csr38_v1: CSR38
@@ -424,7 +424,7 @@ using hash_csr38_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"cs38", std::uint32_t, 31, 0>>;
 
 // hash_csr39_v1: CSR39
@@ -436,7 +436,7 @@ using hash_csr39_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"cs39", std::uint32_t, 31, 0>>;
 
 // hash_csr4_v1: CSR4
@@ -448,7 +448,7 @@ using hash_csr4_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"cs4", std::uint32_t, 31, 0>>;
 
 // hash_csr40_v1: CSR40
@@ -460,7 +460,7 @@ using hash_csr40_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"cs40", std::uint32_t, 31, 0>>;
 
 // hash_csr41_v1: CSR41
@@ -472,7 +472,7 @@ using hash_csr41_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"cs41", std::uint32_t, 31, 0>>;
 
 // hash_csr42_v1: CSR42
@@ -484,7 +484,7 @@ using hash_csr42_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"cs42", std::uint32_t, 31, 0>>;
 
 // hash_csr43_v1: CSR43
@@ -496,7 +496,7 @@ using hash_csr43_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"cs43", std::uint32_t, 31, 0>>;
 
 // hash_csr44_v1: CSR44
@@ -508,7 +508,7 @@ using hash_csr44_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"cs44", std::uint32_t, 31, 0>>;
 
 // hash_csr45_v1: CSR45
@@ -520,7 +520,7 @@ using hash_csr45_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"cs45", std::uint32_t, 31, 0>>;
 
 // hash_csr46_v1: CSR46
@@ -532,7 +532,7 @@ using hash_csr46_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"cs46", std::uint32_t, 31, 0>>;
 
 // hash_csr47_v1: CSR47
@@ -544,7 +544,7 @@ using hash_csr47_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"cs47", std::uint32_t, 31, 0>>;
 
 // hash_csr48_v1: CSR48
@@ -556,7 +556,7 @@ using hash_csr48_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"cs48", std::uint32_t, 31, 0>>;
 
 // hash_csr49_v1: CSR49
@@ -568,7 +568,7 @@ using hash_csr49_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"cs49", std::uint32_t, 31, 0>>;
 
 // hash_csr5_v1: CSR5
@@ -580,7 +580,7 @@ using hash_csr5_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"cs5", std::uint32_t, 31, 0>>;
 
 // hash_csr50_v1: CSR50
@@ -592,7 +592,7 @@ using hash_csr50_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"cs50", std::uint32_t, 31, 0>>;
 
 // hash_csr51_v1: CSR51
@@ -604,7 +604,7 @@ using hash_csr51_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"cs51", std::uint32_t, 31, 0>>;
 
 // hash_csr52_v1: CSR52
@@ -616,7 +616,7 @@ using hash_csr52_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"cs52", std::uint32_t, 31, 0>>;
 
 // hash_csr53_v1: CSR53
@@ -628,7 +628,7 @@ using hash_csr53_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"cs53", std::uint32_t, 31, 0>>;
 
 // hash_csr6_v1: CSR6
@@ -640,7 +640,7 @@ using hash_csr6_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"cs6", std::uint32_t, 31, 0>>;
 
 // hash_csr7_v1: CSR7
@@ -652,7 +652,7 @@ using hash_csr7_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"cs7", std::uint32_t, 31, 0>>;
 
 // hash_csr8_v1: CSR8
@@ -664,7 +664,7 @@ using hash_csr8_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"cs8", std::uint32_t, 31, 0>>;
 
 // hash_csr9_v1: CSR9
@@ -676,7 +676,7 @@ using hash_csr9_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"cs9", std::uint32_t, 31, 0>>;
 
 // hash_din_v1: DIN
@@ -688,7 +688,7 @@ using hash_din_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::wo,
+             common::access::wo,
                groov::field<"datain", std::uint32_t, 31, 0>>;
 
 // hash_hr0_v1: HR0
@@ -700,7 +700,7 @@ using hash_hr0_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"h0", std::uint32_t, 31, 0>>;
 
 // hash_hr1_v1: HR1
@@ -712,7 +712,7 @@ using hash_hr1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"h1", std::uint32_t, 31, 0>>;
 
 // hash_hr2_v1: HR2
@@ -724,7 +724,7 @@ using hash_hr2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"h2", std::uint32_t, 31, 0>>;
 
 // hash_hr3_v1: HR3
@@ -736,7 +736,7 @@ using hash_hr3_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"h3", std::uint32_t, 31, 0>>;
 
 // hash_hr4_v1: HR4
@@ -748,7 +748,7 @@ using hash_hr4_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"h4", std::uint32_t, 31, 0>>;
 
 // hash_hr5_v1: HR5
@@ -760,7 +760,7 @@ using hash_hr5_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"h5", std::uint32_t, 31, 0>>;
 
 // hash_hr6_v1: HR6
@@ -772,7 +772,7 @@ using hash_hr6_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"h6", std::uint32_t, 31, 0>>;
 
 // hash_hr7_v1: HR7
@@ -784,7 +784,7 @@ using hash_hr7_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"h7", std::uint32_t, 31, 0>>;
 
 // hash_hra0_v1: HRA0
@@ -796,7 +796,7 @@ using hash_hra0_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"h0", std::uint32_t, 31, 0>>;
 
 // hash_hra1_v1: HRA1
@@ -808,7 +808,7 @@ using hash_hra1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"h1", std::uint32_t, 31, 0>>;
 
 // hash_hra2_v1: HRA2
@@ -820,7 +820,7 @@ using hash_hra2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"h2", std::uint32_t, 31, 0>>;
 
 // hash_hra3_v1: HRA3
@@ -832,7 +832,7 @@ using hash_hra3_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"h3", std::uint32_t, 31, 0>>;
 
 // hash_hra4_v1: HRA4
@@ -844,7 +844,7 @@ using hash_hra4_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"h4", std::uint32_t, 31, 0>>;
 
 // hash_imr_v1: IMR
@@ -856,10 +856,10 @@ using hash_imr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 2, access::ro>,
-               groov::field<"dcie", bit_enable, 1, 1>,
-               groov::field<"dinie", bit_enable, 0, 0>>;
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 2, common::access::ro>,
+               groov::field<"dcie", common::bittypes::bit_enable, 1, 1>,
+               groov::field<"dinie", common::bittypes::bit_enable, 0, 0>>;
 
 // hash_sr_v1: SR
 // Used by: HASH, SEC_HASH
@@ -870,15 +870,15 @@ using hash_sr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved2", std::uint16_t, 31, 21, access::ro>,
-               groov::field<"nbwe", std::uint8_t, 20, 16, access::ro>,
-               groov::field<"dinne", bool, 15, 15, access::ro>,
-               groov::field<"reserved1", bool, 14, 14, access::ro>,
-               groov::field<"nbwp", std::uint8_t, 13, 9, access::ro>,
-               groov::field<"reserved0", std::uint8_t, 8, 4, access::ro>,
-               groov::field<"busy", bool, 3, 3, access::ro>,
-               groov::field<"dmas", bool, 2, 2, access::ro>,
+             common::access::rw,
+               groov::field<"reserved2", std::uint16_t, 31, 21, common::access::ro>,
+               groov::field<"nbwe", std::uint8_t, 20, 16, common::access::ro>,
+               groov::field<"dinne", bool, 15, 15, common::access::ro>,
+               groov::field<"reserved1", bool, 14, 14, common::access::ro>,
+               groov::field<"nbwp", std::uint8_t, 13, 9, common::access::ro>,
+               groov::field<"reserved0", std::uint8_t, 8, 4, common::access::ro>,
+               groov::field<"busy", bool, 3, 3, common::access::ro>,
+               groov::field<"dmas", bool, 2, 2, common::access::ro>,
                groov::field<"dcis", bool, 1, 1>,
                groov::field<"dinis", bool, 0, 0>>;
 
@@ -891,10 +891,10 @@ using hash_str_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint32_t, 31, 9, access::ro>,
-               groov::field<"dcal", bool, 8, 8, access::wo>,
-               groov::field<"reserved0", std::uint8_t, 7, 5, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint32_t, 31, 9, common::access::ro>,
+               groov::field<"dcal", bool, 8, 8, common::access::wo>,
+               groov::field<"reserved0", std::uint8_t, 7, 5, common::access::ro>,
                groov::field<"nblw", std::uint8_t, 4, 0>>;
 
 } // namespace stm32::regs

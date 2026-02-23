@@ -16,20 +16,20 @@ using adc_cr1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint8_t, 31, 24, access::ro>,
-               groov::field<"awden", bit_enable, 23, 23>,
-               groov::field<"jawden", bit_enable, 22, 22>,
-               groov::field<"reserved0", std::uint8_t, 21, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint8_t, 31, 24, common::access::ro>,
+               groov::field<"awden", common::bittypes::bit_enable, 23, 23>,
+               groov::field<"jawden", common::bittypes::bit_enable, 22, 22>,
+               groov::field<"reserved0", std::uint8_t, 21, 16, common::access::ro>,
                groov::field<"discnum", std::uint8_t, 15, 13>,
-               groov::field<"jdiscen", bit_enable, 12, 12>,
-               groov::field<"discen", bit_enable, 11, 11>,
+               groov::field<"jdiscen", common::bittypes::bit_enable, 12, 12>,
+               groov::field<"discen", common::bittypes::bit_enable, 11, 11>,
                groov::field<"jauto", bool, 10, 10>,
                groov::field<"awdsgl", bool, 9, 9>,
                groov::field<"scan", bool, 8, 8>,
-               groov::field<"jeocie", bit_enable, 7, 7>,
-               groov::field<"awdie", bit_enable, 6, 6>,
-               groov::field<"eocie", bit_enable, 5, 5>,
+               groov::field<"jeocie", common::bittypes::bit_enable, 7, 7>,
+               groov::field<"awdie", common::bittypes::bit_enable, 6, 6>,
+               groov::field<"eocie", common::bittypes::bit_enable, 5, 5>,
                groov::field<"awdch", std::uint8_t, 4, 0>>;
 
 // adc_cr2_v1: CR2
@@ -41,20 +41,20 @@ using adc_cr2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved3", std::uint8_t, 31, 24, access::ro>,
-               groov::field<"tsvrefe", bit_enable, 23, 23>,
+             common::access::rw,
+               groov::field<"reserved3", std::uint8_t, 31, 24, common::access::ro>,
+               groov::field<"tsvrefe", common::bittypes::bit_enable, 23, 23>,
                groov::field<"swstart", bool, 22, 22>,
                groov::field<"jswstart", bool, 21, 21>,
                groov::field<"exttrig", bool, 20, 20>,
                groov::field<"extsel", std::uint8_t, 19, 17>,
-               groov::field<"reserved2", bool, 16, 16, access::ro>,
+               groov::field<"reserved2", bool, 16, 16, common::access::ro>,
                groov::field<"jexttrig", bool, 15, 15>,
                groov::field<"jextsel", std::uint8_t, 14, 12>,
                groov::field<"align", bool, 11, 11>,
-               groov::field<"reserved1", std::uint8_t, 10, 9, access::ro>,
+               groov::field<"reserved1", std::uint8_t, 10, 9, common::access::ro>,
                groov::field<"dma", bool, 8, 8>,
-               groov::field<"reserved0", std::uint8_t, 7, 4, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 7, 4, common::access::ro>,
                groov::field<"rstcal", bool, 3, 3>,
                groov::field<"cal", bool, 2, 2>,
                groov::field<"cont", bool, 1, 1>,
@@ -69,7 +69,7 @@ using adc_dr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint16_t, 31, 16>,
                groov::field<"data", std::uint16_t, 15, 0>>;
 
@@ -82,8 +82,8 @@ using adc_htr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 12, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 12, common::access::ro>,
                groov::field<"ht", std::uint16_t, 11, 0>>;
 
 // adc_jdr1_v1: JDR1
@@ -95,7 +95,7 @@ using adc_jdr1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint16_t, 31, 16>,
                groov::field<"jdata", std::uint16_t, 15, 0>>;
 
@@ -108,7 +108,7 @@ using adc_jdr2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint16_t, 31, 16>,
                groov::field<"jdata", std::uint16_t, 15, 0>>;
 
@@ -121,7 +121,7 @@ using adc_jdr3_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint16_t, 31, 16>,
                groov::field<"jdata", std::uint16_t, 15, 0>>;
 
@@ -134,7 +134,7 @@ using adc_jdr4_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint16_t, 31, 16>,
                groov::field<"jdata", std::uint16_t, 15, 0>>;
 
@@ -147,8 +147,8 @@ using adc_jofr1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 12, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 12, common::access::ro>,
                groov::field<"joffset1", std::uint16_t, 11, 0>>;
 
 // adc_jofr2_v1: JOFR2
@@ -160,8 +160,8 @@ using adc_jofr2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 12, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 12, common::access::ro>,
                groov::field<"joffset2", std::uint16_t, 11, 0>>;
 
 // adc_jofr3_v1: JOFR3
@@ -173,8 +173,8 @@ using adc_jofr3_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 12, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 12, common::access::ro>,
                groov::field<"joffset3", std::uint16_t, 11, 0>>;
 
 // adc_jofr4_v1: JOFR4
@@ -186,8 +186,8 @@ using adc_jofr4_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 12, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 12, common::access::ro>,
                groov::field<"joffset4", std::uint16_t, 11, 0>>;
 
 // adc_jsqr_v1: JSQR
@@ -199,8 +199,8 @@ using adc_jsqr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 22, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 22, common::access::ro>,
                groov::field<"jl", std::uint8_t, 21, 20>,
                groov::field<"jsq4", std::uint8_t, 19, 15>,
                groov::field<"jsq3", std::uint8_t, 14, 10>,
@@ -216,8 +216,8 @@ using adc_ltr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 12, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 12, common::access::ro>,
                groov::field<"lt", std::uint16_t, 11, 0>>;
 
 // adc_smpr1_v1: SMPR1
@@ -229,8 +229,8 @@ using adc_smpr1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint8_t, 31, 24, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint8_t, 31, 24, common::access::ro>,
                groov::field<"smp17", std::uint8_t, 23, 21>,
                groov::field<"smp16", std::uint8_t, 20, 18>,
                groov::field<"smp15", std::uint8_t, 17, 15>,
@@ -249,8 +249,8 @@ using adc_smpr2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint8_t, 31, 30, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint8_t, 31, 30, common::access::ro>,
                groov::field<"smp9", std::uint8_t, 29, 27>,
                groov::field<"smp8", std::uint8_t, 26, 24>,
                groov::field<"smp7", std::uint8_t, 23, 21>,
@@ -271,8 +271,8 @@ using adc_sqr1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint8_t, 31, 24, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint8_t, 31, 24, common::access::ro>,
                groov::field<"l", std::uint8_t, 23, 20>,
                groov::field<"sq16", std::uint8_t, 19, 15>,
                groov::field<"sq15", std::uint8_t, 14, 10>,
@@ -288,8 +288,8 @@ using adc_sqr2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint8_t, 31, 30, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint8_t, 31, 30, common::access::ro>,
                groov::field<"sq12", std::uint8_t, 29, 25>,
                groov::field<"sq11", std::uint8_t, 24, 20>,
                groov::field<"sq10", std::uint8_t, 19, 15>,
@@ -306,8 +306,8 @@ using adc_sqr3_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint8_t, 31, 30, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint8_t, 31, 30, common::access::ro>,
                groov::field<"sq6", std::uint8_t, 29, 25>,
                groov::field<"sq5", std::uint8_t, 24, 20>,
                groov::field<"sq4", std::uint8_t, 19, 15>,
@@ -324,8 +324,8 @@ using adc_sr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 5, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 5, common::access::ro>,
                groov::field<"strt", bool, 4, 4>,
                groov::field<"jstrt", bool, 3, 3>,
                groov::field<"jeoc", bool, 2, 2>,

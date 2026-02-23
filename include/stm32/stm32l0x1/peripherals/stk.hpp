@@ -7,10 +7,22 @@
 namespace stm32::stm32l0x1 {
 
 namespace stk {
-  using csr_tt = regs::stk_csr_v1_tt;
-  using rvr_tt = regs::stk_rvr_v1_tt;
-  using cvr_tt = regs::stk_cvr_v1_tt;
-  using calib_tt = regs::stk_calib_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using csr_tt = regs::stk_csr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using rvr_tt = regs::stk_rvr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cvr_tt = regs::stk_cvr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using calib_tt = regs::stk_calib_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using stk_t =

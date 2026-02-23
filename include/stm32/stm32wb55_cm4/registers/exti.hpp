@@ -16,10 +16,10 @@ using exti_c1emr1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint16_t, 31, 22, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint16_t, 31, 22, common::access::ro>,
                groov::field<"em17_21", std::uint8_t, 21, 17>,
-               groov::field<"reserved0", bool, 16, 16, access::ro>,
+               groov::field<"reserved0", bool, 16, 16, common::access::ro>,
                groov::field<"em0_15", std::uint16_t, 15, 0>>;
 
 // exti_c1emr2_v1: C1EMR2
@@ -31,10 +31,10 @@ using exti_c1emr2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint32_t, 31, 10, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint32_t, 31, 10, common::access::ro>,
                groov::field<"em", std::uint8_t, 9, 8>,
-               groov::field<"reserved0", std::uint8_t, 7, 0, access::ro>>;
+               groov::field<"reserved0", std::uint8_t, 7, 0, common::access::ro>>;
 
 // exti_c1imr1_v1: C1IMR1
 // Used by: EXTI
@@ -45,7 +45,7 @@ using exti_c1imr1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"im", std::uint32_t, 31, 0>>;
 
 // exti_c1imr2_v1: C1IMR2
@@ -57,8 +57,8 @@ using exti_c1imr2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 17, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 17, common::access::ro>,
                groov::field<"im", std::uint32_t, 16, 0>>;
 
 // exti_c2emr1_v1: C2EMR1
@@ -70,10 +70,10 @@ using exti_c2emr1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint16_t, 31, 22, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint16_t, 31, 22, common::access::ro>,
                groov::field<"em17_21", std::uint8_t, 21, 17>,
-               groov::field<"reserved0", bool, 16, 16, access::ro>,
+               groov::field<"reserved0", bool, 16, 16, common::access::ro>,
                groov::field<"em0_15", std::uint16_t, 15, 0>>;
 
 // exti_c2emr2_v1: C2EMR2
@@ -85,10 +85,10 @@ using exti_c2emr2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint32_t, 31, 10, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint32_t, 31, 10, common::access::ro>,
                groov::field<"em", std::uint8_t, 9, 8>,
-               groov::field<"reserved0", std::uint8_t, 7, 0, access::ro>>;
+               groov::field<"reserved0", std::uint8_t, 7, 0, common::access::ro>>;
 
 // exti_c2imr1_v1: C2IMR1
 // Used by: EXTI
@@ -99,7 +99,7 @@ using exti_c2imr1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"im", std::uint32_t, 31, 0>>;
 
 // exti_c2imr2_v1: C2IMR2
@@ -111,8 +111,8 @@ using exti_c2imr2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 17, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 17, common::access::ro>,
                groov::field<"im", std::uint32_t, 16, 0>>;
 
 // exti_ftsr1_v1: FTSR1
@@ -124,9 +124,9 @@ using exti_ftsr1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"ft_31", bool, 31, 31>,
-               groov::field<"reserved0", std::uint16_t, 30, 22, access::ro>,
+               groov::field<"reserved0", std::uint16_t, 30, 22, common::access::ro>,
                groov::field<"ft", std::uint32_t, 21, 0>>;
 
 // exti_ftsr2_v1: FTSR2
@@ -138,12 +138,12 @@ using exti_ftsr2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved2", std::uint32_t, 31, 10, access::ro>,
+             common::access::rw,
+               groov::field<"reserved2", std::uint32_t, 31, 10, common::access::ro>,
                groov::field<"ft40_41", std::uint8_t, 9, 8>,
-               groov::field<"reserved1", std::uint8_t, 7, 2, access::ro>,
+               groov::field<"reserved1", std::uint8_t, 7, 2, common::access::ro>,
                groov::field<"ft33", bool, 1, 1>,
-               groov::field<"reserved0", bool, 0, 0, access::ro>>;
+               groov::field<"reserved0", bool, 0, 0, common::access::ro>>;
 
 // exti_hwcfgr1_v1: HWCFGR1
 // Used by: EXTI
@@ -154,7 +154,7 @@ using exti_hwcfgr1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint16_t, 31, 16>,
                groov::field<"cpuevten", std::uint8_t, 15, 12>,
                groov::field<"nbcpus", std::uint8_t, 11, 8>,
@@ -169,7 +169,7 @@ using exti_hwcfgr2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"event_trg", std::uint32_t, 31, 0>>;
 
 // exti_hwcfgr3_v1: HWCFGR3
@@ -181,7 +181,7 @@ using exti_hwcfgr3_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"event_trg", std::uint32_t, 31, 0>>;
 
 // exti_hwcfgr4_v1: HWCFGR4
@@ -193,7 +193,7 @@ using exti_hwcfgr4_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"event_trg", std::uint32_t, 31, 0>>;
 
 // exti_hwcfgr5_v1: HWCFGR5
@@ -205,7 +205,7 @@ using exti_hwcfgr5_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"cpuevent", std::uint32_t, 31, 0>>;
 
 // exti_hwcfgr6_v1: HWCFGR6
@@ -217,7 +217,7 @@ using exti_hwcfgr6_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"cpuevent", std::uint32_t, 31, 0>>;
 
 // exti_hwcfgr7_v1: HWCFGR7
@@ -229,7 +229,7 @@ using exti_hwcfgr7_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"cpuevent", std::uint32_t, 31, 0>>;
 
 // exti_ipidr_v1: IPIDR
@@ -241,7 +241,7 @@ using exti_ipidr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"ipid", std::uint32_t, 31, 0>>;
 
 // exti_pr1_v1: PR1
@@ -253,9 +253,9 @@ using exti_pr1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"pif_31", bool, 31, 31>,
-               groov::field<"reserved0", std::uint16_t, 30, 22, access::ro>,
+               groov::field<"reserved0", std::uint16_t, 30, 22, common::access::ro>,
                groov::field<"pif", std::uint32_t, 21, 0>>;
 
 // exti_pr2_v1: PR2
@@ -267,12 +267,12 @@ using exti_pr2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved2", std::uint32_t, 31, 10, access::ro>,
+             common::access::rw,
+               groov::field<"reserved2", std::uint32_t, 31, 10, common::access::ro>,
                groov::field<"pif40_41", std::uint8_t, 9, 8>,
-               groov::field<"reserved1", std::uint8_t, 7, 2, access::ro>,
+               groov::field<"reserved1", std::uint8_t, 7, 2, common::access::ro>,
                groov::field<"pif33", bool, 1, 1>,
-               groov::field<"reserved0", bool, 0, 0, access::ro>>;
+               groov::field<"reserved0", bool, 0, 0, common::access::ro>>;
 
 // exti_rtsr1_v1: RTSR1
 // Used by: EXTI
@@ -283,9 +283,9 @@ using exti_rtsr1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"rt_31", bool, 31, 31>,
-               groov::field<"reserved0", std::uint16_t, 30, 22, access::ro>,
+               groov::field<"reserved0", std::uint16_t, 30, 22, common::access::ro>,
                groov::field<"rt", std::uint32_t, 21, 0>>;
 
 // exti_rtsr2_v1: RTSR2
@@ -297,12 +297,12 @@ using exti_rtsr2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved2", std::uint32_t, 31, 10, access::ro>,
+             common::access::rw,
+               groov::field<"reserved2", std::uint32_t, 31, 10, common::access::ro>,
                groov::field<"rt40_41", std::uint8_t, 9, 8>,
-               groov::field<"reserved1", std::uint8_t, 7, 2, access::ro>,
+               groov::field<"reserved1", std::uint8_t, 7, 2, common::access::ro>,
                groov::field<"rt33", bool, 1, 1>,
-               groov::field<"reserved0", bool, 0, 0, access::ro>>;
+               groov::field<"reserved0", bool, 0, 0, common::access::ro>>;
 
 // exti_sidr_v1: SIDR
 // Used by: EXTI
@@ -313,7 +313,7 @@ using exti_sidr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"sid", std::uint32_t, 31, 0>>;
 
 // exti_swier1_v1: SWIER1
@@ -325,9 +325,9 @@ using exti_swier1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"swi_31", bool, 31, 31>,
-               groov::field<"reserved0", std::uint16_t, 30, 22, access::ro>,
+               groov::field<"reserved0", std::uint16_t, 30, 22, common::access::ro>,
                groov::field<"swi", std::uint32_t, 21, 0>>;
 
 // exti_swier2_v1: SWIER2
@@ -339,12 +339,12 @@ using exti_swier2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved2", std::uint32_t, 31, 10, access::ro>,
+             common::access::rw,
+               groov::field<"reserved2", std::uint32_t, 31, 10, common::access::ro>,
                groov::field<"swi40_41", std::uint8_t, 9, 8>,
-               groov::field<"reserved1", std::uint8_t, 7, 2, access::ro>,
+               groov::field<"reserved1", std::uint8_t, 7, 2, common::access::ro>,
                groov::field<"swi33", bool, 1, 1>,
-               groov::field<"reserved0", bool, 0, 0, access::ro>>;
+               groov::field<"reserved0", bool, 0, 0, common::access::ro>>;
 
 // exti_verr_v1: VERR
 // Used by: EXTI
@@ -355,7 +355,7 @@ using exti_verr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint32_t, 31, 8>,
                groov::field<"majrev", std::uint8_t, 7, 4>,
                groov::field<"minrev", std::uint8_t, 3, 0>>;

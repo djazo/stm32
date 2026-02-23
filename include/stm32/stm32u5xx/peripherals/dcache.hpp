@@ -7,16 +7,46 @@
 namespace stm32::stm32u5xx {
 
 namespace dcachex {
-  using dcache_cr_tt = regs::dcache_dcache_cr_v1_tt;
-  using dcache_sr_tt = regs::dcache_dcache_sr_v1_tt;
-  using dcache_ier_tt = regs::dcache_dcache_ier_v1_tt;
-  using dcache_fcr_tt = regs::dcache_dcache_fcr_v1_tt;
-  using dcache_rhmonr_tt = regs::dcache_dcache_rhmonr_v1_tt;
-  using dcache_rmmonr_tt = regs::dcache_dcache_rmmonr_v1_tt;
-  using dcache_whmonr_tt = regs::dcache_dcache_whmonr_v1_tt;
-  using dcache_wmmonr_tt = regs::dcache_dcache_wmmonr_v1_tt;
-  using dcache_cmdrsaddrr_tt = regs::dcache_dcache_cmdrsaddrr_v1_tt;
-  using dcache_cmdreaddrr_tt = regs::dcache_dcache_cmdreaddrr_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dcache_cr_tt = regs::dcache_dcache_cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dcache_sr_tt = regs::dcache_dcache_sr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dcache_ier_tt = regs::dcache_dcache_ier_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dcache_fcr_tt = regs::dcache_dcache_fcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dcache_rhmonr_tt = regs::dcache_dcache_rhmonr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dcache_rmmonr_tt = regs::dcache_dcache_rmmonr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dcache_whmonr_tt = regs::dcache_dcache_whmonr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dcache_wmmonr_tt = regs::dcache_dcache_wmmonr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dcache_cmdrsaddrr_tt = regs::dcache_dcache_cmdrsaddrr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using dcache_cmdreaddrr_tt = regs::dcache_dcache_cmdreaddrr_v1_tt<name, baseaddress, offset>;
 
   template <stdx::ct_string name, std::uint32_t baseaddress>
   using dcachex_t =

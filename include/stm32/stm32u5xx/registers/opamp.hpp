@@ -16,22 +16,22 @@ using opamp_opamp1_csr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved3", bool, 31, 31, access::ro>,
+             common::access::rw,
+               groov::field<"reserved3", bool, 31, 31, common::access::ro>,
                groov::field<"opahsm", bool, 30, 30>,
-               groov::field<"reserved2", std::uint16_t, 29, 16, access::ro>,
+               groov::field<"reserved2", std::uint16_t, 29, 16, common::access::ro>,
                groov::field<"calout", bool, 15, 15>,
                groov::field<"usertrim", bool, 14, 14>,
                groov::field<"calsel", bool, 13, 13>,
                groov::field<"calon", bool, 12, 12>,
-               groov::field<"reserved1", bool, 11, 11, access::ro>,
+               groov::field<"reserved1", bool, 11, 11, common::access::ro>,
                groov::field<"vp_sel", bool, 10, 10>,
                groov::field<"vm_sel", std::uint8_t, 9, 8>,
-               groov::field<"reserved0", std::uint8_t, 7, 6, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 7, 6, common::access::ro>,
                groov::field<"pga_gain", std::uint8_t, 5, 4>,
                groov::field<"opamode", std::uint8_t, 3, 2>,
                groov::field<"opalpm", bool, 1, 1>,
-               groov::field<"opaen", bit_enable, 0, 0>>;
+               groov::field<"opaen", common::bittypes::bit_enable, 0, 0>>;
 
 // opamp_opamp1_lpotr_v1: OPAMP1_LPOTR
 // Used by: OPAMP, SEC_OPAMP
@@ -42,10 +42,10 @@ using opamp_opamp1_lpotr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint32_t, 31, 13, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint32_t, 31, 13, common::access::ro>,
                groov::field<"trimlpoffsetp", std::uint8_t, 12, 8>,
-               groov::field<"reserved0", std::uint8_t, 7, 5, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 7, 5, common::access::ro>,
                groov::field<"trimlpoffsetn", std::uint8_t, 4, 0>>;
 
 // opamp_opamp1_otr_v1: OPAMP1_OTR
@@ -57,10 +57,10 @@ using opamp_opamp1_otr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint32_t, 31, 13, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint32_t, 31, 13, common::access::ro>,
                groov::field<"trimoffsetp", std::uint8_t, 12, 8>,
-               groov::field<"reserved0", std::uint8_t, 7, 5, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 7, 5, common::access::ro>,
                groov::field<"trimoffsetn", std::uint8_t, 4, 0>>;
 
 // opamp_opamp2_crs_v1: OPAMP2_CRS
@@ -72,22 +72,22 @@ using opamp_opamp2_crs_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved3", bool, 31, 31, access::ro>,
+             common::access::rw,
+               groov::field<"reserved3", bool, 31, 31, common::access::ro>,
                groov::field<"opahsm", bool, 30, 30>,
-               groov::field<"reserved2", std::uint16_t, 29, 16, access::ro>,
-               groov::field<"calout", bool, 15, 15, access::ro>,
+               groov::field<"reserved2", std::uint16_t, 29, 16, common::access::ro>,
+               groov::field<"calout", bool, 15, 15, common::access::ro>,
                groov::field<"usertrim", bool, 14, 14>,
                groov::field<"calsel", bool, 13, 13>,
                groov::field<"calon", bool, 12, 12>,
-               groov::field<"reserved1", bool, 11, 11, access::ro>,
+               groov::field<"reserved1", bool, 11, 11, common::access::ro>,
                groov::field<"vp_sel", bool, 10, 10>,
                groov::field<"vm_sel", std::uint8_t, 9, 8>,
-               groov::field<"reserved0", std::uint8_t, 7, 6, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 7, 6, common::access::ro>,
                groov::field<"pga_gain", std::uint8_t, 5, 4>,
                groov::field<"opamode", std::uint8_t, 3, 2>,
                groov::field<"opalpm", bool, 1, 1>,
-               groov::field<"opaen", bit_enable, 0, 0>>;
+               groov::field<"opaen", common::bittypes::bit_enable, 0, 0>>;
 
 // opamp_opamp2_lpotr_v1: OPAMP2_LPOTR
 // Used by: OPAMP, SEC_OPAMP
@@ -98,10 +98,10 @@ using opamp_opamp2_lpotr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint32_t, 31, 13, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint32_t, 31, 13, common::access::ro>,
                groov::field<"trimlpoffsetp", std::uint8_t, 12, 8>,
-               groov::field<"reserved0", std::uint8_t, 7, 5, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 7, 5, common::access::ro>,
                groov::field<"trimlpoffsetn", std::uint8_t, 4, 0>>;
 
 // opamp_opamp2_otr_v1: OPAMP2_OTR
@@ -113,10 +113,10 @@ using opamp_opamp2_otr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint32_t, 31, 13, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint32_t, 31, 13, common::access::ro>,
                groov::field<"trimoffsetp", std::uint8_t, 12, 8>,
-               groov::field<"reserved0", std::uint8_t, 7, 5, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 7, 5, common::access::ro>,
                groov::field<"trimoffsetn", std::uint8_t, 4, 0>>;
 
 } // namespace stm32::regs

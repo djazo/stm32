@@ -7,7 +7,10 @@
 namespace stm32::stm32wb30_cm4 {
 
 namespace scb_actrl {
-  using actrl_tt = regs::scb_actrl_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using actrl_tt = regs::scb_actrl_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using scb_actrl_t =

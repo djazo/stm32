@@ -7,8 +7,14 @@
 namespace stm32::stm32l476 {
 
 namespace vrefbuf {
-  using csr_tt = regs::vref_csr_v1_tt;
-  using ccr_tt = regs::vref_ccr_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using csr_tt = regs::vref_csr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using ccr_tt = regs::vref_ccr_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using vrefbuf_t =

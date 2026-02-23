@@ -16,9 +16,9 @@ using adf_adf_bsmx0cr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"bsmxactive", bool, 31, 31>,
-               groov::field<"reserved0", std::uint32_t, 30, 5, access::ro>,
+               groov::field<"reserved0", std::uint32_t, 30, 5, common::access::ro>,
                groov::field<"bssel", std::uint8_t, 4, 0>>;
 
 // adf_adf_ckgcr_v1: ADF_CKGCR
@@ -30,22 +30,22 @@ using adf_adf_ckgcr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"ckgactive", bool, 31, 31>,
                groov::field<"procdiv", std::uint8_t, 30, 24>,
-               groov::field<"reserved3", std::uint8_t, 23, 20, access::ro>,
+               groov::field<"reserved3", std::uint8_t, 23, 20, common::access::ro>,
                groov::field<"cckdiv", std::uint8_t, 19, 16>,
                groov::field<"trgsrc", std::uint8_t, 15, 12>,
-               groov::field<"reserved2", std::uint8_t, 11, 9, access::ro>,
+               groov::field<"reserved2", std::uint8_t, 11, 9, common::access::ro>,
                groov::field<"trgsens", bool, 8, 8>,
-               groov::field<"reserved1", bool, 7, 7, access::ro>,
+               groov::field<"reserved1", bool, 7, 7, common::access::ro>,
                groov::field<"cck1dir", bool, 6, 6>,
                groov::field<"cck0dir", bool, 5, 5>,
                groov::field<"ckgmod", bool, 4, 4>,
-               groov::field<"reserved0", bool, 3, 3, access::ro>,
-               groov::field<"cck1en", bit_enable, 2, 2>,
-               groov::field<"cck0en", bit_enable, 1, 1>,
-               groov::field<"ckgden", bit_enable, 0, 0>>;
+               groov::field<"reserved0", bool, 3, 3, common::access::ro>,
+               groov::field<"cck1en", common::bittypes::bit_enable, 2, 2>,
+               groov::field<"cck0en", common::bittypes::bit_enable, 1, 1>,
+               groov::field<"ckgden", common::bittypes::bit_enable, 0, 0>>;
 
 // adf_adf_dflt0cicr_v1: ADF_DFLT0CICR
 // Used by: ADF1, SEC_ADF1
@@ -56,14 +56,14 @@ using adf_adf_dflt0cicr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved3", std::uint8_t, 31, 26, access::ro>,
+             common::access::rw,
+               groov::field<"reserved3", std::uint8_t, 31, 26, common::access::ro>,
                groov::field<"scale", std::uint8_t, 25, 20>,
-               groov::field<"reserved2", std::uint8_t, 19, 17, access::ro>,
+               groov::field<"reserved2", std::uint8_t, 19, 17, common::access::ro>,
                groov::field<"mcicd", std::uint16_t, 16, 8>,
-               groov::field<"reserved1", bool, 7, 7, access::ro>,
+               groov::field<"reserved1", bool, 7, 7, common::access::ro>,
                groov::field<"cicmod", std::uint8_t, 6, 4>,
-               groov::field<"reserved0", std::uint8_t, 3, 2, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 3, 2, common::access::ro>,
                groov::field<"datsrc", std::uint8_t, 1, 0>>;
 
 // adf_adf_dflt0cr_v1: ADF_DFLT0CR
@@ -75,19 +75,19 @@ using adf_adf_dflt0cr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dfltactive", bool, 31, 31>,
                groov::field<"dfltrun", bool, 30, 30>,
-               groov::field<"reserved3", std::uint8_t, 29, 28, access::ro>,
+               groov::field<"reserved3", std::uint8_t, 29, 28, common::access::ro>,
                groov::field<"nbdis", std::uint8_t, 27, 20>,
-               groov::field<"reserved2", std::uint8_t, 19, 16, access::ro>,
+               groov::field<"reserved2", std::uint8_t, 19, 16, common::access::ro>,
                groov::field<"trgsrc", std::uint8_t, 15, 12>,
-               groov::field<"reserved1", std::uint8_t, 11, 7, access::ro>,
+               groov::field<"reserved1", std::uint8_t, 11, 7, common::access::ro>,
                groov::field<"acqmod", std::uint8_t, 6, 4>,
-               groov::field<"reserved0", bool, 3, 3, access::ro>,
+               groov::field<"reserved0", bool, 3, 3, common::access::ro>,
                groov::field<"fth", bool, 2, 2>,
-               groov::field<"dmaen", bit_enable, 1, 1>,
-               groov::field<"dflten", bit_enable, 0, 0>>;
+               groov::field<"dmaen", common::bittypes::bit_enable, 1, 1>,
+               groov::field<"dflten", common::bittypes::bit_enable, 0, 0>>;
 
 // adf_adf_dflt0dr_v1: ADF_DFLT0DR
 // Used by: ADF1, SEC_ADF1
@@ -98,7 +98,7 @@ using adf_adf_dflt0dr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"dr", std::uint32_t, 31, 8>,
                groov::field<"reserved0", std::uint8_t, 7, 0>>;
 
@@ -111,16 +111,16 @@ using adf_adf_dflt0ier_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint32_t, 31, 14, access::ro>,
-               groov::field<"sdlvlie", bit_enable, 13, 13>,
-               groov::field<"sddetie", bit_enable, 12, 12>,
-               groov::field<"rfovrie", bit_enable, 11, 11>,
-               groov::field<"ckabie", bit_enable, 10, 10>,
-               groov::field<"satie", bit_enable, 9, 9>,
-               groov::field<"reserved0", std::uint8_t, 8, 2, access::ro>,
-               groov::field<"dovrie", bit_enable, 1, 1>,
-               groov::field<"fthie", bit_enable, 0, 0>>;
+             common::access::rw,
+               groov::field<"reserved1", std::uint32_t, 31, 14, common::access::ro>,
+               groov::field<"sdlvlie", common::bittypes::bit_enable, 13, 13>,
+               groov::field<"sddetie", common::bittypes::bit_enable, 12, 12>,
+               groov::field<"rfovrie", common::bittypes::bit_enable, 11, 11>,
+               groov::field<"ckabie", common::bittypes::bit_enable, 10, 10>,
+               groov::field<"satie", common::bittypes::bit_enable, 9, 9>,
+               groov::field<"reserved0", std::uint8_t, 8, 2, common::access::ro>,
+               groov::field<"dovrie", common::bittypes::bit_enable, 1, 1>,
+               groov::field<"fthie", common::bittypes::bit_enable, 0, 0>>;
 
 // adf_adf_dflt0isr_v1: ADF_DFLT0ISR
 // Used by: ADF1, SEC_ADF1
@@ -131,18 +131,18 @@ using adf_adf_dflt0isr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved2", std::uint32_t, 31, 14, access::ro>,
+             common::access::rw,
+               groov::field<"reserved2", std::uint32_t, 31, 14, common::access::ro>,
                groov::field<"sdlvlf", bool, 13, 13>,
                groov::field<"sddetf", bool, 12, 12>,
                groov::field<"rfovrf", bool, 11, 11>,
                groov::field<"ckabf", bool, 10, 10>,
                groov::field<"satf", bool, 9, 9>,
-               groov::field<"reserved1", std::uint8_t, 8, 4, access::ro>,
-               groov::field<"rxnef", bool, 3, 3, access::ro>,
-               groov::field<"reserved0", bool, 2, 2, access::ro>,
+               groov::field<"reserved1", std::uint8_t, 8, 4, common::access::ro>,
+               groov::field<"rxnef", bool, 3, 3, common::access::ro>,
+               groov::field<"reserved0", bool, 2, 2, common::access::ro>,
                groov::field<"dovrf", bool, 1, 1>,
-               groov::field<"fthf", bool, 0, 0, access::ro>>;
+               groov::field<"fthf", bool, 0, 0, common::access::ro>>;
 
 // adf_adf_dflt0rsfr_v1: ADF_DFLT0RSFR
 // Used by: ADF1, SEC_ADF1
@@ -153,13 +153,13 @@ using adf_adf_dflt0rsfr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved2", std::uint32_t, 31, 10, access::ro>,
+             common::access::rw,
+               groov::field<"reserved2", std::uint32_t, 31, 10, common::access::ro>,
                groov::field<"hpfc", std::uint8_t, 9, 8>,
                groov::field<"hpfbyp", bool, 7, 7>,
-               groov::field<"reserved1", std::uint8_t, 6, 5, access::ro>,
+               groov::field<"reserved1", std::uint8_t, 6, 5, common::access::ro>,
                groov::field<"rsfltd", bool, 4, 4>,
-               groov::field<"reserved0", std::uint8_t, 3, 1, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 3, 1, common::access::ro>,
                groov::field<"rsfltbyp", bool, 0, 0>>;
 
 // adf_adf_dly0cr_v1: ADF_DLY0CR
@@ -171,9 +171,9 @@ using adf_adf_dly0cr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"skpbf", bool, 31, 31>,
-               groov::field<"reserved0", std::uint32_t, 30, 7, access::ro>,
+               groov::field<"reserved0", std::uint32_t, 30, 7, common::access::ro>,
                groov::field<"skpdly", std::uint8_t, 6, 0>>;
 
 // adf_adf_gcr_v1: ADF_GCR
@@ -185,8 +185,8 @@ using adf_adf_gcr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 1, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 1, common::access::ro>,
                groov::field<"trgo", bool, 0, 0>>;
 
 // adf_adf_sadanlvr_v1: ADF_SADANLVR
@@ -198,7 +198,7 @@ using adf_adf_sadanlvr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint32_t, 31, 15>,
                groov::field<"anlvl", std::uint16_t, 14, 0>>;
 
@@ -211,14 +211,14 @@ using adf_adf_sadcfgr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved3", std::uint8_t, 31, 29, access::ro>,
+             common::access::rw,
+               groov::field<"reserved3", std::uint8_t, 31, 29, common::access::ro>,
                groov::field<"anmin", std::uint16_t, 28, 16>,
-               groov::field<"reserved2", bool, 15, 15, access::ro>,
+               groov::field<"reserved2", bool, 15, 15, common::access::ro>,
                groov::field<"hgovr", std::uint8_t, 14, 12>,
-               groov::field<"reserved1", bool, 11, 11, access::ro>,
+               groov::field<"reserved1", bool, 11, 11, common::access::ro>,
                groov::field<"lfrnb", std::uint8_t, 10, 8>,
-               groov::field<"reserved0", bool, 7, 7, access::ro>,
+               groov::field<"reserved0", bool, 7, 7, common::access::ro>,
                groov::field<"anslp", std::uint8_t, 6, 4>,
                groov::field<"snthr", std::uint8_t, 3, 0>>;
 
@@ -231,18 +231,18 @@ using adf_adf_sadcr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"sadactive", bool, 31, 31, access::ro>,
-               groov::field<"reserved2", std::uint32_t, 30, 14, access::ro>,
+             common::access::rw,
+               groov::field<"sadactive", bool, 31, 31, common::access::ro>,
+               groov::field<"reserved2", std::uint32_t, 30, 14, common::access::ro>,
                groov::field<"sadmod", std::uint8_t, 13, 12>,
-               groov::field<"reserved1", bool, 11, 11, access::ro>,
+               groov::field<"reserved1", bool, 11, 11, common::access::ro>,
                groov::field<"frsize", std::uint8_t, 10, 8>,
-               groov::field<"hysten", bit_enable, 7, 7>,
-               groov::field<"reserved0", bool, 6, 6, access::ro>,
-               groov::field<"sadst", std::uint8_t, 5, 4, access::ro>,
+               groov::field<"hysten", common::bittypes::bit_enable, 7, 7>,
+               groov::field<"reserved0", bool, 6, 6, common::access::ro>,
+               groov::field<"sadst", std::uint8_t, 5, 4, common::access::ro>,
                groov::field<"detcfg", bool, 3, 3>,
                groov::field<"datcap", std::uint8_t, 2, 1>,
-               groov::field<"saden", bit_enable, 0, 0>>;
+               groov::field<"saden", common::bittypes::bit_enable, 0, 0>>;
 
 // adf_adf_sadsdlvr_v1: ADF_SADSDLVR
 // Used by: ADF1, SEC_ADF1
@@ -253,7 +253,7 @@ using adf_adf_sadsdlvr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint32_t, 31, 15>,
                groov::field<"sdlvl", std::uint16_t, 14, 0>>;
 
@@ -266,14 +266,14 @@ using adf_adf_sitf0cr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"sitfactive", bool, 31, 31>,
-               groov::field<"reserved2", std::uint32_t, 30, 13, access::ro>,
+               groov::field<"reserved2", std::uint32_t, 30, 13, common::access::ro>,
                groov::field<"sth", std::uint8_t, 12, 8>,
-               groov::field<"reserved1", std::uint8_t, 7, 6, access::ro>,
+               groov::field<"reserved1", std::uint8_t, 7, 6, common::access::ro>,
                groov::field<"sitfmod", std::uint8_t, 5, 4>,
-               groov::field<"reserved0", bool, 3, 3, access::ro>,
+               groov::field<"reserved0", bool, 3, 3, common::access::ro>,
                groov::field<"scksrc", std::uint8_t, 2, 1>,
-               groov::field<"sitfen", bit_enable, 0, 0>>;
+               groov::field<"sitfen", common::bittypes::bit_enable, 0, 0>>;
 
 } // namespace stm32::regs

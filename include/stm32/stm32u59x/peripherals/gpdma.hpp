@@ -7,166 +7,646 @@
 namespace stm32::stm32u59x {
 
 namespace gpdmax {
-  using gpdma_seccfgr_tt = regs::gpdma_gpdma_seccfgr_v1_tt;
-  using gpdma_privcfgr_tt = regs::gpdma_gpdma_privcfgr_v1_tt;
-  using misr_tt = regs::gpdma_misr_v1_tt;
-  using smisr_tt = regs::gpdma_smisr_v1_tt;
-  using gpdma_c0lbar_tt = regs::gpdma_gpdma_c0lbar_v1_tt;
-  using gpdma_c0fcr_tt = regs::gpdma_gpdma_c0fcr_v1_tt;
-  using gpdma_c0sr_tt = regs::gpdma_gpdma_c0sr_v1_tt;
-  using gpdma_c0cr_tt = regs::gpdma_gpdma_c0cr_v1_tt;
-  using gpdma_c0tr1_tt = regs::gpdma_gpdma_c0tr1_v1_tt;
-  using gpdma_c0tr2_tt = regs::gpdma_gpdma_c0tr2_v1_tt;
-  using gpdma_c0br1_tt = regs::gpdma_gpdma_c0br1_v1_tt;
-  using gpdma_c0sar_tt = regs::gpdma_gpdma_c0sar_v1_tt;
-  using gpdma_c0dar_tt = regs::gpdma_gpdma_c0dar_v1_tt;
-  using gpdma_c0llr_tt = regs::gpdma_gpdma_c0llr_v1_tt;
-  using gpdma_c1lbar_tt = regs::gpdma_gpdma_c1lbar_v1_tt;
-  using gpdma_c1fcr_tt = regs::gpdma_gpdma_c1fcr_v1_tt;
-  using gpdma_c1sr_tt = regs::gpdma_gpdma_c1sr_v1_tt;
-  using gpdma_c1cr_tt = regs::gpdma_gpdma_c1cr_v1_tt;
-  using gpdma_c1tr1_tt = regs::gpdma_gpdma_c1tr1_v1_tt;
-  using gpdma_c1tr2_tt = regs::gpdma_gpdma_c1tr2_v1_tt;
-  using gpdma_c1br1_tt = regs::gpdma_gpdma_c1br1_v1_tt;
-  using gpdma_c1sar_tt = regs::gpdma_gpdma_c1sar_v1_tt;
-  using gpdma_c1dar_tt = regs::gpdma_gpdma_c1dar_v1_tt;
-  using gpdma_c1llr_tt = regs::gpdma_gpdma_c1llr_v1_tt;
-  using gpdma_c2lbar_tt = regs::gpdma_gpdma_c2lbar_v1_tt;
-  using gpdma_c2fcr_tt = regs::gpdma_gpdma_c2fcr_v1_tt;
-  using gpdma_c2sr_tt = regs::gpdma_gpdma_c2sr_v1_tt;
-  using gpdma_c2cr_tt = regs::gpdma_gpdma_c2cr_v1_tt;
-  using gpdma_c2tr1_tt = regs::gpdma_gpdma_c2tr1_v1_tt;
-  using gpdma_c2tr2_tt = regs::gpdma_gpdma_c2tr2_v1_tt;
-  using gpdma_c2br1_tt = regs::gpdma_gpdma_c2br1_v1_tt;
-  using gpdma_c2sar_tt = regs::gpdma_gpdma_c2sar_v1_tt;
-  using gpdma_c2dar_tt = regs::gpdma_gpdma_c2dar_v1_tt;
-  using gpdma_c2llr_tt = regs::gpdma_gpdma_c2llr_v1_tt;
-  using gpdma_c3lbar_tt = regs::gpdma_gpdma_c3lbar_v1_tt;
-  using gpdma_c3fcr_tt = regs::gpdma_gpdma_c3fcr_v1_tt;
-  using gpdma_c3sr_tt = regs::gpdma_gpdma_c3sr_v1_tt;
-  using gpdma_c3cr_tt = regs::gpdma_gpdma_c3cr_v1_tt;
-  using gpdma_c3tr1_tt = regs::gpdma_gpdma_c3tr1_v1_tt;
-  using gpdma_c3tr2_tt = regs::gpdma_gpdma_c3tr2_v1_tt;
-  using gpdma_c4tr2_tt = regs::gpdma_gpdma_c4tr2_v1_tt;
-  using gpdma_c5tr2_tt = regs::gpdma_gpdma_c5tr2_v1_tt;
-  using gpdma_c6tr2_tt = regs::gpdma_gpdma_c6tr2_v1_tt;
-  using gpdma_c7tr2_tt = regs::gpdma_gpdma_c7tr2_v1_tt;
-  using gpdma_c8tr2_tt = regs::gpdma_gpdma_c8tr2_v1_tt;
-  using gpdma_c9tr2_tt = regs::gpdma_gpdma_c9tr2_v1_tt;
-  using gpdma_c10tr2_tt = regs::gpdma_gpdma_c10tr2_v1_tt;
-  using gpdma_c11tr2_tt = regs::gpdma_gpdma_c11tr2_v1_tt;
-  using gpdma_c12tr2_tt = regs::gpdma_gpdma_c12tr2_v1_tt;
-  using gpdma_c13tr2_tt = regs::gpdma_gpdma_c13tr2_v1_tt;
-  using gpdma_c14tr2_tt = regs::gpdma_gpdma_c14tr2_v1_tt;
-  using gpdma_c15tr2_tt = regs::gpdma_gpdma_c15tr2_v1_tt;
-  using gpdma_c3br1_tt = regs::gpdma_gpdma_c3br1_v1_tt;
-  using gpdma_c4br1_tt = regs::gpdma_gpdma_c4br1_v1_tt;
-  using gpdma_c5br1_tt = regs::gpdma_gpdma_c5br1_v1_tt;
-  using gpdma_c6br1_tt = regs::gpdma_gpdma_c6br1_v1_tt;
-  using gpdma_c7br1_tt = regs::gpdma_gpdma_c7br1_v1_tt;
-  using gpdma_c8br1_tt = regs::gpdma_gpdma_c8br1_v1_tt;
-  using gpdma_c9br1_tt = regs::gpdma_gpdma_c9br1_v1_tt;
-  using gpdma_c10br1_tt = regs::gpdma_gpdma_c10br1_v1_tt;
-  using gpdma_c11br1_tt = regs::gpdma_gpdma_c11br1_v1_tt;
-  using gpdma_c12br1_tt = regs::gpdma_gpdma_c12br1_v1_tt;
-  using gpdma_c13br1_tt = regs::gpdma_gpdma_c13br1_v1_tt;
-  using gpdma_c14br1_tt = regs::gpdma_gpdma_c14br1_v1_tt;
-  using gpdma_c15br1_tt = regs::gpdma_gpdma_c15br1_v1_tt;
-  using gpdma_c3sar_tt = regs::gpdma_gpdma_c3sar_v1_tt;
-  using gpdma_c4sar_tt = regs::gpdma_gpdma_c4sar_v1_tt;
-  using gpdma_c5sar_tt = regs::gpdma_gpdma_c5sar_v1_tt;
-  using gpdma_c6sar_tt = regs::gpdma_gpdma_c6sar_v1_tt;
-  using gpdma_c7sar_tt = regs::gpdma_gpdma_c7sar_v1_tt;
-  using gpdma_c8sar_tt = regs::gpdma_gpdma_c8sar_v1_tt;
-  using gpdma_c9sar_tt = regs::gpdma_gpdma_c9sar_v1_tt;
-  using gpdma_c10sar_tt = regs::gpdma_gpdma_c10sar_v1_tt;
-  using gpdma_c11sar_tt = regs::gpdma_gpdma_c11sar_v1_tt;
-  using gpdma_c12sar_tt = regs::gpdma_gpdma_c12sar_v1_tt;
-  using gpdma_c13sar_tt = regs::gpdma_gpdma_c13sar_v1_tt;
-  using gpdma_c14sar_tt = regs::gpdma_gpdma_c14sar_v1_tt;
-  using gpdma_c15sar_tt = regs::gpdma_gpdma_c15sar_v1_tt;
-  using gpdma_c3dar_tt = regs::gpdma_gpdma_c3dar_v1_tt;
-  using gpdma_c4dar_tt = regs::gpdma_gpdma_c4dar_v1_tt;
-  using gpdma_c5dar_tt = regs::gpdma_gpdma_c5dar_v1_tt;
-  using gpdma_c6dar_tt = regs::gpdma_gpdma_c6dar_v1_tt;
-  using gpdma_c7dar_tt = regs::gpdma_gpdma_c7dar_v1_tt;
-  using gpdma_c8dar_tt = regs::gpdma_gpdma_c8dar_v1_tt;
-  using gpdma_c9dar_tt = regs::gpdma_gpdma_c9dar_v1_tt;
-  using gpdma_c10dar_tt = regs::gpdma_gpdma_c10dar_v1_tt;
-  using gpdma_c11dar_tt = regs::gpdma_gpdma_c11dar_v1_tt;
-  using gpdma_c12dar_tt = regs::gpdma_gpdma_c12dar_v1_tt;
-  using gpdma_c13dar_tt = regs::gpdma_gpdma_c13dar_v1_tt;
-  using gpdma_c14dar_tt = regs::gpdma_gpdma_c14dar_v1_tt;
-  using gpdma_c15dar_tt = regs::gpdma_gpdma_c15dar_v1_tt;
-  using gpdma_c3llr_tt = regs::gpdma_gpdma_c3llr_v1_tt;
-  using gpdma_c4llr_tt = regs::gpdma_gpdma_c4llr_v1_tt;
-  using gpdma_c5llr_tt = regs::gpdma_gpdma_c5llr_v1_tt;
-  using gpdma_c6llr_tt = regs::gpdma_gpdma_c6llr_v1_tt;
-  using gpdma_c7llr_tt = regs::gpdma_gpdma_c7llr_v1_tt;
-  using gpdma_c8llr_tt = regs::gpdma_gpdma_c8llr_v1_tt;
-  using gpdma_c9llr_tt = regs::gpdma_gpdma_c9llr_v1_tt;
-  using gpdma_c10llr_tt = regs::gpdma_gpdma_c10llr_v1_tt;
-  using gpdma_c11llr_tt = regs::gpdma_gpdma_c11llr_v1_tt;
-  using gpdma_c12llr_tt = regs::gpdma_gpdma_c12llr_v1_tt;
-  using gpdma_c13llr_tt = regs::gpdma_gpdma_c13llr_v1_tt;
-  using gpdma_c14llr_tt = regs::gpdma_gpdma_c14llr_v1_tt;
-  using gpdma_c15llr_tt = regs::gpdma_gpdma_c15llr_v1_tt;
-  using gpdma_c4lbar_tt = regs::gpdma_gpdma_c4lbar_v1_tt;
-  using gpdma_c5lbar_tt = regs::gpdma_gpdma_c5lbar_v1_tt;
-  using gpdma_c6lbar_tt = regs::gpdma_gpdma_c6lbar_v1_tt;
-  using gpdma_c7lbar_tt = regs::gpdma_gpdma_c7lbar_v1_tt;
-  using gpdma_c8lbar_tt = regs::gpdma_gpdma_c8lbar_v1_tt;
-  using gpdma_c9lbar_tt = regs::gpdma_gpdma_c9lbar_v1_tt;
-  using gpdma_c10lbar_tt = regs::gpdma_gpdma_c10lbar_v1_tt;
-  using gpdma_c11lbar_tt = regs::gpdma_gpdma_c11lbar_v1_tt;
-  using gpdma_c12lbar_tt = regs::gpdma_gpdma_c12lbar_v1_tt;
-  using gpdma_c13lbar_tt = regs::gpdma_gpdma_c13lbar_v1_tt;
-  using gpdma_c14lbar_tt = regs::gpdma_gpdma_c14lbar_v1_tt;
-  using gpdma_c15lbar_tt = regs::gpdma_gpdma_c15lbar_v1_tt;
-  using gpdma_c4fcr_tt = regs::gpdma_gpdma_c4fcr_v1_tt;
-  using gpdma_c5fcr_tt = regs::gpdma_gpdma_c5fcr_v1_tt;
-  using gpdma_c6fcr_tt = regs::gpdma_gpdma_c6fcr_v1_tt;
-  using gpdma_c7fcr_tt = regs::gpdma_gpdma_c7fcr_v1_tt;
-  using gpdma_c8fcr_tt = regs::gpdma_gpdma_c8fcr_v1_tt;
-  using gpdma_c9fcr_tt = regs::gpdma_gpdma_c9fcr_v1_tt;
-  using gpdma_c10fcr_tt = regs::gpdma_gpdma_c10fcr_v1_tt;
-  using gpdma_c11fcr_tt = regs::gpdma_gpdma_c11fcr_v1_tt;
-  using gpdma_c12fcr_tt = regs::gpdma_gpdma_c12fcr_v1_tt;
-  using gpdma_c13fcr_tt = regs::gpdma_gpdma_c13fcr_v1_tt;
-  using gpdma_c14fcr_tt = regs::gpdma_gpdma_c14fcr_v1_tt;
-  using gpdma_c15fcr_tt = regs::gpdma_gpdma_c15fcr_v1_tt;
-  using gpdma_c4sr_tt = regs::gpdma_gpdma_c4sr_v1_tt;
-  using gpdma_c5sr_tt = regs::gpdma_gpdma_c5sr_v1_tt;
-  using gpdma_c6sr_tt = regs::gpdma_gpdma_c6sr_v1_tt;
-  using gpdma_c7sr_tt = regs::gpdma_gpdma_c7sr_v1_tt;
-  using gpdma_c8sr_tt = regs::gpdma_gpdma_c8sr_v1_tt;
-  using gpdma_c9sr_tt = regs::gpdma_gpdma_c9sr_v1_tt;
-  using gpdma_c10sr_tt = regs::gpdma_gpdma_c10sr_v1_tt;
-  using gpdma_c11sr_tt = regs::gpdma_gpdma_c11sr_v1_tt;
-  using gpdma_c12sr_tt = regs::gpdma_gpdma_c12sr_v1_tt;
-  using gpdma_c13sr_tt = regs::gpdma_gpdma_c13sr_v1_tt;
-  using gpdma_c14sr_tt = regs::gpdma_gpdma_c14sr_v1_tt;
-  using gpdma_c15sr_tt = regs::gpdma_gpdma_c15sr_v1_tt;
-  using gpdma_c4cr_tt = regs::gpdma_gpdma_c4cr_v1_tt;
-  using gpdma_c5cr_tt = regs::gpdma_gpdma_c5cr_v1_tt;
-  using gpdma_c6cr_tt = regs::gpdma_gpdma_c6cr_v1_tt;
-  using gpdma_c7cr_tt = regs::gpdma_gpdma_c7cr_v1_tt;
-  using gpdma_c8cr_tt = regs::gpdma_gpdma_c8cr_v1_tt;
-  using gpdma_c9cr_tt = regs::gpdma_gpdma_c9cr_v1_tt;
-  using gpdma_c10cr_tt = regs::gpdma_gpdma_c10cr_v1_tt;
-  using gpdma_c11cr_tt = regs::gpdma_gpdma_c11cr_v1_tt;
-  using gpdma_c12cr_tt = regs::gpdma_gpdma_c12cr_v1_tt;
-  using gpdma_c13cr_tt = regs::gpdma_gpdma_c13cr_v1_tt;
-  using gpdma_c14cr_tt = regs::gpdma_gpdma_c14cr_v1_tt;
-  using gpdma_c15cr_tt = regs::gpdma_gpdma_c15cr_v1_tt;
-  using gpdma_c12tr3_tt = regs::gpdma_gpdma_c12tr3_v1_tt;
-  using gpdma_c13tr3_tt = regs::gpdma_gpdma_c13tr3_v1_tt;
-  using gpdma_c14tr3_tt = regs::gpdma_gpdma_c14tr3_v1_tt;
-  using gpdma_c15tr3_tt = regs::gpdma_gpdma_c15tr3_v1_tt;
-  using gpdma_c12br2_tt = regs::gpdma_gpdma_c12br2_v1_tt;
-  using gpdma_c13br2_tt = regs::gpdma_gpdma_c13br2_v1_tt;
-  using gpdma_c14br2_tt = regs::gpdma_gpdma_c14br2_v1_tt;
-  using gpdma_c15br2_tt = regs::gpdma_gpdma_c15br2_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_seccfgr_tt = regs::gpdma_gpdma_seccfgr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_privcfgr_tt = regs::gpdma_gpdma_privcfgr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using misr_tt = regs::gpdma_misr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using smisr_tt = regs::gpdma_smisr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c0lbar_tt = regs::gpdma_gpdma_c0lbar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c0fcr_tt = regs::gpdma_gpdma_c0fcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c0sr_tt = regs::gpdma_gpdma_c0sr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c0cr_tt = regs::gpdma_gpdma_c0cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c0tr1_tt = regs::gpdma_gpdma_c0tr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c0tr2_tt = regs::gpdma_gpdma_c0tr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c0br1_tt = regs::gpdma_gpdma_c0br1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c0sar_tt = regs::gpdma_gpdma_c0sar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c0dar_tt = regs::gpdma_gpdma_c0dar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c0llr_tt = regs::gpdma_gpdma_c0llr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c1lbar_tt = regs::gpdma_gpdma_c1lbar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c1fcr_tt = regs::gpdma_gpdma_c1fcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c1sr_tt = regs::gpdma_gpdma_c1sr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c1cr_tt = regs::gpdma_gpdma_c1cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c1tr1_tt = regs::gpdma_gpdma_c1tr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c1tr2_tt = regs::gpdma_gpdma_c1tr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c1br1_tt = regs::gpdma_gpdma_c1br1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c1sar_tt = regs::gpdma_gpdma_c1sar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c1dar_tt = regs::gpdma_gpdma_c1dar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c1llr_tt = regs::gpdma_gpdma_c1llr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c2lbar_tt = regs::gpdma_gpdma_c2lbar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c2fcr_tt = regs::gpdma_gpdma_c2fcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c2sr_tt = regs::gpdma_gpdma_c2sr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c2cr_tt = regs::gpdma_gpdma_c2cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c2tr1_tt = regs::gpdma_gpdma_c2tr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c2tr2_tt = regs::gpdma_gpdma_c2tr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c2br1_tt = regs::gpdma_gpdma_c2br1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c2sar_tt = regs::gpdma_gpdma_c2sar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c2dar_tt = regs::gpdma_gpdma_c2dar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c2llr_tt = regs::gpdma_gpdma_c2llr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c3lbar_tt = regs::gpdma_gpdma_c3lbar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c3fcr_tt = regs::gpdma_gpdma_c3fcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c3sr_tt = regs::gpdma_gpdma_c3sr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c3cr_tt = regs::gpdma_gpdma_c3cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c3tr1_tt = regs::gpdma_gpdma_c3tr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c3tr2_tt = regs::gpdma_gpdma_c3tr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c4tr2_tt = regs::gpdma_gpdma_c4tr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c5tr2_tt = regs::gpdma_gpdma_c5tr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c6tr2_tt = regs::gpdma_gpdma_c6tr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c7tr2_tt = regs::gpdma_gpdma_c7tr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c8tr2_tt = regs::gpdma_gpdma_c8tr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c9tr2_tt = regs::gpdma_gpdma_c9tr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c10tr2_tt = regs::gpdma_gpdma_c10tr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c11tr2_tt = regs::gpdma_gpdma_c11tr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c12tr2_tt = regs::gpdma_gpdma_c12tr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c13tr2_tt = regs::gpdma_gpdma_c13tr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c14tr2_tt = regs::gpdma_gpdma_c14tr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c15tr2_tt = regs::gpdma_gpdma_c15tr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c3br1_tt = regs::gpdma_gpdma_c3br1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c4br1_tt = regs::gpdma_gpdma_c4br1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c5br1_tt = regs::gpdma_gpdma_c5br1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c6br1_tt = regs::gpdma_gpdma_c6br1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c7br1_tt = regs::gpdma_gpdma_c7br1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c8br1_tt = regs::gpdma_gpdma_c8br1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c9br1_tt = regs::gpdma_gpdma_c9br1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c10br1_tt = regs::gpdma_gpdma_c10br1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c11br1_tt = regs::gpdma_gpdma_c11br1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c12br1_tt = regs::gpdma_gpdma_c12br1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c13br1_tt = regs::gpdma_gpdma_c13br1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c14br1_tt = regs::gpdma_gpdma_c14br1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c15br1_tt = regs::gpdma_gpdma_c15br1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c3sar_tt = regs::gpdma_gpdma_c3sar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c4sar_tt = regs::gpdma_gpdma_c4sar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c5sar_tt = regs::gpdma_gpdma_c5sar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c6sar_tt = regs::gpdma_gpdma_c6sar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c7sar_tt = regs::gpdma_gpdma_c7sar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c8sar_tt = regs::gpdma_gpdma_c8sar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c9sar_tt = regs::gpdma_gpdma_c9sar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c10sar_tt = regs::gpdma_gpdma_c10sar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c11sar_tt = regs::gpdma_gpdma_c11sar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c12sar_tt = regs::gpdma_gpdma_c12sar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c13sar_tt = regs::gpdma_gpdma_c13sar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c14sar_tt = regs::gpdma_gpdma_c14sar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c15sar_tt = regs::gpdma_gpdma_c15sar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c3dar_tt = regs::gpdma_gpdma_c3dar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c4dar_tt = regs::gpdma_gpdma_c4dar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c5dar_tt = regs::gpdma_gpdma_c5dar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c6dar_tt = regs::gpdma_gpdma_c6dar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c7dar_tt = regs::gpdma_gpdma_c7dar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c8dar_tt = regs::gpdma_gpdma_c8dar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c9dar_tt = regs::gpdma_gpdma_c9dar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c10dar_tt = regs::gpdma_gpdma_c10dar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c11dar_tt = regs::gpdma_gpdma_c11dar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c12dar_tt = regs::gpdma_gpdma_c12dar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c13dar_tt = regs::gpdma_gpdma_c13dar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c14dar_tt = regs::gpdma_gpdma_c14dar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c15dar_tt = regs::gpdma_gpdma_c15dar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c3llr_tt = regs::gpdma_gpdma_c3llr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c4llr_tt = regs::gpdma_gpdma_c4llr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c5llr_tt = regs::gpdma_gpdma_c5llr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c6llr_tt = regs::gpdma_gpdma_c6llr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c7llr_tt = regs::gpdma_gpdma_c7llr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c8llr_tt = regs::gpdma_gpdma_c8llr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c9llr_tt = regs::gpdma_gpdma_c9llr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c10llr_tt = regs::gpdma_gpdma_c10llr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c11llr_tt = regs::gpdma_gpdma_c11llr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c12llr_tt = regs::gpdma_gpdma_c12llr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c13llr_tt = regs::gpdma_gpdma_c13llr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c14llr_tt = regs::gpdma_gpdma_c14llr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c15llr_tt = regs::gpdma_gpdma_c15llr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c4lbar_tt = regs::gpdma_gpdma_c4lbar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c5lbar_tt = regs::gpdma_gpdma_c5lbar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c6lbar_tt = regs::gpdma_gpdma_c6lbar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c7lbar_tt = regs::gpdma_gpdma_c7lbar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c8lbar_tt = regs::gpdma_gpdma_c8lbar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c9lbar_tt = regs::gpdma_gpdma_c9lbar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c10lbar_tt = regs::gpdma_gpdma_c10lbar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c11lbar_tt = regs::gpdma_gpdma_c11lbar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c12lbar_tt = regs::gpdma_gpdma_c12lbar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c13lbar_tt = regs::gpdma_gpdma_c13lbar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c14lbar_tt = regs::gpdma_gpdma_c14lbar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c15lbar_tt = regs::gpdma_gpdma_c15lbar_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c4fcr_tt = regs::gpdma_gpdma_c4fcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c5fcr_tt = regs::gpdma_gpdma_c5fcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c6fcr_tt = regs::gpdma_gpdma_c6fcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c7fcr_tt = regs::gpdma_gpdma_c7fcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c8fcr_tt = regs::gpdma_gpdma_c8fcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c9fcr_tt = regs::gpdma_gpdma_c9fcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c10fcr_tt = regs::gpdma_gpdma_c10fcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c11fcr_tt = regs::gpdma_gpdma_c11fcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c12fcr_tt = regs::gpdma_gpdma_c12fcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c13fcr_tt = regs::gpdma_gpdma_c13fcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c14fcr_tt = regs::gpdma_gpdma_c14fcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c15fcr_tt = regs::gpdma_gpdma_c15fcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c4sr_tt = regs::gpdma_gpdma_c4sr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c5sr_tt = regs::gpdma_gpdma_c5sr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c6sr_tt = regs::gpdma_gpdma_c6sr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c7sr_tt = regs::gpdma_gpdma_c7sr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c8sr_tt = regs::gpdma_gpdma_c8sr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c9sr_tt = regs::gpdma_gpdma_c9sr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c10sr_tt = regs::gpdma_gpdma_c10sr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c11sr_tt = regs::gpdma_gpdma_c11sr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c12sr_tt = regs::gpdma_gpdma_c12sr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c13sr_tt = regs::gpdma_gpdma_c13sr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c14sr_tt = regs::gpdma_gpdma_c14sr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c15sr_tt = regs::gpdma_gpdma_c15sr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c4cr_tt = regs::gpdma_gpdma_c4cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c5cr_tt = regs::gpdma_gpdma_c5cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c6cr_tt = regs::gpdma_gpdma_c6cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c7cr_tt = regs::gpdma_gpdma_c7cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c8cr_tt = regs::gpdma_gpdma_c8cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c9cr_tt = regs::gpdma_gpdma_c9cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c10cr_tt = regs::gpdma_gpdma_c10cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c11cr_tt = regs::gpdma_gpdma_c11cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c12cr_tt = regs::gpdma_gpdma_c12cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c13cr_tt = regs::gpdma_gpdma_c13cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c14cr_tt = regs::gpdma_gpdma_c14cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c15cr_tt = regs::gpdma_gpdma_c15cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c12tr3_tt = regs::gpdma_gpdma_c12tr3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c13tr3_tt = regs::gpdma_gpdma_c13tr3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c14tr3_tt = regs::gpdma_gpdma_c14tr3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c15tr3_tt = regs::gpdma_gpdma_c15tr3_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c12br2_tt = regs::gpdma_gpdma_c12br2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c13br2_tt = regs::gpdma_gpdma_c13br2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c14br2_tt = regs::gpdma_gpdma_c14br2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using gpdma_c15br2_tt = regs::gpdma_gpdma_c15br2_v1_tt<name, baseaddress, offset>;
 
   template <stdx::ct_string name, std::uint32_t baseaddress>
   using gpdmax_t =

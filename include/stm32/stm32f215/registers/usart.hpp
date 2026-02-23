@@ -16,8 +16,8 @@ using usart_brr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"div_mantissa", std::uint16_t, 15, 4>,
                groov::field<"div_fraction", std::uint8_t, 3, 0>>;
 
@@ -30,20 +30,20 @@ using usart_cr1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"over8", bool, 15, 15>,
-               groov::field<"reserved0", bool, 14, 14, access::ro>,
+               groov::field<"reserved0", bool, 14, 14, common::access::ro>,
                groov::field<"ue", bool, 13, 13>,
                groov::field<"m", bool, 12, 12>,
                groov::field<"wake", bool, 11, 11>,
                groov::field<"pce", bool, 10, 10>,
                groov::field<"ps", bool, 9, 9>,
-               groov::field<"peie", bit_enable, 8, 8>,
-               groov::field<"txeie", bit_enable, 7, 7>,
-               groov::field<"tcie", bit_enable, 6, 6>,
-               groov::field<"rxneie", bit_enable, 5, 5>,
-               groov::field<"idleie", bit_enable, 4, 4>,
+               groov::field<"peie", common::bittypes::bit_enable, 8, 8>,
+               groov::field<"txeie", common::bittypes::bit_enable, 7, 7>,
+               groov::field<"tcie", common::bittypes::bit_enable, 6, 6>,
+               groov::field<"rxneie", common::bittypes::bit_enable, 5, 5>,
+               groov::field<"idleie", common::bittypes::bit_enable, 4, 4>,
                groov::field<"te", bool, 3, 3>,
                groov::field<"re", bool, 2, 2>,
                groov::field<"rwu", bool, 1, 1>,
@@ -58,18 +58,18 @@ using usart_cr2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved2", std::uint32_t, 31, 15, access::ro>,
-               groov::field<"linen", bit_enable, 14, 14>,
+             common::access::rw,
+               groov::field<"reserved2", std::uint32_t, 31, 15, common::access::ro>,
+               groov::field<"linen", common::bittypes::bit_enable, 14, 14>,
                groov::field<"stop", std::uint8_t, 13, 12>,
-               groov::field<"clken", bit_enable, 11, 11>,
+               groov::field<"clken", common::bittypes::bit_enable, 11, 11>,
                groov::field<"cpol", bool, 10, 10>,
                groov::field<"cpha", bool, 9, 9>,
                groov::field<"lbcl", bool, 8, 8>,
-               groov::field<"reserved1", bool, 7, 7, access::ro>,
-               groov::field<"lbdie", bit_enable, 6, 6>,
+               groov::field<"reserved1", bool, 7, 7, common::access::ro>,
+               groov::field<"lbdie", common::bittypes::bit_enable, 6, 6>,
                groov::field<"lbdl", bool, 5, 5>,
-               groov::field<"reserved0", bool, 4, 4, access::ro>,
+               groov::field<"reserved0", bool, 4, 4, common::access::ro>,
                groov::field<"add", std::uint8_t, 3, 0>>;
 
 // usart_cr2_v2: CR2
@@ -81,14 +81,14 @@ using usart_cr2_v2_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved2", std::uint32_t, 31, 15, access::ro>,
-               groov::field<"linen", bit_enable, 14, 14>,
+             common::access::rw,
+               groov::field<"reserved2", std::uint32_t, 31, 15, common::access::ro>,
+               groov::field<"linen", common::bittypes::bit_enable, 14, 14>,
                groov::field<"stop", std::uint8_t, 13, 12>,
-               groov::field<"reserved1", std::uint8_t, 11, 7, access::ro>,
-               groov::field<"lbdie", bit_enable, 6, 6>,
+               groov::field<"reserved1", std::uint8_t, 11, 7, common::access::ro>,
+               groov::field<"lbdie", common::bittypes::bit_enable, 6, 6>,
                groov::field<"lbdl", bool, 5, 5>,
-               groov::field<"reserved0", bool, 4, 4, access::ro>,
+               groov::field<"reserved0", bool, 4, 4, common::access::ro>,
                groov::field<"add", std::uint8_t, 3, 0>>;
 
 // usart_cr3_v1: CR3
@@ -100,20 +100,20 @@ using usart_cr3_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 12, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 12, common::access::ro>,
                groov::field<"onebit", bool, 11, 11>,
-               groov::field<"ctsie", bit_enable, 10, 10>,
+               groov::field<"ctsie", common::bittypes::bit_enable, 10, 10>,
                groov::field<"ctse", bool, 9, 9>,
                groov::field<"rtse", bool, 8, 8>,
                groov::field<"dmat", bool, 7, 7>,
                groov::field<"dmar", bool, 6, 6>,
-               groov::field<"scen", bit_enable, 5, 5>,
+               groov::field<"scen", common::bittypes::bit_enable, 5, 5>,
                groov::field<"nack", bool, 4, 4>,
                groov::field<"hdsel", bool, 3, 3>,
                groov::field<"irlp", bool, 2, 2>,
-               groov::field<"iren", bit_enable, 1, 1>,
-               groov::field<"eie", bit_enable, 0, 0>>;
+               groov::field<"iren", common::bittypes::bit_enable, 1, 1>,
+               groov::field<"eie", common::bittypes::bit_enable, 0, 0>>;
 
 // usart_cr3_v2: CR3
 // Used by: UART4
@@ -124,17 +124,17 @@ using usart_cr3_v2_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved2", std::uint32_t, 31, 12, access::ro>,
+             common::access::rw,
+               groov::field<"reserved2", std::uint32_t, 31, 12, common::access::ro>,
                groov::field<"onebit", bool, 11, 11>,
-               groov::field<"reserved1", std::uint8_t, 10, 8, access::ro>,
+               groov::field<"reserved1", std::uint8_t, 10, 8, common::access::ro>,
                groov::field<"dmat", bool, 7, 7>,
                groov::field<"dmar", bool, 6, 6>,
-               groov::field<"reserved0", std::uint8_t, 5, 4, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 5, 4, common::access::ro>,
                groov::field<"hdsel", bool, 3, 3>,
                groov::field<"irlp", bool, 2, 2>,
-               groov::field<"iren", bit_enable, 1, 1>,
-               groov::field<"eie", bit_enable, 0, 0>>;
+               groov::field<"iren", common::bittypes::bit_enable, 1, 1>,
+               groov::field<"eie", common::bittypes::bit_enable, 0, 0>>;
 
 // usart_cr3_v3: CR3
 // Used by: UART5
@@ -145,14 +145,14 @@ using usart_cr3_v3_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint32_t, 31, 12, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint32_t, 31, 12, common::access::ro>,
                groov::field<"onebit", bool, 11, 11>,
-               groov::field<"reserved0", std::uint8_t, 10, 4, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 10, 4, common::access::ro>,
                groov::field<"hdsel", bool, 3, 3>,
                groov::field<"irlp", bool, 2, 2>,
-               groov::field<"iren", bit_enable, 1, 1>,
-               groov::field<"eie", bit_enable, 0, 0>>;
+               groov::field<"iren", common::bittypes::bit_enable, 1, 1>,
+               groov::field<"eie", common::bittypes::bit_enable, 0, 0>>;
 
 // usart_dr_v1: DR
 // Used by: USART6, UART4, UART5, USART1, USART2, USART3
@@ -163,8 +163,8 @@ using usart_dr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 9, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 9, common::access::ro>,
                groov::field<"dr", std::uint16_t, 8, 0>>;
 
 // usart_gtpr_v1: GTPR
@@ -176,8 +176,8 @@ using usart_gtpr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint16_t, 31, 16, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint16_t, 31, 16, common::access::ro>,
                groov::field<"gt", std::uint8_t, 15, 8>,
                groov::field<"psc", std::uint8_t, 7, 0>>;
 
@@ -190,18 +190,18 @@ using usart_sr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 10, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 10, common::access::ro>,
                groov::field<"cts", bool, 9, 9>,
                groov::field<"lbd", bool, 8, 8>,
-               groov::field<"txe", bool, 7, 7, access::ro>,
+               groov::field<"txe", bool, 7, 7, common::access::ro>,
                groov::field<"tc", bool, 6, 6>,
                groov::field<"rxne", bool, 5, 5>,
-               groov::field<"idle", bool, 4, 4, access::ro>,
-               groov::field<"ore", bool, 3, 3, access::ro>,
-               groov::field<"nf", bool, 2, 2, access::ro>,
-               groov::field<"fe", bit_enable, 1, 1, access::ro>,
-               groov::field<"pe", bit_enable, 0, 0, access::ro>>;
+               groov::field<"idle", bool, 4, 4, common::access::ro>,
+               groov::field<"ore", bool, 3, 3, common::access::ro>,
+               groov::field<"nf", bool, 2, 2, common::access::ro>,
+               groov::field<"fe", common::bittypes::bit_enable, 1, 1, common::access::ro>,
+               groov::field<"pe", common::bittypes::bit_enable, 0, 0, common::access::ro>>;
 
 // usart_sr_v2: SR
 // Used by: UART4, UART5
@@ -212,16 +212,16 @@ using usart_sr_v2_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 9, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 9, common::access::ro>,
                groov::field<"lbd", bool, 8, 8>,
-               groov::field<"txe", bool, 7, 7, access::ro>,
+               groov::field<"txe", bool, 7, 7, common::access::ro>,
                groov::field<"tc", bool, 6, 6>,
                groov::field<"rxne", bool, 5, 5>,
-               groov::field<"idle", bool, 4, 4, access::ro>,
-               groov::field<"ore", bool, 3, 3, access::ro>,
-               groov::field<"nf", bool, 2, 2, access::ro>,
-               groov::field<"fe", bit_enable, 1, 1, access::ro>,
-               groov::field<"pe", bit_enable, 0, 0, access::ro>>;
+               groov::field<"idle", bool, 4, 4, common::access::ro>,
+               groov::field<"ore", bool, 3, 3, common::access::ro>,
+               groov::field<"nf", bool, 2, 2, common::access::ro>,
+               groov::field<"fe", common::bittypes::bit_enable, 1, 1, common::access::ro>,
+               groov::field<"pe", common::bittypes::bit_enable, 0, 0, common::access::ro>>;
 
 } // namespace stm32::regs

@@ -7,15 +7,42 @@
 namespace stm32::stm32c011 {
 
 namespace spi {
-  using spi_cr1_tt = regs::spi_spi_cr1_v1_tt;
-  using spi_cr2_tt = regs::spi_spi_cr2_v1_tt;
-  using spi_sr_tt = regs::spi_spi_sr_v1_tt;
-  using spi_dr_tt = regs::spi_spi_dr_v1_tt;
-  using spi_crcpr_tt = regs::spi_spi_crcpr_v1_tt;
-  using spi_rxcrcr_tt = regs::spi_spi_rxcrcr_v1_tt;
-  using spi_txcrcr_tt = regs::spi_spi_txcrcr_v1_tt;
-  using spi_i2scfgr_tt = regs::spi_spi_i2scfgr_v1_tt;
-  using spi_i2spr_tt = regs::spi_spi_i2spr_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using spi_cr1_tt = regs::spi_spi_cr1_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using spi_cr2_tt = regs::spi_spi_cr2_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using spi_sr_tt = regs::spi_spi_sr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using spi_dr_tt = regs::spi_spi_dr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using spi_crcpr_tt = regs::spi_spi_crcpr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using spi_rxcrcr_tt = regs::spi_spi_rxcrcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using spi_txcrcr_tt = regs::spi_spi_txcrcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using spi_i2scfgr_tt = regs::spi_spi_i2scfgr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using spi_i2spr_tt = regs::spi_spi_i2spr_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using spi_t =

@@ -16,23 +16,23 @@ using aes_cr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved2", std::uint16_t, 31, 19, access::ro>,
+             common::access::rw,
+               groov::field<"reserved2", std::uint16_t, 31, 19, common::access::ro>,
                groov::field<"keysize", bool, 18, 18>,
-               groov::field<"reserved1", bool, 17, 17, access::ro>,
+               groov::field<"reserved1", bool, 17, 17, common::access::ro>,
                groov::field<"chmod2", bool, 16, 16>,
-               groov::field<"reserved0", bool, 15, 15, access::ro>,
+               groov::field<"reserved0", bool, 15, 15, common::access::ro>,
                groov::field<"gcmph", std::uint8_t, 14, 13>,
-               groov::field<"dmaouten", bit_enable, 12, 12>,
-               groov::field<"dmainen", bit_enable, 11, 11>,
-               groov::field<"errie", bit_enable, 10, 10>,
-               groov::field<"ccfie", bit_enable, 9, 9>,
+               groov::field<"dmaouten", common::bittypes::bit_enable, 12, 12>,
+               groov::field<"dmainen", common::bittypes::bit_enable, 11, 11>,
+               groov::field<"errie", common::bittypes::bit_enable, 10, 10>,
+               groov::field<"ccfie", common::bittypes::bit_enable, 9, 9>,
                groov::field<"errc", bool, 8, 8>,
                groov::field<"ccfc", bool, 7, 7>,
                groov::field<"chmod10", std::uint8_t, 6, 5>,
                groov::field<"mode", std::uint8_t, 4, 3>,
                groov::field<"datatype", std::uint8_t, 2, 1>,
-               groov::field<"en", bit_enable, 0, 0>>;
+               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
 
 // aes_dinr_v1: DINR
 // Used by: AES
@@ -43,7 +43,7 @@ using aes_dinr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"aes_dinr", std::uint32_t, 31, 0>>;
 
 // aes_doutr_v1: DOUTR
@@ -55,7 +55,7 @@ using aes_doutr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"aes_doutr", std::uint32_t, 31, 0>>;
 
 // aes_ivr0_v1: IVR0
@@ -67,7 +67,7 @@ using aes_ivr0_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"aes_ivr0", std::uint32_t, 31, 0>>;
 
 // aes_ivr1_v1: IVR1
@@ -79,7 +79,7 @@ using aes_ivr1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"aes_ivr1", std::uint32_t, 31, 0>>;
 
 // aes_ivr2_v1: IVR2
@@ -91,7 +91,7 @@ using aes_ivr2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"aes_ivr2", std::uint32_t, 31, 0>>;
 
 // aes_ivr3_v1: IVR3
@@ -103,7 +103,7 @@ using aes_ivr3_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"aes_ivr3", std::uint32_t, 31, 0>>;
 
 // aes_keyr0_v1: KEYR0
@@ -115,7 +115,7 @@ using aes_keyr0_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"aes_keyr0", std::uint32_t, 31, 0>>;
 
 // aes_keyr1_v1: KEYR1
@@ -127,7 +127,7 @@ using aes_keyr1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"aes_keyr1", std::uint32_t, 31, 0>>;
 
 // aes_keyr2_v1: KEYR2
@@ -139,7 +139,7 @@ using aes_keyr2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"aes_keyr2", std::uint32_t, 31, 0>>;
 
 // aes_keyr3_v1: KEYR3
@@ -151,7 +151,7 @@ using aes_keyr3_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"aes_keyr3", std::uint32_t, 31, 0>>;
 
 // aes_keyr4_v1: KEYR4
@@ -163,7 +163,7 @@ using aes_keyr4_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"aes_keyr4", std::uint32_t, 31, 0>>;
 
 // aes_keyr5_v1: KEYR5
@@ -175,7 +175,7 @@ using aes_keyr5_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"aes_keyr5", std::uint32_t, 31, 0>>;
 
 // aes_keyr6_v1: KEYR6
@@ -187,7 +187,7 @@ using aes_keyr6_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"aes_keyr6", std::uint32_t, 31, 0>>;
 
 // aes_keyr7_v1: KEYR7
@@ -199,7 +199,7 @@ using aes_keyr7_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"aes_keyr7", std::uint32_t, 31, 0>>;
 
 // aes_sr_v1: SR
@@ -211,7 +211,7 @@ using aes_sr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint32_t, 31, 4>,
                groov::field<"busy", bool, 3, 3>,
                groov::field<"wrerr", bool, 2, 2>,
@@ -227,7 +227,7 @@ using aes_susp0r_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"aes_susp0r", std::uint32_t, 31, 0>>;
 
 // aes_susp1r_v1: SUSP1R
@@ -239,7 +239,7 @@ using aes_susp1r_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"aes_susp1r", std::uint32_t, 31, 0>>;
 
 // aes_susp2r_v1: SUSP2R
@@ -251,7 +251,7 @@ using aes_susp2r_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"aes_susp2r", std::uint32_t, 31, 0>>;
 
 // aes_susp3r_v1: SUSP3R
@@ -263,7 +263,7 @@ using aes_susp3r_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"aes_susp3r", std::uint32_t, 31, 0>>;
 
 // aes_susp4r_v1: SUSP4R
@@ -275,7 +275,7 @@ using aes_susp4r_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"aes_susp4r", std::uint32_t, 31, 0>>;
 
 // aes_susp5r_v1: SUSP5R
@@ -287,7 +287,7 @@ using aes_susp5r_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"aes_susp5r", std::uint32_t, 31, 0>>;
 
 // aes_susp6r_v1: SUSP6R
@@ -299,7 +299,7 @@ using aes_susp6r_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"aes_susp6r", std::uint32_t, 31, 0>>;
 
 // aes_susp7r_v1: SUSP7R
@@ -311,7 +311,7 @@ using aes_susp7r_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"aes_susp7r", std::uint32_t, 31, 0>>;
 
 } // namespace stm32::regs

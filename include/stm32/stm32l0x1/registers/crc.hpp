@@ -16,13 +16,13 @@ using crc_cr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint32_t, 31, 8, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint32_t, 31, 8, common::access::ro>,
                groov::field<"rev_out", bool, 7, 7>,
                groov::field<"rev_in", std::uint8_t, 6, 5>,
                groov::field<"polysize", std::uint8_t, 4, 3>,
-               groov::field<"reserved0", std::uint8_t, 2, 1, access::ro>,
-               groov::field<"reset", bool, 0, 0, access::wo>>;
+               groov::field<"reserved0", std::uint8_t, 2, 1, common::access::ro>,
+               groov::field<"reset", bool, 0, 0, common::access::wo>>;
 
 // crc_dr_v1: DR
 // Used by: CRC
@@ -33,7 +33,7 @@ using crc_dr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dr", std::uint32_t, 31, 0>>;
 
 // crc_idr_v1: IDR
@@ -45,8 +45,8 @@ using crc_idr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 8, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 8, common::access::ro>,
                groov::field<"idr", std::uint8_t, 7, 0>>;
 
 // crc_init_v1: INIT
@@ -58,7 +58,7 @@ using crc_init_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"crc_init", std::uint32_t, 31, 0>>;
 
 // crc_pol_v1: POL
@@ -70,7 +70,7 @@ using crc_pol_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"polynomialcoefficients", std::uint32_t, 31, 0>>;
 
 } // namespace stm32::regs

@@ -16,11 +16,11 @@ using mdma_c0bndtr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"brc", std::uint16_t, 31, 20>,
                groov::field<"brdum", bool, 19, 19>,
                groov::field<"brsum", bool, 18, 18>,
-               groov::field<"reserved0", bool, 17, 17, access::ro>,
+               groov::field<"reserved0", bool, 17, 17, common::access::ro>,
                groov::field<"bndt", std::uint32_t, 16, 0>>;
 
 // mdma_c0brur_v1: C0BRUR
@@ -32,7 +32,7 @@ using mdma_c0brur_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"duv", std::uint16_t, 31, 16>,
                groov::field<"suv", std::uint16_t, 15, 0>>;
 
@@ -45,21 +45,21 @@ using mdma_c0cr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved2", std::uint16_t, 31, 17, access::ro>,
-               groov::field<"swrq", bool, 16, 16, access::wo>,
-               groov::field<"reserved1", bool, 15, 15, access::ro>,
+             common::access::rw,
+               groov::field<"reserved2", std::uint16_t, 31, 17, common::access::ro>,
+               groov::field<"swrq", bool, 16, 16, common::access::wo>,
+               groov::field<"reserved1", bool, 15, 15, common::access::ro>,
                groov::field<"wex", bool, 14, 14>,
                groov::field<"hex", bool, 13, 13>,
                groov::field<"bex", bool, 12, 12>,
-               groov::field<"reserved0", std::uint8_t, 11, 8, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 11, 8, common::access::ro>,
                groov::field<"pl", std::uint8_t, 7, 6>,
-               groov::field<"tcie", bit_enable, 5, 5>,
-               groov::field<"btie", bit_enable, 4, 4>,
-               groov::field<"brtie", bit_enable, 3, 3>,
-               groov::field<"ctcie", bit_enable, 2, 2>,
-               groov::field<"teie", bit_enable, 1, 1>,
-               groov::field<"en", bit_enable, 0, 0>>;
+               groov::field<"tcie", common::bittypes::bit_enable, 5, 5>,
+               groov::field<"btie", common::bittypes::bit_enable, 4, 4>,
+               groov::field<"brtie", common::bittypes::bit_enable, 3, 3>,
+               groov::field<"ctcie", common::bittypes::bit_enable, 2, 2>,
+               groov::field<"teie", common::bittypes::bit_enable, 1, 1>,
+               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
 
 // mdma_c0dar_v1: C0DAR
 // Used by: MDMA
@@ -70,7 +70,7 @@ using mdma_c0dar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dar", std::uint32_t, 31, 0>>;
 
 // mdma_c0esr_v1: C0ESR
@@ -82,7 +82,7 @@ using mdma_c0esr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint32_t, 31, 12>,
                groov::field<"bse", bool, 11, 11>,
                groov::field<"ase", bool, 10, 10>,
@@ -100,8 +100,8 @@ using mdma_c0ifcr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::wo,
-               groov::field<"reserved0", std::uint32_t, 31, 5, access::ro>,
+             common::access::wo,
+               groov::field<"reserved0", std::uint32_t, 31, 5, common::access::ro>,
                groov::field<"cltcif0", bool, 4, 4>,
                groov::field<"cbtif0", bool, 3, 3>,
                groov::field<"cbrtif0", bool, 2, 2>,
@@ -117,7 +117,7 @@ using mdma_c0isr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved1", std::uint16_t, 31, 17>,
                groov::field<"crqa0", bool, 16, 16>,
                groov::field<"reserved0", std::uint16_t, 15, 5>,
@@ -136,7 +136,7 @@ using mdma_c0lar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"lar", std::uint32_t, 31, 0>>;
 
 // mdma_c0mar_v1: C0MAR
@@ -148,7 +148,7 @@ using mdma_c0mar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"mar", std::uint32_t, 31, 0>>;
 
 // mdma_c0mdr_v1: C0MDR
@@ -160,7 +160,7 @@ using mdma_c0mdr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"mdr", std::uint32_t, 31, 0>>;
 
 // mdma_c0sar_v1: C0SAR
@@ -172,7 +172,7 @@ using mdma_c0sar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"sar", std::uint32_t, 31, 0>>;
 
 // mdma_c0tbr_v1: C0TBR
@@ -184,11 +184,11 @@ using mdma_c0tbr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint16_t, 31, 18, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint16_t, 31, 18, common::access::ro>,
                groov::field<"dbus", bool, 17, 17>,
                groov::field<"sbus", bool, 16, 16>,
-               groov::field<"reserved0", std::uint16_t, 15, 6, access::ro>,
+               groov::field<"reserved0", std::uint16_t, 15, 6, common::access::ro>,
                groov::field<"tsel", std::uint8_t, 5, 0>>;
 
 // mdma_c0tcr_v1: C0TCR
@@ -200,7 +200,7 @@ using mdma_c0tcr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"bwm", bool, 31, 31>,
                groov::field<"swrm", bool, 30, 30>,
                groov::field<"trgm", std::uint8_t, 29, 28>,
@@ -225,11 +225,11 @@ using mdma_c10bndtr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"brc", std::uint16_t, 31, 20>,
                groov::field<"brdum", bool, 19, 19>,
                groov::field<"brsum", bool, 18, 18>,
-               groov::field<"reserved0", bool, 17, 17, access::ro>,
+               groov::field<"reserved0", bool, 17, 17, common::access::ro>,
                groov::field<"bndt", std::uint32_t, 16, 0>>;
 
 // mdma_c10brur_v1: C10BRUR
@@ -241,7 +241,7 @@ using mdma_c10brur_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"duv", std::uint16_t, 31, 16>,
                groov::field<"suv", std::uint16_t, 15, 0>>;
 
@@ -254,21 +254,21 @@ using mdma_c10cr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved2", std::uint16_t, 31, 17, access::ro>,
-               groov::field<"swrq", bool, 16, 16, access::wo>,
-               groov::field<"reserved1", bool, 15, 15, access::ro>,
+             common::access::rw,
+               groov::field<"reserved2", std::uint16_t, 31, 17, common::access::ro>,
+               groov::field<"swrq", bool, 16, 16, common::access::wo>,
+               groov::field<"reserved1", bool, 15, 15, common::access::ro>,
                groov::field<"wex", bool, 14, 14>,
                groov::field<"hex", bool, 13, 13>,
                groov::field<"bex", bool, 12, 12>,
-               groov::field<"reserved0", std::uint8_t, 11, 8, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 11, 8, common::access::ro>,
                groov::field<"pl", std::uint8_t, 7, 6>,
-               groov::field<"tcie", bit_enable, 5, 5>,
-               groov::field<"btie", bit_enable, 4, 4>,
-               groov::field<"brtie", bit_enable, 3, 3>,
-               groov::field<"ctcie", bit_enable, 2, 2>,
-               groov::field<"teie", bit_enable, 1, 1>,
-               groov::field<"en", bit_enable, 0, 0>>;
+               groov::field<"tcie", common::bittypes::bit_enable, 5, 5>,
+               groov::field<"btie", common::bittypes::bit_enable, 4, 4>,
+               groov::field<"brtie", common::bittypes::bit_enable, 3, 3>,
+               groov::field<"ctcie", common::bittypes::bit_enable, 2, 2>,
+               groov::field<"teie", common::bittypes::bit_enable, 1, 1>,
+               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
 
 // mdma_c10dar_v1: C10DAR
 // Used by: MDMA
@@ -279,7 +279,7 @@ using mdma_c10dar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dar", std::uint32_t, 31, 0>>;
 
 // mdma_c10esr_v1: C10ESR
@@ -291,7 +291,7 @@ using mdma_c10esr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint32_t, 31, 12>,
                groov::field<"bse", bool, 11, 11>,
                groov::field<"ase", bool, 10, 10>,
@@ -309,8 +309,8 @@ using mdma_c10ifcr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::wo,
-               groov::field<"reserved0", std::uint32_t, 31, 5, access::ro>,
+             common::access::wo,
+               groov::field<"reserved0", std::uint32_t, 31, 5, common::access::ro>,
                groov::field<"cltcif10", bool, 4, 4>,
                groov::field<"cbtif10", bool, 3, 3>,
                groov::field<"cbrtif10", bool, 2, 2>,
@@ -326,7 +326,7 @@ using mdma_c10isr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved1", std::uint16_t, 31, 17>,
                groov::field<"crqa10", bool, 16, 16>,
                groov::field<"reserved0", std::uint16_t, 15, 5>,
@@ -345,7 +345,7 @@ using mdma_c10lar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"lar", std::uint32_t, 31, 0>>;
 
 // mdma_c10mar_v1: C10MAR
@@ -357,7 +357,7 @@ using mdma_c10mar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"mar", std::uint32_t, 31, 0>>;
 
 // mdma_c10mdr_v1: C10MDR
@@ -369,7 +369,7 @@ using mdma_c10mdr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"mdr", std::uint32_t, 31, 0>>;
 
 // mdma_c10sar_v1: C10SAR
@@ -381,7 +381,7 @@ using mdma_c10sar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"sar", std::uint32_t, 31, 0>>;
 
 // mdma_c10tbr_v1: C10TBR
@@ -393,11 +393,11 @@ using mdma_c10tbr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint16_t, 31, 18, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint16_t, 31, 18, common::access::ro>,
                groov::field<"dbus", bool, 17, 17>,
                groov::field<"sbus", bool, 16, 16>,
-               groov::field<"reserved0", std::uint16_t, 15, 6, access::ro>,
+               groov::field<"reserved0", std::uint16_t, 15, 6, common::access::ro>,
                groov::field<"tsel", std::uint8_t, 5, 0>>;
 
 // mdma_c10tcr_v1: C10TCR
@@ -409,7 +409,7 @@ using mdma_c10tcr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"bwm", bool, 31, 31>,
                groov::field<"swrm", bool, 30, 30>,
                groov::field<"trgm", std::uint8_t, 29, 28>,
@@ -434,11 +434,11 @@ using mdma_c11bndtr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"brc", std::uint16_t, 31, 20>,
                groov::field<"brdum", bool, 19, 19>,
                groov::field<"brsum", bool, 18, 18>,
-               groov::field<"reserved0", bool, 17, 17, access::ro>,
+               groov::field<"reserved0", bool, 17, 17, common::access::ro>,
                groov::field<"bndt", std::uint32_t, 16, 0>>;
 
 // mdma_c11brur_v1: C11BRUR
@@ -450,7 +450,7 @@ using mdma_c11brur_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"duv", std::uint16_t, 31, 16>,
                groov::field<"suv", std::uint16_t, 15, 0>>;
 
@@ -463,21 +463,21 @@ using mdma_c11cr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved2", std::uint16_t, 31, 17, access::ro>,
-               groov::field<"swrq", bool, 16, 16, access::wo>,
-               groov::field<"reserved1", bool, 15, 15, access::ro>,
+             common::access::rw,
+               groov::field<"reserved2", std::uint16_t, 31, 17, common::access::ro>,
+               groov::field<"swrq", bool, 16, 16, common::access::wo>,
+               groov::field<"reserved1", bool, 15, 15, common::access::ro>,
                groov::field<"wex", bool, 14, 14>,
                groov::field<"hex", bool, 13, 13>,
                groov::field<"bex", bool, 12, 12>,
-               groov::field<"reserved0", std::uint8_t, 11, 8, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 11, 8, common::access::ro>,
                groov::field<"pl", std::uint8_t, 7, 6>,
-               groov::field<"tcie", bit_enable, 5, 5>,
-               groov::field<"btie", bit_enable, 4, 4>,
-               groov::field<"brtie", bit_enable, 3, 3>,
-               groov::field<"ctcie", bit_enable, 2, 2>,
-               groov::field<"teie", bit_enable, 1, 1>,
-               groov::field<"en", bit_enable, 0, 0>>;
+               groov::field<"tcie", common::bittypes::bit_enable, 5, 5>,
+               groov::field<"btie", common::bittypes::bit_enable, 4, 4>,
+               groov::field<"brtie", common::bittypes::bit_enable, 3, 3>,
+               groov::field<"ctcie", common::bittypes::bit_enable, 2, 2>,
+               groov::field<"teie", common::bittypes::bit_enable, 1, 1>,
+               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
 
 // mdma_c11dar_v1: C11DAR
 // Used by: MDMA
@@ -488,7 +488,7 @@ using mdma_c11dar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dar", std::uint32_t, 31, 0>>;
 
 // mdma_c11esr_v1: C11ESR
@@ -500,7 +500,7 @@ using mdma_c11esr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint32_t, 31, 12>,
                groov::field<"bse", bool, 11, 11>,
                groov::field<"ase", bool, 10, 10>,
@@ -518,8 +518,8 @@ using mdma_c11ifcr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::wo,
-               groov::field<"reserved0", std::uint32_t, 31, 5, access::ro>,
+             common::access::wo,
+               groov::field<"reserved0", std::uint32_t, 31, 5, common::access::ro>,
                groov::field<"cltcif11", bool, 4, 4>,
                groov::field<"cbtif11", bool, 3, 3>,
                groov::field<"cbrtif11", bool, 2, 2>,
@@ -535,7 +535,7 @@ using mdma_c11isr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved1", std::uint16_t, 31, 17>,
                groov::field<"crqa11", bool, 16, 16>,
                groov::field<"reserved0", std::uint16_t, 15, 5>,
@@ -554,7 +554,7 @@ using mdma_c11lar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"lar", std::uint32_t, 31, 0>>;
 
 // mdma_c11mar_v1: C11MAR
@@ -566,7 +566,7 @@ using mdma_c11mar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"mar", std::uint32_t, 31, 0>>;
 
 // mdma_c11mdr_v1: C11MDR
@@ -578,7 +578,7 @@ using mdma_c11mdr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"mdr", std::uint32_t, 31, 0>>;
 
 // mdma_c11sar_v1: C11SAR
@@ -590,7 +590,7 @@ using mdma_c11sar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"sar", std::uint32_t, 31, 0>>;
 
 // mdma_c11tbr_v1: C11TBR
@@ -602,11 +602,11 @@ using mdma_c11tbr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint16_t, 31, 18, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint16_t, 31, 18, common::access::ro>,
                groov::field<"dbus", bool, 17, 17>,
                groov::field<"sbus", bool, 16, 16>,
-               groov::field<"reserved0", std::uint16_t, 15, 6, access::ro>,
+               groov::field<"reserved0", std::uint16_t, 15, 6, common::access::ro>,
                groov::field<"tsel", std::uint8_t, 5, 0>>;
 
 // mdma_c11tcr_v1: C11TCR
@@ -618,7 +618,7 @@ using mdma_c11tcr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"bwm", bool, 31, 31>,
                groov::field<"swrm", bool, 30, 30>,
                groov::field<"trgm", std::uint8_t, 29, 28>,
@@ -643,11 +643,11 @@ using mdma_c12bndtr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"brc", std::uint16_t, 31, 20>,
                groov::field<"brdum", bool, 19, 19>,
                groov::field<"brsum", bool, 18, 18>,
-               groov::field<"reserved0", bool, 17, 17, access::ro>,
+               groov::field<"reserved0", bool, 17, 17, common::access::ro>,
                groov::field<"bndt", std::uint32_t, 16, 0>>;
 
 // mdma_c12brur_v1: C12BRUR
@@ -659,7 +659,7 @@ using mdma_c12brur_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"duv", std::uint16_t, 31, 16>,
                groov::field<"suv", std::uint16_t, 15, 0>>;
 
@@ -672,21 +672,21 @@ using mdma_c12cr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved2", std::uint16_t, 31, 17, access::ro>,
-               groov::field<"swrq", bool, 16, 16, access::wo>,
-               groov::field<"reserved1", bool, 15, 15, access::ro>,
+             common::access::rw,
+               groov::field<"reserved2", std::uint16_t, 31, 17, common::access::ro>,
+               groov::field<"swrq", bool, 16, 16, common::access::wo>,
+               groov::field<"reserved1", bool, 15, 15, common::access::ro>,
                groov::field<"wex", bool, 14, 14>,
                groov::field<"hex", bool, 13, 13>,
                groov::field<"bex", bool, 12, 12>,
-               groov::field<"reserved0", std::uint8_t, 11, 8, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 11, 8, common::access::ro>,
                groov::field<"pl", std::uint8_t, 7, 6>,
-               groov::field<"tcie", bit_enable, 5, 5>,
-               groov::field<"btie", bit_enable, 4, 4>,
-               groov::field<"brtie", bit_enable, 3, 3>,
-               groov::field<"ctcie", bit_enable, 2, 2>,
-               groov::field<"teie", bit_enable, 1, 1>,
-               groov::field<"en", bit_enable, 0, 0>>;
+               groov::field<"tcie", common::bittypes::bit_enable, 5, 5>,
+               groov::field<"btie", common::bittypes::bit_enable, 4, 4>,
+               groov::field<"brtie", common::bittypes::bit_enable, 3, 3>,
+               groov::field<"ctcie", common::bittypes::bit_enable, 2, 2>,
+               groov::field<"teie", common::bittypes::bit_enable, 1, 1>,
+               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
 
 // mdma_c12dar_v1: C12DAR
 // Used by: MDMA
@@ -697,7 +697,7 @@ using mdma_c12dar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dar", std::uint32_t, 31, 0>>;
 
 // mdma_c12esr_v1: C12ESR
@@ -709,7 +709,7 @@ using mdma_c12esr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint32_t, 31, 12>,
                groov::field<"bse", bool, 11, 11>,
                groov::field<"ase", bool, 10, 10>,
@@ -727,8 +727,8 @@ using mdma_c12ifcr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::wo,
-               groov::field<"reserved0", std::uint32_t, 31, 5, access::ro>,
+             common::access::wo,
+               groov::field<"reserved0", std::uint32_t, 31, 5, common::access::ro>,
                groov::field<"cltcif12", bool, 4, 4>,
                groov::field<"cbtif12", bool, 3, 3>,
                groov::field<"cbrtif12", bool, 2, 2>,
@@ -744,7 +744,7 @@ using mdma_c12isr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved1", std::uint16_t, 31, 17>,
                groov::field<"crqa12", bool, 16, 16>,
                groov::field<"reserved0", std::uint16_t, 15, 5>,
@@ -763,7 +763,7 @@ using mdma_c12lar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"lar", std::uint32_t, 31, 0>>;
 
 // mdma_c12mar_v1: C12MAR
@@ -775,7 +775,7 @@ using mdma_c12mar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"mar", std::uint32_t, 31, 0>>;
 
 // mdma_c12mdr_v1: C12MDR
@@ -787,7 +787,7 @@ using mdma_c12mdr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"mdr", std::uint32_t, 31, 0>>;
 
 // mdma_c12sar_v1: C12SAR
@@ -799,7 +799,7 @@ using mdma_c12sar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"sar", std::uint32_t, 31, 0>>;
 
 // mdma_c12tbr_v1: C12TBR
@@ -811,11 +811,11 @@ using mdma_c12tbr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint16_t, 31, 18, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint16_t, 31, 18, common::access::ro>,
                groov::field<"dbus", bool, 17, 17>,
                groov::field<"sbus", bool, 16, 16>,
-               groov::field<"reserved0", std::uint16_t, 15, 6, access::ro>,
+               groov::field<"reserved0", std::uint16_t, 15, 6, common::access::ro>,
                groov::field<"tsel", std::uint8_t, 5, 0>>;
 
 // mdma_c12tcr_v1: C12TCR
@@ -827,7 +827,7 @@ using mdma_c12tcr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"bwm", bool, 31, 31>,
                groov::field<"swrm", bool, 30, 30>,
                groov::field<"trgm", std::uint8_t, 29, 28>,
@@ -852,11 +852,11 @@ using mdma_c13bndtr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"brc", std::uint16_t, 31, 20>,
                groov::field<"brdum", bool, 19, 19>,
                groov::field<"brsum", bool, 18, 18>,
-               groov::field<"reserved0", bool, 17, 17, access::ro>,
+               groov::field<"reserved0", bool, 17, 17, common::access::ro>,
                groov::field<"bndt", std::uint32_t, 16, 0>>;
 
 // mdma_c13brur_v1: C13BRUR
@@ -868,7 +868,7 @@ using mdma_c13brur_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"duv", std::uint16_t, 31, 16>,
                groov::field<"suv", std::uint16_t, 15, 0>>;
 
@@ -881,21 +881,21 @@ using mdma_c13cr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved2", std::uint16_t, 31, 17, access::ro>,
-               groov::field<"swrq", bool, 16, 16, access::wo>,
-               groov::field<"reserved1", bool, 15, 15, access::ro>,
+             common::access::rw,
+               groov::field<"reserved2", std::uint16_t, 31, 17, common::access::ro>,
+               groov::field<"swrq", bool, 16, 16, common::access::wo>,
+               groov::field<"reserved1", bool, 15, 15, common::access::ro>,
                groov::field<"wex", bool, 14, 14>,
                groov::field<"hex", bool, 13, 13>,
                groov::field<"bex", bool, 12, 12>,
-               groov::field<"reserved0", std::uint8_t, 11, 8, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 11, 8, common::access::ro>,
                groov::field<"pl", std::uint8_t, 7, 6>,
-               groov::field<"tcie", bit_enable, 5, 5>,
-               groov::field<"btie", bit_enable, 4, 4>,
-               groov::field<"brtie", bit_enable, 3, 3>,
-               groov::field<"ctcie", bit_enable, 2, 2>,
-               groov::field<"teie", bit_enable, 1, 1>,
-               groov::field<"en", bit_enable, 0, 0>>;
+               groov::field<"tcie", common::bittypes::bit_enable, 5, 5>,
+               groov::field<"btie", common::bittypes::bit_enable, 4, 4>,
+               groov::field<"brtie", common::bittypes::bit_enable, 3, 3>,
+               groov::field<"ctcie", common::bittypes::bit_enable, 2, 2>,
+               groov::field<"teie", common::bittypes::bit_enable, 1, 1>,
+               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
 
 // mdma_c13dar_v1: C13DAR
 // Used by: MDMA
@@ -906,7 +906,7 @@ using mdma_c13dar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dar", std::uint32_t, 31, 0>>;
 
 // mdma_c13esr_v1: C13ESR
@@ -918,7 +918,7 @@ using mdma_c13esr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint32_t, 31, 12>,
                groov::field<"bse", bool, 11, 11>,
                groov::field<"ase", bool, 10, 10>,
@@ -936,8 +936,8 @@ using mdma_c13ifcr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::wo,
-               groov::field<"reserved0", std::uint32_t, 31, 5, access::ro>,
+             common::access::wo,
+               groov::field<"reserved0", std::uint32_t, 31, 5, common::access::ro>,
                groov::field<"cltcif13", bool, 4, 4>,
                groov::field<"cbtif13", bool, 3, 3>,
                groov::field<"cbrtif13", bool, 2, 2>,
@@ -953,7 +953,7 @@ using mdma_c13isr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved1", std::uint16_t, 31, 17>,
                groov::field<"crqa13", bool, 16, 16>,
                groov::field<"reserved0", std::uint16_t, 15, 5>,
@@ -972,7 +972,7 @@ using mdma_c13lar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"lar", std::uint32_t, 31, 0>>;
 
 // mdma_c13mar_v1: C13MAR
@@ -984,7 +984,7 @@ using mdma_c13mar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"mar", std::uint32_t, 31, 0>>;
 
 // mdma_c13mdr_v1: C13MDR
@@ -996,7 +996,7 @@ using mdma_c13mdr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"mdr", std::uint32_t, 31, 0>>;
 
 // mdma_c13sar_v1: C13SAR
@@ -1008,7 +1008,7 @@ using mdma_c13sar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"sar", std::uint32_t, 31, 0>>;
 
 // mdma_c13tbr_v1: C13TBR
@@ -1020,11 +1020,11 @@ using mdma_c13tbr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint16_t, 31, 18, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint16_t, 31, 18, common::access::ro>,
                groov::field<"dbus", bool, 17, 17>,
                groov::field<"sbus", bool, 16, 16>,
-               groov::field<"reserved0", std::uint16_t, 15, 6, access::ro>,
+               groov::field<"reserved0", std::uint16_t, 15, 6, common::access::ro>,
                groov::field<"tsel", std::uint8_t, 5, 0>>;
 
 // mdma_c13tcr_v1: C13TCR
@@ -1036,7 +1036,7 @@ using mdma_c13tcr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"bwm", bool, 31, 31>,
                groov::field<"swrm", bool, 30, 30>,
                groov::field<"trgm", std::uint8_t, 29, 28>,
@@ -1061,11 +1061,11 @@ using mdma_c14bndtr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"brc", std::uint16_t, 31, 20>,
                groov::field<"brdum", bool, 19, 19>,
                groov::field<"brsum", bool, 18, 18>,
-               groov::field<"reserved0", bool, 17, 17, access::ro>,
+               groov::field<"reserved0", bool, 17, 17, common::access::ro>,
                groov::field<"bndt", std::uint32_t, 16, 0>>;
 
 // mdma_c14brur_v1: C14BRUR
@@ -1077,7 +1077,7 @@ using mdma_c14brur_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"duv", std::uint16_t, 31, 16>,
                groov::field<"suv", std::uint16_t, 15, 0>>;
 
@@ -1090,21 +1090,21 @@ using mdma_c14cr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved2", std::uint16_t, 31, 17, access::ro>,
-               groov::field<"swrq", bool, 16, 16, access::wo>,
-               groov::field<"reserved1", bool, 15, 15, access::ro>,
+             common::access::rw,
+               groov::field<"reserved2", std::uint16_t, 31, 17, common::access::ro>,
+               groov::field<"swrq", bool, 16, 16, common::access::wo>,
+               groov::field<"reserved1", bool, 15, 15, common::access::ro>,
                groov::field<"wex", bool, 14, 14>,
                groov::field<"hex", bool, 13, 13>,
                groov::field<"bex", bool, 12, 12>,
-               groov::field<"reserved0", std::uint8_t, 11, 8, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 11, 8, common::access::ro>,
                groov::field<"pl", std::uint8_t, 7, 6>,
-               groov::field<"tcie", bit_enable, 5, 5>,
-               groov::field<"btie", bit_enable, 4, 4>,
-               groov::field<"brtie", bit_enable, 3, 3>,
-               groov::field<"ctcie", bit_enable, 2, 2>,
-               groov::field<"teie", bit_enable, 1, 1>,
-               groov::field<"en", bit_enable, 0, 0>>;
+               groov::field<"tcie", common::bittypes::bit_enable, 5, 5>,
+               groov::field<"btie", common::bittypes::bit_enable, 4, 4>,
+               groov::field<"brtie", common::bittypes::bit_enable, 3, 3>,
+               groov::field<"ctcie", common::bittypes::bit_enable, 2, 2>,
+               groov::field<"teie", common::bittypes::bit_enable, 1, 1>,
+               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
 
 // mdma_c14dar_v1: C14DAR
 // Used by: MDMA
@@ -1115,7 +1115,7 @@ using mdma_c14dar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dar", std::uint32_t, 31, 0>>;
 
 // mdma_c14esr_v1: C14ESR
@@ -1127,7 +1127,7 @@ using mdma_c14esr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint32_t, 31, 12>,
                groov::field<"bse", bool, 11, 11>,
                groov::field<"ase", bool, 10, 10>,
@@ -1145,8 +1145,8 @@ using mdma_c14ifcr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::wo,
-               groov::field<"reserved0", std::uint32_t, 31, 5, access::ro>,
+             common::access::wo,
+               groov::field<"reserved0", std::uint32_t, 31, 5, common::access::ro>,
                groov::field<"cltcif14", bool, 4, 4>,
                groov::field<"cbtif14", bool, 3, 3>,
                groov::field<"cbrtif14", bool, 2, 2>,
@@ -1162,7 +1162,7 @@ using mdma_c14isr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved1", std::uint16_t, 31, 17>,
                groov::field<"crqa14", bool, 16, 16>,
                groov::field<"reserved0", std::uint16_t, 15, 5>,
@@ -1181,7 +1181,7 @@ using mdma_c14lar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"lar", std::uint32_t, 31, 0>>;
 
 // mdma_c14mar_v1: C14MAR
@@ -1193,7 +1193,7 @@ using mdma_c14mar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"mar", std::uint32_t, 31, 0>>;
 
 // mdma_c14mdr_v1: C14MDR
@@ -1205,7 +1205,7 @@ using mdma_c14mdr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"mdr", std::uint32_t, 31, 0>>;
 
 // mdma_c14sar_v1: C14SAR
@@ -1217,7 +1217,7 @@ using mdma_c14sar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"sar", std::uint32_t, 31, 0>>;
 
 // mdma_c14tbr_v1: C14TBR
@@ -1229,11 +1229,11 @@ using mdma_c14tbr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint16_t, 31, 18, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint16_t, 31, 18, common::access::ro>,
                groov::field<"dbus", bool, 17, 17>,
                groov::field<"sbus", bool, 16, 16>,
-               groov::field<"reserved0", std::uint16_t, 15, 6, access::ro>,
+               groov::field<"reserved0", std::uint16_t, 15, 6, common::access::ro>,
                groov::field<"tsel", std::uint8_t, 5, 0>>;
 
 // mdma_c14tcr_v1: C14TCR
@@ -1245,7 +1245,7 @@ using mdma_c14tcr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"bwm", bool, 31, 31>,
                groov::field<"swrm", bool, 30, 30>,
                groov::field<"trgm", std::uint8_t, 29, 28>,
@@ -1270,11 +1270,11 @@ using mdma_c15bndtr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"brc", std::uint16_t, 31, 20>,
                groov::field<"brdum", bool, 19, 19>,
                groov::field<"brsum", bool, 18, 18>,
-               groov::field<"reserved0", bool, 17, 17, access::ro>,
+               groov::field<"reserved0", bool, 17, 17, common::access::ro>,
                groov::field<"bndt", std::uint32_t, 16, 0>>;
 
 // mdma_c15brur_v1: C15BRUR
@@ -1286,7 +1286,7 @@ using mdma_c15brur_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"duv", std::uint16_t, 31, 16>,
                groov::field<"suv", std::uint16_t, 15, 0>>;
 
@@ -1299,21 +1299,21 @@ using mdma_c15cr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved2", std::uint16_t, 31, 17, access::ro>,
-               groov::field<"swrq", bool, 16, 16, access::wo>,
-               groov::field<"reserved1", bool, 15, 15, access::ro>,
+             common::access::rw,
+               groov::field<"reserved2", std::uint16_t, 31, 17, common::access::ro>,
+               groov::field<"swrq", bool, 16, 16, common::access::wo>,
+               groov::field<"reserved1", bool, 15, 15, common::access::ro>,
                groov::field<"wex", bool, 14, 14>,
                groov::field<"hex", bool, 13, 13>,
                groov::field<"bex", bool, 12, 12>,
-               groov::field<"reserved0", std::uint8_t, 11, 8, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 11, 8, common::access::ro>,
                groov::field<"pl", std::uint8_t, 7, 6>,
-               groov::field<"tcie", bit_enable, 5, 5>,
-               groov::field<"btie", bit_enable, 4, 4>,
-               groov::field<"brtie", bit_enable, 3, 3>,
-               groov::field<"ctcie", bit_enable, 2, 2>,
-               groov::field<"teie", bit_enable, 1, 1>,
-               groov::field<"en", bit_enable, 0, 0>>;
+               groov::field<"tcie", common::bittypes::bit_enable, 5, 5>,
+               groov::field<"btie", common::bittypes::bit_enable, 4, 4>,
+               groov::field<"brtie", common::bittypes::bit_enable, 3, 3>,
+               groov::field<"ctcie", common::bittypes::bit_enable, 2, 2>,
+               groov::field<"teie", common::bittypes::bit_enable, 1, 1>,
+               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
 
 // mdma_c15dar_v1: C15DAR
 // Used by: MDMA
@@ -1324,7 +1324,7 @@ using mdma_c15dar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dar", std::uint32_t, 31, 0>>;
 
 // mdma_c15esr_v1: C15ESR
@@ -1336,7 +1336,7 @@ using mdma_c15esr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint32_t, 31, 12>,
                groov::field<"bse", bool, 11, 11>,
                groov::field<"ase", bool, 10, 10>,
@@ -1354,8 +1354,8 @@ using mdma_c15ifcr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::wo,
-               groov::field<"reserved0", std::uint32_t, 31, 5, access::ro>,
+             common::access::wo,
+               groov::field<"reserved0", std::uint32_t, 31, 5, common::access::ro>,
                groov::field<"cltcif15", bool, 4, 4>,
                groov::field<"cbtif15", bool, 3, 3>,
                groov::field<"cbrtif15", bool, 2, 2>,
@@ -1371,7 +1371,7 @@ using mdma_c15isr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved1", std::uint16_t, 31, 17>,
                groov::field<"crqa15", bool, 16, 16>,
                groov::field<"reserved0", std::uint16_t, 15, 5>,
@@ -1390,7 +1390,7 @@ using mdma_c15lar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"lar", std::uint32_t, 31, 0>>;
 
 // mdma_c15mar_v1: C15MAR
@@ -1402,7 +1402,7 @@ using mdma_c15mar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"mar", std::uint32_t, 31, 0>>;
 
 // mdma_c15mdr_v1: C15MDR
@@ -1414,7 +1414,7 @@ using mdma_c15mdr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"mdr", std::uint32_t, 31, 0>>;
 
 // mdma_c15sar_v1: C15SAR
@@ -1426,7 +1426,7 @@ using mdma_c15sar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"sar", std::uint32_t, 31, 0>>;
 
 // mdma_c15tbr_v1: C15TBR
@@ -1438,11 +1438,11 @@ using mdma_c15tbr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint16_t, 31, 18, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint16_t, 31, 18, common::access::ro>,
                groov::field<"dbus", bool, 17, 17>,
                groov::field<"sbus", bool, 16, 16>,
-               groov::field<"reserved0", std::uint16_t, 15, 6, access::ro>,
+               groov::field<"reserved0", std::uint16_t, 15, 6, common::access::ro>,
                groov::field<"tsel", std::uint8_t, 5, 0>>;
 
 // mdma_c15tcr_v1: C15TCR
@@ -1454,7 +1454,7 @@ using mdma_c15tcr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"bwm", bool, 31, 31>,
                groov::field<"swrm", bool, 30, 30>,
                groov::field<"trgm", std::uint8_t, 29, 28>,
@@ -1479,11 +1479,11 @@ using mdma_c1bndtr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"brc", std::uint16_t, 31, 20>,
                groov::field<"brdum", bool, 19, 19>,
                groov::field<"brsum", bool, 18, 18>,
-               groov::field<"reserved0", bool, 17, 17, access::ro>,
+               groov::field<"reserved0", bool, 17, 17, common::access::ro>,
                groov::field<"bndt", std::uint32_t, 16, 0>>;
 
 // mdma_c1brur_v1: C1BRUR
@@ -1495,7 +1495,7 @@ using mdma_c1brur_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"duv", std::uint16_t, 31, 16>,
                groov::field<"suv", std::uint16_t, 15, 0>>;
 
@@ -1508,21 +1508,21 @@ using mdma_c1cr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved2", std::uint16_t, 31, 17, access::ro>,
-               groov::field<"swrq", bool, 16, 16, access::wo>,
-               groov::field<"reserved1", bool, 15, 15, access::ro>,
+             common::access::rw,
+               groov::field<"reserved2", std::uint16_t, 31, 17, common::access::ro>,
+               groov::field<"swrq", bool, 16, 16, common::access::wo>,
+               groov::field<"reserved1", bool, 15, 15, common::access::ro>,
                groov::field<"wex", bool, 14, 14>,
                groov::field<"hex", bool, 13, 13>,
                groov::field<"bex", bool, 12, 12>,
-               groov::field<"reserved0", std::uint8_t, 11, 8, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 11, 8, common::access::ro>,
                groov::field<"pl", std::uint8_t, 7, 6>,
-               groov::field<"tcie", bit_enable, 5, 5>,
-               groov::field<"btie", bit_enable, 4, 4>,
-               groov::field<"brtie", bit_enable, 3, 3>,
-               groov::field<"ctcie", bit_enable, 2, 2>,
-               groov::field<"teie", bit_enable, 1, 1>,
-               groov::field<"en", bit_enable, 0, 0>>;
+               groov::field<"tcie", common::bittypes::bit_enable, 5, 5>,
+               groov::field<"btie", common::bittypes::bit_enable, 4, 4>,
+               groov::field<"brtie", common::bittypes::bit_enable, 3, 3>,
+               groov::field<"ctcie", common::bittypes::bit_enable, 2, 2>,
+               groov::field<"teie", common::bittypes::bit_enable, 1, 1>,
+               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
 
 // mdma_c1dar_v1: C1DAR
 // Used by: MDMA
@@ -1533,7 +1533,7 @@ using mdma_c1dar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dar", std::uint32_t, 31, 0>>;
 
 // mdma_c1esr_v1: C1ESR
@@ -1545,7 +1545,7 @@ using mdma_c1esr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint32_t, 31, 12>,
                groov::field<"bse", bool, 11, 11>,
                groov::field<"ase", bool, 10, 10>,
@@ -1563,8 +1563,8 @@ using mdma_c1ifcr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::wo,
-               groov::field<"reserved0", std::uint32_t, 31, 5, access::ro>,
+             common::access::wo,
+               groov::field<"reserved0", std::uint32_t, 31, 5, common::access::ro>,
                groov::field<"cltcif1", bool, 4, 4>,
                groov::field<"cbtif1", bool, 3, 3>,
                groov::field<"cbrtif1", bool, 2, 2>,
@@ -1580,7 +1580,7 @@ using mdma_c1isr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved1", std::uint16_t, 31, 17>,
                groov::field<"crqa1", bool, 16, 16>,
                groov::field<"reserved0", std::uint16_t, 15, 5>,
@@ -1599,7 +1599,7 @@ using mdma_c1lar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"lar", std::uint32_t, 31, 0>>;
 
 // mdma_c1mar_v1: C1MAR
@@ -1611,7 +1611,7 @@ using mdma_c1mar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"mar", std::uint32_t, 31, 0>>;
 
 // mdma_c1mdr_v1: C1MDR
@@ -1623,7 +1623,7 @@ using mdma_c1mdr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"mdr", std::uint32_t, 31, 0>>;
 
 // mdma_c1sar_v1: C1SAR
@@ -1635,7 +1635,7 @@ using mdma_c1sar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"sar", std::uint32_t, 31, 0>>;
 
 // mdma_c1tbr_v1: C1TBR
@@ -1647,11 +1647,11 @@ using mdma_c1tbr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint16_t, 31, 18, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint16_t, 31, 18, common::access::ro>,
                groov::field<"dbus", bool, 17, 17>,
                groov::field<"sbus", bool, 16, 16>,
-               groov::field<"reserved0", std::uint16_t, 15, 6, access::ro>,
+               groov::field<"reserved0", std::uint16_t, 15, 6, common::access::ro>,
                groov::field<"tsel", std::uint8_t, 5, 0>>;
 
 // mdma_c1tcr_v1: C1TCR
@@ -1663,7 +1663,7 @@ using mdma_c1tcr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"bwm", bool, 31, 31>,
                groov::field<"swrm", bool, 30, 30>,
                groov::field<"trgm", std::uint8_t, 29, 28>,
@@ -1688,11 +1688,11 @@ using mdma_c2bndtr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"brc", std::uint16_t, 31, 20>,
                groov::field<"brdum", bool, 19, 19>,
                groov::field<"brsum", bool, 18, 18>,
-               groov::field<"reserved0", bool, 17, 17, access::ro>,
+               groov::field<"reserved0", bool, 17, 17, common::access::ro>,
                groov::field<"bndt", std::uint32_t, 16, 0>>;
 
 // mdma_c2brur_v1: C2BRUR
@@ -1704,7 +1704,7 @@ using mdma_c2brur_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"duv", std::uint16_t, 31, 16>,
                groov::field<"suv", std::uint16_t, 15, 0>>;
 
@@ -1717,21 +1717,21 @@ using mdma_c2cr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved2", std::uint16_t, 31, 17, access::ro>,
-               groov::field<"swrq", bool, 16, 16, access::wo>,
-               groov::field<"reserved1", bool, 15, 15, access::ro>,
+             common::access::rw,
+               groov::field<"reserved2", std::uint16_t, 31, 17, common::access::ro>,
+               groov::field<"swrq", bool, 16, 16, common::access::wo>,
+               groov::field<"reserved1", bool, 15, 15, common::access::ro>,
                groov::field<"wex", bool, 14, 14>,
                groov::field<"hex", bool, 13, 13>,
                groov::field<"bex", bool, 12, 12>,
-               groov::field<"reserved0", std::uint8_t, 11, 8, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 11, 8, common::access::ro>,
                groov::field<"pl", std::uint8_t, 7, 6>,
-               groov::field<"tcie", bit_enable, 5, 5>,
-               groov::field<"btie", bit_enable, 4, 4>,
-               groov::field<"brtie", bit_enable, 3, 3>,
-               groov::field<"ctcie", bit_enable, 2, 2>,
-               groov::field<"teie", bit_enable, 1, 1>,
-               groov::field<"en", bit_enable, 0, 0>>;
+               groov::field<"tcie", common::bittypes::bit_enable, 5, 5>,
+               groov::field<"btie", common::bittypes::bit_enable, 4, 4>,
+               groov::field<"brtie", common::bittypes::bit_enable, 3, 3>,
+               groov::field<"ctcie", common::bittypes::bit_enable, 2, 2>,
+               groov::field<"teie", common::bittypes::bit_enable, 1, 1>,
+               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
 
 // mdma_c2dar_v1: C2DAR
 // Used by: MDMA
@@ -1742,7 +1742,7 @@ using mdma_c2dar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dar", std::uint32_t, 31, 0>>;
 
 // mdma_c2esr_v1: C2ESR
@@ -1754,7 +1754,7 @@ using mdma_c2esr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint32_t, 31, 12>,
                groov::field<"bse", bool, 11, 11>,
                groov::field<"ase", bool, 10, 10>,
@@ -1772,8 +1772,8 @@ using mdma_c2ifcr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::wo,
-               groov::field<"reserved0", std::uint32_t, 31, 5, access::ro>,
+             common::access::wo,
+               groov::field<"reserved0", std::uint32_t, 31, 5, common::access::ro>,
                groov::field<"cltcif2", bool, 4, 4>,
                groov::field<"cbtif2", bool, 3, 3>,
                groov::field<"cbrtif2", bool, 2, 2>,
@@ -1789,7 +1789,7 @@ using mdma_c2isr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved1", std::uint16_t, 31, 17>,
                groov::field<"crqa2", bool, 16, 16>,
                groov::field<"reserved0", std::uint16_t, 15, 5>,
@@ -1808,7 +1808,7 @@ using mdma_c2lar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"lar", std::uint32_t, 31, 0>>;
 
 // mdma_c2mar_v1: C2MAR
@@ -1820,7 +1820,7 @@ using mdma_c2mar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"mar", std::uint32_t, 31, 0>>;
 
 // mdma_c2mdr_v1: C2MDR
@@ -1832,7 +1832,7 @@ using mdma_c2mdr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"mdr", std::uint32_t, 31, 0>>;
 
 // mdma_c2sar_v1: C2SAR
@@ -1844,7 +1844,7 @@ using mdma_c2sar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"sar", std::uint32_t, 31, 0>>;
 
 // mdma_c2tbr_v1: C2TBR
@@ -1856,11 +1856,11 @@ using mdma_c2tbr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint16_t, 31, 18, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint16_t, 31, 18, common::access::ro>,
                groov::field<"dbus", bool, 17, 17>,
                groov::field<"sbus", bool, 16, 16>,
-               groov::field<"reserved0", std::uint16_t, 15, 6, access::ro>,
+               groov::field<"reserved0", std::uint16_t, 15, 6, common::access::ro>,
                groov::field<"tsel", std::uint8_t, 5, 0>>;
 
 // mdma_c2tcr_v1: C2TCR
@@ -1872,7 +1872,7 @@ using mdma_c2tcr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"bwm", bool, 31, 31>,
                groov::field<"swrm", bool, 30, 30>,
                groov::field<"trgm", std::uint8_t, 29, 28>,
@@ -1897,11 +1897,11 @@ using mdma_c3bndtr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"brc", std::uint16_t, 31, 20>,
                groov::field<"brdum", bool, 19, 19>,
                groov::field<"brsum", bool, 18, 18>,
-               groov::field<"reserved0", bool, 17, 17, access::ro>,
+               groov::field<"reserved0", bool, 17, 17, common::access::ro>,
                groov::field<"bndt", std::uint32_t, 16, 0>>;
 
 // mdma_c3brur_v1: C3BRUR
@@ -1913,7 +1913,7 @@ using mdma_c3brur_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"duv", std::uint16_t, 31, 16>,
                groov::field<"suv", std::uint16_t, 15, 0>>;
 
@@ -1926,21 +1926,21 @@ using mdma_c3cr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved2", std::uint16_t, 31, 17, access::ro>,
-               groov::field<"swrq", bool, 16, 16, access::wo>,
-               groov::field<"reserved1", bool, 15, 15, access::ro>,
+             common::access::rw,
+               groov::field<"reserved2", std::uint16_t, 31, 17, common::access::ro>,
+               groov::field<"swrq", bool, 16, 16, common::access::wo>,
+               groov::field<"reserved1", bool, 15, 15, common::access::ro>,
                groov::field<"wex", bool, 14, 14>,
                groov::field<"hex", bool, 13, 13>,
                groov::field<"bex", bool, 12, 12>,
-               groov::field<"reserved0", std::uint8_t, 11, 8, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 11, 8, common::access::ro>,
                groov::field<"pl", std::uint8_t, 7, 6>,
-               groov::field<"tcie", bit_enable, 5, 5>,
-               groov::field<"btie", bit_enable, 4, 4>,
-               groov::field<"brtie", bit_enable, 3, 3>,
-               groov::field<"ctcie", bit_enable, 2, 2>,
-               groov::field<"teie", bit_enable, 1, 1>,
-               groov::field<"en", bit_enable, 0, 0>>;
+               groov::field<"tcie", common::bittypes::bit_enable, 5, 5>,
+               groov::field<"btie", common::bittypes::bit_enable, 4, 4>,
+               groov::field<"brtie", common::bittypes::bit_enable, 3, 3>,
+               groov::field<"ctcie", common::bittypes::bit_enable, 2, 2>,
+               groov::field<"teie", common::bittypes::bit_enable, 1, 1>,
+               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
 
 // mdma_c3dar_v1: C3DAR
 // Used by: MDMA
@@ -1951,7 +1951,7 @@ using mdma_c3dar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dar", std::uint32_t, 31, 0>>;
 
 // mdma_c3esr_v1: C3ESR
@@ -1963,7 +1963,7 @@ using mdma_c3esr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint32_t, 31, 12>,
                groov::field<"bse", bool, 11, 11>,
                groov::field<"ase", bool, 10, 10>,
@@ -1981,8 +1981,8 @@ using mdma_c3ifcr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::wo,
-               groov::field<"reserved0", std::uint32_t, 31, 5, access::ro>,
+             common::access::wo,
+               groov::field<"reserved0", std::uint32_t, 31, 5, common::access::ro>,
                groov::field<"cltcif3", bool, 4, 4>,
                groov::field<"cbtif3", bool, 3, 3>,
                groov::field<"cbrtif3", bool, 2, 2>,
@@ -1998,7 +1998,7 @@ using mdma_c3isr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved1", std::uint16_t, 31, 17>,
                groov::field<"crqa3", bool, 16, 16>,
                groov::field<"reserved0", std::uint16_t, 15, 5>,
@@ -2017,7 +2017,7 @@ using mdma_c3lar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"lar", std::uint32_t, 31, 0>>;
 
 // mdma_c3mar_v1: C3MAR
@@ -2029,7 +2029,7 @@ using mdma_c3mar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"mar", std::uint32_t, 31, 0>>;
 
 // mdma_c3mdr_v1: C3MDR
@@ -2041,7 +2041,7 @@ using mdma_c3mdr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"mdr", std::uint32_t, 31, 0>>;
 
 // mdma_c3sar_v1: C3SAR
@@ -2053,7 +2053,7 @@ using mdma_c3sar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"sar", std::uint32_t, 31, 0>>;
 
 // mdma_c3tbr_v1: C3TBR
@@ -2065,11 +2065,11 @@ using mdma_c3tbr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint16_t, 31, 18, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint16_t, 31, 18, common::access::ro>,
                groov::field<"dbus", bool, 17, 17>,
                groov::field<"sbus", bool, 16, 16>,
-               groov::field<"reserved0", std::uint16_t, 15, 6, access::ro>,
+               groov::field<"reserved0", std::uint16_t, 15, 6, common::access::ro>,
                groov::field<"tsel", std::uint8_t, 5, 0>>;
 
 // mdma_c3tcr_v1: C3TCR
@@ -2081,7 +2081,7 @@ using mdma_c3tcr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"bwm", bool, 31, 31>,
                groov::field<"swrm", bool, 30, 30>,
                groov::field<"trgm", std::uint8_t, 29, 28>,
@@ -2106,11 +2106,11 @@ using mdma_c4bndtr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"brc", std::uint16_t, 31, 20>,
                groov::field<"brdum", bool, 19, 19>,
                groov::field<"brsum", bool, 18, 18>,
-               groov::field<"reserved0", bool, 17, 17, access::ro>,
+               groov::field<"reserved0", bool, 17, 17, common::access::ro>,
                groov::field<"bndt", std::uint32_t, 16, 0>>;
 
 // mdma_c4brur_v1: C4BRUR
@@ -2122,7 +2122,7 @@ using mdma_c4brur_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"duv", std::uint16_t, 31, 16>,
                groov::field<"suv", std::uint16_t, 15, 0>>;
 
@@ -2135,21 +2135,21 @@ using mdma_c4cr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved2", std::uint16_t, 31, 17, access::ro>,
-               groov::field<"swrq", bool, 16, 16, access::wo>,
-               groov::field<"reserved1", bool, 15, 15, access::ro>,
+             common::access::rw,
+               groov::field<"reserved2", std::uint16_t, 31, 17, common::access::ro>,
+               groov::field<"swrq", bool, 16, 16, common::access::wo>,
+               groov::field<"reserved1", bool, 15, 15, common::access::ro>,
                groov::field<"wex", bool, 14, 14>,
                groov::field<"hex", bool, 13, 13>,
                groov::field<"bex", bool, 12, 12>,
-               groov::field<"reserved0", std::uint8_t, 11, 8, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 11, 8, common::access::ro>,
                groov::field<"pl", std::uint8_t, 7, 6>,
-               groov::field<"tcie", bit_enable, 5, 5>,
-               groov::field<"btie", bit_enable, 4, 4>,
-               groov::field<"brtie", bit_enable, 3, 3>,
-               groov::field<"ctcie", bit_enable, 2, 2>,
-               groov::field<"teie", bit_enable, 1, 1>,
-               groov::field<"en", bit_enable, 0, 0>>;
+               groov::field<"tcie", common::bittypes::bit_enable, 5, 5>,
+               groov::field<"btie", common::bittypes::bit_enable, 4, 4>,
+               groov::field<"brtie", common::bittypes::bit_enable, 3, 3>,
+               groov::field<"ctcie", common::bittypes::bit_enable, 2, 2>,
+               groov::field<"teie", common::bittypes::bit_enable, 1, 1>,
+               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
 
 // mdma_c4dar_v1: C4DAR
 // Used by: MDMA
@@ -2160,7 +2160,7 @@ using mdma_c4dar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dar", std::uint32_t, 31, 0>>;
 
 // mdma_c4esr_v1: C4ESR
@@ -2172,7 +2172,7 @@ using mdma_c4esr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint32_t, 31, 12>,
                groov::field<"bse", bool, 11, 11>,
                groov::field<"ase", bool, 10, 10>,
@@ -2190,8 +2190,8 @@ using mdma_c4ifcr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::wo,
-               groov::field<"reserved0", std::uint32_t, 31, 5, access::ro>,
+             common::access::wo,
+               groov::field<"reserved0", std::uint32_t, 31, 5, common::access::ro>,
                groov::field<"cltcif4", bool, 4, 4>,
                groov::field<"cbtif4", bool, 3, 3>,
                groov::field<"cbrtif4", bool, 2, 2>,
@@ -2207,7 +2207,7 @@ using mdma_c4isr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved1", std::uint16_t, 31, 17>,
                groov::field<"crqa4", bool, 16, 16>,
                groov::field<"reserved0", std::uint16_t, 15, 5>,
@@ -2226,7 +2226,7 @@ using mdma_c4lar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"lar", std::uint32_t, 31, 0>>;
 
 // mdma_c4mar_v1: C4MAR
@@ -2238,7 +2238,7 @@ using mdma_c4mar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"mar", std::uint32_t, 31, 0>>;
 
 // mdma_c4mdr_v1: C4MDR
@@ -2250,7 +2250,7 @@ using mdma_c4mdr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"mdr", std::uint32_t, 31, 0>>;
 
 // mdma_c4sar_v1: C4SAR
@@ -2262,7 +2262,7 @@ using mdma_c4sar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"sar", std::uint32_t, 31, 0>>;
 
 // mdma_c4tbr_v1: C4TBR
@@ -2274,11 +2274,11 @@ using mdma_c4tbr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint16_t, 31, 18, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint16_t, 31, 18, common::access::ro>,
                groov::field<"dbus", bool, 17, 17>,
                groov::field<"sbus", bool, 16, 16>,
-               groov::field<"reserved0", std::uint16_t, 15, 6, access::ro>,
+               groov::field<"reserved0", std::uint16_t, 15, 6, common::access::ro>,
                groov::field<"tsel", std::uint8_t, 5, 0>>;
 
 // mdma_c4tcr_v1: C4TCR
@@ -2290,7 +2290,7 @@ using mdma_c4tcr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"bwm", bool, 31, 31>,
                groov::field<"swrm", bool, 30, 30>,
                groov::field<"trgm", std::uint8_t, 29, 28>,
@@ -2315,11 +2315,11 @@ using mdma_c5bndtr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"brc", std::uint16_t, 31, 20>,
                groov::field<"brdum", bool, 19, 19>,
                groov::field<"brsum", bool, 18, 18>,
-               groov::field<"reserved0", bool, 17, 17, access::ro>,
+               groov::field<"reserved0", bool, 17, 17, common::access::ro>,
                groov::field<"bndt", std::uint32_t, 16, 0>>;
 
 // mdma_c5brur_v1: C5BRUR
@@ -2331,7 +2331,7 @@ using mdma_c5brur_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"duv", std::uint16_t, 31, 16>,
                groov::field<"suv", std::uint16_t, 15, 0>>;
 
@@ -2344,21 +2344,21 @@ using mdma_c5cr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved2", std::uint16_t, 31, 17, access::ro>,
-               groov::field<"swrq", bool, 16, 16, access::wo>,
-               groov::field<"reserved1", bool, 15, 15, access::ro>,
+             common::access::rw,
+               groov::field<"reserved2", std::uint16_t, 31, 17, common::access::ro>,
+               groov::field<"swrq", bool, 16, 16, common::access::wo>,
+               groov::field<"reserved1", bool, 15, 15, common::access::ro>,
                groov::field<"wex", bool, 14, 14>,
                groov::field<"hex", bool, 13, 13>,
                groov::field<"bex", bool, 12, 12>,
-               groov::field<"reserved0", std::uint8_t, 11, 8, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 11, 8, common::access::ro>,
                groov::field<"pl", std::uint8_t, 7, 6>,
-               groov::field<"tcie", bit_enable, 5, 5>,
-               groov::field<"btie", bit_enable, 4, 4>,
-               groov::field<"brtie", bit_enable, 3, 3>,
-               groov::field<"ctcie", bit_enable, 2, 2>,
-               groov::field<"teie", bit_enable, 1, 1>,
-               groov::field<"en", bit_enable, 0, 0>>;
+               groov::field<"tcie", common::bittypes::bit_enable, 5, 5>,
+               groov::field<"btie", common::bittypes::bit_enable, 4, 4>,
+               groov::field<"brtie", common::bittypes::bit_enable, 3, 3>,
+               groov::field<"ctcie", common::bittypes::bit_enable, 2, 2>,
+               groov::field<"teie", common::bittypes::bit_enable, 1, 1>,
+               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
 
 // mdma_c5dar_v1: C5DAR
 // Used by: MDMA
@@ -2369,7 +2369,7 @@ using mdma_c5dar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dar", std::uint32_t, 31, 0>>;
 
 // mdma_c5esr_v1: C5ESR
@@ -2381,7 +2381,7 @@ using mdma_c5esr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint32_t, 31, 12>,
                groov::field<"bse", bool, 11, 11>,
                groov::field<"ase", bool, 10, 10>,
@@ -2399,8 +2399,8 @@ using mdma_c5ifcr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::wo,
-               groov::field<"reserved0", std::uint32_t, 31, 5, access::ro>,
+             common::access::wo,
+               groov::field<"reserved0", std::uint32_t, 31, 5, common::access::ro>,
                groov::field<"cltcif5", bool, 4, 4>,
                groov::field<"cbtif5", bool, 3, 3>,
                groov::field<"cbrtif5", bool, 2, 2>,
@@ -2416,7 +2416,7 @@ using mdma_c5isr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved1", std::uint16_t, 31, 17>,
                groov::field<"crqa5", bool, 16, 16>,
                groov::field<"reserved0", std::uint16_t, 15, 5>,
@@ -2435,7 +2435,7 @@ using mdma_c5lar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"lar", std::uint32_t, 31, 0>>;
 
 // mdma_c5mar_v1: C5MAR
@@ -2447,7 +2447,7 @@ using mdma_c5mar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"mar", std::uint32_t, 31, 0>>;
 
 // mdma_c5mdr_v1: C5MDR
@@ -2459,7 +2459,7 @@ using mdma_c5mdr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"mdr", std::uint32_t, 31, 0>>;
 
 // mdma_c5sar_v1: C5SAR
@@ -2471,7 +2471,7 @@ using mdma_c5sar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"sar", std::uint32_t, 31, 0>>;
 
 // mdma_c5tbr_v1: C5TBR
@@ -2483,11 +2483,11 @@ using mdma_c5tbr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint16_t, 31, 18, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint16_t, 31, 18, common::access::ro>,
                groov::field<"dbus", bool, 17, 17>,
                groov::field<"sbus", bool, 16, 16>,
-               groov::field<"reserved0", std::uint16_t, 15, 6, access::ro>,
+               groov::field<"reserved0", std::uint16_t, 15, 6, common::access::ro>,
                groov::field<"tsel", std::uint8_t, 5, 0>>;
 
 // mdma_c5tcr_v1: C5TCR
@@ -2499,7 +2499,7 @@ using mdma_c5tcr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"bwm", bool, 31, 31>,
                groov::field<"swrm", bool, 30, 30>,
                groov::field<"trgm", std::uint8_t, 29, 28>,
@@ -2524,11 +2524,11 @@ using mdma_c6bndtr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"brc", std::uint16_t, 31, 20>,
                groov::field<"brdum", bool, 19, 19>,
                groov::field<"brsum", bool, 18, 18>,
-               groov::field<"reserved0", bool, 17, 17, access::ro>,
+               groov::field<"reserved0", bool, 17, 17, common::access::ro>,
                groov::field<"bndt", std::uint32_t, 16, 0>>;
 
 // mdma_c6brur_v1: C6BRUR
@@ -2540,7 +2540,7 @@ using mdma_c6brur_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"duv", std::uint16_t, 31, 16>,
                groov::field<"suv", std::uint16_t, 15, 0>>;
 
@@ -2553,21 +2553,21 @@ using mdma_c6cr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved2", std::uint16_t, 31, 17, access::ro>,
-               groov::field<"swrq", bool, 16, 16, access::wo>,
-               groov::field<"reserved1", bool, 15, 15, access::ro>,
+             common::access::rw,
+               groov::field<"reserved2", std::uint16_t, 31, 17, common::access::ro>,
+               groov::field<"swrq", bool, 16, 16, common::access::wo>,
+               groov::field<"reserved1", bool, 15, 15, common::access::ro>,
                groov::field<"wex", bool, 14, 14>,
                groov::field<"hex", bool, 13, 13>,
                groov::field<"bex", bool, 12, 12>,
-               groov::field<"reserved0", std::uint8_t, 11, 8, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 11, 8, common::access::ro>,
                groov::field<"pl", std::uint8_t, 7, 6>,
-               groov::field<"tcie", bit_enable, 5, 5>,
-               groov::field<"btie", bit_enable, 4, 4>,
-               groov::field<"brtie", bit_enable, 3, 3>,
-               groov::field<"ctcie", bit_enable, 2, 2>,
-               groov::field<"teie", bit_enable, 1, 1>,
-               groov::field<"en", bit_enable, 0, 0>>;
+               groov::field<"tcie", common::bittypes::bit_enable, 5, 5>,
+               groov::field<"btie", common::bittypes::bit_enable, 4, 4>,
+               groov::field<"brtie", common::bittypes::bit_enable, 3, 3>,
+               groov::field<"ctcie", common::bittypes::bit_enable, 2, 2>,
+               groov::field<"teie", common::bittypes::bit_enable, 1, 1>,
+               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
 
 // mdma_c6dar_v1: C6DAR
 // Used by: MDMA
@@ -2578,7 +2578,7 @@ using mdma_c6dar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dar", std::uint32_t, 31, 0>>;
 
 // mdma_c6esr_v1: C6ESR
@@ -2590,7 +2590,7 @@ using mdma_c6esr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint32_t, 31, 12>,
                groov::field<"bse", bool, 11, 11>,
                groov::field<"ase", bool, 10, 10>,
@@ -2608,8 +2608,8 @@ using mdma_c6ifcr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::wo,
-               groov::field<"reserved0", std::uint32_t, 31, 5, access::ro>,
+             common::access::wo,
+               groov::field<"reserved0", std::uint32_t, 31, 5, common::access::ro>,
                groov::field<"cltcif6", bool, 4, 4>,
                groov::field<"cbtif6", bool, 3, 3>,
                groov::field<"cbrtif6", bool, 2, 2>,
@@ -2625,7 +2625,7 @@ using mdma_c6isr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved1", std::uint16_t, 31, 17>,
                groov::field<"crqa6", bool, 16, 16>,
                groov::field<"reserved0", std::uint16_t, 15, 5>,
@@ -2644,7 +2644,7 @@ using mdma_c6lar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"lar", std::uint32_t, 31, 0>>;
 
 // mdma_c6mar_v1: C6MAR
@@ -2656,7 +2656,7 @@ using mdma_c6mar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"mar", std::uint32_t, 31, 0>>;
 
 // mdma_c6mdr_v1: C6MDR
@@ -2668,7 +2668,7 @@ using mdma_c6mdr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"mdr", std::uint32_t, 31, 0>>;
 
 // mdma_c6sar_v1: C6SAR
@@ -2680,7 +2680,7 @@ using mdma_c6sar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"sar", std::uint32_t, 31, 0>>;
 
 // mdma_c6tbr_v1: C6TBR
@@ -2692,11 +2692,11 @@ using mdma_c6tbr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint16_t, 31, 18, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint16_t, 31, 18, common::access::ro>,
                groov::field<"dbus", bool, 17, 17>,
                groov::field<"sbus", bool, 16, 16>,
-               groov::field<"reserved0", std::uint16_t, 15, 6, access::ro>,
+               groov::field<"reserved0", std::uint16_t, 15, 6, common::access::ro>,
                groov::field<"tsel", std::uint8_t, 5, 0>>;
 
 // mdma_c6tcr_v1: C6TCR
@@ -2708,7 +2708,7 @@ using mdma_c6tcr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"bwm", bool, 31, 31>,
                groov::field<"swrm", bool, 30, 30>,
                groov::field<"trgm", std::uint8_t, 29, 28>,
@@ -2733,11 +2733,11 @@ using mdma_c7bndtr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"brc", std::uint16_t, 31, 20>,
                groov::field<"brdum", bool, 19, 19>,
                groov::field<"brsum", bool, 18, 18>,
-               groov::field<"reserved0", bool, 17, 17, access::ro>,
+               groov::field<"reserved0", bool, 17, 17, common::access::ro>,
                groov::field<"bndt", std::uint32_t, 16, 0>>;
 
 // mdma_c7brur_v1: C7BRUR
@@ -2749,7 +2749,7 @@ using mdma_c7brur_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"duv", std::uint16_t, 31, 16>,
                groov::field<"suv", std::uint16_t, 15, 0>>;
 
@@ -2762,21 +2762,21 @@ using mdma_c7cr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved2", std::uint16_t, 31, 17, access::ro>,
-               groov::field<"swrq", bool, 16, 16, access::wo>,
-               groov::field<"reserved1", bool, 15, 15, access::ro>,
+             common::access::rw,
+               groov::field<"reserved2", std::uint16_t, 31, 17, common::access::ro>,
+               groov::field<"swrq", bool, 16, 16, common::access::wo>,
+               groov::field<"reserved1", bool, 15, 15, common::access::ro>,
                groov::field<"wex", bool, 14, 14>,
                groov::field<"hex", bool, 13, 13>,
                groov::field<"bex", bool, 12, 12>,
-               groov::field<"reserved0", std::uint8_t, 11, 8, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 11, 8, common::access::ro>,
                groov::field<"pl", std::uint8_t, 7, 6>,
-               groov::field<"tcie", bit_enable, 5, 5>,
-               groov::field<"btie", bit_enable, 4, 4>,
-               groov::field<"brtie", bit_enable, 3, 3>,
-               groov::field<"ctcie", bit_enable, 2, 2>,
-               groov::field<"teie", bit_enable, 1, 1>,
-               groov::field<"en", bit_enable, 0, 0>>;
+               groov::field<"tcie", common::bittypes::bit_enable, 5, 5>,
+               groov::field<"btie", common::bittypes::bit_enable, 4, 4>,
+               groov::field<"brtie", common::bittypes::bit_enable, 3, 3>,
+               groov::field<"ctcie", common::bittypes::bit_enable, 2, 2>,
+               groov::field<"teie", common::bittypes::bit_enable, 1, 1>,
+               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
 
 // mdma_c7dar_v1: C7DAR
 // Used by: MDMA
@@ -2787,7 +2787,7 @@ using mdma_c7dar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dar", std::uint32_t, 31, 0>>;
 
 // mdma_c7esr_v1: C7ESR
@@ -2799,7 +2799,7 @@ using mdma_c7esr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint32_t, 31, 12>,
                groov::field<"bse", bool, 11, 11>,
                groov::field<"ase", bool, 10, 10>,
@@ -2817,8 +2817,8 @@ using mdma_c7ifcr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::wo,
-               groov::field<"reserved0", std::uint32_t, 31, 5, access::ro>,
+             common::access::wo,
+               groov::field<"reserved0", std::uint32_t, 31, 5, common::access::ro>,
                groov::field<"cltcif7", bool, 4, 4>,
                groov::field<"cbtif7", bool, 3, 3>,
                groov::field<"cbrtif7", bool, 2, 2>,
@@ -2834,7 +2834,7 @@ using mdma_c7isr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved1", std::uint16_t, 31, 17>,
                groov::field<"crqa7", bool, 16, 16>,
                groov::field<"reserved0", std::uint16_t, 15, 5>,
@@ -2853,7 +2853,7 @@ using mdma_c7lar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"lar", std::uint32_t, 31, 0>>;
 
 // mdma_c7mar_v1: C7MAR
@@ -2865,7 +2865,7 @@ using mdma_c7mar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"mar", std::uint32_t, 31, 0>>;
 
 // mdma_c7mdr_v1: C7MDR
@@ -2877,7 +2877,7 @@ using mdma_c7mdr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"mdr", std::uint32_t, 31, 0>>;
 
 // mdma_c7sar_v1: C7SAR
@@ -2889,7 +2889,7 @@ using mdma_c7sar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"sar", std::uint32_t, 31, 0>>;
 
 // mdma_c7tbr_v1: C7TBR
@@ -2901,11 +2901,11 @@ using mdma_c7tbr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint16_t, 31, 18, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint16_t, 31, 18, common::access::ro>,
                groov::field<"dbus", bool, 17, 17>,
                groov::field<"sbus", bool, 16, 16>,
-               groov::field<"reserved0", std::uint16_t, 15, 6, access::ro>,
+               groov::field<"reserved0", std::uint16_t, 15, 6, common::access::ro>,
                groov::field<"tsel", std::uint8_t, 5, 0>>;
 
 // mdma_c7tcr_v1: C7TCR
@@ -2917,7 +2917,7 @@ using mdma_c7tcr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"bwm", bool, 31, 31>,
                groov::field<"swrm", bool, 30, 30>,
                groov::field<"trgm", std::uint8_t, 29, 28>,
@@ -2942,11 +2942,11 @@ using mdma_c8bndtr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"brc", std::uint16_t, 31, 20>,
                groov::field<"brdum", bool, 19, 19>,
                groov::field<"brsum", bool, 18, 18>,
-               groov::field<"reserved0", bool, 17, 17, access::ro>,
+               groov::field<"reserved0", bool, 17, 17, common::access::ro>,
                groov::field<"bndt", std::uint32_t, 16, 0>>;
 
 // mdma_c8brur_v1: C8BRUR
@@ -2958,7 +2958,7 @@ using mdma_c8brur_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"duv", std::uint16_t, 31, 16>,
                groov::field<"suv", std::uint16_t, 15, 0>>;
 
@@ -2971,21 +2971,21 @@ using mdma_c8cr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved2", std::uint16_t, 31, 17, access::ro>,
-               groov::field<"swrq", bool, 16, 16, access::wo>,
-               groov::field<"reserved1", bool, 15, 15, access::ro>,
+             common::access::rw,
+               groov::field<"reserved2", std::uint16_t, 31, 17, common::access::ro>,
+               groov::field<"swrq", bool, 16, 16, common::access::wo>,
+               groov::field<"reserved1", bool, 15, 15, common::access::ro>,
                groov::field<"wex", bool, 14, 14>,
                groov::field<"hex", bool, 13, 13>,
                groov::field<"bex", bool, 12, 12>,
-               groov::field<"reserved0", std::uint8_t, 11, 8, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 11, 8, common::access::ro>,
                groov::field<"pl", std::uint8_t, 7, 6>,
-               groov::field<"tcie", bit_enable, 5, 5>,
-               groov::field<"btie", bit_enable, 4, 4>,
-               groov::field<"brtie", bit_enable, 3, 3>,
-               groov::field<"ctcie", bit_enable, 2, 2>,
-               groov::field<"teie", bit_enable, 1, 1>,
-               groov::field<"en", bit_enable, 0, 0>>;
+               groov::field<"tcie", common::bittypes::bit_enable, 5, 5>,
+               groov::field<"btie", common::bittypes::bit_enable, 4, 4>,
+               groov::field<"brtie", common::bittypes::bit_enable, 3, 3>,
+               groov::field<"ctcie", common::bittypes::bit_enable, 2, 2>,
+               groov::field<"teie", common::bittypes::bit_enable, 1, 1>,
+               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
 
 // mdma_c8dar_v1: C8DAR
 // Used by: MDMA
@@ -2996,7 +2996,7 @@ using mdma_c8dar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dar", std::uint32_t, 31, 0>>;
 
 // mdma_c8esr_v1: C8ESR
@@ -3008,7 +3008,7 @@ using mdma_c8esr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint32_t, 31, 12>,
                groov::field<"bse", bool, 11, 11>,
                groov::field<"ase", bool, 10, 10>,
@@ -3026,8 +3026,8 @@ using mdma_c8ifcr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::wo,
-               groov::field<"reserved0", std::uint32_t, 31, 5, access::ro>,
+             common::access::wo,
+               groov::field<"reserved0", std::uint32_t, 31, 5, common::access::ro>,
                groov::field<"cltcif8", bool, 4, 4>,
                groov::field<"cbtif8", bool, 3, 3>,
                groov::field<"cbrtif8", bool, 2, 2>,
@@ -3043,7 +3043,7 @@ using mdma_c8isr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved1", std::uint16_t, 31, 17>,
                groov::field<"crqa8", bool, 16, 16>,
                groov::field<"reserved0", std::uint16_t, 15, 5>,
@@ -3062,7 +3062,7 @@ using mdma_c8lar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"lar", std::uint32_t, 31, 0>>;
 
 // mdma_c8mar_v1: C8MAR
@@ -3074,7 +3074,7 @@ using mdma_c8mar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"mar", std::uint32_t, 31, 0>>;
 
 // mdma_c8mdr_v1: C8MDR
@@ -3086,7 +3086,7 @@ using mdma_c8mdr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"mdr", std::uint32_t, 31, 0>>;
 
 // mdma_c8sar_v1: C8SAR
@@ -3098,7 +3098,7 @@ using mdma_c8sar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"sar", std::uint32_t, 31, 0>>;
 
 // mdma_c8tbr_v1: C8TBR
@@ -3110,11 +3110,11 @@ using mdma_c8tbr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint16_t, 31, 18, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint16_t, 31, 18, common::access::ro>,
                groov::field<"dbus", bool, 17, 17>,
                groov::field<"sbus", bool, 16, 16>,
-               groov::field<"reserved0", std::uint16_t, 15, 6, access::ro>,
+               groov::field<"reserved0", std::uint16_t, 15, 6, common::access::ro>,
                groov::field<"tsel", std::uint8_t, 5, 0>>;
 
 // mdma_c8tcr_v1: C8TCR
@@ -3126,7 +3126,7 @@ using mdma_c8tcr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"bwm", bool, 31, 31>,
                groov::field<"swrm", bool, 30, 30>,
                groov::field<"trgm", std::uint8_t, 29, 28>,
@@ -3151,11 +3151,11 @@ using mdma_c9bndtr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"brc", std::uint16_t, 31, 20>,
                groov::field<"brdum", bool, 19, 19>,
                groov::field<"brsum", bool, 18, 18>,
-               groov::field<"reserved0", bool, 17, 17, access::ro>,
+               groov::field<"reserved0", bool, 17, 17, common::access::ro>,
                groov::field<"bndt", std::uint32_t, 16, 0>>;
 
 // mdma_c9brur_v1: C9BRUR
@@ -3167,7 +3167,7 @@ using mdma_c9brur_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"duv", std::uint16_t, 31, 16>,
                groov::field<"suv", std::uint16_t, 15, 0>>;
 
@@ -3180,21 +3180,21 @@ using mdma_c9cr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved2", std::uint16_t, 31, 17, access::ro>,
-               groov::field<"swrq", bool, 16, 16, access::wo>,
-               groov::field<"reserved1", bool, 15, 15, access::ro>,
+             common::access::rw,
+               groov::field<"reserved2", std::uint16_t, 31, 17, common::access::ro>,
+               groov::field<"swrq", bool, 16, 16, common::access::wo>,
+               groov::field<"reserved1", bool, 15, 15, common::access::ro>,
                groov::field<"wex", bool, 14, 14>,
                groov::field<"hex", bool, 13, 13>,
                groov::field<"bex", bool, 12, 12>,
-               groov::field<"reserved0", std::uint8_t, 11, 8, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 11, 8, common::access::ro>,
                groov::field<"pl", std::uint8_t, 7, 6>,
-               groov::field<"tcie", bit_enable, 5, 5>,
-               groov::field<"btie", bit_enable, 4, 4>,
-               groov::field<"brtie", bit_enable, 3, 3>,
-               groov::field<"ctcie", bit_enable, 2, 2>,
-               groov::field<"teie", bit_enable, 1, 1>,
-               groov::field<"en", bit_enable, 0, 0>>;
+               groov::field<"tcie", common::bittypes::bit_enable, 5, 5>,
+               groov::field<"btie", common::bittypes::bit_enable, 4, 4>,
+               groov::field<"brtie", common::bittypes::bit_enable, 3, 3>,
+               groov::field<"ctcie", common::bittypes::bit_enable, 2, 2>,
+               groov::field<"teie", common::bittypes::bit_enable, 1, 1>,
+               groov::field<"en", common::bittypes::bit_enable, 0, 0>>;
 
 // mdma_c9dar_v1: C9DAR
 // Used by: MDMA
@@ -3205,7 +3205,7 @@ using mdma_c9dar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"dar", std::uint32_t, 31, 0>>;
 
 // mdma_c9esr_v1: C9ESR
@@ -3217,7 +3217,7 @@ using mdma_c9esr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint32_t, 31, 12>,
                groov::field<"bse", bool, 11, 11>,
                groov::field<"ase", bool, 10, 10>,
@@ -3235,8 +3235,8 @@ using mdma_c9ifcr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::wo,
-               groov::field<"reserved0", std::uint32_t, 31, 5, access::ro>,
+             common::access::wo,
+               groov::field<"reserved0", std::uint32_t, 31, 5, common::access::ro>,
                groov::field<"cltcif9", bool, 4, 4>,
                groov::field<"cbtif9", bool, 3, 3>,
                groov::field<"cbrtif9", bool, 2, 2>,
@@ -3252,7 +3252,7 @@ using mdma_c9isr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved1", std::uint16_t, 31, 17>,
                groov::field<"crqa9", bool, 16, 16>,
                groov::field<"reserved0", std::uint16_t, 15, 5>,
@@ -3271,7 +3271,7 @@ using mdma_c9lar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"lar", std::uint32_t, 31, 0>>;
 
 // mdma_c9mar_v1: C9MAR
@@ -3283,7 +3283,7 @@ using mdma_c9mar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"mar", std::uint32_t, 31, 0>>;
 
 // mdma_c9mdr_v1: C9MDR
@@ -3295,7 +3295,7 @@ using mdma_c9mdr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"mdr", std::uint32_t, 31, 0>>;
 
 // mdma_c9sar_v1: C9SAR
@@ -3307,7 +3307,7 @@ using mdma_c9sar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"sar", std::uint32_t, 31, 0>>;
 
 // mdma_c9tbr_v1: C9TBR
@@ -3319,11 +3319,11 @@ using mdma_c9tbr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint16_t, 31, 18, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint16_t, 31, 18, common::access::ro>,
                groov::field<"dbus", bool, 17, 17>,
                groov::field<"sbus", bool, 16, 16>,
-               groov::field<"reserved0", std::uint16_t, 15, 6, access::ro>,
+               groov::field<"reserved0", std::uint16_t, 15, 6, common::access::ro>,
                groov::field<"tsel", std::uint8_t, 5, 0>>;
 
 // mdma_c9tcr_v1: C9TCR
@@ -3335,7 +3335,7 @@ using mdma_c9tcr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"bwm", bool, 31, 31>,
                groov::field<"swrm", bool, 30, 30>,
                groov::field<"trgm", std::uint8_t, 29, 28>,
@@ -3360,7 +3360,7 @@ using mdma_gisr0_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::ro,
+             common::access::ro,
                groov::field<"reserved0", std::uint16_t, 31, 16>,
                groov::field<"gif15", bool, 15, 15>,
                groov::field<"gif14", bool, 14, 14>,

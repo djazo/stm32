@@ -16,8 +16,8 @@ using syscfg_cfgr1_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved2", std::uint8_t, 31, 24, access::ro>,
+             common::access::rw,
+               groov::field<"reserved2", std::uint8_t, 31, 24, common::access::ro>,
                groov::field<"i2c4_fmp", bool, 23, 23>,
                groov::field<"i2c3_fmp", bool, 22, 22>,
                groov::field<"i2c2_fmp", bool, 21, 21>,
@@ -26,10 +26,10 @@ using syscfg_cfgr1_v1_tt =
                groov::field<"i2c_pb8_fmp", bool, 18, 18>,
                groov::field<"i2c_pb7_fmp", bool, 17, 17>,
                groov::field<"i2c_pb6_fmp", bool, 16, 16>,
-               groov::field<"reserved1", std::uint8_t, 15, 10, access::ro>,
+               groov::field<"reserved1", std::uint8_t, 15, 10, common::access::ro>,
                groov::field<"anaswvdd", bool, 9, 9>,
-               groov::field<"boosten", bit_enable, 8, 8>,
-               groov::field<"reserved0", std::uint8_t, 7, 0, access::ro>>;
+               groov::field<"boosten", common::bittypes::bit_enable, 8, 8>,
+               groov::field<"reserved0", std::uint8_t, 7, 0, common::access::ro>>;
 
 // syscfg_cfgr2_v1: CFGR2
 // Used by: SYSCFG, SEC_SYSCFG
@@ -40,14 +40,14 @@ using syscfg_cfgr2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint32_t, 31, 9, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint32_t, 31, 9, common::access::ro>,
                groov::field<"spf", bool, 8, 8>,
-               groov::field<"reserved0", std::uint8_t, 7, 4, access::ro>,
-               groov::field<"eccl", bool, 3, 3, access::wo>,
-               groov::field<"pvdl", bool, 2, 2, access::wo>,
-               groov::field<"spl", bool, 1, 1, access::wo>,
-               groov::field<"cll", bool, 0, 0, access::wo>>;
+               groov::field<"reserved0", std::uint8_t, 7, 4, common::access::ro>,
+               groov::field<"eccl", bool, 3, 3, common::access::wo>,
+               groov::field<"pvdl", bool, 2, 2, common::access::wo>,
+               groov::field<"spl", bool, 1, 1, common::access::wo>,
+               groov::field<"cll", bool, 0, 0, common::access::wo>>;
 
 // syscfg_cnslckr_v1: CNSLCKR
 // Used by: SYSCFG, SEC_SYSCFG
@@ -58,10 +58,10 @@ using syscfg_cnslckr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 2, access::ro>,
-               groov::field<"locknsmpu", bit_locked, 1, 1>,
-               groov::field<"locknsvtor", bit_locked, 0, 0>>;
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 2, common::access::ro>,
+               groov::field<"locknsmpu", common::bittypes::bit_locked, 1, 1>,
+               groov::field<"locknsvtor", common::bittypes::bit_locked, 0, 0>>;
 
 // syscfg_cslockr_v1: CSLOCKR
 // Used by: SYSCFG, SEC_SYSCFG
@@ -72,11 +72,11 @@ using syscfg_cslockr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 3, access::ro>,
-               groov::field<"locksau", bit_locked, 2, 2>,
-               groov::field<"locksmpu", bit_locked, 1, 1>,
-               groov::field<"locksvtaircr", bit_locked, 0, 0>>;
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 3, common::access::ro>,
+               groov::field<"locksau", common::bittypes::bit_locked, 2, 2>,
+               groov::field<"locksmpu", common::bittypes::bit_locked, 1, 1>,
+               groov::field<"locksvtaircr", common::bittypes::bit_locked, 0, 0>>;
 
 // syscfg_fpuimr_v1: FPUIMR
 // Used by: SYSCFG, SEC_SYSCFG
@@ -87,8 +87,8 @@ using syscfg_fpuimr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 6, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 6, common::access::ro>,
                groov::field<"fpu_ie", std::uint8_t, 5, 0>>;
 
 // syscfg_rsscmdr_v1: RSSCMDR
@@ -100,8 +100,8 @@ using syscfg_rsscmdr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 8, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 8, common::access::ro>,
                groov::field<"rsscmd", std::uint8_t, 7, 0>>;
 
 // syscfg_scsr_v1: SCSR
@@ -113,9 +113,9 @@ using syscfg_scsr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 2, access::ro>,
-               groov::field<"sram2bsy", bit_ready_bar, 1, 1, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 2, common::access::ro>,
+               groov::field<"sram2bsy", common::bittypes::bit_ready_bar, 1, 1, common::access::ro>,
                groov::field<"sram2er", bool, 0, 0>>;
 
 // syscfg_seccfgr_v1: SECCFGR
@@ -127,8 +127,8 @@ using syscfg_seccfgr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved0", std::uint32_t, 31, 4, access::ro>,
+             common::access::rw,
+               groov::field<"reserved0", std::uint32_t, 31, 4, common::access::ro>,
                groov::field<"fpusec", bool, 3, 3>,
                groov::field<"sram2sec", bool, 2, 2>,
                groov::field<"classbsec", bool, 1, 1>,
@@ -143,8 +143,8 @@ using syscfg_skr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::wo,
-               groov::field<"reserved0", std::uint32_t, 31, 8, access::ro>,
+             common::access::wo,
+               groov::field<"reserved0", std::uint32_t, 31, 8, common::access::ro>,
                groov::field<"key", std::uint8_t, 7, 0>>;
 
 // syscfg_swpr_v1: SWPR
@@ -156,7 +156,7 @@ using syscfg_swpr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::wo,
+             common::access::wo,
                groov::field<"p31wp", bool, 31, 31>,
                groov::field<"p30wp", bool, 30, 30>,
                groov::field<"p29wp", bool, 29, 29>,
@@ -199,7 +199,7 @@ using syscfg_swpr2_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::wo,
+             common::access::wo,
                groov::field<"p63wp", bool, 31, 31>,
                groov::field<"p62wp", bool, 30, 30>,
                groov::field<"p61wp", bool, 29, 29>,

@@ -16,10 +16,10 @@ using fpu_cpacr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"reserved1", std::uint8_t, 31, 24, access::ro>,
+             common::access::rw,
+               groov::field<"reserved1", std::uint8_t, 31, 24, common::access::ro>,
                groov::field<"cp", std::uint8_t, 23, 20>,
-               groov::field<"reserved0", std::uint32_t, 19, 0, access::ro>>;
+               groov::field<"reserved0", std::uint32_t, 19, 0, common::access::ro>>;
 
 // fpu_fpcar_v1: FPCAR
 // Used by: FPU
@@ -30,9 +30,9 @@ using fpu_fpcar_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"address", std::uint32_t, 31, 3>,
-               groov::field<"reserved0", std::uint8_t, 2, 0, access::ro>>;
+               groov::field<"reserved0", std::uint8_t, 2, 0, common::access::ro>>;
 
 // fpu_fpccr_v1: FPCCR
 // Used by: FPU
@@ -43,17 +43,17 @@ using fpu_fpccr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
-               groov::field<"aspen", bit_enable, 31, 31>,
-               groov::field<"lspen", bit_enable, 30, 30>,
-               groov::field<"reserved2", std::uint32_t, 29, 9, access::ro>,
-               groov::field<"monrdy", bit_ready, 8, 8>,
-               groov::field<"reserved1", bool, 7, 7, access::ro>,
-               groov::field<"bfrdy", bit_ready, 6, 6>,
-               groov::field<"mmrdy", bit_ready, 5, 5>,
-               groov::field<"hfrdy", bit_ready, 4, 4>,
+             common::access::rw,
+               groov::field<"aspen", common::bittypes::bit_enable, 31, 31>,
+               groov::field<"lspen", common::bittypes::bit_enable, 30, 30>,
+               groov::field<"reserved2", std::uint32_t, 29, 9, common::access::ro>,
+               groov::field<"monrdy", common::bittypes::bit_ready, 8, 8>,
+               groov::field<"reserved1", bool, 7, 7, common::access::ro>,
+               groov::field<"bfrdy", common::bittypes::bit_ready, 6, 6>,
+               groov::field<"mmrdy", common::bittypes::bit_ready, 5, 5>,
+               groov::field<"hfrdy", common::bittypes::bit_ready, 4, 4>,
                groov::field<"thread", bool, 3, 3>,
-               groov::field<"reserved0", bool, 2, 2, access::ro>,
+               groov::field<"reserved0", bool, 2, 2, common::access::ro>,
                groov::field<"user", bool, 1, 1>,
                groov::field<"lspact", bool, 0, 0>>;
 
@@ -66,19 +66,19 @@ using fpu_fpscr_v1_tt =
   groov::reg<name,
              std::uint32_t,
              baseaddress + offset,
-             access::rw,
+             common::access::rw,
                groov::field<"n", bool, 31, 31>,
                groov::field<"z", bool, 30, 30>,
                groov::field<"c", bool, 29, 29>,
                groov::field<"v", bool, 28, 28>,
-               groov::field<"reserved2", bool, 27, 27, access::ro>,
+               groov::field<"reserved2", bool, 27, 27, common::access::ro>,
                groov::field<"ahp", bool, 26, 26>,
                groov::field<"dn", bool, 25, 25>,
                groov::field<"fz", bool, 24, 24>,
                groov::field<"rmode", std::uint8_t, 23, 22>,
-               groov::field<"reserved1", std::uint16_t, 21, 8, access::ro>,
+               groov::field<"reserved1", std::uint16_t, 21, 8, common::access::ro>,
                groov::field<"idc", bool, 7, 7>,
-               groov::field<"reserved0", std::uint8_t, 6, 5, access::ro>,
+               groov::field<"reserved0", std::uint8_t, 6, 5, common::access::ro>,
                groov::field<"ixc", bool, 4, 4>,
                groov::field<"ufc", bool, 3, 3>,
                groov::field<"ofc", bool, 2, 2>,

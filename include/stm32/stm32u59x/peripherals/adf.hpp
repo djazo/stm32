@@ -7,21 +7,66 @@
 namespace stm32::stm32u59x {
 
 namespace adfx {
-  using adf_gcr_tt = regs::adf_adf_gcr_v1_tt;
-  using adf_ckgcr_tt = regs::adf_adf_ckgcr_v1_tt;
-  using adf_sitf0cr_tt = regs::adf_adf_sitf0cr_v1_tt;
-  using adf_bsmx0cr_tt = regs::adf_adf_bsmx0cr_v1_tt;
-  using adf_dflt0cr_tt = regs::adf_adf_dflt0cr_v1_tt;
-  using adf_dflt0cicr_tt = regs::adf_adf_dflt0cicr_v1_tt;
-  using adf_dflt0rsfr_tt = regs::adf_adf_dflt0rsfr_v1_tt;
-  using adf_dly0cr_tt = regs::adf_adf_dly0cr_v1_tt;
-  using adf_dflt0ier_tt = regs::adf_adf_dflt0ier_v1_tt;
-  using adf_dflt0isr_tt = regs::adf_adf_dflt0isr_v1_tt;
-  using adf_sadcr_tt = regs::adf_adf_sadcr_v1_tt;
-  using adf_sadcfgr_tt = regs::adf_adf_sadcfgr_v1_tt;
-  using adf_sadsdlvr_tt = regs::adf_adf_sadsdlvr_v1_tt;
-  using adf_sadanlvr_tt = regs::adf_adf_sadanlvr_v1_tt;
-  using adf_dflt0dr_tt = regs::adf_adf_dflt0dr_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using adf_gcr_tt = regs::adf_adf_gcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using adf_ckgcr_tt = regs::adf_adf_ckgcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using adf_sitf0cr_tt = regs::adf_adf_sitf0cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using adf_bsmx0cr_tt = regs::adf_adf_bsmx0cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using adf_dflt0cr_tt = regs::adf_adf_dflt0cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using adf_dflt0cicr_tt = regs::adf_adf_dflt0cicr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using adf_dflt0rsfr_tt = regs::adf_adf_dflt0rsfr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using adf_dly0cr_tt = regs::adf_adf_dly0cr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using adf_dflt0ier_tt = regs::adf_adf_dflt0ier_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using adf_dflt0isr_tt = regs::adf_adf_dflt0isr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using adf_sadcr_tt = regs::adf_adf_sadcr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using adf_sadcfgr_tt = regs::adf_adf_sadcfgr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using adf_sadsdlvr_tt = regs::adf_adf_sadsdlvr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using adf_sadanlvr_tt = regs::adf_adf_sadanlvr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using adf_dflt0dr_tt = regs::adf_adf_dflt0dr_v1_tt<name, baseaddress, offset>;
 
   template <stdx::ct_string name, std::uint32_t baseaddress>
   using adfx_t =

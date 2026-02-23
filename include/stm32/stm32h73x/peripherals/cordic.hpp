@@ -7,9 +7,18 @@
 namespace stm32::stm32h73x {
 
 namespace cordic {
-  using cordic_csr_tt = regs::cordic_cordic_csr_v1_tt;
-  using cordic_wdata_tt = regs::cordic_cordic_wdata_v1_tt;
-  using cordic_rdata_tt = regs::cordic_cordic_rdata_v1_tt;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cordic_csr_tt = regs::cordic_cordic_csr_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cordic_wdata_tt = regs::cordic_cordic_wdata_v1_tt<name, baseaddress, offset>;
+  template <stdx::ct_string name,
+            std::uint32_t   baseaddress,
+            std::uint32_t   offset>
+  using cordic_rdata_tt = regs::cordic_cordic_rdata_v1_tt<name, baseaddress, offset>;
 
   template <std::uint32_t baseaddress>
   using cordic_t =
